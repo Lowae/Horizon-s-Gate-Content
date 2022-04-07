@@ -3,24 +3,24 @@
 
 [DialogNode] ID=cafe;
 animations=;
-statements=<randSetID=Want somethin' to eat or drink?/How's life treating ya?/Try the port special, it's great./What can I get ya?/I'm listenin'./What would ya like?/Pull up a chair and take a load off./What'll it be?>;
+statements=<randSetID=想吃点或者喝点什么吗?/你过得怎么样?/试下港口的特色菜，非常棒./你想要点什么?/我在听./你想要什么?/找把椅子坐下来，放松一下./最近怎么样?>;
 specialEffect=setDialogWindowSizeY,0;
 specialEffect=setPCDialogWindowSizeY,0;
-[DialogOption] text=Local Specialty;
+[DialogOption] text=当地特产;
 formulaReq=m:locFoodPrice;
 nodeToConnectTo=cafe_party;
-[DialogOption] text=Gossip;
+[DialogOption] text=小道消息;
 newLineOfOptions=true;
 nodeToConnectTo=cafe_gossip;
-[DialogOption] text=Dismiss Crew;
+[DialogOption] text=解雇船员;
 formulaReq=m:partySize-1;
 newLineOfOptions=true;
 nodeToConnectTo=cafe_dismiss;
-[DialogOption] text=<color=SlateGray>Dismiss Crew;
+[DialogOption] text=<color=SlateGray>解雇船员;
 formulaReq=2-m:partySize;
 newLineOfOptions=true;
 nodeToConnectTo=cafe_dismiss_nocrew;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -28,20 +28,20 @@ bottomOption=true;
 
 [DialogNode] ID=cafe_party;
 animations=;
-statements=<speed=1.35><randSetID=How about/Want to buy> <locFoodIcon=><color=SaddleBrown><locFoodName=><color=> for your crew?<n=>Only $<math=m:locFoodPrice><adjX=-6> per crew member.<n=><adjY=10><br_brown=><adjY=12><locFoodIcon=><locFoodDesc=><n=><n=><locFoodEffects=>;
+statements=<speed=1.35><randSetID=不如买个/想买个> <locFoodIcon=><color=SaddleBrown><locFoodName=><color=>给你的船员?<n=>人均只要 $<math=m:locFoodPrice><adjX=-6>.<n=><adjY=10><br_brown=><adjY=12><locFoodIcon=><locFoodDesc=><n=><n=><locFoodEffects=>;
 specialEffect=setDialogWindowSizeY,320;
 specialEffect=setPCDialogWindowSizeY,140;
 
-[DialogOption] text=Yes ($<math=m:locFoodPriceTotal><adjX=-6>);
+[DialogOption] text=买 ($<math=m:locFoodPriceTotal><adjX=-6>);
 formulaReq=m:canBuylocFood + gTimeSinceMoreThanOrNeverAssigned:lastFoodEaten:20 - 1;
 nodeToConnectTo=cafe_party_yes;
-[DialogOption] text=<color=SlateGray>Already ate today.;
+[DialogOption] text=<color=SlateGray>今天已经吃过了.;
 formulaReq=m:canBuylocFood + gTimeSinceLessThanOrEqual:lastFoodEaten:20 - 1;
 nodeToConnectTo=;
-[DialogOption] text=<color=SlateGray>Can't afford it...;
+[DialogOption] text=<color=SlateGray>买不起...;
 formulaReq=m:locFoodPriceTotal - m:money;
 nodeToConnectTo=;
-[DialogOption] text=Nevermind;
+[DialogOption] text=别在意;
 nodeToConnectTo=;
 escOption=true;
 bottomOption=true;
@@ -94,18 +94,18 @@ nextNodeID=cafe;
 
 [DialogNode] ID=cafe_dismiss_nocrew;
 animations=sly;
-statements=It's just you, here.<p=2> There's nobody to dismiss!;
+statements=这儿只有你.<p=2>没人能够解雇!;
 nextNodeID=cafe;
 
 [DialogNode] ID=cafe_dismiss_noroom;
 animations=;
-statements=Sorry, mate.<p=2> It's too crowded around here!<p=3> They'd have no place to stay.;
+statements=对不起，伙计.<p=2>这儿太拥挤了!<p=3>没地方安置了.;
 nextNodeID=;
 
 
 [DialogNode] ID=cafe_dismiss;
 animations=;
-statements=Who would you like to dismiss?;
+statements=你想要解雇谁?;
 [DialogOption] text=<portraitBig=1><partyActorName=1>;
 formulaReq=m:partySize-1 - gIsPartyActorNum:firstmate:1*99 - mainPlayerIsPartyActorNum:1*99;
 nodeToConnectTo=cafe_dismiss_p1;
@@ -134,7 +134,7 @@ nodeToConnectTo=cafe_dismiss_p7;
 [DialogOption] text=<portraitBig=8><partyActorName=8>;
 formulaReq=m:partySize-8 - gIsPartyActorNum:firstmate:8*99 - mainPlayerIsPartyActorNum:8*99;
 nodeToConnectTo=cafe_dismiss_p8;
-[DialogOption] text=Nobody;
+[DialogOption] text=没有谁;
 nodeToConnectTo=cafe;
 escOption=true;
 bottomOption=true;
@@ -143,24 +143,24 @@ bottomOption=true;
 
 [DialogNode] ID=cafe_dismiss_p0;
 animations=;
-statements=Do you want to have <partyActorName=0> stay here? You'll have to pay them again to get them back.;
+statements=你想让<partyActorName=0>留在这儿?下次雇佣你需要再次支付费用.;
 [DialogOption] text=Yes;
 nodeToConnectTo=cafe_dismiss_yes_p0;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 escOption=true;
 bottomOption=true;
 
 [DialogNode] ID=cafe_dismiss_yes_p0;
 animations=;
-statements=All right then. All of their items have been added to your stash.;
+statements=好.他们所有的物品都已经重新放入你的库存里.;
 specialEffect=removeFromParty_slot,0;
 
 --1
 
 [DialogNode] ID=cafe_dismiss_p1;
 animations=;
-statements=Do you want to have <partyActorName=1> stay here? You'll have to pay them again to get them back.;
+statements=你想让<partyActorName=1>留在这儿?下次雇佣你需要再次支付费用.;
 [DialogOption] text=Yes;
 nodeToConnectTo=cafe_dismiss_yes_p1;
 [DialogOption] text=Nevermind;
@@ -170,14 +170,14 @@ bottomOption=true;
 
 [DialogNode] ID=cafe_dismiss_yes_p1;
 animations=;
-statements=All right then. All of their items have been added to your stash.;
+statements=好.他们所有的物品都已经重新放入你的库存里.;
 specialEffect=removeFromParty_slot,1;
 
 --2
 
 [DialogNode] ID=cafe_dismiss_p2;
 animations=;
-statements=Do you want to have <partyActorName=2> stay here? You'll have to pay them again to get them back.;
+statements=你想让<partyActorName=2>留在这儿?下次雇佣你需要再次支付费用.;
 [DialogOption] text=Yes;
 nodeToConnectTo=cafe_dismiss_yes_p2;
 [DialogOption] text=Nevermind;
@@ -187,14 +187,14 @@ bottomOption=true;
 
 [DialogNode] ID=cafe_dismiss_yes_p2;
 animations=;
-statements=All right then. All of their items have been added to your stash.;
+statements=好.他们所有的物品都已经重新放入你的库存里.;
 specialEffect=removeFromParty_slot,2;
 
 --3
 
 [DialogNode] ID=cafe_dismiss_p3;
 animations=;
-statements=Do you want to have <partyActorName=3> stay here? You'll have to pay them again to get them back.;
+statements=你想让<partyActorName=3>留在这儿?下次雇佣你需要再次支付费用.;
 [DialogOption] text=Yes;
 nodeToConnectTo=cafe_dismiss_yes_p3;
 [DialogOption] text=Nevermind;
@@ -204,14 +204,14 @@ bottomOption=true;
 
 [DialogNode] ID=cafe_dismiss_yes_p3;
 animations=;
-statements=All right then. All of their items have been added to your stash.;
+statements=好.他们所有的物品都已经重新放入你的库存里.;
 specialEffect=removeFromParty_slot,3;
 
 --4
 
 [DialogNode] ID=cafe_dismiss_p4;
 animations=;
-statements=Do you want to have <partyActorName=4> stay here? You'll have to pay them again to get them back.;
+statements=你想让<partyActorName=4>留在这儿?下次雇佣你需要再次支付费用.;
 [DialogOption] text=Yes;
 nodeToConnectTo=cafe_dismiss_yes_p4;
 [DialogOption] text=Nevermind;
@@ -221,14 +221,14 @@ bottomOption=true;
 
 [DialogNode] ID=cafe_dismiss_yes_p4;
 animations=;
-statements=All right then. All of their items have been added to your stash.;
+statements=好.他们所有的物品都已经重新放入你的库存里.;
 specialEffect=removeFromParty_slot,4;
 
 --5
 
 [DialogNode] ID=cafe_dismiss_p5;
 animations=;
-statements=Do you want to have <partyActorName=5> stay here? You'll have to pay them again to get them back.;
+statements=你想让<partyActorName=5>留在这儿?下次雇佣你需要再次支付费用.;
 [DialogOption] text=Yes;
 nodeToConnectTo=cafe_dismiss_yes_p5;
 [DialogOption] text=Nevermind;
@@ -238,14 +238,14 @@ bottomOption=true;
 
 [DialogNode] ID=cafe_dismiss_yes_p5;
 animations=;
-statements=All right then. All of their items have been added to your stash.;
+statements=好.他们所有的物品都已经重新放入你的库存里.;
 specialEffect=removeFromParty_slot,5;
 
 --6
 
 [DialogNode] ID=cafe_dismiss_p6;
 animations=;
-statements=Do you want to have <partyActorName=6> stay here? You'll have to pay them again to get them back.;
+statements=你想让<partyActorName=6>留在这儿?下次雇佣你需要再次支付费用.;
 [DialogOption] text=Yes;
 nodeToConnectTo=cafe_dismiss_yes_p6;
 [DialogOption] text=Nevermind;
@@ -255,14 +255,14 @@ bottomOption=true;
 
 [DialogNode] ID=cafe_dismiss_yes_p6;
 animations=;
-statements=All right then. All of their items have been added to your stash.;
+statements=好.他们所有的物品都已经重新放入你的库存里.;
 specialEffect=removeFromParty_slot,6;
 
 --7
 
 [DialogNode] ID=cafe_dismiss_p7;
 animations=;
-statements=Do you want to have <partyActorName=7> stay here? You'll have to pay them again to get them back.;
+statements=你想让<partyActorName=7>留在这儿?下次雇佣你需要再次支付费用.;
 [DialogOption] text=Yes;
 nodeToConnectTo=cafe_dismiss_yes_p7;
 [DialogOption] text=Nevermind;
@@ -272,14 +272,14 @@ bottomOption=true;
 
 [DialogNode] ID=cafe_dismiss_yes_p7;
 animations=;
-statements=All right then. All of their items have been added to your stash.;
+statements=好.他们所有的物品都已经重新放入你的库存里.;
 specialEffect=removeFromParty_slot,7;
 
 --8
 
 [DialogNode] ID=cafe_dismiss_p8;
 animations=;
-statements=Do you want to have <partyActorName=8> stay here? You'll have to pay them again to get them back.;
+statements=你想让<partyActorName=8>留在这儿?下次雇佣你需要再次支付费用.;
 [DialogOption] text=Yes;
 nodeToConnectTo=cafe_dismiss_yes_p8;
 [DialogOption] text=Nevermind;
@@ -289,7 +289,7 @@ bottomOption=true;
 
 [DialogNode] ID=cafe_dismiss_yes_p8;
 animations=;
-statements=All right then. All of their items have been added to your stash.;
+statements=好.他们所有的物品都已经重新放入你的库存里.;
 specialEffect=removeFromParty_slot,8;
 
 

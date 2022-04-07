@@ -11,26 +11,26 @@
 
 [DialogNode] ID=shipwright;
 animations=;
-statements=<randSetID=Need something?/What d'ya need?/Ay mate.>;
-[DialogOption] text=Repairs (<math=m:fleetRepairsNeeded>damage);
+statements=<randSetID=需要什么吗?/你要什么?/嗨,伙计.>;
+[DialogOption] text=修理 (<math=m:fleetRepairsNeeded>damage);
 formulaReq=m:fleetRepairsCost;
 nodeToConnectTo=shipwright_repair;
-[DialogOption] text=<color=SlateGray>Repairs;
+[DialogOption] text=<color=SlateGray>修理;
 formulaReq=1-m:fleetRepairsCost;
 nodeToConnectTo=shipwright_repair_cant;
-[DialogOption] text=New Ship;
+[DialogOption] text=买船;
 newLineOfOptions=true;
 formulaReq=1-m:fleetSize(8);
 nodeToConnectTo=shipwright_newShip;
 specialEffect=setupBuyShipDialog,shipwright_newShip;
-[DialogOption] text=<color=SlateGray>New Ship;
+[DialogOption] text=<color=SlateGray>买船;
 newLineOfOptions=true;
 formulaReq=m:fleetSize(8);
 nodeToConnectTo=shipwright_newShip_fleetFull;
-[DialogOption] text=Sell Ship;
+[DialogOption] text=卖船;
 newLineOfOptions=true;
 nodeToConnectTo=shipwright_sellShip;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -38,23 +38,23 @@ bottomOption=true;
 [DialogNode] ID=shipwright_repair;
 animations=;
 statements=Looks like about <color=DarkRed>$<math=m:fleetRepairsCostBase><adjX=-6><color=> worth of damage. <finalTextIf=How about it?=m:fleetRepairsCost - m:fleetRepairsCostBase + 1>But for <pnamefull=>...<p> <randSetID=I can do/I'll fix it for/repairs'll run/I'll do it for> <color=DarkRed>$<math=m:fleetRepairsCost><adjX=-6><color=>. <randSetID=Sound good?/Agreed?/What d'ya think?/Alright?>;
-[DialogOption] text=Yes;
+[DialogOption] text=好;
 formulaReq=m:money - m:fleetRepairsCost + 1;
 nodeToConnectTo=shipwright_repair_buy;
-[DialogOption] text=<color=SlateGray>I can't afford that...;
+[DialogOption] text=<color=SlateGray>我买不起...;
 formulaReq=m:fleetRepairsCost - m:money;
 nodeToConnectTo=shipwright;
-[DialogOption] text=No;
+[DialogOption] text=不;
 formulaReq=m:money - m:fleetRepairsCost + 1;
 nodeToConnectTo=shipwright;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
 
 [DialogNode] ID=shipwright_repair_buy;
 animations=;
-statements=There you go, all fixed up.;
+statements=好了，都修好了.;
 specialEffect=repairFleet_pay;
 specialEffect=fx,sfx_goodConfirm_fast;
 nextNodeID=shipwright;
@@ -62,14 +62,14 @@ nextNodeID=shipwright;
 
 [DialogNode] ID=shipwright_repair_cant;
 animations=sly;
-statements=There's nothin' to fix - your fleet is already shipshape!;
+statements=没什么要修的 - 你的船队已经是整洁的!;
 nextNodeID=shipwright;
 
 --------------------NEWSHIP
 
 [DialogNode] ID=shipwright_newShip;
 animations=;
-statements=We've got these types of ships on offer.<color=DarkRed><n><textIf=Click for more details.=1 - g:shipsBought>;
+statements=我们有以下几艘船可选.<color=DarkRed><n><textIf=点击查看详情.=1 - g:shipsBought>;
 specialEffect=setNPCDialogWindowSizeY;
 specialEffect=setPCDialogWindowSizeY;
 [DialogOption] text=;
@@ -78,23 +78,23 @@ nodeToConnectTo=;
 
 [DialogNode] ID=shipwright_newShip_fleetFull;
 animations=sigh;
-statements=You've already got a full fleet, mate.<p=> You'll have to store or sell one first.;
+statements=你的船队已经满了, 伙计.<p=> 你得先存或者卖一个.;
 nextNodeID=shipwright;
 
 [DialogNode] ID=shipwright_sellShip;
 animations=sigh;
 animations=;
-statements=To sell a ship, transfer all of your crew off of it. Then a <iconBig=fleetW_sellBtn_hover> sell button will appear on the right.;
-statements=Remember, y'can only sell while you're in port!;
+statements=要卖一艘船, 首先需要把船员转移出去. 然后 <iconBig=fleetW_sellBtn_hover> 出售按钮会出现在右边.;
+statements=要记得你只能在港口内出售!;
 nextNodeID=openFleetWindow;
 
 [DialogNode] ID=shipwright_renameShip;
 animations=;
-statements=Great! What'll you name her?;
+statements=太棒了! 你想取什么名字?;
 specialEffect=setNPCDialogWindowSizeY,90;
 specialEffect=setPCDialogWindowSizeY,90;
 specialEffect=renameShip;
-[DialogOption] text=Done;
+[DialogOption] text=完成;
 nodeToConnectTo=shipwright_buyShip_done;
 
 [DialogNode] ID=shipwright_buyShip_done;
