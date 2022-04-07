@@ -1,13 +1,13 @@
 
 [Action] ID=Sa_heal; 
-	name=Heal;
+	name=愈合;
 	icon=icon_Sa_heal;
 	
 	mpCost=7 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=7 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
 	
-	tooltip=Fill a small area with life magic to heal <math=5 + c:MagAtk + c:skill_Life><adjX=-4><icon=HP>.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=使 一小块区域充满生命能量，恢复<math=5 + c:MagAtk + c:skill_Life><adjX=-4><icon=HP>.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
 	harmful=false;
 	
@@ -60,14 +60,14 @@
 	
 
 [Action] ID=Sa_revive; 
-	name=Revive;
+	name=复活;
 	icon=icon_Sa_revive;
 	
 	mpCost=8 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=10 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
 	
-	tooltip=Revive a fallen ally and restore <math=c:MagAtk + c:skill_Life + c:rank * 5 - 2><adjX=-4><icon=HP>.;
-	rankUpTooltip=Each rank restores an additional 5 HP<icon=HP>.;
+	tooltip=复活一名倒下的队友且恢复<math=c:MagAtk + c:skill_Life + c:rank * 5 - 2><adjX=-4><icon=HP>.;
+	rankUpTooltip=每级+5HP<icon=HP>恢复.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
 	harmful=false;
 	
@@ -120,14 +120,14 @@
 	
 
 [Action] ID=Sa_growth; 
-	name=Growth;
+	name=生长;
 	icon=icon_Sa_growth;
 --icon_pB=pOrange;
 --icon_pG=pGreen;
 	mpCost=6 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=7 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
-	tooltip=Cause regeneration for <icon=time><math=40+d:lifeDurMax(2)+20 * c:rank> in a small area, and encourage plant growth.;
-	rankUpTooltip=Each rank increases duration by <icon=time>20.;
+	tooltip=小范围内施加'生命恢复'持续<icon=time><math=40+d:lifeDurMax(2)+20 * c:rank>,还能够促进植物生长.;
+	rankUpTooltip=每级+<icon=time>20持续时间.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
 	harmful=false;
 	
@@ -179,11 +179,11 @@
 	
 
 [Action] ID=Sa_cure; 
-	name=Cure;
+	name=治疗;
 	icon=icon_Sa_cure;
 	mpCost=4 * d:mpCostMult + d:mpCostMod;
-	tooltip=Remove negative status effects in a small area.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=移除区域内的负面效果.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=;
 	harmful=false;
 	
@@ -236,12 +236,12 @@
 
 	
 [Action] ID=Sa_dispel; 
-	name=Dispel;
+	name=驱散;
 	icon=icon_Sa_dispel;
 	mpCost=3 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=7 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
-	tooltip=Remove all status effects (positive or negative) and cancel magic in a small area.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=移除范围所有状态效果(正面或负面)，并消除魔法.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=;
 	
 	XPCost=150;

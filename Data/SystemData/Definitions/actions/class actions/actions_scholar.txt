@@ -1,7 +1,7 @@
 [Action] ID=Sch_study; 
-	name=Study;
+	name=调查;
 	icon=icon_Sch_question;
-	tooltip=Reveal a creature's current elemental resistances & weaknesses.;
+	tooltip=揭示生物当前的元素抗性和弱点.;
 	rankUpTooltip=;
 	tooltipTopRight=;
 	
@@ -126,16 +126,16 @@
 	canSelectEnemies=false;
 	
 [Action] ID=Sch_prayer; 
-	name=Prayer;
+	name=祷告;
 	icon=icon_Sch_prayer;
-	tooltip=Recover <math=5 + c:MagAtk * 0.25
+	tooltip=在周围的小范围内为自己和队友恢复 <math=5 + c:MagAtk * 0.25
 	+ c:skill_Fire * 0.25
 	+ c:skill_Ice * 0.25
 	+ c:skill_Elec * 0.25
 	+ c:skill_Wind * 0.25
 	+ c:skill_Ruin * 0.25
-	+ c:skill_Life * 0.25><adjX=-4><icon=MP> for yourself and allies in a small area around you.;
-	rankUpTooltip=Each rank increases area of effect.;
+	+ c:skill_Life * 0.25><adjX=-4><icon=MP>.;
+	rankUpTooltip=每级增加影响范围和效果.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small><icon=skill_Ice_small><icon=skill_Elec_small><icon=skill_Wind_small><icon=skill_Life_small><icon=skill_Ruin_small>;
 	
 	special=usableEvenUnderZoneActRestrictions;
@@ -189,10 +189,10 @@
 	ignoreCannotTarget=true;
 	
 [Action] ID=Sch_gust; 
-	name=Gust;
+	name=狂风;
 	icon=icon_Sch_gust;
-	tooltip=Channel the wind to push and deal <thinnerIcon=skill_Wind><math=d:windDmg20LessScaleDisplay(3)> damage in a cone.;
-	rankUpTooltip=Each rank increases area of effect.;
+	tooltip=引导风在范围内造成<thinnerIcon=skill_Wind><math=d:windDmg20LessScaleDisplay(3)>点伤害并推开.;
+	rankUpTooltip=每级增加范围和效果.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Wind_small>;
 	
 	XPCost=150;
@@ -269,10 +269,10 @@
 	occupyAll=true;
 	
 [Action] ID=Sch_zap; 
-	name=Bolt;
+	name=电束;
 	icon=icon_Sch_zap;
-	tooltip=Shoot a lightning bolt in a straight line, dealing <thinnerIcon=skill_Elec><math=d:elecDmg20LessScaleDisplay(5)> damage.;
-	rankUpTooltip=Each rank adds +1 max range.;
+	tooltip=以直线射出闪电束造成<thinnerIcon=skill_Elec><math=d:elecDmg20LessScaleDisplay(5)>伤害.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Elec_small>;
 	
 	XPCost=150;
@@ -319,10 +319,10 @@
 	maxRangeAddDistanceFromCaster=true;
 	
 [Action] ID=Sch_flame; 
-	name=Flame;
+	name=火球;
 	icon=icon_Sch_flame;
-	tooltip=Hurl a ball of fire at the target that deals <thinnerIcon=skill_Fire><math=d:fireDmg20LessScaleDisplay(5)> damage.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=向目标投掷火球,造成<thinnerIcon=skill_Fire><math=d:fireDmg20LessScaleDisplay(5)>伤害.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small>;
 	
 	XPCost=125;
@@ -367,10 +367,10 @@
 	cloneFrom=oneTile;
 	
 [Action] ID=Sch_frost; 
-	name=Frost;
+	name=冰霜;
 	icon=icon_Sch_frost;
-	tooltip=Deal <thinnerIcon=skill_Ice><math=d:iceDmg20LessScaleDisplay(7)> damage in a small area.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=在小范围内造成群体<thinnerIcon=skill_Ice><math=d:iceDmg20LessScaleDisplay(7)>伤害.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ice_small>;
 	
 	XPCost=150;

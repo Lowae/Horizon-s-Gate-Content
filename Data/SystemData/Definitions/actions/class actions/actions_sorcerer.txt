@@ -1,11 +1,11 @@
 
 [Action] ID=So_inferno; 
-	name=Inferno;
+	name=地狱火;
 	icon=icon_So_inferno;
 	mpCost=7 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=15 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
-	tooltip=Unleash devastating fire in a small area, dealing <thinnerIcon=skill_Fire><math=d:fireDmg20ScaleDisplay(9) + c:rank> damage.;
-	rankUpTooltip=Each rank adds +1 damage.;
+	tooltip=在范围内释放出毁灭性的火焰,造成<thinnerIcon=skill_Fire><math=d:fireDmg20ScaleDisplay(9) + c:rank>伤害.;
+	rankUpTooltip=每级+1伤害.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small>;
 	
 	XPCost=150;
@@ -53,12 +53,12 @@
 
 
 [Action] ID=So_lightning; 
-	name=Lightning;
+	name=雷电术;
 	icon=icon_So_lightning;
 	mpCost=7 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=13 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
-	tooltip=Strike an area with a bolt of lightning, dealing <thinnerIcon=skill_Elec><math=d:elecDmg20ScaleDisplay(8)> damage.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=用闪电击中一个区域,造成<thinnerIcon=skill_Elec><math=d:elecDmg20ScaleDisplay(8)>伤害.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Elec_small>;
 	
 	XPCost=150;
@@ -110,12 +110,12 @@
 	
 
 [Action] ID=So_blizzard; 
-	name=Blizzard;
+	name=暴风雪;
 	icon=icon_So_blizzard;
 	mpCost=9 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=16 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
-	tooltip=Conjure an icy storm that blasts <math=c:rank+1> contiguous areas for <thinnerIcon=skill_Ice><math=d:iceDmgDisplay(9)> damage.;
-	rankUpTooltip=Each rank increases area of effect.;
+	tooltip=召唤暴风雪,对<math=c:rank+1>个相邻区域造成<thinnerIcon=skill_Ice><math=d:iceDmgDisplay(9)>伤害.;
+	rankUpTooltip=每级+1影响区域.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ice_small>;
 	
 	numTargets=c:rank+1;
@@ -166,12 +166,12 @@
 	
 
 [Action] ID=So_cyclone; 
-	name=Cyclone;
+	name=旋风术;
 	icon=icon_So_cyclone;
 	mpCost=11 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=15 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
-	tooltip=Create a vortex of wind that pushes enemies away from its center by <math=c:rank> tile(s) and deals <thinnerIcon=skill_Wind><math=d:windDmgDisplay(9)> damage.;
-	rankUpTooltip=Each rank increases distance pushed by 1.;
+	tooltip=制造风漩涡,将敌人从中心推开<math=c:rank>格且造成<thinnerIcon=skill_Wind><math=d:windDmgDisplay(9)>伤害.;
+	rankUpTooltip=每级+1推开距离.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Wind_small>;
 	
 	XPCost=220;
@@ -234,11 +234,11 @@
 	
 	
 [Action] ID=So_shockBolts; 
-	name=Shock Bolts;
+	name=闪电球;
 	icon=icon_So_shockBolts;
 	mpCost=5 * d:mpCostMult + d:mpCostMod;
-	tooltip=Shoot <math=c:rank> orb(s) of electricity at your targets, dealing <thinnerIcon=skill_Elec><math=d:elecDmg20LessScaleDisplay(3)> damage.;
-	rankUpTooltip=Each rank increases number of targets by 1.;
+	tooltip=向<math=c:rank>个目标发射电球, 造成<thinnerIcon=skill_Elec><math=d:elecDmg20LessScaleDisplay(3)>伤害.;
+	rankUpTooltip=每级+1目标.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Elec_small>;
 	
 	XPCost=80;

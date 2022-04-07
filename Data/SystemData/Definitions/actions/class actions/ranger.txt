@@ -1,8 +1,8 @@
 
 [SupportAbility] ID=instantAid;
-name=Instant Aid;
+name=即时援助;
 icon=iconP_Ran_instantAid;
-tooltip=Your first non-harmful single-<n>target ability each combat does not consume an action, but Max MP is reduced by 8<adjX=-1><icon=MP><adjX=-2>.;
+tooltip=每次战斗你的第一个非伤害性单体技能不消耗行动机会，但最大MP减少8<adjX=-1><icon=MP><adjX=-2>.;
 XPCostUnlock=750;
 canBeGivenToAI=false;
 --Instant Aid applies to:
@@ -52,9 +52,9 @@ ID=status_instantAid; element=combatEnd; newID=X;
 --
 
 [SupportAbility] ID=overgrowth;
-name=Overgrowth;
+name=过度生长;
 icon=iconP_Ran_overgrowth;
-tooltip=Gain Regen for <icon=time>50 when you get healed to full HP.;
+tooltip=当你被治疗到满血时获得持续<icon=time>50 的'生命回复'.;
 XPCostUnlock=300;
 [SupportAbilityReaction]
 ID=overgrowth; actorValues=HP; action=overgrowth_act;
@@ -83,18 +83,18 @@ ID=overgrowth; actorValues=HP; action=overgrowth_act;
 	
 	
 [SupportAbility] ID=teamPlayer;
-name=Team Player;
+name=团队精神;
 icon=iconP_Ran_teamPlayer;
-tooltip=Weapon attacks deal 95% less damage to allies.;
+tooltip=武器攻击对队友的伤害降低95%.;
 XPCostUnlock=150;
 
 --------
 
 [Action] ID=Ran_doubleTap; 
-	name=Double Tap;
+	name=双击;
 	icon=icon_Ran_doubleTap;
-	tooltip=Attack twice for <math=15 + 5 * c:rank>% damage. Both attacks apply secondary effects.;
-	rankUpTooltip=Each rank adds +5% damage (to enemies only).;
+	tooltip=攻击2次造成<math=15 + 5 * c:rank>%伤害. Both attacks apply secondary effects.;
+	rankUpTooltip=每级+5%伤害.;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	mpCost=4 * d:mpCostMult + d:mpCostMod;
 	applyWeaponBuffs=true;
@@ -136,10 +136,10 @@ XPCostUnlock=150;
 	 shape=11;
 
 [Action] ID=Ran_doubleTap2; 
-	name=Double Tap;
+	name=双击;
 	icon=icon_Ran_doubleTap;
-	tooltip=Attack twice for <math=15 + 5 * c:rank>% damage. Both attacks apply secondary effects.;
-	rankUpTooltip=Each rank adds +5% damage (to enemies only).;
+	tooltip=攻击2次造成<math=15 + 5 * c:rank>%伤害. Both attacks apply secondary effects.;
+	rankUpTooltip=每级+5%伤害.;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	applyWeaponBuffs=true;
 	
@@ -175,12 +175,12 @@ XPCostUnlock=150;
 	 	 
 
 [Action] ID=Ran_applySalve; 
-	name=Apply Salve;
+	name=附魔治疗;
 	icon=icon_Ran_applySalve;
 	mpCost=3 * d:mpCostMult + d:mpCostMod;
 	harmful=false;
-	tooltip=Apply a healing salve to an ally's weapons for <icon=time>40, making weapon attacks heal <math=10 + c:rank + c:MagAtk + c:skill_Life><adjX=-4><icon=HP><adjX=-2> and cure negative status effects.;
-	rankUpTooltip=Each rank increases healing by +1<icon=HP>.;
+	tooltip=为队友的武器附魔'药膏',持续<icon=time>40, 武器每次攻击为对方恢复 <math=10 + c:rank + c:MagAtk + c:skill_Life><adjX=-4><icon=HP><adjX=-2>并治疗负面效果.;
+	rankUpTooltip=每级+1<icon=HP>恢复.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
 	attractAttention=false;
 	
@@ -224,12 +224,12 @@ XPCostUnlock=150;
 	
 
 [Action] ID=Ran_applyToxin; 
-	name=Apply Toxin;
+	name=附魔毒素;
 	icon=icon_Ran_applyToxin;
 	mpCost=3 * d:mpCostMult + d:mpCostMod;
 	harmful=false;
-	tooltip=Apply a vile toxin to an ally's weapons for <icon=time>40, making weapon attacks inflict poison and a random status effect<n>(<icon_low=itchyStatus><icon_low=silenceStatus><icon_low=blindStatus><icon_low=oilStatus><icon_low=immobStatus><icon_low=disableStatus><icon_low=sleepStatus><adjX=-2>) for <icon=time><math=15 + 15*c:rank + c:MagAtk*1.5 + c:skill_Life*1.5>.;
-	rankUpTooltip=Each rank increases inflicted status duration by <icon=time>15.;
+	tooltip=为队友的武器附魔'毒素'持续<icon=time>40, 武器攻击造成'中毒'和以下随机负面状态<n>(<icon_low=itchyStatus><icon_low=silenceStatus><icon_low=blindStatus><icon_low=oilStatus><icon_low=immobStatus><icon_low=disableStatus><icon_low=sleepStatus><adjX=-2>)持续<icon=time><math=15 + 15*c:rank + c:MagAtk*1.5 + c:skill_Life*1.5>.;
+	rankUpTooltip=每级+<icon=time>15负面状态持续时间.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
 	attractAttention=false;
 	
@@ -273,12 +273,12 @@ XPCostUnlock=150;
 	
 
 [Action] ID=Ran_applyBarbs; 
-	name=Apply Barbs;
+	name=附魔讽刺;
 	icon=icon_Ran_applyBarbs;
 	mpCost=3 * d:mpCostMult + d:mpCostMod;
 	harmful=false;
-	tooltip=Apply vicious barbs to an ally's weapons for <icon=time>40, causing weapon attacks to deal 6<icon=HP> more damage and demoralize<n>for <icon=time><math=25 + 20*c:rank + c:MagAtk*1.5 + c:skill_Life*1.5>.;
-	rankUpTooltip=Each rank increases demoralize duration by <icon=time>20.;
+	tooltip=为队友的武器附魔恶毒的'讽刺',持续<icon=time>40, 武器攻击额外造成 6<icon=HP>以上伤害且施加'泄气'负面状态,<n>持续<icon=time><math=25 + 20*c:rank + c:MagAtk*1.5 + c:skill_Life*1.5>.;
+	rankUpTooltip=每级+<icon=time>20持续时间.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
 	attractAttention=false;
 	
@@ -322,11 +322,11 @@ XPCostUnlock=150;
 	
 
 [Action] ID=Ran_smokeBalm; 
-	name=Smoke Balm;
+	name=治疗烟雾;
 	icon=icon_Ran_smokeBalm;
 	mpCost=6 * d:mpCostMult + d:mpCostMod;
-	tooltip=Fill a square area with healing smoke that lasts for <icon=time>80, grants +25%<adjX=2><icon=PhysEva>, and heals<n><math=2 + c:MagAtk * 0.4 + c:skill_Life * 0.4><adjX=-4><icon=HP><adjX=-2> when first thrown and when ending your turn in it.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=使一个正方形区域充满'治疗烟雾',持续<icon=time>80, 烟雾内获得+25%<adjX=2><icon=PhysEva>物理闪避, 且在首次施放和你回合结束时恢复<n><math=2 + c:MagAtk * 0.4 + c:skill_Life * 0.4><adjX=-4><icon=HP><adjX=-2>.;
+	rankUpTooltip=每级+1范围.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
 	
 	AIRatingBias = -999;
