@@ -1,0 +1,659 @@
+[Zone]  ID=zSwamp1a; dark=True; timeUntilNewDay=24; showFogOfWar=True; fogOfWar=True; minimapEnabled=True; allowCameraPastZoneEdges=False; cantAct=False; cantGameOver=False; alwaysKeepWeaponsUnsheathed=False; peaceful=False; overseerMode=False; rollingPinStyle=False; drawSky=False; drawSky_overrideYpos=-1; boatZone=False; wind=False; overworld=False; canDropItems=True; 
+ travelSong=ES-Underclocked; travelSongVolume=1; travelSongPitch=0; song2=; song2Volume=1; song2Pitch=0; combatSong=PM-DeepWoods2; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=102; darkG=102; darkB=153; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=ocean; bgFX_sineWave=12; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=pDirt; zoneGrassPalette=overworld3; zoneGrassDarkPalette=pGreen2; zoneStonePalette=pGreyD; zoneStoneDarkPalette=pGreyD2; zoneStoneLightPalette=pGreyD; zoneWaterPalette=p42; zoneDirtDarkPalette=pYellow6; zoneWoodPalette=pWood; zoneWoodDarkPalette=pWoodDark; zoneMisc1Palette=p9; zoneMisc2Palette=p23; zoneMisc3Palette=pRed; zoneMisc4Palette=pBlue; zoneMisc5Palette=pGreen; zoneMisc6Palette=pOrange; zoneMisc7Palette=pYellow; zoneMisc8Palette=pPurple; 
+
+combatMode=False; zoneFX=amb_crickets;zoneFXTime=38;zoneFX_x=-1;zoneFX_y=-1;
+
+[Item] ID=rubble_water; q=1; x=4; y=5;
+[Item] ID=rubble_water; q=1; x=4; y=8;
+[Item] ID=rubble_water; q=1; x=4; y=17;
+[Item] ID=rubble_water; q=1; x=4; y=27;
+[Item] ID=rubble_water; q=1; x=4; y=29;
+[Item] ID=grass_alt1; q=1; x=4; y=38;
+[Item] ID=rubble_water; q=1; x=4; y=41;
+[Item] ID=rubble_water; q=1; x=4; y=46;
+[Item] ID=grass_alt1; q=4; x=4; y=53;
+[Item] ID=grass_alt1; q=1; x=4; y=54;
+[Item] ID=rubble_water; q=1; x=5; y=9;
+[Item] ID=rubble_water; q=1; x=5; y=31;
+[Item] ID=grass_alt1; q=4; x=5; y=37;
+[Item] ID=cargo_carapace; q=1; bu=True; x=5; y=48;
+[Item] ID=plant_small3; q=1; x=5; y=52;
+[Item] ID=plant_small2; q=1; x=5; y=56;
+[Item] ID=shoreEdge1_grass; q=1; r=-360; x=5; y=58;
+[Item] ID=rubble; q=1; x=6; y=5;
+[Item] ID=rubble_water; q=1; x=6; y=9;
+[Item] ID=plant_reed2; q=1; x=6; y=33;
+[Item] ID=grass_alt1; q=4; x=6; y=57;
+[Item] ID=shoreEdge1_grass; q=1; r=-360; x=6; y=59;
+[Item] ID=rubble; q=1; x=7; y=5;
+[Item] ID=cargo_carapace; q=1; x=7; y=5;
+[Item] ID=rubble; q=1; x=7; y=6;
+[Item] ID=rubble_water; q=1; x=7; y=10;
+[Item] ID=ribs2; q=1; bu=True; x=7; y=25;
+[Item] ID=plant_reed1; q=1; x=7; y=33;
+[Item] ID=plant_reed2; q=1; r=-360; x=7; y=35;
+[Item] ID=plant_small3; q=1; x=7; y=45;
+[Item] ID=grass_alt1; q=1; x=7; y=46;
+[Item] ID=tree_med; q=1; x=7; y=53;
+[Item] ID=rocks1; q=1; r=-360; x=7; y=54;
+[Item] ID=shoreEdge1; q=1; r=-360; x=7; y=60;
+[Item] ID=rubble; q=1; x=8; y=4;
+[Item] ID=rubble; q=1; x=8; y=7;
+[Item] ID=rubble_water; q=1; x=8; y=20;
+[Item] ID=tree_med; q=1; x=8; y=26;
+[Item] ID=grass_alt1; q=4; x=8; y=44;
+[Item] ID=pebbles1; q=1; r=180; x=8; y=55;
+[Item] ID=cargo_carapace; q=1; x=8; y=55;
+[Item] ID=rubble; q=1; x=9; y=5;
+[Item] ID=rubble_water; q=1; x=9; y=9;
+[Item] ID=rubble_water; q=1; x=9; y=12;
+[Item] ID=rocks1; q=1; r=-360; x=9; y=31;
+[Item] ID=pebbles1; q=1; x=9; y=40;
+[Item] ID=debris; q=1; x=9; y=58;
+[Item] ID=bones1; q=1; bu=True; x=9; y=58;
+[Item] ID=shoreEdge1; q=1; r=-360; x=9; y=61;
+[Item] ID=rubble; q=1; x=10; y=4;
+[Item] ID=ghost_grub; q=1; x=10; y=4;
+[Item] ID=pebbles1; q=1; x=10; y=5;
+[Item] ID=rubble_water; q=1; x=10; y=9;
+[Item] ID=debris_small1; q=1; r=90; x=10; y=28;
+[Item] ID=rubble_water; q=1; x=10; y=36;
+[Item] ID=debris_small3; q=1; x=10; y=46;
+[Item] ID=rubble; q=1; x=10; y=59;
+[Item] ID=debris_small3; q=1; x=11; y=5;
+[Item] ID=rubble_water; q=1; x=11; y=9;
+[Item] ID=rubble_water; q=1; x=11; y=19;
+[Item] ID=pebbles1; q=1; x=11; y=25;
+[Item] ID=ore_iron; q=1; x=11; y=28;
+[Item] ID=tree_small; q=1; x=11; y=46;
+[Item] ID=grass_alt1; q=1; x=11; y=54;
+[Item] ID=rubble; q=1; x=12; y=4;
+[Item] ID=rubble_water; q=1; x=12; y=8;
+[Item] ID=plant_small3; q=1; x=12; y=22;
+[Item] ID=ore_iron; q=1; x=12; y=24;
+[Item] ID=shoreEdge1; q=1; r=-360; x=12; y=62;
+[Item] ID=rubble; q=1; x=13; y=5;
+[Item] ID=rubble_water; q=1; x=13; y=7;
+[Item] ID=rubble_water; q=1; x=13; y=9;
+[Item] ID=ore_iron; q=1; x=13; y=23;
+[Item] ID=grass_alt1; q=1; x=13; y=30;
+[Item] ID=stash_dirt_loot3; q=1; x=13; y=31;
+[Item] ID=tree_stump; q=1; x=13; y=60;
+[Item] ID=rubble_water; q=1; x=14; y=8;
+[Item] ID=ore_iron; q=1; x=14; y=25;
+[Item] ID=grass_alt1; q=4; x=14; y=49;
+[Item] ID=plant_small1; q=1; x=14; y=50;
+[Item] ID=debris; q=1; x=14; y=59;
+[Item] ID=cargo_carapace; q=1; bu=True; x=14; y=59;
+[Item] ID=rubble_water; q=1; x=15; y=7;
+[Item] ID=pebbles2; q=1; x=15; y=23;
+[Item] ID=grass_alt1; q=4; x=15; y=31;
+[Item] ID=tree_small; q=1; r=-360; x=15; y=34;
+[Item] ID=cargo_carapace; q=1; bu=True; x=15; y=38;
+[Item] ID=grass_alt1; q=4; x=15; y=51;
+[Item] ID=rubble; q=1; x=15; y=61;
+[Item] ID=rubble_water; q=1; x=16; y=5;
+[Item] ID=rubble_water; q=1; x=16; y=6;
+[Item] ID=debris_small3; q=1; x=16; y=28;
+[Item] ID=debris_small3; q=1; r=-360; x=16; y=58;
+[Item] ID=rubble_water; q=1; x=17; y=4;
+[Item] ID=rubble_water; q=1; x=17; y=8;
+[Item] ID=rocks1; q=6; x=17; y=22;
+[Item] ID=grass_alt1; q=4; x=17; y=29;
+[Item] ID=plant_reed2; q=1; x=17; y=46;
+[Item] ID=rubble_water; q=1; x=18; y=19;
+[Item] ID=grass_alt1; q=1; x=18; y=29;
+[Item] ID=pebbles2; q=1; r=-360; x=18; y=37;
+[Item] ID=rocks1; q=1; r=360; x=18; y=49;
+[Item] ID=rubble_water; q=1; x=18; y=56;
+[Item] ID=plant_reed2; q=1; x=19; y=27;
+[Item] ID=rubble_water; q=1; x=20; y=6;
+[Item] ID=tree_med; q=1; x=20; y=38;
+[Item] ID=rutroot2; q=1; r=180; x=20; y=47;
+[Item] ID=waterfall_dirtEdge; q=1; x=20; y=62;
+[Item] ID=waterfall1; q=1; x=20; y=63;
+[Item] ID=rubble_water; q=1; x=21; y=5;
+[Item] ID=debris_small3; q=1; x=21; y=40;
+[Item] ID=rubble_water; q=1; x=21; y=43;
+[Item] ID=rutroot1; q=1; r=360; x=21; y=47;
+[Item] ID=debris_small3; q=1; r=360; x=22; y=23;
+[Item] ID=rutroot1; q=1; r=360; x=22; y=47;
+[Item] ID=skull2; q=1; x=23; y=17;
+[Item] ID=satchel; q=1; x=23; y=17; containerID=0;
+[Item] ID=bandage; q=1; containedIn=0; cSlot=0;
+[Item] ID=comb; q=1; containedIn=0; cSlot=1;
+[Item] ID=gp; q=29; containedIn=0; cSlot=2;
+[Item] ID=gp; q=3; containedIn=0; cSlot=3;
+[Item] ID=ropePile; q=1; containedIn=0; cSlot=4;
+[Item] ID=bones1; q=1; x=23; y=17;
+[Item] ID=machete; q=1; x=23; y=18; containerID=1;
+[Item] ID=grass_alt1; q=4; x=23; y=26;
+[Item] ID=tree_big; q=1; x=23; y=40;
+[Item] ID=rutroot1; q=1; r=180; x=23; y=47;
+[Item] ID=plant_reed2; q=1; x=23; y=54;
+[Item] ID=shoreEdge1; q=1; r=-360; x=23; y=63;
+[Item] ID=grass_alt1; q=1; x=24; y=35;
+[Item] ID=tree_small; q=1; x=24; y=43;
+[Item] ID=rutroot2; q=1; r=270; x=24; y=44;
+[Item] ID=rutroot1; q=1; r=90; x=24; y=45;
+[Item] ID=rutroot1; q=1; r=90; x=24; y=46;
+[Item] ID=tree_rutroot; q=1; x=24; y=47;
+[Item] ID=rutroot1; q=1; r=90; x=24; y=48;
+[Item] ID=rutroot1; q=1; r=90; x=24; y=49;
+[Item] ID=rutroot2; q=1; r=90; x=24; y=50;
+[Item] ID=plant_reed1; q=1; r=-360; x=24; y=53;
+[Item] ID=grass_alt1; q=4; r=-360; x=24; y=57;
+[Item] ID=cargo_carapace; q=1; bu=True; x=24; y=57;
+[Item] ID=tree_med; q=1; r=360; x=24; y=61;
+[Item] ID=grass_alt1; q=4; x=25; y=31;
+[Item] ID=rutroot1; q=1; r=180; x=25; y=47;
+[Item] ID=plant_reed2; q=1; x=25; y=51;
+[Item] ID=plant_reed2; q=1; r=360; x=26; y=19;
+[Item] ID=grass_alt1; q=4; x=26; y=23;
+[Item] ID=plant_small3; q=1; r=-360; x=26; y=34;
+[Item] ID=rutroot2; q=1; r=360; x=26; y=47;
+[Item] ID=plant_reed1; q=1; x=26; y=51;
+[Item] ID=shoreEdge1; q=1; r=360; x=26; y=63;
+[Item] ID=grass_alt1; q=1; x=27; y=16;
+[Item] ID=plant_reed2; q=1; r=-360; x=27; y=30;
+[Item] ID=pebbles1; q=1; r=180; x=27; y=45;
+[Item] ID=plant_reed2; q=1; x=27; y=53;
+[Item] ID=grass_alt1; q=1; x=27; y=57;
+[Item] ID=rubble; q=1; x=27; y=60;
+[Item] ID=shoreEdge1; q=1; r=-360; x=27; y=63;
+[Item] ID=rubble_water; q=1; x=28; y=6;
+[Item] ID=plant_reed1; q=1; x=28; y=31;
+[Item] ID=grass_alt1; q=1; x=28; y=40;
+[Item] ID=tree_med; q=1; x=28; y=44;
+[Item] ID=plant_small2; q=1; x=28; y=56;
+[Item] ID=rubble; q=1; x=28; y=61;
+[Item] ID=rutroot2; q=1; r=180; x=29; y=17;
+[Item] ID=pod_small1; q=1; r=-360; x=29; y=18;
+[Item] ID=rubble_water; q=1; x=29; y=27;
+[Item] ID=plant_reed2; q=1; x=29; y=34;
+[Item] ID=rocks1; q=6; x=29; y=48;
+[Item] ID=grass_alt1; q=4; r=-360; x=29; y=56;
+[Item] ID=bone; q=1; bu=True; x=29; y=56;
+[Item] ID=plant_small3; q=1; x=29; y=57;
+[Item] ID=rubble_water; q=1; x=30; y=4;
+[Item] ID=pod_small2; q=1; r=-360; x=30; y=14;
+[Item] ID=rutroot1; q=1; x=30; y=17;
+[Item] ID=plant_reed1; q=1; x=30; y=37;
+[Item] ID=plant_reed1; q=1; x=30; y=41;
+[Item] ID=plant_reed2; q=1; x=30; y=42;
+[Item] ID=plant_reed2; q=1; r=360; x=31; y=11;
+[Item] ID=pod_burst; q=1; r=-360; x=31; y=15;
+[Item] ID=rutroot1; q=1; x=31; y=17;
+[Item] ID=plant_reed1; q=1; r=-360; x=31; y=24;
+[Item] ID=plant_reed2; q=1; x=31; y=35;
+[Item] ID=plant_reed2; q=1; x=31; y=43;
+[Item] ID=plant_small3; q=1; x=31; y=45;
+[Item] ID=plant_reed2; q=1; r=-360; x=31; y=52;
+[Item] ID=plant_reed1; q=1; x=32; y=11;
+[Item] ID=pod_small1; q=1; r=-360; x=32; y=15;
+[Item] ID=rutroot1; q=1; x=32; y=17;
+[Item] ID=grass_alt1; q=4; x=32; y=19;
+[Item] ID=plant_reed2; q=1; r=-360; x=32; y=25;
+[Item] ID=grass_alt1; q=2; x=32; y=45;
+[Item] ID=grass_alt1; q=4; r=360; x=32; y=47;
+[Item] ID=waterfall_dirtEdge; q=1; x=32; y=63;
+[Item] ID=waterfall1; q=1; x=32; y=64;
+[Item] ID=rubble_water; q=1; x=33; y=7;
+[Item] ID=rutroot2; q=1; r=270; x=33; y=14;
+[Item] ID=rutroot1; q=1; r=90; x=33; y=15;
+[Item] ID=rutroot1; q=1; r=90; x=33; y=16;
+[Item] ID=tree_rutroot; q=1; x=33; y=17;
+[Item] ID=rutroot1; q=1; r=90; x=33; y=18;
+[Item] ID=rutroot1; q=1; r=90; x=33; y=19;
+[Item] ID=rutroot2; q=1; r=90; x=33; y=20;
+[Item] ID=plant_reed2; q=1; r=-360; x=33; y=22;
+[Item] ID=grass_alt1; q=4; x=33; y=33;
+[Item] ID=plant_reed2; q=1; r=-360; x=34; y=12;
+[Item] ID=grass_alt1; q=4; x=34; y=16;
+[Item] ID=rutroot1; q=1; x=34; y=17;
+[Item] ID=plant_small3; q=1; x=34; y=28;
+[Item] ID=ore_iron; q=1; x=34; y=31;
+[Item] ID=plant_small3; q=1; x=34; y=35;
+[Item] ID=grass_alt1; q=1; x=34; y=39;
+[Item] ID=pebbles2; q=1; x=34; y=43;
+[Item] ID=tree_med; q=1; x=34; y=62;
+[Item] ID=shoreEdge1; q=1; r=-360; x=34; y=64;
+[Item] ID=rubble_water; q=1; x=35; y=5;
+[Item] ID=pod_small2; q=1; r=-360; x=35; y=15;
+[Item] ID=rutroot1; q=1; x=35; y=17;
+[Item] ID=plant_reed2; q=1; r=-360; x=35; y=21;
+[Item] ID=grass_alt1; q=4; x=35; y=34;
+[Item] ID=pebbles1; q=1; r=180; x=35; y=35;
+[Item] ID=grass_alt1; q=1; x=35; y=36;
+[Item] ID=plant_reed2; q=1; x=35; y=48;
+[Item] ID=plant_reed1; q=1; x=35; y=49;
+[Item] ID=tree_small; q=1; x=35; y=63;
+[Item] ID=pod_small1; q=1; r=-360; x=36; y=15;
+[Item] ID=rutroot1; q=1; x=36; y=17;
+[Item] ID=grass_alt1; q=4; x=36; y=18;
+[Item] ID=plant_reed1; q=1; x=36; y=21;
+[Item] ID=grass_alt1; q=1; r=-360; x=36; y=26;
+[Item] ID=stash_dirt_loot2; q=1; x=36; y=28;
+[Item] ID=rubble; q=1; x=36; y=44;
+[Item] ID=plant_reed1; q=1; r=-360; x=36; y=55;
+[Item] ID=grass_alt1; q=1; x=36; y=58;
+[Item] ID=rubble; q=1; x=36; y=61;
+[Item] ID=rutroot2; q=1; x=37; y=17;
+[Item] ID=rubble_water; q=1; x=37; y=23;
+[Item] ID=ore_iron; q=1; x=37; y=35;
+[Item] ID=bones1; q=1; bu=True; x=37; y=43;
+[Item] ID=pod_small1; q=1; r=-360; x=37; y=50;
+[Item] ID=bone_spine; q=1; bu=True; x=37; y=51;
+[Item] ID=plant_reed2; q=1; x=37; y=53;
+[Item] ID=grass_alt1; q=4; x=37; y=57;
+[Item] ID=ribs2; q=1; bu=True; x=37; y=57;
+[Item] ID=rocks1; q=3; x=37; y=60;
+[Item] ID=shoreEdge1; q=1; r=360; x=37; y=64;
+[Item] ID=plant_small2; q=1; x=38; y=27;
+[Item] ID=ore_iron; q=1; x=38; y=30;
+[Item] ID=pebbles1; q=1; r=180; x=38; y=59;
+[Item] ID=shoreEdge1; q=1; r=-360; x=38; y=66;
+[Item] ID=pebbles1; q=1; x=39; y=27;
+[Item] ID=grass_alt1; q=1; x=39; y=31;
+[Item] ID=grass_alt1; q=4; x=39; y=36;
+[Item] ID=plant_reed1; q=1; r=-360; x=39; y=39;
+[Item] ID=rubble; q=1; x=39; y=65;
+[Item] ID=shoreEdge1; q=1; r=-360; x=39; y=69;
+[Item] ID=rubble_water; q=1; x=40; y=4;
+[Item] ID=grass_alt1; q=4; x=40; y=26;
+[Item] ID=ore_iron; q=1; x=40; y=33;
+[Item] ID=plant_reed2; q=1; x=40; y=40;
+[Item] ID=rubble; q=1; x=40; y=68;
+[Item] ID=plant_small1; q=1; x=41; y=30;
+[Item] ID=ore_iron; q=1; x=41; y=34;
+[Item] ID=plant_reed1; q=1; x=41; y=40;
+[Item] ID=rubble; q=1; x=41; y=47;
+[Item] ID=tree_med; q=1; x=41; y=53;
+[Item] ID=travelPoint_0; q=1; r=270; x=41; y=62;
+[Item] ID=rubble_water; q=1; x=42; y=10;
+[Item] ID=ore_iron; q=1; x=42; y=32;
+[Item] ID=plant_reed2; q=1; x=42; y=39;
+[Item] ID=rutroot2; q=1; r=180; x=42; y=42;
+[Item] ID=rocks1; q=1; r=-360; x=42; y=45;
+[Item] ID=rubble; q=1; x=42; y=69;
+[Item] ID=grass_alt1; q=4; x=43; y=27;
+[Item] ID=debris_small3; q=1; x=43; y=35;
+[Item] ID=rutroot1; q=1; x=43; y=42;
+[Item] ID=grass_alt1; q=1; r=360; x=43; y=45;
+[Item] ID=rubble; q=1; x=43; y=64;
+[Item] ID=rubble; q=1; x=43; y=66;
+[Item] ID=rubble_water; q=1; x=44; y=6;
+[Item] ID=grass_alt1; q=1; r=360; x=44; y=28;
+[Item] ID=rutroot1; q=1; x=44; y=42;
+[Item] ID=plant_small2; q=1; x=44; y=44;
+[Item] ID=pebbles2; q=1; x=44; y=49;
+[Item] ID=shoreEdge1; q=1; x=44; y=67;
+[Item] ID=rubble_water; q=1; x=45; y=20;
+[Item] ID=rutroot1; q=1; x=45; y=42;
+[Item] ID=rubble; q=1; x=45; y=53;
+[Item] ID=rocks1; q=1; x=45; y=61;
+[Item] ID=shoreEdge1; q=1; r=360; x=45; y=64;
+[Item] ID=rubble_water; q=1; x=46; y=9;
+[Item] ID=rubble_water; q=1; x=46; y=12;
+[Item] ID=rutroot2; q=1; r=270; x=46; y=40;
+[Item] ID=rutroot1; q=1; r=90; x=46; y=41;
+[Item] ID=tree_rutroot; q=1; x=46; y=42;
+[Item] ID=rutroot1; q=1; r=90; x=46; y=43;
+[Item] ID=rutroot1; q=1; r=90; x=46; y=44;
+[Item] ID=rutroot2; q=1; r=90; x=46; y=45;
+[Item] ID=pebbles2; q=1; x=46; y=55;
+[Item] ID=rubble; q=1; x=46; y=60;
+[Item] ID=rubble; q=1; x=46; y=62;
+[Item] ID=shoreEdge1; q=1; r=-360; x=46; y=64;
+[Item] ID=rubble_water; q=1; x=47; y=25;
+[Item] ID=rocks1; q=1; x=47; y=30;
+[Item] ID=plant_small3; q=1; r=-360; x=47; y=40;
+[Item] ID=rutroot1; q=1; r=180; x=47; y=42;
+[Item] ID=grass_alt1; q=4; x=47; y=43;
+[Item] ID=tree_stump; q=1; x=47; y=57;
+[Item] ID=plant_small3; q=1; x=48; y=34;
+[Item] ID=pod_small1; q=1; r=-360; x=48; y=36;
+[Item] ID=grass_alt1; q=4; x=48; y=39;
+[Item] ID=rutroot1; q=1; r=360; x=48; y=42;
+[Item] ID=grass_alt1; q=1; r=360; x=48; y=44;
+[Item] ID=plant_reed1; q=1; r=-360; x=48; y=49;
+[Item] ID=tree_big; q=1; x=48; y=62;
+[Item] ID=rubble_water; q=1; x=49; y=5;
+[Item] ID=pod_small2; q=1; r=-360; x=49; y=35;
+[Item] ID=rutroot1; q=1; r=360; x=49; y=42;
+[Item] ID=plant_reed2; q=1; x=49; y=46;
+[Item] ID=rutroot2; q=1; r=-360; x=49; y=50;
+[Item] ID=grass_alt1; q=1; x=49; y=53;
+[Item] ID=rubble_water; q=1; x=50; y=15;
+[Item] ID=grass_alt1; q=4; x=50; y=34;
+[Item] ID=rutroot2; q=1; r=-180; x=50; y=42;
+[Item] ID=rutroot2; q=1; r=270; x=50; y=47;
+[Item] ID=rutroot1; q=1; r=90; x=50; y=48;
+[Item] ID=rutroot1; q=1; r=-90; x=50; y=49;
+[Item] ID=tree_rutroot; q=1; x=50; y=50;
+[Item] ID=rutroot1; q=1; r=90; x=50; y=51;
+[Item] ID=rutroot1; q=1; r=90; x=50; y=52;
+[Item] ID=rutroot1; q=1; r=-90; x=50; y=53;
+[Item] ID=rutroot2; q=1; r=90; x=50; y=54;
+[Item] ID=plant_small3; q=1; x=50; y=56;
+[Item] ID=grass_alt1; q=4; x=50; y=58;
+[Item] ID=shoreEdge1; q=1; r=360; x=50; y=64;
+[Item] ID=pod_burst; q=1; r=-360; x=51; y=37;
+[Item] ID=rutroot1; q=1; x=51; y=50;
+[Item] ID=shoreEdge1; q=1; r=360; x=51; y=63;
+[Item] ID=grass_alt1; q=1; r=360; x=52; y=35;
+[Item] ID=rutroot2; q=1; x=52; y=50;
+[Item] ID=grass_alt1; q=1; x=52; y=51;
+[Item] ID=grass_alt1; q=1; x=52; y=57;
+[Item] ID=shoreEdge1_grass; q=1; r=-360; x=52; y=61;
+[Item] ID=rubble_water; q=1; x=53; y=31;
+[Item] ID=grass_alt1; q=4; x=53; y=36;
+[Item] ID=pod_small1; q=1; r=-360; x=53; y=38;
+[Item] ID=pod_small1; q=1; r=-360; x=53; y=40;
+[Item] ID=grass_alt1; q=4; x=53; y=46;
+[Item] ID=plant_reed2; q=1; r=-360; x=53; y=49;
+[Item] ID=grass_alt1; q=4; x=53; y=56;
+[Item] ID=shoreEdge1; q=1; r=-360; x=53; y=62;
+[Item] ID=grass_alt1; q=1; x=54; y=8;
+[Item] ID=rubble_water; q=1; x=54; y=19;
+[Item] ID=pod_burst; q=1; r=-360; x=54; y=41;
+[Item] ID=grass_alt1; q=4; x=54; y=43;
+[Item] ID=pod_small1; q=1; r=-360; x=54; y=44;
+[Item] ID=plant_reed1; q=1; oX=-4; oY=0; x=54; y=49;
+[Item] ID=stash_dirt_loot4; q=1; x=55; y=8;
+[Item] ID=rubble_water; q=1; x=55; y=18;
+[Item] ID=cargo_carapace; q=1; bu=True; x=55; y=21;
+[Item] ID=pod_small2; q=1; r=-360; x=55; y=39;
+[Item] ID=tree_small; q=1; r=360; x=55; y=51;
+[Item] ID=debris_small3; q=1; x=56; y=21;
+[Item] ID=rubble_water; q=1; x=56; y=29;
+[Item] ID=grass_alt1; q=4; x=56; y=41;
+[Item] ID=pod_small2; q=1; r=360; x=56; y=43;
+[Item] ID=rubble_water; q=1; x=57; y=4;
+[Item] ID=ore_iron; q=1; x=57; y=22;
+[Item] ID=tree_med; q=1; r=360; x=57; y=35;
+[Item] ID=tree_med; q=1; x=58; y=13;
+[Item] ID=pod_small1; q=1; r=360; x=58; y=40;
+[Item] ID=grass_alt1; q=4; x=58; y=45;
+[Item] ID=grass_alt1; q=1; x=58; y=59;
+[Item] ID=grass_alt1; q=4; x=58; y=61;
+[Item] ID=bones1; q=1; x=59; y=13;
+[Item] ID=cargo_carapace; q=1; x=59; y=14;
+[Item] ID=tree_med; q=1; r=-360; x=59; y=20;
+[Item] ID=rubble_water; q=1; x=59; y=32;
+[Item] ID=plant_reed2; q=1; x=59; y=48;
+[Item] ID=grass_alt1; q=4; x=59; y=53;
+[Item] ID=grass_alt1; q=1; x=59; y=56;
+[Item] ID=rubble_water; q=1; x=60; y=33;
+[Item] ID=rocks1; q=2; x=60; y=37;
+[Item] ID=skull_dog2; q=1; x=61; y=10;
+[Item] ID=rubble_water; q=1; x=61; y=19;
+[Item] ID=grass_alt1; q=1; x=61; y=40;
+[Item] ID=plant_reed1; q=1; x=61; y=47;
+[Item] ID=plant_reed2; q=1; r=-360; x=61; y=50;
+[Item] ID=pebbles1; q=1; r=180; x=61; y=59;
+[Item] ID=bones2; q=1; x=62; y=10;
+[Item] ID=pebbles1; q=1; x=62; y=15;
+[Item] ID=grass_alt1; q=4; x=62; y=39;
+[Item] ID=grass_alt1; q=4; x=62; y=54;
+[Item] ID=tree; q=1; x=62; y=58;
+[Item] ID=sword_steel; q=1; r=180; x=63; y=10; containerID=2;
+[Item] ID=dirt_sandy2; q=3; r=270; x=63; y=10;
+[Item] ID=rubble_water; q=1; x=63; y=33;
+[Item] ID=bone_dust; q=1; x=64; y=9;
+[Item] ID=gp; q=2; x=64; y=9;
+[Item] ID=bones1; q=1; r=-360; x=64; y=16;
+[Item] ID=pebbles1; q=1; r=180; x=64; y=22;
+[Item] ID=rutroot2; q=1; r=180; x=64; y=43;
+[Item] ID=tree_med; q=1; r=-360; x=64; y=53;
+[Item] ID=rubble; q=1; x=64; y=57;
+[Item] ID=shoreEdge1_grass; q=1; x=64; y=62;
+[Item] ID=shoreEdge1_grass; q=1; r=-360; x=64; y=62;
+[Item] ID=skull_dog1; q=1; x=65; y=13;
+[Item] ID=rutroot2; q=1; r=180; x=65; y=17;
+[Item] ID=rubble; q=1; x=65; y=21;
+[Item] ID=pod_small2; q=1; r=-360; x=65; y=40;
+[Item] ID=rutroot1; q=1; r=180; x=65; y=43;
+[Item] ID=rocks1; q=1; x=65; y=55;
+[Item] ID=grass_alt1; q=1; x=65; y=60;
+[Item] ID=debris_small2; q=1; x=66; y=10;
+[Item] ID=ribs2; q=1; x=66; y=12;
+[Item] ID=rutroot1; q=1; r=360; x=66; y=17;
+[Item] ID=rocks1; q=6; x=66; y=24;
+[Item] ID=plant_reed2; q=1; x=66; y=37;
+[Item] ID=grass_alt1; q=4; x=66; y=41;
+[Item] ID=rutroot1; q=1; r=180; x=66; y=43;
+[Item] ID=shoreEdge1_grass; q=1; x=66; y=62;
+[Item] ID=rubble_water; q=1; x=67; y=4;
+[Item] ID=tree; q=1; x=67; y=10;
+[Item] ID=rutroot1; q=1; r=360; x=67; y=17;
+[Item] ID=tree_small; q=1; x=67; y=21;
+[Item] ID=plant_reed1; q=1; x=67; y=37;
+[Item] ID=rutroot1; q=1; r=360; x=67; y=43;
+[Item] ID=grass_alt1; q=4; x=67; y=59;
+[Item] ID=rutroot1; q=1; r=360; x=68; y=17;
+[Item] ID=rutroot2; q=1; r=270; x=68; y=39;
+[Item] ID=rutroot1; q=1; r=90; x=68; y=40;
+[Item] ID=rutroot1; q=1; r=90; x=68; y=41;
+[Item] ID=rutroot1; q=1; r=270; x=68; y=42;
+[Item] ID=tree_rutroot; q=1; x=68; y=43;
+[Item] ID=rutroot1; q=1; r=90; x=68; y=44;
+[Item] ID=rutroot1; q=1; r=90; x=68; y=45;
+[Item] ID=rutroot1; q=1; r=270; x=68; y=46;
+[Item] ID=rutroot2; q=1; r=90; x=68; y=47;
+[Item] ID=grass_alt1; q=1; x=68; y=54;
+[Item] ID=shoreEdge1_grass; q=1; r=-360; x=68; y=62;
+[Item] ID=rutroot1; q=1; r=360; x=69; y=17;
+[Item] ID=rubble; q=1; x=69; y=27;
+[Item] ID=grass_alt1; q=4; x=69; y=42;
+[Item] ID=rutroot1; q=1; r=360; x=69; y=43;
+[Item] ID=grass_alt1; q=1; x=69; y=56;
+[Item] ID=debris_small3; q=1; x=69; y=59;
+[Item] ID=rutroot2; q=1; r=270; x=70; y=14;
+[Item] ID=rutroot1; q=1; r=90; x=70; y=15;
+[Item] ID=rutroot1; q=1; r=90; x=70; y=16;
+[Item] ID=tree_rutroot; q=1; x=70; y=17;
+[Item] ID=rutroot1; q=1; r=90; x=70; y=18;
+[Item] ID=rutroot1; q=1; r=90; x=70; y=19;
+[Item] ID=rutroot2; q=1; r=90; x=70; y=20;
+[Item] ID=rocks1; q=2; x=70; y=26;
+[Item] ID=pod_small1; q=1; r=-360; x=70; y=41;
+[Item] ID=rutroot1; q=1; r=180; x=70; y=43;
+[Item] ID=stash_dirt_loot3; q=1; x=70; y=45;
+[Item] ID=pebbles1; q=1; x=70; y=55;
+[Item] ID=ore_iron; q=1; x=70; y=58;
+[Item] ID=rubble_water; q=1; x=71; y=4;
+[Item] ID=rutroot1; q=1; r=360; x=71; y=43;
+[Item] ID=ore_iron; q=1; x=71; y=56;
+[Item] ID=grass_alt1; q=4; x=71; y=60;
+[Item] ID=rubble_water; q=1; x=72; y=5;
+[Item] ID=rubble_water; q=1; x=72; y=10;
+[Item] ID=rutroot2; q=1; r=270; x=72; y=41;
+[Item] ID=rutroot1; q=1; r=90; x=72; y=42;
+[Item] ID=tree_rutroot; q=1; x=72; y=43;
+[Item] ID=rutroot1; q=1; r=90; x=72; y=44;
+[Item] ID=rutroot1; q=1; r=270; x=72; y=45;
+[Item] ID=rutroot1; q=1; r=270; x=72; y=46;
+[Item] ID=rutroot1; q=1; r=90; x=72; y=47;
+[Item] ID=rutroot2; q=1; r=90; x=72; y=48;
+[Item] ID=ore_iron; q=1; x=72; y=57;
+[Item] ID=shoreEdge1_grass; q=1; x=72; y=62;
+[Item] ID=rubble_water; q=1; x=73; y=9;
+[Item] ID=rubble_water; q=1; x=73; y=15;
+[Item] ID=rutroot1; q=1; r=180; x=73; y=43;
+[Item] ID=grass_alt1; q=4; x=73; y=46;
+[Item] ID=grass_alt1; q=4; x=73; y=56;
+[Item] ID=rocks1; q=1; x=73; y=58;
+[Item] ID=grass_alt1; q=1; x=73; y=59;
+
+
+[Actor]ID=bitfly_zSwamp1a_; name=Gropp;
+actorTypeID=bitfly; sprite=actor_fly; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=30,18; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pFade; skinPalette=pGreyD2; armorPalette=pPurpleD; unarmoredPalette=pPurpleD; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=1; intelligence=0.01; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=flying;
+
+ supportAbilities=setaeAura;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=bitfly_zSwamp1a__0; name=Skrym;
+actorTypeID=bitfly; sprite=actor_fly; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=29,16; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pFade; skinPalette=pGreyD2; armorPalette=pPurpleD; unarmoredPalette=pPurpleD; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=1; intelligence=0.01; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=flying;
+
+ supportAbilities=setaeAura;  supportAbilities=;  supportAbilities=; HP=5; HPMax=5; TrueHPMax=5; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=bitfly_zSwamp1a__1; name=Ulib;
+actorTypeID=bitfly; sprite=actor_fly; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=27,17; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pFade; skinPalette=pGreyD2; armorPalette=pPurpleD; unarmoredPalette=pPurpleD; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=1; intelligence=0.01; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=flying;
+
+ supportAbilities=setaeAura;  supportAbilities=;  supportAbilities=; MP=2; MPMax=2; TrueMPMax=2; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=botfly_zSwamp1a_; name=Klobb;
+actorTypeID=botfly; sprite=actor_bigfly; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=23,17; destination=-1,-1; facingRot=630; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pFade; skinPalette=pGreyD2; armorPalette=pPurpleD; unarmoredPalette=pPurpleD; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.7; bravery=0.7; intelligence=0.01; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=flying;
+
+ supportAbilities=setaeAura;  supportAbilities=;  supportAbilities=; HP=22; HPMax=22; TrueHPMax=22; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=bitfly_zSwamp1a__3; name=Snok;
+actorTypeID=bitfly; sprite=actor_fly; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=27,13; destination=-1,-1; facingRot=360; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pFade; skinPalette=pGreyD2; armorPalette=pPurpleD; unarmoredPalette=pPurpleD; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=1; intelligence=0.01; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=flying;
+
+ supportAbilities=setaeAura;  supportAbilities=;  supportAbilities=; HP=8; HPMax=8; TrueHPMax=8; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=bitfly_zSwamp1a__6; name=Flos;
+actorTypeID=bitfly; sprite=actor_fly; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=25,15; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pFade; skinPalette=pGreyD2; armorPalette=pPurpleD; unarmoredPalette=pPurpleD; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=1; intelligence=0.01; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=flying;
+
+ supportAbilities=setaeAura;  supportAbilities=;  supportAbilities=; HP=7; HPMax=7; TrueHPMax=7; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=bitfly_zSwamp1a__7; name=Sv;
+actorTypeID=bitfly; sprite=actor_fly; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=25,20; destination=-1,-1; facingRot=180; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pFade; skinPalette=pGreyD2; armorPalette=pPurpleD; unarmoredPalette=pPurpleD; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=1; intelligence=0.01; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=flying;
+
+ supportAbilities=setaeAura;  supportAbilities=;  supportAbilities=; HP=7; HPMax=7; TrueHPMax=7; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=angelfly_zSwamp1a_; name=Bogcraw;
+actorTypeID=angelfly; sprite=actor_angelfly; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=61,9; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pRed; skinPalette=pGreyD; armorPalette=pPurpleD; unarmoredPalette=pPurpleD; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.7; bravery=0.7; intelligence=0.3; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=flying;
+
+ supportAbilities=setaeAura;  supportAbilities=;  supportAbilities=; HP=78; HPMax=78; TrueHPMax=78; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=xpGem; cSlot=8;
+
+
+[Actor]ID=bitfly_zSwamp1a__9; name=Soil;
+actorTypeID=bitfly; sprite=actor_fly; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=59,7; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pFade; skinPalette=pGreyD2; armorPalette=pPurpleD; unarmoredPalette=pPurpleD; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=1; intelligence=0.01; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=flying;
+
+ supportAbilities=setaeAura;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=bitfly_zSwamp1a__10; name=Oil;
+actorTypeID=bitfly; sprite=actor_fly; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=63,6; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pFade; skinPalette=pGreyD2; armorPalette=pPurpleD; unarmoredPalette=pPurpleD; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=1; intelligence=0.01; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=flying;
+
+ supportAbilities=setaeAura;  supportAbilities=;  supportAbilities=; HP=7; HPMax=7; TrueHPMax=7; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+
+[Trigger] numID=0; aliasID=;
+topX=38;topY=64;btmX=45;btmY=69;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=0; effectID=travel_leaveLocation; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=1; aliasID=;
+topX=35;topY=67;btmX=35;btmY=67;
+triggerImmediatelyOnEnteringZone=True; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=1; effectID=trigger; sValue=tEnterLoc; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+

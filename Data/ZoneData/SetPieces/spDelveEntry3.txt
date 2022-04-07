@@ -1,0 +1,38 @@
+[Zone]  ID=spDelveEntry3; dark=False; timeUntilNewDay=24; showFogOfWar=True; fogOfWar=True; minimapEnabled=True; allowCameraPastZoneEdges=False; cantAct=False; cantGameOver=False; alwaysKeepWeaponsUnsheathed=False; peaceful=False; overseerMode=False; rollingPinStyle=False; drawSky=False; drawSky_overrideYpos=-1; boatZone=False; wind=False; overworld=False; canDropItems=True; 
+ travelSong=; travelSongVolume=1; travelSongPitch=0; combatSong=; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=0; darkG=0; darkB=0; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=; bgFX_sineWave=0; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=pDirt; zoneGrassPalette=pGreen; zoneGrassDarkPalette=pGreen2; zoneStonePalette=pGreyD; zoneStoneDarkPalette=pGreyD2; zoneStoneLightPalette=pGreyD; zoneWaterPalette=pBlue; zoneDirtDarkPalette=pDirt; zoneWoodPalette=pWood; zoneWoodDarkPalette=pWoodDark; zoneMisc1Palette=pWoodDark; zoneMisc2Palette=pWoodDark; zoneMisc3Palette=pRed; zoneMisc4Palette=pBlue; zoneMisc5Palette=pGreen; zoneMisc6Palette=pOrange; zoneMisc7Palette=pYellow; zoneMisc8Palette=pPurple; 
+
+combatMode=False; 
+
+[Item] ID=vine_atk_generatorL; q=1; timer=0; x=0; y=0;
+[Item] ID=vine_atkL_delayed; q=1; timer=0; x=0; y=0;
+[Item] ID=dirt_sandy2; q=1; r=360; x=6; y=2;
+[Item] ID=itemRemove1; q=30; x=6; y=2;
+[Item] ID=dirt_sandy2; q=2; x=6; y=4;
+[Item] ID=itemRemove1; q=30; x=6; y=4;
+[Item] ID=travelPoint_0; q=1; r=90; x=7; y=3;
+[Item] ID=sunbeam_circle_small_dull; q=1; x=7; y=3;
+[Item] ID=dirt_sandy2; q=1; r=-360; x=8; y=2;
+[Item] ID=itemRemove1; q=30; x=8; y=2;
+[Item] ID=dirt_sandy2; q=1; r=-360; x=8; y=4;
+[Item] ID=itemRemove1; q=30; x=8; y=4;
+[Item] ID=vine_atk_generatorR; q=1; timer=0; x=14; y=0;
+[Item] ID=vine_atkR_delayed; q=1; timer=0; x=14; y=0;
+
+
+
+[Trigger] numID=0; aliasID=;
+topX=5;topY=0;btmX=9;btmY=0;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=combatEnd; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=0; effectID=removeAllItems; sValue=vine_atkL; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+[TriggerEffect] numID=0; effectID=removeAllItems; sValue=vine_atkR; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+[TriggerEffect] numID=0; effectID=removeAllItems; sValue=vine_atkL_delayed; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+[TriggerEffect] numID=0; effectID=removeAllItems; sValue=vine_atkR_delayed; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+[TriggerEffect] numID=0; effectID=removeAllItems; sValue=vine_atk_generatorL; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+[TriggerEffect] numID=0; effectID=removeAllItems; sValue=vine_atk_generatorR; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+

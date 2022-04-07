@@ -1,0 +1,116 @@
+[Zone]  ID=spGroveEnc28; dark=False; timeUntilNewDay=22.2; showFogOfWar=True; fogOfWar=True; minimapEnabled=True; allowCameraPastZoneEdges=False; cantAct=False; cantGameOver=False; alwaysKeepWeaponsUnsheathed=False; peaceful=False; overseerMode=False; rollingPinStyle=False; drawSky=False; drawSky_overrideYpos=-1; boatZone=False; wind=False; overworld=False; canDropItems=True; 
+ travelSong=; travelSongVolume=1; travelSongPitch=0; song2=; song2Volume=1; song2Pitch=0; combatSong=; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=0; darkG=0; darkB=0; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=; bgFX_sineWave=0; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=pDirt; zoneGrassPalette=overworld1; zoneGrassDarkPalette=overworld2; zoneStonePalette=pGreyD; zoneStoneDarkPalette=p1; zoneStoneLightPalette=p1; zoneWaterPalette=pBlue; zoneDirtDarkPalette=pDirt; zoneWoodPalette=pWood; zoneWoodDarkPalette=pWoodDark; zoneMisc1Palette=pYellow6; zoneMisc2Palette=pWoodDark; zoneMisc3Palette=pYellow5; zoneMisc4Palette=pBlue; zoneMisc5Palette=pGreen; zoneMisc6Palette=pOrange; zoneMisc7Palette=pYellow; zoneMisc8Palette=pPurple; 
+
+combatMode=False; 
+
+[Item] ID=grass_alt1; q=4; x=0; y=2;
+[Item] ID=grass_alt1; q=1; x=0; y=4;
+[Item] ID=grass_alt1; q=3; x=0; y=6;
+[Item] ID=grass_alt1; q=3; x=1; y=0;
+[Item] ID=grass_alt1; q=1; x=1; y=2;
+[Item] ID=grass_alt1; q=3; x=1; y=4;
+[Item] ID=grass_alt1; q=4; x=1; y=5;
+[Item] ID=flowers_healing1_dead; q=1; x=1; y=6;
+[Item] ID=grass_alt1; q=1; x=1; y=7;
+[Item] ID=tree_burnt; q=1; r=-360; x=2; y=1;
+[Item] ID=debris_small3; q=1; x=2; y=3;
+[Item] ID=grass_alt1; q=4; x=2; y=6;
+[Item] ID=rocks1; q=1; x=3; y=4;
+[Item] ID=grass_alt1; q=3; x=3; y=7;
+[Item] ID=grass_alt1; q=4; x=4; y=0;
+[Item] ID=grass_alt1; q=1; x=4; y=1;
+[Item] ID=stash_dirt_loot5; q=1; x=4; y=3;
+[Item] ID=debris_small3; q=1; r=180; x=4; y=4;
+[Item] ID=grass_alt1; q=3; x=4; y=5;
+[Item] ID=grass_alt1; q=1; x=4; y=7;
+[Item] ID=grass_alt1; q=4; x=5; y=1;
+[Item] ID=grass_alt1; q=4; x=5; y=5;
+[Item] ID=grass_alt1; q=3; x=5; y=6;
+[Item] ID=flowers_healing1_dead; q=1; x=6; y=1;
+[Item] ID=grass_alt1; q=3; x=6; y=2;
+[Item] ID=tree_burnt; q=1; x=6; y=5;
+[Item] ID=grass_alt1; q=1; x=6; y=6;
+[Item] ID=aldleafPlant; q=1; x=6; y=7;
+[Item] ID=grass_alt1; q=4; x=7; y=1;
+[Item] ID=grass_alt1; q=1; x=7; y=3;
+[Item] ID=grass_alt1; q=4; x=7; y=4;
+
+
+[Actor]ID=splitworms_magic_spGroveEnc28_1; name=Olra;
+actorTypeID=splitworms_magic; sprite=actor_worms; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=2,4; destination=-1,-1; facingRot=360; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pLaser; skinPalette=pLaser; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=1; intelligence=0.01; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=45; HPMax=45; TrueHPMax=45; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=splitworms_magic_spGroveEnc28_0; name=Kloub;
+actorTypeID=splitworms_magic; sprite=actor_worms; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=6,3; destination=-1,-1; facingRot=180; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pLaser; skinPalette=pLaser; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=1; intelligence=0.01; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=47; HPMax=47; TrueHPMax=47; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=splitworms_spGroveEnc28_; name=Eke;
+actorTypeID=splitworms; sprite=actor_worms; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=3,2; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pRedbrown; skinPalette=pRedbrown; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=1; intelligence=0.01; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=splitworms_magic_spGroveEnc28_2; name=Livingmass;
+actorTypeID=splitworms_magic; sprite=actor_worms; actorClass=unmaker; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=4,3; destination=-1,-1; facingRot=180; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=CC0-Pressure; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=True; faction=enemy; combatTeam=; clothPalette=pLaser; skinPalette=pLaser_fast; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=1; intelligence=1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+ supportAbilities=ruinAura;  supportAbilities=soulpierce;  supportAbilities=; HP=87; MP=7; HPMax=87; MPMax=7; TrueHPMax=87; TrueMPMax=7; MagAtk=5; skill_Ruin=2; Un_ruinTouch=1; ruinAura=1; soulpierce=1; unmaker_XP=0; defiler_XP=0; 
+numRanksBought=ruinAura=1; 
+numRanksBought=Un_ruinTouch=1; 
+numRanksBought=soulpierce=1; 
+chosenAbilityOfEachClass=elementalist=Ele_condensate; 
+chosenAbilityOfEachClass=enchanter=En_fireWpn; 
+chosenAbilityOfEachClass=balancer=Ba_stonefoot; 
+chosenAbilityOfEachClass=defiler=De_iceblood; 
+chosenAbilityOfEachClass=unmaker=Un_ruinTouch; 
+chosenAbilityOfEachClass=sorcerer=So_inferno; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=MagAtk; sourceAVAffecter=unmaker; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagEva; sourceAVAffecter=unmaker; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=10; duration=-1;
+[ActorEffect]
+ actorValue=skill_Dagger; sourceAVAffecter=unmaker; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Ruin; sourceAVAffecter=unmaker; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+

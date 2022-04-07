@@ -1,0 +1,379 @@
+[Action] ID=Ele_condensate; 
+	name=Condensate;
+	icon=icon_Ele_condensate;
+	mpCost=5 * d:mpCostMult + d:mpCostMod;
+	tooltip=Create water, dealing <thinnerIcon=icon_water><math=d:iceDmg20LessScaleDisplay(3)> damage in a small area.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ice_small>;
+	
+	XPCost=150;
+	XPCost=350;
+	XPCost=950;
+	
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnTarget=largePing;
+	FXOnTargetColor=SkyBlue;
+	FXOnTarget=sfx_splash;
+	FXOnTarget=tinyShakeHoriz;
+[ActionAoE] 
+	ID=Ele_condensate; 
+	needsLoS = true;
+	needsLoE = false;
+	minRange = 0;
+	maxRange = 2;
+	airborne=true;
+	arc=true;
+	maxRangeBonus = c:rank;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Ele_condensate; 
+	actorValue=HP;
+	magnitude=d:iceDmg20LessScale(3);
+	duration=-2;
+	chance=d:iceAcc;
+	element=magic;
+	element=water;
+	FXOnHit=chargeBurst;
+	FXOnHitColor=SkyBlue;
+[AvAffecterAoE]
+	ID=Ele_condensate;
+	cloneFrom=adjacentAndSelf;
+[AvAffecter]
+	ID=Ele_condensate; 
+	visibleEvaluations=false;
+	actorValue=wet;
+	magnitude= 1;
+	duration=150;
+	chance=d:iceAcc;
+	element=water;
+[AvAffecterAoE]
+	ID=Ele_condensate;
+	cloneFrom=adjacentAndSelf;
+[AvAffecter]
+	ID=Ele_condensate; 
+	visibleEvaluations=false;
+	actorValue=summonItem;
+	magnitude=puddle;
+	duration=2;
+	chance=100;
+	FXOnTile=waterWave;
+	FXOnTileColor=SkyBlue;
+[AvAffecterAoE]
+	ID=Ele_condensate;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Ele_condensate; 
+	visibleEvaluations=false;
+	actorValue=summonItem;
+	magnitude=puddle;
+	duration=1;
+	chance=100;
+	FXOnTile=waterWave;
+	FXOnTileColor=SkyBlue;
+[AvAffecterAoE]
+	ID=Ele_condensate;
+	cloneFrom=adjacent;
+
+
+[Action] ID=Ele_shock; 
+	name=Shock;
+	icon=icon_Ele_shock;
+	mpCost=10 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=14 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
+	
+	tooltip=Electrify a small area, stunning for up to <icon=time><math=2 + d:elecDurMax(1) + 3 * c:rank> and dealing <thinnerIcon=skill_Elec><math=d:elecDmgDisplay(4)> damage.;
+	rankUpTooltip=Each rank increases duration by <icon=time>3.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Elec_small>;
+	
+	XPCost=270;
+	XPCost=450;
+	XPCost=900;
+	
+	special=requiresCasting;
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnTarget=sparkUp;
+	FXOnTargetColor=Orange;
+	FXOnTarget=chargeSpiralFast_big;
+	FXOnTargetColor=Orange;
+	FXOnTarget=shortBolt;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=chargeFast;
+	FXOnCasterColor=Orange;
+	FXOnCaster=darken_minor;
+[ActionAoE] 
+	ID=Ele_shock; 
+	needsLoS = true;
+	needsLoE = false;
+	minRange = 1;
+	maxRange = 4;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Ele_shock; 
+	actorValue=HP;
+	magnitude=d:elecDmg(4);
+	duration=-2;
+	chance=d:elecAcc;
+	element=magic;
+	element=lightning;
+	FXOnTile=elecBlasts_4;
+	FXOnTileColor=Orange;
+	FXOnTile=tinyShakeHoriz;
+[AvAffecterAoE]
+	ID=Ele_shock;
+	cloneFrom=adjacentAndSelf;
+[AvAffecter]
+	ID=Ele_shock; 
+	FXOnTile=sfx_thunderStrike_quiet;
+[AvAffecterAoE]
+	ID=Ele_shock;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Ele_shock; 
+	actorValue=stun;
+	magnitude=1;
+	duration=2 + d:elecDur(1) + c:rank * 3;
+	chance=d:elecAcc;
+	element=magic;
+	element=lightning;
+[AvAffecterAoE]
+	ID=Ele_shock;
+	cloneFrom=adjacentAndSelf;
+	
+
+
+[Action] ID=Ele_freeze; 
+	name=Freeze;
+	icon=icon_Ele_freeze;
+	mpCost=14 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=15 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
+	
+	tooltip=Freeze a target for up to <icon=time><math=14 + d:iceDurMax(1) + c:rank * 8> and deal <thinnerIcon=skill_Ice><math=d:iceDmgDisplay(7)> damage. When used on empty space, creates an ice block and returns 12<icon=MP>.;
+	rankUpTooltip=Each rank increases frozen duration by <icon=time>8.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ice_small>;
+	
+	AIRatingBias = -7;
+	
+	XPCost=320;
+	XPCost=600;
+	XPCost=980;
+	
+	special=requiresCasting;
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnTarget=darken_minor;
+	FXOnTarget=sparkle;
+[ActionAoE] 
+	ID=Ele_freeze; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	minRange = 1;
+	maxRange = 4;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Ele_freeze; 
+	actorValue=HP;
+	magnitude= d:iceDmg(7);
+	duration=-2;
+	chance=d:iceAcc;
+	element=magic;
+	element=ice;
+	FXOnTile=chargeFast;
+	FXOnTile=sfx_frost;
+	FXOnTile=icefreeze;
+	FXOnTile=iceBurst;
+	FXOnTile=tinyShakeHoriz;
+[AvAffecterAoE]
+	ID=Ele_freeze;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Ele_freeze; 
+	actorValue=frozen;
+	magnitude= 1;
+	duration=14 + d:iceDur(1) + 8 * c:rank;
+	chance=d:iceAcc - t:warmth * 200;
+	element=magic;
+	element=ice;
+[AvAffecterAoE]
+	ID=Ele_freeze;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Ele_freeze; 
+	actorValue=summonItem;
+	magnitude=iceBlock;
+	duration=1;
+	chance=canItemFit:iceBlock*100;
+[AvAffecterAoE]
+	ID=Ele_freeze;
+	cloneFrom=oneTile;
+	bypassAll=false;
+	occupyAll=true;
+[AvAffecter]
+	ID=Ele_freeze; 
+	harmful=false;
+	actorValue=MP;
+	magnitude=12;
+	duration=-2;
+	chance=m:previousAVChanceYes*100;
+	visibleMiss=false;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=Ele_freeze;
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+	
+
+	
+
+[Action] ID=Ele_fireWhirl; 
+	name=Fire Whirl;
+	icon=icon_Ele_fireWhirl;
+	mpCost=12 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=14 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
+	tooltip=Summon a fiery tornado that lasts for <icon=time>80 and scorches adjacent creatures every <icon=time>20 for <thinnerIcon=skill_Fire><math=d:fireDmgDisplay(5)> damage.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small>;
+	
+	AIRatingBias = 0;
+	
+	XPCost=375;
+	XPCost=600;
+	XPCost=700;
+	
+	special=requiresCasting;
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	
+	FXOnTarget=darken;
+	FXOnTarget=fireburst;
+	FXOnTarget=gustyBlast;
+	FXOnTarget=smallShakeHoriz;
+[ActionAoE] 
+	ID=Ele_fireWhirl;
+	needsLoS=true;
+	needsLoE = false;
+	canSelectActors=false;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=false;
+	minRange = 1;
+	maxRange = 2;
+	maxRangeBonus=c:rank;
+	fReq=canItemFit:fireWhirl;
+[AvAffecter]
+	ID=Ele_fireWhirl; 
+	actorValue=summonItem;
+	magnitude=fireWhirl;
+	duration=5 + c:MagAtk + c:skill_Fire;
+	element=spawnFireWhirl;
+[AvAffecterAoE]
+	ID=Ele_fireWhirl;
+	cloneFrom=oneTile;
+	canSelectActors=false;
+	bypassAll=false;
+	occupyAll=false;
+[AvAffecter]
+	ID=Ele_fireWhirl; 
+	actorValue=HP;
+	magnitude=d:fireDmg(5);
+	duration=-2;
+	chance=100 - d:tMagicEva * 0.7;
+	element=magic;
+	element=fire;
+	FXOnTile=burn;
+[AvAffecterAoE]
+	ID=Ele_fireWhirl;
+	cloneFrom=adjacent;
+	needsLoE = false;
+	bypassAll=true;
+	occupyAll=true;
+	airborne=true;
+	arc=true;
+	
+	
+
+[Action] ID=Ele_windslash; 
+	name=Windslash;
+	icon=icon_Ele_windslash;
+	tooltip=Slicing winds cut through a wide line in front of you to deal <thinnerIcon=skill_Wind><math=d:windDmgDisplay(6)> damage.;
+	rankUpTooltip=Each rank adds +1 max range.;
+	tooltipIcons=<icon=noMove>;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Wind_small>;
+	
+	XPCost=220;
+	XPCost=550;
+	XPCost=980;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	mpCost=8 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=12 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
+	special=requiresCasting;
+	special=cancelChargingOnMove;
+	
+	casterAnimation=spellcast;
+	
+	FXOnCaster=windSlash_fadeIn;
+	FXOnCaster=magicCharge;
+	FXOnCaster=darken_minor;
+	FXOnTarget=sliceShing;
+	FXOnTarget=gustyBlast;
+	FXOnTarget=windSlash_moving;
+	FXOnTarget=windSlash_moving_followup;
+	FXOnTarget=tinyShakeHoriz;
+[ActionAoE] 
+	ID=Ele_windslash; shape=2;
+	needsLoS = false;
+	needsLoE = true;
+	airborne = true;
+	arc = true;
+	minRange = 3;
+	maxRange = 3;
+	maxRangeBonus=c:rank;
+	bypassAll=false;
+	occupyAll=true;
+[AvAffecter]
+	ID=Ele_windslash; 
+	actorValue=HP;
+	magnitude= d:windDmg(6);
+	duration=-2;
+	chance=d:windAcc;
+	element=magic;
+	element=wind;
+	element=slash;
+	FXOnHit=whirlSlashes_many;
+	FXOnHit=sfx_slashingHit;
+	FXOnMiss=woosh;
+[AvAffecterAoE]
+	ID=Ele_windslash;  shape=3;
+	aoeCasterAsOrigin=true;
+	coneAngle=92;
+	minRange = 1;
+	maxRange=0;
+	maxRangeBonus=0;
+	maxRangeAddDistanceFromCaster=true;
+	
+	
+
+	

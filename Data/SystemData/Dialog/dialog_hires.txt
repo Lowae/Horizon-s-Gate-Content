@@ -1,0 +1,316 @@
+
+---GENERIC HIRES
+
+
+[DialogNode] ID=crew_hire;
+animations=;
+statements=Need a crew member? Only $10 upfront and $1 a day after.;
+[DialogOption] text=Hire ($10);
+formulaReq=m:money - 9;
+nodeToConnectTo=crew_hire_buy;
+[DialogOption] text=Hire ($10);
+formulaReq=10 - m:money;
+nodeToConnectTo=crew_hire_cantAfford;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=crew_hire_buy;
+animations=happy;
+statements=<rand=Alright!/Great!/Deal./> <rand=You won't regret it!/You've made the right choice.>;
+specialEffect=subtract10gp;
+specialEffect=fx,sfx_positiveNote2;
+specialEffect=addTalkerToParty;
+specialEffect=tHired;
+
+[DialogNode] ID=crew_hire_cantAfford;
+animations=angry;
+statements=You don't have the money! <rand=Come back when you've got something to offer./Forget it./Nevermind.>;
+
+---REHIRE
+
+[DialogNode] ID=crew_rehire;
+animations=;
+statements=(Hire <actorName=> for $10 upfront and $1 per day?);
+[DialogOption] text=Hire ($10);
+formulaReq=m:money - 9;
+nodeToConnectTo=crew_rehire_buy;
+[DialogOption] text=Hire ($10);
+formulaReq=10 - m:money;
+nodeToConnectTo=crew_rehire_cantAfford;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=crew_rehire_buy;
+statements=(<actorName=> joins your party.);
+specialEffect=subtract10gp;
+specialEffect=fx,sfx_positiveNote2;
+specialEffect=addTalkerToParty;
+specialEffect=tHired;
+
+[DialogNode] ID=crew_rehire_cantAfford;
+statements=(You don't have enough money.);
+
+
+
+
+-----UNIQUE HIRES
+
+
+
+--unused
+[DialogNode] ID=crew_hire2;
+animations=angry;
+animations=meh;
+animations=;
+statements='Ey. You.;
+statements=You need a new crewman? I'm lookin' for work.;
+statements=$10 once, then $1 a day after. Seem fair?;
+[DialogOption] text=Hire ($10);
+formulaReq=m:money - 9;
+nodeToConnectTo=crew_hire2_buy;
+[DialogOption] text=Hire ($10);
+formulaReq=10 - m:money;
+nodeToConnectTo=crew_hire2_cantAfford;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=crew_hire2_buy;
+animations=meh;
+statements=<pmf=Good man./Good lass.> <rand=I'm with ya./Let's get to it.>;
+specialEffect=subtract10gp;
+specialEffect=fx,sfx_positiveNote2;
+specialEffect=addTalkerToParty;
+specialEffect=tHired;
+
+[DialogNode] ID=crew_hire2_cantAfford;
+animations=sigh;
+statements=You don't have enough. Maybe y'should pay more attention to your wallet, heh.;
+
+---
+
+--goss
+[DialogNode] ID=crew_hire3;
+animations=sigh;
+animations=meh;
+statements=<speed=0.35>...;
+statements=<speed=0.5>...$10. ...and $1 per day. ...no less.;
+[DialogOption] text=Hire ($10);
+formulaReq=m:money - 9;
+nodeToConnectTo=crew_hire3_buy;
+[DialogOption] text=Hire ($10);
+formulaReq=10 - m:money;
+nodeToConnectTo=crew_hire3_cantAfford;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=crew_hire3_buy;
+animations=meh;
+statements=<rand=Good./...alright.> <rand=.../>;
+specialEffect=subtract10gp;
+specialEffect=fx,sfx_positiveNote2;
+specialEffect=addTalkerToParty;
+specialEffect=tHired;
+
+[DialogNode] ID=crew_hire3_cantAfford;
+animations=angry;
+statements=...I said no less.;
+
+---
+
+--unused
+[DialogNode] ID=crew_hire4;
+animations=happy;
+animations=concern;
+animations=angry;
+statements=Hi there!;
+statements=Uh, so... you're a ship captain, right? At least, I'm pretty sure.;
+statements=Right! So, are you looking for a new crew member? I'm a great sailor! I can work for you for only $10, plus $1 every day.;
+[DialogOption] text=Hire ($10);
+formulaReq=m:money - 9;
+nodeToConnectTo=crew_hire4_buy;
+[DialogOption] text=Hire ($10);
+formulaReq=10 - m:money;
+nodeToConnectTo=crew_hire4_cantAfford;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=crew_hire4_buy;
+animations=happy;
+statements=That's great! You're the best! Thank you!;
+specialEffect=subtract10gp;
+specialEffect=fx,sfx_positiveNote2;
+specialEffect=addTalkerToParty;
+specialEffect=tHired;
+
+[DialogNode] ID=crew_hire4_cantAfford;
+animations=;
+statements=Um, it doesn't look like you have enough to pay me. Sorry.;
+
+---
+
+--unused
+[DialogNode] ID=crew_hire5;
+animations=handupPose;
+animations=handoutSlyPose;
+statements=Yo. Looking for crew, right?;
+statements=You looking in the right place. Slide me $10. Another day is $1.;
+[DialogOption] text=Hire ($10);
+formulaReq=m:money - 9;
+nodeToConnectTo=crew_hire5_buy;
+[DialogOption] text=Hire ($10);
+formulaReq=10 - m:money;
+nodeToConnectTo=crew_hire5_cantAfford;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=crew_hire5_buy;
+animations=;
+statements=<rand=I knew you'd be good for it./Right on./Good, good.> <rand=Show me your fleet and I'll get comfy./You got yourself a loyal crew member.>;
+specialEffect=subtract10gp;
+specialEffect=fx,sfx_positiveNote2;
+specialEffect=addTalkerToParty;
+specialEffect=tHired;
+
+[DialogNode] ID=crew_hire5_cantAfford;
+animations=angry;
+statements=You don't even have a cent to your name. Waste of my time.;
+
+---
+
+--unused
+[DialogNode] ID=crew_hire6;
+animations=happy;
+animations=sly;
+statements=Aha! I knew it. It was only a matter of time.;
+statements=I'm good for $10 and 1$ a day. Pay me and let's get a move on!;
+[DialogOption] text=Hire ($10);
+formulaReq=m:money - 9;
+nodeToConnectTo=crew_hire6_buy;
+[DialogOption] text=Hire ($10);
+formulaReq=10 - m:money;
+nodeToConnectTo=crew_hire6_cantAfford;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=crew_hire6_buy;
+animations=happy;
+statements=I knew it! <rand=You had your eye on me since you walked in. You're a smart one./I'm finally outta here. Let's go!>;
+specialEffect=subtract10gp;
+specialEffect=fx,sfx_positiveNote2;
+specialEffect=addTalkerToParty;
+specialEffect=tHired;
+
+[DialogNode] ID=crew_hire6_cantAfford;
+animations=meh;
+statements=Wh- seems like you made a mistake. You forgot to bring your cash with you.;
+statements=Go back and grab $10, I'll wait.;
+
+---
+
+--unused
+[DialogNode] ID=crew_hire7;
+animations=meh;
+animations=sigh;
+animations=meh;
+statements=...Hi.;
+statements=This probably won't work, but... well, here goes. I'm a sailor. I'm looking for work.;
+statements=It's 10$ in advance, then $1 every day after... you know, like normal...;
+[DialogOption] text=Hire ($10);
+formulaReq=m:money - 9;
+nodeToConnectTo=crew_hire7_buy;
+[DialogOption] text=Hire ($10);
+formulaReq=10 - m:money;
+nodeToConnectTo=crew_hire7_cantAfford;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=crew_hire7_buy;
+animations=scared;
+animations=meh;
+statements=<rand=Huh? Really?/Wait... what?> Well... uh. I didn't really plan for this...;
+statements=Uh... guess I'm on your crew then...?;
+specialEffect=subtract10gp;
+specialEffect=fx,sfx_positiveNote2;
+specialEffect=addTalkerToParty;
+
+[DialogNode] ID=crew_hire7_cantAfford;
+animations=sigh;
+statements=Right... that's what I expected. You don't have the money... you're just pulling my leg.;
+
+---
+
+--unused
+[DialogNode] ID=crew_hire8;
+animations=meh;
+animations=sigh;
+animations=;
+statements=Hm?;
+statements=Mm. Crew, huh.;
+statements=I'll do $10. And a $1 wage.;
+[DialogOption] text=Hire ($10);
+formulaReq=m:money - 9;
+nodeToConnectTo=crew_hire8_buy;
+[DialogOption] text=Hire ($10);
+formulaReq=10 - m:money;
+nodeToConnectTo=crew_hire8_cantAfford;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=crew_hire8_buy;
+animations=happy;
+statements=<rand=Mhm./Mmm.> Sounds good. Let's go.;
+specialEffect=subtract10gp;
+specialEffect=fx,sfx_positiveNote2;
+specialEffect=addTalkerToParty;
+specialEffect=tHired;
+
+[DialogNode] ID=crew_hire8_cantAfford;
+animations=sigh;
+statements=Mmm-mm. Nuh-uh. You don't have enough.;
+
+---
+
+--unused
+[DialogNode] ID=crew_hire9;
+animations=angry;
+animations=handsupPose;
+animations=sly;
+statements=You were about to overlook me, weren't you?;
+statements=Well you just avoided a big mistake! Take a second look. Everything here, you can buy.;
+statements=All this muscle isn't just for display. It's for $10 and then $1 a day!;
+[DialogOption] text=Hire ($10);
+formulaReq=m:money - 9;
+nodeToConnectTo=crew_hire9_buy;
+[DialogOption] text=Hire ($10);
+formulaReq=10 - m:money;
+nodeToConnectTo=crew_hire9_cantAfford;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=crew_hire9_buy;
+animations=happy;
+statements=You're smarter than you look! It's a deal- I'm all yours.;
+specialEffect=subtract10gp;
+specialEffect=fx,sfx_positiveNote2;
+specialEffect=addTalkerToParty;
+specialEffect=tHired;
+
+[DialogNode] ID=crew_hire9_cantAfford;
+animations=meh;
+statements=You've overlooked something else! You don't have enough cash on you.;
+
+
+
+
+
+

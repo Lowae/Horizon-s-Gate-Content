@@ -1,0 +1,29 @@
+[Zone]  ID=zCaveBase; dark=True; timeUntilNewDay=24; showFogOfWar=True; fogOfWar=True; minimapEnabled=True; allowCameraPastZoneEdges=False; cantAct=False; cantGameOver=False; alwaysKeepWeaponsUnsheathed=False; peaceful=False; overseerMode=False; rollingPinStyle=False; drawSky=False; boatZone=False; wind=False; overworld=False; canDropItems=True; 
+ travelSong=; travelSongVolume=1; travelSongPitch=0; combatSong=; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=187; darkG=152; darkB=114; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=; bgFX_sineWave=0; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=p17; zoneGrassPalette=pGreen; zoneGrassDarkPalette=pGreen2; zoneStonePalette=pGreyD; zoneStoneDarkPalette=pGreyD2; zoneStoneLightPalette=pGreyD; zoneWaterPalette=pBlue; zoneDirtDarkPalette=p11; zoneWoodPalette=pWood; zoneWoodDarkPalette=pWoodDark; zoneMisc1Palette=pWoodDark; zoneMisc2Palette=pWoodDark; zoneMisc3Palette=pRed; zoneMisc4Palette=pBlue; zoneMisc5Palette=pGreen; zoneMisc6Palette=pOrange; zoneMisc7Palette=pYellow; zoneMisc8Palette=pPurple; 
+
+combatMode=False; 
+
+[Item] ID=sunbeam_line_huge; q=1; r=180; x=36; y=68;
+[Item] ID=travelPoint_0; q=1; r=270; x=37; y=63;
+[Item] ID=sunbeam_line_huge; q=1; r=180; x=38; y=68;
+
+
+
+[Trigger] numID=0; aliasID=;
+topX=35;topY=65;btmX=39;btmY=69;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=0; effectID=travel_leaveLocation; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=1; aliasID=;
+topX=33;topY=67;btmX=33;btmY=67;
+triggerImmediatelyOnEnteringZone=True; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=1; effectID=trigger; sValue=tEnterLoc; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+

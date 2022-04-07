@@ -1,0 +1,252 @@
+
+[Action] ID=Gu_mightyBlock; 
+	name=Mighty Block;
+	icon=icon_Gu_mightyBlock;
+	tooltip=Make an ally nearly invulnerable to physical attacks until their next turn.;
+	rankUpTooltip=;
+	tooltipTopRight=;
+	
+	harmful=false;
+	attractAttention=false;
+	mpCost=2 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=120;
+	
+	casterAnimation=charge;
+	maxRank=1;
+	
+	AIRatingBias = -999;
+	
+[ActionAoE] 
+	ID=Gu_mightyBlock;
+	cloneFrom=adjacentAndSelf;
+	canSelectEnemies=false;
+[AvAffecter]
+	ID=Gu_mightyBlock;
+	harmful=false;
+	actorValue=PhysDef;
+	magnitude=3 + dMin0:mightyBlockDef;
+	duration=-3;
+	chance=100;
+	FXOnTarget=shields;
+	FXOnTargetColor=Gold;
+	FXOnTarget=sfx_sliceShingLow;
+[AvAffecterAoE]
+	ID=Gu_mightyBlock;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Gu_mightyBlock;
+	harmful=false;
+	visibleEvaluations=false;
+	actorValue=PhysAtk;
+	magnitude=-2;
+	duration=-3;
+	chance=100;
+[AvAffecterAoE]
+	ID=Gu_mightyBlock;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Gu_mightyBlock;
+	harmful=false;
+	visibleEvaluations=false;
+	actorValue=recentlyBlocked;
+	magnitude=1 + c:recentlyBlocked;
+	duration=110;
+	chance=100;
+[AvAffecterAoE]
+	ID=Gu_mightyBlock;
+	cloneFrom=oneTile;
+
+
+	
+[Action] ID=Gu_resuscitate; 
+	name=Resuscitate;
+	icon=icon_Gu_resuscitate;
+	tooltip=Revive an adjacent fallen ally, restoring <math=c:skill_Life + c:MagAtk + 10 * c:rank>% HP.;
+	rankUpTooltip=Each rank increases restored HP by 10%.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
+	harmful=false;
+	attractAttention=false;
+	mpCost=4 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=8 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
+	
+	XPCost=300;
+	XPCost=500;
+	XPCost=800;
+	XPCost=1600;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	special=requiresCasting;
+	
+	casterAnimation=handsup;
+	FXOnCaster=chargeFast;
+	FXOnCasterColor=Blue;
+	FXOnTarget=darken_minor;
+	FXOnTarget=tallLight;
+[ActionAoE] 
+	ID=Gu_resuscitate; 
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=Gu_resuscitate;
+	harmful=false;
+	actorValue=revive;
+	magnitude=t:HPMax * 0.1 * c:rank + 1 + t:HPMax * 0.01 * c:skill_Life + t:HPMax * 0.01 * c:MagAtk;
+	duration=-2;
+	chance=d:reviveAcc;
+	FXOnTile=chargeSpiralFast;
+	FXOnTile=sfx_longGoodAura_med;
+	FXOnTile=actor_reviveGhost;
+	FXOnHit=chargeSpiralFast_big;
+	FXOnHit=sparkles;
+	FXOnHit=upwardLinesQuick;
+	FXOnHit=whiten;
+	FXOnHit=Powerup_longerEchoBloop;
+	FXOnMiss=hitDustQuiet;
+[AvAffecterAoE]
+	ID=Gu_resuscitate;
+	cloneFrom=oneTile;
+
+	
+	
+[Action] ID=Gu_rally; 
+	name=Rally;
+	icon=icon_Gu_rally;
+	tooltip=Inspire your allies, increasing their morale for <icon=time><math=34+ c:MagAtk*2 + 20 * c:rank>.<n=>Good morale increases <icon=PhysAtk><icon=MagAtk> attack and <icon=PhysDef><icon=MagDef> defense.;
+	rankUpTooltip=Each rank increases duration by <icon=time>20.;
+	tooltipTopRight=<icon=MagAtk_small>;
+	
+	harmful=false;
+	mpCost=2 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=120;
+	XPCost=280;
+	XPCost=450;
+	XPCost=950;
+	XPCost=1500;
+	
+	maxRank=5;
+	canExceedMaxRankBy=1;
+	casterAnimation=handsup;
+	
+	FXOnCaster=upwardLines;
+	FXOnCaster=sfx_highestAura;
+[ActionAoE] 
+	ID=Gu_rally; 
+	needsLoS = true;
+	needsLoE = true;
+	airborne = true;
+	arc=true;
+	minRange = 0;
+	maxRange = 3;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Gu_rally;
+	harmful=false;
+	actorValue=morale;
+	magnitude=1;
+	duration=34 + c:MagAtk*2 + 20 * c:rank;
+	chance=100;
+	FXOnTile=chargeFast;
+	FXOnHit=upwardLines;
+	FXOnHit=sparkles;
+	FXOnHit=sfx_powerup2;
+[AvAffecterAoE]
+	ID=Gu_rally;
+	cloneFrom=adjacentAndSelf;	
+	canSelectEnemies=false;
+	
+	
+[Action] ID=Gu_discipline; 
+	name=Discipline;
+	icon=icon_Gu_discipline;
+	tooltip=Through sheer fortitude, cure negative status effects.;
+	rankUpTooltip=Each rank increases area of effect.;
+	tooltipTopRight=;
+	
+	harmful=false;
+	attractAttention=false;
+	
+	XPCost=70;
+	XPCost=250;
+	XPCost=700;
+	
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	casterAnimation=charge;
+	
+	FXOnTarget=largePing;
+	FXOnTarget=sfx_risingBipLow;
+[ActionAoE] 
+	ID=Gu_discipline; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Gu_discipline;
+	harmful=false;
+	actorValue=cure;
+	magnitude=1;
+	duration=-2;
+	chance=100 * m:tCurable;
+	FXOnTile=sparkle;
+	FXOnHit=sparklesFast;
+	FXOnHit=briefAuraSound;
+[AvAffecterAoE]
+	ID=Gu_discipline;
+	cloneFrom=oneTile;	
+	canSelectEnemies=false;
+	maxRangeBonus=c:rank - 1;
+	
+	
+[Action] ID=Gu_impair; 
+	name=Impair;
+	icon=icon_Gu_impair;
+	tooltip=Inflict -<math=c:rank + 2> <icon=PhysAtk><icon=MagAtk> for <icon=time>90 and deal half damage.;
+	rankUpTooltip=Further reduce enemy <icon=PhysAtk><icon=MagAtk> by +1.;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	XPCost=150;
+	XPCost=350;
+	XPCost=600;
+	
+	casterAnimation=weapon;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	requiredWeaponElement=weapon;
+	
+	FXOnCaster=chargeFast;
+	FXOnTarget=weaponFX;
+[ActionAoE] 
+	ID=Gu_impair; shape=10;
+[AvAffecter]
+	ID=Gu_impair; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.5;
+	chance=w:chance;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Gu_impair; shape=11;
+[AvAffecter]
+	ID=Gu_impair; 
+	visibleMiss=false;
+	actorValue=PhysAtk;
+	magnitude=-c:rank - 2;
+	duration=90 + c:PhysAtk - t:PhysDef;
+	chance=w:chance;
+	FXOnHit=downwardLines;
+	FXOnHitColor=Red;
+	FXOnHit=Debuff_lowPitch;
+[AvAffecterAoE]
+	ID=Gu_impair;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Gu_impair; 
+	visibleMiss=false;
+	actorValue=MagAtk;
+	magnitude=-c:rank - 2;
+	duration=90 + c:PhysAtk - t:PhysDef;
+	chance=w:chance;
+[AvAffecterAoE]
+	ID=Gu_impair;
+	cloneFrom=oneTile;

@@ -1,0 +1,389 @@
+
+	
+
+[Action] ID=Min_harmony; 
+	name=Harmony;
+	icon=icon_Min_harmony;
+	
+	mpCost=6 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=20 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	
+	tooltip=Heal all allies for <math=2 + c:rank + c:MagAtk* 0.5 + c:skill_Life* 0.5><adjX=-4><icon=HP>.;
+	rankUpTooltip=Each rank increases HP healed by 1<icon=HP>.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
+	
+	XPCost=150;
+	XPCost=750;
+	XPCost=1200;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	special=requiresCasting;
+	
+	casterAnimation=handup_sing;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=darken_minor;
+	
+	FXOnTarget=upwardLines_screen;
+	FXOnTargetColor=DeepPink;
+[ActionAoE] 
+	ID=Min_harmony;  
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+[AvAffecter]
+	ID=Min_harmony; 
+	FXOnTile=sfx_minstrel_harmony;
+	FXOnTileColor=White;
+	FXOnTile=musicNotes;
+	FXOnTileColor=DeepPink;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=Min_harmony; 
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+[AvAffecter]
+	ID=Min_harmony; 
+	harmful=false;
+	actorValue=HP;
+	magnitude=2 + c:rank + c:MagAtk * 0.5 + c:skill_Life * 0.5 + t:skill_Life * 0.5;
+	duration=-2;
+	chance=100;
+	element=magic;
+	element=life;
+	FXOnTile=charge;
+	FXOnTileColor=DeepPink;
+	FXOnHit=sparkles;
+	FXOnHitColor=DeepPink;
+	FXOnHit=briefAuraSound;
+[AvAffecterAoE]
+	ID=Min_harmony; shape=7;
+	cloneFrom=adjacentAndSelf;
+	maxRange=30;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	bypassAll=true;
+	canSelectEnemies=false;
+	
+	
+
+[Action] ID=Min_rhapsody; 
+	name=Rhapsody;
+	icon=icon_Min_rhapsody;
+	
+	mpCost=6 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=20 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	
+	tooltip=Restore <math=1 + c:rank + c:MagAtk* 0.5 + c:skill_Life* 0.5><adjX=-4><icon=MP> for all allies.;
+	rankUpTooltip=Each rank increases MP restored by 1<icon=MP>.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
+	
+	XPCost=150;
+	XPCost=750;
+	XPCost=1200;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	special=requiresCasting;
+	
+	casterAnimation=handup_sing;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=darken_minor;
+	
+	FXOnTarget=upwardLines_screen;
+	FXOnTargetColor=Purple;
+[ActionAoE] 
+	ID=Min_rhapsody; 
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+[AvAffecter]
+	ID=Min_rhapsody; 
+	FXOnTile=sfx_minstrel_rhapsody;
+	FXOnTileColor=White;
+	FXOnTile=musicNotes;
+	FXOnTileColor=Purple;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=Min_rhapsody; 
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+[AvAffecter]
+	ID=Min_rhapsody; 
+	harmful=false;
+	actorValue=MP;
+	magnitude=1 + c:rank + c:MagAtk * 0.5 + c:skill_Life * 0.5 + t:skill_Life * 0.5;
+	duration=-2;
+	chance=100;
+	element=magic;
+	element=life;
+	FXOnTile=charge;
+	FXOnTileColor=Purple;
+	FXOnHit=sparkles;
+	FXOnHitColor=Purple;
+	FXOnHit=sfx_highAura;
+[AvAffecterAoE]
+	ID=Min_rhapsody; shape=7;
+	cloneFrom=adjacentAndSelf;
+	maxRange=30;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	bypassAll=true;
+	canSelectEnemies=false;
+	
+
+[Action] ID=Min_shanty; 
+	name=Shanty;
+	icon=icon_Min_shanty;
+	
+	mpCost=6 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=20 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	
+	tooltip=Boost morale of all allies for <icon=time><math=30+c:rank*10 + c:MagAtk>.;
+	rankUpTooltip=Each rank increases duration by <icon=time>10.;
+	tooltipTopRight=<icon=MagAtk_small>;
+	
+	XPCost=150;
+	XPCost=750;
+	XPCost=1200;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	special=requiresCasting;
+	
+	casterAnimation=handup_sing;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=darken_minor;
+	
+	FXOnTarget=upwardLines_screen;
+	FXOnTargetColor=White;
+[ActionAoE] 
+	ID=Min_shanty; 
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+[AvAffecter]
+	ID=Min_shanty; 
+	FXOnTile=sfx_minstrel_shanty;
+	FXOnTileColor=White;
+	FXOnTile=musicNotes;
+	FXOnTileColor=White;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=Min_shanty; 
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+[AvAffecter]
+	ID=Min_shanty; 
+	harmful=false;
+	actorValue=morale;
+	magnitude=1;
+	duration=30 + c:rank*10 + c:MagAtk;
+	chance=100;
+	element=magic;
+	FXOnTile=charge;
+	FXOnTileColor=White;
+	FXOnHit=sparkles;
+	FXOnHitColor=White;
+	FXOnHit=upwardLines;
+	FXOnHit=sfx_powerup2;
+[AvAffecterAoE]
+	ID=Min_shanty; shape=7;
+	cloneFrom=adjacentAndSelf;
+	maxRange=30;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	bypassAll=true;
+	canSelectEnemies=false;
+	
+
+[Action] ID=Min_virelai; 
+	name=Virelai;
+	icon=icon_Min_virelai;
+	
+	mpCost=4 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=15 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	
+	tooltip=Cure negative status effects on all allies.;
+	rankUpTooltip=;
+	tooltipTopRight=;
+	
+	XPCost=300;
+	maxRank=1;
+	
+	special=requiresCasting;
+	
+	casterAnimation=handup_sing;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=darken_minor;
+	
+	FXOnTarget=upwardLines_screen;
+	FXOnTargetColor=LightSeaGreen;
+[ActionAoE] 
+	ID=Min_virelai; 
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+[AvAffecter]
+	ID=Min_virelai; 
+	FXOnTile=sfx_minstrel;
+	FXOnTileColor=White;
+	FXOnTile=musicNotes;
+	FXOnTileColor=LightSeaGreen;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=Min_virelai; 
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+[AvAffecter]
+	ID=Min_virelai; 
+	harmful=false;
+	actorValue=cure;
+	magnitude=1;
+	duration=-2;
+	chance=100 * m:tCurable;
+	element=magic;
+	FXOnTile=chargeBurst;
+	FXOnTileColor=LightSeaGreen;
+	FXOnHit=chargeSpiralFast_big;
+	FXOnHitColor=LightSeaGreen;
+	FXOnHit=sidewardLines;
+	FXOnHitColor=LightSeaGreen;
+	FXOnHit=ping;
+	FXOnHitColor=LightSeaGreen;
+	FXOnHit=sfx_lowTingQuiet;
+[AvAffecterAoE]
+	ID=Min_virelai; shape=7;
+	cloneFrom=adjacentAndSelf;
+	maxRange=30;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	bypassAll=true;
+	canSelectEnemies=false;
+	
+
+[Action] ID=Min_ballad; 
+	name=War Ballad;
+	icon=icon_Min_ballad;
+	
+	mpCost=9 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=35 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	
+	tooltip=Grant living allies Ward and Guard for <icon=time><math=20+c:rank*5 + d:lifeDurMax(0.5)>, and revive fallen allies with 1<icon=HP> HP.;
+	rankUpTooltip=Each rank increases duration by <icon=time>5.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
+	
+	XPCost=175;
+	XPCost=750;
+	XPCost=1200;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	special=requiresCasting;
+	
+	casterAnimation=handup_sing;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=darken_minor;
+	
+	FXOnTarget=upwardLines_screen;
+	FXOnTargetColor=Black;
+	FXOnTarget=upwardLines_screen;
+	FXOnTargetColor=White;
+	FXOnTarget=upwardLines_screen;
+	FXOnTargetColor=White;
+	FXOnTarget=whiten;
+	FXOnTargetColor=White;
+	FXOnTarget=sfx_minstrel_warballad;
+[ActionAoE] 
+	ID=Min_ballad; 
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+[AvAffecter]
+	ID=Min_ballad; 
+	FXOnTile=musicNotes;
+	FXOnTileColor=Black;
+	FXOnTile=delay;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=Min_ballad; 
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+[AvAffecter]
+	ID=Min_ballad; 
+	harmful=false;
+	actorValue=ward;
+	magnitude=1;
+	duration=20 + c:rank*5 + d:lifeDurMax(0.5);
+	chance=100 - m:incapped * 100;
+	element=magic;
+	FXOnTile=chargeFast;
+	FXOnTileColor=ForestGreen;
+	FXOnHit=ward;
+	FXOnHitColor=ForestGreen;
+	FXOnHit=sfx_powerup3;
+[AvAffecterAoE]
+	ID=Min_ballad; shape=7;
+	cloneFrom=adjacentAndSelf;
+	maxRange=30;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	bypassAll=true;
+	canSelectEnemies=false;
+[AvAffecter]
+	ID=Min_ballad; 
+	harmful=false;
+	actorValue=guard;
+	magnitude=1;
+	duration=20 + c:rank*5 + d:lifeDurMax(0.5);
+	chance=100 - m:incapped * 100;;
+	element=magic;
+	FXOnHit=shield;
+	FXOnHitColor=SkyBlue;
+	FXOnHit=sfx_sliceNoShingLow;
+	FXOnTile=chargeFast;
+	FXOnTileColor=SkyBlue;
+[AvAffecterAoE]
+	ID=Min_ballad; shape=7;
+	cloneFrom=adjacentAndSelf;
+	maxRange=30;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	bypassAll=true;
+	canSelectEnemies=false;
+[AvAffecter]
+	ID=Min_ballad; 
+	harmful=false;
+	actorValue=revive;
+	magnitude=1;
+	duration=-2;
+	chance=d:reviveAcc;
+	FXOnHit=chargeSpiralFast;
+	FXOnHit=sfx_longGoodAura;
+	FXOnHit=actor_reviveGhost;
+	FXOnHit=chargeSpiralFast_big;
+	FXOnHit=sparkles;
+	FXOnHit=upwardLinesQuick;
+	FXOnHit=Powerup_longerEchoBloop;
+[AvAffecterAoE]
+	ID=Min_ballad; shape=7;
+	cloneFrom=adjacentAndSelf;
+	maxRange=30;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	bypassAll=true;
+	canSelectEnemies=false;

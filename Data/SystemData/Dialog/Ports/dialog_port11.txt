@@ -1,0 +1,276 @@
+[DialogNode] ID=port11_guy1a;
+animations=scared;
+statements=I knew they called Jascias the 'City of Gold'...<p> but this is something else!;
+nextNodeID=;
+
+[DialogNode] ID=port11_guy2a;
+animations=;
+animations=sly;
+animations=happy;
+statements=Enjoying the garden?;
+statements=It wasn't easy to...<p> I mean, it's been my pleasure to tend it!;
+statements=Take your time and enjoy it!<textIf= As long as you don't mess with it this time!=g:D_port11_guy2b_pay>;
+nextNodeID=;
+
+[DialogNode] ID=port11_guy2b;
+animations=angry;
+animations=stern;
+statements=How dare you despoil Jasce' garden<textIf=, again!=g:D_port11_guy2b_pay>!;
+statements=You'll pay for that!;
+nextNodeID=port11_guy2b_rank;
+nextNodeID_fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
+nextNodeID=port11_guy2b_pay;
+
+[DialogNode] ID=port11_guy2b_pay;
+animations=sly;
+statements=The fine is $30, to be exact!;
+specialEffect=subtract30gp;
+nextNodeID=;
+
+[DialogNode] ID=port11_guy2b_rank;
+animations=scared;
+animations=happy;
+animations=sad;
+statements=Er...<p> i-is...<p> what I would say...<p=2> to whoever did this!;
+statements=Of course <pfullname=> would never cause any problem!<p> To be sure!;
+
+[DialogNode] ID=port11_guy3a;
+animations=;
+animations=;
+statements=I don't have anything to sell...<p> I just work here.;
+statements=The forge is free for visitors to use, though.;
+nextNodeID=;
+
+[DialogNode] ID=port11_guy4a;
+animations=sigh;
+statements=Jasce is truly great and merciful...!;
+nextNodeID=;
+specialEffect=facingRotPrev;
+
+[DialogNode] ID=port11_guy5a;
+animations=;
+animations=;
+statements=Welcome to Jascias!;
+statements=The temple is straight ahead to the pavilion, then to the right!;
+nextNodeID=;
+
+[DialogNode] ID=port11_guy6a;
+animations=;
+statements=I know the sermon has ended, but I still have prayers left to say.;
+nextNodeID=;
+
+[DialogNode] ID=port11_guy7a;
+animations=;
+statements=This is quite a selection...!;
+nextNodeID=;
+
+[DialogNode] ID=port11_guy8a;
+animations=stern;
+statements=You know we can't afford it!<p> That's why we're making this trip in the first place!;
+nextNodeID=;
+specialEffect=facingRotPrev;
+
+[DialogNode] ID=port11_guy9a;
+animations=angry;
+statements=But their Deep Wine is to die for!<p> Who knows if we ever get another chance to try it?;
+nextNodeID=;
+specialEffect=facingRotPrev;
+
+[DialogNode] ID=port11_guy10a;
+animations=scared;
+animations=meh;
+statements=This machine is amazing!<p> It's so intricate...;
+statements=Is it really safe to have out here?;
+nextNodeID=;
+specialEffect=facingRotPrev;
+
+[DialogNode] ID=port11_guy11a;
+animations=;
+animations=happy;
+statements=Pearls are a great buy!;
+statements=Even my little Caravel can carry a fortune's worth!;
+nextNodeID=;
+
+[DialogNode] ID=port11_guy12a;
+animations=sly;
+animations=stern;
+animations=;
+statements=What?<p=2> Surprised to see an Unmaker in a civilized place?;
+statements=Jascias is above the petty superstitions of the elementalists.;
+statements=Ruin magic is capable of things besides violence, you know.;
+nextNodeID=;
+
+--buralk
+
+[DialogNode] ID=port11_b1a;
+animations=meh;
+statements=<speed=0.35>...not supposed to...;
+nextNodeID=;
+
+
+[DialogNode] ID=port11_b2a;
+animations=scared;
+statements=<speed=0.4>...y-you're in the wrong place.;
+nextNodeID=;
+
+
+[DialogNode] ID=port11_b3a;
+animations=sigh;
+statements=<speed=0.2>...nothing...;
+nextNodeID=;
+
+--guards
+
+[DialogNode] ID=port11_guard1a;
+animations=;
+statements=Do not touch the Antiair machines.;
+nextNodeID=;
+
+[DialogNodeOverride] ID=maxRank_port11_guard1a;
+dialogNodeID_toOverride=port11_guard1a;
+fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=stern;
+statements=Hail <pnamefull=>!;
+
+[DialogNode] ID=port11_guard2a;
+animations=;
+statements=Jasce's temple is to the right.;
+nextNodeID=;
+
+[DialogNodeOverride] ID=maxRank_port11_guard2a;
+dialogNodeID_toOverride=port11_guard2a;
+fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=stern;
+statements=All in order here, <pnamefull=>!;
+
+[DialogNode] ID=port11_guard3a;
+animations=sigh;
+statements=If you have words for the Auspex, you may enter.;
+nextNodeID=;
+
+[DialogNodeOverride] ID=maxRank_port11_guard3a;
+dialogNodeID_toOverride=port11_guard3a;
+fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=happy;
+statements=Good day, <pnamefull=>!;
+
+[DialogNode] ID=port11_guard4a;
+animations=;
+statements=The palace is open to visitors.;
+nextNodeID=;
+
+[DialogNodeOverride] ID=maxRank_port11_guard4a;
+dialogNodeID_toOverride=port11_guard4a;
+fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=stern;
+statements=Jasce' will be done, <pnamefull=>!;
+
+[DialogNode] ID=port11_guard5a;
+animations=;
+statements=Carry on.;
+nextNodeID=;
+
+[DialogNodeOverride] ID=maxRank_port11_guard5a;
+dialogNodeID_toOverride=port11_guard5a;
+fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=;
+statements=A good <dayname=> to you, <pnamefull=>!;
+
+[DialogNode] ID=port11_guard6a;
+animations=;
+statements=This is just a guard house...<p=1.5> not a tourist spot.;
+nextNodeID=;
+
+[DialogNodeOverride] ID=maxRank_port11_guard6a;
+dialogNodeID_toOverride=port11_guard6a;
+fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=scared;
+animations=happy;
+statements=Oh, <pnamefull=>!<p> Visiting the guard house?;
+statements=Uh...<p> would you like a tour?;
+
+[DialogNode] ID=port11_guard7a;
+animations=sly;
+statements=Did you need something?;
+nextNodeID=;
+
+[DialogNodeOverride] ID=maxRank_port11_guard7a;
+dialogNodeID_toOverride=port11_guard7a;
+fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=sigh;
+statements=Anything you need, <pnamefull=>.;
+
+[DialogNode] ID=port11_guard8a;
+animations=;
+animations=stern;
+statements=No need to worry for your safety.;
+statements=We take security seriously here.;
+nextNodeID=;
+
+[DialogNodeOverride] ID=maxRank_port11_guard8a;
+dialogNodeID_toOverride=port11_guard8a;
+fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=stern;
+statements=All is secure, <pnamefull=>!;
+
+[DialogNode] ID=port11_royal1_guard1a;
+animations=;
+statements=The Auspex is down the hall.;
+nextNodeID=;
+
+[DialogNodeOverride] ID=maxRank_port11_royal1_guard1a;
+dialogNodeID_toOverride=port11_royal1_guard1a;
+fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=;
+statements=The Auspex will meet with you anytime you're ready, <pnamefull=>!;
+
+[DialogNode] ID=port11_royal1_guard2a;
+animations=;
+statements=Touch nothing.;
+nextNodeID=;
+
+[DialogNodeOverride] ID=maxRank_port11_royal1_guard2a;
+dialogNodeID_toOverride=port11_royal1_guard2a;
+fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=stern;
+statements=Jasce' will be done, <prank=>.;
+
+[DialogNode] ID=port11_royal1_guard3a;
+animations=;
+statements=Mind that you are in His Holiness' home.;
+nextNodeID=;
+
+[DialogNodeOverride] ID=maxRank_port11_royal1_guard3a;
+dialogNodeID_toOverride=port11_royal1_guard3a;
+fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=scared;
+statements=I-<p>I have nothing to report, <pnamefull=>!;
+
+[DialogNode] ID=port11_royal1_guard4a;
+animations=;
+statements=Direct your business to the Auspex.;
+nextNodeID=;
+
+[DialogNodeOverride] ID=maxRank_port11_royal1_guard4a;
+dialogNodeID_toOverride=port11_royal1_guard4a;
+fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=happy;
+statements=<pnamefull=>,<p> good to see you.;
+
+
+
+
+
+

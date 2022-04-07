@@ -1,0 +1,292 @@
+
+
+[Action] ID=Wrd_guard; 
+	name=Guard;
+	icon=icon_Wrd_guard;
+	tooltip=Halve incoming physical damage to a small group<n>for <icon=time><math=25 + d:lifeDurMax(0.5) + 10 * c:rank>.;
+	rankUpTooltip=Each rank increases duration by <icon=time>10.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
+	harmful=false;
+	
+	mpCost=7 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=7 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	
+	XPCost=150;
+	XPCost=500;
+	XPCost=900;
+	
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	special=requiresCasting;
+	casterAnimation=spellcast;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=chargeFast;
+	FXOnCasterColor=SkyBlue;
+	FXOnTarget=sfx_highAura;
+[ActionAoE] 
+	ID=Wrd_guard; 
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 0;
+	maxRange = 3;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Wrd_guard;
+	harmful=false;
+	actorValue=guard;
+	magnitude=1;
+	duration=25 + d:lifeDurMax(0.5) + 10 * c:rank;
+	chance=100;
+	element=magic;
+	element=life;
+	FXOnHit=shield;
+	FXOnHitColor=SkyBlue;
+	FXOnHit=sfx_sliceNoShingLow;
+	FXOnTile=chargeFast;
+	FXOnTileColor=SkyBlue;
+[AvAffecterAoE]
+	ID=Wrd_guard;
+	cloneFrom=adjacentAndSelf;
+	
+
+[Action] ID=Wrd_ward; 
+	name=Ward;
+	icon=icon_Wrd_ward;
+	tooltip=Halve incoming magic damage to a small group for <icon=time><math=30 + d:lifeDurMax(1) + 20 * c:rank>.;
+	rankUpTooltip=Each rank increases duration by <icon=time>20.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
+	
+	harmful=false;
+	mpCost=7 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=7 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	
+	XPCost=150;
+	XPCost=500;
+	XPCost=900;
+	
+	special=requiresCasting;
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=chargeFast;
+	FXOnCasterColor=Turquoise;
+	FXOnTarget=sfx_highAura;
+[ActionAoE] 
+	ID=Wrd_ward; shape=0; 
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 0;
+	maxRange = 3;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Wrd_ward; 
+	actorValue=ward;
+	harmful=false;
+	magnitude=1;
+	duration=30 + d:lifeDurMax(1) + c:rank * 20;
+	chance=100;
+	element=magic;
+	element=life;
+	FXOnTile=chargeFast;
+	FXOnTileColor=ForestGreen;
+	FXOnHit=ward;
+	FXOnHitColor=ForestGreen;
+	FXOnHit=sfx_powerup3;
+[AvAffecterAoE]
+	ID=Wrd_ward;
+	cloneFrom=adjacentAndSelf;
+	
+	
+
+[Action] ID=Wrd_barrier; 
+	name=Barrier;
+	icon=icon_Wrd_barrier;
+	mpCost=7 * d:mpCostMult + d:mpCostMod;
+	tooltip=Create <math=c:rank + 2> contiguous magical barriers that block attacks and movement for <icon=time>70. Barriers can be broken with ruin magic or repeated physical attacks.;
+	rankUpTooltip=Each rank increases number of barriers by 1.;
+	tooltipTopRight=;
+	harmful=false;
+	
+	XPCost=200;
+	XPCost=750;
+	XPCost=1200;
+	
+	AIRatingBias=-999;
+	
+	numTargets=c:rank+2;
+	maxDistanceBetweenTargets=1;
+	
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+[ActionAoE] 
+	ID=Wrd_barrier; shape=0; 
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 1;
+	maxRange = 4;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=false;
+	canSelectActors=false;
+[AvAffecter]
+	ID=Wrd_barrier; 
+	actorValue=summonItem;
+	harmful=false;
+	magnitude=barrier_item;
+	duration=1;
+	chance=100;
+	element=magic;
+	element=life;
+	FXOnTile=barrier;
+	FXOnTileColor=SkyBlue;
+	FXOnTile=castingFast;
+	FXOnTileColor=SkyBlue;
+[AvAffecterAoE]
+	ID=Wrd_barrier;
+	cloneFrom=oneTile;
+	
+	
+
+[Action] ID=Wrd_aegis; 
+	name=Aegis;
+	icon=icon_Wrd_aegis;
+	tooltip=Cure negative status effects and grant 'Aegis', protecting an ally from the next negative status effect for <icon=time><math=80 + d:lifeDurMax(2)>.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
+	
+	harmful=false;
+	mpCost=5 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=125;
+	XPCost=350;
+	XPCost=700;
+	
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=chargeFast;
+	FXOnCasterColor=White;
+	FXOnTarget=sfx_highAura;
+[ActionAoE] 
+	ID=Wrd_aegis;
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 0;
+	maxRange = 2;
+	maxRangeBonus=c:rank;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Wrd_aegis; 
+	actorValue=cure;
+	harmful=false;
+	magnitude=1;
+	duration=-2;
+	chance=100 * m:tCurable;
+	element=magic;
+	element=life;
+	FXOnTile=chargeBurst;
+	FXOnTileColor=White;
+	FXOnHit=chargeSpiralFast_big;
+	FXOnHitColor=White;
+	FXOnHit=sidewardLines;
+	FXOnHitColor=White;
+	FXOnHit=ping;
+	FXOnHitColor=White;
+	FXOnHit=sfx_lowTingQuiet;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=Wrd_aegis;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Wrd_aegis; 
+	actorValue=aegis;
+	harmful=false;
+	magnitude=1;
+	duration=80 + d:lifeDurMax(2);
+	chance=100;
+	element=magic;
+	element=life;
+	FXOnTile=chargeFast;
+	FXOnTileColor=White;
+	FXOnHit=ward;
+	FXOnHitColor=White;
+	FXOnHit=guard;
+	FXOnHitColor=White;
+	FXOnHit=sfx_powerup2;
+[AvAffecterAoE]
+	ID=Wrd_aegis;
+	cloneFrom=oneTile;
+	
+
+
+[Action] ID=Wrd_negate; 
+	name=Negate;
+	icon=icon_Wrd_negate;
+	tooltip=Protect an ally from one attack's damage for <icon=time><math=80 + d:lifeDurMax(2)>.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
+	
+	harmful=false;
+	mpCost=5 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=125;
+	XPCost=350;
+	XPCost=700;
+	
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=chargeFast;
+	FXOnCasterColor=White;
+	FXOnTarget=sfx_highAura;
+[ActionAoE] 
+	ID=Wrd_negate;
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 0;
+	maxRange = 2;
+	maxRangeBonus=c:rank;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Wrd_negate; 
+	actorValue=negate;
+	harmful=false;
+	magnitude=1;
+	duration=80 + d:lifeDurMax(2);
+	chance=100;
+	element=magic;
+	FXOnTile=chargeFast;
+	FXOnTileColor=White;
+	FXOnHit=square16_shine_big;
+	FXOnHitColor=White;
+	FXOnHit=square16_shine_big;
+	FXOnHitColor=White;
+	FXOnHit=sfx_crystallize_fast;
+[AvAffecterAoE]
+	ID=Wrd_negate;
+	cloneFrom=oneTile;
+	
+	

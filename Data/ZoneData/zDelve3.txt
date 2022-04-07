@@ -1,0 +1,56 @@
+[Zone]  ID=zDelve3; dark=True; timeUntilNewDay=24; showFogOfWar=True; fogOfWar=True; minimapEnabled=True; allowCameraPastZoneEdges=False; cantAct=False; cantGameOver=False; alwaysKeepWeaponsUnsheathed=False; peaceful=False; overseerMode=False; rollingPinStyle=False; drawSky=False; drawSky_overrideYpos=-1; boatZone=False; wind=False; overworld=False; canDropItems=True; 
+ travelSong=; travelSongVolume=1; travelSongPitch=0; combatSong=; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=193; darkG=205; darkB=209; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=; bgFX_sineWave=0; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=p70; zoneGrassPalette=pGreen; zoneGrassDarkPalette=pGreen2; zoneStonePalette=p86; zoneStoneDarkPalette=pGreyD2; zoneStoneLightPalette=p86; zoneWaterPalette=pBlue; zoneDirtDarkPalette=p70; zoneWoodPalette=pWood; zoneWoodDarkPalette=pWoodDark; zoneMisc1Palette=pWoodDark; zoneMisc2Palette=pWoodDark; zoneMisc3Palette=pRed; zoneMisc4Palette=pBlue; zoneMisc5Palette=pGreen; zoneMisc6Palette=pOrange; zoneMisc7Palette=pYellow; zoneMisc8Palette=pPurple; 
+
+combatMode=False; 
+
+[Item] ID=staircase; q=1; x=19; y=13;
+[Item] ID=floor_stone3b; q=1; r=-360; x=21; y=11;
+[Item] ID=spire_cath_top_noJ; q=1; oX=0; oY=2; x=22; y=9;
+[Item] ID=stone_pole2_noJ; q=1; x=22; y=10;
+[Item] ID=spire_cath_top_noJ; q=1; oX=0; oY=2; x=22; y=15;
+[Item] ID=stone_pole2_noJ; q=1; x=22; y=16;
+[Item] ID=stone_pole2_noJ; q=1; x=23; y=9;
+[Item] ID=chest_stone1; q=1; x=23; y=10; containerID=0;
+[Item] ID=loot3; q=1; containedIn=0; cSlot=0;
+[Item] ID=loot4; q=1; containedIn=0; cSlot=1;
+[Item] ID=loot_gp3; q=1; containedIn=0; cSlot=2;
+[Item] ID=stone_pole2_noJ; q=1; x=23; y=17;
+[Item] ID=chest_stone1; q=1; x=25; y=9; containerID=1;
+[Item] ID=loot_trigger; q=1; containedIn=1; cSlot=0;
+[Item] ID=loot_gp_much; q=1; containedIn=1; cSlot=1;
+[Item] ID=loot_gp3; q=1; containedIn=1; cSlot=2;
+[Item] ID=stone_pole2_noJ; q=1; r=-360; x=27; y=9;
+[Item] ID=chest_stone1; q=1; x=27; y=10; containerID=2;
+[Item] ID=corpryst; q=1; containedIn=2; cSlot=0;
+[Item] ID=loot_gp_much; q=1; containedIn=2; cSlot=1;
+[Item] ID=loot_gp_much; q=1; containedIn=2; cSlot=2;
+[Item] ID=loot_gp_much; q=1; containedIn=2; cSlot=4;
+[Item] ID=stone_pole2_noJ; q=1; r=-360; x=27; y=17;
+[Item] ID=spire_cath_top_noJ; q=1; r=-360; oX=0; oY=2; x=28; y=9;
+[Item] ID=stone_pole2_noJ; q=1; r=-360; x=28; y=10;
+[Item] ID=spire_cath_top_noJ; q=1; r=-360; oX=0; oY=2; x=28; y=15;
+[Item] ID=stone_pole2_noJ; q=1; r=-360; x=28; y=16;
+[Item] ID=floor_stone6b; q=1; r=-360; x=29; y=11;
+[Item] ID=travelPoint_0; q=1; r=180; x=29; y=13;
+[Item] ID=staircase_up; q=1; r=-360; x=31; y=13;
+
+
+
+[Trigger] numID=0; aliasID=;
+topX=19;topY=13;btmX=19;btmY=13;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=0; effectID=travel_procedural_point; sValue=delve3; sValue2=; bValue1=True; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=1; aliasID=;
+topX=31;topY=13;btmX=31;btmY=13;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=1; effectID=talk; sValue=; sValue2=delve_exit; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+

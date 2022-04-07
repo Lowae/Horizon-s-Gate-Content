@@ -1,0 +1,429 @@
+[DialogNode] ID=merchant;
+animations=;
+statements=<randSetID=Whatcha need?/Hey. Want something?/Can I get you something?/What's up?>;
+specialEffect=setPCDialogWindowSizeY;
+specialEffect=setNPCDialogWindowSizeY;
+
+[DialogOption] text=Buy <adjX=-1><math=m:maxFoodBuy><adjX=-12><iconBig=food><adjX=-2> Food ($<buyPrice=food> each);
+formulaReq=m:maxFoodBuy;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_autofill_food;
+[DialogOption] text=Trade;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_goods;
+[DialogOption] text=Port Status;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_portStatus;
+[DialogOption] text=Info;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_info;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+
+----
+
+
+
+-----------------------
+
+[DialogNode] ID=merchant_goods;
+animations=;
+statements=The specialty here is <locGoodsName=>, for $<locGoodsPrice=> each.<n><speed=3><adjX=500><iconBig=marketRate> <font=thickIcons2><locMarketRate=>%;
+specialEffect=enterBuyMode_location;
+specialEffect=setNPCDialogWindowSizeY,120;
+specialEffect=setPCDialogWindowSizeY,68;
+nextNodeID=merchant;
+[DialogOption] text=Back<textIfFinal==1-m:gamepad> (<keybind=endTurn>);
+nodeToConnectTo=merchant;
+escOption=true;
+bottomOption=true;
+
+
+
+[DialogNode] ID=merchant_autofill_food;
+animations=;
+statements=Fill your cargo with <math=m:maxFoodBuy>food, for $<math=m:maxFoodBuy * buyPrice:food><adjX=-2>?;
+[DialogOption] text=Yes ($<math=m:maxFoodBuy * buyPrice:food><adjX=-6>);
+formulaReq=m:money - m:maxFoodBuy * buyPrice:food + 1;
+nodeToConnectTo=merchant_autofill_food_yes;
+[DialogOption] text=No;
+newLineOfOptions=true;
+nodeToConnectTo=merchant;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=merchant_autofill_food_yes;
+animations=;
+statements=Alright. Anything else?;
+specialEffect=autobuy_food;
+[DialogOption] text=Trade;
+nodeToConnectTo=merchant_goods;
+[DialogOption] text=Port Status;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_portStatus;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+-----------------------
+
+[DialogNode] ID=merchant_portStatus;
+animations=;
+statements=<speed=1.5><locName=>'s wealth level is <xAdj=-2><math=locFloat:wealthLevel><xAdj=-6>%.<n=>We restock about ><xAdj=-6><math=m:locGoodsRestockPerDay>><xAdj=-2><locGoodsIcon=><locGoodsName=> per day.<n=><n=><locFactionComparison=><n><speed=3><adjX=500><adjY=-10><iconBig=marketRate> <font=thickIcons2><locMarketRate=>%;
+specialEffect=setNPCDialogWindowSizeY,212;
+[DialogOption] text=Invest;
+formulaReq=gIsString:playerFaction + mIs0:canChangeFaction;
+nodeToConnectTo=merchant_invest;
+[DialogOption] text=Invest;
+formulaReq=m:canChangeFaction - gIsString:playerFaction;
+nodeToConnectTo=merchant_invest_noFaction;
+[DialogOption] text=About Investing;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_invest_about;
+[DialogOption] text=Back;
+newLineOfOptions=true;
+nodeToConnectTo=merchant;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+---
+
+[DialogNode] ID=merchant_invest;
+animations=happy;
+animations=;
+statements=We welcome any and all donations! Investments directly influence wealth<finalTextIf=.=1-m:canChangeFaction> and favor.;
+statements=How much would you like to give?;
+specialEffect=setNPCDialogWindowSizeY;
+[DialogOption] text=$100;
+formulaReq=m:money - 99;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_invest100;
+[DialogOption] text=$500;
+formulaReq=m:money - 499;
+nodeToConnectTo=merchant_invest500;
+[DialogOption] text=$1000;
+formulaReq=m:money - 999;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_invest1000;
+[DialogOption] text=$5000;
+formulaReq=m:money - 4999;
+nodeToConnectTo=merchant_invest5000;
+[DialogOption] text=$10000;
+formulaReq=m:money - 9999;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_invest10000;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=merchant_invest100;
+animations=happy;
+statements=Thanks! Even a small investment is appreciated.;
+specialEffect=subtract100gp;
+specialEffect=invest,100;
+specialEffect=fx,sfx_goodConfirm_fast_loud;
+specialEffect=location_tryUnlockItems;
+nextNodeID=merchant_portStatus;
+
+[DialogNode] ID=merchant_invest500;
+animations=happy;
+statements=Thank you! This will be of great use.;
+specialEffect=subtract500gp;
+specialEffect=invest,500;
+specialEffect=fx,sfx_goodConfirm_fast_loud;
+specialEffect=location_tryUnlockItems;
+nextNodeID=merchant_portStatus;
+
+[DialogNode] ID=merchant_invest1000;
+animations=happy;
+statements=Quite an investment! Thank you very much!;
+specialEffect=subtract1000gp;
+specialEffect=invest,1000;
+specialEffect=fx,sfx_goodConfirm_loud;
+specialEffect=location_tryUnlockItems;
+nextNodeID=merchant_portStatus;
+
+[DialogNode] ID=merchant_invest5000;
+animations=happy;
+statements=Fantastic! This investment will go far indeed! Thank you!;
+specialEffect=subtract5000gp;
+specialEffect=invest,5000;
+specialEffect=fx,sfx_goodConfirm_loud;
+specialEffect=location_tryUnlockItems;
+nextNodeID=merchant_portStatus;
+
+[DialogNode] ID=merchant_invest10000;
+animations=happy;
+statements=Ah-! Your generosity is overwhelming! I can't thank you enough.;
+specialEffect=subtract10000gp;
+specialEffect=invest,10000;
+specialEffect=fx,sfx_goodConfirm_loud;
+specialEffect=location_tryUnlockItems;
+nextNodeID=merchant_portStatus;
+
+---
+
+[DialogNode] ID=merchant_invest_noFaction;
+animations=sly;
+animations=;
+animations=happy;
+statements=Hm? Hold on... you're not serving under any nation.;
+statements=If you invest, it won't affect this port's faction alliegance. It will only increase our wealth level and your Trade fame.;
+statements=Regardless, we welcome any investment!;
+[DialogOption] text=$100;
+formulaReq=m:money - 99;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_invest100;
+[DialogOption] text=$500;
+formulaReq=m:money - 499;
+nodeToConnectTo=merchant_invest500;
+[DialogOption] text=$1000;
+formulaReq=m:money - 999;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_invest1000;
+[DialogOption] text=$5000;
+formulaReq=m:money - 4999;
+nodeToConnectTo=merchant_invest5000;
+[DialogOption] text=$10000;
+formulaReq=m:money - 9999;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_invest10000;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=merchant_invest_about;
+animations=;
+statements=What do you want to know?;
+specialEffect=setNPCDialogWindowSizeY;
+[DialogOption] text=What does investing do exactly?;
+nodeToConnectTo=merchant_invest_about_invest;
+[DialogOption] text=Wealth Level;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_invest_about_wl;
+[DialogOption] text=Faction Favor;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_invest_about_ff;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=merchant_portStatus;
+escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=merchant_info;
+animations=;
+statements=What do you want to know 'bout?;
+[DialogOption] text=Trade Goods;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_info_trade;
+[DialogOption] text=Cannons;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_info_cannons;
+[DialogOption] text=Crew Morale;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_info_crewMorale;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=merchant;
+escOption=true;
+bottomOption=true;
+
+
+[DialogNode] ID=merchant_info_trade;
+animations=happy;
+animations=sly;
+animations=;
+animations=meh;
+animations=;
+statements=Trading's easy!<p> Just buy a handful of goods from one port, and sell it in the next!;
+statements=The further you take it from where it's made, the more money you'll make.;
+statements=And the nice thing is, unless you sell it where it's made, you'll always earn money.<p> It's foolproof!;
+statements=Uh,<p> unless you've lowered a port's <iconBig=marketRate><adjX=-2> Market Rate by selling tons of stuff there before...;
+statements=But <iconBig=marketRate><adjX=-2> Market Rate recovers automatically over time.<p> And it recovers faster with more allied ports nearby...<p> so don't worry about it.;
+animations=;
+nextNodeID=merchant_info;
+
+[DialogNode] ID=merchant_info_cannons;
+animations=;
+animations=sly;
+animations=sigh;
+animations=;
+statements=Cannons are used for naval combat against sea monsters and fleets.;
+statements=After you buy one, make sure to equip it on your ship in the <color=DarkRed>Fleet Window<color=>.;
+statements=Remember, you only need one of each kind...<p> duplicate cannons on the same ship do nothing!;
+statements=Most cannons end your turn when fired,<p> so try to move to a good spot before firing!;
+nextNodeID=merchant_info;
+
+[DialogNode] ID=merchant_info_crewMorale;
+animations=sly;
+animations=happy;
+animations=;
+animations=sly;
+statements=Y'see that <iconBig=icon_crewMorale> face on your menu in the top right?;
+statements=Well, can't see it 'til I'm done talkin, I guess.<p> But still!;
+statements=That's your Crew Morale.<p> Keep that high and your fleet'll sail faster and fight better!;
+statements=Let it fall to 0% and you're done for.<p> So keep it high by treating your party at Cafes!;
+nextNodeID=merchant_info;
+
+
+[DialogNode] ID=merchant_invest_about_invest;
+animations=;
+animations=sigh;
+animations=sly;
+animations=;
+statements=Investing does a number of things. First, it increases a port's wealth level.;
+statements=Second, if you are affiliated with a nation, it makes the port more favorable toward that nation, and less favorable toward others.;
+statements=Third, it increases your trade fame. Everyone loves a generous trader!;
+statements=Lastly, when you invest on behalf of your nation, your nation likes you more...<p=> and the nation you're taking the port from likes you less.;
+nextNodeID=merchant_invest_about;
+
+
+[DialogNode] ID=merchant_invest_about_wl;
+animations=;
+animations=sigh;
+animations=sly;
+animations=sigh;
+statements=A port's wealth level directly influences the restock rate and maximum stock of trade goods.;
+statements=Wealthier ports also have a busier guild and more crowded cafes.;
+statements=Most importantly, when a port reaches a really high wealth level, they start selling more powerful and rarer equipment!;
+statements=Wealth level increases quickly until it hits 70%, when it starts to require twice as much investment.;
+nextNodeID=merchant_invest_about;
+
+[DialogNode] ID=merchant_invest_about_ff;
+animations=;
+animations=sigh;
+animations=;
+animations=sly;
+animations=sigh;
+statements=Each port allies themselves with a different nation based on who they favor most.;
+statements=Whoever invests the most gains the most favor!<p=1.5> When you see merchant fleets sailing, they're usually making investments along the way.;
+statements=If a port likes your nation -<p=1.5> and your nation likes you -<p=1.5> then you can get big discounts on Food and Repairs.;
+statements=And of course, if a port is allied with a nation that hates you, it can become real troublesome just to get in!;
+statements=Keep in mind that some ports will never change alliances - they are 'ever loyal'.;
+nextNodeID=merchant_invest_about;
+
+
+------MERCHANT (ITEMS)
+[DialogNode] ID=merchant_items;
+animations=;
+statements=<randSetID=I got all the gear you need right here./Buying or selling?/Check out my fine selection of items.>;
+
+[DialogOption] text=Trade;
+nodeToConnectTo=merchant_items_buy;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=merchant_items_buy;
+animations=;
+statements=Take a look.;
+specialEffect=enterBuyMode_locationItems;
+specialEffect=setNPCDialogWindowSizeY,120;
+specialEffect=setPCDialogWindowSizeY,68;
+[DialogOption] text=Goodbye<textIfFinal==1-m:gamepad> (<keybind=endTurn>);
+nodeToConnectTo=;
+bottomOption=true;
+
+
+------MERCHANT (ITEMS)
+[DialogNode] ID=merchant_inv;
+animations=;
+statements=<randSetID=I got all the gear you need right here./Buying or selling?/Check out my fine selection of items.>;
+
+[DialogOption] text=Trade;
+nodeToConnectTo=merchant_inv_buy;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=merchant_inv_buy;
+animations=;
+statements=Take a look.;
+specialEffect=enterBuyMode;
+specialEffect=setNPCDialogWindowSizeY,120;
+specialEffect=setPCDialogWindowSizeY,68;
+[DialogOption] text=Goodbye<textIfFinal==1-m:gamepad> (<keybind=endTurn>);
+nodeToConnectTo=;
+bottomOption=true;
+
+------MERCHANT (SECRET SHOP)
+[DialogNode] ID=merchant_secret;
+animations=sly;
+statements=<randSetID=You've done well to come here...! Take a peek at my wares!/Welcome...! These are deals you won't find anywhere else!/The location's not great, but these items are worth it!>;
+
+[DialogOption] text=Trade;
+nodeToConnectTo=merchant_secret_buy;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=merchant_secret_buy;
+animations=;
+statements=Take a look!;
+specialEffect=enterBuyMode_locationItems;
+specialEffect=setNPCDialogWindowSizeY,120;
+specialEffect=setPCDialogWindowSizeY,68;
+[DialogOption] text=Goodbye<textIfFinal==1-m:gamepad> (<keybind=endTurn>);
+nodeToConnectTo=;
+bottomOption=true;
+
+
+
+
+---------------------OVERRIDES
+
+[DialogNodeOverride] ID=merchant_tradeSpecial;
+dialogNodeID_toOverride=merchant; priority=100;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=gIsLocID:tradeSpecial_locID;
+animations=sly;
+animations=happy;
+statements=Hey, got any <color=DarkRed><itemBig_global=tradeSpecial_goodsID> <itemName_global=tradeSpecial_goodsID><color=>?;
+statements=I'll pay you <color=DarkRed>double<color=> the <color=DarkRed>first time<color=> you sell 'em here!;
+
+
+
+
+
+[DialogNodeOverride] ID=merchant_royal_summons_seartial;
+dialogNodeID_toOverride=merchant;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=gIsString:royalQuestType + gIs:playerFaction,seartial + gIsLocFaction:playerFaction - 2 - g:questRoyal * 100 - gTimeSinceLessThan:questComplete_r:20 * 1000;
+animations=;
+statements=Welcome, <pnamefull=>. I hear the <color=DarkRed>Council<color=> is looking for you.;
+specialEffect=setGlobalVar,royalSummons,1;
+
+[DialogNodeOverride] ID=merchant_royal_summons_jasce;
+dialogNodeID_toOverride=merchant;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=gIsString:royalQuestType + gIs:playerFaction,jasce + gIsLocFaction:playerFaction- 2 - g:questRoyal * 100 - gTimeSinceLessThan:questComplete_r:20 * 1000;
+animations=;
+statements=<pnamefull=>, did you know <color=DarkRed>Jasce<color=> has called for you?;
+specialEffect=setGlobalVar,royalSummons,1;
+
+[DialogNodeOverride] ID=merchant_royal_summons_rumane;
+dialogNodeID_toOverride=merchant;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=gIsString:royalQuestType + gIs:playerFaction,rumane + gIsLocFaction:playerFaction- 2 - g:questRoyal * 100 - gTimeSinceLessThan:questComplete_r:20 * 1000;
+animations=;
+statements=<pnamefull=>, did you know the <color=DarkRed>King<color=> is looking for you?;
+specialEffect=setGlobalVar,royalSummons,1;
+
+
+
+
+
+
+
+
+
+
+
+

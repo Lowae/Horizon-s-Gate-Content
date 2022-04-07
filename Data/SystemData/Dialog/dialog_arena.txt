@@ -1,0 +1,450 @@
+
+--------------------ARENA
+
+[DialogNode] ID=arena;
+animations=;
+statements=<textIf=Welcome to the arena! Interested in fighting?=gTimeSinceMoreThanOrNeverAssigned:arenaEntrant2:100><textIf=Come back soon!=gTimeSinceLessThanOrEqual:arenaEntrant2:100>;
+[DialogOption] text=Explain the rules;
+nodeToConnectTo=arena_rules1a;
+formulaReq=1-g:D_arena_won4_firstVictory;
+[DialogOption] text=Explain elite arena;
+formulaReq=g:D_arena_won4_firstVictory;
+nodeToConnectTo=arena_rules1a_elite;
+[DialogOption] text=Fight ($50);
+newLineOfOptions=true;
+formulaReq=m:partySize(2) + m:money(50) + gTimeSinceMoreThanOrNeverAssigned:arenaEntrant2:100 - 2;
+nodeToConnectTo=arena_join1;
+[DialogOption] text=<color=SlateGray>Fight ($50);
+newLineOfOptions=true;
+formulaReq=2-m:partySize + m:money(50) + gTimeSinceMoreThanOrNeverAssigned:arenaEntrant2:100 - 2;
+nodeToConnectTo=arena_join_nocrew;
+[DialogOption] text=<color=SlateGray>Fight ($50);
+newLineOfOptions=true;
+formulaReq=50 - m:money + m:partySize(2) + gTimeSinceMoreThanOrNeverAssigned:arenaEntrant2:100 -2;
+nodeToConnectTo=arena_join_nocash;
+[DialogOption] text=<color=SlateGray>Fight ($50);
+newLineOfOptions=true;
+formulaReq=gTimeSinceLessThanOrEqual:arenaEntrant2:100;
+nodeToConnectTo=arena_join_notready;
+[DialogOption] text=<color=DarkRed>Elite Fight<color=> ($150);
+newLineOfOptions=true;
+formulaReq=m:partySize(2) + m:money(150) + gTimeSinceMoreThanOrNeverAssigned:arenaEntrant2:100 + g:D_arena_won4_firstVictory - 3;
+nodeToConnectTo=arena_join1_elite;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=arena_rules1a;
+animations=happy;
+animations=;
+animations=sly;
+animations=;
+animations=happy;
+animations=;
+statements=Certainly!<p> It's a series of four fights<p> - but with a twist!;
+statements=You enter two combatants as a team.<p> They go up against another pair of fighters.;
+statements=If you win, you go on to the next round <p>- AND one of the fighters you just defeated joins you!;
+statements=Your team of three fights another trio -<p> again, adding a new member if you win!;
+statements=If you win the four-on-four fight, you make it to the FINAL five-on-five brawl!;
+statements=Win that, and you'll recieve the grand prize!<p> You also earn hefty sums of gold for each individual victory, so don't worry if you don't make it to the end.;
+nextNodeID=arena;
+
+--JOIN
+
+[DialogNode] ID=arena_join_nocrew;
+animations=sly;
+statements=Sorry,<p> you need at least two people to enter!;
+nextNodeID=;
+
+[DialogNode] ID=arena_join_nocash;
+animations=sly;
+statements=Sorry,<p> you can't afford the entry fee!;
+nextNodeID=;
+
+[DialogNode] ID=arena_join_notready;
+animations=sigh;
+animations=happy;
+statements=I'm afraid there aren't any more fights today.; 
+statements=Come back in a week and we'll be sure to have something for you!;
+nextNodeID=;
+
+[DialogNode] ID=arena_join1;
+animations=;
+statements=Who would like to enter?;
+specialEffect=healparty;
+[DialogOption] text=<portraitBig=0><partyActorName=0>;
+specialEffect=setGlobalVarToPartyActorNum,arenaEntrant1,0;
+nodeToConnectTo=arena_join2;
+[DialogOption] text=<portraitBig=1><partyActorName=1>;
+--newLineOfOptions=true;
+specialEffect=setGlobalVarToPartyActorNum,arenaEntrant1,1;
+formulaReq=m:partySize-1;
+nodeToConnectTo=arena_join2;
+[DialogOption] text=<portraitBig=2><partyActorName=2>;
+newLineOfOptions=true;
+specialEffect=setGlobalVarToPartyActorNum,arenaEntrant1,2;
+formulaReq=m:partySize-2;
+nodeToConnectTo=arena_join2;
+[DialogOption] text=<portraitBig=3><partyActorName=3>;
+--newLineOfOptions=true;
+specialEffect=setGlobalVarToPartyActorNum,arenaEntrant1,3;
+formulaReq=m:partySize-3;
+nodeToConnectTo=arena_join2;
+[DialogOption] text=<portraitBig=4><partyActorName=4>;
+newLineOfOptions=true;
+specialEffect=setGlobalVarToPartyActorNum,arenaEntrant1,4;
+formulaReq=m:partySize-4;
+nodeToConnectTo=arena_join2;
+[DialogOption] text=Nobody;
+nodeToConnectTo=;
+escOption=true;
+bottomOption=true;
+
+
+[DialogNode] ID=arena_join2;
+animations=;
+statements=And who is your second entrant?;
+[DialogOption] text=<portraitBig=0><partyActorName=0>;
+specialEffect=setGlobalVarToPartyActorNum,arenaEntrant2,0;
+formulaReq=m:partySize-1 - gIs:arenaEntrant1:0*99;
+nodeToConnectTo=arena_join3;
+[DialogOption] text=<portraitBig=1><partyActorName=1>;
+--newLineOfOptions=true;
+specialEffect=setGlobalVarToPartyActorNum,arenaEntrant2,1;
+formulaReq=m:partySize-1 - gIs:arenaEntrant1:1*99;
+nodeToConnectTo=arena_join3;
+[DialogOption] text=<portraitBig=2><partyActorName=2>;
+newLineOfOptions=true;
+specialEffect=setGlobalVarToPartyActorNum,arenaEntrant2,2;
+formulaReq=m:partySize-2 - gIs:arenaEntrant1:2*99;
+nodeToConnectTo=arena_join3;
+[DialogOption] text=<portraitBig=3><partyActorName=3>;
+--newLineOfOptions=true;
+specialEffect=setGlobalVarToPartyActorNum,arenaEntrant2,3;
+formulaReq=m:partySize-3 - gIs:arenaEntrant1:3*99;
+nodeToConnectTo=arena_join3;
+[DialogOption] text=<portraitBig=4><partyActorName=4>;
+newLineOfOptions=true;
+specialEffect=setGlobalVarToPartyActorNum,arenaEntrant2,4;
+formulaReq=m:partySize-4 - gIs:arenaEntrant1:4*99;
+nodeToConnectTo=arena_join3;
+[DialogOption] text=Back;
+nodeToConnectTo=arena_join1;
+escOption=true;
+bottomOption=true;
+
+
+
+[DialogNode] ID=arena_join3;
+animations=happy;
+statements=Excellent!<p> Let's head directly to the arena!!;
+nextNodeID=arena_join4;
+
+[DialogNode] ID=arena_join4;
+specialEffect=gp,-50;
+specialEffect=setGlobalVar,enterArena,1;
+specialEffect=setGlobalVar,cantTeleport,1;
+specialEffect=setGlobalVar,dontAutosaveAfterCombat,1;
+specialEffect=setupPartyFromGVars,arenaEntrant1,arenaEntrant2;
+specialEffect=travel_point,zArena1,0,True;
+
+
+----
+[DialogNode] ID=arena_won1;
+speakerOverride=arenaAdmin;
+animations=happy;
+statements=You won your first fight!;
+nextNodeID=arena_won1a;
+
+[DialogNode] ID=arena_won1a;
+speakerOverride=arenaAdmin;
+animations=sly;
+animations=;
+statements=You've earned $150 for your victory!;
+statements=Now, choose which fighter from the other team to add to yours!;
+specialEffect=gp,150;
+
+[DialogNode] ID=arena_won2;
+speakerOverride=arenaAdmin;
+animations=scared;
+statements=You've won again!!;
+nextNodeID=arena_won2a;
+
+[DialogNode] ID=arena_won2a;
+speakerOverride=arenaAdmin;
+animations=happy;
+animations=angry;
+statements=Fantastic!<p> You've earned an additional $200 for this conquest!;
+statements=Now, choose someone from the other team to fight with you!;
+specialEffect=gp,200;
+
+[DialogNode] ID=arena_won3;
+speakerOverride=arenaAdmin;
+animations=happy;
+statements=Three victories in a row!!<p> You're on a roll!;
+nextNodeID=arena_won3a;
+
+[DialogNode] ID=arena_won3a;
+speakerOverride=arenaAdmin;
+animations=sly;
+animations=;
+statements=You've earned $300 more!<p> One more victory and you'll attain the GRAND PRIZE!;
+statements=Now, choose a fighter from the other team!;
+specialEffect=gp,300;
+
+[DialogNode] ID=arena_won4;
+speakerOverride=arenaAdmin;
+animations=happy;
+statements=Congratulations!!<p> You were victorious in every fight!!;
+nextNodeID=arena_won4_firstVictory;
+nextNodeID_fReq=1 - g:D_arena_won4_firstVictory;
+nextNodeID=arena_won4a;
+
+[DialogNode] ID=arena_won4_firstVictory;
+speakerOverride=arenaAdmin;
+animations=sly;
+animations=happy;
+animations=sly;
+animations=angry;
+statements=You've earned the GRAND PRIZE!;
+statements=And to commemorate your FIRST victory in the arena, you get the special ELITE prize<p=1.5> - ;
+statements=The coveted <itemBig_low=abilityCrest>  Ability Crest!;
+statements=And you get access to our special ELITE arena from here on...!;
+statements=Rest,<p> recover,<p> and come back next week for more bouts of bloodshed!!;
+specialEffect=fx,longGoodAuraSound;
+specialEffect=giveItem,abilityCrest,1;
+specialEffect=setGlobalVar,arenaBeaten,1;
+specialEffect=setGlobalVar,dontAutosaveAfterCombat,0;
+nextNodeID=arena_won4a2;
+
+[DialogNode] ID=arena_won4a;
+speakerOverride=arenaAdmin;
+animations=sly;
+animations=happy;
+animations=angry;
+statements=You've earned the GRAND PRIZE<p=1.5> - ;
+statements=A shiny <itemBig_low=xpGemMed>  Essence Gem!;
+statements=Rest,<p> recover,<p> and come back next week for more bouts of bloodshed!!;
+specialEffect=fx,longGoodAuraSound;
+specialEffect=giveItem,xpGemMed,1;
+specialEffect=setGlobalVar,arenaBeaten,1;
+specialEffect=setGlobalVar,dontAutosaveAfterCombat,0;
+nextNodeID=arena_won4a2;
+
+[DialogNode] ID=arena_won4a2;
+specialEffect=tNextArena;
+
+----
+
+[DialogNode] ID=arena_hire1;
+animations=;
+statements=(Add <actorName=> to your group?);
+[DialogOption] text=Yes;
+nodeToConnectTo=arena_hire_yes;
+[DialogOption] text=No;
+nodeToConnectTo=;
+
+
+[DialogNode] ID=arena_hire_yes;
+animations=handupPose;
+statements=<actorName=> joins you!;
+specialEffect=fx,sfx_goodConfirm_fast;
+nextNodeID=arena_hire_yes2;
+
+[DialogNode] ID=arena_hire_yes2;
+specialEffect=addTalkerToParty_temp;
+specialEffect=tNextArena;
+
+----
+
+[DialogNode] ID=arena_done1;
+speakerOverride=arenaAdmin;
+statements=Well fought!;
+statements=Come back next week for more action!;
+specialEffect=setGlobalVar,dontAutosaveAfterCombat,0,@0.2;
+specialEffect=setGlobalVar,cantTeleport,0,@0.2;
+specialEffect=forget,zArena1b,@0.1;
+specialEffect=forget,zArena2b,@0.1;
+specialEffect=forget,zArena3b,@0.1;
+specialEffect=forget,zArena4b,@0.1;
+specialEffect=getItemsFromZone,zArena1b,@X20,@Y14;
+specialEffect=getItemsFromZone,zArena2b,@X20,@Y15;
+specialEffect=getItemsFromZone,zArena3b,@X20,@Y16;
+specialEffect=getItemsFromZone,zArena4b,@X20,@Y17;
+specialEffect=removeTempPartyActors;
+nextNodeID=;
+
+
+--ELITE ARENA
+
+
+[DialogNode] ID=arena_rules1a_elite;
+animations=happy;
+animations=sly;
+animations=;
+animations=angry;
+animations=happy;
+animations=sly;
+statements=Sure!<p> It's just like the regular arena, but moreso!;
+statements=You take your two entrants to fight...<p> but against TWICE the number of opponents!;
+statements=It's 2v4, 3v6, 4v8, and then finally 5v10!;
+statements=Doesn't seem fair?<p> You got that right!<p> It isn't remotely fair!!;
+statements=But don't worry -<p> if you meet the challenge, you get twice the cash!;
+statements=And there's another <itemBig_low=abilityCrest>  Abilty Crest waiting for you if you make it to the end!;
+nextNodeID=arena;
+
+
+[DialogNode] ID=arena_join1_elite;
+animations=;
+statements=Who would like to enter?;
+specialEffect=healparty;
+[DialogOption] text=<portraitBig=0><partyActorName=0>;
+specialEffect=setGlobalVarToPartyActorNum,arenaEntrant1,0;
+nodeToConnectTo=arena_join2_elite;
+[DialogOption] text=<portraitBig=1><partyActorName=1>;
+--newLineOfOptions=true;
+specialEffect=setGlobalVarToPartyActorNum,arenaEntrant1,1;
+formulaReq=m:partySize-1;
+nodeToConnectTo=arena_join2_elite;
+[DialogOption] text=<portraitBig=2><partyActorName=2>;
+newLineOfOptions=true;
+specialEffect=setGlobalVarToPartyActorNum,arenaEntrant1,2;
+formulaReq=m:partySize-2;
+nodeToConnectTo=arena_join2_elite;
+[DialogOption] text=<portraitBig=3><partyActorName=3>;
+--newLineOfOptions=true;
+specialEffect=setGlobalVarToPartyActorNum,arenaEntrant1,3;
+formulaReq=m:partySize-3;
+nodeToConnectTo=arena_join2_elite;
+[DialogOption] text=<portraitBig=4><partyActorName=4>;
+newLineOfOptions=true;
+specialEffect=setGlobalVarToPartyActorNum,arenaEntrant1,4;
+formulaReq=m:partySize-4;
+nodeToConnectTo=arena_join2_elite;
+[DialogOption] text=Nobody;
+nodeToConnectTo=;
+escOption=true;
+bottomOption=true;
+
+
+[DialogNode] ID=arena_join2_elite;
+animations=;
+statements=And who is your second entrant?;
+[DialogOption] text=<portraitBig=0><partyActorName=0>;
+specialEffect=setGlobalVarToPartyActorNum,arenaEntrant2,0;
+formulaReq=m:partySize-1 - gIs:arenaEntrant1:0*99;
+nodeToConnectTo=arena_join3_elite;
+[DialogOption] text=<portraitBig=1><partyActorName=1>;
+--newLineOfOptions=true;
+specialEffect=setGlobalVarToPartyActorNum,arenaEntrant2,1;
+formulaReq=m:partySize-1 - gIs:arenaEntrant1:1*99;
+nodeToConnectTo=arena_join3_elite;
+[DialogOption] text=<portraitBig=2><partyActorName=2>;
+newLineOfOptions=true;
+specialEffect=setGlobalVarToPartyActorNum,arenaEntrant2,2;
+formulaReq=m:partySize-2 - gIs:arenaEntrant1:2*99;
+nodeToConnectTo=arena_join3_elite;
+[DialogOption] text=<portraitBig=3><partyActorName=3>;
+--newLineOfOptions=true;
+specialEffect=setGlobalVarToPartyActorNum,arenaEntrant2,3;
+formulaReq=m:partySize-3 - gIs:arenaEntrant1:3*99;
+nodeToConnectTo=arena_join3_elite;
+[DialogOption] text=<portraitBig=4><partyActorName=4>;
+newLineOfOptions=true;
+specialEffect=setGlobalVarToPartyActorNum,arenaEntrant2,4;
+formulaReq=m:partySize-4 - gIs:arenaEntrant1:4*99;
+nodeToConnectTo=arena_join3_elite;
+[DialogOption] text=Back;
+nodeToConnectTo=arena_join1_elite;
+escOption=true;
+bottomOption=true;
+
+
+
+[DialogNode] ID=arena_join3_elite;
+animations=angry;
+statements=Excellent!<p> I hope you're ready for the ultimate challenge!;
+nextNodeID=arena_join4_elite;
+
+[DialogNode] ID=arena_join4_elite;
+specialEffect=gp,-150;
+specialEffect=setGlobalVar,enterArena,1;
+specialEffect=setGlobalVar,cantTeleport,1;
+specialEffect=setGlobalVar,dontAutosaveAfterCombat,1;
+specialEffect=setupPartyFromGVars,arenaEntrant1,arenaEntrant2;
+specialEffect=travel_point,zArena1b,0,True;
+
+
+
+
+
+
+
+
+----
+[DialogNode] ID=arena_won1b;
+speakerOverride=arenaAdmin;
+animations=happy;
+statements=You've conquered your first elite challenge!;
+nextNodeID=arena_won1b2;
+
+[DialogNode] ID=arena_won1b2;
+speakerOverride=arenaAdmin;
+animations=sly;
+animations=;
+statements=You get $300 for this victory!;
+statements=Now, choose which fighter from the other team to add to yours!;
+specialEffect=gp,300;
+
+[DialogNode] ID=arena_won2b;
+speakerOverride=arenaAdmin;
+animations=scared;
+statements=You've won again!!;
+nextNodeID=arena_won2b2;
+
+[DialogNode] ID=arena_won2b2;
+speakerOverride=arenaAdmin;
+animations=happy;
+animations=angry;
+statements=Fantastic!<p> You've earned an additional $400 for this conquest!;
+statements=Now, choose someone from the other team to fight with you!;
+specialEffect=gp,400;
+
+[DialogNode] ID=arena_won3b;
+speakerOverride=arenaAdmin;
+animations=sly;
+statements=Three victories in a row!!<p> Could you make it to the end?!;
+nextNodeID=arena_won3b2;
+
+[DialogNode] ID=arena_won3b2;
+speakerOverride=arenaAdmin;
+animations=sly;
+animations=;
+statements=That's another $600!<p> One more victory and you'll attain the GRAND PRIZE!;
+statements=Now, choose a fighter from the other team!;
+specialEffect=gp,600;
+
+[DialogNode] ID=arena_won4b;
+speakerOverride=arenaAdmin;
+animations=scared;
+statements=By Ensu and all the elements!<p> You've conquered the elite arena!!;
+nextNodeID=arena_won4b2;
+
+[DialogNode] ID=arena_won4b2;
+speakerOverride=arenaAdmin;
+animations=sly;
+animations=happy;
+animations=angry;
+statements=You've earned the ELITE GRAND PRIZE<p=1.5> - ;
+statements=Another coveted <itemBig_low=abilityCrest>  Ability Crest!!;
+statements=Rest,<p> recover,<p> and come back next week for more bouts of bloodshed!!;
+specialEffect=fx,longGoodAuraSound;
+specialEffect=giveItem,abilityCrest,1;
+specialEffect=setGlobalVar,arenaBeaten,1;
+specialEffect=setGlobalVar,dontAutosaveAfterCombat,0;
+nextNodeID=arena_won4b3;
+
+[DialogNode] ID=arena_won4b3;
+specialEffect=tNextArena;
+

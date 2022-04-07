@@ -1,0 +1,528 @@
+[Action] ID=gate; 
+	name=Gate;
+	icon=icon_gate;
+	mpCost=3 * d:mpCostMult + d:mpCostMod;
+	tooltip=Connect two points in space, teleporting yourself to the target.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=;
+	harmful=false;
+	
+	XPCost=150;
+	XPCost=700;
+	XPCost=950;
+	
+	AIRatingBias = -999;
+	
+	casterAnimation=spellcast;
+	special=swapCasterWithTarget;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=sfx_highestHum;
+	FXOnCaster=horizSpark_many_wideArea;
+	FXOnCaster=gateOpen_flicker_fast;
+	FXOnCaster=gateClose_fast;
+	
+[ActionAoE] 
+	ID=gate;
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	teleporting=true;
+	minRange = 1;
+	maxRange = 2;
+	maxRangeBonus = c:rank + sa:gateAdept;
+	canSelectActors=false;
+	bypassAll=true;
+	occupyAll=false;
+[AvAffecter]
+	ID=gate; 
+	harmful=false;
+	actorValue=gate;
+	magnitude=0;
+	duration=-2;
+	chance=100;
+	FXOnTile=horizSpark_many_wideArea;
+	FXOnTile=gateOpen_fast;
+	FXOnTile=gateClose_flicker_fast;
+[AvAffecterAoE]
+	ID=gate;
+	cloneFrom=oneTile;
+
+	
+	
+[Action] ID=gate_magma; 
+	name=Gate: Magma;
+	icon=icon_firegate;
+	mpCost=12 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=17 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
+	
+	tooltip=Summon a gate to fire from the depths of the earth. Deals <thinnerIcon=skill_Fire><math=d:fireDmg20ScaleDisplay(14)> damage.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small>;
+	
+	XPCost=350;
+	XPCost=1200;
+	
+	special=requiresCasting;
+	
+	casterAnimation=spellcast;
+	maxRank=2;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=darken_minor;
+[ActionAoE] 
+	ID=gate_magma; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	teleporting=true;
+	minRange = 1;
+	maxRange = 3;
+	maxRangeBonus = c:rank + sa:gateAdept;
+	canFloatMidair=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=gate_magma; 
+	FXOnTile=sfx_higherHum;
+	FXOnTile=horizSpark_many_wideArea;
+	FXOnTile=gateOpen_flicker;
+	FXOnTile=gate_flicker;
+	FXOnTile=sfx_infernoBlast;
+[AvAffecterAoE]
+	ID=gate_magma;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=gate_magma; 
+	actorValue=HP;
+	magnitude= d:fireDmg20Scale(14);
+	duration=-2;
+	chance=d:fireAcc;
+	useCasterAsOriginForDirectionalEffects=false;
+	element=magic;
+	element=fire;
+	element=kindle;
+	FXOnTile=redden_minor;
+	FXOnTile=medShakeHoriz;
+	FXOnTile=flamethrower;
+[AvAffecterAoE]
+	ID=gate_magma;
+	cloneFrom=adjacentAndSelf+1;
+	airborne=true;
+	arc=true;
+[AvAffecter]
+	ID=gate_magma; 
+	FXOnTile=classicExplosion;
+	FXOnTile=medExplosion;
+	FXOnTile=gateClose_flicker;
+[AvAffecterAoE]
+	ID=gate_magma;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=gate_storm; 
+	name=Gate: Storm;
+	icon=icon_gate_storm;
+	mpCost=12 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=17 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
+	tooltip=Summon a gate to storm clouds, covering an area with lightning. Deals <thinnerIcon=skill_Elec><math=d:elecDmg20ScaleDisplay(14)> damage.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Elec_small>;
+	
+	XPCost=350;
+	XPCost=1200;
+	
+	special=requiresCasting;
+	
+	casterAnimation=spellcast;
+	maxRank=2;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=darken_minor;
+	FXOnTarget=delay;
+[ActionAoE] 
+	ID=gate_storm;
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	teleporting=true;
+	minRange = 1;
+	maxRange = 3;
+	maxRangeBonus = c:rank + sa:gateAdept;
+	canFloatMidair=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=gate_storm; 
+	FXOnTile=whiten;
+	FXOnTile=sfx_higherHum;
+	FXOnTile=horizSpark_many_wideArea;
+	FXOnTile=gateOpen_flicker;
+	FXOnTile=gate_flicker;
+[AvAffecterAoE]
+	ID=gate_storm;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=gate_storm; 
+	actorValue=HP;
+	magnitude= d:elecDmg20Scale(14);
+	duration=-2;
+	chance=d:elecAcc;
+	useCasterAsOriginForDirectionalEffects=false;
+	FXOnTile=gateStormLightning;
+	element=magic;
+	element=lightning;
+[AvAffecterAoE]
+	ID=gate_storm;
+	cloneFrom=adjacentAndSelf+1;
+	airborne=true;
+	arc=true;
+[AvAffecter]
+	ID=gate_storm; 
+	FXOnTile=w_lightning;
+	FXOnTile=horizSpark_many_wideArea;
+	FXOnTile=gateClose_flicker;
+	FXOnTile=horizSpark_many_wideArea;
+[AvAffecterAoE]
+	ID=gate_storm;
+	cloneFrom=oneTile;
+	
+	
+	
+	
+	
+[Action] ID=gate_flood; 
+	name=Gate: Flood;
+	icon=icon_gate_water;
+	mpCost=14 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=20 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
+	tooltip=Summon a gate to the bottom of the ocean to flood a wide area. Deals <thinnerIcon=icon_water><math=d:iceDmgDisplay(10)> damage.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ice_small>;
+	
+	special=requiresCasting;
+	
+	XPCost=450;
+	XPCost=1200;
+	
+	casterAnimation=spellcast;
+	maxRank=2;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=darken_minor;
+	FXOnTarget=tinyShakeHoriz;
+[ActionAoE] 
+	ID=gate_flood; shape=0; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	teleporting=true;
+	minRange = 1;
+	maxRange = 3;
+	maxRangeBonus = c:rank + sa:gateAdept;
+	canFloatMidair=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=gate_flood; 
+	FXOnTile=blue_minor;
+	FXOnTile=sfx_higherHum;
+	FXOnTile=horizSpark_many_wideArea;
+	FXOnTile=gateOpen_flicker;
+	FXOnTile=gate_flicker;
+	FXOnTile=sfx_loudSplash;
+	FXOnTile=blue_major;
+[AvAffecterAoE]
+	ID=gate_flood;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=gate_flood; 
+	actorValue=HP;
+	magnitude= d:iceDmg(10);
+	duration=-2;
+	chance=d:iceAcc;
+	element=magic;
+	element=water;
+	useCasterAsOriginForDirectionalEffects=false;
+	
+	FXOnTile=smallShockwaves_flood;
+	FXOnTileColor=Blue;
+	FXOnTile=smallShockwaves_flood2;
+	FXOnTileColor=DarkBlue;
+	FXOnTile=smallShakeHoriz_long;
+[AvAffecterAoE]
+	ID=gate_flood;
+	needsLoS = true;
+	needsLoE = true;
+	minRange = 0;
+	maxRange = 3;
+	bypassAll=true;
+	occupyAll=true;
+	airborne=true;
+	arc=true;
+[AvAffecter]
+	ID=gate_flood; 
+	FXOnTile=hugePing;
+	FXOnTileColor=Blue;
+[AvAffecterAoE]
+	ID=gate_flood;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=gate_flood; 
+	visibleEvaluations=false;
+	actorValue=wet;
+	magnitude= 1;
+	duration=150;
+	chance=d:iceAcc;
+	element=water;
+	useCasterAsOriginForDirectionalEffects=false;
+	FXOnTile=smallShockwaves_flood_delay;
+	FXOnTileColor=DarkBlue;
+	FXOnTile=blue_major;
+[AvAffecterAoE]
+	ID=gate_flood;
+	needsLoS = true;
+	needsLoE = true;
+	minRange = 0;
+	maxRange = 3;
+	bypassAll=true;
+	occupyAll=true;
+	airborne=true;
+	arc=true;
+[AvAffecter]
+	ID=gate_flood; 
+	visibleEvaluations=false;
+	actorValue=summonItem;
+	magnitude=puddle;
+	duration=1 + m:rand(2);
+	chance=100;
+	useCasterAsOriginForDirectionalEffects=false;
+	FXOnTile=smallShockwaves_flood;
+	FXOnTileColor=Blue;
+	FXOnTile=smallShockwaves_flood2;
+	FXOnTileColor=DarkBlue;
+[AvAffecterAoE]
+	ID=gate_flood;
+	needsLoS = true;
+	needsLoE = true;
+	minRange = 0;
+	maxRange = 3;
+	bypassAll=true;
+	occupyAll=true;
+	airborne=true;
+	arc=true;
+[AvAffecter]
+	ID=gate_flood; 
+	FXOnTile=gateClose_flicker;
+[AvAffecterAoE]
+	ID=gate_flood;
+	cloneFrom=oneTile;
+
+[Action] ID=gate_sky; 
+	name=Gate: Sky;
+	icon=icon_gate_sky;
+	mpCost=12 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=18 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
+	tooltip=Create a gate to a vicious gale, pulling creatures inward and dealing <thinnerIcon=skill_Wind><math=d:windDmgDisplay(13)> damage in the center.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Wind_small>;
+	
+	special=requiresCasting;
+	
+	XPCost=450;
+	XPCost=1200;
+	
+	casterAnimation=spellcast;
+	maxRank=2;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+[ActionAoE] 
+	ID=gate_sky;
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	teleporting=true;
+	minRange = 1;
+	maxRange = 3;
+	maxRangeBonus = c:rank + sa:gateAdept;
+	canFloatMidair=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=gate_sky; 
+	FXOnTile=whiten;
+	FXOnTile=sfx_higherHum;
+	FXOnTile=horizSpark_many_wideArea;
+	FXOnTile=gateOpen_flicker;
+	FXOnTile=gate_flicker;
+	FXOnTile=sfx_gustyBlast;
+	FXOnTile=medquake;
+	FXOnTile=giantPing;
+	FXOnTile=chargeSpiralMany_huge;
+	FXOnTile=windBlast_inward;
+	FXOnTile=delay;
+	FXOnTile=windBlast_inward;
+	FXOnTile=medShakeHoriz;
+[AvAffecterAoE]
+	ID=gate_sky;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=gate_sky; 
+	useCasterAsOriginForDirectionalEffects=false;
+	actorValue=pull;
+	magnitude=2;
+	duration=-2;
+	chance=d:windAcc;
+	element=magic; 
+	element=wind;
+	FXOnTile=hitDustQuiet;
+	FXOnHit=pop;
+	FXOnHit=ThudShot;
+[AvAffecterAoE]
+	ID=gate_sky;
+	cloneFrom=adjacentAndSelf+2;
+	minRange=2;
+	maxRange=3;
+	airborne=true;
+	arc=true;
+[AvAffecter]
+	ID=gate_sky; 
+	FXOnTile=sfx_gustyBlast_low_loud;
+	FXOnTile=chargeSpiralMany_huge_overlap;
+	FXOnTile=delay;
+	FXOnTile=chargeSpiralMany_huge_overlap;
+	FXOnTile=medShakeHoriz;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=gate_sky;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=gate_sky; 
+	actorValue=HP;
+	magnitude=d:windDmg(13);
+	duration=-2;
+	chance=d:windAcc;
+	element=magic;
+	element=wind;
+[AvAffecterAoE]
+	ID=gate_sky;
+	cloneFrom=adjacentAndSelf;
+	airborne=true;
+	arc=true;
+[AvAffecter]
+	ID=gate_sky; 
+	FXOnTile=chargeSpiralMany_huge;
+	FXOnTile=chargeSpiralMany_big;
+	FXOnTile=chargeSpiralMany_huge;
+	FXOnTile=delay;
+	FXOnTile=medShakeHoriz;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=gateClose_flicker;
+	FXOnTile=horizSpark_many_wideArea;
+[AvAffecterAoE]
+	ID=gate_sky;
+	cloneFrom=oneTile;
+	
+	
+	
+[Action] ID=gate_trick; 
+--not used. instead we're using wb_trick
+	name=Gate Trick;
+	icon=icon_gate_trick;
+	mpCost=3 * d:mpCostMult + d:mpCostMod;
+	tooltip=Thrust your weapon through a gate, surprising the enemy on the other side.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipIcons=<icon=noRanged>;
+	
+	XPCost=150;
+	XPCost=500;
+	XPCost=900;
+	
+	casterAnimation=weapon;
+	maxRank=3;
+	requiredWeaponElement=melee;
+	
+	FXOnCaster=sfx_highestHum;
+	FXOnCaster=gateOpen_small_flicker_fast;
+	FXOnCaster=gateClose_small_flicker_fast;
+	
+	FXOnTarget=gateOpen_small_flicker_fast_overlap;
+	FXOnTarget=weaponFX;
+[ActionAoE] 
+	ID=gate_trick; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	teleporting=true;
+	minRange = 1;
+	maxRange = 2;
+	maxRangeBonus = c:rank + sa:gateAdept;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=gate_trick; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude;
+	chance=w:chance * 1.2;
+	duration=-2;
+	FXOnTile=gateClose_small_flicker_fast;
+[AvAffecterAoE]
+	ID=gate_trick;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=gate_item; 
+	name=Gate: Item;
+	icon=icon_gate_item;
+	mpCost=2 * d:mpCostMult + d:mpCostMod;
+	tooltip=Swap items at the target with a personal storage space somewhere in the void. Does not work on obstructed terrain, or on certain items.;
+	rankUpTooltip=;
+	
+	XPCost=200;
+	
+	AIRatingBias = -999;
+	
+	casterAnimation=spellcast;
+	maxRank=1;
+	
+[ActionAoE] 
+	ID=gate_item;
+	needsLoS = true;
+	needsLoE = false;
+	teleporting=true;
+	minRange = 1;
+	maxRange = 0;
+	maxRangeBonus = c:rank + sa:gateAdept;
+	canSelectActors=false;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=gate_item; 
+	harmful=false;
+	actorValue=gateItem;
+	magnitude=0;
+	duration=-2;
+	chance=100;
+	
+	FXOnTile=sfx_highestHum;
+	FXOnTile=horizSpark_many_wideArea;
+	FXOnTile=gateOpen_flicker;
+	FXOnTile=gateClose;
+[AvAffecterAoE]
+	ID=gate_item;
+	cloneFrom=oneTile;
+	

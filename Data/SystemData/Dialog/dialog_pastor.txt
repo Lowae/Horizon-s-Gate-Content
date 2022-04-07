@@ -1,0 +1,129 @@
+
+
+
+-----------------------------CHURCH PASTOR/DONATION
+
+
+[DialogNode] ID=pastor;
+animations=;
+statements=How can I help you?;
+[DialogOption] text=Donate;
+formulaReq=m:money;
+nodeToConnectTo=pastor_donate;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=pastor_donate;
+animations=;
+animations=sigh;
+statements=Charity is good for your Essence.; 
+statements=How much would you like to donate?;
+[DialogOption] text=$10;
+formulaReq=m:money - 9;
+nodeToConnectTo=pastor_donate10;
+[DialogOption] text=$100;
+formulaReq=m:money - 99;
+newLineOfOptions=true;
+nodeToConnectTo=pastor_donate100;
+[DialogOption] text=$500;
+formulaReq=m:money - 499;
+nodeToConnectTo=pastor_donate500;
+[DialogOption] text=$1000;
+formulaReq=m:money - 999;
+newLineOfOptions=true;
+nodeToConnectTo=pastor_donate1000;
+[DialogOption] text=$5000;
+formulaReq=m:money - 4999;
+nodeToConnectTo=pastor_donate5000;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=pastor_donate10;
+animations=sigh;
+statements=Your kindness is appreciated.;
+specialEffect=subtract10gp;
+specialEffect=donate,10;
+nextNodeID=;
+
+[DialogNode] ID=pastor_donate100;
+animations=;
+statements=Very generous of you. Thank you very much.;
+specialEffect=subtract100gp;
+specialEffect=donate,100;
+nextNodeID=;
+
+[DialogNode] ID=pastor_donate500;
+animations=sigh;
+statements=Ah, thank you! I humbly accept your kind contribtion.;
+specialEffect=subtract500gp;
+specialEffect=donate,500;
+nextNodeID=;
+
+[DialogNode] ID=pastor_donate1000;
+animations=happy;
+animations=;
+statements=Ah, a true servant of the faith!;
+statements=May your rewards in the next realm be great.;
+specialEffect=subtract1000gp;
+specialEffect=donate,1000;
+nextNodeID=;
+
+[DialogNode] ID=pastor_donate5000;
+animations=scared;
+animations=happy;
+statements=Such generosity...! I feel deeply honored to accept this on behalf of our congregation.;
+statements=A saint such as yourself is welcome here any time.;
+specialEffect=subtract5000gp;
+specialEffect=donate,5000;
+nextNodeID=;
+
+
+
+------LOCATION-BASED LINES
+
+[DialogNodeOverride] ID=pastor_port1;
+dialogNodeID_toOverride=pastor;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=loc:port1;
+animations=;
+statements=Welcome to the Cult of St. Ensu.<p> What can I do for you?;
+
+[DialogNodeOverride] ID=pastor_port6;
+dialogNodeID_toOverride=pastor;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=loc:port6;
+animations=sigh;
+statements=Until the Cathedral of Elements is rebuilt, please avail yourself of our services here.;
+
+
+[DialogNodeOverride] ID=pastor_port8;
+dialogNodeID_toOverride=pastor;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=loc:port8;
+animations=sly;
+statements=Flame in yer heart an' wind atcher back.;
+
+[DialogNodeOverride] ID=pastor_port11;
+dialogNodeID_toOverride=pastor;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=loc:port11;
+animations=happy;
+statements=Welcome to the Holiest Temple!<p> Praise Jasce!;
+
+
+[DialogNodeOverride] ID=pastor_port25;
+dialogNodeID_toOverride=pastor;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=loc:port25;
+animations=;
+statements=Take your time and pray.<p> Jasce hears.;
+
+
+

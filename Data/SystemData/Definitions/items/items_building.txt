@@ -1,0 +1,2590 @@
+
+[ItemType]  name=Roof;
+itemCategory=building;
+ID=roof_noPalettes; sprite=1696; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltip; special=canHangOnWalls; special=roof; special=canFloatOnWater; special=ignoreHeight; special=canAlwaysFitInTile;
+special=cannotTargetInPeacefulZones;
+special=cannotActInPeacefulZones;
+special=blackenOtherTiles; 
+weight=9000; volume=9999999;
+depthMod=2050;
+weight=9000;
+
+[ItemType]  name=Roof;
+ID=roof_black; sprite=223; 
+cloneFrom=roof_noPalettes;
+depthMod=4050;
+
+
+[ItemType]  name=Roof;
+itemCategory=building;
+ID=roof; sprite=1696; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltip; special=canHangOnWalls; special=roof; special=canFloatOnWater; special=ignoreHeight; special=canAlwaysFitInTile;
+special=cannotTargetInPeacefulZones;
+special=cannotActInPeacefulZones;
+special=blackenOtherTiles; 
+weight=9000; volume=9999999;
+depthMod=2050;
+weight=9000;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+pB=zoneStone; pG=zoneStone;
+
+
+
+[ItemType]  name=Fade (Roof);
+itemCategory=building;
+ID=fade_s_roof; sprite=58; 
+special=transparent; special=cannotBePickedUp;
+special=canHangOnWalls; special=canFloatOnWater; special=noTooltip; 
+special=invisibleUnderRoofs; special=ignoreBeingRaised; 
+special=canBeInsideWalls; depthMod=3060;
+[ItemReaction] 
+ID=fade_s_roof; element=tileReacted; element=removeShadow; newID=X;
+
+[ItemType]  name=Fade (Roof);
+ID=fade_s_roof_circ1;  sprite=2336; 
+cloneFrom=fade_s_roof;
+[ItemType]  name=Fade (Roof);
+ID=fade_s_roof_diag1;  sprite=2368; 
+cloneFrom=fade_s_roof;
+[ItemType]  name=Fade (Roof);
+ID=fade_s_roof_diag2;  sprite=2400; 
+cloneFrom=fade_s_roof;
+
+[ItemType]  name=Fade (Roof);
+ID=fade_s_roof2;  sprite=153; 
+cloneFrom=fade_s_roof;
+
+
+[ItemType]  name=Fade (Roof);
+itemCategory=building;
+ID=fade_s_roof_faint; sprite=58; 
+special=verytransparent; special=cannotBePickedUp;
+special=canHangOnWalls; special=canFloatOnWater; special=noTooltip; 
+special=ignoreBeingRaised; special=invisibleUnderRoofs;
+special=canBeInsideWalls; depthMod=3060;
+[ItemReaction] 
+ID=fade_s_roof_faint; element=tileReacted; element=removeShadow; newID=X;
+[ItemType]  name=Fade (Roof);
+ID=fade_s_roof2_faint;  sprite=89; 
+cloneFrom=fade_s_roof_faint;
+[ItemType]  name=Fade (Roof);
+ID=fade_s_roof3_faint;  sprite=90; 
+cloneFrom=fade_s_roof_faint;
+
+
+[ItemType]  name=Nice Stone Wall;
+itemCategory=building;
+ID=wall1; sprite=2209; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltip; special=canHangOnWalls; special=canFloatOnWater; special=alwaysBelowOtherItems;
+special=canAlwaysFitInTile_build;
+blockWalking=true; blockJumping=true;
+weight=9000;
+[ItemType]  name=Nice Stone Wall;
+ID=wall2; sprite=2210; 
+cloneFrom=wall1;
+[ItemType]  name=Nice Stone Wall (Roof);
+ID=wall2_roof; sprite=2210; 
+cloneFrom=roof_noPalettes;
+
+[ItemType]  name=Nice Stone Wall;
+ID=wall3; sprite=2241; 
+cloneFrom=wall1;
+[ItemType]  name=Nice Stone Wall;
+ID=wall4; sprite=2242; 
+cloneFrom=wall1;
+[ItemType]  name=Nice Stone Wall (Roof);
+ID=wall4_roof; sprite=2242; 
+cloneFrom=roof_noPalettes;
+[ItemType]  name=Nice Stone Wall;
+ID=wall5; sprite=2273; 
+cloneFrom=wall1;
+--
+
+[ItemType]  name=Nice Stone Wall P;
+ID=wall1_p; sprite=2211; 
+cloneFrom=wall1;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+pB=zoneStoneDark;
+[ItemType]  name=Nice Stone Wall P;
+ID=wall2_p; sprite=2212; 
+cloneFrom=wall1_p;
+[ItemType]  name=Nice Stone Wall (Roof);
+ID=wall2_roof_p; sprite=2212; 
+cloneFrom=roof; pB=zoneStoneDark;
+[ItemType]  name=Nice Stone Wall P; 
+ID=wall3_p; sprite=2243; 
+cloneFrom=wall1_p;
+[ItemType]  name=Nice Stone Wall P;
+ID=wall4_p; sprite=2244; 
+cloneFrom=wall1_p;
+[ItemType]  name=Nice Stone Wall (Roof) P;
+ID=wall4_roof_p; sprite=2244; 
+cloneFrom=roof; pB=zoneStoneDark;
+[ItemType]  name=Nice Stone Wall P;
+ID=wall5_p; sprite=2275; 
+cloneFrom=wall1_p;
+[ItemType]  name=Nice Stone Wall P;
+ID=wall6_p; sprite=2276; 
+cloneFrom=wall1_p;
+
+--
+
+[ItemType]  name=Large Stone Wall;
+ID=wall1_style2; sprite=2145; 
+cloneFrom=wall1;
+[ItemType]  name=Large Stone Wall;
+ID=wall2_style2; sprite=2146; 
+cloneFrom=wall1;
+[ItemType]  name=Large Stone Wall (Roof);
+ID=wall2_style2_roof; sprite=2146;
+cloneFrom=roof_noPalettes;
+[ItemType]  name=Large Stone Wall;
+ID=wall3_style2; sprite=2147; 
+cloneFrom=wall1;
+[ItemType]  name=Large Stone Wall;
+ID=wall4_style2; sprite=2177; 
+cloneFrom=wall1;
+[ItemType]  name=Large Stone Wall;
+ID=wall5_style2; sprite=2178; 
+cloneFrom=wall1;
+[ItemType]  name=Large Stone Wall;
+ID=wall6_style2; sprite=2179; 
+cloneFrom=wall1;
+
+[ItemType]  name=Large Stone Wall;
+ID=wall7_style2; sprite=2221; 
+cloneFrom=wall1;
+[ItemType]  name=Large Stone Wall;
+ID=wall8_style2; sprite=2222; 
+cloneFrom=wall1;
+--
+
+[ItemType]  name=Large Stone Wall P;
+ID=wall1_style2_p; sprite=2148; 
+cloneFrom=wall1;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+pB=zoneStoneDark;
+[ItemType]  name=Large Stone Wall P;
+ID=wall2_style2_p; sprite=2149; 
+cloneFrom=wall1_style2_p;
+[ItemType]  name=Large Stone Wall (Roof) P;
+ID=wall2_style2_roof_p; sprite=2149; 
+cloneFrom=roof;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+
+[ItemType]  name=Large Stone Wall P;
+ID=wall3_style2_p; sprite=2150; 
+cloneFrom=wall1_style2_p;
+[ItemType]  name=Large Stone Wall P;
+ID=wall4_style2_p; sprite=2180; 
+cloneFrom=wall1_style2_p;
+[ItemType]  name=Large Stone Wall P;
+ID=wall5_style2_p; sprite=2181; 
+cloneFrom=wall1_style2_p;
+[ItemType]  name=Large Stone Wall P;
+ID=wall6_style2_p; sprite=2182; 
+cloneFrom=wall1_style2_p;
+
+[ItemType]  name=Large Stone Wall P;
+ID=wall7_style2_p; sprite=2253; 
+cloneFrom=wall1;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+pB=zoneStoneDark;
+[ItemType]  name=Large Stone Wall P;
+ID=wall8_style2_p; sprite=2254; 
+cloneFrom=wall1;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+pB=zoneStoneDark;
+--STYLE3
+
+[ItemType]  name=Fancy Wall;
+ID=wall1_style3; sprite=2213; 
+cloneFrom=wall1;
+[ItemType]  name=Fancy Wall;
+ID=wall2_style3; sprite=2214; 
+cloneFrom=wall1;
+[ItemType]  name=Fancy Wall;
+ID=wall3_style3; sprite=2215; 
+cloneFrom=wall1;
+[ItemType]  name=Fancy Wall (Roof);
+ID=wall2_style3_roof; sprite=2214; 
+cloneFrom=roof_noPalettes;
+[ItemType]  name=Fancy Wall (Roof);
+ID=wall3_style3_roof; sprite=2215; 
+cloneFrom=roof_noPalettes;
+[ItemType]  name=Fancy Wall (Roof);
+ID=wall10_style3; sprite=2216; 
+cloneFrom=roof_noPalettes;
+[ItemType]  name=Fancy Wall;
+ID=wall4_style3; sprite=2245; 
+cloneFrom=wall1;
+[ItemType]  name=Fancy Wall (Pillar);
+ID=wall5_style3; sprite=2246; 
+cloneFrom=roof_noPalettes;
+[ItemType]  name=Fancy Wall (Window);
+ID=wall6_style3; sprite=2247; 
+cloneFrom=roof_noPalettes;
+[ItemType]  name=Fancy Wall;
+ID=wall11_style3; sprite=2248; 
+cloneFrom=wall1;
+[ItemType]  name=Fancy Wall;
+ID=wall7_style3; sprite=2277; 
+cloneFrom=wall1;
+[ItemType]  name=Fancy Wall;
+ID=wall8_style3; sprite=2278; 
+cloneFrom=wall1;
+[ItemType]  name=Fancy Wall;
+ID=wall9_style3; sprite=2279; 
+cloneFrom=wall1;
+
+--
+
+[ItemType]  name=Fancy Wall P;
+ID=wall1_style3_p; sprite=2217; 
+cloneFrom=wall1;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+[ItemType]  name=Fancy Wall P;
+ID=wall2_style3_p; sprite=2218; 
+cloneFrom=wall1_style3_p;
+[ItemType]  name=Fancy Wall P;
+ID=wall3_style3_p; sprite=2219; 
+cloneFrom=wall1_style3_p;
+[ItemType]  name=Fancy Wall P (Roof);
+ID=wall2_style3_roof_p; sprite=2218; 
+cloneFrom=roof;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+[ItemType]  name=Fancy Wall P (Roof);
+ID=wall3_style3_roof_p; sprite=2219; 
+cloneFrom=wall2_style3_roof_p;
+[ItemType]  name=Fancy Wall P (Roof);
+ID=wall10_style3_p; sprite=2220; 
+cloneFrom=wall2_style3_roof_p;
+[ItemType]  name=Fancy Wall P;
+ID=wall4_style3_p; sprite=2249; 
+cloneFrom=wall1_style3_p; 
+pB=pBlue;
+[ItemType]  name=Fancy Wall (Pillar, Roof) P;
+ID=wall5_style3_p; sprite=2250; 
+cloneFrom=wall2_style3_roof_p;
+[ItemType]  name=Fancy Wall (Window, Roof) P;
+ID=wall6_style3_p; sprite=2251; 
+cloneFrom=wall2_style3_roof_p; 
+pB=pBlue;
+[ItemType]  name=Fancy Wall P;
+ID=wall11_style3_p; sprite=2252; 
+cloneFrom=wall1_style3_p;
+[ItemType]  name=Fancy Wall P;
+ID=wall7_style3_p; sprite=2281; 
+cloneFrom=wall1_style3_p;
+[ItemType]  name=Fancy Wall P;
+ID=wall8_style3_p; sprite=2282; 
+cloneFrom=wall1_style3_p;
+[ItemType]  name=Fancy Wall P;
+ID=wall9_style3_p; sprite=2283; 
+cloneFrom=wall1_style3_p;
+
+
+--STYLE4
+
+[ItemType]  name=Industrial Wall;
+ID=wall1_style4; sprite=2049; 
+cloneFrom=wall1;
+[ItemType]  name=Industrial Wall;
+ID=wall2_style4; sprite=2050; 
+cloneFrom=wall1;
+[ItemType]  name=Industrial Wall;
+ID=wall3_style4; sprite=2051; 
+cloneFrom=wall1;
+[ItemType]  name=Industrial Wall;
+ID=wall4_style4; sprite=2052; 
+cloneFrom=wall1;
+[ItemType]  name=Industrial Wall;
+ID=wall5_style4; sprite=2053; 
+cloneFrom=wall1;
+
+[ItemType]  name=Industrial Wall (Roof);
+ID=wall2_style4_roof; sprite=2050; 
+cloneFrom=roof_noPalettes;
+[ItemType]  name=Industrial Wall (Roof);
+ID=wall3_style4_roof; sprite=2051; 
+cloneFrom=roof_noPalettes;
+[ItemType]  name=Industrial Wall (Roof);
+ID=wall4_style4_roof; sprite=2052; 
+cloneFrom=roof_noPalettes;
+
+[ItemType]  name=Industrial Wall;
+ID=wall6_style4; sprite=2081; 
+cloneFrom=wall1;
+[ItemType]  name=Industrial Wall (Roof);
+ID=wall7_style4; sprite=2082; 
+cloneFrom=roof_noPalettes;
+[ItemType]  name=Industrial Wall (Roof);
+ID=wall8_style4; sprite=2083; 
+cloneFrom=roof_noPalettes;
+[ItemType]  name=Industrial Wall (Roof);
+ID=wall9_style4; sprite=2084; 
+cloneFrom=roof_noPalettes;
+
+[ItemType]  name=Industrial Wall;
+ID=wall10_style4; sprite=2085; 
+cloneFrom=wall1;
+[ItemType]  name=Industrial Wall;
+ID=wall11_style4; sprite=2113; 
+cloneFrom=wall1;
+[ItemType]  name=Industrial Wall;
+ID=wall12_style4; sprite=2114; 
+cloneFrom=wall1;
+[ItemType]  name=Industrial Wall;
+ID=wall13_style4; sprite=2115; 
+cloneFrom=wall1;
+[ItemType]  name=Industrial Wall;
+ID=wall14_style4; sprite=2116; 
+cloneFrom=wall1;
+[ItemType]  name=Industrial Wall;
+ID=wall15_style4; sprite=2117; 
+cloneFrom=wall1;
+[ItemType]  name=Industrial Wall;
+ID=wall16_style4; sprite=2123; 
+cloneFrom=wall1;
+
+--
+
+
+[ItemType]  name=Industrial Wall P;
+ID=wall1_style4_p; sprite=2054; 
+cloneFrom=wall1;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+[ItemType]  name=Industrial Wall P;
+ID=wall2_style4_p; sprite=2055; 
+cloneFrom=wall1_style4_p;
+[ItemType]  name=Industrial Wall P;
+ID=wall3_style4_p; sprite=2056; 
+cloneFrom=wall1_style4_p;
+[ItemType]  name=Industrial Wall P;
+ID=wall4_style4_p; sprite=2057; 
+cloneFrom=wall1_style4_p;
+[ItemType]  name=Industrial Wall P;
+ID=wall5_style4_p; sprite=2058; 
+cloneFrom=wall1_style4_p;
+
+[ItemType]  name=Industrial Wall P (Roof);
+ID=wall2_style4_roof_p; sprite=2055; 
+cloneFrom=roof_noPalettes;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+[ItemType]  name=Industrial Wall P (Roof);
+ID=wall3_style4_roof_p; sprite=2056; 
+cloneFrom=wall2_style4_roof_p;
+[ItemType]  name=Industrial Wall P (Roof);
+ID=wall4_style4_roof_p; sprite=2057; 
+cloneFrom=wall2_style4_roof_p;
+
+[ItemType]  name=Industrial Wall P;
+ID=wall6_style4_p; sprite=2086; 
+cloneFrom=wall1_style4_p;
+pB=pBlue;
+[ItemType]  name=Industrial Wall (Roof) P;
+ID=wall7_style4_p; sprite=2087; 
+cloneFrom=wall2_style4_roof_p;
+[ItemType]  name=Industrial Wall (Roof) P;
+ID=wall8_style4_p; sprite=2088; 
+cloneFrom=wall2_style4_roof_p;
+[ItemType]  name=Industrial Wall (Roof) P;
+ID=wall9_style4_p; sprite=2089; 
+cloneFrom=wall2_style4_roof_p;
+pB=pBlue;
+
+[ItemType]  name=Industrial Wall P;
+ID=wall10_style4_p; sprite=2090; 
+cloneFrom=wall1_style4_p;
+pB=pBlue;
+
+[ItemType]  name=Industrial Wall P;
+ID=wall11_style4_p; sprite=2118; 
+cloneFrom=wall1_style4_p;
+[ItemType]  name=Industrial Wall P;
+ID=wall12_style4_p; sprite=2119; 
+cloneFrom=wall1_style4_p;
+[ItemType]  name=Industrial Wall P;
+ID=wall13_style4_p; sprite=2120; 
+cloneFrom=wall1_style4_p;
+[ItemType]  name=Industrial Wall P;
+ID=wall14_style4_p; sprite=2121; 
+cloneFrom=wall1_style4_p;
+[ItemType]  name=Industrial Wall P;
+ID=wall15_style4_p; sprite=2122; 
+cloneFrom=wall1_style4_p;
+[ItemType]  name=Industrial Wall P;
+ID=wall16_style4_p; sprite=2124; 
+cloneFrom=wall1_style4_p;
+
+--
+
+[ItemType]  name=Clay Wall;
+ID=wall1_style5; sprite=2151; 
+cloneFrom=wall1;
+[ItemType]  name=Clay Wall (Roof);
+ID=wall2_style5; sprite=2152; 
+cloneFrom=roof_noPalettes;
+[ItemType]  name=Clay Wall;
+ID=wall3_style5; sprite=2153; 
+cloneFrom=wall1;
+[ItemType]  name=Clay Wall;
+ID=wall4_style5; sprite=2183; 
+cloneFrom=wall1;
+[ItemType]  name=Clay Wall;
+ID=wall5_style5; sprite=2184; 
+cloneFrom=wall1;
+[ItemType]  name=Clay Wall;
+ID=wall6_style5; sprite=2185; 
+cloneFrom=wall1;
+[ItemType]  name=Clay Wall;
+ID=wall7_style5; sprite=2186; 
+cloneFrom=wall1;
+[ItemType]  name=Clay Wall;
+ID=wall8_style5; sprite=2154; 
+cloneFrom=wall1;
+
+--
+
+[ItemType]  name=Clay Wall P;
+ID=wall1_style5_p; sprite=2155; 
+cloneFrom=wall1;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+[ItemType]  name=Clay Wall (Roof) P;
+ID=wall2_style5_p; sprite=2156; 
+cloneFrom=roof_noPalettes;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+[ItemType]  name=Clay Wall P;
+ID=wall3_style5_p; sprite=2157; 
+cloneFrom=wall1_style5_p;
+[ItemType]  name=Clay Wall P;
+ID=wall4_style5_p; sprite=2187; 
+cloneFrom=wall1_style5_p;
+[ItemType]  name=Clay Wall P;
+ID=wall5_style5_p; sprite=2188; 
+cloneFrom=wall1_style5_p;
+[ItemType]  name=Clay Wall P;
+ID=wall6_style5_p; sprite=2189; 
+cloneFrom=wall1_style5_p;
+[ItemType]  name=Clay Wall P;
+ID=wall7_style5_p; sprite=2190; 
+cloneFrom=wall1_style5_p;
+[ItemType]  name=Clay Wall P;
+ID=wall8_style5_p; sprite=2158; 
+cloneFrom=wall1_style5_p;
+
+
+--
+
+[ItemType]  name=Wood Wall;
+ID=wall1_style6; sprite=2029; 
+cloneFrom=wall1;
+[ItemType]  name=Wood Wall;
+ID=wall2_style6; sprite=2030; 
+cloneFrom=wall1;
+[ItemType]  name=Wood Wall (Roof);
+ID=wall2_style6_roof; sprite=2030; 
+cloneFrom=roof_noPalettes;
+[ItemType]  name=Wood Wall;
+ID=wall3_style6; sprite=2031; 
+cloneFrom=wall1;
+[ItemType]  name=Wood Wall;
+ID=wall4_style6; sprite=2061; 
+cloneFrom=wall1;
+[ItemType]  name=Wood Wall;
+ID=wall5_style6; sprite=2062; 
+cloneFrom=wall1;
+[ItemType]  name=Wood Wall (Roof);
+ID=wall5_style6_roof; sprite=2062; 
+cloneFrom=roof_noPalettes;
+[ItemType]  name=Wood Wall;
+ID=wall6_style6; sprite=2063; 
+cloneFrom=wall1;
+
+--
+
+[ItemType]  name=Wood Wall P;
+ID=wall1_style6_p; sprite=2093; 
+cloneFrom=wall1;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+[ItemType]  name=Wood Wall P;
+ID=wall2_style6_p; sprite=2094; 
+cloneFrom=wall1_style6_p;
+[ItemType]  name=Wood Wall (Roof) P;
+ID=wall2_style6_roof_p; sprite=2094; 
+cloneFrom=roof_noPalettes;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+[ItemType]  name=Wood Wall P;
+ID=wall3_style6_p; sprite=2095; 
+cloneFrom=wall1_style6_p;
+[ItemType]  name=Wood Wall P;
+ID=wall4_style6_p; sprite=2125; 
+cloneFrom=wall1_style6_p;
+[ItemType]  name=Wood Wall P;
+ID=wall5_style6_p; sprite=2126; 
+cloneFrom=wall1_style6_p;
+[ItemType]  name=Wood Wall (Roof) P;
+ID=wall5_style6_roof_p; sprite=2126; 
+cloneFrom=wall2_style6_roof_p;
+[ItemType]  name=Wood Wall P;
+ID=wall6_style6_p; sprite=2127; 
+cloneFrom=wall1_style6_p;
+
+[ItemType]  name=Adobe Wall P;
+ID=wall1_style7_p; sprite=2433; 
+cloneFrom=wall1;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+
+[ItemType]  name=Adobe Wall P;
+ID=wall2_style7_p; sprite=2434; 
+cloneFrom=wall1_style7_p;
+
+[ItemType]  name=Adobe Wall (Roof) P;
+ID=wall2_style7_roof_p; sprite=2434; 
+cloneFrom=roof_noPalettes;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+
+[ItemType]  name=Adobe Wall P;
+ID=wall3_style7_p; sprite=2435; 
+cloneFrom=wall1_style7_p;
+
+[ItemType]  name=Adobe Wall P;
+ID=wall4_style7_p; sprite=2465; 
+cloneFrom=wall1_style7_p;
+[ItemType]  name=Adobe Wall P;
+ID=wall5_style7_p; sprite=2466;  
+cloneFrom=wall1_style7_p;
+[ItemType]  name=Adobe Wall P;
+ID=wall6_style7_p; sprite=2467; 
+cloneFrom=wall1_style7_p;
+
+--
+
+[ItemType]  name=Stairs;
+itemCategory=building;
+ID=stair; sprite=544; 
+texture=items_building;
+special=canHangOnWalls; special=big; special=overrideTerrainCollisions; special=cannotBePickedUp; special=moveCostOverride_2;
+special=inheritTerrainPalettes;
+pR=zoneStone;
+
+[ItemType]  name=Stairs;
+itemCategory=building;
+ID=stair2; sprite=546; 
+texture=items_building;
+special=canHangOnWalls; special=big; special=overrideTerrainCollisions; special=cannotBePickedUp; special=moveCostOverride_2;
+special=inheritTerrainPalettes;
+pR=zoneStone;
+[ItemType]  name=Stairs;
+itemCategory=building;
+ID=stair3; sprite=578; 
+texture=items_building;
+special=canHangOnWalls; special=big; special=overrideTerrainCollisions; special=cannotBePickedUp; special=moveCostOverride_2;
+special=inheritTerrainPalettes;
+pR=zoneStone;
+
+
+
+
+
+
+[ItemType]  name=Bridge;
+itemCategory=building;
+ID=bridge; sprite=547;
+texture=items_building;
+ special=canHangOnWalls; special=overrideTerrainCollisions; special=cannotBePickedUp; special=canFloatOnWater; special=ignoreHeight; special=actorsOnSameTileAreRaised;
+ pR=zoneWood; pB=pFadeDarker;
+[ItemReaction] 
+ID=bridge; element=fire; element=explode; newID=bridge_breaking;
+
+[ItemType]  name=Bridge (Damaged);
+itemCategory=building;
+ID=bridge_breaking; sprite=552;
+texture=items_building;
+weight=0;
+ special=canHangOnWalls; special=overrideTerrainCollisions; special=ignoreHeight;
+ special=cannotBePickedUp; special=canFloatOnWater; special=moveCostOverride_2; special=actorsOnSameTileAreRaised;
+ pR=zoneWood; pB=pFadeDarker;
+[ItemReaction] 
+ID=bridge_breaking; element=fire; element=explode; newID=bridge_gone;
+ 
+[ItemType]  name=Wrecked Bridge;
+itemCategory=building;
+ID=bridge_gone; sprite=548;
+texture=items_building;
+ special=canHangOnWalls; special=cannotBePickedUp; special=canFloatOnWater; 
+ special=fullTileHitbox; special=ignoreHeight;
+ combineSound=step;
+	combineWith=woodPlank; toMake=bridge_makeshift; consumeOnCombine=true; 
+	combineWith=latticeSeeds; toMake=bridge_gone_seeds; consumeOnCombine=true;
+ pR=zoneWood; pB=pFadeDarker;
+[JournalEntry]
+ID=item_bridge_gone;
+category=item; halfPage=true;
+title=Wrecked Bridge;
+text=<itemBig=bridge_gone><title=Wrecked Bridge><brAdj=>These ropes once belonged to a bridge, but now the wood planks are missing. Perhaps it can still be repaired?;
+ 
+[ItemType]  name=Makeshift Bridge;
+itemCategory=building;
+ID=bridge_makeshift; sprite=553;
+texture=items_building;
+ special=canHangOnWalls; special=overrideTerrainCollisions; special=moveCostOverride_2;
+ special=cannotBePickedUp; special=canFloatOnWater; special=ignoreHeight; special=actorsOnSameTileAreRaised;
+ pR=zoneWood; pB=pWood;
+
+ 
+[ItemType]  name=Wrecked Bridge (Seeds);
+itemCategory=building;
+ID=bridge_gone_seeds; sprite=554;
+texture=items_building;
+ special=canHangOnWalls; special=cannotBePickedUp; special=canFloatOnWater;
+ special=timer; special=ignoreHeight;
+ timer=2000;
+ combineSound=step;
+	combineWith=woodPlank; toMake=bridge_makeshift; consumeOnCombine=true; 
+ pR=zoneWood; pG=overworld1;
+[ItemReaction] 
+ID=bridge_gone_seeds; element=timerUp; element=growth; newID=bridge_grown;
+[ItemReaction] 
+ID=bridge_gone_seeds; element=fire; element=explode; newID=bridge_gone;
+
+[ItemType]  name=Overgrown Bridge;
+itemCategory=building;
+ID=bridge_grown; sprite=555;
+texture=items_building;
+ special=canHangOnWalls; special=overrideTerrainCollisions; special=moveCostOverride_2;
+ special=cannotBePickedUp; special=canFloatOnWater; special=ignoreHeight; special=actorsOnSameTileAreRaised;
+ pR=zoneWood; pG=overworld1;
+[ItemReaction] 
+ID=bridge_grown; element=fire; element=explode; newID=bridge_gone;
+[ItemReaction] 
+ID=bridge_grown; element=slash; newID=bridge_gone_seeds;
+
+[ItemType]  name=Wooden Pegs;
+itemCategory=building;
+ID=wood_pegs; sprite=551;
+texture=items_building;
+ special=canHangOnWalls; special=cannotBePickedUp; special=ignoreHeight;
+ pR=zoneWood; pB=pFadeDarker;
+ 
+[ItemType]  name=Wooden Pegs;
+ID=wood_pegs2; sprite=583;
+cloneFrom=wood_pegs;
+ 
+
+[ItemType]  name=Staircase;
+itemCategory=building;
+ID=staircase; sprite=125; 
+texture=items_building;
+weight=0;
+pR=pR;
+special=canBeInsideWalls; special=overrideTerrainCollisions; special=cannotBePickedUp; special=inheritTerrainPalettes;
+special=cannotEverBePushed; special=preventTileReactions;
+special=alwaysBelowOtherItems;
+[JournalEntry]
+ID=item_staircase;
+category=item; halfPage=true;
+title=Staircase;
+text=<itemBig=staircase><title=Staircase><brAdj=>Instead of studying it, why not find out where it goes, hmm? In this particular instance, it's the destination that matters more than the journey.;
+[ItemType]  name=Staircase;
+ID=staircase_up; sprite=126;
+journalID=item_staircase;
+cloneFrom=staircase;
+ 
+[ItemType]  name=Staircase;
+itemCategory=building;
+ID=staircase_zStone; sprite=125; 
+texture=items_building;
+weight=0;
+pR=zoneStone;
+special=canBeInsideWalls; special=overrideTerrainCollisions; special=cannotBePickedUp;
+special=cannotEverBePushed; special=preventTileReactions;
+special=alwaysBelowOtherItems;
+[ItemType]  name=Staircase;
+ID=staircase_up_zStone; sprite=126;
+journalID=item_staircase;
+cloneFrom=staircase_zStone;
+ 
+
+[ItemType]  name=Wood Support;
+itemCategory=building;
+ID=woodSupport1; sprite=502; 
+texture=items_building;
+special=cannotBePickedUp; special=canHangOnWalls; special=noTooltip; 
+special=ignoreBeingRaised;
+weight=0;
+pR=zoneWood;
+[ItemType]  name=Wood Support Beam;
+itemCategory=building;
+ID=woodSupport2; sprite=503; 
+texture=items_building;
+special=cannotBePickedUp; special=canHangOnWalls; special=noTooltip; 
+special=ignoreBeingRaised;
+weight=0;
+pR=zoneWood;
+[ItemType]  name=Wood Support (depth1050);
+ID=woodSupport_above1; sprite=502; cloneFrom=woodSupport1; depthMod=1050;
+[ItemType]  name=Wood Support (depth1050);
+ID=woodSupport_above2; sprite=503; cloneFrom=woodSupport1; depthMod=1050;
+
+[ItemType]  name=Wood Support (depth2050);
+ID=woodSupport_abovemore1; sprite=502; cloneFrom=woodSupport1; depthMod=2050;
+[ItemType]  name=Wood Support (depth2050);
+ID=woodSupport_abovemore2; sprite=503; cloneFrom=woodSupport1; depthMod=2050;
+
+
+[ItemType]  name=Wood;
+itemCategory=building;
+ID=wood_edge_broken; sprite=510;
+texture=items_building;
+special=cannotBePickedUp; special=cannotEverBePushed; special=noTooltip; 
+special=canBeInsideWalls; special=canFloatOnWater;
+pR=zoneWood;
+
+[ItemType]  name=Pedestal;
+itemCategory=building;
+ID=pedestal; sprite=533;
+texture=items_building;
+weight=500; volume=300;
+special=itemsIgnoreBlockWalking; special=itemsOnSameTileAreRaised;
+ special=cannotBePickedUp; special=noTooltip;
+pR=zoneStone;
+special=big;
+blockWalking=true; blockJumping=true;
+
+[ItemType]  name=Pedestal;
+ID=pedestalL; sprite=534;
+cloneFrom=pedestal;
+[ItemType]  name=Pedestal;
+ID=pedestalMid; sprite=535;
+cloneFrom=pedestal;
+
+
+
+
+[ItemType]  name=Pillar;
+itemCategory=building;
+ID=pillar_base1; sprite=1809; 
+texture=items_building;
+special=cannotBePickedUp; special=canHangOnWalls;
+weight=800;
+pR=zoneStone;
+
+[ItemType]  name=Pillar;
+itemCategory=building;
+ID=pillar_mid1; sprite=1745; 
+texture=items_building;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=sprite2xHeight; special=canBeInsideWalls;
+weight=800;
+blockLoE=true; blockWalking=true; blockJumping=true;
+pR=zoneStone;
+depthMod=1050;
+[ItemReaction] 
+ID=pillar_mid1; element=explode; newID=pillar_mid1_broken;
+
+[ItemType]  name=Pillar (Broken);
+itemCategory=building;
+ID=pillar_mid1_broken; sprite=1746; 
+texture=items_building;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=sprite2xHeight; special=canBeInsideWalls;
+weight=800;
+pR=zoneStone;
+depthMod=1050;
+
+[ItemType]  name=Pillar;
+itemCategory=building;
+ID=pillar_top1; sprite=1713; 
+texture=items_building;
+special=cannotBePickedUp; special=canHangOnWalls;
+weight=800;
+pR=zoneStone;
+depthMod=2050;
+
+
+[ItemType]  name=Pillar;
+ID=pillar_base2; sprite=1811; 
+cloneFrom=pillar_base1;
+pR=zoneStoneDark;
+[ItemType]  name=Pillar;
+ID=pillar_mid2; sprite=1747; 
+texture=items_building;
+itemCategory=building;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=sprite2xHeight; special=canBeInsideWalls;
+weight=800;
+blockLoE=true; blockWalking=true; blockJumping=true;
+pR=zoneStoneDark;
+depthMod=1050;
+[ItemReaction] 
+ID=pillar_mid2; element=explode; newID=pillar_mid2_broken;
+[ItemType]  name=Pillar;
+ID=pillar_top2; sprite=1715; 
+cloneFrom=pillar_top1;
+pR=zoneStoneDark;
+
+[ItemType]  name=Pillar (Broken);
+ID=pillar_mid2_broken; sprite=1748; 
+cloneFrom=pillar_mid1_broken;
+pR=zoneStoneDark;
+
+
+[ItemType]  name=Pillar;
+ID=pillar_base3; sprite=1811; 
+cloneFrom=pillar_base1;
+pR=zoneStone;
+[ItemType]  name=Pillar;
+ID=pillar_mid3; sprite=1747; 
+texture=items_building;
+itemCategory=building;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=sprite2xHeight; special=canBeInsideWalls;
+weight=800;
+blockLoE=true; blockWalking=true; blockJumping=true;
+pR=zoneStone;
+depthMod=1050;
+[ItemReaction] 
+ID=pillar_mid3; element=explode; newID=pillar_mid3_broken;
+[ItemType]  name=Pillar;
+ID=pillar_top3; sprite=1715; 
+cloneFrom=pillar_top1;
+pR=zoneStone;
+
+[ItemType]  name=Pillar (Broken);
+ID=pillar_mid3_broken; sprite=1748; 
+cloneFrom=pillar_mid1_broken;
+pR=zoneStone;
+
+
+[ItemType]  name=Circle Floor Design;
+itemCategory=building;
+ID=pillar_circle_floor1; sprite=1786; 
+texture=items_building;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=sprite2xHeight; special=canBeInsideWalls;
+special=noTooltips; special=alwaysBelowOtherItems;
+pR=zoneDirt; special=inheritTerrainPaletteR;
+
+[ItemType]  name=Circle Floor Design Edge;
+itemCategory=building;
+ID=pillar_circle_floorEdge1; sprite=1785; 
+texture=items_building;
+special=cannotBePickedUp;special=canHangOnWalls;
+special=sprite2xHeight; special=canBeInsideWalls;
+special=noTooltips; special=alwaysBelowOtherItems;
+pR=zoneDirt; special=inheritTerrainPaletteR;
+
+[ItemType]  name=Pillar;
+itemCategory=building;
+ID=pillar_circle1; sprite=1787; 
+texture=items_building;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=sprite2xHeight; special=canBeInsideWalls;
+weight=800;
+blockLoE=true; blockWalking=true; blockJumping=true;
+pR=zoneDirt; special=inheritTerrainPaletteR;
+depthMod=1050;
+
+[ItemType]  name=Pillar;
+itemCategory=building;
+ID=pillar_circle2; sprite=1788; 
+texture=items_building;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=sprite2xHeight; special=canBeInsideWalls;
+weight=800;
+blockLoE=true; blockWalking=true; blockJumping=true;
+pR=zoneStone;
+depthMod=1050;
+
+[ItemType]  name=Chimney;
+ID=chimney; sprite=1750; 
+texture=items_building;
+itemCategory=building;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=sprite2xHeight; special=canBeInsideWalls;
+special=roof;
+blockLoE=true; blockWalking=true; blockJumping=true;
+weight=800;
+journalID=;
+pR=zoneStoneDark;
+depthMod=3060;
+
+[ItemType]  name=Chimney;
+ID=chimney2; sprite=1751; 
+cloneFrom=chimney;
+[ItemType]  name=Chimney;
+ID=chimney3; sprite=1749; 
+cloneFrom=chimney;
+[ItemType]  name=Chimney;
+ID=chimney_misc1; sprite=1750; 
+cloneFrom=chimney;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+[ItemType]  name=Chimney;
+ID=chimney_misc2; sprite=1751; 
+cloneFrom=chimney_misc1;
+[ItemType]  name=Chimney;
+ID=chimney_misc3; sprite=1749; 
+cloneFrom=chimney_misc1;
+
+[ItemType]  name=Chimney Smoke;
+ID=smoke_emitter_chimney; sprite=1750; 
+texture=items_building;
+itemCategory=building;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=canBeInsideWalls;
+special=canAlwaysFitInTile; special=invisible;
+spawnFX=chimneyPuff;
+weight=800;
+pR=pR;
+depthMod=4000;
+[ItemType]  name=Chimney Smoke (1 Tile Up);
+ID=smoke_emitter_chimney_1TileUp; sprite=1750; 
+texture=items_building;
+itemCategory=building;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=canBeInsideWalls;
+special=canAlwaysFitInTile; special=invisible;
+spawnFX=chimneyPuff_1TileUp;
+weight=800;
+pR=pR;
+depthMod=4000;
+
+
+[JournalEntry]
+ID=journal_chimney;
+category=item; halfPage=true; rarity=0;
+title=Chimney;
+text=<itemBig=chimney><title=Chimney><brAdj=>Inflammable pipe to deliver smoke exhaust outside. Frequently caked with soot from the burnt sea coal or wood. Maintenance can require thorough cleaning, which was once done by young chimney sweeps. Due to the health risks, special force magic tools have largely replaced chimney sweeps.;
+
+
+[ItemType]  name=Window;
+itemCategory=building;
+ID=window_open; sprite=629; 
+texture=items_building;
+special=canHangOnWalls;
+ special=cannotBePickedUp; special=noTooltips;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+pB=pWood; 
+[ItemReaction] 
+ID=window_open; element=tileReacted; newID=X;
+
+
+[ItemType]  name=Window (Bright);
+itemCategory=building;
+ID=window_bright; sprite=630; 
+texture=items_building;
+special=canHangOnWalls;
+special=drawLightOnTopOfRoofs;
+special=cannotBePickedUp; special=noTooltips;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+pB=pWood; 
+[ItemReaction] 
+ID=window_bright; element=tileReacted; newID=X;
+[ItemLight] 
+ID=window_bright; texture=lightmaskLine; red=1; blue=0.8; green=0.85; alpha=0.27; size=0.45; flicker=0; Y=-0.25; 
+
+
+[ItemType]  name=Window;
+ID=window_open_big; sprite=661;
+cloneFrom=window_open;
+
+[ItemType]  name=Window (Roof);
+itemCategory=building;
+ID=window_open_roof; sprite=629;
+texture=items_building;
+ special=canHangOnWalls; special=canAlwaysFitInTile;
+ special=cannotBePickedUp; special=roof; special=noTooltips;
+ depthMod=2060;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+pB=pYellow; 
+[ItemReaction]
+ID=window_open_roof; element=tileReacted; newID=X;
+
+
+[ItemType]  name=Window  (Roof, Bright);
+itemCategory=building;
+ID=window_bright_roof; sprite=630; 
+texture=items_building;
+special=canHangOnWalls; special=canAlwaysFitInTile;
+special=drawLightOnTopOfRoofs;
+ special=cannotBePickedUp; special=roof; special=noTooltips;
+ depthMod=2060;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+pB=pYellow; 
+[ItemReaction] 
+ID=window_bright_roof; element=tileReacted; newID=X;
+[ItemLight] 
+ID=window_bright_roof; texture=lightmaskLine; red=1; blue=0.7; green=0.85; alpha=0.37; size=0.45; flicker=0; Y=-0.25; 
+
+
+[ItemType]  name=Window;
+ID=window_open_big_roof; sprite=661;
+cloneFrom=window_open_roof;
+
+[ItemType]  name=Window (Roof, DAY/Night);
+ID=window_open_roof_day;
+cloneFrom=window_open_roof;
+[ItemReaction] 
+ID=window_open_roof_day; element=nighttime; newID=window_open_roof_night;
+[ItemType]  name=Window (Roof, Day/NIGHT);
+ID=window_open_roof_night;
+cloneFrom=window_bright_roof;
+[ItemReaction] 
+ID=window_open_roof_night; element=daytime; newID=window_open_roof_day;
+
+
+[ItemType]  name=Big Window;
+ID=window_open_big_roof_smooth_concrete; sprite=725;
+pR=pR; pG=pG; pB=pB;
+cloneFrom=window_open_roof;
+[ItemType]  name=Thin Window;
+ID=window_slit_roof; sprite=726;
+pR=pR; pG=pG; pB=pB;
+cloneFrom=window_open_roof;
+[ItemType]  name=Small Square Window;
+ID=window_small_square_roof; sprite=723;
+cloneFrom=window_open_roof;
+[ItemType]  name=Small Window;
+ID=window_small_roof; sprite=727;
+pR=zoneStone; pG=pG; pB=pB; 
+cloneFrom=window_open_roof;
+
+[ItemType]  name=Bright Doorway;
+ID=doorway_square_bright; sprite=1428;  itemCategory=building;
+texture=items_building;
+special=canHangOnWalls; special=big; special=cannotBePickedUp; special=noTooltips; 
+special=overrideTerrainCollisions; special=preventTileReactions;
+special=cantGrabItemsFromThisTile; special=canAlwaysFitInTileWhenSpawned;
+special=noPlayerPlacedItems;
+pR=zoneDirtDark;
+[ItemLight] 
+ID=doorway_square_bright; red=1; blue=0.8; green=1.0; alpha=1; size=1; flicker=0; Y=-0.5; texture=lightmaskLine;
+[ItemReaction] 
+ID=doorway_square_bright; element=somethingHappened; element=mech; newID=doorway_square_dark;
+
+[ItemType]  name=Dark Doorway;
+ID=doorway_square_dark; sprite=1429;  itemCategory=building;
+texture=items_building;
+special=canHangOnWalls; special=big; special=cannotBePickedUp; special=noTooltips; 
+special=overrideTerrainCollisions; special=preventTileReactions;
+special=cantGrabItemsFromThisTile; special=canAlwaysFitInTileWhenSpawned;
+special=noPlayerPlacedItems;
+pR=zoneDirtDark;
+[ItemReaction] 
+ID=doorway_square_dark; element=somethingHappened; element=mech; newID=doorway_square_bright; fx=doorway_square_open;
+
+
+[ItemType]  name=Spire;
+ID=spire_cath_btm; sprite=1784; 
+texture=items_building;
+itemCategory=building;
+journalID=journal_spire_cath;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=canBeInsideWalls; special=canFloatOnWater; 
+weight=800;
+pR=zoneStoneDark;
+depthMod=3160;
+
+[ItemType]  name=Spire;
+ID=spire_cath_btm_lessDepth; sprite=1784; 
+texture=items_building;
+itemCategory=building;
+journalID=journal_spire_cath;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=canBeInsideWalls; special=canFloatOnWater; 
+weight=800;
+pR=zoneStoneDark;
+depthMod=1050;
+
+[ItemType]  name=Spire;
+ID=spire_cath_top; sprite=1720; 
+texture=items_building;
+itemCategory=building;
+journalID=journal_spire_cath;
+special=cannotBePickedUp; special=canHangOnWalls; special=canFloatOnWater; 
+special=sprite2xHeight; special=canBeInsideWalls;
+weight=800;
+pR=zoneStoneDark;
+depthMod=2050;
+
+[ItemType]  name=Spire (Chain);
+ID=spire_cath_btm2; sprite=1784; 
+texture=items_building;
+itemCategory=building;
+journalID=journal_spire_cath;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=canBeInsideWalls; special=canFloatOnWater; 
+special=sprite2xHeight;
+weight=800;
+pR=zoneStoneDark;
+pG=pGrey2;
+depthMod=10;
+
+[ItemType]  name=Spire;
+ID=spire_cath_btm_noChain_noJ; sprite=1815; 
+texture=items_building;
+itemCategory=building;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=canBeInsideWalls; special=canFloatOnWater;
+weight=800;
+pR=zoneStone;
+pG=pGrey2;
+blockWalking=true; blockJumping=true; blockLoE=true;
+depthMod=1050;
+
+[ItemType]  name=Spire;
+ID=spire_cath_top_noJ; sprite=1720; 
+texture=items_building;
+itemCategory=building;
+special=cannotBePickedUp; special=canHangOnWalls; special=canFloatOnWater; 
+special=sprite2xHeight; special=canBeInsideWalls;
+weight=800;
+pR=zoneStone;
+depthMod=3160;
+
+[ItemType]  name=Spire;
+ID=spire_cath_btm_noJ; sprite=1784; 
+texture=items_building;
+itemCategory=building;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=canBeInsideWalls; special=canFloatOnWater; 
+weight=800;
+pR=zoneStone;
+depthMod=3160;
+
+[ItemType]  name=Stone;
+ID=stone_pole_noJ; sprite=1814; 
+texture=items_building;
+itemCategory=building;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=canBeInsideWalls; special=canFloatOnWater;
+weight=800;
+pR=zoneStone;
+pG=pGrey2;
+blockWalking=true; blockJumping=true; blockLoE=true;
+depthMod=1050;
+
+[ItemType]  name=Stone;
+ID=stone_pole2_noJ; sprite=1813; 
+texture=items_building;
+itemCategory=building;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=canBeInsideWalls; special=canFloatOnWater;
+weight=800;
+pR=zoneStone;
+pG=pGrey2;
+blockWalking=true; blockJumping=true; blockLoE=true;
+depthMod=1050;
+
+[ItemType]  name=Rock Path;
+ID=rock_path1; sprite=1392; 
+journalID=;
+texture=items_building;
+weight=0; itemCategory=building;
+pR=zoneStone; pB=pFadeDark;
+special=cannotBePickedUp;
+[ItemType]  name=Rock Path;
+ID=rock_path2; sprite=1393; 
+cloneFrom=rock_path1;
+[ItemType]  name=Rock Path;
+ID=rock_path3; sprite=1394; 
+cloneFrom=rock_path1;
+
+
+[ItemType]  name=Well;
+ID=well1; sprite=1592;
+journalID=journal_well;
+itemCategory=building;
+texture=items_building;
+weight=500; volume=300;
+ special=cannotBePickedUp;
+pR=zoneStone; pB=zoneWood;
+special=big;
+blockWalking=true; blockJumping=true;
+
+[ItemType]  name=Well;
+ID=well2; sprite=1561;
+cloneFrom=well1;
+special=sprite2xHeight;
+depthMod=1050;
+
+[JournalEntry]
+ID=journal_well;
+category=item; halfPage=true; rarity=0;
+title=Well;
+text=<itemBig=well1><title=Well><brAdj=>This deep brick-lined well provides water to nearby inhabitants. It serves its purpose pretty... good.;
+
+[ItemType]  name=Glass Window;
+itemCategory=building;
+ID=window_cathedral_glass_top; sprite=1421; 
+texture=items_building;
+special=alwaysBelowOtherItems; special=canHangOnWalls; 
+ special=cannotBePickedUp; special=noTooltip;
+[ItemReaction] 
+ID=window_cathedral_glass_top; element=physical; element=explode; element=tileReacted; newID=window_cathedral_glass_broken_btm; fx=dust_glass;
+[ItemType]  name=Glass Window;
+itemCategory=building;
+ID=window_cathedral_glass_btm; sprite=1453; 
+texture=items_building;
+special=alwaysBelowOtherItems; special=canHangOnWalls; 
+ special=cannotBePickedUp; special=noTooltip;
+[ItemReaction] 
+ID=window_cathedral_glass_btm; element=physical; element=explode; element=tileReacted; newID=X; fx=dust_glass;
+[ItemType]  name=Glass Window (Damaged);
+itemCategory=building;
+ID=window_cathedral_glass_broken_btm; sprite=1454; 
+texture=items_building;
+special=alwaysBelowOtherItems; special=canHangOnWalls; special=transparent;
+ special=cannotBePickedUp; special=noTooltip;
+[ItemReaction] 
+ID=window_cathedral_glass_broken_btm; element=smash; element=explode; element=tileReacted; newID=X; fx=dust_glass;
+
+[ItemType]  name=Broken Glass;
+ID=broken_glass; sprite=986; stackable=true; itemCategory=building;
+description=;
+special=cannotBePickedUp;  special=transparent; special=noTooltip;
+special=quantityChangesSprite_upTo2;
+[ItemReaction]
+ID=broken_glass; element=explode; element=tileReacted; newID=X; fx=dust_glass;
+
+
+
+[ItemType]  name=Stone Floor;
+ID=floor_stone1; sprite=97; 
+itemCategory=building;
+texture=items_building;
+special=cannotBePickedUp; special=noTooltip; special=canHangOnWalls; 
+weight=0;
+pR=zoneStoneLight; pB=zoneStoneLight; pG=zoneStoneLight;
+[ItemType]  name=Stone Floor;
+ID=floor_stone2; sprite=98; 
+cloneFrom=floor_stone1;
+[ItemType]  name=Stone Floor;
+ID=floor_stone3; sprite=99; 
+cloneFrom=floor_stone1;
+
+[ItemType]  name=Stone Floor;
+ID=floor_stone1b; sprite=129; 
+cloneFrom=floor_stone1;
+[ItemType]  name=Stone Floor;
+ID=floor_stone2b; sprite=130; 
+cloneFrom=floor_stone1;
+[ItemType]  name=Stone Floor;
+ID=floor_stone3b; sprite=131; 
+cloneFrom=floor_stone1;
+[ItemType]  name=Stone Floor;
+ID=floor_stone4b; sprite=132; 
+cloneFrom=floor_stone1;
+[ItemType]  name=Stone Floor;
+ID=floor_stone5b; sprite=133; 
+cloneFrom=floor_stone1;
+[ItemType]  name=Stone Floor;
+ID=floor_stone6b; sprite=134; 
+cloneFrom=floor_stone1;
+[ItemType]  name=Stone Floor;
+ID=floor_stone7b; sprite=135; 
+cloneFrom=floor_stone1;
+
+[ItemType]  name=Stone Floor;
+ID=floor_cyber1; sprite=112;
+itemCategory=building;
+texture=items_building;
+special=cannotBePickedUp; special=noTooltip; special=canHangOnWalls; 
+stackable=true; special=quantityChangesSprite;
+weight=0;
+pR=zoneStoneLight; pB=zoneStoneLight; pG=zoneStoneLight;
+
+[ItemType]  name=Stone Floor;
+ID=floor_cyber2; sprite=144;
+cloneFrom=floor_cyber1;
+
+[ItemType]  name=Tiling Edge;
+itemCategory=building;
+ID=tiling; sprite=1360; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltip; special=canHangOnWalls; 
+special=alwaysBelowOtherItems;
+weight=0;
+pR=zoneStone; pB=zoneStone; pG=zoneStone;
+[ItemType]  name=Tiling Edge;
+itemCategory=building;
+ID=tiling2; sprite=1361; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltip; special=canHangOnWalls; 
+special=alwaysBelowOtherItems;
+weight=0;
+pR=zoneStone; pB=zoneStone; pG=zoneStone;
+[ItemType]  name=Tiling Edge;
+itemCategory=building;
+ID=tiling_big; sprite=1362; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltip; special=canHangOnWalls; 
+special=alwaysBelowOtherItems;
+weight=0;
+pR=zoneStone; pB=zoneStone; pG=zoneStone;
+[ItemType]  name=Tiling Edge;
+itemCategory=building;
+ID=tiling_big2; sprite=1363; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltip; special=canHangOnWalls; 
+special=alwaysBelowOtherItems;
+weight=0;
+pR=zoneStone; pB=zoneStone; pG=zoneStone;
+
+[ItemType]  name=Street Edge;
+itemCategory=building;
+ID=street_edge; sprite=1477;
+texture=items_building;
+special=cannotBePickedUp; special=noTooltip; special=canHangOnWalls;
+special=alwaysBelowOtherItems;
+pR=zoneStone;
+[ItemType]  name=Street Edge;
+ID=street_edge_and_corner; sprite=1478;
+cloneFrom=street_edge;
+[ItemType]  name=Street Edge;
+ID=street_edge_corner; sprite=1479;
+cloneFrom=street_edge;
+[ItemType]  name=Street Edge;
+ID=street_edge_corner_inner; sprite=1476;
+cloneFrom=street_edge;
+[ItemType]  name=Street Edge;
+ID=street_edge_diag; sprite=1475;
+cloneFrom=street_edge;
+
+[ItemType]  name=Street Edge;
+itemCategory=building;
+ID=street_edge2; sprite=1477;
+pR=zoneStoneLight;
+cloneFrom=street_edge;
+[ItemType]  name=Street Edge;
+ID=street_edge_and_corner2; sprite=1478;
+cloneFrom=street_edge2;
+[ItemType]  name=Street Edge;
+ID=street_edge_corner2; sprite=1479;
+cloneFrom=street_edge2;
+[ItemType]  name=Street Edge;
+ID=street_edge_corner_inner2; sprite=1476;
+cloneFrom=street_edge2;
+[ItemType]  name=Street Edge;
+ID=street_edge_diag2; sprite=1475;
+cloneFrom=street_edge2;
+
+
+[ItemType]  name=Cathedral Wall Sides;
+itemCategory=building;
+ID=cathedral_wall_sides; sprite=1422; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltip; special=canHangOnWalls; special=preventTileReactions;
+depthMod=1050;
+weight=200;
+pR=zoneStone;
+pG=zoneStoneDark;
+[ItemType]  name=Cathedral Arch Top;
+ID=cathedral_wall_sides_top; sprite=1390; 
+cloneFrom=cathedral_wall_sides;
+[ItemType]  name=Cathedral Arch Half;
+ID=cathedral_wall_sides_topL; sprite=1389; 
+cloneFrom=cathedral_wall_sides;
+
+
+[ItemType]  name=Wall Catacomb;
+itemCategory=building;
+ID=catacomb; sprite=691; 
+texture=items_building;
+special=big; special=sprite2xWidth; special=itemsIgnoreBlockWalking; 
+special=canHangOnWalls; special=cannotBePickedUp;
+pR=zoneStoneDark;
+
+[ItemType]  name=Platform;
+itemCategory=building;
+ID=platform; sprite=1324; 
+texture=items_building;
+weight=500; volume=300;
+special=noTooltips;
+special=itemsOnSameTileAreRaised; special=actorsOnSameTileAreRaised;
+pR=zoneStoneDark;
+
+
+
+
+
+[ItemType]  name=Diagonal Wall;
+itemCategory=building;
+ID=wall_diagonalL1; sprite=1729; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltip; special=canHangOnWalls; special=preventTileReactions; special=sprite2xHeight; special=canFloatOnWater; special=big; special=ignoreHeight; special=canAlwaysFitInTile;
+weight=9000;
+blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=true;
+pR=zoneStoneDark; pG=zoneStone;
+[ItemType]  name=Diagonal Wall;
+ID=wall_diagonalL2; sprite=1730; 
+cloneFrom=wall_diagonalL1;
+[ItemType]  name=Diagonal Wall;
+ID=wall_diagonalL3; sprite=1731; 
+cloneFrom=wall_diagonalL1;
+[ItemType]  name=Diagonal Wall;
+ID=wall_diagonalL4; sprite=1732; 
+cloneFrom=wall_diagonalL1;
+pR=zoneStone; pG=zoneStoneDark;
+[ItemType]  name=Diagonal Wall;
+ID=wall_diagonalL5; sprite=1733; 
+cloneFrom=wall_diagonalL1;
+pR=zoneStone; pG=zoneStoneDark;
+[ItemType]  name=Diagonal Wall;
+ID=wall_diagonalL6; sprite=1734; 
+cloneFrom=wall_diagonalL1;
+pR=zoneStoneDark; pG=zoneStone;
+[ItemType]  name=Diagonal Wall;
+ID=wall_diagonalL7; sprite=1735;
+cloneFrom=wall_diagonalL1;
+pR=zoneStone; pG=zoneStoneDark;
+depthMod=1050;
+[ItemType]  name=Diagonal Wall;
+ID=wall_diagonalL8; sprite=1736;
+cloneFrom=wall_diagonalL1;
+pR=zoneStoneDark; pG=zoneStoneDark;
+depthMod=1050;
+[ItemType]  name=Diagonal Wall;
+ID=wall_diagonalL9; sprite=1793;
+cloneFrom=wall_diagonalL1;
+pR=zoneStoneDark; pG=zoneStoneDark;
+depthMod=1050;
+[ItemType]  name=Diagonal Wall;
+ID=wall_diagonalL10; sprite=1794;
+cloneFrom=wall_diagonalL1;
+pR=zoneStoneDark; pG=zoneStoneDark;
+depthMod=1050;
+
+[ItemType]  name=Wall (Roof);
+itemCategory=building;
+ID=wall_L1; sprite=2305; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltip; special=canHangOnWalls; special=preventTileReactions; special=canFloatOnWater;
+special=ignoreHeight; special=canAlwaysFitInTile; special=roof;
+special=blackenOtherTiles;
+special=cannotActInPeacefulZones;
+special=cannotTargetInPeacefulZones;
+weight=9000; volume=9999999;
+depthMod=2050;
+pR=zoneStoneDark; pG=zoneStone;
+[ItemType]  name=Wall (Roof);
+ID=wall_L2; sprite=2306; 
+cloneFrom=wall_L1;
+[ItemType]  name=Wall (Roof);
+ID=wall_L2b; sprite=2306; 
+pR=zoneStone;
+cloneFrom=wall_L1;
+[ItemType]  name=Wall (Roof);
+ID=wall_L2c; sprite=2306; 
+pR=zoneStoneLight;
+cloneFrom=wall_L1;
+[ItemType]  name=Wall (Roof);
+ID=wall_L3; sprite=2307; 
+cloneFrom=wall_L1;
+[ItemType]  name=Wall (Roof);
+ID=wall_L4; sprite=2308; 
+cloneFrom=wall_L1;
+[ItemType]  name=Wall (Roof);
+ID=wall_L5; sprite=2309; 
+cloneFrom=wall_L1;
+
+[ItemType]  name=Adobe Wall (Roof);
+ID=wall_L6; sprite=2310; 
+cloneFrom=wall_L1; pR=pR; pG=pG; pB=pB;
+[ItemType]  name=Adobe Wall (Roof);
+ID=wall_L7; sprite=2311; 
+cloneFrom=wall_L1; pR=pR; pG=pG; pB=pB;
+
+[ItemType]  name=Smooth Wall (Roof);
+ID=wall_L8; sprite=2314; 
+cloneFrom=wall_L1; pR=pR; pG=pG; pB=pB;
+[ItemType]  name=Smooth Wall (Roof);
+ID=wall_L9; sprite=2315; 
+cloneFrom=wall_L1; pR=pR; pG=pG; pB=pB;
+
+
+
+------------------
+
+[ItemType]  name=Rough Shingle Roof;
+itemCategory=building;
+ID=roof2; sprite=2369; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltip; special=canHangOnWalls; special=roof; special=canFloatOnWater; special=canAlwaysFitInTile;
+special=blackenOtherTiles; special=ignoreBeingRaised;
+special=cannotActInPeacefulZones; 
+special=cannotTargetInPeacefulZones;
+special=fullTileRoof;
+depthMod=3050;
+weight=9000; volume=9999999;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+pB=zoneStone; pG=zoneStone;
+
+[ItemType]  name=DONT USE;
+itemCategory=building;
+ID=roof2_partial; sprite=2369; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltip; special=canHangOnWalls; special=roof; special=canFloatOnWater; special=canAlwaysFitInTile;
+special=blackenOtherTiles; special=ignoreBeingRaised;
+special=cannotActInPeacefulZones; 
+special=cannotTargetInPeacefulZones;
+depthMod=3050;
+weight=9000; volume=9999999;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+pB=zoneStone; pG=zoneStone;
+
+[ItemType]  name=Rough Shingle Roof;
+ID=roof2_top; sprite=2337;  
+cloneFrom=roof2;
+[ItemType]  name=Rough Shingle Roof;
+ID=roof2_back; sprite=2338; 
+cloneFrom=roof2;
+
+[ItemType]  name=Rough Shingle Roof Window;
+ID=roof2_window1; sprite=2341; 
+pB=zoneStone;
+cloneFrom=roof2;
+[ItemType]  name=Rough Shingle Roof Window;
+ID=roof2_window2; sprite=2373; 
+pB=zoneStone;
+cloneFrom=roof2;
+
+
+[ItemType]  name=Rough Shingle Roof Gable Top;
+ID=roof2_top_gable1; sprite=2339; 
+cloneFrom=roof2;
+[ItemType]  name=Rough Shingle Roof Gable Top;
+ID=roof2_top_gable2; sprite=2371; 
+cloneFrom=roof2;
+[ItemType]  name=Rough Shingle Roof Gable Top;
+ID=roof2_top_gable3; sprite=2403; 
+cloneFrom=roof2_partial;
+[ItemType]  name=Rough Shingle Roof;
+ID=roof2_gableL1; sprite=2370; 
+cloneFrom=roof2;
+[ItemType]  name=Rough Shingle Roof;
+ID=roof2_gableR1; sprite=2372; 
+cloneFrom=roof2;
+[ItemType]  name=Rough Shingle Roof;
+ID=roof2_gableL2; sprite=2402; 
+cloneFrom=roof2;
+[ItemType]  name=Rough Shingle Roof;
+ID=roof2_gableL3; sprite=2404; 
+cloneFrom=roof2_partial;
+
+[ItemType]  name=Rough Shingle Roof (Damaged);
+ID=roof2_damaged1; sprite=2412; 
+cloneFrom=roof2_partial;
+[ItemType]  name=Rough Shingle Roof (Damaged);
+ID=roof2_damaged2; sprite=2413; 
+cloneFrom=roof2_partial;
+[ItemType]  name=Rough Shingle Roof (Damaged);
+ID=roof2_damaged3; sprite=2414; 
+cloneFrom=roof2_partial;
+
+[ItemType]  name=Rough Shingle Roof Peak;
+ID=roof2_top_point1; sprite=2405; 
+itemCategory=building;
+texture=items_building;
+special=cannotBePickedUp; special=noTooltip; special=canHangOnWalls; special=canFloatOnWater; special=ignoreBeingRaised;
+special=invisibleUnderRoofs;
+depthMod=3050;
+weight=9000; volume=9999999;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+[ItemType]  name=Rough Shingle Roof Edge Top;
+ID=roof2_top_point2; sprite=2406; 
+cloneFrom=roof2_top_point1;
+
+
+
+
+[ItemType]  name=Nice Shingle Roof;
+itemCategory=building;
+ID=roof2_nice; sprite=2375; 
+cloneFrom=roof2;
+[ItemType]  name=Nice Shingle Roof;
+ID=roof2_top_nice; sprite=2343;  
+cloneFrom=roof2;
+
+[ItemType]  name=Nice Shingle Roof Gable Top;
+ID=roof2_top_gable1_nice; sprite=2345; 
+cloneFrom=roof2_partial;
+[ItemType]  name=Nice Shingle Roof Gable Top;
+ID=roof2_top_gable2_nice; sprite=2377; 
+cloneFrom=roof2;
+[ItemType]  name=Nice Shingle Roof Gable Top;
+ID=roof2_top_gable3_nice; sprite=2409; 
+cloneFrom=roof2;
+[ItemType]  name=Nice Shingle Roof;
+ID=roof2_gableL1_nice; sprite=2376; 
+cloneFrom=roof2;
+[ItemType]  name=Nice Shingle Roof;
+ID=roof2_gableR1_nice; sprite=2378; 
+cloneFrom=roof2;
+[ItemType]  name=Nice Shingle Roof;
+ID=roof2_gableL2_nice; sprite=2408; 
+cloneFrom=roof2;
+[ItemType]  name=Nice Shingle Roof;
+ID=roof2_gableL3_nice; sprite=2410; 
+cloneFrom=roof2_partial;
+[ItemType]  name=Nice Shingle Roof Window;
+ID=roof2_window1_nice; sprite=2347; 
+cloneFrom=roof2;
+[ItemType]  name=Nice Shingle Roof Window;
+ID=roof2_window2_nice; sprite=2379; 
+cloneFrom=roof2;
+
+
+[ItemType]  name=Roof (Flat);
+itemCategory=building;
+ID=roof1_flat1; sprite=2352; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltip; special=canHangOnWalls; special=roof; special=canFloatOnWater; special=fullTileRoof;
+special=blackenOtherTiles; special=ignoreBeingRaised;
+ special=canAlwaysFitInTile; special=fullTileRoof;
+special=cannotActInPeacefulZones;
+special=cannotTargetInPeacefulZones;
+depthMod=3050;
+weight=9000; volume=9999999;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+pB=zoneMisc1; pG=zoneMisc1;
+
+[ItemType]  name=DONT USE;
+itemCategory=building;
+ID=roof1_flat1_partial; sprite=2352; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltip; special=canHangOnWalls; special=roof; special=canFloatOnWater; special=fullTileRoof;
+special=blackenOtherTiles; special=ignoreBeingRaised;
+ special=canAlwaysFitInTile;
+special=cannotActInPeacefulZones;
+special=cannotTargetInPeacefulZones;
+depthMod=3050;
+weight=9000; volume=9999999;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+pB=zoneMisc1; pG=zoneMisc1;
+
+[ItemType]  name=Roof (Flat);
+ID=roof1_flat2; sprite=2353; 
+cloneFrom=roof1_flat1;
+[ItemType]  name=Roof (Flat);
+ID=roof1_flat3; sprite=2354; 
+cloneFrom=roof1_flat1;
+
+[ItemType]  name=Roof (Flat);
+ID=roof1_flat4; sprite=2384; 
+cloneFrom=roof1_flat1;
+[ItemType]  name=Roof (Flat);
+ID=roof1_flat5; sprite=2385; 
+cloneFrom=roof1_flat1;
+[ItemType]  name=Roof (Flat);
+ID=roof1_flat6; sprite=2386; 
+cloneFrom=roof1_flat1;
+[ItemType]  name=Roof (Flat);
+ID=roof1_flat6a; sprite=2387; 
+cloneFrom=roof1_flat1_partial;
+[ItemType]  name=Roof (Flat);
+ID=roof1_flat6b; sprite=2388; 
+cloneFrom=roof1_flat1_partial;
+
+[ItemType]  name=Roof (Flat);
+ID=roof1_flat7; sprite=2416; 
+cloneFrom=roof1_flat1;
+[ItemType]  name=Roof (Flat);
+ID=roof1_flat8; sprite=2417; 
+cloneFrom=roof1_flat1;
+[ItemType]  name=Roof (Flat);
+ID=roof1_flat9; sprite=2418; 
+cloneFrom=roof1_flat1;
+[ItemType]  name=Roof (Flat);
+ID=roof1_flat9a; sprite=2419; 
+cloneFrom=roof1_flat1_partial;
+[ItemType]  name=Roof (Flat);
+ID=roof1_flat9b; sprite=2420; 
+cloneFrom=roof1_flat1_partial;
+
+---
+
+[ItemType]  name=Roof (Flat);
+ID=roof2_flat1; sprite=2256; 
+cloneFrom=roof1_flat1;
+[ItemType]  name=Roof (Flat);
+ID=roof2_flat2; sprite=2257; 
+cloneFrom=roof1_flat1;
+[ItemType]  name=Roof (Flat);
+ID=roof2_flat3; sprite=2258; 
+cloneFrom=roof1_flat1;
+[ItemType]  name=Roof (Flat);
+ID=roof2_flat4; sprite=2288; 
+cloneFrom=roof1_flat1;
+[ItemType]  name=Roof (Flat);
+ID=roof2_flat5; sprite=2289; 
+cloneFrom=roof1_flat1;
+[ItemType]  name=Roof (Flat);
+ID=roof2_flat6; sprite=2290; 
+cloneFrom=roof1_flat1;
+[ItemType]  name=Roof (Flat);
+ID=roof2_flat7; sprite=2320; 
+cloneFrom=roof1_flat1;
+[ItemType]  name=Roof (Flat);
+ID=roof2_flat8; sprite=2321; 
+cloneFrom=roof1_flat1;
+[ItemType]  name=Roof (Flat);
+ID=roof2_flat9; sprite=2322; 
+cloneFrom=roof1_flat1;
+
+---
+
+[ItemType]  name=Roof Ornament;
+ID=roof1_ornament1; sprite=2355; 
+cloneFrom=roof1_flat1;
+[ItemType]  name=Roof Ornament;
+ID=roof1_ornament2; sprite=2356; 
+cloneFrom=roof1_flat1;
+
+
+[ItemType]  name=Sheet Metal Roof;
+itemCategory=building;
+ID=roof_nice1; sprite=2358; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltip; special=canHangOnWalls; special=roof; special=canFloatOnWater; special=fullTileRoof;
+special=blackenOtherTiles; special=ignoreBeingRaised;
+special=canAlwaysFitInTile;
+special=cannotActInPeacefulZones;
+special=cannotTargetInPeacefulZones;
+depthMod=3050;
+weight=9000;
+
+[ItemType]  name=Sheet Metal Roof;
+ID=roof_nice2; sprite=2359; 
+cloneFrom=roof_nice1;
+[ItemType]  name=Sheet Metal Roof;
+ID=roof_nice3; sprite=2390; 
+cloneFrom=roof_nice1;
+[ItemType]  name=Sheet Metal Roof;
+ID=roof_nice4; sprite=2391; 
+cloneFrom=roof_nice1;
+[ItemType]  name=Sheet Metal Roof;
+ID=roof_nice5; sprite=2422; 
+cloneFrom=roof_nice1;
+[ItemType]  name=Sheet Metal Roof;
+ID=roof_nice6; sprite=2423; 
+cloneFrom=roof_nice1;
+
+---
+
+[ItemType]  name=Sheet Metal Roof P;
+ID=roof2_nice1; sprite=2360; 
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+cloneFrom=roof_nice1;
+[ItemType]  name=Sheet Metal Roof P;
+ID=roof2_nice2; sprite=2361; 
+cloneFrom=roof2_nice1;
+[ItemType]  name=Sheet Metal Roof P;
+ID=roof2_nice3; sprite=2392; 
+cloneFrom=roof2_nice1;
+[ItemType]  name=Sheet Metal Roof P;
+ID=roof2_nice4; sprite=2393; 
+cloneFrom=roof2_nice1;
+[ItemType]  name=Sheet Metal Roof P;
+ID=roof2_nice5; sprite=2424; 
+cloneFrom=roof2_nice1;
+[ItemType]  name=Sheet Metal Roof P;
+ID=roof2_nice6; sprite=2425; 
+cloneFrom=roof2_nice1;
+
+---
+
+[ItemType]  name=Wood Roof (Back);
+itemCategory=building;
+ID=roof1_style1; sprite=2160; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltip; special=canHangOnWalls; special=roof; special=canFloatOnWater;
+special=blackenOtherTiles; special=ignoreBeingRaised;
+special=canAlwaysFitInTile; special=fullTileRoof;
+special=cannotActInPeacefulZones;
+special=cannotTargetInPeacefulZones;
+depthMod=3050;
+weight=9000; volume=9999999;
+
+[ItemType]  name=DONT USE;
+itemCategory=building;
+ID=roof1_style1_partial; sprite=2160; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltip; special=canHangOnWalls; special=roof; special=canFloatOnWater;
+special=blackenOtherTiles; special=ignoreBeingRaised;
+special=canAlwaysFitInTile;
+special=cannotActInPeacefulZones;
+special=cannotTargetInPeacefulZones;
+depthMod=3050;
+weight=9000; volume=9999999;
+
+[ItemType]  name=Wood Roof (Back);
+ID=roof2_style1; sprite=2161; 
+cloneFrom=roof1_style1;
+[ItemType]  name=Wood Roof (Back);
+ID=roof3_style1; sprite=2162; 
+cloneFrom=roof1_style1;
+[ItemType]  name=Wood Roof;
+ID=roof4_style1; sprite=2192; 
+cloneFrom=roof1_style1;
+[ItemType]  name=Wood Roof;
+ID=roof5_style1; sprite=2193; 
+cloneFrom=roof1_style1;
+[ItemType]  name=Wood Roof;
+ID=roof6_style1; sprite=2194; 
+cloneFrom=roof1_style1;
+[ItemType]  name=Wood Roof;
+ID=roof7_style1; sprite=2224; 
+cloneFrom=roof1_style1;
+[ItemType]  name=Wood Roof;
+ID=roof8_style1; sprite=2225; 
+cloneFrom=roof1_style1;
+[ItemType]  name=Wood Roof;
+ID=roof9_style1; sprite=2226; 
+cloneFrom=roof1_style1;
+
+
+--
+[ItemType]  name=Wood Roof (Back) P;
+ID=roof1_style1_p; sprite=2163; 
+cloneFrom=roof1_style1;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+
+[ItemType]  name=Wood Roof (Back) P;
+ID=roof2_style1_p; sprite=2164; 
+cloneFrom=roof1_style1_p;
+[ItemType]  name=Wood Roof (Back) P;
+ID=roof3_style1_p; sprite=2165; 
+cloneFrom=roof1_style1_p;
+[ItemType]  name=Wood Roof P;
+ID=roof4_style1_p; sprite=2195; 
+cloneFrom=roof1_style1_p;
+[ItemType]  name=Wood Roof P;
+ID=roof5_style1_p; sprite=2196; 
+cloneFrom=roof1_style1_p;
+[ItemType]  name=Wood Roof P;
+ID=roof6_style1_p; sprite=2197; 
+cloneFrom=roof1_style1_p;
+[ItemType]  name=Wood Roof P;
+ID=roof7_style1_p; sprite=2227; 
+cloneFrom=roof1_style1_p;
+[ItemType]  name=Wood Roof P;
+ID=roof8_style1_p; sprite=2228; 
+cloneFrom=roof1_style1_p;
+[ItemType]  name=Wood Roof P;
+ID=roof9_style1_p; sprite=2229; 
+cloneFrom=roof1_style1_p;
+
+--
+
+[ItemType]  name=Rough Tile Roof (Back);
+ID=roof1_style2; sprite=2362; 
+cloneFrom=roof1_style1_partial;
+[ItemType]  name=Rough Tile Roof (Back);
+ID=roof2_style2; sprite=2363; 
+cloneFrom=roof1_style1_partial;
+[ItemType]  name=Rough Tile Roof (Back);
+ID=roof3_style2; sprite=2364; 
+cloneFrom=roof1_style1_partial;
+[ItemType]  name=Rough Tile Roof (Back);
+ID=roof4_style2; sprite=2365; 
+cloneFrom=roof1_style1_partial;
+[ItemType]  name=Rough Tile Roof;
+ID=roof5_style2; sprite=2394; 
+special=fullTileRoof;
+cloneFrom=roof1_style1;
+[ItemType]  name=Rough Tile Roof;
+ID=roof6_style2; sprite=2395; 
+special=fullTileRoof;
+cloneFrom=roof1_style1;
+[ItemType]  name=Rough Tile Roof;
+ID=roof7_style2; sprite=2396; 
+special=fullTileRoof;
+cloneFrom=roof1_style1;
+[ItemType]  name=Rough Tile Roof;
+ID=roof8_style2; sprite=2397; 
+special=fullTileRoof;
+cloneFrom=roof1_style1;
+[ItemType]  name=Rough Tile Roof;
+ID=roof9_style2; sprite=2426; 
+special=fullTileRoof;
+cloneFrom=roof1_style1;
+[ItemType]  name=Rough Tile Roof;
+ID=roof10_style2; sprite=2427; 
+special=fullTileRoof;
+cloneFrom=roof1_style1;
+[ItemType]  name=Rough Tile Roof;
+ID=roof11_style2; sprite=2428; 
+special=fullTileRoof;
+cloneFrom=roof1_style1;
+[ItemType]  name=Rough Tile Roof;
+ID=roof12_style2; sprite=2429; 
+special=fullTileRoof;
+cloneFrom=roof1_style1;
+--
+
+[ItemType]  name=Rough Tile Roof (Back) P;
+ID=roof1_style2_p; sprite=2458; 
+cloneFrom=roof1_style1_partial;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+[ItemType]  name=Rough Tile Roof (Back) P;
+ID=roof2_style2_p; sprite=2459; 
+cloneFrom=roof1_style2_p;
+[ItemType]  name=Rough Tile Roof (Back) P;
+ID=roof3_style2_p; sprite=2460; 
+cloneFrom=roof1_style2_p;
+[ItemType]  name=Rough Tile Roof (Back) P;
+ID=roof4_style2_p; sprite=2461; 
+cloneFrom=roof1_style2_p;
+[ItemType]  name=Rough Tile Roof P;
+ID=roof5_style2_p; sprite=2490; 
+special=fullTileRoof;
+cloneFrom=roof1_style2_p;
+[ItemType]  name=Rough Tile Roof P;
+ID=roof6_style2_p; sprite=2491; 
+special=fullTileRoof;
+cloneFrom=roof1_style2_p;
+[ItemType]  name=Rough Tile Roof P;
+ID=roof7_style2_p; sprite=2492; 
+special=fullTileRoof;
+cloneFrom=roof1_style2_p;
+[ItemType]  name=Rough Tile Roof P;
+ID=roof8_style2_p; sprite=2493; 
+special=fullTileRoof;
+cloneFrom=roof1_style2_p;
+[ItemType]  name=Rough Tile Roof P;
+ID=roof9_style2_p; sprite=2522; 
+special=fullTileRoof;
+cloneFrom=roof1_style2_p;
+[ItemType]  name=Rough Tile Roof P;
+ID=roof10_style2_p; sprite=2523; 
+special=fullTileRoof;
+cloneFrom=roof1_style2_p;
+[ItemType]  name=Rough Tile Roof P;
+ID=roof11_style2_p; sprite=2524; 
+special=fullTileRoof;
+cloneFrom=roof1_style2_p;
+[ItemType]  name=Rough Tile Roof P;
+ID=roof12_style2_p; sprite=2525; 
+special=fullTileRoof;
+cloneFrom=roof1_style2_p;
+--
+
+
+[ItemType]  name=Nice Shingle Roof (Back);
+ID=roof1_style3; sprite=2259; 
+cloneFrom=roof1_style1;
+[ItemType]  name=Nice Shingle Roof (Back);
+ID=roof2_style3; sprite=2260; 
+cloneFrom=roof1_style1;
+[ItemType]  name=Nice Shingle Roof (Back);
+ID=roof3_style3; sprite=2261; 
+cloneFrom=roof1_style1;
+
+[ItemType]  name=Nice Shingle Roof;
+ID=roof4_style3; sprite=2291; 
+cloneFrom=roof1_style1;
+[ItemType]  name=Nice Shingle Roof;
+ID=roof5_style3; sprite=2292; 
+cloneFrom=roof1_style1;
+[ItemType]  name=Nice Shingle Roof;
+ID=roof6_style3; sprite=2293; 
+cloneFrom=roof1_style1;
+
+[ItemType]  name=Nice Shingle Roof (Back);
+ID=roof7_style3; sprite=2294; 
+cloneFrom=roof1_style1;
+[ItemType]  name=Nice Shingle Roof (Back);
+ID=roof8_style3; sprite=2295; 
+cloneFrom=roof1_style1;
+[ItemType]  name=Nice Shingle Roof (Back);
+ID=roof9_style3; sprite=2296; 
+cloneFrom=roof1_style1;
+
+[ItemType]  name=Nice Shingle Roof;
+ID=roof10_style3; sprite=2323; 
+cloneFrom=roof1_style1;
+[ItemType]  name=Nice Shingle Roof;
+ID=roof11_style3; sprite=2324; 
+cloneFrom=roof1_style1;
+[ItemType]  name=Nice Shingle Roof;
+ID=roof12_style3; sprite=2325; 
+cloneFrom=roof1_style1;
+
+[ItemType]  name=Nice Shingle Roof;
+ID=roof13_style3; sprite=2326; 
+cloneFrom=roof1_style1;
+[ItemType]  name=Nice Shingle Roof;
+ID=roof14_style3; sprite=2327; 
+cloneFrom=roof1_style1;
+[ItemType]  name=Nice Shingle Roof;
+ID=roof15_style3; sprite=2328; 
+cloneFrom=roof1_style1;
+
+[ItemType]  name=Nice Shingle Roof (Edge);
+ID=roof_edge1_style3; sprite=2262; 
+itemCategory=building;
+texture=items_building;
+special=cannotBePickedUp; special=noTooltip; special=canHangOnWalls; special=canFloatOnWater; special=ignoreBeingRaised;
+special=invisibleUnderRoofs;
+depthMod=3050;
+weight=9000; volume=9999999;
+[ItemType]  name=Nice Shingle Roof (Edge);
+ID=roof_edge2_style3; sprite=2263; 
+cloneFrom=roof_edge1_style3;
+[ItemType]  name=Nice Shingle Roof (Edge);
+ID=roof_edge3_style3; sprite=2264; 
+cloneFrom=roof_edge1_style3;
+[ItemType]  name=Nice Shingle Window;
+ID=roof_window1_style3; sprite=2303; 
+special=roof;
+cloneFrom=roof_edge1_style3;
+
+[ItemType]  name=Nice Shingle Roof (Roof Edge);
+ID=roof_edge1_style3_r; sprite=2262; 
+itemCategory=building;
+texture=items_building;
+special=cannotBePickedUp; special=noTooltip; special=canHangOnWalls; special=canFloatOnWater; special=ignoreBeingRaised;
+special=roof;
+depthMod=3050;
+weight=9000; volume=9999999;
+[ItemType]  name=Nice Shingle Roof (Roof Edge);
+ID=roof_edge2_style3_r; sprite=2263; 
+cloneFrom=roof_edge1_style3_r;
+[ItemType]  name=Nice Shingle Roof (Roof Edge);
+ID=roof_edge3_style3_r; sprite=2264; 
+cloneFrom=roof_edge1_style3_r;
+
+--
+
+
+[ItemType]  name=Nice Shingle Roof (Back) P;
+ID=roof1_style3_p; sprite=2265; 
+cloneFrom=roof1_style1;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+[ItemType]  name=Nice Shingle Roof (Back) P;
+ID=roof2_style3_p; sprite=2266; 
+cloneFrom=roof1_style3_p;
+[ItemType]  name=Nice Shingle Roof (Back) P;
+ID=roof3_style3_p; sprite=2267; 
+cloneFrom=roof1_style3_p;
+
+[ItemType]  name=Nice Shingle Roof P;
+ID=roof4_style3_p; sprite=2297; 
+cloneFrom=roof1_style3_p;
+[ItemType]  name=Nice Shingle Roof P;
+ID=roof5_style3_p; sprite=2298; 
+cloneFrom=roof1_style3_p;
+[ItemType]  name=Nice Shingle Roof P;
+ID=roof6_style3_p; sprite=2299; 
+cloneFrom=roof1_style3_p;
+
+[ItemType]  name=Nice Shingle Roof (Back) P;
+ID=roof7_style3_p; sprite=2300; 
+cloneFrom=roof1_style3_p;
+[ItemType]  name=Nice Shingle Roof (Back) P;
+ID=roof8_style3_p; sprite=2301; 
+cloneFrom=roof1_style3_p;
+[ItemType]  name=Nice Shingle Roof (Back) P;
+ID=roof9_style3_p; sprite=2302; 
+cloneFrom=roof1_style3_p;
+
+[ItemType]  name=Nice Shingle Roof P;
+ID=roof10_style3_p; sprite=2329; 
+cloneFrom=roof1_style3_p;
+[ItemType]  name=Nice Shingle Roof P;
+ID=roof11_style3_p; sprite=2330; 
+cloneFrom=roof1_style3_p;
+[ItemType]  name=Nice Shingle Roof P;
+ID=roof12_style3_p; sprite=2331; 
+cloneFrom=roof1_style3_p;
+
+[ItemType]  name=Nice Shingle Roof P;
+ID=roof13_style3_p; sprite=2332; 
+cloneFrom=roof1_style3_p;
+[ItemType]  name=Nice Shingle Roof P;
+ID=roof14_style3_p; sprite=2333; 
+cloneFrom=roof1_style3_p;
+[ItemType]  name=Nice Shingle Roof P;
+ID=roof15_style3_p; sprite=2334; 
+cloneFrom=roof1_style3_p;
+
+[ItemType]  name=Nice Shingle Roof (Edge) P;
+ID=roof_edge1_style3_p; sprite=2268; 
+cloneFrom=roof_edge1_style3;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+[ItemType]  name=Nice Shingle Roof (Edge) P;
+ID=roof_edge2_style3_p; sprite=2269; 
+cloneFrom=roof_edge1_style3_p;
+[ItemType]  name=Nice Shingle Roof (Edge) P;
+ID=roof_edge3_style3_p; sprite=2270; 
+cloneFrom=roof_edge1_style3_p;
+[ItemType]  name=Nice Shingle Window P;
+ID=roof_window1_style3_p; sprite=2271; 
+special=roof;
+cloneFrom=roof_edge1_style3_p;
+
+
+[ItemType]  name=Nice Shingle Roof (Roof Edge) P;
+ID=roof_edge1_style3_r_p; sprite=2268; 
+cloneFrom=roof_edge1_style3_r;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+[ItemType]  name=Nice Shingle Roof (Roof Edge) P;
+ID=roof_edge2_style3_r_p; sprite=2269; 
+cloneFrom=roof_edge1_style3_r_p;
+[ItemType]  name=Nice Shingle Roof (Roof Edge) P;
+ID=roof_edge3_style3_r_p; sprite=2270; 
+cloneFrom=roof_edge1_style3_r_p;
+
+
+
+
+---STYLE4
+
+
+[ItemType]  name=Diagonal Shingle Roof;
+ID=roof1_style4; sprite=2168; 
+cloneFrom=roof1_style1;
+[ItemType]  name=Diagonal Shingle Roof;
+ID=roof2_style4; sprite=2169; 
+cloneFrom=roof1_style1;
+
+[ItemType]  name=Diagonal Shingle Peak;
+ID=roof3_style4; sprite=2170; 
+itemCategory=building;
+texture=items_building;
+special=cannotBePickedUp; special=noTooltip; special=canHangOnWalls; special=canFloatOnWater; special=ignoreBeingRaised;
+special=invisibleUnderRoofs;
+depthMod=3050;
+weight=9000; volume=9999999;
+
+[ItemType]  name=Diagonal Shingle Peak2;
+ID=roof3b_style4; sprite=2138; 
+cloneFrom=roof3_style4;
+
+[ItemType]  name=Diagonal Shingle Roof;
+ID=roof4_style4; sprite=2171; 
+cloneFrom=roof1_style1;
+[ItemType]  name=Diagonal Shingle Roof;
+ID=roof5_style4; sprite=2200; 
+special=fullTileRoof;
+cloneFrom=roof1_style1;
+[ItemType]  name=Diagonal Shingle Roof;
+ID=roof6_style4; sprite=2201; 
+special=fullTileRoof;
+cloneFrom=roof1_style1;
+[ItemType]  name=Diagonal Shingle Roof;
+ID=roof7_style4; sprite=2202; 
+special=fullTileRoof;
+cloneFrom=roof1_style1;
+[ItemType]  name=Diagonal Shingle Roof;
+ID=roof8_style4; sprite=2203; 
+special=fullTileRoof;
+cloneFrom=roof1_style1;
+[ItemType]  name=Diagonal Shingle Roof;
+ID=roof9_style4; sprite=2232;
+special=fullTileRoof; 
+cloneFrom=roof1_style1;
+[ItemType]  name=Diagonal Shingle Roof;
+ID=roof10_style4; sprite=2233; 
+special=fullTileRoof;
+cloneFrom=roof1_style1;
+[ItemType]  name=Diagonal Shingle Roof;
+ID=roof11_style4; sprite=2234; 
+special=fullTileRoof;
+cloneFrom=roof1_style1;
+[ItemType]  name=Diagonal Shingle Roof;
+ID=roof12_style4; sprite=2235; 
+special=fullTileRoof;
+cloneFrom=roof1_style1;
+
+--
+
+[ItemType]  name=Diagonal Shingle Roof P;
+ID=roof1_style4_p; sprite=2172; 
+cloneFrom=roof1_style1;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+[ItemType]  name=Diagonal Shingle Roof P;
+ID=roof2_style4_p; sprite=2173; 
+cloneFrom=roof1_style4_p;
+
+[ItemType]  name=Diagonal Shingle Peak P;
+ID=roof3_style4_p; sprite=2174; 
+cloneFrom=roof3_style4;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+[ItemType]  name=Diagonal Shingle Peak2 P;
+ID=roof3b_style4_p; sprite=2142; 
+cloneFrom=roof3_style4_p;
+
+
+[ItemType]  name=Diagonal Shingle Roof P;
+ID=roof4_style4_p; sprite=2175; 
+cloneFrom=roof1_style4_p;
+[ItemType]  name=Diagonal Shingle Roof P;
+ID=roof5_style4_p; sprite=2204; 
+special=fullTileRoof;
+cloneFrom=roof1_style4_p;
+[ItemType]  name=Diagonal Shingle Roof P;
+ID=roof6_style4_p; sprite=2205; 
+special=fullTileRoof;
+cloneFrom=roof1_style4_p;
+[ItemType]  name=Diagonal Shingle Roof P;
+ID=roof7_style4_p; sprite=2206; 
+special=fullTileRoof;
+cloneFrom=roof1_style4_p;
+[ItemType]  name=Diagonal Shingle Roof P;
+ID=roof8_style4_p; sprite=2207; 
+special=fullTileRoof;
+cloneFrom=roof1_style4_p;
+[ItemType]  name=Diagonal Shingle Roof P;
+ID=roof9_style4_p; sprite=2236; 
+special=fullTileRoof;
+cloneFrom=roof1_style4_p;
+[ItemType]  name=Diagonal Shingle Roof P;
+ID=roof10_style4_p; sprite=2237; 
+special=fullTileRoof;
+cloneFrom=roof1_style4_p;
+[ItemType]  name=Diagonal Shingle Roof P;
+ID=roof11_style4_p; sprite=2238; 
+special=fullTileRoof;
+cloneFrom=roof1_style4_p;
+[ItemType]  name=Diagonal Shingle Roof P;
+ID=roof12_style4_p; sprite=2239; 
+special=fullTileRoof;
+cloneFrom=roof1_style4_p;
+
+--
+
+
+[ItemType]  name=Sign;
+itemCategory=building;
+ID=sign_wall1; sprite=193;
+texture=items_building;
+pR=zoneWood;
+pB=pPurpleD;
+special=noTooltips;
+special=cannotBePickedUp;
+special=cantGrabItemsFromThisTile;
+special=canHangOnWalls; special=noPlayerPlacedItems;
+special=itemsIgnoreBlockWalking;
+special=cannotTargetInPeacefulZones;
+[ItemType]  name=Sign;
+ID=sign_wall2; sprite=193;
+cloneFrom=sign_wall1;
+pR=zoneWood;
+pB=pBlue2;
+[ItemType]  name=Sign;
+itemCategory=building;
+ID=sign_hanging1; sprite=192;
+texture=items_building;
+pR=zoneWood;
+pB=pPurpleD;
+special=raiseItemsDepth1000;
+special=raiseItemsDepth1050;
+depthMod=2050;
+special=noTooltips;
+special=cannotBePickedUp;
+special=cantGrabItemsFromThisTile;
+special=canHangOnWalls; special=noPlayerPlacedItems;
+special=itemsIgnoreBlockWalking;
+special=cannotTargetInPeacefulZones;
+[ItemType]  name=Sign;
+ID=sign_hanging2; sprite=192;
+cloneFrom=sign_hanging1;
+pR=zoneWood;
+pB=pBlue2;
+[ItemType]  name=Harbor;
+ID=sign_icon_anchor; sprite=194;
+itemCategory=building;
+texture=items_building;
+pR=pGold;
+special=cannotBePickedUp;
+special=canHangOnWalls; special=fullTileHitbox; special=showOnMinimap;
+
+[JournalEntry]
+ID=item_sign_icon_anchor;
+category=item; halfPage=true; rarity=0;
+title=Harbor;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_anchor><title=Harbor><brAdj=>Though 'harbor' is a general term encompassing many functions, this particular building is where you can store or retrieve your ships for later use. There is no charge for this service, but the ships must not have any crew on them when stored.;
+
+[ItemType]  name=Equipment;
+ID=sign_icon_sword; sprite=195; pR=pGold;
+journalID=journal_eqpt_items;
+cloneFrom=sign_icon_anchor;
+
+[JournalEntry]
+ID=journal_eqpt_items;
+category=item; halfPage=true; rarity=0;
+title=Equipment / Items;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_bag><title=Equipment / Items><brAdj=>When you need any sort of weapons, armor, or even consumable goods, check out the equipment and item stores. Each port has its own unique selection, which may expand with the port's wealth level.;
+
+
+[ItemType]  name=Market;
+ID=sign_icon_balance; sprite=196; pR=pGold;
+cloneFrom=sign_icon_anchor;
+
+[JournalEntry]
+ID=item_sign_icon_balance;
+category=item; halfPage=true; rarity=0;
+title=Market;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_balance><title=Market><brAdj=>The Market sells Food, trade goods, and all ship-related equipment (such as cannons, boarding gear, and other upgrades). Food is limitless, but trade goods are restocked at a regular rate determined by the port's wealth.;
+
+[ItemType]  name=Guild;
+ID=sign_icon_letter; sprite=197; pR=pGold;
+cloneFrom=sign_icon_anchor;
+
+[JournalEntry]
+ID=item_sign_icon_letter;
+category=item; halfPage=true; rarity=0;
+title=Guild;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_letter><title=Guild><brAdj=>The Guild is an international organization that handles tasks both local and global. Various jobs are always available, which award gold and fame upon completion.;
+
+[ItemType]  name=Temple;
+ID=sign_icon_star; sprite=198; pR=pGold;
+cloneFrom=sign_icon_anchor;
+
+[JournalEntry]
+ID=item_sign_icon_star;
+category=item; halfPage=true; rarity=0;
+title=Temple;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_star><title=Temple><brAdj=>Temples vary greatly from port to port, but the one constant is their desire for your donations. Donating increases your favor with whatever nation is allied with the port.;
+
+
+[ItemType]  name=Smithy;
+ID=sign_icon_anvil; sprite=199; pR=pGold;
+cloneFrom=sign_icon_anchor;
+
+[JournalEntry]
+ID=item_sign_icon_anvil;
+category=item; halfPage=true; rarity=0;
+title=Smithy;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_anvil><title=Smithy><brAdj=>In addition to usually selling weapons and armor, the anvil and forge of a Smithy are open for public use. Place equipment on the anvil to augment it, or put it into the forge to recover its base components.;
+
+[ItemType]  name=Items;
+ID=sign_icon_bag; sprite=200; pR=pGold;
+journalID=journal_eqpt_items;
+cloneFrom=sign_icon_anchor;
+[ItemType]  name=Cartographer;
+ID=sign_icon_compass; sprite=201; pR=pGold;
+cloneFrom=sign_icon_anchor;
+[ItemType]  name=Cartographer;
+ID=sign_icon_compass_outline; sprite=233; pR=pGold;
+cloneFrom=sign_icon_anchor;
+
+[JournalEntry]
+ID=item_sign_icon_compass;
+category=item; halfPage=true; rarity=0;
+title=Cartographer;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_compass><title=Cartographer><brAdj=>Cartographers compete jealously for the best, most accurate map - meaning they'll pay good money to reliable sailors that can bring them new info. It's also a good way to make a name as an explorer!;
+
+[ItemType]  name=Shipwright;
+ID=sign_icon_boat; sprite=202; pR=pGold;
+cloneFrom=sign_icon_anchor;
+
+[JournalEntry]
+ID=item_sign_icon_boat;
+category=item; halfPage=true; rarity=0;
+title=Shipwright;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_boat><title=Shipwright><brAdj=>Every port has a shipwright that can provide repairs to your fleet. Each port has different ships available to buy, however, and may unlock more new ships based on the port's wealth level.;
+
+[ItemType]  name=Researcher;
+ID=sign_icon_eyeglass; sprite=203; pR=pGold;
+cloneFrom=sign_icon_anchor;
+[ItemType]  name=Researcher;
+ID=sign_icon_eyeglass_outline; sprite=235; pR=pGold;
+cloneFrom=sign_icon_anchor;
+
+[JournalEntry]
+ID=item_sign_icon_eyeglass;
+category=item; halfPage=true; rarity=0;
+title=Researcher;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_eyeglass><title=Researcher><brAdj=>Eral is filled with mysterious, unexplained things. Researchers work to learn more about them, and will pay you for any information you can bring. This is where explorers go to make a living.;
+
+[ItemType]  name=Cafe;
+ID=sign_icon_cup; sprite=204; pR=pGold;
+cloneFrom=sign_icon_anchor;
+
+[JournalEntry]
+ID=item_sign_icon_cup;
+category=item; halfPage=true; rarity=0;
+title=Cafe;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_cup><title=Cafe><brAdj=>The home of hardened sailors. Buy the local specialty to increase morale, gossip for information, or hire new crew here.;
+
+[ItemType]  name=Trainer;
+ID=sign_icon_book; sprite=205; pR=pGold;
+cloneFrom=sign_icon_anchor;
+[ItemType]  name=Trainer;
+ID=sign_icon_book_done; sprite=237; pR=pGold;
+cloneFrom=sign_icon_anchor;
+[ItemType]  name=Trainer;
+ID=sign_icon_book_done_done; sprite=269; pR=pGold;
+cloneFrom=sign_icon_anchor;
+
+[ItemType]  name=Trainer;
+ID=sign_icon_2book; sprite=236; pR=pGold;
+cloneFrom=sign_icon_anchor;
+[ItemType]  name=Trainer;
+ID=sign_icon_2book_done; sprite=236; pR=pGold;
+cloneFrom=sign_icon_anchor;
+[ItemType]  name=Trainer;
+ID=sign_icon_2book_done_done; sprite=268; pR=pGold;
+cloneFrom=sign_icon_anchor;
+
+
+[JournalEntry]
+ID=item_sign_icon_book;
+category=item; halfPage=true; rarity=0;
+title=Trainer;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_book><title=Trainer><brAdj=>Most classes cannot be used without the specialized knowledge of a Trainer. Pay the trainer a one-time fee, and all current and future crew will be able to access that class (assuming they meet the other requirements as well).;
+
+[ItemType]  name=Dojo;
+ID=sign_icon_muscle; sprite=206; pR=pGold;
+cloneFrom=sign_icon_anchor;
+[ItemType]  name=Dojo;
+ID=sign_icon_muscle_done; sprite=238; pR=pGold;
+cloneFrom=sign_icon_anchor;
+[ItemType]  name=Dojo;
+ID=sign_icon_muscle_done_done; sprite=270; pR=pGold;
+cloneFrom=sign_icon_anchor;
+
+[JournalEntry]
+ID=item_sign_icon_muscle;
+category=item; halfPage=true; rarity=0;
+title=Dojo;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_muscle><title=Dojo><brAdj=>Each weapon has devoted followers around the globe. Visit a dojo to test your skills aqainst these followers. If you succeed, you acquire a small reward and gain access to special training with that weapon type.;
+
+[ItemType]  name=Arena;
+ID=sign_icon_axe; sprite=207; pR=pGold;
+cloneFrom=sign_icon_anchor;
+
+[JournalEntry]
+ID=item_sign_icon_axe;
+category=item; halfPage=true; rarity=0;
+title=Arena;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_axe><title=Arena><brAdj=>Fighting arena for devoted warriors. Pit yourself against tough opponents for gold and glory!;
+
+[ItemType]  name=Information;
+ID=sign_icon_eye; sprite=208; pR=pGold;
+cloneFrom=sign_icon_anchor;
+
+[JournalEntry]
+ID=item_sign_icon_eye;
+category=item; halfPage=true; rarity=0;
+title=Information;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_eye><title=Information><brAdj=>When seeking hidden knowledge, this is the place to go. You can request investigations on ports, fleets, and many other things.;
+
+[ItemType]  name=Home;
+ID=sign_icon_home; sprite=209; pR=pGold;
+cloneFrom=sign_icon_anchor;
+
+[JournalEntry]
+ID=item_sign_icon_home;
+category=item; halfPage=true; rarity=0;
+title=Home;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_home><title=Home><brAdj=>It's your house! Manage the appearance, name, and theme of your port here. Stash anything you want here and make yourself comfortable!;
+
+[ItemType]  name=Museum;
+ID=sign_icon_museum; sprite=210; pR=pGold;
+cloneFrom=sign_icon_anchor;
+
+[JournalEntry]
+ID=item_sign_icon_museum;
+category=item; halfPage=true; rarity=0;
+title=Museum;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_museum><title=Museum><brAdj=>A fine place to display all your most valuable discoveries! Place rare items on the tables to increase its daily income.;
+
+[ItemType]  name=Training Ground;
+ID=sign_icon_training; sprite=206; pR=pGold;
+cloneFrom=sign_icon_anchor;
+
+[JournalEntry]
+ID=item_sign_icon_training;
+category=item; halfPage=true; rarity=0;
+title=Training Ground;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_training><title=Training Ground><brAdj=>This facility increases everyone's daily XP gain when manned.;
+
+
+[ItemType]  name=Cyber Wall;
+ID=wall1_styleC1; sprite=1537; 
+cloneFrom=wall1; special=animated8Med;
+special=slopeS; special=blockJumping_N; special=blockJumping_E; special=blockJumping_W;
+blockJumping=false;
+pR=zoneMisc1;
+pG=zoneMisc2;
+pB=zoneMisc3;
+[ItemLight] 
+ID=wall1_styleC1; red=0.4; blue=0.4; green=0.4; alpha=0.95; size=0.2; flicker=0.01; texture=lightmask;
+
+[ItemType]  name=Cyber Wall;
+ID=wall2_styleC1; sprite=1569; 
+cloneFrom=wall1_styleC1;
+
+
+[ItemType]  name=Cyber Wall Top;
+ID=wall1_styleC1top; sprite=1545; 
+cloneFrom=wall1;
+pR=zoneMisc1;
+pG=zoneMisc2;
+pB=zoneMisc3;
+blockJumping=true;
+
+[ItemType]  name=Cyber Wall Top;
+ID=wall2_styleC1top; sprite=1577; 
+cloneFrom=wall1_styleC1top;
+blockJumping=true;
+
+[ItemType]  name=Cyber Line;
+ID=cyber_line1; sprite=1601; 
+itemCategory=building;
+texture=items_building;
+special=cannotBePickedUp; special=animated8Med; 
+special=canHangOnWalls; special=noTooltip; 
+pR=zoneMisc1; pG=zoneMisc2; pB=zoneMisc3;
+[ItemLight] 
+ID=cyber_line1; red=0.3; blue=0.3; green=0.3; alpha=0.95; size=0.1; flicker=0.005;
+
+[ItemType]  name=Cyber Line;
+ID=cyber_line2; sprite=1633;
+cloneFrom=cyber_line1; 
+
+[ItemType]  name=Cyber Wall (Static);
+ID=wall1_styleC1_static; sprite=1537; 
+cloneFrom=wall1;
+special=slopeS; special=blockJumping_N; special=blockJumping_E; special=blockJumping_W;
+blockJumping=false;
+pR=zoneMisc1;
+pG=zoneMisc2;
+pB=zoneMisc3;
+
+[ItemType]  name=Cyber Wall (Static);
+ID=wall2_styleC1_static; sprite=1569; 
+cloneFrom=wall1_styleC1_static;
+
+[ItemType]  name=Cyber Wall (Static);
+ID=wall2_styleC1_static1; sprite=1546; 
+cloneFrom=wall2_styleC1_static;
+[ItemType]  name=Cyber Wall (Static);
+ID=wall2_styleC1_static2; sprite=1547; 
+cloneFrom=wall2_styleC1_static;
+[ItemType]  name=Cyber Wall (Static);
+ID=wall2_styleC1_static3; sprite=1548; 
+cloneFrom=wall2_styleC1_static;
+
+[ItemType]  name=Cyber Wall (Static);
+ID=wall2_styleC1_static6; sprite=1578; 
+cloneFrom=wall2_styleC1_static;
+[ItemType]  name=Cyber Wall (Static);
+ID=wall2_styleC1_static7; sprite=1579; 
+cloneFrom=wall2_styleC1_static;
+[ItemType]  name=Cyber Wall (Static);
+ID=wall2_styleC1_static8; sprite=1580; 
+cloneFrom=wall2_styleC1_static;
+[ItemType]  name=Cyber Wall (Static);
+ID=wall2_styleC1_static9; sprite=1581; 
+cloneFrom=wall2_styleC1_static;
+

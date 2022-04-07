@@ -1,0 +1,334 @@
+--player is lookig out into the storm
+
+[DialogNode] ID=scene_ship1a;
+speakerOverride=barr;
+animations=handupPose;
+statements=The storm is really picking up, Commodore!;
+animations=stern;
+statements=This is looking bad!;
+
+[DialogOption] text=All hands on deck!!;
+animation=angry;
+nodeToConnectTo=scene_ship1c;
+[DialogOption] text=Reeve, take command for me!;
+animation=scared;
+newLineOfOptions=true;
+nodeToConnectTo=scene_ship1b;
+[DialogOption] text=(Skip scene);
+formulaReq=m:debug;
+newLineOfOptions=true;
+specialEffect=setGlobalVar,turnsTaken,1;
+specialEffect=fx,timeFast;
+nodeToConnectTo=scene_ship12b;
+
+[DialogNode] ID=scene_ship1b;
+speakerOverride=reeve_strong;
+animations=;
+animations=angry;
+statements=Stay calm, Commodore!<p=> You can handle this!;
+statements=All hands on deck!<p=> Brace yourselves, this is going to be a rough one!;
+nextNodeID=scene_ship1c;
+
+[DialogNode] ID=scene_ship1c;
+specialEffect=tScene2;
+nodeToConnectTo=;
+
+--player walks toward barr but is knocked into vang by the jolting of the ship
+
+[DialogNode] ID=scene_ship2a;
+speakerOverride=vang;
+animations=angry;
+statements=Hey, watch it!;
+
+[DialogOption] text=Sorry!;
+animation=;
+nodeToConnectTo=scene_ship2b;
+[DialogOption] text=YOU watch it!;
+animation=stern;
+nodeToConnectTo=scene_ship2b;
+newLineOfOptions=true;
+[DialogOption] text=Stay on task, sailor!;
+animation=angry;
+nodeToConnectTo=scene_ship2b;
+newLineOfOptions=true;
+
+[DialogNode] ID=scene_ship2b;
+speakerOverride=vang;
+animations=angry;
+statements=Hmph...!;
+nextNodeID=scene_ship2c;
+
+[DialogNode] ID=scene_ship2c;
+specialEffect=tScene3;
+nodeToConnectTo=;
+
+--player walks up to barr
+
+[DialogNode] ID=scene_ship2d;
+speakerOverride=barr;
+animations=sigh;
+statements=This storm came out of nowhere...<p=> it's more intense than any I've seen!;
+[DialogOption] text=We'll weather it. Stay focused.;
+animation=angry;
+nodeToConnectTo=scene_ship2e;
+[DialogOption] text=What are our chances?;
+animation=;
+nodeToConnectTo=scene_ship2f;
+newLineOfOptions=true;
+
+[DialogNode] ID=scene_ship2e;
+speakerOverride=barr;
+animations=;
+statements=As you say, Commodore.;
+nextNodeID=scene_ship2g;
+
+[DialogNode] ID=scene_ship2f;
+speakerOverride=barr;
+animations=angry;
+statements=We might make it through...<p=> but I can't say for certain.;
+nextNodeID=scene_ship2g;
+
+[DialogNode] ID=scene_ship2g;
+specialEffect=tScene4;
+nodeToConnectTo=;
+
+--lightning strikes the ship
+
+[DialogNode] ID=scene_ship3a;
+speakerOverride=;
+animations=;
+statements=Fire!<p=> There's a fire belowdecks!;
+nextNodeID=scene_ship3b;
+
+[DialogNode] ID=scene_ship3b;
+speakerOverride=reeve_strong;
+animations=angry;
+statements=I'm on it!<p=> Vang, Mirra, with me!;
+nextNodeID=scene_ship3c;
+
+[DialogNode] ID=scene_ship3c;
+speakerOverride=vang;
+animations=scared;
+statements=Y-yes ma'am!;
+nextNodeID=scene_ship3d;
+
+[DialogNode] ID=scene_ship3d;
+specialEffect=tScene5;
+nodeToConnectTo=;
+
+--Reeve, Vang, and Mirra go belowdecks
+
+[DialogNode] ID=scene_ship4a;
+speakerOverride=barr;
+animations=handupPose;
+statements=Commodore, look!<p=> I-is that...?!;
+specialEffect=facingRot270;
+nextNodeID=scene_ship4b;
+
+[DialogNode] ID=scene_ship4b;
+specialEffect=tScene6;
+nodeToConnectTo=;
+
+--cut to fleet zone, pirates sail into view
+
+[DialogNode] ID=scene_ship4c;
+speakerOverride=barr;
+animations=angry;
+statements=Pirates!<p=> At a time like this!?;
+nextNodeID=scene_ship4d;
+
+[DialogNode] ID=scene_ship4d;
+specialEffect=tScene1b2;
+nodeToConnectTo=;
+
+--pirates sail up to your ship
+
+[DialogNode] ID=scene_ship5a;
+speakerOverride=lagan;
+animations=handupPose;
+animations=handoutPose;
+statements=Hahaha...!<p=> Enjoying the storm, Dominio dogs?;
+statements=Courtesy of Lagan - yours truly!;
+nextNodeID=scene_ship5a2;
+
+
+[DialogNode] ID=scene_ship5a2;
+animations=sigh;
+statements=I was supposed to have the Stormcutter blast you all to bits,<p=> but I'd hate to waste all that fine cargo...;
+specialEffect=moveY1;
+nextNodeID=scene_ship5a3;
+
+[DialogNode] ID=scene_ship5a3;
+animations=idle;
+statements=Why don't you all just lay down and let's do this the easy way?;
+specialEffect=facingRot180;
+
+
+[DialogOption] text=Never! We won't surrender to pirates!;
+animation=angry;
+nodeToConnectTo=scene_ship5b;
+[DialogOption] text=You were 'supposed to'? Did someone hire you?;
+animation=sly;
+nodeToConnectTo=scene_ship5c;
+newLineOfOptions=true;
+[DialogOption] text=Call off the storm, then we'll negotiate!;
+animation=stern;
+nodeToConnectTo=scene_ship5d;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=scene_ship5b;
+animations=swing;
+statements=As expected!<p=> Hard way it is, then!;
+specialEffect=facingRot90;
+nextNodeID=scene_ship5e;
+
+[DialogNode] ID=scene_ship5c;
+animations=chargePose;
+animations=swing;
+statements=You're asking me questions?<p=> Really?;
+statements=I don't think you understand the position you're in...<p=> so let me demonstrate!;
+specialEffect=facingRot90;
+nextNodeID=scene_ship5e;
+
+[DialogNode] ID=scene_ship5d;
+animations=chargePose;
+animations=handupPose;
+statements=I don't think so.<p=> There's nothing to negotiate!<p=> Just lay down and die!;
+statements=...did I say 'and'?<p=> I meant 'lay down or die'.<speed=0.5> ...hm.<p=><speed=1> Oh well!;
+specialEffect=facingRot90;
+nextNodeID=scene_ship5e;
+
+
+[DialogNode] ID=scene_ship5e;
+specialEffect=hostile;
+specialEffect=tScene8;
+nextNodeID=;
+
+
+[DialogNode] ID=scene_ship6a;
+statements=Argh...!;
+nextNodeID=scene_ship6b;
+
+[DialogNode] ID=scene_ship6b;
+specialEffect=tScene9;
+
+--combat ensues
+
+[DialogNode] ID=scene_ship7a;
+statements=Tch...!<p=> This is taking far too long.;
+statements=Once the captain goes down, the rest will follow!;
+specialEffect=facingRot90;
+nextNodeID=scene_ship7b;
+
+[DialogNode] ID=scene_ship7b;
+specialEffect=tScene10;
+
+--Lagan & player have a cutscene fight
+
+
+[DialogNode] ID=scene_ship8a;
+animations=crouchPose_back2;
+animations=crouchHandOutPose_back2;
+statements=<speed=0.8>Oh...<p=> er...;
+statements=Hey...<p=> l-let's not do anything rash, now...!;
+
+[DialogOption] text=Order your men to surrender!;
+animation=handoutAngryPose;
+nodeToConnectTo=scene_ship8b;
+[DialogOption] text=This the 'hard way' you were talking about?;
+animation=handoutSlyPose;
+formulaReq=g:D_scene_ship5b;
+nodeToConnectTo=scene_ship8b;
+newLineOfOptions=true;
+[DialogOption] text=Willing to answer questions now?;
+animation=handoutSlyPose;
+formulaReq=g:D_scene_ship5c;
+nodeToConnectTo=scene_ship8b;
+newLineOfOptions=true;
+[DialogOption] text=Ready to negotiate?;
+animation=handoutSlyPose;
+formulaReq=g:D_scene_ship5d;
+nodeToConnectTo=scene_ship8b;
+newLineOfOptions=true;
+[DialogOption] text=Just lay down and die...!;
+animation=handoutSternPose;
+formulaReq=g:D_scene_ship5d;
+nodeToConnectTo=scene_ship8c;
+newLineOfOptions=true;
+
+[DialogNode] ID=scene_ship8b;
+animations=crouchPose_back2;
+statements=<speed=0.8>Y-yes, <p=>I,<p=> uh...;
+nextNodeID=scene_ship8d;
+
+[DialogNode] ID=scene_ship8c;
+animations=crouchPose_back2;
+statements=<speed=0.8>N-no,<p=> please...!;
+nextNodeID=scene_ship8d;
+
+[DialogNode] ID=scene_ship8d;
+specialEffect=tScene11;
+
+
+[DialogNode] ID=scene_ship9a;
+statements=<rfx=vfx_vang><speed=0.5>RrrrraaAGGGGHHH!<cmd=advanceDialog=1>;
+nextNodeID=scene_ship9b;
+
+[DialogNode] ID=scene_ship9b;
+specialEffect=tScene12;
+
+
+[DialogNode] ID=scene_ship10a;
+animations=angry;
+statements=Vang's here and ready to fight!!;
+specialEffect=facingRot270;
+nextNodeID=scene_ship10b;
+
+[DialogNode] ID=scene_ship10b;
+animations=chargePose;
+statements=Who wants some?!;
+specialEffect=facingRot0;
+specialEffect=setPrevFacingRot,0;
+nextNodeID=scene_ship10c;
+
+
+[DialogNode] ID=scene_ship10c;
+specialEffect=tScene13;
+
+[DialogNode] ID=scene_ship11a;
+animations=angry;
+statements=Hahaha!<p=> Later, fools!;
+specialEffect=facingRot180;
+nextNodeID=scene_ship11b;
+
+[DialogNode] ID=scene_ship11b;
+specialEffect=tScene14;
+
+[DialogNode] ID=scene_ship12a;
+animations=meh;
+statements=...they're running away?;
+specialEffect=facingRot0;
+nextNodeID=scene_ship12a2;
+
+[DialogNode] ID=scene_ship12a2;
+animations=angry;
+animations=handoutPose;
+statements=<speed=0.5>...huh?<p=><speed=1> You fell over again??;
+statements=Get up already!<p=> You let 'em get away!;
+specialEffect=facingRot180;
+
+[DialogOption] text=Vang, you son of a...;
+animation=stern;
+nodeToConnectTo=scene_ship12b;
+[DialogOption] text=Everyone, after them!;
+animation=chargePose;
+nodeToConnectTo=scene_ship12b;
+newLineOfOptions=true;
+[DialogOption] text=...;
+animation=stern;
+nodeToConnectTo=scene_ship12b;
+newLineOfOptions=true;
+
+[DialogNode] ID=scene_ship12b;
+specialEffect=tScene15;

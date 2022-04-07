@@ -1,0 +1,20 @@
+[Zone]  ID=spEnc_travelers1; dark=False; showFogOfWar=True; fogOfWar=True; minimapEnabled=True; cantAct=False; cantGameOver=False; peaceful=False; overseerMode=False; rollingPinStyle=False; boatZone=False; wind=False; canDropItems=True; 
+ travelSong=; travelSongVolume=1; travelSongPitch=0; combatSong=; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=0; darkG=0; darkB=0; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=pDirt; zoneGrassPalette=pGreen; zoneGrassDarkPalette=pGreen2; zoneStonePalette=pGreyD; zoneStoneDarkPalette=pGreyD2; zoneStoneLightPalette=pGreyD; zoneWaterPalette=pBlue; zoneDirtDarkPalette=pDirt; zoneWoodPalette=pWood; zoneWoodDarkPalette=pWoodDark; zoneMisc1Palette=pWoodDark; zoneMisc2Palette=pWoodDark; zoneMisc3Palette=pRed; zoneMisc4Palette=pBlue; 
+
+combatMode=False; 
+
+[Item] ID=campfire_everlit; quantity=1; x=3; y=3;
+
+
+
+[Trigger] numID=0; aliasID=;
+topX=1;topY=1;btmX=5;btmY=5;
+triggerImmediatelyOnEnteringZone=True; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=True; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=0; effectID=spawn; sValue=travelers; sValue2=; bValue1=True; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+

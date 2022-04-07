@@ -1,0 +1,149 @@
+--here's an example of a support ability! It overrides Sailor's Salty Dog.
+--It also displays a dust FX on the player, and cannot be given to AI.
+[SupportAbility]
+ID=saltyDog;
+name=Saltier Dog;
+icon=icon_white;
+tooltip=This is a sample ability! Boosts magic and protects from Itchy.;
+XPCostUnlock=99;
+canBeGivenToAI=false;
+fxEvery4Frames=hitDustQuiet;
+emitFxWhileMoving=false;
+[SupportAbilityEffect]
+ID=saltyDog;
+actorValue=MagAtk; magnitude=2; duration=-1;
+[SupportAbilityReaction]
+ID=saltyDog;
+actorValues=itchy; damageMultiplier=0;
+
+
+
+
+--This example overrides Sailor's Counter Push.
+--It adds a new Action that heals you.
+[SupportAbility]
+ID=counterPush;
+name=Counter Heal;
+icon=icon_elec;
+tooltip=This is a sample ability! Heal yourself when struck by physical attacks.<n>(Can't use with other melee counters.);
+XPCostUnlock=99;
+supportAbilsToReplace=counter;
+supportAbilsToReplace=counterWarp;
+supportAbilsToReplace=counterFrenzy;
+supportAbilsToReplace=lifeMirror;
+[SupportAbilityReaction]
+ID=counterPush; element=physical; action=counterHeal_act;
+
+[Action] ID=counterHeal_act; 
+	attractAttention=false;
+	harmful=false;
+	casterAnimation=use;
+	
+	FXOnCaster=counter;
+	FXOnCaster=actor_counter;
+	FXOnCaster=sfx_magicCharge;
+	FXOnCaster=sidewardLines;
+[ActionAoE] 
+	ID=counterHeal_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=counterHeal_act; 
+	harmful=false;
+	actorValue=HP;
+	magnitude= 10 + c:skill_Life;
+	duration=-2;
+	chance=100;
+	element=removeDecay;
+	FXOnTile=sparkles;
+	FXOnTileColor=Red;
+	FXOnTile=briefAuraSound;
+[AvAffecterAoE]
+	ID=counterHeal_act;
+	cloneFrom=oneTile;
+
+
+
+
+
+--This example overrides Sailor's Sea Legs.
+--It adds a new Action, which checks whether the caster is burning, and if so, applies +1 Move.
+[SupportAbility]
+ID=seaLegs;
+name=Fire Legs;
+icon=icon_fire;
+tooltip=This is a sample ability! Grants +1 <icon=moveDistance> while inflicted with Burn.;
+XPCostUnlock=99;
+[SupportAbilityReaction]
+ID=seaLegs; actorValues=burn; action=fireLegs_act;
+[SupportAbilityReaction]
+ID=seaLegs; element=timerUp; action=fireLegs_act;
+
+[Action] ID=fireLegs_act; 	
+	icon=icon_fire;
+	harmful=false;
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+[ActionAoE] 
+	ID=fireLegs_act;
+	cloneFrom=oneTile;
+	canSelectStackedActors=false;
+[AvAffecter]
+	ID=fireLegs_act; 
+	actorValue=moveDistance;
+	visibleEvaluations=true;
+	visibleMiss=false;
+	harmful=false;
+	magnitude=1;
+	duration=-3;
+	chance=100 * c:burn;
+[AvAffecterAoE]
+	ID=fireLegs_act;
+	cloneFrom=oneTile;
+	
+
+	
+--This example creates a new passive.
+--It replaces Poison effects with Burn effects.
+[SupportAbility]
+ID=poisonToBurn;
+name=Poison to Burn;
+icon=icon_white;
+tooltip=Sample: when hit by Poison, you are Burned instead.;
+XPCostUnlock=99;
+[SupportAbilityReaction]
+ID=poisonToBurn; actorValues=poison; action=replacePoisonWithBurn;
+
+[Action] ID=replacePoisonWithBurn; 	
+	harmful=false;
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+[ActionAoE] 
+	ID=replacePoisonWithBurn;
+	cloneFrom=oneTile;
+	canSelectStackedActors=false;
+[AvAffecter]
+--applies a matching Burn
+	ID=replacePoisonWithBurn; 
+	actorValue=burn;
+	visibleEvaluations=false;
+	harmful=false;
+	magnitude=1;
+	duration=cDur:poison;
+	chance=100 * c:poison;
+[AvAffecterAoE]
+	ID=replacePoisonWithBurn;
+	cloneFrom=oneTile;
+[AvAffecter]
+--removes Poison
+	ID=replacePoisonWithBurn; 
+	actorValue=poison;
+	visibleEvaluations=false;
+	harmful=false;
+	magnitude=-1;
+	duration=-2;
+	chance=100 * c:burn;
+[AvAffecterAoE]
+	ID=replacePoisonWithBurn;
+	cloneFrom=oneTile;

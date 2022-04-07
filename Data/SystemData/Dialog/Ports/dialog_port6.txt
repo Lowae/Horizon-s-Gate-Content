@@ -1,0 +1,238 @@
+[DialogNode] ID=port6_guy1a;
+animations=sly;
+animations=handsupPose;
+statements=Hey hey!<p> Need food?<p> Goods?<p> Gear?;
+statements=We got it here!<p> Check the bag next to me for basic tools, or come on in for the rest!;
+nextNodeID=;
+
+[DialogNode] ID=port6_guy2a;
+animations=sly;
+animations=happy;
+statements=Hey chief.<p> Need directions?;
+statements=Pier's right there.<p> How bout takin' a long walk?<p> Huhuhuh!;
+nextNodeID=;
+
+[DialogNode] ID=port6_guy3a;
+animations=happy;
+animations=meh;
+statements=Wolner's always got good stuff...;
+statements=That creepy mask isn't doing him any favors though.;
+nextNodeID=;
+
+[DialogNode] ID=port6_guy4a;
+animations=meh;
+animations=sigh;
+statements=This's the second time I've lost a ship to Megaray attacks...;
+statements=Should I get a faster ship or just hope it doesn't happen again...?;
+nextNodeID=;
+
+[DialogNode] ID=port6_guy5a;
+animations=sigh;
+statements=Wind at your back and Fire in your heart, friend.;
+nextNodeID=;
+
+[DialogNode] ID=port6_guy6a;
+animations=scared;
+animations=;
+statements=Wow...<p> Searth is so big!;
+statements=Where do I even go first?;
+nextNodeID=;
+
+[DialogNode] ID=port6_guy7a;
+animations=angry;
+statements=Buzz off.;
+nextNodeID=;
+
+[DialogNode] ID=port6_guy8a;
+animations=meh;
+animations=sly;
+statements=Sorry, can't talk now.<p> Gotta clear this wreckage.;
+statements=It's for the new Cathedral.<p> Very important, y'know.<p> Big job.;
+nextNodeID=;
+
+[DialogNode] ID=port6_guy8b;
+animations=happy;
+statements=Hey,<p> thanks for the help!;
+nextNodeID=;
+
+[DialogNode] ID=port6_guy9a;
+animations=;
+animations=;
+statements=Takes forever to get anything done here, even for us Gatekeepers.;
+statements=I came prepared, though.<p> Brought a couple dozen books this time.;
+nextNodeID=;
+
+[DialogNode] ID=port6_guy10a;
+animations=sigh;
+animations=sly;
+statements=I forgot my shoulder pads on the boat...;
+statements=Think they'd let me in the cafe?;
+nextNodeID=;
+
+[DialogNode] ID=port6_guy11a;
+animations=;
+animations=sly;
+animations=happy;
+statements=Hey fella.;
+statements=You lookin' for something to do?<p> Grab a job from the guild!;
+statements=I've been livin' on guild work for years now.;
+nextNodeID=;
+
+[DialogNode] ID=port6_guy12a;
+animations=;
+animations=sly;
+animations=meh;
+statements=See somethin' you like?<p> I got blades, maces - I got whatever.;
+statements=Sift through those weapon bags, or maybe grab one of my special items!;
+statements=The Fire Band's not for sale though.<p> I could get in trouble selling something like that!;
+nextNodeID=;
+
+
+[DialogNode] ID=port6_guy13a;
+animations=;
+animations=sly;
+statements=W-what?<p> What'd you want?;
+statements=<speed=0.7>I-I'm just tryna get some shuteye...<p> b-beat it...!;
+nextNodeID=;
+
+
+
+[DialogNode] ID=port6_guy14a;
+animations=sigh;
+animations=sly;
+animations=stern;
+statements=They say the 6 Virtues are Truth, Courage, Mercy, Faith, Justice, and Sacrifice...;
+statements=...but what was the 7th Virtue?<p> I bet it was Unity!;
+statements=If you analyze the descriptions of the eras, it's the only thing that makes sense!;
+nextNodeID=;
+
+[DialogNode] ID=port6_guy15a;
+animations=sly;
+animations=angry;
+statements=The REAL 6 Virtues are Self, Courage, Acceptance, Determination, Judgment, and Sacrifice!;
+statements=Don't listen to that knucklehead over there.<p> She's going by old, outdated translations.;
+nextNodeID=;
+
+[DialogNode] ID=port6_guy16a;
+animations=angry;
+animations=happy;
+statements=Y'got somethin' you wanna say?!<p> Huh?!?;
+statements=Oh, sorry!<p> I thought you were one of my crew.<p> My mistake!;
+nextNodeID=;
+
+[DialogNode] ID=port6_guy17a;
+animations=happy;
+animations=;
+statements=I love watching all the ships come in!;
+statements=Searth is right in the heart of the Great Sea, so it's always bustling.;
+nextNodeID=;
+
+[DialogNode] ID=port6_guy18a;
+animations=;
+animations=sly;
+animations=;
+statements=These are the Seven Stones, huh?;
+statements=Not exactly the most amazing tourist spot I've ever seen.;
+statements=Then again, I'm not particularly religious.;
+nextNodeID=;
+
+[DialogNode] ID=port6_guy19a;
+animations=;
+animations=happy;
+statements=Nobody looks down on me in Searth!;
+statements=In fact, they all completely ignore me!<p=2> It's great!;
+nextNodeID=;
+
+
+
+
+
+[DialogNode] ID=port6_guard1a;
+animations=stern;
+statements=No touching the stones, please.;
+nextNodeID=;
+
+[DialogNodeOverride] ID=maxRank_port6_guard1a;
+dialogNodeID_toOverride=port6_guard1a;
+fReq=gIs:playerFaction:seartial + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=stern;
+statements=Good day, <prank=>.;
+
+
+[DialogNode] ID=port6_guard2a;
+animations=sigh;
+statements=If you have something to discuss with the Administrator, go on in.;
+nextNodeID=;
+
+[DialogNodeOverride] ID=maxRank_port6_guard2a;
+dialogNodeID_toOverride=port6_guard2a;
+fReq=gIs:playerFaction:seartial + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=happy;
+statements=Good to see you again, <pnamefull=>!;
+
+[DialogNode] ID=port6_royal1_guard1a;
+animations=;
+statements=Admin Ovarr is right ahead.;
+nextNodeID=;
+
+[DialogNodeOverride] ID=maxRank_port6_royal1_guard1a;
+dialogNodeID_toOverride=port6_royal1_guard1a;
+fReq=gIs:playerFaction:seartial + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=;
+statements=Well met, <pnamefull=>.;
+
+[DialogNode] ID=port6_royal1_guard2a;
+animations=;
+statements=Go on in.;
+nextNodeID=;
+
+[DialogNodeOverride] ID=maxRank_port6_royal1_guard2a;
+dialogNodeID_toOverride=port6_royal1_guard2a;
+fReq=gIs:playerFaction:seartial + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=;
+statements=Is there any way I can help you, <pnamefull=>?;
+
+[DialogNode] ID=port6_royal1_guard3a;
+animations=sly;
+statements=Don't touch anything.;
+nextNodeID=;
+
+[DialogNodeOverride] ID=maxRank_port6_royal1_guard3a;
+dialogNodeID_toOverride=port6_royal1_guard3a;
+fReq=gIs:playerFaction:seartial + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=;
+statements=Hail, <pnamefull=>!;
+
+[DialogNode] ID=port6_royal1_guard4a;
+animations=stern;
+animations=sly;
+statements=Don't mess with the guys in the back...;
+statements=They're always dead serious.<p> They won't even talk to me.;
+nextNodeID=;
+
+[DialogNodeOverride] ID=maxRank_port6_royal1_guard4a;
+dialogNodeID_toOverride=port6_royal1_guard4a;
+fReq=gIs:playerFaction:seartial + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=happy;
+statements=How are you, <prank=>?;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

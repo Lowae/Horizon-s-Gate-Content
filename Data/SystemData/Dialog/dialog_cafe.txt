@@ -1,0 +1,304 @@
+
+--------------------CAFE
+
+[DialogNode] ID=cafe;
+animations=;
+statements=<randSetID=Want somethin' to eat or drink?/How's life treating ya?/Try the port special, it's great./What can I get ya?/I'm listenin'./What would ya like?/Pull up a chair and take a load off./What'll it be?>;
+specialEffect=setDialogWindowSizeY,0;
+specialEffect=setPCDialogWindowSizeY,0;
+[DialogOption] text=Local Specialty;
+formulaReq=m:locFoodPrice;
+nodeToConnectTo=cafe_party;
+[DialogOption] text=Gossip;
+newLineOfOptions=true;
+nodeToConnectTo=cafe_gossip;
+[DialogOption] text=Dismiss Crew;
+formulaReq=m:partySize-1;
+newLineOfOptions=true;
+nodeToConnectTo=cafe_dismiss;
+[DialogOption] text=<color=SlateGray>Dismiss Crew;
+formulaReq=2-m:partySize;
+newLineOfOptions=true;
+nodeToConnectTo=cafe_dismiss_nocrew;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+---PARTY
+
+[DialogNode] ID=cafe_party;
+animations=;
+statements=<speed=1.35><randSetID=How about/Want to buy> <locFoodIcon=><color=SaddleBrown><locFoodName=><color=> for your crew?<n=>Only $<math=m:locFoodPrice><adjX=-6> per crew member.<n=><adjY=10><br_brown=><adjY=12><locFoodIcon=><locFoodDesc=><n=><n=><locFoodEffects=>;
+specialEffect=setDialogWindowSizeY,320;
+specialEffect=setPCDialogWindowSizeY,140;
+
+[DialogOption] text=Yes ($<math=m:locFoodPriceTotal><adjX=-6>);
+formulaReq=m:canBuylocFood + gTimeSinceMoreThanOrNeverAssigned:lastFoodEaten:20 - 1;
+nodeToConnectTo=cafe_party_yes;
+[DialogOption] text=<color=SlateGray>Already ate today.;
+formulaReq=m:canBuylocFood + gTimeSinceLessThanOrEqual:lastFoodEaten:20 - 1;
+nodeToConnectTo=;
+[DialogOption] text=<color=SlateGray>Can't afford it...;
+formulaReq=m:locFoodPriceTotal - m:money;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=cafe_party_yes;
+animations=;
+specialEffect=setDialogWindowSizeY,0;
+specialEffect=setPCDialogWindowSizeY,0;
+specialEffect=buyLocationFood;
+specialEffect=fx,blackenScreen;
+specialEffect=fx,sfx_goodConfirm;
+specialEffect=tAddCafeFoodItem;
+specialEffect=removeExcessLandingPartyActors;
+specialEffect=cameraAtPoint,9,2;
+nextNodeID=cafe_party_dialog;
+
+--this is just here to be an easily overridden node
+[DialogNode] ID=cafe_party_dialog;
+specialEffect=cameraAtPoint,9,2;
+nextNodeID=;
+
+--this does cleanup if no overrides are called
+[DialogNodeOverride] ID=cafe_party_dialog_noOverrideCleanup;
+dialogNodeID_toOverride=cafe_party_dialog; priority=-999;
+specialEffect=tRemoveCafeFoodItem;
+nextNodeID=;
+
+[DialogNode] ID=endCafeTalk;
+specialEffect=fx,blackenScreen;
+specialEffect=tRemoveCafeFoodItem;
+
+--GOSSIP
+
+
+[DialogNode] ID=cafe_gossip;
+statements=<gossip=>;
+nextNodeID=cafe;
+
+
+
+
+
+
+
+
+
+
+
+--DISMISS
+
+[DialogNode] ID=cafe_dismiss_nocrew;
+animations=sly;
+statements=It's just you, here.<p=2> There's nobody to dismiss!;
+nextNodeID=cafe;
+
+[DialogNode] ID=cafe_dismiss_noroom;
+animations=;
+statements=Sorry, mate.<p=2> It's too crowded around here!<p=3> They'd have no place to stay.;
+nextNodeID=;
+
+
+[DialogNode] ID=cafe_dismiss;
+animations=;
+statements=Who would you like to dismiss?;
+[DialogOption] text=<portraitBig=1><partyActorName=1>;
+formulaReq=m:partySize-1 - gIsPartyActorNum:firstmate:1*99 - mainPlayerIsPartyActorNum:1*99;
+nodeToConnectTo=cafe_dismiss_p1;
+[DialogOption] text=<portraitBig=2><partyActorName=2>;
+newLineOfOptions=true;
+formulaReq=m:partySize-2 - gIsPartyActorNum:firstmate:2*99 - mainPlayerIsPartyActorNum:2*99;
+nodeToConnectTo=cafe_dismiss_p2;
+[DialogOption] text=<portraitBig=3><partyActorName=3>;
+newLineOfOptions=true;
+formulaReq=m:partySize-3 - gIsPartyActorNum:firstmate:3*99 - mainPlayerIsPartyActorNum:3*99;
+nodeToConnectTo=cafe_dismiss_p3;
+[DialogOption] text=<portraitBig=4><partyActorName=4>;
+formulaReq=m:partySize-4 - gIsPartyActorNum:firstmate:4*99 - mainPlayerIsPartyActorNum:4*99;
+nodeToConnectTo=cafe_dismiss_p4;
+[DialogOption] text=<portraitBig=5><partyActorName=5>;
+newLineOfOptions=true;
+formulaReq=m:partySize-5 - gIsPartyActorNum:firstmate:5*99 - mainPlayerIsPartyActorNum:5*99;
+nodeToConnectTo=cafe_dismiss_p5;
+[DialogOption] text=<portraitBig=6><partyActorName=6>;
+formulaReq=m:partySize-6 - gIsPartyActorNum:firstmate:6*99 - mainPlayerIsPartyActorNum:6*99;
+nodeToConnectTo=cafe_dismiss_p6;
+[DialogOption] text=<portraitBig=7><partyActorName=7>;
+newLineOfOptions=true;
+formulaReq=m:partySize-7 - gIsPartyActorNum:firstmate:7*99 - mainPlayerIsPartyActorNum:7*99;
+nodeToConnectTo=cafe_dismiss_p7;
+[DialogOption] text=<portraitBig=8><partyActorName=8>;
+formulaReq=m:partySize-8 - gIsPartyActorNum:firstmate:8*99 - mainPlayerIsPartyActorNum:8*99;
+nodeToConnectTo=cafe_dismiss_p8;
+[DialogOption] text=Nobody;
+nodeToConnectTo=cafe;
+escOption=true;
+bottomOption=true;
+
+--0 (unused because dismissing the party leader is buggy)
+
+[DialogNode] ID=cafe_dismiss_p0;
+animations=;
+statements=Do you want to have <partyActorName=0> stay here? You'll have to pay them again to get them back.;
+[DialogOption] text=Yes;
+nodeToConnectTo=cafe_dismiss_yes_p0;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=cafe_dismiss_yes_p0;
+animations=;
+statements=All right then. All of their items have been added to your stash.;
+specialEffect=removeFromParty_slot,0;
+
+--1
+
+[DialogNode] ID=cafe_dismiss_p1;
+animations=;
+statements=Do you want to have <partyActorName=1> stay here? You'll have to pay them again to get them back.;
+[DialogOption] text=Yes;
+nodeToConnectTo=cafe_dismiss_yes_p1;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=cafe_dismiss_yes_p1;
+animations=;
+statements=All right then. All of their items have been added to your stash.;
+specialEffect=removeFromParty_slot,1;
+
+--2
+
+[DialogNode] ID=cafe_dismiss_p2;
+animations=;
+statements=Do you want to have <partyActorName=2> stay here? You'll have to pay them again to get them back.;
+[DialogOption] text=Yes;
+nodeToConnectTo=cafe_dismiss_yes_p2;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=cafe_dismiss_yes_p2;
+animations=;
+statements=All right then. All of their items have been added to your stash.;
+specialEffect=removeFromParty_slot,2;
+
+--3
+
+[DialogNode] ID=cafe_dismiss_p3;
+animations=;
+statements=Do you want to have <partyActorName=3> stay here? You'll have to pay them again to get them back.;
+[DialogOption] text=Yes;
+nodeToConnectTo=cafe_dismiss_yes_p3;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=cafe_dismiss_yes_p3;
+animations=;
+statements=All right then. All of their items have been added to your stash.;
+specialEffect=removeFromParty_slot,3;
+
+--4
+
+[DialogNode] ID=cafe_dismiss_p4;
+animations=;
+statements=Do you want to have <partyActorName=4> stay here? You'll have to pay them again to get them back.;
+[DialogOption] text=Yes;
+nodeToConnectTo=cafe_dismiss_yes_p4;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=cafe_dismiss_yes_p4;
+animations=;
+statements=All right then. All of their items have been added to your stash.;
+specialEffect=removeFromParty_slot,4;
+
+--5
+
+[DialogNode] ID=cafe_dismiss_p5;
+animations=;
+statements=Do you want to have <partyActorName=5> stay here? You'll have to pay them again to get them back.;
+[DialogOption] text=Yes;
+nodeToConnectTo=cafe_dismiss_yes_p5;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=cafe_dismiss_yes_p5;
+animations=;
+statements=All right then. All of their items have been added to your stash.;
+specialEffect=removeFromParty_slot,5;
+
+--6
+
+[DialogNode] ID=cafe_dismiss_p6;
+animations=;
+statements=Do you want to have <partyActorName=6> stay here? You'll have to pay them again to get them back.;
+[DialogOption] text=Yes;
+nodeToConnectTo=cafe_dismiss_yes_p6;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=cafe_dismiss_yes_p6;
+animations=;
+statements=All right then. All of their items have been added to your stash.;
+specialEffect=removeFromParty_slot,6;
+
+--7
+
+[DialogNode] ID=cafe_dismiss_p7;
+animations=;
+statements=Do you want to have <partyActorName=7> stay here? You'll have to pay them again to get them back.;
+[DialogOption] text=Yes;
+nodeToConnectTo=cafe_dismiss_yes_p7;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=cafe_dismiss_yes_p7;
+animations=;
+statements=All right then. All of their items have been added to your stash.;
+specialEffect=removeFromParty_slot,7;
+
+--8
+
+[DialogNode] ID=cafe_dismiss_p8;
+animations=;
+statements=Do you want to have <partyActorName=8> stay here? You'll have to pay them again to get them back.;
+[DialogOption] text=Yes;
+nodeToConnectTo=cafe_dismiss_yes_p8;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=cafe_dismiss_yes_p8;
+animations=;
+statements=All right then. All of their items have been added to your stash.;
+specialEffect=removeFromParty_slot,8;
+
+
+
+----
+
+
+
+
+
+
+

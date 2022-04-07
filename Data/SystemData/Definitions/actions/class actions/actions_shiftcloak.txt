@@ -1,0 +1,385 @@
+[Action] ID=Sh_tumble; 
+	name=Tumble;
+	icon=icon_Sh_tumble;
+	harmful=false;
+	tooltip=Quickly tumble to a better position, even moving through enemies.<n=>Cures 'Immobilized' status.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=;
+	
+	XPCost=150;
+	XPCost=450;
+	XPCost=700;
+	
+	casterAnimation=jumpAbility;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	special=moveCasterToTarget;
+	
+	FXOnCaster=actor_afterimage1;
+	FXOnCaster=sidewardLines;
+	FXOnCaster=woosh;
+[ActionAoE] 
+	ID=Sh_tumble;
+	needsLoS = true;
+	needsLoE = true;
+	arc=true;
+	minRange = 1;
+	maxRange = 2;
+	maxRangeBonus=c:rank;
+	canSelectActors=false;
+[AvAffecter]
+	ID=Sh_tumble;
+	harmful=false;	
+	visibleMiss=false;
+	visibleEvaluations=false;
+	actorValue=immob;
+	magnitude=-1;
+	duration=-2;
+	chance=t:immob * 100;
+	FXOnHit=ping;
+	FXOnHitColor=SkyBlue;
+	FXOnHit=bipFlutter;
+	affectIntangible=true;
+[AvAffecterAoE]
+	ID=Sh_tumble;
+	aoeCasterAsOrigin = true;
+	cloneFrom=oneTile;
+	canSelectAllies=true;
+[AvAffecter]
+	ID=Sh_tumble; 
+[AvAffecterAoE]
+	ID=Sh_tumble;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=Sh_whirl; 
+	name=Whirl;
+	icon=icon_Sh_whirl;
+	tooltip=Spin nearby enemies 180 degrees and deal <thinnerIcon=skill_Wind><math=d:windDmgDisplay(4)> damage. Cures 'Burn' status.;
+	rankUpTooltip=Each rank increases area of effect.;
+	harmful=false;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Wind_small>;
+	mpCost=1 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=150;
+	XPCost=720;
+	
+	casterAnimation=spindance;
+	casterAnimationSpeed=1.1;
+	maxRank=2;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=spinSlashCyclone;
+	FXOnCaster=sfx_gustyBlastHigh;
+	FXOnTarget=tinyShakeHoriz;
+[ActionAoE] 
+	ID=Sh_whirl; 
+	aoeCasterAsOrigin = true;
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 1;
+	maxRange = 1;
+	maxRangeBonus=c:rank;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=Sh_whirl;
+	harmful=false;	
+	visibleMiss=false;
+	visibleEvaluations=false;
+	actorValue=burn;
+	magnitude=-1;
+	duration=-2;
+	chance=t:burn * 100;
+	FXOnHit=ping;
+	FXOnHitColor=SkyBlue;
+	FXOnHit=bipFlutter;
+[AvAffecterAoE]
+	ID=Sh_whirl;
+	aoeCasterAsOrigin = true;
+	cloneFrom=oneTile;
+	canSelectAllies=true;
+[AvAffecter]
+	ID=Sh_whirl; 
+	actorValue=rotate;
+	magnitude=180;
+	duration=-2;
+	chance=100;
+	FXOnTile=windWhirlSlash_moving;
+	FXOnHit=whirlSlash_big;
+	FXOnHit=sfx_tweep;
+[AvAffecterAoE]
+	ID=Sh_whirl;
+	aoeCasterAsOrigin = true;
+	maxRangeBonus=c:rank;
+[AvAffecter]
+	ID=Sh_whirl; 
+	actorValue=HP;
+	magnitude=d:windDmg(4);
+	duration=-2;
+	chance=d:windAcc;
+	element=magic;
+	element=wind;
+[AvAffecterAoE]
+	ID=Sh_whirl;
+	aoeCasterAsOrigin = true;
+	maxRangeBonus=c:rank;
+	
+[Action] ID=Sh_shadowSnap; 
+	name=Shadow Snap;
+	icon=icon_Sh_shadowSnap;
+	harmful=false;
+	tooltip=Blind adjacent creatures for <icon=time><math=58 + c:MagAtk*2> then move past them. Cures 'Blind' status.;
+	rankUpTooltip=Each rank adds +1 distance moved.;
+	tooltipTopRight=<icon=MagAtk_small>;
+	mpCost=6 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=450;
+	XPCost=800;
+	
+	casterAnimation=jumpAbility;
+	maxRank=2;
+	canExceedMaxRankBy=1;
+	special=moveCasterTowardTarget;
+	FXOnCaster=darken_sudden;
+	FXOnCasterColor=Black;
+	FXOnCaster=ThudShotBigger;
+	FXOnCasterColor=Black;
+	FXOnCaster=whiteExplosion;
+	FXOnCasterColor=Black;
+[ActionAoE] 
+	ID=Sh_shadowSnap; shape=2;
+	needsLoS = true;
+	needsLoE = true;
+	arc=true;
+	minRange = 2;
+	maxRange = 1;
+	maxRangeBonus=c:rank;
+	canSelectActors=false;
+[AvAffecter]
+	ID=Sh_shadowSnap;
+	harmful=false;	
+	visibleMiss=false;
+	visibleEvaluations=false;
+	actorValue=blind;
+	magnitude=-1;
+	duration=-2;
+	chance=t:blind * 100;
+	FXOnHit=ping;
+	FXOnHitColor=SkyBlue;
+	FXOnHit=bipFlutter;
+	affectIntangible=true;
+[AvAffecterAoE]
+	ID=Sh_shadowSnap;
+	aoeCasterAsOrigin = true;
+	cloneFrom=oneTile;
+	canSelectAllies=true;
+[AvAffecter]
+	ID=Sh_shadowSnap; 
+	actorValue=blind;
+	magnitude=1;
+	chance=d:magicAcc;
+	duration=58 + c:MagAtk*2;
+	FXOnTile=blackCloud;
+	FXOnHit=shroudExplode;
+	FXOnHitColor=Black;
+	FXOnHit=QuietBurnishSound;
+[AvAffecterAoE]
+	ID=Sh_shadowSnap;
+	aoeCasterAsOrigin = true;
+	cloneFrom=adjacent;
+	
+
+[Action] ID=Sh_shiftStab; 
+	name=Shift Stab;
+	icon=icon_Sh_shiftStab;
+	harmful=false;
+	tooltip=Move past an opponent, then attack for +20% damage.<n=>If there is no room behind the target, you land in front of them.;
+	rankUpTooltip=Each rank adds +1 distance.;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	tooltipIcons=<icon=noRanged>;
+	mpCost=1 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=250;
+	XPCost=550;
+	XPCost=950;
+	
+	casterAnimation=shiftStab;
+	casterAnimationSpeed=1;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	special=moveCasterPastTargetOrTowards;
+	requiredWeaponElement=melee;
+	
+	FXOnCaster=actor_afterimage1;
+	FXOnCaster=Thwummm;
+	FXOnCaster=woosh;
+	FXOnCaster=sidewardLines;
+[ActionAoE] 
+	ID=Sh_shiftStab; shape=2;
+	needsLoS = true;
+	needsLoE = true;
+	arc=true;
+	minRange = 1;
+	maxRange = 2;
+	maxRangeBonus=c:rank;
+	canSelectActors=true;
+	fReq=2 - m:actorInTheWayOfMoveToTargetOrUnoccupiable - m:actorInTheWayOfMovePastTargetOrUnccupiable;
+[AvAffecter]
+	ID=Sh_shiftStab; 
+	weaponAvAffecter=true;
+	actorValue=HP;
+	magnitude=w:magnitude * 1.2;
+	chance=w:chance + t:PhysEva * m:evasionfacing_diffFromOpposite;
+	duration=-2;
+	FXOnTile=triSlash;
+	FXOnTile=sfx_slashingHit;
+[AvAffecterAoE]
+	ID=Sh_shiftStab;
+	cloneFrom=oneTile;
+	
+	
+
+[Action] ID=Sh_suddenShot; 
+	name=Sudden Shot;
+	icon=icon_Sh_suddenShot;
+	tooltip=A +30% more accurate shot obscured by motions of the cloak.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipIcons=<icon=skill_Dagger><icon=skill_Bow><icon=skill_Aim> Only;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	mpCost=2 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=180;
+	XPCost=300;
+	XPCost=500;
+	
+	casterAnimation=broadswing;
+	casterAnimationDependsOnWeaponHand=true;
+	casterAnimationSpeed=3;
+	maxRank=3;
+	requiredWeaponElement=shiftcloakWpn;
+	FXOnCaster=quickWoosh;
+	FXOnCaster=glint;
+[ActionAoE] 
+	ID=Sh_suddenShot;
+	needsLoS = true;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 2;
+	maxRangeBonus = c:rank;
+	airborne=true;
+	bypassAll=false;
+	occupyAll=true;
+[AvAffecter]
+	ID=Sh_suddenShot; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude;
+	chance=w:chance * 1.3;
+	duration=-2;
+	element=physical;
+	element=ranged;
+	FXOnTile=line;
+	FXOnTile=pop;
+[AvAffecterAoE]
+	ID=Sh_suddenShot;
+	cloneFrom=oneTile;
+	
+[Action] ID=Sh_backstepShot; 
+	name=Backstep Shot;
+	icon=icon_Sh_backstepShot;
+	harmful=false;
+	tooltip=Step backwards while shooting a wide area for 90% damage.;
+	rankUpTooltip=Each rank increases area of effect.;
+	tooltipIcons=<icon=noAugments> <icon=skill_Dagger><icon=skill_Bow><icon=skill_Aim> Only;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	XPCost=220;
+	XPCost=850;
+	maxRank=2;
+	canExceedMaxRankBy=1;
+	
+	casterAnimation=backstepShot;
+	
+	special=moveCasterTowardTarget;
+	
+	requiredWeaponElement=shiftcloakWpn;
+	
+	FXOnTarget=delay;
+	FXOnCaster=quickWoosh;
+[ActionAoE] 
+	ID=Sh_backstepShot; shape=2;
+	needsLoS = true;
+	needsLoE = true;
+	airborne=true;
+	arc=true;
+	minRange = 1;
+	maxRange = 1;
+	canSelectActors=false;
+[AvAffecter]
+	ID=Sh_backstepShot; 
+	actorValue=HP;
+	magnitude=w:magnitude * 0.9;
+	chance=w:chance;
+	duration=-2;
+	element=physical;
+	element=ranged;
+	FXOnTile=line;
+	FXOnTile=pop;
+[AvAffecterAoE]
+	ID=Sh_backstepShot;
+	aoeCasterAsOrigin = true;
+	cloneFrom=adjacent;
+	minRange=2;
+	maxRange=2;
+	maxRangeBonus=c:rank;
+	airborne=true;
+	arc=true;
+	coneAngle=-270;
+	
+
+[Action] ID=Sh_delay; 
+	name=Delay;
+	icon=icon_Sh_delay;
+	tooltip=Threatening movements slow <math=c:rank> targets' next turn by <icon=time>5 and inflict -2 <icon=moveDistance> Move for a turn.;
+	rankUpTooltip=Each rank adds +1 target.;
+	tooltipTopRight=;
+	
+	XPCost=100;
+	XPCost=600;
+	XPCost=800;
+	
+	numTargets=c:rank;
+	casterAnimation=spinAttack;
+	casterAnimationSpeed=1.7;
+	maxRank=3;
+	
+[ActionAoE] 
+	ID=Sh_delay;
+	cloneFrom=adjacent;
+	maxRange=2;
+[AvAffecter]
+	ID=Sh_delay; 
+	actorValue=actTimer;
+	magnitude=-5;
+	chance=100 * c:Acc;
+	duration=-2;
+	FXOnTile=whirlSlash_big;
+	FXOnTile=sfx_tweep;
+	FXOnHit=downwardLines;
+	FXOnHit=sfx_debuffMild;
+[AvAffecterAoE]
+	ID=Sh_delay;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Sh_delay; 
+	actorValue=moveDistance;
+	magnitude=-2;
+	chance=100 * c:Acc;
+	duration=-4;
+[AvAffecterAoE]
+	ID=Sh_delay;
+	cloneFrom=oneTile;

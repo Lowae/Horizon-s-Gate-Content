@@ -1,0 +1,649 @@
+
+[Action] ID=En_fireWpn; 
+	name=Fire Enchant;
+	icon=icon_En_fireWpn;
+	mpCost=7 * d:mpCostMult + d:mpCostMod;
+	harmful=false;
+	tooltip=Enchant a target's weapons with magic flames for <icon=time><math=50 + c:rank * 50 + c:skill_Fire * 5 + c:MagAtk * 5>,<n=>adding <thinnerIcon=skill_Fire>7 extra damage.;
+	rankUpTooltip=Each rank increases duration by <icon=time>50.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small>;
+	
+	XPCost=150;
+	XPCost=500;
+	XPCost=750;
+	
+	
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnCasterColor=Red;
+	
+	FXOnTarget=chargeSpiralFast;
+	FXOnTargetColor=Red;
+	FXOnTarget=chargeSpiralFast_big;
+	FXOnTargetColor=Red;
+	FXOnTarget=risingBip;
+[ActionAoE] 
+	ID=En_fireWpn; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	minRange = 0;
+	maxRange = 3;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=En_fireWpn; 
+	harmful=false;
+	actorValue=fireWpn;
+	magnitude=1;
+	duration=50 + c:rank * 50 + c:skill_Fire * 5 + c:MagAtk * 5;
+	chance=100;
+	element=magic;
+	FXOnHit=sfx_schwee;
+	FXOnHit=skill_Fire;
+	FXOnHit=fireburst;
+	FXOnHit=fireWhirlEmbers;
+[AvAffecterAoE]
+	ID=En_fireWpn;
+	cloneFrom=oneTile;
+
+	
+	
+
+[Action] ID=En_iceWpn; 
+	name=Ice Enchant;
+	icon=icon_En_iceWpn;
+	mpCost=7 * d:mpCostMult + d:mpCostMod;
+	harmful=false;
+	tooltip=Enchant a target's weapons with magical ice for <icon=time><math=50 + c:rank * 50 + c:skill_Ice * 5 + c:MagAtk * 5>,<n=>adding <thinnerIcon=skill_Ice>7 extra damage.;
+	rankUpTooltip=Each rank increases duration by <icon=time>50.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ice_small>;
+	
+	XPCost=150;
+	XPCost=500;
+	XPCost=750;
+	
+	
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnCasterColor=Blue;
+	
+	FXOnTarget=chargeSpiralFast;
+	FXOnTargetColor=Blue;
+	FXOnTarget=chargeSpiralFast_big;
+	FXOnTargetColor=Blue;
+	FXOnTarget=risingBip;
+[ActionAoE] 
+	ID=En_iceWpn; 
+	needsLoS = true;
+	needsLoE = false;
+	minRange = 0;
+	maxRange = 3;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=En_iceWpn; 
+	harmful=false;
+	actorValue=iceWpn;
+	magnitude=1;
+	duration=50 + c:rank * 50 + c:skill_Ice * 5 + c:MagAtk * 5;
+	chance=100;
+	element=magic;
+	FXOnHit=sfx_schwee;
+	FXOnHit=skill_Ice;
+	FXOnHit=iceExplosion;
+	FXOnHit=sfx_iceSnap;
+	FXOnHit=chilledFX;
+[AvAffecterAoE]
+	ID=En_iceWpn;
+	cloneFrom=oneTile;
+
+	
+[Action] ID=En_elecWpn; 
+	name=Lightning Enchant;
+	icon=icon_En_elecWpn;
+	mpCost=7 * d:mpCostMult + d:mpCostMod;
+	harmful=false;
+	tooltip=Enchant a target's weapons with magic lightning for <icon=time><math=50 + c:rank * 50 +  c:skill_Elec * 5 + c:MagAtk * 5>,<n=>adding <thinnerIcon=skill_Elec>7 extra damage.;
+	rankUpTooltip=Each rank increases duration by <icon=time>50.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Elec_small>;
+	
+	XPCost=150;
+	XPCost=500;
+	XPCost=750;
+	
+	
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	FXOnCaster=magicCharge;
+	FXOnCasterColor=Yellow;
+	
+	FXOnTarget=chargeSpiralFast;
+	FXOnTargetColor=Yellow;
+	FXOnTarget=chargeSpiralFast_big;
+	FXOnTargetColor=Yellow;
+	FXOnTarget=risingBip;
+[ActionAoE] 
+	ID=En_elecWpn; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	minRange = 0;
+	maxRange = 3;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=En_elecWpn; 
+	harmful=false;
+	actorValue=elecWpn;
+	magnitude=1;
+	duration=50 + c:rank * 50 + c:skill_Elec * 5 + c:MagAtk * 5;
+	chance=100;
+	element=magic;
+	FXOnHit=sfx_schwee;
+	FXOnHitColor=White;
+	FXOnHit=skill_Elec;
+	FXOnHitColor=White;
+	FXOnHit=sparkUp;
+	FXOnHitColor=Yellow;
+	FXOnHit=shortBolt;
+[AvAffecterAoE]
+	ID=En_elecWpn;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=En_windWpn; 
+	name=Wind Enchant;
+	icon=icon_En_windWpn;
+	mpCost=7 * d:mpCostMult + d:mpCostMod;
+	harmful=false;
+	tooltip=Enchant a target's weapons with magical wind for <icon=time><math=50 + c:rank * 50 + c:skill_Wind * 5 + c:MagAtk * 5>,<n=>adding <thinnerIcon=skill_Wind>7 extra damage.;
+	rankUpTooltip=Each rank increases duration by <icon=time>50.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Wind_small>;
+	
+	XPCost=150;
+	XPCost=500;
+	XPCost=750;
+	
+	
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnCasterColor=White;
+	
+	FXOnTarget=chargeSpiralFast;
+	FXOnTargetColor=White;
+	FXOnTarget=chargeSpiralFast_big;
+	FXOnTargetColor=White;
+	FXOnTarget=risingBip;
+[ActionAoE] 
+	ID=En_windWpn; 
+	needsLoS = true;
+	needsLoE = false;
+	minRange = 0;
+	maxRange = 3;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=En_windWpn; 
+	harmful=false;
+	actorValue=windWpn;
+	magnitude=1;
+	duration=50 + c:rank * 50 + c:skill_Wind * 5 + c:MagAtk * 5;
+	chance=100;
+	element=magic;
+	FXOnHit=sfx_schwee;
+	FXOnHit=skill_Wind;
+	FXOnHit=whirlSlashes_many;
+	FXOnHit=gustyBlast;
+	
+[AvAffecterAoE]
+	ID=En_windWpn;
+	cloneFrom=oneTile;
+
+	
+	
+
+[Action] ID=En_forceLunge; 
+	name=Force Lunge;
+	icon=icon_En_forceLunge;
+	mpCost=4 * d:mpCostMult + d:mpCostMod;
+	tooltip=Launch yourself forward to deal wind damage and push an enemy.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipIcons=<icon=noRanged>;
+	tooltipTopRight=;
+	
+	XPCost=200;
+	XPCost=400;
+	XPCost=800;
+	
+	casterAnimation=forceLunge;
+	casterAnimationDependsOnWeaponHand=true;
+	maxRank=3;
+	special=moveCasterNextToTarget;
+	requiredWeaponElement=melee;
+	
+	FXOnCaster=sidewardLines;
+	FXOnCaster=whiteExplosionSmall;
+	
+	FXOnTarget=weaponFX;
+	FXOnTarget=smallShockwave_moving_slower;
+	FXOnTarget=DramaticNyeaow;
+	FXOnTarget=delay;
+[ActionAoE] 
+	ID=En_forceLunge; shape=2; 
+	needsLoS=false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 2;
+	maxRangeBonus=c:rank;
+	occupyAll=true;
+[AvAffecter]
+	ID=En_forceLunge; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.5 + dMax0:windDmg(2.5);
+	chance=w:chance;
+	duration=-2;
+	element=wind;
+[AvAffecterAoE]
+	ID=En_forceLunge;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=En_forceLunge; 
+	actorValue=push;
+	magnitude=1;
+	chance=w:chance;
+	duration=-2;
+	FXOnHit=whiteExplosionSmall;
+	FXOnHit=ThudShotBigger;
+[AvAffecterAoE]
+	ID=En_forceLunge;
+	cloneFrom=oneTile;
+	
+	
+	
+
+[Action] ID=En_elementalFury; 
+	name=Elemental Fury;
+	icon=icon_En_elementalFury;
+	tooltip=Grant nearby enchanted allies +5<icon=PhysAtk> for 1 turn. Also renews enchantments for up to <icon=time><math=85 + c:MagAtk*5>.;
+	rankUpTooltip=Each rank increases area of effect.;
+	harmful=false;
+	tooltipTopRight=<icon=MagAtk_small>;
+	
+	mpCost=3 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=300;
+	XPCost=600;
+	XPCost=990;
+	
+	casterAnimation=crouchCast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=charge;
+	FXOnTarget=bipFlutter;
+	FXOnTarget=gustyBlast;
+	FXOnTarget=sfx_lowDramaticN;
+[ActionAoE] 
+	ID=En_elementalFury; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=En_elementalFury; 
+	harmful=false;
+	actorValue=PhysAtk;
+	magnitude=5;
+	duration=-5;
+	chance=100 * t:fireWpn 
+	+ 100 * t:elecWpn 
+	+ 100 * t:iceWpn 
+	+ 100 * t:windWpn;
+	visibleMiss=false;
+	
+	FXOnTile=chargeFast_overlap;
+	FXOnTileColor=Red;
+	FXOnTile=chargeFast_overlap;
+	FXOnTileColor=Blue;
+	FXOnTile=chargeFast_overlap;
+	FXOnTileColor=Yellow;
+	FXOnTile=chargeFast_overlap;
+	FXOnTileColor=White;
+	FXOnHit=sfx_schwee;
+	FXOnHit=upwardLines;
+	FXOnHit=sfx_risingSwish;
+[AvAffecterAoE]
+	ID=En_elementalFury;
+	aoeCasterAsOrigin = true;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=En_elementalFury; 
+	harmful=false;
+	actorValue=PhysAtk;
+	magnitude=5;
+	duration=-4;
+	chance=100 * t:fireWpn 
+	+ 100 * t:elecWpn 
+	+ 100 * t:iceWpn 
+	+ 100 * t:windWpn;
+	
+	FXOnTile=chargeFast_overlap;
+	FXOnTileColor=Red;
+	FXOnTile=chargeFast_overlap;
+	FXOnTileColor=Blue;
+	FXOnTile=chargeFast_overlap;
+	FXOnTileColor=Yellow;
+	FXOnTile=chargeFast_overlap;
+	FXOnTileColor=White;
+	
+	FXOnHit=sfx_schwee;
+	FXOnHit=upwardLines;
+	FXOnHit=sfx_risingSwish;
+[AvAffecterAoE]
+	ID=En_elementalFury;
+	aoeCasterAsOrigin = true;
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 1;
+	maxRange = 1;
+	airborne=true;
+	arc=true;
+	maxRangeBonus=c:rank+1;
+	bypassAll=true;
+	occupyAll=true;
+	canSelectEnemies=false;
+	
+[AvAffecter]
+	ID=En_elementalFury; 
+	harmful=false;
+	visibleEvaluations=false;
+	actorValue=fireWpn;
+	magnitude=1;
+	duration=85 + c:MagAtk*5;
+	chance=100 * t:fireWpn;
+	FXOnHit=skill_Fire;
+[AvAffecterAoE]
+	ID=En_elementalFury;
+	aoeCasterAsOrigin = true;
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 0;
+	maxRange = 1;
+	airborne=true;
+	arc=true;
+	maxRangeBonus=c:rank+1;
+	bypassAll=true;
+	occupyAll=true;
+	canSelectEnemies=false;
+[AvAffecter]
+	ID=En_elementalFury; 
+	harmful=false;
+	visibleEvaluations=false;
+	actorValue=iceWpn;
+	magnitude=1;
+	duration=85 + c:MagAtk * 5;
+	chance=100 * t:iceWpn;
+	FXOnHit=sfx_schwee;
+	FXOnHit=skill_Ice;
+[AvAffecterAoE]
+	ID=En_elementalFury;
+	aoeCasterAsOrigin = true;
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 0;
+	maxRange = 1;
+	airborne=true;
+	arc=true;
+	maxRangeBonus=c:rank+1;
+	bypassAll=true;
+	occupyAll=true;
+	canSelectEnemies=false;
+[AvAffecter]
+	ID=En_elementalFury; 
+	harmful=false;
+	visibleEvaluations=false;
+	actorValue=windWpn;
+	magnitude=1;
+	duration=85 + c:MagAtk*5;
+	chance=100 * t:windWpn;
+	FXOnHit=sfx_schwee;
+	FXOnHit=skill_Wind;
+[AvAffecterAoE]
+	ID=En_elementalFury;
+	aoeCasterAsOrigin = true;
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 0;
+	maxRange = 1;
+	airborne=true;
+	arc=true;
+	maxRangeBonus=c:rank+1;
+	bypassAll=true;
+	occupyAll=true;
+	canSelectEnemies=false;
+[AvAffecter]
+	ID=En_elementalFury; 
+	harmful=false;
+	visibleEvaluations=false;
+	actorValue=elecWpn;
+	magnitude=1;
+	duration=85 + c:MagAtk*5;
+	chance=100 * t:elecWpn;
+	FXOnHit=sfx_schwee;
+	FXOnHit=skill_Elec;
+[AvAffecterAoE]
+	ID=En_elementalFury;
+	aoeCasterAsOrigin = true;
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 0;
+	maxRange = 1;
+	airborne=true;
+	arc=true;
+	maxRangeBonus=c:rank+1;
+	bypassAll=true;
+	occupyAll=true;
+	canSelectEnemies=false;
+	
+	
+
+[Action] ID=En_discharge; 
+	name=Discharge;
+	icon=icon_En_discharge;
+	tooltip=Channel your enchantments and positive status effects into a powerful weapon attack.;
+	rankUpTooltip=Each rank increases damage by 10%.;
+	tooltipIcons=<icon=noRanged>;
+	tooltipTopRight=;
+	mpCost=10 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=8 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	
+	XPCost=450;
+	XPCost=600;
+	XPCost=700;
+	
+	requiredWeaponElement=melee;
+	
+	special=requiresCasting;
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	casterAnimationSpeed=0.4;
+	maxRank=3;
+	
+	FXOnCaster=darken;
+	FXOnCaster=sfx_highShingEcho;
+	FXOnCaster=spiral;
+	FXOnCaster=spiral2;
+	FXOnCaster=chargeSpiralFast_big;
+	FXOnCaster=pingRepeat;
+	
+	FXOnTarget=casting_move;
+[ActionAoE] 
+	ID=En_discharge; shape=10; 
+[AvAffecter]
+	ID=En_discharge; 
+	actorValue=HP;
+	magnitude=
+	  w:magnitude * 0.35 * c:regen
+	+ w:magnitude * 0.35 * c:preserve
+	+ w:magnitude * 0.35 * c:warmth
+	+ w:magnitude * 0.35 * c:iceSpikes
+	+ w:magnitude * 0.35 * c:guard
+	+ w:magnitude * 0.35 * c:ward
+	+ w:magnitude * 0.35 * c:invisible
+	+ dMax0:fireDmg(6) * c:fireWpn
+	+ dMax0:elecDmg(6) * c:elecWpn
+	+ dMax0:iceDmg(6) * c:iceWpn
+	+ w:magnitude * 0.5
+	+ w:magnitude * 0.1 * c:rank;
+	chance=w:chance;
+	duration=-2;
+	element=magic;
+	
+	FXOnTile=whiteExplosionSmall_rand;
+	FXOnTile=whiteExplosionSmall_rand;
+	FXOnTile=whiteExplosionSmall_rand;
+	FXOnTile=whiteExplosionSmall_rand;
+	FXOnTile=tileLine_overlap;
+	FXOnTile=whiteExplosion;
+	
+	FXOnTile=gustyBlast;
+	FXOnTile=giantPing;
+	FXOnTile=shortBolt;
+	FXOnTile=medShakeHoriz;
+	
+	FXOnHit=medShakeHoriz;
+	FXOnHit=thunder;
+	FXOnHit=whiten;
+	FXOnHit=manySplatter;
+[AvAffecterAoE]
+	ID=En_discharge;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=En_discharge; 
+	actorValue=dispel;
+	magnitude=100;
+	chance=100;
+	duration=-2;
+	FXOnTile=vertLines;
+[AvAffecterAoE]
+	ID=En_discharge;
+	aoeCasterAsOrigin=true;
+	cloneFrom=oneTile;
+	
+	
+	
+
+[Action] ID=En_antipode; 
+	name=Antipode;
+	icon=icon_En_antipode;
+	tooltip=A combination ice, fire, and lightning attack that deals massive damage.;
+	rankUpTooltip=;
+	tooltipIcons=;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small><icon=skill_Ice_small><icon=skill_Elec_small>;
+	
+	mpCost=18 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=20 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	
+	XPCost=800;
+	
+	
+	special=requiresCasting;
+	special=cancelChargingOnMove;
+	casterAnimation=swingDramatic;
+	casterAnimationSpeed=1;
+	maxRank=1;
+	
+	FXOnCaster=darken;
+	FXOnCasterColor=White;
+	FXOnCaster=spiral;
+	FXOnCasterColor=Red;
+	FXOnCaster=spiral2;
+	FXOnCasterColor=Blue;
+	FXOnCaster=spiral3;
+	FXOnCasterColor=Red;
+	FXOnCaster=spiral4;
+	FXOnCasterColor=Blue;
+	FXOnCaster=castingFast;
+	FXOnCaster=castingFast;
+	FXOnCaster=castingFast;
+	FXOnCaster=castingFast;
+	FXOnCaster=castingFast;
+	FXOnCaster=delay;
+	FXOnCaster=sfx_infernoBlast;
+[ActionAoE] 
+	ID=En_antipode; shape=2;
+	needsLoS = true;
+	needsLoE = true;
+	airborne = true;
+	arc = true;
+	minRange = 1;
+	maxRange = 4;
+	bypassAll=false;
+	occupyAll=true;
+[AvAffecter]
+	ID=En_antipode; 
+	actorValue=HP;
+	magnitude=dMax0:fireDmg(6);
+	duration=-2;
+	chance=d:fireAcc;
+	element=magic;
+	element=fire;
+	element=kindle;
+	FXOnTile=smallShockwaves_redLight_moving;
+	FXOnTileColor=Red;
+	FXOnTile=smallShockwaves_redLight_moving;
+	FXOnTileColor=Orange;
+	FXOnTile=BurnishSound;
+	FXOnTile=tinyShakeHoriz;
+	FXOnTile=redden_minor;
+[AvAffecterAoE]
+	ID=En_antipode;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+[AvAffecter]
+	ID=En_antipode; 
+	actorValue=HP;
+	magnitude=dMax0:iceDmg(8);
+	duration=-2;
+	chance=d:iceAcc;
+	element=magic;
+	element=ice;
+	FXOnTile=iceExplosion;
+	FXOnTile=frostcloud;
+	FXOnTile=blue_minor;
+	FXOnHit=sfx_iceSnap;
+[AvAffecterAoE]
+	ID=En_antipode;
+	cloneFrom=adjacentAndSelf;
+[AvAffecter]
+	ID=En_antipode; 
+	actorValue=HP;
+	magnitude=dMax0:elecDmg(9);
+	duration=-2;
+	chance=d:elecAcc;
+	element=magic;
+	element=lightning;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=shortBolt;
+	FXOnTile=antipodeLightning;
+	FXOnTile=hitDustQuiet;
+	FXOnTile=hitDustQuiet;
+	FXOnTile=hitDustQuiet;
+[AvAffecterAoE]
+	ID=En_antipode;
+	cloneFrom=oneTile;

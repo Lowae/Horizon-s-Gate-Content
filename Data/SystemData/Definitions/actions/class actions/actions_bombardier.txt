@@ -1,0 +1,509 @@
+[Action] ID=Bom_activate; 
+	name=Activate;
+	icon=icon_Bom_activate;
+	mpCost=1 * d:mpCostMult + d:mpCostMod;
+	tooltip=Charge <math=c:rank> spot(s) with energy to activate remote bombs.;
+	rankUpTooltip=Each rank adds +1 target.;
+	tooltipTopRight=;
+	autolearnedByAI=true;
+	
+	XPCost=30;
+	XPCost=100;
+	XPCost=200;
+	XPCost=300;
+	XPCost=500;
+	
+	numTargets=c:rank;
+	casterAnimation=use;
+	maxRank=5;
+	
+	FXOnTarget=dustCircle;
+	FXOnTargetColor=DarkTurquoise;
+	FXOnTarget=upwardLines;
+	FXOnTargetColor=Turquoise;
+	FXOnTarget=sfx_lowAura;
+	FXOnTarget=sparkle;
+[ActionAoE] 
+	ID=Bom_activate;
+	needsLoS = false;
+	needsLoE = false;
+	airborne = true;
+	arc = true;
+	minRange = 1;
+	maxRange = 6;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Bom_activate; 
+	harmful=false;
+	element=magic;
+	element=focus;
+[AvAffecterAoE]
+	ID=Bom_activate;
+	cloneFrom=oneTile;
+	
+	
+
+
+[Action] ID=Bom_throwFlare; 
+	name=Remote Flare;
+	icon=icon_Bom_flare;
+	mpCost=4 * d:mpCostMult + d:mpCostMod;
+	tooltip=Toss a device that explodes when Activated, dealing <thinnerIcon=skill_Fire><math=d:fireDmgDisplay(11)> damage and stunning for <icon=time>2.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small>;
+	
+	special=limitRemoteBombsTo5InTravelMode;
+	
+	XPCost=150;
+	XPCost=350;
+	XPCost=950;
+	casterAnimation=swing;
+	
+	FXOnTarget=throw_remote_flare;
+	FXOnTarget=swing;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+[ActionAoE]
+	ID=Bom_throwFlare;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 2;
+	maxRangeBonus = c:rank;
+	airborne=true;
+	arc=true;
+	occupyAll=false;
+	canSelectActors=false;
+	fReq=canItemFit:remote_flare;
+[AvAffecter]
+	ID=Bom_throwFlare; 
+	harmful=false;
+	element=replaceCapsule;
+[AvAffecterAoE]
+	ID=Bom_throwFlare;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Bom_throwFlare; 
+	actorValue=summonItem;
+	magnitude=remote_flare;
+	duration=10 + c:MagAtk + c:skill_Fire;
+	FXOnTile=starDonk_thrownItem;
+[AvAffecterAoE]
+	ID=Bom_throwFlare;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Bom_throwFlare; 
+	actorValue=aggro;
+	magnitude=1;
+	duration=-2;
+	chance=150 * m:tIntelligence;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=Bom_throwFlare;
+	cloneFrom=adjacent+1;
+[AvAffecter]
+	ID=Bom_throwFlare; 
+	actorValue=AIBonus;
+	magnitude=-3;
+	duration=-2;
+	chance=100;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=Bom_throwFlare;
+	cloneFrom=adjacent+1;
+	
+
+[Action] ID=Bom_throwPulse; 
+	name=Remote Pulse;
+	icon=icon_Bom_pulse;
+	mpCost=4 * d:mpCostMult + d:mpCostMod;
+	tooltip=Toss a device that explodes when Activated, dealing <thinnerIcon=skill_Wind><math=d:windDmgDisplay(11)> damage and pushing 1 tile.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Wind_small>;
+	
+	special=limitRemoteBombsTo5InTravelMode;
+	
+	XPCost=150;
+	XPCost=350;
+	XPCost=950;
+	
+	casterAnimation=swing;
+	
+	FXOnTarget=throw_remote_pulse;
+	FXOnTarget=swing;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+[ActionAoE]
+	ID=Bom_throwPulse;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 2;
+	maxRangeBonus = c:rank;
+	airborne=true;
+	arc=true;
+	occupyAll=false;
+	canSelectActors=false;
+	fReq=canItemFit:remote_pulse;
+[AvAffecter]
+	ID=Bom_throwPulse; 
+	harmful=false;
+	element=replaceCapsule;
+[AvAffecterAoE]
+	ID=Bom_throwPulse;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Bom_throwPulse; 
+	actorValue=summonItem;
+	magnitude=remote_pulse;
+	duration=10 + c:MagAtk + c:skill_Wind;
+	FXOnTile=starDonk_thrownItem;
+[AvAffecterAoE]
+	ID=Bom_throwPulse;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Bom_throwPulse; 
+	actorValue=aggro;
+	magnitude=1;
+	duration=-2;
+	chance=150 * m:tIntelligence;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=Bom_throwPulse;
+	cloneFrom=adjacent+1;
+[AvAffecter]
+	ID=Bom_throwPulse; 
+	actorValue=AIBonus;
+	magnitude=-3;
+	duration=-2;
+	chance=100;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=Bom_throwPulse;
+	cloneFrom=adjacent+1;
+
+
+	
+[Action] ID=Bom_throwFrost; 
+	name=Remote Frost;
+	icon=icon_Bom_frost;
+	mpCost=4 * d:mpCostMult + d:mpCostMod;
+	tooltip=Toss a device that bursts when Activated, dealing <thinnerIcon=skill_Ice><math=d:iceDmgDisplay(11)> damage and spreading ice across the ground.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ice_small>;
+	
+	special=limitRemoteBombsTo5InTravelMode;
+	
+	XPCost=150;
+	XPCost=350;
+	XPCost=950;
+	
+	casterAnimation=swing;
+	
+	FXOnTarget=throw_remote_frost;
+	FXOnTarget=swing;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+[ActionAoE]
+	ID=Bom_throwFrost;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 2;
+	maxRangeBonus = c:rank;
+	airborne=true;
+	arc=true;
+	occupyAll=false;
+	canSelectActors=false;
+	fReq=canItemFit:remote_frost;
+[AvAffecter]
+	ID=Bom_throwFrost; 
+	harmful=false;
+	element=replaceCapsule;
+[AvAffecterAoE]
+	ID=Bom_throwFrost;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Bom_throwFrost; 
+	actorValue=summonItem;
+	magnitude=remote_frost;
+	duration=10 + c:MagAtk + c:skill_Ice;
+	FXOnTile=starDonk_thrownItem;
+[AvAffecterAoE]
+	ID=Bom_throwFrost;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Bom_throwFrost; 
+	actorValue=aggro;
+	magnitude=1;
+	duration=-2;
+	chance=150 * m:tIntelligence;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=Bom_throwFrost;
+	cloneFrom=adjacent+1;
+[AvAffecter]
+	ID=Bom_throwFrost; 
+	actorValue=AIBonus;
+	magnitude=-3;
+	duration=-2;
+	chance=100;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=Bom_throwFrost;
+	cloneFrom=adjacent+1;
+	
+	
+
+[Action] ID=Bom_throwHeal; 
+	name=Remote Heal;
+	icon=icon_Bom_heal;
+	mpCost=4 * d:mpCostMult + d:mpCostMod;
+	tooltip=Toss a device that bursts when Activated, healing <math=d:lifeDmgDisplay(11)><thinnerIcon=HP> and curing status effects.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
+	
+	special=limitRemoteBombsTo5InTravelMode;
+	
+	XPCost=150;
+	XPCost=350;
+	XPCost=950;
+	
+	casterAnimation=swing;
+	
+	FXOnTarget=throw_remote_heal;
+	FXOnTarget=swing;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+[ActionAoE]
+	ID=Bom_throwHeal;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 2;
+	maxRangeBonus = c:rank;
+	airborne=true;
+	arc=true;
+	occupyAll=false;
+	canSelectActors=false;
+	fReq=canItemFit:remote_heal;
+[AvAffecter]
+	ID=Bom_throwHeal; 
+	harmful=false;
+	element=replaceCapsule;
+[AvAffecterAoE]
+	ID=Bom_throwHeal;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Bom_throwHeal; 
+	actorValue=summonItem;
+	magnitude=remote_heal; 
+	duration=10 + c:MagAtk + c:skill_Life;
+	FXOnTile=starDonk_thrownItem;
+[AvAffecterAoE]
+	ID=Bom_throwHeal;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Bom_throwHeal; 
+	actorValue=aggro;
+	magnitude=1;
+	duration=-2;
+	chance=150 * m:tIntelligence;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=Bom_throwHeal;
+	cloneFrom=adjacent+1;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=Bom_throwHeal; 
+	actorValue=AIBonus;
+	magnitude=3;
+	duration=-2;
+	chance=100;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=Bom_throwHeal;
+	cloneFrom=adjacent+1;
+	
+
+[Action] ID=mechanist_flare_explode; 
+	name=Remote Flare;
+	
+	FXOnTarget=whiten;
+	FXOnTarget=explosionHoriz_flare;
+	FXOnTarget=DramaticNyeaow;
+	FXOnTarget=sfx_classicExplosion;
+	FXOnTarget=medShakeHoriz;
+[ActionAoE] 
+	ID=mechanist_flare_explode;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=mechanist_flare_explode; 
+	actorValue=HP;
+	magnitude=-c:rank + t:skill_Fire + t:MagDef;
+	duration=-2;
+	chance=d:magicAcc;
+	element=magic;
+	element=fire;
+	element=kindle;
+	element=mechanistAbil;
+	FXOnHit=fireEmbers;
+[AvAffecterAoE]
+	ID=mechanist_flare_explode;
+	cloneFrom=adjacentAndSelf+1;
+	airborne=true;
+	arc=true;
+[AvAffecter]
+	ID=mechanist_flare_explode; 
+	actorValue=stun;
+	magnitude=1;
+	duration=2;
+	chance=d:magicAcc;
+	element=magic;
+	element=mechanistAbil;
+	FXOnHit=ping;
+[AvAffecterAoE]
+	ID=mechanist_flare_explode;
+	cloneFrom=adjacentAndSelf+1;
+	airborne=true;
+	arc=true;
+	
+
+[Action] ID=mechanist_pulse_explode; 
+	name=Remote Pulse;
+	
+	FXOnTarget=whiten;
+	FXOnTarget=ping_noOverlap;
+	FXOnTarget=explosionHoriz_pulse;
+	FXOnTarget=sfx_heftyLaserShot;
+	FXOnTarget=ThudShotBigger;
+	FXOnTarget=medShakeHoriz;
+[ActionAoE] 
+	ID=mechanist_pulse_explode;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=mechanist_pulse_explode; 
+	actorValue=HP;
+	magnitude=-c:rank + t:skill_Wind + t:MagDef;
+	duration=-2;
+	chance=d:magicAcc;
+	element=magic;
+	element=wind;
+	element=mechanistAbil;
+	FXOnTile=terrain;
+	FXOnHit=step;
+[AvAffecterAoE]
+	ID=mechanist_pulse_explode;
+	cloneFrom=adjacentAndSelf+1;
+	airborne=true;
+	arc=true;
+[AvAffecter]
+	ID=mechanist_pulse_explode; 
+	useCasterAsOriginForDirectionalEffects=false;
+	actorValue=push;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=mechanist_pulse_explode;
+	cloneFrom=adjacent+1;
+	airborne=true;
+	arc=true;
+	
+
+[Action] ID=mechanist_frost_explode; 
+	name=Remote Frost;
+	
+	FXOnTarget=whiten;
+	FXOnTarget=iceShards_rot_small;
+	FXOnTarget=medShakeHoriz;
+[ActionAoE] 
+	ID=mechanist_frost_explode;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=mechanist_frost_explode; 
+	actorValue=HP;
+	magnitude=-c:rank + t:skill_Ice + t:MagDef;
+	duration=-2;
+	chance=d:magicAcc;
+	element=magic;
+	element=ice;
+	element=mechanistAbil;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=mechanist_frost_explode;
+	cloneFrom=adjacentAndSelf+1;
+	airborne=true;
+	arc=true;
+[AvAffecter]
+	ID=mechanist_frost_explode; 
+	visibleEvaluations=false;
+	actorValue=summonItem;
+	magnitude=puddleFrozen;
+	duration=1 + m:rand(2);
+	FXOnTile=ice_sink_lowOverlap;
+	chance=100;
+[AvAffecterAoE]
+	ID=mechanist_frost_explode;
+	cloneFrom=adjacentAndSelf+1;
+	airborne=true;
+	arc=true;
+	
+	
+
+[Action] ID=mechanist_heal_explode; 
+	name=Remote Heal;
+	harmful=false;
+	
+	FXOnTarget=largePingRepeat;
+	FXOnTargetColor=DeepPink;
+	FXOnTarget=risingChirpEcho;
+	FXOnTargetColor=DeepPink;
+	FXOnTarget=superSparkles;
+	FXOnTargetColor=DeepPink;
+	FXOnTarget=briefAuraSound;
+	FXOnTarget=sfx_lowAura;
+	FXOnTarget=pink_major;
+	FXOnTarget=medShakeHoriz;
+[ActionAoE] 
+	ID=mechanist_heal_explode;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=mechanist_heal_explode; 
+	actorValue=HP;
+	harmful=false;
+	magnitude=c:rank + t:skill_Life;
+	duration=-2;
+	chance=100;
+	FXOnTile=sparkles_noOverlap;
+	FXOnTileColor=DeepPink;
+	FXOnHit=briefAuraSound;
+	element=magic;
+	element=life;
+[AvAffecterAoE]
+	ID=mechanist_heal_explode;
+	cloneFrom=adjacentAndSelf+1;
+	airborne=true;
+	arc=true;
+[AvAffecter]
+	ID=mechanist_heal_explode; 
+	actorValue=cure;
+	harmful=false;
+	magnitude=1;
+	duration=-2;
+	chance=100 * m:tCurable;
+	visibleMiss=false;
+	FXOnHit=chargeSpiralFast_big;
+	FXOnHitColor=Aqua;
+	FXOnHit=sidewardLines;
+	FXOnHitColor=Aqua;
+	FXOnHit=ping;
+	FXOnHitColor=Aqua;
+	FXOnHit=sfx_lowTingQuiet;
+[AvAffecterAoE]
+	ID=mechanist_heal_explode;
+	cloneFrom=adjacentAndSelf+1;
+	airborne=true;
+	arc=true;
+	

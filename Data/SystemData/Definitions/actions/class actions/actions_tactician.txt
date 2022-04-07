@@ -1,0 +1,394 @@
+
+
+[Action] ID=Tac_command; 
+	name=Now!;
+	icon=icon_Tac_command;
+	mpCost=7 * d:mpCostMult + d:mpCostMod;
+	cooldown=50;
+	harmful=false;
+	tooltip=Immediately grant an ally a turn. Can't be used again for <icon=time>50.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=;
+	
+	XPCost=250;
+	XPCost=500;
+	XPCost=950;
+	XPCost=1600;
+	
+	special=cantUseInTravel;
+	
+	casterAnimation=spellcast_eyesOpen;
+	casterAnimationSpeed=1.3;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=delay;
+	FXOnCaster=sfx_command;
+	FXOnCaster=exclamation;
+	FXOnTarget=woosh;
+	FXOnTarget=wind2;
+[ActionAoE] 
+	ID=Tac_command; 
+	needsLoS = true;
+	needsLoE = true;
+	arc=true;
+	airborne=true;
+	minRange = 1;
+	maxRange = 1;
+	maxRangeBonus=c:rank;
+	bypassAll=false;
+	occupyAll=true;
+	canSelectEnemies=false;
+[AvAffecter]
+	ID=Tac_command; 
+	harmful=false;
+	actorValue=actTimer;
+	magnitude=m:tActTimerLeft;
+	duration=-2;
+	chance=100;
+	FXOnHit=delay_minor;
+	FXOnHit=egg_fade;
+	FXOnHit=sfx_schwee;
+[AvAffecterAoE]
+	ID=Tac_command;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Tac_command; 
+	harmful=false;
+	actorValue=AIBonus;
+	magnitude=-50;
+	duration=-2;
+	chance=100 * t:casting + 100 * t:charging + 100 * t:poison + 100 * t:burn;
+	visibleEvaluations=false;
+	visibleMiss=false;
+[AvAffecterAoE]
+	ID=Tac_command;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=Tac_hold; 
+	name=Hold!;
+	icon=icon_Tac_hold;
+	mpCost=1 * d:mpCostMult + d:mpCostMod;
+	harmful=false;
+	tooltip=Delay an ally's <icon=time>Time to Act by 10, but cure negative status effects and boost morale for <icon=time><math=74+c:MagAtk*2>.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small>;
+	
+	XPCost=75;
+	XPCost=200;
+	XPCost=500;
+	XPCost=900;
+	
+	AIRatingBias = -15;
+	
+	casterAnimation=spellcast_eyesOpen;
+	casterAnimationSpeed=1.3;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=delay;
+	FXOnCasterColor=White;
+	FXOnCaster=sfx_command;
+	FXOnCasterColor=White;
+	FXOnCaster=exclamation;
+	FXOnCasterColor=LightGreen;
+	FXOnTarget=woosh;
+	FXOnTargetColor=LightGreen;
+	FXOnTarget=wind2;
+	FXOnTargetColor=LightGreen;
+[ActionAoE] 
+	ID=Tac_hold; 
+	needsLoS = true;
+	needsLoE = true;
+	arc=true;
+	airborne=true;
+	minRange = 1;
+	maxRange = 3;
+	maxRangeBonus=c:rank;
+	bypassAll=false;
+	occupyAll=true;
+	canSelectEnemies=false;
+[AvAffecter]
+	ID=Tac_hold; 
+	harmful=false;
+	actorValue=actTimer;
+	magnitude=-10;
+	duration=-2;
+	chance=100;
+	FXOnTile=ground_impact;
+	FXOnTileColor=LightGreen;
+	FXOnHit=sidewardLines;
+	FXOnHitColor=LightGreen;
+	FXOnHit=sfx_healEcho_loud;
+[AvAffecterAoE]
+	ID=Tac_hold;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Tac_hold; 
+	actorValue=cure;
+	harmful=false;
+	magnitude=1;
+	duration=-2;
+	chance=100 * m:tCurable;
+	FXOnHit=chargeSpiralFast_big;
+	FXOnHitColor=Aqua;
+	FXOnHit=sidewardLines;
+	FXOnHitColor=Aqua;
+	FXOnHit=ping;
+	FXOnHitColor=Aqua;
+	FXOnHit=sfx_lowTingQuiet;
+[AvAffecterAoE]
+	ID=Tac_hold;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Tac_hold; 
+	harmful=false;
+	actorValue=morale;
+	magnitude=1;
+	duration=74+c:MagAtk*2;
+	chance=100;
+[AvAffecterAoE]
+	ID=Tac_hold;
+	cloneFrom=oneTile;
+	
+	
+	
+[Action] ID=Tac_advance; 
+	name=Advance!;
+	icon=icon_Tac_advance;
+	mpCost=1 * d:mpCostMult + d:mpCostMod;
+	harmful=false;
+	tooltip=Instruct <math=c:rank> <adjX=2><textIf=ally=2-c:rank><textIf=allies=c:rank-1><adjX=2> to move<n=>forward up to 3 tiles and gain +2 <icon=PhysAtk><icon=MagAtk> next turn.;
+	rankUpTooltip=Each rank adds +1 target.;
+	tooltipTopRight=;
+	
+	XPCost=125;
+	XPCost=250;
+	XPCost=800;
+	
+	AIRatingBias = -999;
+	
+	numTargets=c:rank;
+	
+	special=cantUseInTravel;
+	
+	casterAnimation=spellcast_eyesOpen;
+	casterAnimationSpeed=1.3;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=delay;
+	FXOnCasterColor=White;
+	FXOnCaster=sfx_command;
+	FXOnCasterColor=White;
+	FXOnCaster=exclamation;
+	FXOnCasterColor=Orange;
+	FXOnTarget=woosh;
+	FXOnTargetColor=Orange;
+	FXOnTarget=wind2;
+	FXOnTargetColor=Orange;
+[ActionAoE] 
+	ID=Tac_advance; 
+	needsLoS = true;
+	needsLoE = true;
+	arc=true;
+	airborne=true;
+	minRange = 1;
+	maxRange = 4;
+	bypassAll=false;
+	occupyAll=true;
+	canSelectEnemies=false;
+[AvAffecter]
+	ID=Tac_advance; 
+	harmful=false;
+	actorValue=PhysAtk;
+	magnitude=2;
+	duration=-4;
+	chance=100;
+[AvAffecterAoE]
+	ID=Tac_advance;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Tac_advance; 
+	harmful=false;
+	actorValue=MagAtk;
+	magnitude=2;
+	duration=-4;
+	chance=100;
+[AvAffecterAoE]
+	ID=Tac_advance;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Tac_advance; 
+	harmful=false;
+	actorValue=walkForward;
+	magnitude=3;
+	duration=-2;
+	chance=100 - 100 * m:incapped;
+	FXOnHit=upwardLines_many_low;
+	FXOnHitColor=Orange;
+	FXOnHit=ringOut_noOverlap;
+	FXOnHitColor=Orange;
+	FXOnHit=sfx_risingSwishHigh;
+[AvAffecterAoE]
+	ID=Tac_advance;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=Tac_withdraw; 
+	name=Withdraw!;
+	icon=icon_Tac_withdraw;
+	mpCost=1 * d:mpCostMult + d:mpCostMod;
+	harmful=false;
+	tooltip=Instruct <math=c:rank> <adjX=2><textIf=ally=2-c:rank><textIf=allies=c:rank-1><adjX=2> to move backward up to 3 tiles and gain +2 <icon=PhysDef><icon=MagDef> next turn.;
+	rankUpTooltip=Each rank adds +1 target.;
+	tooltipTopRight=;
+	
+	XPCost=125;
+	XPCost=250;
+	XPCost=800;
+	
+	AIRatingBias = -999;
+	
+	numTargets=c:rank;
+	
+	special=cantUseInTravel;
+	
+	casterAnimation=spellcast_eyesOpen;
+	casterAnimationSpeed=1.3;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=delay;
+	FXOnCasterColor=White;
+	FXOnCaster=sfx_command;
+	FXOnCasterColor=White;
+	FXOnCaster=exclamation;
+	FXOnCasterColor=SkyBlue;
+	FXOnTarget=woosh;
+	FXOnTargetColor=SkyBlue;
+	FXOnTarget=wind2;
+	FXOnTargetColor=SkyBlue;
+[ActionAoE] 
+	ID=Tac_withdraw; 
+	needsLoS = true;
+	needsLoE = true;
+	arc=true;
+	airborne=true;
+	minRange = 1;
+	maxRange = 4;
+	bypassAll=false;
+	occupyAll=true;
+	canSelectEnemies=false;
+[AvAffecter]
+	ID=Tac_withdraw; 
+	harmful=false;
+	actorValue=PhysDef;
+	magnitude=2;
+	duration=-4;
+	chance=100;
+[AvAffecterAoE]
+	ID=Tac_withdraw;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Tac_withdraw; 
+	harmful=false;
+	actorValue=MagDef;
+	magnitude=2;
+	duration=-4;
+	chance=100;
+[AvAffecterAoE]
+	ID=Tac_withdraw;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Tac_withdraw; 
+	harmful=false;
+	actorValue=walkBackward;
+	magnitude=3;
+	duration=-2;
+	chance=100 - 100 * m:incapped;
+	FXOnHit=upwardLines_many_low;
+	FXOnHitColor=SkyBlue;
+	FXOnHit=ringOut_noOverlap;
+	FXOnHitColor=SkyBlue;
+	FXOnHit=sfx_fallingSwish;
+[AvAffecterAoE]
+	ID=Tac_withdraw;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=Tac_masterstroke; 
+	name=Masterstroke;
+	icon=icon_Tac_masterstroke;
+	mpCost=15 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=35 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	harmful=false;
+	tooltip=All allies immediately get a turn. Can't be used again for <icon=time>50. Also can't be used on the first turn of combat.;
+	rankUpTooltip=;
+	tooltipTopRight=;
+	
+	cooldown=50;
+	XPCost=999;
+	
+	special=cantUseInTravel;
+	special=requiresCasting;
+	special=startBattleOnCooldown;
+	
+	casterAnimation=dramaticCast;
+	casterAnimationSpeed=1;
+	maxRank=1;
+	
+	FXOnCaster=darken;
+	FXOnCasterColor=White;
+	FXOnCaster=scanInfo_noOverlap;
+	FXOnCasterColor=White;
+	FXOnCaster=delay;
+	FXOnCasterColor=White;
+	FXOnCaster=delay;
+	FXOnCasterColor=White;
+	FXOnCaster=scanInfo_flip_noOverlap;
+	FXOnCasterColor=White;
+	FXOnCaster=delay;
+	FXOnCasterColor=White;
+	FXOnCaster=delay;
+	FXOnCasterColor=White;
+	FXOnCaster=delay;
+	FXOnCasterColor=White;
+	FXOnCaster=vertlineFlash;
+	FXOnCasterColor=White;
+	FXOnCaster=horizlineFlash_low;
+	FXOnCasterColor=White;
+	FXOnCaster=sfx_shingEcho;
+	FXOnCasterColor=White;
+	FXOnCaster=exclamation;
+	FXOnCasterColor=White;
+[ActionAoE] 
+	ID=Tac_masterstroke; shape=7;
+	cloneFrom=adjacentAndSelf;
+	minRange=1;
+	maxRange=22;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	bypassAll=true;
+	canSelectEnemies=false;
+[AvAffecter]
+	ID=Tac_masterstroke; 
+	harmful=false;
+	actorValue=actTimer;
+	magnitude=m:tActTimerLeft;
+	duration=-2;
+	chance=100;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnHit=vertlineFlash;
+	FXOnHit=egg_fade;
+	FXOnHit=sfx_schwee;
+[AvAffecterAoE]
+	ID=Tac_masterstroke;
+	aoeCasterAsOrigin=true;
+	
+	

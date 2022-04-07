@@ -1,0 +1,68 @@
+[DialogNode] ID=port29_sage1a;
+animations=sly;
+animations=;
+animations=happy;
+statements=Worried about entering the arena?;
+statements=Don't be.<p> We've got skilled sages and wardens on the sidelines of every match!;
+statements=Trust me, they've had a lot of practice!;
+nextNodeID=;
+
+[DialogNode] ID=port29_sage2a;
+animations=;
+animations=;
+statements=Hey.<p> You bleeding?;
+statements=No?<p> Ok.;
+nextNodeID=;
+
+
+[DialogNode] ID=port29_guy1a;
+animations=scared;
+animations=sigh;
+statements=I'm a little nervous about my match...;
+statements=But, I'm just here for the practice, so it's okay if we lose.;
+nextNodeID=;
+
+[DialogNode] ID=port29_guy2a;
+animations=;
+animations=sly;
+statements=You thinkin' of fightin'?;
+statements=<textIf=That'll be an easy win for us, then.=gIsLessThan:fame_combat:100><textIf=You are? Maybe I'll take the day off...=gIsMoreThan:fame_combat:99>;
+nextNodeID=;
+
+
+[DialogNode] ID=port29_guy3a;
+animations=sad;
+animations=scared;
+statements=Could it get any colder here??;
+statements=I'd take shelter inside, but everyone in this port is so intimidating...;
+nextNodeID=;
+
+[DialogNode] ID=port29_guy3b;
+animations=meh;
+statements=<speed=0.5>...really though?;
+nextNodeID=;
+
+[DialogNode] ID=port29_guy4a;
+animations=angry;
+animations=happy;
+statements=Here there buddy!<p> You lookin' for a fight?!;
+statements=Then head on over to the arena!<p> It's a great time!;
+nextNodeID=;
+
+[DialogNode] ID=port29_guy5a;
+animations=;
+statements=If you drop anything during a fight, we'll put it here on this table for you.;
+nextNodeID=;
+
+[DialogNode] ID=port29_guy6a;
+animations=;
+animations=sly;
+statements=This painting...<p> it speaks to me.;
+statements=And this beer keg...<p> it also speaks to me.;
+nextNodeID=;
+specialEffect=facingRotPrev;
+
+
+
+
+

@@ -1,0 +1,1406 @@
+
+
+[LevelData] ID=organic1;
+minZoneSizeX = 38;
+minZoneSizeY = 29;
+maxZoneSizeX = 40;
+maxZoneSizeY = 31;
+
+wallChanceToZig = 0.36;
+wallChanceToZag = 0.16;
+
+minWallThickness = 7;
+maxWallThickness = 9;
+minWallFlatStretch = 2;
+
+chanceOfForwardPath = 0.3;
+
+worldSizeX = 2;
+worldSizeY = 2;
+
+wallType = caveSolid_org1;
+wallTypeBottom = orgWall1;
+defaultTile = dirt_bumpy;
+
+minExitWidth = 4;
+maxExitWidth = 7;
+exitCurveAverageDepth = 5;
+exitCurveVariation = 2;
+
+otherLevelData=organic1_teeth;
+otherLevelData_chance=0.225;
+otherLevelData_chance_deadEnd=0.28;
+otherLevelData=organic1_tunnel;
+otherLevelData_chance=0.4;
+otherLevelData_chance_deadEnd=0.0;
+otherLevelData=organic1_large;
+otherLevelData_chance=0.5;
+otherLevelData_chance_deadEnd=0.05;
+otherLevelData=organic1_small;
+otherLevelData_chance=0.05;
+otherLevelData_chance_deadEnd=0.4;
+otherLevelData=organic1_acid;
+otherLevelData_chance=0.25;
+otherLevelData_chance_deadEnd=0.4;
+
+----
+
+
+
+mandatoryCenterPieces=Puzzle1=spPuzzle_organic1;
+mandatoryCenterPieces=Puzzle1=spPuzzle_organic2;
+mandatoryCenterPieces=Puzzle1=spPuzzle_organic3;
+mandatoryCenterPieces=Puzzle1=spPuzzle_organic4;
+mandatoryCenterPieces=Puzzle1=spPuzzle_organic5;
+mandatoryCenterPieces=Puzzle1=spPuzzle_organic6;
+mandatoryCenterPieces=Puzzle1=spPuzzle_organic7;
+mandatoryCenterPieces=Puzzle1=spPuzzle_organic_med1;
+mandatoryCenterPieces=Puzzle1=spPuzzle_organic_med2;
+mandatoryCenterPieces=Puzzle1=spPuzzle_organic_med3;
+
+mandatoryCenterPieces=Secret1=spO1_z1a;
+mandatoryCenterPieces=Secret1=spO1_z4a;
+mandatoryCenterPieces=Secret1=spO1_z5a;
+mandatoryCenterPieces=Secret1=spO1_z6a;
+mandatoryCenterPieces=Secret1=spO1_z7a;
+mandatoryCenterPieces=Secret1=spO1_z8a;
+mandatoryCenterPieces=Secret1=spO1_z9a;
+
+----
+minSetPiecesPerRoom = 1;
+maxSetPiecesPerRoom = 2;
+
+setPieces=spPillar1;
+setPiecesChanceToReroll=0;
+setPieces=spPillar2;
+setPiecesChanceToReroll=0;
+setPieces=spPillar3;
+setPiecesChanceToReroll=0;
+setPieces=spPillar4;
+setPiecesChanceToReroll=0;
+setPieces=spBubble_acid1;
+setPiecesChanceToReroll=0.3;
+setPieces=spSogbogger1;
+setPiecesChanceToReroll=0.98;
+setPieces=spCorpse1;
+setPiecesChanceToReroll=0.9;
+setPieces=spCorpse2;
+setPiecesChanceToReroll=0.9;
+setPieces=spGemhide1;
+setPiecesChanceToReroll=0.99;
+
+
+----
+centerPieceChance_normal = 0.9;
+centerPieceChance_deadEnd = 0.978;
+centerPieceChance_1stRoom = 0.5;
+
+centerPieces = spPill1;
+centerPiecesChanceToReroll = 0 + k:pill * 0.003;
+centerPieces = spPill2;
+centerPiecesChanceToReroll = 0 + k:pill * 0.003;
+centerPieces = spLoot_organic1;
+centerPiecesChanceToReroll = 0.5;
+centerPieces = spBugs1;
+centerPiecesChanceToReroll = 0;
+centerPieces = spPillburrow1;
+centerPiecesChanceToReroll = 0.5;
+centerPieces = spFly1;
+centerPiecesChanceToReroll = 0.7;
+centerPieces = spCorpse_Fly1;
+centerPiecesChanceToReroll = 0.7;
+centerPieces = spSplitworms1;
+centerPiecesChanceToReroll = 0;
+centerPieces = spSogbogger1;
+centerPiecesChanceToReroll = 0.9;
+
+
+
+----
+
+spawnItems_nearWall_chance = 0.16;
+spawnItems_nearWall=rubble;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=blisters1;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=blisters2;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=tooth_spikes;
+spawnItems_nearWall_chanceToReroll=0.3;
+spawnItems_nearWall=bubble_big_acid;
+spawnItems_nearWall_chanceToReroll=0.95;
+
+spawnItems_nearCenter_chance = 0.21;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters4;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters5;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters6;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters4;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters5;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters6;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters4;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters5;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters6;
+spawnItems_nearCenter_chanceToReroll=0;
+
+spawnItems_nearCenter=rubble;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=organic_seam;
+spawnItems_nearCenter_chanceToReroll=0.9;
+spawnItems_nearCenter=organic_hole_slow;
+spawnItems_nearCenter_chanceToReroll=0.95;
+spawnItems_nearCenter=bubble_small;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=bubble_big;
+spawnItems_nearCenter_chanceToReroll=0.21;
+spawnItems_nearCenter=bubble_big_acid;
+spawnItems_nearCenter_chanceToReroll=0.7;
+spawnItems_nearCenter=bubble_big_item;
+spawnItems_nearCenter_chanceToReroll=0.82;
+spawnItems_nearCenter=bubble_bigger_item;
+spawnItems_nearCenter_chanceToReroll=0.99;
+spawnItems_nearCenter=nest_worm;
+spawnItems_nearCenter_chanceToReroll=0.9;
+
+
+spawnItems_nearCenter=tooth_big1;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=tooth_big2;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=tooth_small1;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=tooth_small2;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=tooth_spikes;
+spawnItems_nearCenter_chanceToReroll=0.3;
+
+specialSpawns=thingy_organic1;
+specialSpawns=thingy_organic2;
+specialSpawns=thingy_organic3;
+specialSpawns=thingy_organic4;
+specialSpawns=wallBubble1;
+specialSpawns=wallBubble2;
+specialSpawns=wallBubble3;
+
+
+[LevelDataZone]ID=organic1;
+
+zoneDirtPalette = pOrange;
+zoneDirtDarkPalette = pGrey2blue_glow;
+
+travelSong=e-world;
+travelSongVolume=1;
+combatSong=PerituneMaterial_Lost_place;
+combatSongVolume=0.94;
+combatSongDelay=1;
+
+dark=true;
+darkR=220; darkG=220; darkB=220; 
+
+
+[LevelData] ID=organic1_large;
+minZoneSizeX = 44;
+minZoneSizeY = 35;
+maxZoneSizeX = 51;
+maxZoneSizeY = 43;
+
+wallChanceToZig = 0.4;
+wallChanceToZag = 0.2;
+
+minWallThickness = 8;
+maxWallThickness = 11;
+minWallFlatStretch = 2;
+
+chanceOfForwardPath = 0.7;
+
+
+wallType = caveSolid_org1;
+wallTypeBottom = orgWall1;
+defaultTile = dirt_bumpy;
+
+minExitWidth = 5;
+maxExitWidth = 9;
+exitCurveAverageDepth = 6;
+exitCurveVariation = 2;
+
+
+----
+minSetPiecesPerRoom = 1;
+maxSetPiecesPerRoom = 3;
+
+setPieces=spPillar1;
+setPiecesChanceToReroll=0;
+setPieces=spPillar2;
+setPiecesChanceToReroll=0;
+setPieces=spPillar3;
+setPiecesChanceToReroll=0;
+setPieces=spPillar4;
+setPiecesChanceToReroll=0;
+setPieces=spBubble_acid1;
+setPiecesChanceToReroll=0.3;
+setPieces=spSogbogger1;
+setPiecesChanceToReroll=0.98;
+setPieces=spCorpse1;
+setPiecesChanceToReroll=0.9;
+setPieces=spCorpse2;
+setPiecesChanceToReroll=0.9;
+setPieces=spGemhide1;
+setPiecesChanceToReroll=0.99;
+
+----
+centerPieceChance_normal = 0.95;
+centerPieceChance_deadEnd = 0.99;
+centerPieceChance_1stRoom = 0.99;
+
+centerPieces = spPill1;
+centerPiecesChanceToReroll = 0 + k:pill * 0.003;
+centerPieces = spPill2;
+centerPiecesChanceToReroll = 0 + k:pill * 0.003;
+centerPieces = spLoot_organic1;
+centerPiecesChanceToReroll = 0.5;
+centerPieces = spPillburrow1;
+centerPiecesChanceToReroll = 0.5;
+centerPieces = spBrigands_org1;
+centerPiecesChanceToReroll = 0.99;
+centerPieces = spSpide1;
+centerPiecesChanceToReroll = 0.6;
+centerPieces = spFly1;
+centerPiecesChanceToReroll = 0.5;
+centerPieces = spCorpse_Fly1;
+centerPiecesChanceToReroll = 0.5;
+centerPieces = spPuzzle_oddule_easy1;
+centerPiecesChanceToReroll = 0.99;
+centerPieces = spPuzzle_oddule_easy2;
+centerPiecesChanceToReroll = 0.99;
+centerPieces = spPuzzle_oddule_easy3;
+centerPiecesChanceToReroll = 0.99;
+centerPieces = spPuzzle_oddule_easy4;
+centerPiecesChanceToReroll = 0.99;
+centerPieces = spSogbogger1;
+centerPiecesChanceToReroll = 0.9;
+
+
+
+----
+
+spawnItems_nearWall_chance = 0.16;
+spawnItems_nearWall=rubble;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=blisters1;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=blisters2;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=tooth_spikes;
+spawnItems_nearWall_chanceToReroll=0.3;
+
+spawnItems_nearCenter_chance = 0.21;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=blisters1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters4;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters5;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters6;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters4;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters5;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters6;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters4;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters5;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters6;
+spawnItems_nearCenter_chanceToReroll=0;
+
+spawnItems_nearCenter=rubble;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=organic_seam;
+spawnItems_nearCenter_chanceToReroll=0.9;
+spawnItems_nearCenter=organic_hole_slow;
+spawnItems_nearCenter_chanceToReroll=0.95;
+spawnItems_nearCenter=bubble_small;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=bubble_big;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=bubble_big_acid;
+spawnItems_nearCenter_chanceToReroll=0.9;
+spawnItems_nearCenter=bubble_big_item;
+spawnItems_nearCenter_chanceToReroll=0.78;
+spawnItems_nearCenter=bubble_bigger_item;
+spawnItems_nearCenter_chanceToReroll=0.98;
+spawnItems_nearCenter=tooth_big1;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=tooth_big2;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=tooth_small1;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=tooth_small2;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=tooth_spikes;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=nest_worm;
+spawnItems_nearCenter_chanceToReroll=0.9;
+
+specialSpawns=thingy_organic1;
+specialSpawns=thingy_organic2;
+specialSpawns=thingy_organic3;
+specialSpawns=thingy_organic4;
+specialSpawns=wallBubble1;
+specialSpawns=wallBubble2;
+specialSpawns=wallBubble3;
+
+[LevelDataZone]ID=organic1_large;
+
+zoneDirtPalette = pOrange;
+zoneDirtDarkPalette = pGrey2blue_glow;
+
+travelSong=e-world;
+travelSongVolume=1;
+combatSong=PerituneMaterial_Lost_place;
+combatSongVolume=0.94;
+combatSongDelay=1;
+
+dark=true;
+darkR=230; darkG=230; darkB=230; 
+
+
+
+[LevelData] ID=organic1_small;
+minZoneSizeX = 30;
+minZoneSizeY = 26;
+maxZoneSizeX = 32;
+maxZoneSizeY = 28;
+
+wallChanceToZig = 0.3;
+wallChanceToZag = 0.1;
+
+minWallThickness = 6;
+maxWallThickness = 7;
+minWallFlatStretch = 2;
+
+chanceOfForwardPath = 0;
+
+cannotHaveMandatorySetOrCenterPieces=false;
+
+wallType = caveSolid_org1;
+wallTypeBottom = orgWall1;
+defaultTile = dirt_bumpy;
+
+minExitWidth = 3;
+maxExitWidth = 7;
+exitCurveAverageDepth = 4;
+exitCurveVariation = 2;
+
+----
+minSetPiecesPerRoom = 1;
+maxSetPiecesPerRoom = 1;
+
+setPieces=spPillar1;
+setPiecesChanceToReroll=0;
+setPieces=spPillar2;
+setPiecesChanceToReroll=0;
+setPieces=spPillar3;
+setPiecesChanceToReroll=0;
+setPieces=spPillar4;
+setPiecesChanceToReroll=0;
+setPieces=spBubble_acid1;
+setPiecesChanceToReroll=0.3;
+setPieces=spSogbogger1;
+setPiecesChanceToReroll=0.98;
+setPieces=spCorpse1;
+setPiecesChanceToReroll=0.9;
+setPieces=spCorpse2;
+setPiecesChanceToReroll=0.9;
+setPieces=spGemhide1;
+setPiecesChanceToReroll=0.99;
+
+----
+centerPieceChance_normal = 0.8;
+centerPieceChance_deadEnd = 1;
+centerPieceChance_1stRoom = 0;
+
+centerPieces = spPill1;
+centerPiecesChanceToReroll = 0.7 + k:pill * 0.003;
+centerPieces = spPill2;
+centerPiecesChanceToReroll = 0.7 + k:pill * 0.003;
+centerPieces = spLoot_organic1;
+centerPiecesChanceToReroll = 0.5;
+centerPieces = spBugs1;
+centerPiecesChanceToReroll = 0.3;
+centerPieces = spPillburrow1;
+centerPiecesChanceToReroll = 0.9;
+centerPieces = spFly1;
+centerPiecesChanceToReroll = 0.85;
+centerPieces = spCorpse_Fly1;
+centerPiecesChanceToReroll = 0.85;
+centerPieces = spAngelfly1;
+centerPiecesChanceToReroll = 0.96;
+centerPieces = spSplitworms1;
+centerPiecesChanceToReroll = 0.5;
+centerPieces = spSpide1;
+centerPiecesChanceToReroll = 0.9;
+centerPieces = spSogbogger1;
+centerPiecesChanceToReroll = 0.9;
+
+
+
+----
+
+spawnItems_nearWall_chance = 0.16;
+spawnItems_nearWall=rubble;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=blisters1;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=blisters2;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=tooth_spikes;
+spawnItems_nearWall_chanceToReroll=0.3;
+
+spawnItems_nearCenter_chance = 0.21;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters4;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters5;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters6;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters4;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters5;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters6;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters4;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters5;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters6;
+spawnItems_nearCenter_chanceToReroll=0;
+
+spawnItems_nearCenter=rubble;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=organic_seam;
+spawnItems_nearCenter_chanceToReroll=0.9;
+spawnItems_nearCenter=organic_hole_slow;
+spawnItems_nearCenter_chanceToReroll=0.95;
+spawnItems_nearCenter=bubble_small;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=bubble_big;
+spawnItems_nearCenter_chanceToReroll=0.21;
+spawnItems_nearCenter=bubble_big_acid;
+spawnItems_nearCenter_chanceToReroll=0.9;
+spawnItems_nearCenter=bubble_big_item;
+spawnItems_nearCenter_chanceToReroll=0.82;
+spawnItems_nearCenter=bubble_bigger_item;
+spawnItems_nearCenter_chanceToReroll=0.99;
+spawnItems_nearCenter=tooth_big1;
+spawnItems_nearCenter_chanceToReroll=0.35;
+spawnItems_nearCenter=tooth_big2;
+spawnItems_nearCenter_chanceToReroll=0.35;
+spawnItems_nearCenter=tooth_small1;
+spawnItems_nearCenter_chanceToReroll=0.35;
+spawnItems_nearCenter=tooth_small2;
+spawnItems_nearCenter_chanceToReroll=0.35;
+spawnItems_nearCenter=tooth_spikes;
+spawnItems_nearCenter_chanceToReroll=0.35;
+spawnItems_nearCenter=nest_worm;
+spawnItems_nearCenter_chanceToReroll=0.9;
+
+specialSpawns=thingy_organic1;
+specialSpawns=thingy_organic2;
+specialSpawns=thingy_organic3;
+specialSpawns=thingy_organic4;
+specialSpawns=wallBubble1;
+specialSpawns=wallBubble2;
+specialSpawns=wallBubble3;
+
+[LevelDataZone]ID=organic1_small;
+
+zoneDirtPalette = pOrange;
+zoneDirtDarkPalette = pGrey2blue_glow;
+
+travelSong=e-world;
+travelSongVolume=1;
+combatSong=PerituneMaterial_Lost_place;
+combatSongVolume=0.94;
+combatSongDelay=1;
+
+dark=true;
+darkR=210; darkG=210; darkB=210; 
+
+[LevelData] ID=organic1_teeth;
+cloneFrom=organic1;
+
+----
+
+cannotHaveMandatorySetOrCenterPieces=false;
+
+centerPieceChance_normal = 1;
+centerPieceChance_deadEnd = 1;
+centerPieceChance_1stRoom = 0;
+
+centerPieces = spPill1;
+centerPiecesChanceToReroll = 0.2 + k:pill * 0.003;
+centerPieces = spPill2;
+centerPiecesChanceToReroll = 0.2 + k:pill * 0.003;
+centerPieces = spBugs1;
+centerPiecesChanceToReroll = 0.3;
+centerPieces = spPillburrow1;
+centerPiecesChanceToReroll = 0.7;
+centerPieces = spFly1;
+centerPiecesChanceToReroll = 0.3;
+centerPieces = spCorpse_Fly1;
+centerPiecesChanceToReroll = 0.4;
+centerPieces = spAngelfly1;
+centerPiecesChanceToReroll = 0.5;
+centerPieces = spLoot_organic1;
+centerPiecesChanceToReroll = 0.5;
+centerPieces = spSplitworms1;
+centerPiecesChanceToReroll = 0.95;
+
+
+----
+
+spawnItems_nearWall_chance = 0.16;
+spawnItems_nearWall=rubble;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=tooth_spikes;
+spawnItems_nearWall_chanceToReroll=0.4;
+
+spawnItems_nearCenter_chance = 0.255;
+spawnItems_nearCenter=blisters1;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=blisters2;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=tooth_big1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=tooth_big2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=tooth_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=tooth_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=tooth_spikes;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=nest_worm;
+spawnItems_nearCenter_chanceToReroll=0.99;
+
+[LevelDataZone]ID=organic1_teeth;
+
+zoneDirtPalette = pOrange;
+zoneDirtDarkPalette = pGrey2blue_mix1;
+
+travelSong=e-world;
+travelSongVolume=1;
+combatSong=PerituneMaterial_Lost_place;
+combatSongVolume=0.94;
+combatSongDelay=1;
+
+dark=true;
+darkR=200; darkG=200; darkB=200; 
+
+zoneFX=gnat_spawn;
+zoneFXTime=999999;
+zoneFX=gnat_spawn;
+zoneFXTime=999999;
+zoneFX=gnat_spawn;
+zoneFXTime=999999;
+zoneFX=gnat_spawn;
+zoneFXTime=999999;
+zoneFX=gnat_spawn;
+zoneFXTime=999999;
+zoneFX=gnat_spawn;
+zoneFXTime=999999;
+zoneFX=gnat_spawn;
+zoneFXTime=999999;
+zoneFX=gnat_spawn;
+zoneFXTime=999999;
+zoneFX=gnat_spawn;
+zoneFXTime=999999;
+zoneFX=gnat_spawn;
+zoneFXTime=999999;
+zoneFX=gnat_spawn;
+zoneFXTime=999999;
+
+
+[LevelData] ID=organic1_acid;
+cloneFrom=organic1;
+
+cannotHaveMandatorySetOrCenterPieces=true;
+
+minZoneSizeX = 40;
+minZoneSizeY = 32;
+maxZoneSizeX = 44;
+maxZoneSizeY = 34;
+
+wallType = caveSolid_org2;
+wallTypeBottom = orgWall2;
+
+--wallType_exit = caveSolid_org1;
+--wallTypeBottom_exit = orgWall1;
+
+defaultTile = acid_edge_smooth;
+defaultTile_exit = dirt_bumpy;
+
+----
+carvePath_betweenExits_terrainTypeID=dirt_bumpy;
+carvePath_betweenExits_straight_minLength = 1;
+carvePath_betweenExits_turn_minLength = 2;
+carvePath_betweenExits_chanceToTurn = 0.4;
+carvePath_betweenExits_width = 1;
+----
+
+carvePath_fromExitToCenterPiece_terrainTypeID=dirt_bumpy;
+carvePath_fromExitToCenterPiece_straight_minLength = 1;
+carvePath_fromExitToCenterPiece_turn_minLength = 1;
+carvePath_fromExitToCenterPiece_chanceToTurn = 0.4;
+carvePath_fromExitToCenterPiece_width = 1;
+----
+
+centerPieceChance_normal = 1;
+centerPieceChance_deadEnd = 1;
+centerPieceChance_1stRoom = 1;
+
+centerPieces = spPuzzle_oddule_easy1;
+centerPiecesChanceToReroll = 0;
+centerPieces = spPuzzle_oddule_easy2;
+centerPiecesChanceToReroll = 0;
+centerPieces = spPuzzle_oddule_easy3;
+centerPiecesChanceToReroll = 0;
+centerPieces = spPuzzle_oddule_easy4;
+centerPiecesChanceToReroll = 0;
+centerPieces = spPuzzle_oddule_easy5;
+centerPiecesChanceToReroll = 0;
+centerPieces = spPuzzle_oddule_easy6;
+centerPiecesChanceToReroll = 0;
+centerPieces = spO1_z2a;
+centerPiecesChanceToReroll = 0.4 + z:z2a_organic1 * 0.3;
+centerPieces = spO1_z3a;
+centerPiecesChanceToReroll = 0.4 + z:z3a_organic1 * 0.3;
+
+
+
+[LevelDataZone]ID=organic1_acid;
+
+zoneDirtPalette = pOrange;
+zoneDirtDarkPalette = pGrey2blue_glow;
+
+travelSong=e-world;
+travelSongVolume=1;
+combatSong=PerituneMaterial_Lost_place;
+combatSongVolume=0.94;
+combatSongDelay=1;
+
+dark=true;
+darkR=200; darkG=255; darkB=200; 
+
+zoneFX=gnat_spawn;
+zoneFXTime=999999;
+zoneFX=gnat_spawn;
+zoneFXTime=999999;
+zoneFX=gnat_spawn;
+zoneFXTime=999999;
+zoneFX=gnat_spawn;
+zoneFXTime=999999;
+zoneFX=gnat_spawn;
+zoneFXTime=999999;
+zoneFX=gnat_spawn;
+zoneFXTime=999999;
+
+[LevelData] ID=organic1_tunnel;
+minZoneSizeX = 39;
+minZoneSizeY = 35;
+maxZoneSizeX = 41;
+maxZoneSizeY = 36;
+
+cannotHaveMandatorySetOrCenterPieces=false;
+
+wallChanceToZig = 0.3;
+wallChanceToZag = 0.1;
+
+minWallThickness = 12;
+maxWallThickness = 13;
+minWallFlatStretch = 2;
+
+chanceOfForwardPath = 0;
+
+
+wallType = caveSolid_org1;
+wallTypeBottom = orgWall1;
+defaultTile = dirt_bumpy;
+
+minExitWidth = 3;
+maxExitWidth = 7;
+exitCurveAverageDepth = 7;
+exitCurveVariation = 2;
+
+minExitWidth = 4;
+maxExitWidth = 6;
+exitCurveAverageDepth = 8;
+exitCurveVariation = 1;
+
+minSetPiecesPerRoom = 1;
+maxSetPiecesPerRoom = 1;
+
+setPieces=spPillar1;
+setPiecesChanceToReroll=0;
+setPieces=spPillar2;
+setPiecesChanceToReroll=0;
+setPieces=spPillar3;
+setPiecesChanceToReroll=0;
+setPieces=spPillar4;
+setPiecesChanceToReroll=0;
+setPieces=spSogbogger1;
+setPiecesChanceToReroll=0.98;
+setPieces=spCorpse1;
+setPiecesChanceToReroll=0.9;
+setPieces=spCorpse2;
+setPiecesChanceToReroll=0.9;
+setPieces=spGemhide1;
+setPiecesChanceToReroll=0.99;
+
+----
+centerPieceChance_normal = 1;
+centerPieceChance_deadEnd = 1;
+centerPieceChance_1stRoom = 0;
+
+centerPieces = spPill1;
+centerPiecesChanceToReroll = 0.7 + k:pill * 0.003;
+centerPieces = spPill2;
+centerPiecesChanceToReroll = 0.7 + k:pill * 0.003;
+centerPieces = spLoot_organic1;
+centerPiecesChanceToReroll = 0.5;
+centerPieces = spBugs1;
+centerPiecesChanceToReroll = 0.3;
+centerPieces = spPillburrow1;
+centerPiecesChanceToReroll = 0.9;
+centerPieces = spFly1;
+centerPiecesChanceToReroll = 0.85;
+centerPieces = spCorpse_Fly1;
+centerPiecesChanceToReroll = 0.85;
+centerPieces = spAngelfly1;
+centerPiecesChanceToReroll = 0.96;
+centerPieces = spSplitworms1;
+centerPiecesChanceToReroll = 0.5;
+centerPieces = spBrigands_org1;
+centerPiecesChanceToReroll = 0.95;
+centerPieces = spSpide1;
+centerPiecesChanceToReroll = 0.9;
+centerPieces = spSogbogger1;
+centerPiecesChanceToReroll = 0.9;
+
+
+
+----
+
+spawnItems_nearWall_chance = 0.16;
+spawnItems_nearWall=rubble;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=blisters1;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=blisters2;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=tooth_spikes;
+spawnItems_nearWall_chanceToReroll=0.3;
+
+spawnItems_nearCenter_chance = 0.18;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=blisters1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters4;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters5;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters6;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters4;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters5;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters6;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=rubble;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=organic_seam;
+spawnItems_nearCenter_chanceToReroll=0.9;
+spawnItems_nearCenter=organic_hole_slow;
+spawnItems_nearCenter_chanceToReroll=0.95;
+spawnItems_nearCenter=bubble_small;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=bubble_big;
+spawnItems_nearCenter_chanceToReroll=0.21;
+spawnItems_nearCenter=bubble_big_acid;
+spawnItems_nearCenter_chanceToReroll=0.9;
+spawnItems_nearCenter=bubble_big_item;
+spawnItems_nearCenter_chanceToReroll=0.84;
+spawnItems_nearCenter=bubble_bigger_item;
+spawnItems_nearCenter_chanceToReroll=0.99;
+spawnItems_nearCenter=bubble_huge_item;
+spawnItems_nearCenter_chanceToReroll=0.995;
+spawnItems_nearCenter=tooth_big1;
+spawnItems_nearCenter_chanceToReroll=0.35;
+spawnItems_nearCenter=tooth_big2;
+spawnItems_nearCenter_chanceToReroll=0.35;
+spawnItems_nearCenter=tooth_small1;
+spawnItems_nearCenter_chanceToReroll=0.35;
+spawnItems_nearCenter=tooth_small2;
+spawnItems_nearCenter_chanceToReroll=0.35;
+spawnItems_nearCenter=tooth_spikes;
+spawnItems_nearCenter_chanceToReroll=0.35;
+spawnItems_nearCenter=nest_worm;
+spawnItems_nearCenter_chanceToReroll=0.9;
+
+specialSpawns=thingy_organic1;
+specialSpawns=thingy_organic2;
+specialSpawns=thingy_organic3;
+specialSpawns=thingy_organic4;
+specialSpawns=wallBubble1;
+specialSpawns=wallBubble2;
+specialSpawns=wallBubble3;
+
+
+[LevelDataZone]ID=organic1_tunnel;
+
+zoneDirtPalette = pOrange;
+zoneDirtDarkPalette = pGrey2blue_glow;
+
+travelSong=e-world;
+travelSongVolume=1;
+combatSong=PerituneMaterial_Lost_place;
+combatSongVolume=0.94;
+combatSongDelay=1;
+
+dark=true;
+darkR=230; darkG=230; darkB=230; 
+
+[LevelData] ID=organic1_final;
+minZoneSizeX = 30;
+minZoneSizeY = 26;
+maxZoneSizeX = 31;
+maxZoneSizeY = 28;
+
+wallChanceToZig = 0.3;
+wallChanceToZag = 0.1;
+
+minWallThickness = 6;
+maxWallThickness = 7;
+minWallFlatStretch = 2;
+
+chanceOfForwardPath = 0;
+
+cannotHaveMandatorySetOrCenterPieces=true;
+
+wallType = caveSolid_org1;
+wallTypeBottom = orgWall1;
+defaultTile = dirt_bumpy;
+
+minExitWidth = 3;
+maxExitWidth = 7;
+exitCurveAverageDepth = 4;
+exitCurveVariation = 2;
+
+----
+minSetPiecesPerRoom = 1;
+maxSetPiecesPerRoom = 1;
+
+setPieces=spPillar1;
+setPiecesChanceToReroll=0;
+setPieces=spPillar2;
+setPiecesChanceToReroll=0;
+setPieces=spPillar3;
+setPiecesChanceToReroll=0;
+setPieces=spPillar4;
+setPiecesChanceToReroll=0;
+setPieces=spSogbogger1;
+setPiecesChanceToReroll=0.98;
+setPieces=spCorpse1;
+setPiecesChanceToReroll=0.98;
+setPieces=spCorpse2;
+setPiecesChanceToReroll=0.98;
+setPieces=spGemhide1;
+setPiecesChanceToReroll=0.995;
+
+----
+centerPieceChance_normal = 1;
+centerPieceChance_deadEnd = 1;
+centerPieceChance_1stRoom = 1;
+
+chooseCenterPiecesInOrder=true;
+
+
+centerPieces = spAngelfly_easy1;
+centerPiecesChanceToReroll = 0 + k:angelfly;
+centerPieces = spBrigands_enc1;
+centerPiecesChanceToReroll = 0 + g:brigands_enc1;
+centerPieces = spBrigands_org1;
+centerPiecesChanceToReroll = 0.5;
+centerPieces = spBugs2;
+centerPiecesChanceToReroll = 0.5;
+centerPieces = spBugs1;
+centerPiecesChanceToReroll = 0.5;
+centerPieces = spAngelfly1;
+centerPiecesChanceToReroll = 0.5;
+centerPieces = spWormNest1;
+centerPiecesChanceToReroll = 0.5;
+centerPieces = spSplitworms1;
+centerPiecesChanceToReroll = 0;
+
+
+
+----
+
+spawnItems_nearWall_chance = 0.16;
+spawnItems_nearWall=rubble;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=blisters1;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=blisters2;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=tooth_spikes;
+spawnItems_nearWall_chanceToReroll=0.3;
+
+spawnItems_nearCenter_chance = 0.18;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=blisters1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters4;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters5;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters6;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters4;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters5;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters6;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=rubble;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=organic_seam;
+spawnItems_nearCenter_chanceToReroll=0.9;
+spawnItems_nearCenter=organic_hole_slow;
+spawnItems_nearCenter_chanceToReroll=0.95;
+spawnItems_nearCenter=bubble_small;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=bubble_big;
+spawnItems_nearCenter_chanceToReroll=0.21;
+spawnItems_nearCenter=bubble_big_acid;
+spawnItems_nearCenter_chanceToReroll=0.9;
+spawnItems_nearCenter=bubble_big_item;
+spawnItems_nearCenter_chanceToReroll=0.86;
+spawnItems_nearCenter=bubble_bigger_item;
+spawnItems_nearCenter_chanceToReroll=0.99;
+spawnItems_nearCenter=tooth_big1;
+spawnItems_nearCenter_chanceToReroll=0.35;
+spawnItems_nearCenter=tooth_big2;
+spawnItems_nearCenter_chanceToReroll=0.35;
+spawnItems_nearCenter=tooth_small1;
+spawnItems_nearCenter_chanceToReroll=0.35;
+spawnItems_nearCenter=tooth_small2;
+spawnItems_nearCenter_chanceToReroll=0.35;
+spawnItems_nearCenter=tooth_spikes;
+spawnItems_nearCenter_chanceToReroll=0.35;
+spawnItems_nearCenter=nest_worm;
+spawnItems_nearCenter_chanceToReroll=0.9;
+
+specialSpawns=thingy_organic1;
+specialSpawns=thingy_organic2;
+specialSpawns=thingy_organic3;
+specialSpawns=thingy_organic4;
+specialSpawns=wallBubble1;
+specialSpawns=wallBubble2;
+specialSpawns=wallBubble3;
+
+[LevelDataZone]ID=organic1_final;
+
+zoneDirtPalette = pOrange;
+zoneDirtDarkPalette = pGrey2blue_glow;
+
+travelSong=e-world;
+travelSongVolume=1;
+combatSong=PerituneMaterial_Lost_place;
+combatSongVolume=0.94;
+combatSongDelay=1;
+
+dark=true;
+darkR=240; darkG=240; darkB=240; 
+
+
+
+
+
+[LevelData] ID=organic2;
+minZoneSizeX = 38;
+minZoneSizeY = 33;
+maxZoneSizeX = 40;
+maxZoneSizeY = 35;
+
+wallChanceToZig = 0.36;
+wallChanceToZag = 0.16;
+
+minWallThickness = 7;
+maxWallThickness = 9;
+minWallFlatStretch = 2;
+
+chanceOfForwardPath = 0.3;
+
+worldSizeX = 1;
+worldSizeY = 3;
+
+wallType = caveSolid_org1;
+wallTypeBottom = orgWall1;
+defaultTile = dirt_bumpy;
+
+minExitWidth = 4;
+maxExitWidth = 7;
+exitCurveAverageDepth = 5;
+exitCurveVariation = 2;
+
+----
+
+
+----
+minSetPiecesPerRoom = 1;
+maxSetPiecesPerRoom = 2;
+
+setPieces=spPillar1;
+setPiecesChanceToReroll=0;
+setPieces=spPillar2;
+setPiecesChanceToReroll=0;
+setPieces=spPillar3;
+setPiecesChanceToReroll=0;
+setPieces=spPillar4;
+setPiecesChanceToReroll=0;
+setPieces=spCorpse1;
+setPiecesChanceToReroll=0.9;
+setPieces=spCorpse2;
+setPiecesChanceToReroll=0.9;
+setPieces=spGemhide1;
+setPiecesChanceToReroll=0.99;
+
+
+----
+centerPieceChance_normal = 0;
+centerPieceChance_deadEnd = 0;
+centerPieceChance_1stRoom = 1;
+
+chooseCenterPiecesInOrder=true;
+
+centerPieces = spAngelfly_hard1;
+centerPiecesChanceToReroll = g:beatDevilfly;
+centerPieces = spMegangle1;
+centerPiecesChanceToReroll = g:beatMegangle;
+centerPieces = spOdduleBoss1;
+centerPiecesChanceToReroll = g:beatOdduleBoss;
+
+centerPieces = spPill1;
+centerPiecesChanceToReroll = 0.4;
+centerPieces = spPill2;
+centerPiecesChanceToReroll = 0.4;
+centerPieces = spLoot_organic1;
+centerPiecesChanceToReroll = 0.9;
+
+
+
+----
+
+spawnItems_nearWall_chance = 0.16;
+spawnItems_nearWall=rubble;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=tooth_spikes;
+spawnItems_nearWall_chanceToReroll=0.3;
+
+spawnItems_nearCenter_chance = 0.18;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters4;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters5;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters6;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters4;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters5;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters6;
+spawnItems_nearCenter_chanceToReroll=0;
+
+spawnItems_nearCenter=rubble;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=organic_seam;
+spawnItems_nearCenter_chanceToReroll=0.9;
+spawnItems_nearCenter=organic_hole_slow;
+spawnItems_nearCenter_chanceToReroll=0.95;
+spawnItems_nearCenter=bubble_small;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=bubble_big;
+spawnItems_nearCenter_chanceToReroll=0.21;
+spawnItems_nearCenter=bubble_big_item;
+spawnItems_nearCenter_chanceToReroll=0.82;
+spawnItems_nearCenter=bubble_bigger_item;
+spawnItems_nearCenter_chanceToReroll=0.99;
+spawnItems_nearCenter=nest_worm;
+spawnItems_nearCenter_chanceToReroll=0.9;
+
+
+spawnItems_nearCenter=tooth_big1;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=tooth_big2;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=tooth_small1;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=tooth_small2;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=tooth_spikes;
+spawnItems_nearCenter_chanceToReroll=0.3;
+
+specialSpawns=thingy_organic1;
+specialSpawns=thingy_organic2;
+specialSpawns=thingy_organic3;
+specialSpawns=thingy_organic4;
+specialSpawns=wallBubble1;
+specialSpawns=wallBubble2;
+specialSpawns=wallBubble3;
+
+
+[LevelDataZone]ID=organic2;
+
+zoneDirtPalette = pOrange;
+zoneDirtDarkPalette = pRedbrown;
+
+travelSong=PerituneMaterial_Suspense4_loop;
+travelSongVolume=0.95;
+combatSong=PerituneMaterial_Suspense4_loop;
+
+dark=true;
+darkR=250; darkG=250; darkB=250; 
+
+
+[LevelData] ID=organic2_final;
+minZoneSizeX = 39;
+minZoneSizeY = 68;
+maxZoneSizeX = 39;
+maxZoneSizeY = 70;
+
+cloneFrom=organic2;
+----
+
+
+
+----
+minSetPiecesPerRoom = 0;
+maxSetPiecesPerRoom = 0;
+
+
+----
+centerPieceChance_normal = 1;
+centerPieceChance_deadEnd = 1;
+centerPieceChance_1stRoom = 1;
+
+centerPieces = spCorespawner1;
+centerPiecesChanceToReroll = 0.9;
+centerPieces = spHeart1;
+centerPiecesChanceToReroll = 0;
+
+
+cannotHaveMandatorySetOrCenterPieces=true;
+
+----
+
+spawnItems_nearWall_chance = 0.16;
+spawnItems_nearWall=rubble;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=tooth_spikes;
+spawnItems_nearWall_chanceToReroll=0.3;
+
+spawnItems_nearCenter_chance = 0.18;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters4;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters5;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters6;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters4;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters5;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=blisters6;
+spawnItems_nearCenter_chanceToReroll=0;
+
+spawnItems_nearCenter=rubble;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=organic_seam;
+spawnItems_nearCenter_chanceToReroll=0.9;
+spawnItems_nearCenter=organic_hole_slow;
+spawnItems_nearCenter_chanceToReroll=0.95;
+spawnItems_nearCenter=bubble_small;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=bubble_big;
+spawnItems_nearCenter_chanceToReroll=0.21;
+spawnItems_nearCenter=bubble_big_item;
+spawnItems_nearCenter_chanceToReroll=0.82;
+spawnItems_nearCenter=bubble_bigger_item;
+spawnItems_nearCenter_chanceToReroll=0.99;
+
+
+spawnItems_nearCenter=tooth_big1;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=tooth_big2;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=tooth_small1;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=tooth_small2;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=tooth_spikes;
+spawnItems_nearCenter_chanceToReroll=0.3;
+
+specialSpawns=thingy_organic1;
+specialSpawns=thingy_organic2;
+specialSpawns=thingy_organic3;
+specialSpawns=thingy_organic4;
+specialSpawns=wallBubble1;
+specialSpawns=wallBubble2;
+specialSpawns=wallBubble3;
+
+
+[LevelDataZone]ID=organic2_final;
+
+zoneDirtPalette = pOrange;
+zoneDirtDarkPalette = pRedbrown;
+bgTerrainTypeID=abyss;
+bgParallaxRatio=0;
+
+travelSong=PerituneMaterial_Suspense4_loop;
+travelSongVolume=1;
+combatSong=DNA;
+
+dark=true;
+darkR=250; darkG=250; darkB=250; 
+
+
+

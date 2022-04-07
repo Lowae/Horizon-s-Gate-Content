@@ -1,0 +1,104 @@
+[DialogNode] ID=port10_guy1a;
+animations=;
+animations=sigh;
+animations=chargePose;
+statements=It's a shame...<p> truly a shame...!;
+statements=Dolor is having hard times as it is, and now the southern channel is blocked by Hill Mold!;
+statements=Seartial is being so slow about clearing it!!;
+
+
+[DialogOption] text=I could clear it for you.;
+animation=sly;
+formulaReq=1 - g:mold1cleared;
+nodeToConnectTo=port10_guy1b;
+[DialogOption] text=I already cleared it.;
+animation=sly;
+formulaReq=g:mold1cleared;
+newLineOfOptions=true;
+nodeToConnectTo=port10_guy2b;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=port10_guy1b;
+animations=happy;
+animations=;
+animations=chargePose;
+animations=sigh;
+animations=;
+statements=T-<p>truly?<p> I would be much indebted if you would!;
+statements=There are often dangerous parasites...<p> but I'm sure you can handle it!;
+statements=You must approach the blockage from the southern side,<p> and then destroy the part that extends over the river!;
+statements=To destroy it you must <color=DarkRed>burn<color=> and then <color=DarkRed>chop<color=> it!;
+statements=It's persistent stuff, and won't go any other way...;
+statements=Good luck!;
+specialEffect=setDefaultNode,port10_guy2a;
+nextNodeID=;
+
+--
+
+[DialogNode] ID=port10_guy2a;
+animations=chargePose;
+animations=sigh;
+statements=I haven't forgotten your promise!;
+statements=Please <color=DarkRed>burn<color=> and <color=DarkRed>break<color=> that Hill Mold...!;
+
+[DialogOption] text=I'm still working on it.;
+animation=sigh;
+formulaReq=1 - g:mold1cleared;
+nodeToConnectTo=;
+[DialogOption] text=I cleared it!;
+animation=;
+formulaReq=g:mold1cleared;
+newLineOfOptions=true;
+nodeToConnectTo=port10_guy2b;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=port10_guy2b;
+animations=chargePose;
+animations=happy;
+statements=Y-<p>you have?!;
+statements=Thank Ensu!<p> And thank you!;
+nextNodeID=port10_guy2c;
+
+[DialogNode] ID=port10_guy2c;
+animations=handsupPose;
+animations=chargePose;
+animations=sigh;
+animations=happy;
+statements=Please take this $500 as payment!;
+statements=No, no, take it!<p> It's the least I can do!;
+statements=<speed=0.9>I-<p>it's actually the most I can do, too...<p> the blockage hit my business hard...!;
+statements=But thank you again!<p> I'll remember your kindness!;
+specialEffect=addgp,500;
+specialEffect=setDefaultNode,port10_guy3a;
+specialEffect=fx,sfx_questComplete;
+specialEffect=modFame,combat,10;
+
+
+[DialogNode] ID=port10_guy3a;
+animations=happy;
+animations=;
+statements=Thank you again!;
+statements=Having the trade routes open means a lot for me!;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,978 @@
+[Zone]  ID=port30; dark=True; timeUntilNewDay=24; showFogOfWar=False; fogOfWar=True; minimapEnabled=True; allowCameraPastZoneEdges=False; cantAct=False; cantGameOver=False; alwaysKeepWeaponsUnsheathed=False; peaceful=True; overseerMode=False; rollingPinStyle=False; drawSky=False; drawSky_overrideYpos=-1; boatZone=False; wind=False; overworld=False; canDropItems=True; 
+ travelSong=PM-Exotic2; travelSongVolume=1; travelSongPitch=0; combatSong=; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=96; darkG=102; darkB=159; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=ocean; bgFX_sineWave=12; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=p65; zoneGrassPalette=overworld1; zoneGrassDarkPalette=pCoralHilt; zoneStonePalette=p65; zoneStoneDarkPalette=pTeal; zoneStoneLightPalette=p13; zoneWaterPalette=pBlue; zoneDirtDarkPalette=pTeal2; zoneWoodPalette=p41; zoneWoodDarkPalette=p41; zoneMisc1Palette=pRedbrown; zoneMisc2Palette=pTeal2; zoneMisc3Palette=pGreyblue2; zoneMisc4Palette=p41; zoneMisc5Palette=p49; zoneMisc6Palette=pOrange; zoneMisc7Palette=pYellow; zoneMisc8Palette=pPurple; 
+
+combatMode=False; zoneFX=w_cloudshade;zoneFXTime=9999999;zoneFX_x=0;zoneFX_y=0;
+
+[Item] ID=rubble_coral; q=1; r=-360; x=8; y=27;
+[Item] ID=gp; q=3; bu=True; x=8; y=28;
+[Item] ID=rubble_coral; q=1; r=-360; x=8; y=30;
+[Item] ID=puddle_zone; q=3; r=-360; x=8; y=31;
+[Item] ID=coral; q=1; r=-360; x=9; y=27;
+[Item] ID=crab1_runL; q=1; x=9; y=29;
+[Item] ID=rubble_coral; q=1; r=-360; x=9; y=31;
+[Item] ID=rubble_coral; q=1; r=-360; x=10; y=26;
+[Item] ID=shoreEdge1; q=1; r=-360; x=10; y=33;
+[Item] ID=shoreEdge1; q=1; r=-360; x=10; y=37;
+[Item] ID=puddle_zone; q=4; x=11; y=25;
+[Item] ID=rubble_coral; q=1; r=-360; x=11; y=30;
+[Item] ID=travelPoint_6D; q=1; r=90; x=11; y=31;
+[Item] ID=rubble_coral; q=1; r=-360; x=11; y=36;
+[Item] ID=shoreEdge1; q=1; r=-360; x=11; y=42;
+[Item] ID=shoreEdge1; q=1; r=-360; x=12; y=20;
+[Item] ID=rubble_coral; q=1; r=-360; x=12; y=22;
+[Item] ID=travelPoint_7D; q=1; r=180; x=12; y=23;
+[Item] ID=rubble_coral; q=1; r=-360; x=12; y=28;
+[Item] ID=rubble_coral; q=1; r=-360; x=12; y=31;
+[Item] ID=rubble_coral; q=1; r=-360; x=12; y=38;
+[Item] ID=reef_coral7; q=1; r=-360; x=12; y=39;
+[Item] ID=reef_coral7; q=1; r=-360; x=12; y=40;
+[Item] ID=reef_coral7; q=1; r=360; x=12; y=41;
+[Item] ID=rubble_coral; q=1; r=-360; x=13; y=18;
+[Item] ID=puddle_zone; q=4; x=13; y=19;
+[Item] ID=rubble_coral; q=1; r=-360; x=13; y=23;
+[Item] ID=reef_plant1; q=1; r=-360; x=13; y=27;
+[Item] ID=rubble_coral; q=1; r=-360; x=13; y=30;
+[Item] ID=coral; q=1; bu=True; x=13; y=31;
+[Item] ID=rubble_coral; q=1; r=-360; x=13; y=32;
+[Item] ID=rubble_coral; q=1; r=-360; x=13; y=36;
+[Item] ID=reef_plant1; q=1; r=360; x=13; y=37;
+[Item] ID=reef_coral7; q=1; r=-360; x=13; y=40;
+[Item] ID=reef_coral7; q=1; r=360; x=13; y=41;
+[Item] ID=shoreEdge1; q=1; r=-360; x=13; y=44;
+[Item] ID=rubble_coral; q=1; r=-360; x=14; y=16;
+[Item] ID=puddle_zone; q=3; x=14; y=17;
+[Item] ID=rocks1; q=1; x=14; y=19;
+[Item] ID=lifeshard; q=1; bu=True; x=14; y=19;
+[Item] ID=rubble_coral; q=1; r=-360; x=14; y=21;
+[Item] ID=roof3b_style4_p; q=4; x=14; y=26;
+[Item] ID=roof5_style4_p; q=4; x=14; y=27;
+[Item] ID=roof5_style4_p; q=4; x=14; y=28;
+[Item] ID=roof5_style4_p; q=4; x=14; y=29;
+[Item] ID=roof9_style4_p; q=4; x=14; y=30;
+[Item] ID=cantBlackenTile; q=1; x=14; y=31;
+[Item] ID=cantBlackenTile; q=1; x=14; y=32;
+[Item] ID=roof3b_style4_p; q=4; x=14; y=33;
+[Item] ID=roof5_style4_p; q=4; x=14; y=34;
+[Item] ID=roof5_style4_p; q=4; x=14; y=35;
+[Item] ID=roof9_style4_p; q=4; x=14; y=36;
+[Item] ID=fade_s_roof; q=1; r=180; x=14; y=37;
+[Item] ID=fade_s_roof2; q=1; r=180; x=14; y=37;
+[Item] ID=cantBlackenTile; q=1; x=14; y=37;
+[Item] ID=cantBlackenTile; q=1; x=14; y=38;
+[Item] ID=travelPoint_1B; q=1; r=90; x=14; y=39;
+[Item] ID=rubble_coral; q=1; r=-360; x=14; y=41;
+[Item] ID=rubble_coral; q=1; r=-360; x=14; y=43;
+[Item] ID=rubble_coral; q=1; r=-360; x=15; y=17;
+[Item] ID=puddle_zone; q=1; x=15; y=19;
+[Item] ID=roof3_style4_p; q=4; x=15; y=26;
+[Item] ID=roof7_style4_p; q=4; x=15; y=27;
+[Item] ID=painting_small24; q=1; x=15; y=27;
+[Item] ID=roof7_style4_p; q=4; x=15; y=28;
+[Item] ID=roof7_style4_p; q=4; x=15; y=29;
+[Item] ID=lumber_pile1_long_top; q=2; x=15; y=29;
+[Item] ID=travelPoint_0C; q=1; x=15; y=29;
+[Item] ID=roof7_style4_p; q=4; x=15; y=30;
+[Item] ID=lumber_pile1_long_btm; q=2; x=15; y=30;
+[Item] ID=travelPoint_4C; q=1; x=15; y=30;
+[Item] ID=roof7_style4_p; q=4; x=15; y=31;
+[Item] ID=roof7_style4_p; q=4; x=15; y=32;
+[Item] ID=roof7_style4_p; q=4; x=15; y=33;
+[Item] ID=roof7_style4_p; q=4; x=15; y=34;
+[Item] ID=lamp_wall; q=1; x=15; y=34;
+[Item] ID=roof7_style4_p; q=4; x=15; y=35;
+[Item] ID=roof11_style4_p; q=4; x=15; y=36;
+[Item] ID=wall_L5; q=1; x=15; y=37;
+[Item] ID=fade_s_roof; q=1; r=180; x=15; y=37;
+[Item] ID=fade_s_roof2; q=1; r=180; x=15; y=37;
+[Item] ID=rug_corner3; q=2; x=15; y=37;
+[Item] ID=window_open_roof_day; q=2; x=15; y=37;
+[Item] ID=cantBlackenTile; q=1; x=15; y=38;
+[Item] ID=brazier; q=1; x=15; y=39;
+[Item] ID=travelPoint_2D; q=1; r=180; x=15; y=41;
+[Item] ID=shoreEdge1; q=1; r=360; x=15; y=44;
+[Item] ID=reef_coral6; q=1; r=-360; x=16; y=15;
+[Item] ID=rubble_coral; q=1; r=-360; x=16; y=24;
+[Item] ID=roof3b_style4_p; q=4; x=16; y=26;
+[Item] ID=roof6_style4_p; q=4; x=16; y=27;
+[Item] ID=roof6_style4_p; q=4; x=16; y=28;
+[Item] ID=lumber_pile1_long_top; q=2; r=-90; x=16; y=28;
+[Item] ID=travelPoint_2C; q=1; r=90; x=16; y=28;
+[Item] ID=roof6_style4_p; q=4; x=16; y=29;
+[Item] ID=stand_cornerTop; q=1; x=16; y=29;
+[Item] ID=travelPoint_9C; q=1; x=16; y=29;
+[Item] ID=plate; q=1; x=16; y=29;
+[Item] ID=item_cantGrabOrPlace; q=1; x=16; y=29;
+[Item] ID=roof6_style4_p; q=4; x=16; y=30;
+[Item] ID=stand_cornerBtm; q=1; x=16; y=30;
+[Item] ID=roof6_style4_p; q=4; x=16; y=31;
+[Item] ID=roof6_style4_p; q=4; x=16; y=32;
+[Item] ID=rug_small_corner3; q=3; x=16; y=32;
+[Item] ID=roof6_style4_p; q=4; x=16; y=33;
+[Item] ID=rug_small_edge3; q=3; r=270; x=16; y=33;
+[Item] ID=roof6_style4_p; q=4; x=16; y=34;
+[Item] ID=rug_small_corner3; q=3; r=270; x=16; y=34;
+[Item] ID=roof6_style4_p; q=4; x=16; y=35;
+[Item] ID=roof10_style4_p; q=4; x=16; y=36;
+[Item] ID=wall_L5; q=1; x=16; y=37;
+[Item] ID=fade_s_roof; q=1; r=180; x=16; y=37;
+[Item] ID=fade_s_roof2; q=1; r=180; x=16; y=37;
+[Item] ID=rug_edge3; q=2; x=16; y=37;
+[Item] ID=doorway_wideL; q=1; x=16; y=38;
+[Item] ID=cantBlackenTile; q=1; x=16; y=38;
+[Item] ID=bottle; q=1; bu=True; x=17; y=15;
+[Item] ID=rocks2; q=2; x=17; y=17;
+[Item] ID=shoreEdge1; q=1; r=-360; x=17; y=21;
+[Item] ID=roof3b_style4_p; q=4; x=17; y=26;
+[Item] ID=roof6_style4_p; q=4; x=17; y=27;
+[Item] ID=roof6_style4_p; q=4; x=17; y=28;
+[Item] ID=lumber_pile1_long_top; q=2; r=90; x=17; y=28;
+[Item] ID=travelPoint_3C; q=1; r=90; x=17; y=28;
+[Item] ID=roof6_style4_p; q=4; x=17; y=29;
+[Item] ID=stand_cornerTop; q=1; r=-360; x=17; y=29;
+[Item] ID=roof6_style4_p; q=4; x=17; y=30;
+[Item] ID=stand_cornerBtm; q=1; r=-360; x=17; y=30;
+[Item] ID=plate; q=1; x=17; y=30;
+[Item] ID=fork; q=1; x=17; y=30;
+[Item] ID=item_cantGrabOrPlace; q=1; x=17; y=30;
+[Item] ID=roof6_style4_p; q=4; x=17; y=31;
+[Item] ID=roof6_style4_p; q=4; x=17; y=32;
+[Item] ID=rug_small_corner3; q=3; r=90; x=17; y=32;
+[Item] ID=roof6_style4_p; q=4; x=17; y=33;
+[Item] ID=rug_small_edge3; q=3; r=90; x=17; y=33;
+[Item] ID=roof6_style4_p; q=4; x=17; y=34;
+[Item] ID=rug_small_corner3; q=3; r=180; x=17; y=34;
+[Item] ID=roof6_style4_p; q=4; x=17; y=35;
+[Item] ID=roof10_style4_p; q=4; x=17; y=36;
+[Item] ID=wall_L5; q=1; x=17; y=37;
+[Item] ID=fade_s_roof; q=1; r=180; x=17; y=37;
+[Item] ID=fade_s_roof2; q=1; r=180; x=17; y=37;
+[Item] ID=rug_edge3; q=2; x=17; y=37;
+[Item] ID=doorway_wideR; q=1; x=17; y=38;
+[Item] ID=cantBlackenTile; q=1; x=17; y=38;
+[Item] ID=rocks1; q=1; x=18; y=10;
+[Item] ID=rubble_coral; q=1; r=-360; x=18; y=11;
+[Item] ID=rubble_coral; q=1; r=-360; x=18; y=12;
+[Item] ID=rubble_coral; q=1; r=-360; x=18; y=20;
+[Item] ID=shoreEdge1; q=1; r=-360; x=18; y=23;
+[Item] ID=roof3_style4_p; q=4; x=18; y=26;
+[Item] ID=roof7_style4_p; q=4; x=18; y=27;
+[Item] ID=lamp_wall; q=1; x=18; y=27;
+[Item] ID=roof7_style4_p; q=4; x=18; y=28;
+[Item] ID=roof7_style4_p; q=4; x=18; y=29;
+[Item] ID=lumber_pile1_long_top; q=2; r=-360; x=18; y=29;
+[Item] ID=travelPoint_1C; q=1; r=180; x=18; y=29;
+[Item] ID=roof7_style4_p; q=4; x=18; y=30;
+[Item] ID=lumber_pile1_long_btm; q=2; r=-360; x=18; y=30;
+[Item] ID=travelPoint_5C; q=1; r=180; x=18; y=30;
+[Item] ID=roof7_style4_p; q=4; x=18; y=31;
+[Item] ID=roof7_style4_p; q=4; x=18; y=32;
+[Item] ID=roof7_style4_p; q=4; x=18; y=33;
+[Item] ID=roof7_style4_p; q=4; x=18; y=34;
+[Item] ID=roof7_style4_p; q=4; x=18; y=35;
+[Item] ID=chest_stone1_locked; q=1; oX=0; oY=-6; x=18; y=35; containerID=0;
+[Item] ID=roof11_style4_p; q=4; x=18; y=36;
+[Item] ID=travelPoint_0B; q=1; r=180; x=18; y=36;
+[Item] ID=wall_L5; q=1; x=18; y=37;
+[Item] ID=fade_s_roof; q=1; r=180; x=18; y=37;
+[Item] ID=fade_s_roof2; q=1; r=180; x=18; y=37;
+[Item] ID=rug_corner3; q=2; r=90; x=18; y=37;
+[Item] ID=window_open_roof_day; q=2; x=18; y=37;
+[Item] ID=cantBlackenTile; q=1; x=18; y=38;
+[Item] ID=rocks1; q=1; x=18; y=39;
+[Item] ID=travelPoint_1D; q=1; r=90; x=18; y=39;
+[Item] ID=plant_anemone_small3; q=1; r=360; x=18; y=41;
+[Item] ID=rubble_coral; q=1; r=-360; x=19; y=8;
+[Item] ID=rocks1; q=8; x=19; y=10;
+[Item] ID=debris_small3; q=1; x=19; y=11;
+[Item] ID=rubble_coral; q=1; r=-360; x=19; y=14;
+[Item] ID=brazier; q=1; x=19; y=16;
+[Item] ID=travelPoint_8D; q=1; r=90; x=19; y=22;
+[Item] ID=roof3b_style4_p; q=4; x=19; y=26;
+[Item] ID=roof8_style4_p; q=4; x=19; y=27;
+[Item] ID=roof8_style4_p; q=4; x=19; y=28;
+[Item] ID=roof8_style4_p; q=4; x=19; y=29;
+[Item] ID=roof12_style4_p; q=4; x=19; y=30;
+[Item] ID=cantBlackenTile; q=1; x=19; y=31;
+[Item] ID=fade_s_roof3_faint; q=1; x=19; y=31;
+[Item] ID=cantBlackenTile; q=1; x=19; y=32;
+[Item] ID=fade_f1; q=1; x=19; y=32;
+[Item] ID=rubble_coral; q=1; r=-360; x=19; y=33;
+[Item] ID=roof3b_style4_p; q=4; x=19; y=33;
+[Item] ID=fade_f1; q=1; x=19; y=33;
+[Item] ID=roof8_style4_p; q=4; x=19; y=34;
+[Item] ID=roof8_style4_p; q=4; x=19; y=35;
+[Item] ID=roof12_style4_p; q=4; x=19; y=36;
+[Item] ID=fade_s_roof; q=1; r=180; x=19; y=37;
+[Item] ID=fade_s_roof2; q=1; r=180; x=19; y=37;
+[Item] ID=cantBlackenTile; q=1; x=19; y=37;
+[Item] ID=cantBlackenTile; q=1; x=19; y=38;
+[Item] ID=plant_anemone_med; q=1; r=-360; x=19; y=41;
+[Item] ID=roof3b_style4_p; q=4; x=20; y=8;
+[Item] ID=roof5_style4_p; q=4; x=20; y=9;
+[Item] ID=roof5_style4_p; q=4; x=20; y=10;
+[Item] ID=roof5_style4_p; q=4; x=20; y=11;
+[Item] ID=roof5_style4_p; q=4; x=20; y=12;
+[Item] ID=roof9_style4_p; q=4; x=20; y=13;
+[Item] ID=fade_s_roof; q=1; r=180; x=20; y=14;
+[Item] ID=fade_s_roof2; q=1; r=180; x=20; y=14;
+[Item] ID=cantBlackenTile; q=1; x=20; y=14;
+[Item] ID=cantBlackenTile; q=1; x=20; y=15;
+[Item] ID=shoreEdge1; q=1; r=-360; x=20; y=23;
+[Item] ID=shoreEdge1; q=1; x=20; y=23;
+[Item] ID=waterfall1; q=1; x=20; y=24;
+[Item] ID=rubble_coral; q=1; r=-360; x=20; y=25;
+[Item] ID=fade_f1; q=1; x=20; y=28;
+[Item] ID=rocks1; q=1; x=20; y=28;
+[Item] ID=fade_f1; q=1; x=20; y=29;
+[Item] ID=fade_f1; q=1; x=20; y=30;
+[Item] ID=fade_f1; q=1; x=20; y=31;
+[Item] ID=rubble_coral; q=1; r=-360; x=20; y=32;
+[Item] ID=fade_s_diag_half2; q=1; r=-180; x=20; y=32;
+[Item] ID=fade_s_diag_half1; q=1; r=-180; x=20; y=32;
+[Item] ID=rubble_coral; q=1; r=-360; x=20; y=33;
+[Item] ID=reef_plant3; q=1; r=360; x=20; y=34;
+[Item] ID=rubble_coral; q=1; r=-360; x=20; y=35;
+[Item] ID=fade_f1; q=1; x=20; y=35;
+[Item] ID=fade_f1; q=1; x=20; y=36;
+[Item] ID=sign_hanging2; q=1; r=-360; x=20; y=37;
+[Item] ID=sign_icon_cup; q=1; x=20; y=37;
+[Item] ID=fade_f1; q=1; x=20; y=37;
+[Item] ID=fade_s_diag_half2; q=1; r=-180; x=20; y=38;
+[Item] ID=fade_s_diag_half1; q=1; r=-180; x=20; y=38;
+[Item] ID=plant_anemone_small3; q=1; r=-360; x=20; y=41;
+[Item] ID=plant_anemone_small2; q=1; r=-360; x=20; y=41;
+[Item] ID=plant_anemone_small1; q=1; r=-360; x=20; y=41;
+[Item] ID=roof3_style4_p; q=4; x=21; y=8;
+[Item] ID=roof7_style4_p; q=4; x=21; y=9;
+[Item] ID=roof7_style4_p; q=4; x=21; y=10;
+[Item] ID=stand_cornerBtm; q=1; r=-360; x=21; y=10;
+[Item] ID=boat_model3; q=1; r=-360; x=21; y=10;
+[Item] ID=item_cantGrabOrPlace; q=1; x=21; y=10;
+[Item] ID=roof7_style4_p; q=4; x=21; y=11;
+[Item] ID=crab1_runL; q=1; x=21; y=11;
+[Item] ID=roof7_style4_p; q=4; x=21; y=12;
+[Item] ID=rug_small_corner3; q=2; x=21; y=12;
+[Item] ID=roof11_style4_p; q=4; x=21; y=13;
+[Item] ID=rug_small_edge3; q=2; r=270; x=21; y=13;
+[Item] ID=wall_L5; q=1; x=21; y=14;
+[Item] ID=fade_s_roof; q=1; r=180; x=21; y=14;
+[Item] ID=fade_s_roof2; q=1; r=180; x=21; y=14;
+[Item] ID=rug_small_edge3; q=2; r=270; x=21; y=14;
+[Item] ID=cantBlackenTile; q=1; x=21; y=15;
+[Item] ID=rubble_coral; q=1; r=-360; x=21; y=16;
+[Item] ID=rubble_coral; q=1; r=-360; x=21; y=17;
+[Item] ID=rubble_coral; q=1; r=-360; x=21; y=22;
+[Item] ID=pebbles1; q=1; r=180; x=21; y=34;
+[Item] ID=travelPoint_0D; q=1; x=21; y=34;
+[Item] ID=shoreEdge1; q=1; r=360; x=21; y=42;
+[Item] ID=rubble_coral; q=1; r=-360; x=22; y=7;
+[Item] ID=roof3b_style4_p; q=4; x=22; y=8;
+[Item] ID=roof6_style4_p; q=4; x=22; y=9;
+[Item] ID=curtain1_torn2_top; q=1; x=22; y=9;
+[Item] ID=roof6_style4_p; q=4; x=22; y=10;
+[Item] ID=lumber_pile1; q=2; r=-360; x=22; y=10;
+[Item] ID=roof6_style4_p; q=4; x=22; y=11;
+[Item] ID=roof6_style4_p; q=4; x=22; y=12;
+[Item] ID=rug_small_edge3; q=2; r=360; x=22; y=12;
+[Item] ID=roof10_style4_p; q=4; x=22; y=13;
+[Item] ID=rug_mid3; q=2; x=22; y=13;
+[Item] ID=wall_L5; q=1; x=22; y=14;
+[Item] ID=fade_s_roof; q=1; r=180; x=22; y=14;
+[Item] ID=fade_s_roof2; q=1; r=180; x=22; y=14;
+[Item] ID=rug_mid3; q=2; x=22; y=14;
+[Item] ID=doorway_wideL; q=1; x=22; y=15;
+[Item] ID=cantBlackenTile; q=1; x=22; y=15;
+[Item] ID=reef_plant3; q=1; r=-360; x=22; y=26;
+[Item] ID=shoreEdge1; q=1; r=360; x=22; y=40;
+[Item] ID=shoreEdge1; q=1; r=-360; x=22; y=40;
+[Item] ID=rubble_coral; q=1; r=-360; x=23; y=7;
+[Item] ID=roof3b_style4_p; q=4; x=23; y=8;
+[Item] ID=roof6_style4_p; q=4; x=23; y=9;
+[Item] ID=lamp_wall; q=1; x=23; y=9;
+[Item] ID=roof6_style4_p; q=4; x=23; y=10;
+[Item] ID=roof6_style4_p; q=4; x=23; y=11;
+[Item] ID=roof6_style4_p; q=4; x=23; y=12;
+[Item] ID=rug_small_edge3; q=2; r=360; x=23; y=12;
+[Item] ID=roof10_style4_p; q=4; x=23; y=13;
+[Item] ID=rug_mid3; q=2; x=23; y=13;
+[Item] ID=wall_L5; q=1; x=23; y=14;
+[Item] ID=fade_s_roof; q=1; r=180; x=23; y=14;
+[Item] ID=fade_s_roof2; q=1; r=180; x=23; y=14;
+[Item] ID=rug_mid3; q=2; x=23; y=14;
+[Item] ID=doorway_wideR; q=1; x=23; y=15;
+[Item] ID=cantBlackenTile; q=1; x=23; y=15;
+[Item] ID=travelPoint_5D; q=1; x=23; y=27;
+[Item] ID=rubble_coral; q=1; r=-360; x=23; y=39;
+[Item] ID=shoreEdge1; q=1; r=-360; x=23; y=42;
+[Item] ID=rocks1; q=7; x=24; y=7;
+[Item] ID=roof3_style4_p; q=4; x=24; y=8;
+[Item] ID=roof7_style4_p; q=4; x=24; y=9;
+[Item] ID=curtain1_torn3_top; q=1; x=24; y=9;
+[Item] ID=roof7_style4_p; q=4; x=24; y=10;
+[Item] ID=chest_stone1_locked; q=1; oX=0; oY=-4; x=24; y=10; containerID=1;
+[Item] ID=roof7_style4_p; q=4; x=24; y=11;
+[Item] ID=stand_cornerTop; q=1; x=24; y=11;
+[Item] ID=axe_coral; q=1; x=24; y=11; containerID=2;
+[Item] ID=item_cantGrabOrPlace; q=1; x=24; y=11;
+[Item] ID=roof7_style4_p; q=4; x=24; y=12;
+[Item] ID=stand_cornerBtm; q=1; r=360; x=24; y=12;
+[Item] ID=plate; q=1; x=24; y=12;
+[Item] ID=item_cantGrabOrPlace; q=1; x=24; y=12;
+[Item] ID=fish_flop; q=1; r=360; x=24; y=12;
+[Item] ID=roof11_style4_p; q=4; x=24; y=13;
+[Item] ID=rug_small_edge3; q=2; r=90; x=24; y=13;
+[Item] ID=wall_L5; q=1; x=24; y=14;
+[Item] ID=fade_s_roof; q=1; r=180; x=24; y=14;
+[Item] ID=fade_s_roof2; q=1; r=180; x=24; y=14;
+[Item] ID=rug_small_edge3; q=2; r=90; x=24; y=14;
+[Item] ID=cantBlackenTile; q=1; x=24; y=15;
+[Item] ID=rubble_coral; q=1; r=-360; x=24; y=16;
+[Item] ID=rubble_coral; q=1; r=-360; x=24; y=17;
+[Item] ID=rubble_coral; q=1; r=-360; x=24; y=21;
+[Item] ID=reef_plant2; q=1; r=-360; x=24; y=30;
+[Item] ID=rubble_coral; q=1; r=-360; x=24; y=32;
+[Item] ID=crab1_runR; q=1; x=24; y=34;
+[Item] ID=reef_plant1; q=1; r=-360; x=24; y=40;
+[Item] ID=plant_anemone_med; q=1; r=-360; x=24; y=41;
+[Item] ID=roof3b_style4_p; q=4; x=25; y=8;
+[Item] ID=roof8_style4_p; q=4; x=25; y=9;
+[Item] ID=roof8_style4_p; q=4; x=25; y=10;
+[Item] ID=roof8_style4_p; q=4; x=25; y=11;
+[Item] ID=roof8_style4_p; q=4; x=25; y=12;
+[Item] ID=roof12_style4_p; q=4; x=25; y=13;
+[Item] ID=fade_s_roof2; q=1; r=180; x=25; y=14;
+[Item] ID=cantBlackenTile; q=1; x=25; y=14;
+[Item] ID=fade_s_roof; q=1; r=180; x=25; y=14;
+[Item] ID=cantBlackenTile; q=1; x=25; y=15;
+[Item] ID=plant_anemone_small1; q=1; r=-360; x=25; y=24;
+[Item] ID=plant_anemone_small2; q=1; r=360; x=25; y=25;
+[Item] ID=plant_anemone_small3; q=1; r=360; x=25; y=25;
+[Item] ID=plant_anemone_small1; q=1; r=360; x=25; y=25;
+[Item] ID=rubble_coral; q=1; r=-360; x=25; y=28;
+[Item] ID=rocks1; q=6; r=-360; x=25; y=32;
+[Item] ID=crab1_runL; q=1; x=25; y=36;
+[Item] ID=plant_anemone_small1; q=1; r=-360; x=25; y=41;
+[Item] ID=plant_anemone_small3; q=1; r=-360; x=25; y=41;
+[Item] ID=fade_f1; q=1; x=26; y=10;
+[Item] ID=fade_f1; q=1; x=26; y=11;
+[Item] ID=fade_f1; q=1; x=26; y=12;
+[Item] ID=fade_f1; q=1; x=26; y=13;
+[Item] ID=sign_hanging2; q=1; r=-360; x=26; y=14;
+[Item] ID=sign_icon_boat; q=1; x=26; y=14;
+[Item] ID=fade_f1; q=1; x=26; y=14;
+[Item] ID=fade_s_diag_half2; q=1; r=-180; x=26; y=15;
+[Item] ID=fade_s_diag_half1; q=1; r=-180; x=26; y=15;
+[Item] ID=plant_anemone_small1; q=1; r=-360; x=26; y=23;
+[Item] ID=plant_anemone_small3; q=1; r=-360; x=26; y=23;
+[Item] ID=plant_anemone_small2; q=1; r=-360; x=26; y=23;
+[Item] ID=reef_plant3; q=1; r=-360; x=26; y=23;
+[Item] ID=coral; q=1; r=-360; x=26; y=24;
+[Item] ID=reef_coral4; q=1; r=-360; x=26; y=25;
+[Item] ID=rubble_coral; q=1; r=-360; x=26; y=33;
+[Item] ID=rubble_coral; q=1; r=-360; x=27; y=9;
+[Item] ID=dart; q=1; bu=True; x=27; y=11;
+[Item] ID=reef_coral1; q=1; r=360; x=27; y=23;
+[Item] ID=reef_coral5; q=1; r=-360; x=27; y=24;
+[Item] ID=reef_plant1; q=1; r=-360; x=27; y=25;
+[Item] ID=reef_coral7; q=1; r=-360; x=27; y=26;
+[Item] ID=plant_anemone_small1; q=1; r=360; x=27; y=27;
+[Item] ID=plant_anemone_small2; q=1; r=360; x=27; y=27;
+[Item] ID=plant_anemone_small3; q=1; r=-360; x=27; y=27;
+[Item] ID=plant_anemone_small3; q=1; r=360; x=27; y=29;
+[Item] ID=plant_anemone_small1; q=1; r=360; x=27; y=29;
+[Item] ID=rocks1; q=1; x=27; y=32;
+[Item] ID=pebbles2; q=1; x=27; y=34;
+[Item] ID=crab1_runR; q=1; x=27; y=35;
+[Item] ID=travelPoint_0; q=1; r=270; x=27; y=41;
+[Item] ID=rubble_coral; q=1; r=-360; x=28; y=12;
+[Item] ID=rubble_coral; q=1; r=-360; x=28; y=15;
+[Item] ID=rocks1; q=1; x=28; y=19;
+[Item] ID=plant_anemone_small3; q=1; r=360; x=28; y=23;
+[Item] ID=plant_anemone_small1; q=1; r=360; x=28; y=23;
+[Item] ID=coral_gold; q=1; x=28; y=24;
+[Item] ID=brazier; q=1; x=28; y=25;
+[Item] ID=reef_coral6; q=1; r=-360; x=28; y=26;
+[Item] ID=plant_anemone_small1; q=1; r=360; x=28; y=27;
+[Item] ID=shoreEdge1; q=1; r=-360; x=28; y=30;
+[Item] ID=shoreEdge1; q=1; x=28; y=30;
+[Item] ID=waterfall1; q=1; x=28; y=31;
+[Item] ID=travelPoint_9D; q=1; r=270; x=28; y=32;
+[Item] ID=sign_hanging2; q=1; x=28; y=36;
+[Item] ID=sign_icon_balance; q=1; x=28; y=36;
+[Item] ID=plant_anemone_med; q=1; r=-360; x=29; y=23;
+[Item] ID=plant_anemone_small2; q=1; r=-360; x=29; y=23;
+[Item] ID=reef_coral2; q=1; r=-360; x=29; y=24;
+[Item] ID=coral; q=1; x=29; y=25;
+[Item] ID=reef_coral1; q=1; r=-360; x=29; y=26;
+[Item] ID=plant_anemone_med; q=1; r=-360; x=29; y=27;
+[Item] ID=plant_anemone_small2; q=1; r=-360; x=29; y=27;
+[Item] ID=plant_anemone_small2; q=1; r=-360; x=29; y=29;
+[Item] ID=roof3b_style4_p; q=4; x=29; y=32;
+[Item] ID=roof5_style4_p; q=4; x=29; y=33;
+[Item] ID=roof5_style4_p; q=4; x=29; y=34;
+[Item] ID=roof9_style4_p; q=4; x=29; y=35;
+[Item] ID=fade_s_roof; q=1; r=180; x=29; y=36;
+[Item] ID=fade_s_roof2; q=1; r=180; x=29; y=36;
+[Item] ID=cantBlackenTile; q=1; x=29; y=36;
+[Item] ID=cantBlackenTile; q=1; x=29; y=37;
+[Item] ID=brazier; q=1; x=29; y=41;
+[Item] ID=shoreEdge1; q=1; r=-360; x=30; y=9;
+[Item] ID=rubble_coral; q=1; r=-360; x=30; y=14;
+[Item] ID=rubble_coral; q=1; r=-360; x=30; y=20;
+[Item] ID=reef_coral3; q=1; r=-360; x=30; y=24;
+[Item] ID=reef_plant2; q=1; r=-360; x=30; y=25;
+[Item] ID=shoreEdge1; q=1; r=-360; x=30; y=31;
+[Item] ID=roof3_style4_p; q=4; x=30; y=32;
+[Item] ID=roof7_style4_p; q=4; x=30; y=33;
+[Item] ID=roof7_style4_p; q=4; x=30; y=34;
+[Item] ID=chest_stone2_locked; q=1; oX=0; oY=-6; x=30; y=34; containerID=3;
+[Item] ID=roof11_style4_p; q=4; x=30; y=35;
+[Item] ID=wall_L5; q=1; x=30; y=36;
+[Item] ID=fade_s_roof; q=1; r=180; x=30; y=36;
+[Item] ID=fade_s_roof2; q=1; r=180; x=30; y=36;
+[Item] ID=doorway_wideL; q=1; x=30; y=37;
+[Item] ID=cantBlackenTile; q=1; x=30; y=37;
+[Item] ID=rubble_coral; q=1; r=-360; x=30; y=41;
+[Item] ID=rubble_coral; q=1; r=-360; x=31; y=8;
+[Item] ID=rocks2; q=2; x=31; y=13;
+[Item] ID=plant_anemone_small3; q=1; r=-360; x=31; y=24;
+[Item] ID=plant_anemone_small2; q=1; r=-360; x=31; y=24;
+[Item] ID=plant_anemone_small1; q=1; r=-360; x=31; y=24;
+[Item] ID=plant_anemone_med; q=1; r=-360; x=31; y=25;
+[Item] ID=plant_anemone_small1; q=1; r=-360; x=31; y=25;
+[Item] ID=plant_anemone_med; q=1; r=360; x=31; y=30;
+[Item] ID=roof3b_style4_p; q=4; x=31; y=32;
+[Item] ID=roof6_style4_p; q=4; x=31; y=33;
+[Item] ID=roof6_style4_p; q=4; x=31; y=34;
+[Item] ID=rug_corner3; q=2; r=360; x=31; y=34;
+[Item] ID=item_cantGrabOrPlace; q=1; x=31; y=34;
+[Item] ID=sandbag_movable; q=1; r=-360; x=31; y=34;
+[Item] ID=roof10_style4_p; q=4; x=31; y=35;
+[Item] ID=rug_corner3; q=2; r=270; x=31; y=35;
+[Item] ID=cargo_pearls; q=1; x=31; y=35;
+[Item] ID=item_cantGrabOrPlace; q=1; x=31; y=35;
+[Item] ID=wall_L5; q=1; x=31; y=36;
+[Item] ID=fade_s_roof; q=1; r=180; x=31; y=36;
+[Item] ID=fade_s_roof2; q=1; r=180; x=31; y=36;
+[Item] ID=doorway_wideR; q=1; x=31; y=37;
+[Item] ID=cantBlackenTile; q=1; x=31; y=37;
+[Item] ID=plant_anemone_med; q=1; r=360; x=31; y=41;
+[Item] ID=plant_anemone_small2; q=1; r=-360; x=31; y=41;
+[Item] ID=rubble_coral; q=1; r=-360; x=32; y=7;
+[Item] ID=reef_coral1; q=1; r=-360; x=32; y=10;
+[Item] ID=rubble_coral; q=1; r=-360; x=32; y=17;
+[Item] ID=plant_anemone_small3; q=1; r=-360; x=32; y=30;
+[Item] ID=roof3b_style4_p; q=4; x=32; y=32;
+[Item] ID=roof6_style4_p; q=4; x=32; y=33;
+[Item] ID=lamp_wall; q=1; x=32; y=33;
+[Item] ID=roof6_style4_p; q=4; x=32; y=34;
+[Item] ID=rug_edge3; q=2; r=360; x=32; y=34;
+[Item] ID=roof10_style4_p; q=4; x=32; y=35;
+[Item] ID=rug_edge3; q=2; r=180; x=32; y=35;
+[Item] ID=wall_L5; q=1; x=32; y=36;
+[Item] ID=fade_s_roof; q=1; r=180; x=32; y=36;
+[Item] ID=fade_s_roof2; q=1; r=180; x=32; y=36;
+[Item] ID=window_open_roof_day; q=2; x=32; y=36;
+[Item] ID=cantBlackenTile; q=1; x=32; y=37;
+[Item] ID=rocks1; q=1; r=-360; x=32; y=38;
+[Item] ID=rubble_coral; q=1; r=-360; x=32; y=40;
+[Item] ID=shoreEdge1; q=1; x=32; y=42;
+[Item] ID=rocks2; q=5; r=-360; x=33; y=8;
+[Item] ID=rubble_coral; q=1; r=-360; x=33; y=11;
+[Item] ID=rubble_coral; q=1; r=-360; x=33; y=15;
+[Item] ID=pebbles1; q=1; r=180; x=33; y=28;
+[Item] ID=roof3_style4_p; q=4; x=33; y=32;
+[Item] ID=roof7_style4_p; q=4; x=33; y=33;
+[Item] ID=tools2; q=1; x=33; y=33;
+[Item] ID=roof7_style4_p; q=4; x=33; y=34;
+[Item] ID=rug_corner3; q=2; r=90; x=33; y=34;
+[Item] ID=item_cantGrabOrPlace; q=1; x=33; y=34;
+[Item] ID=sandbag_movable; q=1; r=360; x=33; y=34;
+[Item] ID=roof11_style4_p; q=4; x=33; y=35;
+[Item] ID=rug_corner3; q=2; r=180; x=33; y=35;
+[Item] ID=food; q=1; x=33; y=35;
+[Item] ID=item_cantGrabOrPlace; q=1; x=33; y=35;
+[Item] ID=wall_L5; q=1; x=33; y=36;
+[Item] ID=fade_s_roof; q=1; r=180; x=33; y=36;
+[Item] ID=fade_s_roof2; q=1; r=180; x=33; y=36;
+[Item] ID=cantBlackenTile; q=1; x=33; y=37;
+[Item] ID=urn_empty4; q=1; oX=0; oY=-12; x=33; y=38;
+[Item] ID=item_cantGrabOrPlace; q=1; x=33; y=38;
+[Item] ID=shoreEdge1; q=1; x=33; y=41;
+[Item] ID=rocks1; q=1; x=34; y=8;
+[Item] ID=shoreEdge1; q=1; x=34; y=16;
+[Item] ID=rocks1; q=2; x=34; y=26;
+[Item] ID=sign_hanging2; q=1; x=34; y=28;
+[Item] ID=sign_icon_sword; q=1; x=34; y=28;
+[Item] ID=roof3b_style4_p; q=4; x=34; y=32;
+[Item] ID=roof8_style4_p; q=4; x=34; y=33;
+[Item] ID=roof8_style4_p; q=4; x=34; y=34;
+[Item] ID=roof12_style4_p; q=4; x=34; y=35;
+[Item] ID=fade_s_roof; q=1; r=180; x=34; y=36;
+[Item] ID=fade_s_roof2; q=1; r=180; x=34; y=36;
+[Item] ID=cantBlackenTile; q=1; x=34; y=36;
+[Item] ID=cantBlackenTile; q=1; x=34; y=37;
+[Item] ID=urn_empty3; q=1; oX=0; oY=-12; x=34; y=38;
+[Item] ID=item_cantGrabOrPlace; q=1; x=34; y=38;
+[Item] ID=cliffEdge1_SW; q=1; x=35; y=7;
+[Item] ID=shoreEdge1; q=1; r=360; x=35; y=14;
+[Item] ID=shoreEdge1; q=1; r=-360; x=35; y=15;
+[Item] ID=rubble_coral; q=1; r=-360; x=35; y=19;
+[Item] ID=roof3b_style4_p; q=5; x=35; y=24;
+[Item] ID=roof5_style4_p; q=5; x=35; y=25;
+[Item] ID=roof5_style4_p; q=5; x=35; y=26;
+[Item] ID=roof9_style4_p; q=5; x=35; y=27;
+[Item] ID=fade_s_roof; q=1; r=180; x=35; y=28;
+[Item] ID=fade_s_roof2; q=1; r=180; x=35; y=28;
+[Item] ID=cantBlackenTile; q=1; x=35; y=28;
+[Item] ID=cantBlackenTile; q=1; x=35; y=29;
+[Item] ID=shoreEdge1; q=1; r=-360; x=35; y=31;
+[Item] ID=fade_f1; q=1; x=35; y=34;
+[Item] ID=rocks1; q=1; x=35; y=35;
+[Item] ID=fade_f1; q=1; x=35; y=35;
+[Item] ID=rocks1; q=4; x=35; y=36;
+[Item] ID=fade_f1; q=1; x=35; y=36;
+[Item] ID=rocks2; q=3; x=35; y=37;
+[Item] ID=fade_s_diag_half2; q=1; r=-180; x=35; y=37;
+[Item] ID=fade_s_diag_half1; q=1; r=-180; x=35; y=37;
+[Item] ID=shoreEdge1; q=1; r=-360; x=35; y=41;
+[Item] ID=cliffEdge1_corner; q=1; x=36; y=7;
+[Item] ID=cliffEdge1_W; q=1; x=36; y=8;
+[Item] ID=cliffEdge1_W; q=1; x=36; y=9;
+[Item] ID=cliffEdge1_SW; q=1; x=36; y=10;
+[Item] ID=rubble_coral; q=1; r=-360; x=36; y=14;
+[Item] ID=rubble_coral; q=1; r=-360; x=36; y=18;
+[Item] ID=roof3_style4_p; q=5; x=36; y=24;
+[Item] ID=roof7_style4_p; q=5; x=36; y=25;
+[Item] ID=roof7_style4_p; q=5; x=36; y=26;
+[Item] ID=stand_cornerBtm; q=1; x=36; y=26;
+[Item] ID=sword_coral; q=1; x=36; y=26; containerID=4;
+[Item] ID=item_cantGrabOrPlace; q=1; x=36; y=26;
+[Item] ID=roof11_style4_p; q=5; x=36; y=27;
+[Item] ID=wall_L5; q=1; x=36; y=28;
+[Item] ID=fade_s_roof; q=1; r=180; x=36; y=28;
+[Item] ID=fade_s_roof2; q=1; r=180; x=36; y=28;
+[Item] ID=carpet6; q=2; x=36; y=28;
+[Item] ID=carpet_corner2; q=2; x=36; y=28;
+[Item] ID=cantBlackenTile; q=1; x=36; y=29;
+[Item] ID=doorway; q=1; x=36; y=29;
+[Item] ID=rubble_coral; q=1; r=-360; x=36; y=33;
+[Item] ID=travelPoint_3D; q=1; x=36; y=35;
+[Item] ID=cliffEdge1_NW; q=1; x=36; y=37;
+[Item] ID=cliffEdge1_W_top; q=1; x=36; y=38;
+[Item] ID=cliffEdge1_SW; q=1; x=36; y=39;
+[Item] ID=rubble_coral; q=1; r=-360; x=36; y=40;
+[Item] ID=shoreEdge1; q=1; r=-360; x=36; y=42;
+[Item] ID=rubble_coral; q=1; r=-360; x=37; y=7;
+[Item] ID=cliffEdge1_S_stairs; q=1; x=37; y=10;
+[Item] ID=rubble_coral; q=1; r=-360; x=37; y=17;
+[Item] ID=roof3b_style4_p; q=5; x=37; y=24;
+[Item] ID=roof6_style4_p; q=5; x=37; y=25;
+[Item] ID=roof6_style4_p; q=5; x=37; y=26;
+[Item] ID=stand_cornerBtm; q=1; r=-360; x=37; y=26;
+[Item] ID=bow_coral; q=1; x=37; y=26; containerID=5;
+[Item] ID=item_cantGrabOrPlace; q=1; x=37; y=26;
+[Item] ID=roof10_style4_p; q=5; x=37; y=27;
+[Item] ID=wall_L5; q=1; x=37; y=28;
+[Item] ID=fade_s_roof; q=1; r=180; x=37; y=28;
+[Item] ID=fade_s_roof2; q=1; r=180; x=37; y=28;
+[Item] ID=carpet6; q=2; x=37; y=28;
+[Item] ID=carpet_edge2; q=2; x=37; y=28;
+[Item] ID=cantBlackenTile; q=1; x=37; y=29;
+[Item] ID=shoreEdge1; q=1; r=-360; x=37; y=32;
+[Item] ID=debris_small3; q=1; x=37; y=34;
+[Item] ID=brazier; q=1; x=37; y=35;
+[Item] ID=travelPoint_4D; q=1; r=270; x=37; y=36;
+[Item] ID=cliffEdge1_N; q=1; x=37; y=37;
+[Item] ID=rubble_coral; q=1; r=-360; x=37; y=38;
+[Item] ID=cliffEdge1_corner; q=1; x=37; y=39;
+[Item] ID=cliffEdge1_SW; q=1; x=37; y=40;
+[Item] ID=rubble_coral; q=1; r=-360; x=37; y=41;
+[Item] ID=plant_anemone_small2; q=1; r=-360; x=38; y=7;
+[Item] ID=xpGem; q=1; bu=True; x=38; y=7;
+[Item] ID=crab1_runR; q=1; x=38; y=7;
+[Item] ID=cliffEdge1_corner; q=1; x=38; y=10;
+[Item] ID=cliffEdge1_W; q=1; x=38; y=11;
+[Item] ID=cliffEdge1_W; q=1; x=38; y=12;
+[Item] ID=cliffEdge1_W; q=1; x=38; y=13;
+[Item] ID=cliffEdge1_SW; q=1; x=38; y=14;
+[Item] ID=rubble_coral; q=1; r=-360; x=38; y=21;
+[Item] ID=roof3_style4_p; q=5; x=38; y=24;
+[Item] ID=roof7_style4_p; q=5; x=38; y=25;
+[Item] ID=tools3; q=1; x=38; y=25;
+[Item] ID=roof7_style4_p; q=5; x=38; y=26;
+[Item] ID=spear_coral; q=1; x=38; y=26; containerID=6;
+[Item] ID=item_cantGrabOrPlace; q=1; x=38; y=26;
+[Item] ID=roof11_style4_p; q=5; x=38; y=27;
+[Item] ID=wall_L5; q=1; x=38; y=28;
+[Item] ID=fade_s_roof; q=1; r=180; x=38; y=28;
+[Item] ID=fade_s_roof2; q=1; r=180; x=38; y=28;
+[Item] ID=carpet6; q=2; x=38; y=28;
+[Item] ID=carpet_corner2; q=2; r=90; x=38; y=28;
+[Item] ID=window_open_roof_day; q=2; x=38; y=28;
+[Item] ID=cantBlackenTile; q=1; x=38; y=29;
+[Item] ID=reef_plant2; q=1; r=-360; x=38; y=35;
+[Item] ID=cliffEdge1_N; q=1; x=38; y=37;
+[Item] ID=rubble_coral; q=1; r=-360; x=38; y=38;
+[Item] ID=rubble_coral; q=1; r=-360; x=38; y=39;
+[Item] ID=cliffEdge1_S; q=1; x=38; y=40;
+[Item] ID=rubble_coral; q=1; r=-360; x=38; y=41;
+[Item] ID=rubble_coral; q=1; r=-360; x=39; y=7;
+[Item] ID=sign_hanging2; q=1; x=39; y=11;
+[Item] ID=sign_icon_book; q=1; x=39; y=11;
+[Item] ID=cliffEdge1_S; q=1; x=39; y=14;
+[Item] ID=rubble_coral; q=1; r=-360; x=39; y=15;
+[Item] ID=roof3b_style4_p; q=5; x=39; y=24;
+[Item] ID=roof6_style4_p; q=5; x=39; y=25;
+[Item] ID=lamp_wall; q=1; x=39; y=25;
+[Item] ID=roof6_style4_p; q=5; x=39; y=26;
+[Item] ID=roof10_style4_p; q=5; x=39; y=27;
+[Item] ID=fade_s_roof; q=1; r=180; x=39; y=28;
+[Item] ID=fade_s_roof2; q=1; r=180; x=39; y=28;
+[Item] ID=wall_L5; q=1; x=39; y=28;
+[Item] ID=window_open_roof_day; q=2; x=39; y=28;
+[Item] ID=cantBlackenTile; q=1; x=39; y=29;
+[Item] ID=rubble_coral; q=1; r=-360; x=39; y=31;
+[Item] ID=rubble_coral; q=1; r=-360; x=39; y=36;
+[Item] ID=cliffEdge1_NW; q=1; r=-360; x=39; y=37;
+[Item] ID=cliffEdge1_E_top; q=1; x=39; y=38;
+[Item] ID=cliffEdge1_E; q=1; x=39; y=39;
+[Item] ID=cliffEdge1_SW; q=1; r=-360; x=39; y=40;
+[Item] ID=shoreEdge1; q=1; r=360; x=39; y=42;
+[Item] ID=roof3b_style4_p; q=4; x=40; y=7;
+[Item] ID=rocks2; q=2; x=40; y=7;
+[Item] ID=roof5_style4_p; q=4; x=40; y=8;
+[Item] ID=roof5_style4_p; q=4; x=40; y=9;
+[Item] ID=roof9_style4_p; q=4; x=40; y=10;
+[Item] ID=fade_s_roof; q=1; r=180; x=40; y=11;
+[Item] ID=fade_s_roof2; q=1; r=180; x=40; y=11;
+[Item] ID=cantBlackenTile; q=1; x=40; y=11;
+[Item] ID=cantBlackenTile; q=1; x=40; y=12;
+[Item] ID=rocks1; q=1; x=40; y=13;
+[Item] ID=cliffEdge1_S; q=1; x=40; y=14;
+[Item] ID=roof3b_style4_p; q=5; x=40; y=24;
+[Item] ID=roof6_style4_p; q=5; x=40; y=25;
+[Item] ID=roof6_style4_p; q=5; x=40; y=26;
+[Item] ID=chest_stone1_locked; q=1; oX=0; oY=-8; x=40; y=26; containerID=7;
+[Item] ID=roof10_style4_p; q=5; x=40; y=27;
+[Item] ID=fade_s_roof; q=1; r=180; x=40; y=28;
+[Item] ID=fade_s_roof2; q=1; r=180; x=40; y=28;
+[Item] ID=wall_L5; q=1; x=40; y=28;
+[Item] ID=window_open_roof_day; q=2; x=40; y=28;
+[Item] ID=cantBlackenTile; q=1; x=40; y=29;
+[Item] ID=shoreEdge1; q=1; r=-360; x=40; y=33;
+[Item] ID=rubble_coral; q=1; r=-360; x=40; y=36;
+[Item] ID=gp; q=2; bu=True; x=40; y=37;
+[Item] ID=rubble_coral; q=1; r=-360; x=40; y=38;
+[Item] ID=plant_anemone_small1; q=1; r=360; x=40; y=39;
+[Item] ID=shoreEdge1; q=1; r=360; x=40; y=41;
+[Item] ID=roof3_style4_p; q=4; x=41; y=7;
+[Item] ID=roof7_style4_p; q=4; x=41; y=8;
+[Item] ID=lamp_wall; q=1; x=41; y=8;
+[Item] ID=roof7_style4_p; q=4; x=41; y=9;
+[Item] ID=roof11_style4_p; q=4; x=41; y=10;
+[Item] ID=wall_L5; q=1; x=41; y=11;
+[Item] ID=fade_s_roof; q=1; r=180; x=41; y=11;
+[Item] ID=fade_s_roof2; q=1; r=180; x=41; y=11;
+[Item] ID=lumber_pile1; q=2; x=41; y=11;
+[Item] ID=window_open_roof_day; q=2; x=41; y=11;
+[Item] ID=cantBlackenTile; q=1; x=41; y=12;
+[Item] ID=cliffEdge1_S; q=1; x=41; y=14;
+[Item] ID=rubble_coral; q=1; r=-360; x=41; y=15;
+[Item] ID=roof3b_style4_p; q=5; x=41; y=24;
+[Item] ID=roof8_style4_p; q=5; x=41; y=25;
+[Item] ID=roof8_style4_p; q=5; x=41; y=26;
+[Item] ID=roof12_style4_p; q=5; x=41; y=27;
+[Item] ID=fade_s_roof; q=1; r=180; x=41; y=28;
+[Item] ID=fade_s_roof2; q=1; r=180; x=41; y=28;
+[Item] ID=cantBlackenTile; q=1; x=41; y=28;
+[Item] ID=cantBlackenTile; q=1; x=41; y=29;
+[Item] ID=plant_anemone_small1; q=1; r=-360; x=41; y=32;
+[Item] ID=plant_anemone_small3; q=1; r=-360; x=41; y=32;
+[Item] ID=shoreEdge1; q=1; r=-360; x=41; y=34;
+[Item] ID=shoreEdge1; q=1; r=360; x=41; y=40;
+[Item] ID=roof3_style4_p; q=4; x=42; y=7;
+[Item] ID=roof7_style4_p; q=4; x=42; y=8;
+[Item] ID=roof7_style4_p; q=4; x=42; y=9;
+[Item] ID=urn_fancy1_empty2; q=1; oX=0; oY=-8; x=42; y=9;
+[Item] ID=item_cantGrabOrPlace; q=1; x=42; y=9;
+[Item] ID=roof11_style4_p; q=4; x=42; y=10;
+[Item] ID=wall_L5; q=1; x=42; y=11;
+[Item] ID=fade_s_roof; q=1; r=180; x=42; y=11;
+[Item] ID=fade_s_roof2; q=1; r=180; x=42; y=11;
+[Item] ID=cantBlackenTile; q=1; x=42; y=12;
+[Item] ID=plant_anemone_small2; q=1; r=-360; x=42; y=13;
+[Item] ID=cliffEdge1_S; q=1; x=42; y=14;
+[Item] ID=rubble_coral; q=1; r=-360; x=42; y=15;
+[Item] ID=plant_anemone_small3; q=1; r=360; x=42; y=26;
+[Item] ID=fade_f1; q=1; x=42; y=26;
+[Item] ID=fade_f1; q=1; x=42; y=27;
+[Item] ID=fade_f1; q=1; x=42; y=28;
+[Item] ID=fade_s_diag_half2; q=1; r=-180; x=42; y=29;
+[Item] ID=fade_s_diag_half1; q=1; r=-180; x=42; y=29;
+[Item] ID=rocks1; q=1; x=42; y=30;
+[Item] ID=roof3_style4_p; q=4; x=43; y=7;
+[Item] ID=roof7_style4_p; q=4; x=43; y=8;
+[Item] ID=roof7_style4_p; q=4; x=43; y=9;
+[Item] ID=urn_fancy1_empty1; q=1; oX=0; oY=-8; x=43; y=9;
+[Item] ID=item_cantGrabOrPlace; q=1; x=43; y=9;
+[Item] ID=roof11_style4_p; q=4; x=43; y=10;
+[Item] ID=rug_corner3; q=2; x=43; y=10;
+[Item] ID=wall_L5; q=1; x=43; y=11;
+[Item] ID=fade_s_roof; q=1; r=180; x=43; y=11;
+[Item] ID=fade_s_roof2; q=1; r=180; x=43; y=11;
+[Item] ID=rug_corner3; q=2; r=270; x=43; y=11;
+[Item] ID=doorway; q=1; x=43; y=12;
+[Item] ID=cantBlackenTile; q=1; x=43; y=12;
+[Item] ID=cliffEdge1_corner; q=1; x=43; y=14;
+[Item] ID=cliffEdge1_SW; q=1; x=43; y=15;
+[Item] ID=plant_anemone_med; q=1; r=-360; x=43; y=25;
+[Item] ID=plant_anemone_small2; q=1; r=360; x=43; y=25;
+[Item] ID=rubble_coral; q=1; r=-360; x=43; y=28;
+[Item] ID=rubble_coral; q=1; r=-360; x=43; y=29;
+[Item] ID=rubble_coral; q=1; r=-360; x=43; y=31;
+[Item] ID=coral; q=1; bu=True; x=43; y=32;
+[Item] ID=rubble_coral; q=1; r=-360; x=43; y=33;
+[Item] ID=roof3_style4_p; q=4; x=44; y=7;
+[Item] ID=roof7_style4_p; q=4; x=44; y=8;
+[Item] ID=roof7_style4_p; q=4; x=44; y=9;
+[Item] ID=chest_stone1_locked; q=1; oX=0; oY=-8; x=44; y=9; containerID=8;
+[Item] ID=roof11_style4_p; q=4; x=44; y=10;
+[Item] ID=rug_corner3; q=2; r=90; x=44; y=10;
+[Item] ID=wall_L5; q=1; x=44; y=11;
+[Item] ID=fade_s_roof; q=1; r=180; x=44; y=11;
+[Item] ID=fade_s_roof2; q=1; r=180; x=44; y=11;
+[Item] ID=rug_corner3; q=2; r=180; x=44; y=11;
+[Item] ID=cantBlackenTile; q=1; x=44; y=12;
+[Item] ID=brazier; q=1; x=44; y=14;
+[Item] ID=cliffEdge1_S; q=1; x=44; y=15;
+[Item] ID=rocks2; q=4; r=-360; x=44; y=16;
+[Item] ID=rubble_coral; q=1; r=-360; x=44; y=18;
+[Item] ID=shoreEdge1; q=1; x=44; y=26;
+[Item] ID=shoreEdge1; q=1; r=-360; x=44; y=26;
+[Item] ID=waterfall1; q=1; x=44; y=27;
+[Item] ID=rubble_coral; q=1; r=-360; x=44; y=29;
+[Item] ID=reef_plant2; q=1; r=-360; x=44; y=30;
+[Item] ID=rubble_coral; q=1; r=-360; x=44; y=32;
+[Item] ID=plant_anemone_small2; q=1; r=-360; x=44; y=33;
+[Item] ID=plant_anemone_med; q=1; r=-360; x=44; y=33;
+[Item] ID=roof3b_style4_p; q=4; x=45; y=7;
+[Item] ID=roof8_style4_p; q=4; x=45; y=8;
+[Item] ID=roof8_style4_p; q=4; x=45; y=9;
+[Item] ID=roof12_style4_p; q=4; x=45; y=10;
+[Item] ID=fade_s_roof; q=1; r=180; x=45; y=11;
+[Item] ID=fade_s_roof2; q=1; r=180; x=45; y=11;
+[Item] ID=cantBlackenTile; q=1; x=45; y=11;
+[Item] ID=cantBlackenTile; q=1; x=45; y=12;
+[Item] ID=cliffEdge1_S; q=1; x=45; y=15;
+[Item] ID=crab1_runR; q=1; x=45; y=20;
+[Item] ID=rubble_coral; q=1; r=-360; x=45; y=25;
+[Item] ID=shoreEdge1; q=1; r=-360; x=45; y=27;
+[Item] ID=shoreEdge1; q=1; r=360; x=45; y=34;
+[Item] ID=fade_f1; q=1; x=46; y=9;
+[Item] ID=fade_f1; q=1; x=46; y=10;
+[Item] ID=coral_gold; q=1; bu=True; x=46; y=10;
+[Item] ID=fade_f1; q=1; x=46; y=11;
+[Item] ID=fade_s_diag_half2; q=1; r=-180; x=46; y=12;
+[Item] ID=fade_s_diag_half1; q=1; r=-180; x=46; y=12;
+[Item] ID=waterfall_dirtEdge; q=1; x=46; y=15;
+[Item] ID=waterfall1; q=1; x=46; y=16;
+[Item] ID=rubble_coral; q=1; r=-360; x=46; y=19;
+[Item] ID=puddle_zone; q=1; x=46; y=24;
+[Item] ID=coral; q=1; x=46; y=25;
+[Item] ID=reef_plant3; q=1; r=360; x=46; y=26;
+[Item] ID=cliffEdge1_S; q=1; x=47; y=15;
+[Item] ID=rubble_coral; q=1; r=-360; x=47; y=24;
+[Item] ID=puddle_zone; q=3; r=360; x=47; y=25;
+[Item] ID=rubble_coral; q=1; r=-360; x=47; y=26;
+
+
+[Actor]ID=crub_port30_; name=Goca;
+actorTypeID=crub; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=32,34; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=<s1=crub><s2><rfx=vfx_bug>; hostile=False; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pCBlueD; skinPalette=pRedD; armorPalette=pCoral; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=merchant; aggressiveness=0.5; bravery=0.65; intelligence=0.4; honor=0.3; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=crab_head; faceSprite=crab_face; legsSprite=crab_legs; armLSprite=crab_arm; armRSprite=crab_arm; torsoSprite=npc7_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=armor_coral; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=armor_coral; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=-4; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=av_crub1; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=armor_coral; cSlot=2; containerID=0;
+
+
+[Actor]ID=crub_port30_0; name=Dudauku;
+actorTypeID=crub; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=15,35; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=<s1=crub><s2><rfx=vfx_bug>; hostile=False; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pCBlack; skinPalette=pRedD2; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=cafe; aggressiveness=0.5; bravery=0.65; intelligence=0.4; honor=0.3; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=crab_head; faceSprite=crab_face; legsSprite=crab_legs; armLSprite=crab_arm; armRSprite=crab_arm; torsoSprite=npc10_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=37; HPMax=37; TrueHPMax=37; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=av_crub1; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=crub_port30_1; name=Kalakca;
+actorTypeID=crub; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=22,10; destination=-1,-1; facingRot=180; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=<s1=crub><s2>rfx=vfx_bug>; hostile=False; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pCRed; skinPalette=pBlue; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=shipwright; aggressiveness=0.5; bravery=0.65; intelligence=0.4; honor=0.3; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=crab_head; faceSprite=crab_face; legsSprite=crab_legs; armLSprite=crab_arm; armRSprite=crab_arm; torsoSprite=template_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=34; MP=17; HPMax=34; MPMax=17; TrueHPMax=34; TrueMPMax=17; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=av_crub1; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=crub_port30_2; name=Everslay;
+actorTypeID=crub; sprite=; actorClass=krakenslayer; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=42,10; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=<s1=crub><s2><rfx=vfx_bug>; hostile=False; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pCRed; skinPalette=pOrange; armorPalette=pCoral; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=class_krakenslayer0; aggressiveness=0.5; bravery=9; intelligence=0.4; honor=9; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+ headSprite=crab_head; faceSprite=crab_face; legsSprite=crab_legs; armLSprite=crab_arm; armRSprite=crab_arm; torsoSprite=krakenslayer_torso; shoulderLSprite=krakenslayer_shoulder; shoulderRSprite=krakenslayer_shoulder; backSprite=;
+ supportAbilities=brutalReach;  supportAbilities=giantKiller;  supportAbilities=; HP=62; MP=41; HPMax=62; MPMax=41; TrueHPMax=62; TrueMPMax=41; skill_Axe=1; skill_Spear=3; skill_Elec=5; jumpDistance=2; Kra_arcLance=2; Kra_jumpStrike=2; Kra_impale=1; Kra_static=1; brutalReach=1; giantKiller=1; krakenslayer_XP=0; krakenslayer_XP_stars=0; 
+numRanksBought=giantKiller=1; 
+numRanksBought=brutalReach=1; 
+numRanksBought=Kra_arcLance=2; 
+numRanksBought=Kra_jumpStrike=2; 
+numRanksBought=Kra_impale=1; 
+numRanksBought=Kra_static=1; 
+numRanksBought=skill_Spear=3; 
+numRanksBought=skill_Elec=5; 
+numRanksBought=jumpDistance=1; 
+numRanksBought=skill_Axe=1; 
+chosenAbilityOfEachClass=krakenslayer=Kra_arcLance; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=armor_coral; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=armor_coral; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=-4; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=shield_coral; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=12; duration=-1;
+[ActorEffect]
+ actorValue=MagEva; sourceAVAffecter=shield_coral; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=cloak_hood; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=9; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=gauntlets; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=krakenslayer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=krakenslayer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=krakenslayer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=5; duration=-1;
+[ActorEffect]
+ actorValue=skill_Sword; sourceAVAffecter=krakenslayer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Axe; sourceAVAffecter=krakenslayer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Hammer; sourceAVAffecter=krakenslayer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Spear; sourceAVAffecter=krakenslayer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Flail; sourceAVAffecter=krakenslayer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Elec; sourceAVAffecter=krakenslayer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=av_crub1; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=spear_coral; cSlot=0; containerID=0;
+[ActorItem] ID=shield_coral; cSlot=1; containerID=1;
+[ActorItem] ID=armor_coral; cSlot=2; containerID=2;
+[ActorItem] ID=cloak_hood; cSlot=3;
+[ActorItem] ID=gauntlets; cSlot=4;
+
+
+[Actor]ID=crub_port30_3; name=Wopp;
+actorTypeID=crub; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=39,27; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=<s1=crub><s2><rfx=vfx_bug>; hostile=False; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pCBlueD; skinPalette=pBluegreen; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=merchant_items; aggressiveness=0.5; bravery=0.65; intelligence=0.4; honor=0.3; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+ headSprite=crab_head; faceSprite=crab_face; legsSprite=crab_legs; armLSprite=crab_arm; armRSprite=crab_arm; torsoSprite=npc4_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=33; MP=17; HPMax=33; MPMax=17; TrueHPMax=33; TrueMPMax=17; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=av_crub1; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=crub_port30_4; name=Corveri;
+actorTypeID=crub; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=23,32; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=<s1=crub><s2><rfx=vfx_bug>; hostile=False; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pCBlack; skinPalette=pRedD; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=port30_guy1a; aggressiveness=0.5; bravery=0.65; intelligence=0.4; honor=0.3; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=crab_head; faceSprite=crab_face; legsSprite=crab_legs; armLSprite=crab_arm; armRSprite=crab_arm; torsoSprite=template_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=33; HPMax=33; TrueHPMax=33; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=av_crub1; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=crub_port30_5; name=Karacka;
+actorTypeID=crub; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=32,13; destination=-1,-1; facingRot=270; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=<s1=crub><s2><rfx=vfx_bug>; hostile=False; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pCBlack; skinPalette=pBlue; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=port30_guy2a; aggressiveness=0.5; bravery=0.65; intelligence=0.4; honor=0.3; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+ headSprite=crab_head; faceSprite=crab_face; legsSprite=crab_legs; armLSprite=crab_arm; armRSprite=crab_arm; torsoSprite=npc7_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=37; MP=17; HPMax=37; MPMax=17; TrueHPMax=37; TrueMPMax=17; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=av_crub1; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+
+[Trigger] numID=0; aliasID=;
+topX=23;topY=44;btmX=31;btmY=52;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=0; effectID=travel_leaveLocation; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=0; yValue=0;
+
+
+
+[Trigger] numID=1; aliasID=;
+topX=4;topY=50;btmX=4;btmY=50;
+triggerImmediatelyOnEnteringZone=True; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=1; effectID=trigger; sValue=tEnterPort; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+

@@ -1,0 +1,513 @@
+
+
+
+[DialogNode] ID=admiral1a;
+animations=;
+statements=So if we accelerate the process, we can...<cmd=advanceDialog=1>;
+nextNodeID=admiral1b;
+specialEffect=facingRotPrev;
+
+[DialogNode] ID=admiral1b;
+specialEffect=tS1;
+
+[DialogNode] ID=admiral2a;
+animations=sigh;
+animations=stern;
+animations=angry;
+statements=<finalTextIf=You...=1-party:reeve>Reeve.;
+statements=<pname=>.;
+statements=<speed=0.9>It would seem Lagan is completely incompetent after all.;
+nextNodeID=admiral2b;
+specialEffect=facingRot90;
+
+
+[DialogNode] ID=admiral2b;
+animations=sigh;
+statements=After his last failure, I thought I could just let you live and roam freely...;
+specialEffect=facingRot180;
+nextNodeID=admiral2cR;
+nextNodeID_fReq=party:reeve;
+nextNodeID=admiral2c;
+
+[DialogNode] ID=admiral2cR;
+animations=angry;
+statements=<speed=0.8>Clearly I was too forgiving.;
+specialEffect=facingRot90;
+nextNodeID=admiral2dR;
+
+[DialogNode] ID=admiral2dR;
+speakerOverride=reeve;
+animations=chargePose;
+animations=sigh;
+statements=Why did you do it, Admiral?!;
+statements=Why try to kill your own men?;
+specialEffect=facingRot270;
+nextNodeID=admiral2eR;
+
+
+[DialogNode] ID=admiral2eR;
+speakerOverride=admiral;
+animations=sly;
+animations=angry;
+animations=sigh;
+statements=And if I told you,<p> would it make a difference?;
+statements=Even if you accepted my explanation,<p> I can't let you leave here.;
+statements=Let's not waste any more of my time.;
+nextNodeID=admiral2fR;
+
+[DialogNode] ID=admiral2fR;
+statements=Bauen.;
+specialEffect=facingRot180;
+nextNodeID=admiral2gR;
+
+[DialogNode] ID=admiral2gR;
+speakerOverride=bauen;
+statements=Yes sir.;
+specialEffect=facingRot0;
+nextNodeID=admiral2hR;
+
+[DialogNode] ID=admiral2hR;
+specialEffect=tS2;
+
+
+--
+
+[DialogNode] ID=admiral2c;
+animations=angry;
+statements=Clearly I was too forgiving.;
+specialEffect=facingRot90;
+
+[DialogOption] text=Admiral. Why did you try to kill me?;
+animation=angry;
+nodeToConnectTo=admiral2eR;
+[DialogOption] text=It's time to pay for what you've done, Admiral.;
+animation=stern;
+newLineOfOptions=true;
+nodeToConnectTo=admiral2d;
+
+
+[DialogNode] ID=admiral2d;
+animations=angry;
+statements=...;
+nextNodeID=admiral2fR;
+
+--
+
+[DialogNode] ID=admiral3a;
+animations=sigh;
+animations=;
+animations=angry;
+statements=<speed=0.5><pname=>.<p> <textIf=Reeve. =party:reeve><p>I will say this.;
+statements=Your sacrifice was necessary to save Dominio from the forces that be.;
+statements=Let that be your final comfort.;
+nextNodeID=admiral3b;
+
+[DialogNode] ID=admiral3b;
+specialEffect=tS3;
+
+---
+
+
+
+[DialogNode] ID=admiral4a;
+animations=;
+animations=sigh;
+statements=I'm impressed.;
+statements=I've sent two people to kill you, and now they're both dead.;
+specialEffect=facingRot270;
+specialEffect=moveCamXY,0,0.5;
+[DialogOption] text=Ready to talk yet?;
+animation=sly;
+nodeToConnectTo=admiral4b;
+[DialogOption] text=What is this place?;
+animation=scared;
+newLineOfOptions=true;
+nodeToConnectTo=admiral4b;
+[DialogOption] text=Shall we make it three, or are you done hiding?;
+animation=angry;
+newLineOfOptions=true;
+nodeToConnectTo=admiral4a2;
+
+--
+
+[DialogNode] ID=admiral4a2;
+animations=sly;
+animations=meh;
+statements=<speed=0.8>I don't hide, <pname=>.<p=2> I delegate.;
+statements=Now what do you want,<p> now that I'm here wasting my time in person?;
+[DialogOption] text=Explain this hellhole to me.;
+animation=sly;
+nodeToConnectTo=admiral4b;
+[DialogOption] text=I want answers! Why try to kill me? Why all this?;
+animation=stern;
+newLineOfOptions=true;
+nodeToConnectTo=admiral4b;
+[DialogOption] text=I want revenge! Die!;
+animation=chargePose;
+newLineOfOptions=true;
+nodeToConnectTo=admiral5h;
+
+
+--
+
+[DialogNode] ID=admiral4b;
+animations=sigh;
+statements=.<p>.<p>.;
+nextNodeID=admiral4b2;
+
+[DialogNode] ID=admiral4b2;
+animations=;
+animations=;
+statements=<speed=0.5>...these are 'Ruluorn'...<p><speed=1> the strongest Gate users in any realm.;
+statements=Not long ago, they were used to make <color=DarkRed>a weapon<color=> -<p=1.4> one powerful enough to give the nation that owned it absolute dominance.;
+specialEffect=playerFacingRot,0;
+specialEffect=facingRot0;
+specialEffect=moveCamXY,2,0;
+nextNodeID=admiral4c;
+
+[DialogNode] ID=admiral4c;
+animations=angry;
+animations=stern;
+statements=That weapon was shattered,<p> and now Seartial, Jasce, and Rumane are all scrabbling to recover its parts.;
+statements=When they finally do, Dominio will be crushed by their avarice.;
+specialEffect=playerFacingRot,90;
+specialEffect=facingRot90;
+specialEffect=moveXY,0,1;
+specialEffect=moveCamXY,-2,0;
+nextNodeID=admiral4d;
+
+[DialogNode] ID=admiral4d;
+animations=angry;
+statements=But I will not let that happen!;
+specialEffect=moveXY,0,-1;
+nextNodeID=admiral4d2;
+
+[DialogNode] ID=admiral4d2;
+animations=handupPose;
+statements=We will create our own Voidspire!<p> For Dominio's sake!;
+specialEffect=facingRot270;
+
+[DialogOption] text=Do you even know how to build one?;
+animation=sly;
+nodeToConnectTo=admiral5a;
+[DialogOption] text=What, so YOU can crush them instead?;
+animation=stern;
+newLineOfOptions=true;
+nodeToConnectTo=admiral5b;
+[DialogOption] text=And what part of that justifies your atrocities!?;
+animation=chargePose;
+newLineOfOptions=true;
+nodeToConnectTo=admiral4e;
+
+
+[DialogNode] ID=admiral4e;
+animations=sigh;
+animations=angry;
+statements=Every plan requires sacrifice, <pname=>...!;
+statements=Something of this magnitude can't be accomplished just by wishful thinking!;
+nextNodeID=admiral5c;
+
+
+
+[DialogNode] ID=admiral5a;
+animations=sigh;
+animations=;
+statements=Don't underestimate our intelligence network.;
+statements=Our spy was sent onto the Voidspire almost immediately.;
+nextNodeID=admiral5a2;
+specialEffect=facingRot180;
+
+[DialogNode] ID=admiral5a2;
+animations=;
+animations=sly;
+statements=Unlike the other nations' spies, he did his job.;
+statements=Theirs didn't live to report their findings.;
+specialEffect=facingRot270;
+[DialogOption] text=Are you admitting to carrying out assassinations?;
+animation=sly;
+nodeToConnectTo=admiral5b;
+[DialogOption] text=I see. So you've always been a murderous scumbag.;
+animation=angry;
+newLineOfOptions=true;
+nodeToConnectTo=admiral5b;
+[DialogOption] text=...;
+animation=stern;
+newLineOfOptions=true;
+nodeToConnectTo=admiral5c;
+
+
+
+[DialogNode] ID=admiral5b;
+animations=chargePose;
+animations=sly;
+statements=It's us or them,<p> fool!;
+statements=This is why you were culled, <pname=>.<p> <textIf=And especially you, Reeve!=party:reeve><p> Your naivete!;
+specialEffect=moveXY,0,-1;
+specialEffect=moveCamXY,0,-1;
+specialEffect=facingRot270;
+nextNodeID=admiral5b2;
+
+
+[DialogNode] ID=admiral5b2;
+animations=stern;
+statements=You were by far the most foolish of the high officers.<p> A sacrifice was needed to consolidate power, and you were the prime choice.;
+specialEffect=moveXY,0,1;
+specialEffect=moveCamXY,0,1;
+[DialogOption] text=What sacrifice? Randomly killing your own people?;
+animation=angry;
+nodeToConnectTo=admiral5c;
+[DialogOption] text=Sorry I wasn't evil enough to meet your standards.;
+animation=stern;
+newLineOfOptions=true;
+nodeToConnectTo=admiral5b3;
+
+[DialogNode] ID=admiral5b3;
+animations=stern;
+statements=It wasn't just for that...!;
+nextNodeID=admiral5c;
+
+[DialogNode] ID=admiral5c;
+animations=angry;
+animations=stern;
+statements=The Houses divide Dominio -<p> chaining it to inaction.;
+statements=Some even secretly serve Seartial, Jasce, or Rumane out of naked greed.;
+nextNodeID=admiral5d;
+specialEffect=facingRot0;
+
+[DialogNode] ID=admiral5d;
+animations=sigh;
+animations=;
+statements=They had to be disgraced to make this happen.;
+statements=The most stubborn one,<p=2> I had framed for your death.;
+specialEffect=facingRot90;
+
+[DialogOption] text=Enough 'sacrifices'. I won't allow this to continue.;
+animation=stern;
+nodeToConnectTo=admiral5e;
+[DialogOption] text=So you openly admit to treason?;
+animation=sly;
+newLineOfOptions=true;
+nodeToConnectTo=admiral5f;
+[DialogOption] text=I've had enough of your maniacal ranting!;
+animation=chargePose;
+newLineOfOptions=true;
+nodeToConnectTo=admiral5g;
+
+
+
+[DialogNode] ID=admiral5e;
+animations=chargePose;
+statements=<color=DarkRed>You'll do nothing!!;
+specialEffect=facingRot270;
+specialEffect=fx,sfx_slam;
+specialEffect=moveCamXY,0,-1;
+specialEffect=song;
+nextNodeID=admiral5i;
+
+[DialogNode] ID=admiral5f;
+animations=sly;
+statements=Treason?;
+nextNodeID=admiral5f2;
+
+[DialogNode] ID=admiral5f2;
+animations=;
+statements=I serve Dominio, and no other...!;
+specialEffect=facingRot270;
+specialEffect=song;
+nextNodeID=admiral5i;
+
+[DialogNode] ID=admiral5g;
+animations=chargePose;
+statements=<color=DarkRed>And I yours!!;
+specialEffect=facingRot270;
+specialEffect=fx,sfx_slam;
+specialEffect=moveCamXY,0,-1;
+specialEffect=song;
+nextNodeID=admiral5i;
+
+[DialogNode] ID=admiral5h;
+animations=chargePose;
+statements=<color=DarkRed>I will not!;
+specialEffect=facingRot270;
+specialEffect=fx,sfx_slam;
+specialEffect=moveCamXY,0,-1;
+specialEffect=song;
+nextNodeID=admiral5i;
+
+[DialogNode] ID=admiral5i;
+specialEffect=tReadyFight;
+
+--
+
+[DialogNode] ID=admiral6a;
+animations=angry;
+animations=stern;
+statements=<speed=0.85>Surrender now,<p> <pname=>,<p> and I'll take you prisoner rather than kill you.;
+statements=<speed=0.8>AFTER my Voidspire has been finished,<p=1.2> and Dominio saved,<p=1.2> then you and your little crew can leave.;
+specialEffect=facingRot270;
+
+[DialogOption] text=As if I could trust you to keep your word!;
+animation=sly;
+nodeToConnectTo=admiral6b;
+[DialogOption] text=YOU surrender - or die where you stand!;
+animation=angry;
+newLineOfOptions=true;
+nodeToConnectTo=admiral6c;
+[DialogOption] text=Dominio can never be saved by the likes of you.;
+animation=stern;
+newLineOfOptions=true;
+nodeToConnectTo=admiral6d;
+
+[DialogNode] ID=admiral6b;
+animations=sigh;
+statements=<speed=0.8>So be it then.;
+nextNodeID=admiral7a;
+
+[DialogNode] ID=admiral6c;
+animations=sigh;
+statements=<speed=0.8>Hmph...!;
+nextNodeID=admiral7a;
+
+[DialogNode] ID=admiral6d;
+animations=chargePose;
+statements=<speed=0.8>You...!<p> LIAR!!;
+nextNodeID=admiral7a;
+
+[DialogNode] ID=admiral7a;
+animations=stern;
+statements=<speed=0.4>Men...<p=2> <color=DarkRed>kill <pname=>!;
+specialEffect=preventInteraction,0.7;
+specialEffect=moveXY,0,1;
+nextNodeID=admiral7b;
+
+[DialogNode] ID=admiral7b;
+specialEffect=facingRot270;
+specialEffect=hostile;
+specialEffect=tS2;
+
+--
+
+[DialogNode] ID=admiral8a;
+animations=;
+animations=;
+animations=;
+statements=<speed=0.4>Urgh...<p=2> D-damn you!;
+statements=<speed=0.5>Y-you...<p> you think I didn't plan for this...?!;
+statements=<speed=0.6>Like I wouldn't...<p> defend this place at all costs...!;
+specialEffect=song;
+specialEffect=stopCombatAIActing;
+nextNodeID=admiral8b;
+
+[DialogNode] ID=admiral8b;
+animations=chargePose;
+dialogFX=ThudShotBigger;
+statements=<color=DarkRed><speed=0.3>DEPLOY THE MECH!!;
+nextNodeID=admiral8c;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+specialEffect=preventInteraction,1.5;
+specialEffect=facingRot90;
+specialEffect=cameraAtTalker;
+
+[DialogNode] ID=admiral8c;
+specialEffect=tM1;
+
+
+[DialogNode] ID=admiral9a;
+animations=;
+animations=;
+animations=s_345loop;
+dialogFX=vfx_bigrobo;
+dialogFX=vfx_bigrobo;
+dialogFX=vfx_bigrobo;
+statements=<speed=0.6>Hahaha...!<p> Surprised?;
+statements=<speed=0.7>That Gate wasn't the only old war tech we salvaged...!;
+statements=<speed=0.6>Now,<p=1.5> die!!;
+specialEffect=cameraAtTalker;
+specialEffect=moveCamXY,0,-2;
+nextNodeID=admiral9b;
+
+[DialogNode] ID=admiral9b;
+animations=;
+specialEffect=startCombatAIActing;
+specialEffect=tM2;
+
+[DialogNode] ID=admiral10a;
+animations=angry;
+animations=stern;
+statements=<speed=0.5>No...!;
+statements=<speed=0.6>T-<p>this mech was drawing from facility power...!;
+statements=Now it's--!!<cmd=advanceDialog=0.8>;
+nextNodeID=admiral10b;
+
+[DialogNode] ID=admiral10b;
+specialEffect=tM3;
+
+
+[DialogNode] ID=admiral11a;
+speakerOverride=admiral;
+animations=angry;
+animations=stern;
+statements=<speed=0.5>F-<p>fitting...<p> after you've ruined everything...;
+statements=<speed=0.5>...now you'll die here with me...!;
+nextNodeID=admiral11b;
+
+[DialogNode] ID=admiral11b;
+specialEffect=tM4;
+
+[DialogNodeOverride] ID=reeve_admiral11a;
+dialogNodeID_toOverride=admiral11a; priority=999;
+completeOverride=true;
+overrideSpecialEffects=false;
+fReq=party:reeve - g:D_reeve_admiral11a - g:D_hagger_admiral11a;
+speakerOverride=reeve;
+animations=scared;
+statements=Commodore, the floor is falling apart!!;
+nextNodeID=admiral11a;
+
+[DialogNodeOverride] ID=hagger_admiral11a;
+dialogNodeID_toOverride=admiral11a; priority=-99;
+completeOverride=true;
+overrideSpecialEffects=false;
+fReq=party:hagger - g:D_reeve_admiral11a - g:D_hagger_admiral11a;
+speakerOverride=hagger;
+animations=scared;
+statements=Th'floor's falling apart!!;
+nextNodeID=admiral11a;
+
+
+[DialogNode] ID=admiral12a;
+speakerOverride=admiral;
+animations=scared;
+statements=<speed=0.5>The restraints on the Ruluorn...<p> they're breaking...!;
+nextNodeID=admiral12b;
+
+
+[DialogNode] ID=admiral12b;
+specialEffect=tM5;
+
+
+---
+
+[DialogNode] ID=afterFD;
+specialEffect=save,Won!,@F1-g:enteredG,@11;
+specialEffect=tFD1;
+
+[DialogNodeOverride] ID=reeve_afterFD;
+dialogNodeID_toOverride=afterFD; priority=999;
+completeOverride=true;
+overrideSpecialEffects=true;
+fReq=landingParty:reeve;
+speakerOverride=reeve;
+animations=scared;
+statements=<speed=0.7>Did they...<p> teleport us to safety...?;
+nextNodeID=afterFDR;
+specialEffect=song;
+
+[DialogNode] ID=afterFDR;
+specialEffect=save,Won!,@F1-g:enteredG,@11;
+specialEffect=tFD1;
+
+
+
+

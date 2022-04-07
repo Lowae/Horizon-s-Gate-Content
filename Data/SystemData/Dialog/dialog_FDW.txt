@@ -1,0 +1,226 @@
+
+
+
+[DialogNode] ID=demon1a;
+statements=<rfx=vfx_admiral_zomb><speed=0.2>Y<p>ou<p><speed=0.05>...;
+nextNodeID=demon1bR;
+nextNodeID_fReq=party:reeve;
+nextNodeID=demon1b;
+
+
+[DialogNode] ID=demon1b;
+statements=<rfx=vfx_admiral_zomb><speed=0.2>...rreturnn...;
+
+[DialogOption] text=Who speaks?;
+animation=scared;
+nodeToConnectTo=demon2b;
+[DialogOption] text=Admiral? But you're dead!;
+animation=angry;
+newLineOfOptions=true;
+nodeToConnectTo=demon2a;
+
+[DialogNode] ID=demon1bR;
+statements=<rfx=vfx_admiral_zomb><speed=0.2>...rreturnn...;
+nextNodeID=demon1cR;
+
+[DialogNode] ID=demon1cR;
+speakerOverride=reeve;
+animations=scared;
+statements=A-<p>Admiral...?!<p>;
+nextNodeID=demon1dR;
+specialEffect=pointCameraAt,reeve,False,False,8;
+
+[DialogNode] ID=demon1dR;
+speakerOverride=admiral;
+statements=<rfx=vfx_admiral_zomb><speed=0.23>...;
+specialEffect=pointCameraAt,admiral,False,False,8;
+[DialogOption] text=Who speaks?;
+animation=scared;
+nodeToConnectTo=demon2b;
+[DialogOption] text=Admiral? But you're dead!;
+animation=angry;
+newLineOfOptions=true;
+nodeToConnectTo=demon2a;
+
+[DialogNode] ID=demon2a;
+speakerOverride=admiral;
+statements=<rfx=vfx_admiral_zomb><speed=0.23>Yyess...;
+statements=<rfx=vfx_admiral_zomb><speed=0.45>Admiralll...<p> iss dead...;
+nextNodeID=demon2b;
+
+[DialogNode] ID=demon2b;
+statements=<rfx=vfx_admiral_zomb><speed=0.35>Admirrral<p> body...;
+statements=<rfx=vfx_admiral_zomb><speed=0.4>Wind in <p>throat...;
+statements=<rfx=vfx_admiral_zomb><speed=0.28>Myyy voice.;
+nextNodeID=demon2c;
+
+[DialogNode] ID=demon2c;
+specialEffect=tDemon1;
+
+
+[DialogNode] ID=demon3a;
+dialogFX=sfx_angryBlub;
+speakerOverride=demon;
+statements=<font=ruluorn>My voice.;
+specialEffect=pointCameraAt,demon,False,False,8;
+
+
+[DialogOption] text=Who are you?;
+animation=scared;
+nodeToConnectTo=demon3b;
+[DialogOption] text=What are you?;
+animation=sly;
+newLineOfOptions=true;
+nodeToConnectTo=demon3b;
+
+[DialogNode] ID=demon3b;
+speakerOverride=admiral;
+statements=<rfx=vfx_admiral_zomb><speed=0.3>Firsst-capturrred...<p><speed=0.2> 'Ruluu<p> orrnn'...;
+statements=<rfx=vfx_admiral_zomb><speed=0.23>Yyourr kind... namess me...;
+statements=<rfx=vfx_admiral_zomb><speed=0.12>'Demon'...;
+specialEffect=pointCameraAt,@X32,@Y26,False,False;
+specialEffect=setActorName,demon,Demon;
+
+[DialogOption] text=Why are you here?;
+animation=;
+nodeToConnectTo=demon5a;
+[DialogOption] text=Where are the rest of the Ruluorn?;
+animation=;
+newLineOfOptions=true;
+nodeToConnectTo=demon4a;
+
+[DialogNode] ID=demon4a;
+speakerOverride=admiral;
+statements=<rfx=vfx_admiral_zomb><speed=0.3>My<p> kind...<p> leave...;
+statements=<rfx=vfx_admiral_zomb><speed=0.3>Yyou<p=2> helpss<p> my kind leave...;
+statements=<rfx=vfx_admiral_zomb><speed=0.4>Myyy k-<p>kind helpsss you leave...;
+statements=<rfx=vfx_admiral_zomb><speed=0.3>Iii<p> do nnot leave.;
+
+[DialogOption] text=Why don't you leave as well?;
+animation=;
+nodeToConnectTo=demon5a;
+[DialogOption] text=Thank you for helping us leave.;
+animation=sigh;
+newLineOfOptions=true;
+nodeToConnectTo=demon4b;
+
+[DialogNode] ID=demon4b;
+speakerOverride=admiral;
+statements=<rfx=vfx_admiral_zomb><speed=0.3>Ii,<p> h,<p=0.5> help!<p> Help!?;
+statements=<rfx=vfx_admiral_zomb><cmd=fx=fx_earthquake_mild><speed=0.1>NO.;
+nextNodeID=demon5b;
+
+[DialogNode] ID=demon5a;
+speakerOverride=admiral;
+statements=<rfx=vfx_admiral_zomb><speed=0.12><cmd=fx=fx_earthquake_mild>Erralll...;
+nextNodeID=demon5b;
+
+
+
+[DialogNode] ID=demon5b;
+speakerOverride=admiral;
+statements=<rfx=vfx_admiral_zomb><speed=0.3>Yoour<p> k-<p>kind...;
+statements=<rfx=vfx_admiral_zomb2><speed=0.18>Cutss...<p> pullss...;
+statements=<rfx=vfx_admiral_zomb><speed=0.2>P-<p>peels...!;
+statements=<rfx=vfx_admiral_zomb2><speed=0.18>Y-<p>your<p> kh,<p> kind...;
+
+[DialogOption] text=I'm sorry for what the Admiral did to you.;
+animation=sad;
+newLineOfOptions=true;
+nodeToConnectTo=demon5c;
+[DialogOption] text=Easy, now... we had nothing to do with that.;
+animation=sly;
+newLineOfOptions=true;
+nodeToConnectTo=demon5c;
+[DialogOption] text=We can try to help heal your wounds!;
+animation=scared;
+newLineOfOptions=true;
+nodeToConnectTo=demon5c;
+[DialogOption] text=...;
+animation=stern;
+newLineOfOptions=true;
+nodeToConnectTo=demon5c;
+
+[DialogNode] ID=demon5c;
+speakerOverride=admiral;
+statements=<rfx=vfx_admiral_zomb><speed=0.3>Your kind...;
+statements=<rfx=vfx_admiral_zomb2><speed=0.18>...cuts!<cmd=fx=fx_earthquake_mild>;
+statements=<rfx=vfx_admiral_zomb><speed=0.2>Peelss!;
+nextNodeID=demon5d;
+
+[DialogNode] ID=demon5d;
+speakerOverride=admiral;
+specialEffect=preventInteraction,4.5;
+statements=<rfx=vfx_admiral_zomb3><speed=0.3>IIIiii<cmd=fx=fx_earthquake_mild><p=2> CUT<cmd=advanceDialog=0.8>;
+statements=<rfx=vfx_admiral_zomb3><speed=0.6>YOUR KIND<cmd=advanceDialog=0.6>;
+statements=<rfx=vfx_admiral_zomb3><speed=0.5>ERAL<cmd=advanceDialog=0.7>;
+statements=<rfx=vfx_admiral_zomb3><speed=0.5>CUT<cmd=fx=fx_earthquake_mild><cmd=advanceDialog=0.5>;
+statements=<rfx=vfx_admiral_zomb3><speed=0.6>I<cmd=advanceDialog=0.3>;
+statements=<rfx=vfx_admiral_zomb3><speed=0.7>CUT<cmd=fx=fx_earthquake_mild><cmd=advanceDialog=0.3>;
+statements=<rfx=vfx_admiral_zomb3><speed=0.8>I<cmd=advanceDialog=0.2>;
+statements=<rfx=vfx_admiral_zomb3><speed=0.7>PEEL<cmd=advanceDialog=0.3>;
+statements=<rfx=vfx_admiral_zomb3><speed=0.8>I<cmd=advanceDialog=0.2>;
+statements=<rfx=vfx_admiral_zomb3><speed=0.9>CUT<cmd=fx=fx_earthquake_mild><cmd=advanceDialog=0.2>;
+statements=<rfx=vfx_admiral_zomb3><speed=0.9>I<cmd=advanceDialog=0.1>;
+nextNodeID=demon6a;
+specialEffect=setActorIdleAnimOverride,admiral,idle;
+specialEffect=moveXY,0,1;
+
+[DialogNode] ID=demon6a;
+dialogFX=sfx_angryBlub;
+speakerOverride=demon;
+statements=<font=ruluorn><cmd=fx=demonScream><cmd=fx=w_suddenSparks><cmd=fx=fx_earthquake_major>KILL<cmd=advanceDialog=0.8>;
+nextNodeID=demon6b;
+specialEffect=moveXY,0,1;
+
+[DialogNode] ID=demon6b;
+specialEffect=tDemon2;
+
+
+
+[DialogNode] ID=bezoar1a;
+nextNodeID=bezoar1a_charged;
+nextNodeID_fReq=gTimeSinceMoreThanOrNeverAssigned:bezoar_gated:100;
+nextNodeID=bezoar1a_uncharged;
+
+
+
+
+[DialogNode] ID=bezoar1a_uncharged;
+statements=The Bezoar is still charging and cannot be reused this week.;
+
+
+[DialogNode] ID=bezoar1a_charged;
+statements=The Bezoar is fully charged. Use it?;
+[DialogOption] text=Gate;
+animation=;
+nodeToConnectTo=bezoar1b;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=bezoar1b;
+statements=Teleport to a port in what quadrant?;
+specialEffect=setPCDialogWindowSizeY;
+[DialogOption] text=Northwest;
+specialEffect=bezoar_setupportselect,-1,-1,bezoar_portselect;
+nodeToConnectTo=bezoar_portselect;
+[DialogOption] text=Northeast;
+specialEffect=bezoar_setupportselect,1,-1,bezoar_portselect;
+nodeToConnectTo=bezoar_portselect;
+[DialogOption] text=Southwest;
+newLineOfOptions=true;
+specialEffect=bezoar_setupportselect,-1,1,bezoar_portselect;
+nodeToConnectTo=bezoar_portselect;
+[DialogOption] text=Southeast;
+specialEffect=bezoar_setupportselect,1,1,bezoar_portselect;
+nodeToConnectTo=bezoar_portselect;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=bezoar_portselect;
+statements=Teleport your fleet to which port?;
+

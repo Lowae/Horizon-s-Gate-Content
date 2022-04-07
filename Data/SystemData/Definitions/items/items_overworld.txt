@@ -1,0 +1,1924 @@
+
+[ItemType]  name=Building;
+ID=port_houses1; sprite=1153; 
+texture=items_overworld; itemCategory=overworld;
+journalID=journal_location;
+special=location; special=canAssignSpecialTC;
+special=autoAssignSpecialTC;
+special=cannotBePickedUp; special=canHangOnWalls; special=canFloatOnWater;
+pR=zoneGrass;
+pG=zoneWood;
+[ItemType]  name=Building;
+ID=port_houses2; sprite=1154;
+cloneFrom=port_houses1;
+[ItemType]  name=Building;
+ID=port_houses3; sprite=1155;
+cloneFrom=port_houses1;
+[ItemType]  name=Building;
+ID=port_houses4; sprite=1156;
+cloneFrom=port_houses1;
+[ItemType]  name=Building;
+ID=port_houses5; sprite=1157;
+cloneFrom=port_houses1;
+[ItemType]  name=Building;
+ID=port_houses6; sprite=1158;
+cloneFrom=port_houses1;
+[ItemType]  name=Building;
+ID=port_houses7; sprite=1159;
+cloneFrom=port_houses1;
+[ItemType]  name=Building;
+ID=port_houses8; sprite=1160;
+cloneFrom=port_houses1;
+
+[ItemType]  name=Building;
+ID=port_houses1B; sprite=1153;
+special=alwaysBelowOtherItems;
+special=adjustSpriteYUp16;
+special=rollingPin_drawLower;
+special=rollingPin_drawY3Lower;
+cloneFrom=port_houses1;
+[ItemType]  name=Building;
+ID=port_houses2B; sprite=1154;
+cloneFrom=port_houses1B;
+[ItemType]  name=Building;
+ID=port_houses3B; sprite=1155;
+cloneFrom=port_houses1B;
+[ItemType]  name=Building;
+ID=port_houses4B; sprite=1156;
+cloneFrom=port_houses1B;
+[ItemType]  name=Building;
+ID=port_houses5B; sprite=1157;
+cloneFrom=port_houses1B;
+[ItemType]  name=Building;
+ID=port_houses6B; sprite=1158;
+cloneFrom=port_houses1B;
+[ItemType]  name=Building;
+ID=port_houses7B; sprite=1159;
+cloneFrom=port_houses1B;
+[ItemType]  name=Building;
+ID=port_houses8B; sprite=1160;
+cloneFrom=port_houses1B;
+
+[JournalEntry]
+ID=journal_location;
+category=item; halfPage=true; rarity=0;
+title=Location;
+text=<itemBig=port_castle1><title=Location><brAdj=>All sorts of special locations dot the globe - typically marked by houses, castles, caverns, or other suspicious features. They will automatically be discovered as you sail near. Ports can be discovered from a great distance, but other locations can only be discovered within 8 tiles.;
+
+
+[ItemType]  name=Cave;
+ID=port_cave1; sprite=1219;
+cloneFrom=port_houses1;
+depthMod=50;
+pR=overworld1;
+pB=pGreyD2;
+pG=pG;
+
+[ItemType]  name=Grove;
+ID=port_grove1; sprite=1220;
+journalID=journal_grove;
+cloneFrom=port_houses1;
+special=grove; 
+depthMod=50;
+pR=pR;
+pG=pG;
+[ItemType]  name=Grove;
+ID=port_grove1_guaranteed; sprite=1220;
+journalID=journal_grove;
+cloneFrom=port_houses1;
+special=grove_guaranteed; 
+depthMod=50;
+pR=pR;
+pG=pG;
+
+[JournalEntry]
+ID=journal_grove;
+category=item; halfPage=true; rarity=1;
+title=Grove;
+text=<itemBig=port_grove1><title=Grove><brAdj=>A beautiful forested location filled with life. Each grove is guaranteed to have some sort of rare find to add to your journal. However, not all the life within is friendly, so tread with care.;
+
+[ItemType]  name=Monster Den;
+ID=port_den1; sprite=1217;
+cloneFrom=port_houses1;
+special=monsterden;
+depthMod=50;
+pR=overworld1;
+pB=pGreyD2;
+pG=pG;
+
+[ItemType]  name=Cave;
+ID=port_cave2; sprite=1161;
+cloneFrom=port_houses1;
+depthMod=1100;
+special=rollingPin_dontApplyDepthMod;
+pR=pR; pB=pB; pG=pG;
+[ItemType]  name=Sealed Cave;
+ID=port_cave2_sealed; sprite=1173;
+cloneFrom=port_houses1;
+depthMod=1100;
+special=rollingPin_dontApplyDepthMod;
+pR=pR; pB=pB; pG=pG;
+blockWalking=true;
+[ItemReaction] 
+ID=port_cave2_sealed; element=somethingHappened; newID=port_cave2;
+
+[ItemType]  name=Cave;
+ID=port_cave3; sprite=1176;
+cloneFrom=port_houses1;
+depthMod=1100;
+special=rollingPin_dontApplyDepthMod;
+pR=pR; pB=pB; pG=pG;
+special=adjustSpriteYUp16;
+special=rollingPin_drawLower;
+special=rollingPin_drawY3Lower;
+
+[ItemType]  name=Sealed Cave;
+ID=port_cave3_sealed; sprite=1174;
+cloneFrom=port_houses1;
+depthMod=1100;
+special=rollingPin_dontApplyDepthMod;
+pR=pR; pB=pB; pG=pG;
+special=adjustSpriteYUp16;
+special=rollingPin_drawLower;
+special=rollingPin_drawY3Lower;
+blockWalking=true;
+[ItemReaction] 
+ID=port_cave3_sealed; element=somethingHappened; newID=port_cave3;
+
+[ItemType]  name=Cave;
+ID=port_cave4; sprite=1177;
+cloneFrom=port_houses1;
+depthMod=1100;
+special=rollingPin_dontApplyDepthMod;
+pR=pR; pB=pB; pG=pG;
+
+[ItemType]  name=Sealed Cave;
+ID=port_cave4_sealed; sprite=1175;
+cloneFrom=port_houses1;
+depthMod=1100;
+special=rollingPin_dontApplyDepthMod;
+pR=pR; pB=pB; pG=pG;
+blockWalking=true;
+[ItemReaction] 
+ID=port_cave4_sealed; element=somethingHappened; newID=port_cave4;
+
+[ItemType]  name=Location;
+ID=location_natural1; sprite=1232;
+cloneFrom=port_houses1;
+texture=items_overworld; itemCategory=overworld;
+special=rollingPin_drawFlat;
+depthMod=50;
+pR=overworld1;
+pB=pGreyD2;
+pG=pG;
+
+[ItemType]  name=Location;
+ID=location_natural2; sprite=1233;
+cloneFrom=location_natural1;
+special=rollingPin_drawFlat;
+pR=overworld1;
+pB=pGreyD2;
+pG=pG;
+
+[ItemType]  name=Location;
+ID=location_natural3; sprite=1234;
+cloneFrom=location_natural1;
+pR=overworld1;
+pB=overworld2;
+pG=pG;
+
+[ItemType]  name=Station;
+ID=location_station; sprite=1223;
+journalID=item_location_stations;
+cloneFrom=port_houses1;
+pR=pFade;
+pG=p1;
+special=anim_bobUpAndDown_slow_small;
+blockWalking=true;
+
+[JournalEntry]
+ID=item_location_stations;
+category=item; halfPage=true; rarity=1;
+title=Station;
+text=<itemBig=location_station><title=Station><brAdj=>A large floating platform put to varying uses. Some are military in nature, while others are used for long-term salvaging. You'll have to board this one to know its use.;
+
+[ItemType]  name=Shipwreck;
+ID=location_shipwreck; sprite=1224;
+journalID=journal_shipwreck;
+cloneFrom=port_houses1;
+pR=pFade; pG=pBrown; pB=p38;
+volume=9999;
+special=anim_bobUpAndDown_slow_small;
+special=unburyWhenLookedAt;
+special=container; special=containerWood;
+
+[JournalEntry]
+ID=journal_shipwreck;
+category=item; halfPage=true; rarity=1;
+title=Shipwreck;
+text=<itemBig=location_shipwreck><title=Shipwreck><brAdj=>This ruined ship was lost to weather or combat. Now it can only be salvaged for loot. Double-click it to examine the contents.;
+
+[ItemType]  name=Lost Shipwreck;
+ID=location_shipwreck2; sprite=1224;
+journalID=journal_shipwreck;
+cloneFrom=port_houses1;
+pR=pFade; pG=pBrown; pB=p38;
+volume=9999;
+special=anim_bobUpAndDown_slow_small;
+special=unburyWhenLookedAt;
+special=container; special=containerWood;
+special=lakeMarker;
+
+
+[ItemType]  name=Building;
+ID=port_bighouses1; sprite=1162;
+cloneFrom=port_houses1;
+pR=pR; pB=pB; pG=pG;
+[ItemType]  name=Building;
+ID=port_bighouses2; sprite=1163;
+cloneFrom=port_houses1;
+pR=pR; pB=pB; pG=pG;
+[ItemType]  name=Building;
+ID=port_bighouses3; sprite=1164;
+cloneFrom=port_houses1;
+pR=pR; pB=pB; pG=pG;
+[ItemType]  name=Building;
+ID=port_bighouses4; sprite=1165;
+cloneFrom=port_houses1;
+pR=pR; pB=pB; pG=pG;
+[ItemType]  name=Building;
+ID=port_bighouses4a; sprite=1166;
+cloneFrom=port_houses1;
+pR=pR; pB=pB; pG=pG;
+[ItemType]  name=Building;
+ID=port_bighouses5; sprite=1167;
+cloneFrom=port_houses1;
+pR=pR; pB=pB; pG=pG;
+[ItemType]  name=Building;
+ID=port_bighouses6; sprite=1168;
+cloneFrom=port_houses1;
+pR=pR; pB=pB; pG=pG;
+[ItemType]  name=Building;
+ID=port_bighouses7; sprite=1169;
+cloneFrom=port_houses1;
+pR=pR; pB=pB; pG=pG;
+[ItemType]  name=Building;
+ID=port_bighouses8; sprite=1170;
+cloneFrom=port_houses1;
+pR=pR; pB=pB; pG=pG;
+[ItemType]  name=Building;
+ID=port_bighouses9; sprite=1171;
+cloneFrom=port_houses1;
+pR=pR; pB=pB; pG=pG;
+[ItemType]  name=Building;
+ID=port_bighouses10; sprite=1172;
+cloneFrom=port_houses1;
+pR=pR; pB=pB; pG=pG;
+
+
+
+
+[ItemType]  name=Building;
+ID=port_bighouses1B; sprite=1162;
+cloneFrom=port_houses1B;
+pR=pR; pB=pB; pG=pG;
+
+[ItemType]  name=Building;
+ID=port_bighouses2B; sprite=1163;
+cloneFrom=port_houses1B;
+pR=pR; pB=pB; pG=pG;
+
+[ItemType]  name=Building;
+ID=port_bighouses3B; sprite=1164;
+cloneFrom=port_houses1B;
+pR=pR; pB=pB; pG=pG;
+
+[ItemType]  name=Building;
+ID=port_bighouses4B; sprite=1165;
+cloneFrom=port_houses1B;
+pR=pR; pB=pB; pG=pG;
+
+[ItemType]  name=Building;
+ID=port_bighouses5B; sprite=1166;
+cloneFrom=port_houses1B;
+pR=pR; pB=pB; pG=pG;
+
+[ItemType]  name=Building;
+ID=port_bighouses6B; sprite=1167;
+cloneFrom=port_houses1B;
+pR=pR; pB=pB; pG=pG;
+
+[ItemType]  name=Building;
+ID=port_bighouses7B; sprite=1168;
+cloneFrom=port_houses1B;
+pR=pR; pB=pB; pG=pG;
+
+[ItemType]  name=Building;
+ID=port_bighouses8B; sprite=1169;
+cloneFrom=port_houses1B;
+pR=pR; pB=pB; pG=pG;
+
+[ItemType]  name=Building;
+ID=port_bighouses9B; sprite=1170;
+cloneFrom=port_houses1B;
+pR=pR; pB=pB; pG=pG;
+
+[ItemType]  name=Building;
+ID=port_bighouses10B; sprite=1171;
+cloneFrom=port_houses1B;
+pR=pR; pB=pB; pG=pG;
+[ItemType]  name=Building;
+ID=port_bighouses11B; sprite=1172;
+cloneFrom=port_houses1B;
+pR=pR; pB=pB; pG=pG;
+
+[ItemType]  name=Castle;
+ID=port_castle1; sprite=1221;
+texture=items_overworld;
+special=rollingPin_drawSplit;
+cloneFrom=port_houses1;
+pR=pR; pB=pB; pG=pG;
+
+[ItemType]  name=Castle;
+ID=port_castle2; sprite=1222;
+texture=items_overworld;
+special=rollingPin_drawSplit;
+cloneFrom=port_houses1;
+pR=pR; pB=pB; pG=pG;
+
+[ItemType]  name=Castle;
+ID=nonport_castle1; sprite=1221;
+texture=items_overworld; itemCategory=overworld;
+special=rollingPin_drawSplit;
+special=cannotBePickedUp; special=canHangOnWalls; special=canFloatOnWater;
+pR=pR; pB=pB; pG=pG;
+
+[ItemType]  name=Wreckage;
+ID=port_castle_wreckage1; sprite=1227;
+texture=items_overworld; itemCategory=overworld;
+special=rollingPin_drawSplit;
+pR=pR; pB=pB; pG=pG;
+cloneFrom=port_houses1;
+
+
+[ItemType]  name=Location;
+ID=port_houses_invis; sprite=1154;
+cloneFrom=port_houses1;
+special=invisible;
+pR=pR; pB=pB; pG=pG;
+
+[ItemType]  name=Equator;
+ID=equator1; sprite=1281; 
+texture=items_overworld;
+weight=0; itemCategory=overworld;
+special=cannotBePickedUp;
+special=canFloatOnWater; special=canAlwaysFitInTile;
+special=rollingPin_drawFlat; special=rollingPin_squishOnHorizon;
+special=ignoreHeight;
+pR = pGhost;
+[ItemType]  name=Prime Meridian;
+ID=prime_meridian1; sprite=1282; 
+cloneFrom=equator1;
+
+
+
+[ItemType]  name=Rocks;
+ID=outdoor_rocks1; sprite=161; 
+texture=items_overworld;
+journalID=;
+weight=1; itemCategory=overworld;
+pR=pG;
+pB=pGrey;
+pG=zoneWood;
+special=cannotBePickedUp; special=noTooltip;
+special=canFloatOnWater; special=inheritTerrainPaletteR;
+special=rollingPin_drawLower;
+special=rollingPin_drawSplit;
+blockWalking=true;
+  
+
+[ItemType]  name=Rocks;
+ID=outdoor_rocks2; sprite=162; 
+cloneFrom=outdoor_rocks1; 
+[ItemType]  name=Rocks;
+ID=outdoor_rocks3; sprite=163; 
+cloneFrom=outdoor_rocks1; special=sprite2xWidth;
+[ItemType]  name=Rocks;
+ID=outdoor_rocks4; sprite=165; 
+cloneFrom=outdoor_rocks1; special=sprite2xWidth;
+
+[ItemType]  name=Rocks;
+ID=outdoor_rocks_behind1; sprite=161; 
+texture=items_overworld;
+journalID=;
+weight=1; itemCategory=overworld;
+pR=pB; pB=pGrey; pG=zoneWood;
+special=cannotBePickedUp; special=noTooltip;
+special=alwaysBelowOtherItems;
+special=inheritTerrainPaletteR;
+special=adjustSpriteYUp16; special=adjustSpriteY2;
+special=rollingPin_drawLower;
+special=rollingPin_drawSplit;
+
+[ItemType]  name=Rocks;
+ID=outdoor_rocks_behind2; sprite=162; 
+cloneFrom=outdoor_rocks_behind1;
+
+[ItemType]  name=Rocks;
+ID=outdoor_rocks_behind3; sprite=163; 
+cloneFrom=outdoor_rocks_behind1; special=sprite2xWidth;
+
+[ItemType]  name=Rocks;
+ID=outdoor_rocks_behind4; sprite=165; 
+cloneFrom=outdoor_rocks_behind1; special=sprite2xWidth;
+  
+[ItemType]  name=Blockade;
+ID=outdoor_blockade1; sprite=167; 
+texture=items_overworld;
+journalID=journal_outdoor_blockade;
+weight=1; itemCategory=overworld;
+pR=pFadeAnim;
+pB=pGrey;
+special=cannotBePickedUp;
+special=canFloatOnWater;
+blockWalking=true; blockJumping=true;
+special=rollingPin_drawFlat; special=rollingPin_drawLower; special=slopeRot;
+[ItemReaction] 
+ID=outdoor_blockade1; element=somethingHappened; fx=waterSplash; newID=X;
+
+[JournalEntry]
+ID=journal_outdoor_blockade;
+category=item; halfPage=true; rarity=1;
+title=Blockade;
+text=<itemBig=outdoor_blockade1><title=Blockade><brAdj=>A unfortunate rockslide has blocked this river - you can't pass unless you approach it from the correct side, at which point you may clear it permanently.;
+
+  
+[ItemType]  name=Mountains;
+ID=outdoor_hills_brown1; sprite=177; 
+texture=items_overworld;
+journalID=;
+weight=1; itemCategory=overworld;
+pR=pG;
+pB=pGreyblue;
+pG=zoneWood;
+special=cannotBePickedUp; special=noTooltip;
+special=inheritTerrainPaletteR;
+  
+[ItemType]  name=Mountains;
+ID=outdoor_hills_brown_behind1; sprite=178; 
+texture=items_overworld;
+journalID=;
+weight=1; itemCategory=overworld;
+pR=pG;
+pB=pGreyblue;
+pG=zoneWood;
+special=cannotBePickedUp; special=noTooltip;
+special=inheritTerrainPaletteR;
+special=rollingPin_drawLower;
+special=alwaysBelowOtherItems;
+  
+[ItemType]  name=Hills;
+ID=outdoor_hills1; sprite=225; 
+texture=items_overworld;
+journalID=;
+weight=1; itemCategory=overworld;
+special=cannotBePickedUp; special=noTooltip;
+special=canFloatOnWater; special=inheritTerrainPaletteR;
+blockWalking=true;
+pR=pG;
+[ItemType]  name=Hills;
+ID=outdoor_hills_behind1; sprite=225; 
+cloneFrom=outdoor_hills1;
+special=adjustSpriteYUp16; special=adjustSpriteY2;
+special=rollingPin_drawLower;
+pR=pB;
+
+
+
+  
+[ItemType]  name=Hills;
+ID=outdoor_hillsY1; sprite=289; 
+texture=items_overworld;
+journalID=;
+weight=1; itemCategory=overworld;
+special=cannotBePickedUp; special=noTooltip;
+pR=pR; pB=pB; pG=pG;
+[ItemType]  name=Hills;
+ID=outdoor_hillsY_behind1; sprite=289; 
+texture=items_overworld;
+journalID=;
+weight=1; itemCategory=overworld;
+special=cannotBePickedUp; special=noTooltip;
+special=alwaysBelowOtherItems;
+special=adjustSpriteYUp16; special=adjustSpriteY2;
+special=rollingPin_drawLower;
+pR=pR; pB=pB; pG=pG;
+
+
+[ItemType]  name=Hills;
+ID=outdoor_hillsY2; sprite=290; 
+cloneFrom=outdoor_hillsY1; special=sprite2xWidth;
+[ItemType]  name=Hills;
+ID=outdoor_hillsY_behind2; sprite=290; 
+cloneFrom=outdoor_hillsY_behind1; special=sprite2xWidth;
+
+[ItemType]  name=Mountains;
+ID=outdoor_mtns1; sprite=240; 
+texture=items_overworld;
+journalID=;
+pG=zoneGrass; pB=zoneDirt;
+weight=1; itemCategory=overworld;
+special=cannotBePickedUp; special=noTooltip;
+special=inheritTerrainPalettes;
+  
+[ItemType]  name=Mountains;
+ID=outdoor_mtns_behind1; sprite=240; 
+texture=items_overworld;
+journalID=;
+pG=zoneGrass; pB=zoneDirt;
+weight=1; itemCategory=overworld;
+special=cannotBePickedUp; special=noTooltip;
+special=inheritTerrainPalettes;
+special=rollingPin_drawLower;
+special=alwaysBelowOtherItems;
+special=adjustSpriteYUp16; special=adjustSpriteY2;
+
+[ItemType]  name=Mountains;
+ID=outdoor_mtns2; sprite=241; 
+cloneFrom=outdoor_mtns1;
+[ItemType]  name=Mountains;
+ID=outdoor_mtns_behind2; sprite=241; 
+cloneFrom=outdoor_mtns_behind1;
+
+[ItemType]  name=Mountain Wyvern;
+ID=outdoor_mtns1_wyvern1; sprite=242; 
+texture=items_overworld; special=animatedPauseOnFrame1and3;
+journalID=journal_outdoor_mtns1_wyvern1;
+weight=1; itemCategory=overworld;
+special=cannotBePickedUp;
+special=inheritTerrainPaletteR;
+special=inheritTerrainPaletteB;
+pR=overworld1; pG=p46; pB=pYellow6;
+[JournalEntry]
+ID=journal_outdoor_mtns1_wyvern1;
+category=creature; halfPage=true; rarity=4;
+title=Mountain Wyvern;
+text=<itemBig=outdoor_mtns1_wyvern1><title=Mountain Wyvern><brAdj=>These great winged reptilian beasts roost atop mountains and hunt large herbivores. They dislike prey that can fight back, and as such usually leave humanoids alone. They hibernate extensively multiple times per year.;
+
+
+---MTN RANGE
+
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeL_base; sprite=769; 
+texture=items_overworld;
+journalID=;
+weight=0; itemCategory=overworld;
+special=cannotBePickedUp; special=noTooltip;
+special=canFloatOnWater; special=canAlwaysFitInTile;
+special=rollingPin_drawLower;
+special=inheritTerrainPaletteR;
+depthMod=1050; special=rollingPin_dontApplyDepthMod;
+pR=pG;
+pG=pOrange2;
+pB=pOrange3;
+
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeL_base2; sprite=778; 
+cloneFrom=outdoor_mtn_rangeL_base;
+
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeL1; sprite=770; 
+texture=items_overworld;
+journalID=;
+weight=0; itemCategory=overworld;
+special=cannotBePickedUp; special=noTooltip;
+special=canFloatOnWater; special=canAlwaysFitInTile;
+special=rollingPin_drawSplit;
+special=inheritTerrainPaletteR;
+depthMod=1050; special=rollingPin_dontApplyDepthMod;
+pR=pG;
+pG=pOrange2;
+pB=pOrange3;
+
+
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeL2; sprite=771; 
+cloneFrom=outdoor_mtn_rangeL1;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeL3; sprite=772; 
+cloneFrom=outdoor_mtn_rangeL1;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeL4; sprite=773; 
+cloneFrom=outdoor_mtn_rangeL1;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeL5; sprite=774; 
+cloneFrom=outdoor_mtn_rangeL1;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeL6; sprite=775; 
+cloneFrom=outdoor_mtn_rangeL1;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeL7; sprite=776; 
+cloneFrom=outdoor_mtn_rangeL1;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeL8; sprite=777; 
+cloneFrom=outdoor_mtn_rangeL1;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeL9; sprite=779; 
+cloneFrom=outdoor_mtn_rangeL1;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeL10; sprite=780; 
+cloneFrom=outdoor_mtn_rangeL1;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeL11; sprite=781; 
+cloneFrom=outdoor_mtn_rangeL1;
+
+---
+
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeR_base; sprite=833; 
+cloneFrom=outdoor_mtn_rangeL_base;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeR_base2; sprite=842; 
+cloneFrom=outdoor_mtn_rangeL_base2;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeR1; sprite=834; 
+cloneFrom=outdoor_mtn_rangeL1;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeR2; sprite=835; 
+cloneFrom=outdoor_mtn_rangeL2;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeR3; sprite=836; 
+cloneFrom=outdoor_mtn_rangeL3;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeR4; sprite=837; 
+cloneFrom=outdoor_mtn_rangeL4;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeR5; sprite=838; 
+cloneFrom=outdoor_mtn_rangeL5;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeR6; sprite=839; 
+cloneFrom=outdoor_mtn_rangeL6;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeR7; sprite=840; 
+cloneFrom=outdoor_mtn_rangeL7;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeR8; sprite=841; 
+cloneFrom=outdoor_mtn_rangeL8;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeR9; sprite=843; 
+cloneFrom=outdoor_mtn_rangeL9;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeR10; sprite=844; 
+cloneFrom=outdoor_mtn_rangeL10;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeR11; sprite=845; 
+cloneFrom=outdoor_mtn_rangeL11;
+
+---
+
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM_base; sprite=897; 
+cloneFrom=outdoor_mtn_rangeL_base;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM1; sprite=898; 
+cloneFrom=outdoor_mtn_rangeL1;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM2; sprite=899; 
+cloneFrom=outdoor_mtn_rangeL2;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM3; sprite=900; 
+cloneFrom=outdoor_mtn_rangeL3;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM4; sprite=901; 
+cloneFrom=outdoor_mtn_rangeL4;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM5; sprite=902; 
+cloneFrom=outdoor_mtn_rangeL5;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM6; sprite=903; 
+cloneFrom=outdoor_mtn_rangeL6;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM7; sprite=904; 
+cloneFrom=outdoor_mtn_rangeL7;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM8; sprite=905; 
+cloneFrom=outdoor_mtn_rangeL1;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM9; sprite=906; 
+cloneFrom=outdoor_mtn_rangeL1;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM10; sprite=907; 
+cloneFrom=outdoor_mtn_rangeL1;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM11; sprite=908; 
+cloneFrom=outdoor_mtn_rangeL1;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM12; sprite=909; 
+cloneFrom=outdoor_mtn_rangeL1;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM13; sprite=910; 
+cloneFrom=outdoor_mtn_rangeL1;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM14; sprite=911; 
+cloneFrom=outdoor_mtn_rangeL1;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM15; sprite=912; 
+cloneFrom=outdoor_mtn_rangeL1;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM16; sprite=913; 
+cloneFrom=outdoor_mtn_rangeL1;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM17; sprite=914; 
+cloneFrom=outdoor_mtn_rangeL1;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM20; sprite=917; 
+cloneFrom=outdoor_mtn_rangeL1;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM21; sprite=918; 
+cloneFrom=outdoor_mtn_rangeL1;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM18; sprite=915; 
+cloneFrom=outdoor_mtn_rangeL1;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM19; sprite=916; 
+cloneFrom=outdoor_mtn_rangeL1;
+
+
+---MTN RANGE #2
+
+[ItemType]  name=Cragrook;
+ID=outdoor_mtn_rangeL_base_cr; sprite=1569; 
+texture=items_overworld;
+journalID=journal_cragrook;
+weight=0; itemCategory=overworld;
+special=cannotBePickedUp;
+special=canFloatOnWater; special=canAlwaysFitInTile;
+special=rollingPin_drawLower;
+depthMod=1050; special=rollingPin_dontApplyDepthMod;
+pR=pFadeDarker;
+pG=p32;
+pB=p33;
+
+[ItemType] 
+ID=outdoor_mtn_rangeL_base2_cr; sprite=1578; 
+cloneFrom=outdoor_mtn_rangeL_base_cr;
+
+[ItemType]  name=Cragrook;
+ID=outdoor_mtn_rangeL1_cr; sprite=1570; 
+texture=items_overworld;
+journalID=journal_cragrook;
+weight=0; itemCategory=overworld;
+special=cannotBePickedUp;
+special=canFloatOnWater; special=canAlwaysFitInTile;
+special=rollingPin_drawSplit;
+depthMod=1050; special=rollingPin_dontApplyDepthMod;
+pR=pFadeDarker;
+pG=p32;
+pB=p33;
+
+
+[ItemType] 
+ID=outdoor_mtn_rangeL2_cr; sprite=1571; 
+cloneFrom=outdoor_mtn_rangeL1_cr;
+[ItemType] 
+ID=outdoor_mtn_rangeL3_cr; sprite=1572; 
+cloneFrom=outdoor_mtn_rangeL1_cr;
+[ItemType]  
+ID=outdoor_mtn_rangeL4_cr; sprite=1573; 
+cloneFrom=outdoor_mtn_rangeL1_cr;
+[ItemType]  
+ID=outdoor_mtn_rangeL5_cr; sprite=1574; 
+cloneFrom=outdoor_mtn_rangeL1_cr;
+[ItemType]  
+ID=outdoor_mtn_rangeL6_cr; sprite=1575; 
+cloneFrom=outdoor_mtn_rangeL1_cr;
+[ItemType]  
+ID=outdoor_mtn_rangeL7_cr; sprite=1576; 
+cloneFrom=outdoor_mtn_rangeL1_cr;
+[ItemType] 
+ID=outdoor_mtn_rangeL8_cr; sprite=1577; 
+cloneFrom=outdoor_mtn_rangeL1_cr;
+[ItemType] 
+ID=outdoor_mtn_rangeL9_cr; sprite=1579; 
+cloneFrom=outdoor_mtn_rangeL1_cr;
+[ItemType]  
+ID=outdoor_mtn_rangeL10_cr; sprite=1580; 
+cloneFrom=outdoor_mtn_rangeL1_cr;
+[ItemType]  
+ID=outdoor_mtn_rangeL11_cr; sprite=1581; 
+cloneFrom=outdoor_mtn_rangeL1_cr;
+
+---
+
+[ItemType]  
+ID=outdoor_mtn_rangeR_base_cr; sprite=1633; 
+cloneFrom=outdoor_mtn_rangeL_base_cr;
+[ItemType]  
+ID=outdoor_mtn_rangeR_base2_cr; sprite=1642; 
+cloneFrom=outdoor_mtn_rangeL_base2_cr;
+[ItemType] 
+ID=outdoor_mtn_rangeR1_cr; sprite=1634; 
+cloneFrom=outdoor_mtn_rangeL1_cr;
+[ItemType]  
+ID=outdoor_mtn_rangeR2_cr; sprite=1635; 
+cloneFrom=outdoor_mtn_rangeL2_cr;
+[ItemType]  
+ID=outdoor_mtn_rangeR3_cr; sprite=1636; 
+cloneFrom=outdoor_mtn_rangeL3_cr;
+[ItemType]  
+ID=outdoor_mtn_rangeR4_cr; sprite=1637; 
+cloneFrom=outdoor_mtn_rangeL4_cr;
+[ItemType] 
+ID=outdoor_mtn_rangeR5_cr; sprite=1638; 
+cloneFrom=outdoor_mtn_rangeL5_cr;
+[ItemType]  
+ID=outdoor_mtn_rangeR6_cr; sprite=1639; 
+cloneFrom=outdoor_mtn_rangeL6_cr;
+[ItemType] 
+ID=outdoor_mtn_rangeR7_cr; sprite=1640; 
+cloneFrom=outdoor_mtn_rangeL7_cr;
+[ItemType]  
+ID=outdoor_mtn_rangeR8_cr; sprite=1641; 
+cloneFrom=outdoor_mtn_rangeL8_cr;
+[ItemType]  
+ID=outdoor_mtn_rangeR9_cr; sprite=1643; 
+cloneFrom=outdoor_mtn_rangeL9_cr;
+[ItemType]  
+ID=outdoor_mtn_rangeR10_cr; sprite=1644; 
+cloneFrom=outdoor_mtn_rangeL10_cr;
+[ItemType] 
+ID=outdoor_mtn_rangeR11_cr; sprite=1645; 
+cloneFrom=outdoor_mtn_rangeL11_cr;
+
+---
+
+[ItemType]  
+ID=outdoor_mtn_rangeM_base_cr; sprite=1697; 
+cloneFrom=outdoor_mtn_rangeL_base_cr;
+[ItemType]  
+ID=outdoor_mtn_rangeM1_cr; sprite=1698; 
+cloneFrom=outdoor_mtn_rangeL1_cr;
+[ItemType] 
+ID=outdoor_mtn_rangeM2_cr; sprite=1699; 
+cloneFrom=outdoor_mtn_rangeL2_cr;
+[ItemType] 
+ID=outdoor_mtn_rangeM3_cr; sprite=1700; 
+cloneFrom=outdoor_mtn_rangeL3_cr;
+[ItemType]  
+ID=outdoor_mtn_rangeM4_cr; sprite=1701; 
+cloneFrom=outdoor_mtn_rangeL4_cr;
+[ItemType] 
+ID=outdoor_mtn_rangeM5_cr; sprite=1702; 
+cloneFrom=outdoor_mtn_rangeL5_cr;
+[ItemType]  
+ID=outdoor_mtn_rangeM6_cr; sprite=1703; 
+cloneFrom=outdoor_mtn_rangeL6_cr;
+[ItemType]  
+ID=outdoor_mtn_rangeM7_cr; sprite=1704; 
+cloneFrom=outdoor_mtn_rangeL7_cr;
+[ItemType]  
+ID=outdoor_mtn_rangeM8_cr; sprite=1705; 
+cloneFrom=outdoor_mtn_rangeL1_cr;
+[ItemType]  
+ID=outdoor_mtn_rangeM9_cr; sprite=1706; 
+cloneFrom=outdoor_mtn_rangeL1_cr;
+[ItemType]  
+ID=outdoor_mtn_rangeM10_cr; sprite=1707; 
+cloneFrom=outdoor_mtn_rangeL1_cr;
+[ItemType]  
+ID=outdoor_mtn_rangeM11_cr; sprite=1708; 
+cloneFrom=outdoor_mtn_rangeL1_cr;
+[ItemType]  
+ID=outdoor_mtn_rangeM12_cr; sprite=1709; 
+cloneFrom=outdoor_mtn_rangeL1_cr;
+[ItemType]  
+ID=outdoor_mtn_rangeM13_cr; sprite=1710; 
+cloneFrom=outdoor_mtn_rangeL1_cr;
+[ItemType]  
+ID=outdoor_mtn_rangeM14_cr; sprite=1711; 
+cloneFrom=outdoor_mtn_rangeL1_cr;
+[ItemType] 
+ID=outdoor_mtn_rangeM15_cr; sprite=1712; 
+cloneFrom=outdoor_mtn_rangeL1_cr;
+[ItemType]
+ID=outdoor_mtn_rangeM16_cr; sprite=1713; 
+cloneFrom=outdoor_mtn_rangeL1_cr;
+[ItemType]  
+ID=outdoor_mtn_rangeM17_cr; sprite=1714; 
+cloneFrom=outdoor_mtn_rangeL1_cr;
+[ItemType]
+ID=outdoor_mtn_rangeM20_cr; sprite=1717; 
+cloneFrom=outdoor_mtn_rangeL1_cr;
+[ItemType]
+ID=outdoor_mtn_rangeM21_cr; sprite=1718; 
+cloneFrom=outdoor_mtn_rangeL1_cr;
+[ItemType]
+ID=outdoor_mtn_rangeM18_cr; sprite=1715; 
+cloneFrom=outdoor_mtn_rangeL1_cr;
+[ItemType]
+ID=outdoor_mtn_rangeM19_cr; sprite=1716; 
+cloneFrom=outdoor_mtn_rangeL1_cr;
+
+[JournalEntry]
+ID=journal_cragrook;
+category=item; halfPage=true; rarity=1;
+title=Cragrook;
+text=<itemBig=outdoor_mtn_rangeL_base_cr><title=Cragrook><brAdj=>What appears to be a mountain range is actually Cragrook - a hardy tree-like root that grows to massive sizes. Cragrook can grow so large that entire ecosystems exist on and within it. Its valuable fruit only grows at the peak, to be eaten and spread by birds and other avian creatures.;
+
+[ItemType]  name=Rooksbane;
+ID=outdoor_mtn_mushroom1; sprite=1584; 
+texture=items_overworld;
+journalID=journal_rooksbane;
+weight=0; itemCategory=overworld;
+special=quantityChangesSprite_upTo4; stackable=true;
+special=cannotBePickedUp;
+special=canFloatOnWater; special=canAlwaysFitInTile;
+special=rollingPin_drawSplit; 
+depthMod=1060; special=rollingPin_scaleDepthMod; special=rollingPin_dontApplyDepthMod;
+pR=pYellow5; pG=pFadeDarker;
+
+[ItemType]  name=Rooksbane;
+ID=outdoor_mtn_mushroom2; sprite=1648; 
+texture=items_overworld;
+journalID=journal_rooksbane;
+weight=0; itemCategory=overworld;
+special=quantityChangesSprite_upTo4; stackable=true;
+special=cannotBePickedUp;
+special=canFloatOnWater; special=canAlwaysFitInTile;
+special=rollingPin_drawSplit; 
+depthMod=1060; special=rollingPin_scaleDepthMod; special=rollingPin_dontApplyDepthMod;
+pR=pYellow5; pG=pFadeDarker;
+
+[JournalEntry]
+ID=journal_rooksbane;
+category=item; halfPage=true; rarity=1;
+title=Rooksbane;
+text=<itemBig=outdoor_mtn_mushroom1><title=Rooksbane><brAdj=>Normally a small fungus, Rooksbane can grow into massive mushroom shelves on Cragrook. Despite the dramatic name, the Cragrook actually benefits - Rooksbane feeds scavengers which often live and die on the Cragrook, whose bodies supply it with nutrients.;
+
+---MTN RANGE ALT
+
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeL_base_alt; sprite=769; 
+texture=items_overworld;
+journalID=;
+weight=0; itemCategory=overworld;
+special=cannotBePickedUp; special=noTooltip;
+special=canFloatOnWater; special=canAlwaysFitInTile;
+special=rollingPin_drawLower;
+special=inheritTerrainPaletteR;
+depthMod=1050; special=rollingPin_dontApplyDepthMod;
+pR=pG;
+pG=overworld11;
+pB=p77;
+
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeL_base2_alt; sprite=778; 
+cloneFrom=outdoor_mtn_rangeL_base_alt;
+
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeL1_alt; sprite=770; 
+texture=items_overworld;
+journalID=;
+weight=0; itemCategory=overworld;
+special=cannotBePickedUp; special=noTooltip;
+special=canFloatOnWater; special=canAlwaysFitInTile;
+special=rollingPin_drawSplit;
+special=inheritTerrainPaletteR;
+depthMod=1050; special=rollingPin_dontApplyDepthMod;
+pR=pG;
+pG=overworld11;
+pB=p77;
+
+
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeL2_alt; sprite=771; 
+cloneFrom=outdoor_mtn_rangeL1_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeL3_alt; sprite=772; 
+cloneFrom=outdoor_mtn_rangeL1_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeL4_alt; sprite=773; 
+cloneFrom=outdoor_mtn_rangeL1_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeL5_alt; sprite=774; 
+cloneFrom=outdoor_mtn_rangeL1_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeL6_alt; sprite=775; 
+cloneFrom=outdoor_mtn_rangeL1_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeL7_alt; sprite=776; 
+cloneFrom=outdoor_mtn_rangeL1_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeL8_alt; sprite=777; 
+cloneFrom=outdoor_mtn_rangeL1_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeL9_alt; sprite=779; 
+cloneFrom=outdoor_mtn_rangeL1_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeL10_alt; sprite=780; 
+cloneFrom=outdoor_mtn_rangeL1_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeL11_alt; sprite=781; 
+cloneFrom=outdoor_mtn_rangeL1_alt;
+
+---
+
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeR_base_alt; sprite=833; 
+cloneFrom=outdoor_mtn_rangeL_base_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeR_base2_alt; sprite=842; 
+cloneFrom=outdoor_mtn_rangeL_base2_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeR1_alt; sprite=834; 
+cloneFrom=outdoor_mtn_rangeL1_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeR2_alt; sprite=835; 
+cloneFrom=outdoor_mtn_rangeL2_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeR3_alt; sprite=836; 
+cloneFrom=outdoor_mtn_rangeL3_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeR4_alt; sprite=837; 
+cloneFrom=outdoor_mtn_rangeL4_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeR5_alt; sprite=838; 
+cloneFrom=outdoor_mtn_rangeL5_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeR6_alt; sprite=839; 
+cloneFrom=outdoor_mtn_rangeL6_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeR7_alt; sprite=840; 
+cloneFrom=outdoor_mtn_rangeL7_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeR8_alt; sprite=841; 
+cloneFrom=outdoor_mtn_rangeL8_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeR9_alt; sprite=843; 
+cloneFrom=outdoor_mtn_rangeL9_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeR10_alt; sprite=844; 
+cloneFrom=outdoor_mtn_rangeL10_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeR11_alt; sprite=845; 
+cloneFrom=outdoor_mtn_rangeL11_alt;
+
+---
+
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM_base_alt; sprite=897; 
+cloneFrom=outdoor_mtn_rangeL_base_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM1_alt; sprite=898; 
+cloneFrom=outdoor_mtn_rangeL1_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM2_alt; sprite=899; 
+cloneFrom=outdoor_mtn_rangeL2_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM3_alt; sprite=900; 
+cloneFrom=outdoor_mtn_rangeL3_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM4_alt; sprite=901; 
+cloneFrom=outdoor_mtn_rangeL4_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM5_alt; sprite=902; 
+cloneFrom=outdoor_mtn_rangeL5_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM6_alt; sprite=903; 
+cloneFrom=outdoor_mtn_rangeL6_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM7_alt; sprite=904; 
+cloneFrom=outdoor_mtn_rangeL7_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM8_alt; sprite=905; 
+cloneFrom=outdoor_mtn_rangeL1_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM9_alt; sprite=906; 
+cloneFrom=outdoor_mtn_rangeL1_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM10_alt; sprite=907; 
+cloneFrom=outdoor_mtn_rangeL1_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM11_alt; sprite=908; 
+cloneFrom=outdoor_mtn_rangeL1_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM12_alt; sprite=909; 
+cloneFrom=outdoor_mtn_rangeL1_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM13_alt; sprite=910; 
+cloneFrom=outdoor_mtn_rangeL1_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM14_alt; sprite=911; 
+cloneFrom=outdoor_mtn_rangeL1_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM15_alt; sprite=912; 
+cloneFrom=outdoor_mtn_rangeL1_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM16_alt; sprite=913; 
+cloneFrom=outdoor_mtn_rangeL1_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM17_alt; sprite=914; 
+cloneFrom=outdoor_mtn_rangeL1_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM20_alt; sprite=917; 
+cloneFrom=outdoor_mtn_rangeL1_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM21_alt; sprite=918; 
+cloneFrom=outdoor_mtn_rangeL1_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM18_alt; sprite=915; 
+cloneFrom=outdoor_mtn_rangeL1_alt;
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM19_alt; sprite=916; 
+cloneFrom=outdoor_mtn_rangeL1_alt;
+
+
+---PLATEAU
+
+[ItemType]  name=Plateau;
+ID=outdoor_plateau_corner1; sprite=353; 
+texture=items_overworld;
+journalID=;
+weight=1; itemCategory=overworld;
+special=cannotBePickedUp; special=noTooltip;
+special=canFloatOnWater;
+special=inheritTerrainPaletteR;
+pR=overworld1; pB=pFadeDarker; pG=zoneDirt;
+depthMod=50;
+
+[ItemType]  name=Plateau;
+ID=outdoor_plateau1; sprite=354; 
+cloneFrom=outdoor_plateau_corner1;
+depthMod=0;
+  
+[ItemType]  name=Plateau;
+ID=outdoor_plateau_corner_inside1; sprite=355; 
+cloneFrom=outdoor_plateau1;
+depthMod=50;
+  
+  
+[ItemType]  name=Plateau;
+ID=outdoor_plateau_side1; sprite=356; 
+cloneFrom=outdoor_plateau1;
+special=rollingPin_drawFlat; special=rollingPin_scaleMore;
+depthMod=0;
+[ItemType]  name=Plateau;
+ID=outdoor_plateau_side2; sprite=357; 
+cloneFrom=outdoor_plateau1;
+special=rollingPin_drawFlat;
+depthMod=0;
+[ItemType]  name=Plateau;
+ID=outdoor_plateau_top; sprite=358; 
+cloneFrom=outdoor_plateau1;
+special=rollingPin_drawFlat; special=rollingPin_scaleHalf;
+depthMod=0;
+  
+[ItemType]  name=Plateau;
+ID=outdoor_plateau_topcorner1; sprite=359; 
+cloneFrom=outdoor_plateau1;
+special=rollingPin_drawFlat; special=rollingPin_scaleHalf;
+depthMod=0;
+[ItemType]  name=Plateau;
+ID=outdoor_plateau_topcorner_in1; sprite=360; 
+cloneFrom=outdoor_plateau1;
+special=rollingPin_drawFlat; special=rollingPin_scaleHalf;
+depthMod=0;
+  
+[ItemType]  name=Plateau;
+ID=outdoor_plateau_surface1; sprite=361; 
+cloneFrom=outdoor_plateau1;
+depthMod=0;
+[ItemType]  name=Plateau;
+ID=outdoor_plateau_surface_edge1; sprite=362; 
+cloneFrom=outdoor_plateau1;
+depthMod=0;
+[ItemType]  name=Plateau;
+ID=outdoor_plateau_surface_underCorner1; sprite=363; 
+cloneFrom=outdoor_plateau1;
+special=rollingPin_drawFlat; special=rollingPin_scaleHalf;
+depthMod=0;
+  
+[ItemType]  name=Sea Flower;
+ID=sea_flower1; sprite=545; 
+texture=items_overworld;
+journalID=journal_sea_flower;
+weight=0; itemCategory=overworld;
+special=cannotBePickedUp; special=noTooltip;
+special=canFloatOnWater; special=canAlwaysFitInTile;
+special=rollingPin_drawFlat;
+blockWalking=true; blockJumping=true;
+[ItemReaction]
+ID=sea_flower1; element=physical; newID=X; fx=grassdust;
+
+[ItemType]  name=Sea Flower;
+ID=sea_flower2; sprite=546; 
+cloneFrom=sea_flower1;
+[ItemType]  name=Sea Flower;
+ID=sea_flower3; sprite=547; 
+cloneFrom=sea_flower1;
+[JournalEntry]
+ID=journal_sea_flower;
+category=item; halfPage=true; rarity=0;
+title=Sea Flower;
+text=<itemBig=sea_flower1><title=Sea Flower><brAdj=>Bright saltwater flower with a stem that reaches into the depths. These tend to grow to great sizes all across Eral.;
+[ItemType]  name=Underwater Object;
+ID=underwater_object1; sprite=609; 
+texture=items_overworld;
+journalID=;
+weight=0; itemCategory=overworld;
+special=cannotBePickedUp; special=noTooltip;
+special=canFloatOnWater; special=canAlwaysFitInTile;
+special=verytransparent; special=rollingPin_drawFlat;
+special=rollingPin_squishOnHorizon;
+
+[ItemType]  name=Underwater Object;
+ID=underwater_object2; sprite=610; 
+cloneFrom=underwater_object1;
+[ItemType]  name=Seaweed;
+ID=underwater_object3; sprite=611; 
+cloneFrom=underwater_object1; special=animated;
+[ItemType]  name=Seaweed;
+ID=underwater_object4; sprite=615; 
+cloneFrom=underwater_object1; special=animated;
+[ItemType]  name=Underwater Object;
+ID=underwater_object5; sprite=619; 
+cloneFrom=underwater_object1; special=anim_bobUpAndDown_slow_small;
+[ItemType]  name=Underwater Object;
+ID=underwater_object6; sprite=620; 
+cloneFrom=underwater_object1; special=anim_bobUpAndDown_slow_small;
+[ItemType]  name=Underwater Object;
+ID=underwater_object7; sprite=624; 
+cloneFrom=underwater_object1; special=animated2Slow;
+[ItemType]  name=Underwater Object;
+ID=underwater_object8; sprite=626; 
+cloneFrom=underwater_object1; special=animatedPauseOnFrame1and3;
+
+[ItemType]  name=Underwater Object;
+ID=underwater_object9; sprite=545; 
+cloneFrom=underwater_object1;
+[ItemType]  name=Underwater Object;
+ID=underwater_object10; sprite=546; 
+cloneFrom=underwater_object1;
+[ItemType]  name=Underwater Object;
+ID=underwater_object11; sprite=547; 
+cloneFrom=underwater_object1;
+[ItemType]  name=Underwater Object;
+ID=underwater_object12; sprite=621; 
+cloneFrom=underwater_object1; special=anim_bobUpAndDown_slow_small;
+
+
+[ItemType]
+ID=underwater_object1_procgen;
+cloneFrom=underwater_object1;
+[ItemType]
+ID=underwater_object2_procgen; 
+cloneFrom=underwater_object2;
+[ItemType]
+ID=underwater_object3_procgen;
+cloneFrom=underwater_object3;
+[ItemType]
+ID=underwater_object4_procgen; 
+cloneFrom=underwater_object4;
+[ItemType] 
+ID=underwater_object5_procgen;
+cloneFrom=underwater_object5; 
+[ItemType]
+ID=underwater_object6_procgen;
+cloneFrom=underwater_object6; 
+
+[ItemType]  name=Farmland;
+ID=farmland1; sprite=481; 
+texture=items_overworld; special=rollingPin_drawFlat;
+journalID=journal_farmland;
+weight=0; itemCategory=overworld;
+special=cannotBePickedUp; special=noTooltip;
+special=canFloatOnWater; special=canAlwaysFitInTile;
+
+[ItemType]  name=Farmland;
+ID=farmland2; sprite=482; 
+cloneFrom=farmland1;
+
+[JournalEntry]
+ID=journal_farmland;
+category=item; halfPage=true; rarity=0;
+title=Farmland;
+text=<itemBig=farmland1><title=Farmland><brAdj=>Land set aside for use in the growing and harvesting of plants and animals. Though it is a humble job, farm work is the backbone of civilization. Some farms turn to mechanization to increase efficiency, while others use Growth Triggers to speed things along. Too much magic can spoil both flavor and nutrition, however.;
+
+[ItemType]  name=Bones;
+ID=overworld_bones1; sprite=1409; 
+texture=items_overworld;
+journalID=journal_bone;
+weight=0; itemCategory=overworld;
+special=cannotBePickedUp; special=noTooltip;
+special=inheritTerrainPaletteR;
+pB=pBoneDark;
+
+[ItemType]  name=Bones;
+ID=overworld_bones2; sprite=1410; 
+cloneFrom=overworld_bones1;
+[ItemType]  name=Bones;
+ID=overworld_bones3; sprite=1411; 
+cloneFrom=overworld_bones1;
+[ItemType]  name=Bones;
+ID=overworld_bones4; sprite=1412; 
+cloneFrom=overworld_bones1;
+[ItemType]  name=Bones;
+ID=overworld_bones5; sprite=1413; 
+cloneFrom=overworld_bones1;
+[ItemType]  name=Bones;
+ID=overworld_bones6; sprite=1414; 
+cloneFrom=overworld_bones1;
+[ItemType]  name=Bones;
+ID=overworld_bones7; sprite=1415; 
+cloneFrom=overworld_bones1;
+[ItemType]  name=Bones;
+ID=overworld_bones8; sprite=1416; 
+cloneFrom=overworld_bones1;
+[ItemType]  name=Bones;
+ID=overworld_bones9; sprite=1417; 
+cloneFrom=overworld_bones1;
+
+[ItemType]  name=Towerwall;
+ID=overworld_wall1; sprite=1025; 
+texture=items_overworld;
+special=rollingPin_drawSplit;
+journalID=;
+weight=0; itemCategory=overworld;
+special=cannotBePickedUp;
+special=canFloatOnWater; special=canAlwaysFitInTile;
+blockWalking=true; blockJumping=true; blockLoE=true;
+pR=p9;
+pB=overworld1;
+[ItemType]
+ID=overworld_wall2; sprite=1026; 
+cloneFrom=overworld_wall1;
+[ItemType]
+ID=overworld_wall3; sprite=1027; 
+cloneFrom=overworld_wall1;
+[ItemType]
+ID=overworld_wall4; sprite=1028; 
+cloneFrom=overworld_wall1;
+[ItemType]
+ID=overworld_wall5; sprite=1029; 
+cloneFrom=overworld_wall1;
+[ItemType]
+ID=overworld_wall6; sprite=1030; 
+cloneFrom=overworld_wall1;
+[ItemType]
+ID=overworld_wall7; sprite=1031; 
+cloneFrom=overworld_wall1;
+[ItemType]
+ID=overworld_wall8; sprite=1032; 
+cloneFrom=overworld_wall1;
+[ItemType]
+ID=overworld_wall9; sprite=1033; 
+cloneFrom=overworld_wall1;
+[ItemType]
+ID=overworld_wall10; sprite=1034; 
+cloneFrom=overworld_wall1;
+[ItemType]
+ID=overworld_wall11; sprite=1035; 
+cloneFrom=overworld_wall1;
+[ItemType]
+ID=overworld_wall12; sprite=1036; 
+cloneFrom=overworld_wall1;
+[ItemType]  name=Wall Port;
+ID=overworld_wall13; sprite=1037; 
+cloneFrom=overworld_wall1;
+special=location; special=canAssignSpecialTC;
+special=autoAssignSpecialTC;
+[ItemType]  name=Towerwall;
+ID=overworld_wall14; sprite=1038; 
+cloneFrom=overworld_wall1;
+
+[ItemType] name=Wall;
+ID=overworld_wall1b;
+cloneFrom=overworld_wall1;
+pR=p1;
+[ItemType]
+ID=overworld_wall2b; sprite=1026; 
+cloneFrom=overworld_wall1b;
+[ItemType]
+ID=overworld_wall3b; sprite=1027; 
+cloneFrom=overworld_wall1b;
+[ItemType]
+ID=overworld_wall4b; sprite=1028; 
+cloneFrom=overworld_wall1b;
+[ItemType]
+ID=overworld_wall5b; sprite=1029; 
+cloneFrom=overworld_wall1b;
+[ItemType]
+ID=overworld_wall5b_passable; sprite=1029; 
+cloneFrom=overworld_wall5b;
+blockWalking=false; blockJumping=false; blockLoE=false;
+[ItemType]
+ID=overworld_wall6b; sprite=1030; 
+cloneFrom=overworld_wall1b;
+[ItemType]
+ID=overworld_wall7b; sprite=1031; 
+cloneFrom=overworld_wall1b;
+[ItemType]
+ID=overworld_wall8b; sprite=1032; 
+cloneFrom=overworld_wall1b;
+[ItemType]
+ID=overworld_wall9b; sprite=1033; 
+cloneFrom=overworld_wall1b;
+[ItemType]
+ID=overworld_wall10b; sprite=1034; 
+cloneFrom=overworld_wall1b;
+[ItemType]
+ID=overworld_wall11b; sprite=1035; 
+cloneFrom=overworld_wall1b;
+[ItemType]
+ID=overworld_wall12b; sprite=1036; 
+cloneFrom=overworld_wall1b;
+[ItemType]  name=Fortress;
+ID=overworld_wall13b; sprite=1037; 
+cloneFrom=overworld_wall1b;
+special=location; special=canAssignSpecialTC;
+special=autoAssignSpecialTC;
+blockWalking=false; blockJumping=false; blockLoE=false;
+[ItemType]
+ID=overworld_wall14b; sprite=1038; 
+cloneFrom=overworld_wall1b;
+
+
+
+[ItemType]  name=Hill Mold;
+ID=overworld_hillMold1; sprite=965; 
+texture=items_overworld;
+journalID=journal_hillMold;
+weight=0; itemCategory=overworld;
+special=cannotBePickedUp;
+special=canFloatOnWater; special=rollingPin_drawFlat;
+pR=pYellow;
+
+[ItemType]
+ID=overworld_hillMold_end1; sprite=961; 
+cloneFrom=overworld_hillMold1;
+special=quantityChangesSprite_upTo2; stackable=true;
+
+[ItemType]
+ID=overworld_hillMold_long1; sprite=963; 
+cloneFrom=overworld_hillMold1;
+special=quantityChangesSprite_upTo3; stackable=true;
+
+[ItemType]
+ID=overworld_hillMold_clump1; sprite=966; 
+cloneFrom=overworld_hillMold1;
+special=quantityChangesSprite_upTo3; stackable=true;
+
+[ItemType]
+ID=overworld_hillMold_branch1; sprite=969; 
+cloneFrom=overworld_hillMold1;
+special=quantityChangesSprite_upTo2; stackable=true;
+
+
+[ItemType]
+ID=overworld_hillMold1_rot; sprite=980; 
+cloneFrom=overworld_hillMold1;
+
+[ItemType]
+ID=overworld_hillMold_end1_rot; sprite=976; 
+cloneFrom=overworld_hillMold1;
+special=quantityChangesSprite_upTo2; stackable=true;
+
+[ItemType]
+ID=overworld_hillMold_long1_rot; sprite=978; 
+cloneFrom=overworld_hillMold1;
+special=quantityChangesSprite_upTo3; stackable=true;
+
+
+[ItemType]
+ID=overworld_hillMold_clump1_rot; sprite=981; 
+cloneFrom=overworld_hillMold1;
+special=quantityChangesSprite_upTo3; stackable=true;
+
+[ItemType]
+ID=overworld_hillMold_branch1_rot; sprite=984; 
+cloneFrom=overworld_hillMold1;
+special=quantityChangesSprite_upTo2; stackable=true;
+
+
+[JournalEntry]
+ID=journal_hillMold;
+category=item; halfPage=true; rarity=1;
+title=Hill Mold;
+text=<itemBig=overworld_hillMold_clump1><title=Hill Mold><brAdj=>A strange ooze that grows and infests into hill-sized mounds of mold. When left alone, it can cover cities. Weaponry has no effect until it is weakened with fire - and even then it spews toxin once burnt. Squads of battlemages are often enlisted to scorch and hack the vile stuff back.;
+
+[ItemType]  name=Tree;
+ID=outdoor_trees1; sprite=33; 
+texture=items_overworld;
+journalID=; stackable=true;
+weight=1; itemCategory=overworld;
+pR=pG;
+pB=zoneMisc1;
+pG=zoneWood;
+special=cannotBePickedUp; special=noTooltip;
+special=inheritTerrainPalettes;
+special=randomFlipWhenPlaced;
+special=quantityChangesSprite_upTo6;
+special=forestOverworldItem;
+  element=life;
+  
+[ItemType]  name=Tree;
+ID=outdoor_trees_behind1; sprite=33; 
+texture=items_overworld;
+journalID=; stackable=true;
+weight=1; itemCategory=overworld;
+pR=pB;
+pB=zoneMisc1;
+pG=zoneWood;
+special=cannotBePickedUp; special=noTooltip;
+special=alwaysBelowOtherItems;
+special=inheritTerrainPalettes;
+special=adjustSpriteYUp16; special=adjustSpriteY2;
+special=randomFlipWhenPlaced;
+special=rollingPin_drawLower;
+special=quantityChangesSprite_upTo4;
+special=forestOverworldItem;
+  element=life;
+  
+[ItemType]  name=Trees;
+ID=outdoor_trees2; sprite=37; 
+cloneFrom=outdoor_trees1;
+[ItemType]  name=Trees;
+ID=outdoor_trees_behind2; sprite=37; 
+cloneFrom=outdoor_trees_behind1;
+  
+  
+[ItemType]  name=Tree;
+ID=outdoor_trees_alt1; sprite=97; 
+cloneFrom=outdoor_trees1;
+  
+[ItemType]  name=Tree;
+ID=outdoor_trees_alt_behind1; sprite=97; 
+cloneFrom=outdoor_trees_behind1;
+  
+[ItemType]  name=Trees;
+ID=outdoor_trees_alt2; sprite=101; 
+cloneFrom=outdoor_trees1;
+[ItemType]  name=Trees;
+ID=outdoor_trees_alt_behind2; sprite=101; 
+cloneFrom=outdoor_trees_behind1;
+  
+  
+[ItemType]
+ID=outdoor_trees1_procgen; 
+cloneFrom=outdoor_trees1;
+[ItemType]
+ID=outdoor_trees_behind1_procgen;
+cloneFrom=outdoor_trees_behind1;
+[ItemType]
+ID=outdoor_trees2_procgen; 
+cloneFrom=outdoor_trees2;
+[ItemType]
+ID=outdoor_trees_behind2_procgen;
+cloneFrom=outdoor_trees_behind2;
+[ItemType]
+ID=outdoor_trees_alt1_procgen; 
+cloneFrom=outdoor_trees_alt1;
+[ItemType]
+ID=outdoor_trees_alt_behind1_procgen;
+cloneFrom=outdoor_trees_alt_behind1;
+[ItemType]
+ID=outdoor_trees_alt2_procgen; 
+cloneFrom=outdoor_trees_alt2; 
+[ItemType]
+ID=outdoor_trees_alt_behind2_procgen;
+cloneFrom=outdoor_trees_alt_behind2;
+
+[ItemType]  name=Ice;
+ID=ice_rubble_water; sprite=1345;  itemCategory=overworld;
+texture=items_overworld; stackable=true;
+journalID=;
+special=cannotBePickedUp; special=alwaysBelowOtherItems;
+special=preventTileReactions; special=moveCostOverride_2; 
+special=canFloatOnWater; special=canHangOnWalls;
+special=rollingPin_drawFlat; special=quantityChangesSprite_upTo2;
+pR=pIce; pB=pFadeDark; 
+[ItemReaction] 
+ID=ice_rubble_water; element=fire; element=physical; newID=X;
+
+[ItemType]  name=Mountain Range;
+ID=outdoor_mtn_rangeM18_0Depth; sprite=915; 
+depthMod=0;
+cloneFrom=outdoor_mtn_rangeL1;
+
+[ItemType]  name=Great Wyrm;
+ID=greatwyrm1; sprite=1478; 
+texture=items_overworld;
+journalID=journal_g_wyrm;
+weight=0; itemCategory=overworld;
+special=cannotBePickedUp; special=fullTileHitbox;
+special=canFloatOnWater; special=canAlwaysFitInTile;
+pR=p65;
+pB=overworld1;
+
+[ItemType]  name=Great Wyrm;
+ID=greatwyrm2; sprite=1473; 
+texture=items_overworld;
+journalID=journal_g_wyrm;
+weight=0; itemCategory=overworld;
+special=cannotBePickedUp; special=fullTileHitbox;
+special=canFloatOnWater; special=canAlwaysFitInTile; special=animatedSlow;
+pR=p65;
+
+[ItemType]  name=Great Wyrm;
+ID=greatwyrm3; sprite=1477; 
+texture=items_overworld;
+journalID=journal_g_wyrm;
+weight=0; itemCategory=overworld;
+special=cannotBePickedUp; special=fullTileHitbox;
+special=canFloatOnWater; special=canAlwaysFitInTile;
+pR=p65;
+pB=pBlue;
+
+[ItemType]  name=Great Wyrm;
+ID=greatwyrm1b;
+cloneFrom=greatwyrm1;
+special=alwaysBelowOtherItems; special=adjustSpriteYUp16;
+special=rollingPin_drawLower; special=rollingPin_drawY3Lower;
+[ItemType]  name=Great Wyrm;
+ID=greatwyrm2b;
+cloneFrom=greatwyrm2;
+special=alwaysBelowOtherItems; special=adjustSpriteYUp16;
+special=rollingPin_drawLower; special=rollingPin_drawY3Lower;
+[ItemType]  name=Great Wyrm;
+ID=greatwyrm3b;
+cloneFrom=greatwyrm3;
+special=alwaysBelowOtherItems; special=adjustSpriteYUp16;
+special=rollingPin_drawLower; special=rollingPin_drawY3Lower;
+[JournalEntry]
+ID=journal_g_wyrm;
+category=creature; halfPage=true; rarity=3; rewardMod=-100;
+title=Great Wyrm;
+text=<itemBig=greatwyrm1b><itemBig=greatwyrm2b><itemBig=greatwyrm3b><title=Great Wyrm><brAdj=>Great Wyrms grow to over a mile long and subsist on minerals & essence found in dirt. Young Great Wyrms can be violent and aggressive. Thankfully, as they grow, they become less active and mobile, slowly moving over the land like glaciers. They leave the earth richer than they found it, but disaster occurs if they wander into a city.;
+  
+[ItemType]  name=SampleTile;
+ID=sampleTile1; sprite=673; 
+texture=items_overworld; special=rollingPin_drawSplit;
+journalID=;
+weight=0; itemCategory=overworld;
+special=cannotBePickedUp; special=noTooltip;
+special=canFloatOnWater; special=canAlwaysFitInTile;
+[ItemType]  name=SampleTile;
+ID=sampleTile2; sprite=674; 
+cloneFrom=sampleTile1;
+[ItemType]  name=SampleTile;
+ID=sampleTile3; sprite=675; 
+cloneFrom=sampleTile1;
+[ItemType]  name=SampleTile;
+ID=sampleTile4; sprite=676; 
+cloneFrom=sampleTile1;
+[ItemType]  name=SampleTile;
+ID=sampleTile5; sprite=677; 
+cloneFrom=sampleTile1;
+[ItemType]  name=SampleTile;
+ID=sampleTile6; sprite=678; 
+cloneFrom=sampleTile1;
+
+
+
+[ItemType]  name=Waypoint;
+ID=waypoint; sprite=33; 
+itemCategory=overworld;
+description=Set the specialInfoTC to connect to another waypoint.;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=ignoreHeight;
+special=waypoint; special=canAssignSpecialTC;
+
+[ItemType]  name=Waypoint Connector;
+ID=waypoint_connect; sprite=34; 
+itemCategory=overworld;
+description=Place in the tile with a Waypoint, then set specialInfoTC to add a new connection.;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=ignoreHeight;
+special=waypointConnector; special=canAssignSpecialTC;
+
+[ItemType]  name=Wind Beacon;
+ID=windBeacon1; sprite=853; 
+itemCategory=overworld;
+description=When near this beacon, wind usually blows this direction.;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=ignoreHeight;
+special=windBeacon; special=canRot45deg;
+pR=pB;
+
+[ItemType]  name=Weather Beacon;
+ID=weatherBeacon1; sprite=821; 
+itemCategory=overworld;
+description=When near this beacon, this type of weather is more likely.;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=ignoreHeight;
+special=weatherBeacon; stackable=true;
+special=quantityChangesSprite;
+[ItemType]  name=Sea Monster Beacon;
+ID=seaMonsterBeacon; sprite=820; 
+itemCategory=overworld;
+description=When near this beacon, this type of sea monster can spawn.;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=ignoreHeight;
+special=monsterBeacon; stackable=true;
+[ItemReaction] 
+ID=seaMonsterBeacon; element=monsterBeaconUsed;  newID=seaMonsterBeacon_disabled;
+
+[ItemType]  name=Sea Monster Beacon (Disabled);
+ID=seaMonsterBeacon_disabled; sprite=820; 
+itemCategory=overworld;
+description=Disabled beacon that does not spawn monsters.;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=ignoreHeight;
+stackable=true;
+pR=pB;
+special=timer; timer=30;
+[ItemReaction] 
+ID=seaMonsterBeacon_disabled; element=timerUp;  newID=seaMonsterBeacon;
+
+
+[ItemType]  name=Lake Marker;
+ID=lakeMarker1; sprite=956; 
+itemCategory=overworld;
+description=Informs certain Tasks that nearby water is inaccessible to the player.;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=ignoreHeight;
+special=lakeMarker;
+
+
+
+[ItemType]  name=Gale;
+ID=overworld_hazard_gale; sprite=1089; 
+itemCategory=overworld;
+texture=items_overworld;
+journalID=journal_gale;
+special=cannotBePickedUp; special=noTooltip;
+special=canFloatOnWater; special=canAlwaysFitInTile;
+special=reactsToPressure;
+special=rollingPin_drawFlat; special=rollingPin_scaleHalf;
+special=animated; special=fullTileHitbox;
+special=ignoreHeight;
+pR=pBW;
+pB=pCBlack;
+[ItemReaction] 
+ID=overworld_hazard_gale; element=pressureMoveAcross; action=gale_action;  newID=X;
+[ItemReaction] 
+ID=overworld_hazard_gale; element=wind; newID=X;
+
+[JournalEntry]
+ID=journal_gale;
+category=item; halfPage=true; rarity=0;
+title=Gale;
+text=<itemBig=overworld_hazard_gale><title=Gale><brAdj=>An obstructing column of wind fills this area. It won't harm you, but sailing through it is slow going.;
+
+[ItemType]  name=Gust;
+ID=overworld_hazard_gust; sprite=1093; 
+itemCategory=overworld;
+texture=items_overworld;
+journalID=journal_gust;
+special=cannotBePickedUp; special=noTooltip;
+special=canFloatOnWater; special=canAlwaysFitInTile;
+special=reactsToPressure; special=fullTileHitbox;
+special=rollingPin_drawFlat; special=rollingPin_scaleHalf;
+special=animatedFast;
+special=ignoreHeight;
+pR=pSilver;
+pB=pFadeAnim;
+[ItemReaction] 
+ID=overworld_hazard_gust; element=pressureMoveAcross; action=gust_action;  newID=X;
+[ItemReaction] 
+ID=overworld_hazard_gust; element=wind; newID=X;
+[ItemType]  name=Gust;
+ID=overworld_hazard_perma_gust; sprite=1093; 
+itemCategory=overworld;
+texture=items_overworld;
+journalID=journal_gust;
+special=cannotBePickedUp; special=noTooltip;
+special=canFloatOnWater; special=canAlwaysFitInTile;
+special=reactsToPressure; special=fullTileHitbox;
+special=rollingPin_drawFlat; special=rollingPin_scaleHalf;
+special=animatedFast;
+special=ignoreHeight;
+pR=pSilver;
+pB=pFadeAnim;
+[ItemReaction] 
+ID=overworld_hazard_perma_gust; element=pressureMoveAcross; action=gust_action;  newID=X;
+
+
+[JournalEntry]
+ID=journal_gust;
+category=item; halfPage=true; rarity=0;
+title=Gust;
+text=<itemBig=overworld_hazard_gust><title=Gust><brAdj=>The winds here are strong, and in your favor. Sail through it to get a big speed boost!;
+
+
+[ItemType]  name=Loot;
+ID=overworld_loot1; sprite=1097; 
+itemCategory=overworld;
+texture=items_overworld;
+journalID=journal_overworld_loot1;
+stackable=true;
+special=cannotBePickedUp; special=noTooltip;
+special=canFloatOnWater; special=canAlwaysFitInTile;
+special=playerPickup; special=currency; special=ignoreHeight;
+special=rollingPin_drawLower;
+special=anim_bobUpAndDown_slow;
+value=6; 
+pR=pWood;
+pB=pFadeAnim;
+[ItemReaction] 
+ID=overworld_loot1; element=wind; newID=X;
+
+[JournalEntry]
+ID=journal_overworld_loot1;
+category=item; halfPage=true; rarity=0;
+title=Loot;
+text=<itemBig=overworld_loot1><title=Loot><brAdj=>Looks like someone lost some cargo along the way, and now it's just floating along waiting to be picked up! Sail into it to grab some coin.;
+
+
+[ItemType]  name=Launch Buoy;
+ID=overworld_hazard_launchB_off; sprite=1098; 
+description=Buoy that can be placed on the overworld. Gives a boost when sailed through.;
+itemCategory=overworld;
+texture=items_overworld;
+value=8000;
+journalID=journal_launchB;
+special=canAlwaysFitInTileWhenSpawned;
+special=canFloatOnWater; special=canOnlyBeOnWater;
+special=rollingPin_drawFlat; special=rollingPin_scaleHalf;
+special=timer; special=hideTimer; special=canBeDroppedInOverworld; special=canOnlyBeDroppedInOverworld;
+special=anim_bobUpAndDown_slow; special=cargo;
+pR=pGreyD2;
+pG=pGreyD2;
+pB=pFadeAnim;
+timer=45;
+[ItemReaction] 
+ID=overworld_hazard_launchB_off; element=timerUp; newID=overworld_hazard_launchB;
+
+[ItemType]  name=Launch Buoy (Charged);
+ID=overworld_hazard_launchB; sprite=1099; 
+description=Buoy that can be placed on the overworld. Gives a boost when sailed through.;
+itemCategory=overworld;
+texture=items_overworld;
+journalID=journal_launchB;
+special=cannotBePickedUp;
+special=canFloatOnWater; special=canAlwaysFitInTile;
+special=reactsToPressure;
+special=rollingPin_drawFlat; special=rollingPin_scaleHalf;
+special=animated;
+special=anim_bobUpAndDown_slow; special=cargo;
+special=canReactIndefinitely;
+pR=pGreyD2;
+pG=pBW;
+pB=pFadeAnim;
+[ItemReaction] 
+ID=overworld_hazard_launchB; element=pressureMoveAcross; element=use; action=gust_action; newID=overworld_hazard_launchB_off;
+
+[ItemType]  name=Launch Buoy (Charged);
+ID=overworld_hazard_launchB_red;
+special=dontCloneReactions;
+cloneFrom=overworld_hazard_launchB;
+pR=pRed4;
+[ItemReaction] 
+ID=overworld_hazard_launchB_red; element=pressureMoveAcross; action=gust_action; newID=overworld_hazard_launchB_off_red;
+
+[ItemType]  name=Launch Buoy;
+ID=overworld_hazard_launchB_off_red;
+special=cannotBePickedUp;
+special=dontCloneReactions;
+cloneFrom=overworld_hazard_launchB_off;
+pR=pRed4;
+[ItemReaction] 
+ID=overworld_hazard_launchB_off_red; element=timerUp; newID=overworld_hazard_launchB_red;
+
+[JournalEntry]
+ID=journal_launchB;
+category=item; halfPage=true; rarity=1;
+title=Launch Buoy;
+text=<itemBig=overworld_hazard_launchB><title=Launch Buoy><brAdj=>These special buoys will buoy your sails with a magical wind when you pass through them. While exceedingly expensive, they are sometimes placed on common trade routes, free for all to use. It's a technological marvel!;
+
+
+[ItemType]  name=Flag;
+ID=overworld_marker1; sprite=1296; 
+description=Flag that can be placed on the overworld.;
+itemCategory=overworld;
+texture=items_overworld;
+value=10;
+journalID=;
+special=cannotBePickedUp;
+special=canAlwaysFitInTileWhenSpawned;
+special=canFloatOnWater; special=canOnlyBeOnWater;
+special=rollingPin_drawFlat; special=rollingPin_scaleHalf;
+special=canBeDroppedInOverworld; special=canOnlyBeDroppedInOverworld;
+special=anim_bobUpAndDown_slow; special=showOnMinimap; special=animated;
+stackable=true;
+pR=pGreyD2;
+pG=pR;
+pB=pFadeAnim;
+

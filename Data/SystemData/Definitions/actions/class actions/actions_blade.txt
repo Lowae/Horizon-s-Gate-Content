@@ -1,0 +1,287 @@
+
+[Action] ID=Bl_flashCut; 
+	name=Flash Cut;
+	icon=icon_Bl_flashcut;
+	tooltip=Dash forward through opponents, cutting them for 90% damage.;
+	rankUpTooltip=Each rank adds +1 max range.;
+	tooltipIcons=<icon=noAugments> <icon=slashWeapons>Only;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	XPCost=150;
+	XPCost=750;
+	XPCost=1600;
+	
+	casterAnimation=flashCut;
+	casterAnimationDependsOnWeaponHand=true;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	special=moveCasterToTarget;
+	requiredWeaponElement=slash;
+	
+	FXOnCaster=sfx_sliceNoShingLow;
+	FXOnCaster=sidewardLines;
+	FXOnCaster=actor_afterimage;
+[ActionAoE] 
+	ID=Bl_flashCut; shape=2; 
+	needsLoS=true;
+	needsLoE = true;
+	arc=true;
+	minRange = 2;
+	maxRange = 3;
+	maxRangeBonus=c:rank;
+	canSelectActors=false;
+	occupyAll=false;
+[AvAffecter]
+	ID=Bl_flashCut; 
+	harmful=false;
+	element=usedMeleeWeaponAtk;
+	visibleEvaluations=false;
+	affectIntangible=true;
+[AvAffecterAoE]
+	ID=Bl_flashCut;
+	aoeCasterAsOrigin=true;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Bl_flashCut; 
+	actorValue=HP;
+	magnitude=w:magnitude * 0.9;
+	chance=w:chance;
+	duration=-2;
+	element=slash;
+	element=physical;
+	FXOnTile=slash;
+[AvAffecterAoE]
+	ID=Bl_flashCut; shape=2; 
+	needsLoS=false;
+	needsLoE =false;
+	occupyAll=true;
+	bypassAll=true;
+	minRange = 1;
+	maxRange = -1;
+	maxRangeBonus=0;
+	coneAngle=1;
+	canSelectActors=true;
+	aoeCasterAsOrigin=true;
+	maxRangeAddDistanceFromCaster=true;
+	
+	
+
+[Action] ID=Bl_bladestorm; 
+	name=Bladestorm;
+	icon=icon_Bl_bladestorm;
+	tooltip=A torrent of slashes against nearby enemies deals half damage.;
+	rankUpTooltip=Each rank increases area of effect.;
+	tooltipIcons=<icon=noAugments> <icon=slashWeapons>Only;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	XPCost=250;
+	XPCost=950;
+	
+	casterAnimation=spindance;
+	maxRank=2;
+	canExceedMaxRankBy=1;
+	requiredWeaponElement=slash;
+	
+	FXOnCaster=sidewardLines;
+	FXOnCaster=actor_spreadPhantoms;
+[ActionAoE] 
+	ID=Bl_bladestorm;
+	cloneFrom=adjacent;
+	maxRange=1;
+	maxRangeBonus=c:rank;
+	arc=true;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=Bl_bladestorm; 
+	harmful=false;
+	element=usedMeleeWeaponAtk;
+	visibleEvaluations=false;
+	affectIntangible=true;
+[AvAffecterAoE]
+	ID=Bl_bladestorm;
+	aoeCasterAsOrigin=true;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Bl_bladestorm; 
+	actorValue=HP;
+	magnitude=w:magnitude * 0.5;
+	chance=w:chance;
+	duration=-2;
+	element=physical;
+	element=slash;
+	FXOnTile=bladestormSlash;
+[AvAffecterAoE]
+	ID=Bl_bladestorm;
+	aoeCasterAsOrigin=true;
+	maxRangeBonus=c:rank;
+	arc=true;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+	canSelectAllies=false;
+	
+	
+	
+
+[Action] ID=Bl_perfect; 
+	name=Perfect Strike;
+	icon=icon_Bl_perfectStrike;
+	tooltip=Deliver a weak strike for <math=30 + 10 * c:rank>% damage that cannot miss.;
+	rankUpTooltip=Each rank increases damage by 10%.;
+	tooltipIcons=<icon=slashWeapons>Only;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	XPCost=100;
+	XPCost=300;
+	XPCost=400;
+	XPCost=450;
+	
+	casterAnimation=weapon;
+	casterAnimationSpeed=1.2;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	FXOnTarget=weaponFX;
+	FXOnCaster=eyeGlint;
+	FXOnCaster=sliceShing;
+	requiredWeaponElement=slash;
+[ActionAoE] 
+	ID=Bl_perfect; shape=10; 
+[AvAffecter]
+	ID=Bl_perfect; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.3 + w:magnitude * c:rank * 0.1;
+	chance=100;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Bl_perfect;
+	 shape=11;
+	 
+	 
+
+[Action] ID=Bl_rend; 
+	name=Rend;
+	icon=icon_Bl_rend;
+	tooltip=Cut into armor, dealing half damage and -3<icon=PhysDef> for <icon=time><math=40 + 30 * c:rank>.;
+	rankUpTooltip=Each rank increases duration by <icon=time>30.;
+	tooltipIcons=<icon=slashWeapons>Only;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	XPCost=225;
+	XPCost=350;
+	XPCost=500;
+	XPCost=750;
+	
+	casterAnimation=weapon;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	FXOnTarget=weaponFX;
+	requiredWeaponElement=slash;
+[ActionAoE] 
+	ID=Bl_rend; shape=10; 
+[AvAffecter]
+	ID=Bl_rend; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.5;
+	chance=w:chance;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Bl_rend;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Bl_rend; 
+	visibleMiss=false;
+	actorValue=PhysDef;
+	magnitude=-3;
+	chance=w:chance;
+	duration = 40 + c:rank * 30;
+	FXOnTile=triSlash;
+	FXOnTile=woosh;
+	FXOnHit=sfx_slashingHit;
+[AvAffecterAoE]
+	ID=Bl_rend;
+	cloneFrom=oneTile;
+	
+	
+
+[Action] ID=Bl_shockwave; 
+	name=Shockwave;
+	icon=icon_Bl_shockwave;
+	tooltip=Make a ranged attack with your blade for 75% damage.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipIcons=<icon=slashWeapons>Only;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small><icon=skill_Wind_small>;
+	mpCost=1 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=200;
+	XPCost=400;
+	XPCost=800;
+	
+	casterAnimation=broadswing;
+	casterAnimationDependsOnWeaponHand=true;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=chargeFast;
+	FXOnTarget=smallShockwave_moving_minOverlap;
+	requiredWeaponElement=slash;
+[ActionAoE] 
+	ID=Bl_shockwave;
+	cloneFrom=adjacent+1;
+	airborne=true;
+	maxRangeBonus=c:rank;
+[AvAffecter]
+	ID=Bl_shockwave; 
+	weaponAvAffecter=true;
+	showWeaponAvAffecterFX=false;
+	actorValue=HP;
+	magnitude=w:magnitude * 0.73 - c:skill_Wind;
+	chance=w:chance;
+	duration=-2;
+	element=wind;
+	element=physical;
+	FXOnHit=bladestormSlash;
+	FXOnMiss=bladestormSlash;
+[AvAffecterAoE]
+	ID=Bl_shockwave;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=Bl_deathblow; 
+	name=Deathblow;
+	icon=icon_Bl_deathblow;
+	tooltip=Deal +50% extra damage to a target that is in critical condition or asleep.;
+	rankUpTooltip=;
+	tooltipIcons=<icon=slashWeapons>Only;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	XPCost=400;
+	
+	casterAnimation=jumpAttack_swing;
+	casterAnimationDependsOnWeaponHand=true;
+	casterAnimationSpeed=1;
+	maxRank=1;
+	
+	FXOnCaster=darken_minor;
+	FXOnTarget=weaponFX;
+	FXOnTarget=strike;
+	FXOnTarget=strikeHoriz;
+	FXOnTarget=sfx_slashingHit;
+	requiredWeaponElement=slash;
+[ActionAoE] 
+	ID=Bl_deathblow; shape=10; 
+[AvAffecter]
+	ID=Bl_deathblow; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 1.5;
+	chance=w:chance * m:tCritical + w:chance * t:sleep;
+	duration=-2;
+	FXOnHit=hitdashes;
+[AvAffecterAoE]
+	ID=Bl_deathblow;
+	cloneFrom=oneTile;
+	 

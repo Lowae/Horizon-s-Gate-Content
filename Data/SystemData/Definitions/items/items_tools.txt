@@ -1,0 +1,2329 @@
+[ItemType]  name=Pin;
+ID=map_pin1; sprite=225;
+itemCategory=building;
+texture=items_building;
+special=cannotBePickedUp; special=invisible;
+special=canHangOnWalls; special=canAlwaysFitInTile;
+special=showOnMinimap;
+
+[ItemType]  name=Magnifying Glass;
+ID=studyTool; itemCategory=tool;
+description=Reveals elemental weaknesses.;
+ sprite=119; spriteWhenHeld=151;
+ action=studyTool_action;
+  volume=1; value=50;
+[JournalEntry]
+ID=item_studyTool;
+category=item; halfPage=true; rarity=1;
+title=Magnifying Glass;
+text=<itemBig=studyTool><title=Magnifying Glass><brAdj=>This deceptively simple tool can reveal knowledge to you. It replicates the Scholar's 'Elementary' ability, although it takes a turn to use.;
+[ItemType]  name=Repair Tools;
+ID=repairTool;  itemCategory=tool;
+description=Kit for fixing broken equipment. Drag it onto an item to repair it.; stackable=true;
+ sprite=800; spriteWhenHeld=0; 
+ pR=pBlue; pB=pIron;
+ special=repairTool; special=consumeOnUse; special=quantityChangesSprite_upTo2;
+  volume=1; value=6;
+[JournalEntry]
+ID=item_repairTool;
+category=item; halfPage=true;
+title=Repair Tools;
+text=<itemBig=repairTool><title=Repair Tools><brAdj=>All-purpose tool set for fixing broken weapons and armor. It has a limited number of uses, but it's usually worth it.;
+[ItemType]  name=Lockpick;
+ID=lockpick;  itemCategory=tool;
+description=Open a lock by dragging this onto it. Breaks after use.; stackable=true;
+ sprite=120; spriteWhenHeld=0;
+ special=quantityChangesSprite_upTo2;
+  volume=1; value=20;
+[JournalEntry]
+ID=item_lockpick;
+category=item; halfPage=true;
+title=Lockpick;
+text=<itemBig=lockpick><title=Lockpick><brAdj=>Small pins and picks for opening any traditional lock. Regrettably, they're quite fragile, and one breaks on each lock.;
+
+[ItemType]  name=Shovel;
+description=A simple shovel used for digging.;
+ID=shovel; sprite=114; spriteWhenHeld=146; itemCategory=tool;
+weight=1; volume=10; value=2;
+pR=pSteel; pG=pSteelHilt;
+special=stackCannotBeSplit; special=consumeOnUse;
+special=defaultStack_2; special=defaultStack_x2; special=defaultStack_x10;
+ action=dig;
+[JournalEntry]
+ID=item_shovel;
+category=item; halfPage=true;
+title=Shovel;
+text=<itemBig=shovel><title=Shovel><brAdj=>Metal on a stick in a shape ideal for moving dirt. Use it in the right place and you might find treasure!;
+
+[ItemType]  name=Silver Shovel;
+description=Shovel of amazing quality and durability.;
+ID=shovel_silver; sprite=114; spriteWhenHeld=146; itemCategory=tool;
+weight=1; volume=10; value=1500;
+pR=pMythril; pG=pMythrilHilt;
+ action=dig;
+[JournalEntry]
+ID=item_shovel_silver;
+category=item; halfPage=true; rarity=2;
+title=Silver Shovel;
+text=<itemBig=shovel_silver><title=Silver Shovel><brAdj=>Despite the name, its primary component is mythril. Only a truly peaceful community would craft mythril into shovels rather than swords.;
+ 
+[ItemType]  name=Pickaxe;
+ID=pickaxe; sprite=117; itemCategory=tool;
+description=A tool used to break apart cavern walls.;
+weight=1; volume=10; value=2;
+pR=pSteel; pG=pSteelHilt;
+special=stackCannotBeSplit; special=consumeOnUse;
+special=defaultStack_2; special=defaultStack_x10;
+ action=pickaxe;
+[JournalEntry]
+ID=item_pickaxe;
+category=item; halfPage=true;
+title=Pickaxe;
+text=<itemBig=pickaxe><title=Pickaxe><brAdj=>A spike for prying & breaking rock with a counter weight on the other side. Mostly used for mining and clearing stone.;
+
+
+[ItemType]  name=Guide Chrysolit;
+ID=guide_chrysolit; sprite=108; itemCategory=tool; 
+texture=items_weapons;
+description=Docile arthropod that glows differently based on position.<n=><adjX=18><overworldPos=>;
+weight=1; volume=1; value=700;
+pR=p5; pB=pAsh;
+special=cannotBeSheathed;
+[ItemLight]
+ ID=guide_chrysolit; red=1.0; blue=0.5; green=0.8; alpha=0.5; size=0.3; flicker=0.0005; texture=krypton;
+[JournalEntry]
+ID=item_guide_chrysolit;
+category=equipment; halfPage=true; rarity=2;
+title=Guide Chrysolit;
+text=<itemBig=guide_chrysolit><title=Guide Chrysolit><brAdj=>This pupating creature glows brighter or redder based on latitudinal and longitudinal distance from its mate, which is currently being kept where the Equator and Prime Meridian meet. By analyzing the glow, one can determine their global position, making these a great boon for sailors.;
+
+
+
+[ItemType]  name=Essence Stone;
+description=A small brittle crystal. It can improve the skills of the user.;
+ID=xpGem; sprite=45; action=xpGem_awardXP; itemCategory=1; special=consumeOnUse; stackable=true;
+pR=pTeal;
+ volume=1; value=300;
+[JournalEntry]
+ID=item_xpGem;
+category=item; halfPage=true; rarity=2;
+title=Essence Stone;
+text=<itemBig=xpGem><title=Essence Stone><brAdj=>This odd blue material has a high concentration of essence. When you crush it in your hands, you feel enlightened (and a bit lightheaded).;
+
+[ItemType]  name=Essence Gem;
+description=Brittle, slightly impure crystal that improves the skills of the user (with diminishing returns).;
+ID=xpGemMed; sprite=110; action=xpGemMed_awardXP; itemCategory=1; special=consumeOnUse; stackable=true;
+pR=pTeal; pB=pBLite_slow;
+ volume=1; value=2000;
+[JournalEntry]
+ID=item_xpGemMed;
+category=item; halfPage=true; rarity=2;
+title=Essence Gem;
+text=<itemBig=xpGemMed><title=Essence Gem><brAdj=>A hefty chunk of concentrated essence. When you crush it in your hands (which is no small feat at this size) it brings a sense of enlightenment. Unfortunately, due to minor impurities, it is less potent when used repeatedly by the same person.;
+
+[ItemType]  name=Essence Gem;
+description=Large chunk of brittle crystal that can improve the skills of the user.;
+ID=xpGemMed2; sprite=109; action=xpGemMed_pure_awardXP; itemCategory=1; special=consumeOnUse; stackable=true;
+pR=pTeal;
+ volume=1; value=2000;
+[JournalEntry]
+ID=item_xpGemMed2;
+category=item; halfPage=true; rarity=2;
+title=Essence Gem (Pure);
+text=<itemBig=xpGemMed2><title=Essence (Pure)><brAdj=>A hefty chunk of concentrated essence. When you crush it in your hands (which is no small feat at this size) it brings a sense of enlightenment.;
+
+[ItemType]  name=<color=SkyBlue>Essence Crystal;
+description=A huge crystal. It can improve the skills of the user.;
+ID=xpGemBig; sprite=47; action=xpGemBig_awardXP; itemCategory=1; special=consumeOnUse; stackable=true;
+pR=pTeal;
+ volume=1; value=5000;
+[ItemLight] 
+ID=xpGemBig; red=0.4; blue=1; green=0.4; alpha=0.7; size=0.3; flicker=0.01;
+[JournalEntry]
+ID=item_xpGemBig;
+category=item; halfPage=true; rarity=4;
+title=Essence Crystal;
+text=<itemBig=xpGemBig><title=Essence Crystal><brAdj=>Massive crystal filled with essence. To crush and absorb it would empower you greatly.;
+
+[ItemType]  name=<color=Gold>Ability Crest;
+description=When used, grants an extra ability slot permanently.<n>(Maximum 2 per person.);
+ID=abilityCrest; sprite=897; action=abilityCrest_act; itemCategory=1; special=consumeOnUse; stackable=true;
+ volume=1; value=2000;
+[JournalEntry]
+ID=item_abilityCrest;
+category=item; halfPage=true; rarity=4;
+title=Ability Crest;
+text=<itemBig=abilityCrest><title=Ability Crest><brAdj=>These silver medals were once awarded by the now-defunct city-state of Iail. One of Iail's few peaceful contributions was to present these to international persons of high esteem as a gesture of goodwill.<n=>  Awarding an Ability Crest grants an extra class slot (maximum of 4), allowing you to use one of that class' abilities.;
+
+[ItemType]  name=<color=Gold>Action Tablet Base;
+ID=actionTablet;
+texture=icon_default;
+description=; sprite=0; itemCategory=4;
+journalID=journal_actionTablet;
+special=fullTileHitbox; drawSprite=actionTabletBG;
+ volume=0; value=2000;
+ 
+[ItemType]  name=Random Action Tablet;
+ID=actionTablet_random;
+description=; sprite=0; itemCategory=4;
+texture=icon_white;
+special=fullTileHitbox;
+ volume=0; value=2000;
+special=replaceWith_toMake_list;
+special=replaceWith_globalVarMatch;
+special=replaceWith_assign_globalVar;
+
+[JournalEntry]
+ID=journal_actionTablet;
+category=item; halfPage=true; rarity=4; rewardMod=-1000;
+title=Ability Tablet;
+text=<itemBig=tablet_Gla_smash><title=Ability Tablet><brAdj=>Stone tablet with intricate, incomprehensible script carved onto it. The only understandable part of it is a single painted symbol. Somehow, holding or equipping it as an augment bolsters your skill with the depicted ability. For <adjX=1><color=DarkRed>most<color=><adjX=1> abilities, this can even go beyond the normal maximum! Additionally, when worn as an accessory, it can be 'used' to cast the ability at any time.;
+
+
+
+[ItemType]  name=Essence Dust;
+description=Sparkling dust that heightens the senses.;
+ID=xpDust; sprite=46;
+ volume=1; value=1; special=cannotBePickedUp; special=canHangOnWalls; special=big; special=fullTileHitbox;
+pR=pTeal;
+[ItemReaction] 
+ID=xpDust; element=92; newID=X; fx=castingFast; action=dust_awardXP;
+[JournalEntry]
+ID=item_xpDust;
+category=item; halfPage=true; rarity=1;
+title=Essence Dust;
+text=<itemBig=xpDust><title=Essence Dust><brAdj=>Strange blue particles that smell of chalk. Being near some of it seems to widen your awareness in an uncanny, but not entirely unpleasant, manner.;
+
+[ItemType]  name=Revive Dust;
+description=Bag of gold dust that revives KO'd allies.;
+ID=reviveDust; sprite=13; action=reviveDust_action; itemCategory=1; special=consumeOnUse; stackable=true; pR=pGrey;
+value=20;
+[JournalEntry]
+ID=item_reviveDust;
+category=item; halfPage=true; rarity=1;
+title=Revive Dust;
+text=<itemBig=reviveDust><title=Revive Dust><brAdj=>An expensive mix of powdered Preservation trigger and Volskarn. When inhaled it provides a surge of life energy.;
+
+[ItemType]  name=Red Spices;
+description=Ground-up peppers and herbs to add flavor. Usable as a weapon in a pinch.;
+ID=itchPowder; sprite=15; value=10;
+action=itchDust_action; itemCategory=1; special=consumeOnUse; stackable=true;
+pR=pR;
+[JournalEntry]
+ID=item_itchPowder;
+category=item; halfPage=true;
+title=Red Spices;
+text=<itemBig=itchPowder><title=Red Spices><brAdj=>Extremely potent spices that make most curries look weak. Since you lack culinary skills, their only use is to salt your enemies' eyes and skin.;
+
+[ItemType]  name=Blind Dust;
+description=A bag of special sand that blinds a target.;
+ID=blindDust; sprite=13; action=blindDust_action; itemCategory=1; special=consumeOnUse; stackable=true;
+pR=pCBlack;
+[JournalEntry]
+ID=item_blindDust;
+category=item; halfPage=true;
+title=Blind Dust;
+text=<itemBig=blindDust><title=Blind Dust><brAdj=>Musty, thick grit fills this pouch. Keep away from your eyes!;
+
+
+[ItemType]  name=Toxic Powder;
+description=A bag of poisonous dust.;
+ID=poisonDust; sprite=14; action=poisonDust_action; itemCategory=1; special=consumeOnUse; stackable=true;
+pR=pPurple;
+[JournalEntry]
+ID=item_poisonDust;
+category=item; halfPage=true;
+title=Toxic Powder;
+text=<itemBig=poisonDust><title=Toxic Powder><brAdj=>When Bone Dust is applied to Slugvine, this vile powder is the result. It has no practical purpose other than to sicken your enemies.;
+
+
+[ItemType]  name=Dart;
+description=One-use attack item. Can be used even when your hands are full.; itemCategory=1;
+ID=dart; sprite=98; spriteWhenHeld=130;
+weight=0; volume=1; value=8; stackable=true;
+special=consumeOnUse;
+pR=pSteel; pB=pWood;
+ action=dart_action;
+combineWith=poisonDust; toMake=dart_poison; consumeOnCombine=true;
+combineWith=itchPowder; toMake=dart_itchy; consumeOnCombine=true;
+combineWith=reviveDust; toMake=dart_life; consumeOnCombine=true;
+combineWith=sleep_fruit; toMake=dart_sleep; consumeOnCombine=true;
+combineWith=glowshroomPiece; toMake=dart_glow; consumeOnCombine=true;
+
+[JournalEntry]
+ID=item_dart;
+category=item; halfPage=true;
+title=Dart;
+text=<itemBig=dart><title=Dart><brAdj=>Lightweight handheld projectile that deals minimal damage. They can be improved by rubbing poisons or powders on them.;
+
+ 
+[ItemType]  name=Poison Dart;
+description=Dart laced with poison.; itemCategory=1;
+ID=dart_poison; sprite=98; spriteWhenHeld=130;
+weight=0; volume=1; value=15; stackable=true;
+special=consumeOnUse;
+pR=pPurple; pB=pWood;
+ action=dart_poison_action;
+[JournalEntry]
+ID=item_dart_poison;
+category=item; halfPage=true;
+title=Poison Dart;
+text=<itemBig=dart_poison><title=Poison Dart><brAdj=>A classic tool of assassination. These darts may be too big to go undetected, but they still get the job done.;
+ 
+[ItemType]  name=Itchy Dart;
+description=Dart covered in itch-inducing powder.;
+ID=dart_itchy; sprite=98; spriteWhenHeld=130; itemCategory=1;
+weight=0; volume=1; value=12; stackable=true;
+special=consumeOnUse;
+pR=pCRed; pB=pWoodDark;
+ action=dart_itchy_action;
+[JournalEntry]
+ID=item_dart_itchy;
+category=item; halfPage=true;
+title=Itchy Dart;
+text=<itemBig=dart_itchy><title=Itchy Dart><brAdj=>A normal dart coated in stuff that aggravates the skin. Useful as emergency weapon, even if they are a bit unorthodox.;
+
+[ItemType]  name=Sleep Dart;
+description=Dart coated in sleep-inducing juice.; itemCategory=1;
+ID=dart_sleep; sprite=98; spriteWhenHeld=130;
+weight=0; volume=1; value=50; stackable=true;
+special=consumeOnUse;
+pR=pMagenta; pB=pBlue;
+ action=dart_sleep_action;
+[JournalEntry]
+ID=item_dart_sleep;
+category=item; halfPage=true;
+title=Sleep Dart;
+text=<itemBig=dart_sleep><title=Sleep Dart><brAdj=>Makeshift weapon that briefly incapacitates an enemy. A sleeping target cannot evade any attacks.;
+
+[ItemType]  name=Glow Dart;
+description=Dart covered in gloam dust.;
+ID=dart_glow; sprite=98; spriteWhenHeld=130; itemCategory=1;
+weight=0; volume=1; value=12; stackable=true;
+special=consumeOnUse;
+pR=pShroom_glow; pB=pWoodDark;
+ action=dart_glow_action;
+[ItemLight] 
+ID=dart_glow; red=0.7; blue=1; green=0.6; alpha=0.6; size=0.4; flicker=0.01; texture=krypton;
+[JournalEntry]
+ID=item_dart_glow;
+category=item; halfPage=true;
+title=Glow Dart;
+text=<itemBig=dart_glow><title=Glow Dart><brAdj=>Sparkling Gloam Shroom dust coats this dart, making it a great tool for marking an enemy. The bright glow reduces the target's <icon=PhysEva><icon=MagEva> by 30%.;
+
+ 
+[ItemType]  name=Life Needle;
+description=Dart covered in life-giving powder.; itemCategory=1;
+ID=dart_life; sprite=98; spriteWhenHeld=130;
+weight=0; volume=1; value=25; stackable=true;
+special=consumeOnUse;
+pR=pGrey; pB=pBone;
+ action=dart_life_action;
+[JournalEntry]
+ID=item_dart_life;
+category=item; halfPage=true; rarity=1;
+title=Life Needle;
+text=<itemBig=dart_life><title=Life Needle><brAdj=>The least popular method of first aid on the battlefield. Leaves the revived ally with less health than normal methods.;
+
+[ItemType]  name=Sack;
+ID=sack; sprite=736;  itemCategory=tool;
+description=Simple cloth container.;
+volume=90; pR=pYellow5; pB=pRed2;
+special=container; special=container4x4;
+[ItemType]  name=Bag;
+ID=sack2; sprite=736;   itemCategory=tool;
+description=Simple cloth container.;
+volume=90; pR=pOrange;  pB=pTeal;
+special=container; special=container4x4;
+[ItemType]  name=Bindle;
+ID=sack3; sprite=736;  itemCategory=tool;
+description=Simple cloth container.;
+volume=90; pR=pRed2;  pB=pGreyD;
+special=container; special=container4x4;
+
+[ItemType]  name=Huge Bag;
+ID=sack_fine; sprite=704;  itemCategory=tool;
+description=Spacious bag. Can fit most lesser bags inside it.;
+volume=91; pR=pGrey; pB=pRed;
+special=container; special=container5x5;
+
+[ItemType]  name=Satchel;
+ID=satchel; sprite=737;  itemCategory=tool;
+description=Leather container with a strap and buckle.;
+volume=90; pR=pYellow5; pB=pYellow5;
+special=container; special=container4x4;
+[ItemType]  name=Purse;
+ID=satchel2; sprite=737;  itemCategory=tool;
+description=Leather container with a strap and buckle.;
+volume=90; pR=pPurple; pB=pGrey2;
+special=container; special=container4x4;
+[ItemType]  name=Shoulder Bag;
+ID=satchel3; sprite=737;  itemCategory=tool;
+description=Leather container with a strap and buckle.;
+volume=90; pR=pGreyD2; pB=pYellow;
+special=container; special=container4x4;
+[ItemType]  name=Huge Satchel;
+ID=satchel_fine; sprite=705;  itemCategory=tool;
+description=Roomy satchel. Can fit most lesser bags inside it.;
+volume=91; pR=pGrey1; pB=pOrange;
+special=container; special=container5x5;
+
+[ItemType]  name=Pouch;
+ID=pouch; sprite=738; itemCategory=tool;
+description=Bag that can only fit smaller objects.;
+volume=16; pR=pDirt; pB=pYellow;
+special=container;
+
+[ItemType]  name=Game Chip Bag;
+ID=gamechip_sack1; sprite=704;  itemCategory=tool;
+description=Draws random chips.;
+volume=91; pR=pRedD2; pB=pGold;
+special=container; special=container5x5; 
+special=container_drawRandomItem; special=oneClickToUse;
+
+[ItemType]  name=Game Chip Bag;
+ID=gamechip_sack2; sprite=704;  itemCategory=tool;
+description=Draws random chips.;
+volume=91; pR=pBlueD; pB=pGold;
+special=container; special=container5x5;
+special=container_drawRandomItem; special=oneClickToUse;
+
+[ItemType]  name=Wood Weaponry;
+ID=weaponPack_wood; sprite=769; itemCategory=tool;
+description=Click to view wood equipment.;
+journalID=journal_weaponPack;
+volume=98;
+pR=pDirt; pB=pWood; pG=pWoodDark;
+special=container; special=container4x4;
+ special=infiniteStockContainer;
+ special=shopContainer;
+ special=cannotBePickedUp;
+ special=oneClickToUse;
+ special=defaultContainsWoodEquipment;
+special=disappearFromCorpse;
+
+[ItemType]  name=Iron Weaponry;
+ID=weaponPack; sprite=769; itemCategory=tool;
+description=Click to view iron equipment.;
+journalID=journal_weaponPack;
+volume=98;
+pR=pOrange; pB=pIron; pG=pIronHilt;
+special=container; special=container4x4;
+ special=infiniteStockContainer;
+ special=shopContainer;
+ special=cannotBePickedUp;
+ special=oneClickToUse;
+ special=defaultContainsIronEquipment;
+special=disappearFromCorpse;
+
+[ItemType]  name=Steel Weaponry;
+ID=weaponPack_steel; sprite=769; itemCategory=tool;
+description=Click to view steel equipment.;
+journalID=journal_weaponPack;
+volume=98;
+pR=pWood; pB=pSteel; pG=pGrey2;
+special=container; special=container4x4;
+ special=infiniteStockContainer;
+ special=shopContainer;
+ special=cannotBePickedUp;
+ special=oneClickToUse;
+ special=defaultContainsSteelEquipment;
+special=disappearFromCorpse;
+
+[ItemType]  name=Mythril Weaponry;
+ID=weaponPack_fine; sprite=769; itemCategory=tool;
+description=Click to view mythril equipment.;
+journalID=journal_weaponPack;
+volume=98;
+pR=pGrey2; pB=pMythril; pG=pMythrilHilt;
+special=container; special=container4x4;
+ special=infiniteStockContainer;
+ special=shopContainer;
+ special=cannotBePickedUp;
+ special=oneClickToUse;
+ special=defaultContainsMythrilEquipment;
+special=disappearFromCorpse;
+
+[JournalEntry]
+ID=journal_weaponPack;
+category=item; halfPage=true; rarity=0;
+title=Cafe;
+text=<itemBig=weaponPack><itemBig=weaponPack_steel><title=Weaponry><brAdj=>This hefty bag of weapons has been bundled by a vendor for you to peruse. It never runs out of stock, so open it up and buy whatever interests you!;
+
+[ItemType]  name=Basic Equipment;
+ID=toolPack; sprite=707; itemCategory=tool;
+description=Click to view basic equipment.;
+journalID=journal_toolPack;
+volume=98;
+pR=pYellow5; pB=pIron; pG=pWoodDark;
+special=container;
+special=infiniteStockContainer;
+special=shopContainer;
+special=cannotBePickedUp;
+special=oneClickToUse;
+special=defaultContainsToolEquipment;
+special=disappearFromCorpse;
+
+[JournalEntry]
+ID=journal_toolPack;
+category=item; halfPage=true; rarity=0;
+title=Cafe;
+text=<itemBig=toolPack><title=Basic Equipment><brAdj=>These bags are full of basic tools, ready for purchase. It never runs out of stock, so dive in and buy whatever interests you!;
+
+[ItemType]  name=Small Box;
+description=A small wooden container.; itemCategory=tool;
+ID=box_small; sprite=770;
+volume=90;
+pR=pWoodDark; pB=pGold;
+special=container; special=containerWood;
+
+[ItemType]  name=Large Box;
+description=A chest small enough to be carried. Can fit other bags inside.; itemCategory=tool;
+ID=box_large; sprite=772;
+volume=98;
+pR=pWood;
+special=container; special=containerWood; special=container5x5;
+
+[ItemType]  name=Box;
+description=A wooden container.; itemCategory=tool;
+ID=box_med; sprite=774;
+volume=90;
+pR=pWood;
+special=container; special=containerWood; special=container4x4;
+
+
+[ItemType]  name=Megabomb;
+description=Very dangerous explosive. Light & toss it, then move far away.;
+ID=bomb; sprite=142; itemCategory=1; special=consumeOnUse; stackable=true;
+action=bombThrow;
+ volume=5; value=350;
+[ItemReaction] 
+ID=bomb; element=fire; newID=bombLit;
+[ItemReaction] 
+ID=bomb; element=explode; newID=X; action=bombExplosion;
+[JournalEntry]
+ID=item_bomb;
+category=item; halfPage=true; rarity=1;
+title=Megabomb;
+text=<itemBig=bomb><title=Megabomb><brAdj=>Awkward to use, and must be lit then deliberately placed- but when it explodes it does massive damage! Can also break certain extra-durable obstacles.;
+
+[ItemType]  name=Megabomb (Lit);
+description=This thing is lit!! Use it to extinguish it, or get away as soon as possible.; itemCategory=1;
+ID=bombLit; sprite=142; special=animated; special=timer;
+timer=25;
+special=convertIntoCashAtEnd;
+volume=10000000; value=0;
+  element=fire;
+[ItemReaction] 
+ID=bombLit; element=use; element=wind; element=water; element=dispel; newID=bomb;
+[ItemReaction] 
+ID=bombLit; element=explode; element=timerUp; newID=X; action=bombExplosion;
+[JournalEntry]
+ID=item_bombLit;
+category=item; halfPage=true; rarity=1;
+title=Megabomb (Lit!);
+text=<itemBig=bombLit><title=Megabomb (Lit!)><brAdj=>What are you doing staring at lit explosives?!? Get away, this is dangerous!!;
+
+[ItemType]  name=Minibomb;
+description=Compact handheld explosive. Lob it and hope for the best.;
+ID=minibomb; sprite=141; itemCategory=1; special=consumeOnUse; stackable=true;
+action=minibomb_throw;
+ volume=2; value=80; pR=pLaser; pB=pIron;
+[ItemReaction] 
+ID=minibomb; element=explode; element=fire; newID=fire; action=minibomb_throw;
+[JournalEntry]
+ID=item_minibomb;
+category=item; halfPage=true; rarity=1;
+title=Minibomb;
+text=<itemBig=minibomb><title=Minibomb><brAdj=>Military explosive designed for easy use- just throw at the enemy and enjoy the show. Weaker and more volatile than other explosives. Can't break larger obstacles.;
+
+[ItemType]  name=Krask Gut;
+description=Volatile internals of the Krask. Spews oil when thrown.;
+ID=kraskbomb; sprite=141; itemCategory=1; special=consumeOnUse; stackable=true;
+special=convertIntoCashAtEnd;
+action=kraskbomb_throw;
+ volume=2; value=25; pR=pBlue5; pB=pBlue5;
+
+[JournalEntry]
+ID=item_kraskbomb;
+category=item; halfPage=true; rarity=2;
+title=Krask Gut;
+text=<itemBig=kraskbomb><title=Krask Gut><brAdj=>The Krask's internals are foreign and indiscernable to modern scientists. However, their use as a source of flammable fuel - and as an improvised weapon - was immediately noted.;
+ 
+[ItemType]  name=Lifeshard;
+description=Brittle rock full of healing powder.;
+ID=lifeshard; sprite=140; itemCategory=1; special=consumeOnUse; stackable=true;
+action=lifeshard_throw;
+ volume=2; value=60; pR=pGold; 
+[JournalEntry]
+ID=item_lifeshard;
+category=item; halfPage=true; rarity=1;
+title=Lifeshard;
+text=<itemBig=lifeshard><title=Lifeshard><brAdj=>A clever solution for those not magically inclined. The golden dust in this fragile stone billows out on impact, healing a small area.;
+
+[ItemType]  name=Wood Debris;
+ID=debris_wood; sprite=587; spriteWhenHeld=0; 
+journalID=journal_debris_wood;
+weight=2; volume=99; value=0;
+pR=pWood;
+[ItemReaction] 
+ID=debris_wood; element=fire; newID=fire_small;
+
+[ItemType]  name=Wood Debris;
+ID=debris_wood_dark; sprite=587; spriteWhenHeld=0; 
+journalID=journal_debris_wood;
+weight=2; volume=99; value=0;
+pR=pWoodDark;
+[ItemReaction] 
+ID=debris_wood_dark; element=fire; newID=fire_small;
+[JournalEntry]
+ID=journal_debris_wood;
+category=item; halfPage=true;
+title=Wood Debris;
+text=<itemBig=debris_wood><title=Wood Debris><brAdj=>Wood chips, splinters, sawdust. To carry it around would be impractical. It is, however, flammable, so watch your fire attacks around it.;
+
+[ItemType]  name=Pillow;
+ID=pillow; sprite=639; spriteWhenHeld=0; value=10;
+pB=pGrey;
+	combineWith=oilCan; toMake=oilyRag; consumeOnCombine=true;
+	combineWith=shears; toMake=bandage; consumeOnCombine=false;
+[ItemType]  name=Blanket;
+ID=blanket; sprite=671; spriteWhenHeld=0; value=10;
+pB=pGreen;
+	combineWith=oilCan; toMake=oilyRag; consumeOnCombine=true;
+	combineWith=shears; toMake=bandage; consumeOnCombine=false;
+	combineWith=craft_armor; toMake=cloak; consumeOnCombine=false;
+
+[ItemType]  name=Rope;
+description=This large bundle of rope is the essential tool of an explorer.; itemCategory=tool;
+ID=ropePile; sprite=1505; spriteWhenHeld=0; 
+weight=8; volume=20; value=8;
+pG=pYellow5;
+[ItemReaction] 
+ID=ropePile; element=fire; newID=fire;
+[JournalEntry]
+ID=item_ropePile;
+category=item; halfPage=true;
+title=Rope;
+text=<itemBig=ropePile><title=Rope><brAdj=>Strands of plant fiber twisted together. It holds your weight just fine, but can be cut by sharp weapons. To use rope properly you'll need a Piton.;
+
+[ItemType]  name=Piton;
+description=When placed on the ground and combined with rope, you can climb down cliffs!; itemCategory=tool;
+journalID=journal_piton;
+ID=piton; sprite=1506; 
+weight=1; volume=1; value=18;
+pR=pIron;
+combineWith=ropePile; toMake=piton_rope; consumeOnCombine=true;
+[ItemReaction] 
+ID=piton; element=itemCombine; action=spreadRope;
+
+[ItemType]  name=Piton (Rope);
+description=Use or cut it to remove the rope.;
+journalID=journal_piton; itemCategory=tool;
+ID=piton_rope; sprite=1507; 
+weight=10; volume=10;
+special=cannotBePickedUp;
+pR=pIron;
+pG=pYellow5;
+[ItemReaction] 
+ID=piton_rope; element=use; element=slash; newID=piton; fx=SandPuff;
+action=removeRope; spawnItem=ropePile;
+
+[JournalEntry]
+ID=journal_piton;
+category=item; halfPage=true;
+title=Piton;
+text=<itemBig=piton><title=Piton><brAdj=>Sturdy metal spike. Place it near a cliff, then put rope on it. When you're done, use it to detach it - but make sure no one's on the rope when you do.;
+
+[ItemType]  name=Rope;
+ID=rope_extended; sprite=1508; spriteWhenHeld=0;  itemCategory=tool;
+special=cannotBePickedUp; special=big; special=canHangOnWalls; 
+special=overrideTerrainCollisions; special=overrideMostCollisions;
+special=moveCostOverride_2;
+special=climbAnim;
+depthMod=500;
+pG=pYellow5;
+[ItemReaction] 
+ID=rope_extended; element=removeRope; element=tileReacted; newID=X; action=removeRope;
+[ItemReaction] 
+ID=rope_extended; element=slash; action=removeRope;
+
+
+[ItemType]  name=Oil Can;
+description=A small sealed container filled with flammable oil.;
+ID=oilCan; sprite=1921; itemCategory=1;
+weight=3; volume=5; value=4;
+special=stackCannotBeSplit; special=consumeOnUse;
+special=defaultStack_2; special=defaultStack_x10;
+[ItemReaction] 
+ID=oilCan; element=fire; element=explode; newID=fire;
+[JournalEntry]
+ID=item_oilCan;
+category=item; halfPage=true;
+title=Oil Can;
+text=<itemBig=oilCan><title=Oil Can><brAdj=>A can of fuel. If you have something you want made flammable, dip it in here. Keep away from open flames.;
+
+[ItemType]  name=Oily Rag;
+description=Rag soaked in flammable oil.; itemCategory=1;
+ID=oilyRag; sprite=1922; stackable=true;
+weight=0; volume=1;
+[ItemReaction] 
+ID=oilyRag; element=fire; newID=fire_small;
+[JournalEntry]
+ID=item_oilyRag;
+category=item; halfPage=true;
+title=Oily Rag;
+text=<itemBig=oilyRag><title=Oily Rag><brAdj=>A filthy, oily, flammable rag - the final ingredient of a Firebomb. Otherwise, it's completely useless.;
+
+[ItemType]  name=Bottle;
+description=An empty glass bottle.; itemCategory=1;
+weight=1; volume=3; value=3;
+ID=bottle; sprite=1923; stackable=true; combineSound=sfx_bottle;
+	combineWith=oilCan; toMake=bottle_oil; consumeOnCombine=true;
+	combineWith=keg; toMake=bottle_beer;
+[ItemReaction] 
+ID=bottle; element=smash; element=explode; newID=X; fx=dust_glassGreen;
+[JournalEntry]
+ID=item_bottle;
+category=item; halfPage=true;
+title=Bottle;
+text=<itemBig=bottle><title=Bottle><brAdj=>A versatile glass bottle. Can contain all kinds of fluids. Just drag it onto what you want to fill it with.;
+
+[ItemType]  name=Beer;
+description=A bottle of beer. Restores energy if drank in moderation.;
+weight=1; volume=3; value=9; itemCategory=1;
+journalID=journal_beer;
+special=convertIntoCashAtEnd;
+ID=bottle_beer; sprite=1924; action=drink_beer;
+[ItemReaction] 
+ID=bottle_beer; element=smash; element=explode; newID=X; spawnItem=puddle_beer; fx=dust_glassGreen;
+[ItemReaction] 
+ID=bottle_beer; element=actionUsed; newID=bottle;
+
+[ItemType]  name=Bottle of Oil;
+description=A bottle of flammable oil.; itemCategory=1;
+weight=1; volume=3; value=7;
+ID=bottle_oil; sprite=1955; stackable=true;
+special=consumeOnUse; action=bottle_oil_action;
+	combineWith=oilyRag; toMake=firebomb; consumeOnCombine=true;
+[ItemReaction] 
+ID=bottle_oil; element=smash; element=explode; newID=X; spawnItem=blackOil1; fx=dust_glassGreen;
+[ItemReaction] 
+ID=bottle_oil; element=fire; newID=fire; fx=dust_glassGreen; action=burning;
+[JournalEntry]
+ID=item_bottle_oil;
+category=item; halfPage=true;
+title=Bottle of Oil;
+text=<itemBig=bottle_oil><title=Bottle of Oil><brAdj=>Bottle filled with fuel. Could be used as an improvised weapon to douse an enemy in oil, slowing them and making them susceptible to fire.;
+
+[ItemType]  name=Firebomb;
+description=An improvised incendiary that can be hurled to coat an area in fire.;
+ID=firebomb; sprite=1956; stackable=true;
+weight=1; volume=3; value=25;
+itemCategory=1; special=consumeOnUse; action=firebomb_action;
+[ItemReaction] 
+ID=firebomb; element=smash; element=explode; newID=X; spawnItem=blackOil1; fx=dust_glassGreen;
+[ItemReaction] 
+ID=firebomb; element=fire; newID=fire; fx=dust_glassGreen; action=burning;
+[JournalEntry]
+ID=item_firebomb;
+category=item; halfPage=true; rarity=1;
+title=Firebomb;
+text=<itemBig=firebomb><title=Firebomb><brAdj=>Fuel in a breakable bottle with a flammable rag as a fuse. Because it is easy to produce, it is popular with rioters and rebels.;
+
+[ItemType]  name=<color=SkyBlue>Moss Malt;
+description=A potent brew made from cultivated moss. Drinking it grants a  <color=SkyBlue>permanent<color=White> +1<icon=MP>.;
+weight=1; volume=3; value=2000; action=eat_MP_Up1;
+ID=mossMalt; sprite=1925; itemCategory=1;
+[ItemReaction] 
+ID=mossMalt; element=actionUsed; newID=bottle;
+[JournalEntry]
+ID=item_mossMalt;
+category=item; halfPage=true; rarity=2;
+title=Moss Malt;
+text=<itemBig=mossMalt><title=Moss Malt><brAdj=>A delicacy created from condensed ghost moss. The brewing process takes 2+ years. The musty flavor and odor takes getting used to.;
+
+
+[ItemType]  name=<color=OrangeRed>Volcano Bakemeat;
+description=A spicy meat delicacy. Eating it grants a  <color=OrangeRed>permanent<color=White> +2<icon=HP>.;
+weight=3; volume=5; value=4000; action=eat_HP_Up2;
+ID=volcano_bakemeat; sprite=1963; special=consumeOnUse;
+ itemCategory=1;
+[JournalEntry]
+ID=item_volcano_bakemeat;
+category=item; halfPage=true; rarity=2;
+title=Volcano Bakemeat;
+text=<itemBig=volcano_bakemeat><title=Volcano Bakemeat><brAdj=>Exotic meat doused in spicy sauces. Eating it is a delicious ordeal that makes you feel hardier for surviving it.;
+
+[ItemType]  name=<color=LightGreen>Ectozoon;
+description=Translucent grub known as an exotic dish. Eating it grants a <color=LightGreen>permanent<color=White> +1 <icon=PhysEva>.;
+weight=0; volume=1; value=2000; action=eat_PEva_Up1;
+pR=pFade;
+ID=ghost_grub; sprite=1961; special=consumeOnUse;
+special=canHangOnWalls; itemCategory=1;
+[JournalEntry]
+ID=item_ghost_grub;
+category=item; halfPage=true; rarity=2;
+title=Ectozoon;
+text=<itemBig=ghost_grub><title=Ectozoon><brAdj=>This bugger is highly valued as a tasty treat. It's a bit insubstantial, but the oddly salty taste leaves you feeling energized.;
+
+[ItemType]  name=<color=SkyBlue>Sea Lancetfish;
+description=Thin, lizard-like fish. Eating it grants a  <color=SkyBlue>permanent<color=White> +1 <icon=MagEva>.;
+weight=0; volume=1; value=2000; action=eat_MEva_Up1;
+pR=pTeal; pB=pTeal;
+ID=fish_mag; sprite=1959; special=consumeOnUse;
+ itemCategory=1;
+[JournalEntry]
+ID=item_fish_mag;
+category=item; halfPage=true; rarity=2;
+title=Sea Lancetfish;
+text=<itemBig=fish_mag><title=Sea Lancetfish><brAdj=>Normally only found in deep waters, the Sea Lancetfish is a coveted catch. Despite its appearance, the meat is sweet, tender, and a bit tangy.;
+
+[ItemType]  name=Flopfish;
+description=Large, meaty fish. Sells for a modest amount.;
+weight=0; volume=1; value=80;
+pR=pRedD;
+ID=fish_flop; sprite=1960; stackable=true;
+special=convertIntoCashAtEnd; special=sellForFullValue;
+ itemCategory=1;
+[JournalEntry]
+ID=item_fish_flop;
+category=item; halfPage=true; rarity=1;
+title=Flopfish;
+text=<itemBig=fish_flop><title=Flopfish><brAdj=>Named for its tendency to escape unwary fishermen by flopping off the deck. A good, lucrative catch, but nothing to write home about.;
+
+[ItemType]  name=Mug;
+ID=mug; sprite=1926; value=3; itemCategory=1;
+	combineWith=keg; toMake=mug_beer; combineSound=sfx_droplet;
+[ItemType]  name=Mug of Beer;
+ID=mug_beer; sprite=1927; value=6; action=drink_beer;
+journalID=journal_beer; itemCategory=1;
+special=convertIntoCashAtEnd;
+description=Beer in a mug.;
+[ItemReaction] 
+ID=mug_beer; element=actionUsed; newID=mug;
+[ItemType]  name=Goblet;
+ID=goblet; sprite=1930; value=3; itemCategory=1;
+	combineWith=keg; toMake=goblet_beer; combineSound=sfx_droplet;
+[ItemType]  name=Goblet of Beer;
+ID=goblet_beer; sprite=1931; value=6; action=drink_beer;
+journalID=journal_beer; itemCategory=1;
+special=convertIntoCashAtEnd;
+description=Beer in a cup.;
+[ItemReaction] 
+ID=goblet_beer; element=actionUsed; newID=goblet;
+[JournalEntry]
+ID=journal_beer;
+category=item; halfPage=true;
+title=Beer;
+text=<itemBig=mug_beer><title=Beer><brAdj=>Popular alcoholic beverage. Found in some form in most cultures. Restores energy and improves morale (provided you drink in moderation).;
+
+[ItemType]  name=Shears;
+ID=shears; sprite=1537; 
+weight=1; volume=1; value=8; itemCategory=tool;
+description=Basic scissors. Often used to cut cloth into bandages.; 
+[JournalEntry]
+ID=item_shears;
+category=item; halfPage=true;
+title=Shears;
+text=<itemBig=shears><title=Shears><brAdj=>Primitive scissors made of two blades connected by a strip of springy metal. On the plus side, they're equally effective for left-handed users.;
+
+[ItemType]  name=Bandages;
+ID=bandage; sprite=1538; 
+stackable=true;
+weight=0; volume=1; value=8;
+pR=pGrey;
+description=Useful in a pinch to heal minor injuries.;
+action=bandage_action; itemCategory=consumable; special=consumeOnUse;
+	combineWith=oilCan; toMake=oilyRag; consumeOnCombine=true;
+	combineWith=woodPlank; toMake=splint; consumeOnCombine=true;
+[JournalEntry]
+ID=item_bandage;
+category=item; halfPage=true;
+title=Bandage;
+text=<itemBig=bandage><title=Bandage><brAdj=>Cloth cut into strips. Wraps around an injury to reduce blood flow. A Scout with 'Medic' is even better at using these.;
+	
+[ItemType]  name=Splint;
+ID=splint; sprite=1539; 
+stackable=true;
+weight=0; volume=1; value=12;
+pR=pGrey;
+pB=pWood;
+description=Heals & cures damaged limbs (immobilize, disable, stun).;
+action=splint_action; itemCategory=consumable; special=consumeOnUse;
+[JournalEntry]
+ID=item_splint;
+category=item; halfPage=true;
+title=Splint;
+text=<itemBig=splint><title=Splint><brAdj=>Cloth wrapped around wood holds the injured limb in place, providing support and preventing further injury.;
+
+[ItemType]  name=Wood Plank;
+ID=woodPlank; sprite=624; stackable=true;
+weight=3; volume=5; value=4; itemCategory=1;
+pB=pWood;
+requiredForCombining=; combineSound=stomp;
+combineWith=craft_sword; toMake=sword_wood; 
+combineWith=craft_dagger; toMake=dagger_wood; 
+combineWith=craft_hammer; toMake=hammer_wood; 
+combineWith=craft_spear; toMake=spear_wood; 
+combineWith=craft_shield; toMake=shield_wood;
+combineWith=craft_bow; toMake=bow_wood; 
+combineWith=craft_xbow; toMake=xbow_wood; 
+description=A wooden plank usable for almost any purpose.; 
+[JournalEntry]
+ID=item_woodPlank;
+category=item; halfPage=true;
+title=Wood Plank;
+text=<itemBig=woodPlank><title=Wood Plank><brAdj=>Yep, it's wood. Try using it for anything! Repair bridges, craft splints, or make certain kinds of weapons.;
+
+[ItemType]  name=Iron Chunk;
+ID=iron_chunk; sprite=834; pR=pIron; stackable=true;
+weight=5; value=25; itemCategory=1;
+special=canAlwaysFitInTileWhenSpawned;
+--requiredForCombining=anvil; 
+combineSound=sfx_hitMetal;
+combineWith=craft_sword; toMake=sword_iron; 
+combineWith=craft_dagger; toMake=dagger_iron; 
+combineWith=craft_axe; toMake=axe_iron; 
+combineWith=craft_hammer; toMake=hammer_iron; 
+combineWith=craft_spear; toMake=spear_iron; 
+combineWith=craft_shield; toMake=shield_iron; 
+combineWith=craft_flail; toMake=flail_iron; 
+combineWith=craft_whip; toMake=whip_iron; 
+combineWith=craft_bow; toMake=bow_iron; 
+combineWith=craft_xbow; toMake=xbow_iron; 
+combineWith=craft_knuckle; toMake=knuckle_iron; 
+combineWith=craft_rapier; toMake=rapier_iron; 
+combineWith=craft_greatsword; toMake=greatsword_iron; 
+combineWith=craft_armor; toMake=armor_iron; 
+description=Most basic metal available for making equipment.; 
+[JournalEntry]
+ID=item_iron_chunk;
+category=item; halfPage=true; rarity=1;
+title=Iron Chunk;
+text=<itemBig=iron_chunk><title=Iron Chunk><brAdj=>Iron, the ubiquitous metal, mainstay of basic crafting. Combine it with a crafting kit to create weapons and armor.;
+
+
+[ItemType]  name=Steel Bar;
+ID=steel_bar; sprite=833; pR=pSteel;
+stackable=true; itemCategory=1;
+weight=5; value=125;
+--requiredForCombining=anvil; 
+combineSound=sfx_hitMetal;
+combineWith=craft_sword; toMake=sword_steel; 
+combineWith=craft_dagger; toMake=dagger_steel; 
+combineWith=craft_axe; toMake=axe_steel; 
+combineWith=craft_hammer; toMake=hammer_steel; 
+combineWith=craft_spear; toMake=spear_steel; 
+combineWith=craft_shield; toMake=shield_steel; 
+combineWith=craft_flail; toMake=flail_steel; 
+combineWith=craft_whip; toMake=whip_steel; 
+combineWith=craft_bow; toMake=bow_steel; 
+combineWith=craft_xbow; toMake=xbow_steel; 
+combineWith=craft_knuckle; toMake=knuckle_steel; 
+combineWith=craft_rapier; toMake=rapier_steel; 
+combineWith=craft_greatsword; toMake=greatsword_steel; 
+combineWith=craft_armor; toMake=armor_steel; 
+description=Reliable and useful for creating all kinds of equipment.; 
+[JournalEntry]
+ID=item_steel_bar;
+category=item; halfPage=true; rarity=1;
+title=Steel Bar;
+text=<itemBig=steel_bar><title=Steel Bar><brAdj=>Iron alloy that was smelted and refined in a lengthy process until it became steel. Perfect for creating weapons and armor.;
+
+[ItemType]  name=Mythril Chunk;
+ID=mythril_chunk; sprite=834; pR=pMythril; stackable=true;
+weight=5; value=900;  itemCategory=1;
+special=canAlwaysFitInTileWhenSpawned;
+--requiredForCombining=anvil; 
+combineSound=sfx_hitMetal;
+combineWith=craft_sword; toMake=sword_mythril; 
+combineWith=craft_dagger; toMake=dagger_mythril; 
+combineWith=craft_axe; toMake=axe_mythril; 
+combineWith=craft_hammer; toMake=hammer_mythril; 
+combineWith=craft_spear; toMake=spear_mythril; 
+combineWith=craft_shield; toMake=shield_mythril; 
+combineWith=craft_flail; toMake=flail_mythril; 
+combineWith=craft_whip; toMake=whip_mythril; 
+combineWith=craft_bow; toMake=bow_mythril; 
+combineWith=craft_xbow; toMake=xbow_mythril; 
+combineWith=craft_knuckle; toMake=knuckle_mythril; 
+combineWith=craft_rapier; toMake=rapier_mythril; 
+combineWith=craft_greatsword; toMake=greatsword_mythril; 
+combineWith=craft_armor; toMake=armor_mythril; 
+description=Valuable metal that can make great equipment.;
+[JournalEntry]
+ID=item_mythril_chunk;
+category=item; halfPage=true; rarity=2;
+title=Mythril Chunk;
+text=<itemBig=mythril_chunk><title=Mythril Chunk><brAdj=>Mythril is a metal of supreme quality, harder and lighter than steel. Unfortunately it's often prohibitively expensive to work in.;
+
+[ItemType]  name=Chunk of Laser;
+ID=laser_chunk; sprite=835; 
+stackable=true; itemCategory=1;
+weight=3; value=2500;
+pR=pLaser;
+--requiredForCombining=anvil; 
+combineSound=sfx_hitMetal;
+combineWith=craft_sword; toMake=sword_laser; 
+combineWith=craft_dagger; toMake=dagger_laser; 
+combineWith=craft_axe; toMake=axe_laser; 
+combineWith=craft_hammer; toMake=hammer_laser; 
+combineWith=craft_spear; toMake=spear_laser; 
+combineWith=craft_shield; toMake=shield_laser; 
+combineWith=craft_flail; toMake=flail_laser; 
+combineWith=craft_whip; toMake=whip_laser; 
+combineWith=craft_bow; toMake=bow_laser; 
+combineWith=craft_xbow; toMake=xbow_laser; 
+combineWith=craft_knuckle; toMake=knuckle_laser; 
+combineWith=craft_rapier; toMake=rapier_laser; 
+combineWith=craft_greatsword; toMake=greatsword_laser; 
+combineWith=craft_armor; toMake=armor_laser; 
+description=Inexplicable chunk of light.;
+[ItemLight]
+ID=laser_chunk; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.2; flicker=0.03;
+[JournalEntry]
+ID=item_laser_chunk;
+category=item; halfPage=true; rarity=3; rewardMod=200;
+title=Chunk of Laser;
+text=<itemBig=laser_chunk><title=Chunk of Laser><brAdj=>Don't touch with your bare hands or stare at it. It defies scientific explanation... all the better to make weapons with!;
+
+[ItemType]  name=Ironice;
+ID=ironice_chunk; sprite=836;
+stackable=true; itemCategory=1;
+weight=15; value=4000;
+pR=pIronice;
+description=Unnatural ice that stays frigid & strong at any temperature.;
+--requiredForCombining=anvil;
+combineSound=sfx_hitMetal;
+combineWith=craft_sword; toMake=sword_ironice; 
+combineWith=craft_dagger; toMake=dagger_ironice; 
+combineWith=craft_axe; toMake=axe_ironice; 
+combineWith=craft_hammer; toMake=hammer_ironice; 
+combineWith=craft_spear; toMake=spear_ironice; 
+combineWith=craft_shield; toMake=shield_ironice; 
+combineWith=craft_flail; toMake=flail_ironice; 
+combineWith=craft_whip; toMake=whip_ironice; 
+combineWith=craft_bow; toMake=bow_ironice; 
+combineWith=craft_xbow; toMake=xbow_ironice; 
+combineWith=craft_knuckle; toMake=knuckle_ironice; 
+combineWith=craft_rapier; toMake=rapier_ironice; 
+combineWith=craft_greatsword; toMake=greatsword_ironice; 
+combineWith=craft_armor; toMake=armor_ironice; 
+[JournalEntry]
+ID=item_ironice_chunk;
+category=item; halfPage=true; rarity=3; rewardMod=200;
+title=Ironice;
+text=<itemBig=ironice_chunk><title=Ironice><brAdj=>Though icy in appearance, it's solid and long-lasting. Structures built of Ironice remain standing to this day, even in warm climes. This chunk is especially pure & refined, and can create fantastic weaponry.;
+
+[ItemType]  name=Whistle Stone;
+ID=whistle_chunk; sprite=837;
+stackable=true; itemCategory=1;
+weight=5; value=1800;
+pR=pWhistle;
+--requiredForCombining=anvil; 
+combineSound=sfx_hitMetal;
+combineWith=craft_sword; toMake=sword_wind; 
+combineWith=craft_dagger; toMake=dagger_wind; 
+combineWith=craft_axe; toMake=axe_wind; 
+combineWith=craft_hammer; toMake=hammer_wind; 
+combineWith=craft_spear; toMake=spear_wind; 
+combineWith=craft_shield; toMake=shield_wind; 
+combineWith=craft_flail; toMake=flail_wind; 
+combineWith=craft_whip; toMake=whip_wind; 
+combineWith=craft_bow; toMake=bow_wind; 
+combineWith=craft_xbow; toMake=xbow_wind; 
+combineWith=craft_knuckle; toMake=knuckle_wind; 
+combineWith=craft_rapier; toMake=rapier_wind; 
+combineWith=craft_greatsword; toMake=greatsword_wind; 
+combineWith=craft_armor; toMake=armor_wind; 
+description=Smooth, beautiful stone punctured with holes.;
+[JournalEntry]
+ID=item_whistle_chunk;
+category=item; halfPage=true; rarity=3; rewardMod=100;
+title=Whistle Stone;
+text=<itemBig=whistle_chunk><title=Whistle Stone><brAdj=>Smooth & silky stone with hollows that whistle in the wind. And yet it's quite sturdy- suitable for crafting.;
+
+[ItemType]  name=Shock Parts;
+ID=shock_chunk; sprite=838;
+stackable=true; itemCategory=1;
+description=Strange mechanical parts that hum with electricity.;
+weight=4; value=1250;
+pR=pShockWeapon; pB=pShockWeaponHilt;
+--requiredForCombining=anvil; 
+combineSound=sfx_hitMetal;
+combineWith=craft_sword; toMake=sword_elec; 
+combineWith=craft_dagger; toMake=dagger_elec; 
+combineWith=craft_axe; toMake=axe_elec; 
+combineWith=craft_hammer; toMake=hammer_elec; 
+combineWith=craft_spear; toMake=spear_elec; 
+combineWith=craft_shield; toMake=shield_elec; 
+combineWith=craft_flail; toMake=flail_elec; 
+combineWith=craft_whip; toMake=whip_elec; 
+combineWith=craft_bow; toMake=bow_elec; 
+combineWith=craft_xbow; toMake=xbow_elec; 
+combineWith=craft_knuckle; toMake=knuckle_elec; 
+combineWith=craft_rapier; toMake=rapier_elec; 
+combineWith=craft_greatsword; toMake=greatsword_elec; 
+combineWith=craft_armor; toMake=armor_elec; 
+[JournalEntry]
+ID=item_shock_chunk;
+category=item; halfPage=true; rarity=3; rewardMod=-700;
+title=Shock Parts;
+text=<itemBig=shock_chunk><title=Shock Parts><brAdj=>These complex machine parts are embedded with shards of lightning trigger stones. Could turn them into devastating weapons with the right kit...;
+
+
+[ItemType]  name=Spidesilk;
+ID=silk_spide; sprite=1463;
+stackable=true; itemCategory=1;
+weight=0; value=30;
+pR=pGrey; 
+special=quantityChangesSprite_upTo2;
+combineWith=craft_whip; toMake=whip_silk; 
+combineWith=craft_armor; toMake=armor_silk; 
+description=Thick, sticky silk of an arachnid.;
+[JournalEntry]
+ID=item_silk_spide;
+category=item; halfPage=true; rarity=2;
+title=Spidesilk;
+text=<itemBig=silk_spide><title=Spidesilk><brAdj=>Though they prefer hunting, Spides can produce sturdy silk. Enterprising humanoids often take their webbing to make clothing or whips.;
+[ItemType]  name=Spidest Fang;
+ID=fang_spidest; sprite=871;
+stackable=true; itemCategory=1;
+weight=0; volume=0; value=150;
+pR=pFangWeaponHilt; 
+pB=pFangWeapon; 
+--requiredForCombining=anvil; 
+combineSound=sfx_hitMetal;
+combineWith=craft_sword; toMake=sword_fang; 
+combineWith=craft_dagger; toMake=dagger_fang; 
+combineWith=craft_axe; toMake=axe_fang; 
+combineWith=craft_hammer; toMake=hammer_fang; 
+combineWith=craft_spear; toMake=spear_fang; 
+combineWith=craft_flail; toMake=flail_fang; 
+combineWith=craft_whip; toMake=whip_fang; 
+combineWith=craft_knuckle; toMake=knuckle_fang; 
+combineWith=craft_rapier; toMake=rapier_fang; 
+combineWith=craft_greatsword; toMake=greatsword_fang; 
+combineWith=craft_bow; toMake=bow_fang; 
+combineWith=craft_xbow; toMake=xbow_fang; 
+combineWith=craft_shield; toMake=shield_fang; 
+combineWith=craft_armor; toMake=armor_fang; 
+description=Vicious & toxic mandible of the Spidest.
+<font=thickIcons><color=Black>
+<n=><icon=invIcon_sword> +Poison Attack
+<n=><icon=invIcon_armor> +50% Poison Resist;
+[ItemReactionInWeapon] 
+ID=fang_spidest; element=weaponBuff; action=PoisonFangInWeapon;
+[ItemReactionInArmor]  
+ID=fang_spidest; actorValues=poison; damageMultiplier=0.5;
+[JournalEntry]
+ID=item_fang_spidest;
+category=item; halfPage=true; rarity=2;
+title=Spidest Fang;
+text=<itemBig=fang_spidest><title=Spidest Fang><brAdj=>Few live to see one of these up close. With a little ingenuity, this poisonous fang could be made into a potent weapon.;
+
+[ItemType]  name=Itchy Barbs;
+ID=barb_itchy; sprite=874;
+stackable=true; itemCategory=1;
+weight=0; volume=0; value=150;
+pR=p22; 
+pB=p22; 
+
+description=Irritating barbs from a Netchal.<font=thickIcons><color=Black>
+<n=><icon=invIcon_sword> +Itchy Attack
+<n=><icon=invIcon_armor> +50% Itchy Resist;
+[ItemReactionInWeapon] 
+ID=barb_itchy; element=weaponBuff; action=ItchyBarbInWeapon;
+[ItemReactionInArmor]  
+ID=barb_itchy; actorValues=itchy; damageMultiplier=0.5;
+[JournalEntry]
+ID=item_barb_itchy;
+category=item; halfPage=true; rarity=1;
+title=Itchy Barbs;
+text=<itemBig=barb_itchy><title=Itchy Barbs><brAdj=>These sharp spikes are harvested from Netchal and coated in aggravating toxin. With a little tinkering, they can make very effective augments for equipment.;
+
+[ItemType]  name=Corpryst;
+ID=corpryst; sprite=850;
+stackable=true; itemCategory=1;
+weight=0; value=750;
+pR=pCorpryst;
+--requiredForCombining=anvil;
+combineSound=sfx_hitMetal;
+combineWith=craft_sword; toMake=sword_corpryst; 
+combineWith=craft_dagger; toMake=dagger_corpryst; 
+combineWith=craft_axe; toMake=axe_corpryst; 
+combineWith=craft_hammer; toMake=hammer_corpryst; 
+combineWith=craft_spear; toMake=spear_corpryst; 
+combineWith=craft_shield; toMake=shield_corpryst; 
+combineWith=craft_flail; toMake=flail_corpryst; 
+combineWith=craft_whip; toMake=whip_corpryst; 
+combineWith=craft_knuckle; toMake=knuckle_corpryst; 
+combineWith=craft_rapier; toMake=rapier_corpryst; 
+combineWith=craft_greatsword; toMake=greatsword_corpryst; 
+combineWith=craft_armor; toMake=armor_corpryst;
+description=Slick, chunky stone from Graven.;
+[JournalEntry]
+ID=item_corpryst;
+category=item; halfPage=true; rarity=3; rewardMod=-100;
+title=Corpryst;
+text=<itemBig=corpryst><title=Corpryst><brAdj=>Valuable Graven mineral. It makes strong (but heavy) equipment. Diecast embedded with Corpryst are considered a higher social class.;
+
+[ItemType]  name=Rock Coral;
+ID=coral; sprite=1976;
+stackable=true; itemCategory=1;
+weight=0; value=120;
+pR=pCoral;
+combineSound=sfx_hitMetal;
+combineWith=craft_sword; toMake=sword_coral; 
+combineWith=craft_dagger; toMake=dagger_coral; 
+combineWith=craft_axe; toMake=axe_coral; 
+combineWith=craft_hammer; toMake=hammer_coral; 
+combineWith=craft_spear; toMake=spear_coral; 
+combineWith=craft_shield; toMake=shield_coral; 
+combineWith=craft_flail; toMake=flail_coral; 
+combineWith=craft_whip; toMake=whip_coral; 
+combineWith=craft_bow; toMake=bow_coral; 
+combineWith=craft_xbow; toMake=xbow_coral; 
+combineWith=craft_knuckle; toMake=knuckle_coral; 
+combineWith=craft_rapier; toMake=rapier_coral; 
+combineWith=craft_greatsword; toMake=greatsword_coral; 
+combineWith=craft_armor; toMake=armor_coral; 
+description=Smooth but pointy coral of surprising durability.;
+
+[JournalEntry]
+ID=item_coral;
+category=item; halfPage=true; rarity=3; rewardMod=-200;
+title=Rock Coral;
+text=<itemBig=coral><title=Rock Coral><brAdj=>Precious coral with especially sharp edges. Young Rock Coral is actually quite soft, and only hardens after approximately 3 years of aging. Weaponry made with it constantly condensates, and can splash foes with water.;
+
+[ItemType]  name=Goop Gland;
+ID=goop_gland; sprite=872;
+stackable=true; itemCategory=1;
+weight=0; volume=0; value=160;
+pR=pGreen; 
+description=Slimy organ that generates immobilizing goop.
+<font=thickIcons><color=Black>
+<n=><icon=invIcon_sword> +Slow Attack
+<n=><icon=invIcon_armor> +50% Immob Resist;
+[ItemReactionInWeapon] 
+ID=goop_gland; element=weaponBuff; action=GoopGlandInWeapon;
+[ItemReactionInArmor]  
+ID=goop_gland; actorValues=immob; damageMultiplier=0.5;
+
+[JournalEntry]
+ID=item_goop_gland;
+category=item; halfPage=true; rarity=2;
+title=Goop Gland;
+text=<itemBig=goop_gland><title=Goop Gland><brAdj=>Sogboggers carry glands within them that generate the copious immobilizing goop they spew. It doesn't take a genius to see the possible combat applications of such a fluid.;
+
+[ItemType]  name=Shellworm Plate;
+ID=shellworm_plate; sprite=873;
+stackable=true; itemCategory=1;
+weight=0; volume=0; value=950;
+pR=pPurpleD; 
+description=Unbreakable plate of the Shellworm.
+<font=thickIcons><color=Black>
+<n=><icon=invIcon_sword> +5<icon=PhysEva>
+<n=><icon=invIcon_armor> +5<icon=PhysEva>;
+
+combineSound=sfx_hitMetal;
+combineWith=craft_shield; toMake=shield_shellworm; 
+combineWith=craft_armor; toMake=armor_shellworm;
+[ItemEffectInWeapon]  
+ID=shellworm_plate; actorValue=PhysEva; magnitude=5; duration=-1;
+[ItemEffectInArmor]  
+ID=shellworm_plate; actorValue=PhysEva; magnitude=5; duration=-1;
+
+[JournalEntry]
+ID=item_shellworm_plate;
+category=item; halfPage=true; rarity=3; rewardMod=-50;
+title=Shellworm Plate;
+text=<itemBig=shellworm_plate><title=Shellworm Plate><brAdj=>Nearly indestructible, the plate of the Shellworm looks at first to be ideal material for crafting weaponry. Unfortunately they are completely unmalleable, so only shields and armor can be made from them.;
+
+[ItemType]  name=Volskarn;
+ID=volskarn_chunk; sprite=839;
+stackable=true; itemCategory=1;
+weight=0; volume=0; value=800;
+pR=pVolskarn; 
+special=canAlwaysFitInTileWhenSpawned;
+description=Essence-absorbing shard, often used to power magical equipment.
+<font=thickIcons><color=Black>
+<n=><icon=invIcon_sword> +1<icon=MagDef>
+<n=><icon=invIcon_armor> +1<icon=MagDef>;
+
+combineSound=sfx_hitMetal;
+combineWith=craft_sword; toMake=sword_volskarn; 
+combineWith=craft_dagger; toMake=dagger_volskarn; 
+combineWith=craft_axe; toMake=axe_volskarn; 
+combineWith=craft_hammer; toMake=hammer_volskarn; 
+combineWith=craft_spear; toMake=spear_volskarn; 
+combineWith=craft_shield; toMake=shield_volskarn; 
+combineWith=craft_flail; toMake=flail_volskarn; 
+combineWith=craft_whip; toMake=whip_volskarn; 
+combineWith=craft_bow; toMake=bow_volskarn; 
+combineWith=craft_xbow; toMake=xbow_volskarn; 
+combineWith=craft_knuckle; toMake=knuckle_volskarn; 
+combineWith=craft_rapier; toMake=rapier_volskarn; 
+combineWith=craft_greatsword; toMake=greatsword_volskarn; 
+combineWith=craft_armor; toMake=armor_volskarn; 
+[ItemEffectInWeapon]  
+ID=volskarn_chunk; actorValue=MagDef; magnitude=1; duration=-1;
+[ItemEffectInArmor]  
+ID=volskarn_chunk; actorValue=MagDef; magnitude=1; duration=-1;
+
+[JournalEntry]
+ID=item_volskarn_chunk;
+category=item; halfPage=true; rarity=2;
+title=Volskarn;
+text=<itemBig=volskarn_chunk><title=Volskarn><brAdj=>The discovery of Volskarn revolutionized industry, transportation, and war. It can absorb essence like a battery, which can then be directed into triggers. Almost all magical equipment has some amount of Volskarn in it.;
+
+[ItemType]  name=Aerstone;
+ID=aerstone; sprite=840; spriteWhenHeld=0; special=animateEvery100Frames;
+itemCategory=1;
+weight=0; volume=0; value=5000;
+description=Valuable stone that rises when charged with essence.<font=thickIcons><color=Black>
+<n=><icon=invIcon_sword> +1<icon=jumpDistance>
+<n=><icon=invIcon_armor> +1<icon=jumpDistance>;
+[ItemLight] 
+ID=aerstone; red=0.3; blue=0.4; green=0.4; alpha=0.2; size=0.05; flicker=0;
+[ItemEffectInWeapon]  
+ID=aerstone; actorValue=jumpDistance; magnitude=1; duration=-1;
+[ItemEffectInArmor]  
+ID=aerstone; actorValue=jumpDistance; magnitude=1; duration=-1;
+
+[JournalEntry]
+ID=item_aerstone;
+category=item; halfPage=true; rarity=4; rewardMod=-200;
+title=Aerstone;
+text=<itemBig=aerstone><title=Aerstone><brAdj=>Incredibly valuable substance that, when charged with essence, provides upward force. Often used to create airships.;
+
+[ItemType]  name=Mystical Stepladder;
+description=A collapsible stepladder that can be placed on water.;
+ID=stepladder_magic; sprite=514;  itemCategory=tool;
+special=big; special=overrideTerrainCollisions;
+special=canFloatOnWater;
+special=fullTileHitbox;
+special=ignoreHeight;
+[JournalEntry]
+ID=item_stepladder_magic;
+category=item; halfPage=true; rarity=4; rewardMod=-300;
+title=Mystical Stepladder;
+text=<itemBig=stepladder_magic><title=Mystical Stepladder><brAdj=>The finest stepladder you've ever laid eyes on. It is completely buoyant and can balance on water. Who made it and how is unknown.;
+
+[ItemType]  name=Ruluorn Bezoar;
+ID=bezoar_ruluorn; sprite=2049; itemCategory=tool;
+description=Magic stone that can be ' <color=Gold>used<color=> ' in port to Gate to other ports.<textIfFinal==gTimeSinceMoreThanOrNeverAssigned:bezoar_gated:100> Currently recharging (<math=gTimeSince:bezoar_gated>/100).;
+special=animated;
+pR=p37;
+pB=pFadeAnim;
+action=bezoar_ruluorn_act;
+[JournalEntry]
+ID=item_bezoar_ruluorn;
+category=artifact; halfPage=true; rarity=5;
+title=Ruluorn Bezoar;
+text=<itemBig=bezoar_ruluorn><title=Ruluorn Bezoar><brAdj=>Indigestible mass formed in the gut of a Ruluorn, possibly due to cruel experimentation. Somehow contains much of the Ruluorn's magical ability, as if it were an extremely powerful Gate trigger. Each week, it charges enough energy to allow you to Gate your entire fleet from one port to another.;
+
+
+[ItemType]  name=Sandbags;
+description=Hefty weights that can be repositioned but not walked over.;
+ID=sandbag_movable; sprite=865; itemCategory=tool;
+journalID=journal_sandbag;
+texture=items_misc;
+special=big; special=fullTileHitbox;
+special=cannotEverBePushed;
+blockWalking=true;
+volume = 9999;
+[ItemReaction] 
+ID=sandbag_movable; element=melee; element=explode; 
+newID=sandbag_movable_dmg1; fx=hitDust; aiRatingMod = 1; aiRatingModForHostilesOnly = true;
+[ItemType]  name=Torn Sandbags;
+description=Damaged weights that can be repositioned but not walked over.;
+ID=sandbag_movable_dmg1; sprite=866;
+cloneFrom=sandbag_movable; special=dontCloneReactions;
+[ItemReaction] 
+ID=sandbag_movable_dmg1; element=melee; element=explode; 
+newID=sandbag_movable_dmg2; fx=hitDust; aiRatingMod = 1; aiRatingModForHostilesOnly = true;
+[ItemReaction] 
+ID=sandbag_movable_dmg1; element=newDay; newID=sandbag_movable;
+[ItemType]  name=Shredded Sandbags;
+description=Deflated sandbags that slow movement a bit.;
+ID=sandbag_movable_dmg2; sprite=867; 
+journalID=journal_sandbag;
+texture=items_misc;
+special=big; special=fullTileHitbox;
+special=cannotEverBePushed; special=moveCostOverride_2;
+volume = 9999;
+[ItemReaction] 
+ID=sandbag_movable_dmg2; element=newDay; newID=sandbag_movable;
+
+[JournalEntry]
+ID=journal_sandbag;
+category=item; halfPage=true; rarity=0;
+title=Sandbags;
+text=<itemBig=sandbag_movable><title=Sandbags><brAdj=>Hefty burlap sacks filled with sand, commonly used as fortification - often against humanoid attackers or floods. You can move these around to build your own defenses, but remember that they can be jumped over, and a few attacks will shred them to a mere pile.;
+
+
+[ItemType]  name=Food;
+description=Each unit of Food feeds one crew member for one day.; itemCategory=tool;
+ID=food; sprite=66; value=3;
+volume=999; special=cargo; special=foodPrice;
+pR=pR;
+stackable=true;
+
+
+[JournalEntry]
+ID=item_food;
+category=item; halfPage=true; rarity=0;
+title=Food;
+text=<itemBig=food><title=Food><brAdj=>Rations and water enough to feed one man for a day. If your crew has no Food by the day's end, crew morale will suffer greatly. Thankfully you can buy Food at any port.;
+
+[ItemType]  name=Deluxe Rations;
+description=Special rations that feed the entire crew for 1 day. Only used when crew would otherwise starve.; itemCategory=tool;
+ID=foodDX; sprite=105; value=400;
+volume=999; special=cargo;
+stackable=true;
+[JournalEntry]
+ID=item_foodDX;
+category=item; halfPage=true; rarity=1;
+title=Deluxe Rations;
+text=<itemBig=foodDX><title=Deluxe Rations><brAdj=>These perfectly packaged rations are of the finest make and never deteriorate. If you spend a day without enough food, instead of starving and losing morale, your crew will instead dig into this. It can feed a crew of any size.<n>(You'd think a small crew could stretch these rations across a few days, but the delicacies within are too good not to finish off.);
+
+[ItemType]  name=Bullion;
+ID=cargo_gold; sprite=72;
+journalID=journal_tradeGoods;
+description=22-karat gold in bar form.; itemCategory=tool;
+volume=999; special=cargo; special=tradeGood;
+value=120;
+stackable=true;
+
+[ItemType]  name=Perfumes;
+ID=cargo_perfume; sprite=73;
+journalID=journal_tradeGoods;
+description=Fine oils and fragrances.; itemCategory=tool;
+volume=999; special=cargo; special=tradeGood;
+value=50;
+stackable=true;
+
+[ItemType]  name=Glass Beads;
+ID=cargo_beads; sprite=74;
+journalID=journal_tradeGoods;
+description=Glass trinkets and baubles.; itemCategory=tool;
+volume=999; special=cargo; special=tradeGood;
+value=5;
+stackable=true;
+
+[ItemType]  name=Silk;
+ID=cargo_silk; sprite=71;
+journalID=journal_tradeGoods;
+description=Cocoon fiber woven into cloth.; itemCategory=tool;
+volume=999; special=cargo; special=tradeGood;
+value=36;
+stackable=true;
+
+[ItemType]  name=Seacoal;
+ID=cargo_coal; sprite=70;
+journalID=journal_tradeGoods;
+description=Highly combustible rock.; itemCategory=tool;
+volume=999; special=cargo; special=tradeGood;
+value=24;
+stackable=true;
+
+
+[ItemType]  name=Gemstones;
+ID=cargo_gemstone; sprite=69;
+journalID=journal_tradeGoods;
+description=Semi-precious gems & jewels.; itemCategory=tool;
+volume=999; special=cargo; special=tradeGood;
+value=90;
+stackable=true;
+
+[ItemType]  name=Spices;
+ID=cargo_spice; sprite=68;
+journalID=journal_tradeGoods;
+description=Culinary herbs and additives.; itemCategory=tool;
+volume=999; special=cargo; special=tradeGood;
+value=44;
+stackable=true;
+
+[ItemType]  name=Grain;
+ID=cargo_grain; sprite=67;
+journalID=journal_tradeGoods;
+description=Hard, dry seed.; itemCategory=tool;
+volume=999; special=cargo; special=tradeGood;
+value=12;
+stackable=true;
+
+[ItemType]  name=Furs;
+ID=cargo_furs; sprite=99;
+journalID=journal_tradeGoods;
+description=Animal pelts and hides.; itemCategory=tool;
+volume=999; special=cargo; special=tradeGood;
+value=28;
+stackable=true;
+
+[ItemType]  name=Carapace;
+ID=cargo_carapace; sprite=100;
+journalID=journal_tradeGoods;
+description=Durable arthropod chitin.; itemCategory=tool;
+volume=999; special=cargo; special=tradeGood;
+value=33;
+stackable=true;
+
+[ItemType]  name=Tools;
+ID=cargo_tools; sprite=101;
+journalID=journal_tradeGoods;
+description=Various well-crafted devices.; itemCategory=tool;
+volume=999; special=cargo; special=tradeGood;
+value=20;
+stackable=true;
+
+[ItemType]  name=Grubhusk;
+ID=cargo_grub; sprite=102;
+journalID=journal_tradeGoods;
+description=Rubbery skins of giant larvae.; itemCategory=tool;
+volume=999; special=cargo; special=tradeGood;
+value=18;
+stackable=true;
+
+[ItemType]  name=Dyes;
+ID=cargo_dye; sprite=103;
+journalID=journal_tradeGoods;
+description=Powdered natural pigments.; itemCategory=tool;
+volume=999; special=cargo; special=tradeGood;
+value=27;
+stackable=true;
+
+[ItemType]  name=Pearls;
+ID=cargo_pearls; sprite=106;
+journalID=journal_tradeGoods;
+description=Glistening stones of great value.; itemCategory=tool;
+volume=999; special=cargo; special=tradeGood;
+value=96;
+stackable=true;
+[ItemType]  name=Ray Oil;
+ID=cargo_oil; sprite=104;
+journalID=journal_cargo_oil;
+description=Valuable oils collected from Megarays.; itemCategory=tool;
+volume=999; special=cargo; special=tradeGood;
+value=22;
+stackable=true;
+[JournalEntry]
+ID=journal_cargo_oil;
+category=item; halfPage=true; rarity=1;
+title=Ray Oil;
+text=<itemBig=cargo_oil><title=Ray Oil><brAdj=>Once flensed and boiled, the fat from Megarays becomes useful and valuable Ray Oil. Some sailors make an occupation of harvesting Ray Oil, which can then be used as fuel, lubricant, or illumination.;
+
+[ItemType]  name=Lost Cargo;
+description=Special cargo salvaged from a wreck. To be returned to the Guild.; itemCategory=tool;
+ID=cargo_lost; sprite=65;
+volume=999; special=cargo;
+pR=pWood; value=0;
+[JournalEntry]
+ID=item_cargo_lost;
+category=item; halfPage=true; rarity=0;
+title=Lost Cargo;
+text=<itemBig=cargo_lost><title=Lost Cargo><brAdj=>Cargo that has specifically been requested by the Guild. It has no use to you, so you may as well return it in exchange for payment.;
+
+
+
+[ItemType]  name=Cargo;
+description=Generic nondescript cargo.; itemCategory=tool;
+ID=cargo1; sprite=65;
+volume=999; special=cargo;
+pR=pWood; value=10;
+stackable=true;
+[JournalEntry]
+ID=journal_tradeGoods;
+category=item; halfPage=true; rarity=0;
+title=Trade Goods;
+text=<itemBig=cargo_perfume> <itemBig=cargo_pearls> <itemBig=cargo_furs><adjX=-12><title=Trade Goods><brAdj=>These special goods change value based on where you sell them. Each type comes from certain ports, and their value increases the further you get from those ports.<n>You're practically guaranteed to turn a profit as long as you sell somewhere besides the port of origin!;
+
+
+[ItemType]  name=Lost Documents;
+description=Old documents that can be exchanged for favor with Jasce, Seartial, or Rumane.;
+ID=lost_docs; sprite=2028; value=0; stackable=true; itemCategory=tool;
+pR=pGrey;
+[JournalEntry]
+ID=item_lost_docs;
+category=item; halfPage=true; rarity=1;
+title=Lost Documents;
+text=<itemBig=lost_docs><title=Lost Documents><brAdj=>Old, incomprehensibly bureaucratic documents. Not inherently valuable, but Jasce, Seartial, or Rumane would love to get their hands on the historical details inside.;
+
+
+----
+
+[ItemType]  name=Sword Crafting Kit;
+ID=craft_sword; sprite=803; 
+weight=0; volume=1; value=150; itemCategory=tool;
+description=Combine this with raw material to create a sword.;
+journalID=journal_craft_item;
+pR=pBlue; pB=pWoodDark; pG=pIron;
+special=setGlobalVarWhenConverted;
+[ItemType]  name=Dagger Crafting Kit;
+ID=craft_dagger; sprite=804; 
+weight=0; volume=1; value=150; itemCategory=tool;
+description=Combine this with raw material to create a dagger.;
+journalID=journal_craft_item;
+pR=pBlue; pB=pWoodDark; pG=pIron;
+special=setGlobalVarWhenConverted;
+[ItemType]  name=Hammer Crafting Kit;
+ID=craft_hammer; sprite=805;  itemCategory=tool;
+weight=0; volume=1; value=150;
+description=Combine this with raw material to create a hammer.;
+journalID=journal_craft_item;
+pR=pBlue; pB=pWoodDark; pG=pIron;
+special=setGlobalVarWhenConverted;
+[ItemType]  name=Axe Crafting Kit;
+ID=craft_axe; sprite=806; 
+weight=0; volume=1; value=150; itemCategory=tool;
+description=Combine this with raw material to create an axe.;
+journalID=journal_craft_item;
+pR=pBlue; pB=pWoodDark; pG=pIron;
+special=setGlobalVarWhenConverted;
+[ItemType]  name=Shield Crafting Kit;
+ID=craft_shield; sprite=807; 
+weight=0; volume=1; value=150; itemCategory=tool;
+description=Combine this with raw material to create a shield.;
+journalID=journal_craft_item;
+pR=pBlue; pB=pWoodDark; pG=pIron;
+special=setGlobalVarWhenConverted;
+[ItemType]  name=Flail Crafting Kit;
+ID=craft_flail; sprite=808; 
+weight=0; volume=1; value=150; itemCategory=tool;
+description=Combine this with raw material to create a flail.;
+journalID=journal_craft_item;
+pR=pBlue; pB=pWoodDark; pG=pIron;
+special=setGlobalVarWhenConverted;
+[ItemType]  name=Whip Crafting Kit;
+ID=craft_whip; sprite=809; 
+weight=0; volume=1; value=150; itemCategory=tool;
+description=Combine this with raw material to create a whip.;
+journalID=journal_craft_item;
+pR=pBlue; pB=pWoodDark; pG=pIron;
+special=setGlobalVarWhenConverted;
+[ItemType]  name=Bow Crafting Kit;
+ID=craft_bow; sprite=810; 
+weight=0; volume=1; value=150; itemCategory=tool;
+description=Combine this with raw material to create a bow.;
+journalID=journal_craft_item;
+pR=pBlue; pB=pWoodDark; pG=pIron;
+special=setGlobalVarWhenConverted;
+[ItemType]  name=Crossbow Crafting Kit;
+ID=craft_xbow; sprite=811; 
+weight=0; volume=1; value=150; itemCategory=tool;
+description=Combine this with raw material to create a crossbow.;
+journalID=journal_craft_item;
+pR=pBlue; pB=pWoodDark; pG=pIron;
+special=setGlobalVarWhenConverted;
+[ItemType]  name=Spear Crafting Kit;
+ID=craft_spear; sprite=812; 
+weight=0; volume=1; value=150; itemCategory=tool;
+description=Combine this with raw material to create a spear.;
+journalID=journal_craft_item;
+pR=pBlue; pB=pWoodDark; pG=pIron;
+special=setGlobalVarWhenConverted;
+[ItemType]  name=Knuckle Crafting Kit;
+ID=craft_knuckle; sprite=813; 
+weight=0; volume=1; value=150; itemCategory=tool;
+description=Combine this with raw material to create knuckles.;
+journalID=journal_craft_item;
+pR=pBlue; pB=pWoodDark; pG=pIron;
+special=setGlobalVarWhenConverted;
+[ItemType]  name=Rapier Crafting Kit;
+ID=craft_rapier; sprite=814; 
+weight=0; volume=1; value=150; itemCategory=tool;
+description=Combine this with raw material to create a rapier.;
+journalID=journal_craft_item;
+pR=pBlue; pB=pWoodDark; pG=pIron;
+special=setGlobalVarWhenConverted;
+[ItemType]  name=Greatsword Crafting Kit;
+ID=craft_greatsword; sprite=815; 
+weight=0; volume=1; value=150; itemCategory=tool;
+description=Combine this with raw material to create a greatsword.;
+journalID=journal_craft_item;
+pR=pBlue; pB=pWoodDark; pG=pIron;
+special=setGlobalVarWhenConverted;
+[ItemType]  name=Armor Crafting Kit;
+ID=craft_armor; sprite=816; 
+weight=0; volume=1; value=150; itemCategory=tool;
+description=Combine this with raw material to create armor.;
+journalID=journal_craft_item;
+pR=pBlue; pB=pWoodDark; pG=pIron;
+special=setGlobalVarWhenConverted;
+[JournalEntry]
+ID=journal_craft_item;
+category=item; halfPage=true; rarity=1;
+title=Crafting Kit;
+text=<itemBig=craft_sword><itemBig=craft_armor><title=Crafting Kit><brAdj=>Combine it with raw material, such as  <item=iron_chunk>iron, and you'll have a new item! The kit itself is reusable.;
+
+
+
+[ItemType]  name=Tool Rack;
+ID=tools1; sprite=1936;
+itemCategory=tool;
+journalID=journal_tools;
+special=cannotBePickedUp; special=canHangOnWalls;
+pR=zoneWood; pB=zoneStoneDark; 
+[ItemReaction] 
+ID=tools1; element=explode; newID=X;
+[ItemType]  name=Tool Rack;
+ID=tools2; sprite=1937;
+cloneFrom=tools1;
+[ItemType]  name=Rack;
+ID=tools3; sprite=1938;
+journalID=; special=itemsIgnoreBlockWalking; special=noPlayerPlacedItems;
+cloneFrom=tools1;
+[JournalEntry]
+ID=journal_tools;
+category=item; halfPage=true;
+title=Tools;
+text=<itemBig=tools1><title=Tools><brAdj=>Fine tools made for precision work. They're much too puny to be useful on the go, so don't worry about them.;
+
+[ItemType]  name=Anvil;
+ID=anvil; sprite=619; pB=pGreyD;
+description=Used to forge weapons and armor.; 
+itemCategory=tool;
+weight=500; depthMod=1050;
+special=big; special=itemsIgnoreBlockWalking; special=itemsOnSameTileAreRaised; special=sprite2xWidth; 
+special=openEnhanceUI;
+blockWalking=true; blockJumping=true;
+pB=pGreyD2;
+[JournalEntry]
+ID=item_anvil;
+category=item; halfPage=true; rarity=1;
+title=Anvil;
+text=<itemBig=anvil><title=Anvil><brAdj=>Iron anvil with a steel face. This hunk of metal is what all proper blacksmithing is done on. Place a weapon or armor on top, then put trigger stones or materials inside to augment your equipment!;
+
+[ItemType]  name=Keg;
+itemCategory=tool;
+ID=keg; sprite=1639;
+weight=200; volume=100;
+special=big;
+blockWalking=true; blockJumping=true;
+pR=zoneWoodDark;
+pB=pGreyD2;
+[ItemReaction] 
+ID=keg; element=use; action=pour_beer;
+[ItemReaction] 
+ID=keg; element=explode; element=heavySlash; element=smash; newID=X; fx=dust_wood; spawnItem=puddle_beer; spawnItem=puddle_beer; spawnItem=puddle_beer; spawnItem=puddle_beer; spawnItem=puddle_beer; spawnItem=debris_wood;
+[JournalEntry]
+ID=item_keg;
+category=item; halfPage=true; rarity=1;
+title=Keg;
+text=<itemBig=keg><title=Keg><brAdj=>Favorite container of the hedonist and the socialite. When you turn the spigot, alcohol comes out!;
+
+[ItemType]  name=Saw;
+description=Severs wood with even, straight cuts.;
+weight=1; volume=10; value=0; itemCategory=tool;
+ID=saw; sprite=149;
+pR=pGrey2;
+pB=pWood;
+[JournalEntry]
+ID=item_saw;
+category=item; halfPage=true;
+title=Saw;
+text=<itemBig=saw><title=Saw><brAdj=>Blade with a serrated toothed edge. Allows for precision removal of wood.;
+
+
+
+------DICE
+
+ [ItemType]  name=Subtractor;
+ID=gamedice_subtract; sprite=1600; 
+texture=items_misc; itemCategory=tool;
+special=fullTileHitbox;
+
+ [ItemType]  name=Fire Die;
+ID=gamedice_fire1_b; sprite=1601; 
+texture=items_misc; itemCategory=tool;
+element=fire; power=1;
+special=quantityChangesSprite_upTo6; stackable=true;
+combineWith=gamedice_subtract; toMake=gamedice_fire1_b;
+pR=pRed; pB=pBlue;
+[ItemReaction] 
+ID=gamedice_fire1_b; element=use; quantityMod_rand=5; quantitySetTo=1; fx=click;
+[ItemReaction] 
+ID=gamedice_fire1_b; element=itemCombined; quantityMod=-1; fx=chk;
+
+
+ [ItemType]  name=Ice Die;
+ID=gamedice_ice1_b; sprite=1633; 
+cloneFrom=gamedice_fire1_b;
+element=ice;
+!combineWith=gamedice_subtract; toMake=gamedice_ice1_b;
+pR=pBlue2;
+
+ [ItemType]  name=Elec Die;
+ID=gamedice_elec1_b; sprite=1665; 
+cloneFrom=gamedice_fire1_b;
+element=elec;
+!combineWith=gamedice_subtract; toMake=gamedice_elec1_b;
+pR=pYellow;
+
+ [ItemType]  name=Wind Die;
+ID=gamedice_wind1_b; sprite=1697; 
+cloneFrom=gamedice_fire1_b;
+element=wind;
+!combineWith=gamedice_subtract; toMake=gamedice_wind1_b;
+pR=pGrey6;
+
+ [ItemType]  name=Fire Die;
+ID=gamedice_fire1_r; cloneFrom=gamedice_fire1_b; pB=pRed;
+ [ItemType]  name=Ice Die;
+ID=gamedice_ice1_r; cloneFrom=gamedice_ice1_b; pB=pRed;
+ [ItemType]  name=Elec Die;
+ID=gamedice_elec1_r; cloneFrom=gamedice_elec1_b; pB=pRed;
+ [ItemType]  name=Wind Die;
+ID=gamedice_wind1_r; cloneFrom=gamedice_wind1_b; pB=pRed;
+
+
+------BLUE
+
+ 
+ [ItemType]  name=Fire 1;
+ID=gamechip_fire1_b; sprite=1; 
+texture=items_misc; itemCategory=tool;
+element=fire; power=1;
+[ItemReaction] 
+ID=gamechip_fire1_b; element=use; newID=gamechip_fire1_bC;
+
+ [ItemType]  name=Fire 1;
+ID=gamechip_fire1_bC; sprite=33; 
+texture=items_misc; itemCategory=tool;
+element=fire; power=1;
+[ItemReaction] 
+ID=gamechip_fire1_bC; element=use; newID=gamechip_fire1_b;
+--
+
+ [ItemType]  name=Fire 2;
+texture=items_misc;
+ID=gamechip_fire2_b; sprite=2; 
+description=; itemCategory=tool;
+element=fire; power=2;
+[ItemReaction] 
+ID=gamechip_fire2_b; element=use; newID=gamechip_fire2_bC;
+
+ [ItemType]  name=Fire 2;
+texture=items_misc;
+ID=gamechip_fire2_bC; sprite=34; 
+description=; itemCategory=tool;
+element=fire; power=2;
+[ItemReaction] 
+ID=gamechip_fire2_bC; element=use; newID=gamechip_fire2_b;
+--
+
+ [ItemType]  name=Fire 3;
+texture=items_misc;
+ID=gamechip_fire3_b; sprite=3; 
+description=; itemCategory=tool;
+element=fire; power=3;
+[ItemReaction] 
+ID=gamechip_fire3_b; element=use; newID=gamechip_fire3_bC;
+
+ [ItemType]  name=Fire 3;
+texture=items_misc;
+ID=gamechip_fire3_bC; sprite=35; 
+description=; itemCategory=tool;
+element=fire; power=3;
+[ItemReaction] 
+ID=gamechip_fire3_bC; element=use; newID=gamechip_fire3_b;
+
+--
+ [ItemType]  name=Fire 4;
+texture=items_misc;
+ID=gamechip_fire4_b; sprite=4; 
+description=; itemCategory=tool;
+element=fire; power=4;
+[ItemReaction] 
+ID=gamechip_fire4_b; element=use; newID=gamechip_fire4_bC;
+
+ [ItemType]  name=Fire 4;
+texture=items_misc;
+ID=gamechip_fire4_bC; sprite=36; 
+description=; itemCategory=tool;
+element=fire; power=4;
+[ItemReaction] 
+ID=gamechip_fire4_bC; element=use; newID=gamechip_fire4_b;
+--
+
+ [ItemType]  name=Ice 1;
+texture=items_misc;
+ID=gamechip_ice1_b; sprite=5; 
+description=; itemCategory=tool;
+element=ice; power=1;
+[ItemReaction] 
+ID=gamechip_ice1_b; element=use; newID=gamechip_ice1_bC;
+
+ [ItemType]  name=Ice 1;
+texture=items_misc;
+ID=gamechip_ice1_bC; sprite=37; 
+description=; itemCategory=tool;
+element=ice; power=1;
+[ItemReaction] 
+ID=gamechip_ice1_bC; element=use; newID=gamechip_ice1_b;
+
+--
+ [ItemType]  name=Ice 2;
+texture=items_misc;
+ID=gamechip_ice2_b; sprite=6; 
+description=; itemCategory=tool;
+element=ice; power=2;
+[ItemReaction] 
+ID=gamechip_ice2_b; element=use; newID=gamechip_ice2_bC;
+
+ [ItemType]  name=Ice 2;
+texture=items_misc;
+ID=gamechip_ice2_bC; sprite=38; 
+description=; itemCategory=tool;
+element=ice; power=2;
+[ItemReaction] 
+ID=gamechip_ice2_bC; element=use; newID=gamechip_ice2_b;
+
+--
+ [ItemType]  name=Ice 3;
+texture=items_misc;
+ID=gamechip_ice3_b; sprite=7; 
+description=; itemCategory=tool;
+element=ice; power=3;
+[ItemReaction] 
+ID=gamechip_ice3_b; element=use; newID=gamechip_ice3_bC;
+
+ [ItemType]  name=Ice 3;
+texture=items_misc;
+ID=gamechip_ice3_bC; sprite=39; 
+description=; itemCategory=tool;
+element=ice; power=3;
+[ItemReaction] 
+ID=gamechip_ice3_bC; element=use; newID=gamechip_ice3_b;
+
+--
+ [ItemType]  name=Ice 4;
+texture=items_misc;
+ID=gamechip_ice4_b; sprite=8; 
+description=; itemCategory=tool;
+element=ice; power=4;
+[ItemReaction] 
+ID=gamechip_ice4_b; element=use; newID=gamechip_ice4_bC;
+
+ [ItemType]  name=Ice 4;
+texture=items_misc;
+ID=gamechip_ice4_bC; sprite=40; 
+description=; itemCategory=tool;
+element=ice; power=4;
+[ItemReaction] 
+ID=gamechip_ice4_bC; element=use; newID=gamechip_ice4_b;
+
+--1
+ [ItemType]  name=Elec 1;
+texture=items_misc;
+ID=gamechip_elec1_b; sprite=9; 
+description=; itemCategory=tool;
+element=elec; power=1;
+[ItemReaction] 
+ID=gamechip_elec1_b; element=use; newID=gamechip_elec1_bC;
+
+ [ItemType]  name=Elec 1;
+texture=items_misc;
+ID=gamechip_elec1_bC; sprite=41; 
+description=; itemCategory=tool;
+element=elec; power=1;
+[ItemReaction]
+ID=gamechip_elec1_bC; element=use; newID=gamechip_elec1_b;
+
+--2
+ [ItemType]  name=Elec 2;
+texture=items_misc;
+ID=gamechip_elec2_b; sprite=10; 
+description=; itemCategory=tool;
+element=elec; power=2;
+[ItemReaction] 
+ID=gamechip_elec2_b; element=use; newID=gamechip_elec2_bC;
+
+ [ItemType]  name=Elec 2;
+texture=items_misc;
+ID=gamechip_elec2_bC; sprite=42; 
+description=; itemCategory=tool;
+element=elec; power=2;
+[ItemReaction]
+ID=gamechip_elec2_bC; element=use; newID=gamechip_elec2_b;
+
+--3
+ [ItemType]  name=Elec 3;
+texture=items_misc;
+ID=gamechip_elec3_b; sprite=11; 
+description=; itemCategory=tool;
+element=elec; power=3;
+[ItemReaction] 
+ID=gamechip_elec3_b; element=use; newID=gamechip_elec3_bC;
+
+ [ItemType]  name=Elec 3;
+texture=items_misc;
+ID=gamechip_elec3_bC; sprite=43; 
+description=; itemCategory=tool;
+element=elec; power=3;
+[ItemReaction]
+ID=gamechip_elec3_bC; element=use; newID=gamechip_elec3_b;
+
+--4
+ [ItemType]  name=Elec 4;
+texture=items_misc;
+ID=gamechip_elec4_b; sprite=12; 
+description=; itemCategory=tool;
+element=elec; power=4;
+[ItemReaction] 
+ID=gamechip_elec4_b; element=use; newID=gamechip_elec4_bC;
+
+[ItemType]  name=Elec 4;
+texture=items_misc;
+ID=gamechip_elec4_bC; sprite=44; 
+description=; itemCategory=tool;
+element=elec; power=4;
+[ItemReaction]
+ID=gamechip_elec4_bC; element=use; newID=gamechip_elec4_b;
+
+
+--1
+[ItemType]  name=Wind 1;
+texture=items_misc;
+ID=gamechip_wind1_b; sprite=13; 
+description=; itemCategory=tool;
+element=wind; power=1;
+[ItemReaction] 
+ID=gamechip_wind1_b; element=use; newID=gamechip_wind1_bC;
+
+[ItemType]  name=Wind 1;
+texture=items_misc;
+ID=gamechip_wind1_bC; sprite=45; 
+description=; itemCategory=tool;
+element=wind; power=1;
+[ItemReaction]
+ID=gamechip_wind1_bC; element=use; newID=gamechip_wind1_b;
+
+--2
+[ItemType]  name=Wind 2;
+texture=items_misc;
+ID=gamechip_wind2_b; sprite=14; 
+description=; itemCategory=tool;
+element=wind; power=2;
+[ItemReaction] 
+ID=gamechip_wind2_b; element=use; newID=gamechip_wind2_bC;
+
+[ItemType]  name=Wind 2;
+texture=items_misc;
+ID=gamechip_wind2_bC; sprite=46; 
+description=; itemCategory=tool;
+element=wind; power=2;
+[ItemReaction]
+ID=gamechip_wind2_bC; element=use; newID=gamechip_wind2_b;
+
+--3
+[ItemType]  name=Wind 3;
+texture=items_misc;
+ID=gamechip_wind3_b; sprite=15; 
+description=; itemCategory=tool;
+element=wind; power=3;
+[ItemReaction] 
+ID=gamechip_wind3_b; element=use; newID=gamechip_wind3_bC;
+
+[ItemType]  name=Wind 3;
+texture=items_misc;
+ID=gamechip_wind3_bC; sprite=47; 
+description=; itemCategory=tool;
+element=wind; power=3;
+[ItemReaction]
+ID=gamechip_wind3_bC; element=use; newID=gamechip_wind3_b;
+
+
+--4
+[ItemType]  name=Wind 4;
+texture=items_misc;
+ID=gamechip_wind4_b; sprite=16; 
+description=; itemCategory=tool;
+element=wind; power=4;
+[ItemReaction] 
+ID=gamechip_wind4_b; element=use; newID=gamechip_wind4_bC;
+
+[ItemType]  name=Wind 4;
+texture=items_misc;
+ID=gamechip_wind4_bC; sprite=48; 
+description=; itemCategory=tool;
+element=wind; power=4;
+[ItemReaction]
+ID=gamechip_wind4_bC; element=use; newID=gamechip_wind4_b;
+
+
+
+-----RED
+
+ [ItemType]  name=Fire 1;
+ID=gamechip_fire1_r; sprite=65;
+texture=items_misc; itemCategory=tool;
+element=fire; power=1;
+ [ItemType]  name=Fire 1;
+ID=gamechip_fire1_rC; sprite=97; 
+texture=items_misc; itemCategory=tool;
+element=fire; power=1;
+
+
+
+ [ItemType]  name=Fire 2;
+texture=items_misc;
+ID=gamechip_fire2_r; sprite=66; 
+description=; itemCategory=tool;
+element=fire; power=2;
+[ItemReaction] 
+ID=gamechip_fire2_r; element=use; newID=gamechip_fire2_rC;
+
+ [ItemType]  name=Fire 2;
+texture=items_misc;
+ID=gamechip_fire2_rC; sprite=98; 
+description=; itemCategory=tool;
+element=fire; power=2;
+[ItemReaction] 
+ID=gamechip_fire2_rC; element=use; newID=gamechip_fire2_r;
+--
+
+ [ItemType]  name=Fire 3;
+texture=items_misc;
+ID=gamechip_fire3_r; sprite=67; 
+description=; itemCategory=tool;
+element=fire; power=3;
+[ItemReaction] 
+ID=gamechip_fire3_r; element=use; newID=gamechip_fire3_rC;
+
+ [ItemType]  name=Fire 3;
+texture=items_misc;
+ID=gamechip_fire3_rC; sprite=99; 
+description=; itemCategory=tool;
+element=fire; power=3;
+[ItemReaction] 
+ID=gamechip_fire3_rC; element=use; newID=gamechip_fire3_r;
+
+--
+ [ItemType]  name=Fire 4;
+texture=items_misc;
+ID=gamechip_fire4_r; sprite=68; 
+description=; itemCategory=tool;
+element=fire; power=4;
+[ItemReaction] 
+ID=gamechip_fire4_r; element=use; newID=gamechip_fire4_rC;
+
+ [ItemType]  name=Fire 4;
+texture=items_misc;
+ID=gamechip_fire4_rC; sprite=100; 
+description=; itemCategory=tool;
+element=fire; power=4;
+[ItemReaction] 
+ID=gamechip_fire4_rC; element=use; newID=gamechip_fire4_r;
+--
+
+ [ItemType]  name=Ice 1;
+texture=items_misc;
+ID=gamechip_ice1_r; sprite=69; 
+description=; itemCategory=tool;
+element=ice; power=1;
+[ItemReaction] 
+ID=gamechip_ice1_r; element=use; newID=gamechip_ice1_rC;
+
+ [ItemType]  name=Ice 1;
+texture=items_misc;
+ID=gamechip_ice1_rC; sprite=101; 
+description=; itemCategory=tool;
+element=ice; power=1;
+[ItemReaction] 
+ID=gamechip_ice1_rC; element=use; newID=gamechip_ice1_r;
+
+--
+ [ItemType]  name=Ice 2;
+texture=items_misc;
+ID=gamechip_ice2_r; sprite=70; 
+description=; itemCategory=tool;
+element=ice; power=2;
+[ItemReaction] 
+ID=gamechip_ice2_r; element=use; newID=gamechip_ice2_rC;
+
+ [ItemType]  name=Ice 2;
+texture=items_misc;
+ID=gamechip_ice2_rC; sprite=102; 
+description=; itemCategory=tool;
+element=ice; power=2;
+[ItemReaction] 
+ID=gamechip_ice2_rC; element=use; newID=gamechip_ice2_r;
+
+--
+ [ItemType]  name=Ice 3;
+texture=items_misc;
+ID=gamechip_ice3_r; sprite=71; 
+description=; itemCategory=tool;
+element=ice; power=3;
+[ItemReaction] 
+ID=gamechip_ice3_r; element=use; newID=gamechip_ice3_rC;
+
+ [ItemType]  name=Ice 3;
+texture=items_misc;
+ID=gamechip_ice3_rC; sprite=103; 
+description=; itemCategory=tool;
+element=ice; power=3;
+[ItemReaction] 
+ID=gamechip_ice3_rC; element=use; newID=gamechip_ice3_r;
+
+--
+ [ItemType]  name=Ice 4;
+texture=items_misc;
+ID=gamechip_ice4_r; sprite=72; 
+description=; itemCategory=tool;
+element=ice; power=4;
+[ItemReaction] 
+ID=gamechip_ice4_r; element=use; newID=gamechip_ice4_rC;
+
+ [ItemType]  name=Ice 4;
+texture=items_misc;
+ID=gamechip_ice4_rC; sprite=104; 
+description=; itemCategory=tool;
+element=ice; power=4;
+[ItemReaction] 
+ID=gamechip_ice4_rC; element=use; newID=gamechip_ice4_r;
+
+--1
+ [ItemType]  name=Elec 1;
+texture=items_misc;
+ID=gamechip_elec1_r; sprite=73; 
+description=; itemCategory=tool;
+element=elec; power=1;
+[ItemReaction] 
+ID=gamechip_elec1_r; element=use; newID=gamechip_elec1_rC;
+
+ [ItemType]  name=Elec 1;
+texture=items_misc;
+ID=gamechip_elec1_rC; sprite=105; 
+description=; itemCategory=tool;
+element=elec; power=1;
+[ItemReaction]
+ID=gamechip_elec1_rC; element=use; newID=gamechip_elec1_r;
+
+--2
+ [ItemType]  name=Elec 2;
+texture=items_misc;
+ID=gamechip_elec2_r; sprite=74; 
+description=; itemCategory=tool;
+element=elec; power=2;
+[ItemReaction] 
+ID=gamechip_elec2_r; element=use; newID=gamechip_elec2_rC;
+
+ [ItemType]  name=Elec 2;
+texture=items_misc;
+ID=gamechip_elec2_rC; sprite=106; 
+description=; itemCategory=tool;
+element=elec; power=2;
+[ItemReaction]
+ID=gamechip_elec2_rC; element=use; newID=gamechip_elec2_r;
+
+--3
+ [ItemType]  name=Elec 3;
+texture=items_misc;
+ID=gamechip_elec3_r; sprite=75; 
+description=; itemCategory=tool;
+element=elec; power=3;
+[ItemReaction] 
+ID=gamechip_elec3_r; element=use; newID=gamechip_elec3_rC;
+
+ [ItemType]  name=Elec 3;
+texture=items_misc;
+ID=gamechip_elec3_rC; sprite=107; 
+description=; itemCategory=tool;
+element=elec; power=3;
+[ItemReaction]
+ID=gamechip_elec3_rC; element=use; newID=gamechip_elec3_r;
+
+--4
+ [ItemType]  name=Elec 4;
+texture=items_misc;
+ID=gamechip_elec4_r; sprite=76; 
+description=; itemCategory=tool;
+element=elec; power=4;
+[ItemReaction] 
+ID=gamechip_elec4_r; element=use; newID=gamechip_elec4_rC;
+
+[ItemType]  name=Elec 4;
+texture=items_misc;
+ID=gamechip_elec4_rC; sprite=108; 
+description=; itemCategory=tool;
+element=elec; power=4;
+[ItemReaction]
+ID=gamechip_elec4_rC; element=use; newID=gamechip_elec4_r;
+
+
+--1
+[ItemType]  name=Wind 1;
+texture=items_misc;
+ID=gamechip_wind1_r; sprite=77; 
+description=; itemCategory=tool;
+element=wind; power=1;
+[ItemReaction] 
+ID=gamechip_wind1_r; element=use; newID=gamechip_wind1_rC;
+
+[ItemType]  name=Wind 1;
+texture=items_misc;
+ID=gamechip_wind1_rC; sprite=109; 
+description=; itemCategory=tool;
+element=wind; power=1;
+[ItemReaction]
+ID=gamechip_wind1_rC; element=use; newID=gamechip_wind1_r;
+
+--2
+[ItemType]  name=Wind 2;
+texture=items_misc;
+ID=gamechip_wind2_r; sprite=78; 
+description=; itemCategory=tool;
+element=wind; power=2;
+[ItemReaction] 
+ID=gamechip_wind2_r; element=use; newID=gamechip_wind2_rC;
+
+[ItemType]  name=Wind 2;
+texture=items_misc;
+ID=gamechip_wind2_rC; sprite=110; 
+description=; itemCategory=tool;
+element=wind; power=2;
+[ItemReaction]
+ID=gamechip_wind2_rC; element=use; newID=gamechip_wind2_r;
+
+--3
+[ItemType]  name=Wind 3;
+texture=items_misc;
+ID=gamechip_wind3_r; sprite=79; 
+description=; itemCategory=tool;
+element=wind; power=3;
+[ItemReaction] 
+ID=gamechip_wind3_r; element=use; newID=gamechip_wind3_rC;
+
+[ItemType]  name=Wind 3;
+texture=items_misc;
+ID=gamechip_wind3_rC; sprite=111; 
+description=; itemCategory=tool;
+element=wind; power=3;
+[ItemReaction]
+ID=gamechip_wind3_rC; element=use; newID=gamechip_wind3_r;
+
+
+--4
+[ItemType]  name=Wind 4;
+texture=items_misc;
+ID=gamechip_wind4_r; sprite=80; 
+description=; itemCategory=tool;
+element=wind; power=4;
+[ItemReaction] 
+ID=gamechip_wind4_r; element=use; newID=gamechip_wind4_rC;
+
+[ItemType]  name=Wind 4;
+texture=items_misc;
+ID=gamechip_wind4_rC; sprite=112; 
+description=; itemCategory=tool;
+element=wind; power=4;
+[ItemReaction]
+ID=gamechip_wind4_rC; element=use; newID=gamechip_wind4_r;
+
+
+
+
+

@@ -1,0 +1,69 @@
+--this is a sample cloneFrom
+[ActorValue]
+ID=MagAtk;
+cloneFrom=MagAtk;
+description=This overrides MagAtk and does nothing but change the description.;
+
+
+
+--here's a new positive status effect: Toasty
+[ActorValue]
+ID=toasty;
+name=Toasty;
+icon=TOASTY<icon=skill_Fire>;
+minimum=0;
+maximum=1;
+description=Toasty makes you resistant to cold and better at Fire magic.;
+
+defaultValue = 0;
+
+harmfulMagnitude = -1;
+
+animationOnHarmful = pain;
+
+affectsActors = true;
+
+canAffectIncapped = false;
+
+showDamageNumbers = true;
+showDamageNumbersMagnitude = false;
+showDamageNumbersSign = false;
+showDamageNumbersIcon = true;
+showDamageNumbersElements = false;
+showDamageNumbersIconInTooltips = true;
+damageNumberColor_Positive = Orange;
+damageNumberColor_Negative = Red;
+
+actorPaletteOverride =;
+actorPaletteOverrideDuration = 0.27;
+
+elementReactionModifiesDuration = true;
+
+canBeRemovedByNonspecificAVEffectRemoval = true;
+
+recordInActorData = true;
+showEvaluationInfo = true;
+
+allowDecimalValues = false;
+percentage = false;
+
+XPCostBase = 0;
+XPCostIncrement = 0;
+XPCostMultiplier = 1;
+XPCostFloorToNearest = 0;
+
+[ActorValueReaction]
+ID=toasty;
+element=ice; damageMultiplier=0.5;
+[ActorValueReaction]
+ID=toasty;
+element=water; damageMultiplier=0.8;
+[ActorValueEffect]
+ID=toasty;
+actorValue=skill_Fire; magnitude=1; duration=-1;
+
+--let's add a reaction to Burn so that it becomes Toasty if we are hit by Life magic
+[ActorValueReaction]
+ID=burn;
+element=life; newID=toasty;
+

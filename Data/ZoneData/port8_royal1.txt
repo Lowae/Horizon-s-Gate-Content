@@ -1,0 +1,1420 @@
+[Zone]  ID=port8_royal1; locID=port8; dark=True; timeUntilNewDay=24; showFogOfWar=True; fogOfWar=True; minimapEnabled=True; allowCameraPastZoneEdges=False; cantAct=True; cantGameOver=False; alwaysKeepWeaponsUnsheathed=False; peaceful=True; overseerMode=False; rollingPinStyle=False; drawSky=False; drawSky_overrideYpos=-1; boatZone=False; wind=False; overworld=False; canDropItems=True; 
+ travelSong=PM-Minstrel2; travelSongVolume=1; travelSongPitch=0; song2=; song2Volume=1; song2Pitch=0; combatSong=; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=209; darkG=214; darkB=211; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=; bgFX_sineWave=0; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=pDirt; zoneGrassPalette=pGreen; zoneGrassDarkPalette=pGreen2; zoneStonePalette=pGreyblue2; zoneStoneDarkPalette=pSilver; zoneStoneLightPalette=pVolskarnEmpty; zoneWaterPalette=pBlue; zoneDirtDarkPalette=pDirt; zoneWoodPalette=pWood; zoneWoodDarkPalette=pWoodDark; zoneMisc1Palette=pRed2; zoneMisc2Palette=pYellow5; zoneMisc3Palette=pRed; zoneMisc4Palette=pBlue; zoneMisc5Palette=pGreen; zoneMisc6Palette=pOrange; zoneMisc7Palette=pYellow; zoneMisc8Palette=p30; 
+
+combatMode=False; 
+
+[Item] ID=fade_f1; q=1; x=11; y=34;
+[Item] ID=fade_f1; q=1; x=11; y=35;
+[Item] ID=fade_f1; q=1; x=11; y=36;
+[Item] ID=fade_f1_diag30; q=1; r=-180; x=11; y=37;
+[Item] ID=fade_f2; q=1; r=360; x=12; y=19;
+[Item] ID=fade_f1; q=1; x=12; y=20;
+[Item] ID=fade_f1; q=1; x=12; y=34;
+[Item] ID=fade_f1; q=1; x=12; y=35;
+[Item] ID=fade_f1; q=1; x=12; y=36;
+[Item] ID=fade_f2_diag30; q=1; r=-180; x=12; y=37;
+[Item] ID=wall_diagonalL5; q=1; r=360; x=13; y=16;
+[Item] ID=wall_diagonalL4; q=1; r=360; x=13; y=17;
+[Item] ID=wall_diagonalL4; q=1; r=360; x=13; y=18;
+[Item] ID=fade_f2; q=1; r=360; x=13; y=20;
+[Item] ID=wall_diagonalL5; q=1; r=-360; x=13; y=35;
+[Item] ID=wall_diagonalL4; q=1; r=-360; x=13; y=36;
+[Item] ID=wall_diagonalL4; q=1; r=-360; x=13; y=37;
+[Item] ID=wall_diagonalL5; q=1; r=360; x=14; y=15;
+[Item] ID=wall_diagonalL4; q=1; r=360; x=14; y=16;
+[Item] ID=wall_diagonalL4; q=1; r=360; x=14; y=17;
+[Item] ID=wall_diagonalL5; q=1; r=-360; x=14; y=36;
+[Item] ID=wall_diagonalL4; q=1; r=-360; x=14; y=37;
+[Item] ID=wall_diagonalL4; q=1; r=-360; x=14; y=38;
+[Item] ID=curtain1_top; q=8; x=16; y=14;
+[Item] ID=curtain1_mid; q=8; x=16; y=15;
+[Item] ID=curtain1_btm; q=8; x=16; y=16;
+[Item] ID=curtain1_top; q=8; x=16; y=36;
+[Item] ID=curtain1_mid; q=8; x=16; y=37;
+[Item] ID=curtain1_btm; q=8; x=16; y=38;
+[Item] ID=wall_diagonalL5; q=1; r=-360; x=18; y=15;
+[Item] ID=wall_diagonalL4; q=1; r=-360; x=18; y=16;
+[Item] ID=wall_diagonalL4; q=1; r=-360; x=18; y=17;
+[Item] ID=wall_diagonalL5; q=1; r=360; x=18; y=24;
+[Item] ID=fade_f2; q=1; r=-270; x=18; y=24;
+[Item] ID=wall_diagonalL4; q=1; r=360; x=18; y=25;
+[Item] ID=fade_f1; q=1; x=18; y=25;
+[Item] ID=wall_diagonalL4; q=1; r=360; x=18; y=26;
+[Item] ID=fade_f1; q=1; x=18; y=26;
+[Item] ID=fade_f1; q=1; x=18; y=27;
+[Item] ID=fade_f1_diag30; q=1; r=-90; x=18; y=28;
+[Item] ID=fade_f2_diag30; q=1; r=-90; x=18; y=29;
+[Item] ID=wall_diagonalL5; q=1; x=18; y=36;
+[Item] ID=wall_diagonalL4; q=1; x=18; y=37;
+[Item] ID=wall_diagonalL4; q=1; x=18; y=38;
+[Item] ID=wall_diagonalL5; q=1; r=360; x=19; y=23;
+[Item] ID=wall_diagonalL4; q=1; r=360; x=19; y=24;
+[Item] ID=wall_diagonalL5; q=1; r=-360; x=19; y=28;
+[Item] ID=wall_diagonalL4; q=1; r=-360; x=19; y=29;
+[Item] ID=wall_diagonalL4; q=1; r=-360; x=19; y=30;
+[Item] ID=wall_diagonalL5; q=1; x=19; y=35;
+[Item] ID=wall_diagonalL4; q=1; x=19; y=36;
+[Item] ID=wall_diagonalL4; q=1; x=19; y=37;
+[Item] ID=wall_diagonalL5; q=1; r=-360; x=20; y=16;
+[Item] ID=wall_diagonalL4; q=1; r=-360; x=20; y=17;
+[Item] ID=wall_diagonalL4; q=1; r=-360; x=20; y=18;
+[Item] ID=brazier; q=1; x=20; y=20;
+[Item] ID=brazier; q=1; x=20; y=32;
+[Item] ID=wall_diagonalL5; q=1; r=360; x=21; y=28;
+[Item] ID=wall_diagonalL4; q=1; r=360; x=21; y=29;
+[Item] ID=wall_diagonalL4; q=1; r=360; x=21; y=30;
+[Item] ID=wall_diagonalL5; q=1; r=360; x=22; y=16;
+[Item] ID=wall_diagonalL4; q=1; r=360; x=22; y=17;
+[Item] ID=street_edge2; q=1; r=180; x=22; y=18;
+[Item] ID=wall_diagonalL4; q=1; r=360; x=22; y=18;
+[Item] ID=street_edge2; q=1; r=180; x=22; y=19;
+[Item] ID=street_edge2; q=1; r=180; x=22; y=20;
+[Item] ID=street_edge2; q=1; r=180; x=22; y=21;
+[Item] ID=street_edge2; q=1; r=180; x=22; y=22;
+[Item] ID=street_edge2; q=1; r=180; x=22; y=23;
+[Item] ID=street_edge2; q=1; r=180; x=22; y=24;
+[Item] ID=street_edge2; q=1; r=180; x=22; y=25;
+[Item] ID=street_edge2; q=1; r=180; x=22; y=26;
+[Item] ID=street_edge2; q=1; r=180; x=22; y=27;
+[Item] ID=street_edge2; q=1; r=180; x=22; y=28;
+[Item] ID=street_edge2; q=1; r=180; x=22; y=29;
+[Item] ID=street_edge2; q=1; r=180; x=22; y=30;
+[Item] ID=street_edge2; q=1; r=180; x=22; y=31;
+[Item] ID=street_edge2; q=1; r=180; x=22; y=32;
+[Item] ID=street_edge2; q=1; r=180; x=22; y=33;
+[Item] ID=street_edge2; q=1; r=180; x=22; y=34;
+[Item] ID=street_edge2; q=1; r=180; x=22; y=35;
+[Item] ID=street_edge2; q=1; r=180; x=22; y=36;
+[Item] ID=street_edge2; q=1; r=180; x=22; y=37;
+[Item] ID=street_edge2; q=1; r=180; x=22; y=38;
+[Item] ID=street_edge2; q=1; r=180; x=22; y=39;
+[Item] ID=street_edge2; q=1; r=180; x=22; y=40;
+[Item] ID=street_edge2; q=1; r=180; x=22; y=41;
+[Item] ID=carpet_regal1_edge; q=1; x=23; y=13;
+[Item] ID=fade_f1; q=1; x=23; y=13;
+[Item] ID=carpet_regal1_edge; q=1; x=23; y=14;
+[Item] ID=fade_f2; q=1; r=90; x=23; y=14;
+[Item] ID=carpet_regal1_edge; q=1; x=23; y=15;
+[Item] ID=carpet_regal1_edge; q=1; x=23; y=16;
+[Item] ID=carpet_regal1_edge; q=1; x=23; y=17;
+[Item] ID=carpet_regal1_edge; q=1; x=23; y=18;
+[Item] ID=carpet_regal1_edge; q=1; x=23; y=19;
+[Item] ID=carpet_regal1_edge; q=1; x=23; y=20;
+[Item] ID=carpet_regal1_edge; q=1; x=23; y=21;
+[Item] ID=carpet_regal1_edge; q=1; x=23; y=22;
+[Item] ID=carpet_regal1_edge; q=1; x=23; y=23;
+[Item] ID=carpet_regal1_edge; q=1; x=23; y=24;
+[Item] ID=carpet_regal1_edge; q=1; x=23; y=25;
+[Item] ID=carpet_regal1_edge; q=1; r=360; x=23; y=26;
+[Item] ID=carpet_regal1_edge; q=1; x=23; y=27;
+[Item] ID=carpet_regal1_edge; q=1; x=23; y=28;
+[Item] ID=carpet_regal1_edge; q=1; x=23; y=29;
+[Item] ID=carpet_regal1_edge; q=1; x=23; y=30;
+[Item] ID=carpet_regal1_edge; q=1; x=23; y=31;
+[Item] ID=carpet_regal1_edge; q=1; x=23; y=32;
+[Item] ID=carpet_regal1_edge; q=1; x=23; y=33;
+[Item] ID=carpet_regal1_edge; q=1; x=23; y=34;
+[Item] ID=carpet_regal1_edge; q=1; x=23; y=35;
+[Item] ID=carpet_regal1_edge; q=1; x=23; y=36;
+[Item] ID=carpet_regal1_edge; q=1; x=23; y=37;
+[Item] ID=carpet_regal1_edge; q=1; x=23; y=38;
+[Item] ID=carpet_regal1_corner; q=1; r=270; x=23; y=39;
+[Item] ID=sunbeam_line_huge_dim; q=1; x=24; y=12;
+[Item] ID=carpet_regal1; q=1; x=24; y=13;
+[Item] ID=fade_f2; q=1; r=90; x=24; y=13;
+[Item] ID=carpet_regal1; q=1; x=24; y=14;
+[Item] ID=carpet_regal1; q=1; x=24; y=15;
+[Item] ID=carpet_regal1; q=1; x=24; y=16;
+[Item] ID=carpet_regal1; q=1; x=24; y=17;
+[Item] ID=carpet_regal1; q=1; x=24; y=18;
+[Item] ID=carpet_regal1; q=1; x=24; y=19;
+[Item] ID=carpet_regal1; q=1; x=24; y=20;
+[Item] ID=carpet_regal1; q=1; x=24; y=21;
+[Item] ID=chest_wood1_locked; q=1; oX=0; oY=14; x=24; y=21; containerID=0;
+[Item] ID=carpet_regal1; q=1; x=24; y=22;
+[Item] ID=table_left2; q=1; x=24; y=22;
+[Item] ID=tableclothL2; q=1; x=24; y=22;
+[Item] ID=item_cantGrabOrPlace; q=1; x=24; y=22;
+[Item] ID=notes_blank; q=1; x=24; y=22;
+[Item] ID=carpet_regal1; q=1; x=24; y=23;
+[Item] ID=carpet_regal1; q=1; x=24; y=24;
+[Item] ID=carpet_regal1; q=1; x=24; y=25;
+[Item] ID=carpet_regal1; q=1; x=24; y=26;
+[Item] ID=carpet_regal1; q=1; x=24; y=27;
+[Item] ID=carpet_regal1; q=1; x=24; y=28;
+[Item] ID=carpet_regal1; q=1; x=24; y=29;
+[Item] ID=carpet_regal1; q=1; x=24; y=30;
+[Item] ID=carpet_regal1; q=1; x=24; y=31;
+[Item] ID=carpet_regal1; q=1; x=24; y=32;
+[Item] ID=carpet_regal1; q=1; x=24; y=33;
+[Item] ID=carpet_regal1; q=1; x=24; y=34;
+[Item] ID=carpet_regal1; q=1; x=24; y=35;
+[Item] ID=carpet_regal1; q=1; x=24; y=36;
+[Item] ID=carpet_regal1; q=1; x=24; y=37;
+[Item] ID=carpet_regal1; q=1; x=24; y=38;
+[Item] ID=carpet_regal1_edge; q=1; r=270; x=24; y=39;
+[Item] ID=carpet_regal1; q=1; x=25; y=13;
+[Item] ID=carpet_regal1; q=1; x=25; y=14;
+[Item] ID=carpet_regal1; q=1; x=25; y=15;
+[Item] ID=carpet_regal1; q=1; x=25; y=16;
+[Item] ID=carpet_regal1; q=1; x=25; y=17;
+[Item] ID=travelPoint_1; q=1; r=90; x=25; y=17;
+[Item] ID=carpet_regal1; q=1; x=25; y=18;
+[Item] ID=carpet_regal1; q=1; x=25; y=19;
+[Item] ID=carpet_regal1; q=1; x=25; y=20;
+[Item] ID=carpet_regal1; q=1; x=25; y=21;
+[Item] ID=carpet_regal1; q=1; x=25; y=22;
+[Item] ID=table_mid2; q=1; x=25; y=22;
+[Item] ID=tableclothM2; q=1; x=25; y=22;
+[Item] ID=item_cantGrabOrPlace; q=1; x=25; y=22;
+[Item] ID=carpet_regal1; q=1; x=25; y=23;
+[Item] ID=carpet_regal1; q=1; x=25; y=24;
+[Item] ID=carpet_regal1; q=1; x=25; y=25;
+[Item] ID=carpet_regal1; q=1; x=25; y=26;
+[Item] ID=carpet_regal1; q=1; x=25; y=27;
+[Item] ID=carpet_regal1; q=1; x=25; y=28;
+[Item] ID=carpet_regal1; q=1; x=25; y=29;
+[Item] ID=carpet_regal1; q=1; x=25; y=30;
+[Item] ID=carpet_regal1; q=1; x=25; y=31;
+[Item] ID=carpet_regal1; q=1; x=25; y=32;
+[Item] ID=carpet_regal1; q=1; x=25; y=33;
+[Item] ID=carpet_regal1; q=1; x=25; y=34;
+[Item] ID=carpet_regal1; q=1; x=25; y=35;
+[Item] ID=carpet_regal1; q=1; x=25; y=36;
+[Item] ID=carpet_regal1; q=1; x=25; y=37;
+[Item] ID=carpet_regal1; q=1; x=25; y=38;
+[Item] ID=travelPoint_0; q=1; r=270; x=25; y=38;
+[Item] ID=carpet_regal1_edge; q=1; r=270; x=25; y=39;
+[Item] ID=sunbeam_line_huge_dim; q=1; x=26; y=12;
+[Item] ID=carpet_regal1; q=1; x=26; y=13;
+[Item] ID=fade_f2; q=1; r=180; x=26; y=13;
+[Item] ID=carpet_regal1; q=1; x=26; y=14;
+[Item] ID=carpet_regal1; q=1; x=26; y=15;
+[Item] ID=carpet_regal1; q=1; x=26; y=16;
+[Item] ID=carpet_regal1; q=1; x=26; y=17;
+[Item] ID=carpet_regal1; q=1; x=26; y=18;
+[Item] ID=carpet_regal1; q=1; x=26; y=19;
+[Item] ID=carpet_regal1; q=1; x=26; y=20;
+[Item] ID=carpet_regal1; q=1; x=26; y=21;
+[Item] ID=chest_wood2_locked; q=1; oX=0; oY=14; x=26; y=21; containerID=1;
+[Item] ID=carpet_regal1; q=1; x=26; y=22;
+[Item] ID=table_right2; q=1; x=26; y=22;
+[Item] ID=tableclothR2; q=1; x=26; y=22;
+[Item] ID=item_cantGrabOrPlace; q=1; x=26; y=22;
+[Item] ID=gp; q=3; x=26; y=22;
+[Item] ID=gem_small1; q=1; oX=2; oY=-6; x=26; y=22;
+[Item] ID=carpet_regal1; q=1; x=26; y=23;
+[Item] ID=carpet_regal1; q=1; x=26; y=24;
+[Item] ID=carpet_regal1; q=1; x=26; y=25;
+[Item] ID=carpet_regal1; q=1; x=26; y=26;
+[Item] ID=carpet_regal1; q=1; x=26; y=27;
+[Item] ID=carpet_regal1; q=1; x=26; y=28;
+[Item] ID=carpet_regal1; q=1; x=26; y=29;
+[Item] ID=carpet_regal1; q=1; x=26; y=30;
+[Item] ID=carpet_regal1; q=1; x=26; y=31;
+[Item] ID=carpet_regal1; q=1; x=26; y=32;
+[Item] ID=carpet_regal1; q=1; x=26; y=33;
+[Item] ID=carpet_regal1; q=1; x=26; y=34;
+[Item] ID=carpet_regal1; q=1; x=26; y=35;
+[Item] ID=carpet_regal1; q=1; x=26; y=36;
+[Item] ID=carpet_regal1; q=1; x=26; y=37;
+[Item] ID=carpet_regal1; q=1; x=26; y=38;
+[Item] ID=carpet_regal1_edge; q=1; r=270; x=26; y=39;
+[Item] ID=carpet_regal1_edge; q=1; r=-360; x=27; y=13;
+[Item] ID=fade_f1; q=1; x=27; y=13;
+[Item] ID=carpet_regal1_edge; q=1; r=-360; x=27; y=14;
+[Item] ID=fade_f2; q=1; r=180; x=27; y=14;
+[Item] ID=carpet_regal1_edge; q=1; r=-360; x=27; y=15;
+[Item] ID=carpet_regal1_edge; q=1; r=-360; x=27; y=16;
+[Item] ID=carpet_regal1_edge; q=1; r=-360; x=27; y=17;
+[Item] ID=carpet_regal1_edge; q=1; r=-360; x=27; y=18;
+[Item] ID=carpet_regal1_edge; q=1; r=-360; x=27; y=19;
+[Item] ID=carpet_regal1_edge; q=1; r=-360; x=27; y=20;
+[Item] ID=carpet_regal1_edge; q=1; r=-360; x=27; y=21;
+[Item] ID=carpet_regal1_edge; q=1; r=-360; x=27; y=22;
+[Item] ID=carpet_regal1_edge; q=1; r=-360; x=27; y=23;
+[Item] ID=carpet_regal1_edge; q=1; r=-360; x=27; y=24;
+[Item] ID=carpet_regal1_edge; q=1; r=-360; x=27; y=25;
+[Item] ID=carpet_regal1_edge; q=1; r=-360; x=27; y=26;
+[Item] ID=carpet_regal1_edge; q=1; r=-360; x=27; y=27;
+[Item] ID=carpet_regal1_edge; q=1; r=-360; x=27; y=28;
+[Item] ID=carpet_regal1_edge; q=1; r=-360; x=27; y=29;
+[Item] ID=carpet_regal1_edge; q=1; r=-360; x=27; y=30;
+[Item] ID=carpet_regal1_edge; q=1; r=-360; x=27; y=31;
+[Item] ID=carpet_regal1_edge; q=1; r=-360; x=27; y=32;
+[Item] ID=carpet_regal1_edge; q=1; r=-360; x=27; y=33;
+[Item] ID=carpet_regal1_edge; q=1; r=-360; x=27; y=34;
+[Item] ID=carpet_regal1_edge; q=1; r=-360; x=27; y=35;
+[Item] ID=carpet_regal1_edge; q=1; r=-360; x=27; y=36;
+[Item] ID=carpet_regal1_edge; q=1; r=-360; x=27; y=37;
+[Item] ID=carpet_regal1_edge; q=1; r=-360; x=27; y=38;
+[Item] ID=carpet_regal1_corner; q=1; r=-270; x=27; y=39;
+[Item] ID=wall_diagonalL5; q=1; r=-360; x=28; y=16;
+[Item] ID=wall_diagonalL4; q=1; r=-360; x=28; y=17;
+[Item] ID=street_edge2; q=1; r=360; x=28; y=18;
+[Item] ID=wall_diagonalL4; q=1; r=-360; x=28; y=18;
+[Item] ID=street_edge2; q=1; r=360; x=28; y=19;
+[Item] ID=street_edge2; q=1; r=360; x=28; y=20;
+[Item] ID=street_edge2; q=1; r=360; x=28; y=21;
+[Item] ID=street_edge2; q=1; r=360; x=28; y=22;
+[Item] ID=street_edge2; q=1; r=360; x=28; y=23;
+[Item] ID=street_edge2; q=1; r=360; x=28; y=24;
+[Item] ID=street_edge2; q=1; r=360; x=28; y=25;
+[Item] ID=street_edge2; q=1; r=360; x=28; y=26;
+[Item] ID=street_edge2; q=1; r=360; x=28; y=27;
+[Item] ID=street_edge2; q=1; r=360; x=28; y=28;
+[Item] ID=street_edge2; q=1; r=360; x=28; y=29;
+[Item] ID=street_edge2; q=1; x=28; y=30;
+[Item] ID=street_edge2; q=1; x=28; y=31;
+[Item] ID=street_edge2; q=1; x=28; y=32;
+[Item] ID=street_edge2; q=1; x=28; y=33;
+[Item] ID=street_edge2; q=1; x=28; y=34;
+[Item] ID=street_edge2; q=1; x=28; y=35;
+[Item] ID=street_edge2; q=1; x=28; y=36;
+[Item] ID=street_edge2; q=1; x=28; y=37;
+[Item] ID=street_edge2; q=1; x=28; y=38;
+[Item] ID=street_edge2; q=1; x=28; y=39;
+[Item] ID=street_edge2; q=1; x=28; y=40;
+[Item] ID=street_edge2; q=1; x=28; y=41;
+[Item] ID=wall_diagonalL5; q=1; r=-360; x=29; y=28;
+[Item] ID=wall_diagonalL4; q=1; r=-360; x=29; y=29;
+[Item] ID=wall_diagonalL4; q=1; r=-360; x=29; y=30;
+[Item] ID=wall_diagonalL5; q=1; r=360; x=30; y=16;
+[Item] ID=wall_diagonalL4; q=1; r=360; x=30; y=17;
+[Item] ID=wall_diagonalL4; q=1; r=360; x=30; y=18;
+[Item] ID=brazier; q=1; x=30; y=20;
+[Item] ID=brazier; q=1; x=30; y=32;
+[Item] ID=wall_diagonalL5; q=1; r=-360; x=31; y=23;
+[Item] ID=wall_diagonalL4; q=1; r=-360; x=31; y=24;
+[Item] ID=wall_diagonalL5; q=1; r=360; x=31; y=28;
+[Item] ID=wall_diagonalL4; q=1; r=360; x=31; y=29;
+[Item] ID=wall_diagonalL4; q=1; r=360; x=31; y=30;
+[Item] ID=wall_diagonalL5; q=1; r=-360; x=31; y=35;
+[Item] ID=wall_diagonalL4; q=1; r=-360; x=31; y=36;
+[Item] ID=wall_diagonalL4; q=1; r=-360; x=31; y=37;
+[Item] ID=wall_diagonalL5; q=1; r=360; x=32; y=15;
+[Item] ID=wall_diagonalL5; q=1; r=360; x=32; y=15;
+[Item] ID=wall_diagonalL4; q=1; r=360; x=32; y=16;
+[Item] ID=wall_diagonalL4; q=1; r=360; x=32; y=17;
+[Item] ID=wall_diagonalL5; q=1; r=-360; x=32; y=24;
+[Item] ID=fade_f2; q=1; r=270; x=32; y=24;
+[Item] ID=wall_diagonalL4; q=1; r=-360; x=32; y=25;
+[Item] ID=fade_f1; q=1; x=32; y=25;
+[Item] ID=wall_diagonalL4; q=1; r=-360; x=32; y=26;
+[Item] ID=fade_f1; q=1; x=32; y=26;
+[Item] ID=fade_f1; q=1; x=32; y=27;
+[Item] ID=fade_f1_diag30; q=1; r=90; x=32; y=28;
+[Item] ID=fade_f2_diag30; q=1; r=90; x=32; y=29;
+[Item] ID=wall_diagonalL5; q=1; r=-360; x=32; y=36;
+[Item] ID=wall_diagonalL4; q=1; r=-360; x=32; y=37;
+[Item] ID=wall_diagonalL4; q=1; r=-360; x=32; y=38;
+[Item] ID=curtain1_top; q=8; x=34; y=14;
+[Item] ID=curtain1_mid; q=8; x=34; y=15;
+[Item] ID=curtain1_btm; q=8; x=34; y=16;
+[Item] ID=curtain1_top; q=8; x=34; y=36;
+[Item] ID=curtain1_mid; q=8; x=34; y=37;
+[Item] ID=curtain1_btm; q=8; x=34; y=38;
+[Item] ID=wall_diagonalL5; q=1; r=-360; x=36; y=15;
+[Item] ID=wall_diagonalL4; q=1; r=-360; x=36; y=16;
+[Item] ID=wall_diagonalL4; q=1; r=-360; x=36; y=17;
+[Item] ID=wall_diagonalL5; q=1; r=360; x=36; y=36;
+[Item] ID=wall_diagonalL4; q=1; r=360; x=36; y=37;
+[Item] ID=wall_diagonalL4; q=1; r=360; x=36; y=38;
+[Item] ID=wall_diagonalL5; q=1; r=-360; x=37; y=16;
+[Item] ID=wall_diagonalL4; q=1; r=-360; x=37; y=17;
+[Item] ID=wall_diagonalL4; q=1; r=-360; x=37; y=18;
+[Item] ID=fade_f2; q=1; r=-360; x=37; y=20;
+[Item] ID=wall_diagonalL5; q=1; r=360; x=37; y=35;
+[Item] ID=wall_diagonalL4; q=1; r=360; x=37; y=36;
+[Item] ID=wall_diagonalL4; q=1; r=360; x=37; y=37;
+[Item] ID=fade_f2; q=1; r=-360; x=38; y=19;
+[Item] ID=fade_f1; q=1; x=38; y=20;
+[Item] ID=fade_f1; q=1; x=38; y=34;
+[Item] ID=fade_f1; q=1; x=38; y=35;
+[Item] ID=fade_f1; q=1; x=38; y=36;
+[Item] ID=fade_f2_diag30; q=1; r=180; x=38; y=37;
+[Item] ID=fade_f1; q=1; x=39; y=34;
+[Item] ID=fade_f1; q=1; x=39; y=35;
+[Item] ID=fade_f1; q=1; x=39; y=36;
+[Item] ID=fade_f1_diag30; q=1; r=180; x=39; y=37;
+
+
+[Actor]ID=viceroy; name=Viceroy Lyn;
+actorTypeID=wilderi; sprite=; actorClass=sage; secondaryClass=warrior; actorClass3=; actorClass4=; movementSpeed=6; position=25,21; destination=-1,-1; facingRot=2250; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=False; fearless=False; unkillable=False; factionBoss=False; faction=rumane; combatTeam=; clothPalette=pCBlueD; skinPalette=pBlue5; armorPalette=pCRedD; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=royal_questgiver; aggressiveness=0.5; bravery=0.8; intelligence=0.65; honor=0.64; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=; headSprite=human_head_beard4_male; faceSprite=fullbeard_face_male; legsSprite=wilderi_legs2; armLSprite=wilderi_arm; armRSprite=wilderi_arm; torsoSprite=ranger_torso; shoulderLSprite=gatewarder_shoulderR; shoulderRSprite=gatewarder_shoulderR; backSprite=wilderi_back2;
+ supportAbilities=shieldBash;  supportAbilities=;  supportAbilities=; HP=33; MP=19; HPMax=33; MPMax=19; TrueHPMax=33; TrueMPMax=19; counter=1; shieldBash=1; warrior_XP=0; guardian_XP=0; 
+numRanksBought=counter=1; 
+numRanksBought=shieldBash=1; 
+chosenAbilityOfEachClass=sage=Sa_heal; 
+chosenAbilityOfEachClass=warrior=Wa_shove; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=shirt_red; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=cloak_fine; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=8; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagAtk; sourceAVAffecter=sage; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=sage; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=MagEva; sourceAVAffecter=sage; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=12; duration=-1;
+[ActorEffect]
+ actorValue=skill_Hammer; sourceAVAffecter=sage; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Life; sourceAVAffecter=sage; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=av_wilderi1; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=MagAtk; sourceAVAffecter=av_wilderi2; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=backDefense; sourceAVAffecter=av_wilderi3; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=30; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=shirt_redD; cSlot=2; containerID=0;
+[ActorItem] ID=cloak_fine; cSlot=3;
+[ActorItem] ID=ring_thaw; cSlot=4;
+
+
+[Actor]ID=wilderi_port8_royal1_; name=Soldier;
+actorTypeID=wilderi; sprite=; actorClass=guardian; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=22,35; destination=-1,-1; facingRot=450; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=False; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=pCPurple2; skinPalette=p11; armorPalette=pSteel; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=port8_royal1_guard1a; aggressiveness=0.5; bravery=0.5; intelligence=0.5; honor=0.4; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=; headSprite=helmet_head2; faceSprite=masked_face; legsSprite=wilderi_legs; armLSprite=wilderi_arm; armRSprite=wilderi_arm; torsoSprite=guardian_torso; shoulderLSprite=guardian_shoulder; shoulderRSprite=guardian_shoulder; backSprite=wilderi_back;
+ supportAbilities=bulwark;  supportAbilities=;  supportAbilities=; HP=46; MP=22; HPMax=46; MPMax=22; TrueHPMax=46; TrueMPMax=22; skill_Sword=1; skill_Shield=1; bulwark=1; guardian_XP=0; guardian_XP_stars=0; 
+numRanksBought=bulwark=1; 
+numRanksBought=skill_Sword=1; 
+numRanksBought=skill_Shield=1; 
+chosenAbilityOfEachClass=guardian=Gu_mightyBlock; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=armor_steel; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=armor_steel; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=rapier_steel; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=3; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=shield_steel; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=14; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Sword; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Spear; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Axe; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Hammer; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Flail; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Shield; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=av_wilderi1; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=MagAtk; sourceAVAffecter=av_wilderi2; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=backDefense; sourceAVAffecter=av_wilderi3; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=30; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=shieldBonus; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=9; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=rapier_steel; cSlot=0; containerID=0;
+[ActorItem] ID=shield_steel; cSlot=1; containerID=1;
+[ActorItem] ID=armor_steel; cSlot=2; containerID=2;
+
+
+[Actor]ID=wilderi_port8_royal1_port8_royal1_; name=Soldier;
+actorTypeID=wilderi; sprite=; actorClass=guardian; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=28,35; destination=-1,-1; facingRot=450; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=False; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=pCPurple2; skinPalette=p19; armorPalette=pSteel; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=port8_royal1_guard2a; aggressiveness=0.5; bravery=0.5; intelligence=0.5; honor=0.4; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=; headSprite=helmet_head2; faceSprite=masked_face; legsSprite=wilderi_legs; armLSprite=wilderi_arm; armRSprite=wilderi_arm; torsoSprite=guardian_torso; shoulderLSprite=guardian_shoulder; shoulderRSprite=guardian_shoulder; backSprite=wilderi_back;
+ supportAbilities=bulwark;  supportAbilities=;  supportAbilities=; HP=48; MP=18; HPMax=48; MPMax=18; TrueHPMax=48; TrueMPMax=18; skill_Aim=1; skill_Shield=1; bulwark=1; ranger_XP_stars=0; guardian_XP=0; guardian_XP_stars=0; 
+numRanksBought=bulwark=1; 
+numRanksBought=skill_Sword=0; 
+numRanksBought=skill_Shield=1; 
+numRanksBought=skill_Aim=1; 
+chosenAbilityOfEachClass=guardian=Gu_mightyBlock; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=armor_steel; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=armor_steel; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=shield_steel; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=14; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Sword; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Spear; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Axe; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Hammer; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Flail; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Shield; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=av_wilderi1; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=MagAtk; sourceAVAffecter=av_wilderi2; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=backDefense; sourceAVAffecter=av_wilderi3; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=30; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=shieldBonus; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=9; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=shield_steel; cSlot=0; containerID=0;
+[ActorItem] ID=xbow_steel; cSlot=1; containerID=1;
+[ActorItem] ID=armor_steel; cSlot=2; containerID=2;
+
+
+[Actor]ID=wilderi_port8_royal1_0; name=Guard;
+actorTypeID=wilderi; sprite=; actorClass=guardian; secondaryClass=warrior; actorClass3=; actorClass4=; movementSpeed=6; position=21,31; destination=-1,-1; facingRot=450; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=False; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=pCPurple2; skinPalette=pBlack; armorPalette=pSteel; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=silent; aggressiveness=0.5; bravery=0.5; intelligence=0.5; honor=0.4; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=; headSprite=helmet_head2; faceSprite=squinty_face; legsSprite=wilderi_legs2; armLSprite=wilderi_arm; armRSprite=wilderi_arm; torsoSprite=guardian_torso; shoulderLSprite=guardian_shoulder; shoulderRSprite=guardian_shoulder; backSprite=wilderi_back;
+ supportAbilities=valiant;  supportAbilities=;  supportAbilities=; HP=55; MP=22; HPMax=55; MPMax=22; TrueHPMax=55; TrueMPMax=22; valiant=1; warrior_XP=0; 
+numRanksBought=valiant=1; 
+chosenAbilityOfEachClass=guardian=Gu_mightyBlock; 
+chosenAbilityOfEachClass=gladiator=Gla_smash; 
+chosenAbilityOfEachClass=warrior=Wa_shove; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=armor_steel; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=armor_steel; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=bracers_metal; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=gauntlets; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Sword; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Spear; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Axe; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Hammer; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Flail; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Shield; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=av_wilderi1; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=MagAtk; sourceAVAffecter=av_wilderi2; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=backDefense; sourceAVAffecter=av_wilderi3; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=30; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=greatsword_steel; cSlot=0; containerID=0;
+[ActorItem] ID=armor_steel; cSlot=2; containerID=1;
+[ActorItem] ID=gauntlets; cSlot=3;
+[ActorItem] ID=bracers_metal; cSlot=4;
+
+
+[Actor]ID=wilderi_port8_royal1_0_port8_royal1_; name=Guard;
+actorTypeID=wilderi; sprite=; actorClass=guardian; secondaryClass=warrior; actorClass3=; actorClass4=; movementSpeed=6; position=29,31; destination=-1,-1; facingRot=450; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=False; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=pCPurple2; skinPalette=pBlack; armorPalette=pSteel; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=silent; aggressiveness=0.5; bravery=0.5; intelligence=0.5; honor=0.4; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=; headSprite=helmet_head2; faceSprite=squinty_face; legsSprite=wilderi_legs2; armLSprite=wilderi_arm; armRSprite=wilderi_arm; torsoSprite=guardian_torso; shoulderLSprite=guardian_shoulder; shoulderRSprite=guardian_shoulder; backSprite=wilderi_back;
+ supportAbilities=valiant;  supportAbilities=;  supportAbilities=; HP=55; MP=22; HPMax=55; MPMax=22; TrueHPMax=55; TrueMPMax=22; valiant=1; warrior_XP=0; 
+numRanksBought=valiant=1; 
+chosenAbilityOfEachClass=guardian=Gu_mightyBlock; 
+chosenAbilityOfEachClass=gladiator=Gla_smash; 
+chosenAbilityOfEachClass=warrior=Wa_shove; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=gauntlets; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=bracers_metal; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=armor_steel; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=armor_steel; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Sword; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Spear; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Axe; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Hammer; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Flail; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Shield; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=av_wilderi1; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=MagAtk; sourceAVAffecter=av_wilderi2; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=backDefense; sourceAVAffecter=av_wilderi3; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=30; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=greatsword_steel; cSlot=1; containerID=0;
+[ActorItem] ID=armor_steel; cSlot=2; containerID=1;
+[ActorItem] ID=gauntlets; cSlot=3;
+[ActorItem] ID=bracers_metal; cSlot=4;
+
+
+[Actor]ID=wilderi_port8_royal1_0_port8_royal1_port8_royal1_; name=Guard;
+actorTypeID=wilderi; sprite=; actorClass=guardian; secondaryClass=gladiator; actorClass3=; actorClass4=; movementSpeed=6; position=22,19; destination=-1,-1; facingRot=450; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=False; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=pCPurple2; skinPalette=pBlack; armorPalette=pSteel; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=silent; aggressiveness=0.5; bravery=0.5; intelligence=0.5; honor=0.4; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=; headSprite=helmet_head2; faceSprite=squinty_face; legsSprite=wilderi_legs2; armLSprite=wilderi_arm; armRSprite=wilderi_arm; torsoSprite=guardian_torso; shoulderLSprite=guardian_shoulder; shoulderRSprite=guardian_shoulder; backSprite=wilderi_back;
+ supportAbilities=valiant;  supportAbilities=;  supportAbilities=; HP=55; MP=22; HPMax=55; MPMax=22; TrueHPMax=55; TrueMPMax=22; valiant=1; warrior_XP=0; 
+numRanksBought=valiant=1; 
+chosenAbilityOfEachClass=guardian=Gu_mightyBlock; 
+chosenAbilityOfEachClass=gladiator=Gla_smash; 
+chosenAbilityOfEachClass=warrior=Wa_shove; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=gauntlets; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=bracers_metal; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=armor_steel; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=armor_steel; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Sword; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Spear; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Axe; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Hammer; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Flail; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Shield; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=av_wilderi1; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=MagAtk; sourceAVAffecter=av_wilderi2; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=backDefense; sourceAVAffecter=av_wilderi3; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=30; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=greatsword_steel; cSlot=0; containerID=0;
+[ActorItem] ID=armor_steel; cSlot=2; containerID=1;
+[ActorItem] ID=gauntlets; cSlot=3;
+[ActorItem] ID=bracers_metal; cSlot=4;
+
+
+[Actor]ID=wilderi_port8_royal1_0_port8_royal1_port8_royal1_0; name=Guard;
+actorTypeID=wilderi; sprite=; actorClass=guardian; secondaryClass=gladiator; actorClass3=; actorClass4=; movementSpeed=6; position=28,19; destination=-1,-1; facingRot=450; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=False; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=pCPurple2; skinPalette=pBlack; armorPalette=pSteel; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=silent; aggressiveness=0.5; bravery=0.5; intelligence=0.5; honor=0.4; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=; headSprite=helmet_head2; faceSprite=squinty_face; legsSprite=wilderi_legs2; armLSprite=wilderi_arm; armRSprite=wilderi_arm; torsoSprite=guardian_torso; shoulderLSprite=guardian_shoulder; shoulderRSprite=guardian_shoulder; backSprite=wilderi_back;
+ supportAbilities=valiant;  supportAbilities=;  supportAbilities=; HP=55; MP=22; HPMax=55; MPMax=22; TrueHPMax=55; TrueMPMax=22; valiant=1; warrior_XP=0; 
+numRanksBought=valiant=1; 
+chosenAbilityOfEachClass=guardian=Gu_mightyBlock; 
+chosenAbilityOfEachClass=gladiator=Gla_smash; 
+chosenAbilityOfEachClass=warrior=Wa_shove; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=gauntlets; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=bracers_metal; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=armor_steel; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=armor_steel; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Sword; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Spear; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Axe; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Hammer; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Flail; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Shield; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=av_wilderi1; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=MagAtk; sourceAVAffecter=av_wilderi2; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=backDefense; sourceAVAffecter=av_wilderi3; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=30; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=greatsword_steel; cSlot=1; containerID=0;
+[ActorItem] ID=armor_steel; cSlot=2; containerID=1;
+[ActorItem] ID=gauntlets; cSlot=3;
+[ActorItem] ID=bracers_metal; cSlot=4;
+
+
+[Actor]ID=wilderi_port8_royal1_0_port8_royal1_port8_royal1_port8_royal1_; name=Guard;
+actorTypeID=wilderi; sprite=; actorClass=guardian; secondaryClass=warrior; actorClass3=; actorClass4=; movementSpeed=6; position=15,17; destination=-1,-1; facingRot=1170; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=False; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=pCPurple2; skinPalette=pBlack; armorPalette=pSteel; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=silent; aggressiveness=0.5; bravery=0.5; intelligence=0.5; honor=0.4; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=; headSprite=helmet_head2; faceSprite=squinty_face; legsSprite=wilderi_legs2; armLSprite=wilderi_arm; armRSprite=wilderi_arm; torsoSprite=guardian_torso; shoulderLSprite=guardian_shoulder; shoulderRSprite=guardian_shoulder; backSprite=wilderi_back;
+ supportAbilities=valiant;  supportAbilities=;  supportAbilities=; HP=55; MP=22; HPMax=55; MPMax=22; TrueHPMax=55; TrueMPMax=22; valiant=1; warrior_XP=0; 
+numRanksBought=valiant=1; 
+chosenAbilityOfEachClass=guardian=Gu_mightyBlock; 
+chosenAbilityOfEachClass=gladiator=Gla_smash; 
+chosenAbilityOfEachClass=warrior=Wa_shove; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=gauntlets; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=bracers_metal; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=armor_steel; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=armor_steel; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=shield_steel; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=14; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Sword; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Spear; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Axe; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Hammer; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Flail; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Shield; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=av_wilderi1; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=MagAtk; sourceAVAffecter=av_wilderi2; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=backDefense; sourceAVAffecter=av_wilderi3; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=30; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=shieldBonus; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=6; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=spear_steel; cSlot=0; containerID=0;
+[ActorItem] ID=shield_steel; cSlot=1; containerID=1;
+[ActorItem] ID=armor_steel; cSlot=2; containerID=2;
+[ActorItem] ID=gauntlets; cSlot=3;
+[ActorItem] ID=bracers_metal; cSlot=4;
+
+
+[Actor]ID=wilderi_port8_royal1_0_port8_royal1_port8_royal1_port8_royal1_port8_royal1_; name=Guard;
+actorTypeID=wilderi; sprite=; actorClass=guardian; secondaryClass=warrior; actorClass3=; actorClass4=; movementSpeed=6; position=35,17; destination=-1,-1; facingRot=1170; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=False; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=pCPurple2; skinPalette=pBlack; armorPalette=pSteel; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=silent; aggressiveness=0.5; bravery=0.5; intelligence=0.5; honor=0.4; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=; headSprite=helmet_head2; faceSprite=squinty_face; legsSprite=wilderi_legs2; armLSprite=wilderi_arm; armRSprite=wilderi_arm; torsoSprite=guardian_torso; shoulderLSprite=guardian_shoulder; shoulderRSprite=guardian_shoulder; backSprite=wilderi_back;
+ supportAbilities=valiant;  supportAbilities=;  supportAbilities=; HP=55; MP=22; HPMax=55; MPMax=22; TrueHPMax=55; TrueMPMax=22; valiant=1; warrior_XP=0; 
+numRanksBought=valiant=1; 
+chosenAbilityOfEachClass=guardian=Gu_mightyBlock; 
+chosenAbilityOfEachClass=gladiator=Gla_smash; 
+chosenAbilityOfEachClass=warrior=Wa_shove; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=gauntlets; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=bracers_metal; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=shield_steel; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=14; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=armor_steel; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=armor_steel; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Sword; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Spear; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Axe; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Hammer; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Flail; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Shield; sourceAVAffecter=guardian; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=av_wilderi1; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=MagAtk; sourceAVAffecter=av_wilderi2; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=backDefense; sourceAVAffecter=av_wilderi3; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=30; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=shieldBonus; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=6; duration=-1;
+[ActorEffect]
+ actorValue=invincible; sourceAVAffecter=peaceful; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=shield_steel; cSlot=0; containerID=0;
+[ActorItem] ID=spear_steel; cSlot=1; containerID=1;
+[ActorItem] ID=armor_steel; cSlot=2; containerID=2;
+[ActorItem] ID=gauntlets; cSlot=3;
+[ActorItem] ID=bracers_metal; cSlot=4;
+
+
+
+[Trigger] numID=0; aliasID=;
+topX=20;topY=43;btmX=30;btmY=45;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=0; effectID=travel_point; sValue=port8; sValue2=; bValue1=False; bValue2=False; fValue=1; delay=0; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=1; aliasID=;
+topX=12;topY=18;btmX=12;btmY=20;topX+=38;topY+=18;btmX+=38;btmY+=20;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=1; effectID=damageNumber; sValue=Off limits.; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=2; aliasID=;
+topX=22;topY=12;btmX=28;btmY=14;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=g:playerRank-1002+gIs:playerFaction,rumane*1000;
+[TriggerEffect] numID=2; effectID=travel_point; sValue=port8_royal2; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=3; aliasID=;
+topX=23;topY=13;btmX=27;btmY=15;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=gIsLessThan:playerRank:3+gIsNot:playerFaction:rumane;
+[TriggerEffect] numID=3; effectID=talk; sValue=viceroy; sValue2=viceroy_royal_questgiver_offlimits; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+

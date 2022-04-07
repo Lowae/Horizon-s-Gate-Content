@@ -1,0 +1,3044 @@
+[ItemType]  name=Terrain Depth Up 1050;
+ID=terrainDepthUp_1050; sprite=29; pR=pWhite;
+itemCategory=hazard;
+special=ignoreDarkness;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed;
+special=raiseTileDepth1050; special=canBeInsideWalls; special=canFloatOnWater;
+special=invisible; special=noTooltip; special=noPlayerPlacedItems;
+pB=pWhite;
+pG=pX;
+[ItemReaction] 
+ID=terrainDepthUp_1050; element=tileReacted; newID=X;
+[ItemType]  name=Terrain Depth Up 2050!;
+ID=terrainDepthUp_2050; sprite=29;
+itemCategory=hazard;
+special=ignoreDarkness;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed;
+special=raiseTileDepth2050; special=canBeInsideWalls; special=canFloatOnWater;
+special=invisible; special=noTooltip; special=noPlayerPlacedItems;
+pB=pWhite;
+pG=pX;
+[ItemReaction] 
+ID=terrainDepthUp_2050; element=tileReacted; newID=X;
+
+[ItemType]  name=1% Replace Terrain;
+ID=terrainReplace1; sprite=29; stackable=true;
+itemCategory=hazard;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed; special=canBeInsideWalls; special=canFloatOnWater; special=ignoreDarkness;
+special=invisible; special=noTooltip;
+special=replaceTerrainWithDefault1PercentChance;
+pR=pWhite;
+pB=pX;
+pG=pX;
+
+[ItemType]  name=1% Replace Terrain (Group);
+ID=terrainReplace1_group; sprite=29; stackable=true;
+itemCategory=hazard;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed; special=canBeInsideWalls; special=canFloatOnWater; special=ignoreDarkness;
+special=invisible; special=noTooltip;
+special=replaceTerrainWithDefault1PercentChance_GroupA;
+pR=pB;
+pB=pX;
+pG=pX;
+
+[ItemType]  name=1% Remove Items A;
+ID=itemRemove1; sprite=29; stackable=true;
+itemCategory=hazard;
+depthMod=2070;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed; special=canBeInsideWalls; special=canFloatOnWater; special=ignoreDarkness;
+special=invisible; special=noTooltip;
+special=removeItems1PercentChance;
+pR=pG;
+pB=pX;
+pG=pWhite;
+
+[ItemType]  name=Remove Items (if No A were Removed);
+ID=itemRemove_others; sprite=29;
+itemCategory=hazard;
+special=ignoreDarkness;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed; special=canBeInsideWalls; special=canFloatOnWater; special=ignoreDarkness;
+special=invisible; special=noTooltip;
+special=removeItemsIfNoOtherItemsRemoved;
+pR=pBloodyMess_slow;
+pB=pX;
+pG=pWhite;
+
+[ItemType]  name=1% Remove Items B;
+ID=itemRemove1_B; sprite=29; 
+itemCategory=hazard;
+depthMod=2070;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed; special=canBeInsideWalls; special=canFloatOnWater; special=ignoreDarkness;
+special=invisible; special=noTooltip;
+special=removeItems1PercentChance_B; stackable=true;
+pR=pG;
+pB=pX;
+pG=pB;
+
+[ItemType]  name=Remove Items (if No B were Removed);
+ID=itemRemove_others_B; sprite=29;
+itemCategory=hazard;
+special=ignoreDarkness;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed; special=canBeInsideWalls; special=canFloatOnWater; special=ignoreDarkness;
+special=invisible; special=noTooltip;
+special=removeItemsIfNoOtherItemsRemoved_B;
+pR=pBloodyMess_slow;
+pB=pX;
+pG=pB;
+
+[ItemType]  name=Cutscene Destroy;
+ID=destroy_cutscene; sprite=29;
+itemCategory=hazard;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed; special=canBeInsideWalls; special=canFloatOnWater; special=ignoreDarkness;
+special=invisible; special=noTooltip;
+pR=pBlack;
+pB=pBlack;
+pG=pBlack;
+[ItemReaction]
+ID=destroy_cutscene; element=mechanical; newID=X;
+applyElement=cutsc_destroy;
+
+[ItemType]  name=Untargetable Tile;
+ID=tile_cantTarget; sprite=24;
+itemCategory=hazard;
+special=ignoreDarkness;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed; special=canBeInsideWalls; special=canFloatOnWater; special=ignoreDarkness;
+special=invisible; special=noTooltip; special=canAlwaysFitInTile;
+special=cannotTarget;
+pR=pR;
+
+[ItemType]  name=Untargetable Tile (Peaceful);
+ID=tile_cantTarget_peaceful; sprite=24;
+itemCategory=hazard;
+special=ignoreDarkness;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed; special=canBeInsideWalls; special=canFloatOnWater; special=ignoreDarkness;
+special=invisible; special=noTooltip; special=canAlwaysFitInTile;
+special=cannotTargetInPeacefulZones;
+pR=pG;
+
+[ItemType]  name=Can't Grab or Place Items Here;
+ID=item_cantGrabOrPlace; sprite=29; 
+itemCategory=hazard;
+special=ignoreDarkness;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed; special=canBeInsideWalls; special=canFloatOnWater; special=ignoreDarkness;
+special=invisible; special=noTooltip; special=canAlwaysFitInTile;
+special=cantGrabItemsFromThisTile;
+special=noPlayerPlacedItems;
+pR=pBlack;
+pB=pX;
+pG=pWhite;
+volume=99999;
+
+
+[ItemType]  name=Secret Passage (Seethrough);
+ID=secretPassage_seethru; sprite=31; pR=pWhite;
+itemCategory=hazard;
+special=ignoreDarkness;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed;
+special=overrideTerrainCollisions; special=canBeInsideWalls; special=canFloatOnWater; special=noPlayerPlacedItems; special=overrideMostCollisions;
+special=invisible; special=noTooltip;
+[ItemReaction]
+ID=secretPassage_seethru; element=tileReacted; newID=X;
+[ItemType]  name=Secret Passage (Block LoS);
+ID=secretPassage; sprite=31; pR=pR;
+itemCategory=hazard;
+special=ignoreDarkness;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed;
+special=overrideTerrainCollisions; special=canBeInsideWalls; special=canFloatOnWater; special=noPlayerPlacedItems; special=overrideMostCollisions;
+blockLoS=true;
+special=invisible; special=noTooltip;
+[ItemReaction] 
+ID=secretPassage; element=tileReacted; newID=X;
+
+[ItemType]  name=Block Reactions;
+ID=blocker_reactions; sprite=30; pR=pPurple;
+itemCategory=hazard;
+special=ignoreDarkness;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed; special=canBeInsideWalls; special=canFloatOnWater;
+special=alwaysBelowOtherItems; special=canAlwaysFitInTile;
+special=invisible; special=noTooltip; special=preventTileReactions;
+
+[ItemType]  name=Override (Block LoE/Walk/Jump);
+ID=override_LoE; sprite=28; pR=pG;
+itemCategory=hazard;
+special=ignoreDarkness;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed;
+special=overrideTerrainCollisions; special=overrideMostCollisions;
+special=canBeInsideWalls; special=canFloatOnWater;
+blockLoE=true; blockJumping=true; blockWalking=true;
+special=invisible; special=noTooltip;
+[ItemReaction] 
+ID=override_LoE; element=tileReacted; newID=X;
+
+[ItemType]  name=Override (Block Walk);
+ID=override_walk; sprite=28; pR=pSilver;
+itemCategory=hazard;
+special=ignoreDarkness;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed;
+special=overrideTerrainCollisions; special=overrideMostCollisions;
+special=canBeInsideWalls; special=canFloatOnWater;
+blockWalking=true;
+special=invisible; special=noTooltip;
+[ItemReaction] 
+ID=override_walk; element=tileReacted; newID=X;
+
+[ItemType]  name=Blocker LoS/LoE/Walk/Jump;
+ID=blockedPassage; sprite=30;
+itemCategory=hazard;
+special=ignoreDarkness;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed; special=canBeInsideWalls; special=canFloatOnWater;
+special=invisible; special=noTooltip;
+blockLoE=true; blockLoS=true; blockWalking=true;
+blockJumping=true;
+[ItemReaction] 
+ID=blockedPassage; element=tileReacted; newID=X;
+
+[ItemType]  name=Blocker LoS;
+ID=blockedLoS; sprite=30; pR=pWhite;
+itemCategory=hazard;
+special=ignoreDarkness;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed; special=canBeInsideWalls; special=canFloatOnWater;
+special=invisible; special=noTooltip;
+blockLoS=true;
+[ItemReaction] 
+ID=blockedLoS; element=tileReacted; newID=X;
+[ItemType]  name=Blocker LoE/Walk/Jump;
+ID=blockedLoE; sprite=30; 
+itemCategory=hazard;
+pR=pG;
+special=ignoreDarkness;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed; special=canBeInsideWalls; special=canFloatOnWater;
+special=invisible; special=noTooltip;
+blockLoE=true; blockJumping=true; blockWalking=true;
+[ItemReaction] 
+ID=blockedLoE; element=tileReacted; newID=X;
+[ItemType]  name=Blocker Walk/Jump;
+ID=blockedWalkJump; sprite=30; 
+itemCategory=hazard;
+pR=pGreen;
+cloneFrom=blockedLoE;
+blockLoE=false;
+
+[ItemType]  name=Blocker Walk/Jump (Don't Disappear w/ Rxns);
+ID=blockedWalkJumpNoRxns; sprite=30; 
+itemCategory=hazard;
+pR=pGreen;
+cloneFrom=blockedLoE; special=dontCloneReactions; 
+blockLoE=false;
+[ItemType]  name=Blocker LoE/Walk/Jump (Pickaxe);
+ID=blockedLoEPickaxe; sprite=30;
+itemCategory=hazard;
+ pR=pYellow;
+cloneFrom=blockedLoE; blockLoE=true;
+[ItemReaction] 
+ID=blockedLoEPickaxe; element=pickaxe; element=explode; newID=X;
+
+
+[ItemType]  name=Slow Movement;
+ID=slowMovement; sprite=160; 
+itemCategory=hazard;
+pR=pWhite;
+special=ignoreDarkness;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed; special=canBeInsideWalls; special=canFloatOnWater;
+special=invisible; special=noTooltip;
+special=moveCostOverride_2;
+[ItemReaction] 
+ID=slowMovement; element=tileReacted; newID=X;
+
+[ItemType]  name=Big Item Blocker;
+ID=blocker_big; sprite=25; 
+itemCategory=hazard;
+pR=pBlack;
+special=ignoreDarkness;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed; special=canBeInsideWalls; special=canFloatOnWater; special=big;
+special=invisible; special=noTooltip;
+
+[ItemType]  name=Unblacken Tile;
+ID=cantBlackenTile; sprite=29; 
+itemCategory=hazard;
+pR=pBlack;
+pG=pBlack;
+pB=pGreyD2;
+special=ignoreDarkness;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed;special=canBeInsideWalls; special=canFloatOnWater; special=canAlwaysFitInTile;
+special=notBlackened; special=invisible; special=noTooltip;
+
+[ItemType]  name=Shop Tile;
+ID=shopTile; sprite=31;
+itemCategory=hazard;
+special=ignoreDarkness;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed;special=canBeInsideWalls; special=canFloatOnWater; special=shopTile;
+special=alwaysBelowOtherItems;
+special=transparent;
+special=invisible; special=noTooltip; special=noPlayerPlacedItems;
+
+
+[ItemType]  name=Counts as Land for WaterFX;
+ID=counts_as_land_for_waterfx; sprite=640;
+itemCategory=hazard;
+special=cannotBePickedUp; special=invisible; special=canHangOnWalls;  special=noTooltip; special=waterFXTile;
+special=cannotEverBePushed; special=canBeInsideWalls; special=canFloatOnWater;
+special=alwaysBelowOtherItems; special=canAlwaysFitInTile;
+pR=pWhite;
+
+[ItemType]  name=Roof Tile;
+ID=roof_invisible; sprite=1711;
+itemCategory=hazard;
+texture=items_building;
+special=ignoreDarkness;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed; special=canBeInsideWalls; special=canFloatOnWater;
+special=invisible; special=noTooltip; special=canAlwaysFitInTile;
+special=roof; special=blackenOtherTiles; 
+ pR=pR;
+
+[ItemType]  name=Slope;
+ID=slopeRot; sprite=645; 
+itemCategory=hazard;
+description=Slope based on this item's rotation.;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile;
+special=slopeRot; special=blockJumpingRot;
+blockWalking=true; blockJumping=false;
+pR=pWhite;
+
+[ItemType]  name=Torch Fire;
+itemCategory=hazard;
+ID=flame; sprite=1120; special=animated; special=canHangOnWalls; special=cannotBePickedUp;
+ weight=0;
+  element=fire;
+[ItemLight] 
+ID=flame; red=1; blue=0.5; green=0.9; alpha=0.9; size=1.0; flicker=0.04; texture=krypton;
+[ItemReaction] 
+ID=flame; element=water; element=wind; element=explode; newID=X;
+
+[ItemType]  name=Blue Flame;
+itemCategory=hazard;
+  ID=flame_blue; sprite=1120; special=animated; special=canHangOnWalls; special=cannotBePickedUp;
+  weight=0; pR=pB;
+  element=fire;
+[ItemLight] 
+ID=flame_blue; red=0.7; blue=1; green=0.7; alpha=0.9; size=0.8; flicker=0.04; texture=krypton;
+[JournalEntry]
+ID=item_flame_blue;
+category=item; halfPage=true; rarity=1;
+title=Blue Flame;
+text=<itemBig=flame_blue><title=Blue Flame><brAdj=>A small sconce houses this odd flame. It generates surprisingly little light, heat, and smoke, yet burns for a long time.;
+
+[ItemType]  name=Lightglobe;
+itemCategory=hazard;
+ID=lightSphere; sprite=1152; special=animated; special=canHangOnWalls; special=cannotBePickedUp; pR=pYellow;
+ weight=0;
+[ItemLight] 
+ID=lightSphere; red=0.8; blue=0.5; green=0.9; alpha=0.6; size=1; flicker=0.05; texture=krypton;
+[JournalEntry]
+ID=item_lightSphere;
+category=item; halfPage=true; rarity=1;
+title=Light;
+text=<itemBig=lightSphere><title=Light><brAdj=>Wall-mounted light. Because one of the components is volskarn, these lights are very expensive.;
+
+[ItemType]  name=Brazier;
+ID=brazier; sprite=1156; 
+journalID=journal_brazier;
+itemCategory=hazard;
+special=animated; special=big;
+weight=200; volume=1000;
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=true;
+depthMod=1050;
+pR=pFire; pB=pGrey; pG=pFadeDarker;
+  element=fire;
+[ItemLight] 
+ID=brazier; red=1; blue=0.5; green=0.9; alpha=1.0; size=1.8; flicker=0.10; texture=krypton;
+[ItemReaction] 
+ID=brazier; element=water; element=wind; element=ice; newID=brazierUnlit;
+[ItemReaction] 
+ID=brazier; element=explode; newID=brazierSpilled; fx=smokeCloud;
+[ItemReaction] 
+ID=brazier; element=melee; element=itemPushed; newID=brazierSpilled; action=spillBrazier; fx=smokeCloud;
+
+[ItemType]  name=Brazier (Unlit);
+ID=brazierUnlit; sprite=1160; 
+journalID=journal_brazier;
+itemCategory=hazard;
+special=big;
+weight=200; volume=300;
+pR=pFire; pB=pGrey; pG=pFadeDarker;
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=true;
+	combineWith=lamp; toMake=brazier; combineWith=lamp_blue; toMake=brazier; combineSound=BurnishSound;
+[ItemReaction] 
+ID=brazierUnlit; element=fire; newID=brazier;
+[ItemReaction] 
+ID=brazierUnlit; element=melee; element=itemPushed; newID=brazierSpilled; fx=sfx_breakRock;
+
+[ItemType]  name=Blue Brazier;
+ID=brazierBlue; sprite=1156; 
+itemCategory=hazard;
+journalID=journal_brazier;
+special=animated; special=big;
+weight=200; volume=300;
+pR=pFire; pB=pGrey; pG=pFadeDarker;
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=true;
+	pR = pB;
+  element=fire;
+[ItemLight] 
+ID=brazierBlue; red=0.5; blue=1; green=0.6; alpha=1.0; size=0.4; flicker=0.02;
+[ItemLight] 
+ID=brazierBlue; size=0.8; flicker=0.02; palette=pBW;
+
+[ItemType]  name=Green Brazier;
+ID=brazierGreen; sprite=1156; 
+itemCategory=hazard;
+journalID=journal_brazier;
+special=animated; special=big;
+weight=200; volume=300;
+pR=pFire; pB=pGrey; pG=pFadeDarker;
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=true;
+	pR = pG;
+  element=fire;
+[ItemLight] 
+ID=brazierGreen; red=1; blue=1; green=1; alpha=1.0; size=1.0; flicker=0.02;
+[ItemLight] 
+ID=brazierGreen; red=1; blue=1; green=1; alpha=1.0; size=1.0; flicker=0.02; palette=pG;
+
+
+[ItemType]  name=Brazier (Spilled);
+ID=brazierSpilled; sprite=1161; 
+journalID=journal_brazier;
+itemCategory=hazard;
+special=big;
+weight=200; volume=300;
+pR=pFire; pB=pGrey; pG=pFadeDarker;
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=true;
+[ItemReaction] 
+ID=brazierSpilled; element=use; newID=brazierUnlit; fx=sfx_breakRock;
+	
+[JournalEntry]
+ID=journal_brazier;
+category=item; halfPage=true;
+title=Brazier;
+text=<itemBig=brazier><title=Brazier><brAdj=>A bowl of flames to provide warmth and light. Best used in wide open areas, to reduce the risk of poisoning from the fumes. Melee attacks knock them over, so be careful.;
+
+[ItemType]  name=Gloam Stand;
+ID=brazier_glowshroom; sprite=1125; 
+itemCategory=hazard;
+journalID=journal_brazier_glowshroom;
+special=big;
+weight=200; volume=300;
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=true;
+	pR = pShroom_glow; pB=pGrey2; pG=pFadeDarker;
+[ItemLight] 
+ID=brazier_glowshroom; red=0.6; blue=1; green=0.5; alpha=1.0; size=1.0; flicker=0.01; texture=krypton;
+[ItemReaction] 
+ID=brazier_glowshroom; element=physical; newID=brazier_glowshroom_cracked; fx=sfx_breakRock;
+	
+
+[ItemType]  name=Gloam Stand (Damaged);
+ID=brazier_glowshroom_cracked; sprite=1126; 
+itemCategory=hazard;
+journalID=journal_brazier_glowshroom;
+special=big;
+weight=200; volume=300;
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=true;
+	pR = pShroom_glow; pB=pGrey2; pG=pFadeDarker;
+[ItemLight] 
+ID=brazier_glowshroom_cracked; red=0.6; blue=1; green=0.5; alpha=0.9; size=0.9; flicker=0.11; texture=krypton;
+[ItemReaction] 
+ID=brazier_glowshroom_cracked; element=physical; newID=brazier_glowshroom_shattered; fx=dust_glass;
+
+[JournalEntry]
+ID=journal_brazier_glowshroom;
+category=item; halfPage=true; rarity=1;
+title=Gloam Stand;
+text=<itemBig=brazier_glowshroom><title=Gloam Stand><brAdj=>A glass sphere filled with Gloam Shroom dust. Useful for lighting places where fire and smoke would be impractical. It looks fragile.;
+
+[ItemType]  name=Shattered Stand;
+ID=brazier_glowshroom_shattered; sprite=1127; 
+itemCategory=hazard;
+special=big;
+weight=200; volume=300;
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=true;
+	pR = pShroom_glow; pB=pGrey2; pG=pFadeDarker;
+	
+[ItemType]  name=Gloam Seal;
+ID=brazier_glowshroom_seal; sprite=1128; 
+itemCategory=hazard;
+special=big;
+weight=200; volume=300;
+depthMod=1050;
+	special=cannotBePickedUp;
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=true;
+	pR = pShroom_glow; pB=zoneStone;
+[ItemLight] 
+ID=brazier_glowshroom_seal; red=0.6; blue=1; green=0.5; alpha=1.0; size=1.1; flicker=0; texture=krypton;
+
+[JournalEntry]
+ID=item_brazier_glowshroom_seal;
+category=item; halfPage=true; rarity=1;
+title=Gloam Post;
+text=<itemBig=brazier_glowshroom_seal><title=Gloam Post><brAdj=>Luminous Gloam dust is sealed within this durable casing. It was clearly very important to whoever installed this that the area be kept illuminated.;
+  
+
+[ItemType]  name=Street Light;
+ID=streetlight1; sprite=11;
+texture=items_building;
+description=Lantern mounted on a post.; itemCategory=hazard;
+journalID=journal_streetlight; element=fire;
+special=cannotBePickedUp; special=sprite2xHeight;
+special=animated; special=adjustSpriteYUp8; special=adjustSpriteYUp2;
+blockWalking=true; blockJumping=true;
+pR=zoneStone; pB=pGold; pG=pFadeDarker;
+depthMod=1050;
+[ItemLight]
+ ID=streetlight1; red=1; blue=0.76; green=0.93; alpha=1; size=1.55; flicker=0.01; texture=krypton; Y=-0.9;
+[ItemReaction] 
+ID=streetlight1; 
+element=wind; element=water; element=ice; element=daytime;
+newID=streetlight_off1;
+ 
+[ItemType]  name=Street Light;
+ID=streetlight_off1; sprite=14;
+texture=items_building;
+description=Lantern mounted on a post.; itemCategory=hazard;
+journalID=journal_streetlight;
+special=cannotBePickedUp; special=sprite2xHeight;
+special=adjustSpriteYUp8; special=adjustSpriteYUp2;
+blockWalking=true; blockJumping=true;
+pR=zoneStone; pB=pGreyD2; pG=pFadeDarker;
+depthMod=1050;
+[ItemReaction] 
+ID=streetlight_off1; 
+element=fire; element=elec; element=nighttime;
+newID=streetlight1;
+
+[JournalEntry]
+ID=journal_streetlight;
+category=item; halfPage=true; rarity=0;
+title=Street Light;
+text=<itemBig=streetlight1><title=Street Light><brAdj=>These public lights are maintained by dutiful lamplighters who come round every evening to ignite them. Although in some high-end cities, magical street lights are used instead, which require no such maintenance.;
+
+
+[ItemType]  name=Lantern;
+description=Simple, durable light. Equip in your hand to light the way.; itemCategory=hazard;
+journalID=journal_lamp;
+ID=lamp; sprite=10; element=fire; action=lamp_action;
+ volume=10; value=5;
+combineWith=glowshroomPiece; toMake=lamp_blue; consumeOnCombine=true;
+special=canUseWithoutConsumingAction;
+[ItemLight]
+ ID=lamp; red=1; blue=0.6; green=0.9; alpha=1; size=1; flicker=0.01; texture=krypton;
+[ItemReaction] 
+ID=lamp; element=water; element=wind; newID=lamp_off;
+[ItemReaction] 
+ID=lamp; element=explode;  newID=X; fx=dust_glass;
+
+[ItemType]  name=Lantern;
+description=Simple, durable light. Use to kindle.;
+journalID=journal_lamp; itemCategory=hazard;
+ID=lamp_off; sprite=11;
+combineWith=glowshroomPiece; toMake=lamp_blue_off; consumeOnCombine=true;
+ volume=5; value=5;
+special=canUseWithoutConsumingAction;
+[ItemReaction] 
+ID=lamp_off; element=use; element=fire; newID=lamp;
+[ItemReaction] 
+ID=lamp_off; element=explode;  newID=X; fx=dust_glass;
+[JournalEntry]
+ID=journal_lamp;
+category=item; halfPage=true;
+title=Lantern;
+text=<itemBig=lamp><title=Lantern><brAdj=>A simple light fueled by oil & sealed in glass and metal. It doesn't look like it's going to run out of fuel anytime soon.;
+
+[ItemType]  name=Blue Lantern;
+ID=lamp_blue; sprite=10; itemCategory=hazard;
+description=Glows with a bright blue light.;
+pR=pBlue; element=fire; action=lamp_action;
+ volume=10; value=15;
+special=canUseWithoutConsumingAction;
+[ItemLight] 
+ID=lamp_blue; red=0.8; blue=1; green=0.9; alpha=1; size=1.3; flicker=0.01; texture=krypton;
+[ItemReaction] 
+ID=lamp_blue; element=water; element=wind; newID=lamp_blue_off;
+[ItemReaction] 
+ID=lamp_blue; element=explode;  newID=X; fx=dust_glass;
+
+[ItemType]  name=Blue Lantern;
+ID=lamp_blue_off; sprite=11; itemCategory=hazard;
+description=Glows with a bright blue light. Use to kindle.;
+pR=pBlue;
+  element=fire;
+   volume=5; value=15;
+special=canUseWithoutConsumingAction;
+[ItemReaction] 
+ID=lamp_blue_off; element=use; element=fire; newID=lamp_blue;
+[ItemReaction] 
+ID=lamp_blue_off; element=explode;  newID=X; fx=dust_glass;
+[JournalEntry]
+ID=item_lamp_blue;
+category=item; halfPage=true; rarity=2;
+title=Blue Lantern;
+text=<itemBig=lamp_blue><title=Blue Lantern><brAdj=>This traditional lantern has been augmented and improved by adding Gloam dust. Quite effective!;
+
+
+[ItemType]  name=Lantern;
+description=Simple wall-mounted lamp.; itemCategory=hazard;
+journalID=journal_lamp;
+ID=lamp_wall; sprite=1132; element=fire;
+pR=pWood;
+pG=pYellow;
+ volume=10; value=5;
+ special=canHangOnWalls; special=cannotBePickedUp;
+ special=animated2Fast;
+[ItemReaction] 
+ID=lamp_wall; element=water; element=wind; element=daytime;
+ newID=lamp_wall_off;
+[ItemLight]
+ ID=lamp_wall; red=1; blue=0.6; green=0.9; alpha=1; size=1.0; flicker=0.01; texture=krypton;
+[ItemType]  name=Lantern;
+description=Simple wall-mounted lamp.; itemCategory=hazard;
+journalID=journal_lamp;
+ID=lamp_wall_off; sprite=1132;
+pR=pWood;
+pG=pGreyD2;
+ volume=10; value=5;
+ special=canHangOnWalls; special=cannotBePickedUp;
+[ItemReaction] 
+ID=lamp_wall_off; element=fire; element=elec; element=nighttime;
+ newID=lamp_wall;
+ 
+[ItemType]  name=Mounted Lantern;
+ID=lantern_mounted1; sprite=1163;
+texture=items_building; itemCategory=hazard;
+journalID=; element=fire; journalID=journal_lamp;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=adjustSpriteX4; special=adjustSpriteX8;
+special=animated; depthMod=1050;
+[ItemLight]
+ ID=lantern_mounted1; red=0.5; blue=0.36; green=0.43; alpha=0.5; size=1.25; flicker=0.01; texture=krypton; X=0.4; Y=-0.1; 
+[ItemLight]
+ ID=lantern_mounted1; red=1; blue=0.86; green=0.98; alpha=1; size=0.15; flicker=0.01; texture=krypton; X=0.4; Y=-0.1; 
+[ItemReaction] 
+ID=lantern_mounted1; 
+element=wind; element=water; element=daytime;
+newID=lantern_mounted1_off;
+[ItemReaction] 
+ID=lantern_mounted1; 
+element=physical; element=explode; element=fire; element=elec;  element=ice;
+element=smash; element=slash; newID=fire; fx=dust_glass;
+[ItemReaction] 
+ID=lantern_mounted1; 
+element=ice; newID=X; fx=dust_glass;
+
+[ItemType]  name=Mounted Lantern;
+ID=lantern_mounted1_off; sprite=1167;
+texture=items_building; itemCategory=hazard;
+journalID=journal_lamp;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=adjustSpriteX4; special=adjustSpriteX8;
+depthMod=1050;
+[ItemReaction] 
+ID=lantern_mounted1_off; 
+element=nighttime;
+newID=lantern_mounted1;
+[ItemReaction] 
+ID=lantern_mounted1_off; 
+element=physical; element=explode; element=fire; element=elec; 
+element=smash; element=slash; newID=X;
+
+[ItemType]  name=Gloam Dust Bottle;
+  ID=gloamdustBottle; sprite=1124; itemCategory=hazard;
+  description=Bottle of powdered Gloam Shroom.;
+  pR=pShroom_glow;
+  weight=0; value=9;
+[ItemLight] 
+ID=gloamdustBottle; red=0.7; blue=1; green=0.6; alpha=0.8; size=0.9; flicker=0.03; texture=krypton;
+[ItemReaction] 
+ID=gloamdustBottle; element=smash; newID=X; fx=dust_glass;
+
+[JournalEntry]
+ID=item_gloamdustBottle;
+category=item; halfPage=true; rarity=1;
+title=Gloam Dust Bottle;
+text=<itemBig=gloamdustBottle><title=Gloam Dust Bottle><brAdj=>Glass bottle containing dust from bioluminescent Gloam Shrooms. These long-lasting light sources don't rely on kindling to function.;
+
+
+[ItemType]  name=Campfire;
+ID=campfire_everlit; sprite=1162; 
+itemCategory=hazard;
+description=A cozy campfire.;
+journalID=journal_campfire;
+special=animated; special=huge; special=sprite2xWidth; 
+special=cannotBePickedUp;
+weight=200; volume=1000;
+	blockWalking=true; blockJumping=true;
+pR=zoneStoneLight;
+pG=pHoneyglow;
+pB=pR;
+  element=fire;
+[ItemLight] 
+ID=campfire_everlit; red=1; blue=0.5; green=0.8; alpha=0.95; size=0.9; flicker=0.10; texture=krypton;
+[ItemReaction] 
+ID=campfire_everlit; element=water; element=ice; element=wind; element=physical; newID=campfire_unlit; fx=smokeCloud;
+
+
+[ItemType]  name=Campfire;
+ID=campfire_unlit; sprite=1130; 
+itemCategory=hazard;
+description=An unlit campfire.;
+journalID=journal_campfire;
+special=huge; special=sprite2xWidth; special=cannotBePickedUp;
+weight=200; volume=1000;
+	blockWalking=true;
+pR=zoneStoneLight;
+pB=pLaser_slow;
+	combineSound=BurnishSound;
+combineWith=lamp; toMake=campfire_lit; 
+combineWith=lamp_blue; toMake=campfire_lit; 
+[ItemLight] 
+ID=campfire_unlit; red=1; blue=0.5; green=0.8; alpha=0.45; size=0.1; flicker=0.03;
+[ItemReaction] 
+ID=campfire_unlit; element=fire; element=elec; newID=campfire_lit;
+
+[ItemType]  name=Campfire;
+ID=campfire_lit; sprite=1162; 
+itemCategory=hazard;
+description=A cozy campfire.;
+journalID=journal_campfire;
+special=animated; special=huge; special=sprite2xWidth; 
+special=cannotBePickedUp; special=timer;
+weight=200; volume=1000;
+	blockWalking=true; blockJumping=true;
+timer=400;
+pR=zoneStoneLight;
+pG=pHoneyglow;
+pB=pR;
+  element=fire;
+[ItemLight] 
+ID=campfire_lit; red=1; blue=0.5; green=0.8; alpha=0.95; size=0.9; flicker=0.10; texture=krypton;
+[ItemReaction] 
+ID=campfire_lit; element=water; element=ice; element=wind; element=physical; newID=campfire_unlit; fx=smokeCloud;
+[ItemReaction] 
+ID=campfire_lit; element=timerUp; newID=campfire_unlit; fx=smokeCloud;
+
+
+
+[JournalEntry]
+ID=journal_campfire;
+category=item; halfPage=true;
+title=Campfire;
+text=<itemBig=campfire_lit><title=Campfire><brAdj=>This circle of stones represents a place of safety. Symbolically, at least. Not physically.;
+
+
+
+[ItemType]  name=Oil;
+ID=blackOil1; itemCategory=hazard;
+journalID=journal_blackOil;
+ sprite=1017; special=cannotBePickedUp;  special=transparent; special=canHangOnWalls; special=alwaysBelowOtherItems;
+ stackable=true;
+[ItemReaction] 
+ID=blackOil1; element=fire; action=spreadFire; newID=fire; fx=DramaticNyeaow;
+
+[ItemType]  name=Oil;
+ID=blackOil2; itemCategory=hazard;
+journalID=journal_blackOil;
+ sprite=1018; special=cannotBePickedUp;  special=transparent; special=canHangOnWalls; special=alwaysBelowOtherItems;
+ stackable=true;
+[ItemReaction] 
+ID=blackOil2; element=fire; action=spreadFire; newID=fire; fx=DramaticNyeaow;
+[JournalEntry]
+ID=journal_blackOil;
+category=item; halfPage=true;
+title=Oil;
+text=<itemBig=blackOil1><title=Oil><brAdj=>At a glance it looks like ordinary filth, but it's actually oil. Now that it's on the ground it can't be salvaged, but it's still a fire hazard.;
+
+[ItemType]  name=Mechanist Trap;
+ID=rogueTrap; sprite=118;  itemCategory=hazard;
+description=Damages and immobilizes.;
+special=big; special=reactsToPressure; special=cannotBePickedUp; special=timer;
+timer=300;
+weight=0;
+volume=10000;
+[ItemReaction] 
+ID=rogueTrap; element=physical; element=pressurePlateDown;
+element=fire; element=ice; element=wind; element=elec; element=earth;  
+newID=X; action=rogueTrap_cut;
+[ItemReaction] 
+ID=rogueTrap; element=leavingZone; newID=X; 
+[ItemReaction] 
+ID=rogueTrap; element=explode; element=timerUp; newID=X;
+
+[ItemReaction] 
+ID=rogueTrap; element=leavingZone; newID=X;
+
+[ItemType]  name=Ice Block;
+  ID=iceBlock; sprite=1016; weight=200;  itemCategory=hazard;
+  special=transparent; special=big;
+  special=pushable; special=timer; special=slideWhenPushed;
+  special=slideWhenPushedMax4;
+timer=400;
+  blockLoE=true; blockWalking=true; blockJumping=true;
+  element=ice;
+[ItemReaction] 
+ID=iceBlock; element=fire; element=heat; element=timerUp; newID=puddle; spawnItem=puddle; fx=vaporCloud;
+[ItemReaction] 
+ID=iceBlock; element=explode; element=heavySmash; newID=puddle; fx=dust_glass; spawnItem=puddle; aiRatingMod = 4;
+[ItemReaction] 
+ID=iceBlock; element=leavingZone; newID=X;
+[JournalEntry]
+ID=item_iceBlock;
+category=item; halfPage=true;
+title=Ice Block;
+text=<itemBig=iceBlock><title=Ice Block><brAdj=>A man-sized cube of ice! It's very durable, but can be pushed. You can speed up the melting process with a hammer or some fire.;
+
+[ItemType]  name=Ice Block;
+  ID=iceBlock_eternal; sprite=1016; weight=200;  itemCategory=hazard;
+  special=transparent; special=big;
+  special=pushable; special=slideWhenPushed;
+  special=slideWhenPushedMax4;
+  blockLoE=true; blockWalking=true; blockJumping=true;
+  element=ice;
+[ItemReaction] 
+ID=iceBlock_eternal; element=fire; element=heat; newID=puddle; spawnItem=puddle; fx=vaporCloud;
+[ItemReaction] 
+ID=iceBlock_eternal; element=explode; element=heavySmash; newID=puddle; fx=dust_glass; spawnItem=puddle; 
+
+[ItemType]  name=Beer;
+ID=puddle_beer; sprite=890; spriteWhenHeld=0; stackable=true; itemCategory=hazard;
+description=What a waste.;
+special=cannotBePickedUp;  special=transparent;
+special=quantityChangesSprite_upTo6;
+special=canHangOnWalls;
+cantFitInTileWith=boat_hatch1;
+cantFitInTileWith=boat_hatch2;
+pB=pHoneyglow;
+[ItemReaction] 
+ID=puddle_beer; element=fire; newID=X; fx=vaporCloud;
+[ItemReaction] 
+ID=puddle_beer; element=ice; newID=puddleFrozen; action=puddleFrost;
+[ItemReaction] 
+ID=puddle_beer; element=lightning; action=spreadElec;
+[ItemReaction]
+ID=puddle_beer; element=newDay; newID=X;
+[JournalEntry]
+ID=item_puddle_beer;
+category=item; halfPage=true;
+title=Beer Puddle;
+text=<itemBig=puddle_beer><title=Beer Puddle><brAdj=>What a waste! Someone spilled beer all over the ground. Next time they should use a mug or a bottle on the keg instead.;
+
+[ItemType]  name=Puddle;
+ID=puddle; sprite=890; stackable=true; itemCategory=hazard;
+journalID=journal_puddle;
+description=Puddle of water. Can conduct electricity.;
+special=cannotBePickedUp; 
+special=quantityChangesSprite_upTo6;
+special=elementUsableForRestrictedAoEs;
+special=delayBetweenReactions;
+element=water;
+cantFitInTileWith=boat_hatch1;
+cantFitInTileWith=boat_hatch2;
+pB=pBlue;
+[ItemReaction] 
+ID=puddle; element=fire; newID=X; fx=vaporCloud;
+[ItemReaction] 
+ID=puddle; element=ice; newID=puddleFrozen; action=puddleFrost;
+[ItemReaction] 
+ID=puddle; element=lightning; action=spreadElec;
+[ItemReaction]
+ID=puddle; element=newDay; newID=X;
+
+[ItemType]  name=Puddle;
+ID=puddle_zone; sprite=890; stackable=true; itemCategory=hazard;
+description=Puddle of water. Can conduct electricity.;
+journalID=journal_puddle;
+special=cannotBePickedUp; special=quantityChangesSprite_upTo6;
+special=elementUsableForRestrictedAoEs;
+special=delayBetweenReactions;
+element=water;
+cantFitInTileWith=boat_hatch1;
+cantFitInTileWith=boat_hatch2;
+pB=zoneWater;
+[ItemReaction] 
+ID=puddle_zone; element=fire; newID=X; fx=vaporCloud;
+[ItemReaction] 
+ID=puddle_zone; element=ice; newID=puddleFrozen; action=puddleFrost;
+[ItemReaction] 
+ID=puddle_zone; element=lightning; action=spreadElec;
+[JournalEntry]
+ID=journal_puddle;
+category=item; halfPage=true;
+title=Puddle;
+text=<itemBig=puddle><title=Puddle><brAdj=>Somebody spilled some water here. In combat, electrical attacks will course through puddles, damaging everyone standing in them.;
+
+
+[ItemType]  name=Static Field;
+ID=hazard_lightning; sprite=1104; 
+description=Lightning may strike here soon- try to stay away.;
+itemCategory=hazard;
+texture=items_overworld;
+journalID=journal_static_field;
+special=cannotBePickedUp;
+special=canFloatOnWater;
+special=reactsToPressure; special=fullTileHitbox;
+special=rollingPin_drawFlat; special=rollingPin_scaleHalf;
+special=animated;
+special=ignoreDarkness;
+special=timer; special=timer_advanceOnScreenOnly; special=hideTimer;
+special=moveCostOverride_2;
+timer=60;
+spawnFX=horizSpark_many_sudden_hazard;
+spawnFXColor=SkyBlue;
+[ItemReaction] 
+ID=hazard_lightning; element=pressureJumpAcross; element=pressureMoveAcross; element=pressurePlateDown; action=hazard_lightning_act; newID=X;
+[ItemReaction] 
+ID=hazard_lightning; element=wind; element=combatEnd; element=newDay; newID=X;
+[ItemReaction] 
+ID=hazard_lightning; element=timerUp; action=hazard_lightning_act; newID=X;
+[ItemLight] 
+ID=hazard_lightning; texture=lightmask; red=0.85; blue=1; green=0.85; alpha=1; size=0.3; flicker=0.1;
+
+[ItemType]  name=Static Zone;
+ID=hazard_lightning_perma; sprite=1104; 
+description=Long-lasting static. Don't touch!;
+journalID=journal_static_field;
+itemCategory=hazard;
+texture=items_overworld;
+special=cannotBePickedUp;
+special=canFloatOnWater;
+special=reactsToPressure; special=fullTileHitbox;
+special=rollingPin_drawFlat; special=rollingPin_scaleHalf;
+special=animated;
+special=ignoreDarkness;
+special=moveCostOverride_2;
+spawnFX=horizSpark_many_sudden_hazard;
+spawnFXColor=SkyBlue;
+[ItemReaction] 
+ID=hazard_lightning_perma; element=pressureJumpAcross; element=pressureMoveAcross; element=pressurePlateDown; action=hazard_lightning_act; newID=X;
+[ItemReaction] 
+ID=hazard_lightning_perma; element=wind; element=combatEnd; element=newDay; newID=X;
+[ItemLight] 
+ID=hazard_lightning_perma; texture=lightmask; red=0.85; blue=1; green=0.85; alpha=1; size=0.3; flicker=0.1;
+[JournalEntry]
+ID=journal_static_field;
+category=item; halfPage=true;
+title=Static Field;
+text=<itemBig=hazard_lightning><title=Static Field><brAdj=>Dangerous zone of electricity that threatens to shock anything that touches it. Cannot be jumped over.;
+
+
+[ItemType]  name=Ice;
+ID=puddleFrozen; sprite=954; stackable=true; itemCategory=hazard;
+description=Slippery and hinders movement.;
+special=cannotBePickedUp;  special=semitransparent; special=moveCostOverride_2;
+special=quantityChangesSprite_upTo6;
+special=elementUsableForRestrictedAoEs;
+cantFitInTileWith=boat_hatch1;
+cantFitInTileWith=boat_hatch2;
+element=ice;
+[ItemReaction] 
+ID=puddleFrozen; element=fire; element=heat; newID=puddle; spawnItem=puddle;
+
+
+[ItemType]  name=Ice Platform;
+ID=ice_platform; sprite=958; itemCategory=hazard;
+description=Floating chunk of ice.;
+special=cannotBePickedUp; special=moveCostOverride_2;
+special=elementUsableForRestrictedAoEs; special=overrideTerrainCollisions;
+special=canFloatOnWater; special=canHangOnWalls;
+special=anim_bobUpAndDown_slow; 
+element=ice;
+[ItemReaction] 
+ID=ice_platform; element=fire; newID=X; fx=vaporCloud; applyElement=actorFall;
+[ItemReaction] 
+ID=ice_platform; element=leavingZone; newID=X; 
+
+
+
+[ItemType]  name=Barrier;
+  ID=barrier_item; sprite=1012; weight=0;  itemCategory=hazard;
+  special=animated; special=cannotBePickedUp; special=transparent; special=timer; special=canHangOnWalls;
+  blockLoE=true; blockLoS=true; blockWalking=true; blockJumping=true;
+  timer=40;
+[ItemLight] 
+ID=barrier_item; red=0.5; blue=1; green=0.5; alpha=0.6; size=0.4; flicker=0.05;
+[ItemReaction] 
+ID=barrier_item; element=explode; element=ruin; element=pickaxe; element=shatter; element=dispel; newID=X; fx=castingFast; aiRatingMod = 4; aiRatingModForHostilesOnly = true;
+[ItemReaction] 
+ID=barrier_item; element=physical; element=timerUp; newID=barrier_item_weak;
+[ItemReaction] 
+ID=barrier_item; element=leavingZone; newID=X;
+[JournalEntry]
+ID=item_barrier_item;
+category=item; halfPage=true; rarity=2;
+title=Barrier;
+text=<itemBig=barrier_item><title=Barrier><brAdj=>Force and Preservation magic form this barrier. Application of Ruin magic, dispelling magic, or an explosion breaks it easily. It weakens over time, and can also be brought down with physical attacks.;
+
+
+[ItemType]  name=Weak Barrier;
+  ID=barrier_item_weak; sprite=1044; weight=0;  itemCategory=hazard;
+  special=animated; special=cannotBePickedUp; special=transparent; special=timer; special=canHangOnWalls;
+  blockLoE=true; blockLoS=true; blockWalking=true; blockJumping=true;
+  timer=30;
+[ItemLight] 
+ID=barrier_item_weak; red=0.5; blue=1; green=0.5; alpha=0.6; size=0.3; flicker=0.05;
+[ItemReaction] 
+ID=barrier_item_weak; element=explode; element=physical; element=ruin; element=dispel;
+ element=timerUp; newID=X; fx=castingFast; aiRatingMod = 3; aiRatingModForHostilesOnly = true;
+[ItemReaction] 
+ID=barrier_item_weak; element=leavingZone; newID=X;
+
+[ItemType]  name=Strong Barrier;
+  ID=barrier_strong; sprite=980; weight=0;  itemCategory=hazard;
+  special=animated; special=cannotBePickedUp; special=transparent; special=canHangOnWalls;
+  blockLoE=true; blockWalking=true; blockJumping=true;
+[ItemLight] 
+ID=barrier_strong; red=1; blue=0.6; green=0.5; alpha=0.6; size=0.4; flicker=0.05;
+[ItemReaction] 
+ID=barrier_strong; element=explode; element=destroy; newID=X; fx=castingFast; aiRatingMod = 4;
+[JournalEntry]
+ID=item_barrier_strong;
+category=item; halfPage=true; rarity=2;
+title=Strong Barrier;
+text=<itemBig=barrier_strong><title=Strong Barrier><brAdj=>A super-strong magic barrier that resists dispelling, and can only be brought down by severe explosive force.;
+
+
+[ItemType]  name=Healing Flowers;
+ID=flowers_healing1; sprite=440; 
+journalID=journal_flowers_healing1;
+special=cannotBePickedUp;
+special=animatedPauseOnFrame1and3;
+itemCategory=hazard;
+special=canHangOnWalls; special=canAlwaysFitInTile;
+spawnFX=dust_rise_slow_small_gold;
+--pG=zoneGrass;
+  element=life;
+[ItemReaction] 
+ID=flowers_healing1; element=slash; element=explode; element=wither; element=dig; newID=flowers_healing1_dead;
+[ItemReaction] 
+ID=flowers_healing1; element=fire; newID=fire;
+[ItemReaction] 
+ID=flowers_healing1; element=endTurn; action=heal10Damage;
+[JournalEntry]
+ID=journal_flowers_healing1;
+category=item; halfPage=true; rarity=2;
+title=Healing Flowers;
+text=<itemBig=flowers_healing1><title=Healing Flowers><brAdj=>Strange flowers overflowing with Preservation magic. Ending your turn on them heals 9 damage. Many have attempted to transplant flowers of this kind, but it almost always ends with them withering.;
+
+
+[ItemType]  name=Withered Flowers;
+ID=flowers_healing1_dead; sprite=408; 
+journalID=journal_flowers;
+special=cannotBePickedUp;
+itemCategory=hazard;
+special=canHangOnWalls; special=canAlwaysFitInTile;
+[ItemReaction] 
+ID=flowers_healing1_dead; element=growth; newID=flowers_healing1;
+  
+[ItemType]  name=Spikes;
+  ID=rubble_spikes; sprite=612; 
+  itemCategory=hazard;
+	special=cannotBePickedUp; special=randomFlipWhenPlaced;
+	special=moveCostOverride_2; special=reactsToPressure; special=big;
+	pR=zoneDirt; pB=zoneDirt;
+  element=life;
+[ItemReaction] 
+ID=rubble_spikes; element=pressureMoveAcross; element=pressurePlateDown; element=noMoveTaken;
+ action=spikeDamage10; newID=rubble;
+[ItemReaction] 
+ID=rubble_spikes; element=physical; element=smash; element=heavySmash; newID=rubble;
+[JournalEntry]
+ID=item_rubble_spikes;
+category=item; halfPage=true; rarity=0;
+title=Spikes;
+text=<itemBig=rubble_spikes><title=Spikes><brAdj=>Don't walk here if you can help it! These spiky rocks deal 9 damage to the first thing to touch them, then they break into normal rubble.;
+
+
+[ItemType]  name=Teeth Spikes;
+  ID=tooth_spikes; sprite=1903; 
+  itemCategory=hazard;
+	special=cannotBePickedUp; special=randomFlipWhenPlaced;
+	special=moveCostOverride_2; special=reactsToPressure; special=big;
+	pR=pGrey2; pB=zoneDirt;
+  element=life;
+[ItemReaction] 
+ID=tooth_spikes; element=pressureMoveAcross; element=pressurePlateDown; element=noMoveTaken;
+ action=spikeDamage10; newID=tooth_spikes_dull;
+[ItemReaction] 
+ID=tooth_spikes; element=smash; element=heavySmash; 
+newID=tooth_spikes_dull;
+[JournalEntry]
+ID=item_tooth_spikes;
+category=item; halfPage=true; rarity=1;
+title=Spikes;
+text=<itemBig=tooth_spikes><title=Teeth Spikes><brAdj=>Watch your step! Walking on these would be extremely painful - we're talking 9 damage painful. However, keep in mind that they could be equally as painful for your enemies.;
+
+[ItemType]  name=Teeth;
+  ID=tooth_spikes_dull; sprite=1932;
+  itemCategory=hazard;
+  journalID=item_tooth_spikes;
+	special=cannotBePickedUp; special=randomFlipWhenPlaced;
+	special=big; special=noTooltips; special=moveCostOverride_2;
+	pR=pGrey2; pB=zoneDirt;
+  element=life;
+
+[ItemType]  name=Giant Claw;
+ID=clawBlocker2x; sprite=1091;
+itemCategory=hazard; texture=items_misc;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed; 
+special=canBeInsideWalls; special=canFloatOnWater;
+depthMod=2050;
+blockLoE=true; blockLoS=true; blockWalking=true; blockJumping=true;
+special=sprite2xWidth; special=sprite2xHeight;
+pR=p74;
+
+[ItemType]  name=Giant Claw;
+ID=clawBlocker4x; sprite=1089;
+itemCategory=hazard; texture=items_misc;
+special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed; 
+special=canBeInsideWalls; special=canFloatOnWater;
+depthMod=2050;
+blockLoE=true; blockLoS=true; blockWalking=true; blockJumping=true;
+special=sprite2xWidth; special=sprite4xHeight; special=adjustSpriteY16;
+pR=p74;
+
+[ItemType]  name=Brambles;
+ID=brambles; sprite=1206; itemCategory=hazard; 
+special=cannotBePickedUp; special=canHangOnWalls;
+special=canFloatOnWater; special=reactsToPressure;
+special=moveCostOverride_2;
+special=randomRotateWhenPlaced;
+special=randomFlipWhenPlaced;
+pR=pYellow6; pB=pRed2;
+[ItemReaction] 
+ID=brambles; element=ruin; element=wither; element=heavySlash; element=explode; newID=X; fx=dust_wood;
+[ItemReaction] 
+ID=brambles; element=fire; newID=fire;
+[ItemReaction] 
+ID=brambles; element=slash; element=pressureMoveAcross; element=pressurePlateDown; action=spikeDamage10_itchy; newID=brambles_broken; fx=woodCrack;
+
+[JournalEntry]
+ID=item_brambles;
+category=item; halfPage=true; rarity=1;
+title=Brambles;
+text=<itemBig=brambles><title=Brambles><brAdj=>Prickly shrub. Its exceedingly sharp thorns can cause real injury if you wade into them, and they leave you feeling painfully itchy afterward.;
+
+[ItemType]  name=Broken Brambles;
+ID=brambles_broken; sprite=1238; itemCategory=hazard; 
+special=cannotBePickedUp; special=canHangOnWalls;
+special=canFloatOnWater; special=noTooltips;
+pR=pYellow6; pB=pRed2;
+journalID=item_brambles;
+[ItemReaction] 
+ID=brambles_broken; element=ruin; element=wither; element=slash; element=explode; newID=X; fx=dust_wood;
+[ItemReaction] 
+ID=brambles_broken; element=fire; newID=fire;
+[ItemReaction] 
+ID=brambles_broken; element=growth; newID=brambles;
+
+
+
+[ItemType]  name=Bone Spines;
+ID=bone_spikes; sprite=689; itemCategory=hazard;
+  pR=pBone;
+  blockWalking=true;
+  special=big; special=timer; special=cannotBePickedUp;
+  element=ruin;
+  timer=60;
+[ItemReaction] 
+ID=bone_spikes; element=smash;
+element=explode; element=ruin; element=dispel;
+ element=timerUp; newID=X; fx=dust_bone; aiRatingMod = 3;
+[JournalEntry]
+ID=item_bone_spikes;
+category=item; halfPage=true; rarity=1;
+title=Bone Spikes;
+text=<itemBig=bone_spikes><title=Bone Spikes><brAdj=>A short barrier of bone. Prevents walking, but can be easily hopped over. It's the best a Ruin user can do without proper materials.;
+
+[ItemType]  name=Bone Spines;
+ID=bone_spikes_strong; sprite=689; itemCategory=hazard;
+journalID=item_bone_spikes;
+  pR=pBoneDark;
+  blockWalking=true;
+  special=big; special=cannotBePickedUp;
+  element=ruin;
+[ItemReaction] 
+ID=bone_spikes_strong; element=smash;
+element=explode; element=ruin; element=dispel; newID=X; fx=dust_bone;
+ 
+[ItemType]  name=Bone Wall;
+ID=bone_wall_weak; sprite=688; itemCategory=hazard;
+journalID=journal_bone_wall;
+  pR=pBone;
+  blockLoS=false; blockLoE=true; blockWalking=true; blockJumping=true; 
+  special=big; special=timer; special=cannotBePickedUp;
+  element=ruin;
+  timer=100;
+[ItemReaction] 
+ID=bone_wall_weak; element=explode; element=ruin; element=dispel;
+ element=timerUp; newID=bone_dust; fx=dust_bone; aiRatingMod = 3;
+ 
+[ItemType]  name=Bone Wall;
+ID=bone_wall_strong; sprite=688; itemCategory=hazard;
+journalID=journal_bone_wall;
+  pR=pBoneDark;
+  blockLoS=false; blockLoE=true; blockWalking=true; blockJumping=true;
+  special=big; special=cannotBePickedUp;
+  element=ruin;
+[ItemReaction] 
+ID=bone_wall_strong; element=explode; element=ruin; element=dispel; newID=X; fx=dust_bone;
+[JournalEntry]
+ID=journal_bone_wall;
+category=item; halfPage=true; rarity=1;
+title=Bone Wall;
+text=<itemBig=bone_wall_strong><itemBig=bone_wall_weak><title=Bone Wall><brAdj=>Wall formed from bone material, shaped by a Ruin mage. Darker colored ones are more durable, and last indefinitely.;
+
+[ItemType]  name=Miasma;
+  ID=miasma; sprite=1019; weight=0; itemCategory=hazard;
+  special=cannotBePickedUp; special=timer;
+  timer=6;
+[ItemReaction] 
+ID=miasma; element=timerUp; action=miasmaCloud;
+
+[ItemType]  name=Vent;
+  ID=miasmaVent; sprite=61; weight=0; itemCategory=hazard;
+  special=cannotBePickedUp; special=timer; special=noTooltip;
+  special=alwaysBelowOtherItems;
+  timer=3;
+  pR=zoneStoneLight;
+[ItemReaction] 
+ID=miasmaVent; element=timerUp; action=miasmaCloud;
+[ItemReaction] 
+ID=miasmaVent; element=mechanical; newID=miasmaVent_closed;
+
+[ItemType]  name=Vent (Closed);
+  ID=miasmaVent_closed; sprite=62; weight=0; itemCategory=hazard;
+  special=cannotBePickedUp; special=noTooltip; 
+  special=alwaysBelowOtherItems;
+  pR=zoneStoneLight;
+[ItemReaction] 
+ID=miasmaVent_closed; element=mechanical; newID=miasmaVent;
+  
+[ItemType]  name=Spear Trap;
+  ID=spearTrap_wall; sprite=93; weight=0; itemCategory=hazard;
+  special=cannotBePickedUp; special=noTooltip;
+  pR=zoneStoneLight;
+  depthMod=50;
+[ItemReaction] 
+ID=spearTrap_wall; element=mechanical; action=spearTrap_wall_act;
+ 
+[ItemType]  name=Spear Trap;
+  ID=spearTrap_wall_flip; sprite=94; weight=0; itemCategory=hazard;
+  special=cannotBePickedUp; special=noTooltip;
+  pR=zoneStoneLight;
+  depthMod=50;
+[ItemReaction] 
+ID=spearTrap_wall_flip; element=mechanical; action=spearTrap_wall_flip_act;
+  
+  
+[ItemType]  name=Goop;
+  ID=goop_pool; sprite=1004; weight=0;  itemCategory=hazard;
+  special=big; special=animated; special=cannotBePickedUp; special=timer; special=reactsToPressure; special=moveCostOverride_2; 
+  stackable=true;
+  timer=85;
+[ItemLight] 
+ID=goop_pool; red=0; blue=0; green=1; alpha=0.2; size=0.15; flicker=0.05;
+[ItemReaction] 
+ID=goop_pool; element=water; element=dig; element=timerUp; newID=X;
+[ItemReaction] 
+ID=goop_pool; element=pressureMoveAcross; element=noMoveTaken;  element=pressurePlateDown; action=goopDamage; newID=X;
+[ItemReaction] 
+ID=goop_pool; element=leavingZone; newID=X;
+  
+
+[JournalEntry]
+ID=item_goop_pool;
+category=item; halfPage=true; rarity=1;
+title=Goop;
+text=<itemBig=goop_pool><title=Goop><brAdj=>Sticky pool that gets all over you when you step on it. If you walk through some, you'll have a hard time moving afterwards!;
+  
+[ItemType]  name=Acid;
+  ID=acid_pool; sprite=1004; weight=0;  itemCategory=hazard;
+  special=big; special=animated; special=cannotBePickedUp; special=timer; special=reactsToPressure; special=moveCostOverride_2; 
+  stackable=true;
+  timer=150;
+[ItemLight] 
+ID=acid_pool; red=0; blue=0; green=1; alpha=0.2; size=0.15; flicker=0.05;
+[ItemReaction] 
+ID=acid_pool; element=water; element=dig; element=timerUp; newID=X;
+[ItemReaction] 
+ID=acid_pool; element=pressureMoveAcross; action=acidDamage;
+[ItemReaction] 
+ID=acid_pool; element=leavingZone; newID=X;
+
+[JournalEntry]
+ID=item_acid_pool;
+category=item; halfPage=true; rarity=1;
+title=Acid;
+text=<itemBig=acid_pool><title=Acid><brAdj=>Corrosive liquid that causes great harm on contact. Generally recommended procedure is: avoid, evade, bypass, or push your enemies in it and laugh (laughing optional).;
+
+[ItemType]  name=Trap;
+ID=mantrap; sprite=118;  itemCategory=hazard;
+special=reactsToPressure; special=cannotBePickedUp;
+weight=0;
+volume=10000;
+[ItemReaction] 
+ID=mantrap; element=physical; element=explode;
+element=fire; element=ice; element=wind; element=elec; element=earth; 
+element=pressureMoveAcross; element=pressurePlateDown; newID=X; action=rogueTrap_cut; fx=terrain;
+
+[ItemType]  name=Piston;
+ID=piston_push3; sprite=59;  itemCategory=hazard;
+special=timer; special=huge; special=sprite2xHeight;
+special=cannotBePickedUp;
+special=canAlwaysFitInTile;
+  timer=12;
+  pR=zoneStone;
+weight=0;
+depthMod=50;
+[ItemReaction] 
+ID=piston_push3; element=timerUp; action=piston_action; newID=piston_push3_extended;
+[ItemReaction] 
+ID=piston_push3; element=mechanical; newID=piston_push3_extended_off;
+
+
+[ItemType]  name=Piston;
+ID=piston_push3_extended; sprite=60;  itemCategory=hazard;
+special=timer; special=huge; special=sprite2xHeight; special=canAlwaysFitInTile;
+special=cannotBePickedUp;
+blockWalking=true; blockJumping=true;
+  timer=10;
+  pR=zoneStone;
+weight=0;
+depthMod=50;
+[ItemReaction] 
+ID=piston_push3_extended; element=timerUp; newID=piston_push3; fx=TinyStep;
+[ItemReaction] 
+ID=piston_push3_extended; element=mechanical; newID=piston_push3_extended_off;
+
+[ItemType]  name=Piston;
+ID=piston_push3_extended_off; sprite=60;  itemCategory=hazard;
+special=huge; special=sprite2xHeight; special=canAlwaysFitInTile;
+special=cannotBePickedUp;
+blockWalking=true; blockJumping=true;
+  pR=zoneStone;
+weight=0;
+depthMod=50;
+[ItemReaction] 
+ID=piston_push3_extended_off; element=mechanical; newID=piston_push3;
+
+[ItemType]  name=Piston;
+ID=piston_push3_up; sprite=1302;
+special=cannotBePickedUp;
+blockWalking=true; blockJumping=true; special=dontCloneReactions;
+cloneFrom=piston_push3;
+[ItemReaction] 
+ID=piston_push3_up; element=timerUp; action=piston_action; newID=piston_push3_extended_up;
+[ItemReaction] 
+ID=piston_push3_up; element=mechanical; newID=piston_push3_extended_off_up;
+
+
+[ItemType]  name=Piston;
+ID=piston_push3_extended_up; sprite=1303;
+blockWalking=true; blockJumping=true; special=cannotBePickedUp;
+cloneFrom=piston_push3_extended;  special=dontCloneReactions;
+[ItemReaction] 
+ID=piston_push3_extended_up; element=timerUp; newID=piston_push3_up; fx=TinyStep;
+[ItemReaction] 
+ID=piston_push3_extended_up; element=mechanical; newID=piston_push3_extended_off_up;
+
+[ItemType]  name=Piston;
+ID=piston_push3_extended_off_up; sprite=1303;
+blockWalking=true; blockJumping=true; special=cannotBePickedUp;
+cloneFrom=piston_push3_extended_off;  special=dontCloneReactions;
+[ItemReaction] 
+ID=piston_push3_extended_off_up; element=mechanical; newID=piston_push3_up;
+
+
+
+[ItemType]  name=Force Turret;
+ID=turret_omni_wind; sprite=1336; 
+special=big; special=cannotBePickedUp;
+weight=200; itemCategory=hazard;
+journalID=journal_force_turret;
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=true;
+pR=zoneStoneDark;
+pB=pGrey;
+  element=wind;
+[ItemReaction] 
+ID=turret_omni_wind; element=mechanical; element=elec; action=turret_omni_wind_action;
+
+[ItemType]  name=Force Turret;
+ID=turret_wind; sprite=1337; 
+journalID=journal_force_turret;
+special=big; special=cannotBePickedUp;
+weight=200; itemCategory=hazard;
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=true;
+pR=zoneStoneDark;
+pB=pGrey;
+  element=wind;
+[ItemReaction] 
+ID=turret_wind; element=mechanical; element=elec; action=turret_wind_action;
+
+
+[ItemType]  name=Movable Force Turret;
+ID=turret_omni_wind_movable; sprite=1338; 
+description=When activated, shoots blasts of wind that damage and push.;
+itemCategory=hazard;
+journalID=journal_force_turret;
+special=big; volume=9999; weight=0; 
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=false;
+	special=cannotEverBePushed;
+pR=zoneStoneDark;
+pB=pGrey;
+  element=wind;
+[ItemReaction] 
+ID=turret_omni_wind_movable; element=mechanical; element=elec; element=focus; action=turret_omni_wind_action; newID=turret_omni_wind_movable_off;
+
+[JournalEntry]
+ID=journal_force_turret;
+category=item; halfPage=true; rarity=2;
+title=Force Turret;
+text=<itemBig=turret_omni_wind_movable><title=Force Turret><brAdj=>Powerful turret equipped with many wind triggers. It sends howling wind a great distance, dealing 10 damage and pushing 1 tile. It can be powered on by electrifying it or hooking it up to a switch of some sort. After firing, it must take <icon=time>1 to recharge.;
+
+[ItemType]  name=Movable Force Turret;
+ID=turret_omni_wind_movable_off; sprite=1338; 
+description=When activated, shoots blasts of wind that damage and push.;
+itemCategory=hazard;
+journalID=journal_force_turret;
+special=big; volume=9999; weight=0; 
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=false;
+	special=cannotEverBePushed; special=timer;
+	timer=1;
+pR=zoneStoneDark;
+pB=pBlack;
+  element=wind;
+[ItemReaction] 
+ID=turret_omni_wind_movable_off; element=timerUp; newID=turret_omni_wind_movable;
+
+[ItemType]  name=Arrow Fire;
+texture=items_weapons;
+ID=arrow_timer; pR=pR; pB=pB;
+sprite=183; spriteWhenHeld=215; itemCategory=hazard; 
+description=A powerful crossbow.; 
+special=canHangOnWalls; special=cannotBePickedUp; special=invisible;
+special=canAssignSpecialTC; special=timer; 
+timer=20;
+[ItemReaction]
+ID=arrow_timer; element=timerUp; action=skyArrow;
+[ItemReaction]
+ID=arrow_timer; element=mechanical; newID=mounted_xbow_off;
+  
+[ItemType]  name=Hot Coals;
+  ID=coals_hot1; sprite=640; weight=0;  itemCategory=hazard;
+  journalID=journal_coals_hot1;
+  description=Don't touch!!;
+  texture=items_building;
+  special=cannotBePickedUp; special=canHangOnWalls; special=reactsToPressure; special=moveCostOverride_2; special=alwaysBelowOtherItems; 
+  spawnFX=fireEmbers;
+  element=fire;
+  pR=pLaser;
+[ItemReaction] 
+ID=coals_hot1; element=pressureMoveAcross; element=pressurePlateDown; element=noMoveTaken; action=fireHazardDamage10; newID=coals_cool1; 
+[ItemReaction] 
+ID=coals_hot1; element=ice; element=wind; newID=coals_cool1; 
+[ItemLight] 
+ID=coals_hot1; red=0.9; blue=0.4; green=0.4; alpha=0.4; size=0.4; flicker=0.02;
+ texture=lightmask;
+[JournalEntry]
+ID=journal_coals_hot1;
+category=item; halfPage=true; rarity=0;
+title=Hot Coals;
+text=<itemBig=coals_hot1><title=Hot Coals><brAdj=>These burning coals will scorch your feet for 10 fire damage if you walk through them. Doing so extinguishes them, however.;
+[ItemType]  name=Coals;
+  ID=coals_cool1; sprite=641; weight=0;  itemCategory=hazard;
+  description=;
+  texture=items_building;
+  special=cannotBePickedUp; special=canHangOnWalls; 
+  special=alwaysBelowOtherItems;
+  pR=pAsh_still2;
+[ItemReaction] 
+ID=coals_cool1; element=fire; newID=coals_hot1; 
+  
+[ItemType]  name=Fire;
+  ID=fire; sprite=996; weight=0;  itemCategory=hazard;
+  description=Stay back, it's on fire!;
+  journalID=journal_fire;
+  special=animated; special=cannotBePickedUp; special=canHangOnWalls; special=timer; special=reactsToPressure; special=big; special=set0RotWhenPlaced;
+  special=moveCostOverride_2;
+  timer=20;  spawnFX=fireEmbers;
+  element=fire;
+[ItemLight] 
+ID=fire; red=1; blue=0.3; green=0.3; alpha=0.6; size=1.6; flicker=0.12;
+ texture=lightmask;
+[ItemReaction] 
+ID=fire; element=leavingZone; newID=X;
+[ItemReaction] 
+ID=fire; element=spawnFireWhirl; newID=fireWhirl;
+[ItemReaction] 
+ID=fire; element=timerUp; newID=fire_small; action=spreadFire;
+[ItemReaction] 
+ID=fire; element=water; element=wind; element=earth; element=ice; element=dispel; newID=X; fx=smokeCloud;
+[ItemReaction] 
+ID=fire; element=pressureMoveAcross; element=noMoveTaken; action=fireDamage; newID=X; 
+[ItemReaction] 
+ID=fire; element=pressurePlateDown; action=fireDamage_noBurn; newID=X; 
+[ItemReaction] 
+ID=fire; element=kindle; newID=fire; 
+
+[ItemType]  name=Fire;
+  ID=fire_fast;
+  cloneFrom=fire;
+  timer=3;
+  
+[ItemType]  name=Fire;
+  ID=fire_long; 
+  cloneFrom=fire;
+  timer=60;
+  
+[ItemType]  name=Fire;
+  ID=fire_long_depthMod; 
+  cloneFrom=fire;
+  timer=60;
+  depthMod=1050;
+[ItemType]  name=Fire;
+  ID=fire_eternal; sprite=996; weight=0;  itemCategory=hazard;
+  journalID=journal_fire;
+  special=animated; special=cannotBePickedUp; special=canHangOnWalls; special=set0RotWhenPlaced;
+  special=moveCostOverride_2; spawnFX=fireEmbers;
+  element=fire;
+[ItemLight] 
+ID=fire_eternal; red=1; blue=0.3; green=0.3; alpha=0.6; size=1.6; flicker=0.12; texture=lightmask;
+  
+[ItemType]  name=Fire;
+  ID=fire_small; sprite=1000; weight=0;  itemCategory=hazard;
+  description=Stay back, it's on fire!;
+  journalID=journal_fire;
+  special=animated; special=cannotBePickedUp; special=canHangOnWalls; special=timer; 
+  special=reactsToPressure; special=big; special=set0RotWhenPlaced;
+  special=moveCostOverride_2;
+  timer=30;  spawnFX=fireEmbers;
+  element=fire;
+[ItemReaction]
+ID=fire_small; element=leavingZone; newID=X;
+[ItemReaction]
+ID=fire_small; element=spawnFireWhirl; newID=fireWhirl;
+[ItemLight] 
+ID=fire_small; red=1; blue=0.3; green=0.3; alpha=0.8; size=0.8; flicker=0.10;
+ texture=lightmask;
+[ItemReaction]
+ID=fire_small; element=water; element=wind; element=earth; element=ice; element=dispel; element=timerUp; newID=X; fx=smokeCloud;
+[ItemReaction]
+ID=fire_small; element=oil; newID=fire; 
+[ItemReaction]
+ID=fire_small; element=pressureMoveAcross; element=noMoveTaken; action=fireDamage; newID=X; 
+[ItemReaction]
+ID=fire_small; element=pressurePlateDown; action=fireDamage_noBurn; newID=X; 
+[ItemReaction]
+ID=fire_small; element=kindle; newID=fire;
+[JournalEntry]
+ID=journal_fire;
+category=item; halfPage=true;
+title=Fire;
+text=<itemBig=fire><title=Fire!><brAdj=>Fire is a chemical reaction that releases heat & light. Fire starts when combustible material is exposed to enough oxygen and heat. Fire created under a target deals minor damage. Walking into pre-existing fire also inflicts Burn.;
+
+
+[ItemType]  name=Fire Whirl;
+ID=fireWhirl; sprite=988; itemCategory=hazard;
+journalID=journal_fireWhirl; 
+special=animated; special=cannotBePickedUp; special=timer; special=sprite2xHeight;
+blockWalking=true; blockJumping=true; spawnFX=fireWhirlEmbers; stackable=true;
+	depthMod=1050;
+timer=20;
+  element=fire;
+[ItemLight] 
+ID=fireWhirl; red=1; blue=0.5; green=0.5; alpha=0.75; size=1.6; flicker=0.10; texture=krypton;
+[ItemReaction] 
+ID=fireWhirl; element=water; element=ice; element=dispel; newID=X; fx=smokeCloud;
+[ItemReaction] 
+ID=fireWhirl; element=timerUp; action=fireWhirlDamage; newID=fireWhirl1;
+[ItemReaction] 
+ID=fireWhirl; element=leavingZone; newID=X;
+
+
+[ItemType]  name=Fire Whirl;
+ID=fireWhirl1; sprite=988; itemCategory=hazard;
+journalID=journal_fireWhirl;
+special=animated; special=cannotBePickedUp; special=timer; special=sprite2xHeight;
+blockWalking=true; blockJumping=true; spawnFX=fireWhirlEmbers; stackable=true;
+	depthMod=1050;
+timer=20;
+  element=fire;
+[ItemLight] 
+ID=fireWhirl1; red=1; blue=0.5; green=0.5; alpha=0.73; size=1.5; flicker=0.10; texture=krypton;
+[ItemReaction] 
+ID=fireWhirl1; element=water; element=ice; element=dispel;  newID=X; fx=smokeCloud;
+[ItemReaction] 
+ID=fireWhirl1; element=timerUp; action=fireWhirlDamage;  newID=fireWhirl2;
+[ItemReaction] 
+ID=fireWhirl1; element=leavingZone; newID=X;
+[ItemReaction] 
+ID=fireWhirl1; element=spawnFireWhirl; newID=fireWhirl;
+
+
+[ItemType]  name=Fire Whirl;
+ID=fireWhirl2; sprite=988; itemCategory=hazard;
+journalID=journal_fireWhirl;
+special=animated; special=cannotBePickedUp; special=timer; special=sprite2xHeight;
+blockWalking=true; blockJumping=true; spawnFX=fireWhirlEmbers; stackable=true;
+	depthMod=1050;
+timer=20;
+  element=fire;
+[ItemLight] 
+ID=fireWhirl2; red=1; blue=0.5; green=0.5; alpha=0.7; size=1.4; flicker=0.10; texture=krypton;
+[ItemReaction] 
+ID=fireWhirl2; element=water; element=ice; element=dispel; newID=X; fx=smokeCloud;
+[ItemReaction] 
+ID=fireWhirl2; element=timerUp; action=fireWhirlDamage;  newID=fireWhirl3;
+[ItemReaction] 
+ID=fireWhirl2; element=leavingZone; newID=X;
+[ItemReaction] 
+ID=fireWhirl2; element=spawnFireWhirl; newID=fireWhirl;
+
+[ItemType]  name=Fire Whirl;
+ID=fireWhirl3; sprite=988; itemCategory=hazard;
+journalID=journal_fireWhirl;
+special=animated; special=cannotBePickedUp; special=timer; special=sprite2xHeight;
+blockWalking=true; blockJumping=true; spawnFX=fireWhirlEmbers; stackable=true;
+	depthMod=1050;
+timer=20;
+  element=fire;
+[ItemLight] 
+ID=fireWhirl3; red=1; blue=0.5; green=0.5; alpha=0.65; size=1.2; flicker=0.12; texture=krypton;
+[ItemReaction] 
+ID=fireWhirl3; element=water; element=ice; element=dispel; newID=X; fx=smokeCloud;
+[ItemReaction] 
+ID=fireWhirl3; element=timerUp; action=fireWhirlDamage;  newID=fire;
+[ItemReaction] 
+ID=fireWhirl3; element=leavingZone; newID=X;
+[ItemReaction] 
+ID=fireWhirl3; element=spawnFireWhirl; newID=fireWhirl;
+
+[JournalEntry]
+ID=journal_fireWhirl;
+category=item; halfPage=true; rarity=1;
+title=Fire Whirl;
+text=<itemBig=fireWhirl><title=Fire Whirl><brAdj=>Flame caught in a vortex of wind. They can occur naturally from wildfires or lightning strikes. Also referred to as a fire tornado or fire devil.;
+
+
+
+
+[ItemType]  name=Glow;
+  ID=glow_circle; sprite=1008; weight=0; itemCategory=hazard;
+  special=animated; special=cannotBePickedUp;
+[ItemLight] 
+ID=glow_circle; red=0.5; blue=1; green=0.5; alpha=0.6; size=0.4; flicker=0.05;
+
+[ItemType]  name=Gate;
+  ID=gate_item; sprite=1028; weight=0;  itemCategory=hazard;
+  description=;
+  journalID=journal_gate;
+  special=animated; special=cannotBePickedUp; 
+  special=canHangOnWalls; special=noPlayerPlacedItems;
+  spawnFX=horizSpark_many_sudden;
+  depthMod=1050;
+  blockWalking=true; blockJumping=true;
+[ItemLight] 
+ID=gate_item; red=1; blue=1; green=0; alpha=0.6; size=0.3; flicker=0.12;
+
+[ItemType]  name=Gate;
+  ID=gate_item_noCollision;
+  journalID=journal_gate;
+  cloneFrom=gate_item;
+  blockWalking=false; blockJumping=false;
+
+[JournalEntry]
+ID=journal_gate;
+category=item; halfPage=true;  rarity=3; rewardMod=-100;
+title=Gate;
+text=<itemBig=gate_item><title=Gate><brAdj=>A magical Gate that teleports anything that enters it. It seems stable enough... but who knows where it will lead?;
+
+
+
+[ItemType]  name=Blood;
+ID=blood_pool; sprite=916; stackable=true; itemCategory=hazard;
+journalID=journal_blood;
+special=cannotBePickedUp;  special=transparent; special=canHangOnWalls;
+special=quantityChangesSprite_upTo5;
+
+[ItemType]  name=Blood;
+ID=blood_seeping; sprite=948; stackable=true; itemCategory=hazard;
+journalID=journal_blood;
+special=cannotBePickedUp;  special=transparent; special=canHangOnWalls;
+special=quantityChangesSprite_upTo5;
+
+[ItemType]  name=Blood;
+ID=blood_trail; sprite=943; stackable=true; itemCategory=hazard;
+journalID=journal_blood;
+special=cannotBePickedUp;  special=transparent; special=canHangOnWalls;
+special=quantityChangesSprite_upTo4;
+[JournalEntry]
+ID=journal_blood;
+category=item; halfPage=true;
+title=Blood;
+text=<itemBig=blood_trail><itemBig=blood_pool><title=Blood><brAdj=>Vital bodily fluid that moves nutrients & air across the body. Blood is best kept inside a living thing, not splashed on the floor like this.;
+
+
+[ItemType]  name=Plasma;
+  ID=plasma_bomb; sprite=1032; weight=330;  itemCategory=hazard;
+  description=Unstable energy moments away from exploding.;
+  special=animated; special=canHangOnWalls; special=big; special=timer;
+  spawnFX=chargeSpiralFast_many; 
+  journalID=journal_plasma_bomb;
+timer=35;
+  blockWalking=true; blockJumping=true;
+  pR=pBW;
+[ItemLight]
+ID=plasma_bomb; red=0.8; blue=0.6; green=0.8; alpha=0.6; size=0.3; flicker=0.12;
+[ItemReaction]
+ID=plasma_bomb; element=timerUp; element=elec; element=focus; element=oil; action=plasma_explosion; newID=X;
+[ItemReaction]
+ID=plasma_bomb; element=ice; element=water; element=ruin; element=dispel; newID=X; fx=casting;
+[JournalEntry]
+ID=journal_plasma_bomb;
+category=item; halfPage=true;
+title=Plasma;
+text=<itemBig=plasma_bomb><title=Plasma><brAdj=>This swirling mass of energy is moments away from exploding, causing 20 damage in a cross pattern and burning anything unfortunate enough stand too close.;
+
+
+[ItemType]  name=Current;
+ID=waterCurrent; sprite=2036; 
+journalID=;
+itemCategory=hazard;
+special=cannotBePickedUp; special=animated;
+special=moveCostOverride_2;
+special=canHangOnWalls;
+special=canFloatOnWater;
+special=timer;
+special=hideTimer;
+special=fullTileHitbox;
+timer=5;
+element=water;
+pB=zoneWater;
+[ItemReaction] 
+ID=waterCurrent; element=timerUp; action=conveyorBelt_action;
+[ItemReaction] 
+ID=waterCurrent; element=ice; newID=waterCurrent_frozen;
+
+[ItemType]  name=Current;
+ID=waterCurrent_below;
+cloneFrom=waterCurrent;
+special=dontCloneReactions;
+depthMod=-2000;
+[ItemReaction] 
+ID=waterCurrent_below; element=timerUp; action=conveyorBelt_action;
+[ItemReaction] 
+ID=waterCurrent_below; element=ice; newID=waterCurrent_frozen_below;
+
+ 
+[ItemType]  name=Current;
+ID=waterCurrent_frozen; sprite=2036; 
+journalID=;
+itemCategory=hazard;
+special=cannotBePickedUp;
+special=moveCostOverride_2;
+special=canHangOnWalls;
+special=canFloatOnWater;
+special=fullTileHitbox;
+element=water;
+pB=pIce;
+[ItemReaction] 
+ID=waterCurrent_frozen; element=fire; element=heat; newID=waterCurrent;
+
+[ItemType]  name=Current;
+ID=waterCurrent_frozen_below;
+cloneFrom=waterCurrent_frozen;
+special=dontCloneReactions;
+depthMod=-2000;
+pB=pIce;
+[ItemReaction] 
+ID=waterCurrent_frozen_below; element=fire; element=heat; newID=waterCurrent_below;
+
+
+[ItemType]  name=<color=Red>Vein;
+  ID=vein_atkL; sprite=2147; weight=330;  itemCategory=hazard;
+  description=;
+  special=canHangOnWalls; special=big; special=timer;
+  special=anim_bobUpAndDown; special=canFloatOnWater;
+  special=canBeInsideWalls;
+timer=30;
+  blockWalking=true; blockJumping=true;
+  pR=pR;
+[ItemLight]
+ID=vein_atkL; red=0.8; blue=0; green=0; alpha=0.4; size=0.2; flicker=0.02;
+[ItemReaction]
+ID=vein_atkL; element=timerUp; action=heart_stabL; newID=X;
+[ItemReaction]
+ID=vein_atkL; element=physical; element=explode; 
+element=fire; element=ice; element=elec; element=wind; element=ruin;
+newID=X; fx=dust_bubble_dark;
+
+[ItemType]  name=<color=Red>Vein;
+  ID=vein_atkR;  sprite=2148;
+  cloneFrom=vein_atkL;
+  special=dontCloneReactions;
+[ItemReaction]
+ID=vein_atkR; element=timerUp; action=heart_stabR; newID=X;
+[ItemReaction]
+ID=vein_atkR; element=physical; element=explode; 
+element=fire; element=ice; element=elec; element=wind; element=ruin;
+newID=X; fx=dust_bubble_dark;
+
+
+
+[ItemType]  name=<color=Red>Vein;
+  ID=vein_atk_slam; sprite=2149; weight=330;  itemCategory=hazard;
+  description=;
+  special=canHangOnWalls; special=big; special=timer;
+  special=anim_bobLeftAndRight_slow; special=canFloatOnWater;
+  special=canBeInsideWalls;
+timer=8;
+  blockWalking=true; blockJumping=true;
+  pR=pR;
+[ItemReaction]
+ID=vein_atk_slam; element=timerUp; action=heart_slam; newID=X;
+[ItemReaction]
+ID=vein_atk_slam; element=physical; element=explode; 
+element=fire; element=ice; element=elec; element=wind; element=ruin;
+newID=X; fx=dust_bubble_dark;
+
+
+[ItemType]  name=<color=Red>Vine;
+ID=vine_atkL; sprite=2147; weight=330;  itemCategory=hazard;
+journalID=journal_vine_atk;
+special=canHangOnWalls; special=big; special=timer;
+special=anim_bobUpAndDown; special=canFloatOnWater;
+special=canBeInsideWalls; special=canAlwaysFitInTile;
+timer=20;
+blockWalking=true; blockJumping=true;
+pR=zoneGrass;
+[ItemLight]
+ID=vine_atkL; red=0; blue=0; green=0.28; alpha=0.2; size=0.2; flicker=0;
+[ItemReaction]
+ID=vine_atkL; element=timerUp; action=vine_stabL; newID=X;
+[ItemReaction]
+ID=vine_atkL; element=physical; element=explode; 
+element=fire; element=ice; element=elec; element=ruin;
+newID=vine_atkL_delayed; fx=dust_bubble_dark;
+
+[ItemType]  name=<color=Red>Vine;
+ID=vine_atkR;  sprite=2148;
+cloneFrom=vine_atkL;
+special=dontCloneReactions;
+[ItemReaction]
+ID=vine_atkR; element=timerUp; action=vine_stabR; newID=X;
+[ItemReaction]
+ID=vine_atkR; element=physical; element=explode; 
+element=fire; element=ice; element=elec; element=ruin;
+newID=vine_atkR_delayed; fx=dust_bubble_dark;
+
+
+[ItemType]  name=<color=Red>Vine;
+ID=vine_atkL_delayed; sprite=2147; weight=330;  itemCategory=hazard;
+journalID=journal_vine_atk;
+special=canHangOnWalls; special=big; special=timer;
+special=canFloatOnWater; special=canBeInsideWalls; special=canAlwaysFitInTile;
+timer=15;
+blockWalking=true; blockJumping=true;
+pR=pGrey3;
+[ItemReaction]
+ID=vine_atkL_delayed; element=timerUp; newID=vine_atkL;
+
+[ItemType]  name=<color=Red>Vine;
+ID=vine_atkR_delayed;  sprite=2148;
+cloneFrom=vine_atkL_delayed;
+special=dontCloneReactions;
+[ItemReaction]
+ID=vine_atkR_delayed; element=timerUp; newID=vine_atkR;
+[JournalEntry]
+ID=journal_vine_atk;
+category=item; halfPage=true; rarity=1;
+title=Vine (Hazard);
+text=<itemBig=vine_atkL><title=Vine><brAdj=>Massive vine that protrudes from the walls. Wriggles unnaturally while dormant, then lashes out wildly. Try not to be anywhere nearby when that happens! It's not clear whether this is just how the plant acts, or if some being somewhere is controlling it. Damaging it delays its attack briefly.;
+
+
+[ItemType]  name=Vine Generator;
+ID=vine_atk_generatorL; sprite=2147; weight=330;  itemCategory=hazard;
+special=canHangOnWalls; special=timer; special=canFloatOnWater;
+special=canBeInsideWalls; special=canAlwaysFitInTile;
+special=invisible; 
+timer=40;
+pR=pBW;
+[ItemReaction]
+ID=vine_atk_generatorL; element=timerUp; spawnItem=vine_atkL; fx=vine_spawnL;
+
+[ItemType]
+ID=vine_atk_generatorR;  sprite=2148;
+cloneFrom=vine_atk_generatorL;
+special=dontCloneReactions;
+[ItemReaction]
+ID=vine_atk_generatorR; element=timerUp; spawnItem=vine_atkR; fx=vine_spawnR;
+
+[ItemType] name=Stone Mushroom;
+ID=myconid_stone; 
+itemCategory=hazard;
+description=Statue of a large mushroom.;
+ sprite=1857; special=canAlwaysFitInTile; special=itemsOnSameTileAreRaised; special=preventTileReactions; special=cannotBePickedUp; special=canAssignSpecialTC;
+ weight=800; volume=800;
+ blockLoS=false; blockLoE=true; blockWalking=true; blockJumping=true;
+ pG=pGrey2;
+[ItemReaction] 
+ID=myconid_stone; element=mechanical; action=moveSelf;
+ 
+[JournalEntry]
+ID=item_myconid_stone;
+category=item; halfPage=true; rarity=2;
+title=Stone Mushroom;
+text=<itemBig=myconid_stone><title=Stone Mushroom><brAdj=>An extremely intricate statue of a mushroom. It's incredibly lifelike and astoundingly durable - even a hammer can't dent it.;
+
+
+[ItemType] name=Ruluorn Queen;
+ID=ruluorn_queen1; 
+itemCategory=hide;
+description=;
+journalID=journal_ruluorn_queen;
+ sprite=1944; special=canAlwaysFitInTile; special=preventTileReactions; special=cannotBePickedUp; special=animatedSlow;
+ special=sprite2xWidth; special=sprite2xHeight;
+ weight=8000; volume=8000;
+ blockLoS=false; blockLoE=true; blockWalking=true; blockJumping=true;
+ pR=pRuluorn;
+ pB=pRuluorn;
+ spawnFX=risingDust;
+ 
+[ItemType] name=Ruluorn Queen;
+ID=ruluorn_queen2; 
+cloneFrom=ruluorn_queen1;
+ spawnFX=risingDust;
+ sprite=2008; 
+ [JournalEntry]
+ID=journal_ruluorn_queen;
+category=item; halfPage=true; rarity=5;
+title=Ruluorn Queen;
+text=<itemBig=ruluorn_queen1><title=Ruluorn Queen><brAdj=>Withered corpse of a Ruluorn Queen- a lifeform created by the voluntary and permanent fusion of two Ruluorn.;
+ 
+[ItemType] name=Ruluorn Heart;
+ID=ruluorn_heart; 
+itemCategory=hide;
+journalID=journal_ruluorn_heart;
+description=;
+ sprite=1912; special=canAlwaysFitInTile; special=preventTileReactions; special=cannotBePickedUp; special=animatedSlow;
+ special=sprite2xWidth;
+ spawnFX=horizSpark_many_sudden;
+ weight=8; volume=8;
+ pR=pBW;
+ [JournalEntry]
+ID=journal_ruluorn_heart;
+category=item; halfPage=false; rarity=5;
+title=Ruluorn Heart;
+text=<itemBig=ruluorn_heart><title=Ruluorn Heart><brAdj=>Heart of a Ruluorn Queen. It pulsates with immense power beyond anything you've seen before.<n=>Necromancy has been used to sustain and control the heart, allowing Ekrast to use the massive magical power of the Ruluorn Queen to create gates.;
+
+[ItemType]  name=Spire;
+ID=spire_fx; sprite=90; special=noTooltip;
+itemCategory=hide;
+spawnFX=spire_black;
+
+[ItemType]  name=Smoke Balm;
+ID=smoke_balm1; sprite=1052; 
+journalID=;
+weight=1; itemCategory=hazard;
+special=cannotBePickedUp;
+special=reactionsDontPreventMoveUndo;
+special=applyAVEffectsToTile; 
+special=animatedPauseOnFrame1and3; pR=pFade; pG=pFade; pB=pFade; --special=supertransparent;
+special=canBeInsideWalls; special=canHangOnWalls; special=canFloatOnWater;
+special=randomFlipWhenPlaced; special=canAlwaysFitInTile; 
+special=fullTileHitbox;
+special=timer; timer=80;
+depthMod=1052;
+  element=wind;
+[ItemEffect]
+ID=smoke_balm1; actorValue=PhysEva; magnitude=25; duration=-1;
+[ItemEffect]
+ID=smoke_balm1; actorValue=PhysEvaFlank; magnitude=25; duration=-1;
+[ItemReaction]
+ID=smoke_balm1; element=timerUp; element=wind; newID=X;
+[ItemReaction] 
+ID=smoke_balm1; element=endTurn; action=smoke_balm1_act;
+[ItemReaction] 
+ID=smoke_balm1; element=leavingZone; newID=X;
+
+[ItemType]  name=Turret (5 left);
+itemCategory=hazard;
+ID=mechanist_turret1; sprite=1817; weight=200; volume=300;
+description=Automatic mechanist turret.;
+journalID=journal_mechanist_turret;
+special=rotateWhenUsed; special=canReactIndefinitely;
+special=dontCloneReactions; special=timer;
+special=addCastersRotationOnSpawn;
+special=animated;
+blockWalking=true; stackable=true;
+pR=pGreyD2; pB=pGreyD2;
+pG=pVolskarnEmpty; 
+timer=20;
+element=elec;
+[ItemReaction]
+ID=mechanist_turret1; element=timerUp;
+newID=mechanist_turret2; action=mechanist_turret_shoot;
+[ItemReaction]
+ID=mechanist_turret1; element=focus; action=useSelf; fx=horizSpark_many;
+[ItemReaction]
+ID=mechanist_turret1; element=dispel; newID=mechanist_turret6; 
+[ItemReaction]
+ID=mechanist_turret1; 
+element=fire; element=physical; element=explode; element=water; element=elec;
+ newID=X; action=mechanist_turret_explode; fx=horizSpark_many;
+[ItemReaction] 
+ID=mechanist_turret1; element=leavingZone; newID=X;
+
+[ItemType]  name=Turret (4 left);
+ID=mechanist_turret2;
+cloneFrom=mechanist_turret1; special=dontCloneReactions;
+[ItemReaction]
+ID=mechanist_turret2; element=timerUp;
+newID=mechanist_turret3; action=mechanist_turret_shoot;
+[ItemReaction]
+ID=mechanist_turret2; element=focus; action=useSelf; fx=horizSpark_many;
+[ItemReaction]
+ID=mechanist_turret2; element=dispel; newID=mechanist_turret6; 
+[ItemReaction]
+ID=mechanist_turret2; 
+element=fire; element=physical; element=explode; element=water; element=elec;
+ newID=X; action=mechanist_turret_explode; fx=horizSpark_many;
+[ItemReaction] 
+ID=mechanist_turret2; element=leavingZone; newID=X;
+
+[ItemType]  name=Turret (3 left);
+ID=mechanist_turret3;
+sprite=1849;
+cloneFrom=mechanist_turret1; special=dontCloneReactions;
+[ItemReaction]
+ID=mechanist_turret3; element=timerUp;
+newID=mechanist_turret4; action=mechanist_turret_shoot;
+[ItemReaction]
+ID=mechanist_turret3; element=elec; element=focus; action=useSelf; fx=horizSpark_many;
+[ItemReaction]
+ID=mechanist_turret3; element=dispel; newID=mechanist_turret6; 
+[ItemReaction]
+ID=mechanist_turret3; 
+element=fire; element=physical; element=explode; element=water; element=elec;
+ newID=X; action=mechanist_turret_explode; fx=horizSpark_many;
+[ItemReaction] 
+ID=mechanist_turret3; element=leavingZone; newID=X;
+
+
+[ItemType]  name=Turret (2 left);
+ID=mechanist_turret4;
+sprite=1849;
+cloneFrom=mechanist_turret1; special=dontCloneReactions;
+[ItemReaction]
+ID=mechanist_turret4; element=timerUp;
+newID=mechanist_turret5; action=mechanist_turret_shoot;
+[ItemReaction]
+ID=mechanist_turret4; element=focus; action=useSelf; fx=horizSpark_many;
+[ItemReaction]
+ID=mechanist_turret4; element=dispel; newID=mechanist_turret6; 
+[ItemReaction]
+ID=mechanist_turret4; 
+element=fire; element=physical; element=explode; element=water; element=elec;
+ newID=X; action=mechanist_turret_explode; fx=horizSpark_many;
+[ItemReaction] 
+ID=mechanist_turret4; element=leavingZone; newID=X;
+
+[ItemType]  name=Turret (1 left);
+ID=mechanist_turret5;
+sprite=1881;
+cloneFrom=mechanist_turret1; special=dontCloneReactions;
+[ItemReaction]
+ID=mechanist_turret5; element=timerUp;
+newID=mechanist_turret6; action=mechanist_turret_shoot;
+[ItemReaction]
+ID=mechanist_turret5; element=focus; action=useSelf; fx=horizSpark_many;
+[ItemReaction]
+ID=mechanist_turret5; element=dispel; newID=mechanist_turret6; 
+[ItemReaction]
+ID=mechanist_turret5; 
+element=fire; element=physical; element=explode; element=water; element=elec;
+ newID=X; action=mechanist_turret_explode; fx=horizSpark_many;
+[ItemReaction] 
+ID=mechanist_turret5; element=leavingZone; newID=X;
+[ItemType]  name=Turret;
+ID=mechanist_turret6;
+itemCategory=hazard; sprite=1881; weight=200; volume=300;
+special=timer; stackable=true;
+journalID=journal_mechanist_turret;
+blockWalking=true;
+pR=pGreyD2; pB=pGreyD2;
+pG=pGreyD; 
+element=elec;
+timer=15;
+[ItemReaction]
+ID=mechanist_turret6; 
+element=timerUp; element=focus; 
+element=fire; element=physical; element=explode; element=water; element=elec;
+ newID=X; action=mechanist_turret_explode; fx=horizSpark_many;
+[ItemReaction] 
+ID=mechanist_turret6; element=leavingZone; newID=X;
+
+[JournalEntry]
+ID=journal_mechanist_turret;
+category=item; halfPage=true; rarity=1;
+title=Portable Turret;
+text=<itemBig=mechanist_turret1><title=Portable Turret><brAdj=>A mechanist creation that fires repeatedly. 'Use' it or shock it to rotate it.;
+ 
+ 
+[ItemType]  name=Remote Flare;
+description=;
+ID=remote_flare; sprite=1689; special=animated; special=timer;
+itemCategory=hazard; weight=200;
+timer=300; stackable=true;
+pR=pRed4; pB=pPurple;
+pG=pR;
+volume=10000000; value=0;
+  element=fire;
+[ItemReaction] 
+ID=remote_flare; element=timerUp; element=replaceCapsule; newID=X; fx=remote_item_fade; aiRatingMod=-99;
+[ItemReaction] 
+ID=remote_flare; element=elec; element=focus; newID=X; action=mechanist_flare_explode;
+fx=remote_item_exploding;
+[ItemReaction] 
+ID=remote_flare; element=leavingZone; newID=X;
+[ItemLight]
+ID=remote_flare; red=0.8; blue=0; green=0; alpha=0.3; size=0.1; flicker=0.02;
+
+[ItemType]  name=Remote Pulse;
+description=;
+ID=remote_pulse; sprite=1689; special=animated; special=timer;
+itemCategory=hazard; weight=200;
+timer=300; stackable=true;
+special=reactionDoesntApplyItemRot;
+pR=pGreyD; pB=pTeal;
+pG=pWhite;
+volume=10000000; value=0;
+  element=wind;
+[ItemReaction] 
+ID=remote_pulse; element=timerUp; element=replaceCapsule; newID=X; fx=remote_item_fade; aiRatingMod=-99;
+[ItemReaction] 
+ID=remote_pulse; element=elec; element=focus; newID=X; action=mechanist_pulse_explode;
+fx=remote_item_exploding;
+
+[ItemReaction] 
+ID=remote_pulse; element=leavingZone; newID=X;
+[ItemLight]
+ID=remote_pulse; red=0.8; blue=0.8; green=0.8; alpha=0.3; size=0.1; flicker=0.02;
+
+[ItemType]  name=Remote Frost;
+description=;
+ID=remote_frost; sprite=1689; special=animated; special=timer;
+itemCategory=hazard; weight=200;
+timer=300; stackable=true;
+pR=pTeal2; pB=pGreyblue2;
+pG=pB;
+volume=10000000; value=0;
+  element=ice;
+[ItemReaction] 
+ID=remote_frost; element=timerUp; element=replaceCapsule; newID=X; fx=remote_item_fade; aiRatingMod=-99;
+[ItemReaction] 
+ID=remote_frost; element=elec; element=focus; newID=X; action=mechanist_frost_explode;
+fx=remote_item_exploding;
+
+[ItemReaction] 
+ID=remote_frost; element=leavingZone; newID=X;
+[ItemLight]
+ID=remote_frost; red=0; blue=0.8; green=0; alpha=0.3; size=0.1; flicker=0.02;
+[ItemType]  name=Remote Heal;
+description=;
+ID=remote_heal; sprite=1689; special=animated; special=timer;
+itemCategory=hazard; weight=200;
+timer=300; stackable=true;
+pR=pYellow4; pB=pOrange;
+pG=pG;
+volume=10000000; value=0;
+  element=life;
+[ItemReaction] 
+ID=remote_heal; element=timerUp; element=replaceCapsule; newID=X; fx=remote_item_fade; aiRatingMod=-99;
+[ItemReaction] 
+ID=remote_heal; element=elec; element=focus; newID=X; action=mechanist_heal_explode;
+fx=remote_item_exploding;
+
+[ItemReaction] 
+ID=remote_heal; element=leavingZone; newID=X;
+[ItemLight]
+ID=remote_heal; red=0.8; blue=0; green=0.5; alpha=0.3; size=0.1; flicker=0.02;
+[ItemType]  name=Portable Wall;
+  ID=mechanist_wall; sprite=1658; weight=200; volume=200; 
+  itemCategory=hazard;
+  special=cannotBePickedUp; special=transparent; special=timer;
+  special=addCastersRotationOnSpawn;
+  blockLoE=true; blockWalking=true; blockJumping=true;
+	pR=pGreyD2; pB=pGreyD2;
+  timer=120;
+element=elec;
+[ItemReaction] 
+ID=mechanist_wall; element=elec; element=focus; newID=mechanist_wall_off; fx=portableWallClose;
+[ItemReaction] 
+ID=mechanist_wall; element=explode; element=smash; element=dispel;
+ element=timerUp; newID=X; fx=horizSpark_many; aiRatingMod = 4;
+ 
+[ItemReaction] 
+ID=mechanist_wall; element=leavingZone; newID=X;
+
+[ItemType]  name=Portable Wall;
+  ID=mechanist_wall_off; sprite=1657; weight=200; volume=200; 
+  itemCategory=hazard;
+  special=cannotBePickedUp; special=transparent; special=timer;
+  special=addCastersRotationOnSpawn;
+	pR=pGreyD2; pB=pGreyD2;
+  timer=120;
+element=elec;
+[ItemReaction]
+ID=mechanist_wall_off; element=elec; element=focus; newID=mechanist_wall; fx=portableWallOpen;
+[ItemReaction] 
+ID=mechanist_wall_off; element=explode; element=smash; element=dispel;
+ element=timerUp; newID=X; fx=horizSpark_many;
+
+[ItemReaction] 
+ID=mechanist_wall_off; element=leavingZone; newID=X;
+
+
+[ItemType]  name=Conveyor Belt;
+ID=mechanist_conveyorBelt; sprite=1913; 
+itemCategory=hazard;
+weight=300; stackable=true;
+special=cannotBePickedUp; special=animated;
+special=addCastersRotationOnSpawn;
+special=timer; special=canAlwaysFitInTileWhenSpawned;
+timer=5;
+element=elec;
+pR=p1; pB=p2; pG=p3;
+[ItemReaction]
+ID=mechanist_conveyorBelt; element=timerUp; action=conveyorBelt_action; quantityMod=-1;
+
+[ItemType]  name=Medkit;
+description=Medical kit. Heals whoever ends their turn on it.;
+ID=medkit; sprite=1821;
+itemCategory=hazard; weight=200;
+timer=300; stackable=true;
+special=timer;
+pR=pRed2; pB=pBuralk;
+pG=pGrey;
+volume=10000000; value=0;
+  element=life;
+[ItemReaction]
+ID=medkit; element=endTurn; newID=X; action=medkit_action;
+[ItemReaction]
+ID=medkit; element=timerUp; element=replaceCapsule; fx=medkit_fade; newID=X; aiRatingMod=-99;
+[ItemReaction]
+ID=medkit; element=leavingZone; newID=X;
+
+[ItemType]  name=Point 0;
+ID=travelPoint_0; sprite=854; 
+itemCategory=hazard;
+description=Travel to point 0 sends the player here.;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point0;
+[ItemType]  name=Point 1;
+ID=travelPoint_1; sprite=855; 
+itemCategory=hazard;
+description=Travel to point 1 sends the player here.;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point1;
+[ItemType]  name=Point 2;
+ID=travelPoint_2; sprite=856; 
+itemCategory=hazard;
+description=Travel to point 2 sends the player here.;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point2;
+[ItemType]  name=Point 3;
+ID=travelPoint_3; sprite=857; 
+itemCategory=hazard;
+description=Travel to point 3 sends the player here.;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point3;
+
+[ItemType]  name=Point 4;
+ID=travelPoint_4; sprite=858; 
+itemCategory=hazard;
+description=Travel to point 4 sends the player here.;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point4;
+
+[ItemType]  name=Point 5;
+ID=travelPoint_5; sprite=859; 
+itemCategory=hazard;
+description=Travel to point 5 sends the player here.;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point5;
+
+[ItemType]  name=Point 6;
+ID=travelPoint_6; sprite=860; 
+itemCategory=hazard;
+description=Travel to point 6 sends the player here.;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point6;
+
+[ItemType]  name=Point 7;
+ID=travelPoint_7; sprite=861; 
+itemCategory=hazard;
+description=Travel to point 7 sends the player here.;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point7;
+
+[ItemType]  name=Point 8;
+ID=travelPoint_8; sprite=862; 
+itemCategory=hazard;
+description=Travel to point 8 sends the player here.;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point8;
+
+[ItemType]  name=Point 9;
+ID=travelPoint_9; sprite=863; 
+itemCategory=hazard;
+description=Travel to point 9 sends the player here.;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point9;
+
+[ItemType]  name=Point 0B;
+ID=travelPoint_0B; sprite=854; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point0B;
+pR=pB;
+[ItemType]  name=Point 1B;
+ID=travelPoint_1B; sprite=855; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point1B;
+pR=pB;
+[ItemType]  name=Point 2B;
+ID=travelPoint_2B; sprite=856; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point2B;
+pR=pB;
+[ItemType]  name=Point 3B;
+ID=travelPoint_3B; sprite=857; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point3B;
+pR=pB;
+[ItemType]  name=Point 4B;
+ID=travelPoint_4B; sprite=858; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point4B;
+pR=pB;
+[ItemType]  name=Point 5B;
+ID=travelPoint_5B; sprite=859; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point5B;
+pR=pB;
+[ItemType]  name=Point 6B;
+ID=travelPoint_6B; sprite=860; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point6B;
+pR=pB;
+[ItemType]  name=Point 7B;
+ID=travelPoint_7B; sprite=861; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point7B;
+pR=pB;
+[ItemType]  name=Point 8B;
+ID=travelPoint_8B; sprite=862; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point8B;
+pR=pB;
+[ItemType]  name=Point 9B;
+ID=travelPoint_9B; sprite=863; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point9B;
+pR=pB;
+
+
+[ItemType]  name=Point 0C;
+ID=travelPoint_0C; sprite=854; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point0C;
+pR=pG;
+[ItemType]  name=Point 1C;
+ID=travelPoint_1C; sprite=855; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point1C;
+pR=pG;
+[ItemType]  name=Point 2C;
+ID=travelPoint_2C; sprite=856; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point2C;
+pR=pG;
+[ItemType]  name=Point 3C;
+ID=travelPoint_3C; sprite=857; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point3C;
+pR=pG;
+[ItemType]  name=Point 4C;
+ID=travelPoint_4C; sprite=858; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point4C;
+pR=pG;
+[ItemType]  name=Point 5C;
+ID=travelPoint_5C; sprite=859; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point5C;
+pR=pG;
+[ItemType]  name=Point 6C;
+ID=travelPoint_6C; sprite=860; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point6C;
+pR=pG;
+[ItemType]  name=Point 7C;
+ID=travelPoint_7C; sprite=861; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point7C;
+pR=pG;
+[ItemType]  name=Point 8C;
+ID=travelPoint_8C; sprite=862; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point8C;
+pR=pG;
+[ItemType]  name=Point 9C;
+ID=travelPoint_9C; sprite=863; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point9C;
+pR=pG;
+
+
+[ItemType]  name=Point 0D;
+ID=travelPoint_0D; sprite=854; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point0D;
+pR=pDirt;
+[ItemType]  name=Point 1D;
+ID=travelPoint_1D; sprite=855; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point1D;
+pR=pDirt;
+[ItemType]  name=Point 2D;
+ID=travelPoint_2D; sprite=856; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point2D;
+pR=pDirt;
+[ItemType]  name=Point 3D;
+ID=travelPoint_3D; sprite=857; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point3D;
+pR=pDirt;
+[ItemType]  name=Point 4D;
+ID=travelPoint_4D; sprite=858; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point4D;
+pR=pDirt;
+[ItemType]  name=Point 5D;
+ID=travelPoint_5D; sprite=859; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point5D;
+pR=pDirt;
+[ItemType]  name=Point 6D;
+ID=travelPoint_6D; sprite=860; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point6D;
+pR=pDirt;
+[ItemType]  name=Point 7D;
+ID=travelPoint_7D; sprite=861; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point7D;
+pR=pDirt;
+[ItemType]  name=Point 8D;
+ID=travelPoint_8D; sprite=862; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point8D;
+pR=pDirt;
+[ItemType]  name=Point 9D;
+ID=travelPoint_9D; sprite=863; 
+itemCategory=hazard;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=travel_point9D;
+pR=pDirt;
+
+[ItemType]  name=Spawn Point;
+ID=travelPoint_nonspecific; sprite=854; 
+itemCategory=hazard;
+description=Spawn point for enemy hordes. Used by triggers.;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile; special=canRot45deg;
+special=spawnpoint;
+pR=pWhite;
+
+[ItemType]  name=Player-created Building Center;
+ID=sport_building_center; sprite=1032; 
+itemCategory=hazard;
+description=Marker for the center of a player-created building.;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile;
+pR=pWhite;
+
+[ItemType]  name=Museum Tile;
+ID=sport_building_museum_tile; sprite=1032; 
+itemCategory=hazard;
+description=Marker tile that is evaluated for museums.;
+special=invisible; special=ignoreDarkness;
+special=noTooltips; special=cannotBePickedUp;
+special=canAlwaysFitInTile;
+pR=pB;
+
+
+[ItemType]  name=Light;
+ID=sunbeam;  sprite=251;
+weight=0; itemCategory=hazard; 
+pR=pGold; pG=pGreyD; pB=pBlack;
+special=canHangOnWalls; special=cannotBePickedUp; special=invisible; special=ignoreHeight;
+special=ignoreBeingRaised;
+special=noTooltip; special=canBeInsideWalls; special=canFloatOnWater;
+special=ignoreDarkness;
+[ItemLight] 
+ID=sunbeam; texture=lightmaskSunbeam; red=1; blue=0.8; green=0.85; alpha=1; size=1; Y=-0.5;
+
+[ItemType]  name=Light (Flipped);
+ID=sunbeam_flipped;  cloneFrom=sunbeam; 
+[ItemLight] 
+ID=sunbeam_flipped; texture=lightmaskSunbeam; red=1; blue=0.8; green=0.85; alpha=1; size=1;
+X=0; Y=-0.5; flip=true;
+
+
+[ItemType]  name=Light X Adjusted;
+ID=sunbeam_X; cloneFrom=sunbeam;
+pB=pR; 
+[ItemLight] 
+ID=sunbeam_X; texture=lightmaskSunbeam; red=1; blue=0.8; green=0.85; alpha=1; size=1;
+X=0.5; Y=-0.5;
+
+[ItemType]  name=Light X Adjusted (Flipped);
+ID=sunbeam_X_flipped; cloneFrom=sunbeam; 
+pB=pR; 
+[ItemLight] 
+ID=sunbeam_X_flipped; texture=lightmaskSunbeam; red=1; blue=0.8; green=0.85; alpha=1; size=1;
+X=-0.5; Y=-0.5; flip=true;
+
+[ItemType]  name=Light Y Adjusted;
+ID=sunbeam_Y; cloneFrom=sunbeam;
+pB=pR; 
+[ItemLight] 
+ID=sunbeam_Y; texture=lightmaskSunbeam; red=1; blue=0.8; green=0.85; alpha=1; size=1;
+X=0; Y=-1.5;
+
+
+[ItemType]  name=Light (Line);
+ID=sunbeam_line;  cloneFrom=sunbeam; sprite=253;
+
+[ItemLight] 
+ID=sunbeam_line; texture=lightmaskLine; red=1; blue=0.8; green=0.85; alpha=1; size=1; flicker=0; Y=-0.5; 
+
+[ItemType]  name=Light (Line, adjY);
+ID=sunbeam_line_adjY;  cloneFrom=sunbeam; sprite=253;
+
+[ItemLight] 
+ID=sunbeam_line_adjY; texture=lightmaskLine; red=1; blue=0.8; green=0.85; alpha=1; size=1; flicker=0; Y=0.5; 
+
+
+[ItemType]  name=Light (Line, Big);
+ID=sunbeam_line_big;  cloneFrom=sunbeam; sprite=253;
+pB=pG; 
+[ItemLight] 
+ID=sunbeam_line_big; texture=lightmaskLine; red=1; blue=0.8; green=0.85; alpha=1; size=2; flicker=0; Y=-0.5;
+
+[ItemType]  name=Light (Line, Huge);
+ID=sunbeam_line_huge;  cloneFrom=sunbeam; sprite=253;
+pB=pR; 
+[ItemLight] 
+ID=sunbeam_line_huge; texture=lightmaskLine; red=1; blue=0.8; green=0.85; alpha=1; size=2.3; flicker=0; Y=-0.5;
+
+
+[ItemType]  name=Light (Circle, Small);
+ID=sunbeam_circle_small;  cloneFrom=sunbeam; sprite=254;
+[ItemLight] 
+ID=sunbeam_circle_small; texture=lightmask; red=1; blue=0.8; green=0.85; alpha=1; size=0.25; flicker=0;
+
+[ItemType]  name=Light (Circle, Med);
+ID=sunbeam_circle_med;  cloneFrom=sunbeam; sprite=254;
+pB=pB; 
+[ItemLight] 
+ID=sunbeam_circle_med; texture=lightmask; red=1; blue=0.8; green=0.85; alpha=1; size=0.5; flicker=0;
+
+[ItemType]  name=Light (Circle, Big);
+ID=sunbeam_circle_big;  cloneFrom=sunbeam; sprite=254;
+pB=pG; 
+[ItemLight] 
+ID=sunbeam_circle_big; texture=lightmask; red=1; blue=0.8; green=0.85; alpha=1; size=1; flicker=0;
+
+[ItemType]  name=Light (Circle, Huge);
+ID=sunbeam_circle_huge;  cloneFrom=sunbeam; sprite=254;
+pB=pR; 
+[ItemLight] 
+ID=sunbeam_circle_huge; texture=lightmask; red=1; blue=0.8; green=0.85; alpha=1; size=2; flicker=0;
+
+[ItemType]  name=Light (Krypton, Small);
+ID=sunbeam_krypton_small;  cloneFrom=sunbeam; sprite=250;
+[ItemLight] 
+ID=sunbeam_krypton_small; texture=krypton; red=1; blue=0.8; green=0.85; alpha=1; size=0.25; flicker=0;
+
+[ItemType]  name=Light (Krypton, Med);
+ID=sunbeam_krypton_med;  cloneFrom=sunbeam; sprite=250;
+pB=pB; 
+[ItemLight] 
+ID=sunbeam_krypton_med; texture=krypton; red=1; blue=0.8; green=0.85; alpha=1; size=0.5; flicker=0;
+
+[ItemType]  name=Light (Krypton, Big);
+ID=sunbeam_krypton_big;  cloneFrom=sunbeam; sprite=250;
+pB=pG; 
+[ItemLight] 
+ID=sunbeam_krypton_big; texture=krypton; red=1; blue=0.8; green=0.85; alpha=1; size=1; flicker=0;
+
+[ItemType]  name=Light (Krypton, Huge);
+ID=sunbeam_krypton_huge;  cloneFrom=sunbeam; sprite=250;
+pB=pR; 
+[ItemLight] 
+ID=sunbeam_krypton_huge; texture=krypton; red=1; blue=0.8; green=0.85; alpha=1; size=2; flicker=0;
+
+
+[ItemType]  name=Light (Square, 6x6);
+ID=sunbeam_sq_6x6;  cloneFrom=sunbeam; sprite=252;
+pB=pB; 
+[ItemLight]
+ID=sunbeam_sq_6x6; texture=pixel; red=1; blue=0.8; green=0.85; alpha=1; size=96; flicker=0; X=3; Y=-3;
+
+[ItemType]  name=Light (Square, 10x10);
+ID=sunbeam_sq_10x10;  cloneFrom=sunbeam; sprite=252;
+pB=pG; 
+[ItemLight] 
+ID=sunbeam_sq_10x10; texture=pixel; red=1; blue=0.8; green=0.85; alpha=1; size=160; flicker=0; X=5; Y=-5;
+
+[ItemType]  name=Light (Foliage, Tiny);
+ID=sunbeam_foliage_tiny; cloneFrom=sunbeam; sprite=255;
+ special=randomFlipWhenPlaced; special=randomRotateWhenPlaced;
+[ItemLight] 
+ID=sunbeam_foliage_tiny; texture=lightmaskFoliage_tiny; red=0.9; blue=0.8; green=1; alpha=0.5; size=1; flicker=0;
+
+[ItemType]  name=Light (Foliage, Small);
+ID=sunbeam_foliage_small; cloneFrom=sunbeam_foliage_tiny; sprite=255;
+pB=pB;
+[ItemLight] 
+ID=sunbeam_foliage_small; texture=lightmaskFoliage_small; red=0.9; blue=0.8; green=1; alpha=0.5; size=1; flicker=0;
+
+[ItemType]  name=Light (Foliage, Med);
+ID=sunbeam_foliage_med; cloneFrom=sunbeam_foliage_tiny; sprite=255;
+pB=pG; 
+[ItemLight] 
+ID=sunbeam_foliage_med; texture=lightmaskFoliage_med; red=0.9; blue=0.8; green=1; alpha=0.5; size=1; flicker=0;
+
+
+[ItemType]  name=Light (Foliage, Big);
+ID=sunbeam_foliage_big;  cloneFrom=sunbeam_foliage_tiny; sprite=255;
+pB=pR; 
+[ItemLight] 
+ID=sunbeam_foliage_big; texture=lightmaskFoliage_big; red=0.9; blue=0.8; green=1; alpha=0.5; size=1; flicker=0;
+
+
+
+[ItemType]  name=Light (Circle, Small, Dull);
+ID=sunbeam_circle_small_dull;  cloneFrom=sunbeam; sprite=254;
+pR=pGrey;
+[ItemLight] 
+ID=sunbeam_circle_small_dull; texture=lightmask; red=0.8; blue=0.64; green=0.68; alpha=0.5; size=0.25; flicker=0;
+
+[ItemType]  name=Light (Circle, Med, Dull);
+ID=sunbeam_circle_med_dull;  cloneFrom=sunbeam; sprite=254;
+pB=pB; 
+pR=pGrey;
+[ItemLight] 
+ID=sunbeam_circle_med_dull; texture=lightmask; red=0.8; blue=0.64; green=0.68; alpha=0.5; size=0.5; flicker=0;
+
+[ItemType]  name=Light (Circle, Big, Dull);
+ID=sunbeam_circle_big_dull;  cloneFrom=sunbeam; sprite=254;
+pB=pG; 
+pR=pGrey;
+[ItemLight] 
+ID=sunbeam_circle_big_dull; texture=lightmask; red=0.8; blue=0.64; green=0.68;alpha=0.5; size=1; flicker=0;
+
+[ItemType]  name=Light (Circle, Huge, Dull);
+ID=sunbeam_circle_huge_dull;  cloneFrom=sunbeam; sprite=254;
+pB=pR; 
+pR=pGrey;
+[ItemLight] 
+ID=sunbeam_circle_huge_dull; texture=lightmask; red=0.8; blue=0.64; green=0.68; alpha=0.5; size=2; flicker=0;
+
+[ItemType]  name=Light (Krypton, Small, Dull);
+ID=sunbeam_krypton_small_dull;  cloneFrom=sunbeam; sprite=250;
+pR=pGrey;
+[ItemLight] 
+ID=sunbeam_krypton_small_dull; texture=krypton; red=0.8; blue=0.64; green=0.68; alpha=0.5; size=0.25; flicker=0;
+
+[ItemType]  name=Light (Krypton, Med, Dull);
+ID=sunbeam_krypton_med_dull;  cloneFrom=sunbeam; sprite=250;
+pB=pB; 
+pR=pGrey;
+[ItemLight] 
+ID=sunbeam_krypton_med_dull; texture=krypton; red=0.8; blue=0.64; green=0.68;alpha=0.5;  size=0.5; flicker=0;
+
+[ItemType]  name=Light (Krypton, Big, Dull);
+ID=sunbeam_krypton_big_dull;  cloneFrom=sunbeam; sprite=250;
+pB=pG; 
+pR=pGrey;
+[ItemLight] 
+ID=sunbeam_krypton_big_dull; texture=krypton; red=0.8; blue=0.64; green=0.68;alpha=0.5; size=1; flicker=0;
+
+[ItemType]  name=Light (Krypton, Huge, Dull);
+ID=sunbeam_krypton_huge_dull;  cloneFrom=sunbeam; sprite=250;
+pB=pR; 
+pR=pGrey;
+[ItemLight] 
+ID=sunbeam_krypton_huge_dull; texture=krypton; red=0.8; blue=0.64; green=0.68; alpha=0.5; size=2; flicker=0;
+
+[ItemType]  name=Light (Foliage, Tiny, Dull);
+ID=sunbeam_foliage_tiny_dull; cloneFrom=sunbeam_foliage_tiny; sprite=255;
+pR=pGrey;
+[ItemLight] 
+ID=sunbeam_foliage_tiny_dull; texture=lightmaskFoliage_tiny; red=0.9; blue=0.8; green=1; alpha=0.3; size=1; flicker=0;
+
+[ItemType]  name=Light (Foliage, Small, Dull);
+ID=sunbeam_foliage_small_dull; cloneFrom=sunbeam_foliage_tiny; sprite=255;
+pB=pB;
+pR=pGrey;
+[ItemLight] 
+ID=sunbeam_foliage_small_dull; texture=lightmaskFoliage_small; red=0.9; blue=0.8; green=1; alpha=0.3; size=1; flicker=0;
+
+[ItemType]  name=Light (Foliage, Med, Dull);
+ID=sunbeam_foliage_med_dull; cloneFrom=sunbeam_foliage_tiny; sprite=255;
+pB=pG; 
+pR=pGrey;
+[ItemLight] 
+ID=sunbeam_foliage_med_dull; texture=lightmaskFoliage_med; red=0.9; blue=0.8; green=1; alpha=0.3; size=1; flicker=0;
+
+
+[ItemType]  name=Light (Foliage, Big, Dull);
+ID=sunbeam_foliage_big_dull;  cloneFrom=sunbeam; sprite=255;
+pB=pR; 
+pR=pGrey;
+[ItemLight] 
+ID=sunbeam_foliage_big_dull; texture=lightmaskFoliage_big; red=0.9; blue=0.8; green=1; alpha=0.3; size=1; flicker=0;
+
+
+
+
+[ItemType]  name=Light (Foliage, Tiny, Dim);
+ID=sunbeam_foliage_tiny_dim; cloneFrom=sunbeam_foliage_tiny; sprite=255;
+pR=pGreyD;
+[ItemLight] 
+ID=sunbeam_foliage_tiny_dim; texture=lightmaskFoliage_tiny; red=0.9; blue=0.8; green=1; alpha=0.1; size=1; flicker=0;
+
+
+[ItemType]  name=Light (Foliage, Small, Dim);
+ID=sunbeam_foliage_small_dim; cloneFrom=sunbeam_foliage_tiny; sprite=255;
+pB=pB; 
+pR=pGreyD;
+[ItemLight] 
+ID=sunbeam_foliage_small_dim; texture=lightmaskFoliage_small; red=0.9; blue=0.8; green=1; alpha=0.1; size=1; flicker=0;
+
+
+[ItemType]  name=Light (Foliage, Med, Dim);
+ID=sunbeam_foliage_med_dim; cloneFrom=sunbeam_foliage_tiny; sprite=255;
+pB=pG; 
+pR=pGreyD;
+
+[ItemLight] 
+ID=sunbeam_foliage_med_dim; texture=lightmaskFoliage_med; red=0.9; blue=0.8; green=1; alpha=0.1; size=1; flicker=0;
+
+[ItemType]  name=Light (Foliage, Big, Dim);
+ID=sunbeam_foliage_big_dim;  cloneFrom=sunbeam_foliage_tiny; sprite=255;
+pB=pR; 
+pR=pGreyD; 
+[ItemLight] 
+ID=sunbeam_foliage_big_dim; texture=lightmaskFoliage_big; red=0.9; blue=0.8; green=1; alpha=0.1; size=1; flicker=0;
+
+
+[ItemType]  name=Light (Foliage, Tiny, Dark);
+ID=sunbeam_foliage_tiny_dark; cloneFrom=sunbeam_foliage_tiny; sprite=255;
+pR=pGreyD2;
+[ItemLight] 
+ID=sunbeam_foliage_tiny_dark; texture=lightmaskFoliage_tiny; red=0.45; blue=0.4; green=0.5; alpha=0.1; size=1; flicker=0;
+
+[ItemType]  name=Light (Foliage, Small, Dark);
+ID=sunbeam_foliage_small_dark; cloneFrom=sunbeam_foliage_tiny; sprite=255;
+pB=pB; 
+pR=pGreyD2;
+[ItemLight] 
+ID=sunbeam_foliage_small_dark; texture=lightmaskFoliage_small; red=0.45; blue=0.4; green=0.5; alpha=0.1; size=1; flicker=0;
+
+[ItemType]  name=Light (Foliage, Med, Dark);
+ID=sunbeam_foliage_med_dark; cloneFrom=sunbeam_foliage_tiny; sprite=255;
+pB=pG; 
+pR=pGreyD2;
+[ItemLight] 
+ID=sunbeam_foliage_med_dark; texture=lightmaskFoliage_med; red=0.45; blue=0.4; green=0.5; alpha=0.1; size=1; flicker=0;
+
+[ItemType]  name=Light (Foliage, Big, Dark);
+ID=sunbeam_foliage_big_dark;  cloneFrom=sunbeam_foliage_tiny; sprite=255;
+pB=pR; 
+pR=pGreyD2; 
+[ItemLight] 
+ID=sunbeam_foliage_big_dark; texture=lightmaskFoliage_big; red=0.45; blue=0.4; green=0.5; alpha=0.1; size=1; flicker=0;
+
+
+[ItemType]  name=Light (Circle, Dim);
+ID=sunbeam_circle_big_dim;  cloneFrom=sunbeam; sprite=254;
+pR=pGreyD;
+
+[ItemLight] 
+ID=sunbeam_circle_big_dim; texture=lightmask_broad; red=1; blue=0.9; green=0.95; alpha=0.1; size=1; flicker=0;
+
+[ItemType]  name=Light (Circle, Huge, Dark);
+ID=sunbeam_circle_huge_dark;  cloneFrom=sunbeam; sprite=254;
+pB=pR; 
+pR=pGreyD2;
+[ItemLight] 
+ID=sunbeam_circle_huge_dark; texture=lightmask; red=0.45; blue=0.4; green=0.5; alpha=0.1; size=2; flicker=0;
+
+
+[ItemType]  name=Light (Circle, Huge, Darker);
+ID=sunbeam_circle_huge_darker;  cloneFrom=sunbeam; sprite=254;
+pB=pR; 
+pR=pBlack;
+[ItemLight] 
+ID=sunbeam_circle_huge_darker; texture=lightmask; red=0.15; blue=0.1; green=0.15; alpha=0.025; size=2; flicker=0;
+
+
+[ItemType]  name=Light (Krypton, Small, Dark);
+ID=sunbeam_krypton_small_dark;  cloneFrom=sunbeam; sprite=250;
+pR=pGreyD2;
+[ItemLight] 
+ID=sunbeam_krypton_small_dark; texture=krypton; red=0.45; blue=0.4; green=0.5; alpha=0.1;  size=0.25; flicker=0;
+
+[ItemType]  name=Light (Krypton, Med, Dark);
+ID=sunbeam_krypton_med_dark;  cloneFrom=sunbeam; sprite=250;
+pB=pB; 
+pR=pGreyD2;
+[ItemLight] 
+ID=sunbeam_krypton_med_dark; texture=krypton; red=0.45; blue=0.4; green=0.5; alpha=0.1;  size=0.5; flicker=0;
+
+[ItemType]  name=Light (Krypton, Big, Dark);
+ID=sunbeam_krypton_big_dark;  cloneFrom=sunbeam; sprite=250;
+pB=pG; 
+pR=pGreyD2;
+[ItemLight] 
+ID=sunbeam_krypton_big_dark; texture=krypton; red=0.45; blue=0.4; green=0.5; alpha=0.1;  size=1; flicker=0;
+
+[ItemType]  name=Light (Krypton, Huge, Dark);
+ID=sunbeam_krypton_huge_dark;  cloneFrom=sunbeam; sprite=250;
+pB=pR; 
+pR=pGreyD2;
+[ItemLight] 
+ID=sunbeam_krypton_huge_dark; texture=krypton; red=0.45; blue=0.4; green=0.5; alpha=0.1;  size=2; flicker=0;
+
+--
+
+[ItemType]  name=Light (Krypton, Small, Darker);
+ID=sunbeam_krypton_small_darker;  cloneFrom=sunbeam; sprite=250;
+pR=pBlack;
+[ItemLight] 
+ID=sunbeam_krypton_small_darker; texture=krypton;  red=0.15; blue=0.1; green=0.15; alpha=0.025;  size=0.25; flicker=0;
+
+[ItemType]  name=Light (Krypton, Med, Darker);
+ID=sunbeam_krypton_med_darker;  cloneFrom=sunbeam; sprite=250;
+pB=pB; 
+pR=pBlack;
+[ItemLight] 
+ID=sunbeam_krypton_med_darker; texture=krypton;  red=0.15; blue=0.1; green=0.15; alpha=0.025; size=0.5; flicker=0;
+
+[ItemType]  name=Light (Krypton, Big, Darker);
+ID=sunbeam_krypton_big_darker;  cloneFrom=sunbeam; sprite=250;
+pB=pG; 
+pR=pBlack;
+[ItemLight] 
+ID=sunbeam_krypton_big_darker; texture=krypton;  red=0.15; blue=0.1; green=0.15; alpha=0.025; size=1; flicker=0;
+
+[ItemType]  name=Light (Krypton, Huge, Darker);
+ID=sunbeam_krypton_huge_darker;  cloneFrom=sunbeam; sprite=250;
+pB=pR; 
+pR=pBlack;
+[ItemLight] 
+ID=sunbeam_krypton_huge_darker; texture=krypton;  red=0.15; blue=0.1; green=0.15; alpha=0.025; size=2; flicker=0;
+
+
+[ItemType]  name=Light (Line, Dim);
+ID=sunbeam_line_dim;  cloneFrom=sunbeam; sprite=253;
+pR=pGreyD;
+[ItemLight] 
+ID=sunbeam_line_dim; texture=lightmaskLine; red=1; blue=0.8; green=0.85; alpha=0.1; size=1; flicker=0; Y=-0.5; 
+
+
+[ItemType]  name=Light (Line, Big, Dim);
+ID=sunbeam_line_big_dim;  cloneFrom=sunbeam; sprite=253;
+pR=pGreyD;
+pB=pG; 
+[ItemLight] 
+ID=sunbeam_line_big_dim; texture=lightmaskLine; red=1; blue=0.8; green=0.85; alpha=0.1; size=2; flicker=0; Y=-0.5;
+
+[ItemType]  name=Light (Line, Huge, Dim);
+ID=sunbeam_line_huge_dim;  cloneFrom=sunbeam; sprite=253;
+pR=pGreyD;
+pB=pR; 
+[ItemLight] 
+ID=sunbeam_line_huge_dim; texture=lightmaskLine; red=1; blue=0.8; green=0.85; alpha=0.1; size=2.3; flicker=0; Y=-0.5;
+
+[ItemType]  name=Skylight;
+ID=skylight;  sprite=251;
+weight=0; itemCategory=hazard; 
+pR=pLaser; pG=pGreyD; pB=pBlack;
+special=canHangOnWalls; special=cannotBePickedUp; special=invisible; special=ignoreHeight;
+special=ignoreBeingRaised;
+special=noTooltip; special=canBeInsideWalls; special=canFloatOnWater;
+special=ignoreDarkness;
+[ItemReaction]
+ID=skylight; element=nightime; newID=skylight_off;
+[ItemLight] 
+ID=skylight; texture=lightmaskSunbeam; red=1; blue=0.8; green=0.85; alpha=1; size=1; Y=-0.5;
+
+[ItemType]  name=Skylight OFF;
+ID=skylight_off;  sprite=251;
+weight=0; itemCategory=hidden; 
+pR=pBlack; pG=pGreyD; pB=pBlack;
+special=canHangOnWalls; special=cannotBePickedUp; special=invisible; special=ignoreHeight;
+special=ignoreBeingRaised;
+special=noTooltip; special=canBeInsideWalls; special=canFloatOnWater;
+special=ignoreDarkness;
+[ItemReaction]
+ID=skylight_off; element=daytime; newID=skylight;
+
+[ItemType]  name=Skylight (Line, Dim);
+ID=skylight_line_dim;  cloneFrom=skylight; sprite=253;
+special=dontCloneReactions;
+pR=pLaser;
+[ItemReaction]
+ID=skylight_line_dim; element=nightime; newID=skylight_line_dim_off;
+[ItemLight] 
+ID=skylight_line_dim; texture=lightmaskLine; red=0.5; blue=0.4; green=0.45; alpha=0.1; size=1; flicker=0; Y=-0.5; 
+
+[ItemType]  name=Skylight (Line, Dim) OFF;
+ID=skylight_line_dim_off;  cloneFrom=skylight_off; sprite=253;
+special=dontCloneReactions;
+[ItemReaction]
+ID=skylight_line_dim_off; element=daytime; newID=skylight_line_dim;
+
+
+[ItemType]  name=Skylight (Line, Dim, AdjY);
+ID=skylight_line_dim_adjY;  cloneFrom=skylight; sprite=253;
+special=dontCloneReactions;
+pR=pLaser;
+[ItemReaction]
+ID=skylight_line_dim_adjY; element=nightime; newID=skylight_line_dim_adjY_off;
+[ItemLight] 
+ID=skylight_line_dim_adjY; texture=lightmaskLine; red=0.5; blue=0.4; green=0.45; alpha=0.1; size=1; flicker=0; Y=0.5; 
+
+[ItemType]  name=Skylight (Line, Dim) OFF;
+ID=skylight_line_dim_adjY_off;  cloneFrom=skylight_off; sprite=253;
+special=dontCloneReactions;
+[ItemReaction]
+ID=skylight_line_dim_adjY_off; element=daytime; newID=skylight_line_dim_adjY;

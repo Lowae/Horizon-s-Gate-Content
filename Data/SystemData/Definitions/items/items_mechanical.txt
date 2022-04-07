@@ -1,0 +1,2602 @@
+
+[ItemType]  name=Furnace;
+itemCategory=mech;
+ID=furnace; sprite=625; 
+journalID=journal_furnace;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=sprite2xHeight; special=sprite2xWidth;
+weight=800;
+depthMod=1050;
+blockLoE=true; blockWalking=true; blockJumping=true;
+pR=zoneStone; pB=pBlack;
+[ItemReaction] 
+ID=furnace; element=fire; element=nighttime; newID=furnace_lit;
+[ItemType]  name=Furnace;
+itemCategory=mech;
+ID=furnace2; sprite=627; 
+journalID=journal_furnace;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=sprite2xHeight; special=sprite2xWidth;
+weight=800;
+depthMod=1050;
+blockLoE=true; blockWalking=true; blockJumping=true;
+pR=zoneStoneDark; pB=pBlack;
+[ItemReaction] 
+ID=furnace2; element=fire; element=nighttime; newID=furnace2_lit;
+[JournalEntry]
+ID=journal_furnace;
+category=item; halfPage=true;
+title=Furnace;
+text=<itemBig=furnace2><title=Furnace><brAdj=>A vital appliance for heating, food, & craftwork. Once lit, you can break equipment into base components by dragging them into the fire.;
+
+[ItemType]  name=Furnace (Lit);
+itemCategory=mech;
+ID=furnace_lit; sprite=625; 
+journalID=journal_furnace;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=sprite2xHeight; special=sprite2xWidth;
+weight=800;
+depthMod=1050;
+blockLoE=true; blockWalking=true; blockJumping=true;
+pR=zoneStone; pB=pAsh;
+[ItemReaction] 
+ID=furnace_lit; element=water; newID=furnace;
+[ItemLight] 
+ID=furnace_lit; red=1; blue=0.5; green=0.9; alpha=0.9; size=1.0; flicker=0.04; texture=krypton;
+
+[ItemType]  name=Furnace (Lit);
+itemCategory=mech;
+ID=furnace2_lit; sprite=627; 
+journalID=journal_furnace;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=sprite2xHeight; special=sprite2xWidth;
+weight=800;
+depthMod=1050;
+blockLoE=true; blockWalking=true; blockJumping=true;
+pR=zoneStoneDark; pB=pAsh;
+[ItemReaction] 
+ID=furnace2_lit; element=water; newID=furnace2;
+[ItemLight] 
+ID=furnace2_lit; red=1; blue=0.5; green=0.9; alpha=0.9; size=1.0; flicker=0.04; texture=krypton;
+
+[ItemType]  name=Furnace;
+itemCategory=mech;
+ID=furnace3; sprite=631; 
+journalID=journal_furnace;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=sprite2xHeight; special=sprite2xWidth;
+weight=800;
+depthMod=1050;
+blockLoE=true; blockWalking=true; blockJumping=true;
+pR=zoneStoneDark; pB=pBlack;
+[ItemReaction] 
+ID=furnace3; element=fire; element=nighttime; newID=furnace3_lit;
+
+[ItemType]  name=Furnace (Lit);
+itemCategory=mech;
+ID=furnace3_lit; sprite=631; 
+journalID=journal_furnace;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=sprite2xHeight; special=sprite2xWidth;
+weight=800;
+depthMod=1050;
+blockLoE=true; blockWalking=true; blockJumping=true;
+pR=zoneStoneDark; pB=pAsh;
+[ItemReaction] 
+ID=furnace3_lit; element=water; newID=furnace3;
+[ItemLight] 
+ID=furnace3_lit; red=1; blue=0.5; green=0.9; alpha=0.9; size=1.0; flicker=0.04; texture=krypton;
+
+
+[ItemType]  name=Furnace;
+itemCategory=mech;
+ID=furnace_everlit1; sprite=615; 
+description=Can be used to melt down weapons and armor.;
+journalID=journal_furnace;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=sprite2xWidth; special=sprite2xHeight;
+weight=800;
+depthMod=1050;
+blockLoE=true; blockWalking=true; blockJumping=true;
+pR=zoneStone; pB=pAsh;
+[ItemLight] 
+ID=furnace_everlit1; red=1; blue=0.5; green=0.9; alpha=0.6; size=0.8; flicker=0.04; texture=krypton;
+
+[ItemType]  name=Furnace;
+itemCategory=mech;
+ID=furnace_everlit2; sprite=617; 
+description=Can be used to melt down weapons and armor.;
+journalID=journal_furnace;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=sprite2xHeight; special=sprite2xWidth;
+weight=800;
+blockLoE=true; blockWalking=true; blockJumping=true;
+pR=zoneStone; pB=pAsh;
+[ItemLight] 
+ID=furnace_everlit2; red=1; blue=0.5; green=0.9; alpha=0.7; size=0.8; flicker=0.04; texture=krypton;
+
+[ItemType]  name=Furnace;
+itemCategory=mech;
+ID=furnace_everlit2_small; sprite=649; 
+combineID=furnace_lit;
+description=Can be used to melt down weapons and armor.;
+journalID=journal_furnace;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=sprite2xWidth;
+weight=800;
+blockLoE=true; blockWalking=true; blockJumping=true;
+pR=zoneStone; pB=pAsh;
+[ItemLight] 
+ID=furnace_everlit2_small; red=1; blue=0.5; green=0.9; alpha=0.7; size=0.76; flicker=0.04; texture=krypton;
+
+
+[ItemType]  name=Damage Mechanism;
+ID=mech_damage; sprite=179; pR=pR; pB=pR;
+description=Casts mechanismArea when struck.;
+weight=0; itemCategory=mech;
+special=cannotBePickedUp; special=alwaysBuried; special=canHangOnWalls; special=canBeInsideWalls; special=canFloatOnWater;
+special=cannotEverBePushed;
+depthMod=4000; special=canAssignSpecialTC; 
+blockWalking=true; blockJumping=true; blockLoE=true;
+[ItemReaction] 
+ID=mech_damage; 
+element=physical; element=fire; element=elec; element=pickaxe;
+element=ice; element=wind; element=ruin; element=focus; element=explode; action=mechanismArea; newID=X;
+
+[ItemType]  name=Damage Mechanism2;
+ID=mech2_damage; sprite=179; pR=pR; pB=pR;
+weight=0; itemCategory=mech;
+description=Casts mechanism2Area when struck.;
+special=cannotBePickedUp; special=alwaysBuried; special=canHangOnWalls; special=canBeInsideWalls; special=canFloatOnWater;
+special=cannotEverBePushed;
+depthMod=4000; special=canAssignSpecialTC; 
+blockWalking=true; blockJumping=true; blockLoE=true;
+[ItemReaction] 
+ID=mech2_damage; 
+element=physical; element=fire; element=elec; element=pickaxe;
+element=ice; element=wind; element=ruin; element=focus; element=explode; action=mechanism2Area; newID=X;
+
+
+
+[ItemType]  name=Mechanism Splitter (Range 1);
+description=Splits mechanical signal to all within 1 (square).;
+weight=0; itemCategory=mech;
+special=cannotBePickedUp; special=alwaysBuried; special=canHangOnWalls; special=canBeInsideWalls; special=canFloatOnWater;
+special=cannotEverBePushed;
+depthMod=4000;
+ID=mechanismSplitter; sprite=50;
+[ItemReaction] 
+ID=mechanismSplitter; element=mechanical; action=mechanismArea;
+
+
+[ItemType]  name=Mechanism Splitter (Range 2);
+description=Splits mechanical signal to all within 2 (square).;
+cloneFrom=mechanismSplitter;
+ID=mechanismSplitter2; sprite=82;
+[ItemReaction] 
+ID=mechanismSplitter2; element=mechanical; action=mechanismArea2;
+
+[ItemType]  name=Mechanism Splitter (Range 3);
+description=Splits mechanical signal to all within 3 (square).;
+cloneFrom=mechanismSplitter;
+ID=mechanismSplitter3; sprite=83;
+[ItemReaction] 
+ID=mechanismSplitter3; element=mechanical; action=mechanismArea3;
+
+[ItemType]  name=Mechanism Splitter (Range 5);
+description=Splits mechanical signal to all within 5 (square).;
+cloneFrom=mechanismSplitter;
+ID=mechanismSplitter5; sprite=84;
+[ItemReaction] 
+ID=mechanismSplitter5; element=mechanical; action=mechanismArea5;
+
+[ItemType]  name=Mechanism Splitter (Range 10);
+description=Splits mechanical signal to all within 10 (square).;
+cloneFrom=mechanismSplitter;
+ID=mechanismSplitter10; sprite=85;
+[ItemReaction] 
+ID=mechanismSplitter10; element=mechanical; action=mechanismArea10;
+
+
+[ItemType]  name=Mechanism Passer;
+ itemCategory=mech;
+description=Passes incoming mechanical signal to specialTC.;
+weight=0;
+special=canAssignSpecialTC; special=cannotBePickedUp; special=alwaysBuried; special=canHangOnWalls; special=canBeInsideWalls;
+special=cannotEverBePushed;
+depthMod=4000;
+ID=mechanismPasser; sprite=51;
+[ItemReaction] 
+ID=mechanismPasser; element=mechanical; action=mechanism;
+
+
+
+[ItemType]  name=Mechanism2 Splitter (Range 1);
+description=Splits mechanical2 signal to all within 1 (square).;
+weight=0; itemCategory=mech;
+special=cannotBePickedUp; special=alwaysBuried; special=canHangOnWalls; special=canBeInsideWalls; special=canFloatOnWater;
+special=cannotEverBePushed;
+depthMod=4000;
+ID=mechanism2Splitter; sprite=50;
+pR=pB;
+[ItemReaction] 
+ID=mechanism2Splitter; element=mechanical2; action=mechanism2Area;
+
+
+[ItemType]  name=Mechanism2 Splitter (Range 2);
+description=Splits mechanical2 signal to all within 2 (square).;
+cloneFrom=mechanism2Splitter;
+ID=mechanism2Splitter2; sprite=82;
+pR=pB;
+[ItemReaction] 
+ID=mechanism2Splitter2;element=mechanical2; action=mechanism2Area2;
+
+[ItemType]  name=Mechanism2 Splitter (Range 3);
+description=Splits mechanical2 signal to all within 3 (square).;
+cloneFrom=mechanism2Splitter;
+ID=mechanism2Splitter3; sprite=83;
+pR=pB;
+[ItemReaction] 
+ID=mechanism2Splitter3; element=mechanical2; action=mechanism2Area3;
+
+[ItemType]  name=Mechanism2 Splitter (Range 5);
+description=Splits mechanical2 signal to all within 5 (square).;
+cloneFrom=mechanism2Splitter;
+ID=mechanism2Splitter5; sprite=84;
+pR=pB;
+[ItemReaction] 
+ID=mechanism2Splitter5; element=mechanical2; action=mechanism2Area5;
+
+[ItemType]  name=Mechanism2 Splitter (Range 10);
+description=Splits mechanical2 signal to all within 10 (square).;
+cloneFrom=mechanism2Splitter;
+ID=mechanism2Splitter10; sprite=85;
+pR=pB;
+[ItemReaction] 
+ID=mechanism2Splitter10; element=mechanical2; action=mechanism2Area10;
+
+
+[ItemType]  name=Mechanism Passer;
+ itemCategory=mech;
+description=Passes incoming mechanical2 signal to specialTC.;
+weight=0;
+special=canAssignSpecialTC; special=cannotBePickedUp; special=alwaysBuried; special=canHangOnWalls; special=canBeInsideWalls;
+special=cannotEverBePushed;
+depthMod=4000;
+pR=pB;
+ID=mechanism2Passer; sprite=51;
+[ItemReaction] 
+ID=mechanism2Passer; element=mechanical2; action=mechanism;
+
+
+
+
+[ItemType]  name=Pressure Plate;
+ itemCategory=mech;
+ journalID=journal_pressPlate;
+description=Responds to weight placed upon it.; 
+weight=0;
+special=canAssignSpecialTC; special=reactsToPressure;  special=cannotBePickedUp;
+ID=pressPlateUp; sprite=18;
+pR=zoneStoneLight;
+[ItemReaction] 
+ID=pressPlateUp; element=pressurePlateDown; newID=pressPlateDown; action=mechanism; fx=unlock;
+
+[ItemType]  name=Pressure Plate;
+ itemCategory=mech;
+ journalID=journal_pressPlate;
+description=Responds to weight placed upon it.; 
+weight=0;
+special=canAssignSpecialTC; special=reactsToPressure;  special=cannotBePickedUp;
+ID=pressPlateDown; sprite=19;
+pR=zoneStoneLight;
+[ItemReaction] 
+ID=pressPlateDown; element=pressurePlateUp; newID=pressPlateUp; action=mechanism; fx=unlock;
+
+
+[ItemType]  name=Pressure Plate;
+itemCategory=mech;
+ journalID=journal_pressPlate;
+description=Responds to weight placed upon it, but only once.; 
+weight=0;
+special=canAssignSpecialTC; special=reactsToPressure;  special=cannotBePickedUp;
+ID=pressPlateUp1x; sprite=18;
+pR=zoneStoneLight;
+[ItemReaction] 
+ID=pressPlateUp1x; element=pressurePlateDown; element=pressureMoveAcross;
+ newID=pressPlateDown1x; action=mechanism; fx=unlock;
+
+[ItemType]  name=Pressure Plate;
+itemCategory=mech;
+ journalID=journal_pressPlate;
+description=Responds to weight placed upon it, but only once.; 
+weight=0;
+special=canAssignSpecialTC; special=reactsToPressure; special=cannotBePickedUp;
+ID=pressPlateDown1x; sprite=19;
+pR=zoneStoneLight;
+
+[ItemType]  name=Pressure Plate;
+ itemCategory=mech;
+ journalID=journal_pressPlate;
+description=Responds to weight placed upon it.; 
+weight=0;
+special=canAssignSpecialTC; special=reactsToPressure;  special=cannotBePickedUp;
+ID=pressPlateUp_organic; sprite=1870;
+pR=zoneDirt;
+[ItemReaction] 
+ID=pressPlateUp_organic; element=pressurePlateDown; newID=pressPlateDown_organic; action=mechanism; fx=unlock;
+
+[ItemType]  name=Pressure Plate;
+ itemCategory=mech;
+ journalID=journal_pressPlate;
+description=Responds to weight placed upon it.; 
+weight=0;
+special=canAssignSpecialTC; special=reactsToPressure;  special=cannotBePickedUp;
+ID=pressPlateDown_organic; sprite=1871;
+pR=zoneDirt;
+[ItemReaction] 
+ID=pressPlateDown_organic; element=pressurePlateUp; newID=pressPlateUp_organic; action=mechanism; fx=unlock;
+
+[ItemType]  name=Pressure Plate;
+ itemCategory=mech;
+ journalID=journal_pressPlate;
+description=Responds to weight placed upon it.; 
+weight=0;
+special=canAssignSpecialTC; special=reactsToPressure;  special=cannotBePickedUp;
+ID=pressPlateUp_organic_1x; sprite=1870;
+pR=zoneDirt;
+[ItemReaction] 
+ID=pressPlateUp_organic_1x; element=pressurePlateDown; newID=pressPlateDown_organic_1x; action=mechanism; fx=unlock;
+
+[ItemType]  name=Pressure Plate;
+ itemCategory=mech;
+ journalID=journal_pressPlate;
+description=Responds to weight placed upon it.; 
+weight=0;
+special=canAssignSpecialTC; special=reactsToPressure;  special=cannotBePickedUp;
+ID=pressPlateDown_organic_1x; sprite=1871;
+pR=zoneDirt;
+[ItemReaction] 
+ID=pressPlateDown_organic_1x; element=mechanical; newID=pressPlateUp_organic_1x;
+
+
+
+[ItemType]  name=Pressure Plate;
+ID=pressPlateUp_marble;
+cloneFrom= pressPlateUp; sprite=1294;
+special=dontCloneReactions;
+[ItemReaction] 
+ID=pressPlateUp_marble; element=pressurePlateDown; newID=pressPlateDown_marble; action=mechanism; fx=unlock;
+
+[ItemType]  name=Pressure Plate;
+ID=pressPlateDown_marble;
+cloneFrom= pressPlateDown; sprite=1295;
+special=dontCloneReactions;
+[ItemReaction] 
+ID=pressPlateDown_marble; element=pressurePlateUp; newID=pressPlateUp_marble;  fx=unlock;
+
+
+[ItemType]  name=Pressure Plate;
+ID=pressPlateUp_marble_1x;
+cloneFrom= pressPlateUp; sprite=1294;
+special=dontCloneReactions;
+[ItemReaction] 
+ID=pressPlateUp_marble_1x; element=pressurePlateDown; newID=pressPlateDown_marble_1x; action=mechanism; fx=unlock;
+
+[ItemType]  name=Pressure Plate;
+ID=pressPlateDown_marble_1x;
+cloneFrom= pressPlateDown; sprite=1295;
+special=dontCloneReactions;
+
+
+[JournalEntry]
+ID=journal_pressPlate;
+category=item; halfPage=true; rarity=1;
+title=Pressure Plate;
+text=<itemBig=pressPlateUp><title=Pressure Plate><brAdj=>Pressure plates react to being stepped on, naturally, and activate some device nearby. If a pressure plate is hard to see, but deliberately placed in your way, then you might not like what happens when you step on it.;
+
+[ItemType]  name=Switch;
+itemCategory=mech;
+description=Use to flip.; 
+journalID=journal_switch;
+weight=0;
+special=canAssignSpecialTC; special=canHangOnWalls; special=cannotBePickedUp;
+element=elec;
+ID=wallSwitchUp; sprite=48;
+[ItemReaction] 
+ID=wallSwitchUp; element=use; newID=wallSwitchDown; action=mechanism; fx=sfx_slam;
+
+[ItemType]  name=Switch;
+itemCategory=mech;
+description=Use to flip.;
+journalID=journal_switch;
+weight=0;
+special=canAssignSpecialTC; special=canHangOnWalls; special=cannotBePickedUp;
+element=elec;
+ID=wallSwitchDown; sprite=49;
+[ItemReaction] 
+ID=wallSwitchDown; element=use; newID=wallSwitchUp; action=mechanism; fx=sfx_slam;
+
+[ItemType]  name=Switch;
+itemCategory=mech;
+description=Use to flip.; 
+journalID=journal_switch;
+weight=0;
+special=canAssignSpecialTC; special=canHangOnWalls; special=cannotBePickedUp;
+element=elec;
+ID=floorSwitchUp; sprite=79;
+[ItemReaction] 
+ID=floorSwitchUp; element=use; newID=floorSwitchDown; action=mechanism; fx=chk;
+
+[ItemType]  name=Switch;
+itemCategory=mech;
+description=Use to flip.;
+journalID=journal_switch;
+weight=0;
+special=canAssignSpecialTC; special=canHangOnWalls; special=cannotBePickedUp;
+element=elec;
+ID=floorSwitchDown; sprite=80;
+[ItemReaction] 
+ID=floorSwitchDown; element=use; newID=floorSwitchUp; action=mechanism; fx=chk;
+
+[ItemType]  name=Button;
+itemCategory=mech;
+description=Use to press.; 
+weight=0;
+special=canAssignSpecialTC; special=canHangOnWalls; special=cannotBePickedUp;
+ID=buttonUp; sprite=77;
+pR=zoneStone;
+[ItemReaction] 
+ID=buttonUp; element=use; newID=buttonDown; action=mechanism; fx=chk;
+
+[ItemType]  name=Button;
+itemCategory=mech;
+description=Use to press.; 
+weight=0;
+special=canAssignSpecialTC; special=canHangOnWalls; special=cannotBePickedUp;
+ID=buttonDown; sprite=78;
+pR=zoneStone;
+[ItemReaction] 
+ID=buttonDown; element=mechanical2; newID=buttonUp; fx=chk;
+
+[ItemType]  name=Button;
+itemCategory=mech;
+description=Use to press.; 
+weight=0;
+special=canAssignSpecialTC; special=canHangOnWalls; special=cannotBePickedUp;
+ID=buttonUp2; sprite=77;
+pR=zoneMisc8;
+[ItemReaction] 
+ID=buttonUp2; element=use; newID=buttonDown2; action=mechanism; fx=chk;
+
+[ItemType]  name=Button;
+itemCategory=mech;
+description=Use to press.; 
+weight=0;
+special=canAssignSpecialTC; special=canHangOnWalls; special=cannotBePickedUp;
+ID=buttonDown2; sprite=78;
+pR=zoneMisc8;
+[ItemReaction] 
+ID=buttonDown2; element=mechanical2; newID=buttonUp2; fx=chk;
+
+
+[ItemType]  name=Button;
+ID=button_repeatable; sprite=156;
+itemCategory=mech;
+journalID=journal_switch;
+description=Click to press.; 
+weight=0;
+special=canAssignSpecialTC; special=canHangOnWalls; special=cannotBePickedUp; special=oneClickToUse;
+pR=pR;
+pB=zoneStone;
+[ItemReaction] 
+ID=button_repeatable; element=use; element=physical; element=ranged; action=mechanism; fx=chk;
+
+[ItemType]  name=Reset Button;
+ID=button_repeatable_reset; sprite=157;
+itemCategory=mech;
+description=Click to press.; 
+weight=0;
+special=canAssignSpecialTC; special=canHangOnWalls; special=cannotBePickedUp; special=oneClickToUse;
+pR=pR;
+pB=zoneStone;
+[ItemReaction] 
+ID=button_repeatable_reset; element=use; element=physical; element=ranged; action=mechanism2; fx=chk;
+
+[ItemType]  name=Handheld Button;
+ID=button_handheld; sprite=769; spriteWhenHeld=769;
+itemCategory=mech;
+texture=items_misc;
+journalID=journal_switch;
+description=Click to press.; 
+weight=0;
+special=canAssignSpecialTC; special=oneClickToUse;
+pR=pR; pB=p2;
+
+[ItemType]  name=Lever;
+ID=switchOn; sprite=16;
+itemCategory=mech;
+description=Use to flip.; 
+journalID=journal_switch;
+weight=0;
+special=canAssignSpecialTC; special=cannotBePickedUp; special=canHangOnWalls;
+blockWalking=true; blockJumping=true;
+element=elec;
+[ItemReaction] 
+ID=switchOn; element=0; element=10; element=physical; newID=switchOff; action=mechanism; fx=click;
+
+[ItemType]  name=Lever;
+ID=switchOff; sprite=17;
+itemCategory=mech;
+description=Use to flip.;
+journalID=journal_switch;
+weight=0;
+special=canAssignSpecialTC; special=cannotBePickedUp; special=canHangOnWalls;
+blockWalking=true; blockJumping=true;
+element=elec;
+[ItemReaction] 
+ID=switchOff; element=0; element=10; element=physical; newID=switchOn; action=mechanism; fx=click;
+[JournalEntry]
+ID=journal_switch;
+category=item; halfPage=true; rarity=1;
+title=Switches & Levers;
+text=<itemBig=wallSwitchUp><itemBig=switchOn><itemBig=button_repeatable><title=Switches & Levers><brAdj=>Mechanical, electrical, and magical devices all need some form of input. Hence, switches and levers. There's no way to be sure what'll happen when you use one.;
+
+[ItemType]  name=Broken Lever;
+itemCategory=mech;
+weight=0;
+special=canAssignSpecialTC; special=cannotBePickedUp; special=canHangOnWalls;
+blockWalking=true; blockJumping=true;
+ID=switch_broken; sprite=20;
+combineWith=switch_piece; toMake=switchOff; consumeOnCombine=true; 
+combineWith=repairTool; toMake=switchOff; consumeOnCombine=true; combineSound=unlock;
+
+[ItemType]  name=Lever Handle;
+itemCategory=mech;
+description=A lever handle. Must be a broken lever somewhere nearby...;
+weight=0;
+special=playerPickup;
+ID=switch_piece; sprite=21;
+
+[ItemType]  name=Lever;
+ID=switchOn2; sprite=52;
+itemCategory=mech;
+description=Use to flip.; 
+journalID=journal_switch;
+weight=0;
+special=canAssignSpecialTC; special=cannotBePickedUp; special=canHangOnWalls;
+blockWalking=true; blockJumping=true;
+element=elec;
+[ItemReaction] 
+ID=switchOn2; element=0; element=10; element=physical; newID=switchOff2; action=mechanism; fx=click;
+
+[ItemType]  name=Lever;
+ID=switchOff2; sprite=53;
+itemCategory=mech;
+description=Use to flip.;
+journalID=journal_switch;
+weight=0;
+special=canAssignSpecialTC; special=cannotBePickedUp; special=canHangOnWalls;
+blockWalking=true; blockJumping=true;
+element=elec;
+[ItemReaction] 
+ID=switchOff2; element=0; element=10; element=physical; newID=switchOn2; action=mechanism; fx=click;
+
+[ItemType]  name=Gate Lever;
+ID=switchGateOpen; sprite=154;
+itemCategory=mech;
+description=Use to flip.; 
+journalID=journal_switchGate;
+weight=0;
+special=canAssignSpecialTC; special=cannotBePickedUp; special=canHangOnWalls;
+blockWalking=true; blockJumping=true;
+element=elec;
+depthMod=1050;
+pR=zoneStoneDark;
+pB=pGrey1;
+pG=zoneStone;
+[ItemReaction] 
+ID=switchGateOpen; element=use; element=ranged; element=physical; newID=switchGateClose; action=castle_openGate_all; fx=click;
+[ItemReaction] 
+ID=switchGateOpen; element=openGates; newID=switchGateClose;
+
+[ItemType]  name=Gate Lever;
+ID=switchGateClose; sprite=155;
+itemCategory=mech;
+description=Use to flip.;
+journalID=journal_switchGate;
+weight=0;
+special=canAssignSpecialTC; special=cannotBePickedUp; special=canHangOnWalls;
+blockWalking=true; blockJumping=true;
+pR=zoneStoneDark;
+pB=pGrey1;
+pG=zoneStone;
+depthMod=1050;
+element=elec;
+[ItemReaction] 
+ID=switchGateClose; element=use; element=ranged; element=physical; newID=switchGateOpen; action=castle_closeGate_all; fx=click;
+[ItemReaction] 
+ID=switchGateClose; element=closeGates; newID=switchGateOpen;
+
+[JournalEntry]
+ID=journal_switchGate;
+category=item; halfPage=true; rarity=1;
+title=Gate Switch;
+text=<itemBig=switchGateOpen><title=Gate Switch><brAdj=>The size and odd design of this lever reveals its importance. By pulling it, all the sealed doors in this sector of the palace are toggled - closed ones open, and open ones close.;
+
+[ItemType]  name=Target;
+itemCategory=mech;
+ID=bullseye; sprite=116;
+journalID=journal_bullseye;
+special=canHangOnWalls; special=cannotBePickedUp;
+special=canAssignSpecialTC;
+blockWalking=true; blockJumping=true; blockLoE=true;
+weight=220;
+combineWith=dart;
+toMake=bullseye_shot;
+consumeOnCombine=true;
+combineSound=click;
+[ItemReaction] 
+ID=bullseye; element=dart; newID=bullseye_shot; fx=click;
+[ItemReaction] 
+ID=bullseye; element=ranged; action=mechanism; fx=click;
+
+[ItemType]  name=Target (Dart);
+itemCategory=mech;
+ID=bullseye_shot; sprite=148;
+journalID=journal_bullseye;
+special=canHangOnWalls; special=cannotBePickedUp;
+blockWalking=true; blockJumping=true; blockLoE=true;
+weight=220;
+[ItemReaction] 
+ID=bullseye_shot; element=use; action=drop_dart; newID=bullseye; fx=click;
+[JournalEntry]
+ID=journal_bullseye;
+category=item; halfPage=true; rarity=1;
+title=Target;
+text=<itemBig=bullseye><title=Target><brAdj=>Used for practice and competition of archery, dart throwing, and the like. Commonly found as an idle diversion in taverns.;
+
+[ItemType]  name=Railway Corner;
+itemCategory=mech;
+ID=railCorner; sprite=504; 
+journalID=journal_railway;
+special=cannotBePickedUp; special=canHangOnWalls; special=elementUsableForRestrictedAoEs; special=canFloatOnWater; special=big;
+weight=0; element=railway;
+pR=zoneWood; pB=zoneStoneLight;
+
+[ItemType]  name=Railway;
+itemCategory=mech;
+ID=railway; sprite=505; 
+journalID=journal_railway;
+special=cannotBePickedUp; special=canHangOnWalls; special=elementUsableForRestrictedAoEs; special=canFloatOnWater; special=big;
+special=canBeInsideWalls;
+weight=0; element=railway;
+pR=zoneWood; pB=zoneStoneLight;
+
+
+[ItemType]  name=Pushable Rail;
+itemCategory=mech;
+ID=railwayPushable; sprite=508; 
+journalID=journal_railway;
+special=elementUsableForRestrictedAoEs; special=pushable; special=big;
+blockWalking=true; blockJumping=true;
+weight=220; element=railway;
+pR=zoneWood; pB=zoneStoneLight;
+[JournalEntry]
+ID=journal_railway;
+category=item; halfPage=true; rarity=1;
+title=Railway;
+text=<itemBig=railway><title=Railway><brAdj=>Specially designed rails that allow easy transport of goods & materials. These are often used in mines to move ore and excess rock.;
+
+
+[ItemType]  name=Blocker;
+itemCategory=mech;
+ID=railwayBlocker; sprite=506; 
+special=cannotBePickedUp; special=canHangOnWalls; 
+special=overrideTerrainCollisions; special=canAlwaysFitInTile_build;
+blockWalking=true; blockJumping=true; blockLoE=true;
+pR=zoneWood;
+[ItemReaction] 
+ID=railwayBlocker; element=mechanical; newID=railwayBlocker_closed;
+[ItemReaction] 
+ID=railwayBlocker; element=explode; element=slash; element=smash; element=fire; newID=railwayBlocker_closed; fx=dust_wood;
+
+[ItemType]  name=Blocker (Off);
+itemCategory=mech;
+ID=railwayBlocker_closed; sprite=507; 
+special=noTooltips; special=canAlwaysFitInTile_build;
+special=cannotBePickedUp; special=canHangOnWalls; 
+pR=zoneWood;
+[ItemReaction] 
+ID=railwayBlocker_closed; element=mechanical; newID=railwayBlocker;
+
+[ItemType]  name=Grate;
+itemCategory=furnishing;
+ID=grate_mech1; sprite=1153; 
+journalID=journal_grate;
+texture=items_building;
+special=canAlwaysFitInTile_build;
+blockWalking=true; blockJumping=true;
+weight=5; volume=9000;
+pR=zoneMisc7;
+[ItemReaction] 
+ID=grate_mech1; element=mechanical; element=explode; newID=X;
+[JournalEntry]
+ID=journal_grate;
+category=item; halfPage=true; rarity=0;
+title=Grate;
+text=<itemBig=grate_mech1><title=Grate><brAdj=>Heavy metal mesh used to cover vents and prevent objects from passing through.;
+
+[ItemType]  name=Conveyor Belt;
+ID=conveyorBelt_off; sprite=1296; 
+journalID=journal_conveyorBelt;
+itemCategory=mech;
+special=cannotBePickedUp;
+pR=zoneStoneDark;
+element=elec;
+[ItemReaction] 
+ID=conveyorBelt_off; element=mechanical; newID=conveyorBelt; action=mechanismArea_rotBased1;
+
+[ItemType]  name=Conveyor Belt;
+ID=conveyorBelt; sprite=1296; 
+journalID=journal_conveyorBelt;
+itemCategory=mech;
+special=cannotBePickedUp; special=animated;
+special=moveCostOverride_2;
+special=timer;
+timer=5;
+element=elec;
+pR=zoneStoneDark;
+[ItemReaction] 
+ID=conveyorBelt; element=timerUp; action=conveyorBelt_action;
+[ItemReaction] 
+ID=conveyorBelt; element=mechanical; newID=conveyorBelt_off; action=mechanismArea_rotBased1;
+[JournalEntry]
+ID=journal_conveyorBelt;
+category=item; halfPage=true; rarity=2;
+title=Conveyor Belt;
+text=<itemBig=conveyorBelt><title=Conveyor Belt><brAdj=>High-tech factories often feature trigger-powered belts like these to move items along the assembly line.;
+
+[ItemType]  name=Wall (Stone, Movable);
+itemCategory=mech;
+ID=moveableWall1; sprite=123; 
+special=canAssignSpecialTC; special=cannotBePickedUp; special=noTooltip; special=canBeInsideWalls;
+weight=200;
+blockLoS=true; blockLoE=true; blockWalking=true; blockJumping=true;
+pR=zoneStoneDark; pG=zoneStone;
+[ItemReaction] 
+ID=moveableWall1; element=mechanical; action=moveSelf;
+
+[ItemType]  name=Wall (Stone, Movable, End);
+itemCategory=mech;
+ID=moveableWall2; sprite=124; 
+special=canAssignSpecialTC; special=cannotBePickedUp; special=noTooltip; special=canBeInsideWalls;
+weight=200;
+blockLoS=true; blockLoE=true; blockWalking=true; blockJumping=true;
+pR=zoneStoneDark; pG=zoneStone;
+[ItemReaction] 
+ID=moveableWall2; element=mechanical; action=moveSelf;
+
+
+
+[ItemType]  name=Portcullis;
+itemCategory=mech;
+journalID=journal_portcullis;
+  ID=portcullis_closed; sprite=40;
+texture=items_building;
+  weight=500; special=huge; special=cannotBePickedUp; special=sprite2xHeight;
+	blockLoS=false; blockLoE=true; blockWalking=true; blockJumping=true;
+  special=canFloatOnWater;
+	depthMod=1050;
+[ItemReaction] 
+ID=portcullis_closed; element=16; newID=portcullis_open; fx=chkSparks;
+
+[ItemType]  name=Open Portcullis;
+itemCategory=mech;
+journalID=journal_portcullis;
+  ID=portcullis_open; sprite=41; 
+texture=items_building;
+  weight=500; special=huge; special=cannotBePickedUp; special=sprite2xHeight;
+  special=canFloatOnWater;
+	depthMod=1050;
+[ItemReaction] 
+ID=portcullis_open; element=16; newID=portcullis_closed; fx=chkSparks;
+[JournalEntry]
+ID=journal_portcullis;
+category=item; halfPage=true;
+title=Portcullis;
+text=<itemBig=portcullis_closed><title=Portcullis><brAdj=>A great grate gate. There's no way to break the gate, so you'll just have to find the switch or lever that controls it.;
+
+
+[ItemType]  name=Wood Door;
+itemCategory=mech;
+  ID=door_closed_wood_shoddy; sprite=8; 
+texture=items_building;
+  weight=500; 
+  special=huge; special=cannotBePickedUp;
+	blockLoS=true; blockLoE=true; blockWalking=true; blockJumping=true;
+[ItemReaction] 
+ID=door_closed_wood_shoddy; element=10; element=16; newID=door_open; fx=unlock;
+[ItemReaction] 
+ID=door_closed_wood_shoddy; element=explode; element=fire; newID=fire;
+
+[ItemType]  name=Open Wood Door;
+itemCategory=mech;
+  ID=door_open_wood_shoddy; sprite=9; 
+texture=items_building;
+  weight=500; 
+special=cannotActInPeacefulZones;
+  special=huge; special=cannotBePickedUp;
+[ItemReaction] 
+ID=door_open_wood_shoddy; element=10; element=16; newID=door_closed; fx=unlock;
+[ItemReaction] 
+ID=door_open_wood_shoddy; element=explode; element=fire; newID=fire;
+
+[ItemType]  name=Locked Wood Door;
+itemCategory=mech;
+  ID=door_locked_wood_shoddy; sprite=74; 
+texture=items_building;
+  weight=500; 
+  special=huge; special=cannotBePickedUp;
+	blockLoS=true; blockLoE=true; blockWalking=true; blockJumping=true;
+	combineWith=key; toMake=door_open; consumeOnCombine=true; combineSound=unlock;
+[ItemReaction] 
+ID=door_locked_wood_shoddy; element=explode; newID=X;
+
+[ItemType]  name=Wood Door;
+itemCategory=mech;
+  ID=door_closed_wood; sprite=566; 
+texture=items_building;
+  weight=500; 
+  special=huge; special=cannotBePickedUp;
+	blockLoS=true; blockLoE=true; blockWalking=true; blockJumping=true;
+	pR=zoneWood;
+[ItemReaction] 
+ID=door_closed_wood; element=use; element=mechanical; newID=door_open_wood; fx=unlock;
+
+[ItemType]  name=Open Wood Door;
+itemCategory=mech;
+  ID=door_open_wood; sprite=567; 
+texture=items_building;
+  weight=500; 
+special=cannotActInPeacefulZones;
+  special=huge; special=cannotBePickedUp;
+	pR=zoneWood;
+[ItemReaction] 
+ID=door_open_wood; element=use; element=mechanical; newID=door_closed_wood; fx=unlock;
+
+
+[ItemType]  name=Big Wood Door;
+itemCategory=mech;
+  ID=door_closed_wood_big_arch; sprite=1423; weight=500; 
+texture=items_building;
+  special=big; special=cannotBePickedUp; special=sprite2xHeight;
+	blockLoS=true; blockLoE=true; blockWalking=true; blockJumping=true;
+	depthMod=1050;
+	pR=zoneWood; pG=zoneStone;
+[ItemReaction] 
+ID=door_closed_wood_big_arch; element=use; element=mechanical; newID=door_open_wood_big_arch; fx=unlock;
+
+[ItemType]  name=Open Big Wood Door;
+itemCategory=mech;
+  ID=door_open_wood_big_arch; sprite=1424; weight=500; 
+texture=items_building;
+  special=big; special=cannotBePickedUp; special=sprite2xHeight;
+special=cannotActInPeacefulZones;
+	depthMod=0;
+	pR=zoneWood; pG=zoneStone;
+[ItemReaction] 
+ID=door_open_wood_big_arch; element=use; element=mechanical; newID=door_closed_wood_big_arch; fx=unlock;
+
+[ItemType]  name=Big Wood Door;
+itemCategory=mech;
+  ID=door_closed_wood_big_L; sprite=1425; weight=500;
+texture=items_building; 
+  special=big; special=cannotBePickedUp; special=sprite2xHeight;
+	blockLoS=true; blockLoE=true; blockWalking=true; blockJumping=true;
+	depthMod=1050;
+	pR=zoneWood;
+[ItemReaction] 
+ID=door_closed_wood_big_L; element=use; element=mechanical; newID=door_open_wood_big_L; fx=unlock;
+
+
+[ItemType]  name=Open Big Wood Door;
+itemCategory=mech;
+  ID=door_open_wood_big_L; sprite=1426; weight=500; 
+texture=items_building;
+special=cannotActInPeacefulZones;
+  special=big; special=cannotBePickedUp; special=sprite2xHeight;
+	depthMod=1050;
+	pR=zoneWood;
+[ItemReaction] 
+ID=door_open_wood_big_L; element=use; element=mechanical; newID=door_closed_wood_big_L; fx=unlock;
+
+
+
+[ItemType]  name=Stone Door;
+itemCategory=mech;
+  ID=door_closed_stone; sprite=598; 
+texture=items_building;
+  weight=500; 
+  special=huge; special=cannotBePickedUp;
+	blockLoS=true; blockLoE=true; blockWalking=true; blockJumping=true;
+	pR=zoneStoneDark;
+[ItemReaction] 
+ID=door_closed_stone;  element=use; element=mechanical; newID=door_open_stone; fx=unlock;
+
+[ItemType]  name=Open Stone Door;
+itemCategory=mech;
+  ID=door_open_stone; sprite=599; 
+texture=items_building;
+  weight=500;
+special=cannotActInPeacefulZones; 
+  special=huge; special=cannotBePickedUp;
+	pR=zoneStoneDark;
+[ItemReaction] 
+ID=door_open_stone; element=use; element=mechanical; newID=door_closed_stone; fx=unlock;
+
+
+[ItemType]  name=Stone Door;
+ID=door_closed_stone_LoS;
+cloneFrom=door_closed_stone; 
+special=dontCloneReactions;
+blockLoS=false;
+pR=zoneStone;
+[ItemReaction]
+ID=door_closed_stone_LoS;  element=use; element=mechanical; newID=door_open_stone_LoS; fx=unlock;
+
+[ItemType]  name=Open Stone Door;
+ID=door_open_stone_LoS;
+cloneFrom=door_open_stone; 
+special=dontCloneReactions;
+special=cannotActInPeacefulZones;
+blockLoS=false;
+pR=zoneStone;
+[ItemReaction] 
+ID=door_open_stone_LoS; element=use; element=mechanical; newID=door_closed_stone_LoS; fx=unlock;
+
+
+[ItemType]  name=Big Stone Door;
+itemCategory=mech;
+  ID=door_closed_stone_big_L; sprite=569;
+texture=items_building;
+  weight=500; 
+  special=huge; special=sprite2xHeight;
+  special=canHangOnWalls; special=cannotBePickedUp;
+	blockLoE=true; blockLoS=true; blockWalking=true; blockJumping=true;
+	pR=zoneStoneDark;
+depthMod=1050;
+[ItemReaction] 
+ID=door_closed_stone_big_L; element=use; element=mechanical; newID=door_open_stone_big_L; fx=sfx_slam;
+	
+
+[ItemType]  name=Open Big Stone Door;
+itemCategory=mech;
+  ID=door_open_stone_big_L; sprite=571;
+texture=items_building;
+  weight=500; 
+  special=huge; special=sprite2xHeight;
+special=cannotActInPeacefulZones;
+  special=canHangOnWalls; special=cannotBePickedUp;
+	pR=zoneStoneDark;
+[ItemReaction] 
+ID=door_open_stone_big_L; element=use; element=mechanical; newID=door_closed_stone_big_L; fx=sfx_slam;
+	
+[ItemType]  name=Stone Wall;
+itemCategory=mech;
+  ID=door_closed_stone_big_seal; sprite=575; 
+texture=items_building;
+  weight=500; 
+  special=big; special=sprite2xHeight;
+  special=canHangOnWalls; special=cannotBePickedUp;
+	blockLoE=true; blockLoS=true; blockWalking=true; blockJumping=true;
+	pR=zoneStoneDark;
+depthMod=1050;
+[ItemReaction] 
+ID=door_closed_stone_big_seal; element=mechanical; newID=X; fx=sfx_slam;
+
+[ItemType]  name=Sealed Door;
+itemCategory=mech;
+  ID=door_closed_stone_big_seal_magic; sprite=511; 
+texture=items_building;
+journalID=journal_magicSealDoor;
+  weight=500; 
+  special=big; special=sprite2xHeight;
+  special=canHangOnWalls; special=cannotBePickedUp;
+	blockLoE=true; blockLoS=false; blockWalking=true; blockJumping=true;
+	pR=pGreyD2; pB=pPurpleD;
+depthMod=1050;
+[ItemReaction] 
+ID=door_closed_stone_big_seal_magic; element=mechanical; element=explode; newID=X; fx=sfx_slam;
+[JournalEntry]
+ID=journal_magicSealDoor;
+category=artifact; halfPage=true; rarity=3; rewardMod=-500;
+title=Sealed Door;
+text=<itemBig=door_closed_stone_big_seal_magic><title=Sealed Door><brAdj=>This large stone gate is sealed tight, and has no visible handle or other opening mechanism. It looks ancient, and is adorned with small grooves, indents, and gems. The markings are relatively simplistic, making it difficult to discern who or what created it. It would take high explosives to breach this door.;
+
+
+[ItemType]  name=Locked Stone;
+itemCategory=mech;
+  ID=locked_stone; sprite=537; weight=500; 
+  special=big; special=cannotBePickedUp;
+  blockLoE=true; blockWalking=true; blockJumping=true;
+	combineWith=key_silver; toMake=X; combineSound=click;
+[ItemType]  name=Locked Stone;
+itemCategory=mech;
+  ID=locked_stone2; sprite=538; weight=500; 
+  special=big; special=cannotBePickedUp;
+  blockLoE=true; blockWalking=true; blockJumping=true;
+	combineWith=key_silver; toMake=X; combineSound=click;
+[ItemType]  name=Locked Stone Door;
+itemCategory=mech;
+  ID=door_locked_stone; sprite=600; 
+texture=items_building;
+  weight=500; 
+  special=huge; special=cannotBePickedUp;
+	blockLoS=true; blockLoE=true; blockWalking=true; blockJumping=true;
+	pR=zoneStoneDark;
+	pB=pSilver; combineSound=unlock;
+	combineWith=key; toMake=door_open_stone; consumeOnCombine=true;
+	combineWith=lockpick; toMake=door_open_stone; consumeOnCombine=true;
+	
+
+[ItemType]  name=Open Door;
+itemCategory=mech;
+ID=doorway_open; sprite=631; 
+texture=items_building;
+special=huge; special=canHangOnWalls;  special=cannotBePickedUp;
+special=overrideTerrainCollisions;
+special=inheritTerrainPalettes; special=overrideMostCollisions;
+special=cannotActInPeacefulZones; special=canAlwaysFitInTile_build;
+special=canAlwaysFitInTileWhenSpawned;
+[ItemReaction] 
+ID=doorway_open; element=use; element=mechanical; newID=doorway_closed; fx=unlock;
+
+[ItemType]  name=Closed Door;
+itemCategory=mech;
+ID=doorway_closed; sprite=632; 
+texture=items_building;
+special=huge; special=canHangOnWalls;  special=cannotBePickedUp;
+special=inheritTerrainPalettes; special=overrideTerrainCollisions;
+special=canAlwaysFitInTile_build; special=canAlwaysFitInTileWhenSpawned;
+	blockLoS=true; blockLoE=true; blockWalking=true; blockJumping=true;
+[ItemReaction] 
+ID=doorway_closed; element=use; element=mechanical; newID=doorway_open; fx=unlock;
+[ItemReaction]
+ID=doorway_closed; element=explode; newID=doorway_open;
+
+[ItemType]  name=Locked Door;
+itemCategory=mech;
+ID=doorway_locked; sprite=664; 
+texture=items_building;
+special=huge; special=canHangOnWalls;  special=cannotBePickedUp;
+special=inheritTerrainPalettes; special=overrideTerrainCollisions;
+special=canAlwaysFitInTile_build; special=canAlwaysFitInTileWhenSpawned;
+	blockLoS=true; blockLoE=true; blockWalking=true; blockJumping=true;
+	 combineSound=unlock;
+combineWith=key; toMake=doorway_open; consumeOnCombine=true;
+combineWith=lockpick; toMake=doorway_open; consumeOnCombine=true;
+
+[ItemReaction]
+ID=doorway_locked; element=cutsc_destroy; newID=doorway;
+
+[ItemType]  name=Doorway;
+itemCategory=mech;
+ID=doorway; sprite=695; 
+texture=items_building;
+special=huge; special=canHangOnWalls;  special=cannotBePickedUp;
+special=overrideTerrainCollisions;
+special=inheritTerrainPalettes; special=overrideMostCollisions;
+special=cannotActInPeacefulZones; 
+special=canAlwaysFitInTile_build; special=canAlwaysFitInTileWhenSpawned;
+
+[ItemType]  name=Doorway;
+ID=doorway_wideL; sprite=633; 
+cloneFrom=doorway;
+[ItemType]  name=Doorway;
+ID=doorway_wideR; sprite=634; 
+cloneFrom=doorway;
+----
+
+[ItemType]  name=Open Door;
+itemCategory=mech;
+ID=doorway_open_staticP; sprite=631; 
+texture=items_building;
+special=huge; special=canHangOnWalls;  special=cannotBePickedUp;
+special=overrideTerrainCollisions;
+special=overrideMostCollisions; 
+special=canAlwaysFitInTile_build; special=canAlwaysFitInTileWhenSpawned;
+special=cannotActInPeacefulZones;
+pR=zoneStoneDark;
+pB=zoneWood; 
+[ItemReaction] 
+ID=doorway_open_staticP; element=use; element=mechanical; newID=doorway_closed_staticP; fx=unlock;
+
+[ItemType]  name=Closed Door;
+itemCategory=mech;
+ID=doorway_closed_staticP; sprite=632; 
+texture=items_building;
+special=huge; special=canHangOnWalls;  special=cannotBePickedUp;
+special=overrideTerrainCollisions; 
+special=canAlwaysFitInTile_build; special=canAlwaysFitInTileWhenSpawned;
+	blockLoS=true; blockLoE=true; blockWalking=true; blockJumping=true;
+pR=zoneStoneDark;
+pB=zoneWood; 
+[ItemReaction] 
+ID=doorway_closed_staticP; element=use; element=mechanical; newID=doorway_open_staticP; fx=unlock;
+[ItemReaction]
+ID=doorway_closed_staticP; element=explode; newID=doorway_open_staticP;
+
+[ItemType]  name=Locked Door;
+itemCategory=mech;
+ID=doorway_locked_staticP; sprite=664; 
+texture=items_building;
+special=huge; special=canHangOnWalls;  special=cannotBePickedUp;
+special=overrideTerrainCollisions; 
+special=canAlwaysFitInTile_build; special=canAlwaysFitInTileWhenSpawned;
+	blockLoS=true; blockLoE=true; blockWalking=true; blockJumping=true;
+	 combineSound=unlock;
+combineWith=key; toMake=doorway_open_staticP; consumeOnCombine=true;
+combineWith=lockpick; toMake=doorway_open_staticP; consumeOnCombine=true;
+
+pR=zoneStoneDark;
+pB=zoneWood;
+pG=pSilver;
+
+[ItemType]  name=Doorway;
+itemCategory=mech;
+ID=doorway_staticP; sprite=695; 
+texture=items_building;
+special=huge; special=canHangOnWalls;  special=cannotBePickedUp;
+special=overrideTerrainCollisions; special=overrideMostCollisions; 
+special=canAlwaysFitInTile_build; special=canAlwaysFitInTileWhenSpawned;
+special=cannotActInPeacefulZones;
+pR=zoneStoneDark;
+pB=zoneWood; 
+
+[ItemType]  name=Doorway;
+ID=doorway_misc; sprite=695; 
+cloneFrom=doorway_staticP;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+
+
+[ItemType]  name=Open Door;
+itemCategory=mech;
+ID=doorway_open_misc; sprite=631; 
+texture=items_building;
+special=huge; special=canHangOnWalls;  special=cannotBePickedUp;
+special=overrideTerrainCollisions;
+special=overrideMostCollisions; 
+special=canAlwaysFitInTile_build; special=canAlwaysFitInTileWhenSpawned;
+special=cannotActInPeacefulZones;
+pB=pYellow5; 
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+[ItemReaction] 
+ID=doorway_open_misc; element=use; element=mechanical; newID=doorway_closed_misc; fx=unlock;
+
+[ItemType]  name=Closed Door;
+itemCategory=mech;
+ID=doorway_closed_misc; sprite=632; 
+texture=items_building;
+special=huge; special=canHangOnWalls;  special=cannotBePickedUp;
+special=overrideTerrainCollisions; 
+special=canAlwaysFitInTile_build; special=canAlwaysFitInTileWhenSpawned;
+	blockLoS=true; blockLoE=true; blockWalking=true; blockJumping=true;
+pB=pYellow5; 
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+[ItemReaction] 
+ID=doorway_closed_misc; element=use; element=mechanical; newID=doorway_open_misc; fx=unlock;
+[ItemReaction]
+ID=doorway_closed_misc; element=explode; newID=doorway_open_misc;
+
+[ItemType]  name=Locked Door;
+itemCategory=mech;
+ID=doorway_locked_misc; sprite=664; 
+texture=items_building;
+special=huge; special=canHangOnWalls;  special=cannotBePickedUp;
+special=overrideTerrainCollisions; 
+special=canAlwaysFitInTile_build; special=canAlwaysFitInTileWhenSpawned;
+	blockLoS=true; blockLoE=true; blockWalking=true; blockJumping=true;
+	 combineSound=unlock;
+combineWith=key; toMake=doorway_open_misc; consumeOnCombine=true;
+combineWith=lockpick; toMake=doorway_open_misc; consumeOnCombine=true;
+pB=pYellow5; 
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+
+
+[ItemType]  name=Doorway;
+itemCategory=mech;
+ID=doorway_misc_fake; sprite=695;
+--this doorway cannot be entered 
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+texture=items_building;
+special=huge; special=canHangOnWalls;  special=cannotBePickedUp;
+special=canAlwaysFitInTile_build; special=canAlwaysFitInTileWhenSpawned;
+
+
+
+----
+[ItemType]  name=Doorway Top;
+itemCategory=mech;
+ID=doorway_square_staticP_top; sprite=665; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltip; special=canHangOnWalls; special=roof; special=canFloatOnWater;
+special=blackenOtherTiles; special=ignoreBeingRaised;
+special=cannotActInPeacefulZones;
+special=cannotTargetInPeacefulZones;
+special=noTooltips;
+special=sprite2xWidth;
+depthMod=3050;
+weight=9000; volume=9999999;
+pR=zoneStone;
+pB=zoneStoneDark; 
+
+[ItemType]  name=Doorway;
+itemCategory=mech;
+ID=doorway_square_staticP; sprite=697; 
+texture=items_building;
+special=huge; special=canHangOnWalls;  special=cannotBePickedUp;
+special=overrideTerrainCollisions; special=overrideMostCollisions; 
+special=canAlwaysFitInTile_build; special=canAlwaysFitInTileWhenSpawned;
+special=cannotActInPeacefulZones;
+special=sprite2xWidth;
+depthMod=50;
+pR=zoneStone;
+pB=zoneStoneDark; 
+
+
+[ItemType]  name=Open Door;
+itemCategory=mech;
+ID=doorway_square_open_staticP; sprite=701; 
+texture=items_building;
+special=huge; special=canHangOnWalls;  special=cannotBePickedUp;
+special=overrideTerrainCollisions; special=overrideMostCollisions; 
+special=canAlwaysFitInTile_build; special=canAlwaysFitInTileWhenSpawned;
+special=cannotActInPeacefulZones;
+special=sprite2xWidth;
+depthMod=50;
+pR=zoneStone;
+pB=zoneStoneDark; 
+pG=zoneWood;
+[ItemReaction] 
+ID=doorway_square_open_staticP; element=use; element=mechanical; newID=doorway_square_closed_staticP; fx=unlock;
+
+[ItemType]  name=Closed Door;
+itemCategory=mech;
+ID=doorway_square_closed_staticP; sprite=699; 
+texture=items_building;
+special=huge; special=canHangOnWalls;  special=cannotBePickedUp;
+special=overrideTerrainCollisions; 
+special=canAlwaysFitInTile_build; special=canAlwaysFitInTileWhenSpawned;
+special=sprite2xWidth;
+	blockLoS=true; blockLoE=true; blockWalking=true; blockJumping=true;
+depthMod=50;
+pR=zoneStone;
+pB=zoneStoneDark; 
+pG=zoneWood;
+[ItemReaction] 
+ID=doorway_square_closed_staticP; element=use; element=mechanical; newID=doorway_square_open_staticP; fx=unlock;
+[ItemReaction]
+ID=doorway_square_closed_staticP; element=explode; newID=doorway;
+
+[ItemType]  name=Locked Door;
+itemCategory=mech;
+ID=doorway_square_locked_staticP; sprite=731; 
+texture=items_building;
+special=huge; special=canHangOnWalls;  special=cannotBePickedUp;
+special=overrideTerrainCollisions; 
+special=canAlwaysFitInTile_build; special=canAlwaysFitInTileWhenSpawned;
+special=sprite2xWidth;
+	blockLoS=true; blockLoE=true; blockWalking=true; blockJumping=true;
+depthMod=50;
+pR=zoneStone;
+pB=zoneStoneDark; 
+pG=zoneWood;
+
+----
+	
+[ItemType]  name=Overhead Door;
+itemCategory=mech;
+ID=overheadDoor; sprite=1368; pR=zoneStoneDark;
+special=cannotBePickedUp; special=canHangOnWalls; 
+special=canBeInsideWalls;
+	blockWalking=true; blockJumping=true;
+[ItemReaction] 
+ID=overheadDoor; element=mechanical; newID=overheadDoor_open;
+[ItemType]  name=Overhead Door;
+itemCategory=mech;
+ID=overheadDoor_open; sprite=0; pR=zoneStoneDark;
+special=cannotBePickedUp; special=canHangOnWalls; 
+special=canBeInsideWalls;
+[ItemReaction] 
+ID=overheadDoor_open; element=mechanical; newID=overheadDoor; action=relocate;
+	
+[ItemType]  name=Hall Door;
+itemCategory=mech;
+ID=overheadDoor2; sprite=1368; pR=zoneStoneDark;
+special=cannotBePickedUp; special=canHangOnWalls; 
+special=canBeInsideWalls;
+	blockWalking=true; blockJumping=true; blockLoS=true;
+[ItemReaction] 
+ID=overheadDoor2; element=mechanical; newID=overheadDoor2_open; fx=sidewardLines_slam;
+[ItemType]  name=Hall Door;
+itemCategory=mech;
+ID=overheadDoor2_open; sprite=0; pR=zoneStoneDark;
+special=cannotBePickedUp; special=canHangOnWalls; 
+special=canBeInsideWalls;
+[ItemReaction] 
+ID=overheadDoor2_open; element=mechanical; newID=overheadDoor2; fx=sidewardLines_slam; action=forceRelocate;
+	
+[ItemType]  name=Seal;
+itemCategory=mech;
+ID=stair_cover; sprite=124; 
+texture=items_building;
+special=cannotBePickedUp; special=canHangOnWalls; 
+blockWalking=true; blockJumping=true;
+pR=zoneStone; pB=pTeal2; pG=zoneStone;
+[ItemReaction] 
+ID=stair_cover; element=mechanical; newID=X; fx=sfx_slam;
+[JournalEntry]
+ID=item_stair_cover;
+category=item; halfPage=true;
+title=Seal;
+text=<itemBig=stair_cover><title=Seal><brAdj=>This mechanical blocker is no doubt sealing away a passage, staircase, or something similar. Sometimes there's a method to open it nearby... and sometimes not.;
+
+[ItemType]  name=Chest (Sealed);
+ID=chest_stone1_sealed; sprite=747; itemCategory=mech; pR=zoneStone;
+description=A hefty, durable chest. It's shut tight.;
+journalID=journal_chest;
+weight=3000; volume=100; 
+special=container; special=big; special=container4x4; special=containerMetal;
+special=lockedContainer;
+blockWalking=true; blockJumping=true;
+[ItemReaction] 
+ID=chest_stone1_sealed; element=mechanical; newID=chest_stone1_unsealed;
+[ItemReaction] 
+ID=chest_stone1_sealed; element=explode; newID=chest_stone1_sealed_damaged;
+fx=unlock;
+[ItemType]  name=Chest;
+ID=chest_stone1_unsealed; sprite=748; itemCategory=mech; pR=zoneStone;
+description=A hefty, durable chest.;
+journalID=journal_chest;
+weight=3000; volume=100; 
+special=container; special=big; special=container4x4; special=containerMetal;
+blockWalking=true; blockJumping=true;
+
+[ItemType]  name=Chest (Damaged);
+ID=chest_stone1_sealed_damaged; sprite=780; itemCategory=mech; pR=zoneStone;
+description=A sealed chest, majorly damaged.;
+journalID=journal_chest;
+weight=3000; volume=100; 
+special=container; special=big; special=container4x4; special=containerMetal;
+special=lockedContainer;
+blockWalking=true; blockJumping=true;
+[ItemReaction] 
+ID=chest_stone1_sealed_damaged; element=mechanical; element=explode; newID=chest_stone1_unsealed;
+
+	
+[ItemType]  name=Sealed Door;
+itemCategory=mech;
+ID=lockdown_open; sprite=540; 
+texture=items_building;
+journalID=journal_lockdown;
+special=huge; special=canHangOnWalls;  special=cannotBePickedUp;
+special=overrideTerrainCollisions;
+special=cannotActInPeacefulZones;
+special=reduceItemGrabRangeWhenStoodUpon;
+special=canAlwaysFitInTile;
+special=noTooltips;
+pR=zoneStone;
+[ItemReaction] 
+ID=lockdown_open; element=explode; element=mech; newID=lockdown_closed; fx=sealDoorClose; action=forceRelocate;
+
+
+[ItemType]  name=Sealed Door;
+itemCategory=mech;
+ID=lockdown_closed; sprite=539; 
+texture=items_building;
+journalID=journal_lockdown;
+special=huge; special=canHangOnWalls;  special=cannotBePickedUp;
+special=overrideTerrainCollisions;
+special=canAlwaysFitInTile;
+	blockLoS=true; blockLoE=true; blockWalking=true; blockJumping=true;
+pR=zoneStone; 
+[ItemReaction] 
+ID=lockdown_closed; element=explode; 
+element=mech; newID=lockdown_open; fx=sealDoorOpen;
+
+
+[ItemType]  name=Sealed Door;
+ID=lockdown_open_alt; 
+cloneFrom=lockdown_open;
+special=cannotActInPeacefulZones;
+special=dontCloneReactions;
+pR=zoneStoneDark;
+[ItemReaction] 
+ID=lockdown_open_alt; element=explode; element=mech; newID=lockdown_closed_alt; fx=sealDoorClose_dark; action=forceRelocate;
+
+
+[ItemType]  name=Sealed Door;
+ID=lockdown_closed_alt; 
+cloneFrom=lockdown_closed;
+special=dontCloneReactions;
+pR=zoneStoneDark;
+[ItemReaction] 
+ID=lockdown_closed_alt; element=explode; 
+element=mech; newID=lockdown_open_alt; fx=sealDoorOpen_dark;
+
+
+[JournalEntry]
+ID=journal_lockdown;
+category=item; halfPage=true; rarity=1;
+title=Seal;
+text=<itemBig=lockdown_closed><title=Seal><brAdj=>A panel of thick stone blocks passage. It is nearly unbreakable, but there must be a hidden mechanism that controls it.;
+	
+[ItemType]  name=Rungs;
+itemCategory=mech;
+ID=rungs_both; sprite=1541; 
+journalID=journal_rung;
+special=canHangOnWalls; special=big; special=overrideTerrainCollisions; special=overrideMostCollisions; special=cannotBePickedUp;
+  special=fullTileHitbox;
+pR=pGrey2;
+
+[ItemType]  name=Rungs;
+itemCategory=mech;
+ID=rungs_top; sprite=1542; 
+journalID=journal_rung;
+special=canHangOnWalls; special=big; special=overrideTerrainCollisions; special=overrideMostCollisions;
+ special=cannotBePickedUp; special=moveCostOverride_2;
+  special=fullTileHitbox;
+pR=pGrey2; combineSound=step;
+	combineWith=rung; toMake=rungs_both; consumeOnCombine=true; 
+
+[ItemType]  name=Rungs;
+itemCategory=mech;
+ID=rungs_btm; sprite=1543; 
+journalID=journal_rung;
+cloneFrom=rungs_top; combineSound=step;
+	combineWith=rung; toMake=rungs_both; consumeOnCombine=true; 
+
+[ItemType]  name=Rungs (Missing);
+itemCategory=mech;
+ID=rungs_none; sprite=1544;
+journalID=journal_rung;
+special=canHangOnWalls; special=big; special=cannotBePickedUp;
+  special=fullTileHitbox;
+pR=pGrey2; combineSound=step;
+	combineWith=rung; toMake=rungs_top; consumeOnCombine=true; 
+
+[ItemType]  name=Rung;
+itemCategory=mech;
+ID=rung; sprite=1545; weight=1; volume=3; value=3; stackable=true;
+description=A bent metal bar.;
+journalID=journal_rung;
+pR=pGrey2;
+[JournalEntry]
+ID=journal_rung;
+category=item; halfPage=true; rarity=0;
+title=Rung;
+text=<itemBig=rung><title=Rung><brAdj=>When inserted into properly arranged holes in a wall, bent metal bars (rungs) can form a simple ladder.;
+	
+[ItemType]  name=Key;
+  ID=key; sprite=75; weight=0; volume=0;
+[ItemType]  name=Silver Key;
+  ID=key_silver; sprite=536; weight=0; volume=0;
+
+
+[ItemType]  name=Bridge;
+itemCategory=mech;
+ID=drawbridge; sprite=580; 
+special=canBeInsideWalls; special=overrideTerrainCollisions; special=cannotBePickedUp; special=canAssignSpecialTC; special=ignoreHeight;
+special=canFloatOnWater; 
+pR=zoneWood;
+[ItemReaction] 
+ID=drawbridge; element=mechanical; action=moveSelf;
+
+[ItemType]  name=Planks;
+ID=bridge_float1; sprite=1392; 
+itemCategory=mech;
+special=canBeInsideWalls; special=overrideTerrainCollisions; special=cannotBePickedUp; special=ignoreHeight;
+special=canFloatOnWater;
+pR=zoneWood;
+
+[ItemType]  name=Planks;
+ID=bridge_float2; sprite=1393; 
+cloneFrom=bridge_float1;
+
+[ItemType]  name=Moving Floor;
+itemCategory=mech;
+ID=movingFloor; sprite=63; 
+special=canBeInsideWalls; special=overrideTerrainCollisions; special=cannotBePickedUp; special=canAssignSpecialTC; special=canFloatOnWater; special=noTooltip;
+special=ignoreHeight;
+special=big;
+special=canAlwaysFitInTile;
+special=alwaysBelowOtherItems;
+special=reduceItemGrabRangeWhenStoodUpon;
+pR=zoneStoneLight;
+[ItemReaction] 
+ID=movingFloor; element=mechanical; action=moveSelf;
+
+[ItemType]  name=Moving Floor;
+itemCategory=mech;
+ID=movingFloor2; sprite=127; 
+special=canBeInsideWalls; special=overrideTerrainCollisions; special=cannotBePickedUp; special=canAssignSpecialTC; special=canFloatOnWater; special=noTooltip;
+special=ignoreHeight;
+special=canAlwaysFitInTile;
+special=alwaysBelowOtherItems;
+special=reduceItemGrabRangeWhenStoodUpon;
+pR=zoneStoneLight;
+[ItemReaction] 
+ID=movingFloor2; element=mechanical; action=moveSelf;
+
+[ItemType]  name=Moving Floor;
+ID=movingFloor3; sprite=95; 
+itemCategory=mech;
+special=canBeInsideWalls; special=overrideTerrainCollisions; special=cannotBePickedUp; special=canAssignSpecialTC; special=canFloatOnWater; special=noTooltip;
+special=ignoreHeight;
+special=canAlwaysFitInTile;
+special=reduceItemGrabRangeWhenStoodUpon;
+pR=zoneStoneLight;
+[ItemReaction] 
+ID=movingFloor3; element=mechanical; action=moveSelf;
+
+[ItemType]  name=Stone;
+ID=stoneBlock; sprite=12; 
+itemCategory=mech;
+special=pushable; special=big; special=canAssignSpecialTC; 
+special=canReactWhileMoving;
+special=canReactIndefinitely;
+special=dontChangeSpecialTCOnPush;
+ weight=200;
+ pR = zoneStone;
+	blockLoS=false; blockLoE=true; blockWalking=true; blockJumping=true;
+[ItemReaction] 
+ID=stoneBlock; element=mechanical; element=mechanical2; action=moveSelf;
+[ItemReaction] 
+ID=stoneBlock; element=explode; newID=X; fx=dust_stone; action=pushBlock_destroyed;
+[JournalEntry]
+ID=item_stoneBlock;
+category=item; halfPage=true;
+title=Stone;
+text=<itemBig=stoneBlock><title=Stone><brAdj=>This solid stone is very heavy, but not so heavy that you can't give it a good push to move it.;
+
+[ItemType]  name=Cracked Stone;
+ID=stoneBlock_cracked; sprite=44; 
+itemCategory=mech;
+special=pushable; special=big; special=canAssignSpecialTC; 
+special=canReactWhileMoving;
+special=canReactIndefinitely;
+special=dontChangeSpecialTCOnPush;
+ weight=200;
+ pR = zoneStone;
+	blockLoS=false; blockLoE=true; blockWalking=true; blockJumping=true;
+[ItemReaction] 
+ID=stoneBlock_cracked; element=mechanical; element=mechanical2; action=moveSelf;
+[ItemReaction] 
+ID=stoneBlock_cracked; element=smash; element=explode;  action=pushBlock_destroyed;
+[ItemReaction] 
+ID=stoneBlock_cracked; element=blockDestroyed; fx=dust_stone; newID=X;
+	
+[JournalEntry]
+ID=item_stoneBlock_cracked;
+category=item; halfPage=true;
+title=Cracked Stone;
+text=<itemBig=stoneBlock_cracked><title=Cracked Stone><brAdj=>You can push this stone around, but it looks pretty fragile. You might as well break it with a hammer.;
+
+---
+
+[ItemType]  name=Pedestal;
+ID=mechNotch_pedestal; sprite=1624; 
+itemCategory=mech;
+special=noTooltips;
+special=cannotBePickedUp;
+pR = zoneStone;
+blockWalking=true;
+blockJumping=true;
+
+[ItemType]  name=Mechanism;
+ID=mechNotch_power; sprite=1625; 
+journalID=journal_mechNotch;
+itemCategory=mech;
+special=attachedToPushable;
+special=canReactWhileMoving;
+special=canReactIndefinitely;
+special=canAlwaysFitInTile; 
+special=canAssignSpecialTC;
+special=cannotBePickedUp;
+pB = pBW;
+ depthMod=50;
+[ItemReaction] 
+ID=mechNotch_power; element=explode; element=blockDestroyed; newID=X;
+[ItemLight] 
+ID=mechNotch_power; red=0.7; blue=1; green=0.6; alpha=0.8; size=0.22; flicker=0.02;
+	
+[ItemType]  name=Mechanism;
+ID=mechNotch1; sprite=1627; 
+journalID=journal_mechNotch;
+itemCategory=mech;
+special=timer;
+timer=3;
+special=attachedToPushable;
+special=hideTimer;
+special=canReactWhileMoving;
+special=canReactIndefinitely;
+special=canAlwaysFitInTile; 
+special=canAssignSpecialTC;
+special=cannotBePickedUp;
+pB = pGreen;
+ depthMod=50;
+[ItemReaction] 
+ID=mechNotch1; element=matched; newID=mechNotch_off; action=mechanism; fx=horizSpark_many_magicHum;
+[ItemReaction] 
+ID=mechNotch1; element=timerUp; action=mech_mechNotch_trigger;
+[ItemReaction] 
+ID=mechNotch1; element=explode; element=blockDestroyed; newID=X;
+[ItemLight] 
+ID=mechNotch1; red=0.4; blue=0.4; green=1; alpha=0.8; size=0.15; flicker=0.01;
+ 
+[ItemType]  name=Mechanism;
+ID=mechNotch_connector_off; sprite=1626; 
+journalID=journal_mechNotch;
+itemCategory=mech;
+special=attachedToPushable;
+special=canReactWhileMoving;
+special=canReactIndefinitely;
+special=canAlwaysFitInTile; 
+special=canAssignSpecialTC;
+special=cannotBePickedUp;
+pB = paletteDarkGray;
+ depthMod=50;
+[ItemReaction] 
+ID=mechNotch_connector_off; element=matched; newID=mechNotch_connector_on; action=mech_mechNotch_selfMatch;
+[ItemReaction] 
+ID=mechNotch_connector_off; element=explode; element=blockDestroyed; newID=X;
+ 
+[ItemType]  name=Mechanism;
+ID=mechNotch_connector_on; sprite=1626; 
+journalID=journal_mechNotch;
+itemCategory=mech;
+special=timer;
+timer=3;
+special=attachedToPushable;
+special=hideTimer;
+special=canReactWhileMoving;
+special=canReactIndefinitely;
+special=canAlwaysFitInTile; 
+special=canAssignSpecialTC;
+special=cannotBePickedUp;
+pB = pBW;
+ depthMod=50;
+[ItemReaction] 
+ID=mechNotch_connector_on; element=timerUp; newID=mechNotch_connector_poweringDown;
+[ItemReaction] 
+ID=mechNotch_connector_on; element=explode; element=blockDestroyed; newID=X;
+[ItemLight] 
+ID=mechNotch_connector_on; red=0.7; blue=1; green=0.6; alpha=0.8; size=0.1; flicker=0.02;
+
+[ItemType]  name=Mechanism;
+ID=mechNotch_connector_poweringDown;
+cloneFrom=mechNotch_connector_on;
+itemCategory=mech;
+special=timer;
+timer=3;
+special=dontCloneReactions;
+pB = pBW_dark;
+ depthMod=50;
+[ItemReaction] 
+ID=mechNotch_connector_poweringDown; element=timerUp; newID=mechNotch_connector_off;
+[ItemReaction] 
+ID=mechNotch_connector_poweringDown; element=explode; element=blockDestroyed; newID=X;
+[ItemLight] 
+ID=mechNotch_connector_poweringDown; red=0.7; blue=1; green=0.6; alpha=0.6; size=0.07; flicker=0.02;
+
+
+ 
+[ItemType]  name=Mechanism;
+ID=mechNotch_explode; sprite=1628; 
+cloneFrom=mechNotch1;
+special=dontCloneReactions;
+pB = pBloodyMess;
+[ItemReaction] 
+ID=mechNotch_explode; element=matchedSelf; newID=X; action=bombExplosion_small_weak;
+[ItemReaction] 
+ID=mechNotch_explode; element=explode; element=blockDestroyed; newID=X;
+[ItemReaction] 
+ID=mechNotch_explode; element=timerUp; action=mech_mechNotch_trigger;
+[ItemLight] 
+ID=mechNotch_explode; red=1; blue=0.1; green=0.1; alpha=0.8; size=0.1; flicker=0.05;
+ 
+[ItemType]  name=Mechanism;
+ID=mechNotch_off; 
+journalID=journal_mechNotch;
+sprite=1627; 
+itemCategory=mech;
+special=timer;
+timer=3;
+special=attachedToPushable;
+special=hideTimer;
+special=canReactWhileMoving;
+special=canReactIndefinitely;
+special=canAlwaysFitInTile; 
+special=canAssignSpecialTC;
+special=cannotBePickedUp;
+pB = pGreen;
+ depthMod=50;
+pB = pBlack;
+[ItemReaction] 
+ID=mechNotch_off; element=explode; element=blockDestroyed; newID=X;
+ 
+ 
+[JournalEntry]
+ID=journal_mechNotch;
+category=item; halfPage=true;
+title=Mechanism;
+text=<itemBig=mechNotch_power><title=Mechanism><brAdj=>These stones have strange mechanical devices carved into them. They seem to interface with eachother in some way... Perhaps their respective symbols betray their use?;
+ 
+[ItemType]  name=Wire;
+ID=wire; sprite=1328; weight=0; itemCategory=mech;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=noTooltip; special=canFloatOnWater;
+pR=zoneStoneDark;
+element=elec;
+[ItemReaction] 
+ID=wire; element=tileReacted; newID=X;
+
+[ItemType]  name=Wire;
+ID=wire_long; sprite=1329;
+cloneFrom=wire;
+
+[ItemType]  name=Power Node;
+ID=powerNode_off; sprite=1330; weight=1; itemCategory=mech;
+journalID=journal_powerNode;
+special=cannotBePickedUp; special=canHangOnWalls; special=canAssignSpecialTC; blockWalking=true;
+pR=zoneStone; pB=pB;
+element=elec;
+[ItemReaction] 
+ID=powerNode_off; element=lightning; element=focus; newID=powerNode_on;
+action=mechanism; fx=horizSpark_many_magicHum;
+[ItemReaction] 
+ID=powerNode_off; element=destroy; newID=powerNode_broken;
+
+[ItemType]  name=Power Node (Activated);
+ID=powerNode_on; sprite=1331; weight=1; itemCategory=mech;
+journalID=journal_powerNode;
+special=cannotBePickedUp; special=canHangOnWalls; special=canAssignSpecialTC; blockWalking=true;
+pR=zoneStone; pB=pSilver;
+element=elec;
+[ItemReaction] 
+ID=powerNode_on; element=ruin; element=dispel; newID=powerNode_off;
+action=mechanism; fx=horizSpark_many_magicHum;
+[ItemReaction] 
+ID=powerNode_on; element=destroy; newID=powerNode_broken;
+[ItemLight] 
+ID=powerNode_on; red=0.6; blue=1; green=0.8; alpha=0.2; size=0.12; flicker=0.01;
+
+
+[ItemType]  name=Power Node;
+ID=powerNode_dirt_off; sprite=1332; weight=1; itemCategory=mech;
+journalID=journal_powerNode;
+special=cannotBePickedUp; special=canHangOnWalls; special=canAssignSpecialTC; blockWalking=true;
+pR=zoneStone; pB=pB;
+element=elec; pR=zoneDirt;
+[ItemReaction] 
+ID=powerNode_dirt_off; element=lightning; element=focus; newID=powerNode_dirt_on;
+action=mechanism; fx=horizSpark_many_magicHum;
+[ItemType]  name=Power Node (Activated);
+ID=powerNode_dirt_on; sprite=1333;
+journalID=journal_powerNode;
+special=dontCloneReactions;
+cloneFrom=powerNode_on; pR=zoneDirt;
+[ItemReaction] 
+ID=powerNode_dirt_on; element=ruin; element=dispel; newID=powerNode_dirt_off;
+action=mechanism; fx=horizSpark_many_magicHum;
+[ItemReaction] 
+ID=powerNode_dirt_on; element=destroy; newID=powerNode_broken;
+
+[ItemType]  name=Power Node (Broken);
+ID=powerNode_broken; sprite=1301;
+journalID=journal_powerNode; special=dontCloneReactions;
+cloneFrom=powerNode_on; blockWalking=false;
+pR=zoneStone; pB=pB;
+[JournalEntry]
+ID=journal_powerNode;
+category=item; halfPage=true; rarity=1;
+title=Power Node;
+text=<itemBig=powerNode_on><title=Power Node><brAdj=>This sphere of Volskarn and wiring serves as the input for essence-powered devices. Raw energy or lightning are both sufficient to power it.;
+
+[ItemType]  name=Capsule;
+itemCategory=mech;
+ID=capsule_mech; sprite=1287; weight=900; volume=300;
+journalID=journal_capsule_mech;
+special=cannotBePickedUp; special=sprite2xHeight; special=big;
+blockWalking=true; blockJumping=true; blockLoE=true;
+depthMod=1050;
+pR=zoneStone; pB=pIce;
+special=container; special=container2x3; special=containerMetal;
+[ItemReaction] 
+ID=capsule_mech; element=use; newID=capsule_mech_open; fx=RockDrag;
+
+[ItemType]  name=Capsule;
+itemCategory=mech;
+ID=capsule_mech_open; sprite=1288; weight=900; volume=300;
+journalID=journal_capsule_mech;
+special=cannotBePickedUp; special=sprite2xHeight; special=big;
+blockWalking=true; blockJumping=true; blockLoE=true;
+depthMod=1050;
+pR=zoneStone; pB=pIce;
+special=container; special=container2x3; special=containerMetal;
+[ItemReaction]
+ID=capsule_mech_open; element=closeContainer; newID=capsule_mech; fx=RockDrag;
+[JournalEntry]
+ID=journal_capsule_mech;
+category=item; halfPage=true; rarity=2;
+title=Capsule;
+text=<itemBig=capsule_mech><title=Capsule><brAdj=>The detached cockpit of a giant war machine. In its current state it is functionally useless.;
+
+[ItemType]  name=Broken Capsule;
+itemCategory=mech;
+journalID=journal_broken_mech;
+ID=capsule_mech_buried; sprite=1289; weight=900; volume=300;
+special=cannotBePickedUp; special=big; special=noTooltip;
+special=containerMetal; special=container2x3; special=container;
+special=lockedContainer;
+blockWalking=true; blockJumping=true; blockLoE=true;
+depthMod=1050;
+pR=zoneStone; pB=pIce; pG=zoneDirt;
+[ItemReaction]
+ID=capsule_mech_buried; element=mechanical; newID=capsule_mech_open; fx=fx_shake;
+
+[ItemType]  name=Broken Capsule;
+itemCategory=mech;
+journalID=journal_broken_mech;
+ID=capsule_mech_buried2; sprite=1321; weight=900; volume=300;
+special=cannotBePickedUp; special=big;
+special=containerMetal; special=container2x3; special=container;
+special=lockedContainer;
+blockWalking=true; blockJumping=true; blockLoE=true;
+depthMod=1050;
+pR=zoneStone; pB=pIce; pG=zoneDirt;
+[ItemReaction]
+ID=capsule_mech_buried2; element=mechanical; newID=capsule_mech; fx=fx_shake;
+
+[ItemType]  name=Broken Hand;
+itemCategory=mech;
+journalID=journal_broken_mech;
+ID=mech_hand_broken; sprite=1322; weight=900; volume=300;
+special=cannotBePickedUp; special=big;
+special=preventTileReactions; special=alwaysBelowOtherItems;
+special=itemsIgnoreBlockWalking;
+blockWalking=true; blockJumping=true;
+pR=zoneStone; pB=zoneStoneDark; pG=zoneDirt;
+
+[ItemType]  name=Broken Hand;
+itemCategory=mech;
+journalID=journal_broken_mech;
+ID=mech_hand_broken_closed; sprite=1290; weight=900; volume=300;
+special=cannotBePickedUp; special=big;
+ special=alwaysBelowOtherItems; special=preventTileReactions;
+ special=canReactIndefinitely;
+ special=itemsIgnoreBlockWalking;
+blockWalking=true; blockJumping=true;
+pR=zoneStone; pB=zoneStoneDark; pG=zoneDirt;
+[ItemReaction]
+ID=mech_hand_broken_closed; element=elec; fx=horizSpark_many; action=unbury;
+[ItemReaction]
+ID=mech_hand_broken_closed; element=dig; newID=mech_hand_broken;
+
+
+[ItemType]  name=Broken Cannon;
+itemCategory=mech;
+journalID=journal_broken_mech;
+ID=mech_cannon_broken; sprite=1323; weight=900; volume=300;
+special=cannotBePickedUp; special=big;
+blockWalking=true; blockJumping=true;
+pR=zoneStone; pB=zoneStoneDark; pG=zoneDirt;
+[JournalEntry]
+ID=journal_broken_mech;
+category=item; halfPage=true; rarity=2;
+title=Broken Machine;
+text=<itemBig=capsule_mech_buried2><itemBig=mech_hand_broken><title=Broken Machine><brAdj=>The smashed and worthless remains of a war machine. Only the most powerful and wealthy armies can afford to build even one of these.;
+
+[ItemType]  name=Pole;
+itemCategory=mech;
+ID=pole_up; sprite=1744; 
+special=cannotBePickedUp; special=canHangOnWalls; 
+special=sprite2xHeight; special=canAlwaysFitInTile;
+weight=800;
+blockLoE=true; blockWalking=true; blockJumping=true;
+depthMod=1050;
+pR=zoneStone;
+pG=zoneStoneDark;
+[ItemReaction]
+ID=pole_up; element=mechanical; newID=pole_down; fx=chk;
+[ItemReaction]
+ID=pole_up; element=noMoveTaken; action=forceRelocate;
+[ItemType]  name=Pole;
+itemCategory=mech;
+ID=pole_down; sprite=1808; 
+special=cannotBePickedUp; special=canHangOnWalls;
+ special=canAlwaysFitInTile;
+weight=800;
+pR=zoneStone;
+pG=zoneStoneDark;
+[ItemReaction]
+ID=pole_down; element=mechanical; newID=pole_up; action=forceRelocate; fx=chk;
+
+[ItemType]  name=Protrusion;
+itemCategory=mech;
+ID=pole_organic_up; sprite=1873; 
+special=cannotBePickedUp; special=canHangOnWalls; special=canAlwaysFitInTile;
+weight=800;
+blockLoE=true; blockWalking=true; blockJumping=true;
+depthMod=1050;
+pR=zoneDirt;
+[ItemReaction]
+ID=pole_organic_up; element=mechanical; newID=pole_organic_down; fx=WetSquish;
+[ItemReaction]
+ID=pole_organic_up; element=noMoveTaken; action=forceRelocate; fx=WetSquish;
+
+[ItemType]  name=Bump;
+itemCategory=mech;
+ID=pole_organic_down; sprite=1872; 
+special=cannotBePickedUp; special=canHangOnWalls;
+ special=canAlwaysFitInTile;
+weight=800;
+pR=zoneDirt;
+[ItemReaction]
+ID=pole_organic_down; element=mechanical; newID=pole_organic_up; action=forceRelocate; fx=WetSquish;
+
+
+[ItemType]  name=Salvager;
+itemCategory=mech;
+ID=machine_extractor_on; sprite=1272; weight=900; volume=300;
+journalID=journal_salvager;
+special=cannotBePickedUp; special=huge; special=sprite2xHeight; special=animated; special=timer;
+special=cantEndCombat;
+blockWalking=true; blockJumping=true; blockLoE=true;
+pR=p2;
+depthMod=1050;
+element=elec;
+timer=100;
+[ItemLight] 
+ID=machine_extractor_on; red=0.8; blue=0.6; green=0.8; alpha=0.25; size=0.2; flicker=0.01;
+[ItemReaction] 
+ID=machine_extractor_on; element=physical; element=explode; element=fire; element=ice;
+ newID=machine_extractor_broken; fx=whiteExplosionSmall_rand_many_more;  aiRatingMod = 999;
+ aiRatingModForHostilesOnly = true;
+ action=salvagerBroke_act;
+[ItemReaction]
+ID=machine_extractor_on; element=timerUp; action=somethingHappened_action;
+ 
+[ItemType]  name=Salvager;
+itemCategory=mech;
+ID=machine_extractor; sprite=1272; weight=900; volume=300;
+journalID=journal_salvager;
+special=cannotBePickedUp; special=huge; special=sprite2xHeight;
+blockWalking=true; blockJumping=true; blockLoE=true;
+pR=p2;
+depthMod=1050;
+element=elec;
+[ItemReaction]
+ID=machine_extractor; element=mech; newID=machine_extractor_on; fx=sfx_slam; action=somethingHappened_action;
+
+[ItemType]  name=Broken Salvager;
+itemCategory=mech;
+ID=machine_extractor_broken; sprite=1272; weight=900; volume=300;
+journalID=journal_salvager;
+special=cannotBePickedUp; special=huge; special=sprite2xHeight;
+blockWalking=true; blockJumping=true; blockLoE=true;
+pR=p6;
+depthMod=1050;
+element=elec;
+[ItemReaction] 
+ID=machine_extractor_broken; element=repair; newID=machine_extractor;
+[JournalEntry]
+ID=journal_salvager;
+category=item; halfPage=true; rarity=2;
+title=Salvager;
+text=<itemBig=machine_extractor><title=Salvager><brAdj=>This booming machine powers the salvage station and extracts valuable materials from the sea. Despite appearances, it's quite fragile - a single stray blow could knock it out. Something about its cacophonous noise drives beasts and Cleever to attack it.;
+
+
+[ItemType]  name=Pipe;
+ID=machine_pipe; sprite=1339; weight=900; volume=300;
+itemCategory=mech;
+special=cannotBePickedUp; 
+pR=p1;
+
+[ItemType]  name=Aerstone Stabilizer;
+itemCategory=hide;
+journalID=journal_stabilizer;
+ID=stabilizer_on; sprite=1304; weight=900; volume=300;
+special=cannotBePickedUp; special=huge; special=sprite2xHeight; special=animated;
+blockWalking=true; blockJumping=true;
+pR=pGreyD;
+pB=pB;
+spawnFX=sfx_bgMachineNoise;
+depthMod=1050;
+element=elec;
+[ItemLight] 
+ID=stabilizer_on; red=0.6; blue=0.8; green=0.8; alpha=0.75; size=0.3; flicker=0.03;
+[ItemReaction] 
+ID=stabilizer_on; element=use; action=drop_Aerstone; newID=stabilizer;
+[JournalEntry]
+ID=journal_stabilizer;
+category=item; halfPage=true; rarity=2;
+title=Aerstone Stabilizer;
+text=<itemBig=stabilizer_on><title=Aerstone Stabilizer><brAdj=>Noisy machine that pumps energy into Aerstone, causing it to provide lift. This particular model is extremely efficient.;
+
+[ItemType]  name=Stabilizer;
+itemCategory=hide;
+ID=stabilizer; sprite=1292; weight=900; volume=300;
+journalID=journal_stabilizer;
+special=cannotBePickedUp; special=huge; special=sprite2xHeight;
+blockWalking=true; blockJumping=true;
+pR=pGreyD; pB=pYellow5;
+depthMod=1050;
+element=elec;
+
+[ItemType]  name=Stabilizer;
+itemCategory=hide;
+ID=stabilizer2; sprite=1325; weight=900; volume=300;
+journalID=journal_stabilizer;
+special=cannotBePickedUp; special=big;
+blockWalking=true; blockJumping=true;
+pR=pGreyD; pB=pYellow5;
+element=elec;
+[ItemType]  name=Stabilizer;
+ID=stabilizer3; sprite=1293; cloneFrom=stabilizer2;
+
+[ItemType]  name=Aerstone Stabilizer;
+itemCategory=hide;
+ID=stabilizer_poor; sprite=1240; weight=900; volume=300;
+journalID=journal_stabilizer_poor;
+special=cannotBePickedUp; special=huge; special=sprite2xHeight; special=animated;
+blockWalking=true; blockJumping=true;
+pR=p2;
+pB=pYellow5;
+spawnFX=sfx_bgMachineNoise;
+depthMod=1050;
+element=elec;
+[ItemLight] 
+ID=stabilizer_poor; red=0.8; blue=0.6; green=0.8; alpha=0.75; size=0.3; flicker=0.06;
+[ItemReaction] 
+ID=stabilizer_poor; element=mechanical; newID=stabilizer_poor_off;
+
+[ItemType]  name=Aerstone Stabilizer;
+itemCategory=hide;
+ID=stabilizer_poor_off; sprite=1240; weight=900; volume=300;
+journalID=journal_stabilizer_poor;
+special=cannotBePickedUp; special=huge; special=sprite2xHeight; 
+blockWalking=true; blockJumping=true;
+pR=p2;
+pB=pYellow5;
+depthMod=1050;
+element=elec;
+
+
+[JournalEntry]
+ID=journal_stabilizer_poor;
+category=item; halfPage=true; rarity=2;
+title=Aerstone Stabilizer;
+text=<itemBig=stabilizer_poor><title=Aerstone Stabilizer><brAdj=>Essentially the 'mast' of a large airship. Careful modulation allows the airship to ascend and descend. Unfortunately, the Aerstone is stuck & won't budge.;
+
+[ItemType]  name=Capsule;
+ID=capsule_tube1; sprite=912; weight=900; volume=300;
+itemCategory=mech; texture=items_misc;
+journalID=journal_capsule_tube1;
+special=cannotBePickedUp; special=sprite3xHeight; special=sprite2xWidth; special=big;
+blockWalking=true; blockJumping=true; blockLoE=true;
+depthMod=1050;
+pR=zoneStone; pG=zoneMisc4;
+
+[ItemType]  name=Capsule (Ruluorn);
+ID=capsule_tube1_ruluorn1; sprite=914; 
+journalID=journal_ruluorn; 
+cloneFrom=capsule_tube1;
+special=animated2Slow; special=cannotTarget;
+
+[JournalEntry]
+ID=journal_capsule_tube1;
+category=item; halfPage=true; rarity=2;
+title=Capsule;
+text=<itemBig=capsule_tube1><title=Capsule><brAdj=>Sturdy capsule for the containment of dangerous specimens. The inside of the base is lined with essence-suppressors to keep the captive from using magic.;
+
+[ItemType]  name=Capsule;
+ID=capsule_tube2; sprite=1008; weight=900; volume=300;
+itemCategory=mech; texture=items_misc;
+journalID=journal_capsule_tube1;
+special=cannotBePickedUp; special=sprite4xHeight; special=sprite2xWidth; special=big;
+special=canAlwaysFitInTile;
+blockWalking=true; blockJumping=true; blockLoE=true;
+depthMod=1050;
+pR=zoneStone; pG=zoneMisc4;
+
+[ItemType]  name=Capsule (Ruluorn);
+ID=capsule_tube2_ruluorn1; sprite=1010; weight=900; volume=300;
+itemCategory=mech; texture=items_misc;
+journalID=journal_ruluorn;
+special=cannotBePickedUp; special=sprite4xHeight; special=sprite2xWidth; special=big;
+special=canAlwaysFitInTile; special=cannotTarget;
+blockWalking=true; blockJumping=true; blockLoE=true; special=animated;
+depthMod=1050;
+pR=zoneStone; pG=zoneMisc4; pB=zoneMisc5;
+[ItemReaction] 
+ID=capsule_tube2_ruluorn1; element=somethingHappened; newID=capsule_tube2_ruluorn1_cracked; fx=dust_glass;
+
+[ItemType]  name=Capsule (Ruluorn);
+ID=capsule_tube2_ruluorn1_top; sprite=1010; weight=900; volume=300;
+itemCategory=mech; texture=items_misc;
+journalID=journal_ruluorn;
+special=cannotBePickedUp; special=sprite2xHeight; special=sprite2xWidth; special=animated;
+special=canAlwaysFitInTile; special=cannotTarget;
+depthMod=2050;
+pR=zoneStone; pG=zoneMisc4; pB=zoneMisc5;
+[ItemReaction] 
+ID=capsule_tube2_ruluorn1_top; element=somethingHappened; newID=capsule_tube2_ruluorn1_top_cracked; fx=dust_glass;
+
+[ItemType]  name=Capsule (Ruluorn);
+ID=capsule_tube2_ruluorn1_mid; sprite=1074; weight=900; volume=300;
+itemCategory=mech; texture=items_misc;
+journalID=journal_ruluorn;
+special=cannotBePickedUp; special=sprite2xWidth; special=animated;
+special=canAlwaysFitInTile; special=cannotTarget;
+depthMod=1050;
+pR=zoneStone; pG=zoneMisc4; pB=zoneMisc5;
+[ItemReaction] 
+ID=capsule_tube2_ruluorn1_mid; element=somethingHappened; newID=capsule_tube2_ruluorn1_mid_cracked; fx=dust_glass;
+
+[ItemType]  name=Capsule (Ruluorn);
+ID=capsule_tube2_ruluorn1_btm; sprite=1106; weight=900; volume=300;
+itemCategory=mech; texture=items_misc;
+journalID=journal_ruluorn;
+special=cannotBePickedUp; special=sprite2xWidth; special=animated;
+special=canAlwaysFitInTile; special=cannotTarget;
+blockWalking=true; blockJumping=true; blockLoE=true; 
+depthMod=1050;
+pR=zoneStone; pG=zoneMisc4; pB=zoneMisc5;
+[ItemReaction] 
+ID=capsule_tube2_ruluorn1_btm; element=somethingHappened; newID=capsule_tube2_ruluorn1_btm_cracked; fx=dust_glass;
+
+[ItemType]  name=Capsule (Ruluorn);
+ID=capsule_tube2_ruluorn1_btm2; sprite=1138; weight=900; volume=300;
+itemCategory=mech; texture=items_misc;
+journalID=journal_ruluorn;
+special=cannotBePickedUp; special=sprite2xWidth;
+special=canAlwaysFitInTile; special=cannotTarget;
+blockWalking=true; blockJumping=true; blockLoE=true; 
+depthMod=1050;
+pR=zoneStone; pG=zoneMisc4; pB=zoneMisc5;
+[ItemReaction] 
+ID=capsule_tube2_ruluorn1_btm2; element=somethingHappened; newID=capsule_tube2_ruluorn1_btm2_cracked; fx=dust_glass;
+
+[ItemType]  name=Capsule (Ruluorn);
+ID=capsule_tube2_ruluorn1_cracked; sprite=1170;
+cloneFrom=capsule_tube2_ruluorn1;
+[ItemType]  name=Capsule (Ruluorn);
+ID=capsule_tube2_ruluorn1_top_cracked; sprite=1170; 
+cloneFrom=capsule_tube2_ruluorn1_top;
+[ItemType]  name=Capsule (Ruluorn);
+ID=capsule_tube2_ruluorn1_mid_cracked; sprite=1234; 
+cloneFrom=capsule_tube2_ruluorn1_mid;
+[ItemType]  name=Capsule (Ruluorn);
+ID=capsule_tube2_ruluorn1_btm_cracked; sprite=1266; 
+cloneFrom=capsule_tube2_ruluorn1_btm;
+[ItemType]  name=Capsule (Ruluorn);
+ID=capsule_tube2_ruluorn1_btm2_cracked; sprite=1298; 
+cloneFrom=capsule_tube2_ruluorn1_btm2;
+
+[ItemType]  name=Pipe;
+ID=capsule_tube_thin1; sprite=816; weight=900; volume=300;
+itemCategory=mech; texture=items_misc;
+journalID=;
+special=cannotBePickedUp; special=sprite3xHeight; special=big;
+blockWalking=true; blockJumping=true; blockLoE=true;
+depthMod=1050;
+pR=zoneStone; pG=zoneMisc4;
+
+[ItemType]  name=Pipe;
+ID=capsule_tube_thin2; 
+cloneFrom=capsule_tube_thin1;
+special=animated;
+
+[ItemType]  name=Pushable Staircase;
+description=Portable steps that can be pushed by 'use'-ing them.;
+ID=stepladder_pushable1; sprite=784;  itemCategory=mech;
+texture=items_misc;
+weight=200;
+special=fullTileHitbox; special=moveCostOverride_2;
+special=ignoreHeight; special=adjustSpriteY8;
+special=overrideTerrainCollisions; special=overrideMostCollisions; special=pushOnlyCaresAboutLoE;
+special=canHangOnWalls; special=raiseActorsDepth1050;
+special=pushable; special=pushableXOnly;
+special=canAlwaysReachThisTile;
+depthMod=1050;
+pR=zoneStoneDark;
+[JournalEntry]
+ID=item_stepladder_pushable1;
+category=item; halfPage=true; rarity=0;
+title=Pushable Staircase;
+text=<itemBig=stepladder_pushable1><title=Pushable Staircase><brAdj=>These portable steps are meant for reaching high places. You can push them around by standing off to the side and then 'use'-ing them.;
+
+
+
+[ItemType]  name=Damaged Autocycle;
+itemCategory=mech;
+ID=autocycle_damaged; sprite=1308; weight=900; volume=300;
+special=cannotBePickedUp; special=huge; 
+special=sprite2xHeight; special=sprite2xWidth;
+blockWalking=true; blockJumping=true;
+pR=pHuman2;
+pG=p4; combineSound=sfx_hitMetal;
+	combineWith=autocycle_wheel; toMake=X; consumeOnCombine=true;
+depthMod=1050;
+[ItemReaction]
+ID=autocycle_damaged; element=itemCombined; newID=X; action=spawn_autocycle;
+[JournalEntry]
+ID=item_autocycle_damaged;
+category=item; halfPage=true; rarity=3;
+title=Damaged Autocycle;
+text=<itemBig=autocycle_damaged><title=Damaged Autocycle><brAdj=>This complex machine is actually in decent shape. It only seems to be missing a wheel... surely there's an extra wheel out there?;
+
+[ItemType]  name=<color=Gold>Autocycle Wheel;
+itemCategory=mech;
+ID=autocycle_wheel; sprite=1310; weight=1; volume=3;
+description=A strange wheel that seems to be in good shape.;
+pR=pHuman2;
+pG=p4;
+[JournalEntry]
+ID=item_autocycle_wheel;
+category=item; halfPage=true; rarity=2;
+title=Autocycle Wheel;
+text=<itemBig=autocycle_wheel><title=Autocycle Wheel><brAdj=>High quality tire specifically sized for an Autocycle. Surely there's one out there missing a wheel?;
+
+[ItemType]  name=Storm Cannon;
+ID=stormcannon1; sprite=929;  
+itemCategory=mech; texture=items_misc;
+special=big; special=sprite2xHeight;
+special=canHangOnWalls; special=cannotBePickedUp;
+pR=p2; pB=pGreyD; pG=pGold;
+depthMod=1050; weight=5000;
+blockWalking=true; blockJumping=true;
+[ItemReaction] 
+ID=stormcannon1; element=explode; newID=stormcannon1_broken;
+[ItemType]  name=Storm Cannon;
+ID=stormcannon2; sprite=930;
+special=dontCloneReactions;
+cloneFrom=stormcannon1;
+[ItemReaction] 
+ID=stormcannon2; element=explode; newID=stormcannon2_broken;
+
+
+[ItemType]  name=Broken Storm Cannon;
+ID=stormcannon1_broken; sprite=935;  
+itemCategory=mech; texture=items_misc;
+special=big; special=sprite2xHeight;
+special=canHangOnWalls; special=cannotBePickedUp;
+pR=p2; pB=pGreyD; pG=pGold;
+depthMod=1050; weight=5000;
+blockWalking=true; blockJumping=true;
+[ItemType]  name=Broken Storm Cannon;
+ID=stormcannon2_broken; sprite=936;
+cloneFrom=stormcannon1_broken;
+
+[ItemType]  name=Storm Cannon;
+ID=stormcannon1_side1; sprite=937;  
+itemCategory=mech; texture=items_misc;
+special=big; special=sprite2xHeight;
+special=canHangOnWalls; special=cannotBePickedUp; special=canFloatOnWater;
+pR=p2; pB=pGreyD; pG=pGold; weight=5000;
+blockWalking=true; blockJumping=true;
+
+[ItemType]  name=Burlap Pile;
+ID=stormcannon1b; sprite=931;
+itemCategory=mech; texture=items_misc;
+special=sprite2xHeight; special=canHangOnWalls; special=cannotBePickedUp;
+depthMod=1051;
+pR=p43;
+[ItemType]  name=Burlap Pile;
+ID=stormcannon2b; sprite=932;
+cloneFrom=stormcannon1b;
+
+[ItemType]  name=Airship;
+itemCategory=mech;
+journalID=journal_airship;
+  ID=airship1; sprite=1566; weight=5000; 
+  special=big; special=sprite2xHeight; special=sprite2xWidth;
+  special=canHangOnWalls; special=cannotBePickedUp;
+	pR=p2; pB=pGreyD; pG=p1;
+	depthMod=1051;
+	blockWalking=true; blockJumping=true;
+[ItemType]  name=Airship;
+itemCategory=mech;
+journalID=journal_airship;
+  ID=airship1_on; sprite=1566; weight=5000;
+  special=sprite2xHeight; special=sprite2xWidth;
+  special=canHangOnWalls; special=cannotBePickedUp;
+	pR=p2; pB=pGreyD; pG=p1;
+	depthMod=1050;
+	spawnFX=largePingRepeat_up;
+[ItemType]  name=Airship;
+itemCategory=mech;
+journalID=journal_airship;
+  ID=airship2; sprite=1630; weight=5000; 
+  special=big; special=sprite2xWidth;
+  special=canHangOnWalls; special=cannotBePickedUp;
+	pR=p2; pB=pGreyD; pG=p1;
+	depthMod=10;
+[ItemType]  name=Airship;
+itemCategory=mech;
+journalID=journal_airship;
+  ID=airship_mid; sprite=1662; weight=5000; 
+  special=big; special=sprite2xWidth;
+  special=canHangOnWalls; special=cannotBePickedUp;
+	pR=p2; pB=pGreyD; pG=p1;
+[ItemType]  name=Airship;
+itemCategory=mech;
+journalID=journal_airship;
+  ID=airship3; sprite=1694; weight=5000; 
+  special=big; special=sprite2xHeight; special=sprite2xWidth;
+  special=canHangOnWalls; special=cannotBePickedUp;
+	pR=p2; pB=pGreyD; pG=p1;
+	blockWalking=true; blockJumping=true;
+	depthMod=10;
+[ItemType]  name=Airship;
+itemCategory=mech;
+journalID=journal_airship;
+  ID=airship4; sprite=1758;
+  cloneFrom=airship3;
+  
+[JournalEntry]
+ID=journal_airship;
+category=item; halfPage=true; rarity=2;
+title=Airship;
+text=<itemBig=airship1><title=Airship><brAdj=>This metal-plated boat appears to be a homemade airship, complete with engine full of force triggers. It looks functional, if a bit weathered.;
+
+[ItemType]  name=Aerstone Slot;
+itemCategory=mech;
+  ID=airship_aerstone_holder; sprite=1724; weight=5000; 
+  special=big;
+  special=canHangOnWalls; special=cannotBePickedUp;
+  special=canFloatOnWater; special=canBeInsideWalls; 
+  special=fullTileHitbox;
+	pB=pGreyD;
+	blockWalking=true; blockJumping=true;
+	combineWith=aerstone; toMake=airship_aerstone; consumeOnCombine=true;
+[ItemReaction]
+ID=airship_aerstone_holder; element=itemCombined; action=aerstoneInstalled;
+[JournalEntry]
+ID=item_airship_aerstone_holder;
+category=item; halfPage=true;
+title=Aerstone Slot;
+text=<itemBig=airship_aerstone_holder><title=Aerstone Slot><brAdj=>A protrusion designed to house Aerstone. Once fitted, it pumps energy into the Aerstone, which then generates lift.;
+
+[ItemType]  name=Aerstone;
+itemCategory=mech;
+  ID=airship_aerstone; sprite=1725; weight=5000; 
+  special=big;
+  special=canHangOnWalls; special=cannotBePickedUp;
+  special=canFloatOnWater; special=canBeInsideWalls;
+	pB=pGreyD;
+	blockWalking=true; blockJumping=true;
+[ItemLight] 
+ID=airship_aerstone; red=0.8; blue=0.6; green=0.8; alpha=0.45; size=0.1; flicker=0.1;
+
+[ItemType]  name=Aerstone;
+itemCategory=mech;
+  ID=airship_aerstone_small; sprite=1693; weight=500; 
+  special=big;
+  special=canHangOnWalls; special=cannotBePickedUp;
+  special=canFloatOnWater; special=canBeInsideWalls;
+	pB=pGreyD;
+[JournalEntry]
+ID=item_airship_aerstone_small;
+category=item; halfPage=true; rarity=2;
+title=Aerstone;
+text=<itemBig=airship_aerstone_small><title=Aerstone><brAdj=>Highly efficient device holding a small chunk of Aerstone. Often studded into the sides of large airships to keep them from tipping.;
+
+[ItemType]  name=Thruster;
+itemCategory=mech;
+ID=thruster_off; sprite=1785; weight=900; volume=300;
+journalID=journal_thruster;
+special=cannotBePickedUp; special=big;
+  special=canHangOnWalls; special=cannotBePickedUp;
+  special=canFloatOnWater; special=canBeInsideWalls;
+blockWalking=true; blockJumping=true;
+pR=p2;
+pG=pBW;
+
+[ItemType]  name=Thruster;
+itemCategory=mech;
+ID=thruster_on; sprite=1786; weight=900; volume=300;
+journalID=journal_thruster;
+special=cannotBePickedUp; special=big; special=animated;
+  special=canHangOnWalls; special=cannotBePickedUp;
+  special=canFloatOnWater; special=canBeInsideWalls;
+blockWalking=true; blockJumping=true;
+pR=p2;
+pG=pBW;
+spawnFX=largePingRepeat_down;
+[ItemReaction] 
+ID=thruster_on; element=mechanical; newID=thruster_off;
+[JournalEntry]
+ID=journal_thruster;
+category=item; halfPage=true; rarity=2;
+title=Thruster;
+text=<itemBig=thruster_on><title=Thruster><brAdj=>A series of Force triggers line the inside of this device, which move the ship laterally when activated.;
+
+[ItemType]  name=Trash (Chunks);
+itemCategory=mech;
+ID=trash_chunks; sprite=1347; stackable=true;
+special=quantityChangesSprite_upTo3; special=cannotBePickedUp;
+special=alwaysBelowOtherItems; special=noTooltip;
+pR=zoneDirt; pB=zoneStone; pG=zoneStone;
+
+[ItemType]  name=Trash;
+ID=trash2; sprite=1350; 
+itemCategory=mech; special=cannotBePickedUp;
+special=alwaysBelowOtherItems; special=noTooltip;
+pR=zoneDirt; pB=zoneStone; pG=zoneStone;
+
+[ItemType]  name=Trash (Rods);
+itemCategory=mech;
+ID=trash_rods; sprite=1351; stackable=true;
+special=quantityChangesSprite_upTo5; special=cannotBePickedUp;
+special=alwaysBelowOtherItems; special=noTooltip;
+pR=zoneDirt; pB=zoneStone; pG=zoneStone;
+
+[ItemType]  name=Trash (Pipes);
+itemCategory=mech;
+ID=trash_pipes; sprite=1313; stackable=true;
+special=quantityChangesSprite_upTo3; special=cannotBePickedUp;
+special=alwaysBelowOtherItems; special=noTooltip;
+pR=zoneDirt; pB=zoneStone; pG=zoneStone;
+
+[ItemType]  name=Trash (Smooth);
+itemCategory=mech;
+ID=trash_smooth; sprite=1356; stackable=true;
+special=quantityChangesSprite_upTo2; special=cannotBePickedUp;
+special=alwaysBelowOtherItems; special=noTooltip;
+pR=zoneDirt; pB=zoneStone; pG=zoneStone;
+[ItemType]  name=Trash (Sword);
+itemCategory=mech;
+ID=trash_sword; sprite=1281; stackable=true;
+special=quantityChangesSprite_upTo3; special=cannotBePickedUp;
+special=alwaysBelowOtherItems; special=noTooltip;
+pR=zoneDirt; pB=zoneStone; pG=zoneStone;
+
+
+[ItemType]  name=Pipes;
+itemCategory=mech;
+ID=trash_pipes1; sprite=1316; special=cannotBePickedUp;
+special=canHangOnWalls; 
+pR=zoneDirt; pB=zoneStone; pG=zoneStone;
+[ItemType]  name=Pipes;
+itemCategory=mech;
+ID=trash_pipes2; sprite=1317; special=cannotBePickedUp;
+special=canHangOnWalls; 
+pR=zoneDirt; pB=zoneStone; pG=zoneStone;
+[ItemType]  name=Pipes;
+itemCategory=mech;
+ID=trash_pipes3; sprite=1318; special=cannotBePickedUp;
+special=canHangOnWalls; 
+pR=zoneDirt; pB=zoneStone; pG=zoneStone;
+[ItemType]  name=Pipes;
+itemCategory=mech;
+ID=trash_pipes4; sprite=1286;
+special=canHangOnWalls; special=cannotBePickedUp;
+pR=zoneDirt; pB=zoneStone; pG=zoneStone;
+
+
+[ItemType]  name=Grate;
+itemCategory=mech;
+ID=grate; sprite=1364; 
+special=cannotBePickedUp; special=canHangOnWalls; 
+special=alwaysBelowOtherItems;
+pR=zoneStoneLight; pB=zoneStoneLight; pG=zoneStoneLight;
+
+[ItemType]  name=Grate;
+itemCategory=mech;
+ID=grate2; sprite=1364; 
+special=cannotBePickedUp; special=canHangOnWalls; 
+special=alwaysBelowOtherItems;
+pR=zoneStoneDark; pB=zoneStoneDark; pG=zoneStoneDark;
+
+[ItemType]  name=Manhole Cover;
+itemCategory=mech;
+ID=manhole_cover; sprite=1365; 
+special=cannotBePickedUp; special=canHangOnWalls; 
+special=alwaysBelowOtherItems;
+pR=zoneStone; pB=zoneStone; pG=zoneStone;
+[ItemReaction] 
+ID=manhole_cover; element=mechanical; newID=manhole;
+[JournalEntry]
+ID=item_manhole_cover;
+category=item; halfPage=true;
+title=Manhole Cover;
+text=<itemBig=manhole_cover><title=Manhole Cover><brAdj=>A manhole sealed tight by a thick lid. It's practically impenetrable.;
+
+[ItemType]  name=Manhole;
+itemCategory=mech;
+ID=manhole; sprite=1366; 
+journalID=journal_manhole;
+special=cannotBePickedUp; special=canHangOnWalls; 
+special=alwaysBelowOtherItems; special=reactsToPressure;
+special=canReactIndefinitely;
+pR=zoneStone; pB=zoneStone; pG=zoneStone;
+[ItemReaction] 
+ID=manhole; element=mech; newID=manhole_cover;
+
+[JournalEntry]
+ID=journal_manhole;
+category=item; halfPage=true;
+title=Manhole;
+text=<itemBig=manhole><title=Manhole><brAdj=>A man-sized hole, naturally. Usually includes a ladder or stairs for easy access. Most are for emergency or maintenance use.;
+
+[ItemType]  name=Manhole;
+ID=manhole_recentlyUsed; cloneFrom=manhole;
+special=dontCloneReactions; special=timer; special=hideTimer;
+timer=13;
+[ItemReaction] 
+ID=manhole_recentlyUsed; element=timerUp; newID=manhole;
+[ItemReaction] 
+ID=manhole_recentlyUsed; element=pressurePlateDown; newID=manhole_recentlyUsed;
+
+
+[ItemType]  name=Vol Cannon;
+itemCategory=mech;
+ID=cannon_off; sprite=1753; weight=900; volume=300;
+journalID=journal_volcannon;
+special=big; special=rotateWhenUsed;
+blockWalking=true; blockJumping=true;
+pR=pGreyDG; pB=pGreyDR;
+pG=pVolskarnEmpty;
+element=elec;
+[ItemReaction]
+ID=cannon_off; element=focus; element=elec; newID=cannon_on;
+
+[ItemType]  name=Vol Cannon;
+itemCategory=mech;
+ID=cannon_on; sprite=1754; weight=900; volume=300;
+journalID=journal_volcannon;
+special=big; special=animated; special=timer;
+special=rotateWhenUsed;
+timer=15;
+blockWalking=true; blockJumping=true;
+pR=pGreyDG; pB=pGreyDR; pG=pVolskarn;
+element=elec;
+[ItemReaction]
+ID=cannon_on; element=timerUp; newID=cannon_off; action=cannonShoot;
+[JournalEntry]
+ID=journal_volcannon;
+category=item; halfPage=true; rarity=3;
+title=Vol Cannon;
+text=<itemBig=cannon_on><title=Vol Cannon><brAdj=>Military device that fires a blast of energy when the Volskarn within is charged. Designed for shelling fortified positions.;
+
+
+
+[ItemType]  name=Sword Slot;
+itemCategory=mech;
+ID=mech_sword_slot; sprite=1284;
+special=cannotBePickedUp; special=alwaysBelowOtherItems; 
+special=preventTileReactions; special=canAssignSpecialTC;
+special=fullTileHitbox; special=noTooltip;
+combineSound=unlock;
+combineWith=sword_iron; toMake=mech_sword_slot_withSword; 
+consumeOnCombine=true; 
+combineWith=greatsword_iron; toMake=mech_sword_slot_withSword;
+consumeOnCombine=true;  
+combineWith=rapier_iron; toMake=mech_sword_slot_withSword; 
+consumeOnCombine=true; 
+pR=pIron; pB=pIronHilt; pG=zoneDirt;
+[ItemReaction]
+ID=mech_sword_slot; element=itemCombine; action=mechanism; fx=unlock;
+
+[ItemType]  name=Sword Slot;
+itemCategory=mech;
+ID=mech_sword_slot_withSword; sprite=1285;
+special=cannotBePickedUp; special=alwaysBelowOtherItems; 
+special=preventTileReactions; special=canAssignSpecialTC;
+special=noTooltip;
+pR=pIron; pB=pIronHilt; pG=zoneDirt;
+[ItemReaction]
+ID=mech_sword_slot_withSword; element=itemCombine; action=mechanism; fx=unlock;

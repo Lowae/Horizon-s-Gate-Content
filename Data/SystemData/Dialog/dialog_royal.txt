@@ -1,0 +1,933 @@
+
+
+------------------------ROYAL
+
+
+[DialogNode] ID=royal1;
+animations=;
+statements=Welcome <pnamefull=>.<p=> What brings you before the Council?;
+
+[DialogOption] text=Nation Status;
+nodeToConnectTo=royal_status1;
+[DialogOption] text=Request Boon;
+newLineOfOptions=true;
+nodeToConnectTo=royal_boon1;
+
+
+[DialogOption] text=Goodbye;
+nodeToConnectTo=royal_done1;
+bottomOption=true;
+
+
+
+[DialogNode] ID=royal1_return;
+animations=;
+statements=Will there be anything else, <pnamefull=>?;
+
+[DialogOption] text=Nation Status;
+nodeToConnectTo=royal_status1;
+[DialogOption] text=Request Boon;
+newLineOfOptions=true;
+nodeToConnectTo=royal_boon1;
+
+
+[DialogOption] text=Goodbye;
+nodeToConnectTo=royal_done1;
+bottomOption=true;
+
+----BOON
+
+[DialogNode] ID=royal_boon1;
+animations=stern;
+statements=And what assistance would you have from the Council?;
+
+--CAN
+[DialogOption] text=Gold;
+nodeToConnectTo=royal_boon_gold1;
+[DialogOption] text=Ship;
+newLineOfOptions=true;
+formulaReq=1-m:fleetSize(8);
+nodeToConnectTo=royal_boon_ship1;
+[DialogOption] text=Escort;
+newLineOfOptions=true;
+formulaReq=1-gTimeSinceLessThan:playerEscort:721;
+nodeToConnectTo=royal_boon_escort1;
+[DialogOption] text=Dismiss Escort;
+newLineOfOptions=true;
+formulaReq=gTimeSinceLessThan:playerEscort:721;
+nodeToConnectTo=royal_boon_escort_dismiss1;
+
+--CANT
+[DialogOption] text=<color=SlateGray>Ship;
+newLineOfOptions=true;
+formulaReq=m:fleetSize(8);
+nodeToConnectTo=royal_boon_ship_full;
+
+[DialogOption] text=Nevermind;
+nodeToConnectTo=royal1_return;
+escOption=true;
+bottomOption=true;
+
+
+-------GOLD BOON
+
+[DialogNode] ID=royal_boon_gold1;
+animations=;
+statements=I see.<p=> And how much do you require, <pname=>?;
+
+--CAN
+[DialogOption] text=$1500 (-5 Favor);
+formulaReq=m:playerFavor - 4;
+nodeToConnectTo=royal_boon_gold_1500;
+[DialogOption] text=$5000 (-10 Favor);
+newLineOfOptions=true;
+formulaReq=m:playerFavor - 9;
+nodeToConnectTo=royal_boon_gold_5000;
+[DialogOption] text=$15000 (-25 Favor);
+newLineOfOptions=true;
+formulaReq=m:playerFavor - 24;
+nodeToConnectTo=royal_boon_gold_15000;
+
+--CANT
+[DialogOption] text=<color=SlateGray>$1500 (-5 Favor);
+formulaReq=m:playerFavorBelow(5);
+nodeToConnectTo=royal_boon_cant;
+[DialogOption] text=<color=SlateGray>$5000 (-10 Favor);
+newLineOfOptions=true;
+formulaReq=m:playerFavorBelow(10);
+nodeToConnectTo=royal_boon_cant;
+[DialogOption] text=<color=SlateGray>$15000 (-25 Favor);
+newLineOfOptions=true;
+formulaReq=m:playerFavorBelow(25);
+nodeToConnectTo=royal_boon_cant;
+
+[DialogOption] text=Back;
+nodeToConnectTo=royal_boon1;
+bottomOption=true;
+
+
+---
+
+
+[DialogNode] ID=royal_boon_gold_1500;
+animations=sigh;
+animations=;
+statements=I believe we can make that sort of allowance for you, <pname=>.;
+statements=Consider this <cmd=money=1500>$1500 an award for your good performance thus far.;
+specialEffect=modPlayerFactionFavor,-5;
+
+
+[DialogNode] ID=royal_boon_gold_5000;
+animations=;
+animations=sigh;
+statements=The Council is agreeable to your request, <pname=>.;
+statements=Use this <cmd=money=5000>$5000 to prove your value to Seartial even further.;
+specialEffect=modPlayerFactionFavor,-10;
+
+[DialogNode] ID=royal_boon_gold_15000;
+animations=sigh;
+animations=;
+statements=A hefty sum,<p=> but your services thus far have been well worth it, <pname=>.;
+statements=Take this <cmd=money=15000>$15000 and continue your good work.;
+specialEffect=modPlayerFactionFavor,-25;
+
+
+-------SHIP BOON
+
+[DialogNode] ID=royal_boon_ship1;
+animations=sly;
+statements=Oh?<p=> What ship were you considering?;
+
+--#1
+[DialogOption] text=Towership (-20 Favor);
+formulaReq=m:playerFavor - 19;
+nodeToConnectTo=royal_boon_ship_tier1;
+[DialogOption] text=<color=SlateGray>Towership (-20 Favor);
+formulaReq=m:playerFavorBelow(20);
+nodeToConnectTo=royal_boon_cant;
+[DialogOption] text=<iconBig=ui_questionmark>;
+includeSymbol=false;
+nodeToConnectTo=view_towership;
+
+--#2
+[DialogOption] text=Ironclad (-50 Favor);
+newLineOfOptions=true;
+formulaReq=m:playerFavor - 49;
+nodeToConnectTo=royal_boon_ship_tier2;
+[DialogOption] text=<color=SlateGray>Ironclad (-50 Favor);
+newLineOfOptions=true;
+formulaReq=m:playerFavorBelow(50);
+nodeToConnectTo=royal_boon_cant;
+[DialogOption] text=<iconBig=ui_questionmark>;
+includeSymbol=false;
+nodeToConnectTo=view_ironclad;
+
+[DialogOption] text=Back;
+nodeToConnectTo=royal_boon1;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=royal_boon_ship_tier1;
+animations=sigh;
+statements=This type of ship will no doubt serve you as well as it has our navy.;
+specialEffect=modPlayerFactionFavor,-20;
+nextNodeID=royal_boon_ship_tier1_give;
+
+[DialogNode] ID=royal_boon_ship_tier1_give;
+animations=;
+statements=The Council expects great things from you, <pname=>.;
+specialEffect=giveShip,towership;
+specialEffect=renameShip;
+
+[DialogOption] text=Done;
+specialEffect=openFleetWindow_delay;
+specialEffect=closeCharEdit;
+nodeToConnectTo=;
+
+[DialogNode] ID=royal_boon_ship_tier2;
+animations=sigh;
+statements=The Ironclad is the result of Seartial's greatest minds coming together.<p=> This pinnacle of technology is not granted lightly.;
+specialEffect=modPlayerFactionFavor,-50;
+nextNodeID=royal_boon_ship_tier2_give;
+
+[DialogNode] ID=royal_boon_ship_tier2_give;
+animations=;
+statements=Use this ship to the best of your ability, <pname=>.;
+specialEffect=giveShip,ironclad;
+specialEffect=renameShip;
+
+[DialogOption] text=Done;
+specialEffect=openFleetWindow_delay;
+specialEffect=closeCharEdit;
+nodeToConnectTo=;
+
+
+
+
+[DialogNode] ID=royal_boon_ship_full;
+animations=stern;
+animations=sly;
+statements=Your fleet is already at its limit, <pname=>.;
+statements=If you have a lesser ship to replace, then discard that one first.;
+nextNodeID=royal1_return;
+
+
+
+-------ESCORT BOON
+
+[DialogNode] ID=royal_boon_escort1;
+animations=;
+statements=We can assign ships to aid you in naval combat for the next 30 days.<p=> How much protection do you need?;
+
+--CAN
+[DialogOption] text=1 Ship (-5 Favor);
+formulaReq=m:playerFavor - 4;
+nodeToConnectTo=royal_boon_escort_1ship;
+[DialogOption] text=2 Ships (-15 Favor);
+newLineOfOptions=true;
+formulaReq=m:playerFavor - 14;
+nodeToConnectTo=royal_boon_escort_2ship;
+[DialogOption] text=3 Ships (-25 Favor);
+newLineOfOptions=true;
+formulaReq=m:playerFavor - 24;
+nodeToConnectTo=royal_boon_escort_3ship;
+
+--CANT
+[DialogOption] text=<color=SlateGray>1 Ship (-5 Favor);
+formulaReq=m:playerFavorBelow(5);
+nodeToConnectTo=royal_boon_cant;
+[DialogOption] text=<color=SlateGray>2 Ships (-15 Favor);
+newLineOfOptions=true;
+formulaReq=m:playerFavorBelow(15);
+nodeToConnectTo=royal_boon_cant;
+[DialogOption] text=<color=SlateGray>3 Ships (-25 Favor);
+newLineOfOptions=true;
+formulaReq=m:playerFavorBelow(25);
+nodeToConnectTo=royal_boon_cant;
+
+[DialogOption] text=Back;
+nodeToConnectTo=royal_boon1;
+bottomOption=true;
+
+
+
+[DialogNode] ID=royal_boon_escort_1ship;
+animations=sigh;
+statements=Very good.<p> For the next 30 days, one of our ships will accompany you in combat.;
+specialEffect=modPlayerFactionFavor,-5;
+specialEffect=setGlobalVar,playerEscort,seartial_escort1;
+specialEffect=fx,sfx_goodConfirm_fast;
+nextNodeID=royal1_return;
+
+[DialogNode] ID=royal_boon_escort_2ship;
+animations=sigh;
+statements=Very good.<p> For the next 30 days, two of our ships will accompany you in combat.;
+specialEffect=modPlayerFactionFavor,-15;
+specialEffect=setGlobalVar,playerEscort,seartial_escort2;
+specialEffect=fx,sfx_goodConfirm_fast;
+nextNodeID=royal1_return;
+
+[DialogNode] ID=royal_boon_escort_3ship;
+animations=sigh;
+statements=Very good.<p> For the next 30 days, three of our ships will accompany you in combat.;
+specialEffect=modPlayerFactionFavor,-25;
+specialEffect=setGlobalVar,playerEscort,seartial_escort3;
+specialEffect=fx,sfx_goodConfirm_fast;
+nextNodeID=royal1_return;
+----
+
+[DialogNode] ID=royal_boon_escort_dismiss1;
+animations=sly;
+statements=You wish to dismiss your current escort?;
+[DialogOption] text=Yes;
+nodeToConnectTo=royal_boon_escort_dismiss1_confirm;
+[DialogOption] text=No;
+newLineOfOptions=true;
+nodeToConnectTo=royal1_return;
+
+[DialogNode] ID=royal_boon_escort_dismiss1_confirm;
+animations=sigh;
+statements=So be it then.;
+specialEffect=fx,sfx_goodConfirm_fast;
+specialEffect=clearGlobalVar,playerEscort;
+nextNodeID=royal1_return;
+
+----
+
+[DialogNode] ID=royal_boon_cant;
+animations=sigh;
+animations=sly;
+statements=Hmm...<p=2> I'm sorry, <pname=>, but your performance as late does not merit such.;
+statements=If you had better results, perhaps, but for now you must make do with what you have.;
+nextNodeID=royal1_return;
+
+
+----
+
+[DialogNode] ID=royal_done1;
+animations=sigh;
+statements=Very well then <pname=>.<p=> Continue your work.;
+nextNodeID=royal_done2;
+
+[DialogNode] ID=royal_done2;
+specialEffect=completeJournalGoal,@0.9,* Reach 3rd royal rank and have an audience.;
+
+-------------------------
+
+
+
+[DialogNode] ID=royal_status1;
+animations=sigh;
+animations=;
+animations=sigh;
+animations=;
+statements=Good of you to take interest in our national affairs,<p=> <pfullname=>.;
+statements=Currently Seartial holds <color=DarkRed><math=factionPorts:seartial>ports<color=> worldwide.<p=> The total wealth level of those ports is <color=DarkRed><math=factionWealth:seartial><adjX=-6><color=>.;
+statements=We have <color=DarkRed><math=factionMFleets:seartial>merchant fleets<color=> making continued investments to expand our influence,<p=> with <color=DarkRed><math=factionBFleets:seartial>battle fleets<color=> protecting them.;
+statements=And, regarding yourself, <pname=>...<p=><finalTextIf= the Council, and myself, view your work in the highest regard. Thank you again for your assistance.=gIs:playerRank:9><finalTextIf= we will have a task for you soon, so keep an eye out.=m:nextRoyalFameReqMet><finalTextIf= keep up the good work. Speak to the Admin about our task for you.=g:questRoyal + g:royalSummons> we shall likely have another task for you once you reach <color=DarkRed><math=m:nextRoyalFameReq>fame<color=>.;
+nextNodeID=royal1_return;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----WORLD DOMINATION
+
+[DialogNodeOverride] ID=royal_domination1;
+dialogNodeID_toOverride=royal1; priority=999;
+completeOverride=true;
+overrideSpecialEffects=true;
+fReq=talker:chairman + gIs:playerRank:9 + factionPortsMoreThan:seartial:24 - 2 - g:D_royal_domination1*9999;
+animations=sigh;
+animations=happy;
+animations=sly;
+animations=;
+statements=<speed=0.5><pfullname=> -<p=2> word of your deeds has reached the Council.;
+statements=Today is a glorious day for Seartial!<p> With <math=factionPorts:seartial>ports allied to us, the threat to our people from Jasce and Rumane is truly no more.;
+statements=<pfullname=>, thanks to your efforts,<p> we can now maintain<p> - and share with you -<p> <color=DarkRed>information on the movements of all enemy fleets.;
+statements=Additionally, though it is hardly sufficient for your incredible performance,<p> <pname=>...;
+nextNodeID=royal_domination2;
+
+[DialogNode] ID=royal_domination2;
+animations=happy;
+animations=sigh;
+statements=The Council has unanimously chosen to dedicate <itemBig_low=xpGemBig> <itemBig_low=abilityCrest> and $50,000 to you!;
+statements=Please make use of these boons as you see fit!;
+specialEffect=giveItem,xpGemBig,1;
+specialEffect=giveItem,abilityCrest,1;
+specialEffect=modPlayerFactionFavor,10;
+specialEffect=gp,50000;
+specialEffect=setGlobalVar,tracking_rumane,1;
+specialEffect=setGlobalVar,tracking_jasce,1;
+specialEffect=setGlobalVar,tracking_seartial,1;
+specialEffect=setGlobalVar,tracking_dominio,1;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+
+
+
+
+----------RUMANE
+
+[DialogNodeOverride] ID=rumane_royal1;
+dialogNodeID_toOverride=royal1;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:king;
+animations=sigh;
+statements=Welcome, <pfullname=>.<p=> How can We help you?;
+
+[DialogNodeOverride] ID=rumane_royal1_return;
+dialogNodeID_toOverride=royal1_return;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:king;
+animations=;
+statements=Is there anything more, <pname=>?;
+
+[DialogNodeOverride] ID=rumane_royal_boon1;
+dialogNodeID_toOverride=royal_boon1;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:king;
+animations=;
+statements=Tell me how We could best aid you, <pname=>.;
+
+[DialogNodeOverride] ID=rumane_royal_boon_cant;
+dialogNodeID_toOverride=royal_boon_cant;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:king;
+animations=stern;
+animations=sly;
+statements=Hmph.<p=> Regrettably, <pname=>, We cannot give you that.;
+statements=Your rewards must befit your service.<p=> You may ask again when you have better served your King.;
+
+
+[DialogNodeOverride] ID=rumane_royal_done1;
+dialogNodeID_toOverride=royal_done1;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:king;
+animations=;
+statements=Carry on, <pfullname=>.;
+
+[DialogNodeOverride] ID=rumane_royal_status1;
+dialogNodeID_toOverride=royal_status1;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:king;
+animations=;
+animations=sigh;
+animations=;
+animations=;
+statements=We'll give you a short summary,<p=> <pname=>.;
+statements=Our kingdom holds <color=DarkRed><math=factionPorts:rumane>ports<color=> worldwide.<p=> The total wealth level of those ports is <color=DarkRed><math=factionWealth:rumane><adjX=-6><color=>.;
+statements=We have <color=DarkRed><math=factionMFleets:rumane>merchant fleets<color=> making investments,<p=> and <color=DarkRed><math=factionBFleets:rumane>battle fleets<color=> protecting them.;
+statements=As for you, <pname=>...<p=><finalTextIf= We thank you again for your tremendous service. If there is aught We can do for you, just ask.=gIs:playerRank:9><finalTextIf= We will have a task for you soon. Stay aware.=m:nextRoyalFameReqMet><finalTextIf= I believe I gave the Viceroy a task for you. Make sure you speak to him about it.=g:questRoyal + g:royalSummons> when you reach <color=DarkRed><math=m:nextRoyalFameReq>fame<color=>, We should have another task for you.;
+
+
+
+-------GOLD BOON
+
+
+[DialogNodeOverride] ID=rumane_royal_boon_gold1;
+dialogNodeID_toOverride=royal_boon_gold1;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:king;
+animations=sly;
+statements=Coin from the treasury?<p=> How much would suit you?;
+
+
+[DialogNodeOverride] ID=rumane_royal_boon_gold_1500;
+dialogNodeID_toOverride=royal_boon_gold_1500;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:king;
+animations=sigh;
+animations=;
+statements=Very good.<p=>You have earned that much, at least.;
+statements=We gladly give you this <cmd=money=1500>$1500.<p=> Use it wisely.;
+
+
+[DialogNodeOverride] ID=rumane_royal_boon_gold_5000;
+dialogNodeID_toOverride=royal_boon_gold_5000;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:king;
+animations=;
+animations=sigh;
+statements=This We will grant you, <pname=>.;
+statements=Use this <cmd=money=5000>$5000 in service of Rumane.;
+
+[DialogNodeOverride] ID=rumane_royal_boon_gold_15000;
+dialogNodeID_toOverride=royal_boon_gold_15000;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:king;
+animations=sigh;
+animations=happy;
+statements=Hmmm...<p=> I suppose you have earned that, haven't you?;
+statements=Take this <cmd=money=15000>$15000 and keep up the good work,<p=> <pname=>.<p=> Your King is counting on you.;
+
+
+-------SHIP BOON
+
+[DialogNodeOverride] ID=rumane_royal_boon_ship1;
+dialogNodeID_toOverride=royal_boon_ship1;
+completeOverride=true;
+overrideSpecialEffects=true;
+fReq=talker:king;
+animations=sly;
+statements=What sort of ship are you after?;
+
+--#1
+[DialogOption] text=Ice Reaver (-20 Favor);
+formulaReq=m:playerFavor - 19;
+nodeToConnectTo=royal_boon_ship_tier1;
+[DialogOption] text=<color=SlateGray>Ice Reaver (-20 Favor);
+formulaReq=m:playerFavorBelow(20);
+nodeToConnectTo=royal_boon_cant;
+[DialogOption] text=<iconBig=ui_questionmark>;
+includeSymbol=false;
+nodeToConnectTo=view_icereaver;
+
+--#2
+[DialogOption] text=Glacier (-50 Favor);
+newLineOfOptions=true;
+formulaReq=m:playerFavor - 49;
+nodeToConnectTo=royal_boon_ship_tier2;
+[DialogOption] text=<color=SlateGray>Glacier (-50 Favor);
+newLineOfOptions=true;
+formulaReq=m:playerFavorBelow(50);
+nodeToConnectTo=royal_boon_cant;
+[DialogOption] text=<iconBig=ui_questionmark>;
+includeSymbol=false;
+nodeToConnectTo=view_glacier;
+
+[DialogOption] text=Back;
+nodeToConnectTo=royal_boon1;
+bottomOption=true;
+
+--
+[DialogNodeOverride] ID=rumane_royal_boon_ship_tier1;
+dialogNodeID_toOverride=royal_boon_ship_tier1;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:king;
+animations=;
+statements=This Ice Reaver should well complement any fleet.;
+
+[DialogNodeOverride] ID=rumane_royal_boon_ship_tier2;
+dialogNodeID_toOverride=royal_boon_ship_tier2;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:king;
+animations=;
+statements=The indestructible Glacier will outlast any assault.;
+--
+
+
+[DialogNodeOverride] ID=rumane_royal_boon_ship_tier1_give;
+dialogNodeID_toOverride=royal_boon_ship_tier1_give;
+completeOverride=false;
+overrideSpecialEffects=true;
+fReq=talker:king;
+animations=;
+statements=We expect great things from you, <pname=>.;
+specialEffect=giveShip,icereaver;
+specialEffect=renameShip;
+
+
+
+[DialogNodeOverride] ID=rumane_royal_boon_ship_tier2_give;
+dialogNodeID_toOverride=royal_boon_ship_tier2_give;
+completeOverride=false;
+overrideSpecialEffects=true;
+fReq=talker:king;
+animations=;
+statements=Use this ship to bring glory to Rumane, <pname=>.;
+specialEffect=giveShip,glacier;
+specialEffect=renameShip;
+
+--
+
+[DialogNodeOverride] ID=rumane_royal_boon_escort_1ship;
+dialogNodeID_toOverride=royal_boon_escort_1ship;
+completeOverride=false;
+overrideSpecialEffects=true;
+fReq=talker:king;
+animations=sigh;
+statements=Very well then.<p> For the next 30 days, one of our ships will accompany you in combat.;
+specialEffect=modPlayerFactionFavor,-5;
+specialEffect=setGlobalVar,playerEscort,rumane_escort1;
+specialEffect=fx,sfx_goodConfirm_fast;
+
+[DialogNodeOverride] ID=rumane_royal_boon_escort_2ship;
+dialogNodeID_toOverride=royal_boon_escort_2ship;
+completeOverride=false;
+overrideSpecialEffects=true;
+fReq=talker:king;
+animations=sigh;
+statements=Very well then.<p> For the next 30 days, one of our ships will accompany you in combat.;
+specialEffect=modPlayerFactionFavor,-15;
+specialEffect=setGlobalVar,playerEscort,rumane_escort2;
+specialEffect=fx,sfx_goodConfirm_fast;
+
+[DialogNodeOverride] ID=rumane_royal_boon_escort_3ship;
+dialogNodeID_toOverride=royal_boon_escort_3ship;
+completeOverride=false;
+overrideSpecialEffects=true;
+fReq=talker:king;
+animations=sigh;
+statements=Very well then.<p> For the next 30 days, one of our ships will accompany you in combat.;
+specialEffect=modPlayerFactionFavor,-25;
+specialEffect=setGlobalVar,playerEscort,rumane_escort3;
+specialEffect=fx,sfx_goodConfirm_fast;
+----
+
+
+
+[DialogNodeOverride] ID=rumane_royal_domination1;
+dialogNodeID_toOverride=royal1; priority=999;
+completeOverride=true;
+overrideSpecialEffects=true;
+fReq=talker:king + gIs:playerRank:9 + factionPortsMoreThan:rumane:24 - 2 - g:D_rumane_royal_domination1*9999;
+animations=stern;
+animations=happy;
+animations=;
+animations=happy;
+statements=<speed=0.5><pfullname=> -<p=2> word of your deeds has reached Us.;
+statements=All of Rumane is truly in your debt!<p> With <math=factionPorts:rumane>allied ports, the Clanlands now has nothing to fear from Jasce or Seartial!;
+statements=<pfullname=>, with what you have accomplished,<p> We can now track and share with you the <color=DarkRed>position of all enemy fleets.;
+statements=I...<p=1.6> We<p=1.6> would also like to present you these small gifts,<p> <pname=>.;
+nextNodeID=rumane_royal_domination2;
+
+[DialogNode] ID=rumane_royal_domination2;
+animations=sigh;
+animations=happy;
+statements=Although it hardly seems enough, please take <itemBig_low=xpGemBig> <itemBig_low=abilityCrest>  and $50,000 from our coffers!;
+statements=Enjoy those boons,<p> and rest easy,<p> knowing you have done right by Rumane.;
+specialEffect=giveItem,xpGemBig,1;
+specialEffect=giveItem,abilityCrest,1;
+specialEffect=modPlayerFactionFavor,10;
+specialEffect=gp,50000;
+specialEffect=setGlobalVar,tracking_rumane,1;
+specialEffect=setGlobalVar,tracking_jasce,1;
+specialEffect=setGlobalVar,tracking_seartial,1;
+specialEffect=setGlobalVar,tracking_dominio,1;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------JASCE
+
+[DialogNodeOverride] ID=jasce_royal1;
+dialogNodeID_toOverride=royal1;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:jasce;
+animations=;
+statements=<speed=0.8>Speak, <prank=>.;
+
+[DialogNodeOverride] ID=jasce_royal1_return;
+dialogNodeID_toOverride=royal1_return;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:jasce;
+animations=;
+statements=What else, then?;
+
+
+[DialogNodeOverride] ID=jasce_royal_boon1;
+dialogNodeID_toOverride=royal_boon1;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:jasce;
+animations=;
+statements=What do you require?;
+
+[DialogNodeOverride] ID=jasce_royal_boon_cant;
+dialogNodeID_toOverride=royal_boon_cant;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:jasce;
+animations=stern;
+animations=;
+statements=No, I think not.;
+statements=Demonstrate your devotion first,<p=> and then you will be rewarded.;
+
+
+[DialogNodeOverride] ID=jasce_royal_done1;
+dialogNodeID_toOverride=royal_done1;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:jasce;
+animations=;
+statements=Go.;
+
+
+[DialogNodeOverride] ID=jasce_royal_status1;
+dialogNodeID_toOverride=royal_status1;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:jasce;
+animations=;
+animations=sigh;
+animations=;
+animations=;
+statements=Listen well,<p=> <prank=>.;
+statements=Currently <color=DarkRed><math=factionPorts:jasce>ports<color=> are held by believers.<p=> The total wealth level of these ports is <color=DarkRed><math=factionWealth:jasce><adjX=-6><color=>.;
+statements=<color=DarkRed><math=factionMFleets:jasce>merchant fleets<color=> sail abroad,<p=> and <color=DarkRed><math=factionBFleets:jasce>battle fleets<color=> with them.;
+statements=As for you, <prank=>.<p=2><finalTextIf= You have served and continue to serve well. Your soul may rest easy knowing you have earned your God's favor.=gIs:playerRank:9><finalTextIf= My next command will be delivered to you soon - be ready.=m:nextRoyalFameReqMet><finalTextIf= Speak to the Auspex about your task.=g:questRoyal + g:royalSummons> Reach <color=DarkRed><math=m:nextRoyalFameReq>fame<color=>, and you will be fit to serve.;
+
+-------GOLD BOON
+
+
+[DialogNodeOverride] ID=jasce_royal_boon_gold1;
+dialogNodeID_toOverride=royal_boon_gold1;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:jasce;
+animations=;
+statements=How much?;
+
+[DialogNodeOverride] ID=jasce_royal_boon_gold_1500;
+dialogNodeID_toOverride=royal_boon_gold_1500;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:jasce;
+animations=;
+animations=;
+statements=An adequate reward for your faith.;
+statements=Take the <cmd=money=1500>$1500,<p=> and use it as you wish.;
+
+
+[DialogNodeOverride] ID=jasce_royal_boon_gold_5000;
+dialogNodeID_toOverride=royal_boon_gold_5000;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:jasce;
+animations=;
+animations=;
+statements=For each coin I give you in life,<p=> you have earned tenfold in heaven.;
+statements=Take <cmd=money=5000>$5000,<p=> and spend it to further my kingdom.;
+
+[DialogNodeOverride] ID=jasce_royal_boon_gold_15000;
+dialogNodeID_toOverride=royal_boon_gold_15000;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:jasce;
+animations=;
+animations=;
+statements=Your faithfulness has not gone unnoticed.;
+statements=Use this <cmd=money=15000>$15000 to enact my will.;
+
+
+
+-------SHIP BOON
+
+[DialogNodeOverride] ID=jasce_royal_boon_ship1;
+dialogNodeID_toOverride=royal_boon_ship1;
+completeOverride=true;
+overrideSpecialEffects=true;
+fReq=talker:jasce;
+animations=;
+statements=Which ship?;
+
+--#1
+[DialogOption] text=Corvair (-20 Favor);
+formulaReq=m:playerFavor - 19;
+nodeToConnectTo=royal_boon_ship_tier1;
+[DialogOption] text=<color=SlateGray>Corvair (-20 Favor);
+formulaReq=m:playerFavorBelow(20);
+nodeToConnectTo=royal_boon_cant;
+[DialogOption] text=<iconBig=ui_questionmark>;
+includeSymbol=false;
+nodeToConnectTo=view_corvair;
+
+
+--#2
+[DialogOption] text=Blackwing Galeass (-50 Favor);
+newLineOfOptions=true;
+formulaReq=m:playerFavor - 49;
+nodeToConnectTo=royal_boon_ship_tier2;
+[DialogOption] text=<color=SlateGray>Blackwing Galeass (-50 Favor);
+newLineOfOptions=true;
+formulaReq=m:playerFavorBelow(50);
+nodeToConnectTo=royal_boon_cant;
+[DialogOption] text=<iconBig=ui_questionmark>;
+includeSymbol=false;
+nodeToConnectTo=view_bwing_galleass;
+
+[DialogOption] text=Back;
+nodeToConnectTo=royal_boon1;
+bottomOption=true;
+
+--
+[DialogNodeOverride] ID=jasce_royal_boon_ship_tier1;
+dialogNodeID_toOverride=royal_boon_ship_tier1;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:jasce;
+animations=;
+statements=The Corvair is our fastest ship, fit for any purpose.;
+
+[DialogNodeOverride] ID=jasce_royal_boon_ship_tier2;
+dialogNodeID_toOverride=royal_boon_ship_tier2;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:jasce;
+animations=;
+statements=Behold the mightiest ship on the seas, the Blackwing Galleass!;
+--
+
+[DialogNodeOverride] ID=jasce_royal_boon_ship_tier1_give;
+dialogNodeID_toOverride=royal_boon_ship_tier1_give;
+completeOverride=false;
+overrideSpecialEffects=true;
+fReq=talker:jasce;
+animations=;
+statements=Use this ship well and you will be rewarded even further.;
+specialEffect=giveShip,corvair;
+specialEffect=renameShip;
+
+[DialogNodeOverride] ID=jasce_royal_boon_ship_tier2_give;
+dialogNodeID_toOverride=royal_boon_ship_tier2_give;
+completeOverride=false;
+overrideSpecialEffects=true;
+fReq=talker:jasce;
+animations=;
+statements=Now your fleet is truly fit to enact my will.;
+specialEffect=giveShip,bwing_galleass;
+specialEffect=renameShip;
+
+--
+
+[DialogNodeOverride] ID=jasce_royal_boon_escort_1ship;
+dialogNodeID_toOverride=royal_boon_escort_1ship;
+completeOverride=false;
+overrideSpecialEffects=true;
+fReq=talker:jasce;
+animations=sigh;
+statements=So be it. For the next 30 days, one of my ships will accompany you in combat.;
+specialEffect=modPlayerFactionFavor,-5;
+specialEffect=setGlobalVar,playerEscort,jasce_escort1;
+specialEffect=fx,sfx_goodConfirm_fast;
+nextNodeID=royal1_return;
+
+[DialogNodeOverride] ID=jasce_royal_boon_escort_2ship;
+dialogNodeID_toOverride=royal_boon_escort_2ship;
+completeOverride=false;
+overrideSpecialEffects=true;
+fReq=talker:jasce;
+animations=sigh;
+statements=So be it. For the next 30 days, two of my ships will accompany you in combat.;
+specialEffect=modPlayerFactionFavor,-15;
+specialEffect=setGlobalVar,playerEscort,jasce_escort2;
+specialEffect=fx,sfx_goodConfirm_fast;
+nextNodeID=royal1_return;
+
+[DialogNodeOverride] ID=jasce_royal_boon_escort_3ship;
+dialogNodeID_toOverride=royal_boon_escort_3ship;
+completeOverride=false;
+overrideSpecialEffects=true;
+fReq=talker:jasce;
+animations=sigh;
+statements=So be it. For the next 30 days, three of my ships will accompany you in combat.;
+specialEffect=modPlayerFactionFavor,-25;
+specialEffect=setGlobalVar,playerEscort,jasce_escort3;
+specialEffect=fx,sfx_goodConfirm_fast;
+nextNodeID=royal1_return;
+----
+
+[DialogNodeOverride] ID=jasce_royal_domination1;
+dialogNodeID_toOverride=royal1; priority=999;
+completeOverride=true;
+overrideSpecialEffects=true;
+fReq=talker:jasce + gIs:playerRank:9 + factionPortsMoreThan:jasce:24 - 2 - g:D_jasce_royal_domination1*9999;
+animations=;
+animations=handupPose;
+animations=;
+animations=handsupPose;
+statements=<speed=0.5><pfullname=>.<p> You have fully met the destiny I set for you.;
+statements=By your doing, believers hold <math=factionPorts:jasce>ports -<p> and with it, untold souls have been saved!;
+statements=<pfullname=>,<p> I now entrust you with <color=DarkRed>knowledge of the position of every enemy fleet.;
+statements=Know,<p> <pfullname=>,<p> that your rewards in the afterlife shall be great!;
+nextNodeID=jasce_royal_domination2;
+
+[DialogNode] ID=jasce_royal_domination2;
+animations=;
+animations=;
+statements=Your material rewards shall be <itemBig_low=xpGemBig> <itemBig_low=abilityCrest><p>  and $50,000 from my treasury.;
+statements=Go, <pfullname=>, with My favor.;
+specialEffect=giveItem,xpGemBig,1;
+specialEffect=giveItem,abilityCrest,1;
+specialEffect=modPlayerFactionFavor,10;
+specialEffect=gp,50000;
+specialEffect=setGlobalVar,tracking_rumane,1;
+specialEffect=setGlobalVar,tracking_jasce,1;
+specialEffect=setGlobalVar,tracking_seartial,1;
+specialEffect=setGlobalVar,tracking_dominio,1;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

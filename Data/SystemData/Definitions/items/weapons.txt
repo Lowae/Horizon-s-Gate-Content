@@ -1,0 +1,4982 @@
+
+[ItemType]  name=Machete;
+texture=items_weapons;
+description=Primitive blade for cutting obstacles.;
+weight=2; volume=3; value=10;
+power=4; volume=5;
+ID=machete; sprite=33; spriteWhenHeld=65; itemCategory=weapon; element=50;
+special=enhanceDoesntAlterPalettes;
+ action=swordAttack;
+[JournalEntry]
+ID=item_machete;
+category=equipment; halfPage=true;
+title=Machete;
+text=<itemBig=machete><title=Machete><brAdj=>A cleaver-like blade typically used for agricultural purposes. Excels at cutting undergrowth, not armor.;
+ 
+ 
+[ItemType]  name=Hatchet;
+texture=items_weapons;
+description=Axe designed for woodcutting.;
+weight=3; volume=5; value=10;
+power=5;
+ID=hatchet; sprite=104; spriteWhenHeld=136; itemCategory=weapon; element=53;
+special=enhanceDoesntAlterPalettes;
+ action=axeAttack;
+ special=rotate90WhenSheathed;
+[JournalEntry]
+ID=item_hatchet;
+category=equipment; halfPage=true;
+title=Hatchet;
+text=<itemBig=hatchet><title=Hatchet><brAdj=>A hatchet is a simple sharpened blade for cutting wood. It is very versatile, and easily fills any role that a common knife would.;
+
+[ItemType]  name=Wrench;
+ID=hammer_wrench; pR=pIron;
+texture=items_weapons;
+description=Fit for clubbing and dismantling machinery.;
+journalID=journal_hammer;
+weight=6; volume=5; value=30;
+power=6;
+sprite=418; spriteWhenHeld=450; itemCategory=weapon; element=hammer;
+ action=hammerAttack_wrench;
+ special=rotate90WhenSheathed;
+[JournalEntry]
+ID=item_hammer_wrench;
+category=equipment; halfPage=true;
+title=Wrench;
+text=<itemBig=hammer_wrench><title=Wrench><brAdj=>You're not much of an engineer, so it's mainly useful for taking things apart. It does double damage against machines.;
+
+[ItemType]  name=Slingshot;
+texture=items_weapons;
+description=So weak, it is often mistaken for a toy.;
+ID=slingshot; sprite=97; spriteWhenHeld=129; itemCategory=weapon; element=58;
+weight=1; volume=1; value=2; pR = pR; pB=pInventory;
+power=2;
+ action=slingshotAttack;
+[JournalEntry]
+ID=item_slingshot;
+category=equipment; halfPage=true;
+title=Slingshot;
+text=<itemBig=slingshot><title=Slingshot><brAdj=>An elastic band attached to two prongs makes up a slingshot. This one is weak, but some better slingshots are good enough to hunt with.;
+
+[ItemType]  name=Lucky Slingshot;
+texture=items_weapons;
+journalID=item_slingshot;
+description=Weak slingshot that nonetheless feels satisfying to hold.;
+ID=luckshot; sprite=97; spriteWhenHeld=129; itemCategory=weapon; element=58;
+weight=1; volume=1; value=200; pR = pMythril; pB=pYellow5;
+power=3;
+ action=slingshotAttack_lucky;
+ 
+
+[ItemType]  name=Excalibur;
+texture=items_weapons;
+description=Sword overflowing with powerful magic.;
+ID=magic_sword; sprite=35; spriteWhenHeld=67; itemCategory=weapon; special=animated; element=50;
+weight=3; volume=5; value=9000;
+power=45;
+ action=swordAttack;
+ special=rotate90WhenSheathed;
+ pR=pSilver; pB=pIronHilt; pG=pPurple;
+ 
+[ItemType]  name=Fire Trigger;
+ID=trigger_fire; sprite=110; itemCategory=weapon; element=fire;
+texture=items_weapons;
+description=Magical 'trigger' stone that converts essence into fire.
+<font=thickIcons><color=Black>
+<n=><icon=invIcon_sword> +Fire Attack
+<n=><icon=invIcon_armor> +1<icon=skill_Fire>;
+journalID=trigger_stone;
+weight=1; volume=0; value=150;
+power=3;
+special=enhanceSlots_0; special=animateEvery100Frames;
+special=cannotBeSheathed; special=unbreakable;
+ action=fireTriggerAttack;
+[ItemReactionInWeapon] 
+ID=trigger_fire; element=weaponBuff; action=fireTriggerInWeapon;
+[ItemEffect]  
+ID=trigger_fire; actorValue=skill_Fire; magnitude=1; duration=-1;
+[ItemEffectInArmor]  
+ID=trigger_fire; actorValue=skill_Fire; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_trigger_fire;
+category=equipment; halfPage=true; rarity=1;
+title=Fire Trigger;
+text=<itemBig=trigger_fire><title=Fire Trigger><brAdj=>Directing oneself through it creates flame. Fire triggers are a key component in tech such as furnaces, propulsion, and weapons of war.;
+
+[ItemType]  name=Ice Trigger;
+ID=trigger_ice; sprite=110; itemCategory=weapon; element=ice;
+texture=items_weapons;
+description=Magical 'trigger' stone that converts essence into cold.
+<font=thickIcons><color=Black>
+<n=><icon=invIcon_sword> +Ice Attack
+<n=><icon=invIcon_armor> +1<icon=skill_Ice>;
+journalID=trigger_stone;
+weight=1; volume=0; value=150;
+power=3;
+pR=pBlue2;
+special=enhanceSlots_0; special=animateEvery100Frames;
+special=cannotBeSheathed; special=unbreakable;
+ action=iceTriggerAttack;
+[ItemReactionInWeapon] 
+ID=trigger_ice; element=weaponBuff; action=iceTriggerInWeapon;
+[ItemEffect]  
+ID=trigger_ice; actorValue=skill_Ice; magnitude=1; duration=-1;
+[ItemEffectInArmor]  
+ID=trigger_ice; actorValue=skill_Ice; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_trigger_ice;
+category=equipment; halfPage=true; rarity=1;
+title=Ice Trigger;
+text=<itemBig=trigger_ice><title=Ice Trigger><brAdj=>With thought and effort, this stone can sap heat. Ice triggers are highly valued for preservation of food.;
+
+[ItemType]  name=Lightning Trigger;
+ID=trigger_elec; sprite=110; itemCategory=weapon; element=lightning;
+texture=items_weapons;
+description=Magical 'trigger' stone that converts essence into electricity.
+<font=thickIcons><color=Black>
+<n=><icon=invIcon_sword> +Elec Attack
+<n=><icon=invIcon_armor> +1<icon=skill_Elec>;
+journalID=trigger_stone;
+weight=1; volume=0; value=150;
+power=3;
+pR=pIce;
+special=enhanceSlots_0; special=animateEvery100Frames;
+special=cannotBeSheathed; special=unbreakable;
+ action=elecTriggerAttack;
+[ItemReactionInWeapon] 
+ID=trigger_elec; element=weaponBuff; action=elecTriggerInWeapon;
+[ItemEffect]  
+ID=trigger_elec; actorValue=skill_Elec; magnitude=1; duration=-1;
+[ItemEffectInArmor]  
+ID=trigger_elec; actorValue=skill_Elec; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_trigger_elec;
+category=equipment; halfPage=true; rarity=1;
+title=Lightning Trigger;
+text=<itemBig=trigger_elec><title=Lightning Trigger><brAdj=>This stone sparks when you focus on it. Lightning triggers see non-combat use only in highly complex machinery.;
+
+
+[ItemType]  name=Wind Trigger;
+ID=trigger_wind; sprite=110; itemCategory=weapon; element=wind;
+texture=items_weapons;
+description=Magical 'trigger' stone that converts essence into force.
+<font=thickIcons><color=Black>
+<n=><icon=invIcon_sword> +Wind Attack
+<n=><icon=invIcon_armor> +1<icon=skill_Wind>;
+journalID=trigger_stone;
+weight=1; volume=0; value=150;
+power=3;
+pR=pGrey;
+special=enhanceSlots_0; special=animateEvery100Frames;
+special=cannotBeSheathed; special=unbreakable;
+ action=windTriggerAttack;
+[ItemReactionInWeapon] 
+ID=trigger_wind; element=weaponBuff; action=windTriggerInWeapon;
+[ItemEffect]  
+ID=trigger_wind; actorValue=skill_Wind; magnitude=1; duration=-1;
+[ItemEffectInArmor]  
+ID=trigger_wind; actorValue=skill_Wind; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_trigger_wind;
+category=equipment; halfPage=true; rarity=1;
+title=Wind Trigger;
+text=<itemBig=trigger_wind><title=Wind Trigger><brAdj=>This stone allows you to project force with your mind. Wind triggers are often used in construction, or as components of machinery.;
+
+
+
+[ItemType]  name=Life Trigger;
+ID=trigger_life; sprite=110; itemCategory=weapon; element=life;
+texture=items_weapons;
+description=Magical 'trigger' stone that converts essence into restorative magic.
+<font=thickIcons><color=Black>
+<n=><icon=invIcon_sword> +Heal
+<n=><icon=invIcon_armor> +1<icon=skill_Life>;
+journalID=trigger_stone;
+weight=1; volume=0; value=150;
+power=3;
+pR=pHoneyglow;
+special=enhanceSlots_0; special=animateEvery100Frames;
+special=cannotBeSheathed; special=unbreakable;
+ action=lifeTriggerAttack;
+[ItemReactionInWeapon] 
+ID=trigger_life; element=weaponBuff; action=lifeTriggerInWeapon;
+[ItemEffect]  
+ID=trigger_life; actorValue=skill_Life; magnitude=1; duration=-1;
+[ItemEffectInArmor]  
+ID=trigger_life; actorValue=skill_Life; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_trigger_life;
+category=equipment; halfPage=true; rarity=1;
+title=Life Trigger;
+text=<itemBig=trigger_life><title=Life Trigger><brAdj=>When someone is recently injured, their essence still 'remembers' their original form. Preservation (i.e. Life) magic restores that form.;
+
+
+[ItemType]  name=Ruin Trigger;
+ID=trigger_ruin; sprite=110; itemCategory=weapon; element=ruin;
+texture=items_weapons;
+description=Magical 'trigger' stone that converts essence into Ruin magic.
+<font=thickIcons><color=Black>
+<n=><icon=invIcon_sword> +Ruin Attack
+<n=><icon=invIcon_armor> +1<icon=skill_Ruin>;
+journalID=trigger_stone;
+weight=1; volume=0; value=150;
+power=3;
+pR=pPurpleD;
+special=enhanceSlots_0; special=animateEvery100Frames;
+special=cannotBeSheathed; special=unbreakable;
+ action=ruinTriggerAttack;
+[ItemReactionInWeapon] 
+ID=trigger_ruin; element=weaponBuff; action=ruinTriggerInWeapon;
+[ItemEffect]  
+ID=trigger_ruin; actorValue=skill_Ruin; magnitude=1; duration=-1;
+[ItemEffectInArmor]  
+ID=trigger_ruin; actorValue=skill_Ruin; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_trigger_ruin;
+category=equipment; halfPage=true; rarity=1;
+title=Ruin Trigger;
+text=<itemBig=trigger_ruin><title=Ruin Trigger><brAdj=>Empowers Ruin magic, which degrades or controls essence. Ruin is often reviled for its role in necromancy, even though it has other uses.;
+
+[ItemType]  name=Dud Trigger;
+texture=items_weapons;
+description=Trigger stone that was improperly created, and is useless.;
+journalID=trigger_stone;
+weight=1; volume=0; value=0;
+pR=pBlack;
+special=enhanceSlots_0;
+special=cannotBeSheathed; special=unbreakable;
+ID=trigger_dud; sprite=110; itemCategory=weapon;
+[JournalEntry]
+ID=item_trigger_dud;
+category=equipment; halfPage=true; rarity=1;
+title=Dud Trigger;
+text=<itemBig=trigger_dud><title=Dud Trigger><brAdj=>In order for a trigger stone to react to essence, its components must be purified and properly proportioned... unlike this useless dud.;
+
+
+[JournalEntry]
+ID=trigger_stone;
+category=item; halfPage=true; rarity=1;
+title=Trigger Stones;
+text=<itemBig=trigger_fire><itemBig=trigger_ice><title=Trigger Stones><brAdj=>'Trigger' stones are substances that convert essence into energy. The user can mentally direct their essence into the stone to create energy.<n=>   They are used as training tools by apprentices or as an empowering focus by skilled wizards. Each trigger stone is refined from different materials, and corresponds to a single element.;
+
+
+[ItemType]  name=Flamecage;
+texture=items_weapons;
+description=Fire trigger device that doubles as a light source.;
+journalID=trigger_stone;
+weight=1; volume=1; value=900;
+power=5; pB=pCopper; spawnFX=fireEmber;
+ID=trigger_fire_cage; sprite=109; itemCategory=weapon;
+special=enhanceSlots_0; element=fire;
+special=cannotBeSheathed; special=unbreakable;
+ action=fireTriggerAttack;
+[ItemLight]
+ ID=trigger_fire_cage; red=1; blue=0.5; green=0.8; alpha=1; size=0.9; flicker=0.02; texture=krypton;
+[ItemEffect]
+ID=trigger_fire_cage; actorValue=skill_Fire; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_trigger_fire_cage;
+category=equipment; halfPage=true; rarity=1;
+title=Flamecage;
+text=<itemBig=trigger_fire_cage><title=Flamecage><brAdj=>A device designed for combat mages on the Watch. It provides light without any effort from the user, and also empowers fire magic.;
+
+
+[ItemType]  name=Boltcage;
+texture=items_weapons;
+description=Lightning trigger device that doubles as a light source.;
+journalID=trigger_stone;
+weight=1; volume=1; value=900;
+power=5;
+pR=pIce; pB=pGold; spawnFX=horizSpark_small;
+ID=trigger_elec_cage; sprite=109; itemCategory=weapon; element=lightning;
+special=enhanceSlots_0;
+special=cannotBeSheathed; special=unbreakable;
+ action=elecTriggerAttack;
+[ItemLight]
+ ID=trigger_elec_cage; red=0.8; blue=1; green=0.5; alpha=1; size=0.9; flicker=0.02; texture=krypton;
+[ItemEffect]
+ID=trigger_elec_cage; actorValue=skill_Elec; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_trigger_elec_cage;
+category=equipment; halfPage=true; rarity=1;
+title=Boltcage;
+text=<itemBig=trigger_elec_cage><title=Boltcage><brAdj=>A device designed for combat mages on the Watch. It is generally unpopular due to its propensity for causing mishaps on rainy nights.;
+
+[ItemType]  name=Life Chrysolit;
+texture=items_weapons;
+description=Docile glowing arthropod that exudes life magic.;
+ID=trigger_life_light; sprite=108; itemCategory=weapon; 
+weight=1; volume=1; value=900;
+power=5; pR=p1; pB=pGold;
+special=canHangOnWalls;
+special=enhanceSlots_0;
+special=cannotBeSheathed; special=unbreakable;
+action=lifeTriggerAttack;
+element=life;
+[ItemLight]
+ ID=trigger_life_light; red=0.9; blue=0.8; green=0.9; alpha=0.9; size=1.1; flicker=0.001; texture=krypton;
+[ItemEffect]
+ID=trigger_life_light; actorValue=skill_Life; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_trigger_life_light;
+category=equipment; halfPage=true; rarity=3;
+title=Life Chrysolit;
+text=<itemBig=trigger_life_light><title=Life Chrysolit><brAdj=>This hardy insect is completely limp- practically lifeless. At the same time, it glows brightly and has a powerful magic aura.;
+
+
+[ItemType]  name=Refracting Ice;
+texture=items_weapons;
+description=Ironice specially carved to reflect and amplify light.;
+weight=1; volume=1; value=900;
+power=5;
+pR=pBlue;
+ID=trigger_ice_light; sprite=875; itemCategory=weapon; element=ice;
+special=enhanceSlots_0;
+special=cannotBeSheathed; special=unbreakable;
+ action=iceTriggerAttack;
+[ItemLight]
+ ID=trigger_ice_light; red=0.5; blue=1; green=0.5; alpha=0.8; size=0.8; flicker=0; texture=krypton;
+[ItemEffect]
+ID=trigger_ice_light; actorValue=skill_Ice; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_trigger_ice_light;
+category=equipment; halfPage=true; rarity=2;
+title=Refracting Ice;
+text=<itemBig=trigger_ice_light><title=Refracting Ice><brAdj=>Ironice is rarely suited to delicate creations, but someone managed to craft it into this magnificent and complicated crystal.;
+
+[ItemType]  name=Gale Lamp;
+texture=items_weapons;
+description=Wind triggers embedded in a mythril lamp.;
+weight=1; volume=1; value=900;
+power=5;
+pR=pBlue;
+ID=trigger_wind_light; sprite=10; itemCategory=weapon; element=wind;
+special=enhanceSlots_0; special=unbreakable;
+special=cannotBeSheathed;
+ action=windTriggerAttack;
+[ItemLight]
+ ID=trigger_wind_light; red=1.0; blue=0.8; green=0.7; alpha=0.8; size=1.0; flicker=0; texture=krypton;
+[ItemEffect]
+ID=trigger_wind_light; actorValue=skill_Wind; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_trigger_wind_light;
+category=equipment; halfPage=true; rarity=2;
+title=Gale Lamp;
+text=<itemBig=trigger_wind_light><title=Gale Lamp><brAdj=>The wind triggers encircling it were originally intended to keep wind from dousing the flame, but they serve just as well as weapons.;
+
+[ItemType]  name=Chill Trigger;
+ID=trigger_chill; sprite=107; itemCategory=weapon; element=ice; 
+texture=items_weapons;
+description=Advanced trigger stone that Chills an enemy.
+<font=thickIcons><color=Black>
+<n=><icon=invIcon_sword> +Chill
+<n=><icon=invIcon_armor> +50% Chill Resist;
+journalID=trigger_stone;
+weight=1; volume=0; value=950;
+power=1;
+pR=pBlue2;
+special=enhanceSlots_0; special=unbreakable;
+special=cannotBeSheathed;
+ action=chillTriggerAttack;
+[ItemReactionInWeapon] 
+ID=trigger_chill; element=weaponBuff; action=chillTriggerInWeapon;
+[ItemEffect]  
+ID=trigger_chill; actorValue=skill_Ice; magnitude=1; duration=-1;
+[ItemReactionInArmor]  
+ID=trigger_chill; actorValues=chilled; damageMultiplier=0.5;
+
+[ItemType]  name=Stun Trigger;
+texture=items_weapons;
+description=Advanced trigger stone that briefly Stuns a target.
+<font=thickIcons><color=Black>
+<n=><icon=invIcon_sword> +Stun
+<n=><icon=invIcon_armor> +50% Stun Resist;
+journalID=trigger_stone;
+weight=1; volume=0; value=950;
+power=1;
+pR=pIce;
+ID=trigger_stun; sprite=107; itemCategory=weapon; element=lightning;
+special=enhanceSlots_0; special=unbreakable;
+special=cannotBeSheathed;
+ action=stunTriggerAttack;
+[ItemReactionInWeapon] 
+ID=trigger_stun; element=weaponBuff; action=stunTriggerInWeapon;
+[ItemEffect]  
+ID=trigger_stun; actorValue=skill_Elec; magnitude=1; duration=-1;
+[ItemReactionInArmor]  
+ID=trigger_stun; actorValues=stun; damageMultiplier=0.5;
+
+
+[ItemType]  name=Push Trigger;
+texture=items_weapons;
+description=Advanced trigger stone that pushes a target back.
+<font=thickIcons><color=Black>
+<n=><icon=invIcon_sword> +Push
+<n=><icon=invIcon_armor> +50% Push Resist;
+journalID=trigger_stone;
+weight=1; volume=0; value=950;
+power=1;
+pR=pGrey;
+ID=trigger_push; sprite=107; itemCategory=weapon; element=wind;
+special=enhanceSlots_0; special=unbreakable;
+special=cannotBeSheathed;
+ action=pushTriggerAttack;
+[ItemReactionInWeapon] 
+ID=trigger_push; element=weaponBuff; action=pushTriggerInWeapon;
+[ItemEffect]  
+ID=trigger_push; actorValue=skill_Wind; magnitude=1; duration=-1;
+[ItemReactionInArmor]  
+ID=trigger_push; actorValues=push; damageMultiplier=0.5;
+
+
+
+[ItemType]  name=Growth Trigger;
+texture=items_weapons;
+description=Advanced trigger stone that makes the target regenerate.
+<font=thickIcons><color=Black>
+<n=><icon=invIcon_sword> +Growth
+<n=><icon=invIcon_armor> +50% Growth Duration;
+journalID=trigger_stone;
+weight=1; volume=0; value=950;
+power=1;
+pR=pHoneyglow;
+ID=trigger_growth; sprite=107; itemCategory=weapon; element=life;
+special=enhanceSlots_0; special=unbreakable;
+special=cannotBeSheathed;
+ action=growthTriggerAttack;
+[ItemReactionInWeapon] 
+ID=trigger_growth; element=weaponBuff; action=growthTriggerInWeapon;
+[ItemEffect]  
+ID=trigger_growth; actorValue=skill_Life; magnitude=1; duration=-1;
+[ItemReactionInArmor]  
+ID=trigger_growth; actorValues=regen; healMultiplier=1.5;
+
+
+[ItemType]  name=Water Trigger;
+texture=items_weapons;
+description=Special trigger stone that condensates water at the target.
+<font=thickIcons><color=Black>
+<n=><icon=invIcon_sword> +Wet
+<n=><icon=invIcon_armor> +50% Wet Resist;
+journalID=trigger_stone;
+weight=1; volume=0; value=250;
+power=3;
+pR=pBlueD;
+ID=trigger_water; sprite=110; itemCategory=weapon; element=ice;
+special=enhanceSlots_0; special=animateEvery100Frames;
+special=cannotBeSheathed; special=unbreakable;
+ action=waterTriggerAttack;
+[ItemReactionInWeapon] 
+ID=trigger_water; element=weaponBuff; action=waterTriggerInWeapon;
+[ItemEffect]  
+ID=trigger_water; actorValue=skill_Ice; magnitude=1; duration=-1;
+[ItemReactionInArmor]  
+ID=trigger_water; actorValues=wet; damageMultiplier=0.5;
+
+[ItemType]  name=Javelins;
+ID=javelin;
+texture=items_weapons;
+journalID=journal_javelin;
+description=Light spears designed for throwing.;
+pR=pSteel; pB=pWood; 
+weight=0; volume=5; value=125;
+power=4; throwDamageMod=-1;
+sprite=103; spriteWhenHeld=135; itemCategory=weapon; element=javelin;
+ action=javelinAttack;
+ 
+[ItemType]  name=Mythril Javelins;
+ID=javelin_mythril;
+texture=items_weapons;
+journalID=journal_javelin;
+description=Shining javelins of mythril.;
+pR=pMythril; pB=pMythrilHilt; 
+weight=0; volume=5; value=2500;
+power=5; throwDamageMod=-1;
+sprite=103; spriteWhenHeld=135; itemCategory=weapon; element=javelin;
+ action=javelinMythrilAttack;
+ 
+[JournalEntry]
+ID=journal_javelin;
+category=equipment; halfPage=true; rarity=1;
+title=Javelin;
+text=<itemBig=javelin><title=Javelin><brAdj=>The ideal throwing spear, refined from millennia of use as a hunting weapon. The leather amentum provides extra distance & accuracy.;
+
+[ItemType]  name=Javelin FX;
+ID=thrown_javelin; pR=pSteel; pB=pWood; 
+texture=items_weapons;
+itemCategory=hazard;
+description=Solely for FX purposes DO NOT USE.; special=alwaysBuried;
+weight=0; volume=5; value=25;
+sprite=102; element=spear;
+[ItemType]  name=Mythril Javelin FX;
+ID=thrown_mythril_javelin; pR=pMythril; pB=pMythrilHilt; 
+texture=items_weapons;
+itemCategory=hazard;
+description=Solely for FX purposes DO NOT USE.; special=alwaysBuried;
+weight=0; volume=5; value=25;
+sprite=102; element=spear;
+[ItemType]  name=Sword FX;
+texture=items_weapons;
+itemCategory=hazard;
+ID=thrown_sword; pR=pSteel; pB=pSteelHilt; 
+description=Solely for FX purposes DO NOT USE.; special=alwaysBuried;
+weight=0; volume=5; value=25;
+sprite=134; element=sword;
+[ItemType]  name=Throwing Axe FX;
+ID=thrown_axe; pR=pSteel; pB=pWood; 
+texture=items_weapons;
+itemCategory=hazard;
+description=Solely for FX purposes DO NOT USE.; special=alwaysBuried;
+weight=0; volume=5; value=50;
+sprite=137; element=axe_throw;
+[ItemType]  name=Throwing Axe FX;
+ID=thrown_mythril_axe; pR=pMythril; pB=pMythrilHilt; 
+texture=items_weapons;
+itemCategory=hazard;
+description=Solely for FX purposes DO NOT USE.; special=alwaysBuried;
+weight=0; volume=5; value=50;
+sprite=137; element=axe_throw;
+
+[ItemType]  name=Throwing Axes;
+ID=axe_throwing; pR=pSteel; pB=pWood; 
+texture=items_weapons;
+description=Lightweight axes for throwing.;
+journalID=journal_axe_throwing;
+weight=0; volume=5; value=125;
+power=5; throwDamageMod=-1;
+sprite=105; spriteWhenHeld=137; itemCategory=weapon; element=axe_throw;
+ action=axe_throwing_attack;
+ 
+[ItemType]  name=Mythril Throwing Axes;
+ID=mythril_axe_throwing; pR=pMythril; pB=pMythrilHilt; 
+texture=items_weapons;
+journalID=journal_axe_throwing;
+description=Mythril axes for throwing.;
+weight=0; volume=5; value=2500;
+power=6; throwDamageMod=-1;
+sprite=105; spriteWhenHeld=137; itemCategory=weapon; element=axe_throw;
+ action=mythril_axe_throwing_attack;
+[JournalEntry]
+ID=journal_axe_throwing;
+category=equipment; halfPage=true; rarity=1;
+title=Throwing Axe;
+text=<itemBig=axe_throwing><title=Throwing Axe><brAdj=>Axe with a narrow arched head. Even if the axe head doesn't land in the target, its significant weight & momentum make it dangerous.;
+
+[ItemType]  name=Wooden Sword;
+texture=items_weapons; 
+ID=sword_wood; pR=pWood; pB=pWoodDark;
+description=A shoddy sword of wood.;
+journalID=journal_sword;
+weight=1; volume=5; value=5;
+power=4;
+sprite=175; spriteWhenHeld=207; itemCategory=weapon; element=sword;
+ action=swordAttack;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=woodPlank; 
+combineWith=furnace2_lit; toMake=woodPlank; 
+combineWith=furnace_everlit1; toMake=woodPlank; 
+combineWith=furnace_everlit2; toMake=woodPlank; 
+ 
+[ItemType]  name=Wooden Shiv;
+texture=items_weapons; 
+ID=dagger_wood; pR=pWood; pB=pWoodDark;
+description=An improvised dagger.;
+journalID=journal_dagger;
+weight=1; volume=1; value=5;
+power=3;
+sprite=176; spriteWhenHeld=208; itemCategory=weapon; element=dagger;
+ action=daggerAttack;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=woodPlank; 
+combineWith=furnace2_lit; toMake=woodPlank; 
+combineWith=furnace_everlit1; toMake=woodPlank; 
+combineWith=furnace_everlit2; toMake=woodPlank; 
+ 
+[ItemType]  name=Wooden Mallet;
+texture=items_weapons; 
+ID=hammer_wood; pR=pWood; pB=pWoodDark;
+description=A poor weapon, but still useful as a tool.;
+journalID=journal_hammer;
+weight=4; volume=5; value=5;
+power=5;
+sprite=177; spriteWhenHeld=209; itemCategory=weapon; element=hammer;
+ action=hammerAttack;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=woodPlank; 
+combineWith=furnace2_lit; toMake=woodPlank; 
+combineWith=furnace_everlit1; toMake=woodPlank; 
+combineWith=furnace_everlit2; toMake=woodPlank; 
+
+[ItemType]  name=Wooden Shield;
+texture=items_weapons; 
+ID=shield_wood; pR=pWood; pB=pWoodDark;
+description=A decent round wooden shield.;
+journalID=journal_shield;
+sprite=106; spriteWhenHeld=138; itemCategory=weapon; element=shield;
+weight=3; volume=5; value=5;
+power=1;
+action=shieldAttack;
+combineWith=furnace_lit; toMake=woodPlank; 
+combineWith=furnace2_lit; toMake=woodPlank; 
+combineWith=furnace_everlit1; toMake=woodPlank; 
+combineWith=furnace_everlit2; toMake=woodPlank; 
+[ItemEffect]  
+ID=shield_wood; actorValue=PhysEva; magnitude=9; duration=-1;
+
+[ItemType]  name=Wood Bow;
+texture=items_weapons; 
+ID=bow_wood; pR=pWood; pB=pWoodDark;
+description=A simple straight bow. Requires both hands to use.;
+journalID=journal_bow;
+sprite=182; spriteWhenHeld=214; itemCategory=weapon; element=bow; special=twoHanded;
+weight=1; volume=5; value=5;
+power=2;
+ action=bowAttack;
+combineWith=furnace_lit; toMake=woodPlank; 
+combineWith=furnace2_lit; toMake=woodPlank; 
+combineWith=furnace_everlit1; toMake=woodPlank; 
+combineWith=furnace_everlit2; toMake=woodPlank; 
+ 
+[ItemType]  name=Wood Crossbow;
+texture=items_weapons; 
+ID=xbow_wood; pR=pWood; pB=pWoodDark;
+description=A powerful weapon despite mediocre construction.; 
+journalID=journal_xbow;
+sprite=183; spriteWhenHeld=215; itemCategory=weapon; element=aim;
+weight=2; volume=5; value=5;
+power=5;
+ action=crossbowAttack;
+combineWith=furnace_lit; toMake=woodPlank; 
+combineWith=furnace2_lit; toMake=woodPlank; 
+combineWith=furnace_everlit1; toMake=woodPlank; 
+combineWith=furnace_everlit2; toMake=woodPlank; 
+[ItemReaction] 
+ID=xbow_wood; element=actionUsed; newID=xbow_wood_unloaded;
+
+[ItemType]  name=Wood Crossbow (Unloaded);
+texture=items_weapons; 
+ID=xbow_wood_unloaded; pR=pWood; pB=pWoodDark;
+description=A powerful weapon despite mediocre construction. Needs to be reloaded.; 
+journalID=journal_xbow;
+sprite=184; spriteWhenHeld=216; itemCategory=weapon; 
+weight=2; volume=5; value=5;
+power=5;
+ action=crossbowReload;
+combineWith=furnace_lit; toMake=woodPlank; 
+combineWith=furnace2_lit; toMake=woodPlank; 
+combineWith=furnace_everlit1; toMake=woodPlank; 
+combineWith=furnace_everlit2; toMake=woodPlank; 
+[ItemReaction] 
+ID=xbow_wood_unloaded; element=actionUsed; element=reload; newID=xbow_wood;
+ 
+[ItemType]  name=Wooden Spear;
+texture=items_weapons; 
+ID=spear_wood; pR=pWood; pB=pWood;
+description=A sharpened stick.;
+journalID=journal_spear;
+weight=3; volume=10; value=5;
+power=3;
+sprite=185; spriteWhenHeld=185; itemCategory=weapon; 
+special=sprite2xHeight; element=spear;
+depthMod=900;
+ action=spearAttack;
+combineWith=furnace_lit; toMake=woodPlank; 
+combineWith=furnace2_lit; toMake=woodPlank; 
+combineWith=furnace_everlit1; toMake=woodPlank; 
+combineWith=furnace_everlit2; toMake=woodPlank; 
+ 
+ 
+[ItemType]  name=Bone Sword;
+texture=items_weapons; 
+ID=sword_bone; pR=pBone; pB=pBoneDark;
+description=Sharpened bone blade.;
+journalID=journal_sword;
+weight=2; volume=5; value=0;
+power=5;
+sprite=352; spriteWhenHeld=384; itemCategory=weapon; element=sword;
+ action=swordAttack;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=bones1; 
+combineWith=furnace2_lit; toMake=bones1; 
+combineWith=furnace_everlit1; toMake=bones1; 
+combineWith=furnace_everlit2; toMake=bones1; 
+[ItemEffect]
+ID=sword_bone; actorValue=skill_Ruin; magnitude=1; duration=-1;
+ 
+[ItemType]  name=Bone Dirk;
+texture=items_weapons; 
+ID=dagger_bone; pR=pBone; pB=pBoneDark;
+description=Dagger with a suprisingly sharp bone edge.;
+journalID=journal_dagger;
+weight=2; volume=1; value=0;
+power=4;
+sprite=353; spriteWhenHeld=385; itemCategory=weapon; element=dagger;
+ action=daggerAttack;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=bones1; 
+combineWith=furnace2_lit; toMake=bones1;
+combineWith=furnace_everlit1; toMake=bones1; 
+combineWith=furnace_everlit2; toMake=bones1; 
+[ItemEffect]
+ID=dagger_bone; actorValue=skill_Ruin; magnitude=1; duration=-1;
+ 
+[ItemType]  name=Bone Mace;
+texture=items_weapons; 
+ID=hammer_bone; pR=pBone; pB=pBoneDark;
+description=Flanged mace constructed from pelvic bones.;
+journalID=journal_hammer;
+weight=6; volume=5; value=0;
+power=6;
+sprite=354; spriteWhenHeld=386; itemCategory=weapon; element=hammer;
+ action=hammerAttack;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=bones1; 
+combineWith=furnace2_lit; toMake=bones1;
+combineWith=furnace_everlit1; toMake=bones1; 
+combineWith=furnace_everlit2; toMake=bones1; 
+[ItemEffect]
+ID=hammer_bone; actorValue=skill_Ruin; magnitude=1; duration=-1;
+
+[ItemType]  name=Bone Hatchet;
+texture=items_weapons; 
+ID=axe_bone; pR=pBone; pB=pBoneDark;
+description=Primitive, but effective.;
+journalID=journal_axe;
+weight=3; volume=5; value=0;
+power=6;
+sprite=355; spriteWhenHeld=387; itemCategory=weapon; element=axe;
+ action=axeAttack;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=bones1; 
+combineWith=furnace2_lit; toMake=bones1;
+combineWith=furnace_everlit1; toMake=bones1; 
+combineWith=furnace_everlit2; toMake=bones1; 
+[ItemEffect]
+ID=axe_bone; actorValue=skill_Ruin; magnitude=1; duration=-1;
+ 
+[ItemType]  name=Bone Shield;
+texture=items_weapons; 
+ID=shield_bone; pR=pBone; pB=pBoneDark;
+description=Wood shield reinforced with bones.;
+journalID=journal_shield;
+sprite=356; spriteWhenHeld=388; itemCategory=weapon; element=shield;
+weight=5; volume=5; value=0;
+power=1;
+action=shieldAttack;
+combineWith=furnace_lit; toMake=bones1; 
+combineWith=furnace2_lit; toMake=bones1;
+combineWith=furnace_everlit1; toMake=bones1; 
+combineWith=furnace_everlit2; toMake=bones1; 
+[ItemEffect]  
+ID=shield_bone; actorValue=PhysEva; magnitude=10; duration=-1;
+[ItemEffect]
+ID=shield_bone; actorValue=skill_Ruin; magnitude=1; duration=-1;
+
+[ItemType]  name=Bone Flail;
+texture=items_weapons; 
+ID=flail_bone; pR=pBone; pB=pBoneDark;
+description=An unusual construction of sharpened bones.;
+journalID=journal_flail;
+weight=3; volume=5; value=0;
+power=4;
+sprite=357; spriteWhenHeld=389; itemCategory=weapon; element=flail;
+ action=flailAttack;
+combineWith=furnace_lit; toMake=bones1; 
+combineWith=furnace2_lit; toMake=bones1;
+combineWith=furnace_everlit1; toMake=bones1; 
+combineWith=furnace_everlit2; toMake=bones1; 
+[ItemEffect]
+ID=flail_bone; actorValue=skill_Ruin; magnitude=1; duration=-1;
+ 
+[ItemType]  name=Bone Whip;
+texture=items_weapons; 
+ID=whip_bone; pR=pBone; pB=pBoneDark;
+description=Bone-tipped whip. Weak against armor.;
+journalID=journal_whip;
+weight=3; volume=3; value=0;
+power=3;
+sprite=358; spriteWhenHeld=390; itemCategory=weapon; element=whip;
+ action=whipAttack;
+combineWith=furnace_lit; toMake=bones1; 
+combineWith=furnace2_lit; toMake=bones1;
+combineWith=furnace_everlit1; toMake=bones1; 
+combineWith=furnace_everlit2; toMake=bones1; 
+[ItemEffect]
+ID=whip_bone; actorValue=skill_Ruin; magnitude=1; duration=-1;
+ 
+[ItemType]  name=Bone Bow;
+texture=items_weapons; 
+ID=bow_bone; pR=pBone; pB=pBoneDark;
+description=Composite bow of wood & bone. Requires both hands to use.;
+journalID=journal_bow;
+sprite=359; spriteWhenHeld=391; itemCategory=weapon; element=bow; special=twoHanded;
+weight=1; volume=5; value=0;
+power=3;
+ action=bowAttack;
+combineWith=furnace_lit; toMake=bones1; 
+combineWith=furnace2_lit; toMake=bones1;
+combineWith=furnace_everlit1; toMake=bones1; 
+combineWith=furnace_everlit2; toMake=bones1; 
+[ItemEffect]
+ID=bow_bone; actorValue=skill_Ruin; magnitude=1; duration=-1;
+ 
+[ItemType]  name=Bone Crossbow;
+texture=items_weapons; 
+ID=xbow_bone; pR=pBone; pB=pBoneDark;
+description=Crossbow of wood and bone.; 
+journalID=journal_xbow;
+sprite=360; spriteWhenHeld=392; itemCategory=weapon; element=aim;
+weight=2; volume=5; value=0;
+power=5;
+ action=crossbowAttack;
+combineWith=furnace_lit; toMake=bones1; 
+combineWith=furnace2_lit; toMake=bones1;
+combineWith=furnace_everlit1; toMake=bones1; 
+combineWith=furnace_everlit2; toMake=bones1; 
+[ItemReaction] 
+ID=xbow_bone; element=actionUsed; newID=xbow_bone_unloaded;
+[ItemEffect]
+ID=xbow_bone; actorValue=skill_Ruin; magnitude=1; duration=-1;
+
+[ItemType]  name=Bone Crossbow (Unloaded);
+texture=items_weapons; 
+ID=xbow_bone_unloaded; pR=pBone; pB=pBoneDark;
+description=Crossbow of wood and bone -- needs to be reloaded.; 
+journalID=journal_xbow;
+sprite=361; spriteWhenHeld=393; itemCategory=weapon; 
+weight=2; volume=5; value=0;
+power=5;
+ action=crossbowReload;
+combineWith=furnace_lit; toMake=bones1; 
+combineWith=furnace2_lit; toMake=bones1;
+combineWith=furnace_everlit1; toMake=bones1; 
+combineWith=furnace_everlit2; toMake=bones1; 
+[ItemReaction] 
+ID=xbow_bone_unloaded; element=actionUsed; element=reload; newID=xbow_bone;
+[ItemEffect]
+ID=xbow_bone_unloaded; actorValue=skill_Ruin; magnitude=1; duration=-1;
+ 
+[ItemType]  name=Bone Spear;
+texture=items_weapons; 
+ID=spear_bone; pR=pBone; pB=pBoneDark;
+description=Spear with a tibia tip.;
+journalID=journal_spear;
+weight=4; volume=10; value=0;
+power=4;
+sprite=362; spriteWhenHeld=362; itemCategory=weapon; 
+special=sprite2xHeight; element=spear;
+depthMod=900;
+ action=spearAttack;
+combineWith=furnace_lit; toMake=bones1; 
+combineWith=furnace2_lit; toMake=bones1;
+combineWith=furnace_everlit1; toMake=bones1; 
+combineWith=furnace_everlit2; toMake=bones1; 
+[ItemEffect]
+ID=spear_bone; actorValue=skill_Ruin; magnitude=1; duration=-1;
+ 
+[ItemType]  name=Bone Knuckle;
+texture=items_weapons; 
+ID=knuckle_bone; pR=pBone; pB=pBoneDark;
+description=Knuckles made of actual knuckles.;
+journalID=journal_knuckle;
+weight=3; volume=1; value=0;
+power=3;
+sprite=363; spriteWhenHeld=395; itemCategory=weapon; element=fist;
+ action=fistAttack;
+combineWith=furnace_lit; toMake=bones1; 
+combineWith=furnace2_lit; toMake=bones1;
+combineWith=furnace_everlit1; toMake=bones1; 
+combineWith=furnace_everlit2; toMake=bones1; 
+[ItemEffect]
+ID=knuckle_bone; actorValue=skill_Ruin; magnitude=1; duration=-1;
+
+
+  
+
+ 
+[ItemType]  name=Iron Sword;
+texture=items_weapons; 
+ID=sword_iron; pR=pIron; pB=pIronHilt;
+description=A double-edged blade.;
+journalID=journal_sword;
+weight=2; volume=5; value=25;
+power=5;
+sprite=175; spriteWhenHeld=207; itemCategory=weapon; element=sword;
+ action=swordAttack;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=iron_chunk; 
+combineWith=furnace2_lit; toMake=iron_chunk;
+combineWith=furnace_everlit1; toMake=iron_chunk; 
+combineWith=furnace_everlit2; toMake=iron_chunk; 
+ 
+[ItemType]  name=Iron Dagger;
+texture=items_weapons; 
+ID=dagger_iron; pR=pIron; pB=pIronHilt;
+description=A short blade designed for stabbing. Very accurate.;
+journalID=journal_dagger;
+weight=2; volume=1; value=25;
+power=3;
+sprite=176; spriteWhenHeld=208; itemCategory=weapon; element=dagger;
+ action=daggerAttack;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=iron_chunk; 
+combineWith=furnace2_lit; toMake=iron_chunk;
+combineWith=furnace_everlit1; toMake=iron_chunk; 
+combineWith=furnace_everlit2; toMake=iron_chunk; 
+ 
+[ItemType]  name=Iron Hammer;
+texture=items_weapons; 
+ID=hammer_iron; pR=pIron; pB=pIronHilt;
+description=A weighty hammer suitable for bashing in armor. Like all hammers, misses easily, but ignores 50%<icon=PhysDef>.;
+journalID=journal_hammer;
+weight=6; volume=5; value=25;
+power=6;
+sprite=177; spriteWhenHeld=209; itemCategory=weapon; element=hammer;
+ action=hammerAttack;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=iron_chunk; 
+combineWith=furnace2_lit; toMake=iron_chunk;
+combineWith=furnace_everlit1; toMake=iron_chunk; 
+combineWith=furnace_everlit2; toMake=iron_chunk; 
+
+[ItemType]  name=Iron Axe;
+texture=items_weapons; 
+ID=axe_iron; pR=pIron; pB=pIronHilt;
+description=Fit for carving enemies or wood. Highly damaging but less accurate.;
+journalID=journal_axe;
+weight=3; volume=5; value=25;
+power=6;
+sprite=178; spriteWhenHeld=210; itemCategory=weapon; element=axe;
+ action=axeAttack;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=iron_chunk; 
+combineWith=furnace2_lit; toMake=iron_chunk;
+combineWith=furnace_everlit1; toMake=iron_chunk; 
+combineWith=furnace_everlit2; toMake=iron_chunk; 
+ 
+[ItemType]  name=Iron Shield;
+texture=items_weapons; 
+ID=shield_iron; pR=pIron; pB=pIronHilt;
+description=Heater shield reinforced with iron.;
+journalID=journal_shield;
+sprite=179; spriteWhenHeld=211; itemCategory=weapon; element=shield;
+weight=5; volume=5; value=25;
+power=1;
+action=shieldAttack;
+combineWith=furnace_lit; toMake=iron_chunk; 
+combineWith=furnace2_lit; toMake=iron_chunk;
+combineWith=furnace_everlit1; toMake=iron_chunk; 
+combineWith=furnace_everlit2; toMake=iron_chunk; 
+[ItemEffect]  
+ID=shield_iron; actorValue=PhysEva; magnitude=12; duration=-1;
+
+[ItemType]  name=Iron Flail;
+texture=items_weapons; 
+ID=flail_iron; pR=pIron; pB=pIronHilt;
+description=A weapon designed to attack from unusual angles - even diagonally.;
+journalID=journal_flail;
+weight=3; volume=5; value=25;
+power=4;
+sprite=180; spriteWhenHeld=212; itemCategory=weapon; element=flail;
+ action=flailAttack;
+combineWith=furnace_lit; toMake=iron_chunk; 
+combineWith=furnace2_lit; toMake=iron_chunk;
+combineWith=furnace_everlit1; toMake=iron_chunk; 
+combineWith=furnace_everlit2; toMake=iron_chunk; 
+ 
+[ItemType]  name=Iron Whip;
+texture=items_weapons; 
+ID=whip_iron; pR=pIron; pB=pIronHilt;
+description=Iron-tipped whip. Weak against armor, but longer range.;
+journalID=journal_whip;
+weight=3; volume=3; value=25;
+power=3;
+sprite=181; spriteWhenHeld=213; itemCategory=weapon; element=whip;
+ action=whipAttack;
+combineWith=furnace_lit; toMake=iron_chunk; 
+combineWith=furnace2_lit; toMake=iron_chunk;
+combineWith=furnace_everlit1; toMake=iron_chunk; 
+combineWith=furnace_everlit2; toMake=iron_chunk; 
+ 
+[ItemType]  name=Iron Bow;
+texture=items_weapons; 
+ID=bow_iron; pR=pIron; pB=pIronHilt;
+description=Well-constructed bow. Requires both hands to use.;
+journalID=journal_bow;
+sprite=182; spriteWhenHeld=214; itemCategory=weapon; element=bow; special=twoHanded;
+weight=1; volume=5; value=25;
+power=3;
+ action=bowAttack;
+combineWith=furnace_lit; toMake=iron_chunk; 
+combineWith=furnace2_lit; toMake=iron_chunk;
+combineWith=furnace_everlit1; toMake=iron_chunk; 
+combineWith=furnace_everlit2; toMake=iron_chunk; 
+ 
+[ItemType]  name=Iron Crossbow;
+texture=items_weapons; 
+ID=xbow_iron; pR=pIron; pB=pIronHilt;
+description=A powerful crossbow with a pull lever reload mechanism.; 
+journalID=journal_xbow;
+sprite=183; spriteWhenHeld=215; itemCategory=weapon; element=aim;
+weight=2; volume=5; value=25;
+power=6;
+ action=crossbowAttack;
+combineWith=furnace_lit; toMake=iron_chunk; 
+combineWith=furnace2_lit; toMake=iron_chunk;
+combineWith=furnace_everlit1; toMake=iron_chunk; 
+combineWith=furnace_everlit2; toMake=iron_chunk; 
+[ItemReaction] 
+ID=xbow_iron; element=actionUsed; newID=xbow_iron_unloaded;
+
+[ItemType]  name=Iron Crossbow (Unloaded);
+texture=items_weapons; 
+ID=xbow_iron_unloaded; pR=pIron; pB=pIronHilt;
+description=A powerful crossbow -- needs to be reloaded.; 
+journalID=journal_xbow;
+sprite=184; spriteWhenHeld=216; itemCategory=weapon; 
+weight=2; volume=5; value=25;
+power=6;
+ action=crossbowReload;
+combineWith=furnace_lit; toMake=iron_chunk; 
+combineWith=furnace2_lit; toMake=iron_chunk;
+combineWith=furnace_everlit1; toMake=iron_chunk; 
+combineWith=furnace_everlit2; toMake=iron_chunk; 
+[ItemReaction] 
+ID=xbow_iron_unloaded; element=actionUsed; element=reload; newID=xbow_iron;
+ 
+[ItemType]  name=Iron Spear;
+texture=items_weapons; 
+ID=spear_iron; pR=pIron; pB=pIronHilt;
+description=Spear with socketed metal head.;
+journalID=journal_spear;
+weight=4; volume=10; value=25;
+power=4;
+sprite=185; spriteWhenHeld=185; itemCategory=weapon; 
+special=sprite2xHeight; element=spear;
+depthMod=900;
+ action=spearAttack;
+combineWith=furnace_lit; toMake=iron_chunk; 
+combineWith=furnace2_lit; toMake=iron_chunk;
+combineWith=furnace_everlit1; toMake=iron_chunk; 
+combineWith=furnace_everlit2; toMake=iron_chunk; 
+ 
+[ItemType]  name=Iron Knuckle;
+texture=items_weapons; 
+ID=knuckle_iron; pR=pIron; pB=pIronHilt;
+description=Metal that covers the fist when punching.;
+journalID=journal_knuckle;
+weight=3; volume=1; value=25;
+power=3;
+sprite=186; spriteWhenHeld=218; itemCategory=weapon; element=fist;
+ action=fistAttack;
+combineWith=furnace_lit; toMake=iron_chunk; 
+combineWith=furnace2_lit; toMake=iron_chunk;
+combineWith=furnace_everlit1; toMake=iron_chunk; 
+combineWith=furnace_everlit2; toMake=iron_chunk; 
+ 
+[ItemType]  name=Iron Rapier;
+texture=items_weapons; 
+ID=rapier_iron; pR=pIron; pB=pIronHilt;
+description=A light thrusting sword.;
+journalID=journal_rapier;
+weight=2; volume=5; value=25;
+power=4;
+sprite=187; spriteWhenHeld=219; itemCategory=weapon; element=sword;
+ action=rapierAttack;
+ special=rotate180WhenSheathed;
+combineWith=furnace_lit; toMake=iron_chunk; 
+combineWith=furnace2_lit; toMake=iron_chunk;
+combineWith=furnace_everlit1; toMake=iron_chunk; 
+combineWith=furnace_everlit2; toMake=iron_chunk; 
+[ItemEffect]  
+ID=rapier_iron; actorValue=PhysEva; magnitude=3; duration=-1;
+ 
+[ItemType]  name=Iron Greatsword;
+texture=items_weapons; 
+ID=greatsword_iron; pR=pIron; pB=pIronHilt;
+description=Sword made to match any polearm. Requires both hands to wield.;
+journalID=journal_gsword;
+sprite=188; spriteWhenHeld=220; itemCategory=weapon;  special=enhanceSlots_2;
+special=sprite2xWidth; special=twoHanded; element=sword;
+weight=6; volume=10; value=25;
+power=6;
+ action=greatswordAttack;
+combineWith=furnace_lit; toMake=iron_chunk; 
+combineWith=furnace2_lit; toMake=iron_chunk;
+combineWith=furnace_everlit1; toMake=iron_chunk; 
+combineWith=furnace_everlit2; toMake=iron_chunk; 
+ 
+
+[ItemType]  name=Steel Sword;
+texture=items_weapons; 
+ID=sword_steel; pR=pSteel; pB=pSteelHilt;
+description=A fine blade.;
+journalID=journal_sword;
+weight=2; volume=5; value=125;
+power=6;
+sprite=175; spriteWhenHeld=207; itemCategory=weapon; element=sword;
+ action=swordAttack;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=steel_bar; 
+combineWith=furnace2_lit; toMake=steel_bar;
+combineWith=furnace_everlit1; toMake=steel_bar; 
+combineWith=furnace_everlit2; toMake=steel_bar; 
+[ItemReaction] 
+ID=sword_steel; element=windAnimate; action=sword_summon; newID=X;
+ 
+[ItemType]  name=Steel Dagger;
+texture=items_weapons; 
+ID=dagger_steel; pR=pSteel; pB=pSteelHilt;
+description=A dirk of solid steel.;
+journalID=journal_dagger;
+weight=2; volume=1; value=125;
+power=4;
+sprite=176; spriteWhenHeld=208; itemCategory=weapon; element=dagger;
+ action=daggerAttack;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=steel_bar; 
+combineWith=furnace2_lit; toMake=steel_bar;
+combineWith=furnace_everlit1; toMake=steel_bar; 
+combineWith=furnace_everlit2; toMake=steel_bar; 
+ 
+[ItemType]  name=Steel Hammer;
+texture=items_weapons; 
+ID=hammer_steel; pR=pSteel; pB=pSteelHilt;
+description=Compact hammer that can pierce any defense.;
+journalID=journal_hammer;
+weight=6; volume=5; value=125;
+power=7;
+sprite=177; spriteWhenHeld=209; itemCategory=weapon; element=hammer;
+ action=hammerAttack;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=steel_bar; 
+combineWith=furnace2_lit; toMake=steel_bar;
+combineWith=furnace_everlit1; toMake=steel_bar; 
+combineWith=furnace_everlit2; toMake=steel_bar; 
+
+[ItemType]  name=Steel Axe;
+texture=items_weapons; 
+ID=axe_steel; pR=pSteel; pB=pSteelHilt;
+description=Well-crafted battle axe.;
+journalID=journal_axe;
+weight=3; volume=5; value=125;
+power=7;
+sprite=178; spriteWhenHeld=210; itemCategory=weapon; element=axe;
+ action=axeAttack;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=steel_bar; 
+combineWith=furnace2_lit; toMake=steel_bar;
+combineWith=furnace_everlit1; toMake=steel_bar; 
+combineWith=furnace_everlit2; toMake=steel_bar; 
+ 
+[ItemType]  name=Steel Shield;
+texture=items_weapons; 
+ID=shield_steel; pR=pSteel; pB=pSteelHilt;
+description=Sturdy and effective shield.;
+journalID=journal_shield;
+sprite=179; spriteWhenHeld=211; itemCategory=weapon; element=shield;
+weight=5; volume=5; value=125;
+power=2;
+action=shieldAttack;
+combineWith=furnace_lit; toMake=steel_bar; 
+combineWith=furnace2_lit; toMake=steel_bar;
+combineWith=furnace_everlit1; toMake=steel_bar; 
+combineWith=furnace_everlit2; toMake=steel_bar; 
+[ItemEffect]  
+ID=shield_steel; actorValue=PhysEva; magnitude=14; duration=-1;
+
+[ItemType]  name=Steel Flail;
+texture=items_weapons; 
+ID=flail_steel; pR=pSteel; pB=pSteelHilt;
+description=Spiked steel ball on a chain.;
+journalID=journal_flail;
+weight=3; volume=5; value=125;
+power=5;
+sprite=180; spriteWhenHeld=212; itemCategory=weapon; element=flail;
+ action=flailAttack;
+combineWith=furnace_lit; toMake=steel_bar; 
+combineWith=furnace2_lit; toMake=steel_bar;
+combineWith=furnace_everlit1; toMake=steel_bar; 
+combineWith=furnace_everlit2; toMake=steel_bar; 
+ 
+[ItemType]  name=Steel Whip;
+texture=items_weapons; 
+ID=whip_steel; pR=pSteel; pB=pSteelHilt;
+description=Steel-tipped whip. Weak against armor.;
+journalID=journal_whip;
+weight=3; volume=3; value=125;
+power=4;
+sprite=181; spriteWhenHeld=213; itemCategory=weapon; element=whip;
+ action=whipAttack;
+combineWith=furnace_lit; toMake=steel_bar; 
+combineWith=furnace2_lit; toMake=steel_bar;
+combineWith=furnace_everlit1; toMake=steel_bar; 
+combineWith=furnace_everlit2; toMake=steel_bar; 
+ 
+[ItemType]  name=Steel Bow;
+texture=items_weapons; 
+ID=bow_steel; pR=pSteel; pB=pSteelHilt;
+description=Recurve bow with steel grip. Requires both hands to use.;
+journalID=journal_bow;
+sprite=182; spriteWhenHeld=214; itemCategory=weapon; element=bow; special=twoHanded;
+weight=1; volume=5; value=125;
+power=4;
+ action=bowAttack;
+combineWith=furnace_lit; toMake=steel_bar; 
+combineWith=furnace2_lit; toMake=steel_bar;
+combineWith=furnace_everlit1; toMake=steel_bar; 
+combineWith=furnace_everlit2; toMake=steel_bar; 
+ 
+[ItemType]  name=Steel Crossbow;
+texture=items_weapons; 
+ID=xbow_steel; pR=pSteel; pB=pSteelHilt;
+description=Crossbow with steel prod for extra strength.; 
+journalID=journal_xbow;
+sprite=183; spriteWhenHeld=215; itemCategory=weapon; element=aim;
+weight=2; volume=5; value=125;
+power=7;
+ action=crossbowAttack;
+combineWith=furnace_lit; toMake=steel_bar; 
+combineWith=furnace2_lit; toMake=steel_bar;
+combineWith=furnace_everlit1; toMake=steel_bar; 
+combineWith=furnace_everlit2; toMake=steel_bar; 
+[ItemReaction] 
+ID=xbow_steel; element=actionUsed; newID=xbow_steel_unloaded;
+
+[ItemType]  name=Steel Crossbow (Unloaded);
+texture=items_weapons; 
+ID=xbow_steel_unloaded; pR=pSteel; pB=pSteelHilt;
+description=Crossbow with steel prod for extra strength. Needs to be reloaded.; 
+journalID=journal_xbow;
+sprite=184; spriteWhenHeld=216; itemCategory=weapon; 
+weight=2; volume=5; value=125;
+power=7;
+ action=crossbowReload;
+combineWith=furnace_lit; toMake=steel_bar; 
+combineWith=furnace2_lit; toMake=steel_bar;
+combineWith=furnace_everlit1; toMake=steel_bar; 
+combineWith=furnace_everlit2; toMake=steel_bar; 
+[ItemReaction] 
+ID=xbow_steel_unloaded; element=actionUsed; element=reload; newID=xbow_steel;
+ 
+[ItemType]  name=Steel Spear;
+texture=items_weapons; 
+ID=spear_steel; pR=pSteel; pB=pSteelHilt;
+description=Stave with an exceedingly sharp spearhead.;
+journalID=journal_spear;
+weight=4; volume=10; value=125;
+power=5;
+sprite=185; spriteWhenHeld=185; itemCategory=weapon; 
+special=sprite2xHeight; element=spear;
+depthMod=900;
+ action=spearAttack;
+combineWith=furnace_lit; toMake=steel_bar; 
+combineWith=furnace2_lit; toMake=steel_bar;
+combineWith=furnace_everlit1; toMake=steel_bar; 
+combineWith=furnace_everlit2; toMake=steel_bar; 
+ 
+[ItemType]  name=Steel Knuckle;
+texture=items_weapons; 
+ID=knuckle_steel; pR=pSteel; pB=pSteelHilt;
+description=Protects hands and focuses force on steel points.;
+journalID=journal_knuckle;
+weight=3; volume=1; value=125;
+power=4;
+sprite=186; spriteWhenHeld=218; itemCategory=weapon; element=fist;
+ action=fistAttack;
+combineWith=furnace_lit; toMake=steel_bar; 
+combineWith=furnace2_lit; toMake=steel_bar;
+combineWith=furnace_everlit1; toMake=steel_bar; 
+combineWith=furnace_everlit2; toMake=steel_bar; 
+ 
+[ItemType]  name=Steel Rapier;
+texture=items_weapons; 
+ID=rapier_steel; pR=pSteel; pB=pSteelHilt;
+description=Designed primarily with speed and accuracy in mind.;
+journalID=journal_rapier;
+weight=2; volume=5; value=125;
+power=5;
+sprite=187; spriteWhenHeld=219; itemCategory=weapon; element=sword;
+ action=rapierAttack;
+ special=rotate180WhenSheathed;
+combineWith=furnace_lit; toMake=steel_bar; 
+combineWith=furnace2_lit; toMake=steel_bar;
+combineWith=furnace_everlit1; toMake=steel_bar; 
+combineWith=furnace_everlit2; toMake=steel_bar; 
+[ItemEffect]
+ID=rapier_steel; actorValue=PhysEva; magnitude=3; duration=-1;
+ 
+[ItemType]  name=Steel Greatsword;
+texture=items_weapons; 
+ID=greatsword_steel; pR=pSteel; pB=pSteelHilt;
+description=Taller and more dangerous than most men. Requires both hands to wield.;
+journalID=journal_gsword;
+sprite=188; spriteWhenHeld=220; itemCategory=weapon;  special=enhanceSlots_2;
+special=sprite2xWidth; special=twoHanded; element=sword;
+weight=6; volume=10; value=125;
+power=7;
+ action=greatswordAttack;
+combineWith=furnace_lit; toMake=steel_bar; 
+combineWith=furnace2_lit; toMake=steel_bar;
+combineWith=furnace_everlit1; toMake=steel_bar; 
+combineWith=furnace_everlit2; toMake=steel_bar; 
+ 
+ 
+ 
+[ItemType]  name=Mythril Sword;
+texture=items_weapons; 
+ID=sword_mythril; pR=pMythril; pB=pMythrilHilt;
+description=Blade sharper than any steel.;
+journalID=journal_sword;
+weight=2; volume=5; value=900;
+power=7;
+sprite=175; spriteWhenHeld=207; itemCategory=weapon; element=sword;
+ action=swordAttack;
+special=rotate90WhenSheathed; special=enhanceSlots_1;
+combineWith=furnace_lit; toMake=mythril_chunk; 
+combineWith=furnace2_lit; toMake=mythril_chunk;
+combineWith=furnace_everlit1; toMake=mythril_chunk; 
+combineWith=furnace_everlit2; toMake=mythril_chunk; 
+ 
+[ItemType]  name=Mythril Dagger;
+texture=items_weapons; 
+ID=dagger_mythril; pR=pMythril; pB=pMythrilHilt;
+description=A dirk of the finest metal.;
+journalID=journal_dagger;
+weight=1; volume=1; value=900;
+power=5;
+sprite=176; spriteWhenHeld=208; itemCategory=weapon; element=dagger;
+ action=daggerAttack;
+special=rotate90WhenSheathed; special=enhanceSlots_1;
+combineWith=furnace_lit; toMake=mythril_chunk; 
+combineWith=furnace2_lit; toMake=mythril_chunk;
+combineWith=furnace_everlit1; toMake=mythril_chunk; 
+combineWith=furnace_everlit2; toMake=mythril_chunk; 
+ 
+[ItemType]  name=Mythril Hammer;
+texture=items_weapons; 
+ID=hammer_mythril; pR=pMythril; pB=pMythrilHilt;
+description=Hammer of magnificent lightness and strength.;
+journalID=journal_hammer;
+weight=5; volume=5; value=900;
+power=8;
+sprite=177; spriteWhenHeld=209; itemCategory=weapon; element=hammer;
+ action=hammerAttack;
+special=rotate90WhenSheathed; special=enhanceSlots_1;
+combineWith=furnace_lit; toMake=mythril_chunk; 
+combineWith=furnace2_lit; toMake=mythril_chunk;
+combineWith=furnace_everlit1; toMake=mythril_chunk; 
+combineWith=furnace_everlit2; toMake=mythril_chunk; 
+
+[ItemType]  name=Mythril Axe;
+texture=items_weapons; 
+ID=axe_mythril; pR=pMythril; pB=pMythrilHilt;
+description=Superior battle axe.;
+journalID=journal_axe;
+weight=3; volume=5; value=900;
+power=8;
+sprite=178; spriteWhenHeld=210; itemCategory=weapon; element=axe;
+ action=axeAttack;
+special=rotate90WhenSheathed; special=enhanceSlots_1;
+combineWith=furnace_lit; toMake=mythril_chunk; 
+combineWith=furnace2_lit; toMake=mythril_chunk;
+combineWith=furnace_everlit1; toMake=mythril_chunk; 
+combineWith=furnace_everlit2; toMake=mythril_chunk; 
+ 
+[ItemType]  name=Mythril Shield;
+texture=items_weapons; 
+ID=shield_mythril; pR=pMythril; pB=pMythrilHilt;
+description=Nigh-impenetrable metal shield.;
+journalID=journal_shield;
+sprite=179; spriteWhenHeld=211; itemCategory=weapon; element=shield;
+weight=4; volume=5; value=900;
+power=2;
+action=shieldAttack;
+special=enhanceSlots_1;
+combineWith=furnace_lit; toMake=mythril_chunk; 
+combineWith=furnace2_lit; toMake=mythril_chunk;
+combineWith=furnace_everlit1; toMake=mythril_chunk; 
+combineWith=furnace_everlit2; toMake=mythril_chunk; 
+[ItemEffect]  
+ID=shield_mythril; actorValue=PhysEva; magnitude=17; duration=-1;
+[ItemEffect]  
+ID=shield_mythril; actorValue=MagEva; magnitude=2; duration=-1;
+
+[ItemType]  name=Mythril Flail;
+texture=items_weapons; 
+ID=flail_mythril; pR=pMythril; pB=pMythrilHilt;
+description=Spiked mythril on a chain.;
+journalID=journal_flail;
+weight=2; volume=5; value=900;
+power=6;
+sprite=180; spriteWhenHeld=212; itemCategory=weapon; element=flail;
+ action=flailAttack;
+special=enhanceSlots_1;
+combineWith=furnace_lit; toMake=mythril_chunk; 
+combineWith=furnace2_lit; toMake=mythril_chunk;
+combineWith=furnace_everlit1; toMake=mythril_chunk; 
+combineWith=furnace_everlit2; toMake=mythril_chunk; 
+ 
+[ItemType]  name=Mythril Whip;
+texture=items_weapons; 
+ID=whip_mythril; pR=pMythril; pB=pMythrilHilt;
+description=Mythril-tipped whip. Weak against armor.;
+journalID=journal_whip;
+weight=1; volume=3; value=900;
+power=5;
+sprite=181; spriteWhenHeld=213; itemCategory=weapon; element=whip;
+ action=whipAttack;
+special=enhanceSlots_1;
+combineWith=furnace_lit; toMake=mythril_chunk; 
+combineWith=furnace2_lit; toMake=mythril_chunk;
+combineWith=furnace_everlit1; toMake=mythril_chunk; 
+combineWith=furnace_everlit2; toMake=mythril_chunk; 
+ 
+[ItemType]  name=Mythril Bow;
+texture=items_weapons; 
+ID=bow_mythril; pR=pMythril; pB=pMythrilHilt;
+description=Recurve bow with mythril grip. Requires both hands to use.;
+journalID=journal_bow;
+sprite=182; spriteWhenHeld=214; itemCategory=weapon; element=bow; special=twoHanded;
+weight=1; volume=5; value=900;
+power=5;
+ action=bowAttack;
+special=enhanceSlots_1;
+combineWith=furnace_lit; toMake=mythril_chunk; 
+combineWith=furnace2_lit; toMake=mythril_chunk;
+combineWith=furnace_everlit1; toMake=mythril_chunk; 
+combineWith=furnace_everlit2; toMake=mythril_chunk; 
+ 
+[ItemType]  name=Mythril Crossbow;
+texture=items_weapons; 
+ID=xbow_mythril; pR=pMythril; pB=pMythrilHilt;
+description=Crossbow of shining mythril.; 
+journalID=journal_xbow;
+sprite=183; spriteWhenHeld=215; itemCategory=weapon; element=aim;
+weight=1; volume=5; value=900;
+power=8;
+ action=crossbowAttack;
+special=enhanceSlots_1;
+combineWith=furnace_lit; toMake=mythril_chunk; 
+combineWith=furnace2_lit; toMake=mythril_chunk;
+combineWith=furnace_everlit1; toMake=mythril_chunk; 
+combineWith=furnace_everlit2; toMake=mythril_chunk; 
+[ItemReaction] 
+ID=xbow_mythril; element=actionUsed; newID=xbow_mythril_unloaded;
+
+[ItemType]  name=Mythril Crossbow (Unloaded);
+texture=items_weapons; 
+ID=xbow_mythril_unloaded; pR=pMythril; pB=pMythrilHilt;
+description=Crossbow of shining mythril. Needs to be reloaded.; 
+journalID=journal_xbow;
+sprite=184; spriteWhenHeld=216; itemCategory=weapon; 
+weight=1; volume=5; value=900;
+power=8;
+ action=crossbowReload;
+special=enhanceSlots_1;
+combineWith=furnace_lit; toMake=mythril_chunk; 
+combineWith=furnace2_lit; toMake=mythril_chunk;
+combineWith=furnace_everlit1; toMake=mythril_chunk; 
+combineWith=furnace_everlit2; toMake=mythril_chunk; 
+[ItemReaction] 
+ID=xbow_mythril_unloaded; element=actionUsed; element=reload; newID=xbow_mythril;
+ 
+[ItemType]  name=Mythril Spear;
+texture=items_weapons; 
+ID=spear_mythril; pR=pMythril; pB=pMythrilHilt;
+description=Spear that can pierce any lesser metal.;
+journalID=journal_spear;
+weight=3; volume=10; value=900;
+power=6;
+special=enhanceSlots_1;
+sprite=185; spriteWhenHeld=185; itemCategory=weapon; 
+special=sprite2xHeight; element=spear;
+depthMod=900;
+ action=spearAttack;
+combineWith=furnace_lit; toMake=mythril_chunk; 
+combineWith=furnace2_lit; toMake=mythril_chunk;
+combineWith=furnace_everlit1; toMake=mythril_chunk; 
+combineWith=furnace_everlit2; toMake=mythril_chunk; 
+ 
+[ItemType]  name=Mythril Knuckle;
+texture=items_weapons; 
+ID=knuckle_mythril; pR=pMythril; pB=pMythrilHilt;
+description=The finest of fisticuffs.;
+journalID=journal_knuckle;
+weight=2; volume=1; value=900;
+power=5;
+sprite=186; spriteWhenHeld=218; itemCategory=weapon; element=fist;
+ action=fistAttack;
+special=enhanceSlots_1;
+combineWith=furnace_lit; toMake=mythril_chunk; 
+combineWith=furnace2_lit; toMake=mythril_chunk;
+combineWith=furnace_everlit1; toMake=mythril_chunk; 
+combineWith=furnace_everlit2; toMake=mythril_chunk; 
+ 
+[ItemType]  name=Mythril Rapier;
+texture=items_weapons; 
+ID=rapier_mythril; pR=pMythril; pB=pMythrilHilt;
+description=The finest blade a smith could make.;
+journalID=journal_rapier;
+weight=1; volume=5; value=900;
+power=6;
+sprite=187; spriteWhenHeld=219; itemCategory=weapon; element=sword;
+ action=rapierAttack;
+ special=rotate180WhenSheathed; special=enhanceSlots_1;
+combineWith=furnace_lit; toMake=mythril_chunk; 
+combineWith=furnace2_lit; toMake=mythril_chunk;
+combineWith=furnace_everlit1; toMake=mythril_chunk; 
+combineWith=furnace_everlit2; toMake=mythril_chunk; 
+[ItemEffect]
+ID=rapier_mythril; actorValue=PhysEva; magnitude=3; duration=-1;
+ 
+[ItemType]  name=Mythril Greatsword;
+texture=items_weapons; 
+ID=greatsword_mythril; pR=pMythril; pB=pMythrilHilt;
+description=Sword of the elite. Requires both hands to wield.;
+journalID=journal_gsword;
+sprite=188; spriteWhenHeld=220; itemCategory=weapon;  special=enhanceSlots_2;
+special=sprite2xWidth; special=twoHanded; element=sword;
+weight=5; volume=10; value=900;
+power=8;
+ action=greatswordAttack;
+special=enhanceSlots_2;
+combineWith=furnace_lit; toMake=mythril_chunk; 
+combineWith=furnace2_lit; toMake=mythril_chunk;
+combineWith=furnace_everlit1; toMake=mythril_chunk; 
+combineWith=furnace_everlit2; toMake=mythril_chunk; 
+ 
+ 
+ 
+[ItemType]  name=Laser Sabre;
+texture=items_weapons; 
+ID=sword_laser; pR=pLaser; pB=pLaserHilt;
+description=Glowing blade of energy.;
+journalID=journal_sword;
+weight=1; volume=5; value=2500;
+power=8;
+sprite=239; spriteWhenHeld=271; itemCategory=weapon; element=sword;
+ action=swordAttack_laser;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=laser_chunk; 
+combineWith=furnace2_lit; toMake=laser_chunk;
+combineWith=furnace_everlit1; toMake=laser_chunk; 
+combineWith=furnace_everlit2; toMake=laser_chunk; 
+[ItemLight]
+ID=sword_laser; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.2; flicker=0.03;
+ 
+[ItemType]  name=Energy Shiv;
+texture=items_weapons; 
+ID=dagger_laser; pR=pLaser; pB=pLaserHilt;
+description=Almost weightless knife that glows warmly.;
+journalID=journal_dagger;
+weight=1; volume=1; value=2500;
+power=6;
+sprite=240; spriteWhenHeld=272; itemCategory=weapon; element=dagger;
+ action=daggerAttack_laser;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=laser_chunk; 
+combineWith=furnace2_lit; toMake=laser_chunk;
+combineWith=furnace_everlit1; toMake=laser_chunk; 
+combineWith=furnace_everlit2; toMake=laser_chunk; 
+[ItemLight]
+ID=dagger_laser; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.15; flicker=0.03;
+ 
+[ItemType]  name=Ray Hammer;
+texture=items_weapons; 
+ID=hammer_laser; pR=pLaser; pB=pLaserHilt;
+description=Chunk of solid light on a haft.;
+journalID=journal_hammer;
+weight=3; volume=5; value=2500;
+power=9;
+sprite=241; spriteWhenHeld=273; itemCategory=weapon; element=hammer;
+ action=hammerAttack_laser;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=laser_chunk; 
+combineWith=furnace2_lit; toMake=laser_chunk;
+combineWith=furnace_everlit1; toMake=laser_chunk; 
+combineWith=furnace_everlit2; toMake=laser_chunk; 
+[ItemLight]
+ID=hammer_laser; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.25; flicker=0.03;
+
+[ItemType]  name=Laser Axe;
+texture=items_weapons; 
+ID=axe_laser; pR=pLaser; pB=pLaserHilt;
+description=Bizzare curved, sharp light.;
+journalID=journal_axe;
+weight=2; volume=5; value=2500;
+power=9;
+sprite=242; spriteWhenHeld=274; itemCategory=weapon; element=axe;
+ action=axeAttack_laser;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=laser_chunk; 
+combineWith=furnace2_lit; toMake=laser_chunk;
+combineWith=furnace_everlit1; toMake=laser_chunk; 
+combineWith=furnace_everlit2; toMake=laser_chunk; 
+[ItemLight]
+ID=axe_laser; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.2; flicker=0.03;
+ 
+[ItemType]  name=Laser Shield;
+texture=items_weapons; 
+ID=shield_laser; pR=pLaser; pB=pLaserHilt;
+description=Shield covered in magic-repelling light.;
+journalID=journal_shield;
+sprite=243; spriteWhenHeld=275; itemCategory=weapon; element=shield;
+weight=4; volume=5; value=2500;
+power=3;
+action=shieldAttack_laser;
+combineWith=furnace_lit; toMake=laser_chunk; 
+combineWith=furnace2_lit; toMake=laser_chunk;
+combineWith=furnace_everlit1; toMake=laser_chunk; 
+combineWith=furnace_everlit2; toMake=laser_chunk; 
+[ItemEffect]  
+ID=shield_laser; actorValue=PhysEva; magnitude=12; duration=-1;
+[ItemEffect]  
+ID=shield_laser; actorValue=MagEva; magnitude=10; duration=-1;
+[ItemLight]
+ID=shield_laser; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.25; flicker=0.03;
+
+[ItemType]  name=Laser Flail;
+texture=items_weapons; 
+ID=flail_laser; pR=pLaser; pB=pLaserHilt;
+description=Ball and chain wreathed in blazing energy.;
+journalID=journal_flail;
+weight=3; volume=5; value=2500;
+power=7;
+sprite=244; spriteWhenHeld=276; itemCategory=weapon; element=flail;
+ action=flailAttack_laser;
+combineWith=furnace_lit; toMake=laser_chunk; 
+combineWith=furnace2_lit; toMake=laser_chunk;
+combineWith=furnace_everlit1; toMake=laser_chunk; 
+combineWith=furnace_everlit2; toMake=laser_chunk; 
+[ItemLight]
+ID=flail_laser; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.2; flicker=0.03;
+ 
+[ItemType]  name=Laser Whip;
+texture=items_weapons; 
+ID=whip_laser; pR=pLaser; pB=pLaserHilt;
+description=Cord of sharp fire.;
+journalID=journal_whip;
+weight=1; volume=3; value=2500;
+power=6;
+sprite=245; spriteWhenHeld=277; itemCategory=weapon; element=whip;
+ action=whipAttack_laser;
+combineWith=furnace_lit; toMake=laser_chunk; 
+combineWith=furnace2_lit; toMake=laser_chunk;
+combineWith=furnace_everlit1; toMake=laser_chunk; 
+combineWith=furnace_everlit2; toMake=laser_chunk; 
+[ItemLight]
+ID=whip_laser; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.2; flicker=0.03;
+ 
+[ItemType]  name=Laser Bow;
+texture=items_weapons; 
+ID=bow_laser; pR=pLaser; pB=pLaserHilt;
+description=Coats each arrow in fire. Requires both hands to use.;
+journalID=journal_bow;
+sprite=246; spriteWhenHeld=278; itemCategory=weapon; element=bow; special=twoHanded;
+weight=1; volume=5; value=2500;
+power=6;
+ action=bowAttack_laser;
+combineWith=furnace_lit; toMake=laser_chunk; 
+combineWith=furnace2_lit; toMake=laser_chunk;
+combineWith=furnace_everlit1; toMake=laser_chunk; 
+combineWith=furnace_everlit2; toMake=laser_chunk; 
+[ItemLight]
+ID=bow_laser; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.1; flicker=0.03;
+ 
+[ItemType]  name=Laser Crossbow;
+texture=items_weapons; 
+ID=xbow_laser; pR=pLaser; pB=pLaserHilt;
+description=Ignites each bolt with flame.; 
+journalID=journal_xbow;
+sprite=247; spriteWhenHeld=279; itemCategory=weapon; element=aim;
+weight=2; volume=5; value=2500;
+power=9;
+ action=crossbowAttack_laser;
+combineWith=furnace_lit; toMake=laser_chunk; 
+combineWith=furnace2_lit; toMake=laser_chunk;
+combineWith=furnace_everlit1; toMake=laser_chunk; 
+combineWith=furnace_everlit2; toMake=laser_chunk; 
+[ItemReaction] 
+ID=xbow_laser; element=actionUsed; newID=xbow_laser_unloaded;
+[ItemLight]
+ID=xbow_laser; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.2; flicker=0.03;
+
+[ItemType]  name=Laser Crossbow (Unloaded);
+texture=items_weapons; 
+ID=xbow_laser_unloaded; pR=pLaser; pB=pLaserHilt;
+description=Ignites each bolt with flame. Needs to be reloaded.; 
+journalID=journal_xbow;
+sprite=248; spriteWhenHeld=280; itemCategory=weapon; 
+weight=2; volume=5; value=2500;
+power=9;
+ action=crossbowReload;
+combineWith=furnace_lit; toMake=laser_chunk; 
+combineWith=furnace2_lit; toMake=laser_chunk;
+combineWith=furnace_everlit1; toMake=laser_chunk; 
+combineWith=furnace_everlit2; toMake=laser_chunk; 
+[ItemReaction] 
+ID=xbow_laser_unloaded; element=actionUsed; element=reload; newID=xbow_laser;
+ 
+[ItemType]  name=Laser Spear;
+texture=items_weapons; 
+ID=spear_laser; pR=pLaser; pB=pLaserHilt;
+description=Staff with a burning, sharp tip.;
+journalID=journal_spear;
+weight=3; volume=5; value=2500;
+power=7;
+sprite=249; spriteWhenHeld=249; itemCategory=weapon; 
+special=sprite2xHeight; element=spear;
+depthMod=900;
+ action=spearAttack_laser;
+combineWith=furnace_lit; toMake=laser_chunk; 
+combineWith=furnace2_lit; toMake=laser_chunk;
+combineWith=furnace_everlit1; toMake=laser_chunk; 
+combineWith=furnace_everlit2; toMake=laser_chunk; 
+[ItemLight]
+ID=spear_laser; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.2; flicker=0.03;
+ 
+[ItemType]  name=Laser Knuckle;
+texture=items_weapons; 
+ID=knuckle_laser; pR=pLaser; pB=pLaserHilt;
+description=Keeps the hands uncomfortably warm.;
+journalID=journal_knuckle;
+weight=1; volume=1; value=2500;
+power=6;
+sprite=250; spriteWhenHeld=282; itemCategory=weapon; element=fist;
+ action=fistAttack_laser;
+combineWith=furnace_lit; toMake=laser_chunk; 
+combineWith=furnace2_lit; toMake=laser_chunk;
+combineWith=furnace_everlit1; toMake=laser_chunk; 
+combineWith=furnace_everlit2; toMake=laser_chunk; 
+[ItemLight]
+ID=knuckle_laser; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.15; flicker=0.03;
+ 
+[ItemType]  name=Laser Rapier;
+texture=items_weapons; 
+ID=rapier_laser; pR=pLaser; pB=pLaserHilt;
+description=The thinnest possible blade.;
+journalID=journal_rapier;
+weight=1; volume=5; value=2500;
+power=7;
+sprite=251; spriteWhenHeld=283; itemCategory=weapon; element=sword;
+ action=rapierAttack_laser;
+ special=rotate180WhenSheathed;
+combineWith=furnace_lit; toMake=laser_chunk; 
+combineWith=furnace2_lit; toMake=laser_chunk;
+combineWith=furnace_everlit1; toMake=laser_chunk; 
+combineWith=furnace_everlit2; toMake=laser_chunk; 
+[ItemEffect]
+ID=rapier_laser; actorValue=PhysEva; magnitude=3; duration=-1;
+[ItemLight]
+ID=rapier_laser; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.2; flicker=0.03;
+ 
+[ItemType]  name=Laser Greatsword;
+texture=items_weapons; 
+ID=greatsword_laser; pR=pLaser; pB=pLaserHilt;
+description=Cuts through enemy ranks with ease. Requires both hands to wield.;
+journalID=journal_gsword;
+sprite=252; spriteWhenHeld=284; itemCategory=weapon;  special=enhanceSlots_2;
+special=sprite2xWidth; special=twoHanded; element=sword;
+weight=2; volume=10; value=2500;
+power=9;
+ action=greatswordAttack_laser;
+combineWith=furnace_lit; toMake=laser_chunk; 
+combineWith=furnace2_lit; toMake=laser_chunk;
+combineWith=furnace_everlit1; toMake=laser_chunk; 
+combineWith=furnace_everlit2; toMake=laser_chunk; 
+[ItemLight]
+ID=greatsword_laser; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.2; flicker=0.03;
+
+
+[ItemType]  name=Frostbite;
+texture=items_weapons; 
+ID=sword_ironice; pR=pIronice; pB=pIroniceHilt;
+description=Sword carved from hard, cold Ironice.;
+journalID=journal_sword;
+weight=4; volume=5; value=4000;
+power=9;
+sprite=303; spriteWhenHeld=335; itemCategory=weapon; element=sword;
+ action=swordAttack_ice;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=ironice_chunk; 
+combineWith=furnace2_lit; toMake=ironice_chunk;
+combineWith=furnace_everlit1; toMake=ironice_chunk; 
+combineWith=furnace_everlit2; toMake=ironice_chunk; 
+ 
+[ItemType]  name=Shiver;
+texture=items_weapons; 
+ID=dagger_ironice; pR=pIronice; pB=pIroniceHilt;
+description=Dagger that leaves deep, frostbitten wounds.;
+journalID=journal_dagger;
+weight=3; volume=1; value=4000;
+power=7;
+sprite=304; spriteWhenHeld=336; itemCategory=weapon; element=dagger;
+ action=daggerAttack_ice;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=ironice_chunk; 
+combineWith=furnace2_lit; toMake=ironice_chunk;
+combineWith=furnace_everlit1; toMake=ironice_chunk; 
+combineWith=furnace_everlit2; toMake=ironice_chunk; 
+ 
+[ItemType]  name=Avalanche;
+texture=items_weapons; 
+ID=hammer_ironice; pR=pIronice; pB=pIroniceHilt;
+description=Hammer whose every swing feels like the rumbling of a mountain.;
+journalID=journal_hammer;
+weight=9; volume=5; value=4000;
+power=10;
+sprite=305; spriteWhenHeld=337; itemCategory=weapon; element=hammer;
+ action=hammerAttack_ice;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=ironice_chunk; 
+combineWith=furnace2_lit; toMake=ironice_chunk;
+combineWith=furnace_everlit1; toMake=ironice_chunk; 
+combineWith=furnace_everlit2; toMake=ironice_chunk; 
+
+[ItemType]  name=Rime;
+texture=items_weapons; 
+ID=axe_ironice; pR=pIronice; pB=pIroniceHilt;
+description=Ironice crafted into a wicked axe-like shape.;
+journalID=journal_axe;
+weight=7; volume=5; value=4000;
+power=10;
+sprite=306; spriteWhenHeld=338; itemCategory=weapon; element=axe;
+ action=axeAttack_ice;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=ironice_chunk; 
+combineWith=furnace2_lit; toMake=ironice_chunk;
+combineWith=furnace_everlit1; toMake=ironice_chunk; 
+combineWith=furnace_everlit2; toMake=ironice_chunk; 
+ 
+[ItemType]  name=Glacier;
+texture=items_weapons; 
+ID=shield_ironice; pR=pIronice; pB=pIroniceHilt;
+description=Shield of exceedingly thick Ironice.;
+journalID=journal_shield;
+sprite=307; spriteWhenHeld=339; itemCategory=weapon; element=shield;
+weight=10; volume=5; value=4000;
+power=3;
+action=shieldAttack_ice;
+combineWith=furnace_lit; toMake=ironice_chunk; 
+combineWith=furnace2_lit; toMake=ironice_chunk;
+combineWith=furnace_everlit1; toMake=ironice_chunk; 
+combineWith=furnace_everlit2; toMake=ironice_chunk; 
+[ItemEffect]  
+ID=shield_ironice; actorValue=PhysEva; magnitude=23; duration=-1;
+[ItemEffect]  
+ID=shield_ironice; actorValue=MagEva; magnitude=2; duration=-1;
+
+[ItemType]  name=Snowflake;
+texture=items_weapons; 
+ID=flail_ironice; pR=pIronice; pB=pIroniceHilt;
+description=Icy flail that exudes cold.;
+journalID=journal_flail;
+sprite=308; spriteWhenHeld=340; itemCategory=weapon; element=flail;
+weight=4; volume=5; value=4000;
+power=8;
+ action=flailAttack_ice;
+combineWith=furnace_lit; toMake=ironice_chunk; 
+combineWith=furnace2_lit; toMake=ironice_chunk;
+combineWith=furnace_everlit1; toMake=ironice_chunk; 
+combineWith=furnace_everlit2; toMake=ironice_chunk; 
+ 
+[ItemType]  name=Chill Whip;
+texture=items_weapons; 
+ID=whip_ironice; pR=pIronice; pB=pIroniceHilt;
+description=A draft of cold follows this whip's every motion.;
+journalID=journal_whip;
+sprite=309; spriteWhenHeld=341; itemCategory=weapon; element=flail;
+weight=3; volume=3; value=4000;
+power=7;
+ action=whipAttack_ice;
+combineWith=furnace_lit; toMake=ironice_chunk; 
+combineWith=furnace2_lit; toMake=ironice_chunk;
+combineWith=furnace_everlit1; toMake=ironice_chunk; 
+combineWith=furnace_everlit2; toMake=ironice_chunk; 
+ 
+[ItemType]  name=Blizzard;
+texture=items_weapons; 
+ID=bow_ironice; pR=pIronice; pB=pIroniceHilt;
+description=Bow that blasts ice faster than its namesake. Requires both hands to use.;
+journalID=journal_bow;
+sprite=310; spriteWhenHeld=342; itemCategory=weapon; element=bow; special=twoHanded;
+weight=2; volume=5; value=4000;
+power=7;
+ action=bowAttack_ice;
+combineWith=furnace_lit; toMake=ironice_chunk; 
+combineWith=furnace2_lit; toMake=ironice_chunk;
+combineWith=furnace_everlit1; toMake=ironice_chunk; 
+combineWith=furnace_everlit2; toMake=ironice_chunk; 
+ 
+[ItemType]  name=Hail;
+texture=items_weapons; 
+ID=xbow_ironice; pR=pIronice; pB=pIroniceHilt;
+description=Shoots devastating bolts of Ironice.; 
+journalID=journal_xbow;
+sprite=311; spriteWhenHeld=343; itemCategory=weapon; element=aim;
+weight=3; volume=5; value=4000;
+power=11;
+ action=crossbowAttack_ice;
+combineWith=furnace_lit; toMake=ironice_chunk; 
+combineWith=furnace2_lit; toMake=ironice_chunk;
+combineWith=furnace_everlit1; toMake=ironice_chunk; 
+combineWith=furnace_everlit2; toMake=ironice_chunk; 
+[ItemReaction] 
+ID=xbow_ironice; element=actionUsed; newID=xbow_ironice_unloaded;
+
+[ItemType]  name=Hail (Unloaded);
+texture=items_weapons; 
+ID=xbow_ironice_unloaded; pR=pIronice; pB=pIroniceHilt;
+description=Shoots devastating bolts of Ironice. Needs to be reloaded.; 
+journalID=journal_xbow;
+sprite=312; spriteWhenHeld=344; itemCategory=weapon; 
+weight=3; volume=5; value=4000;
+power=11;
+ action=crossbowReload;
+combineWith=furnace_lit; toMake=ironice_chunk; 
+combineWith=furnace2_lit; toMake=ironice_chunk;
+combineWith=furnace_everlit1; toMake=ironice_chunk; 
+combineWith=furnace_everlit2; toMake=ironice_chunk; 
+[ItemReaction] 
+ID=xbow_ironice_unloaded; element=actionUsed; element=reload; newID=xbow_ironice;
+ 
+[ItemType]  name=Ice Spike;
+texture=items_weapons; 
+ID=spear_ironice; pR=pIronice; pB=pIroniceHilt;
+description=Spear with a broad and sharp head of Ironice.;
+journalID=journal_spear;
+weight=5; volume=10; value=4000;
+power=8;
+sprite=313; spriteWhenHeld=313; itemCategory=weapon; 
+special=sprite2xHeight; element=spear;
+depthMod=900;
+ action=spearAttack_ice;
+combineWith=furnace_lit; toMake=ironice_chunk; 
+combineWith=furnace2_lit; toMake=ironice_chunk;
+combineWith=furnace_everlit1; toMake=ironice_chunk; 
+combineWith=furnace_everlit2; toMake=ironice_chunk; 
+ 
+[ItemType]  name=Flurry;
+texture=items_weapons; 
+ID=knuckle_ironice; pR=pIronice; pB=pIroniceHilt;
+description=Knuckles that pummel the enemy with cold.;
+journalID=journal_knuckle;
+weight=4; volume=1; value=4000;
+power=7;
+sprite=314; spriteWhenHeld=346; itemCategory=weapon; element=fist;
+ action=fistAttack_ice;
+combineWith=furnace_lit; toMake=ironice_chunk; 
+combineWith=furnace2_lit; toMake=ironice_chunk;
+combineWith=furnace_everlit1; toMake=ironice_chunk; 
+combineWith=furnace_everlit2; toMake=ironice_chunk; 
+ 
+[ItemType]  name=Icicle;
+texture=items_weapons; 
+ID=rapier_ironice; pR=pIronice; pB=pIroniceHilt;
+description=A rapier as thin as Ironice can possibly make.;
+journalID=journal_rapier;
+weight=3; volume=5; value=4000;
+power=8;
+sprite=315; spriteWhenHeld=347; itemCategory=weapon; element=sword;
+ action=rapierAttack_ice;
+ special=rotate180WhenSheathed;
+combineWith=furnace_lit; toMake=ironice_chunk; 
+combineWith=furnace2_lit; toMake=ironice_chunk;
+combineWith=furnace_everlit1; toMake=ironice_chunk; 
+combineWith=furnace_everlit2; toMake=ironice_chunk; 
+[ItemEffect]
+ID=rapier_ironice; actorValue=PhysEva; magnitude=3; duration=-1;
+ 
+[ItemType]  name=Aufeis;
+texture=items_weapons; 
+ID=greatsword_ironice; pR=pIronice; pB=pIroniceHilt;
+description=Winter's wrath in greatsword form. Requires both hands to wield.;
+journalID=journal_gsword;
+sprite=316; spriteWhenHeld=348; itemCategory=weapon;  special=enhanceSlots_2;
+special=sprite2xWidth; special=twoHanded; element=sword;
+weight=8; volume=10; value=4000;
+power=10;
+ action=greatswordAttack_ice;
+combineWith=furnace_lit; toMake=ironice_chunk; 
+combineWith=furnace2_lit; toMake=ironice_chunk;
+combineWith=furnace_everlit1; toMake=ironice_chunk; 
+combineWith=furnace_everlit2; toMake=ironice_chunk; 
+ 
+ 
+[ItemType]  name=Singing Sword;
+texture=items_weapons; 
+ID=sword_wind; pR=pWhistle; pB=pWhistleHilt;
+description=Sword that sings eerily when swung.;
+journalID=journal_sword;
+weight=2; volume=5; value=1800;
+power=8;
+sprite=367; spriteWhenHeld=399; itemCategory=weapon; element=sword;
+ action=swordAttack_wind;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=whistle_chunk; 
+combineWith=furnace2_lit; toMake=whistle_chunk;
+combineWith=furnace_everlit1; toMake=whistle_chunk; 
+combineWith=furnace_everlit2; toMake=whistle_chunk; 
+ 
+[ItemType]  name=Tuning Knife;
+texture=items_weapons; 
+ID=dagger_wind; pR=pWhistle; pB=pWhistleHilt;
+description=When struck, this knife hums quietly.;
+journalID=journal_dagger;
+weight=2; volume=1; value=1800;
+power=6;
+sprite=368; spriteWhenHeld=400; itemCategory=weapon; element=dagger;
+ action=daggerAttack_wind;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=whistle_chunk; 
+combineWith=furnace2_lit; toMake=whistle_chunk;
+combineWith=furnace_everlit1; toMake=whistle_chunk; 
+combineWith=furnace_everlit2; toMake=whistle_chunk; 
+ 
+[ItemType]  name=Chime Hammer;
+texture=items_weapons; 
+ID=hammer_wind; pR=pWhistle; pB=pWhistleHilt;
+description=Rings out loudly against any surface.;
+journalID=journal_hammer;
+weight=7; volume=5; value=1800;
+power=9;
+sprite=369; spriteWhenHeld=401; itemCategory=weapon; element=hammer;
+ action=hammerAttack_wind;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=whistle_chunk; 
+combineWith=furnace2_lit; toMake=whistle_chunk;
+combineWith=furnace_everlit1; toMake=whistle_chunk; 
+combineWith=furnace_everlit2; toMake=whistle_chunk; 
+
+[ItemType]  name=Howling Axe;
+texture=items_weapons; 
+ID=axe_wind; pR=pWhistle; pB=pWhistleHilt;
+description=Forceful gusts of wind accompany this axe into battle.;
+journalID=journal_axe;
+weight=3; volume=5; value=1800;
+power=9;
+sprite=370; spriteWhenHeld=402; itemCategory=weapon; element=axe;
+ action=axeAttack_wind;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=whistle_chunk; 
+combineWith=furnace2_lit; toMake=whistle_chunk;
+combineWith=furnace_everlit1; toMake=whistle_chunk; 
+combineWith=furnace_everlit2; toMake=whistle_chunk; 
+ 
+[ItemType]  name=Reverb Shield;
+texture=items_weapons; 
+ID=shield_wind; pR=pWhistle; pB=pWhistleHilt;
+description=Seems to repel weapons with its vibrations.;
+journalID=journal_shield;
+sprite=371; spriteWhenHeld=403; itemCategory=weapon; element=shield;
+weight=5; volume=5; value=1800;
+power=3;
+action=shieldAttack_wind;
+combineWith=furnace_lit; toMake=whistle_chunk; 
+combineWith=furnace2_lit; toMake=whistle_chunk;
+combineWith=furnace_everlit1; toMake=whistle_chunk; 
+combineWith=furnace_everlit2; toMake=whistle_chunk; 
+[ItemEffect]  
+ID=shield_wind; actorValue=PhysEva; magnitude=21; duration=-1;
+
+[ItemType]  name=Wailing Flail;
+texture=items_weapons; 
+ID=flail_wind; pR=pWhistle; pB=pWhistleHilt;
+description=Sounds and feels like a cyclone when swung overhead.;
+journalID=journal_flail;
+weight=3; volume=5; value=1800;
+power=7;
+sprite=372; spriteWhenHeld=404; itemCategory=weapon; element=flail;
+ action=flailAttack_wind;
+combineWith=furnace_lit; toMake=whistle_chunk; 
+combineWith=furnace2_lit; toMake=whistle_chunk;
+combineWith=furnace_everlit1; toMake=whistle_chunk; 
+combineWith=furnace_everlit2; toMake=whistle_chunk; 
+ 
+[ItemType]  name=Whistling Whip;
+texture=items_weapons; 
+ID=whip_wind; pR=pWhistle; pB=pWhistleHilt;
+description=Lets out an odd whistle with every lash.;
+journalID=journal_whip;
+weight=3; volume=3; value=1800;
+power=6;
+sprite=373; spriteWhenHeld=405; itemCategory=weapon; element=whip;
+ action=whipAttack_wind;
+combineWith=furnace_lit; toMake=whistle_chunk; 
+combineWith=furnace2_lit; toMake=whistle_chunk;
+combineWith=furnace_everlit1; toMake=whistle_chunk; 
+combineWith=furnace_everlit2; toMake=whistle_chunk; 
+ 
+[ItemType]  name=Harp Longbow;
+texture=items_weapons; 
+ID=bow_wind; pR=pWhistle; pB=pWhistleHilt;
+description=The thrum of its bowstring is like music. Grants extra range. Requires both hands to use.;
+journalID=journal_bow;
+sprite=374; spriteWhenHeld=406; itemCategory=weapon; element=bow; special=twoHanded;
+weight=1; volume=5; value=1800;
+power=4;
+ action=bowAttack_wind;
+combineWith=furnace_lit; toMake=whistle_chunk; 
+combineWith=furnace2_lit; toMake=whistle_chunk;
+combineWith=furnace_everlit1; toMake=whistle_chunk; 
+combineWith=furnace_everlit2; toMake=whistle_chunk; 
+ 
+[ItemType]  name=Gale Crossbow;
+texture=items_weapons; 
+ID=xbow_wind; pR=pWhistle; pB=pWhistleHilt;
+description=Each shot is carried by a powerful wind.;
+journalID=journal_xbow; 
+sprite=375; spriteWhenHeld=407; itemCategory=weapon; element=aim;
+weight=2; volume=5; value=1800;
+power=9;
+ action=crossbowAttack_wind;
+combineWith=furnace_lit; toMake=whistle_chunk; 
+combineWith=furnace2_lit; toMake=whistle_chunk;
+combineWith=furnace_everlit1; toMake=whistle_chunk; 
+combineWith=furnace_everlit2; toMake=whistle_chunk; 
+[ItemReaction] 
+ID=xbow_wind; element=actionUsed; newID=xbow_wind_unloaded;
+
+[ItemType]  name=Gale Crossbow (Unloaded);
+texture=items_weapons; 
+ID=xbow_wind_unloaded; pR=pWhistle; pB=pWhistleHilt;
+description=Each shot is carried by a powerful wind. Needs to be reloaded.; 
+journalID=journal_xbow;
+sprite=376; spriteWhenHeld=408; itemCategory=weapon; 
+weight=2; volume=5; value=1800;
+power=9;
+ action=crossbowReload;
+combineWith=furnace_lit; toMake=whistle_chunk; 
+combineWith=furnace2_lit; toMake=whistle_chunk;
+combineWith=furnace_everlit1; toMake=whistle_chunk; 
+combineWith=furnace_everlit2; toMake=whistle_chunk; 
+[ItemReaction] 
+ID=xbow_wind_unloaded; element=actionUsed; element=reload; newID=xbow_wind;
+ 
+[ItemType]  name=Siren Spear;
+texture=items_weapons; 
+ID=spear_wind; pR=pWhistle; pB=pWhistleHilt;
+description=Thrusts with this spear let out a dramatic ringing noise.;
+journalID=journal_spear;
+weight=4; volume=10; value=1800;
+power=7;
+sprite=377; spriteWhenHeld=377; itemCategory=weapon; 
+special=sprite2xHeight; element=spear;
+depthMod=900;
+ action=spearAttack_wind;
+combineWith=furnace_lit; toMake=whistle_chunk; 
+combineWith=furnace2_lit; toMake=whistle_chunk;
+combineWith=furnace_everlit1; toMake=whistle_chunk; 
+combineWith=furnace_everlit2; toMake=whistle_chunk; 
+ 
+[ItemType]  name=Beat Knuckle;
+texture=items_weapons; 
+ID=knuckle_wind; pR=pWhistle; pB=pWhistleHilt;
+description=Knuckles of whistling stone.;
+journalID=journal_knuckle;
+weight=3; volume=1; value=1800;
+power=6;
+sprite=378; spriteWhenHeld=410; itemCategory=weapon; element=fist;
+ action=fistAttack_wind;
+combineWith=furnace_lit; toMake=whistle_chunk; 
+combineWith=furnace2_lit; toMake=whistle_chunk;
+combineWith=furnace_everlit1; toMake=whistle_chunk; 
+combineWith=furnace_everlit2; toMake=whistle_chunk; 
+ 
+[ItemType]  name=Trill Estoc;
+texture=items_weapons; 
+ID=rapier_wind; pR=pWhistle; pB=pWhistleHilt;
+description=This rapier whispers as it swings through the air.;
+journalID=journal_rapier;
+weight=2; volume=5; value=1800;
+power=7;
+sprite=379; spriteWhenHeld=411; itemCategory=weapon; element=sword;
+ action=rapierAttack_wind;
+ special=rotate180WhenSheathed;
+combineWith=furnace_lit; toMake=whistle_chunk; 
+combineWith=furnace2_lit; toMake=whistle_chunk;
+combineWith=furnace_everlit1; toMake=whistle_chunk; 
+combineWith=furnace_everlit2; toMake=whistle_chunk;
+[ItemEffect]
+ID=rapier_wind; actorValue=PhysEva; magnitude=4; duration=-1;
+ 
+[ItemType]  name=Tremor Greatsword;
+texture=items_weapons; 
+ID=greatsword_wind; pR=pWhistle; pB=pWhistleHilt;
+description=The wrong end of this blade is worse than any storm. Requires both hands to use.;
+journalID=journal_gsword;
+sprite=380; spriteWhenHeld=412; itemCategory=weapon;  special=enhanceSlots_2;
+special=sprite2xWidth; special=twoHanded; element=sword;
+weight=6; volume=10; value=1800;
+power=9;
+ action=greatswordAttack_wind;
+combineWith=furnace_lit; toMake=whistle_chunk; 
+combineWith=furnace2_lit; toMake=whistle_chunk;
+combineWith=furnace_everlit1; toMake=whistle_chunk; 
+combineWith=furnace_everlit2; toMake=whistle_chunk; 
+ 
+ 
+ 
+
+[ItemType]  name=Taze Blade;
+texture=items_weapons; 
+ID=sword_elec; pR=pShockWeapon; pB=pShockWeaponHilt;
+description=Electrically charged sword.;
+journalID=journal_sword;
+weight=2; volume=5; value=1250;
+power=7;
+sprite=431; spriteWhenHeld=463; itemCategory=weapon; element=sword;
+ action=swordAttack_elec;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=shock_chunk; 
+combineWith=furnace2_lit; toMake=shock_chunk;
+combineWith=furnace_everlit1; toMake=shock_chunk; 
+combineWith=furnace_everlit2; toMake=shock_chunk; 
+ 
+[ItemType]  name=Shock Prod;
+texture=items_weapons; 
+ID=dagger_elec; pR=pShockWeapon; pB=pShockWeaponHilt;
+description=Dagger that courses with electricity.;
+journalID=journal_dagger;
+weight=2; volume=1; value=1250;
+power=5;
+sprite=432; spriteWhenHeld=464; itemCategory=weapon; element=dagger;
+ action=daggerAttack_elec;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=shock_chunk; 
+combineWith=furnace2_lit; toMake=shock_chunk;
+combineWith=furnace_everlit1; toMake=shock_chunk; 
+combineWith=furnace_everlit2; toMake=shock_chunk; 
+ 
+[ItemType]  name=Thunder;
+texture=items_weapons; 
+ID=hammer_elec; pR=pShockWeapon; pB=pShockWeaponHilt;
+description=Hammer that combines blunt trauma with shock.;
+journalID=journal_hammer;
+weight=6; volume=5; value=1250;
+power=8;
+sprite=433; spriteWhenHeld=465; itemCategory=weapon; element=hammer;
+ action=hammerAttack_elec;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=shock_chunk; 
+combineWith=furnace2_lit; toMake=shock_chunk;
+combineWith=furnace_everlit1; toMake=shock_chunk; 
+combineWith=furnace_everlit2; toMake=shock_chunk; 
+
+[ItemType]  name=Voltaic Axe;
+texture=items_weapons; 
+ID=axe_elec; pR=pShockWeapon; pB=pShockWeaponHilt;
+description=Axe that sparks when swung in an arc.;
+journalID=journal_axe;
+weight=3; volume=5; value=1250;
+power=8;
+sprite=434; spriteWhenHeld=466; itemCategory=weapon; element=axe;
+ action=axeAttack_elec;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=shock_chunk; 
+combineWith=furnace2_lit; toMake=shock_chunk;
+combineWith=furnace_everlit1; toMake=shock_chunk; 
+combineWith=furnace_everlit2; toMake=shock_chunk; 
+ 
+[ItemType]  name=Electro Shield;
+texture=items_weapons; 
+ID=shield_elec; pR=pShockWeapon; pB=pShockWeaponHilt;
+description=Shield covered in electricity-conducting spikes. Lightly zaps blocked attackers.;
+journalID=journal_shield;
+sprite=435; spriteWhenHeld=467; itemCategory=weapon; element=shield;
+weight=5; volume=5; value=1250;
+power=5;
+action=shieldAttack_elec;
+combineWith=furnace_lit; toMake=shock_chunk; 
+combineWith=furnace2_lit; toMake=shock_chunk;
+combineWith=furnace_everlit1; toMake=shock_chunk; 
+combineWith=furnace_everlit2; toMake=shock_chunk; 
+[ItemEffect] 
+ID=shield_elec; actorValue=PhysEva; magnitude=18; duration=-1;
+[ItemReaction] 
+ID=shield_elec; element=blocked; action=shieldBlock_elec;
+
+[ItemType]  name=Electric Flail;
+texture=items_weapons; 
+ID=flail_elec; pR=pShockWeapon; pB=pShockWeaponHilt;
+description=Lightning on a chain.;
+journalID=journal_flail;
+weight=3; volume=5; value=1250;
+power=6;
+sprite=436; spriteWhenHeld=468; itemCategory=weapon; element=flail;
+ action=flailAttack_elec;
+combineWith=furnace_lit; toMake=shock_chunk; 
+combineWith=furnace2_lit; toMake=shock_chunk;
+combineWith=furnace_everlit1; toMake=shock_chunk; 
+combineWith=furnace_everlit2; toMake=shock_chunk; 
+ 
+[ItemType]  name=Live Wire;
+texture=items_weapons; 
+ID=whip_elec; pR=pShockWeapon; pB=pShockWeaponHilt;
+description=A whip that cracks like thunder.;
+journalID=journal_whip;
+weight=3; volume=3; value=1250;
+power=5;
+sprite=437; spriteWhenHeld=469; itemCategory=weapon; element=whip;
+ action=whipAttack_elec;
+combineWith=furnace_lit; toMake=shock_chunk; 
+combineWith=furnace2_lit; toMake=shock_chunk;
+combineWith=furnace_everlit1; toMake=shock_chunk; 
+combineWith=furnace_everlit2; toMake=shock_chunk; 
+ 
+[ItemType]  name=Jolt Bow;
+texture=items_weapons; 
+ID=bow_elec; pR=pShockWeapon; pB=pShockWeaponHilt;
+description=Electrifies each arrow. Requires both hands to use.;
+journalID=journal_bow;
+sprite=438; spriteWhenHeld=470; itemCategory=weapon; element=bow; special=twoHanded;
+weight=1; volume=5; value=1250;
+power=5;
+ action=bowAttack_elec;
+combineWith=furnace_lit; toMake=shock_chunk; 
+combineWith=furnace2_lit; toMake=shock_chunk;
+combineWith=furnace_everlit1; toMake=shock_chunk; 
+combineWith=furnace_everlit2; toMake=shock_chunk; 
+ 
+[ItemType]  name=Bolt Crossbow;
+texture=items_weapons; 
+ID=xbow_elec; pR=pShockWeapon; pB=pShockWeaponHilt;
+description=Crossbow that fires lightning bolts.; 
+journalID=journal_xbow;
+sprite=439; spriteWhenHeld=471; itemCategory=weapon; element=aim;
+weight=2; volume=5; value=1250;
+power=8;
+ action=crossbowAttack_elec;
+combineWith=furnace_lit; toMake=shock_chunk; 
+combineWith=furnace2_lit; toMake=shock_chunk;
+combineWith=furnace_everlit1; toMake=shock_chunk; 
+combineWith=furnace_everlit2; toMake=shock_chunk; 
+[ItemReaction] 
+ID=xbow_elec; element=actionUsed; newID=xbow_elec_unloaded;
+
+[ItemType]  name=Bolt Crossbow (Unloaded);
+texture=items_weapons; 
+ID=xbow_elec_unloaded; pR=pShockWeapon; pB=pShockWeaponHilt;
+description=Crossbow that fires lightning bolts. Needs to be reloaded.; 
+journalID=journal_xbow;
+sprite=440; spriteWhenHeld=472; itemCategory=weapon; 
+weight=2; volume=5; value=1250;
+power=8;
+ action=crossbowReload;
+combineWith=furnace_lit; toMake=shock_chunk; 
+combineWith=furnace2_lit; toMake=shock_chunk;
+combineWith=furnace_everlit1; toMake=shock_chunk; 
+combineWith=furnace_everlit2; toMake=shock_chunk; 
+[ItemReaction] 
+ID=xbow_elec_unloaded; element=actionUsed; element=reload; newID=xbow_elec;
+ 
+[ItemType]  name=Spark Bident;
+texture=items_weapons; 
+ID=spear_elec; pR=pShockWeapon; pB=pShockWeaponHilt;
+description=Two-tined spear to electrify from a distance.;
+journalID=journal_spear;
+weight=4; volume=10; value=1250;
+power=6;
+sprite=441; spriteWhenHeld=441; itemCategory=weapon; 
+special=sprite2xHeight; element=spear;
+depthMod=900;
+ action=spearAttack_elec;
+combineWith=furnace_lit; toMake=shock_chunk; 
+combineWith=furnace2_lit; toMake=shock_chunk;
+combineWith=furnace_everlit1; toMake=shock_chunk; 
+combineWith=furnace_everlit2; toMake=shock_chunk; 
+ 
+[ItemType]  name=Tazer Knuckle;
+texture=items_weapons; 
+ID=knuckle_elec; pR=pShockWeapon; pB=pShockWeaponHilt;
+description=Imbues punches with shocking power.;
+journalID=journal_knuckle;
+weight=3; volume=1; value=1250;
+power=5;
+sprite=442; spriteWhenHeld=474; itemCategory=weapon; element=fist;
+ action=fistAttack_elec;
+combineWith=furnace_lit; toMake=shock_chunk; 
+combineWith=furnace2_lit; toMake=shock_chunk;
+combineWith=furnace_everlit1; toMake=shock_chunk; 
+combineWith=furnace_everlit2; toMake=shock_chunk; 
+ 
+[ItemType]  name=Surge Espada;
+texture=items_weapons; 
+ID=rapier_elec; pR=pShockWeapon; pB=pShockWeaponHilt;
+description=A rapier that directs electricity to its tip.;
+journalID=journal_rapier;
+weight=2; volume=5; value=1250;
+power=6;
+sprite=443; spriteWhenHeld=475; itemCategory=weapon; element=sword;
+ action=rapierAttack_elec;
+ special=rotate180WhenSheathed;
+combineWith=furnace_lit; toMake=shock_chunk; 
+combineWith=furnace2_lit; toMake=shock_chunk;
+combineWith=furnace_everlit1; toMake=shock_chunk; 
+combineWith=furnace_everlit2; toMake=shock_chunk; 
+[ItemEffect]
+ID=rapier_elec; actorValue=PhysEva; magnitude=3; duration=-1;
+ 
+[ItemType]  name=Volt Greatsword;
+texture=items_weapons; 
+ID=greatsword_elec; pR=pShockWeapon; pB=pShockWeaponHilt;
+description=Stun entire groups with this blade. Requires both hands to wield.;
+journalID=journal_gsword;
+sprite=444; spriteWhenHeld=476; itemCategory=weapon;  special=enhanceSlots_2;
+special=sprite2xWidth; special=twoHanded; element=sword;
+weight=6; volume=10; value=1250;
+power=8;
+ action=greatswordAttack_elec;
+combineWith=furnace_lit; toMake=shock_chunk; 
+combineWith=furnace2_lit; toMake=shock_chunk;
+combineWith=furnace_everlit1; toMake=shock_chunk; 
+combineWith=furnace_everlit2; toMake=shock_chunk; 
+
+[ItemType]  name=Fang Sword;
+texture=items_weapons; 
+ID=sword_fang; pR=pFangWeapon; pB=pFangWeaponHilt;
+description=Sharpened fang and mandible, still dripping with poison.;
+journalID=journal_sword;
+weight=2; volume=5; value=150;
+power=6;
+sprite=352; spriteWhenHeld=384; itemCategory=weapon; element=sword;
+ action=swordAttack_poison;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=fang_spidest; 
+combineWith=furnace2_lit; toMake=fang_spidest;
+combineWith=furnace_everlit1; toMake=fang_spidest; 
+combineWith=furnace_everlit2; toMake=fang_spidest; 
+ 
+[ItemType]  name=Fang Dagger;
+texture=items_weapons; 
+ID=dagger_fang; pR=pFangWeapon; pB=pFangWeaponHilt;
+description=Toxic fang on a short hilt.;
+journalID=journal_dagger;
+weight=2; volume=1; value=150;
+power=4;
+sprite=353; spriteWhenHeld=385; itemCategory=weapon; element=dagger;
+ action=daggerAttack_poison;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=fang_spidest; 
+combineWith=furnace2_lit; toMake=fang_spidest;
+combineWith=furnace_everlit1; toMake=fang_spidest; 
+combineWith=furnace_everlit2; toMake=fang_spidest; 
+
+[ItemType]  name=Fang Axe;
+texture=items_weapons; 
+ID=axe_fang; pR=pFangWeapon; pB=pFangWeaponHilt;
+description=Curved axe that comes to a pointed fang.;
+journalID=journal_axe;
+weight=3; volume=5; value=150;
+power=7;
+sprite=306; spriteWhenHeld=338; itemCategory=weapon; element=axe;
+ action=axeAttack_poison;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=fang_spidest; 
+combineWith=furnace2_lit; toMake=fang_spidest;
+combineWith=furnace_everlit1; toMake=fang_spidest; 
+combineWith=furnace_everlit2; toMake=fang_spidest; 
+ 
+[ItemType]  name=Fang Hammer;
+texture=items_weapons; 
+ID=hammer_fang; pR=pFangWeapon; pB=pFangWeaponHilt;
+description=Spiny hammer with poison points.;
+journalID=journal_hammer;
+weight=6; volume=5; value=150;
+power=7;
+sprite=2306; spriteWhenHeld=2338; itemCategory=weapon; element=hammer;
+ action=hammerAttack_poison;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=fang_spidest; 
+combineWith=furnace2_lit; toMake=fang_spidest;
+combineWith=furnace_everlit1; toMake=fang_spidest; 
+combineWith=furnace_everlit2; toMake=fang_spidest; 
+
+ 
+[ItemType]  name=Fang Flail;
+texture=items_weapons; 
+ID=flail_fang; pR=pFangWeapon; pB=pFangWeaponHilt;
+description=Flail barbed with bits of poisonous fang.;
+journalID=journal_flail;
+weight=3; volume=5; value=150;
+power=5;
+sprite=357; spriteWhenHeld=389; itemCategory=weapon; element=flail;
+ action=flailAttack_poison;
+combineWith=furnace_lit; toMake=fang_spidest; 
+combineWith=furnace2_lit; toMake=fang_spidest;
+combineWith=furnace_everlit1; toMake=fang_spidest; 
+combineWith=furnace_everlit2; toMake=fang_spidest; 
+ 
+[ItemType]  name=Fang Whip;
+texture=items_weapons; 
+ID=whip_fang; pR=pFangWeapon; pB=pFangWeaponHilt;
+description=Venom-tipped whip.;
+journalID=journal_whip;
+weight=3; volume=3; value=150;
+power=4;
+sprite=358; spriteWhenHeld=390; itemCategory=weapon; element=whip;
+ action=whipAttack_poison;
+combineWith=furnace_lit; toMake=fang_spidest; 
+combineWith=furnace2_lit; toMake=fang_spidest;
+combineWith=furnace_everlit1; toMake=fang_spidest; 
+combineWith=furnace_everlit2; toMake=fang_spidest; 
+ 
+[ItemType]  name=Fang Spear;
+texture=items_weapons; 
+ID=spear_fang; pR=pFangWeapon; pB=pFangWeaponHilt;
+description=Spear topped with a toxic fang.;
+journalID=journal_spear;
+weight=4; volume=10; value=150;
+power=5;
+sprite=313; spriteWhenHeld=313; itemCategory=weapon; 
+special=sprite2xHeight; element=spear;
+depthMod=900;
+ action=spearAttack_poison;
+combineWith=furnace_lit; toMake=fang_spidest; 
+combineWith=furnace2_lit; toMake=fang_spidest;
+combineWith=furnace_everlit1; toMake=fang_spidest; 
+combineWith=furnace_everlit2; toMake=fang_spidest; 
+ 
+[ItemType]  name=Fang Knuckle;
+texture=items_weapons; 
+ID=knuckle_fang; pR=pFangWeapon; pB=pFangWeaponHilt;
+description=Hand mandibles & fang fists.;
+journalID=journal_knuckle;
+weight=3; volume=1; value=150;
+power=4;
+sprite=314; spriteWhenHeld=346; itemCategory=weapon; element=fist;
+ action=fistAttack_poison;
+combineWith=furnace_lit; toMake=fang_spidest; 
+combineWith=furnace2_lit; toMake=fang_spidest;
+combineWith=furnace_everlit1; toMake=fang_spidest; 
+combineWith=furnace_everlit2; toMake=fang_spidest; 
+ 
+[ItemType]  name=Fang Rapier;
+texture=items_weapons; 
+ID=rapier_fang; pR=pFangWeapon; pB=pFangWeaponHilt;
+description=Venomous rapier of a sharpened fang.;
+journalID=journal_rapier;
+weight=2; volume=5; value=150;
+power=5;
+sprite=315; spriteWhenHeld=347; itemCategory=weapon; element=sword;
+ action=rapierAttack_poison;
+ special=rotate180WhenSheathed;
+combineWith=furnace_lit; toMake=fang_spidest; 
+combineWith=furnace2_lit; toMake=fang_spidest;
+combineWith=furnace_everlit1; toMake=fang_spidest; 
+combineWith=furnace_everlit2; toMake=fang_spidest; 
+[ItemEffect]
+ID=rapier_fang; actorValue=PhysEva; magnitude=3; duration=-1;
+
+
+[ItemType]  name=Fang Greatsword;
+texture=items_weapons; 
+ID=greatsword_fang; pR=pFangWeapon; pB=pFangWeaponHilt;
+description=Greatsword with poison barbs.;
+journalID=journal_gsword;
+sprite=444; spriteWhenHeld=476; itemCategory=weapon;  special=enhanceSlots_2;
+special=sprite2xWidth; special=twoHanded; element=sword;
+weight=5; volume=10; value=150;
+power=7;
+ action=greatswordAttack_poison;
+combineWith=furnace_lit; toMake=fang_spidest; 
+combineWith=furnace2_lit; toMake=fang_spidest;
+combineWith=furnace_everlit1; toMake=fang_spidest; 
+combineWith=furnace_everlit2; toMake=fang_spidest; 
+ 
+[ItemType]  name=Fang Bow;
+texture=items_weapons; 
+ID=bow_fang; pR=pFangWeapon; pB=pFangWeaponHilt;
+description=Toxic-tipped bow & arrows. Requires both hands to use.;
+journalID=journal_bow;
+sprite=438; spriteWhenHeld=470; itemCategory=weapon; element=bow; special=twoHanded;
+weight=1; volume=5; value=150;
+power=4;
+ action=bowAttack_poison;
+combineWith=furnace_lit; toMake=fang_spidest; 
+combineWith=furnace2_lit; toMake=fang_spidest;
+combineWith=furnace_everlit1; toMake=fang_spidest; 
+combineWith=furnace_everlit2; toMake=fang_spidest; 
+
+
+[ItemType]  name=Fang Crossbow;
+texture=items_weapons; 
+ID=xbow_fang; pR=pFangWeapon; pB=pFangWeaponHilt;
+description=Poison-inducing crossbow.; 
+journalID=journal_xbow;
+sprite=439; spriteWhenHeld=471; itemCategory=weapon; element=aim;
+weight=2; volume=5; value=150;
+power=7;
+ action=crossbowAttack_poison;
+combineWith=furnace_lit; toMake=fang_spidest; 
+combineWith=furnace2_lit; toMake=fang_spidest;
+combineWith=furnace_everlit1; toMake=fang_spidest; 
+combineWith=furnace_everlit2; toMake=fang_spidest; 
+[ItemReaction] 
+ID=xbow_fang; element=actionUsed; newID=xbow_fang_unloaded;
+
+[ItemType]  name=Fang Crossbow (Unloaded);
+texture=items_weapons; 
+ID=xbow_fang_unloaded; pR=pFangWeapon; pB=pFangWeaponHilt;
+description=Poison-inducing crossbow. Needs to be reloaded.; 
+journalID=journal_xbow;
+sprite=440; spriteWhenHeld=472; itemCategory=weapon; 
+weight=2; volume=5; value=150;
+power=7;
+ action=crossbowReload;
+combineWith=furnace_lit; toMake=fang_spidest; 
+combineWith=furnace2_lit; toMake=fang_spidest;
+combineWith=furnace_everlit1; toMake=fang_spidest; 
+combineWith=furnace_everlit2; toMake=fang_spidest; 
+[ItemReaction] 
+ID=xbow_fang_unloaded; element=actionUsed; element=reload; newID=xbow_fang;
+ 
+[ItemType]  name=Fang Shield;
+texture=items_weapons; 
+ID=shield_fang; pR=pFangWeapon; pB=pFangWeaponHilt;
+description=Shield with poison spikes jutting out. Lightly poisons blocked attackers.;
+journalID=journal_shield;
+sprite=435; spriteWhenHeld=467; itemCategory=weapon; element=shield;
+weight=5; volume=5; value=150;
+power=4;
+action=shieldAttack_poison;
+combineWith=furnace_lit; toMake=fang_spidest; 
+combineWith=furnace2_lit; toMake=fang_spidest;
+combineWith=furnace_everlit1; toMake=fang_spidest; 
+combineWith=furnace_everlit2; toMake=fang_spidest; 
+[ItemEffect] 
+ID=shield_fang; actorValue=PhysEva; magnitude=14; duration=-1;
+[ItemReaction] 
+ID=shield_fang; element=blocked; action=shieldBlock_poison;
+ 
+[ItemType]  name=Corpryst Blade;
+texture=items_weapons; 
+ID=sword_corpryst; pR=pCorpryst; pB=pCorprystHilt;
+description=Heavy sword made of strange Graven material.;
+journalID=journal_sword;
+weight=4; volume=5; value=750;
+power=7;
+sprite=303; spriteWhenHeld=335; itemCategory=weapon; element=sword;
+ action=swordAttack;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=corpryst; 
+combineWith=furnace2_lit; toMake=corpryst;
+combineWith=furnace_everlit1; toMake=corpryst; 
+combineWith=furnace_everlit2; toMake=corpryst; 
+[ItemEffect]
+ID=sword_corpryst; actorValue=PhysEva; magnitude=-4; duration=-1;
+ 
+[ItemType]  name=Corpryst Dagger;
+texture=items_weapons; 
+ID=dagger_corpryst; pR=pCorpryst; pB=pCorprystHilt;
+description=Dagger that is sharp but awkward to wield.;
+journalID=journal_dagger;
+weight=3; volume=1; value=750;
+power=5;
+sprite=304; spriteWhenHeld=336; itemCategory=weapon; element=dagger;
+ action=daggerAttack;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=corpryst; 
+combineWith=furnace2_lit; toMake=corpryst;
+combineWith=furnace_everlit1; toMake=corpryst; 
+combineWith=furnace_everlit2; toMake=corpryst; 
+[ItemEffect]
+ID=dagger_corpryst; actorValue=PhysEva; magnitude=-4; duration=-1;
+ 
+[ItemType]  name=Corpryst Hammer;
+texture=items_weapons; 
+ID=hammer_corpryst; pR=pCorpryst; pB=pCorprystHilt;
+description=Hammer-shaped slab of Corpryst.;
+journalID=journal_hammer;
+weight=9; volume=5; value=750;
+power=8;
+sprite=305; spriteWhenHeld=337; itemCategory=weapon; element=hammer;
+ action=hammerAttack;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=corpryst; 
+combineWith=furnace2_lit; toMake=corpryst;
+combineWith=furnace_everlit1; toMake=corpryst; 
+combineWith=furnace_everlit2; toMake=corpryst; 
+[ItemEffect]
+ID=hammer_corpryst; actorValue=PhysEva; magnitude=-4; duration=-1;
+
+[ItemType]  name=Corpryst Cleaver;
+texture=items_weapons; 
+ID=axe_corpryst; pR=pCorpryst; pB=pCorprystHilt;
+description=Axe made of heavy, dangerous Corpryst.;
+journalID=journal_axe;
+weight=7; volume=5; value=750;
+power=8;
+sprite=306; spriteWhenHeld=338; itemCategory=weapon; element=axe;
+ action=axeAttack;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=corpryst; 
+combineWith=furnace2_lit; toMake=corpryst;
+combineWith=furnace_everlit1; toMake=corpryst; 
+combineWith=furnace_everlit2; toMake=corpryst; 
+[ItemEffect]
+ID=axe_corpryst; actorValue=PhysEva; magnitude=-4; duration=-1;
+ 
+[ItemType]  name=Corpryst Shield;
+texture=items_weapons; 
+ID=shield_corpryst; pR=pCorpryst; pB=pCorprystHilt;
+description=Thick protective chunk of Corpryst.;
+journalID=journal_shield;
+sprite=307; spriteWhenHeld=339; itemCategory=weapon; element=shield;
+weight=10; volume=5; value=750;
+power=2;
+action=shieldAttack;
+combineWith=furnace_lit; toMake=corpryst; 
+combineWith=furnace2_lit; toMake=corpryst;
+combineWith=furnace_everlit1; toMake=corpryst; 
+combineWith=furnace_everlit2; toMake=corpryst; 
+[ItemEffect]
+ID=shield_corpryst; actorValue=PhysEva; magnitude=16; duration=-1;
+
+[ItemType]  name=Corpryst Flail;
+texture=items_weapons; 
+ID=flail_corpryst; pR=pCorpryst; pB=pCorprystHilt;
+description=Flail of Corpryst shards attached to Graven tendrils.;
+journalID=journal_flail;
+sprite=372; spriteWhenHeld=404; itemCategory=weapon; element=flail;
+weight=4; volume=5; value=750;
+power=6;
+ action=flailAttack;
+combineWith=furnace_lit; toMake=corpryst; 
+combineWith=furnace2_lit; toMake=corpryst;
+combineWith=furnace_everlit1; toMake=corpryst; 
+combineWith=furnace_everlit2; toMake=corpryst; 
+[ItemEffect]
+ID=flail_corpryst; actorValue=PhysEva; magnitude=-4; duration=-1;
+ 
+[ItemType]  name=Corpryst Whip;
+texture=items_weapons; 
+ID=whip_corpryst; pR=pCorpryst; pB=pCorprystHilt;
+description=Graven tendril with pointed Corpryst barbs.;
+journalID=journal_whip;
+sprite=422; spriteWhenHeld=454; itemCategory=weapon; element=flail;
+weight=3; volume=3; value=750;
+power=5;
+ action=whipAttack;
+combineWith=furnace_lit; toMake=corpryst; 
+combineWith=furnace2_lit; toMake=corpryst;
+combineWith=furnace_everlit1; toMake=corpryst; 
+combineWith=furnace_everlit2; toMake=corpryst; 
+[ItemEffect]
+ID=whip_corpryst; actorValue=PhysEva; magnitude=-4; duration=-1;
+ 
+[ItemType]  name=Corpryst Spear;
+texture=items_weapons; 
+ID=spear_corpryst; pR=pCorpryst; pB=pCorprystHilt;
+description=Bulky spear that is nonetheless effective.;
+journalID=journal_spear;
+weight=5; volume=10; value=750;
+power=6;
+sprite=313; spriteWhenHeld=313; itemCategory=weapon; 
+special=sprite2xHeight; element=spear;
+depthMod=900;
+ action=spearAttack;
+combineWith=furnace_lit; toMake=corpryst; 
+combineWith=furnace2_lit; toMake=corpryst;
+combineWith=furnace_everlit1; toMake=corpryst; 
+combineWith=furnace_everlit2; toMake=corpryst; 
+[ItemEffect]
+ID=spear_corpryst; actorValue=PhysEva; magnitude=-4; duration=-1;
+ 
+[ItemType]  name=Corpryst Fist;
+texture=items_weapons; 
+ID=knuckle_corpryst; pR=pCorpryst; pB=pCorprystHilt;
+description=Hefty fist of Corpryst.;
+journalID=journal_knuckle;
+weight=4; volume=1; value=750;
+power=5;
+sprite=314; spriteWhenHeld=346; itemCategory=weapon; element=fist;
+ action=fistAttack;
+combineWith=furnace_lit; toMake=corpryst; 
+combineWith=furnace2_lit; toMake=corpryst;
+combineWith=furnace_everlit1; toMake=corpryst; 
+combineWith=furnace_everlit2; toMake=corpryst; 
+[ItemEffect]
+ID=knuckle_corpryst; actorValue=PhysEva; magnitude=-4; duration=-1;
+ 
+[ItemType]  name=Corpryst Rapier;
+texture=items_weapons; 
+ID=rapier_corpryst; pR=pCorpryst; pB=pCorprystHilt;
+description=Thin, jagged strip of Corpryst.;
+journalID=journal_rapier;
+weight=3; volume=5; value=750;
+power=6;
+sprite=315; spriteWhenHeld=347; itemCategory=weapon; element=sword;
+ action=rapierAttack;
+ special=rotate180WhenSheathed;
+combineWith=furnace_lit; toMake=corpryst; 
+combineWith=furnace2_lit; toMake=corpryst;
+combineWith=furnace_everlit1; toMake=corpryst; 
+combineWith=furnace_everlit2; toMake=corpryst; 
+[ItemEffect]
+ID=rapier_corpryst; actorValue=PhysEva; magnitude=1; duration=-1;
+ 
+[ItemType]  name=Corpryst Greatsword;
+texture=items_weapons; 
+ID=greatsword_corpryst; pR=pCorpryst; pB=pCorprystHilt;
+description=Vast blade of heavy Corpryst.;
+journalID=journal_gsword;
+sprite=316; spriteWhenHeld=348; itemCategory=weapon;  special=enhanceSlots_2;
+special=sprite2xWidth; special=twoHanded; element=sword;
+weight=8; volume=10; value=750;
+power=8;
+ action=greatswordAttack;
+combineWith=furnace_lit; toMake=corpryst; 
+combineWith=furnace2_lit; toMake=corpryst;
+combineWith=furnace_everlit1; toMake=corpryst; 
+combineWith=furnace_everlit2; toMake=corpryst; 
+[ItemEffect]
+ID=greatsword_corpryst; actorValue=PhysEva; magnitude=-4; duration=-1;
+ 
+ 
+
+[ItemType]  name=Coral Sword;
+texture=items_weapons; 
+ID=sword_coral; pR=pCoral; pB=pCoralHilt;
+description=A double-edged blade made of rough coral.;
+journalID=journal_sword;
+weight=2; volume=5; value=120;
+power=6;
+sprite=2304; spriteWhenHeld=2336; itemCategory=weapon; element=sword;
+ action=swordAttack_wet;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=coral; 
+combineWith=furnace2_lit; toMake=coral;
+combineWith=furnace_everlit1; toMake=coral; 
+combineWith=furnace_everlit2; toMake=coral; 
+ 
+[ItemType]  name=Coral Dagger;
+texture=items_weapons; 
+ID=dagger_coral; pR=pCoral; pB=pCoralHilt;
+description=Hard coral sharpened to a point.;
+journalID=journal_dagger;
+weight=2; volume=1; value=120;
+power=4;
+sprite=2305; spriteWhenHeld=2337; itemCategory=weapon; element=dagger;
+ action=daggerAttack_wet;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=coral; 
+combineWith=furnace2_lit; toMake=coral;
+combineWith=furnace_everlit1; toMake=coral; 
+combineWith=furnace_everlit2; toMake=coral; 
+ 
+[ItemType]  name=Coral Hammer;
+texture=items_weapons; 
+ID=hammer_coral; pR=pCoral; pB=pCoralHilt;
+description=A weighty chunk of thick coral.;
+journalID=journal_hammer;
+weight=6; volume=5; value=120;
+power=7;
+sprite=2306; spriteWhenHeld=2338; itemCategory=weapon; element=hammer;
+ action=hammerAttack_wet;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=coral; 
+combineWith=furnace2_lit; toMake=coral;
+combineWith=furnace_everlit1; toMake=coral; 
+combineWith=furnace_everlit2; toMake=coral; 
+
+[ItemType]  name=Coral Axe;
+texture=items_weapons; 
+ID=axe_coral; pR=pCoral; pB=pCoralHilt;
+description=A wedge of coral sharpened into an axe.;
+journalID=journal_axe;
+weight=3; volume=5; value=120;
+power=7;
+sprite=2307; spriteWhenHeld=2339; itemCategory=weapon; element=axe;
+ action=axeAttack_wet;
+special=rotate90WhenSheathed;
+combineWith=furnace_lit; toMake=coral; 
+combineWith=furnace2_lit; toMake=coral;
+combineWith=furnace_everlit1; toMake=coral; 
+combineWith=furnace_everlit2; toMake=coral; 
+ 
+[ItemType]  name=Coral Shield;
+texture=items_weapons; 
+ID=shield_coral; pR=pCoral; pB=pCoralHilt;
+description=A buckler of thick, durable coral.;
+journalID=journal_shield;
+sprite=2308; spriteWhenHeld=2340; itemCategory=weapon; element=shield;
+weight=5; volume=5; value=120;
+power=2;
+action=shieldAttack_wet;
+combineWith=furnace_lit; toMake=coral; 
+combineWith=furnace2_lit; toMake=coral;
+combineWith=furnace_everlit1; toMake=coral; 
+combineWith=furnace_everlit2; toMake=coral; 
+[ItemEffect]
+ID=shield_coral; actorValue=PhysEva; magnitude=12; duration=-1;
+[ItemEffect]
+ID=shield_coral; actorValue=MagEva; magnitude=1; duration=-1;
+
+[ItemType]  name=Coral Flail;
+texture=items_weapons; 
+ID=flail_coral; pR=pCoral; pB=pCoralHilt;
+description=Sharp coral on a lengthy chain.;
+journalID=journal_flail;
+weight=3; volume=5; value=120;
+power=5;
+sprite=2309; spriteWhenHeld=2341; itemCategory=weapon; element=flail;
+ action=flailAttack_wet;
+combineWith=furnace_lit; toMake=coral; 
+combineWith=furnace2_lit; toMake=coral;
+combineWith=furnace_everlit1; toMake=coral; 
+combineWith=furnace_everlit2; toMake=coral; 
+ 
+[ItemType]  name=Coral Whip;
+texture=items_weapons; 
+ID=whip_coral; pR=pCoral; pB=pCoralHilt;
+description=Coral-tipped whip. Peculiar, but effective.;
+journalID=journal_whip;
+weight=3; volume=3; value=120;
+power=4;
+sprite=2310; spriteWhenHeld=2342; itemCategory=weapon; element=whip;
+ action=whipAttack_wet;
+combineWith=furnace_lit; toMake=coral; 
+combineWith=furnace2_lit; toMake=coral;
+combineWith=furnace_everlit1; toMake=coral; 
+combineWith=furnace_everlit2; toMake=coral; 
+ 
+[ItemType]  name=Coral Bow;
+texture=items_weapons; 
+ID=bow_coral; pR=pCoral; pB=pCoralHilt;
+description=Bow with a coral grip. Requires both hands to use.;
+journalID=journal_bow;
+sprite=2311; spriteWhenHeld=2343; itemCategory=weapon; element=bow; special=twoHanded;
+weight=1; volume=5; value=120;
+power=4;
+ action=bowAttack_wet;
+combineWith=furnace_lit; toMake=coral; 
+combineWith=furnace2_lit; toMake=coral;
+combineWith=furnace_everlit1; toMake=coral; 
+combineWith=furnace_everlit2; toMake=coral; 
+ 
+[ItemType]  name=Coral Crossbow;
+texture=items_weapons; 
+ID=xbow_coral; pR=pCoral; pB=pCoralHilt;
+description=Odd crossbow with a coral base.; 
+journalID=journal_xbow;
+sprite=2312; spriteWhenHeld=2344; itemCategory=weapon; element=aim;
+weight=2; volume=5; value=120;
+power=7;
+ action=crossbowAttack_wet;
+combineWith=furnace_lit; toMake=coral; 
+combineWith=furnace2_lit; toMake=coral;
+combineWith=furnace_everlit1; toMake=coral; 
+combineWith=furnace_everlit2; toMake=coral; 
+[ItemReaction] 
+ID=xbow_coral; element=actionUsed; newID=xbow_coral_unloaded;
+
+[ItemType]  name=Coral Crossbow (Unloaded);
+texture=items_weapons; 
+ID=xbow_coral_unloaded; pR=pCoral; pB=pCoralHilt;
+description=Odd crossbow with a coral base -- needs to be reloaded.; 
+journalID=journal_xbow;
+sprite=2313; spriteWhenHeld=2345; itemCategory=weapon; 
+weight=2; volume=5; value=120;
+power=7;
+ action=crossbowReload;
+combineWith=furnace_lit; toMake=coral; 
+combineWith=furnace2_lit; toMake=coral;
+combineWith=furnace_everlit1; toMake=coral; 
+combineWith=furnace_everlit2; toMake=coral; 
+[ItemReaction] 
+ID=xbow_coral_unloaded; element=actionUsed; element=reload; newID=xbow_coral;
+ 
+[ItemType]  name=Coral Spear;
+texture=items_weapons; 
+ID=spear_coral; pR=pCoral; pB=pCoralHilt;
+description=Spear with sharpened head of coral.;
+journalID=journal_spear;
+weight=4; volume=10; value=120;
+power=5;
+sprite=2314; spriteWhenHeld=2314; itemCategory=weapon; 
+special=sprite2xHeight; element=spear;
+depthMod=900;
+ action=spearAttack_wet;
+combineWith=furnace_lit; toMake=coral; 
+combineWith=furnace2_lit; toMake=coral;
+combineWith=furnace_everlit1; toMake=coral; 
+combineWith=furnace_everlit2; toMake=coral; 
+ 
+[ItemType]  name=Coral Knuckle;
+texture=items_weapons; 
+ID=knuckle_coral; pR=pCoral; pB=pCoralHilt;
+description=Spiky coral fist covering.;
+journalID=journal_knuckle;
+weight=3; volume=1; value=120;
+power=4;
+sprite=2315; spriteWhenHeld=2347; itemCategory=weapon; element=fist;
+ action=fistAttack_wet;
+combineWith=furnace_lit; toMake=coral; 
+combineWith=furnace2_lit; toMake=coral;
+combineWith=furnace_everlit1; toMake=coral; 
+combineWith=furnace_everlit2; toMake=coral; 
+ 
+[ItemType]  name=Coral Rapier;
+texture=items_weapons; 
+ID=rapier_coral; pR=pCoral; pB=pCoralHilt;
+description=Thin, wickedly pointed blade of coral.;
+journalID=journal_rapier;
+weight=2; volume=5; value=120;
+power=5;
+sprite=2316; spriteWhenHeld=2348; itemCategory=weapon; element=sword;
+ action=rapierAttack_wet;
+ special=rotate180WhenSheathed;
+combineWith=furnace_lit; toMake=coral; 
+combineWith=furnace2_lit; toMake=coral;
+combineWith=furnace_everlit1; toMake=coral; 
+combineWith=furnace_everlit2; toMake=coral;
+[ItemEffect]
+ID=rapier_coral; actorValue=PhysEva; magnitude=3; duration=-1; 
+ 
+[ItemType]  name=Coral Greatsword;
+texture=items_weapons; 
+ID=greatsword_coral; pR=pCoral; pB=pCoralHilt;
+description=Sword made of a massive hunk of coral. Requires both hands to wield.;
+journalID=journal_gsword;
+sprite=2317; spriteWhenHeld=2349; itemCategory=weapon;  special=enhanceSlots_2;
+special=sprite2xWidth; special=twoHanded; element=sword;
+weight=6; volume=10; value=120;
+power=7;
+ action=greatswordAttack_wet;
+combineWith=furnace_lit; toMake=coral; 
+combineWith=furnace2_lit; toMake=coral;
+combineWith=furnace_everlit1; toMake=coral; 
+combineWith=furnace_everlit2; toMake=coral; 
+ 
+ 
+
+[ItemType]  name=Volskarn Sword;
+texture=items_weapons; 
+ID=sword_volskarn; pR=pVolskarn; pB=pVolskarnHilt;
+description=Volskarn-inlaid blade. More augmentable.;
+journalID=journal_sword;
+weight=2; volume=5; value=800;
+power=5;
+sprite=2368; spriteWhenHeld=2400; itemCategory=weapon; element=sword;
+special=rotate90WhenSheathed; special=enhanceSlots_2;
+ action=swordAttack;
+combineWith=furnace_lit; toMake=volskarn_chunk; 
+combineWith=furnace2_lit; toMake=volskarn_chunk;
+combineWith=furnace_everlit1; toMake=volskarn_chunk; 
+combineWith=furnace_everlit2; toMake=volskarn_chunk; 
+ 
+[ItemType]  name=Volskarn Dagger;
+texture=items_weapons; 
+ID=dagger_volskarn; pR=pVolskarn; pB=pVolskarnHilt;
+description=Short, accurate blade with traces of Volskarn. Extra augmentable.;
+journalID=journal_dagger;
+weight=2; volume=1; value=800;
+power=3;
+sprite=2369; spriteWhenHeld=2401; itemCategory=weapon; element=dagger;
+special=rotate90WhenSheathed; special=enhanceSlots_2;
+ action=daggerAttack;
+combineWith=furnace_lit; toMake=volskarn_chunk; 
+combineWith=furnace2_lit; toMake=volskarn_chunk;
+combineWith=furnace_everlit1; toMake=volskarn_chunk; 
+combineWith=furnace_everlit2; toMake=volskarn_chunk; 
+ 
+[ItemType]  name=Volskarn Hammer;
+texture=items_weapons; 
+ID=hammer_volskarn; pR=pVolskarn; pB=pVolskarnHilt;
+description=Hammer with Volskarn center. Easy to augment.;
+journalID=journal_hammer;
+weight=6; volume=5; value=800;
+power=6;
+sprite=2370; spriteWhenHeld=2402; itemCategory=weapon; element=hammer;
+special=rotate90WhenSheathed; special=enhanceSlots_2;
+ action=hammerAttack;
+combineWith=furnace_lit; toMake=volskarn_chunk; 
+combineWith=furnace2_lit; toMake=volskarn_chunk;
+combineWith=furnace_everlit1; toMake=volskarn_chunk; 
+combineWith=furnace_everlit2; toMake=volskarn_chunk; 
+
+[ItemType]  name=Volskarn Axe;
+texture=items_weapons; 
+ID=axe_volskarn; pR=pVolskarn; pB=pVolskarnHilt;
+description=Axe inlaid with Volskarn. More augmentable.;
+journalID=journal_axe;
+weight=3; volume=5; value=800;
+power=6;
+sprite=2371; spriteWhenHeld=2403; itemCategory=weapon; element=axe;
+special=rotate90WhenSheathed; special=enhanceSlots_2;
+ action=axeAttack;
+combineWith=furnace_lit; toMake=volskarn_chunk; 
+combineWith=furnace2_lit; toMake=volskarn_chunk;
+combineWith=furnace_everlit1; toMake=volskarn_chunk; 
+combineWith=furnace_everlit2; toMake=volskarn_chunk; 
+ 
+[ItemType]  name=Volskarn Shield;
+texture=items_weapons; 
+ID=shield_volskarn; pR=pVolskarn; pB=pVolskarnHilt;
+description=Heater shield reinforced with Volskarn. Easy to augment.;
+journalID=journal_shield;
+sprite=2372; spriteWhenHeld=2404; itemCategory=weapon; element=shield;
+weight=5; volume=5; value=800;
+power=1;
+special=enhanceSlots_2;
+action=shieldAttack;
+combineWith=furnace_lit; toMake=volskarn_chunk; 
+combineWith=furnace2_lit; toMake=volskarn_chunk;
+combineWith=furnace_everlit1; toMake=volskarn_chunk; 
+combineWith=furnace_everlit2; toMake=volskarn_chunk; 
+[ItemEffect]
+ID=shield_volskarn; actorValue=PhysEva; magnitude=12; duration=-1;
+[ItemEffect]
+ID=shield_volskarn; actorValue=MagEva; magnitude=2; duration=-1;
+
+[ItemType]  name=Volskarn Flail;
+texture=items_weapons; 
+ID=flail_volskarn; pR=pVolskarn; pB=pVolskarnHilt;
+description=Flail with spikes of Volskarn. Easily augmentable.;
+journalID=journal_flail;
+weight=3; volume=5; value=800;
+power=4;
+sprite=2373; spriteWhenHeld=2405; itemCategory=weapon; element=flail;
+special=enhanceSlots_2;
+ action=flailAttack;
+combineWith=furnace_lit; toMake=volskarn_chunk; 
+combineWith=furnace2_lit; toMake=volskarn_chunk;
+combineWith=furnace_everlit1; toMake=volskarn_chunk; 
+combineWith=furnace_everlit2; toMake=volskarn_chunk; 
+ 
+[ItemType]  name=Volskarn Whip;
+texture=items_weapons; 
+ID=whip_volskarn; pR=pVolskarn; pB=pVolskarnHilt;
+description=Whip entwined with Volskarn. Extra augmentable.;
+journalID=journal_whip;
+weight=3; volume=3; value=800;
+power=3;
+sprite=2374; spriteWhenHeld=2406; itemCategory=weapon; element=whip;
+special=enhanceSlots_2;
+ action=whipAttack;
+combineWith=furnace_lit; toMake=volskarn_chunk; 
+combineWith=furnace2_lit; toMake=volskarn_chunk;
+combineWith=furnace_everlit1; toMake=volskarn_chunk; 
+combineWith=furnace_everlit2; toMake=volskarn_chunk; 
+ 
+[ItemType]  name=Volskarn Bow;
+texture=items_weapons; 
+ID=bow_volskarn; pR=pVolskarn; pB=pVolskarnHilt;
+description=Bow crafted with the power of Volskarn. Easily augmented. Requires both hands to use.;
+journalID=journal_bow;
+sprite=2375; spriteWhenHeld=2407; itemCategory=weapon; element=bow; special=twoHanded;
+weight=1; volume=5; value=800;
+power=3;
+special=enhanceSlots_2;
+ action=bowAttack;
+combineWith=furnace_lit; toMake=volskarn_chunk; 
+combineWith=furnace2_lit; toMake=volskarn_chunk;
+combineWith=furnace_everlit1; toMake=volskarn_chunk; 
+combineWith=furnace_everlit2; toMake=volskarn_chunk; 
+ 
+[ItemType]  name=Volskarn Crossbow;
+texture=items_weapons; 
+ID=xbow_volskarn; pR=pVolskarn; pB=pVolskarnHilt;
+description=Crossbow with a Volskarn base. Easy to augment.; 
+journalID=journal_xbow;
+sprite=2376; spriteWhenHeld=2408; itemCategory=weapon; element=aim;
+weight=2; volume=5; value=800;
+power=6;
+special=enhanceSlots_2;
+ action=crossbowAttack;
+combineWith=furnace_lit; toMake=volskarn_chunk; 
+combineWith=furnace2_lit; toMake=volskarn_chunk;
+combineWith=furnace_everlit1; toMake=volskarn_chunk; 
+combineWith=furnace_everlit2; toMake=volskarn_chunk; 
+[ItemReaction] 
+ID=xbow_volskarn; element=actionUsed; newID=xbow_volskarn_unloaded;
+
+[ItemType]  name=Volskarn Crossbow (Unloaded);
+texture=items_weapons; 
+ID=xbow_volskarn_unloaded; pR=pVolskarn; pB=pVolskarnHilt;
+description=Crossbow with a Volskarn base -- needs to be reloaded.; 
+journalID=journal_xbow;
+sprite=2377; spriteWhenHeld=2409; itemCategory=weapon; 
+weight=2; volume=5; value=800;
+power=6;
+special=enhanceSlots_2;
+ action=crossbowReload;
+combineWith=furnace_lit; toMake=volskarn_chunk; 
+combineWith=furnace2_lit; toMake=volskarn_chunk;
+combineWith=furnace_everlit1; toMake=volskarn_chunk; 
+combineWith=furnace_everlit2; toMake=volskarn_chunk; 
+[ItemReaction] 
+ID=xbow_volskarn_unloaded; element=actionUsed; element=reload; newID=xbow_volskarn;
+ 
+[ItemType]  name=Volskarn Spear;
+texture=items_weapons; 
+ID=spear_volskarn; pR=pVolskarn; pB=pVolskarnHilt;
+description=Spear with embedded Volskarn. More augmentable.;
+journalID=journal_spear;
+weight=4; volume=10; value=800;
+power=4;
+sprite=2378; spriteWhenHeld=2378; itemCategory=weapon; 
+special=sprite2xHeight; element=spear;
+depthMod=900;
+special=enhanceSlots_2;
+ action=spearAttack;
+combineWith=furnace_lit; toMake=volskarn_chunk; 
+combineWith=furnace2_lit; toMake=volskarn_chunk;
+combineWith=furnace_everlit1; toMake=volskarn_chunk; 
+combineWith=furnace_everlit2; toMake=volskarn_chunk; 
+ 
+[ItemType]  name=Volskarn Knuckle;
+texture=items_weapons; 
+ID=knuckle_volskarn; pR=pVolskarn; pB=pVolskarnHilt;
+description=Metal knuckles with Volskarn hand cover. Easy to augment.;
+journalID=journal_knuckle;
+weight=3; volume=1; value=800;
+power=3;
+sprite=2379; spriteWhenHeld=2411; itemCategory=weapon; element=fist;
+special=enhanceSlots_2;
+ action=fistAttack;
+combineWith=furnace_lit; toMake=volskarn_chunk; 
+combineWith=furnace2_lit; toMake=volskarn_chunk;
+combineWith=furnace_everlit1; toMake=volskarn_chunk; 
+combineWith=furnace_everlit2; toMake=volskarn_chunk; 
+ 
+[ItemType]  name=Volskarn Rapier;
+texture=items_weapons; 
+ID=rapier_volskarn; pR=pVolskarn; pB=pVolskarnHilt;
+description=Fencing sword of magical Volskarn. Easily augmented.;
+journalID=journal_rapier;
+weight=2; volume=5; value=800;
+power=4;
+sprite=2380; spriteWhenHeld=2412; itemCategory=weapon; element=sword;
+special=enhanceSlots_2;
+ action=rapierAttack;
+ special=rotate180WhenSheathed;
+combineWith=furnace_lit; toMake=volskarn_chunk; 
+combineWith=furnace2_lit; toMake=volskarn_chunk;
+combineWith=furnace_everlit1; toMake=volskarn_chunk; 
+combineWith=furnace_everlit2; toMake=volskarn_chunk;
+[ItemEffect]
+ID=rapier_volskarn; actorValue=PhysEva; magnitude=3; duration=-1;
+ 
+[ItemType]  name=Volskarn Greatsword;
+texture=items_weapons; 
+ID=greatsword_volskarn; pR=pVolskarn; pB=pVolskarnHilt;
+description=Massive Volskarn blade. Very augmentable. Requires both hands to wield.;
+journalID=journal_gsword;
+sprite=2381; spriteWhenHeld=2413; itemCategory=weapon; 
+special=enhanceSlots_3;
+special=sprite2xWidth; special=twoHanded; element=sword;
+weight=6; volume=10; value=800;
+power=6;
+ action=greatswordAttack;
+combineWith=furnace_lit; toMake=volskarn_chunk; 
+combineWith=furnace2_lit; toMake=volskarn_chunk;
+combineWith=furnace_everlit1; toMake=volskarn_chunk; 
+combineWith=furnace_everlit2; toMake=volskarn_chunk; 
+ 
+ 
+
+[JournalEntry]
+ID=journal_sword;
+category=equipment; halfPage=true;
+title=Sword;
+text=<itemBig=sword_steel><title=Sword><brAdj=>Swords are evenly balanced in power and accuracy. They can cut through ropes, vines, etc.<br=>  No special properties;
+
+[JournalEntry]
+ID=journal_gsword;
+category=equipment; halfPage=true;
+title=Greatsword;
+text=<itemBig=greatsword_steel><title=Greatsword><brAdj=>These 2-handers cut their way through enemy formations with broad, sweeping strokes.<br=>  Wide attack area<br=>  +1 Augment Slot;
+
+[JournalEntry]
+ID=journal_rapier;
+category=equipment; halfPage=true;
+title=Rapier;
+text=<itemBig=rapier_steel><title=Rapier><brAdj=>Light, easy to handle thrusting swords for those who value accuracy over power.<br=>  +3% <icon=PhysEva> Evasion<br=>  +5% Accuracy<br=>  Extra +1% Acc. per <icon=skill_Sword>;
+
+[JournalEntry]
+ID=journal_dagger;
+category=equipment; halfPage=true;
+title=Dagger;
+text=<itemBig=dagger_steel><title=Dagger><brAdj=>Daggers are extremely accurate, but weak. They're deadly in the right hands.<br=>  +10% Accuracy<br=>  Extra +1% Acc. per <icon=skill_Dagger>;
+
+[JournalEntry]
+ID=journal_hammer;
+category=equipment; halfPage=true;
+title=Hammer;
+text=<itemBig=hammer_steel><title=Hammer><brAdj=>Hammers bypass armor and hit hard... if they hit at all. Can smash rocks & obstacles.<br=>  -15% Accuracy<br=>  Ignore 50% <icon=PhysDef>;
+
+[JournalEntry]
+ID=journal_axe;
+category=equipment; halfPage=true;
+title=Axe;
+text=<itemBig=axe_steel><title=Axe><brAdj=>Axes are powerful, but less accurate than swords. Can cut trees & break wood.<br=>  -4% Accuracy;
+
+[JournalEntry]
+ID=journal_spear;
+category=equipment; halfPage=true;
+title=Spear;
+text=<itemBig=spear_steel><title=Spear><brAdj=>The classic weapon of war & hunting, for good reason. The added range of spears make them versatile weapons.<br=>  Range: 2;
+
+[JournalEntry]
+ID=journal_flail;
+category=equipment; halfPage=true;
+title=Flail;
+text=<itemBig=flail_steel><title=Flail><brAdj=>Originated from a threshing tool, now a potent weapon. Less damaging, but better range than swords.<br=>  Can attack diagonally;
+
+[JournalEntry]
+ID=journal_whip;
+category=equipment; halfPage=true;
+title=Whip;
+text=<itemBig=whip_steel><title=Whip><brAdj=>Weak but flexible. Longest range of any melee weapon, but thwarted by armor.<br=>  Range: 3,  +3% Accuracy<br=>  20% less damage vs. <icon=PhysDef>;
+
+[JournalEntry]
+ID=journal_knuckle;
+category=equipment; halfPage=true;
+title=Knuckle;
+text=<itemBig=knuckle_steel><title=Knuckle><brAdj=>Better than being unarmed, but where they truly excel is in the hands of experts.<br=>  Extra +1.5% Acc. per <icon=skill_Fist>;
+
+[JournalEntry]
+ID=journal_shield;
+category=equipment; halfPage=true;
+title=Shield;
+text=<itemBig=shield_steel><title=Shield><brAdj=>Mainly used for protection. Bashing with it deals minimal damage, but also pushes. Pushing someone into an obstacle damages them.<br=>  -5% Accuracy<br=>  Pushes enemy;
+
+[JournalEntry]
+ID=journal_bow;
+category=equipment; halfPage=true;
+title=Bow;
+text=<itemBig=bow_steel><title=Bow><brAdj=>Most versatile ranged weapon. Powerful & effective (except in close combat).<br=>  Can arc over obstacles;
+
+[JournalEntry]
+ID=journal_xbow;
+category=equipment; halfPage=true;
+title=Crossbow;
+text=<itemBig=xbow_steel><title=Crossbow><brAdj=>Extremely strong weapon that can be used 1-handed, but must be reloaded every shot.<br=>  Cannot arc over obstacles<br=>  Must be reloaded;
+
+[ItemType]  name=Lattice Whip;
+texture=items_weapons; 
+ID=whip_lattice; pR=pGreen; pB=pYellow;
+description=Whip made of twisted lattice weed.;
+journalID=item_latticeWeed;
+weight=3; volume=3; value=15;
+power=4;
+sprite=373; spriteWhenHeld=405; itemCategory=weapon; element=whip;
+ action=whipAttack;
+ 
+[ItemType]  name=Silk Whip;
+texture=items_weapons; 
+ID=whip_silk; pR=pGrey; pB=pBoneDark;
+journalID=item_silk_spide;
+description=Whip of webs wrapped around leather.;
+weight=3; volume=3; value=30;
+power=4;
+sprite=373; spriteWhenHeld=405; itemCategory=weapon; element=whip;
+ action=whipAttack;
+combineWith=shears; toMake=silk_spide;
+combineWith=furnace_lit; toMake=silk_spide; 
+combineWith=furnace2_lit; toMake=silk_spide; 
+combineWith=furnace_everlit1; toMake=silk_spide; 
+combineWith=furnace_everlit2; toMake=silk_spide; 
+ 
+[ItemType]  name=Cleever Edge;
+texture=items_weapons; 
+ID=rapier_cleever; pR=pCRed; pB=pCRed;
+description=Severed hand of a Cleever sharpened into a weapon.;
+journalID=journal_cleever_weapon;
+weight=2; volume=5; value=5;
+power=5;
+sprite=481; spriteWhenHeld=513; itemCategory=weapon; element=sword;
+ action=rapierAttack;
+special=rotate90WhenSheathed;
+[ItemEffect]
+ID=rapier_cleever; actorValue=PhysEva; magnitude=-3; duration=-1;
+ 
+[ItemType]  name=Cleever Spear;
+texture=items_weapons; 
+ID=spear_cleever; pR=pCRed; pB=pCRed;
+description=Cleever limbs fashioned into a spear.;
+journalID=journal_cleever_weapon;
+weight=4; volume=10; value=5;
+power=5;
+sprite=482; spriteWhenHeld=482; itemCategory=weapon; element=spear;
+depthMod=900;
+special=sprite2xHeight;
+ action=spearAttack;
+[ItemEffect]
+ID=spear_cleever; actorValue=PhysEva; magnitude=-3; duration=-1;
+ 
+[ItemType]  name=Cleever Shield;
+texture=items_weapons; 
+ID=shield_cleever; pR=pCRed; pB=pCRed;
+description=Shield wrought from Cleever carapace.;
+journalID=journal_cleever_weapon;
+sprite=483; spriteWhenHeld=515; itemCategory=weapon; element=shield;
+weight=5; volume=5; value=5;
+power=3;
+action=shieldAttack;
+[ItemEffect]  
+ID=shield_cleever; actorValue=PhysEva; magnitude=10; duration=-1;
+
+
+[ItemType]  name=Cleever Impaler;
+texture=items_weapons; 
+ID=xbow_cleever; pR=pCRed; pB=pCRed;
+description=Crossbow that fires Cleever spines.; 
+journalID=journal_cleever_weapon;
+sprite=484; spriteWhenHeld=516; itemCategory=weapon; element=aim;
+weight=2; volume=5; value=5;
+power=6;
+ action=crossbowAttack;
+[ItemReaction] 
+ID=xbow_cleever; element=actionUsed; newID=xbow_cleever_unloaded;
+[ItemEffect]
+ID=xbow_cleever; actorValue=PhysEva; magnitude=-3; duration=-1;
+ 
+[ItemType]  name=Cleever Impaler (Unloaded);
+texture=items_weapons; 
+ID=xbow_cleever_unloaded; pR=pCRed; pB=pCRed;
+description=Cleever spine crossbow -- needs to be reloaded.; 
+journalID=journal_cleever_weapon;
+sprite=485; spriteWhenHeld=517; itemCategory=weapon; 
+weight=2; volume=5; value=5;
+power=6;
+ action=crossbowReload;
+[ItemReaction] 
+ID=xbow_cleever_unloaded; element=actionUsed; element=reload; newID=xbow_cleever;
+[ItemEffect]
+ID=xbow_cleever_unloaded; actorValue=PhysEva; magnitude=-3; duration=-1;
+
+[ItemType]  name=Cleever Flail;
+texture=items_weapons; 
+ID=flail_cleever; pR=pCRed; pB=pCRed;
+description=Cleever joints clumped into sharp flail.;
+journalID=journal_cleever_weapon;
+weight=2; volume=5; value=5;
+power=5;
+sprite=357; spriteWhenHeld=389; itemCategory=weapon; element=flail;
+ action=flailAttack;
+[ItemEffect]
+ID=flail_cleever; actorValue=PhysEva; magnitude=-3; duration=-1;
+ 
+[JournalEntry]
+ID=journal_cleever_weapon;
+category=equipment; halfPage=true; rarity=1;
+title=Cleever Weapons;
+text=<itemBig=rapier_cleever><itemBig=shield_cleever><itemBig=xbow_cleever><title=Cleever Weapons><brAdj=>Morbid weaponry crafted by the Cleever, of the Cleever. By bending and clumping together the jagged Cleever anatomy, they have crafted functional, dangerous weapons.;
+
+[ItemType]  name=Mantis Blade;
+texture=items_weapons; 
+ID=sword_mantis; pR=p56; pB=p56; pG=p56;
+description=Sharp limb of a mantis beast.;
+journalID=journal_mantis_weapon;
+weight=2; volume=5; value=200;
+power=7;
+sprite=487; spriteWhenHeld=519; itemCategory=weapon; element=sword;
+ action=swordAttack;
+special=rotate90WhenSheathed; special=enhanceSlots_0;
+ 
+[ItemType]  name=Mantis Smasher;
+texture=items_weapons; 
+ID=hammer_mantis; pR=p56; pB=p56; pG=p56;
+description=A severed club-like mantis appendage.;
+journalID=journal_mantis_weapon;
+weight=2; volume=5; value=200;
+power=8;
+sprite=488; spriteWhenHeld=520; itemCategory=weapon; element=hammer;
+ action=hammerAttack;
+special=rotate90WhenSheathed; special=enhanceSlots_0;
+
+[ItemType]  name=Mantis Hacker;
+texture=items_weapons; 
+ID=axe_mantis; pR=p56; pB=p56; pG=p56;
+description=Vicious serrated mantis claw.;
+journalID=journal_mantis_weapon;
+weight=2; volume=5; value=200;
+power=8;
+sprite=489; spriteWhenHeld=521; itemCategory=weapon; element=axe;
+ action=axeAttack;
+special=rotate90WhenSheathed; special=enhanceSlots_0;
+[JournalEntry]
+ID=journal_mantis_weapon;
+category=equipment; halfPage=true; rarity=2;
+title=Mantis Weapons;
+text=<itemBig=sword_mantis><itemBig=axe_mantis><title=Mantis Weapons><brAdj=>Sometimes a chopped off limb is enough to make a savage weapon. These mantis-beast claws are sharp as mythril, but cannot be augmented.;
+
+
+[ItemType]  name=Junkstone Club;
+texture=items_weapons; 
+ID=hammer_junkstone; pR=pPurple2;
+description=Hammer of Graven dirt & rock.;
+journalID=journal_hammer;
+weight=16; volume=5; value=50;
+power=6;
+sprite=101; spriteWhenHeld=133; itemCategory=weapon; element=hammer;
+ action=hammerAttack;
+special=rotate90WhenSheathed; special=enhanceSlots_0;
+[ItemEffect]
+ID=hammer_junkstone; actorValue=PhysEva; magnitude=-5; duration=-1;
+ 
+ 
+[ItemType]  name=Shellworm Shield;
+texture=items_weapons; 
+ID=shield_shellworm; pR=pPurple; pB=pPurple;
+description=Shield made from a single plate of the Shellworm.;
+journalID=journal_shield;
+sprite=243; spriteWhenHeld=275; itemCategory=weapon; element=shield;
+weight=5; volume=5; value=950;
+power=1;
+action=shieldAttack_wet;
+combineWith=furnace_lit; toMake=shellworm_plate; 
+combineWith=furnace2_lit; toMake=shellworm_plate;
+combineWith=furnace_everlit1; toMake=shellworm_plate; 
+combineWith=furnace_everlit2; toMake=shellworm_plate; 
+[ItemEffect]  
+ID=shield_shellworm; actorValue=PhysEva; magnitude=18; duration=-1;
+[ItemEffect]  
+ID=shield_shellworm; actorValue=MagEva; magnitude=4; duration=-1;
+
+ 
+[ItemType]  name=Barrier Shield;
+texture=items_weapons; 
+ID=shield_barrier; pR=pIce; pB=pIron;
+description=Massive shield enchanted with warding magic.;
+journalID=journal_shield;
+sprite=420; spriteWhenHeld=452; itemCategory=weapon; element=shield;
+weight=6; volume=8; value=8600;
+power=3;
+action=shieldAttack_barrier;
+[ItemEffect]
+ID=shield_barrier; actorValue=PhysEva; magnitude=17; duration=-1;
+[ItemEffect]
+ID=shield_barrier; actorValue=MagEva; magnitude=10; duration=-1;
+[JournalEntry]
+ID=item_shield_barrier;
+category=equipment; halfPage=true; rarity=2;
+title=Barrier Shield;
+text=<itemBig=shield_barrier><title=Barrier Shield><brAdj=>Contains a complex array of Wind & Preservation triggers that permanently ward it. It also creates barriers when thrust forward.;
+ 
+[ItemType]  name=Silver Tower;
+texture=items_weapons; 
+ID=shield_silvertower; pR=p14; pB=p8;
+description=Mythril shield of massive proportions.;
+journalID=journal_shield;
+sprite=627; spriteWhenHeld=659; itemCategory=weapon; element=shield;
+weight=8; volume=8; value=12500;
+power=4;
+action=shieldAttack;
+[ItemEffect]
+ID=shield_silvertower; actorValue=PhysEva; magnitude=24; duration=-1;
+[ItemEffect]
+ID=shield_silvertower; actorValue=MagEva; magnitude=6; duration=-1;
+[JournalEntry]
+ID=item_shield_silvertower;
+category=equipment; halfPage=true; rarity=2;
+title=Silver Tower;
+text=<itemBig=shield_silvertower><title=Silver Tower><brAdj=>Large tower shield that is exceptionally light due to its mythril alloy composition. Made to protect the large bodies of Wilderi - but thanks to its lightness, can be used just as well by smaller beings.;
+
+[ItemType]  name=Shieldshot;
+texture=items_weapons; 
+ID=shield_slingshot; pR=p14; pB=p4;
+description=Curious shield with a slingshot mounted on top.;
+journalID=journal_shield;
+sprite=563; spriteWhenHeld=595; itemCategory=weapon; element=shieldShotWpn;
+weight=5; volume=5; value=2500;
+power=1;
+action=slingshotAttack;
+[ItemEffect]  
+ID=shield_slingshot; actorValue=PhysEva; magnitude=15; duration=-1;
+[JournalEntry]
+ID=item_shield_slingshot;
+category=equipment; halfPage=true; rarity=2;
+title=Shieldshot;
+text=<itemBig=shield_slingshot><title=Shieldshot><brAdj=>Sometimes an odd design works better than it has any right to. This combination shield / slingshot makes an effective backup weapon - although with the drawback that it can no longer be used to push opponents.;
+
+
+[ItemType]  name=Heavenpiercer;
+texture=items_weapons; 
+ID=spear_heaven; pR=pGold; pB=pPurpleD;
+description=Drill-like spear that inspires you to do the impossible.;
+journalID=journal_spear;
+sprite=426; spriteWhenHeld=426; itemCategory=weapon; element=spear;
+depthMod=900;
+weight=4; volume=10; value=2500;
+special=sprite2xHeight;
+power=6;
+action=spearAttack_inspire;
+[ItemReaction]
+ID=spear_heaven; actorValues=morale; damageMultiplier=0;
+[JournalEntry]
+ID=item_spear_heaven;
+category=equipment; halfPage=true; rarity=3; rewardMod=250;
+title=Heavenpiercer;
+text=<itemBig=spear_heaven><title=Heavenpiercer><brAdj=>Spear of a legendary hero who died ignominiously. Its wielder knows no fear, and when it strikes it inspires nearby allies.;
+
+[ItemType]  name=Steel Crescent;
+texture=items_weapons; 
+ID=spear_crescent1; pR=pSteel; pB=pSteelHilt;
+description=Bladed polearm capable of wide sweep attacks.;
+journalID=journal_spear;
+sprite=569; spriteWhenHeld=569; itemCategory=weapon; element=spear;
+depthMod=900;
+weight=4; volume=10; value=960;
+special=sprite2xHeight;
+power=4;
+action=spearAttack_crescent;
+
+[ItemType]  name=Silver Crescent;
+texture=items_weapons; 
+ID=spear_crescent2; pR=pMythril; pB=pMythrilHilt;
+description=Shining blade used for broad slash attacks.;
+journalID=journal_spear;
+sprite=569; spriteWhenHeld=569; itemCategory=weapon; element=spear;
+depthMod=900;
+weight=4; volume=10; value=3600;
+special=sprite2xHeight;
+power=5;
+action=spearAttack_crescent;
+[JournalEntry]
+ID=journal_spear_crescent1;
+category=equipment; halfPage=true; rarity=2;
+title=Crescent Polearm;
+text=<itemBig=spear_crescent1><title=Crescent Polearm><brAdj=>Not all polearms are only for stabbing - this well-crafted blade excels at cutting down large groups. Unfortunately this design reduces its accuracy by 5% compared to standard spears.;
+
+
+[ItemType]  name=Thresher Trident;
+texture=items_weapons; 
+ID=spear_trident_thresher; pR=pTeal; pB=pGold;
+description=Vicious trident that mangles and disorients foes at the tip.;
+journalID=journal_spear;
+sprite=633; spriteWhenHeld=633; itemCategory=weapon; element=spear;
+depthMod=900;
+weight=4; volume=10; value=5500;
+special=sprite2xHeight;
+power=7;
+action=spearAttack_thresher;
+[JournalEntry]
+ID=item_spear_trident_thresher;
+category=equipment; halfPage=true; rarity=2;
+title=Thresher Trident;
+text=<itemBig=spear_trident_thresher><title=Thresher Trident><brAdj=>Originally a weapon to defend against vicious Pangullin in Limroft. By setting the spear against charging Pangullin, it would simultaneously wound and send the birds off course. It was found to be similarly effective against other beings in Eral.;
+
+[ItemType]  name=Lasher;
+texture=items_weapons; 
+ID=whip_lasher; pR=pRedD; pB=pShockWeaponHilt;
+description=Wicked-looking whip with barbs for flaying.;
+journalID=journal_whip;
+weight=3; volume=3; value=3400;
+power=5;
+sprite=422; spriteWhenHeld=454; itemCategory=weapon; element=whip;
+ action=whipAttack_lasher;
+[JournalEntry]
+ID=item_whip_lasher;
+category=equipment; halfPage=true; rarity=2;
+title=Lasher;
+text=<itemBig=whip_lasher><title=Lasher><brAdj=>This bloodstained whip is no doubt the invention of some crazed torturer. It seems designed to inflict pain rather than damage.;
+
+[ItemType]  name=Grapple Whip;
+texture=items_weapons; 
+ID=whip_grapple; pR=pMythril; pB=pBronze;
+description=Chain whip with a hook at the end. Pulls target.;
+journalID=journal_whip;
+weight=3; volume=3; value=1270;
+power=5;
+sprite=421; spriteWhenHeld=453; itemCategory=weapon; element=whip;
+ action=whipAttack_grapple;
+[JournalEntry]
+ID=item_whip_grapple;
+category=equipment; halfPage=true; rarity=2;
+title=Grapple Whip;
+text=<itemBig=whip_grapple><title=Grapple Whip><brAdj=>This odd mythril whip is fitted with a sharp grappling hook, allowing it to pull enemies. Its range is limited as a result.;
+
+[ItemType]  name=Undead Killer;
+texture=items_weapons; 
+ID=whip_undeadkiller; pR=pGold; pB=pSilver;
+description=War whip designed to destroy undead.;
+weight=3; volume=3; value=6000;
+power=6;
+sprite=358; spriteWhenHeld=390; itemCategory=weapon; element=whip;
+ action=whipAttack_undeadkiller;
+[JournalEntry]
+ID=item_whip_undeadkiller;
+category=equipment; halfPage=true; rarity=3; rewardMod=100;
+title=Undead Killer;
+text=<itemBig=whip_undeadkiller><title=Undead Killer><brAdj=>Whip studded with life triggers that only respond to close proximity to undead. This allows it to be effective against both undead & living creatures.;
+
+[ItemType]  name=Volskarver;
+texture=items_weapons; 
+ID=sword_volskarver; sprite=34; spriteWhenHeld=66; 
+itemCategory=weapon;  element=sword; special=timer;
+description=Volskarn-inlaid sword bereft of energy.;
+timer=250;
+journalID=journal_volskarver;
+weight=3; volume=5; value=7600;
+power=7;
+ action=swordAttack;
+ special=rotate90WhenSheathed;
+ pR=pVolskarnEmpty; pB=pIronHilt; pG=pBW;
+[ItemReaction]
+ID=sword_volskarver; element=elec; element=timerUp; newID=sword_volskarver_charged;
+ 
+[ItemType]  name=Volskarver;
+texture=items_weapons; 
+ID=sword_volskarver_charged; sprite=35; spriteWhenHeld=67; 
+itemCategory=weapon; special=animated; element=sword;
+description=Volskarn-inlaid sword overflowing with energy.;
+journalID=journal_volskarver;
+weight=3; volume=5; value=7600;
+power=11;
+ action=swordAttack_volskarn;
+ special=rotate90WhenSheathed;
+ pR=pVolskarn; pB=pGold; pG=pWhite;
+[ItemReaction]
+ID=sword_volskarver_charged; element=actionUsed; newID=sword_volskarver;
+[ItemLight]
+ID=sword_volskarver_charged; red=0.8; blue=0.9; green=0.7; alpha=0.5; size=0.15; flicker=0.03;
+[JournalEntry]
+ID=journal_volskarver;
+category=equipment; halfPage=true; rarity=4;
+title=Volskarver;
+text=<itemBig=sword_volskarver_charged><title=Volskarver><brAdj=>Masterwork blade with a peculiar design. The Volskarn absorbs essence over time or from lightning, which is then discharged next attack.;
+
+[ItemType]  name=Whirling Scimitar;
+texture=items_weapons; 
+ID=scimitar_whirl; pR=pSteel; pB=pSilver;
+description=Curved blade that disorients foes.;
+sprite=190; spriteWhenHeld=222; itemCategory=weapon; 
+special=sprite2xWidth; element=sword;
+weight=6; volume=10; value=2800;
+power=8;
+ action=swordAttack_spin;
+[JournalEntry]
+ID=item_scimitar_whirl;
+category=equipment; halfPage=true; rarity=2;
+title=Whirling Scimitar;
+text=<itemBig=scimitar_whirl><title=Whirling Scimitar><brAdj=>Each swing is accompanied by a gust of wind from a force trigger embedded in the hilt. This spins the enemy, exposing their sides & back.;
+
+[ItemType]  name=Dragon Scimitar;
+texture=items_weapons; 
+ID=scimitar_dragon; pR=p31; pB=p30;
+description=Blade presented to Reeve in honor of her accomplishments.;
+sprite=190; spriteWhenHeld=222; itemCategory=weapon; 
+special=sprite2xWidth; element=sword;
+weight=6; volume=10; value=6500;
+power=9;
+ action=swordAttack_scimitar;
+[ItemEffect]
+ID=scimitar_dragon; actorValue=PhysEva; magnitude=3; duration=-1;
+[JournalEntry]
+ID=item_scimitar_dragon;
+category=equipment; halfPage=true; rarity=3; rewardMod=-500;
+title=Dragon Scimitar;
+text=<itemBig=scimitar_dragon><title=Dragon Scimitar><brAdj=>Fine blade given to Reeve as a reward for 30 years of service to Dominio. Was lost when Reeve was blasted by a storm cannon - but it looks like it was recovered and pawned at some point.;
+
+
+[ItemType]  name=Shining Saber;
+texture=items_weapons; 
+ID=rapier_shining; pR=pWhite; pB=p12;
+description=Highly reflective rapier that can blind melee attackers.;
+sprite=571; spriteWhenHeld=603; itemCategory=weapon; 
+element=sword;
+weight=6; volume=10; value=7500;
+power=6;
+ action=rapierAttack;
+[ItemReaction]
+ID=rapier_shining; element=dodged; action=rapier_shining_miss_act;
+[ItemEffect]
+ID=rapier_shining; actorValue=PhysEva; magnitude=7; duration=-1;
+[ItemLight]
+ID=rapier_shining; red=0.1; blue=0.1; green=0.1; alpha=0.2; size=0.1; flicker=0;
+[JournalEntry]
+ID=item_rapier_shining;
+category=equipment; halfPage=true; rarity=3; rewardMod=50;
+title=Shining Saber;
+text=<itemBig=rapier_shining><title=Shining Saber><brAdj=>Something about the way the mythril was treated causes its surface to shine brightly in the light. Adjacent attackers that miss its wielder are blinded for a short time.;
+
+[ItemType]  name=Punch Dagger;
+texture=items_weapons; 
+ID=knuckle_dagger_steel; pR=pIron; pB=pSteelHilt;
+description=Steel bladed knuckle weapon.;
+journalID=journal_dagger_punch;
+weight=3; volume=1; value=100;
+power=4;
+sprite=427; spriteWhenHeld=459; itemCategory=weapon; element=punchDaggerWpn;
+ action=fistAttack_slash;
+ 
+[ItemType]  name=Mythril Katar;
+texture=items_weapons; 
+ID=knuckle_dagger_mythril; pR=pMythril; pB=pBoneDark;
+description=Bladed knuckle weapon of mythril.;
+journalID=journal_dagger_punch;
+weight=3; volume=1; value=950;
+power=5;
+sprite=427; spriteWhenHeld=459; itemCategory=weapon; element=punchDaggerWpn;
+ action=fistAttack_slash;
+[JournalEntry]
+ID=journal_dagger_punch;
+category=equipment; halfPage=true; rarity=1;
+title=Punch Dagger;
+text=<itemBig=knuckle_dagger_steel><title=Punch Dagger><brAdj=>Thick blade held in a grip similar to standard knuckle weapons. Allows a brawling expert to use blade-based abilities.;
+
+[ItemType]  name=8-Finger Knuckle;
+texture=items_weapons; 
+ID=knuckle_8finger; pR=p8; pB=pSteelHilt;
+description=Oversized knuckle made for an unknown species. Powerful but inaccurate.;
+journalID=journal_knuckle;
+weight=8; volume=1; value=8000;
+power=8;
+sprite=570; spriteWhenHeld=602; itemCategory=weapon; element=fist;
+ action=fistAttack_8finger;
+[ItemEffect]
+ID=knuckle_8finger; actorValue=PhysEva; magnitude=-8; duration=-1;
+[JournalEntry]
+ID=item_knuckle_8finger;
+category=equipment; halfPage=true; rarity=4; rewardMod=500;
+title=8-Finger Knuckle;
+text=<itemBig=knuckle_8finger><title=8-Finger Knuckle><brAdj=>This knuckle weapon is crafted from an unknown material, and for an unknown species - no known humanoid has 8 fingers, particularly ones of this size. Though awkward to use, whatever it is made of (what feels like some sort of combination of smooth bone and metal) makes it especially effective.;
+ 
+[ItemType]  name=Brass Dragon;
+texture=items_weapons; 
+ID=knuckle_bdragon; pR=pAsh_still2; pB=p31;
+description=Knuckle blaster that spouts flames on impact.;
+journalID=journal_knuckle;
+weight=8; volume=1; value=4000;
+power=3;
+sprite=634; spriteWhenHeld=666; itemCategory=weapon; element=fist;
+ action=fistAttack_bdragon;
+[ItemEffect]
+ID=knuckle_bdragon; actorValue=skill_Fire; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_knuckle_bdragon;
+category=equipment; halfPage=true; rarity=3;
+title=Brass Dragon;
+text=<itemBig=knuckle_bdragon><title=Brass Dragon><brAdj=>This intricate yet durable device rigs up multiple fire triggers to blast flames when punching a foe. It was invented by Seldous Lorn during the peak of technological advancement in Gonhaldr. Despite functioning perfectly, it was not adopted for widespread use due to its expensive components and the fact that few were willing to strap fire cannons to their hands.;
+ 
+ 
+[ItemType]  name=Parrying Dagger;
+texture=items_weapons; 
+ID=dagger_parry; pR=pSilver; pB=pSteel;
+description=Dagger for parrying incoming attacks.;
+journalID=journal_dagger;
+weight=2; volume=1; value=650;
+power=4;
+sprite=417; spriteWhenHeld=449; itemCategory=weapon; element=dagger;
+ action=daggerAttack;
+special=rotate90WhenSheathed;
+[ItemEffect]
+ID=dagger_parry; actorValue=PhysEva; magnitude=8; duration=-1;
+[JournalEntry]
+ID=item_dagger_parry;
+category=equipment; halfPage=true; rarity=1;
+title=Parrying Dagger;
+text=<itemBig=dagger_parry><title=Parrying Dagger><brAdj=>Dagger with an especially broad hilt to catch incoming weapons. Serviceable both defensively and offensively, but excels at neither.;
+
+[ItemType]  name=Black Chisel;
+texture=items_weapons; 
+ID=dagger_chisel_black; pR=pLaserHilt; pB=pLaserHilt;
+description=Sinister-looking chisel with an abnormally sharp edge.;
+journalID=journal_dagger;
+weight=2; volume=1; value=2150;
+power=4;
+sprite=560; spriteWhenHeld=592; itemCategory=weapon; element=dagger;
+ action=daggerAttack_chisel;
+special=rotate90WhenSheathed;
+[JournalEntry]
+ID=item_dagger_chisel_black;
+category=equipment; halfPage=true; rarity=3; rewardMod=500;
+title=Black Chisel;
+text=<itemBig=dagger_chisel_black><title=Black Chisel><brAdj=>Posing as a sculptor, Nora had an easy time getting near the vain Governor-General Arnas. However, Arnas demanded that he be sculpted wearing his full armor set. This led to the creation of the Black Chisel, which allowed Nora to easily assassinate Arnas. The chisel was left embedded in its target, but Nora was never found or captured.;
+ 
+[ItemType]  name=Lemarck's Dagger;
+texture=items_weapons; 
+ID=dagger_lemarck; pR=pSilver; pB=p44; pG=p46;
+description=Elegant, perfectly balanced dagger that strikes twice.;
+journalID=journal_dagger;
+weight=2; volume=1; value=8500;
+power=2;
+sprite=558; spriteWhenHeld=590; itemCategory=weapon; element=dagger;
+ action=daggerAttack_twice;
+special=rotate90WhenSheathed;
+special=enhanceSlots_0;
+[JournalEntry]
+ID=item_dagger_lemarck;
+category=equipment; halfPage=true; rarity=4; rewardMod=-200;
+title=Lemarck's Dagger;
+text=<itemBig=dagger_lemarck><title=Lemarck's Dagger><brAdj=>An exquisitely crafted dagger so refined that it can attack twice as fast. It matches a description of the knife the people's hero Lemarck used when robbing corrupt Rumanian clan leaders - however, it lacks his personal insignia. Due to its sleek design, it cannot fit any augments or triggers in it.;
+ 
+
+
+[ItemType]  name=Spirithail;
+texture=items_weapons; 
+ID=bow_spirithail; pR=pGold; pB=pPurple2;
+description=Ruin-imbued bow that pierces Guard magic. Requires both hands to use.;
+journalID=journal_bow;
+sprite=423; spriteWhenHeld=455; itemCategory=weapon; element=bow; special=twoHanded;
+weight=1; volume=4; value=8900;
+power=6;
+ action=bowAttack_spirithail;
+[JournalEntry]
+ID=item_bow_spirithail;
+category=equipment; halfPage=true; rarity=4; rewardMod=250;
+title=Spirithail;
+text=<itemBig=bow_spirithail><title=Spirithail><brAdj=>Ruin magic allows its shots to ignore the target's Guard spells. Most (in)famously used to assassinate Seartial's Head Warden 40 years ago.;
+
+
+[ItemType]  name=Gloam Bow;
+texture=items_weapons; 
+ID=bow_gloam; pR=pShroom_glow; pB=pPurple;
+description=Bow that shoots arrows coated in gloam dust. Requires both hands to use.;
+journalID=journal_bow;
+sprite=566; spriteWhenHeld=598; itemCategory=weapon; element=bow; special=twoHanded;
+weight=1; volume=4; value=4000;
+power=5;
+ action=bowAttack_gloam;
+[JournalEntry]
+ID=item_bow_gloam;
+category=equipment; halfPage=true; rarity=2;
+title=Gloam Bow;
+text=<itemBig=bow_gloam><title=Gloam Bow><brAdj=>Through some clever engineering, the gloam dust in this bow is applied to the arrows at the time of firing, preventing the user from also being lit up by its glow. Very effective for painting targets.;
+ 
+ 
+[ItemType]  name=Machine Bow;
+texture=items_weapons; 
+ID=bow_machine; pR=p20; pB=p21;
+description=Bow with strange gears that give it massive range, but hinder short range usage. Requires both hands to use.;
+journalID=journal_bow;
+sprite=630; spriteWhenHeld=662; itemCategory=weapon; element=bow; special=twoHanded;
+weight=1; volume=5; value=5750;
+power=5;
+ action=bowAttack_long;
+[JournalEntry]
+ID=item_bow_machine;
+category=equipment; halfPage=true; rarity=3; rewardMod=50;
+title=Machine Bow;
+text=<itemBig=bow_machine><title=Machine Bow><brAdj=>It was commonly accepted that the longbow was the pinnacle of bow design - until the creation of this bow. It appears to be made from some sort of mythril alloy, lending it the strength it needs for the design to function.;
+
+[ItemType]  name=Dual Flail;
+texture=items_weapons; 
+ID=flail_double; pR=pGreyD2; pB=pBoneDark;
+description=Dangerous flail with 2 heads.;
+journalID=journal_flail;
+weight=3; volume=5; value=1200;
+power=5;
+sprite=293; spriteWhenHeld=325; itemCategory=weapon; element=flail;
+ action=flailAttack_double;
+[JournalEntry]
+ID=item_flail_double;
+category=equipment; halfPage=true; rarity=1;
+title=Dual Flail;
+text=<itemBig=flail_double><title=Dual Flail><brAdj=>Someone created a more reckless & awkward weapon than the flail - a double flail! It could potentially strike 2 targets at once.;
+
+[ItemType]  name=Chain of Command;
+ID=flail_command;
+texture=items_weapons; sprite=692; spriteWhenHeld=724; 
+description=Shining flail that spurs allies into action.;
+journalID=journal_flail;
+weight=3; volume=5; value=5000;
+power=6;
+itemCategory=weapon; element=flail;
+pR=p65; pB=pGreyblue2;
+action=flailAttack_command;
+[JournalEntry]
+ID=item_flail_command;
+category=equipment; halfPage=true; rarity=3;
+title=Chain of Command;
+text=<itemBig=flail_command><title=Chain of Command><brAdj=>This brilliantly polished flail was used by one of Seartial's Head Wardens during tense riot control situations. When its bright light lashed out at the target, her subordinates knew exactly who to take down and acted without delay.;
+
+
+[ItemType]  name=Backblaster;
+texture=items_weapons; 
+ID=hammer_blaster; pR=pLaser; pB=pIronHilt;
+description=Rocket-powered hammer that damages its user.;
+journalID=journal_hammer;
+weight=6; volume=5; value=9999;
+power=14;
+sprite=290; spriteWhenHeld=322; itemCategory=weapon; element=hammer;
+ action=hammerAttack_blaster;
+special=rotate90WhenSheathed;
+[JournalEntry]
+ID=item_hammer_blaster;
+category=equipment; halfPage=true; rarity=2;
+title=Backblaster;
+text=<itemBig=hammer_blaster><title=Backblaster><brAdj=>The idiot who designed this weapon was immediately fired, figuratively and literally. Fire triggers propel it but also scorch the user.;
+
+[ItemType]  name=Myriapincer;
+texture=items_weapons; 
+ID=axe_crab; pR=pMeat; pB=pSilver;
+description=Sharp appendage of some vicious crustacean.;
+journalID=journal_axe;
+weight=5; volume=5; value=2750;
+power=9;
+sprite=291; spriteWhenHeld=323; itemCategory=weapon; element=axe;
+ action=axeAttack_crab;
+special=rotate90WhenSheathed;
+[JournalEntry]
+ID=item_axe_crab;
+category=equipment; halfPage=true; rarity=2;
+title=Myriapincer;
+text=<itemBig=axe_crab><title=Myriapincer><brAdj=>An abandoned limb of a Giant Myriacraw - something no one ever wants to meet. Its claw is still razor sharp and slick with aggravating toxin.;
+
+[ItemType]  name=The Icepick;
+texture=items_weapons; 
+ID=axe_icepick; pR=pBlue4; pB=pBlue5;
+description=Specially crafted pick that devastates Chilled or Frozen targets.;
+journalID=journal_axe;
+weight=5; volume=5; value=3500;
+power=9;
+sprite=622; spriteWhenHeld=654; itemCategory=weapon; element=axe;
+ action=axeAttack_icepick;
+special=rotate90WhenSheathed;
+[JournalEntry]
+ID=item_axe_icepick;
+category=equipment; halfPage=true; rarity=3;
+title=The Icepick;
+text=<itemBig=axe_icepick><title=The Icepick><brAdj=>A common Wilderi rite of passage is to make a partial climb of the holy Mt. Jurrin - tallest peak in Limroft. In Eral, they perform this rite on lesser mountains. Odrig Rymand, a murderous Wilderi, knew these expeditions often ended in unsolved deaths, making them easy marks. With this axe, he effortlessly dispatched many such groups before slipping and falling to his death hauling away his ill-gotten loot.;
+
+[ItemType]  name=Hacker;
+texture=items_weapons; 
+ID=axe_hacker; pR=p33; pB=p16;
+description=Axe that makes you just want to keep chopping.;
+journalID=journal_axe;
+weight=5; volume=5; value=5000;
+power=8;
+sprite=626; spriteWhenHeld=658; itemCategory=weapon; element=axe;
+ action=axeAttack_hacker;
+special=rotate90WhenSheathed;
+[ItemEffect]
+ID=axe_hacker; actorValue=skill_Axe; magnitude=1; duration=-1;
+[ItemReaction] 
+ID=axe_hacker; element=weaponBuff; element=usedMeleeWeaponAtk; action=axeAttack_hacker_buff;
+[JournalEntry]
+ID=item_axe_hacker;
+category=equipment; halfPage=true; rarity=2;
+title=Hacker;
+text=<itemBig=axe_hacker><title=Hacker><brAdj=>This unrefined-looking axe has an unusual notched blade, but is otherwise unremarkable. And yet, something about it compels you to want to swing it. In the heat of combat, each consecutive swing feels stronger and more accurate than the last.;
+
+
+[ItemType]  name=Twain Axe;
+texture=items_weapons; 
+ID=axe_twain; pR=pGreyL; pB=pGrey;
+description=Axe that splits enemy forces in twain.;
+journalID=journal_axe;
+weight=5; volume=5; value=5000;
+power=9;
+sprite=690; spriteWhenHeld=722; itemCategory=weapon; element=axe;
+ action=axeAttack_twain;
+special=rotate90WhenSheathed;
+[JournalEntry]
+ID=item_axe_twain;
+category=equipment; halfPage=true; rarity=3; rewardMod=150;
+title=Twain Axe;
+text=<itemBig=axe_twain><title=Twain Axe><brAdj=>This double-sided battleaxe was made to resemble the fabled Twain Axe, a weapon said to duplicate anything it strikes into two exact copies. This axe does not possess that ability, instead merely splitting what it strikes into two halves.;
+
+[ItemType]  name=Twain Axe;
+texture=items_weapons; 
+ID=axe_twain_true; pR=pGreyL; pB=pGrey;
+description=Axe that splits enemy forces into twain.;
+journalID=journal_axe;
+weight=5; volume=5; value=5000;
+power=999;
+sprite=690; spriteWhenHeld=722; itemCategory=weapon; element=axe;
+ action=axeAttack_twain_true;
+special=rotate90WhenSheathed;
+
+[ItemType]  name=Ancient Pistol;
+texture=items_weapons; 
+ID=pistol_ancient; pR=pSepia; pB=pIron;
+description=Rusty single-shot handgun.; 
+journalID=journal_pistol_ancient;
+sprite=424; spriteWhenHeld=456; itemCategory=weapon; element=aim;
+weight=2; volume=3; value=1150;
+power=7;
+ action=gunAttack_short;
+[ItemReaction] 
+ID=pistol_ancient; element=actionUsed; newID=pistol_ancient_unloaded;
+
+[ItemType]  name=Ancient Pistol (Unloaded);
+texture=items_weapons; 
+ID=pistol_ancient_unloaded; pR=pSepia; pB=pIron;
+journalID=journal_pistol_ancient;
+description=Rusty single-shot handgun -- needs to be reloaded.; 
+sprite=425; spriteWhenHeld=457; itemCategory=weapon; 
+weight=2; volume=3; value=1150;
+power=7;
+ action=crossbowReload;
+[ItemReaction]
+ID=pistol_ancient_unloaded; element=actionUsed; element=reload; newID=pistol_ancient;
+[JournalEntry]
+ID=journal_pistol_ancient;
+category=equipment; halfPage=true; rarity=2;
+title=Ancient Pistol;
+text=<itemBig=pistol_ancient><title=Ancient Pistol><brAdj=>A once-powerful pistol degraded by age and misuse. Even so, it still outstrips most crossbows in power & range.;
+
+[ItemType]  name=Dragon Pistol;
+texture=items_weapons; 
+ID=pistol_dragon; pR=pIron; pB=pIronHilt;
+description=Powerful single-shot handgun.; 
+sprite=424; spriteWhenHeld=456; itemCategory=weapon; element=aim;
+weight=2; volume=3; value=3500;
+power=9;
+ action=gunAttack_short;
+[ItemReaction] 
+ID=pistol_dragon; element=actionUsed; newID=pistol_dragon_unloaded;
+
+[ItemType]  name=Dragon Pistol (Unloaded);
+texture=items_weapons; 
+ID=pistol_dragon_unloaded; pR=pIron; pB=pIronHilt;
+journalID=item_pistol_dragon;
+description=Powerful single-shot handgun -- needs to be reloaded.; 
+sprite=425; spriteWhenHeld=457; itemCategory=weapon; 
+weight=2; volume=3; value=3500;
+power=10;
+ action=crossbowReload;
+[ItemReaction]
+ID=pistol_dragon_unloaded; element=actionUsed; element=reload; newID=pistol_dragon;
+[JournalEntry]
+ID=item_pistol_dragon;
+category=equipment; halfPage=true; rarity=2;
+title=Dragon Pistol;
+text=<itemBig=pistol_dragon><title=Dragon Pistol><brAdj=>A brutally powerful pistol. The fire triggers burst & propel a bullet through the barrel at high speed.;
+ 
+[ItemType]  name=Force Pistol;
+texture=items_weapons; 
+ID=pistol_force; pR=pSilver; pB=pShockWeaponHilt;
+description=Wind-based single-shot pistol.; 
+sprite=424; spriteWhenHeld=456; itemCategory=weapon; element=aim;
+weight=2; volume=3; value=3250;
+power=7;
+ action=gunAttack_wind;
+[ItemReaction] 
+ID=pistol_force; element=actionUsed; newID=pistol_force_unloaded;
+
+[ItemType]  name=Force Pistol (Unloaded);
+texture=items_weapons; 
+ID=pistol_force_unloaded; pR=pSilver; pB=pShockWeaponHilt;
+journalID=item_pistol_force;
+description=Wind-based single-shot pistol -- needs to be reloaded.; 
+sprite=425; spriteWhenHeld=457; itemCategory=weapon; 
+weight=2; volume=3; value=3250;
+power=8;
+ action=crossbowReload;
+[ItemReaction]
+ID=pistol_force_unloaded; element=actionUsed; element=reload; newID=pistol_force;
+[JournalEntry]
+ID=item_pistol_force;
+category=equipment; halfPage=true; rarity=2;
+title=Force Pistol;
+text=<itemBig=pistol_force><title=Force Pistol><brAdj=>Alternate gun model that propels bullets using wind triggers. The system results in less power but greater accuracy and range.;
+ 
+
+[ItemType]  name=Slide Gun;
+texture=items_weapons; 
+ID=pistol_slide; pR=pIron; pB=pSteel;
+description=Pistol that never needs a reload.; 
+sprite=364; spriteWhenHeld=396; itemCategory=weapon; element=aim;
+weight=3; volume=5; value=5000;
+power=5;
+ action=gunAttack_short;
+[JournalEntry]
+ID=item_pistol_slide;
+category=equipment; halfPage=true; rarity=3; rewardMod=-50;
+title=Slide Gun;
+text=<itemBig=pistol_slide><title=Slide Gun><brAdj=>A bulky slide mechanism handles reloading. Unfortunately its power and range is gutted as a result.;
+
+
+[ItemType]  name=Blunderbuss;
+texture=items_weapons; 
+ID=rifle_blunderbuss; pR=pIron; pB=pUnarmored;
+description=Muzzle-loaded firearm that blasts shrapnel. Deals extra damage in the center.; 
+sprite=365; spriteWhenHeld=397; itemCategory=weapon; element=aim;
+weight=4; volume=8; value=5500; special=twoHanded;
+power=12;
+ action=gunAttack_burst;
+[ItemReaction] 
+ID=rifle_blunderbuss; element=actionUsed; newID=rifle_blunderbuss_unloaded;
+ 
+[ItemType]  name=Blunderbuss (Unloaded);
+texture=items_weapons; 
+ID=rifle_blunderbuss_unloaded; pR=pIron; pB=pUnarmored;
+journalID=item_rifle_blunderbuss;
+description=Muzzle-loaded rifle -- needs to be reloaded.; 
+sprite=366; spriteWhenHeld=398; itemCategory=weapon; 
+weight=4; volume=8; value=5500;
+power=12;
+ action=crossbowReload;
+[ItemReaction]
+ID=rifle_blunderbuss_unloaded; element=actionUsed; element=reload; newID=rifle_blunderbuss;
+[JournalEntry]
+ID=item_rifle_blunderbuss;
+category=equipment; halfPage=true; rarity=2;
+title=Blunderbuss;
+text=<itemBig=rifle_blunderbuss><title=Blunderbuss><brAdj=>A wonder of modern weaponry that fires a cloud of pellets. Quite potent, but has relatively short range and requires both hands.;
+
+
+[ItemType]  name=Scout Rifle;
+texture=items_weapons; 
+ID=rifle_scout; pR=pIron; pB=pUnarmored;
+description=Powerful single-shot rifle.; 
+sprite=429; spriteWhenHeld=461; itemCategory=weapon; element=aim;
+weight=4; volume=8; value=9500; special=twoHanded;
+power=13;
+ action=gunAttack_rifle;
+[ItemReaction] 
+ID=rifle_scout; element=actionUsed; newID=rifle_scout_unloaded;
+
+[ItemType]  name=Scout Rifle (Unloaded);
+texture=items_weapons; 
+ID=rifle_scout_unloaded; pR=pIron; pB=pUnarmored;
+journalID=item_rifle_scout;
+description=Powerful single-shot rifle -- needs to be reloaded.; 
+sprite=430; spriteWhenHeld=462; itemCategory=weapon; 
+weight=4; volume=8; value=9500;
+power=13;
+ action=crossbowReload;
+[ItemReaction]
+ID=rifle_scout_unloaded; element=actionUsed; element=reload; newID=rifle_scout;
+
+[JournalEntry]
+ID=item_rifle_scout;
+category=equipment; halfPage=true; rarity=2;
+title=Scout Rifle;
+text=<itemBig=rifle_scout><title=Scout Rifle><brAdj=>Standard rifle of Seartial elite troops, and a powerhouse of technology. Multiple fire triggers propel the bullet. Its massive range can reach almost any target.;
+ 
+ 
+[ItemType]  name=Intimidator;
+texture=items_weapons; 
+ID=gun_intimidator; pR=pGreyD2; pB=pGreyD2;
+description=Solid metal replica of an infamously powerful gun.; 
+sprite=428; spriteWhenHeld=460; itemCategory=weapon; element=hammer;
+weight=4; volume=8; value=2000;
+power=9;
+ action=hammerAttack;
+[JournalEntry]
+ID=item_gun_intimidator;
+category=equipment; halfPage=true; rarity=3; rewardMod=-200;
+title=Intimidator;
+text=<itemBig=gun_intimidator><title=Intimidator><brAdj=>Replica produced in a desperate gambit to a scare off a rival gang. It looks convincing from a distance but is merely a hunk of metal.;
+
+
+[ItemType]  name=Daggerhand;
+texture=items_weapons; 
+ID=hammer_hand_dagger; pR=pGreyD2; pB=pSteel;
+description=Fancy sculpted hand holding a dagger. Chips away at enemy defenses.; 
+sprite=561; spriteWhenHeld=593; itemCategory=weapon; element=hammerDaggerWpn;
+weight=4; volume=8; value=1800;
+power=8;
+ action=hammerAttack_hand_dagger;
+[JournalEntry]
+ID=item_hammer_hand_dagger;
+category=equipment; halfPage=true; rarity=2;
+title=Daggerhand;
+text=<itemBig=hammer_hand_dagger><title=Daggerhand><brAdj=>A bizarre weapon from House Ashar of Dominio. Ashar funds an amazingly skilled blacksmith who regularly churns out strange but potent creations such as this. Part of their contract requires the blacksmith remains anonymous - whether for House Ashar's benefit or the blacksmith's protection, none can say.;
+ 
+[ItemType]  name=Battle Anchor;
+texture=items_weapons; 
+ID=hammer_anchor; pR=pGreyblue2; pB=pSteelHilt;
+description=Bizarre anchor fitted with a leather grip. Its massive weight knocks enemies silly.; 
+sprite=625; spriteWhenHeld=657; itemCategory=weapon; element=hammer;
+weight=12; volume=8; value=3000;
+power=9;
+ action=hammerAttack_anchor;
+[ItemEffect]
+ID=hammer_anchor; actorValue=PhysEva; magnitude=-6; duration=-1;
+[JournalEntry]
+ID=item_hammer_anchor;
+category=equipment; halfPage=true; rarity=3; rewardMod=250;
+title=Battle Anchor;
+text=<itemBig=hammer_anchor><title=Battle Anchor><brAdj=>According to legend, the mercenary-knight Ovorra was once captured by Dralir's fleet. While en route to her execution, Cleever hordes beset the ship, killing the crew down to the last man. Without her greatsword, Ovorra reached for the next heaviest weapon - the ship's anchor - and smashed the Cleever to pieces. Perhaps that unlikely story is what inspired this even more unlikely weapon.;
+ 
+[ItemType]  name=Arc Greatsword;
+texture=items_weapons; 
+ID=greatsword_arc; pR=pTeal; pB=pBlueD;
+description=Curved blade that sparks with power. Requires both hands to use.;
+sprite=382; spriteWhenHeld=414; itemCategory=weapon; special=enhanceSlots_2;
+special=sprite2xWidth; special=twoHanded; element=sword;
+weight=6; volume=10; value=9900;
+power=11;
+ action=greatswordAttack_arc;
+[JournalEntry]
+ID=item_greatsword_arc;
+category=equipment; halfPage=true; rarity=5; rewardMod=500;
+title=Arc Greatsword;
+text=<itemBig=greatsword_arc><title=Arc Greatsword><brAdj=>Magnificent sword once owned by Knight Ovorra, the famous mercenary. The wide reach it grants kept her alive in many bloody conquests.;
+ 
+ 
+[ItemType]  name=Omnipode;
+ID=greatsword_omnipode_fire; pR=pRed2; pB=pGreyD2;
+texture=items_weapons; 
+description=Multi-elemental greatsword, wreathed in flame. Requires both hands to wield.;
+journalID=journal_omnipode;
+sprite=572; spriteWhenHeld=604; itemCategory=weapon; special=enhanceSlots_2;
+special=sprite2xWidth; special=twoHanded; element=sword;
+weight=6; volume=10; value=7500;
+power=9;
+ action=greatswordAttack_omnipode_fire;
+[ItemReaction]
+ID=greatsword_omnipode_fire; element=actionUsed; newID=greatsword_omnipode_ice;
+[ItemEffect]
+ID=greatsword_omnipode_fire; actorValue=skill_Fire; magnitude=1; duration=-1;
+[ItemLight]
+ID=greatsword_omnipode_fire; red=1; blue=0.4; green=0.4; alpha=0.5; size=0.25; flicker=0.03;
+
+[ItemType]  name=Omnipode;
+ID=greatsword_omnipode_ice; pR=pBlue2; pB=pGreyD2;
+texture=items_weapons;
+description=Multi-elemental greatsword, covered in frost. Requires both hands to wield.;
+journalID=journal_omnipode;
+sprite=574; spriteWhenHeld=606; itemCategory=weapon; special=enhanceSlots_2;
+special=sprite2xWidth; special=twoHanded; element=sword;
+weight=6; volume=10; value=7500;
+power=9;
+ action=greatswordAttack_omnipode_ice;
+[ItemReaction]
+ID=greatsword_omnipode_ice; element=actionUsed; newID=greatsword_omnipode_elec;
+[ItemEffect]
+ID=greatsword_omnipode_ice; actorValue=skill_Ice; magnitude=1; duration=-1;
+[ItemLight]
+ID=greatsword_omnipode_ice; red=0.5; blue=1; green=0.5; alpha=0.5; size=0.25; flicker=0.01;
+
+[ItemType]  name=Omnipode;
+ID=greatsword_omnipode_elec; pR=pYellow4; pB=pGreyD2;
+texture=items_weapons;
+description=Multi-elemental greatsword, sparking with lightning. Requires both hands to wield.;
+journalID=journal_omnipode;
+sprite=636; spriteWhenHeld=668; itemCategory=weapon; special=enhanceSlots_2;
+special=sprite2xWidth; special=twoHanded; element=sword;
+weight=6; volume=10; value=7500;
+power=9;
+ action=greatswordAttack_omnipode_elec;
+[ItemReaction]
+ID=greatsword_omnipode_elec; element=actionUsed; newID=greatsword_omnipode_wind;
+[ItemEffect]
+ID=greatsword_omnipode_elec; actorValue=skill_Elec; magnitude=1; duration=-1;
+[ItemLight]
+ID=greatsword_omnipode_elec; red=0.3; blue=1; green=1; alpha=0.5; size=0.25; flicker=0.04;
+
+[ItemType]  name=Omnipode;
+ID=greatsword_omnipode_wind; pR=pGrey2; pB=pGreyD2;
+texture=items_weapons;
+description=Multi-elemental greatsword, swirling with wind. Requires both hands to wield.;
+journalID=journal_omnipode;
+sprite=638; spriteWhenHeld=670; itemCategory=weapon; special=enhanceSlots_2;
+special=sprite2xWidth; special=twoHanded; element=sword;
+weight=6; volume=10; value=7500;
+power=9;
+ action=greatswordAttack_omnipode_wind;
+[ItemReaction]
+ID=greatsword_omnipode_wind; element=actionUsed; newID=greatsword_omnipode_fire;
+[ItemEffect]
+ID=greatsword_omnipode_wind; actorValue=skill_Wind; magnitude=1; duration=-1;
+[ItemLight]
+ID=greatsword_omnipode_wind; red=1; blue=1; green=1; alpha=0.5; size=0.25; flicker=0.01;
+
+[JournalEntry]
+ID=journal_omnipode;
+category=equipment; halfPage=true; rarity=4; rewardMod=100;
+title=Omnipode;
+text=<itemBig=greatsword_omnipode_fire><title=Omnipode><brAdj=>Masterwork greatsword created by an Elementalist zealot in the early days of the Seartial Alliance. Using the Omnipode, she fought bitterly against magic regulators and evaded capture for years. Ironically, she was later murdered by fellow Elementalists for refusing to acknowledge Ruin as a true element.;
+
+[ItemType]  name=Wind Wand;
+texture=items_weapons; 
+ID=windWand; pR=pGrey; pB=pBoneDark;
+description=Rod with twirling wind triggers that can produce a cyclone attack.;
+weight=4; volume=10; value=850;
+sprite=299; spriteWhenHeld=331; itemCategory=weapon; 
+power=4;
+special=enhanceSlots_0; special=unbreakable;
+element=wind;
+ action=windWand_attack;
+[ItemEffect]  
+ID=windWand; actorValue=skill_Wind; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_windWand;
+category=equipment; halfPage=true; rarity=2;
+title=Wind Wand;
+text=<itemBig=windWand><title=Wind Wand><brAdj=>When spun properly, this rod activates its 3 wind triggers to create a brutal but short-lived cyclone.;
+
+
+[ItemType]  name=Chill Rod;
+texture=items_weapons; 
+ID=iceWand; pR=pIce; pB=pSilver;
+description=Icy stave that sprays cold.;
+weight=4; volume=10; value=850;
+sprite=300; spriteWhenHeld=332; itemCategory=weapon; 
+special=enhanceSlots_0; special=unbreakable;
+power=2;
+element=ice;
+ action=iceWand_attack;
+[ItemEffect]  
+ID=iceWand; actorValue=skill_Ice; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_iceWand;
+category=equipment; halfPage=true; rarity=2;
+title=Chill Rod;
+text=<itemBig=iceWand><title=Chill Rod><brAdj=>The pronged design of this ice trigger spreads cold over a wide area. This reduces potency, but it's still a solid close-range weapon.;
+ 
+ 
+
+[ItemType]  name=Steam Staff;
+texture=items_weapons; 
+ID=steamWand; pR=pBlue; pG=pRed2; pB=pIron;
+description=Rod that spouts hot steam when activated.;
+weight=4; volume=10; value=850;
+sprite=301; spriteWhenHeld=333; itemCategory=weapon; 
+power=6;
+special=enhanceSlots_0; special=unbreakable;
+element=water;
+ action=steamWand_attack;
+[ItemEffect]  
+ID=steamWand; actorValue=skill_Fire; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_steamWand;
+category=equipment; halfPage=true; rarity=2;
+title=Steam Staff;
+text=<itemBig=steamWand><title=Steam Staff><brAdj=>A combination fire/ice trigger is mounted at the head, which produces a gout of steam that damages and soaks the enemy.;
+ 
+
+
+[ItemType]  name=Shock Rod;
+texture=items_weapons; 
+ID=shockWand; pR=pYellow5; pB=p5;
+description=Sparking device that can stun targets.;
+weight=4; volume=10; value=850;
+sprite=302; spriteWhenHeld=334; itemCategory=weapon; 
+special=enhanceSlots_0; special=unbreakable;  spawnFX=horizSpark_small;
+power=2;
+element=elec;
+ action=shockWand_attack;
+[ItemLight]
+ ID=shockWand; red=0.8; blue=1; green=0.5; alpha=0.5; size=0.12; flicker=0.0; texture=krypton;
+[ItemEffect]  
+ID=shockWand; actorValue=skill_Elec; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_shockWand;
+category=equipment; halfPage=true; rarity=2;
+title=Shock Rod;
+text=<itemBig=shockWand><title=Shock Rod><brAdj=>Two prods direct focused electricity at a single target, shocking them into submission.;
+ 
+ 
+
+[ItemType]  name=Focus Stone;
+texture=items_weapons; 
+description=Smooth sphere that aids focus when gripped tightly.
+<font=thickIcons><color=Black>
+<n=><icon=invIcon_sword> +1<icon=MagDef>
+<n=><icon=invIcon_armor> +1<icon=MagDef>;
+weight=1; volume=0; value=120;
+pR=pBlueD;
+special=enhanceSlots_0;
+special=cannotBeSheathed; special=unbreakable;
+ID=focus_stone; sprite=99; spriteWhenHeld=131; itemCategory=weapon;
+ action=focusStone_act;
+[ItemEffect]  
+ID=focus_stone; actorValue=MagDef; magnitude=1; duration=-1;
+[ItemEffectInWeapon]  
+ID=focus_stone; actorValue=MagDef; magnitude=1; duration=-1;
+[ItemEffectInArmor]  
+ID=focus_stone; actorValue=MagDef; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_focus_stone;
+category=equipment; halfPage=true; rarity=1;
+title=Focus Stone;
+text=<itemBig=focus_stone><title=Focus Stone><brAdj=>Its peculiar texture lends itself to being idly palmed, ridding the mind of distraction. A common trinket found among apprentices.;
+ 
+[ItemType]  name=Iron Hammer;
+texture=items_weapons; 
+ID=hammer_iron_prop; pR=pIron; pB=pIronHilt;
+description=Hammer prop.;
+sprite=1439; spriteWhenHeld=1439; itemCategory=weapon; 
+element=hammer;
+special=cannotBeSheathed;
+weight=6; volume=10; value=25;
+power=6;
+ action=hammerAttack;
+ 
+[ItemType]  name=Steel Hammer;
+texture=items_weapons; 
+ID=hammer_steel_prop; pR=pSteel; pB=pSteelHilt;
+description=Hammer prop.;
+sprite=1439; spriteWhenHeld=1439; itemCategory=weapon; 
+element=hammer;
+special=cannotBeSheathed;
+weight=6; volume=10; value=25;
+power=6;
+ action=hammerAttack;
+ 
+[ItemType]  name=Mythril Hammer;
+texture=items_weapons; 
+ID=hammer_mythril_prop; pR=pMythril; pB=pMythrilHilt;
+description=Hammer prop.;
+sprite=1439; spriteWhenHeld=1439; itemCategory=weapon; 
+element=hammer;
+special=cannotBeSheathed;
+weight=6; volume=10; value=25;
+power=6;
+ action=hammerAttack;
+ 
+[ItemType]  name=Greatsword;
+texture=items_weapons; 
+ID=greatsword_iron_prop; pR=temperSwordGlow; pB=pIronHilt;
+description=Greatsword prop.;
+journalID=journal_gsword;
+sprite=1471; spriteWhenHeld=1471; itemCategory=weapon; 
+ element=sword;
+special=cannotBeSheathed;
+weight=6; volume=10; value=25;
+power=5;
+ action=greatswordAttack;
+ 
+[ItemType]  name=Boarding Gear;
+ID=gear_boarding; sprite=1945; spriteWhenHeld=65; itemCategory=weapon;
+journalID=journal_gear_boarding;
+texture=items_weapons;
+description=Allows you to board an adjacent boat for <icon=time>80.<n=><adjX=56><font=thickIcons><icon=icon_crew>5;
+weight=2; volume=3000; value=30; element=cannon;
+ action=boardingGear_act;
+ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+ pR=pGreyD2;
+ pG=pBrown;
+
+[ItemType]  name=Boarding Hooks;
+ID=gear_boarding_hook; sprite=1977; spriteWhenHeld=65;
+journalID=journal_gear_boarding;
+texture=items_weapons; itemCategory=weapon;
+description=Complex hook system that boards for <icon=time>90.<n=><adjX=56><font=thickIcons><icon=icon_crew>5;
+weight=2; volume=3000; value=5500; element=cannon;
+ action=boardingHook_act;
+ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+ pR=pSteel;
+ pG=pBrown;
+ 
+[ItemType]  name=Boarding Corvus;
+ID=gear_boarding_plank; sprite=1944; spriteWhenHeld=65; 
+journalID=journal_gear_boarding;
+texture=items_weapons;
+description=Plank for boarding that brings more crew, but only for <icon=time>55.<n=><adjX=74><font=thickIcons><icon=icon_crew>6;
+weight=2; volume=3000; value=3500; element=cannon;itemCategory=weapon;
+ action=boardingPlank_act;
+ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+ pR=pYellow5;
+ pB=pGreyD2;
+ 
+[ItemType]  name=Boarding Spines;
+ID=gear_boarding_cleever; sprite=1977; spriteWhenHeld=65; itemCategory=weapon;
+journalID=journal_gear_boarding;
+texture=items_weapons;
+description=Weak hooks that board an adjacent boat for <icon=time>60.<n=><adjX=56><font=thickIcons><icon=icon_crew>5;
+weight=2; volume=3000; value=20; element=cannon;
+ action=boardingSpines_act;
+ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+ pR=pRedD;
+ pG=pGreen3;
+ 
+[JournalEntry]
+ID=journal_gear_boarding;
+category=equipment; halfPage=true; rarity=0;
+title=Boarding Gear;
+text=<itemBig=gear_boarding><title=Boarding Gear><brAdj=>These hooks & ropes can be used to board an enemy ship and fight their crew man-to-man. Once the timer expires, both crews return to their ships, then naval combat continues as normal. Different types of gear allows you to fight longer or bring more crew. If you defeat all enemy crew, their ship will be helpless, and you can capture it!;
+ 
+ 
+ 
+[ItemType]  name=Anti-Boarding Net;
+ID=gear_antiboarding_net; sprite=1976; spriteWhenHeld=65; 
+texture=items_weapons;
+description=Net that encircles the ship, making it 25% faster to repel boarders.;
+weight=2; volume=3000; value=250; element=cannon; itemCategory=tool;
+special=cargo; special=shipWeapon; special=equipInAnySlot;
+ pG=pBrown;
+[ItemReaction]
+ID=gear_antiboarding_net; actorValues=board; damageMultiplier=0.75;
+
+[JournalEntry]
+ID=item_gear_antiboarding_net;
+category=equipment; halfPage=true; rarity=1;
+title=Absorbent Mesh;
+text=<itemBig=gear_antiboarding_net><title=Anti-Boarding Net><brAdj=>By surrounding the deck with thick ropes, boarding can be made exceedingly difficult. Very useful while sailing in Cleever-infested waters.;
+
+[ItemType]  name=Absorbent Mesh;
+ID=gear_absorb_mesh; sprite=1976; spriteWhenHeld=65; 
+texture=items_weapons;
+description=Mesh that dissipates 20% of incoming electricity and fire.;
+weight=2; volume=3000; value=1500; element=cannon; itemCategory=tool;
+special=cargo; special=shipWeapon; special=equipInAnySlot;
+ pG=pShockWeaponHilt;
+[ItemReaction]
+ID=gear_absorb_mesh; element=elec; element=fire; damageMultiplier=0.8;
+
+[JournalEntry]
+ID=item_gear_absorb_mesh;
+category=equipment; halfPage=true; rarity=2;
+title=Absorbent Mesh;
+text=<itemBig=gear_absorb_mesh><title=Absorbent Mesh><brAdj=>Finely crafted mesh that encircles & shields the ship from incoming heat and lightning. Useful for weathering storms.;
+ 
+[ItemType]  name=Nullrose;
+ID=gear_nullrose; sprite=2008; spriteWhenHeld=65; 
+texture=items_weapons;
+description=Sphere that can be mounted on a ship, absorbing half incoming <icon=skill_Fire><icon=skill_Ice><icon=skill_Elec><icon=skill_Wind> damage.;
+weight=2; volume=3000; value=9900; element=cannon; itemCategory=tool;
+special=cargo; special=shipWeapon; special=equipInAnySlot;
+[ItemReaction]
+ID=gear_nullrose; element=elec; element=ice; element=fire; element=wind; damageMultiplier=0.5;
+
+[JournalEntry]
+ID=item_gear_nullrose;
+category=equipment; halfPage=true; rarity=5;
+title=Nullrose;
+text=<itemBig=gear_nullrose><title=Nullrose><brAdj=>Said to be the blackened eyeball of an unknowable deep-sea creature. It endlessly absorbs energy directed at it. While too bulky for personal protection, it can effectively shelter a structure or ship from the elements.;
+ 
+ 
+[ItemType]  name=Falconet;
+ID=cannon_falconet; sprite=1913; spriteWhenHeld=65; itemCategory=weapon;
+journalID=journal_cannon;
+texture=items_weapons;
+description=Smallest, weakest cannon.<n=><adjX=14><font=thickIcons><icon=cannonRange> 4<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 3;
+weight=2; volume=3000; value=50;
+power=3; element=cannon;
+ action=cannon_falconet_atk;
+ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+ pR=pGreyD2;
+ pG=pBrown;
+
+[ItemType]  name=Falcon;
+ID=cannon_falcon; sprite=1916; spriteWhenHeld=65; itemCategory=weapon;
+journalID=journal_cannon;
+texture=items_weapons;
+description=Small, portable cannon.<n=><adjX=14><font=thickIcons><icon=cannonRange> 4<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 4;
+weight=2; volume=3000; value=150;
+power=4; element=cannon;
+ action=cannon_falcon_atk;
+ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+ pR=pGreyD2;
+ pG=pGreyD2;
+
+[ItemType]  name=Saker;
+ID=cannon_saker; sprite=1917; spriteWhenHeld=65; itemCategory=weapon;
+journalID=journal_cannon;
+texture=items_weapons;
+description=Standard cannon.<n=><adjX=14><font=thickIcons><icon=cannonRange> 5<adjX=14><icon=cannonCone> Wide<adjX=14><icon=cannonPower> 5;
+weight=2; volume=3000; value=300;
+power=5; element=cannon;
+ action=cannon_saker_atk;
+ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+ pR=pGreyD2;
+ pG=pBrown;
+
+[ItemType]  name=Fore Saker;
+ID=cannon_saker_fore; sprite=1918; spriteWhenHeld=65; itemCategory=weapon;
+journalID=journal_cannon;
+texture=items_weapons;
+description=Saker positioned at the bow, allowing forwards fire.<n=><adjX=14><font=thickIcons><icon=cannonRange> 4<adjX=14><icon=cannonCone> Wide<adjX=14><icon=cannonPower> 5;
+weight=2; volume=3000; value=300;
+power=5; element=cannon;
+ action=cannon_saker_fore_atk;
+ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+ pR=pGreyD2;
+ pG=pBrown;
+
+[ItemType]  name=Aft Saker;
+ID=cannon_saker_aft; sprite=1919; spriteWhenHeld=65; itemCategory=weapon;
+journalID=journal_cannon;
+texture=items_weapons;
+description=Saker positioned at the stern, allowing backwards fire.<n=><adjX=14><font=thickIcons><icon=cannonRange> 4<adjX=14><icon=cannonCone> Wide<adjX=14><icon=cannonPower> 5;
+weight=2; volume=3000; value=300;
+power=5; element=cannon;
+ action=cannon_saker_aft_atk;
+ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+ pR=pGreyD2;
+ pG=pBrown;
+
+[ItemType]  name=Demi-culverin;
+ID=cannon_demiculverin; sprite=1948; spriteWhenHeld=65; itemCategory=weapon;
+journalID=journal_cannon;
+texture=items_weapons;
+description=Smaller, cheaper culverin.<n=><adjX=14><font=thickIcons><icon=cannonRange> 6<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 6;
+weight=2; volume=3000; value=700;
+power=6; element=cannon;
+ action=cannon_demiculverin_atk;
+ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+ pR=pGreyD2;
+ pG=pBrown;
+
+[ItemType]  name=Culverin;
+ID=cannon_culverin; sprite=1914; spriteWhenHeld=65; itemCategory=weapon;
+journalID=journal_cannon;
+texture=items_weapons;
+description=Strongest cannon in most markets.<n=><adjX=14><font=thickIcons><icon=cannonRange> 6<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 7;
+weight=2; volume=3000; value=1500;
+power=7; element=cannon;
+ action=cannon_culverin_atk;
+ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+ pR=pGreyD2;
+ pG=pBrown;
+
+[ItemType]  name=Demi-cannon;
+ID=cannon_demicannon; sprite=1949; spriteWhenHeld=65; itemCategory=weapon;
+journalID=journal_cannon;
+texture=items_weapons;
+description=Very powerful cannon.<n=><adjX=14><font=thickIcons><icon=cannonRange> 6<adjX=14><icon=cannonCone> Thin<adjX=14><icon=cannonPower> 8;
+weight=2; volume=3000; value=3500;
+power=8; element=cannon;
+ action=cannon_demicannon_atk;
+ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+ pR=pGreyD2;
+ pG=pGreyD2;
+
+[ItemType]  name=Cannon;
+ID=cannon_cannon; sprite=1915; spriteWhenHeld=65; itemCategory=weapon;
+journalID=journal_cannon;
+texture=items_weapons;
+description=The epitome of a cannon.<n=><adjX=14><font=thickIcons><icon=cannonRange> 6<adjX=14><icon=cannonCone> Thin<adjX=14><icon=cannonPower> 9;
+weight=2; volume=3000; value=8500;
+power=9; element=cannon;
+ action=cannon_cannon_atk;
+ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+ pR=pGreyD2;
+ pG=pGreyD2;
+ 
+[ItemType]  name=Lil' Buster;
+ID=cannon_lilbuster; sprite=2011; spriteWhenHeld=65; itemCategory=weapon;
+journalID=journal_cannon;
+texture=items_weapons;
+description=Short, stubby custom-made cannon with surprising power.<n=><adjX=14><font=thickIcons><icon=cannonRange> 3<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 9;
+weight=2; volume=3000; value=1250;
+power=9; element=cannon;
+ action=cannon_lilbuster_atk;
+ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+ pR=pGreyD2;
+ pG=pBrown;
+ pB=pSilver;
+
+[ItemType]  name=Basilisk;
+ID=cannon_basilisk; sprite=1951; spriteWhenHeld=65; itemCategory=weapon;
+journalID=journal_cannon;
+texture=items_weapons;
+description=A monstrous cannon of nearly impractical size. Obliterates targets with its 160 lb. shot.<n=><adjX=14><font=thickIcons><icon=cannonRange> 4<adjX=14><icon=cannonCone> Line<adjX=14><icon=cannonPower> 20;
+weight=2; volume=3000; value=50000;
+power=20; element=cannon;
+ action=cannon_basilisk_atk;
+ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+ pR=pGreyD2;
+ pG=pGreyD2;
+[ItemType]  name=Harpoon;
+ID=cannon_harpoon; sprite=2042; spriteWhenHeld=65; itemCategory=weapon;
+journalID=journal_cannon;
+texture=items_weapons;
+description=Spear cannon that pulls targets in.<n=><adjX=14><font=thickIcons><icon=cannonRange> 3<adjX=14><icon=cannonCone> Wide<adjX=14><icon=cannonPower> 4;
+weight=2; volume=3000; value=150;
+power=4; element=cannon;
+ action=cannon_harpoon_atk;
+ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+ pR=pGreyD2;
+ pG=pBrown;
+ pB=pGreyD2;
+
+
+[ItemType]  name=Grapeshot;
+ID=cannon_grape; sprite=1946; spriteWhenHeld=65; itemCategory=weapon;
+journalID=journal_cannon;
+texture=items_weapons;
+description=Highly damaging to crew, but barely affects the hull.<n=><adjX=14><font=thickIcons><icon=cannonRange> 4<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 2;
+weight=2; volume=3000; value=250;
+power=2; element=cannon;
+ action=cannon_grape_atk;
+ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+ pR=pGreyD2;
+ pG=pBrown;
+ 
+[ItemType]  name=Chain Shot;
+ID=cannon_chain; sprite=1947; spriteWhenHeld=65; itemCategory=weapon;
+journalID=journal_cannon;
+texture=items_weapons;
+description=Shot that has been chained together damages rigging, reducing ship mobility.<n=><adjX=14><font=thickIcons><icon=cannonRange> 3<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 3;
+weight=2; volume=3000; value=350;
+power=3; element=cannon;
+ action=cannon_chain_atk;
+ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+ pR=pGreyD2;
+ pG=pBrown;
+ 
+[ItemType]  name=Spider Shot;
+ID=cannon_spider; sprite=1943; spriteWhenHeld=65; itemCategory=weapon;
+journalID=journal_cannon;
+texture=items_weapons;
+description=Many chained shots that devastate rigging, greatly reducing ship mobility.<n=><adjX=14><font=thickIcons><icon=cannonRange> 3<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 1;
+weight=2; volume=3000; value=1500;
+power=1; element=cannon;
+ action=cannon_spider_atk;
+ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+ pR=pGreyD2;
+ pG=pBrown;
+ 
+[ItemType]  name=Vol Cannon;
+ID=cannon_vol; sprite=1885; spriteWhenHeld=65; itemCategory=weapon;
+journalID=journal_cannon;
+texture=items_weapons;
+description=Lightweight energy cannon. Covers a 270 deg. front arc.<n=><adjX=14><font=thickIcons><icon=cannonRange> 5<adjX=14><icon=cannonCone> Huge<adjX=14><icon=cannonPower> 5;
+weight=2; volume=3000; value=15000;
+power=5; element=cannon;
+ action=cannon_vol_atk;
+ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+ pR=pIron;
+ pG=pGreyD;
+ pB=pVolskarn;
+
+ 
+[ItemType]  name=Explosive Shot;
+ID=cannon_explode; sprite=1979; spriteWhenHeld=65; itemCategory=weapon;
+journalID=journal_cannon;
+texture=items_weapons;
+description=Shot crammed full of explosives. Blasts an area.<n=><adjX=14><font=thickIcons><icon=cannonRange> 3<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 5;
+weight=2; volume=3000; value=7500;
+power=5; element=cannon;
+ action=cannon_explode_atk;
+ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+ pR=pGreyD2;
+ pB=pAsh;
+ 
+ 
+[ItemType]  name=Long Nine;
+ID=cannon_longnine; sprite=1980; spriteWhenHeld=65; itemCategory=weapon;
+journalID=journal_cannon;
+texture=items_weapons;
+description=Lengthy front-facing cannon.<n=><adjX=14><font=thickIcons><icon=cannonRange> 5<adjX=14><icon=cannonCone> Thin<adjX=14><icon=cannonPower> 6;
+weight=2; volume=3000; value=990;
+power=6; element=cannon;
+ action=cannon_longnine_atk;
+ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+ pR=pGreyD2;
+ pG=pBrown;
+ 
+[ItemType]  name=Long Ten;
+ID=cannon_longten; sprite=1980; spriteWhenHeld=65; itemCategory=weapon;
+journalID=journal_cannon;
+texture=items_weapons;
+description=Long Nine with even more power.<n=><adjX=14><font=thickIcons><icon=cannonRange> 5<adjX=14><icon=cannonCone> Thin<adjX=14><icon=cannonPower> 7;
+weight=2; volume=3000; value=1000;
+power=7; element=cannon;
+ action=cannon_longten_atk;
+ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+ pR=p1;
+ pG=pGreyD2;
+
+
+[ItemType]  name=Swivel Gun;
+ID=cannon_swivel; sprite=1981; spriteWhenHeld=65; itemCategory=weapon;
+journalID=journal_cannon;
+texture=items_weapons;
+description=Mini-cannon that can aim in any direction. Can be used before moving.<n=><adjX=14><font=thickIcons><icon=cannonRange> 3<adjX=14><icon=cannonCone> Any<adjX=14><icon=cannonPower> 2;
+weight=2; volume=3000; value=175;
+power=2; element=cannon;
+action=cannon_swivel_atk;
+special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+pR=pGreyD2;
+pG=pBrown;
+
+[ItemType]  name=Ram;
+ID=cannon_ram; sprite=1982; spriteWhenHeld=65; itemCategory=weapon;
+texture=items_weapons;
+description=Hull-mounted armored beak. Allows a direct frontal attack.<n=><adjX=14><font=thickIcons><icon=cannonRange> 1<adjX=14><icon=cannonCone> Line<adjX=14><icon=cannonPower> 9;
+weight=2; volume=3000; value=175;
+power=9; element=cannon;
+action=cannon_ram_atk;
+special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+pR=pGreyD2;
+pG=pBrown;
+ 
+[ItemType]  name=Mythril Ram;
+texture=items_weapons;
+description=Mythril-clad ram that provides a devastating frontal attack.<n=><adjX=14><font=thickIcons><icon=cannonRange> 1<adjX=14><icon=cannonCone> Line<adjX=14><icon=cannonPower> 14;
+weight=2; volume=3000; value=5500;
+power=14; element=cannon;
+ID=cannon_ram_mythril; sprite=1982; spriteWhenHeld=65; itemCategory=weapon;
+action=cannon_mythril_ram_atk;
+special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+pR=pMythril;
+pG=pBrown;
+
+[ItemType]  name=Cyclone Blaster;
+ID=cannon_cyclone; sprite=2012; spriteWhenHeld=65; itemCategory=weapon;
+journalID=journal_cannon;
+texture=items_weapons;
+description=Front blaster that emits a brutal gale, slowing & spinning the target 180 degrees.<n=><adjX=14><font=thickIcons><icon=cannonRange> 4<adjX=14><icon=cannonCone> Line<adjX=14><icon=cannonPower> 4;
+weight=2; volume=3000; value=1250;
+power=4; element=cannon;
+ action=cannon_cyclone_atk;
+ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+ pR=pSilver;
+ pG=pGreyD2;
+ pB=pBW;
+ 
+[ItemType]  name=Freeze Cannon;
+ID=cannon_freeze; sprite=2013; spriteWhenHeld=65; itemCategory=weapon;
+journalID=journal_cannon;
+texture=items_weapons;
+description=Front-facing beam cannon. Fires a freezing ray that creates ice floes to slow movement.<n=><adjX=14><font=thickIcons><icon=cannonRange> 4<adjX=14><icon=cannonCone> Line<adjX=14><icon=cannonPower> 4;
+weight=2; volume=3000; value=1400;
+power=4; element=cannon;
+ action=cannon_freeze_atk;
+ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+ pR=pIce;
+ pG=pGrey3;
+ pB=pGrey;
+
+[ItemType]  name=Storm Cannon;
+ID=cannon_storm; sprite=2043; spriteWhenHeld=65; itemCategory=weapon;
+journalID=journal_cannon;
+texture=items_weapons;
+description=Multi-directional beam cannon that fires devastating lightning.<n=><adjX=14><font=thickIcons><icon=cannonRange> 7<adjX=14><icon=cannonCone> Wide<adjX=14><icon=cannonPower> 7;
+weight=2; volume=3000; value=9750;
+power=0; element=cannon;
+ action=cannon_storm_atk;
+ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+pR=p2; pB=pGreyD; pG=pGold;
+ 
+[JournalEntry]
+ID=journal_cannon;
+category=equipment; halfPage=true; rarity=0;
+title=Cannons;
+text=<itemBig=cannon_cannon> <itemBig=cannon_saker> <itemBig=cannon_falconet><title=Cannons> <brAdj=>Cannons! Cannons have three properties:<n><icon=cannonRange> <color=DarkRed>Range<color=> is how many tiles it can reach.<n><icon=cannonCone> <color=DarkRed>Cone<color=> explains the angles it can reach. Any is best, followed by Huge, Wide, Med, Thin, then Line.<n><icon=cannonPower> <color=DarkRed>Power<color=> is the damage it deals. Damage is also boosted by being near the target or having more crew. (Equipping duplicate cannons does NOT increase power.);
+
+ 
+[ItemType]  name=Extra Cache;
+ID=gear_extraCache; sprite=97; spriteWhenHeld=65; 
+description=Equip this on your ship to increase max <icon=cargo>cargo by +3.; 
+itemCategory=tool;
+volume=999; special=cargo; special=shipWeapon; special=equipInAnySlot;
+value=900;
+[ItemEffect]  
+ID=gear_extraCache; actorValue=cargo; magnitude=3; duration=-1;
+
+[ItemType]  name=Perfect Cache;
+ID=gear_perfectCache; sprite=96; spriteWhenHeld=65; 
+description=Equip this on your ship to increase max <icon=cargo>cargo by +8.; 
+itemCategory=tool;
+volume=999; special=cargo; special=shipWeapon; special=equipInAnySlot;
+value=3000;
+[ItemEffect]  
+ID=gear_perfectCache; actorValue=cargo; magnitude=8; duration=-1;
+
+[ItemType]  name=Force Thruster;
+ID=gear_thruster; sprite=1785;
+description=Grants a forward burst of speed when used in combat.; 
+itemCategory=tool;
+journalID=journal_thruster;
+volume=999; special=cargo; special=shipWeapon; special=equipInAnySlot;
+value=2250;
+action=cannon_thruster_act;
+pR=p2;
+pG=pBW;
+
+[ItemType]  name=Spine Launcher;
+ID=cannon_spineLauncher; sprite=2009; spriteWhenHeld=65; itemCategory=weapon;
+texture=items_weapons;
+description=Fires Cleever spines at enemy ships. Can be used before moving.<n=><adjX=14><font=thickIcons><icon=cannonRange> 2<adjX=14><icon=cannonCone> Any<adjX=14><icon=cannonPower> 3;
+journalID=journal_cleever_weapon;
+weight=2; volume=3000; value=60;
+power=3; element=cannon;
+action=cannon_spineLauncher_atk;
+special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
+pR=pRedD;
+

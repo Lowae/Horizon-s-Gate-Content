@@ -1,0 +1,1871 @@
+[DialogNode] ID=merchant_sPort;
+animations=;
+statements=<randSetID=Don't get many visitors here./Need supplies?/Welcome.>;
+specialEffect=setPCDialogWindowSizeY;
+specialEffect=setNPCDialogWindowSizeY;
+
+[DialogOption] text=Buy <adjX=-1><math=m:maxFoodBuy><adjX=-12><iconBig=food><adjX=-2> Food ($<buyPrice=food> each);
+formulaReq=m:maxFoodBuy;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_autofill_food_sPort;
+[DialogOption] text=Trade;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_goods_sPort;
+[DialogOption] text=Establish <pfactionIcon=>  Port;
+newLineOfOptions=true;
+formulaReq=gIsString:playerFaction;
+nodeToConnectTo=merchant_sPort_createPort;
+
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+
+----
+
+
+
+-----------------------
+
+[DialogNode] ID=merchant_goods_sPort;
+animations=;
+statements=What would you like?<n><speed=3><adjX=500><iconBig=marketRate> <font=thickIcons2><locMarketRate=>%;
+specialEffect=enterBuyMode_location;
+specialEffect=setNPCDialogWindowSizeY,120;
+specialEffect=setPCDialogWindowSizeY,68;
+nextNodeID=merchant_sPort;
+[DialogOption] text=Back<textIfFinal==1-m:gamepad> (<keybind=endTurn>);
+nodeToConnectTo=merchant_sPort;
+escOption=true;
+bottomOption=true;
+
+
+
+[DialogNode] ID=merchant_autofill_food_sPort;
+animations=;
+statements=Fill your cargo with <math=m:maxFoodBuy>food, for $<math=m:maxFoodBuy * buyPrice:food><adjX=-2>?;
+[DialogOption] text=Yes ($<math=m:maxFoodBuy * buyPrice:food><adjX=-6>);
+formulaReq=m:money - m:maxFoodBuy * buyPrice:food + 1;
+nodeToConnectTo=merchant_autofill_food_yes_sPort;
+[DialogOption] text=No;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_sPort;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=merchant_autofill_food_yes_sPort;
+animations=;
+statements=Alright. Anything else?;
+specialEffect=autobuy_food;
+[DialogOption] text=Trade;
+nodeToConnectTo=merchant_goods_sPort;
+[DialogOption] text=Establish <pfactionIcon=>  Port;
+newLineOfOptions=true;
+formulaReq=gIsString:playerFaction;
+nodeToConnectTo=merchant_sPort_createPort;
+
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+-----------------------
+
+
+[DialogNode] ID=merchant_sPort_createPort;
+animations=scared;
+animations=sly;
+statements=Huh?<p> Wait, really?;
+statements=You want to invest in this supply port that much?;
+[DialogOption] text=Yes ($10,000);
+formulaReq=m:money(10000);
+nodeToConnectTo=merchant_sPort_createPort2;
+[DialogOption] text=<color=SlateGray>Can't afford ($10,000);
+formulaReq=1 - m:money(10000);
+nodeToConnectTo=merchant_sPort;
+[DialogOption] text=Explain establishing ports;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_sPort_createPort_explain;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=merchant_sPort;
+bottomOption=true;
+
+
+[DialogNode] ID=merchant_sPort_createPort_explain;
+animations=sigh;
+animations=sly;
+animations=;
+animations=sigh;
+animations=happy;
+animations=;
+animations=;
+statements=Well, Supply Ports are usually just small ports where you can only buy Food...;
+statements=But if you wanted to invest a lot of money, you can take ownership, make buildings, rename the port, and earn income from it!;
+statements=You can create up to 7 buildings, such as Cafes, Shipwrights, Harbors, and so on...;
+statements=You'll have to <color=DarkRed>fund<color=> each building and assign a <color=DarkRed>crew member<color=> to operate it.;
+statements=But you'll get daily profit from each, and your crew earns a little XP too!;
+statements=And of course you can make use of their services yourself!;
+statements=What do you think?;
+
+[DialogOption] text=Establish Port ($10,000);
+formulaReq=m:money(10000);
+nodeToConnectTo=merchant_sPort_createPort2;
+[DialogOption] text=<color=SlateGray>Can't afford ($10,000);
+formulaReq=1 - m:money(10000);
+nodeToConnectTo=merchant_sPort;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=merchant_sPort;
+bottomOption=true;
+
+
+
+[DialogNode] ID=merchant_sPort_createPort2;
+animations=scared;
+animations=happy;
+statements=You're sure?<p> That would be great!;
+statements=If you want to give $10,000, we can start our first building <p>- your house!;
+[DialogOption] text=Establish Port ($10,000);
+formulaReq=m:money(10000);
+nodeToConnectTo=merchant_sPort_createPort3;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=merchant_sPort_createPort3;
+animations=scared;
+animations=happy;
+statements=Wow!;
+statements=Great!!;
+nextNodeID=merchant_sPort_createPort4;
+specialEffect=gp,-10000;
+specialEffect=modFame,trade,50;
+specialEffect=modLocFavor,2;
+
+[DialogNode] ID=merchant_sPort_createPort4;
+animations=happy;
+animations=;
+animations=stern;
+animations=;
+statements=Here, take this - it's a <itemBig_low=deed_home> Deed for your house!<textIf= It's waiting outside for you.=m:gamepad>;
+statements=Place that onto one of the lots outside, and we'll have it built in a week!;
+statements=But remember -<p> these buildings are <color=DarkRed>PERMANENT<color=>.;
+statements=So choose wisely!<p> And don't leave any items near the construction site, or you may lose them!;
+specialEffect=fx,longGoodAuraSound;
+specialEffect=setupLocationAsPlayerPort;
+specialEffect=setDefaultNode,merchant_myport;
+nextNodeID=merchant_sPort_createPort5_controller;
+nextNodeID_fReq=m:gamepad;
+nextNodeID=merchant_sPort_createPort5;
+
+[DialogNode] ID=merchant_sPort_createPort5;
+specialEffect=giveItem,deed_home,1;
+specialEffect=modLocWealthLevel,10;
+specialEffect=setGlobalVarPlusLocID,bought_home_,1;
+specialEffect=setGlobalVarPlusLocID,gpCollect_,1;
+specialEffect=setGlobalVarPlusLocID,gpCollected_,1;
+
+[DialogNode] ID=merchant_sPort_createPort5_controller;
+specialEffect=spawnItem,deed_home,1,@X0,@Y0,true,true;
+specialEffect=modLocWealthLevel,10;
+specialEffect=setGlobalVarPlusLocID,bought_home_,1;
+specialEffect=setGlobalVarPlusLocID,gpCollect_,1;
+specialEffect=setGlobalVarPlusLocID,gpCollected_,1;
+
+
+
+--AFTER BUYING HOME
+
+[DialogNode] ID=merchant_myport;
+animations=happy;
+statements=Welcome, <pname=>!;
+specialEffect=setPCDialogWindowSizeY;
+specialEffect=setNPCDialogWindowSizeY;
+
+[DialogOption] text=Buy <adjX=-1><math=m:maxFoodBuy><adjX=-12><iconBig=food><adjX=-2> Food ($<buyPrice=food> each);
+formulaReq=m:maxFoodBuy;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_autofill_food_myport;
+[DialogOption] text=Trade;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_goods_myport;
+[DialogOption] text=Expand Port;
+newLineOfOptions=true;
+formulaReq=1 -itemsZoneOrParty:deed_home - itemsZone:build_home - itemsZoneMoreThan:sport_building_center:6 - itemsZoneOrParty:deed_cafe - itemsZone:build_cafe - itemsZoneOrParty:deed_shipwright - itemsZone:build_shipwright - itemsZoneOrParty:deed_items - itemsZone:build_items - itemsZoneOrParty:deed_guild - itemsZone:build_guild - itemsZoneOrParty:deed_smithy - itemsZone:build_smithy - itemsZoneOrParty:deed_harbor - itemsZone:build_harbor - itemsZoneOrParty:deed_museum - itemsZone:build_museum - itemsZoneOrParty:deed_training - itemsZone:build_training;
+nodeToConnectTo=merchant_myport_expand;
+[DialogOption] text=Collect $;
+formulaReq=gPlusLocIDTimeSince:gpCollected_ - 25;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_myport_collect;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=merchant_goods_myport;
+animations=;
+statements=What would you like?<n><speed=3><adjX=500><iconBig=marketRate> <font=thickIcons2><locMarketRate=>%;
+specialEffect=enterBuyMode_location;
+specialEffect=setNPCDialogWindowSizeY,120;
+specialEffect=setPCDialogWindowSizeY,68;
+nextNodeID=merchant_myport;
+[DialogOption] text=Back;
+nodeToConnectTo=merchant_myport;
+escOption=true;
+bottomOption=true;
+
+
+
+[DialogNode] ID=merchant_autofill_food_myport;
+animations=;
+statements=Fill your cargo with <math=m:maxFoodBuy>food, for $<math=m:maxFoodBuy * buyPrice:food><adjX=-2>?;
+[DialogOption] text=Yes ($<math=m:maxFoodBuy * buyPrice:food><adjX=-6>);
+formulaReq=m:money - m:maxFoodBuy * buyPrice:food + 1;
+nodeToConnectTo=merchant_autofill_food_yes_myport;
+[DialogOption] text=No;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_myport;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=merchant_autofill_food_yes_myport;
+animations=;
+statements=Alright. Anything else?;
+specialEffect=autobuy_food;
+[DialogOption] text=Trade;
+nodeToConnectTo=merchant_goods_myport;
+[DialogOption] text=Expand Port;
+newLineOfOptions=true;
+formulaReq=1 -itemsZoneOrParty:deed_home - itemsZone:build_home - itemsZoneMoreThan:sport_building_center:6 - itemsZoneOrParty:deed_cafe - itemsZone:build_cafe - itemsZoneOrParty:deed_shipwright - itemsZone:build_shipwright - itemsZoneOrParty:deed_items - itemsZone:build_items - itemsZoneOrParty:deed_guild - itemsZone:build_guild - itemsZoneOrParty:deed_smithy - itemsZone:build_smithy - itemsZoneOrParty:deed_harbor - itemsZone:build_harbor - itemsZoneOrParty:deed_museum - itemsZone:build_museum - itemsZoneOrParty:deed_training - itemsZone:build_training;
+nodeToConnectTo=merchant_myport_expand;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+--
+
+
+[DialogNode] ID=merchant_myport_expand;
+animations=;
+statements=You want to build something?<p><textIf= More types of buildings become available as we expand.=1-itemsZoneMoreThan:sport_building_center:5><color=DarkRed><textIf= Remember, this will be our last building!=itemsZoneMoreThan:sport_building_center:5>;
+
+[DialogOption] text=<itemBig_low=sign_wall1><adjX=-18><itemBig_low=sign_icon_cup> Cafe;
+formulaReq=1 - gPlusLocID:bought_cafe_;
+nodeToConnectTo=merchant_myport_expand_cafe;
+[DialogOption] text=<itemBig_low=sign_wall1><adjX=-18><itemBig_low=sign_icon_boat> Shipwright;
+newLineOfOptions=true;
+formulaReq=1 - gPlusLocID:bought_shipwright_;
+nodeToConnectTo=merchant_myport_expand_shipwright;
+[DialogOption] text=<itemBig_low=sign_wall1><adjX=-18><itemBig_low=sign_icon_bag> Item Store;
+newLineOfOptions=true;
+formulaReq=itemsZoneMoreThan:sport_building_center:1 - gPlusLocID:bought_items_;
+nodeToConnectTo=merchant_myport_expand_itemstore;
+[DialogOption] text=<itemBig_low=sign_wall1><adjX=-18><itemBig_low=sign_icon_anvil> Smithy;
+newLineOfOptions=true;
+formulaReq=itemsZoneMoreThan:sport_building_center:1 - gPlusLocID:bought_smithy_;
+nodeToConnectTo=merchant_myport_expand_smithy;
+[DialogOption] text=<itemBig_low=sign_wall1><adjX=-18><itemBig_low=sign_icon_anchor> Harbor;
+newLineOfOptions=true;
+formulaReq=itemsZoneMoreThan:sport_building_center:3 - gPlusLocID:bought_harbor_;
+nodeToConnectTo=merchant_myport_expand_harbor;
+[DialogOption] text=<itemBig_low=sign_wall1><adjX=-18><itemBig_low=sign_icon_letter> Guild;
+newLineOfOptions=true;
+formulaReq=itemsZoneMoreThan:sport_building_center:3 - gPlusLocID:bought_guild_;
+nodeToConnectTo=merchant_myport_expand_guild;
+[DialogOption] text=<itemBig_low=sign_wall1><adjX=-18><itemBig_low=sign_icon_museum> Museum;
+newLineOfOptions=true;
+formulaReq=itemsZoneMoreThan:sport_building_center:5 - gPlusLocID:bought_museum_;
+nodeToConnectTo=merchant_myport_expand_museum;
+[DialogOption] text=<itemBig_low=sign_wall1><adjX=-18><itemBig_low=sign_icon_training> Training Ground;
+newLineOfOptions=true;
+formulaReq=itemsZoneMoreThan:sport_building_center:5 - gPlusLocID:bought_training_;
+nodeToConnectTo=merchant_myport_expand_training;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=merchant_myport;
+bottomOption=true;
+
+
+
+--collect $
+
+[DialogNode] ID=merchant_myport_collect;
+animations=;
+statements=Over the past <color=DarkRed><mathInt=gPlusLocIDTimeSince:gpCollected_ / 24><color=> days, we've earned <color=DarkRed>$<mathInt=gPlusLocID:gpCollect_><color=>!;
+nextNodeID=merchant_myport_collect2;
+
+[DialogNode] ID=merchant_myport_collect2;
+animations=happy;
+statements=Here you go!;
+specialEffect=addgp,gPlusLocID:gpCollect_;
+specialEffect=setGlobalVarPlusLocID,gpCollect_,0;
+specialEffect=setGlobalVarPlusLocID,gpCollected_,1;
+nextNodeID=;
+
+
+
+--BUY CAFE DEED
+
+[DialogNode] ID=merchant_myport_expand_cafe;
+animations=;
+statements=A cafe lets you buy meals, gossip, and hire new crew.;
+[DialogOption] text=Yes ($10,000);
+formulaReq=m:money(10000);
+nodeToConnectTo=merchant_buy_cafe;
+[DialogOption] text=<color=SlateGray>Can't afford ($10,000);
+formulaReq=1 - m:money(10000);
+nodeToConnectTo=merchant_myport_expand;
+[DialogOption] text=Back;
+nodeToConnectTo=merchant_myport_expand;
+bottomOption=true;
+
+
+[DialogNode] ID=merchant_buy_cafe;
+animations=happy;
+animations=;
+statements=Excellent!;
+statements=Pick a spot for the Cafe, and we'll build it!;
+specialEffect=gp,-10000;
+specialEffect=fx,sfx_positiveNote1;
+specialEffect=modFame,trade,20;
+specialEffect=modLocFavor,1;
+nextNodeID=merchant_buy_cafe2_controller;
+nextNodeID_fReq=m:gamepad;
+nextNodeID=merchant_buy_cafe2;
+
+[DialogNode] ID=merchant_buy_cafe2;
+specialEffect=setGlobalVarPlusLocID,bought_cafe_,1;
+specialEffect=giveItem,deed_cafe,1;
+specialEffect=modLocWealthLevel,10;
+specialEffect=addIconToCurrentLocation,sign_icon_cup;
+
+[DialogNode] ID=merchant_buy_cafe2_controller;
+specialEffect=setGlobalVarPlusLocID,bought_cafe_,1;
+specialEffect=spawnItem,deed_cafe,1,@X0,@Y0,true,true;
+specialEffect=modLocWealthLevel,10;
+specialEffect=addIconToCurrentLocation,sign_icon_cup;
+
+
+
+
+--BUY SHIPWRIGHT DEED
+
+[DialogNode] ID=merchant_myport_expand_shipwright;
+animations=;
+statements=A shipwright allows you to repair your ships and build new Cogs, Caravels, or Pinnaces. You can also disassemble ships to learn how to build them.;
+[DialogOption] text=Yes ($10,000);
+formulaReq=m:money(10000);
+nodeToConnectTo=merchant_buy_shipwright;
+[DialogOption] text=<color=SlateGray>Can't afford ($10,000);
+formulaReq=1 - m:money(10000);
+nodeToConnectTo=merchant_myport_expand;
+[DialogOption] text=Back;
+nodeToConnectTo=merchant_myport_expand;
+bottomOption=true;
+
+
+[DialogNode] ID=merchant_buy_shipwright;
+animations=happy;
+animations=;
+statements=Excellent!;
+statements=Pick a spot for the Shipwright, and we'll build it!;
+specialEffect=gp,-10000;
+specialEffect=fx,sfx_positiveNote1;
+specialEffect=modFame,trade,20;
+specialEffect=modLocFavor,1;
+nextNodeID=merchant_buy_shipwright2_controller;
+nextNodeID_fReq=m:gamepad;
+nextNodeID=merchant_buy_shipwright2;
+
+[DialogNode] ID=merchant_buy_shipwright2;
+specialEffect=setGlobalVarPlusLocID,bought_shipwright_,1;
+specialEffect=giveItem,deed_shipwright,1;
+specialEffect=modLocWealthLevel,10;
+specialEffect=addIconToCurrentLocation,sign_icon_boat;
+
+[DialogNode] ID=merchant_buy_shipwright2_controller;
+specialEffect=setGlobalVarPlusLocID,bought_shipwright_,1;
+specialEffect=spawnItem,deed_shipwright,1,@X0,@Y0,true,true;
+specialEffect=modLocWealthLevel,10;
+specialEffect=addIconToCurrentLocation,sign_icon_boat;
+
+--BUY ITEM STORE DEED
+
+[DialogNode] ID=merchant_myport_expand_itemstore;
+animations=;
+statements=An Item Store sells an infinite supply of basic equipment and tools.;
+[DialogOption] text=Yes ($10,000);
+formulaReq=m:money(10000);
+nodeToConnectTo=merchant_buy_itemstore;
+[DialogOption] text=<color=SlateGray>Can't afford ($10,000);
+formulaReq=1 - m:money(10000);
+nodeToConnectTo=merchant_myport_expand;
+[DialogOption] text=Back;
+nodeToConnectTo=merchant_myport_expand;
+bottomOption=true;
+
+
+[DialogNode] ID=merchant_buy_itemstore;
+animations=happy;
+animations=;
+statements=Excellent!;
+statements=Pick a spot for the Item Store, and we'll build it!;
+specialEffect=gp,-10000;
+specialEffect=fx,sfx_positiveNote1;
+specialEffect=modFame,trade,20;
+specialEffect=modLocFavor,1;
+nextNodeID=merchant_buy_itemstore2_controller;
+nextNodeID_fReq=m:gamepad;
+nextNodeID=merchant_buy_itemstore2;
+
+[DialogNode] ID=merchant_buy_itemstore2;
+specialEffect=setGlobalVarPlusLocID,bought_items_,1;
+specialEffect=giveItem,deed_items,1;
+specialEffect=modLocWealthLevel,10;
+specialEffect=addIconToCurrentLocation,sign_icon_bag;
+
+[DialogNode] ID=merchant_buy_itemstore2_controller;
+specialEffect=setGlobalVarPlusLocID,bought_items_,1;
+specialEffect=spawnItem,deed_items,1,@X0,@Y0,true,true;
+specialEffect=modLocWealthLevel,10;
+specialEffect=addIconToCurrentLocation,sign_icon_bag;
+
+--BUY SMITHY DEED
+
+[DialogNode] ID=merchant_myport_expand_smithy;
+animations=;
+statements=A Smithy sells unlimited Iron, Steel, and Mythril equipment<p> - and you can use their anvil and forge.;
+[DialogOption] text=Yes ($10,000);
+formulaReq=m:money(10000);
+nodeToConnectTo=merchant_buy_smithy;
+[DialogOption] text=<color=SlateGray>Can't afford ($10,000);
+formulaReq=1 - m:money(10000);
+nodeToConnectTo=merchant_myport_expand;
+[DialogOption] text=Back;
+nodeToConnectTo=merchant_myport_expand;
+bottomOption=true;
+
+
+[DialogNode] ID=merchant_buy_smithy;
+animations=happy;
+animations=;
+statements=Excellent!;
+statements=Pick a spot for the Smithy, and we'll build it!;
+specialEffect=gp,-10000;
+specialEffect=fx,sfx_positiveNote1;
+specialEffect=modFame,trade,20;
+specialEffect=modLocFavor,1;
+nextNodeID=merchant_buy_smithy2_controller;
+nextNodeID_fReq=m:gamepad;
+nextNodeID=merchant_buy_smithy2;
+
+[DialogNode] ID=merchant_buy_smithy2;
+specialEffect=setGlobalVarPlusLocID,bought_smithy_,1;
+specialEffect=giveItem,deed_smithy,1;
+specialEffect=modLocWealthLevel,10;
+specialEffect=addIconToCurrentLocation,sign_icon_anvil;
+
+[DialogNode] ID=merchant_buy_smithy2_controller;
+specialEffect=setGlobalVarPlusLocID,bought_smithy_,1;
+specialEffect=spawnItem,deed_smithy,1,@X0,@Y0,true,true;
+specialEffect=modLocWealthLevel,10;
+specialEffect=addIconToCurrentLocation,sign_icon_anvil;
+
+
+--BUY GUILD DEED
+
+[DialogNode] ID=merchant_myport_expand_guild;
+animations=;
+statements=A Guild offers new jobs every day for you to take.;
+[DialogOption] text=Yes ($10,000);
+formulaReq=m:money(10000);
+nodeToConnectTo=merchant_buy_guild;
+[DialogOption] text=<color=SlateGray>Can't afford ($10,000);
+formulaReq=1 - m:money(10000);
+nodeToConnectTo=merchant_myport_expand;
+[DialogOption] text=Back;
+nodeToConnectTo=merchant_myport_expand;
+bottomOption=true;
+
+
+[DialogNode] ID=merchant_buy_guild;
+animations=happy;
+animations=;
+statements=Excellent!;
+statements=Pick a spot for the Guild, and we'll build it!;
+specialEffect=gp,-10000;
+specialEffect=fx,sfx_positiveNote1;
+specialEffect=modFame,trade,20;
+specialEffect=modLocFavor,1;
+nextNodeID=merchant_buy_guild2_controller;
+nextNodeID_fReq=m:gamepad;
+nextNodeID=merchant_buy_guild2;
+
+[DialogNode] ID=merchant_buy_guild2;
+specialEffect=setGlobalVarPlusLocID,bought_guild_,1;
+specialEffect=giveItem,deed_guild,1;
+specialEffect=modLocWealthLevel,10;
+specialEffect=addIconToCurrentLocation,sign_icon_letter;
+
+[DialogNode] ID=merchant_buy_guild2_controller;
+specialEffect=setGlobalVarPlusLocID,bought_guild_,1;
+specialEffect=spawnItem,deed_guild,1,@X0,@Y0,true,true;
+specialEffect=modLocWealthLevel,10;
+specialEffect=addIconToCurrentLocation,sign_icon_letter;
+
+
+--BUY HARBOR DEED
+
+[DialogNode] ID=merchant_myport_expand_harbor;
+animations=;
+statements=You can store up to 9 of your ships for free at a Harbor.;
+[DialogOption] text=Yes ($10,000);
+formulaReq=m:money(10000);
+specialEffect=setGlobalVarPlusLocID,bought_harbor_,1;
+nodeToConnectTo=merchant_buy_harbor;
+[DialogOption] text=<color=SlateGray>Can't afford ($10,000);
+formulaReq=1 - m:money(10000);
+nodeToConnectTo=merchant_myport_expand;
+[DialogOption] text=Back;
+nodeToConnectTo=merchant_myport_expand;
+bottomOption=true;
+
+[DialogNode] ID=merchant_buy_harbor;
+animations=happy;
+animations=;
+statements=Excellent!;
+statements=Pick a spot for the Harbor, and we'll build it!;
+specialEffect=gp,-10000;
+specialEffect=fx,sfx_positiveNote1;
+specialEffect=modFame,trade,20;
+specialEffect=modLocFavor,1;
+nextNodeID=merchant_buy_harbor2_controller;
+nextNodeID_fReq=m:gamepad;
+nextNodeID=merchant_buy_harbor2;
+
+[DialogNode] ID=merchant_buy_harbor2;
+specialEffect=setGlobalVarPlusLocID,bought_harbor_,1;
+specialEffect=giveItem,deed_harbor,1;
+specialEffect=modLocWealthLevel,10;
+specialEffect=addIconToCurrentLocation,sign_icon_anchor;
+
+[DialogNode] ID=merchant_buy_harbor2_controller;
+specialEffect=setGlobalVarPlusLocID,bought_harbor_,1;
+specialEffect=spawnItem,deed_harbor,1,@X0,@Y0,true,true;
+specialEffect=modLocWealthLevel,10;
+specialEffect=addIconToCurrentLocation,sign_icon_anchor;
+
+
+--BUY MUSEUM DEED
+
+[DialogNode] ID=merchant_myport_expand_museum;
+animations=;
+statements=You can greatly increase our income by decorating a Museum with rare finds!;
+[DialogOption] text=Yes ($20,000);
+formulaReq=m:money(20000);
+specialEffect=setGlobalVarPlusLocID,bought_museum_,1;
+nodeToConnectTo=merchant_buy_museum;
+[DialogOption] text=<color=SlateGray>Can't afford ($20,000);
+formulaReq=1 - m:money(20000);
+nodeToConnectTo=merchant_myport_expand;
+[DialogOption] text=Back;
+nodeToConnectTo=merchant_myport_expand;
+bottomOption=true;
+
+[DialogNode] ID=merchant_buy_museum;
+animations=happy;
+animations=;
+statements=Excellent!;
+statements=Pick a spot for the Museum, and we'll build it!;
+specialEffect=gp,-20000;
+specialEffect=fx,sfx_positiveNote1;
+specialEffect=modFame,trade,40;
+specialEffect=modLocFavor,2;
+nextNodeID=merchant_buy_museum2_controller;
+nextNodeID_fReq=m:gamepad;
+nextNodeID=merchant_buy_museum2;
+
+[DialogNode] ID=merchant_buy_museum2;
+specialEffect=setGlobalVarPlusLocID,bought_museum_,1;
+specialEffect=giveItem,deed_museum,1;
+specialEffect=modLocWealthLevel,10;
+specialEffect=addIconToCurrentLocation,sign_icon_museum;
+
+[DialogNode] ID=merchant_buy_museum2_controller;
+specialEffect=setGlobalVarPlusLocID,bought_museum_,1;
+specialEffect=spawnItem,deed_museum,1,@X0,@Y0,true,true;
+specialEffect=modLocWealthLevel,10;
+specialEffect=addIconToCurrentLocation,sign_icon_museum;
+
+--BUY TRAINING GROUND DEED
+
+[DialogNode] ID=merchant_myport_expand_training;
+animations=;
+statements=A Training Ground increases everyone's daily XP gains, taking it from +1xp per day to +4xp per day! It also lets you convert unused XP into Stars!;
+[DialogOption] text=Yes ($20,000);
+formulaReq=m:money(20000);
+specialEffect=setGlobalVarPlusLocID,bought_training_,1;
+nodeToConnectTo=merchant_buy_training;
+[DialogOption] text=<color=SlateGray>Can't afford ($20,000);
+formulaReq=1 - m:money(20000);
+nodeToConnectTo=merchant_myport_expand;
+[DialogOption] text=Back;
+nodeToConnectTo=merchant_myport_expand;
+bottomOption=true;
+
+[DialogNode] ID=merchant_buy_training;
+animations=happy;
+animations=;
+statements=Excellent!;
+statements=Pick a spot for the Training Ground, and we'll build it!;
+specialEffect=gp,-20000;
+specialEffect=fx,sfx_positiveNote1;
+specialEffect=modFame,trade,40;
+specialEffect=modLocFavor,2;
+nextNodeID=merchant_buy_training2_controller;
+nextNodeID_fReq=m:gamepad;
+nextNodeID=merchant_buy_training2;
+
+[DialogNode] ID=merchant_buy_training2;
+specialEffect=setGlobalVarPlusLocID,bought_training_,1;
+specialEffect=giveItem,deed_training,1;
+specialEffect=modLocWealthLevel,10;
+specialEffect=addIconToCurrentLocation,sign_icon_training;
+
+[DialogNode] ID=merchant_buy_training2_controller;
+specialEffect=setGlobalVarPlusLocID,bought_training_,1;
+specialEffect=spawnItem,deed_training,1,@X0,@Y0,true,true;
+specialEffect=modLocWealthLevel,10;
+specialEffect=addIconToCurrentLocation,sign_icon_training;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--HOME
+
+[DialogNode] ID=sport_home1;
+statements=Player Stats:<n><iconBig=time> <gameTime=>     Day <days=><n>Journals: <journalEntries=><n>Enemies KO'd: <enemiesDefeated=><n>Fleets defeated: <math=g:fleetsDefeated><n>Turns taken: <math=g:turnsTaken>;
+specialEffect=setNPCDialogWindowSizeY,270;
+specialEffect=setPCDialogWindowSizeY;
+[DialogOption] text=Rename Port;
+nodeToConnectTo=sport_home_rename;
+[DialogOption] text=Change Music;
+newLineOfOptions=true;
+nodeToConnectTo=sport_home_music;
+[DialogOption] text=Change Colors;
+newLineOfOptions=true;
+nodeToConnectTo=sport_home_color;
+[DialogOption] text=Done;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=sport_home_rename;
+statements=;
+specialEffect=setNPCDialogWindowSizeY,-10;
+specialEffect=setPCDialogWindowSizeY,80;
+specialEffect=askForNewPortName;
+[DialogOption] text=Done;
+nodeToConnectTo=;
+bottomOption=true;
+
+--MUSIC
+
+[DialogNode] ID=sport_home_music;
+statements=<speed=4>Choose a song for the port.;
+specialEffect=song,travel,,false,true,0;
+specialEffect=setNPCDialogWindowSizeY,160;
+specialEffect=setPCDialogWindowSizeY,280;
+[DialogOption] text=Default;
+specialEffect=setZoneSongs,HC-TownAmbience1,, true, false, 0;
+nodeToConnectTo=sport_home_music;
+[DialogOption] text=Empty Road;
+specialEffect=setZoneSongs,HC-EmptyRoad,, true, false, 0;
+nodeToConnectTo=sport_home_music;
+[DialogOption] text=Nostalgic;
+newLineOfOptions=true;
+specialEffect=setZoneSongs,PM-Nostalgic,, true, false, 0;
+nodeToConnectTo=sport_home_music;
+[DialogOption] text=Festival;
+specialEffect=setZoneSongs,KP-Festival1Intro,, true, false, 0;
+nodeToConnectTo=sport_home_music;
+[DialogOption] text=Minamo;
+newLineOfOptions=true;
+specialEffect=setZoneSongs,PM-Minamo,, true, false, 0;
+nodeToConnectTo=sport_home_music;
+[DialogOption] text=Harvest;
+specialEffect=setZoneSongs,PM-Harvest,, true, false, 0;
+nodeToConnectTo=sport_home_music;
+[DialogOption] text=Harvest3;
+newLineOfOptions=true;
+specialEffect=setZoneSongs,PM-Harvest3,, true, false, 0;
+nodeToConnectTo=sport_home_music;
+[DialogOption] text=Harvest4;
+specialEffect=setZoneSongs,PM-Harvest4,, true, false, 0;
+nodeToConnectTo=sport_home_music;
+[DialogOption] text=Exotic;
+newLineOfOptions=true;
+specialEffect=setZoneSongs,PM-Exotic,, true, false, 0;
+nodeToConnectTo=sport_home_music;
+[DialogOption] text=Exotic2;
+specialEffect=setZoneSongs,PM-Exotic2,, true, false, 0;
+nodeToConnectTo=sport_home_music;
+[DialogOption] text=Snowy Day;
+newLineOfOptions=true;
+specialEffect=setZoneSongs,PM-SnowyDay,, true, false, 0;
+nodeToConnectTo=sport_home_music;
+[DialogOption] text=Desert3;
+specialEffect=setZoneSongs,PM-Desert3,, true, false, 0;
+nodeToConnectTo=sport_home_music;
+[DialogOption] text=Back;
+nodeToConnectTo=sport_home1;
+bottomOption=true;
+
+--COLORS
+
+[DialogNode] ID=sport_home_color;
+statements=Change which color?;
+specialEffect=setRoofDrawNoMatterWhat,false;
+specialEffect=setNPCDialogWindowSizeY;
+specialEffect=setPCDialogWindowSizeY;
+[DialogOption] text=Stone <paletteBig=zoneStoneDark>;
+nodeToConnectTo=sport_home_color_stone;
+[DialogOption] text=Wood <paletteBig=zoneWood>;
+newLineOfOptions=true;
+nodeToConnectTo=sport_home_color_wood;
+[DialogOption] text=Roofs <paletteBig=zoneMisc1>;
+newLineOfOptions=true;
+nodeToConnectTo=sport_home_color_roof;
+[DialogOption] text=Floors <paletteBig=zoneStoneLight>;
+newLineOfOptions=true;
+nodeToConnectTo=sport_home_color_floor;
+[DialogOption] text=Back;
+nodeToConnectTo=sport_home1;
+bottomOption=true;
+
+
+[DialogNode] ID=sport_home_color_stone;
+statements=<speed=4>Choose a new palette for Stone.;
+specialEffect=setNPCDialogWindowSizeY,140;
+specialEffect=setPCDialogWindowSizeY,180;
+[DialogOption] text=<paletteBig=p1>;
+specialEffect=setZonePalettes,stoneDark,p1;
+specialEffect=setZonePalettes,misc5,p1;
+nodeToConnectTo=sport_home_color_stone;
+[DialogOption] text=<paletteBig=p4>;
+specialEffect=setZonePalettes,stoneDark,p4;
+specialEffect=setZonePalettes,misc5,p4;
+nodeToConnectTo=sport_home_color_stone;
+[DialogOption] text=<paletteBig=p5>;
+specialEffect=setZonePalettes,stoneDark,p5;
+specialEffect=setZonePalettes,misc5,p5;
+nodeToConnectTo=sport_home_color_stone;
+[DialogOption] text=<paletteBig=p18>;
+specialEffect=setZonePalettes,stoneDark,p18;
+specialEffect=setZonePalettes,misc5,p18;
+nodeToConnectTo=sport_home_color_stone;
+[DialogOption] text=<paletteBig=p8>;
+newLineOfOptions=true;
+specialEffect=setZonePalettes,stoneDark,p8;
+specialEffect=setZonePalettes,misc5,p8;
+nodeToConnectTo=sport_home_color_stone;
+[DialogOption] text=<paletteBig=p25>;
+specialEffect=setZonePalettes,stoneDark,p25;
+specialEffect=setZonePalettes,misc5,p25;
+nodeToConnectTo=sport_home_color_stone;
+[DialogOption] text=<paletteBig=p54>;
+specialEffect=setZonePalettes,stoneDark,p54;
+specialEffect=setZonePalettes,misc5,p54;
+nodeToConnectTo=sport_home_color_stone;
+[DialogOption] text=<paletteBig=p75>;
+specialEffect=setZonePalettes,stoneDark,p75;
+specialEffect=setZonePalettes,misc5,p75;
+nodeToConnectTo=sport_home_color_stone;
+[DialogOption] text=<paletteBig=p58>;
+newLineOfOptions=true;
+specialEffect=setZonePalettes,stoneDark,p58;
+specialEffect=setZonePalettes,misc5,p58;
+nodeToConnectTo=sport_home_color_stone;
+[DialogOption] text=<paletteBig=p49>;
+specialEffect=setZonePalettes,stoneDark,p49;
+specialEffect=setZonePalettes,misc5,p49;
+nodeToConnectTo=sport_home_color_stone;
+[DialogOption] text=<paletteBig=p32>;
+specialEffect=setZonePalettes,stoneDark,p32;
+specialEffect=setZonePalettes,misc5,p32;
+nodeToConnectTo=sport_home_color_stone;
+[DialogOption] text=<paletteBig=p9>;
+specialEffect=setZonePalettes,stoneDark,p9;
+specialEffect=setZonePalettes,misc5,p9;
+nodeToConnectTo=sport_home_color_stone;
+[DialogOption] text=Back;
+nodeToConnectTo=sport_home_color;
+bottomOption=true;
+
+
+
+[DialogNode] ID=sport_home_color_wood;
+statements=<speed=4>Choose a new palette for Wood.;
+specialEffect=setNPCDialogWindowSizeY,140;
+specialEffect=setPCDialogWindowSizeY,180;
+[DialogOption] text=<paletteBig=pWood>;
+specialEffect=setZonePalettes,wood,pWood;
+specialEffect=setZonePalettes,woodDark,pWood;
+nodeToConnectTo=sport_home_color_wood;
+[DialogOption] text=<paletteBig=pYellow5>;
+specialEffect=setZonePalettes,wood,pYellow5;
+specialEffect=setZonePalettes,woodDark,pYellow5;
+nodeToConnectTo=sport_home_color_wood;
+[DialogOption] text=<paletteBig=pYellow6>;
+specialEffect=setZonePalettes,wood,pYellow6;
+specialEffect=setZonePalettes,woodDark,pYellow6;
+nodeToConnectTo=sport_home_color_wood;
+[DialogOption] text=<paletteBig=pRedbrown2>;
+specialEffect=setZonePalettes,wood,pRedbrown2;
+specialEffect=setZonePalettes,woodDark,pRedbrown2;
+nodeToConnectTo=sport_home_color_wood;
+[DialogOption] text=<paletteBig=pBlue5>;
+newLineOfOptions=true;
+specialEffect=setZonePalettes,wood,pBlue5;
+specialEffect=setZonePalettes,woodDark,pBlue5;
+nodeToConnectTo=sport_home_color_wood;
+[DialogOption] text=<paletteBig=p2>;
+specialEffect=setZonePalettes,wood,p2;
+specialEffect=setZonePalettes,woodDark,p2;
+nodeToConnectTo=sport_home_color_wood;
+[DialogOption] text=<paletteBig=p8>;
+specialEffect=setZonePalettes,wood,p8;
+specialEffect=setZonePalettes,woodDark,p8;
+nodeToConnectTo=sport_home_color_wood;
+[DialogOption] text=<paletteBig=p15>;
+specialEffect=setZonePalettes,wood,p15;
+specialEffect=setZonePalettes,woodDark,p15;
+nodeToConnectTo=sport_home_color_wood;
+[DialogOption] text=<paletteBig=p35>;
+newLineOfOptions=true;
+specialEffect=setZonePalettes,wood,p35;
+specialEffect=setZonePalettes,woodDark,p35;
+nodeToConnectTo=sport_home_color_wood;
+[DialogOption] text=<paletteBig=p43>;
+specialEffect=setZonePalettes,wood,p43;
+specialEffect=setZonePalettes,woodDark,p43;
+nodeToConnectTo=sport_home_color_wood;
+[DialogOption] text=Back;
+nodeToConnectTo=sport_home_color;
+bottomOption=true;
+
+
+
+[DialogNode] ID=sport_home_color_roof;
+statements=<speed=4>Choose a new palette for Roofs.;
+specialEffect=setNPCDialogWindowSizeY,140;
+specialEffect=setPCDialogWindowSizeY,180;
+specialEffect=setRoofDrawNoMatterWhat,true;
+[DialogOption] text=<paletteBig=pYellow6>;
+specialEffect=setZonePalettes,zoneMisc1,pYellow6;
+nodeToConnectTo=sport_home_color_roof;
+[DialogOption] text=<paletteBig=pRedbrown>;
+specialEffect=setZonePalettes,zoneMisc1,pRedbrown;
+nodeToConnectTo=sport_home_color_roof;
+[DialogOption] text=<paletteBig=pGreyblue2>;
+specialEffect=setZonePalettes,zoneMisc1,pGreyblue2;
+nodeToConnectTo=sport_home_color_roof;
+[DialogOption] text=<paletteBig=pPurpleD>;
+specialEffect=setZonePalettes,zoneMisc1,pPurpleD;
+nodeToConnectTo=sport_home_color_roof;
+[DialogOption] text=<paletteBig=p2>;
+newLineOfOptions=true;
+specialEffect=setZonePalettes,zoneMisc1,p2;
+nodeToConnectTo=sport_home_color_roof;
+[DialogOption] text=<paletteBig=p9>;
+specialEffect=setZonePalettes,zoneMisc1,p9;
+nodeToConnectTo=sport_home_color_roof;
+[DialogOption] text=<paletteBig=p25>;
+specialEffect=setZonePalettes,zoneMisc1,p25;
+nodeToConnectTo=sport_home_color_roof;
+[DialogOption] text=<paletteBig=p54>;
+specialEffect=setZonePalettes,zoneMisc1,p54;
+nodeToConnectTo=sport_home_color_roof;
+[DialogOption] text=<paletteBig=p60>;
+newLineOfOptions=true;
+specialEffect=setZonePalettes,zoneMisc1,p60;
+nodeToConnectTo=sport_home_color_roof;
+[DialogOption] text=<paletteBig=p70>;
+specialEffect=setZonePalettes,zoneMisc1,p70;
+nodeToConnectTo=sport_home_color_roof;
+[DialogOption] text=<paletteBig=p81>;
+specialEffect=setZonePalettes,zoneMisc1,p81;
+nodeToConnectTo=sport_home_color_roof;
+[DialogOption] text=<paletteBig=p82>;
+specialEffect=setZonePalettes,zoneMisc1,p82;
+nodeToConnectTo=sport_home_color_roof;
+[DialogOption] text=Back;
+nodeToConnectTo=sport_home_color;
+bottomOption=true;
+
+
+[DialogNode] ID=sport_home_color_floor;
+statements=<speed=2>Choose a new palette for Floors.;
+specialEffect=setNPCDialogWindowSizeY,140;
+specialEffect=setPCDialogWindowSizeY,180;
+[DialogOption] text=<paletteBig=p1>;
+specialEffect=setZonePalettes,stoneLight,p1;
+nodeToConnectTo=sport_home_color_floor;
+[DialogOption] text=<paletteBig=pBlue5>;
+specialEffect=setZonePalettes,stoneLight,pBlue5;
+nodeToConnectTo=sport_home_color_floor;
+[DialogOption] text=<paletteBig=p2>;
+specialEffect=setZonePalettes,stoneLight,p2;
+nodeToConnectTo=sport_home_color_floor;
+[DialogOption] text=<paletteBig=p13>;
+specialEffect=setZonePalettes,stoneLight,p13;
+nodeToConnectTo=sport_home_color_floor;
+[DialogOption] text=<paletteBig=p14>;
+newLineOfOptions=true;
+specialEffect=setZonePalettes,stoneLight,p14;
+nodeToConnectTo=sport_home_color_floor;
+[DialogOption] text=<paletteBig=p49>;
+specialEffect=setZonePalettes,stoneLight,p49;
+nodeToConnectTo=sport_home_color_floor;
+[DialogOption] text=<paletteBig=p53>;
+specialEffect=setZonePalettes,stoneLight,p53;
+nodeToConnectTo=sport_home_color_floor;
+[DialogOption] text=<paletteBig=p54>;
+specialEffect=setZonePalettes,stoneLight,p54;
+nodeToConnectTo=sport_home_color_floor;
+[DialogOption] text=<paletteBig=p56>;
+newLineOfOptions=true;
+specialEffect=setZonePalettes,stoneLight,p56;
+nodeToConnectTo=sport_home_color_floor;
+[DialogOption] text=<paletteBig=p70>;
+specialEffect=setZonePalettes,stoneLight,p70;
+nodeToConnectTo=sport_home_color_floor;
+[DialogOption] text=<paletteBig=p74>;
+specialEffect=setZonePalettes,stoneLight,p74;
+nodeToConnectTo=sport_home_color_floor;
+[DialogOption] text=<paletteBig=p75>;
+specialEffect=setZonePalettes,stoneLight,p75;
+nodeToConnectTo=sport_home_color_floor;
+[DialogOption] text=Back;
+nodeToConnectTo=sport_home_color;
+bottomOption=true;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--CAFE
+
+
+[DialogNode] ID=sport_cafe1;
+statements=Cafe earnings per day: $<textIfFinal=0=1-getVendorTotalXP:cafe><mathInt=d:baseGPPerVendor + getVendorTotalXP:cafe*d:gpPerXP><n>XP gained per day: +<mathDecimal=d:vendorXPPerDay>xp;
+specialEffect=setNPCDialogWindowSizeY;
+specialEffect=setPCDialogWindowSizeY;
+[DialogOption] text=Assign to Cafe;
+nodeToConnectTo=sport_cafe1_choose;
+[DialogOption] text=Retrieve Assigned Crew;
+formulaReq=getVendorTotalXP:cafe;
+specialEffect=readdVendorToParty,cafe,1;
+specialEffect=fx,sfx_positiveNote2;
+newLineOfOptions=true;
+nodeToConnectTo=;
+[DialogOption] text=Change Cafe Recipe ($150);
+formulaReq=m:money(150);
+newLineOfOptions=true;
+specialEffect=setupCafeFoodDialogOptionsWealth100,sport_cafe1_specialty;
+nodeToConnectTo=sport_cafe1_specialty;
+[DialogOption] text=<color=SlateGray>Change Cafe Specialty ($150);
+formulaReq=1-m:money(150);
+newLineOfOptions=true;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=sport_cafe1_choose;
+statements=Who will tend the Cafe? (More experienced crew bring in more profit.);
+[DialogOption] text=<portraitBig=0><partyActorName=0>;
+formulaReq=-gIsPartyActorNum:firstmate:0*99 - mainPlayerIsPartyActorNum:0*99;
+specialEffect=setPartyActorAsVendor,0,cafe,1;
+specialEffect=fx,sfx_positiveNote1;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=1><partyActorName=1>;
+specialEffect=setPartyActorAsVendor,1,cafe,1;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-1 - gIsPartyActorNum:firstmate:1*99 - mainPlayerIsPartyActorNum:1*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=2><partyActorName=2>;
+newLineOfOptions=true;
+specialEffect=setPartyActorAsVendor,2,cafe,1;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-2- gIsPartyActorNum:firstmate:2*99 - mainPlayerIsPartyActorNum:2*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=3><partyActorName=3>;
+specialEffect=setPartyActorAsVendor,3,cafe,1;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-3- gIsPartyActorNum:firstmate:3*99 - mainPlayerIsPartyActorNum:3*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=4><partyActorName=4>;
+newLineOfOptions=true;
+specialEffect=setPartyActorAsVendor,4,cafe,1;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-4- gIsPartyActorNum:firstmate:4*99 - mainPlayerIsPartyActorNum:4*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=5><partyActorName=5>;
+newLineOfOptions=true;
+specialEffect=setPartyActorAsVendor,5,cafe,1;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-5- gIsPartyActorNum:firstmate:5*99 - mainPlayerIsPartyActorNum:5*99;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=sport_cafe1_specialty;
+statements=You can use recipes from any other port that is at 100% wealth level.;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=sport_cafe1_specialty_changed;
+statements=Recipe changed!;
+specialEffect=fx,sfx_positiveNote1;
+specialEffect=gp,-150;
+--ITEM STORE
+
+[DialogNode] ID=sport_items1;
+statements=Item Store earnings per day: $<textIfFinal=0=1-getVendorTotalXP:merchant_items><mathInt=d:baseGPPerVendor + getVendorTotalXP:merchant_items*d:gpPerXP><n>XP gained per day: +<mathDecimal=d:vendorXPPerDay>xp;
+specialEffect=setNPCDialogWindowSizeY;
+specialEffect=setPCDialogWindowSizeY;
+[DialogOption] text=Assign to Item Store;
+nodeToConnectTo=sport_items1_choose;
+[DialogOption] text=Retrieve Assigned Crew;
+formulaReq=getVendorTotalXP:merchant_items;
+specialEffect=readdVendorToParty,merchant_items,5;
+specialEffect=fx,sfx_positiveNote2;
+newLineOfOptions=true;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=sport_items1_choose;
+statements=Who will tend the Item Store? (More experienced crew bring in more profit.);
+[DialogOption] text=<portraitBig=0><partyActorName=0>;
+formulaReq=-gIsPartyActorNum:firstmate:0*99 - mainPlayerIsPartyActorNum:0*99;
+specialEffect=setPartyActorAsVendor,0,merchant_items,5;
+specialEffect=fx,sfx_positiveNote1;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=1><partyActorName=1>;
+specialEffect=setPartyActorAsVendor,1,merchant_items,5;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-1 - gIsPartyActorNum:firstmate:1*99 - mainPlayerIsPartyActorNum:1*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=2><partyActorName=2>;
+newLineOfOptions=true;
+specialEffect=setPartyActorAsVendor,2,merchant_items,5;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-2- gIsPartyActorNum:firstmate:2*99 - mainPlayerIsPartyActorNum:2*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=3><partyActorName=3>;
+specialEffect=setPartyActorAsVendor,3,merchant_items,5;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-3- gIsPartyActorNum:firstmate:3*99 - mainPlayerIsPartyActorNum:3*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=4><partyActorName=4>;
+newLineOfOptions=true;
+specialEffect=setPartyActorAsVendor,4,merchant_items,5;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-4- gIsPartyActorNum:firstmate:4*99 - mainPlayerIsPartyActorNum:4*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=5><partyActorName=5>;
+newLineOfOptions=true;
+specialEffect=setPartyActorAsVendor,5,merchant_items,5;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-5- gIsPartyActorNum:firstmate:5*99 - mainPlayerIsPartyActorNum:5*99;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+--SMITHY
+
+[DialogNode] ID=sport_smithy1;
+statements=Smithy earnings per day: $<textIfFinal=0=1-getVendorTotalXP:sport_merchant_smithy><mathInt=d:baseGPPerVendor + getVendorTotalXP:sport_merchant_smithy*d:gpPerXP><n>XP gained per day: +<mathDecimal=d:vendorXPPerDay>xp;
+specialEffect=setNPCDialogWindowSizeY;
+specialEffect=setPCDialogWindowSizeY;
+[DialogOption] text=Assign to Smithy;
+nodeToConnectTo=sport_smithy1_choose;
+[DialogOption] text=Retrieve Assigned Crew;
+formulaReq=getVendorTotalXP:sport_merchant_smithy;
+specialEffect=readdVendorToParty,sport_merchant_smithy,6;
+specialEffect=fx,sfx_positiveNote2;
+newLineOfOptions=true;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=sport_smithy1_choose;
+statements=Who will tend the Smithy? (More experienced crew bring in more profit.);
+[DialogOption] text=<portraitBig=0><partyActorName=0>;
+formulaReq=-gIsPartyActorNum:firstmate:0*99 - mainPlayerIsPartyActorNum:0*99;
+specialEffect=setPartyActorAsVendor,0,sport_merchant_smithy,6;
+specialEffect=fx,sfx_positiveNote1;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=1><partyActorName=1>;
+specialEffect=setPartyActorAsVendor,1,sport_merchant_smithy,6;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-1 - gIsPartyActorNum:firstmate:1*99 - mainPlayerIsPartyActorNum:1*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=2><partyActorName=2>;
+newLineOfOptions=true;
+specialEffect=setPartyActorAsVendor,2,sport_merchant_smithy,6;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-2- gIsPartyActorNum:firstmate:2*99 - mainPlayerIsPartyActorNum:2*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=3><partyActorName=3>;
+specialEffect=setPartyActorAsVendor,3,sport_merchant_smithy,6;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-3- gIsPartyActorNum:firstmate:3*99 - mainPlayerIsPartyActorNum:3*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=4><partyActorName=4>;
+newLineOfOptions=true;
+specialEffect=setPartyActorAsVendor,4,sport_merchant_smithy,6;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-4- gIsPartyActorNum:firstmate:4*99 - mainPlayerIsPartyActorNum:4*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=5><partyActorName=5>;
+newLineOfOptions=true;
+specialEffect=setPartyActorAsVendor,5,sport_merchant_smithy,6;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-5- gIsPartyActorNum:firstmate:5*99 - mainPlayerIsPartyActorNum:5*99;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+--GUILD
+
+[DialogNode] ID=sport_guild1;
+statements=Guild earnings per day: $<textIfFinal=0=1-getVendorTotalXP:questgiver><mathInt=d:baseGPPerVendor + getVendorTotalXP:questgiver*d:gpPerXP><n>XP gained per day: +<mathDecimal=d:vendorXPPerDay>xp;
+specialEffect=setNPCDialogWindowSizeY;
+specialEffect=setPCDialogWindowSizeY;
+[DialogOption] text=Assign to Guild;
+nodeToConnectTo=sport_guild1_choose;
+[DialogOption] text=Retrieve Assigned Crew;
+formulaReq=actorWithDialogNodeID:questgiver - gIsActorWithDialogNodeID:questGiver:questgiver;
+specialEffect=readdVendorToParty,questgiver,4;
+specialEffect=fx,sfx_positiveNote2;
+newLineOfOptions=true;
+nodeToConnectTo=;
+[DialogOption] text=<color=SlateGray>Can't Unassign Crew;
+formulaReq=gIsActorWithDialogNodeID:questGiver:questgiver;
+newLineOfOptions=true;
+nodeToConnectTo=sport_guild1_cantUnassign;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=sport_guild1_choose;
+statements=Who will tend the Guild? (More experienced crew bring in more profit.);
+[DialogOption] text=<portraitBig=0><partyActorName=0>;
+formulaReq=-gIsPartyActorNum:firstmate:0*99 - mainPlayerIsPartyActorNum:0*99;
+specialEffect=setPartyActorAsVendor,0,questgiver,4;
+specialEffect=fx,sfx_positiveNote1;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=1><partyActorName=1>;
+specialEffect=setPartyActorAsVendor,1,questgiver,4;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-1 - gIsPartyActorNum:firstmate:1*99 - mainPlayerIsPartyActorNum:1*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=2><partyActorName=2>;
+newLineOfOptions=true;
+specialEffect=setPartyActorAsVendor,2,questgiver,4;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-2- gIsPartyActorNum:firstmate:2*99 - mainPlayerIsPartyActorNum:2*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=3><partyActorName=3>;
+specialEffect=setPartyActorAsVendor,3,questgiver,4;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-3- gIsPartyActorNum:firstmate:3*99 - mainPlayerIsPartyActorNum:3*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=4><partyActorName=4>;
+newLineOfOptions=true;
+specialEffect=setPartyActorAsVendor,4,questgiver,4;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-4- gIsPartyActorNum:firstmate:4*99 - mainPlayerIsPartyActorNum:4*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=5><partyActorName=5>;
+newLineOfOptions=true;
+specialEffect=setPartyActorAsVendor,5,questgiver,4;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-5- gIsPartyActorNum:firstmate:5*99 - mainPlayerIsPartyActorNum:5*99;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=sport_guild1_cantUnassign;
+statements=You have an active job involving this guild, so you can't unassign it.;
+
+--SHIPWRIGHT
+
+[DialogNode] ID=sport_shipwright1;
+statements=Shipwright earnings per day: $<textIfFinal=0=1-getVendorTotalXP:shipwright><mathInt=d:baseGPPerVendor + getVendorTotalXP:shipwright*d:gpPerXP><n>XP gained per day: +<mathDecimal=d:vendorXPPerDay>xp;
+specialEffect=setNPCDialogWindowSizeY;
+specialEffect=setPCDialogWindowSizeY;
+[DialogOption] text=Assign to Shipwright;
+nodeToConnectTo=sport_shipwright1_choose;
+[DialogOption] text=Retrieve Assigned Crew;
+formulaReq=getVendorTotalXP:shipwright;
+specialEffect=readdVendorToParty,shipwright,2;
+specialEffect=fx,sfx_positiveNote2;
+newLineOfOptions=true;
+nodeToConnectTo=;
+[DialogOption] text=Research Ship;
+formulaReq=1 - m:locHasUnlockableShip;
+newLineOfOptions=true;
+nodeToConnectTo=sport_shipwright1_research;
+[DialogOption] text=<color=SlateGray>Researching Ship...;
+formulaReq=m:locHasUnlockableShip;
+newLineOfOptions=true;
+nodeToConnectTo=sport_shipwright1;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=sport_shipwright1_choose;
+statements=Who will tend the Shipwright? (More experienced crew bring in more profit.);
+[DialogOption] text=<portraitBig=0><partyActorName=0>;
+formulaReq=-gIsPartyActorNum:firstmate:0*99 - mainPlayerIsPartyActorNum:0*99;
+specialEffect=setPartyActorAsVendor,0,shipwright,2;
+specialEffect=fx,sfx_positiveNote1;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=1><partyActorName=1>;
+specialEffect=setPartyActorAsVendor,1,shipwright,2;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-1 - gIsPartyActorNum:firstmate:1*99 - mainPlayerIsPartyActorNum:1*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=2><partyActorName=2>;
+newLineOfOptions=true;
+specialEffect=setPartyActorAsVendor,2,shipwright,2;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-2- gIsPartyActorNum:firstmate:2*99 - mainPlayerIsPartyActorNum:2*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=3><partyActorName=3>;
+specialEffect=setPartyActorAsVendor,3,shipwright,2;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-3- gIsPartyActorNum:firstmate:3*99 - mainPlayerIsPartyActorNum:3*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=4><partyActorName=4>;
+newLineOfOptions=true;
+specialEffect=setPartyActorAsVendor,4,shipwright,2;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-4- gIsPartyActorNum:firstmate:4*99 - mainPlayerIsPartyActorNum:4*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=5><partyActorName=5>;
+newLineOfOptions=true;
+specialEffect=setPartyActorAsVendor,5,shipwright,2;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-5- gIsPartyActorNum:firstmate:5*99 - mainPlayerIsPartyActorNum:5*99;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=sport_shipwright1_research;
+statements=You can build up to 8 ship types.<n>Disassemble which ship to learn how to build it?;
+specialEffect=setPCDialogWindowSizeY,260;
+
+---buttons are out of order so they show up in alternating columns.
+--#0
+[DialogOption] text=<actorBigPFleet=0><partyBoatName=0>;
+newLineOfOptions=true;
+formulaReq=m:fleetSize(1) - m:bCrewNum(0);
+nodeToConnectTo=sport_shipwright1_research0;
+[DialogOption] text=<color=SlateGray><actorBigPFleet=0><partyBoatName=0>  (<iconBig=icon_crew><math=m:bCrewNum(0)>);
+newLineOfOptions=true;
+formulaReq=m:fleetSize(1) + m:bCrewNum(0) - 1;
+nodeToConnectTo=sport_shipwright1_research_tooMuchCrew;
+--#5
+[DialogOption] text=<actorBigPFleet=5><partyBoatName=5>;
+formulaReq=m:fleetSize(5) - m:bCrewNum(5);
+nodeToConnectTo=sport_shipwright1_research5;
+[DialogOption] text=<color=SlateGray><actorBigPFleet=5><partyBoatName=5>  (<iconBig=icon_crew><math=m:bCrewNum(5)>);
+formulaReq=m:fleetSize(5) + m:bCrewNum(5) - 1;
+nodeToConnectTo=sport_shipwright1_research_tooMuchCrew;
+--#1
+[DialogOption] text=<actorBigPFleet=1><partyBoatName=1>;
+newLineOfOptions=true;
+formulaReq=m:fleetSize(1) - m:bCrewNum(1);
+nodeToConnectTo=sport_shipwright1_research1;
+[DialogOption] text=<color=SlateGray><actorBigPFleet=0><partyBoatName=1>  (<iconBig=icon_crew><math=m:bCrewNum(1)>);
+newLineOfOptions=true;
+formulaReq=m:fleetSize(1) + m:bCrewNum(1) - 1;
+nodeToConnectTo=sport_shipwright1_research_tooMuchCrew;
+--#6
+[DialogOption] text=<actorBigPFleet=6><partyBoatName=6>;
+formulaReq=m:fleetSize(6) - m:bCrewNum(6);
+nodeToConnectTo=sport_shipwright1_research6;
+[DialogOption] text=<color=SlateGray><actorBigPFleet=6><partyBoatName=6>  (<iconBig=icon_crew><math=m:bCrewNum(6)>);
+formulaReq=m:fleetSize(6) + m:bCrewNum(6) - 1;
+nodeToConnectTo=sport_shipwright1_research_tooMuchCrew;
+--#2
+[DialogOption] text=<actorBigPFleet=2><partyBoatName=2>;
+newLineOfOptions=true;
+formulaReq=m:fleetSize(2) - m:bCrewNum(2);
+nodeToConnectTo=sport_shipwright1_research2;
+[DialogOption] text=<color=SlateGray><actorBigPFleet=2><partyBoatName=2>  (<iconBig=icon_crew><math=m:bCrewNum(2)>);
+newLineOfOptions=true;
+formulaReq=m:fleetSize(2) + m:bCrewNum(2) - 1;
+nodeToConnectTo=sport_shipwright1_research_tooMuchCrew;
+--#7
+[DialogOption] text=<actorBigPFleet=7><partyBoatName=7>;
+formulaReq=m:fleetSize(7) - m:bCrewNum(7);
+nodeToConnectTo=sport_shipwright1_research7;
+[DialogOption] text=<color=SlateGray><actorBigPFleet=7><partyBoatName=7>  (<iconBig=icon_crew><math=m:bCrewNum(7)>);
+formulaReq=m:fleetSize(7) + m:bCrewNum(7) - 1;
+nodeToConnectTo=sport_shipwright1_research_tooMuchCrew;
+--#3
+[DialogOption] text=<actorBigPFleet=3><partyBoatName=3>;
+newLineOfOptions=true;
+formulaReq=m:fleetSize(3) - m:bCrewNum(3);
+nodeToConnectTo=sport_shipwright1_research3;
+[DialogOption] text=<color=SlateGray><actorBigPFleet=3><partyBoatName=3>  (<iconBig=icon_crew><math=m:bCrewNum(3)>);
+newLineOfOptions=true;
+formulaReq=m:fleetSize(3) + m:bCrewNum(3) - 1;
+nodeToConnectTo=sport_shipwright1_research_tooMuchCrew;
+--#8
+[DialogOption] text=<actorBigPFleet=8><partyBoatName=8>;
+formulaReq=m:fleetSize(8) - m:bCrewNum(8);
+nodeToConnectTo=sport_shipwright1_research8;
+[DialogOption] text=<color=SlateGray><actorBigPFleet=8><partyBoatName=8>  (<iconBig=icon_crew><math=m:bCrewNum(8)>);
+formulaReq=m:fleetSize(8) + m:bCrewNum(8) - 1;
+nodeToConnectTo=sport_shipwright1_research_tooMuchCrew;
+--#4
+[DialogOption] text=<actorBigPFleet=4><partyBoatName=4>;
+newLineOfOptions=true;
+formulaReq=m:fleetSize(4) - m:bCrewNum(4);
+nodeToConnectTo=sport_shipwright1_research4;
+[DialogOption] text=<color=SlateGray><actorBigPFleet=4><partyBoatName=4>  (<iconBig=icon_crew><math=m:bCrewNum(4)>);
+newLineOfOptions=true;
+formulaReq=m:fleetSize(4) + m:bCrewNum(4) - 1;
+nodeToConnectTo=sport_shipwright1_research_tooMuchCrew;
+
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+escOption=true;
+bottomOption=true;
+
+
+
+-----CONFIRM YES/NO
+
+--0
+[DialogNode] ID=sport_shipwright1_research0;
+animations=;
+statements=Destroy <actorBigPFleet=0><partyBoatName=0> and pay $<math=m:bTypeValue(0)><adjX=-4> to research how to build <partyBoatType=0>?;
+specialEffect=setPCDialogWindowSizeY,0;
+[DialogOption] text=Yes ($<math=m:bTypeValue(0)><adjX=-4>);
+formulaReq=1 + m:money - m:bTypeValue(0);
+nodeToConnectTo=sport_shipwright1_research_yes0;
+[DialogOption] text=<color=SlateGray>Can't afford... ($<math=m:bTypeValue(0)><adjX=-4>);
+formulaReq=m:bTypeValue(0) - m:money;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=; escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=sport_shipwright1_research_yes0;
+animations=;
+statements=Research has begun! The new ship type will be available to build in 20 days.;
+specialEffect=fx,sfx_goodConfirm;
+specialEffect=researchFromFleet_slot,0;
+
+--1
+[DialogNode] ID=sport_shipwright1_research1;
+animations=;
+statements=Destroy <actorBigPFleet=1><partyBoatName=1> and pay $<math=m:bTypeValue(1)><adjX=-4> to research how to build <partyBoatType=1>?;
+specialEffect=setPCDialogWindowSizeY,0;
+[DialogOption] text=Yes ($<math=m:bTypeValue(1)><adjX=-4>);
+formulaReq=1 + m:money - m:bTypeValue(1);
+nodeToConnectTo=sport_shipwright1_research_yes1;
+[DialogOption] text=<color=SlateGray>Can't afford... ($<math=m:bTypeValue(1)><adjX=-4>);
+formulaReq=m:bTypeValue(1) - m:money;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=; escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=sport_shipwright1_research_yes1;
+animations=;
+statements=Research has begun! The new ship type will be available to build in 20 days.;
+specialEffect=researchFromFleet_slot,1;
+
+--2
+[DialogNode] ID=sport_shipwright1_research2;
+animations=;
+statements=Destroy <actorBigPFleet=2><partyBoatName=2> and pay $<math=m:bTypeValue(2)><adjX=-4> to research how to build <partyBoatType=2>?;
+specialEffect=setPCDialogWindowSizeY,0;
+[DialogOption] text=Yes ($<math=m:bTypeValue(2)><adjX=-4>);
+formulaReq=1 + m:money - m:bTypeValue(2);
+nodeToConnectTo=sport_shipwright1_research_yes2;
+[DialogOption] text=<color=SlateGray>Can't afford... ($<math=m:bTypeValue(2)><adjX=-4>);
+formulaReq=m:bTypeValue(2) - m:money;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=; escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=sport_shipwright1_research_yes2;
+animations=;
+statements=Research has begun! The new ship type will be available to build in 20 days.;
+specialEffect=researchFromFleet_slot,2;
+
+--3
+[DialogNode] ID=sport_shipwright1_research3;
+animations=;
+statements=Destroy <actorBigPFleet=3><partyBoatName=3> and pay $<math=m:bTypeValue(3)><adjX=-4> to research how to build <partyBoatType=3>?;
+specialEffect=setPCDialogWindowSizeY,0;
+[DialogOption] text=Yes ($<math=m:bTypeValue(3)><adjX=-4>);
+formulaReq=1 + m:money - m:bTypeValue(3);
+nodeToConnectTo=sport_shipwright1_research_yes3;
+[DialogOption] text=<color=SlateGray>Can't afford... ($<math=m:bTypeValue(3)><adjX=-4>);
+formulaReq=m:bTypeValue(3) - m:money;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=; escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=sport_shipwright1_research_yes3;
+animations=;
+statements=Research has begun! The new ship type will be available to build in 20 days.;
+specialEffect=researchFromFleet_slot,3;
+
+
+--4
+[DialogNode] ID=sport_shipwright1_research4;
+animations=;
+statements=Destroy <actorBigPFleet=4><partyBoatName=4> and pay $<math=m:bTypeValue(4)><adjX=-4> to research how to build <partyBoatType=4>?;
+specialEffect=setPCDialogWindowSizeY,0;
+[DialogOption] text=Yes ($<math=m:bTypeValue(4)><adjX=-4>);
+formulaReq=1 + m:money - m:bTypeValue(4);
+nodeToConnectTo=sport_shipwright1_research_yes4;
+[DialogOption] text=<color=SlateGray>Can't afford... ($<math=m:bTypeValue(4)><adjX=-4>);
+formulaReq=m:bTypeValue(4) - m:money;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=; escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=sport_shipwright1_research_yes4;
+animations=;
+statements=Research has begun! The new ship type will be available to build in 20 days.;
+specialEffect=researchFromFleet_slot,4;
+
+
+--5
+[DialogNode] ID=sport_shipwright1_research5;
+animations=;
+statements=Destroy <actorBigPFleet=5><partyBoatName=5> and pay $<math=m:bTypeValue(5)><adjX=-4> to research how to build <partyBoatType=5>?;
+specialEffect=setPCDialogWindowSizeY,0;
+[DialogOption] text=Yes ($<math=m:bTypeValue(5)><adjX=-4>);
+formulaReq=1 + m:money - m:bTypeValue(5);
+nodeToConnectTo=sport_shipwright1_research_yes5;
+[DialogOption] text=<color=SlateGray>Can't afford... ($<math=m:bTypeValue(5)><adjX=-4>);
+formulaReq=m:bTypeValue(5) - m:money;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=; escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=sport_shipwright1_research_yes5;
+animations=;
+statements=Research has begun! The new ship type will be available to build in 20 days.;
+specialEffect=researchFromFleet_slot,5;
+
+
+--6
+[DialogNode] ID=sport_shipwright1_research6;
+animations=;
+statements=Destroy <actorBigPFleet=6><partyBoatName=6> and pay $<math=m:bTypeValue(6)><adjX=-4> to research how to build <partyBoatType=6>?;
+specialEffect=setPCDialogWindowSizeY,0;
+[DialogOption] text=Yes ($<math=m:bTypeValue(6)><adjX=-4>);
+formulaReq=1 + m:money - m:bTypeValue(6);
+nodeToConnectTo=sport_shipwright1_research_yes6;
+[DialogOption] text=<color=SlateGray>Can't afford... ($<math=m:bTypeValue(6)><adjX=-4>);
+formulaReq=m:bTypeValue(6) - m:money;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=; escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=sport_shipwright1_research_yes6;
+animations=;
+statements=Research has begun! The new ship type will be available to build in 20 days.;
+specialEffect=researchFromFleet_slot,6;
+
+
+--7
+[DialogNode] ID=sport_shipwright1_research7;
+animations=;
+statements=Destroy <actorBigPFleet=7><partyBoatName=7> and pay $<math=m:bTypeValue(7)><adjX=-4> to research how to build <partyBoatType=7>?;
+specialEffect=setPCDialogWindowSizeY,0;
+[DialogOption] text=Yes ($<math=m:bTypeValue(7)><adjX=-4>);
+formulaReq=1 + m:money - m:bTypeValue(7);
+nodeToConnectTo=sport_shipwright1_research_yes7;
+[DialogOption] text=<color=SlateGray>Can't afford... ($<math=m:bTypeValue(7)><adjX=-4>);
+formulaReq=m:bTypeValue(7) - m:money;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=; escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=sport_shipwright1_research_yes7;
+animations=;
+statements=Research has begun! The new ship type will be available to build in 20 days.;
+specialEffect=researchFromFleet_slot,7;
+
+
+--8
+[DialogNode] ID=sport_shipwright1_research8;
+animations=;
+statements=Destroy <actorBigPFleet=8><partyBoatName=8> and pay $<math=m:bTypeValue(8)><adjX=-4> to research how to build <partyBoatType=8>?;
+specialEffect=setPCDialogWindowSizeY,0;
+[DialogOption] text=Yes ($<math=m:bTypeValue(8)><adjX=-4>);
+formulaReq=1 + m:money - m:bTypeValue(8);
+nodeToConnectTo=sport_shipwright1_research_yes8;
+[DialogOption] text=<color=SlateGray>Can't afford... ($<math=m:bTypeValue(8)><adjX=-4>);
+formulaReq=m:bTypeValue(8) - m:money;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=; escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=sport_shipwright1_research_yes8;
+animations=;
+statements=Research has begun! The new ship type will be available to build in 20 days.;
+specialEffect=researchFromFleet_slot,8;
+
+[DialogNode] ID=sport_shipwright1_research_tooMuchCrew;
+statements=You must remove all crew from the ship first.;
+nextNodeID=;
+
+[DialogNode] ID=sport_shipwright1_research_noroom;
+statements=You cannot research any more ship types at this port.;
+nextNodeID=;
+
+[DialogNode] ID=sport_shipwright1_research_alreadyResearched;
+statements=You can already build that type of ship here.;
+nextNodeID=;
+
+[DialogNode] ID=sport_shipwright1_research_alreadyResearching;
+statements=You are already researching that type of ship.;
+nextNodeID=;
+
+
+
+--HARBOR
+
+[DialogNode] ID=sport_harbor1;
+statements=Harbor earnings per day: $<textIfFinal=0=1-getVendorTotalXP:harbor><mathInt=d:baseGPPerVendor + getVendorTotalXP:harbor*d:gpPerXP><n>XP gained per day: +<mathDecimal=d:vendorXPPerDay>xp;
+specialEffect=setNPCDialogWindowSizeY;
+specialEffect=setPCDialogWindowSizeY;
+[DialogOption] text=Assign to Harbor;
+nodeToConnectTo=sport_harbor1_choose;
+[DialogOption] text=Retrieve Assigned Crew;
+formulaReq=getVendorTotalXP:harbor;
+specialEffect=readdVendorToParty,harbor,3;
+specialEffect=fx,sfx_positiveNote2;
+newLineOfOptions=true;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=sport_harbor1_choose;
+statements=Who will tend the Harbor? (More experienced crew bring in more profit.);
+[DialogOption] text=<portraitBig=0><partyActorName=0>;
+formulaReq=-gIsPartyActorNum:firstmate:0*99 - mainPlayerIsPartyActorNum:0*99;
+specialEffect=setPartyActorAsVendor,0,harbor,3;
+specialEffect=fx,sfx_positiveNote1;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=1><partyActorName=1>;
+specialEffect=setPartyActorAsVendor,1,harbor,3;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-1 - gIsPartyActorNum:firstmate:1*99 - mainPlayerIsPartyActorNum:1*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=2><partyActorName=2>;
+newLineOfOptions=true;
+specialEffect=setPartyActorAsVendor,2,harbor,3;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-2- gIsPartyActorNum:firstmate:2*99 - mainPlayerIsPartyActorNum:2*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=3><partyActorName=3>;
+specialEffect=setPartyActorAsVendor,3,harbor,3;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-3- gIsPartyActorNum:firstmate:3*99 - mainPlayerIsPartyActorNum:3*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=4><partyActorName=4>;
+newLineOfOptions=true;
+specialEffect=setPartyActorAsVendor,4,harbor,3;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-4- gIsPartyActorNum:firstmate:4*99 - mainPlayerIsPartyActorNum:4*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=5><partyActorName=5>;
+newLineOfOptions=true;
+specialEffect=setPartyActorAsVendor,5,harbor,3;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-5- gIsPartyActorNum:firstmate:5*99 - mainPlayerIsPartyActorNum:5*99;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+
+--MUSEUM
+
+[DialogNode] ID=sport_museum1;
+statements=Museum earnings per day: $<textIfFinal=0=1-getVendorTotalXP:sport_museum><mathInt=d:museumGPPerDay + getVendorTotalXP:sport_museum*d:gpPerXP><n>XP gained per day: +<mathDecimal=d:vendorXPPerDay>xp;
+specialEffect=setNPCDialogWindowSizeY;
+specialEffect=setPCDialogWindowSizeY;
+[DialogOption] text=Assign to Museum;
+nodeToConnectTo=sport_museum1_choose;
+[DialogOption] text=Retrieve Assigned Crew;
+formulaReq=getVendorTotalXP:sport_museum;
+specialEffect=readdVendorToParty,sport_museum,7;
+specialEffect=fx,sfx_positiveNote2;
+newLineOfOptions=true;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=sport_museum1_choose;
+statements=Who will tend the Museum? (More experienced crew bring in more profit.);
+[DialogOption] text=<portraitBig=0><partyActorName=0>;
+formulaReq=-gIsPartyActorNum:firstmate:0*99 - mainPlayerIsPartyActorNum:0*99;
+specialEffect=setPartyActorAsVendor,0,sport_museum,7;
+specialEffect=fx,sfx_positiveNote1;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=1><partyActorName=1>;
+specialEffect=setPartyActorAsVendor,1,sport_museum,7;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-1 - gIsPartyActorNum:firstmate:1*99 - mainPlayerIsPartyActorNum:1*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=2><partyActorName=2>;
+newLineOfOptions=true;
+specialEffect=setPartyActorAsVendor,2,sport_museum,7;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-2- gIsPartyActorNum:firstmate:2*99 - mainPlayerIsPartyActorNum:2*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=3><partyActorName=3>;
+specialEffect=setPartyActorAsVendor,3,sport_museum,7;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-3- gIsPartyActorNum:firstmate:3*99 - mainPlayerIsPartyActorNum:3*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=4><partyActorName=4>;
+newLineOfOptions=true;
+specialEffect=setPartyActorAsVendor,4,sport_museum,7;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-4- gIsPartyActorNum:firstmate:4*99 - mainPlayerIsPartyActorNum:4*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=5><partyActorName=5>;
+newLineOfOptions=true;
+specialEffect=setPartyActorAsVendor,5,sport_museum,7;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-5- gIsPartyActorNum:firstmate:5*99 - mainPlayerIsPartyActorNum:5*99;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+--TRAINING GROUND
+
+[DialogNode] ID=sport_training1;
+statements=Training Ground earnings per day: $<textIfFinal=0=1-getVendorTotalXP:sport_training><mathInt=d:baseGPPerVendor + getVendorTotalXP:sport_training*d:gpPerXP><n>XP gained per day: +<mathDecimal=d:vendorXPPerDay>xp;
+specialEffect=setNPCDialogWindowSizeY;
+specialEffect=setPCDialogWindowSizeY;
+[DialogOption] text=Assign to Training Ground;
+nodeToConnectTo=sport_training1_choose;
+[DialogOption] text=Retrieve Assigned Crew;
+formulaReq=getVendorTotalXP:sport_training;
+specialEffect=readdVendorToParty,sport_training,7;
+specialEffect=fx,sfx_positiveNote2;
+newLineOfOptions=true;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=sport_training1_choose;
+statements=Who will tend the Training Ground? (More experienced crew bring in more profit.);
+[DialogOption] text=<portraitBig=0><partyActorName=0>;
+formulaReq=-gIsPartyActorNum:firstmate:0*99 - mainPlayerIsPartyActorNum:0*99;
+specialEffect=setPartyActorAsVendor,0,sport_training,7;
+specialEffect=fx,sfx_positiveNote1;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=1><partyActorName=1>;
+specialEffect=setPartyActorAsVendor,1,sport_training,7;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-1 - gIsPartyActorNum:firstmate:1*99 - mainPlayerIsPartyActorNum:1*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=2><partyActorName=2>;
+newLineOfOptions=true;
+specialEffect=setPartyActorAsVendor,2,sport_training,7;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-2- gIsPartyActorNum:firstmate:2*99 - mainPlayerIsPartyActorNum:2*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=3><partyActorName=3>;
+specialEffect=setPartyActorAsVendor,3,sport_training,7;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-3- gIsPartyActorNum:firstmate:3*99 - mainPlayerIsPartyActorNum:3*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=4><partyActorName=4>;
+newLineOfOptions=true;
+specialEffect=setPartyActorAsVendor,4,sport_training,7;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-4- gIsPartyActorNum:firstmate:4*99 - mainPlayerIsPartyActorNum:4*99;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=5><partyActorName=5>;
+newLineOfOptions=true;
+specialEffect=setPartyActorAsVendor,5,sport_training,7;
+specialEffect=fx,sfx_positiveNote1;
+formulaReq=m:partySize-5- gIsPartyActorNum:firstmate:5*99 - mainPlayerIsPartyActorNum:5*99;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+
+---DIALOG JUST FOR SMITHY MERCHANT
+
+[DialogNode] ID=sport_merchant_smithy;
+animations=;
+statements=<randSetID=Take a look at the weapons and armor over there./Feel free to use the forge.>;
+
+---DIALOG JUST FOR MUSEUM ATTENDANT
+
+[DialogNode] ID=sport_museum;
+animations=;
+statements=<randSetID=Welcome to the museum!/I'm just here to tend the artifacts.>;
+
+
+---DIALOG JUST FOR TRAINING GROUNDS ATTENDANT
+
+[DialogNode] ID=sport_training;
+animations=;
+statements=<randSetID=Ready for your training?/I'll whip everyone here into shape!>;
+[DialogOption] text=Convert XP to Stars;
+nodeToConnectTo=sport_training_convert;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=sport_training_convert;
+animations=;
+statements=If one of you has 1000xp in your currently equipped class, you can convert it into 1 Star.;
+[DialogOption] text=<portraitBig=0><partyActorName=0>;
+formulaReq=currentXPOfPartyActorNum:0 - 999;
+specialEffect=fx,sfx_positiveNote1;
+specialEffect=actionOnPartyNumActor,convert1000XPtoStar,0;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=1><partyActorName=1>;
+specialEffect=fx,sfx_positiveNote1;
+specialEffect=actionOnPartyNumActor,convert1000XPtoStar,1;
+formulaReq=currentXPOfPartyActorNum:1 - 999;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=2><partyActorName=2>;
+newLineOfOptions=true;
+specialEffect=fx,sfx_positiveNote1;
+specialEffect=actionOnPartyNumActor,convert1000XPtoStar,2;
+formulaReq=currentXPOfPartyActorNum:2 - 999;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=3><partyActorName=3>;
+specialEffect=actionOnPartyNumActor,convert1000XPtoStar,3;
+formulaReq=currentXPOfPartyActorNum:3 - 999;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=4><partyActorName=4>;
+newLineOfOptions=true;
+specialEffect=fx,sfx_positiveNote1;
+specialEffect=actionOnPartyNumActor,convert1000XPtoStar,4;
+formulaReq=currentXPOfPartyActorNum:4 - 999;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=5><partyActorName=5>;
+newLineOfOptions=true;
+specialEffect=fx,sfx_positiveNote1;
+specialEffect=actionOnPartyNumActor,convert1000XPtoStar,5;
+formulaReq=currentXPOfPartyActorNum:5 - 999;
+nodeToConnectTo=;
+[DialogOption] text=<portraitBig=6><partyActorName=6>;
+newLineOfOptions=true;
+specialEffect=fx,sfx_positiveNote1;
+specialEffect=actionOnPartyNumActor,convert1000XPtoStar,6;
+formulaReq=currentXPOfPartyActorNum:6 - 999;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+
+---ORVERRIIDES
+
+[DialogNodeOverride] ID=merchant_myport_portcomplete;
+dialogNodeID_toOverride=merchant_myport;
+fReq=itemsZoneMoreThan:sport_building_center:6 - g1:D_merchant_myport_portcomplete;
+completeOverride=true;
+animations=scared;
+animations=sly;
+animations=happy;
+animations=;
+statements=Wow...<p> every building is complete, <pname=>!;
+statements=I can't believe it!<p> I remember thinking this place would be a ditch in the middle of nowhere forever...;
+statements=But now it's <locName=> -<p=2> premier port!;
+specialEffect=modLocWealthLevel,10;
+nextNodeID=merchant_myport_portcomplete2;
+
+[DialogNode] ID=merchant_myport_portcomplete2;
+animations=;
+statements=Thanks for your hard work, <pname=>.<p> I hope this place can serve you well!;
+specialEffect=modFame,trade,20;

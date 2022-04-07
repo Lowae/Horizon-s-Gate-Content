@@ -1,0 +1,329 @@
+[Action] ID=Sc_trip; 
+	name=绊倒;
+	icon=icon_Sc_trip;
+	tooltip=用你的武器绊倒一个敌人，造成75%的伤害并使对方移动距离 -<math=c:rank> <icon=moveDistance> ,持续1回合.;
+	rankUpTooltip=每级增加减少移动距离1格.;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	XPCost=120;
+	XPCost=450;
+	XPCost=1500;
+	
+	casterAnimation=weapon;
+	casterAnimationSpeed=0.9;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	requiredWeaponElement=weapon;
+[ActionAoE] 
+	ID=Sc_trip; shape=10; 
+[AvAffecter]
+	ID=Sc_trip; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.75;
+	chance=w:chance;
+[AvAffecterAoE]
+	ID=Sc_trip;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Sc_trip; 
+	visibleMiss=false;
+	actorValue=moveDistance;
+	magnitude= - c:rank;
+	duration=-4;
+	chance=w:chance;
+	FXOnTile=whirlSlash_overlap0;
+	FXOnHit=click;
+	FXOnHit=downwardLines_quick;
+[AvAffecterAoE]
+	ID=Sc_trip;
+	cloneFrom=oneTile;
+	
+[Action] ID=Sc_spot; 
+	name=Spot;
+	icon=icon_Sc_exclamation;
+	tooltip=Reduce an enemy's <icon=PhysEva>by 25% and <icon=PhysDef> by 2 for <icon=time><math=150>. Also reveals the map as if you were standing at the target.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=;
+	
+	attractAttention=false;
+	
+	XPCost=120;
+	XPCost=220;
+	XPCost=300;
+	
+	FXOnCaster=exclamation;
+	FXOnCasterColor=Orange;
+	FXOnCaster=sfx_highTing;
+	
+	AIRatingBias = -999;
+	
+	casterAnimation=handsup;
+	maxRank=3;
+[ActionAoE] 
+	ID=Sc_spot;
+	needsLoS = true;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 4;
+	maxRangeBonus=c:rank;
+	airborne=true;
+	arc=true;
+	canFloatMidair=true;
+	bypassAll=false;
+	occupyAll=false;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=Sc_spot; 
+	actorValue=PhysDef;
+	magnitude= -2;
+	duration=150;
+	chance=100;
+[AvAffecterAoE]
+	ID=Sc_spot;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Sc_spot; 
+	actorValue=PhysEva;
+	magnitude= -25;
+	duration=150;
+	chance=100;
+	FXOnTile=eyeOpen;
+	FXOnHit=ping;
+	FXOnHitColor=Orange;
+	FXOnHit=downwardLines;
+	FXOnHitColor=Orange;
+	FXOnHit=sfx_debuffMild;
+[AvAffecterAoE]
+	ID=Sc_spot;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Sc_spot; 
+	actorValue=revealFog;
+	visibleEvaluations=false;
+	harmful=false;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=Sc_spot;
+	cloneFrom=oneTile;
+	
+	
+
+	
+[Action] ID=Sc_throwStone; 
+	name=扔石头;
+	icon=icon_Sc_throwRock;
+	tooltip=投掷石头造成 <math=c:PhysAtk + m:cHighestRangedSkill + c:rank + 1><adjX=-4><icon=HP> 点伤害.;
+	rankUpTooltip=每级增加1攻击距离和1点伤害.;
+	tooltipTopRight=<icon=PhysAtk_small><icon=ranged_small>;
+	
+	XPCost=50;
+	XPCost=300;
+	XPCost=400;
+	XPCost=950;
+	
+	casterAnimation=swing;
+	
+	FXOnTarget=throw_rock;
+	FXOnTarget=swing;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+[ActionAoE] 
+	ID=Sc_throwStone;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 2;
+	maxRangeBonus = c:rank;
+	airborne=true;
+	arc=false;
+	occupyAll=true;
+[AvAffecter]
+	ID=Sc_throwStone; 
+	actorValue=HP;
+	magnitude= -c:PhysAtk - m:cHighestRangedSkill - c:rank - 2 + t:PhysDef;
+	duration=-2;
+	chance=d:physicalAcc;
+	element=physical;
+	element=ranged;
+	FXOnTile=pop;
+	FXOnTileColor=Orange;
+[AvAffecterAoE]
+	ID=Sc_throwStone;
+	cloneFrom=oneTile;
+	
+[Action] ID=Sc_firstAid; 
+	name=急救;
+	icon=icon_Sc_heal;
+	mpCost=3 * d:mpCostMult + d:mpCostMod;
+	harmful=false;
+	attractAttention=false;
+	tooltip=为相邻的人治疗 <math=11 + c:MagAtk + c:skill_Life><adjX=-4><icon=HP>.<n=><textIf=也能治愈中毒=c:rank-1><textIf=  和烧伤=c:rank-2><textIf= .=c:rank-1>;
+	rankUpTooltip=2级后治愈中毒, 3级后治愈烧伤.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
+	
+	attractAttention=false;
+	
+	AIRatingBias = -6;
+	
+	XPCost=100;
+	XPCost=250;
+	XPCost=400;
+	
+	casterAnimation=use;
+	maxRank=3;
+	
+[ActionAoE] 
+	ID=Sc_firstAid;
+	cloneFrom=adjacentAndSelf;
+[AvAffecter]
+	ID=Sc_firstAid; 
+	actorValue=HP;
+	harmful=false;
+	magnitude= 11 + c:MagAtk + c:skill_Life + sa:medic * 6 + sa:medic * c:MagAtk * 0.5 + sa:medic * c:skill_Life * 0.5;
+	duration=-2;
+	chance=100;
+	element=life;
+	FXOnTile=sparkles;
+	FXOnTileColor=Red;
+	FXOnTile=briefAuraSound;
+[AvAffecterAoE]
+	ID=Sc_firstAid;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Sc_firstAid; 
+	rankRequired=2;
+	actorValue=poison;
+	harmful=false;
+	visibleMiss=false;
+	magnitude=-1;
+	duration=-2;
+	chance=100 * t:poison;
+	element=life;
+	FXOnHit=sparkles;
+	FXOnHitColor=Blue;
+[AvAffecterAoE]
+	ID=Sc_firstAid;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Sc_firstAid; 
+	rankRequired=3;
+	actorValue=burn;
+	harmful=false;
+	visibleMiss=false;
+	magnitude=-1;
+	duration=-2;
+	chance=100 * t:burn;
+	element=life;
+	FXOnHit=sparkles;
+	FXOnHitColor=Blue;
+[AvAffecterAoE]
+	ID=Sc_firstAid;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=Sc_sidestep; 
+	name=回避;
+	icon=icon_Sc_sidestep;
+	harmful=false;
+	attractAttention=false;
+	tooltip=快速移动 <math=1+c:rank> 格并且 +30% <icon=PhysEva> 闪避持续 <icon=time>70.;
+	rankUpTooltip=每级增加1移动距离.;
+	tooltipTopRight=;
+	
+	AIRatingBias = -999;
+	
+	XPCost=150;
+	XPCost=300;
+	XPCost=500;
+	XPCost=700;
+	
+	FXOnCaster=swing2;
+	FXOnCaster=dustCircle;
+	FXOnCaster=sidewardLines;
+	
+	casterAnimation=jumpAbilityInstant;
+	casterAnimationSpeed=2;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	special=walkCasterToTarget;
+	special=cantUseInTravel;
+[ActionAoE] 
+	ID=Sc_sidestep; shape=1;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 1;
+	maxRangeBonus=c:rank;
+	canSelectActors=false;
+	canSelectEnemies=false;
+[AvAffecter]
+	ID=Sc_sidestep; 
+	harmful=false;
+	actorValue=PhysEva;
+	magnitude=30;
+	duration=70;
+	chance=100;
+	affectIntangible=true;
+[AvAffecterAoE]
+	ID=Sc_sidestep;
+	aoeCasterAsOrigin=true;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Sc_sidestep; 
+	harmful=false;
+	actorValue=blank;
+	magnitude=0;
+	chance=0;
+	duration=0;
+[AvAffecterAoE]
+	ID=Sc_sidestep;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=Sc_firestarter; 
+	name=纵火者;
+	icon=icon_Sc_flame;
+	tooltip=点燃附近目标, 造成 <thinnerIcon=skill_Fire><math=d:fireDmgDisplay(1)> 燃烧伤害并且施加烧伤减益持续 <icon=time><math=30 + 30 * c:rank>.;
+	rankUpTooltip=每级增加烧伤持续时间 <icon=time>30.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small>;
+	mpCost=1 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=90;
+	XPCost=350;
+	XPCost=500;
+	XPCost=950;
+	
+	casterAnimation=spellcast;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+[ActionAoE] 
+	ID=Sc_firestarter;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=Sc_firestarter; 
+	actorValue=HP;
+	magnitude=d:fireDmg(1);
+	duration=-2;
+	chance=d:fireAcc;
+	FXOnTile=burn;
+	FXOnHit=tinyShakeHoriz;
+	element=fire;
+	element=kindle;
+[AvAffecterAoE]
+	ID=Sc_firestarter;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Sc_firestarter; 
+	actorValue=burn;
+	magnitude=1;
+	duration=30 + 30 * c:rank;
+	chance=d:fireAcc;
+	element=fire;
+[AvAffecterAoE]
+	ID=Sc_firestarter;
+	cloneFrom=oneTile;
+	
+	

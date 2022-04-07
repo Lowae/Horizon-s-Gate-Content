@@ -1,0 +1,1721 @@
+
+--------BERSERKER
+
+[DialogNode] ID=class_berserker0;
+animations=angry;
+animations=sigh;
+animations=happy;
+animations=angry;
+statements=A new face, eh?<p=> Come here, let me get a look at you.;
+statements=<speed=0.35>Hmmmmmm hmm.;
+statements=Ha! There's hardly a scratch on ya!<p=> That's how I can tell you're a rookie.;
+statements=If you want to change that, you're at the right place.;
+specialEffect=incDefaultNode;
+[DialogOption] text=Unlock <iconBig=classIcon_berserker> Berserker;
+formulaReq=;
+nodeToConnectTo=class_berserker_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=class_berserker1;
+animations=angry;
+statements=Change your mind, ay?;
+[DialogOption] text=Unlock <iconBig=classIcon_berserker> Berserker;
+formulaReq=;
+nodeToConnectTo=class_berserker_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=class_berserker_ask;
+animations=;
+animations=angry;
+statements=So you want to learn how to really fight, eh?;
+statements=To train you an' yours, it'll be $150 upfront.<p=> I don't do discounts.;
+[DialogOption] text=Yes ($150);
+formulaReq=m:money - 149;
+nodeToConnectTo=class_berserker_train;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=class_berserker_train;
+animations=;
+animations=angry;
+statements=Good choice.<p=> You'll live longer that way.;
+statements=Now come here and hold your fists up.<p=> Thumbs out, remember...;
+nextNodeID=class_berserker_unlock;
+
+[DialogNode] ID=class_berserker_unlock;
+specialEffect=subtract150gp;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,class_berserker,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=markTrainerLocDone;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+
+[DialogNode] ID=class_berserker2;
+animations=;
+animations=angry;
+statements=<rand=I've done all I can for ya./No point in dawdling around here./You already know how to fight like a real man.>;
+statements=<rand=Go put those fists to good use!/So get going already an' make it happen!/Now get out there and take it to 'em!>;
+
+
+
+
+--------GUARDIAN
+
+[DialogNode] ID=class_guardian0;
+animations=;
+statements=Well met, knowledge-seeker.;
+statements=I can teach you and your crew in the ways of the Guardian,<p=> if you wish.;
+[DialogOption] text=Unlock <iconBig=classIcon_guardian> Guardian;
+formulaReq=;
+nodeToConnectTo=class_guardian_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=class_guardian_ask;
+animations=;
+animations=;
+statements=I can begin the training for only $150.;
+statements=If there's something you truly wish to protect,<p=> this price will be nothing to you.;
+[DialogOption] text=Yes ($150);
+formulaReq=m:money - 149;
+nodeToConnectTo=class_guardian_train;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=class_guardian_train;
+animations=;
+animations=sigh;
+statements=Wisdom.;
+statements=Come.<p=> Let us work on your stance, first...;
+nextNodeID=class_guardian_unlock;
+
+[DialogNode] ID=class_guardian_unlock;
+specialEffect=subtract150gp;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,class_guardian,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=markTrainerLocDone;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+
+[DialogNode] ID=class_guardian1;
+animations=;
+statements=You have learned everything I have to teach.;
+
+
+
+
+--------UNMAKER
+
+[DialogNode] ID=class_unmaker0;
+animations=;
+statements=Have you come here to be an Unmaker?;
+[DialogOption] text=Unlock <iconBig=classIcon_unmaker> Unmaker;
+formulaReq=;
+nodeToConnectTo=class_unmaker_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=class_unmaker_ask;
+animations=stern;
+animations=sly;
+animations=;
+statements=First, dispel all your previous notions about Ruin magic.<p=> Any force can be used for good or ill.;
+statements=If you wish to wield this power over others then you've come to the wrong place.;
+statements=If you understand this, I can train you.<p=> $150 up front.;
+[DialogOption] text=Yes ($150);
+formulaReq=m:money - 149;
+nodeToConnectTo=class_unmaker_train;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=class_unmaker_train;
+animations=;
+animations=sigh;
+animations=;
+statements=Good.;
+statements=Whenever you use this magic, I want you to remember that all life is precious.;
+statements=Keep this in your mind at all times.<p=> Now, let's begin...;
+nextNodeID=class_unmaker_unlock;
+
+[DialogNode] ID=class_unmaker_unlock;
+specialEffect=subtract150gp;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,class_unmaker,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=markTrainerLocDone;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+
+[DialogNode] ID=class_unmaker1;
+animations=;
+statements=Always remember that life is precious.;
+
+
+
+
+
+--------WARDEN
+
+[DialogNode] ID=class_warden0;
+animations=;
+statements=Hm?<p=> Lo there.;
+statements=What brings you to the home of this old ex-Warden?;
+[DialogOption] text=Unlock <iconBig=classIcon_warden> Warden;
+formulaReq=;
+nodeToConnectTo=class_warden_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=class_warden_ask;
+animations=sigh;
+animations=;
+animations=sly;
+animations=stern;
+animations=;
+statements=Mmm.<p=> You know there are academies for this sort of thing.;
+statements=I haven't taught,<p=> myself,<p=> in a number of years.;
+statements=Well, I suppose you aren't the type to do things the <speed=0.4>slow,<p=> <speed=0.5>drawn-out,<p=> <speed=0.6>difficult,<p=> <speed=0.7>expensive,<p=> <speed=0.8>snobby, <speed=0.9>painful, <speed=1>obnoxious <speed=1>sort of way.;
+statements=Not that I'm bitter or anything...<p=> nobody could be bitter about being fired for nothing after 20 years of hard work...<p=> not at all...;
+statements=Mmm.<p=> Tell you what.<p=> Just to stick it to those crustbag professors at the academy, I'll teach you cheap and easy.<p=> Only $150 for the whole course.;
+[DialogOption] text=Yes ($150);
+formulaReq=m:money - 149;
+nodeToConnectTo=class_warden_train;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=class_warden_train;
+animations=stern;
+animations=sly;
+statements=Mmm.<p=> I hope your ears are open because I'm not stopping for you to take notes.;
+statements=Now listen up.<p=> Project your essence forward, but not forcefully...;
+nextNodeID=class_warden_unlock;
+
+[DialogNode] ID=class_warden_unlock;
+specialEffect=subtract150gp;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,class_warden,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=markTrainerLocDone;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+
+[DialogNode] ID=class_warden1;
+animations=sly;
+animations=happy;
+animations=;
+statements=Lo again.<p=> Did you forget something?<p=> Wanted a refresher?;
+statements=Too bad!<p=> I've forgotten most of it too.;
+statements=You'll just have to teach yourself.<p=> Good luck kid.;
+
+
+
+--------TACTICIAN
+
+[DialogNode] ID=class_tactician0;
+animations=;
+statements=...are you here to learn the art of war?;
+[DialogOption] text=Unlock <iconBig=classIcon_tactician> Tactician;
+formulaReq=;
+nodeToConnectTo=class_tactician_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=class_tactician_ask;
+animations=;
+animations=sigh;
+statements=I can train you for $350.;
+statements=No cheaper - this is how I make a living.<p=> Not all of us can be Jasce's chosen...;
+[DialogOption] text=Yes ($350);
+formulaReq=m:money - 349;
+nodeToConnectTo=class_tactician_train;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=class_tactician_train;
+animations=;
+animations=;
+statements=Let's begin, then.;
+statements=Tell me about your crew, and I'll tell you the best way to manage them.;
+nextNodeID=class_tactician_unlock;
+
+[DialogNode] ID=class_tactician_unlock;
+specialEffect=subtract350gp;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,class_tactician,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=markTrainerLocDone;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+
+[DialogNode] ID=class_tactician1;
+animations=;
+animations=sigh;
+statements=Only so much can be taught.;
+statements=Some things, you have to learn on your own.;
+
+
+
+--------BREAKER
+
+[DialogNode] ID=class_breaker0;
+animations=angry;
+statements=Nnh?<p=> Whad yer aft?;
+[DialogOption] text=Unlock <iconBig=classIcon_breaker> Breaker;
+formulaReq=;
+nodeToConnectTo=class_breaker_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=class_breaker_ask;
+animations=stern;
+animations=;
+statements=Keh!<p=> An't fer nothin', whelp!;
+statements=Hmm, see's $150. Na jab awt for nothin'.;
+[DialogOption] text=Yes ($150);
+formulaReq=m:money - 149;
+nodeToConnectTo=class_breaker_train;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=class_breaker_train;
+animations=stern;
+animations=sly;
+statements=Tch!<p=> Fraid that.<p=> Voice's hurtin' arredy...;
+statements=<speed=0.5>Ggh...<p=><speed=1> Fine... hold th'swatter.<p=> Lessee yer grip...;
+nextNodeID=class_breaker_unlock;
+
+[DialogNode] ID=class_breaker_unlock;
+specialEffect=subtract150gp;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,class_breaker,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=markTrainerLocDone;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+
+[DialogNode] ID=class_breaker1;
+animations=sigh;
+animations=sly;
+statements=Hmh!<p=> An'tch nawt bu' talk?;
+statements=G'on, git!;
+
+
+
+
+
+--------BLADE
+
+[DialogNode] ID=class_blade0;
+animations=;
+animations=sly;
+statements=Oh.<p=> Hi.;
+statements=Meat's sold at the cafe.;
+[DialogOption] text=Unlock <iconBig=classIcon_blade> Blade;
+formulaReq=;
+nodeToConnectTo=class_blade_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=class_blade_ask;
+animations=;
+animations=sly;
+animations=;
+statements=Ah...<p=> I see.;
+statements=I might not look like much at the moment... but I can still teach you a thing or two.;
+statements=I can't just step away from my work for nothing, though.<p=> How about $150?;
+[DialogOption] text=Yes ($150);
+formulaReq=m:money - 149;
+nodeToConnectTo=class_blade_train;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=class_blade_train;
+animations=sigh;
+animations=sly;
+statements=Very good.<p=> Let me just finish with this cut real quick.;
+statements=Actually, come here.<p=> Take a good look at the way I'm holding the blade, here...<p=> see how the force of my arm is in line with the edge...?;
+nextNodeID=class_blade_unlock;
+
+[DialogNode] ID=class_blade_unlock;
+specialEffect=subtract150gp;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,class_blade,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=markTrainerLocDone;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+
+[DialogNode] ID=class_blade1;
+animations=;
+animations=;
+statements=Hey again.;
+statements=Thanks for letting me relive my past a little.<p=> I hope you put that knowledge to good use.;
+
+
+--------ELEMENTALIST
+
+[DialogNode] ID=class_elementalist0;
+animations=happy;
+animations=handsupPose;
+animations=;
+statements=Hey hey!;
+statements=Welcome to my shrine of Water!<p=> I am Flow, patron and crafter of the elements!;
+statements=What brings you to this humble shrine?;
+specialEffect=incDefaultNode;
+[DialogOption] text=Unlock <iconBig=classIcon_elementalist> Elementalist;
+formulaReq=;
+nodeToConnectTo=class_elementalist_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=class_elementalist1;
+animations=happy;
+animations=sly;
+statements=Welcome, welcome!;
+statements=Did you want something, or are you just here to soak in the atmosphere??;
+[DialogOption] text=Unlock <iconBig=classIcon_elementalist> Elementalist;
+formulaReq=;
+nodeToConnectTo=class_elementalist_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=class_elementalist_ask;
+animations=;
+animations=sigh;
+animations=;
+statements=<speed=0.5>Mmmmmmmmmmmmm.<p=> Heh heh.<p=> Heh.;
+statements=I will gladly pass on the arts.<p=> I was trained in the Cathedral of Elements myself, after all!;
+statements=They don't offer that training right now!<p=1.5> That means my teaching is the best you'll get, haha!;
+statements=How about $250?<p=> Sounds right?;
+[DialogOption] text=Yes ($250);
+formulaReq=m:money - 249;
+nodeToConnectTo=class_elementalist_train;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=class_elementalist_train;
+animations=happy;
+animations=handsupPose;
+animations=;
+statements=Ahh, that will buy so many water barrels...;
+statements=Ahem!<p=> ...prepare yourself student!<p=> You are now a vessel unto which I will pour my knowledge and skill!;
+statements=I'll get to the other elements of course, but first we start with water...<p=> now, concentrate, and listen...;
+nextNodeID=class_elementalist_unlock;
+
+[DialogNode] ID=class_elementalist_unlock;
+specialEffect=subtract250gp;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,class_elementalist,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=markTrainerLocDone;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+
+[DialogNode] ID=class_elementalist2;
+animations=handsupPose;
+animations=;
+statements=Welcome back, student!<p=> Water fill you this day!;
+statements=I have no further teaching, but you may bask in this shrine as long as you like.;
+
+
+
+--------MINSTREL
+
+[DialogNode] ID=class_minstrel0;
+animations=happy;
+animations=;
+statements=Welcome to the Banner Flagon!;
+statements=Do you have a song request?;
+[DialogOption] text=Unlock <iconBig=classIcon_minstrel> Minstrel;
+formulaReq=;
+nodeToConnectTo=class_minstrel_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=class_minstrel_ask;
+animations=happy;
+animations=;
+animations=sly;
+statements=O-ho!<p=> An aspiring performer!;
+statements=I'd be more than glad to instruct you.<p=> Ah, but...;
+statements=Dear Risia would have my head if I didn't pull in something for the Flagon.<p=2> Maybe you could spare $250 for the lessons?;
+[DialogOption] text=Yes ($250);
+formulaReq=m:money - 249;
+nodeToConnectTo=class_minstrel_train;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=class_minstrel_train;
+animations=happy;
+animations=;
+animations=sly;
+animations=sigh;
+animations=;
+statements=Great!;
+statements=There's so much to teach, I'm not sure where to start...!;
+statements=Let's do some voice exercises first.<p=> Wouldn't want to strain yourself!;
+statements=<speed=0.7>Do<p=> Re<p=> Mi<p=> Fa<p=> Sol<p=> La<p=> Ti<p=><speed=0.3> Dooooo!;
+statements=Now you try it!<p=> Do, Re, Mi...!;
+nextNodeID=class_minstrel_unlock;
+
+[DialogNode] ID=class_minstrel_unlock;
+specialEffect=subtract250gp;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,class_minstrel,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=markTrainerLocDone;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+[DialogNode] ID=class_minstrel1;
+animations=;
+animations=happy;
+statements=Welcome to the Banner Flagon!;
+statements=Hey <pname=>!<p=> Have those lessons I gave you come in handy yet?;
+
+
+
+
+
+
+--------BOMBARDIER
+
+[DialogNode] ID=class_bombardier0;
+animations=angry;
+animations=stern;
+statements=What you want?;
+statements=This is a dangerous task, so don't distract me!;
+[DialogOption] text=Unlock <iconBig=classIcon_bombardier> Bombardier;
+formulaReq=;
+nodeToConnectTo=class_bombardier_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=class_bombardier_ask;
+animations=sly;
+animations=;
+statements=Hmph!<p=> At least someone still appreciates my genius!;
+statements=I'll teach ya so long as y' fund my next project!<p=> I need $150 to cram this thing fulla Fire Triggers!;
+[DialogOption] text=Yes ($150);
+formulaReq=m:money - 149;
+nodeToConnectTo=class_bombardier_train;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=class_bombardier_train;
+animations=angry;
+animations=sly;
+statements=Excellent!!;
+statements=Quick, grab those goggles and gloves off the shelf.<p=> I'll show you how make a proper bomb!;
+nextNodeID=class_bombardier_unlock;
+
+[DialogNode] ID=class_bombardier_unlock;
+specialEffect=subtract150gp;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,class_bombardier,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=markTrainerLocDone;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+[DialogNode] ID=class_bombardier1;
+animations=sigh;
+statements=Pass me that <rand=wrench/doohickey/scalpel/fire trigger/thingy/knife/cloth/paper/powder/can/thingbob/bottle/handkerchief/piece of metal/bar/plank/prybar/repair kit/uh, the uh- you know- the uh, what is it, that big thing over there/whatsit/rope/string/middle part/drink/cup/grey stuff>, would ya?;
+
+
+
+
+
+
+
+--------SWASHBUCKLER
+
+[DialogNode] ID=class_swashbuckler0;
+animations=sly;
+statements=Ay?<p=> Looking for something?;
+[DialogOption] text=Unlock <iconBig=classIcon_swashbuckler> Swashbuckler;
+formulaReq=;
+nodeToConnectTo=class_swashbuckler_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=class_swashbuckler_ask;
+animations=;
+animations=sigh;
+animations=;
+statements=Ah, a student?<p=> Been a while...;
+statements=Tell ya what -<p=2> I could use any sort of entertainment in this dull place.<p=> I feel like I'm completely disconnected from the world here...;
+statements=Tell me about your travels, and I'll teach you free of charge.;
+[DialogOption] text=Yes (Need 200<iconBig=fame_explore>);
+formulaReq=g:fame_explore - 199;
+nodeToConnectTo=class_swashbuckler_train;
+[DialogOption] text=<color=SlateGray>(Need 200<iconBig=fame_explore>);
+formulaReq=200 - g:fame_explore;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=class_swashbuckler_train;
+animations=happy;
+animations=;
+statements=Great!<p=>;
+statements=You first!<p=> And skip the boring details - start with the most interesting part!;
+nextNodeID=class_swashbuckler_unlock;
+
+[DialogNode] ID=class_swashbuckler_unlock;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,class_swashbuckler,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=markTrainerLocDone;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+[DialogNode] ID=class_swashbuckler1;
+animations=;
+animations=sly;
+statements=Ay, how's life on the seas?;
+statements=Are you here to tell me more tales of danger and intrigue?;
+
+
+
+
+
+--------STORMSHOT
+
+[DialogNode] ID=class_stormshot0;
+animations=angry;
+statements=What do you want?;
+[DialogOption] text=Unlock <iconBig=classIcon_stormshot> Stormshot;
+formulaReq=;
+nodeToConnectTo=class_stormshot_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=class_stormshot_ask;
+animations=stern;
+animations=;
+statements=Hmph.<p=2> Training is free, but I don't train novices.;
+statements=Unless you've seen some real combat already, I've got no interest.;
+[DialogOption] text=Yes (Need 100<iconBig=fame_combat>);
+formulaReq=g:fame_combat - 99;
+nodeToConnectTo=class_stormshot_train;
+[DialogOption] text=<color=SlateGray>(Need 100<iconBig=fame_combat>);
+formulaReq=100 - g:fame_combat;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=class_stormshot_train;
+animations=sly;
+animations=;
+statements=So you already know a thing or two, eh?;
+statements=Good.<p=> Then I can skip the basics.<p=2> Let's get out onto the range and see what you can do.;
+nextNodeID=class_stormshot_unlock;
+
+[DialogNode] ID=class_stormshot_unlock;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,class_stormshot,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=markTrainerLocDone;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+[DialogNode] ID=class_stormshot1;
+animations=sly;
+animations=stern;
+statements=You're still here?;
+statements=If you want to improve, then go fight.<p=> Practice has its limits.;
+
+
+
+--------SHIFTCLOAK
+
+[DialogNode] ID=class_shiftcloak0;
+animations=sly;
+animations=;
+statements=Well done - you've found me!;
+statements=Those keen eyes will serve you well.;
+specialEffect=incDefaultNode;
+[DialogOption] text=Unlock <iconBig=classIcon_shiftcloak> Shiftcloak;
+formulaReq=;
+nodeToConnectTo=class_shiftcloak_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=class_shiftcloak1;
+animations=;
+statements=What brings you back to me, seeker?;
+[DialogOption] text=Unlock <iconBig=classIcon_shiftcloak> Shiftcloak;
+formulaReq=;
+nodeToConnectTo=class_shiftcloak_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=class_shiftcloak_ask;
+animations=stern;
+animations=sly;
+animations=;
+statements=I thought you'd ask me such!;
+statements=Your keen senses can detect mastery from a mile away.;
+statements=However, I have my own purposes.<p=> I require $350 for them.;
+[DialogOption] text=Yes ($350);
+formulaReq=m:money - 349;
+nodeToConnectTo=class_shiftcloak_train;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=class_shiftcloak_train;
+animations=;
+animations=sly;
+statements=Right!<p=> You clearly are serious about this.;
+statements=In that case, try to follow my movements<p=2> - if you can perceive them!;
+nextNodeID=class_shiftcloak_unlock;
+
+[DialogNode] ID=class_shiftcloak_unlock;
+specialEffect=subtract350gp;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,class_shiftcloak,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=markTrainerLocDone;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+
+[DialogNode] ID=class_shiftcloak2;
+animations=sly;
+animations=;
+statements=By the way, do me a favor...;
+statements=Keep quiet about my training.<p=> There's a reason I am where I am.;
+
+
+
+
+--------BALANCER
+
+[DialogNode] ID=class_balancer0;
+animations=;
+animations=sigh;
+animations=;
+animations=stern;
+statements=<speed=0.8>Hello there.;
+statements=<speed=0.8>Please don't touch the plants...<p=> they're quite fragile.;
+statements=<speed=0.8>Fantlin used to be quite the garden, you know... but no more.<p=> No one knows quite why<p=> - it's been very interesting research.;
+statements=<speed=0.8>Oh, I've been rambling...<p=> what did you need?;
+specialEffect=incDefaultNode;
+[DialogOption] text=Unlock <iconBig=classIcon_balance> Balancer;
+formulaReq=;
+nodeToConnectTo=class_balancer_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=class_balancer1;
+animations=;
+animations=happy;
+statements=<speed=0.8>Hello again.;
+statements=<speed=0.8>Come to admire the flowers?<p=> Ha ha.;
+[DialogOption] text=Unlock <iconBig=classIcon_balance> Balancer;
+formulaReq=;
+nodeToConnectTo=class_balancer_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=class_balancer_ask;
+animations=happy;
+animations=stern;
+animations=sigh;
+statements=<speed=0.8>Ah, so good to meet another in search of scholarly pursuits!;
+statements=<speed=0.8>The more Balancers there are, the more likely we are to figure out the conundrum of Fantlin's ecosystem.;
+statements=<speed=0.8>I will gladly teach you.<p=> However, I could certainly use some compensation<p=> - how about $250?;
+[DialogOption] text=Yes ($250);
+formulaReq=m:money - 249;
+nodeToConnectTo=class_balancer_train;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=class_balancer_train;
+animations=sigh;
+animations=happy;
+statements=<speed=0.8>Thank you.<p=> I will try to keep my lessons concise and practical.;
+statements=<speed=0.8>Let's begin right away, shall we?<p=> First, a detailed history of Balancer magic...;
+nextNodeID=class_balancer_unlock;
+
+[DialogNode] ID=class_balancer_unlock;
+specialEffect=subtract250gp;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,class_balancer,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=markTrainerLocDone;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+
+[DialogNode] ID=class_balancer2;
+animations=sigh;
+animations=happy;
+statements=<speed=0.8>I cannot claim to have made much progress in my research, lately...;
+statements=<speed=0.8>But, such is to be expected!<p=> You cannot grow a tree in a day, they say.;
+
+[DialogNodeOverride] ID=class_balancer2_growthport22;
+dialogNodeID_toOverride=class_balancer2;
+completeOverride=true;
+fReq=g:growthport22 - g1:D_class_balancer2_growthport22 * 999;
+animations=happy;
+animations=sly;
+animations=;
+animations=sigh;
+animations=;
+animations=happy;
+animations=;
+statements=I see you tried a little magic on my garden!;
+statements=Thank you for your earnest attempts.<p> Growth certainly is a miraculous bit of magic, isn't it?;
+statements=<speed=0.8>Alas, plants grown solely with Growth tend to lack vitality, and soon wither away...;
+statements=Fruit grown with it are quite bitter, and hardly nutritious...;
+statements=<speed=0.9>Still, a moderate application can increase output greatly without much harming the end result!;
+statements=<speed=0.8>I've been experimenting thoroughly with it in my own tests...;
+statements=<speed=0.8>Oh, I'm just prattling on now...<p> well,<p> take care,<p> stop by anytime.;
+
+
+--------ENCHANTER
+
+[DialogNode] ID=class_enchanter0;
+animations=sigh;
+animations=stern;
+animations=sigh;
+statements=Ugh...<p=> this is so dreadfully tedious.;
+statements=I would rather be doing<p=> lit-<p=3>rally<p=2> anything else right now.<p=> If it wasn't an assignment from Father, I would just quit.;
+statements=Go on then.<p=> Give me the next batch of fruit or <n=>what<p=3>-damned-<p=3>ever.;
+specialEffect=incDefaultNode;
+[DialogOption] text=Unlock <iconBig=classIcon_enchanter> Enchanter;
+formulaReq=;
+nodeToConnectTo=class_enchanter_ask0;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=class_enchanter1;
+animations=sigh;
+statements=What is it now?<p=> Anything to break the tedium...;
+[DialogOption] text=Unlock <iconBig=classIcon_enchanter> Enchanter;
+formulaReq=;
+nodeToConnectTo=class_enchanter_ask1;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=class_enchanter_ask0;
+animations=scared;
+animations=happy;
+animations=sigh;
+animations=stern;
+animations=sigh;
+statements=Uh?<p=> You aren't one of the...?<p=> Oh!;
+statements=Well then!<p=> Training, you say?<p=> You mean, a chance to put my skills to actual use??;
+statements=It would be a deligh-<p=3> well, I mean-<p=> I suppose I could.;
+statements=Oh, but,<p=> I could get in trouble if I taught someone who,<p=> ah,<p=> shouldn't know such things...;
+statements=You know,<p=> for lack of a better term, someone who isn't ah,<p=> im-<p=3>port-<p=3>ant enough...<p=> you know.;
+[DialogOption] text=Yes (Need 100<iconBig=fame_trade>);
+formulaReq=g:fame_trade - 99;
+nodeToConnectTo=class_enchanter_train;
+[DialogOption] text=<color=SlateGray>(Need 100<iconBig=fame_trade>);
+formulaReq=100 - g:fame_trade;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=class_enchanter_ask1;
+animations=happy;
+animations=sigh;
+animations=stern;
+animations=sigh;
+statements=Training, you say?<p=> A chance to put my skills to actual use?;
+statements=It would be a deligh-<p=3> well, I mean-<p=> I suppose I could.;
+statements=Oh, but,<p=> I could get in trouble if I taught someone who,<p=> ah,<p=> shouldn't know such things...;
+statements=You know,<p=> for lack of a better term, someone who isn't ah,<p=> im-<p=3>port-<p=3>ant enough...<p=1.5> you know.;
+[DialogOption] text=Yes (Need 100<iconBig=fame_trade>);
+formulaReq=g:fame_trade - 99;
+nodeToConnectTo=class_enchanter_train;
+[DialogOption] text=<color=SlateGray>(Need 100<iconBig=fame_trade>);
+formulaReq=100 - g:fame_trade;
+nodeToConnectTo=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=class_enchanter_train;
+animations=happy;
+animations=sigh;
+animations=;
+statements=Fan-<p=3>tastic!<p=> Let us start straight-away!;
+statements=Oh, do me a favor...<p=> don't mention this to my father at any point, would you?<p=> Or anyone else, actually.;
+statements=Now, take hold of this dart.<p=> Notice its shape and its essence...;
+nextNodeID=class_enchanter_unlock;
+
+[DialogNode] ID=class_enchanter_unlock;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,class_enchanter,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=markTrainerLocDone;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+
+[DialogNode] ID=class_enchanter2;
+animations=happy;
+statements=<rand=Are you as bored here as I am?/Fancy a game of darts?>;
+
+
+
+--------IGNIS KNIGHT
+
+[DialogNode] ID=class_ignisKnight0;
+animations=stern;
+animations=angry;
+statements=...;
+statements=Get out.;
+specialEffect=incDefaultNode;
+[DialogOption] text=Unlock <iconBig=classIcon_ignisKnight> Ignis Knight;
+formulaReq=;
+nodeToConnectTo=class_ignisKnight_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=class_ignisKnight1;
+animations=angry;
+statements=What is it now?;
+[DialogOption] text=Unlock <iconBig=classIcon_ignisKnight> Ignis Knight;
+formulaReq=;
+nodeToConnectTo=class_ignisKnight_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=class_ignisKnight_ask;
+animations=angry;
+animations=stern;
+animations=angry;
+statements=That...<p=> that life is behind me.;
+statements=<speed=0.7>Hmph...<p=> but...;
+statements=$500.;
+specialEffect=facingRot270;
+[DialogOption] text=Yes ($500);
+formulaReq=m:money - 499;
+nodeToConnectTo=class_ignisKnight_train;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=class_ignisKnight_train;
+animations=angry;
+animations=stern;
+animations=angry;
+statements=Keh!<p=> I thought that would be expensive enough to stop you.;
+statements=Fine, fine...<p=> I'll teach you.<p=> That'll make good drink money.;
+statements=Let's go outside, and far enough no one can see us.;
+nextNodeID=class_ignisKnight_unlock;
+
+[DialogNode] ID=class_ignisKnight_unlock;
+specialEffect=subtract500gp;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,class_ignisKnight,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=markTrainerLocDone;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+
+[DialogNode] ID=class_ignisKnight2;
+animations=angry;
+animations=stern;
+statements=Tell no one about your training.;
+statements=The Ignis Knights may come looking.;
+
+
+--------BAT HANDLER
+
+[DialogNode] ID=class_batHandler0;
+animations=happy;
+animations=;
+statements=Oh!<p=> Polly!<p=> Zoary!<p=> We have visitors!;
+statements=Hello there!<p=> Can I help you?;
+specialEffect=incDefaultNode;
+[DialogOption] text=Unlock <iconBig=classIcon_bathandler> Bat Handler;
+formulaReq=;
+nodeToConnectTo=class_batHandler_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=class_batHandler1;
+animations=happy;
+statements=Don't mind Zoary, he's being a fussbudget today.;
+[DialogOption] text=Unlock <iconBig=classIcon_bathandler> Bat Handler;
+formulaReq=;
+nodeToConnectTo=class_batHandler_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=class_batHandler_ask;
+animations=happy;
+animations=handsupPose;
+animations=sad;
+statements=Oooh!<p=> You want to be a Bat Handler?;
+statements=I can teach you anything you want to know about them!;
+statements=But it's expensive to take care of Zoar...<p=> It'll cost at least $500 to do!;
+[DialogOption] text=Yes ($500);
+formulaReq=m:money - 499;
+nodeToConnectTo=class_batHandler_train;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=class_batHandler_train;
+animations=happy;
+animations=;
+animations=handsupPose;
+statements=Yay, great!!;
+statements=Here Zoary!<p=> Be good for our new friend, ok?;
+statements=Time to show off your tricks!<p=> Backflip Zoary!<p=> Backflip!!;
+nextNodeID=class_batHandler_unlock;
+
+[DialogNode] ID=class_batHandler_unlock;
+specialEffect=subtract500gp;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,class_bathandler,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=markTrainerLocDone;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+
+[DialogNode] ID=class_batHandler2;
+animations=;
+animations=happy;
+statements=Treat your Zoar bats with love and care, okay?;
+
+
+[DialogNode] ID=zoar1;
+animations=;
+statements=Mrrr.;
+[DialogNode] ID=zoar2;
+animations=;
+statements=Rrr-!!;
+
+
+--------RAVAGER
+
+[DialogNode] ID=class_ravager0;
+animations=angry;
+statements=What I can do ye for stranger?;
+specialEffect=incDefaultNode;
+[DialogOption] text=Unlock <iconBig=classIcon_ravager> Ravager;
+formulaReq=;
+nodeToConnectTo=class_ravager_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=class_ravager1;
+animations=sly;
+statements=Back agin aye?;
+[DialogOption] text=Unlock <iconBig=classIcon_ravager> Ravager;
+formulaReq=;
+nodeToConnectTo=class_ravager_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=class_ravager_ask;
+animations=happy;
+animations=sly;
+statements=Gahah!<p> So ye want to know real power, ay?;
+statements=Power don't come cheap...<p> slip me $500 an' I'll teach ye.;
+[DialogOption] text=Yes ($500);
+formulaReq=m:money - 499;
+nodeToConnectTo=class_ravager_train;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=class_ravager_train;
+animations=happy;
+animations=sly;
+statements=Gahahah!<p> Great!!;
+statements=Grab yer weapons and let's go.<p> Time's a wastin'!;
+nextNodeID=class_ravager_unlock;
+
+[DialogNode] ID=class_ravager_unlock;
+specialEffect=subtract500gp;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,class_ravager,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=markTrainerLocDone;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+
+[DialogNode] ID=class_ravager2;
+animations=angry;
+animations=happy;
+statements=Put yer trainin' to good use in the arena, arrite?;
+statements=I'll be rootin for ya.;
+
+
+
+
+--------SPELL ARCHON
+
+[DialogNode] ID=class_spellslinger0;
+animations=;
+statements=They call me Quickdraw Munsend.;
+statements=You need something?;
+specialEffect=incDefaultNode;
+[DialogOption] text=Unlock <iconBig=classIcon_spellslinger> Spell Archon;
+formulaReq=;
+nodeToConnectTo=class_spellslinger_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=class_spellslinger1;
+animations=;
+statements=Quickdraw Munsend, at your service.;
+[DialogOption] text=Unlock <iconBig=classIcon_spellslinger> Spell Archon;
+formulaReq=;
+nodeToConnectTo=class_spellslinger_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=class_spellslinger_ask;
+animations=;
+animations=sly;
+animations=;
+statements=I teach something deeper than mere shooting.;
+statements=This is about imbuing your weapons with your spirit.;
+statements=If that sounds good to you, just lay $500 on the table and we'll start.;
+[DialogOption] text=Yes ($500);
+formulaReq=m:money - 499;
+nodeToConnectTo=class_spellslinger_train;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=class_spellslinger_train;
+animations=;
+animations=meh;
+animations=;
+statements=Good call.;
+statements=Let's see if your spirit is up to the task.;
+statements=Stand in front of the target, and take a shot.;
+nextNodeID=class_spellslinger_unlock;
+
+[DialogNode] ID=class_spellslinger_unlock;
+specialEffect=subtract500gp;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,class_spellslinger,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=markTrainerLocDone;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+
+[DialogNode] ID=class_spellslinger2;
+animations=;
+statements=Your spirit is more important than any weapon you wield.;
+
+
+
+--------DEFILER
+
+[DialogNode] ID=class_defiler0;
+animations=read_book_tall2;
+statements=...;
+specialEffect=incDefaultNode;
+[DialogOption] text=Unlock <iconBig=classIcon_defiler> Defiler;
+formulaReq=;
+nodeToConnectTo=class_defiler_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=class_defiler1;
+animations=read_book_tall2;
+statements=...;
+[DialogOption] text=Unlock <iconBig=classIcon_defiler> Defiler;
+formulaReq=;
+nodeToConnectTo=class_defiler_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=class_defiler_ask;
+animations=read_book_tall2;
+animations=sigh;
+animations=idle;
+animations=meh;
+statements=Hmm.;
+statements=<speed=0.7>Imagine you were in the middle of a great book,<p=2> and were interrupted...;
+statements=Your time is valuable, and so is mine.;
+statements=So you can imagine what I'm going to ask for...;
+[DialogOption] text=Yes ($400);
+formulaReq=m:money - 399;
+nodeToConnectTo=class_defiler_train;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=class_defiler_train;
+animations=idle;
+animations=sly;
+animations=sigh;
+animations=idle;
+animations=angry;
+statements=Alright then.;
+statements=Imagine...<p> your opponent.;
+statements=Not as an opponent.<p> Imagine yourself as them.;
+statements=Feel their essence...<p> just like yours.;
+statements=Now command it as you would your own...!;
+nextNodeID=class_defiler_unlock;
+
+[DialogNode] ID=class_defiler_unlock;
+specialEffect=gp,-400;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,class_defiler,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=markTrainerLocDone;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+
+[DialogNode] ID=class_defiler2;
+animations=read_book_tall2;
+statements=Learn to empathize with your opponents...<p> only then can you control them.;
+
+
+
+
+
+
+
+--------GATEKEEPER
+
+[DialogNode] ID=class_gatekeeper0;
+animations=;
+animations=;
+statements=Welcome to the Gatekeeper's Guild.;
+statements=Can I help you?;
+[DialogOption] text=Unlock <iconBig=classIcon_gatekeeper> Gatekeeper;
+formulaReq=1 - g:D_class_gatekeeper_ask;
+nodeToConnectTo=class_gatekeeper_ask;
+[DialogOption] text=Unlock <iconBig=classIcon_gatekeeper> Gatekeeper;
+formulaReq=gTimeSinceMoreThan:D_class_gatekeeper_ask:4320 + gIsLessThan:favor_seartial:0 - 1;
+nodeToConnectTo=class_gatekeeper_train2_lowFavor;
+[DialogOption] text=Unlock <iconBig=classIcon_gatekeeper> Gatekeeper;
+formulaReq=gTimeSinceMoreThan:D_class_gatekeeper_ask:4320 - gIsLessThan:favor_seartial:0;
+nodeToConnectTo=class_gatekeeper_train2;
+[DialogOption] text=Unlock <iconBig=classIcon_gatekeeper> Gatekeeper;
+formulaReq=g:D_class_gatekeeper_ask + gTimeSinceLessThanOrEqual:D_class_gatekeeper_ask:4320 - 1;
+nodeToConnectTo=class_gatekeeper_notyet;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+--
+
+[DialogNode] ID=class_gatekeeper_ask;
+animations=sly;
+animations=sigh;
+animations=;
+animations=happy;
+animations=;
+animations=;
+statements=You are interested in Gatekeeper certification and training?;
+statements=Very good.<p> I'll begin filing the paperwork and start the process.;
+statements=Simply fill these out...;
+statements=<speed=0.7>And...<p> there!;
+statements=Very good, very good.;
+statements=The approval process should finish in about 9 months, after which you can complete your training!;
+[DialogOption] text=Can't I recieve training now?;
+animation=sly;
+nodeToConnectTo=class_gatekeeper_ask_wait1a;
+[DialogOption] text=I have to wait that long!?;
+animation=angry;
+nodeToConnectTo=class_gatekeeper_ask_wait1b;
+newLineOfOptions=true;
+
+[DialogNode] ID=class_gatekeeper_ask_wait1a;
+animations=sigh;
+statements=No, I'm afraid not.;
+nextNodeID=class_gatekeeper_ask_wait1b;
+
+[DialogNode] ID=class_gatekeeper_ask_wait1b;
+animations=sly;
+animations=sigh;
+animations=stern;
+animations=happy;
+animations=;
+statements=The approval process is absolutely vital.<p> It's in the public's best interest for us to track these things, you know.;
+statements=Various checks have to be made, registries updated, documents processed, you know.;
+statements=...however...<p> if you absolutely cannot wait...;
+statements=You can accelerate the approval by paying additional processing fees.;
+statements=$5000 should cover it.;
+
+[DialogOption] text=That's an absurd fee!;
+animation=angry;
+nodeToConnectTo=class_gatekeeper_ask_wait1c;
+[DialogOption] text=Fine... here's your $5000.;
+animation=stern;
+formulaReq=m:money - 4999;
+nodeToConnectTo=class_gatekeeper_unlock_expensive;
+newLineOfOptions=true;
+[DialogOption] text=Never mind.;
+animation=meh;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=class_gatekeeper_ask_wait1c;
+animations=happy;
+animations=;
+animations=sly;
+statements=Well, you get what you pay for!;
+statements=To accelerate your approval we would have to pay a variety of experts, accountants, and notaries for their timely work.; 
+statements=It's actually quite a reasonable cost, you know.;
+[DialogOption] text=Fine... here's your $5000.;
+animation=stern;
+formulaReq=m:money - 4999;
+nodeToConnectTo=class_gatekeeper_train;
+newLineOfOptions=true;
+[DialogOption] text=Never mind.;
+animation=meh;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+--
+
+[DialogNode] ID=class_gatekeeper_notyet;
+animations=happy;
+statements=The approval is still in progress I'm afraid!;
+statements=I'm sure it'll be done any day now!;
+[DialogOption] text=Can't I recieve training now?;
+animation=sly;
+nodeToConnectTo=class_gatekeeper_ask_wait1a;
+[DialogOption] text=Nevermind;
+animation=;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+
+
+
+
+[DialogNode] ID=class_gatekeeper_train;
+animations=happy;
+animations=;
+statements=Very good!;
+statements=Take a seat.<p> A licensed Gatekeeper should be with you shortly to train you!;
+nextNodeID=class_gatekeeper_unlock;
+
+[DialogNode] ID=class_gatekeeper_unlock_expensive;
+specialEffect=gp,-5000;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,class_gatekeeper,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+[DialogNode] ID=class_gatekeeper_unlock;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,class_gatekeeper,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=markTrainerLocDone;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+[DialogNode] ID=class_gatekeeper_train2;
+animations=happy;
+animations=;
+statements=Good news!<p> You've been approved!;
+statements=Take a seat.<p> A licensed Gatekeeper should be with you shortly to train you!;
+nextNodeID=class_gatekeeper_unlock;
+
+[DialogNode] ID=class_gatekeeper_train2_lowFavor;
+animations=happy;
+animations=sly;
+animations=happy;
+animations=;
+statements=Good news!<p> You've been approved!;
+statements=Uh, I think...<p> some of these documents say something about you causing some sort of trouble...?;
+statements=Oh well -<p> I'll get it sorted out,<p> I'm sure!;
+statements=Take a seat.<p> A licensed Gatekeeper should be with you shortly to train you!;
+nextNodeID=class_gatekeeper_unlock;
+
+[DialogNode] ID=class_gatekeeper_unlock2;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,class_gatekeeper,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=markTrainerLocDone;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+[DialogNode] ID=class_gatekeeper1;
+animations=;
+animations=happy;
+statements=Welcome to the Gatekeeper's Guild, <pname>!;
+statements=I hope our services have been satisfactory!;
+
+
+
+
+--------WARPBLADE
+
+[DialogNode] ID=class_warpblade0;
+animations=meh;
+animations=;
+statements=The fact that you're here means you're ready for my training.;
+statements=Do you wish to be a Warpblade?;
+specialEffect=incDefaultNode;
+[DialogOption] text=Unlock <iconBig=classIcon_warpblade> Warpblade;
+formulaReq=;
+nodeToConnectTo=class_warpblade_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=class_warpblade1;
+animations=;
+statements=I'm ready when you are.;
+[DialogOption] text=Unlock <iconBig=classIcon_warpblade> Warpblade;
+formulaReq=;
+nodeToConnectTo=class_warpblade_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=class_warpblade_ask;
+animations=sly;
+animations=;
+animations=happy;
+statements=It's not free, of course.;
+statements=Being a mysterious mentor in an isolated part of the world has its drawbacks. I still have bills to pay.;
+statements=How about $500?;
+[DialogOption] text=Yes ($500);
+formulaReq=m:money - 499;
+nodeToConnectTo=class_warpblade_train;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=class_warpblade_train;
+animations=sly;
+animations=handupPose;
+animations=chargePose;
+statements=Alright!<p> This is going to be rigorous.;
+statements=You must hone both your body and mind to be a Warpblade!;
+statements=Now, to start!<p> 100 jumping jacks - but you must teleport between each one!;
+nextNodeID=class_warpblade_unlock;
+
+[DialogNode] ID=class_warpblade_unlock;
+specialEffect=subtract500gp;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,class_warpblade,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=markTrainerLocDone;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+
+[DialogNode] ID=class_warpblade2;
+animations=chargePose;
+statements=Don't forget to exercise your mind and body at every opportunity!;
+
+
+
+
+[DialogNode] ID=class_krakenslayer0;
+animations=happy;
+animations=chargePose;
+animations=happy;
+statements=Welcome, visitors!;
+statements=I am Everslay!<p> Yes, the legendary Krakenslayer!!;
+statements=But don't be intimidated<p> - you are welcome here.;
+specialEffect=incDefaultNode;
+[DialogOption] text=Unlock <iconBig=classIcon_krakenslayer> Krakenslayer;
+formulaReq=;
+nodeToConnectTo=class_krakenslayer_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=class_krakenslayer1;
+animations=happy;
+statements=What brings you back to my abode?;
+[DialogOption] text=Unlock <iconBig=classIcon_krakenslayer> Krakenslayer;
+formulaReq=;
+nodeToConnectTo=class_krakenslayer_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=class_krakenslayer_ask;
+animations=sly;
+animations=scared;
+animations=;
+animations=chargePose;
+statements=<finalTextIf=So, tales of my prowess has reached even other Crub waters!!=mainPlayerIsActorType:crub>So, tales of my prowess has reached even the realm of the dry ones!!;
+statements=...no?;
+statements=W-well,<p> regardless,<p> I will train you!;
+statements=For $500,<p> you may witness my skill!;
+[DialogOption] text=Yes ($500);
+formulaReq=m:money - 499;
+nodeToConnectTo=class_krakenslayer_train;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=class_krakenslayer_train;
+animations=sly;
+animations=stern;
+animations=chargePose;
+statements=<finalTextIf=Though you fear electricity, you do not hesitate. You must be truly brave!=mainPlayerIsActorType:crub>I hear that electricity does not sting the dry ones as it does us Crub!;
+statements=<finalTextIf=You had better stay brave - because you are going to feel the lightning!!=mainPlayerIsActorType:crub>This is good news for you!<p> Because you are going to feel the lightning!!;
+statements=Withstand this training, and you too can master it!!!;
+nextNodeID=class_krakenslayer_unlock;
+
+[DialogNode] ID=class_krakenslayer_unlock;
+specialEffect=subtract500gp;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,class_krakenslayer,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=markTrainerLocDone;
+specialEffect=fx,longGoodAuraSound;
+specialEffect=fx,w_thunder_lesser;
+nextNodeID=;
+
+
+[DialogNode] ID=class_krakenslayer2;
+animations=chargePose;
+statements=Now go, and spread the legend of Everslay!;
+
+
+---gatewarder
+
+[DialogNode] ID=class_gatewarder0;
+animations=;
+statements=Welcome.<p> What brings you to Bellrique?;
+specialEffect=incDefaultNode;
+[DialogOption] text=Unlock <iconBig=classIcon_gatewarder> Gatewarder;
+formulaReq=;
+nodeToConnectTo=class_gatewarder_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=class_gatewarder1;
+animations=;
+statements=Hello again.;
+[DialogOption] text=Unlock <iconBig=classIcon_gatewarder> Gatewarder;
+formulaReq=;
+nodeToConnectTo=class_gatewarder_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--
+
+[DialogNode] ID=class_gatewarder_ask;
+animations=;
+animations=happy;
+animations=;
+statements=This is a rare skill that you ask for.;
+statements=Were we in the heart of Seartial, it would be illegal for me to teach you!;
+statements=But the Gatekeepers have no influence here.<p> I will teach you for only $500.;
+[DialogOption] text=Yes ($500);
+formulaReq=m:money - 499;
+nodeToConnectTo=class_gatewarder_train;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=class_gatewarder_train;
+animations=;
+animations=sigh;
+animations=;
+statements=Fantastic.;
+statements=Gate magic is capable of more than you can imagine.;
+statements=All it takes is an open mind and some creativity.<p> Allow me to demonstrate...;
+nextNodeID=class_gatewarder_unlock;
+
+[DialogNode] ID=class_gatewarder_unlock;
+specialEffect=subtract500gp;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,class_gatewarder,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=markTrainerLocDone;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+
+[DialogNode] ID=class_gatewarder2;
+animations=happy;
+statements=Enjoy your stay in Bellrique.;
+
+
+
+
+
+
+
+
+
+
+

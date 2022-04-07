@@ -1,0 +1,2591 @@
+----NOTES:
+--completeOverride - if false, uses original node's dialog options & nextNodeID
+---nextNodeID=
+--previous - goes to previous node
+--overridden - goes to node that was overridden
+--overrideNext - goes to the overridden node's nextNodeID
+
+[DialogNode] ID=dialog_enemyCommodoreAttacked_done;
+specialEffect=cameraAtPlayer;
+nextNodeID=;
+
+----COMMODORE QUOTES
+
+
+--Seartial Merchant
+
+---1
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_seartial_m1;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_seartial_merchant1 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_seartial_merchant1;
+animations=sly;
+statements=Huh!<p=> Y-you don't scare me, pirate!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_seartial_m1;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_seartial_merchant1;
+speakerOverride=comm_seartial_merchant1;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=scared;
+statements=Help, help!<p=2> SOS!<p=> SOS!!;
+
+---2
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_seartial_m2;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_seartial_merchant2 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_seartial_merchant2;
+animations=angry;
+statements=We won't go down without a fight...!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_seartial_m2;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_seartial_merchant2;
+speakerOverride=comm_seartial_merchant2;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=angry;
+statements=Y-you won't get away with this!<p=> Just you wait...!;
+
+---3
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_seartial_m3;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_seartial_merchant3 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_seartial_merchant3;
+animations=stern;
+statements=Back off, pirates!<p=> W-we won't yield to you!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_seartial_m3;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_seartial_merchant3;
+speakerOverride=comm_seartial_merchant3;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sad;
+statements=Why did this have to happen to me...?;
+
+---4
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_seartial_m4;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_seartial_merchant4 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_seartial_merchant4;
+animations=angry;
+statements=Give you our cargo?<p=> As if!<p=3> You can have our cannons instead!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_seartial_m4;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_seartial_merchant4;
+speakerOverride=comm_seartial_merchant4;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=angry;
+statements=The Seartial Alliance won't let this stand!<p=2> I-I'm sure of it!;
+
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_seartial_m5;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_seartial_merchant5 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_seartial_merchant5;
+animations=angry;
+statements=I-I won't just lay down and take this!<p> I've worked too hard to give up here!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_seartial_m5;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_seartial_merchant5;
+speakerOverride=comm_seartial_merchant5;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=angry;
+statements=I...<p> I won't give up!<p> This is just a setback...!;
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_seartial_m6;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_seartial_merchant6 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_seartial_merchant6;
+animations=angry;
+statements=You messin' with the wrong merchant, fella.;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_seartial_m6;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_seartial_merchant6;
+speakerOverride=comm_seartial_merchant6;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=angry;
+statements=Damn...<p> I'm outta practice...;
+
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_seartial_m7;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_seartial_merchant7 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_seartial_merchant7;
+animations=angry;
+statements=I've important business to attend to!<p> S-stay out of my way!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_seartial_m7;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_seartial_merchant7;
+speakerOverride=comm_seartial_merchant7;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=stern;
+statements=Of all the rotten luck!<p> How will I explain this to my business partners...?;
+
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_seartial_m8;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_seartial_merchant8 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_seartial_merchant8;
+animations=sigh;
+statements=But, but, I'm just a regular merchant...!<p> Why me?;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_seartial_m8;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_seartial_merchant8;
+speakerOverride=comm_seartial_merchant8;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sigh;
+statements=How can a regular guy like me make it in this world...?;
+
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_seartial_m9;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_seartial_merchant9 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_seartial_merchant9;
+animations=scared;
+statements=You...<p> you have me mistaken for someone else, right??;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_seartial_m9;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_seartial_merchant9;
+speakerOverride=comm_seartial_merchant9;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sad;
+statements=Wait!<p> Help!<p> I can't swiiiiiiim!;
+
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_seartial_m10;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_seartial_merchant10 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_seartial_merchant10;
+animations=angry;
+statements=N-now, hold on!<p> You're making some big enemies by attacking a Seartial fleet!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_seartial_m10;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_seartial_merchant10;
+speakerOverride=comm_seartial_merchant10;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=angry;
+statements=Seartial will get you for this!<p> They'll sink you for what you've done to me!;
+
+
+--Seartial Battle
+
+----Vann Loc
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_seartial_b1;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_seartial_battle1 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_seartial_battle1;
+animations=;
+statements=You will not break this fleet, scoundrel!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_seartial_b1;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_seartial_battle1;
+animations=angry;
+statements=Enemy of Seartial!<p=> Surrender and be brought to justice!;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_seartial_b1;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_seartial_battle1;
+speakerOverride=comm_seartial_battle1;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sigh;
+statements=Curses!<p=> I let my guard down...;
+
+----Seth Ondol
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_seartial_b2;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_seartial_battle2 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_seartial_battle2;
+animations=sly;
+animations=angry;
+statements=Taking on an Alliance battle fleet?<p=1.5> You must be as foolish as you look!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_seartial_b2;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_seartial_battle2;
+animations=angry;
+statements=Law-breaker, face swift punishment for your crimes!;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_seartial_b2;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_seartial_battle2;
+speakerOverride=comm_seartial_battle2;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=angry;
+statements=The Alliance will make you pay for this, filthy pirate...!;
+
+----Val Ryder
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_seartial_b3;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_seartial_battle3 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_seartial_battle3;
+animations=angry;
+statements=I won't yield to you!<p=> Ensu guide us to victory!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_seartial_b3;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_seartial_battle3;
+animations=sigh;
+animations=angry;
+statements=Ensu, guide my hand!;
+statements=<pname=> <p=2>- in the name of the Alliance -<p=2> your time is up!;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_seartial_b3;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_seartial_battle3;
+speakerOverride=comm_seartial_battle3;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sigh;
+statements=Ensu save me from these wretched pirates...!;
+
+
+----Streed Imar
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_seartial_b4;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_seartial_battle4 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_seartial_battle4;
+animations=stern;
+statements=<pname=>, crossing Seartial is not in your best interest.<p=> Give up now!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_seartial_b4;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_seartial_battle4;
+animations=stern;
+statements=<pname=>, it is my duty to apprehend you.<p=> Lay down your arms and surrender!;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_seartial_b4;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_seartial_battle4;
+speakerOverride=comm_seartial_battle4;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sigh;
+statements=You'll see the error of your ways someday.;
+
+
+----Rob Steele
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_seartial_b5;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_seartial_battle5 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_seartial_battle5;
+animations=sly;
+statements=Pirates?<p=2> I'll give you 5 seconds to regret your life choices before I blast you out of the water!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_seartial_b5;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_seartial_battle5;
+animations=sly;
+statements=Those who cross Seartial...<p=2> will face its Steele!<p> Prepare yourself!;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_seartial_b5;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_seartial_battle5;
+speakerOverride=comm_seartial_battle5;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=stern;
+statements=Well doesn't that just beat all...!<p> How could I be bested?;
+
+
+----Craigh Dysell
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_seartial_b6;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_seartial_battle6 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_seartial_battle6;
+animations=scared;
+animations=angry;
+statements=I'm shocked that someone would be so bold as to attack us, the defenders of Seartial.;
+statements=<pname=>...<p> you're in for a shock of your own if you think this will end well for you!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_seartial_b6;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_seartial_battle6;
+animations=stern;
+statements=<pname=>, I've been ordered to bring you in -<p> give up now so I don't have to bring you in as a corpse!;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_seartial_b6;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_seartial_battle6;
+speakerOverride=comm_seartial_battle6;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=stern;
+statements=<pname=>...<p> we'll be coming after you.<p> The Alliance won't tolerate this kind of aggression!;
+
+
+----Erin Moldava
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_seartial_b7;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_seartial_battle7 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_seartial_battle7;
+animations=sly;
+statements=And here I thought patrols would be dull!<p>Come on then, have at you!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_seartial_b7;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_seartial_battle7;
+animations=angry;
+statements=You've come this far, pirate, but you won't get past me!<p> On your guard!;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_seartial_b7;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_seartial_battle7;
+speakerOverride=comm_seartial_battle7;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=angry;
+statements=Wait, how did that happen?!<p> I demand a rematch!;
+
+
+
+----Rax Angdrid
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_seartial_b8;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_seartial_battle8 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_seartial_battle8;
+animations=angry;
+statements=There are cheaper ways to die.<p> Why not try those instead?;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_seartial_b8;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_seartial_battle8;
+animations=stern;
+statements=Enemies that sail within my reach will meet nothing but destruction.;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_seartial_b8;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_seartial_battle8;
+speakerOverride=comm_seartial_battle8;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sigh;
+statements=I regret nothing.<p> You, however, will come to regret much.;
+
+
+
+----Darlo Raleigh
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_seartial_b9;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_seartial_battle9 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_seartial_battle9;
+animations=sly;
+statements=You can't hope to touch my fleet -<p> why even try?;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_seartial_b9;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_seartial_battle9;
+animations=sly;
+statements=It's over for you, <pname=> -<p> crossing Darlo Raleigh is the last mistake you'll ever make!;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_seartial_b9;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_seartial_battle9;
+speakerOverride=comm_seartial_battle9;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sad;
+statements=Am I going to get demoted for this...?;
+
+
+
+----Lee Brisby
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_seartial_b10;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_seartial_battle10 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_seartial_battle10;
+animations=sly;
+animations=angry;
+statements=So that's how it's going to be?;
+statements=Let's see if you've got the strength to match your bravado!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_seartial_b10;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_seartial_battle10;
+animations=angry;
+statements=Get ready to swim.<p> Those flimsy hulls won't protect you from me!;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_seartial_b10;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_seartial_battle10;
+speakerOverride=comm_seartial_battle10;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sad;
+statements=All broken to pieces...;
+
+----Vise
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_seartial_bVise;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,vise + g:playerInitiatedFleetBattle - 1;
+speakerOverride=vise;
+animations=happy;
+statements=This should be fun.;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_seartial_bVise;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:vise;
+animations=angry;
+animations=happy;
+statements=Looks like you made the wrong people angry.;
+statements=Now you have to deal with me.;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_seartial_bVise;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,vise;
+speakerOverride=vise;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=angry;
+animations=stern;
+statements=<speed=0.5>Y-YOU...!;
+statements=Rrg...<p> you...<p> you aren't worth...<p=2> it.<p=1.5> I'll crush you next time.;
+
+----Jin
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_seartial_bJin;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,jin + g:playerInitiatedFleetBattle - 1;
+speakerOverride=jin;
+animations=angry;
+statements=Please, reconsider this rashness!<p> I'll fight you if I must, but it won't end well for you!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_seartial_bJin;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:jin;
+animations=angry;
+statements=<pname=>, in Ensu's name and by the authority of Seartial,<p> I'm taking you in for your crimes!;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_seartial_bJin;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,jin;
+speakerOverride=jin;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sad;
+statements=Ensu help us...!;
+
+
+
+--Jasce Merchant
+
+---1
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_jasce_m1;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_jasce_merchant1 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_jasce_merchant1;
+animations=happy;
+statements=Attacking us?<p=> This is a joke, right?;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_jasce_m1;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_jasce_merchant1;
+speakerOverride=comm_jasce_merchant1;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=scared;
+statements=Nooo!<p=> Jasce, help meeeee!;
+
+---2
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_jasce_m2;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_jasce_merchant2 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_jasce_merchant2;
+animations=angry;
+statements=Hmph!<p=> Come and get it!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_jasce_m2;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_jasce_merchant2;
+speakerOverride=comm_jasce_merchant2;
+specialEffect=noSpeechFXLookOrAnim;
+animations=angry;
+statements=Damn it all...!<p=> You'll pay for this...!;
+
+---3
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_jasce_m3;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_jasce_merchant3 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_jasce_merchant3;
+animations=scared;
+statements=What?<p=> Fight?<p=> That's not really what we're going to do, are we??;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_jasce_m3;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_jasce_merchant3;
+speakerOverride=comm_jasce_merchant3;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sad;
+statements=Ack!<p=> This isn't what I became a trader for...!;
+
+---4
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_jasce_m4;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_jasce_merchant4 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_jasce_merchant4;
+animations=angry;
+statements=We may be merchants, but don't underestimate us!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_jasce_m4;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_jasce_merchant4;
+speakerOverride=comm_jasce_merchant4;
+specialEffect=noSpeechFXLookOrAnim;
+animations=angry;
+statements=Grr...<p=2> Jasce will punish you for this transgression!;
+
+---Arraga Leed
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_jasce_m5;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_jasce_merchant5 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_jasce_merchant5;
+animations=angry;
+statements=I paid for this cargo, and I'm going to keep it!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_jasce_m5;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_jasce_merchant5;
+speakerOverride=comm_jasce_merchant5;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sigh;
+statements=Ah... crap.;
+
+
+---Hyath Goha
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_jasce_m6;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_jasce_merchant6 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_jasce_merchant6;
+animations=angry;
+statements=Y-you think you can just push us around?;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_jasce_m6;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_jasce_merchant6;
+speakerOverride=comm_jasce_merchant6;
+specialEffect=noSpeechFXLookOrAnim;
+animations=stern;
+statements=Jasce!<p> Visit your wrath upon these fools, I beg you!!;
+
+
+---Finbar Rusty
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_jasce_m7;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_jasce_merchant7 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_jasce_merchant7;
+animations=stern;
+statements=Say whatever you want.<p> I ain't listenin'.;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_jasce_m7;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_jasce_merchant7;
+speakerOverride=comm_jasce_merchant7;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sad;
+statements=I shoulda listened...;
+
+
+---Mia Woznam
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_jasce_m8;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_jasce_merchant8 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_jasce_merchant8;
+animations=scared;
+statements=T-this is bad...<p> but I can't just give up!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_jasce_m8;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_jasce_merchant8;
+speakerOverride=comm_jasce_merchant8;
+specialEffect=noSpeechFXLookOrAnim;
+animations=angry;
+statements=Rrgh!<p> Grrr...!<p> Arg!!;
+
+
+---Kian Jols-aia
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_jasce_m9;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_jasce_merchant9 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_jasce_merchant9;
+animations=scared;
+statements=Wait, wait...!<p> Don't you know, it's bad luck to fight on a <dayname=>?;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_jasce_m9;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_jasce_merchant9;
+speakerOverride=comm_jasce_merchant9;
+specialEffect=noSpeechFXLookOrAnim;
+animations=angry;
+statements=Jasce...!<p> Grant me better luck next time...!!;
+
+
+
+---Lovall Smit
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_jasce_m10;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_jasce_merchant10 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_jasce_merchant10;
+animations=angry;
+statements=Attacking?<p> Isn't that a bit rude?;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_jasce_m10;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_jasce_merchant10;
+speakerOverride=comm_jasce_merchant10;
+specialEffect=noSpeechFXLookOrAnim;
+animations=;
+statements=I'm over it.;
+
+
+
+
+
+--Jasce Battle------------
+
+----Mor Dalvin
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_jasce_b1;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_jasce_battle1 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_jasce_battle1;
+animations=angry;
+statements=Attacking us?<p=> You've merely saved me the trouble of hunting you down!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_jasce_b1;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_jasce_battle1;
+animations=angry;
+statements=<pname=> -<p=2> it is Jasce' will that you be destroyed!;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_jasce_b1;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_jasce_battle1;
+speakerOverride=comm_jasce_battle1;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=angry;
+statements=I won't forget this!<p=> Jasce' wrath be on you...!;
+
+----Redclaw
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_jasce_b2;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_jasce_battle2 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_jasce_battle2;
+animations=;
+statements=Attackers?<p=> I'll lay your heads at Jasce' doorstep!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_jasce_b2;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_jasce_battle2;
+animations=angry;
+statements=<pname=>!<p=> I'll lay your head at Jasce' doorstep!;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_jasce_b2;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_jasce_battle2;
+speakerOverride=comm_jasce_battle2;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=angry;
+statements=Gah!<p=> Next time, this will end differently!!;
+
+
+----Jamis Dorne
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_jasce_b3;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_jasce_battle3 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_jasce_battle3;
+animations=sly;
+statements=This doesn't look good...<p=> for you!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_jasce_b3;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_jasce_battle3;
+animations=sly;
+statements=Another of Jasce' foes in my sight...?<p=2> I'll crush you like the ant you are!;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_jasce_b3;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_jasce_battle3;
+speakerOverride=comm_jasce_battle3;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=angry;
+statements=Jasce will have your head for this!<p=2> Just wait and see...!;
+
+
+----Edea Kelsaz
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_jasce_b4;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_jasce_battle4 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_jasce_battle4;
+animations=;
+statements=Know that this attack will be your last mistake.;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_jasce_b4;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_jasce_battle4;
+animations=;
+statements=<pname=>.<p=2> You picked the wrong side in this war...<p=2> now face the consequences.;
+
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_jasce_b4;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_jasce_battle4;
+speakerOverride=comm_jasce_battle4;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sigh;
+statements=Well fought...<p=> but you can only protest against God for so long...!;
+
+
+
+----Lede Valbain
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_jasce_b5;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_jasce_battle5 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_jasce_battle5;
+animations=sly;
+statements=Anger me, and you anger Jasce.<p> Is that what you want?;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_jasce_b5;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_jasce_battle5;
+animations=angry;
+statements=You should have stayed hidden from Jasce's sight...<p> now it's over for you!;
+
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_jasce_b5;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_jasce_battle5;
+speakerOverride=comm_jasce_battle5;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sad;
+statements=No...!<p> I said I would do better than her...<p> and I failed...!;
+
+
+----Wynam Coll
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_jasce_b6;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_jasce_battle6 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_jasce_battle6;
+animations=angry;
+statements=If this is how you want to die, then so be it!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_jasce_b6;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_jasce_battle6;
+animations=angry;
+statements=Enemy of Jasce, surrender or be destroyed!;
+
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_jasce_b6;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_jasce_battle6;
+speakerOverride=comm_jasce_battle6;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sigh;
+statements=I just wanted to do a good job!<p> Why is that so hard...?;
+
+
+
+----Anders Ellsom
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_jasce_b7;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_jasce_battle7 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_jasce_battle7;
+animations=angry;
+statements=Man the cannons!<p> Hit 'em before they know what hit 'em!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_jasce_b7;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_jasce_battle7;
+animations=angry;
+statements=These cannons were made just for you, <pname=>! Better enjoy it, in your last moments!!;
+
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_jasce_b7;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_jasce_battle7;
+speakerOverride=comm_jasce_battle7;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sad;
+statements=Next time, I'm bringing bigger guns...!;
+
+
+----Lumeis-wren
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_jasce_b8;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_jasce_battle8 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_jasce_battle8;
+animations=sigh;
+statements=You see what Jasce offers, and yet you do this?<p> Pathetic.;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_jasce_b8;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_jasce_battle8;
+animations=angry;
+statements=The time for repentance has past, <pname=>.<p> Jasce has judged you, and I am the gavel.;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_jasce_b8;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_jasce_battle8;
+speakerOverride=comm_jasce_battle8;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sigh;
+statements=Such strength!<p=2> If only you had a conscience -<p> you could have had a future under Jasce...;
+
+
+----Bal Roderick
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_jasce_b9;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_jasce_battle9 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_jasce_battle9;
+animations=angry;
+statements=You who lead yourself to Ruin -<p> know that you have found him!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_jasce_b9;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_jasce_battle9;
+animations=angry;
+statements=Children of the world.<p> Embrace Jasce, the true God, in your final moments!;
+
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_jasce_b9;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_jasce_battle9;
+speakerOverride=comm_jasce_battle9;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sigh;
+statements=Neither Jasce nor Ruin can get me out of this, can they...?;
+
+
+
+----Reb Virnam
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_jasce_b10;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_jasce_battle10 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_jasce_battle10;
+animations=angry;
+statements=You're gonna attack?<p> I'll tear you apart.;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_jasce_b10;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_jasce_battle10;
+animations=sly;
+animations=angry;
+statements=You're the troublemaker '<pname=>'?;
+statements=I'll eat your face off.;
+
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_jasce_b10;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_jasce_battle10;
+speakerOverride=comm_jasce_battle10;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=angry;
+statements=<speed=0.7>GRRRRAARRRRGHGHH!!;
+
+
+
+----Nias Varkarra
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_jasce_b11;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_jasce_battle11 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_jasce_battle11;
+animations=sigh;
+statements=Jasce!<p> Jasce!<p> Oh, Jasce!<p> Deliver me and punish these miscreants!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_jasce_b11;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_jasce_battle11;
+animations=stern;
+statements=Jasce!<p> Jasce, Great Lord Jasce, the true God-king!<p> Smite these inferior creatures for their irreverence!;
+
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_jasce_b11;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_jasce_battle11;
+speakerOverride=comm_jasce_battle11;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sad;
+statements=Jasce...!<p> <speed=0.8>Jaaaaasce!!!;
+
+
+
+----Hand
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_jasce_b12;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_jasce_battle12 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_jasce_battle12;
+animations=angry;
+statements=<speed=0.5><pname=>. Perish.;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_jasce_b12;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_jasce_battle12;
+animations=angry;
+statements=<speed=0.5>It's over <pname=>.;
+
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_jasce_b12;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_jasce_battle12;
+speakerOverride=comm_jasce_battle12;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=angry;
+statements=<speed=0.4>...;
+
+
+
+
+----
+
+
+
+
+
+
+
+
+
+
+
+
+--Rumane Merchant
+
+---Underson
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_rumane_m1;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_rumane_merchant1 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_rumane_merchant1;
+animations=scared;
+statements=D-don't get in the way!<p=> I-I can be vicious when attacked!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_rumane_m1;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_rumane_merchant1;
+speakerOverride=comm_rumane_merchant1;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=scared;
+statements=Y, you only won because I-I was going easy on you!;
+
+---Jous Kilian
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_rumane_m2;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_rumane_merchant2 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_rumane_merchant2;
+animations=angry;
+statements=You won't get a single coin from me!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_rumane_m2;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_rumane_merchant2;
+speakerOverride=comm_rumane_merchant2;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=scared;
+statements=Ah...<p=> that went exceptionally poorly...;
+
+
+---Ordin Kohm
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_rumane_m3;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_rumane_merchant3 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_rumane_merchant3;
+animations=sly;
+statements=Well!<p=> Looks like these cannons were a good investment after all!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_rumane_m3;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_rumane_merchant3;
+speakerOverride=comm_rumane_merchant3;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=stern;
+statements=Damn...<p=> if only I'd bought that marine insurance...!;
+
+
+---Martie Hobb
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_rumane_m4;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_rumane_merchant4 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_rumane_merchant4;
+animations=sigh;
+statements=<speed=0.8>Ugh...<p=> this is really not how I wanted today to go...;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_rumane_m4;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_rumane_merchant4;
+speakerOverride=comm_rumane_merchant4;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=stern;
+statements=Urgh...<p=> this is really the worst...!;
+
+
+
+---Mol William
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_rumane_m5;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_rumane_merchant5 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_rumane_merchant5;
+animations=angry;
+statements=You best back off before you regret it...!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_rumane_m5;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_rumane_merchant5;
+speakerOverride=comm_rumane_merchant5;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=angry;
+statements=Ruin take you,<p=> you wretched blaggard!;
+
+
+---Doris Linel
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_rumane_m6;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_rumane_merchant6 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_rumane_merchant6;
+animations=angry;
+statements=Is this some kind of sick joke?<p=> Because I'm not laughing.;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_rumane_m6;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_rumane_merchant6;
+speakerOverride=comm_rumane_merchant6;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sad;
+statements=...oh...;
+
+
+
+---Kig Jeffly
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_rumane_m7;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_rumane_merchant7 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_rumane_merchant7;
+animations=;
+statements=Uhhh,<p=> I don't really know what to think of this...;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_rumane_m7;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_rumane_merchant7;
+speakerOverride=comm_rumane_merchant7;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sigh;
+statements=I, uhh,<p=> I don't,<p=> I don't like this.;
+
+
+---Myloft
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_rumane_m8;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_rumane_merchant8 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_rumane_merchant8;
+animations=angry;
+statements=I thought my fighting days were over...<p=> but I guess not yet!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_rumane_m8;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_rumane_merchant8;
+speakerOverride=comm_rumane_merchant8;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sigh;
+statements=Can't even one trip go smoothly?;
+
+
+---Trent Wiser
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_rumane_m9;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_rumane_merchant9 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_rumane_merchant9;
+animations=sly;
+statements=You'd better not be doing what I think you're doing...;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_rumane_m9;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_rumane_merchant9;
+speakerOverride=comm_rumane_merchant9;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=angry;
+statements=You scoundrels will pay for this!<p=> I assure you!;
+
+
+---Gorsham J
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_rumane_m10;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_rumane_merchant10 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_rumane_merchant10;
+animations=angry;
+statements=I'm not scareda you.<p=> You want our loot, you'll hafta earn it!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_rumane_m10;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_rumane_merchant10;
+speakerOverride=comm_rumane_merchant10;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sigh;
+statements=Guh...<p=> me and my big mouth...;
+
+
+
+
+
+--Rumane Battle-------------
+
+----Vol-ria
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_rumane_b1;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_rumane_battle1 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_rumane_battle1;
+animations=angry;
+statements=Cocky punks!<p=> How 'bout you break yourselves on these fists, instead?;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_rumane_b1;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_rumane_battle1;
+animations=angry;
+statements=Go at them with everything you've got!!<p=> Don't hesitate!;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_rumane_b1;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_rumane_battle1;
+speakerOverride=comm_rumane_battle1;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=angry;
+statements=You made a big mistake here today!!<p=> And you're going to regret it!!;
+
+
+----Koris Colby
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_rumane_b2;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_rumane_battle2 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_rumane_battle2;
+animations=sigh;
+animations=angry;
+statements=It is the nature of the criminal to put themselves at risk.;
+statements=I'll see to it that you face the consequences.;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_rumane_b2;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_rumane_battle2;
+animations=angry;
+statements=Criminals like yourselves deserve no mercy.;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_rumane_b2;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_rumane_battle2;
+speakerOverride=comm_rumane_battle2;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=angry;
+statements=Grr...<p=> beaten by a load of crooks and fools...!;
+
+
+----Drake
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_rumane_b3;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_rumane_battle3 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_rumane_battle3;
+animations=;
+statements=The wind and water is on my side...<p=> you have no chance to win!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_rumane_b3;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_rumane_battle3;
+animations=angry;
+statements=The wind has delivered you unto me<p=> - now face the storm!;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_rumane_b3;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_rumane_battle3;
+speakerOverride=comm_rumane_battle3;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=angry;
+statements=Fire burn you, and lightning score you...!;
+
+
+
+----Lodi Darish
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_rumane_b4;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_rumane_battle4 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_rumane_battle4;
+animations=angry;
+statements=Your bravery is impressive...<p=> but no tales will be told of it, sadly!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_rumane_b4;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_rumane_battle4;
+animations=stern;
+animations=angry;
+statements=Rally, men!<p=> The enemy is at hand!;
+statements=To the cannons!<p=> Draw your steel!<p=> Make them know the fear of Rumane!;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_rumane_b4;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_rumane_battle4;
+speakerOverride=comm_rumane_battle4;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sigh;
+statements=Every journey has its setbacks...;
+
+
+----Al Burblade
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_rumane_b5;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_rumane_battle5 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_rumane_battle5;
+animations=sigh;
+animations=sly;
+statements=Oh, here we go.;
+statements=Listen,<p=> I'm a busy man, so die quickly,<p=> would you?;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_rumane_b5;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_rumane_battle5;
+animations=stern;
+animations=sly;
+statements=Time to put another notch in the ol' belt!;
+statements=Just die, alright?<p=> Make it quicker for the both of us.;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_rumane_b5;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_rumane_battle5;
+speakerOverride=comm_rumane_battle5;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=happy;
+statements=Hah!<p=> Looks like you sure showed me!;
+
+
+----Drask Lydo
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_rumane_b6;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_rumane_battle6 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_rumane_battle6;
+animations=sly;
+statements=You're making a big mistake.<p=> You know this is a BATTLE FLEET, right?;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_rumane_b6;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_rumane_battle6;
+animations=;
+statements=<pname=>,<p=> I'm taking you in for crimes against Rumane.;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_rumane_b6;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_rumane_battle6;
+speakerOverride=comm_rumane_battle6;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sigh;
+statements=Father warned me there would be days like this.;
+
+
+
+----Sid Quinet
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_rumane_b7;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_rumane_battle7 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_rumane_battle7;
+animations=angry;
+statements=Hmph.<p=> Time to teach you a lesson.;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_rumane_b7;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_rumane_battle7;
+animations=stern;
+animations=angry;
+statements=<pname=>, <pname=>...<p=> your unruly behavior is getting you into quite a lot of trouble.;
+statements=Let me show you firsthand what that behavior gets you.;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_rumane_b7;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_rumane_battle7;
+speakerOverride=comm_rumane_battle7;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sad;
+statements=This kind of deviance isn't going to get you anywhere, you know...!;
+
+
+
+----Ire Jackson
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_rumane_b8;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_rumane_battle8 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_rumane_battle8;
+animations=angry;
+statements=You're pissing me off, whelp.<p=> Is that really what you want?;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_rumane_b8;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_rumane_battle8;
+animations=angry;
+statements=Looks like you went and pissed off all of Rumane.<p=2>Now you've got to deal with me.;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_rumane_b8;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_rumane_battle8;
+speakerOverride=comm_rumane_battle8;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=stern;
+statements=Damn you...!;
+
+
+
+----Miguel Slye
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_rumane_b9;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_rumane_battle9 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_rumane_battle9;
+animations=angry;
+statements=Come, rogues!<p=> Crash upon my blade and be split asunder!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_rumane_b9;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_rumane_battle9;
+animations=stern;
+animations=angry;
+statements=<pname=>, your foul actions have angered the King!;
+statements=As his sword, justice is mine to enact!<p=> En garde!;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_rumane_b9;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_rumane_battle9;
+speakerOverride=comm_rumane_battle9;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sad;
+statements=Blast it all!<p=> Your Majesty, I have failed you!;
+
+
+----Iomar Varley
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_rumane_b10;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_rumane_battle10 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_rumane_battle10;
+animations=;
+statements=<cmd=task=weather,storm><speed=0.8>The wind is howling, <pname=>...<p> can you hear it?;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_rumane_b10;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_rumane_battle10;
+animations=;
+statements=Your fate has come for you, <pname=>.<cmd=task=weather,storm><p=2> Face it head on.;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_rumane_b10;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_rumane_battle10;
+speakerOverride=comm_rumane_battle10;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sigh;
+statements=<cmd=task=weather,none>You've earned freedom... for now.<p=2> Make good use of it.;
+
+
+----Kai Stone
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_rumane_b11;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_rumane_battle11 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_rumane_battle11;
+animations=angry;
+statements=Come, sunder yourself on 'The Wall' Kai Stone!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_rumane_b11;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_rumane_battle11;
+animations=angry;
+statements=His Majesty's will is my will, and none can stand against it!;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_rumane_b11;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_rumane_battle11;
+speakerOverride=comm_rumane_battle11;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=scared;
+statements=No...!<p=2> Unfathomable!;
+
+
+
+
+
+
+
+
+
+
+
+--Neutral Merchant
+
+---Smith Doe
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_neutral_m1;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_neutral_merchant1 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_neutral_merchant1;
+animations=scared;
+statements=U-uhh...<p=> battle stations, everyone!<p=> That's what I'm supposed to say, right?;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_neutral_m1;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_neutral_merchant1;
+speakerOverride=comm_neutral_merchant1;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sigh;
+statements=I guess I'll always be a nobody...;
+
+---Nedric Alan
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_neutral_m2;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_neutral_merchant2 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_neutral_merchant2;
+animations=sly;
+statements=Huh??<p=> Did I do something wrong?;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_neutral_m2;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_neutral_merchant2;
+speakerOverride=comm_neutral_merchant2;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sly;
+statements=Maybe I did something wrong in a past life...??;
+
+
+---Ban-ouvall
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_neutral_m3;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_neutral_merchant3 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_neutral_merchant3;
+animations=sigh;
+statements=I don't like the look of this...<p=> did we take a wrong turn?;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_neutral_m3;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_neutral_merchant3;
+speakerOverride=comm_neutral_merchant3;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sigh;
+statements=I knew I should have gone the long way around...!;
+
+
+---Basil Odson
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_neutral_m4;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_neutral_merchant4 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_neutral_merchant4;
+animations=scared;
+statements=Y-you're attacking me??<p=> Th-that's...<p=> you know that's illegal, right??;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_neutral_m4;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_neutral_merchant4;
+speakerOverride=comm_neutral_merchant4;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=scared;
+statements=SOS!<p=> There's pirates everywhere!<p=> Help!!;
+
+
+---Ron Midton
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_neutral_m5;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_neutral_merchant5 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_neutral_merchant5;
+animations=happy;
+statements=Huhuh, I doubt you'll actually attack!<p=> That's just an empty threat!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_neutral_m5;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_neutral_merchant5;
+speakerOverride=comm_neutral_merchant5;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sigh;
+statements=Uhmmm,<p=> that isn't what I expected...;
+
+
+---Egg Edison
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_neutral_m6;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_neutral_merchant6 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_neutral_merchant6;
+animations=angry;
+statements=You upstart!<p=> You think you can just harass people on the seas?<p=> Disrespectful!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_neutral_m6;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_neutral_merchant6;
+speakerOverride=comm_neutral_merchant6;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=angry;
+statements=Whippersnapper!<p=> Landlubber!<p=> Try that again when I have my battle fleet with me!!;
+
+
+---Jess Tambar
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_neutral_m7;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_neutral_merchant7 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_neutral_merchant7;
+animations=sigh;
+statements=My, how dreadful...<p=> having to fight instead of just sailing peacefully!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_neutral_m7;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_neutral_merchant7;
+speakerOverride=comm_neutral_merchant7;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sigh;
+statements=Isn't that a shame.<p=> I expected a better outcome...;
+
+
+---Worry
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_neutral_m8;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_neutral_merchant8 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_neutral_merchant8;
+animations=sigh;
+statements=P-p-pirates?<p=> But, but, this isn't fair!!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_neutral_m8;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_neutral_merchant8;
+speakerOverride=comm_neutral_merchant8;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sigh;
+statements=Wahh!<p=> W-why didn't I stay home and become a <rand=baker/weaver/potter/cobbler/cooper> instead...?;
+
+
+---Siggy Jake
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_neutral_m9;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_neutral_merchant9 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_neutral_merchant9;
+animations=scared;
+statements=Huh?<p=> You're doing what now?;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_neutral_m9;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_neutral_merchant9;
+speakerOverride=comm_neutral_merchant9;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sad;
+statements=I just wanted to make a quick bit of coin...;
+
+
+---Dodgy Jones
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_neutral_m10;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_neutral_merchant10 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_neutral_merchant10;
+animations=angry;
+statements=Ain't gonna lay yer hands on me.<p=> Guarantee it.;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_neutral_m10;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_neutral_merchant10;
+speakerOverride=comm_neutral_merchant10;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sad;
+statements=Sometimes dodgin' just ain't enough...;
+
+---Peevins
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_neutral_m11;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_neutral_merchant11 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_neutral_merchant11;
+animations=angry;
+statements=Wh,<p=> but I already paid protection money!<p=2> Who are you guys??;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_neutral_m11;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_neutral_merchant11;
+speakerOverride=comm_neutral_merchant11;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sad;
+statements=I knew I should have paid for more protection...!;
+
+---Udor Jong
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_neutral_m12;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_neutral_merchant12 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_neutral_merchant12;
+animations=angry;
+statements=I don't have time for this!<p=> Go away, you scumbags!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_neutral_m12;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_neutral_merchant12;
+speakerOverride=comm_neutral_merchant12;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sad;
+statements=Sorry, sorry!!<p=> I take it back!;
+
+
+
+
+
+
+
+
+
+
+
+
+
+--Pirate Battle------------
+
+----Grol Worvyn
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_pirate_b1;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_pirate_battle1 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_pirate_battle1;
+animations=sly;
+statements=Pretty bold, aren't you?<p=> I think you'd better run back home...;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_pirate_b1;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_pirate_battle1;
+animations=sly;
+animations=stern;
+statements=Looks like someone wandered a little too far from home!;
+statements=Stay right there and I'll guide you back where you belong.;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_pirate_b1;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_pirate_battle1;
+speakerOverride=comm_pirate_battle1;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sigh;
+statements=Well damn.<p=> That wasn't what I expected...;
+
+
+----Cinder
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_pirate_b2;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_pirate_battle2 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_pirate_battle2;
+animations=stern;
+statements=Like moths to a flame...!<p=> Everyone, attack!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_pirate_b2;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_pirate_battle2;
+animations=angry;
+statements=Hold it, whelp!<p=2> Hand over everything you've got, now!;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_pirate_b2;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_pirate_battle2;
+speakerOverride=comm_pirate_battle2;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=angry;
+statements=RrrraaaghgH!!!<p=3> Burn in hell, you bastards!!;
+
+
+----Thresher
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_pirate_b3;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_pirate_battle3 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_pirate_battle3;
+animations=sly;
+animations=angry;
+statements=Do you...<p=> not realize who I am?;
+statements=Well. Time to learn.;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_pirate_b3;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_pirate_battle3;
+animations=stern;
+animations=angry;
+statements=<pname=>.;
+statements=Don't put up a fight, or this will go even worse for you.;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_pirate_b3;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_pirate_battle3;
+speakerOverride=comm_pirate_battle3;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=angry;
+statements=Wait a minute...<p=3> why didn't I win?;
+
+----Luka Hythol
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_pirate_b4;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_pirate_battle4 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_pirate_battle4;
+animations=happy;
+animations=angry;
+statements=Haha!<p=> Are these idiots actually coming at us??;
+statements=This will be the easiest fortune I've ever made!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_pirate_b4;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_pirate_battle4;
+animations=stern;
+animations=angry;
+statements=Heh.<p=> More hapless sailors.;
+statements=Looks like you picked the wrong career, fool.;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_pirate_b4;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_pirate_battle4;
+speakerOverride=comm_pirate_battle4;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=scared;
+statements=Erhg...<p=> beaten by...<p=> idiots...<p=> how...?;
+
+
+----Rembrandt
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_pirate_b5;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_pirate_battle5 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_pirate_battle5;
+animations=;
+statements=No pirate hunter will ever cage me!<p=> Die!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_pirate_b5;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_pirate_battle5;
+animations=angry;
+statements=Coming here was a mistake.<p=2> One you won't repeat.;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_pirate_b5;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_pirate_battle5;
+speakerOverride=comm_pirate_battle5;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sad;
+statements=I... lost?<p=2> I don't believe it...!;
+
+----Trys Randel
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_pirate_b6;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_pirate_battle6 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_pirate_battle6;
+animations=sly;
+statements=Now this is interesting...<p=> let's see how it plays out!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_pirate_b6;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_pirate_battle6;
+animations=happy;
+statements=Finally, a mark!<p=2> I thought I'd die of boredom!;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_pirate_b6;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_pirate_battle6;
+speakerOverride=comm_pirate_battle6;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sigh;
+statements=Urg-!<p=> Why is it always like this...?;
+
+----Cholhash
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_pirate_b7;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_pirate_battle7 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_pirate_battle7;
+animations=;
+statements=<font=buralk>No, YOU lay down everything and give it to me!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_pirate_b7;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_pirate_battle7;
+animations=angry;
+statements=<font=buralk>Lay down everything and give it to me!;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_pirate_b7;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_pirate_battle7;
+speakerOverride=comm_pirate_battle7;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sad;
+statements=<font=buralk>Why don't they ever listen to what I say?;
+
+
+----Elos Mordri
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_pirate_b8;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_pirate_battle8 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_pirate_battle8;
+animations=;
+statements=Feeble-minded pirate hunter!<p=> You can suffer like the rest!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_pirate_b8;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_pirate_battle8;
+animations=angry;
+statements=More quisling fortune-seekers.<p=1.5> Time to pay for your greed!;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_pirate_b8;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_pirate_battle8;
+speakerOverride=comm_pirate_battle8;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=angry;
+statements=You'll suffer for this, one way or another...!;
+
+
+----Lil' Bogo
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_pirate_b9;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_pirate_battle9 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_pirate_battle9;
+animations=angry;
+statements=Hey!<p=> You're all mixed up, chump!<p=> I'M supposed to be attacking YOU!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_pirate_b9;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_pirate_battle9;
+animations=angry;
+statements=Hand over everything you've got, chump!;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_pirate_b9;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_pirate_battle9;
+speakerOverride=comm_pirate_battle9;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sigh;
+statements=Ugh...<p=2> I got what I deserved, huh...?;
+
+
+----Dorn Smith
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_pirate_b10;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,comm_pirate_battle10 + g:playerInitiatedFleetBattle - 1;
+speakerOverride=comm_pirate_battle10;
+animations=sly;
+animations=angry;
+statements=A hunter?<p=> You aren't pointing those cannons at me, are you?;
+statements=Let me show you where you can point 'em!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_pirate_b10;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:comm_pirate_battle10;
+animations=sly;
+animations=;
+statements=Hold it, friend.<p=2> Looks like you got a bit too much cargo there, slowing you down.;
+statements=Just sit right there and I'll fix that for ya!;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_pirate_b10;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,comm_pirate_battle10;
+speakerOverride=comm_pirate_battle10;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+animations=stern;
+statements=I overdid it again, didn't I...?;
+
+
+
+
+
+----Lagan
+
+--attacked
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttacked_lagan;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttacked;
+completeOverride=false;
+fReq=gIs:commodoreEnemy,lagan + g:playerInitiatedFleetBattle - 1;
+speakerOverride=lagan;
+animations=sly;
+animations=angry;
+animations=happy;
+animations=angry;
+statements=<pname=>...!<p> You and Reeve still alive and causing problems, I see!;
+statements=How dare you come back here after what you did...<p> you cost me more than half my pay!!;
+statements=<cmd=task=weather,storm>No mercy this time -<p> now I have two Stormcutters, both ready to blast you into dust!!;
+statements=<speed=0.3><pname=>! <color=DarkRed>Die!!;
+nextNodeID=dialog_enemyCommodoreAttacked_done;
+specialEffect=song,CC0-DeepNoise;
+
+--attacking
+[DialogNodeOverride] ID=dialog_enemyCommodoreAttack_lagan;
+dialogNodeID_toOverride=dialog_enemyCommodoreAttack;
+completeOverride=false;
+fReq=talker:lagan;
+animations=sly;
+animations=angry;
+animations=happy;
+animations=angry;
+statements=<pname=>...!<p> You and Reeve still alive and causing problems, I see!;
+statements=How dare you come back here after what you did...<p> you cost me more than half my pay!!;
+statements=<cmd=task=weather,storm>No mercy this time -<p> now I have two Stormcutters, both ready to blast you into dust!!;
+statements=<speed=0.3><pname=>! <color=DarkRed>Die!!;
+specialEffect=song,CC0-DeepNoise;
+
+--defeated
+[DialogNodeOverride] ID=dialog_enemyCommodoreQuip_lagan;
+dialogNodeID_toOverride=dialog_enemyCommodoreQuip;
+completeOverride=false;
+fReq=gIs:lastCommodoreDefeated,lagan;
+speakerOverride=lagan;
+specialEffect=delayDialog,1;
+specialEffect=noSpeechFXLookOrAnim;
+specialEffect=setGlobalVar,laganDefeated,1;
+animations=sad;
+animations=angry;
+statements=<cmd=task=weather,none>N-no...!<p> This can't be...!;
+statements=<speed=0.6><pname=>!!<p=> D-damn you...!!;
+
+

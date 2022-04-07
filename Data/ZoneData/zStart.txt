@@ -1,0 +1,49 @@
+[Zone]  ID=zStart; dark=False; timeUntilNewDay=13.49957; showFogOfWar=True; fogOfWar=True; minimapEnabled=True; allowCameraPastZoneEdges=False; cantAct=False; cantGameOver=False; alwaysKeepWeaponsUnsheathed=False; peaceful=False; overseerMode=False; rollingPinStyle=False; drawSky=False; drawSky_overrideYpos=-1; boatZone=False; wind=False; overworld=False; canDropItems=True; 
+ travelSong=; travelSongVolume=1; travelSongPitch=0; combatSong=; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=0; darkG=0; darkB=0; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=; bgFX_sineWave=0; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=pR; zoneGrassPalette=pR; zoneGrassDarkPalette=pR; zoneStonePalette=pR; zoneStoneDarkPalette=pR; zoneStoneLightPalette=pR; zoneWaterPalette=pR; zoneDirtDarkPalette=pR; zoneWoodPalette=pR; zoneWoodDarkPalette=pR; zoneMisc1Palette=pR; zoneMisc2Palette=pR; zoneMisc3Palette=pRed; zoneMisc4Palette=pBlue; zoneMisc5Palette=pGreen; zoneMisc6Palette=pOrange; zoneMisc7Palette=pYellow; zoneMisc8Palette=pPurple; 
+
+combatMode=False; 
+
+
+
+
+[Trigger] numID=0; aliasID=base;
+topX=25;topY=13;btmX=29;btmY=13;
+triggerImmediatelyOnEnteringZone=True; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=0; effectID=preventInteraction; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=1; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=0; effectID=fx; sValue=blackenScreen_long; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=0; effectID=trigger; sValue=tStartGame; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0.1; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=0; effectID=giveActorsBaseXP; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=1; aliasID=debug start;
+topX=25;topY=17;btmX=29;btmY=17;
+triggerImmediatelyOnEnteringZone=True; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=keyHeld:console+g:skipIntro;
+[TriggerEffect] numID=1; effectID=travel_point; sValue=zBeach0d; sValue2=; bValue1=True; bValue2=False; fValue=0; delay=0.15; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=1; effectID=enableUI; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0.11; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=1; effectID=cutsceneMode; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0.11; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=1; effectID=setGlobalVar; sValue=turnsTaken; sValue2=; bValue1=False; bValue2=False; fValue=1; delay=0.11; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=1; effectID=setGlobalVar; sValue=ignoreHardcore; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0.11; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=1; effectID=setGlobalVar; sValue=cantFleeCombat; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0.11; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=1; effectID=setGlobalVar; sValue=cantBacktrackBeach0d; sValue2=; bValue1=False; bValue2=False; fValue=1; delay=0.11; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=1; effectID=setGlobalVar; sValue=hideTravelUI; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0.11; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=1; effectID=setGlobalVar; sValue=enableEnemyRandomActTimers; sValue2=; bValue1=False; bValue2=False; fValue=1; delay=0.11; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=1; effectID=gp; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=50; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=1; effectID=addItem; sValue=xpGem; sValue2=player; bValue1=False; bValue2=False; fValue=4; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=1; effectID=addItem; sValue=armor_iron; sValue2=player; bValue1=False; bValue2=False; fValue=1; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=1; effectID=addItem; sValue=cloak_hood; sValue2=player; bValue1=False; bValue2=False; fValue=1; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=1; effectID=learnJournalEntry; sValue=journal_magicSealDoor; sValue2=; bValue1=False; bValue2=True; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=2; aliasID=normal start;
+topX=25;topY=16;btmX=29;btmY=16;
+triggerImmediatelyOnEnteringZone=True; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1-keyHeld:console-g:skipIntro;
+[TriggerEffect] numID=2; effectID=travel_point; sValue=zScene1a; sValue2=; bValue1=True; bValue2=False; fValue=0; delay=0.1; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+

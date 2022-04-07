@@ -1,0 +1,14 @@
+
+[DialogNode] ID=port30_guy1a;
+animations=happy;
+statements=Welcome, <textIf2=Crub!=non-Crub!=mainPlayerIsActorType:crub><p> We are Crub!;
+nextNodeID=;
+
+[DialogNode] ID=port30_guy2a;
+animations=;
+animations=angry;
+animations=meh;
+statements=Crubtown is friendly, but not all crub are friendly.;
+statements=<finalTextIf=Are you friendly?=mainPlayerIsActorType:crub>So don't judge us if you meet a mean Crub.;
+statements=<finalTextIf=You seem friendly enough... I guess.=mainPlayerIsActorType:crub>And I won't judge you...<p> I guess.;
+nextNodeID=;

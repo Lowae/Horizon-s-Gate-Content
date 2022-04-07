@@ -1,0 +1,3986 @@
+[Action] ID=bombThrow; 
+	name=Megabomb;
+	casterAnimation=swing;
+	
+	FXOnCaster=QuietBurnishSound;
+	FXOnTarget=swing;
+	FXOnTarget=throw_bomb;
+[ActionAoE] 
+	ID=bombThrow;
+	cloneFrom=adjacentAndSelf;
+	maxRange=3;
+	maxRangeBonus=sa:toolTalent;
+	arc=true;
+	airborne=true;
+	needsLoS=true;
+	needsLoE = true;
+	canSelectActors=false;
+	occupyAll=false;
+[AvAffecter]
+	ID=bombThrow; 
+	actorValue=summonItem;
+	magnitude=bombLit;
+	duration=1;
+	FXOnTile=step;
+[AvAffecterAoE]
+	ID=bombThrow;
+	cloneFrom=oneTile;
+
+[Action] ID=bombExplosion; 
+	FXOnTarget=medExplosion;
+	FXOnTarget=ThudShotBigger;
+	FXOnTarget=sfx_classicExplosion;
+	FXOnTarget=medShakeHoriz;
+[ActionAoE] 
+	ID=bombExplosion;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=bombExplosion; 
+	actorValue=HP;
+	magnitude=-50 + t:skill_Fire + t:MagDef;
+	duration=-2;
+	chance=100;
+	FXOnTile=terrain;
+	FXOnTile=smoke_noOverlap;
+	element=fire;
+	element=kindle;
+	element=explode;
+	element=smash;
+	element=heavySmash;
+[AvAffecterAoE]
+	ID=bombExplosion;
+	cloneFrom=adjacentAndSelf+1;
+	arc=true;
+	airborne=true;
+	
+[Action] ID=bombExplosion_25dmg; 
+	FXOnTarget=medExplosion;
+	FXOnTarget=ThudShotBigger;
+	FXOnTarget=sfx_classicExplosion;
+	FXOnTarget=medShakeHoriz;
+[ActionAoE] 
+	ID=bombExplosion_25dmg;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=bombExplosion_25dmg; 
+	actorValue=HP;
+	magnitude=-25 + t:skill_Fire + t:MagDef;
+	duration=-2;
+	chance=100;
+	FXOnTile=terrain;
+	FXOnTile=smoke_noOverlap;
+	element=fire;
+	element=kindle;
+	element=explode;
+	element=smash;
+	element=heavySmash;
+[AvAffecterAoE]
+	ID=bombExplosion_25dmg;
+	cloneFrom=adjacentAndSelf+1;
+	arc=true;
+	airborne=true;
+	
+[Action] ID=bombExplosion_small; 
+	FXOnTarget=medExplosion_small_noOverlap;
+	FXOnTarget=ThudShotBigger;
+	FXOnTarget=sfx_classicExplosion;
+	FXOnTarget=medShakeHoriz;
+[ActionAoE] 
+	ID=bombExplosion_small;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=bombExplosion_small; 
+	actorValue=HP;
+	magnitude=-25 + t:skill_Fire + t:MagDef;
+	duration=-2;
+	chance=100;
+	FXOnTile=terrain;
+	FXOnTile=smoke_noOverlap;
+	element=fire;
+	element=kindle;
+	element=explode;
+	element=smash;
+	element=heavySmash;
+[AvAffecterAoE]
+	ID=bombExplosion_small;
+	cloneFrom=adjacentAndSelf;
+	arc=true;
+	airborne=true;
+	
+[Action] ID=bombExplosion_small_weak; 
+	FXOnTarget=medExplosion_small_noOverlap;
+	FXOnTarget=ThudShotBigger;
+	FXOnTarget=sfx_classicExplosion;
+	FXOnTarget=medShakeHoriz;
+[ActionAoE] 
+	ID=bombExplosion_small_weak;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=bombExplosion_small_weak; 
+	actorValue=HP;
+	magnitude=-20 + t:skill_Fire + t:MagDef;
+	duration=-2;
+	chance=100;
+	FXOnTile=terrain;
+	FXOnTile=smoke_noOverlap;
+	element=fire;
+	element=kindle;
+	element=explode;
+	element=smash;
+	element=heavySmash;
+[AvAffecterAoE]
+	ID=bombExplosion_small_weak;
+	cloneFrom=adjacentAndSelf;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	occupyAll=true;
+	
+
+[Action] ID=bombExplosion_small_killSelf; 
+	FXOnTarget=medExplosion_small_noOverlap;
+	FXOnTarget=ThudShotBigger;
+	FXOnTarget=sfx_classicExplosion;
+	FXOnTarget=medShakeHoriz;
+[ActionAoE] 
+	ID=bombExplosion_small_killSelf;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=bombExplosion_small_killSelf; 
+	actorValue=HP;
+	magnitude=-25 + t:skill_Fire + t:MagDef;
+	duration=-2;
+	chance=100;
+	FXOnTile=terrain;
+	FXOnTile=smoke_noOverlap;
+	element=fire;
+	element=kindle;
+	element=explode;
+	element=smash;
+	element=heavySmash;
+[AvAffecterAoE]
+	ID=bombExplosion_small_killSelf;
+	cloneFrom=adjacent+1;
+	arc=true;
+	airborne=true;
+[AvAffecter]
+	ID=bombExplosion_small_killSelf; 
+	actorValue=HP;
+	magnitude=-t:HP;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=bombExplosion_small_killSelf;
+	cloneFrom=oneTile;
+	
+[Action] ID=explode_fungus; 
+	name=Explode!;
+	FXOnTarget=tallExplosion;
+	FXOnTarget=explosionHoriz;
+	FXOnTarget=sfx_classicExplosion;
+[ActionAoE] 
+	ID=explode_fungus; shape=0; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=explode_fungus; 
+	actorValue=HP;
+	magnitude=-30 + t:skill_Fire + t:MagDef;
+	duration=-2;
+	chance=100;
+	element=explode;
+	element=fire;
+	element=kindle;
+[AvAffecterAoE]
+	ID=explode_fungus;
+	cloneFrom=adjacentAndSelf;
+
+	
+[Action] ID=barrel_water_act; 
+	harmful=false;
+	attractAttention=false;
+	FXOnTarget=sfx_loudSplash;
+[ActionAoE] 
+	ID=barrel_water_act;
+	cloneFrom=oneTile;
+	occupyAll=true;
+[AvAffecter]
+	ID=barrel_water_act; 
+	actorValue=wet;
+	magnitude= 1;
+	duration=150;
+	chance=100;
+	element=water;
+	useCasterAsOriginForDirectionalEffects=false;
+	FXOnTile=smallShockwaves_flood;
+	FXOnTileColor=Blue;
+	FXOnTile=smallShockwaves_flood2;
+	FXOnTileColor=SkyBlue;
+[AvAffecterAoE]
+	ID=barrel_water_act;
+	cloneFrom=adjacent+1;
+	airborne=true;
+	arc=true;
+[AvAffecter]
+	ID=barrel_water_act; 
+	visibleEvaluations=false;
+	actorValue=summonItem;
+	magnitude=puddle;
+	duration=1 + m:rand(2);
+	chance=100;
+	useCasterAsOriginForDirectionalEffects=false;
+	FXOnTile=smallShockwaves_flood_delay;
+	FXOnTileColor=Blue;
+	FXOnTile=smallShockwaves_flood;
+	FXOnTileColor=SkyBlue;
+[AvAffecterAoE]
+	ID=barrel_water_act;
+	cloneFrom=adjacentAndSelf+1;
+	airborne=true;
+	arc=true;
+[AvAffecter]
+	ID=barrel_water_act; 
+	actorValue=HP;
+	magnitude=-3 + t:skill_Ice;
+	duration=-2;
+	chance=100;
+	useCasterAsOriginForDirectionalEffects=false;
+	element=water;
+[AvAffecterAoE]
+	ID=barrel_water_act;
+	cloneFrom=adjacentAndSelf+1;
+	airborne=true;
+	arc=true;
+	
+	
+[Action] ID=minibomb_throw; 
+	name=Minibomb;
+	casterAnimation=swing;
+	
+	FXOnTarget=swing;
+	FXOnTarget=throw_minibomb;
+[ActionAoE] 
+	ID=minibomb_throw;
+	cloneFrom=adjacent;
+	maxRange=4;
+	maxRangeBonus=sa:toolTalent;
+	arc=false;
+	airborne=true;
+	needsLoS=false;
+	needsLoE = true;
+[AvAffecter]
+	ID=minibomb_throw; 
+	actorValue=HP;
+	magnitude=-18 - c:skill_Fire * 0.5 + t:skill_Fire + t:MagDef - sa:toolTalent * 8;
+	duration=-2;
+	chance=d:magicAcc;
+	element=magic;
+	element=fire;
+	element=kindle;
+	FXOnTile=step;
+	FXOnTile=bounce_minibomb;
+	FXOnTile=explosionHoriz;
+	FXOnTile=DramaticNyeaow;
+	FXOnHit=fireEmbers;
+[AvAffecterAoE]
+	ID=minibomb_throw;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=minibomb_throw; 
+	actorValue=HP;
+	magnitude=-18 - c:skill_Fire * 0.5 + t:skill_Fire + t:MagDef - sa:toolTalent * 8;
+	duration=-2;
+	chance=d:magicAcc;
+	element=magic;
+	element=fire;
+	FXOnHit=fireEmbers;
+[AvAffecterAoE]
+	ID=minibomb_throw;
+	cloneFrom=adjacent;
+	
+
+[Action] ID=kraskbomb_throw; 
+	name=Krask Gut;
+	casterAnimation=swing;
+	
+	FXOnTarget=swing;
+	FXOnTarget=throw_kraskbomb;
+[ActionAoE] 
+	ID=kraskbomb_throw;
+	cloneFrom=adjacent;
+	maxRange=4;
+	maxRangeBonus=sa:toolTalent;
+	arc=true;
+	airborne=true;
+	needsLoS=true;
+	needsLoE = true;
+[AvAffecter]
+	ID=kraskbomb_throw; 
+	FXOnTile=step;
+	FXOnTileColor=White;
+	FXOnTile=bounce_kraskbomb;
+	FXOnTileColor=White;
+	FXOnTile=sfx_splash;
+	FXOnTileColor=White;
+	FXOnTile=sfx_debuff2;
+	FXOnTileColor=White;
+	FXOnTile=popSilent;
+	FXOnTileColor=Brown;
+[AvAffecterAoE]
+	ID=kraskbomb_throw;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=kraskbomb_throw; 
+	actorValue=HP;
+	magnitude=-8 + t:PhysDef - sa:toolTalent * 6;
+	duration=-2;
+	chance=d:magicAcc;
+	element=physical;
+	element=oil;
+[AvAffecterAoE]
+	ID=kraskbomb_throw;
+	cloneFrom=adjacentAndSelf;
+[AvAffecter]
+	ID=kraskbomb_throw; 
+	actorValue=oil;
+	magnitude=1;
+	duration=100;
+	chance=d:magicAcc;
+	element=oil;
+	useCasterAsOriginForDirectionalEffects=false;
+	FXOnTile=smallShockwave_instant_moving;
+	FXOnTileColor=Brown;
+[AvAffecterAoE]
+	ID=kraskbomb_throw;
+	cloneFrom=adjacentAndSelf;
+	
+	
+[Action] ID=lifeshard_throw; 
+	name=Lifeshard;
+	casterAnimation=swing;
+	harmful=false;
+	AIRatingBias=-4;
+	
+	FXOnTarget=swing;
+	FXOnTargetColor=White;
+	FXOnTarget=throw_lifeshard;
+	FXOnTargetColor=White;
+[ActionAoE] 
+	ID=lifeshard_throw;
+	cloneFrom=adjacentAndSelf;
+	maxRange=3;
+	maxRangeBonus=sa:toolTalent;
+	arc=false;
+	airborne=true;
+	needsLoS=false;
+	needsLoE = true;
+[AvAffecter]
+	ID=lifeshard_throw; 
+	FXOnTile=hitDustQuiet;
+	FXOnTileColor=Gold;
+	FXOnTile=sfx_iceSnap;
+[AvAffecterAoE]
+	ID=lifeshard_throw;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=lifeshard_throw; 
+	actorValue=HP;
+	harmful=false;
+	magnitude=12 + c:skill_Life * 0.25 + t:skill_Life * 0.25;
+	duration=-2;
+	chance=100;
+	element=magic;
+	element=life;
+	FXOnTile=dust_rise_overlap;
+	FXOnTileColor=Gold;
+	FXOnTile=dust_cloud;
+	FXOnTileColor=Gold;
+	FXOnHit=sparkles;
+	FXOnHitColor=Gold;
+	FXOnHit=briefAuraSound;
+[AvAffecterAoE]
+	ID=lifeshard_throw;
+	cloneFrom=adjacentAndSelf;
+	
+
+	
+	
+[Action] ID=cannonShoot; 
+	icon=icon_fire;
+	FXOnTarget=timeSlow_minor;
+	FXOnTarget=whiteExplosion;
+	FXOnTarget=sfx_heftyLaserShot;
+	FXOnTarget=ThudShotBigger;
+[ActionAoE] 
+	ID=cannonShoot;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannonShoot; 
+	actorValue=HP;
+	magnitude=-38 + t:skill_Fire + t:MagDef;
+	duration=-2;
+	chance=100;
+	FXOnTile=tallExplosion;
+	FXOnTile=sfx_classicExplosion;
+	FXOnTile=bigShakeHoriz;
+	element=elec;
+	element=fire;
+	element=explode;
+	element=smash;
+	element=heavySmash;
+[AvAffecterAoE]
+	ID=cannonShoot;
+	shape=2;
+	minRange=1;
+	maxRange=10;
+	needsLoE=true;
+	airborne=true;
+	arc=false;
+	furthestPossibleOnly=true;
+	coneAngle=1;
+	occupyAll=true;
+	
+	
+[Action] ID=plasma_explosion; 
+	
+	FXOnTarget=magicCharge;
+[ActionAoE] 
+	ID=plasma_explosion;
+	cloneFrom=adjacentAndSelf;
+	maxRange=4;
+	arc=true;
+	airborne=true;
+	needsLoS=true;
+	needsLoE = true;
+[AvAffecter]
+	ID=plasma_explosion; 
+	actorValue=HP;
+	magnitude=-31 + t:skill_Fire + t:MagDef;
+	duration=-2;
+	chance=d:magicAcc;
+	element=magic;
+	element=fire;
+	element=explode;
+	FXOnTile=spiral;
+	FXOnTile=spiral2;
+	FXOnTile=spiral3;
+	FXOnTile=spiral4;
+	FXOnTile=chargeSpiralFast_many_overlap;
+	FXOnTile=horizSpark_many_sudden;
+	FXOnTile=medShakeHoriz;
+	FXOnTile=explosionHoriz2_overlap;
+	FXOnTile=DramaticNyeaow;
+	FXOnHit=fireEmbers;
+[AvAffecterAoE]
+	ID=plasma_explosion;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=plasma_explosion; 
+	actorValue=HP;
+	magnitude=-20 + t:skill_Fire + t:MagDef;
+	duration=-2;
+	chance=d:magicAcc;
+	element=magic;
+	element=fire;
+	FXOnHit=fireEmbers;
+[AvAffecterAoE]
+	ID=plasma_explosion; shape=2;
+	cloneFrom=adjacentAndSelf;
+	maxRange=2;
+[AvAffecter]
+	ID=plasma_explosion; 
+	actorValue=burn;
+	magnitude=1;
+	duration=70;
+	chance=d:magicAcc;
+	element=magic;
+	element=fire;
+[AvAffecterAoE]
+	ID=plasma_explosion; shape=2;
+	cloneFrom=adjacentAndSelf;
+	maxRange=2;
+	
+[Action] ID=skyArrow; 
+	
+[ActionAoE] 
+	ID=skyArrow;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=skyArrow; 
+	actorValue=HP;
+	magnitude=-11 + t:PhysDef;
+	duration=-2;
+	FXOnTile=arrow_fromSky;
+	FXOnTile=pop;
+	FXOnTile=hitDustQuiet;
+[AvAffecterAoE]
+	ID=skyArrow;
+	cloneFrom=oneTile;
+
+	
+[Action] ID=mantrapHit; 
+FXOnTarget=chk;
+[ActionAoE] 
+	ID=mantrapHit;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=mantrapHit; 
+	actorValue=HP;
+	magnitude=-6 + t:PhysDef;
+	duration=-2;
+	chance=100;
+	element=physical;
+[AvAffecterAoE]
+	ID=mantrapHit;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=mantrapHit; 
+	actorValue=stun;
+	magnitude=1;
+	duration=30;
+	chance=100;
+[AvAffecterAoE]
+	ID=mantrapHit;
+	cloneFrom=oneTile;
+
+[Action] ID=spikeDamage5; 
+[ActionAoE] 
+	ID=spikeDamage5;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=spikeDamage5; 
+	actorValue=HP;
+	magnitude=-5 + t:PhysDef * 0.33;
+	duration=-2;
+	chance=100;
+	element=physical;
+	element=earth;
+[AvAffecterAoE]
+	ID=spikeDamage5;
+	cloneFrom=oneTile;
+
+[Action] ID=spikeDamage10; 
+[ActionAoE] 
+	ID=spikeDamage10;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=spikeDamage10; 
+	actorValue=HP;
+	magnitude=-9 + t:PhysDef * 0.33;
+	duration=-2;
+	chance=100;
+	element=physical;
+	element=earth;
+[AvAffecterAoE]
+	ID=spikeDamage10;
+	cloneFrom=oneTile;
+	
+[Action] ID=spikeDamage10_itchy; 
+[ActionAoE] 
+	ID=spikeDamage10_itchy;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=spikeDamage10_itchy; 
+	actorValue=HP;
+	magnitude=-9 + t:PhysDef * 0.33;
+	duration=-2;
+	chance=100;
+	element=physical;
+	element=earth;
+[AvAffecterAoE]
+	ID=spikeDamage10_itchy;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=spikeDamage10_itchy; 
+	actorValue=itchy;
+	magnitude=1;
+	duration=99;
+	chance=100;
+	element=physical;
+	element=earth;
+[AvAffecterAoE]
+	ID=spikeDamage10_itchy;
+	cloneFrom=oneTile;
+
+
+[Action] ID=fireHazardDamage5; 
+[ActionAoE] 
+	ID=fireHazardDamage5;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=fireHazardDamage5; 
+	actorValue=HP;
+	magnitude=-5 + t:skill_Fire * 0.5 + t:MagDef * 0.33;
+	duration=-2;
+	chance=100;
+	element=earth;
+	element=fire;
+	element=elementwalker;
+	FXOnTile=burn;
+[AvAffecterAoE]
+	ID=fireHazardDamage5;
+	cloneFrom=oneTile;
+
+
+[Action] ID=fireHazardDamage10; 
+[ActionAoE] 
+	ID=fireHazardDamage10;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=fireHazardDamage10; 
+	actorValue=HP;
+	magnitude=-9 + t:skill_Fire * 0.5 + t:MagDef * 0.33;
+	duration=-2;
+	chance=100;
+	element=earth;
+	element=fire;
+	element=elementwalker;
+	FXOnTile=burn;
+[AvAffecterAoE]
+	ID=fireHazardDamage10;
+	cloneFrom=oneTile;
+
+
+[Action] ID=heal10Damage; 
+	harmful=false;
+	attractAttention=false;
+	special=hideOnTurnOrder;
+[ActionAoE] 
+	ID=heal10Damage;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=heal10Damage; 
+	harmful=false;
+	actorValue=HP;
+	magnitude=9 + t:skill_Life * 0.33;
+	duration=-2;
+	chance=100;
+	element=magic;
+	element=life;
+	FXOnHit=sparkles;
+	FXOnHitColor=Gold;
+	FXOnHit=briefAuraSound;
+[AvAffecterAoE]
+	ID=heal10Damage;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=forceRelocate; 
+	attractAttention=false;
+[ActionAoE] 
+	ID=forceRelocate;
+	forcedRot=90;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=forceRelocate; 
+	actorValue=relocate;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=forceRelocate;
+	cloneFrom=oneTile;
+	
+
+
+[Action] ID=cloak_firestorm_act; 
+	name=Firestorm Dash;
+	mpCost=3;
+	
+	casterAnimation=flashCut_noOffset;
+	special=moveCasterToTarget;
+	
+	FXOnCaster=fireburst;
+	FXOnCasterColor=White;
+	FXOnCaster=sfx_infernoBlast_high;
+	FXOnCasterColor=Red;
+	FXOnCaster=sidewardLines;
+	FXOnCasterColor=Red;
+	FXOnCaster=actor_afterimage_red;
+[ActionAoE] 
+	ID=cloak_firestorm_act; shape=2; 
+	needsLoS=true;
+	needsLoE = true;
+	arc=false;
+	minRange = 3;
+	maxRange = 5;
+	canSelectActors=false;
+	occupyAll=false;
+[AvAffecter]
+	ID=cloak_firestorm_act; 
+	FXOnTile=fireburst;
+[AvAffecterAoE]
+	ID=cloak_firestorm_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cloak_firestorm_act; 
+	actorValue=summonItem;
+	magnitude=fire;
+	duration=1;
+	chance=100;
+	FXOnTile=fireburst;
+	FXOnTile=fireEmbers;
+	element=fire;
+	element=kindle;
+[AvAffecterAoE]
+	ID=cloak_firestorm_act; shape=2; 
+	needsLoS=false;
+	needsLoE =false;
+	occupyAll=true;
+	bypassAll=true;
+	minRange = 1;
+	maxRange = -1;
+	coneAngle=1;
+	canSelectActors=true;
+	aoeCasterAsOrigin=true;
+	maxRangeAddDistanceFromCaster=true;
+
+
+[Action] ID=cloak_firestorm_act_onMoveAbil; 
+	harmful=false;
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+[ActionAoE] 
+	ID=cloak_firestorm_act_onMoveAbil;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cloak_firestorm_act_onMoveAbil; 
+	actorValue=summonItem;
+	magnitude=fire_small;
+	duration=1;
+	chance=100 - m:targetExists * 100;
+	FXOnHit=burn;
+[AvAffecterAoE]
+	ID=cloak_firestorm_act_onMoveAbil;
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+	
+
+[Action] ID=cloak_ward_action; 
+	name=Warding Sash;
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+	
+	FXOnTarget=sfx_highAura;
+[ActionAoE] 
+	ID=cloak_ward_action; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cloak_ward_action; 
+	actorValue=ward;
+	harmful=false;
+	magnitude=1;
+	duration=130;
+	chance=100;
+	element=magic;
+	element=life;
+	FXOnTile=castingFast;
+	FXOnTileColor=ForestGreen;
+	FXOnHit=ward;
+	FXOnHitColor=ForestGreen;
+	FXOnHit=sfx_powerup3;
+[AvAffecterAoE]
+	ID=cloak_ward_action;
+	cloneFrom=oneTile;
+	
+[Action] ID=necklace_viral_act; 
+	icon=icon_De_viral;
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+[ActionAoE] 
+	ID=necklace_viral_act; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=necklace_viral_act; 
+	actorValue=viral;
+	visibleMiss=false;
+	magnitude= 1;
+	duration=-2;
+	chance=100 * m:tCurable;
+	FXOnHit=spiral;
+	FXOnHitColor=Green;
+	FXOnHit=spiral2;
+	FXOnHitColor=Green;
+	FXOnHit=viralShroud;
+	FXOnHitColor=DarkGreen;
+	FXOnHit=viralShroud_quiet;
+	FXOnHitColor=DarkGreen;
+[AvAffecterAoE]
+	ID=necklace_viral_act;
+	cloneFrom=oneTile;
+	
+[Action] ID=ring_blood_act; 
+harmful=false;
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+[ActionAoE] 
+	ID=ring_blood_act; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=ring_blood_act; 
+	harmful=false;
+	actorValue=MP;
+	visibleMiss=false;
+	magnitude= 2;
+	duration=-2;
+	chance=100 * m:cLastDmgTakenGreaterThanX(0);
+	FXOnHit=sparkle;
+	FXOnHitColor=Purple;
+[AvAffecterAoE]
+	ID=ring_blood_act;
+	cloneFrom=oneTile;
+	
+[Action] ID=acc_pocketwatch_act; 
+	harmful=false;
+	special=cantUseInCombat;
+	special=doesNotConsumeCombatAction;
+	special=doesNotCancelOtherSpells;
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+	special=autocastInTravel;
+[ActionAoE] 
+	ID=acc_pocketwatch_act;
+	cloneFrom=oneTile;
+	canSelectStackedActors=false;
+[AvAffecter]
+	ID=acc_pocketwatch_act; 
+	actorValue=trigger;
+	harmful=false;
+	magnitude=damageNumber_worldTime;
+	chance=100;
+[AvAffecterAoE]
+	ID=acc_pocketwatch_act;
+	cloneFrom=oneTile;
+
+[Action] ID=acc_pocketwatch_react; 
+	harmful=false;
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+[ActionAoE] 
+	ID=acc_pocketwatch_react;
+	cloneFrom=oneTile;
+	canSelectStackedActors=false;
+[AvAffecter]
+	ID=acc_pocketwatch_react; 
+	actorValue=actTimer;
+	harmful=false;
+	magnitude=m:tActTimerLeft * 0.3;
+	duration=-2;
+	chance=100;
+	FXOnTile=upwardLines_quick;
+[AvAffecterAoE]
+	ID=acc_pocketwatch_react;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=fireDamage; 
+	icon=skill_Fire;
+[ActionAoE] 
+	ID=fireDamage;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=fireDamage; 
+	actorValue=HP;
+	magnitude=-2;
+	duration=-2;
+	chance=100;
+	element=fire;
+	element=elementwalker;
+	FXOnHit=burn;
+	applyElementToTile=false;
+[AvAffecterAoE]
+	ID=fireDamage;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=fireDamage; 
+	visibleMiss=false;
+	actorValue=burn;
+	magnitude=1;
+	duration=t:actTime + 5;
+	chance=100;
+	element=fire;
+	element=elementwalker_status;
+	applyElementToTile=false;
+[AvAffecterAoE]
+	ID=fireDamage;
+	cloneFrom=oneTile;
+
+	
+[Action] ID=fireDamage_noBurn; 
+	icon=skill_Fire;
+[ActionAoE] 
+	ID=fireDamage_noBurn;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=fireDamage_noBurn; 
+	actorValue=HP;
+	magnitude=-3;
+	duration=-2;
+	chance=100;
+	element=fire;
+	element=elementwalker;
+	FXOnHit=burn;
+	applyElementToTile=false;
+[AvAffecterAoE]
+	ID=fireDamage_noBurn;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=spillBrazier; 
+	icon=skill_Fire;
+	FXOnTarget=sfx_breakRock;
+	FXOnTarget=pop;
+[ActionAoE] 
+	ID=spillBrazier;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=spillBrazier; 
+	actorValue=HP;
+	magnitude=-3;
+	duration=-2;
+	chance=100;
+	element=fire;
+	FXOnHit=burn;
+[AvAffecterAoE]
+	ID=spillBrazier;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=spillBrazier; 
+	actorValue=summonItem;
+	magnitude=fire_small;
+	duration=1;
+	chance=100;
+	element=fire;
+	FXOnTile=burn;
+[AvAffecterAoE]
+	ID=spillBrazier;
+	cloneFrom=adjacent;
+	canSelectActors=false;
+	
+[Action] ID=growLatticeSeeds; 
+[ActionAoE] 
+	ID=growLatticeSeeds;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=growLatticeSeeds; 
+	actorValue=summonItem_alwaysFit;
+	magnitude=latticeSeeds;
+	duration=1;
+	chance=20 - itemsZone:latticeSeeds;
+[AvAffecterAoE]
+	ID=growLatticeSeeds;
+	cloneFrom=oneTile;
+	
+[Action] ID=goopDamage; 
+[ActionAoE] 
+	ID=goopDamage;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=goopDamage; 
+	actorValue=HP;
+	magnitude=-1;
+	visibleMiss=false;
+	duration=-2;
+	chance=100 - t:immob * 100;
+	element=acid;
+	element=elementwalker;
+	applyElementToTile=false;
+[AvAffecterAoE]
+	ID=goopDamage;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=goopDamage; 
+	actorValue=immob;
+	visibleMiss=false;
+	magnitude=1;
+	duration=35;
+	chance=100 * m:inCombat - t:immob * 100;
+	element=acid;
+	element=elementwalker;
+	applyElementToTile=false;
+[AvAffecterAoE]
+	ID=goopDamage;
+	cloneFrom=oneTile;
+	
+[Action] ID=acidDamage; 
+[ActionAoE] 
+	ID=acidDamage;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=acidDamage; 
+	actorValue=HP;
+	magnitude=-6;
+	duration=-2;
+	chance=100;
+	element=acid;
+	element=elementwalker;
+	FXOnHit=acidSpray;
+	applyElementToTile=false;
+[AvAffecterAoE]
+	ID=acidDamage;
+	cloneFrom=oneTile;
+	
+[Action] ID=miasmaCloud; 
+	special=hideOnTurnOrder;
+[ActionAoE] 
+	ID=miasmaCloud;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=miasmaCloud; 
+	actorValue=HP;
+	visibleEvaluations=false;
+	visibleMiss=false;
+	magnitude=-2;
+	duration=-2;
+	element=poison;
+	chance=100  - 70 * t:poison;
+[AvAffecterAoE]
+	ID=miasmaCloud;
+	cloneFrom=adjacentAndSelf;
+[AvAffecter]
+	ID=miasmaCloud; 
+	actorValue=poison;
+	visibleEvaluations=false;
+	visibleMiss=false;
+	magnitude=2;
+	duration=80;
+	chance=100;
+	FXOnTile=miasmaVent_noOverlap;
+	FXOnHit=WetSquish;
+[AvAffecterAoE]
+	ID=miasmaCloud;
+	cloneFrom=adjacentAndSelf;
+	
+
+[Action] ID=checkDarkness_murkspore; 
+	special=hideOnTurnOrder;
+	attractAttention=false;
+[ActionAoE] 
+	ID=checkDarkness_murkspore;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=checkDarkness_murkspore; 
+	visibleEvaluations=false;
+	harmful=false;
+	element=mechanical;
+[AvAffecterAoE]
+	ID=checkDarkness_murkspore;
+	cloneFrom=oneTile;
+	darkOnly=true;
+[AvAffecter]
+	ID=checkDarkness_murkspore; 
+	visibleEvaluations=false;
+	harmful=false;
+	element=mechanical2;
+[AvAffecterAoE]
+	ID=checkDarkness_murkspore;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=checkDarkness_murkspore; 
+	visibleEvaluations=false;
+	visibleMiss=false;
+	actorValue=HP;
+	magnitude=-1;
+	duration=-2;
+	chance=100;
+	FXOnHit=smog;
+	FXOnHit=WetSquish;
+	FXOnHit=smog;
+[AvAffecterAoE]
+	ID=checkDarkness_murkspore;
+	cloneFrom=adjacent;
+	
+
+[Action] ID=spreadMurkspore; 
+	special=hideOnTurnOrder;
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=spreadMurkspore;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=spreadMurkspore; 
+	visibleEvaluations=false;
+	harmful=false;
+	actorValue=summonItem;
+	magnitude=murkspore1;
+	duration=1;
+[AvAffecterAoE]
+	ID=spreadMurkspore;
+	cloneFrom=adjacent+1;
+	needsLoE=true;
+	needsLoS=true;
+	occupyAll=false;
+	darkOnly=true;
+[AvAffecter]
+	ID=spreadMurkspore; 
+	visibleEvaluations=false;
+	harmful=false;
+	actorValue=summonItem;
+	magnitude=murkspore_water;
+	duration=1;
+[AvAffecterAoE]
+	ID=spreadMurkspore;
+	cloneFrom=adjacent;
+	needsLoE=true;
+	needsLoS=true;
+	occupyAll=false;
+	swimOnly=true;
+	canSwim=true;
+	darkOnly=true;
+
+
+	
+
+[Action] ID=blob1_checkBurst; 
+	special=hideOnTurnOrder;
+[ActionAoE] 
+	ID=blob1_checkBurst;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=blob1_checkBurst; 
+	element=burstSpread1;
+[AvAffecterAoE]
+	ID=blob1_checkBurst;
+	cloneFrom=adjacent;
+	
+[Action] ID=blob1_bursting; 
+	special=hideOnTurnOrder;
+[ActionAoE] 
+	ID=blob1_bursting;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=blob1_bursting; 
+	FXOnTile=delay;
+	FXOnTile=delay;
+	element=burst1;
+[AvAffecterAoE]
+	ID=blob1_bursting;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=blob1_bursting; 
+	element=burst1;
+[AvAffecterAoE]
+	ID=blob1_bursting;
+	cloneFrom=adjacent;
+	
+	
+[Action] ID=blob2_checkBurst; 
+	special=hideOnTurnOrder;
+[ActionAoE] 
+	ID=blob2_checkBurst;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=blob2_checkBurst; 
+	element=burstSpread2;
+[AvAffecterAoE]
+	ID=blob2_checkBurst;
+	cloneFrom=adjacent;
+	
+[Action] ID=blob2_bursting; 
+	special=hideOnTurnOrder;
+[ActionAoE] 
+	ID=blob2_bursting;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=blob2_bursting; 
+	FXOnTile=delay;
+	FXOnTile=delay;
+	element=burst2;
+[AvAffecterAoE]
+	ID=blob2_bursting;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=blob2_bursting; 
+	element=burst2;
+[AvAffecterAoE]
+	ID=blob2_bursting;
+	cloneFrom=adjacent;
+
+
+[Action] ID=blob3_checkBurst; 
+	special=hideOnTurnOrder;
+[ActionAoE] 
+	ID=blob3_checkBurst;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=blob3_checkBurst; 
+	element=burstSpread3;
+[AvAffecterAoE]
+	ID=blob3_checkBurst;
+	cloneFrom=adjacent;
+	
+[Action] ID=blob3_bursting; 
+	special=hideOnTurnOrder;
+[ActionAoE] 
+	ID=blob3_bursting;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=blob3_bursting; 
+	FXOnTile=delay;
+	FXOnTile=delay;
+	element=burst3;
+[AvAffecterAoE]
+	ID=blob3_bursting;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=blob3_bursting; 
+	element=burst3;
+[AvAffecterAoE]
+	ID=blob3_bursting;
+	cloneFrom=adjacent;
+
+	
+[Action] ID=pod_burst_action;
+	FXOnTarget= pop_big; 
+	FXOnTarget= gustyBlast; 
+[ActionAoE] 
+	ID=pod_burst_action;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=pod_burst_action; 
+	actorValue=HP;
+	visibleMiss=false;
+	magnitude=-10 + t:PhysDef*0.5;
+	duration=-2;
+	chance=100;
+	element=wind;
+	FXOnHit=dust_cloud;
+	FXOnHitColor=White;
+[AvAffecterAoE]
+	ID=pod_burst_action;
+	cloneFrom=adjacent+1;
+	arc=true;
+	airborne=true;
+[AvAffecter]
+	ID=pod_burst_action; 
+	actorValue=push;
+	visibleMiss=false;
+	magnitude=2;
+	duration=-2;
+	chance=100;
+	FXOnTile=smallShockwave_instant_moving;
+[AvAffecterAoE]
+	ID=pod_burst_action;
+	cloneFrom=adjacent+1;
+	arc=true;
+	airborne=true;
+	
+
+[Action] ID=pod_sickly_action;
+	FXOnTarget=pop_big; 
+	FXOnTargetColor=Green;
+[ActionAoE] 
+	ID=pod_sickly_action;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=pod_sickly_action; 
+	actorValue=poison;
+	visibleMiss=false;
+	magnitude=2;
+	duration=100;
+	chance=100;
+	element=wind;
+	FXOnTile=smallShockwave_instant_moving;
+	FXOnTileColor=Green;
+	FXOnTile=WetSquish; 
+[AvAffecterAoE]
+	ID=pod_sickly_action;
+	cloneFrom=adjacent+1;
+	arc=true;
+	airborne=true;
+	
+[Action] ID=pod_blast_action;
+	FXOnTarget= pop_big; 
+	FXOnTarget= sfx_shotgun; 
+	FXOnTarget=pixelBurst;
+[ActionAoE] 
+	ID=pod_blast_action;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=pod_blast_action; 
+	actorValue=HP;
+	visibleMiss=false;
+	magnitude=-12 + t:PhysDef*0.5;
+	duration=-2;
+	chance=100;
+	element=wind;
+	FXOnTile=pixelBurst;
+	FXOnTileColor=Orange;
+	FXOnHit=dust_cloud;
+	FXOnHitColor=Red;
+[AvAffecterAoE]
+	ID=pod_blast_action;
+	cloneFrom=adjacent+2;
+	arc=true;
+	airborne=true;
+[AvAffecter]
+	ID=pod_blast_action; 
+	actorValue=itchy;
+	visibleMiss=false;
+	magnitude=1;
+	duration=100;
+	chance=100;
+[AvAffecterAoE]
+	ID=pod_blast_action;
+	cloneFrom=adjacent+2;
+	arc=true;
+	airborne=true;
+	
+
+[Action] ID=tree_guln_explode; 
+	FXOnTarget= darken_minor; 
+	FXOnTarget= sfx_heftyLaserShot; 
+[ActionAoE] 
+	ID=tree_guln_explode;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=tree_guln_explode; 
+	actorValue=HP;
+	magnitude=-17 + t:skill_Elec + t:MagDef;
+	duration=-2;
+	chance=100;
+	FXOnTile=elecBlasts;
+	FXOnTile=terrain;
+	FXOnTile=horizSpark_lingering;
+	element=elec;
+	element=smash;
+	element=heavySmash;
+[AvAffecterAoE]
+	ID=tree_guln_explode;
+	cloneFrom=adjacent+2;
+	arc=true;
+	airborne=true;
+	
+
+[Action] ID=slugwort_action;
+	FXOnTarget=pixelBurst_big;
+	FXOnTargetColor=Green;
+	FXOnTarget=SandPuff;
+	FXOnTarget=tinyShakeHoriz;
+[ActionAoE] 
+	ID=slugwort_action;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=slugwort_action; 
+	actorValue=poison;
+	visibleMiss=false;
+	magnitude=1;
+	duration=100;
+	chance=100;
+[AvAffecterAoE]
+	ID=slugwort_action;
+	cloneFrom=adjacentAndSelf;
+[AvAffecter]
+	ID=slugwort_action; 
+	actorValue=itchy;
+	visibleMiss=false;
+	magnitude=1;
+	duration=100;
+	chance=100;
+[AvAffecterAoE]
+	ID=slugwort_action;
+	cloneFrom=adjacentAndSelf;
+	
+	
+[Action] ID=bubble_acid_action; 
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=bubble_acid_action;
+	cloneFrom=oneTile;
+	occupyAll=true;
+[AvAffecter]
+	ID=bubble_acid_action; 
+	harmful=false;
+	actorValue=summonItem;
+	magnitude=acid_pool;
+	duration=1;
+	chance=100;
+	FXOnTile=acidSpray;
+[AvAffecterAoE]
+	ID=bubble_acid_action;
+	cloneFrom=adjacentAndSelf;
+	occupyAll=true;
+	
+
+[Action] ID=turret_omni_wind_action;
+	FXOnTarget= pop_big; 
+	FXOnTarget= gustyBlast; 
+[ActionAoE] 
+	ID=turret_omni_wind_action;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=turret_omni_wind_action; 
+	actorValue=HP;
+	visibleMiss=false;
+	magnitude=-10 + t:MagDef * 0.33 + t:skill_Wind * 0.5;
+	duration=-2;
+	chance=100;
+	element=wind;
+	FXOnTile=smallShockwave_instant_moving_longRange;
+	FXOnHit=pop_big;
+[AvAffecterAoE]
+	ID=turret_omni_wind_action;
+	minRange=1;
+	maxRange=12;
+	shape=2;
+	needsLoE=true;
+	airborne=true;
+	arc=false;
+	bypassAll=false;
+	occupyAll=true;
+[AvAffecter]
+	ID=turret_omni_wind_action; 
+	actorValue=push;
+	visibleMiss=false;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=turret_omni_wind_action;
+	minRange=1;
+	maxRange=12;
+	shape=2;
+	needsLoE=true;
+	airborne=true;
+	arc=false;
+	bypassAll=false;
+	occupyAll=true;
+
+	
+[Action] ID=turret_wind_action;
+	FXOnTarget= pop_big; 
+	FXOnTarget= gustyBlast; 
+[ActionAoE] 
+	ID=turret_wind_action;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=turret_wind_action; 
+	actorValue=push;
+	visibleMiss=false;
+	magnitude=4;
+	duration=-2;
+	chance=100;
+	FXOnTile=smallShockwave_instant_moving;
+[AvAffecterAoE]
+	ID=turret_wind_action;
+	minRange=1;
+	maxRange=1;
+	shape=2;
+	coneAngle=1;
+	needsLoE=true;
+	airborne=true;
+	arc=false;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=turret_wind_action; 
+	actorValue=push;
+	visibleMiss=false;
+	magnitude=3;
+	duration=-2;
+	chance=100;
+	FXOnTile=smallShockwave_instant_moving;
+[AvAffecterAoE]
+	ID=turret_wind_action;
+	minRange=2;
+	maxRange=2;
+	shape=2;
+	coneAngle=1;
+	needsLoE=true;
+	airborne=true;
+	arc=false;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=turret_wind_action; 
+	actorValue=push;
+	visibleMiss=false;
+	magnitude=2;
+	duration=-2;
+	chance=100;
+	FXOnTile=smallShockwave_instant_moving;
+[AvAffecterAoE]
+	ID=turret_wind_action;
+	minRange=3;
+	maxRange=3;
+	shape=2;
+	coneAngle=1;
+	needsLoE=true;
+	airborne=true;
+	arc=false;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=turret_wind_action; 
+	actorValue=push;
+	visibleMiss=false;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	FXOnTile=smallShockwave_instant_moving;
+[AvAffecterAoE]
+	ID=turret_wind_action;
+	minRange=4;
+	maxRange=4;
+	shape=2;
+	coneAngle=1;
+	needsLoE=true;
+	airborne=true;
+	arc=false;
+	bypassAll=true;
+	occupyAll=true;
+	
+
+
+[Action] ID=glowingKeyCheck_trigger; 
+	special=hideOnTurnOrder;
+[ActionAoE] 
+	ID=glowingKeyCheck_trigger;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=glowingKeyCheck_trigger; 
+	actorValue=trigger;
+	magnitude=tGlowingKey;
+	duration=;
+	chance=100;
+[AvAffecterAoE]
+	ID=glowingKeyCheck_trigger;
+	cloneFrom=oneTile;
+
+[Action] ID=mech_mechNotch_trigger; 
+	special=hideOnTurnOrder;
+[ActionAoE] 
+	ID=mech_mechNotch_trigger;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=mech_mechNotch_trigger; 
+	actorValue=trigger;
+	magnitude=tMechNotch;
+	duration=;
+	chance=100;
+[AvAffecterAoE]
+	ID=mech_mechNotch_trigger;
+	cloneFrom=oneTile;
+	
+[Action] ID=mech_mechNotch_selfMatch; 
+	special=hideOnTurnOrder;
+[ActionAoE] 
+	ID=mech_mechNotch_selfMatch;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=mech_mechNotch_selfMatch; 
+	chance=100;
+	element=matched;
+[AvAffecterAoE]
+	ID=mech_mechNotch_selfMatch;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=pushBlock_destroyed; 
+	special=hideOnTurnOrder;
+[ActionAoE] 
+	ID=pushBlock_destroyed;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=pushBlock_destroyed; 
+	chance=100;
+	element=blockDestroyed;
+[AvAffecterAoE]
+	ID=pushBlock_destroyed;
+	cloneFrom=oneTile;
+	
+[Action] ID=worm_nest_action;
+	FXOnTarget=nest_worm_enlarge;
+	FXOnTargetColor= White; 
+	FXOnTarget= WetSquish; 
+	FXOnTargetColor= White; 
+	FXOnTarget= sfx_breakRock; 
+	FXOnTargetColor= White; 
+	FXOnTarget= sfx_splash; 
+	FXOnTargetColor= White; 
+	
+	
+	FXOnTarget= manySplatter_overlap; 
+	FXOnTargetColor= Purple; 
+[ActionAoE] 
+	ID=worm_nest_action;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=worm_nest_action; 
+	actorValue=push;
+	visibleMiss=false;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	FXOnTile= delay_minor; 
+	FXOnTile= WetSquish; 
+[AvAffecterAoE]
+	ID=worm_nest_action;
+	cloneFrom=adjacent;
+	maxRange=1.5;
+[AvAffecter]
+	ID=worm_nest_action; 
+	harmful=false;
+	actorValue=summonActor;
+	magnitude=rotworms;
+	duration=-2;
+	chance=63;
+	FXOnTile= manySplatter_overlap; 
+	FXOnTileColor= Purple; 
+	FXOnTile= WetSquish; 
+	FXOnHit=rotworms_spawn;
+[AvAffecterAoE]
+	ID=worm_nest_action;
+	cloneFrom=adjacentAndSelf;
+	maxRange=1.5;
+	needsLoE=false;
+	occupyAll=true;
+	canSelectActors=false;
+[AvAffecter]
+	ID=worm_nest_action; 
+	harmful=false;
+	element=physical;
+[AvAffecterAoE]
+	ID=worm_nest_action;
+	cloneFrom=adjacentAndSelf;
+	maxRange=2.5;
+	occupyAll=true;
+	canSelectActors=false;
+	
+	
+[Action] ID=fireWhirlDamage; 
+	FXOnTarget=fireburst;
+[ActionAoE] 
+	ID=fireWhirlDamage;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=fireWhirlDamage; 
+	actorValue=HP;
+	magnitude=-c:rank - m:isItThisDayOfWeek(0) + t:MagDef + t:skill_Fire ;
+	duration=-2;
+	chance=100 - t:MagEva * 0.7;
+	element=magic;
+	element=fire;
+	FXOnTile=burn;
+[AvAffecterAoE]
+	ID=fireWhirlDamage;
+	cloneFrom=adjacent;
+
+[Action] ID=puddleFrost; 
+	special=hideOnTurnOrder;
+	icon=skill_Ice;
+	attractAttention=false;
+[ActionAoE] 
+	ID=puddleFrost;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=puddleFrost; 
+	actorValue=chilled;
+	magnitude=1;
+	duration=50;
+	chance=100;
+	element=ice;
+	FXOnTile=chilledFX;
+	FXOnHit=casting;
+	FXOnHitColor=SkyBlue;
+[AvAffecterAoE]
+	ID=puddleFrost;
+	cloneFrom=oneTile;
+	
+[Action] ID=CRUSH; 
+	special=hideOnTurnOrder;
+FXOnTarget=ThudShot;
+[ActionAoE] 
+	ID=CRUSH;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=CRUSH; 
+	actorValue=push;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=CRUSH;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=CRUSH; 
+	actorValue=HP;
+	magnitude=-50;
+	duration=-2;
+	chance=100;
+	element=physical;
+[AvAffecterAoE]
+	ID=CRUSH;
+	cloneFrom=oneTile;
+	
+[Action] ID=piston_action; 
+	special=hideOnTurnOrder;
+	FXOnTarget=SandPuff;
+[ActionAoE] 
+	ID=piston_action;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=piston_action; 
+	actorValue=HP;
+	visibleMiss=false;
+	magnitude=-35 + t:PhysDef;
+	duration=-2;
+	chance=100;
+	element=physical;
+	FXOnHit=ThudShot;
+[AvAffecterAoE]
+	ID=piston_action;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=piston_action; 
+	actorValue=relocate;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	rotOverride = 90;
+	element=physical;
+[AvAffecterAoE]
+	ID=piston_action;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=spearTrap_wall_act; 
+	special=hideOnTurnOrder;
+	FXOnTarget=spearTrap_wall;
+	FXOnTarget=sfx_slashingHit;
+[ActionAoE] 
+	ID=spearTrap_wall_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=spearTrap_wall_act; 
+	actorValue=HP;
+	visibleMiss=false;
+	magnitude=-45 + t:PhysDef;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=spearTrap_wall_act;
+	cloneFrom=adjacentAndSelf;
+	forcedRot=0;
+	coneAngle=1;
+	
+
+[Action] ID=spearTrap_wall_flip_act; 
+	special=hideOnTurnOrder;
+	FXOnTarget=spearTrap_wall_flip;
+	FXOnTarget=sfx_slashingHit;
+[ActionAoE] 
+	ID=spearTrap_wall_flip_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=spearTrap_wall_flip_act; 
+	actorValue=HP;
+	visibleMiss=false;
+	magnitude=-45 + t:PhysDef;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=spearTrap_wall_flip_act;
+	cloneFrom=adjacentAndSelf;
+	forcedRot=180;
+	coneAngle=1;
+	
+
+[Action] ID=vine_stabL; 
+name=Vine Stab;
+FXOnTarget=DramaticNyeaow;
+FXOnTarget=sfx_slashingHit;
+FXOnTarget=vine_stabL;
+[ActionAoE] 
+	ID=vine_stabL;
+	cloneFrom=oneTile;
+	forcedRot=0;
+[AvAffecter]
+	ID=vine_stabL; 
+	actorValue=HP;
+	magnitude=-22 + t:PhysDef * 0.5;
+	duration=-2;
+	chance=100;
+	element=physical;
+[AvAffecterAoE]
+	ID=vine_stabL; shape=2;
+	cloneFrom=adjacent;
+	forcedRot=0;
+	minRange=1;
+	maxRange=10;
+	needsLoS=false;
+	needsLoE=false;
+	airborne=true;
+	arc=true;
+	coneAngle=1;
+[AvAffecter]
+	ID=vine_stabL; 
+	harmful=false;
+	actorValue=relocate;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=vine_stabL;
+	forcedRot=90;
+	coneAngle=1;
+	cloneFrom=adjacent;
+	ignoreCannotTarget=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=vine_stabL; 
+	harmful=false;
+	actorValue=summonItem;
+	magnitude=vine_atkL;
+	duration=1;
+	chance=100;
+	FXOnTile=vine_spawnL;
+[AvAffecterAoE]
+	ID=vine_stabL;
+	forcedRot=90;
+	coneAngle=1;
+	cloneFrom=adjacent;
+	ignoreCannotTarget=true;
+	occupyAll=true;
+	needsLoS=true;
+	
+[Action] ID=vine_stabR; 
+name=Vine Stab;
+FXOnTarget=DramaticNyeaow;
+FXOnTarget=sfx_slashingHit;
+FXOnTarget=vine_stabR;
+[ActionAoE] 
+	ID=vine_stabR;
+	cloneFrom=oneTile;
+	forcedRot=180;
+[AvAffecter]
+	ID=vine_stabR; 
+	actorValue=HP;
+	magnitude=-22 + t:PhysDef * 0.5;
+	duration=-2;
+	chance=100;
+	element=physical;
+[AvAffecterAoE]
+	ID=vine_stabR; shape=2;
+	cloneFrom=adjacent;
+	forcedRot=180;
+	minRange=1;
+	maxRange=10;
+	needsLoS=false;
+	needsLoE=false;
+	airborne=true;
+	arc=true;
+	coneAngle=1;
+[AvAffecter]
+	ID=vine_stabR; 
+	harmful=false;
+	actorValue=relocate;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=vine_stabR;
+	forcedRot=90;
+	coneAngle=1;
+	cloneFrom=adjacent;
+	ignoreCannotTarget=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=vine_stabR; 
+	harmful=false;
+	actorValue=summonItem;
+	magnitude=vine_atkR;
+	duration=1;
+	chance=100;
+	FXOnTile=vine_spawnR;
+[AvAffecterAoE]
+	ID=vine_stabR;
+	forcedRot=90;
+	coneAngle=1;
+	cloneFrom=adjacent;
+	ignoreCannotTarget=true;
+	occupyAll=true;
+	needsLoS=true;
+	
+[Action] ID=conveyorBelt_action; 
+	special=hideOnTurnOrder;
+	harmful=false;
+[ActionAoE] 
+	ID=conveyorBelt_action;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=conveyorBelt_action; 
+	harmful=false;
+	actorValue=push_safe;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	useCasterAsOriginForDirectionalEffects=false;
+[AvAffecterAoE]
+	ID=conveyorBelt_action;
+	cloneFrom=oneTile;
+	
+[Action] ID=lamp_action; 
+casterAnimation=use;
+casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=lamp_action;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=lamp_action; 
+	actorValue=HP;
+	magnitude=-1;
+	duration=-2;
+	chance=100;
+	element=fire;
+	element=kindle;
+	FXOnTile=burn_small;
+[AvAffecterAoE]
+	ID=lamp_action;
+	cloneFrom=oneTile;
+	
+[Action] ID=dart_action; 
+	name=Dart;
+	casterAnimation=swing;
+	casterAnimationSpeed=1.5;
+	FXOnTarget=swing;
+[ActionAoE] 
+	ID=dart_action;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 4;
+	maxRangeBonus=sa:toolTalent;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=dart_action; 
+	actorValue=HP;
+	magnitude=d:dartDmg;
+	duration=-2;
+	chance=d:aimAcc;
+	element=ranged;
+	element=physical;
+	element=dart;
+	FXOnTile=line;
+	FXOnTile=hitDustQuiet;
+	FXOnTile=sfx_breakRock;
+	FXOnHit=pop;
+[AvAffecterAoE]
+	ID=dart_action;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=dart_life_action; 
+	name=Life Needle;
+	casterAnimation=swing;
+	casterAnimationSpeed=1.5;
+	FXOnTarget=swing;
+	harmful=false;
+[ActionAoE] 
+	ID=dart_life_action;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 4;
+	maxRangeBonus=sa:toolTalent;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=dart_life_action; 
+	actorValue=revive;
+	harmful=false;
+	magnitude=1;
+	duration=-2;
+	chance=d:reviveAcc;
+	element=ranged;
+	element=physical;
+	element=dart;
+	FXOnTile=line;
+	FXOnTile=hitDustQuiet;
+	FXOnTile=sfx_breakRock;
+	FXOnTile=dust_rise;
+	FXOnTileColor=Gold;
+	FXOnTile=dust_cloud;
+	FXOnTileColor=Gold;
+	FXOnTile=chargeSpiralFast;
+	FXOnTile=sfx_longGoodAura_med;
+	FXOnTile=actor_reviveGhost;
+	FXOnHit=chargeSpiralFast_big;
+	FXOnHit=sparkles;
+	FXOnHit=upwardLinesQuick;
+	FXOnHit=whiten;
+	FXOnHit=Powerup_longerEchoBloop;
+[AvAffecterAoE]
+	ID=dart_life_action;
+	cloneFrom=oneTile;
+	
+[Action] ID=dart_poison_action; 
+	name=Poison Dart;
+	casterAnimation=swing;
+	casterAnimationSpeed=1.5;
+	FXOnTarget=swing;
+[ActionAoE] 
+	ID=dart_poison_action;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 4;
+	maxRangeBonus=sa:toolTalent;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=dart_poison_action; 
+	actorValue=HP;
+	magnitude=d:dartDmg;
+	duration=-2;
+	chance=d:aimAcc;
+	element=ranged;
+	element=physical;
+	element=dart;
+	FXOnTile=line;
+	FXOnTile=hitDustQuiet;
+	FXOnTile=sfx_breakRock;
+	FXOnHit=pop;
+[AvAffecterAoE]
+	ID=dart_poison_action;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=dart_poison_action; 
+	actorValue=poison;
+	visibleMiss=false;
+	magnitude=2;
+	duration=100;
+	chance=d:aimAcc;
+	FXOnTile=dust_cloud;
+	FXOnTileColor=Purple;
+[AvAffecterAoE]
+	ID=dart_poison_action;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=dart_itchy_action; 
+	name=Itchy Dart;
+	casterAnimation=swing;
+	casterAnimationSpeed=1.5;
+	FXOnTarget=swing;
+[ActionAoE] 
+	ID=dart_itchy_action;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 4;
+	maxRangeBonus=sa:toolTalent;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=dart_itchy_action; 
+	actorValue=HP;
+	magnitude=d:dartDmg;
+	duration=-2;
+	chance=d:aimAcc;
+	element=ranged;
+	element=physical;
+	element=dart;
+	FXOnTile=line;
+	FXOnTile=hitDustQuiet;
+	FXOnTile=sfx_breakRock;
+	FXOnHit=pop;
+[AvAffecterAoE]
+	ID=dart_itchy_action;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=dart_itchy_action; 
+	actorValue=itchy;
+	visibleMiss=false;
+	magnitude=1;
+	duration=100;
+	chance=d:aimAcc;
+	FXOnTile=dust_cloud;
+	FXOnTileColor=Red;
+[AvAffecterAoE]
+	ID=dart_itchy_action;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=dart_sleep_action; 
+	name=Sleep Dart;
+	casterAnimation=swing;
+	casterAnimationSpeed=1.5;
+	FXOnTarget=swing;
+[ActionAoE] 
+	ID=dart_sleep_action;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 4;
+	maxRangeBonus=sa:toolTalent;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=dart_sleep_action; 
+	actorValue=HP;
+	magnitude=d:dartDmg;
+	duration=-2;
+	chance=d:aimAcc;
+	element=ranged;
+	element=physical;
+	element=dart;
+	FXOnTile=line;
+	FXOnTile=hitDustQuiet;
+	FXOnTile=sfx_breakRock;
+	FXOnHit=pop;
+[AvAffecterAoE]
+	ID=dart_sleep_action;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=dart_sleep_action; 
+	actorValue=sleep;
+	visibleMiss=false;
+	magnitude=1;
+	duration=50 - t:MagDef * 2;
+	chance=d:aimAcc;
+	FXOnTile=dust_cloud;
+	FXOnTileColor=Magenta;
+[AvAffecterAoE]
+	ID=dart_sleep_action;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=dart_glow_action; 
+	name=Glow Dart;
+	casterAnimation=swing;
+	casterAnimationSpeed=1.5;
+	FXOnTarget=swing;
+[ActionAoE] 
+	ID=dart_glow_action;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 4;
+	maxRangeBonus=sa:toolTalent;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=dart_glow_action; 
+	actorValue=HP;
+	magnitude=d:dartDmg;
+	duration=-2;
+	chance=d:aimAcc;
+	element=ranged;
+	element=physical;
+	element=dart;
+	FXOnTile=line;
+	FXOnTile=hitDustQuiet;
+	FXOnTile=sfx_breakRock;
+	FXOnHit=pop;
+[AvAffecterAoE]
+	ID=dart_glow_action;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=dart_glow_action; 
+	actorValue=glowing;
+	visibleMiss=false;
+	magnitude=1;
+	duration=100;
+	chance=d:aimAcc;
+	FXOnTile=dust_cloud;
+	FXOnTileColor=SkyBlue;
+[AvAffecterAoE]
+	ID=dart_glow_action;
+	cloneFrom=oneTile;
+	
+[Action] ID=dart_belt_action; 
+	name=Dart Bandolier;
+	casterAnimation=swing;
+	casterAnimationSpeed=1.5;
+	FXOnTarget=swing;
+[ActionAoE] 
+	ID=dart_belt_action;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 4;
+	maxRangeBonus=sa:toolTalent;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=dart_belt_action; 
+	actorValue=HP;
+	magnitude=d:dartDmg * 0.9;
+	duration=-2;
+	chance=d:aimAcc;
+	element=ranged;
+	element=physical;
+	FXOnTile=line;
+	FXOnTile=hitDustQuiet;
+	FXOnTile=sfx_breakRock;
+	FXOnHit=pop;
+[AvAffecterAoE]
+	ID=dart_belt_action;
+	cloneFrom=oneTile;
+	
+
+	
+[Action] ID=xpGem_awardXP; 
+	name=XP;
+	harmful=false;
+	casterAnimation=spellcast;
+	attractAttention=false;
+	AIRatingBias=-999;
+[ActionAoE] 
+	ID=xpGem_awardXP;
+	cloneFrom=party;
+	canSelectStackedActors=false;
+[AvAffecter]
+	ID=xpGem_awardXP; 
+	harmful=false;
+	actorValue=XP_ignoreTired;
+	magnitude=100;
+	duration=-2;
+	chance=100;
+	FXOnTile=upwardLines_quick_noOverlap;
+	FXOnTileColor=Blue;
+	FXOnTile=charge;
+	FXOnTileColor=Blue;
+	FXOnTile=Powerup_highPitchChirp2;
+	FXOnTileColor=Blue;
+	FXOnTile=implosionBlue;
+	FXOnTile=sfx_quickHum;
+[AvAffecterAoE]
+	ID=xpGem_awardXP;
+	cloneFrom=oneTile;
+	
+[Action] ID=xpGemMed_awardXP; 
+	name=XP;
+	harmful=false;
+	casterAnimation=spellcast;
+	attractAttention=false;
+	AIRatingBias=-999;
+[ActionAoE] 
+	ID=xpGemMed_awardXP;
+	cloneFrom=party;
+	canSelectStackedActors=false;
+[AvAffecter]
+	ID=xpGemMed_awardXP; 
+	harmful=false;
+	actorValue=XP_ignoreTired;
+	magnitude=300 - t:xpGemSickness;
+	duration=-2;
+	chance=100;
+	FXOnTile=upwardLines_quick_noOverlap;
+	FXOnTileColor=Blue;
+	FXOnTile=charge;
+	FXOnTileColor=Blue;
+	FXOnTile=Powerup_highPitchChirp2;
+	FXOnTileColor=Blue;
+	FXOnTile=implosionBlue;
+	FXOnTile=sfx_quickHum;
+[AvAffecterAoE]
+	ID=xpGemMed_awardXP;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=xpGemMed_awardXP; 
+	harmful=false;
+	actorValue=xpGemSickness;
+	magnitude=3;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=xpGemMed_awardXP;
+	cloneFrom=oneTile;
+	
+[Action] ID=xpGemMed_pure_awardXP; 
+	name=XP;
+	harmful=false;
+	casterAnimation=spellcast;
+	attractAttention=false;
+	AIRatingBias=-999;
+[ActionAoE] 
+	ID=xpGemMed_pure_awardXP;
+	cloneFrom=party;
+	canSelectStackedActors=false;
+[AvAffecter]
+	ID=xpGemMed_pure_awardXP; 
+	harmful=false;
+	actorValue=XP_ignoreTired;
+	magnitude=300;
+	duration=-2;
+	chance=100;
+	FXOnTile=upwardLines_quick_noOverlap;
+	FXOnTileColor=Blue;
+	FXOnTile=charge;
+	FXOnTileColor=Blue;
+	FXOnTile=Powerup_highPitchChirp2;
+	FXOnTileColor=Blue;
+	FXOnTile=implosionBlue;
+	FXOnTile=sfx_quickHum;
+[AvAffecterAoE]
+	ID=xpGemMed_pure_awardXP;
+	cloneFrom=oneTile;
+
+[Action] ID=xpGemBig_awardXP; 
+	name=XP;
+	harmful=false;
+	casterAnimation=spellcast;
+	attractAttention=false;
+	AIRatingBias=-999;
+	FXOnTarget=smallestShakeHoriz;
+[ActionAoE] 
+	ID=xpGemBig_awardXP;
+	cloneFrom=party;
+	canSelectStackedActors=false;
+[AvAffecter]
+	ID=xpGemBig_awardXP; 
+	harmful=false;
+	actorValue=XP_ignoreTired;
+	magnitude=1000;
+	duration=-2;
+	chance=100;
+	FXOnTile=upwardLines_quick_noOverlap;
+	FXOnTileColor=Blue;
+	FXOnTile=sparkle;
+	FXOnTileColor=Blue;
+	FXOnTile=charge;
+	FXOnTileColor=Blue;
+	FXOnTile=Powerup_highPitchChirp2;
+	FXOnTileColor=Blue;
+	FXOnTile=Powerup_highPitchChirp;
+	FXOnTileColor=Blue;
+	FXOnTile=implosionBlue;
+	FXOnTileColor=White;
+	FXOnTile=superSparkles;
+	FXOnTileColor=Blue;
+	FXOnTile=sfx_quickHum;
+[AvAffecterAoE]
+	ID=xpGemBig_awardXP;
+	cloneFrom=oneTile;
+	
+[Action] ID=abilityCrest_act; 
+	name=Ability Crest;
+	harmful=false;
+	casterAnimation=handsup_instantCast_long;
+	attractAttention=false;
+	AIRatingBias=-9999;
+	special=cantUseInCombat;
+	fReq=2 - c:extraClasses;
+	
+	FXOnCaster=longGoodAuraSound;
+[ActionAoE] 
+	ID=abilityCrest_act;
+	cloneFrom=oneTile;
+	canSelectStackedActors=false;
+[AvAffecter]
+	ID=abilityCrest_act; 
+	harmful=false;
+	actorValue=extraClasses;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	FXOnTile=sfx_magicHum;
+	FXOnTile=abilityCrest_floatUp;
+	FXOnTile=sfx_energyBuildup;
+	FXOnTile=pixelBrightUp_thenDown_thenPing;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=whiteFade_shorter;
+	FXOnTile=delay;
+	FXOnTile=sfx_goodConfirm;
+[AvAffecterAoE]
+	ID=abilityCrest_act;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=bezoar_ruluorn_act; 
+	name=Ruluorn Bezoar;
+	harmful=false;
+	attractAttention=false;
+	AIRatingBias=-999;
+	fReq=m:peaceful + gTimeSinceMoreThanOrNeverAssigned:bezoar_gated:100 - 1 - g:cantTeleport;
+	special=cantUseInCombat;
+	special=showConfirmOptionAlways;
+[ActionAoE] 
+	ID=bezoar_ruluorn_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=bezoar_ruluorn_act; 
+	harmful=false;
+	actorValue=task;
+	magnitude=talk,False,False,,bezoar1a;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=bezoar_ruluorn_act;
+	cloneFrom=oneTile;
+	
+
+	
+[Action] ID=dust_awardXP; 
+	name=XP;
+	special=usableEvenWhenCantAct;
+	harmful=false;
+	casterAnimation=spellcast;
+	attractAttention=false;
+[ActionAoE] 
+	ID=dust_awardXP;
+	cloneFrom=oneTile;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=dust_awardXP; 
+	harmful=false;
+	actorValue=XP_ignoreTired;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	FXOnTile=upwardLines_quick_noOverlap;
+	FXOnTile=bipFlutter;
+[AvAffecterAoE]
+	ID=dust_awardXP;
+	cloneFrom=party;
+	needsLoE=false;
+	needsLoS=false;
+	canSelectEnemies=true;
+	maxRange=12;
+	ignoreCannotTarget=true;
+	
+	
+[Action] ID=dig; 
+	name=Dig;
+	harmful=false;
+	casterAnimation=punch;
+	casterAnimationSpeed=1.3;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=dig;
+	cloneFrom=adjacent;
+	needsLoS = true;
+	needsLoE = true;
+	canSelectActors=false;
+	maxRange=2;
+	airborne=false;
+	bypassAll=false;
+	occupyAll=false;
+[AvAffecter]
+	ID=dig; 
+	harmful=false;
+	duration=-2;
+	chance=100;
+	element=dig;
+	element=physical;
+	FXOnTile=BurnishSound;
+	FXOnTile=terrain;
+	FXOnTile=delay;
+	FXOnTile=terrain;
+[AvAffecterAoE]
+	ID=dig;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=pickaxe; 
+	name=Pickaxe;
+	harmful=false;
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=pickaxe;
+	cloneFrom=adjacent;
+	needsLoS = true;
+	needsLoE = true;
+	canSelectActors=false;
+	maxRange=2;
+	airborne=false;
+	bypassAll=false;
+	occupyAll=true;
+[AvAffecter]
+	ID=pickaxe; 
+	harmful=false;
+	duration=-2;
+	chance=100;
+	element=pickaxe;
+	element=physical;
+	element=smash;
+	element=heavySmash;
+	FXOnTile=stomp;
+	FXOnTile=terrain;
+	FXOnTile=delay;
+	FXOnTile=terrain;
+	FXOnTile=stomp;
+[AvAffecterAoE]
+	ID=pickaxe;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=spreadRope; 
+	special=hideOnTurnOrder;
+	harmful=true;
+[ActionAoE] 
+	ID=spreadRope; shape=2;
+	cloneFrom=adjacent;
+	maxRange=1;
+	forcedRot=90;
+	coneAngle=1;
+[AvAffecter]
+	ID=spreadRope; 
+	visibleEvaluations=false;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	element=spreadRope;
+	FXOnTile=ropeExtend;
+[AvAffecterAoE]
+	ID=spreadRope; shape=2;
+	cloneFrom=adjacent;
+	maxRange=1;
+	forcedRot=90;
+	coneAngle=1;
+	aoeCasterAsOrigin = true;
+	
+[Action] ID=spreadChain; 
+	special=hideOnTurnOrder;
+	harmful=false;
+	attractAttention=false;
+	FXOnTarget=SandPuff;
+[ActionAoE] 
+	ID=spreadChain; shape=2;
+	cloneFrom=adjacent;
+	maxRange=1;
+	forcedRot=90;
+	coneAngle=1;
+	needsLoS=false;
+	needsLoE=false;
+	airborne=true;
+	arc=true;
+	occupyAll=true;
+	bypassAll=true;
+	airborne=true;
+	canFloatMidair=true;
+[AvAffecter]
+	ID=spreadChain; 
+	visibleEvaluations=false;
+	actorValue=summonItem;
+	magnitude=chain_extended;
+	duration=1;
+	FXOnTile=chainExtend;
+[AvAffecterAoE]
+	ID=spreadChain; shape=2;
+	cloneFrom=adjacent;
+	minRange=1;
+	maxRange=25;
+	forcedRot=90;
+	coneAngle=1;
+	restrictedToTerrainElement=spreadChain;
+	needsLoS=false;
+	needsLoE=false;
+	arc=true;
+	occupyAll=true;
+	bypassAll=true;
+	airborne=true;
+	canFloatMidair=true;
+	aoeCasterAsOrigin = true;
+	
+[Action] ID=removeRope; 
+	special=hideOnTurnOrder;
+	harmful=true;
+[ActionAoE] 
+	ID=removeRope; shape=2;
+	cloneFrom=adjacent;
+	maxRange=1;
+	forcedRot=90;
+	coneAngle=1;
+[AvAffecter]
+	ID=removeRope; 
+	visibleEvaluations=false;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	element=removeRope;
+[AvAffecterAoE]
+	ID=removeRope; shape=2;
+	cloneFrom=adjacent;
+	maxRange=1;
+	forcedRot=90;
+	coneAngle=1;
+	aoeCasterAsOrigin = true;
+	
+[Action] ID=studyTool_action; 
+	name=Study;
+	icon=icon_Sch_question;
+	tooltip=Shows elemental resistances & weaknesses.;
+	rankUpTooltip=;
+	harmful=false;
+	attractAttention=false;
+	
+	AIRatingBias = -999;
+	
+	casterAnimation=use;
+	casterAnimationDependsOnWeaponHand=true;
+	casterAnimationSpeed=0.5;
+	
+	FXOnCaster=question;
+	FXOnCasterColor=SkyBlue;
+	FXOnCaster=ting;
+	
+	FXOnTarget=study_targetRet2;
+[ActionAoE] 
+	ID=studyTool_action;
+	needsLoS = true;
+	needsLoE = false;
+	minRange = 1;
+	maxRange = 6;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=studyTool_action; 
+	harmful=false;
+	actorValue=study;
+	magnitude= 1;
+	duration=-2;
+	chance=100;
+	FXOnTile=bipFlutter;
+	FXOnTile=scanInfo;
+	FXOnTile=bipFlutter;
+	FXOnTile=scanInfo_flip;
+[AvAffecterAoE]
+	ID=studyTool_action;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=bandage_action; 
+	name=Bandage;
+	icon=;
+	tooltip=;
+	rankUpTooltip=;
+	attractAttention=false;
+	harmful=false;
+	AIRatingBias=-4;
+	
+	casterAnimation=use;
+[ActionAoE] 
+	ID=bandage_action; shape=7;
+	cloneFrom=adjacentAndSelf;
+	canSelectEnemies = false;
+[AvAffecter]
+	ID=bandage_action; 
+	harmful=false;
+	actorValue=HP;
+	magnitude= 16 + c:skill_Life * 0.25 + t:skill_Life * 0.25 + sa:medic * 8;
+	duration=-2;
+	chance=100;
+	element=removeDecay;
+	FXOnTile=sparkles;
+	FXOnTileColor=Red;
+	FXOnTile=briefAuraSound;
+[AvAffecterAoE]
+	ID=bandage_action;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=splint_action; 
+	name=Splint;
+	icon=;
+	tooltip=;
+	rankUpTooltip=;
+	attractAttention=false;
+	harmful=false;
+	AIRatingBias=-4;
+	
+	casterAnimation=use;
+[ActionAoE]
+	ID=splint_action; shape=7;
+	cloneFrom=adjacentAndSelf;
+	canSelectEnemies = false;
+[AvAffecter]
+	ID=splint_action; 
+	harmful=false;
+	actorValue=HP;
+	magnitude= 18 + c:skill_Life * 0.25 + t:skill_Life * 0.25 + sa:medic * 9;
+	duration=-2;
+	chance=100;
+	element=removeDecay;
+	FXOnTile=sparkles;
+	FXOnTileColor=Red;
+	FXOnTile=briefAuraSound;
+[AvAffecterAoE]
+	ID=splint_action;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=splint_action; 
+	harmful=false;
+	visibleMiss=false;
+	actorValue=immob;
+	magnitude=-1;
+	duration=-2;
+	chance=100 * t:immob;
+[AvAffecterAoE]
+	ID=splint_action;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=splint_action; 
+	harmful=false;
+	visibleMiss=false;
+	actorValue=disable;
+	magnitude=-1;
+	duration=-2;
+	chance=100 * t:disable;
+[AvAffecterAoE]
+	ID=splint_action;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=splint_action; 
+	harmful=false;
+	visibleMiss=false;
+	actorValue=stun;
+	magnitude=-1;
+	duration=-2;
+	chance=100 * t:stun;
+[AvAffecterAoE]
+	ID=splint_action;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=reviveDust_action; 
+	name=Revive Dust;
+	harmful=false;
+	attractAttention=false;
+	casterAnimation=use;
+	FXOnTarget=darken_minor;
+	FXOnTarget=tallLight;
+[ActionAoE] 
+	ID=reviveDust_action;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=reviveDust_action; 
+	harmful=false;
+	actorValue=revive;
+	magnitude=9;
+	duration=-2;
+	chance=d:reviveAcc;
+	FXOnTile=dust_rise;
+	FXOnTileColor=Gold;
+	FXOnTile=dust_cloud;
+	FXOnTileColor=Gold;
+	FXOnTile=chargeSpiralFast;
+	FXOnTile=sfx_longGoodAura_med;
+	FXOnTile=actor_reviveGhost;
+	FXOnHit=chargeSpiralFast_big;
+	FXOnHit=sparkles;
+	FXOnHit=upwardLinesQuick;
+	FXOnHit=whiten;
+	FXOnHit=Powerup_longerEchoBloop;
+	FXOnMiss=hitDustQuiet;
+[AvAffecterAoE]
+	ID=reviveDust_action;
+	cloneFrom=oneTile;
+	
+[Action] ID=itchDust_action;
+	name=Spices; 
+	casterAnimation=swing;
+	FXOnTarget=SandPuff;
+[ActionAoE] 
+	ID=itchDust_action;
+	cloneFrom=adjacent+1;
+[AvAffecter]
+	ID=itchDust_action; 
+	actorValue=itchy;
+	magnitude=1;
+	duration=100;
+	chance=100;
+	FXOnTile=dust_cloud;
+	FXOnTileColor=Red;
+[AvAffecterAoE]
+	ID=itchDust_action;
+	cloneFrom=adjacentAndSelf;
+	
+[Action] ID=blindDust_action; 
+	casterAnimation=swing;
+	FXOnTarget=SandPuff;
+[ActionAoE] 
+	ID=blindDust_action;
+	cloneFrom=adjacent+1;
+[AvAffecter]
+	ID=blindDust_action; 
+	actorValue=blind;
+	magnitude=1;
+	duration=100;
+	chance=100;
+	FXOnTile=dust_cloud;
+	FXOnTileColor=Black;
+	FXOnTile=dust_cloud;
+	FXOnTileColor=Black;
+[AvAffecterAoE]
+	ID=blindDust_action;
+	cloneFrom=oneTile;
+	
+[Action] ID=poisonDust_action; 
+	name=Toxic Powder; 
+	casterAnimation=swing;
+	FXOnTarget=SandPuff;
+[ActionAoE] 
+	ID=poisonDust_action;
+	cloneFrom=adjacent+1;
+[AvAffecter]
+	ID=poisonDust_action; 
+	actorValue=poison;
+	magnitude=2;
+	duration=100;
+	chance=100;
+	FXOnTile=dust_cloud;
+	FXOnTileColor=Purple;
+[AvAffecterAoE]
+	ID=poisonDust_action;
+	cloneFrom=adjacentAndSelf;
+	
+
+[Action] ID=glowDust_action;
+	name=Glow Dust; 
+	casterAnimation=swing;
+	FXOnTarget=SandPuff;
+[ActionAoE] 
+	ID=glowDust_action;
+	cloneFrom=adjacent+2;
+[AvAffecter]
+	ID=glowDust_action; 
+	actorValue=glowing;
+	magnitude=1;
+	duration=250;
+	chance=100;
+	FXOnTile=w_risingDust_glow_splash;
+	FXOnTileColor=White;
+[AvAffecterAoE]
+	ID=glowDust_action;
+	cloneFrom=adjacentAndSelf;
+	
+	
+[Action] ID=bottle_oil_action; 
+	name=Throw Oil;
+	casterAnimation=swing;
+	
+	FXOnTarget=throw_bottle_oil;
+[ActionAoE] 
+	ID=bottle_oil_action;
+	cloneFrom=adjacent+1;
+	airborne=true;
+	arc=false;
+	maxRange=4;
+	maxRangeBonus=sa:toolTalent;
+[AvAffecter]
+	ID=bottle_oil_action; 
+	actorValue=summonItem;
+	magnitude=blackOil1;
+	chance=100;
+	element=oil;
+[AvAffecterAoE]
+	ID=bottle_oil_action;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=bottle_oil_action; 
+	actorValue=oil;
+	magnitude=1;
+	duration=200;
+	chance=d:physicalAcc;
+	FXOnTile=dust_glassGreen;
+	FXOnTileColor=White;
+	FXOnTile=ping;
+	FXOnTileColor=Black;
+	FXOnHit=WetSquish;
+[AvAffecterAoE]
+	ID=bottle_oil_action;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=firebomb_action; 
+	name=Firebomb;
+	casterAnimation=swing;
+	
+	FXOnTarget=throw_firebomb;
+[ActionAoE] 
+	ID=firebomb_action;
+	cloneFrom=adjacent+1;
+	airborne=true;
+	arc=false;
+	maxRange=4;
+	maxRangeBonus=sa:toolTalent;
+[AvAffecter]
+	ID=firebomb_action; 
+	actorValue=summonItem;
+	magnitude=fire;
+	chance=100;
+	FXOnTile=dust_glassGreen;
+	FXOnTile=DramaticNyeaow;
+	FXOnTile=redden_minor;
+[AvAffecterAoE]
+	ID=firebomb_action;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=firebomb_action; 
+	actorValue=burn;
+	magnitude=1;
+	duration=40;
+	chance=100;
+	element=fire;
+	element=kindle;
+	element=oil;
+[AvAffecterAoE]
+	ID=firebomb_action;
+	cloneFrom=adjacentAndSelf+1;
+	arc=true;
+[AvAffecter]
+	ID=firebomb_action; 
+	actorValue=summonItem;
+	magnitude=fire;
+	useCasterAsOriginForDirectionalEffects=false;
+	FXOnTile=smallShockwaves_flood;
+	FXOnTileColor=Red;
+	FXOnTile=smallShockwaves_flood2;
+	FXOnTileColor=Yellow;
+[AvAffecterAoE]
+	ID=firebomb_action;
+	cloneFrom=adjacentAndSelf;
+	occupyAll=false;
+	bypassAll=false;
+	arc=true;
+[AvAffecter]
+	ID=firebomb_action; 
+	actorValue=summonItem;
+	magnitude=fire_small;
+	useCasterAsOriginForDirectionalEffects=false;
+	FXOnTile=smallShockwaves_flood;
+	FXOnTileColor=Red;
+[AvAffecterAoE]
+	ID=firebomb_action;
+	cloneFrom=adjacentAndSelf+1;
+	minRange=2;
+	canSelectActors=false;
+	occupyAll=false;
+	bypassAll=false;
+	arc=true;
+	
+
+
+[Action] ID=pour_beer; 
+	harmful=false;
+	casterAnimation=use;
+	attractAttention=false;
+[ActionAoE] 
+	ID=pour_beer;
+	cloneFrom=oneTile;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=pour_beer; 
+	harmful=false;
+	actorValue=summonItem;
+	magnitude=puddle_beer;
+	duration=1;
+	chance=100;
+	FXOnTile=sfx_droplet;
+[AvAffecterAoE]
+	ID=pour_beer;
+	forcedRot=180;
+	coneAngle=1;
+	cloneFrom=adjacent;
+	ignoreCannotTarget=true;
+	
+[Action] ID=drop_dart; 
+	harmful=false;
+	casterAnimation=use;
+	attractAttention=false;
+	FXOnTarget=pop;
+[ActionAoE] 
+	ID=drop_dart;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=drop_dart; 
+	harmful=false;
+	actorValue=summonItem;
+	magnitude=dart;
+	duration=1;
+	chance=100;
+[AvAffecterAoE]
+	ID=drop_dart;
+	forcedRot=90;
+	coneAngle=1;
+	cloneFrom=adjacent;
+	bypassAll=true;
+	needsLoE=false;
+	
+
+[Action] ID=drop_Aerstone; 
+	harmful=false;
+	casterAnimation=use;
+	attractAttention=false;
+	FXOnTarget=horizSpark_many;
+	FXOnTarget=horizSpark_many_above;
+	FXOnTarget=longGoodAuraSound;
+[ActionAoE] 
+	ID=drop_Aerstone;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=drop_Aerstone; 
+	harmful=false;
+	actorValue=summonItem;
+	magnitude=aerstone;
+	duration=1;
+	chance=100;
+	FXOnTile=aerstone_descend;
+	FXOnTile=aerstone;
+	FXOnTile=ping_noOverlap;
+	FXOnTile=pixelSpinCircle;
+	FXOnTile=spiral;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=drop_Aerstone;
+	forcedRot=90;
+	coneAngle=1;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=drop_Aerstone; 
+	harmful=false;
+	actorValue=XP;
+	magnitude=100;
+	duration=-2;
+	chance=100;
+	FXOnTile=upwardLines_quick_noOverlap;
+	FXOnTile=bipFlutter;
+[AvAffecterAoE]
+	ID=drop_Aerstone;
+	cloneFrom=party;
+	maxRange=90;
+	
+[Action] ID=eat_sleep; 
+	harmful=false;
+	casterAnimation=use;
+	attractAttention=false;
+[ActionAoE] 
+	ID=eat_sleep;
+	cloneFrom=party;
+[AvAffecter]
+	ID=eat_sleep; 
+	harmful=false;
+	actorValue=sleep;
+	magnitude=1;
+	duration=200;
+	chance=100;
+	FXOnTile=sfx_bottle;
+	FXOnTile=sparkle;
+[AvAffecterAoE]
+	ID=eat_sleep;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=eat_MP_Up1; 
+	harmful=false;
+	casterAnimation=use;
+	attractAttention=false;
+[ActionAoE] 
+	ID=eat_MP_Up1;
+	cloneFrom=party;
+	canSelectStackedActors=false;
+[AvAffecter]
+	ID=eat_MP_Up1; 
+	harmful=false;
+	actorValue=TrueMPMax;
+	visibleEvaluations=false;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=eat_MP_Up1;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=eat_MP_Up1; 
+	harmful=false;
+	actorValue=MP;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	FXOnTile=sfx_bottle;
+	FXOnTileColor=SkyBlue;
+	FXOnTile=superSparkles;
+	FXOnTileColor=SkyBlue;
+	FXOnTile=Powerup_highPitchChirp;
+[AvAffecterAoE]
+	ID=eat_MP_Up1;
+	cloneFrom=oneTile;
+	
+[Action] ID=eat_HP_Up2; 
+	harmful=false;
+	casterAnimation=use;
+	attractAttention=false;
+[ActionAoE] 
+	ID=eat_HP_Up2;
+	cloneFrom=party;
+	canSelectStackedActors=false;
+[AvAffecter]
+	ID=eat_HP_Up2; 
+	harmful=false;
+	actorValue=TrueHPMax;
+	visibleEvaluations=false;
+	magnitude=2;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=eat_HP_Up2;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=eat_HP_Up2; 
+	harmful=false;
+	actorValue=HP;
+	magnitude=2;
+	duration=-2;
+	chance=100;
+	FXOnTile=sfx_bottle;
+	FXOnTileColor=Red;
+	FXOnTile=superSparkles;
+	FXOnTileColor=Red;
+	FXOnTile=Powerup_highPitchChirp;
+[AvAffecterAoE]
+	ID=eat_HP_Up2;
+	cloneFrom=oneTile;
+
+[Action] ID=eat_HP_Up1; 
+	harmful=false;
+	casterAnimation=use;
+	attractAttention=false;
+[ActionAoE] 
+	ID=eat_HP_Up1;
+	cloneFrom=party;
+	canSelectStackedActors=false;
+[AvAffecter]
+	ID=eat_HP_Up1; 
+	harmful=false;
+	actorValue=TrueHPMax;
+	visibleEvaluations=false;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=eat_HP_Up1;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=eat_HP_Up1; 
+	harmful=false;
+	actorValue=HP;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	FXOnTile=sfx_bottle;
+	FXOnTileColor=Red;
+	FXOnTile=superSparkles;
+	FXOnTileColor=Red;
+	FXOnTile=Powerup_highPitchChirp;
+[AvAffecterAoE]
+	ID=eat_HP_Up1;
+	cloneFrom=oneTile;
+
+[Action] ID=eat_PEva_Up1; 
+	harmful=false;
+	casterAnimation=use;
+	attractAttention=false;
+[ActionAoE] 
+	ID=eat_PEva_Up1;
+	cloneFrom=party;
+	canSelectStackedActors=false;
+[AvAffecter]
+	ID=eat_PEva_Up1; 
+	harmful=false;
+	actorValue=PhysEva;
+	visibleEvaluations=true;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	FXOnTile=sfx_bottle;
+	FXOnTileColor=LightGreen;
+	FXOnTile=superSparkles;
+	FXOnTileColor=LightGreen;
+	FXOnTile=Powerup_highPitchChirp;
+[AvAffecterAoE]
+	ID=eat_PEva_Up1;
+	cloneFrom=oneTile;
+	
+[Action] ID=eat_MEva_Up1; 
+	harmful=false;
+	casterAnimation=use;
+	attractAttention=false;
+[ActionAoE] 
+	ID=eat_MEva_Up1;
+	cloneFrom=party;
+	canSelectStackedActors=false;
+[AvAffecter]
+	ID=eat_MEva_Up1; 
+	harmful=false;
+	actorValue=MagEva;
+	visibleEvaluations=true;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	FXOnTile=sfx_bottle;
+	FXOnTileColor=LightBlue;
+	FXOnTile=superSparkles;
+	FXOnTileColor=LightBlue;
+	FXOnTile=Powerup_highPitchChirp;
+[AvAffecterAoE]
+	ID=eat_MEva_Up1;
+	cloneFrom=oneTile;
+	
+[Action] ID=drink_beer; 
+	name=Beer;
+	harmful=false;
+	casterAnimation=use;
+	attractAttention=false;
+	AIRatingBias=-4;
+	special=usableEvenUnderZoneActRestrictions;
+[ActionAoE] 
+	ID=drink_beer;
+	cloneFrom=party;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=drink_beer; 
+	harmful=false;
+	visibleEvaluations=false;
+	actorValue=HPMax;
+	magnitude=-t:morale;
+	duration=900;
+	chance=100;
+[AvAffecterAoE]
+	ID=drink_beer;
+	cloneFrom=oneTile;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=drink_beer; 
+	harmful=false;
+	actorValue=morale;
+	magnitude=1;
+	duration=80;
+	chance=100;
+	FXOnTile=sfx_bottle;
+	FXOnTile=sparkle;
+[AvAffecterAoE]
+	ID=drink_beer;
+	cloneFrom=oneTile;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=drink_beer; 
+	harmful=false;
+	actorValue=MP;
+	magnitude=10;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=drink_beer;
+	cloneFrom=oneTile;
+	ignoreCannotTarget=true;
+	
+
+[Action] ID=drink_hipflask; 
+	name=Hip Flask;
+	harmful=false;
+	casterAnimation=use;
+	attractAttention=false;
+	special=usableEvenUnderZoneActRestrictions;
+[ActionAoE] 
+	ID=drink_hipflask;
+	cloneFrom=oneTile;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=drink_hipflask; 
+	harmful=false;
+	actorValue=morale;
+	magnitude=1;
+	duration=40;
+	chance=100;
+	FXOnTile=sfx_bottle;
+	FXOnTile=sparkle;
+[AvAffecterAoE]
+	ID=drink_hipflask;
+	cloneFrom=oneTile;
+	ignoreCannotTarget=true;
+	
+[Action] ID=elemStone_fire_act; 
+	special=usableEvenUnderZoneActRestrictions;
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=elemStone_fire_act;
+	cloneFrom=oneTile;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=elemStone_fire_act; 
+	harmful=false;
+	actorValue=skill_Fire;
+	magnitude=1;
+	duration=3;
+	durationIsWorldtimeDays=true;
+	hideAllEffects=true;
+	chance=100;
+	FXOnTile=sparkle;
+[AvAffecterAoE]
+	ID=elemStone_fire_act;
+	cloneFrom=party;
+	ignoreCannotTarget=true;
+		
+[Action] ID=elemStone_ice_act; 
+	special=usableEvenUnderZoneActRestrictions;
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=elemStone_ice_act;
+	cloneFrom=oneTile;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=elemStone_ice_act; 
+	harmful=false;
+	actorValue=skill_Ice;
+	magnitude=1;
+	duration=3;
+	durationIsWorldtimeDays=true;
+	hideAllEffects=true;
+	chance=100;
+	FXOnTile=sparkle;
+[AvAffecterAoE]
+	ID=elemStone_ice_act;
+	cloneFrom=party;
+	ignoreCannotTarget=true;
+		
+[Action] ID=elemStone_elec_act; 
+	special=usableEvenUnderZoneActRestrictions;
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=elemStone_elec_act;
+	cloneFrom=oneTile;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=elemStone_elec_act; 
+	harmful=false;
+	actorValue=skill_Elec;
+	magnitude=1;
+	duration=3;
+	durationIsWorldtimeDays=true;
+	hideAllEffects=true;
+	chance=100;
+	FXOnTile=sparkle;
+[AvAffecterAoE]
+	ID=elemStone_elec_act;
+	cloneFrom=party;
+	ignoreCannotTarget=true;
+		
+[Action] ID=elemStone_wind_act; 
+	special=usableEvenUnderZoneActRestrictions;
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=elemStone_wind_act;
+	cloneFrom=oneTile;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=elemStone_wind_act; 
+	harmful=false;
+	actorValue=skill_Wind;
+	magnitude=1;
+	duration=3;
+	durationIsWorldtimeDays=true;
+	hideAllEffects=true;
+	chance=100;
+	FXOnTile=sparkle;
+[AvAffecterAoE]
+	ID=elemStone_wind_act;
+	cloneFrom=party;
+	ignoreCannotTarget=true;
+		
+[Action] ID=elemStone_life_act; 
+	special=usableEvenUnderZoneActRestrictions;
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=elemStone_life_act;
+	cloneFrom=oneTile;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=elemStone_life_act; 
+	harmful=false;
+	actorValue=skill_Life;
+	magnitude=1;
+	duration=3;
+	durationIsWorldtimeDays=true;
+	hideAllEffects=true;
+	chance=100;
+	FXOnTile=sparkle;
+[AvAffecterAoE]
+	ID=elemStone_life_act;
+	cloneFrom=party;
+	ignoreCannotTarget=true;
+		
+[Action] ID=elemStone_ruin_act; 
+	special=usableEvenUnderZoneActRestrictions;
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=elemStone_ruin_act;
+	cloneFrom=oneTile;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=elemStone_ruin_act; 
+	harmful=false;
+	actorValue=skill_Ruin;
+	magnitude=1;
+	duration=3;
+	durationIsWorldtimeDays=true;
+	hideAllEffects=true;
+	chance=100;
+	FXOnTile=sparkle;
+[AvAffecterAoE]
+	ID=elemStone_ruin_act;
+	cloneFrom=party;
+	ignoreCannotTarget=true;
+	
+[Action] ID=spawn_fish_mag; 
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=spawn_fish_mag;
+	cloneFrom=oneTile;
+	occupyAll=true;
+[AvAffecter]
+	ID=spawn_fish_mag; 
+	harmful=false;
+	actorValue=summonItem;
+	magnitude=fish_mag;
+	duration=1;
+	chance=100;
+	FXOnTile=throw_fish_mag;
+[AvAffecterAoE]
+	ID=spawn_fish_mag; shape=5;
+	cloneFrom=oneTile;
+	occupyAll=true;
+	
+	
+[Action] ID=spawn_fish_flop; 
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=spawn_fish_flop;
+	cloneFrom=oneTile;
+	occupyAll=true;
+[AvAffecter]
+	ID=spawn_fish_flop; 
+	harmful=false;
+	actorValue=summonItem;
+	magnitude=fish_flop;
+	duration=1;
+	chance=100;
+	FXOnTile=throw_fish_flop;
+[AvAffecterAoE]
+	ID=spawn_fish_flop; shape=5;
+	cloneFrom=oneTile;
+	occupyAll=true;
+	
+[Action] ID=spawn_gangle_chance15; 
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=spawn_gangle_chance15;
+	cloneFrom=oneTile;
+	occupyAll=true;
+[AvAffecter]
+	ID=spawn_gangle_chance15; 
+	harmful=false;
+	actorValue=summonActor;
+	magnitude=gangle_spawn;
+	duration=-2;
+	chance=15;
+[AvAffecterAoE]
+	ID=spawn_gangle_chance15;
+	cloneFrom=oneTile;
+	occupyAll=true;
+	
+
+[Action] ID=spawn_gangle_chance2; 
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=spawn_gangle_chance2;
+	cloneFrom=oneTile;
+	occupyAll=true;
+[AvAffecter]
+	ID=spawn_gangle_chance2; 
+	harmful=false;
+	actorValue=summonActor;
+	magnitude=gangle_spawn;
+	duration=-2;
+	chance=2;
+[AvAffecterAoE]
+	ID=spawn_gangle_chance2;
+	cloneFrom=oneTile;
+	occupyAll=true;
+	
+[Action] ID=spawn_autocycle; 
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=spawn_autocycle;
+	cloneFrom=oneTile;
+	occupyAll=true;
+[AvAffecter]
+	ID=spawn_autocycle; 
+	harmful=false;
+	chance=100;
+	FXOnTile=sfx_breakRock;
+	FXOnTile=smokeCloud;
+	FXOnTile=delay_minor;
+	FXOnTile=smokeCloud;
+	FXOnTile=delay;
+	FXOnTile=sfx_pummel;
+	FXOnTile=smokeCloud;
+	FXOnTile=delay;
+	FXOnTile=smokeCloud;
+	FXOnTile=delay;
+	FXOnTile=circle_form;
+	FXOnTile=smokeCloud;
+	FXOnTile=stomp;
+	FXOnTile=smokeCloud;
+	FXOnTile=delay;
+	FXOnTile=smokeCloud;
+	FXOnTile=delay;
+	FXOnTile=longGoodAuraSound;
+	FXOnTile=superSparkles;
+[AvAffecterAoE]
+	ID=spawn_autocycle;
+	cloneFrom=oneTile;
+	occupyAll=true;
+[AvAffecter]
+	ID=spawn_autocycle; 
+	harmful=false;
+	actorValue=summonActor;
+	magnitude=cycle;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=spawn_autocycle;
+	cloneFrom=oneTile;
+	occupyAll=true;
+[AvAffecter]
+	ID=spawn_autocycle; 
+	harmful=false;
+	actorValue=trigger;
+	magnitude=tAutocycleRepaired;
+	duration=;
+	chance=100;
+[AvAffecterAoE]
+	ID=spawn_autocycle;
+	cloneFrom=oneTile;
+	occupyAll=true;
+
+[Action] ID=massiveGateOpen; 
+	special=hideOnTurnOrder;
+[ActionAoE] 
+	ID=massiveGateOpen;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=massiveGateOpen; 
+	actorValue=;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	element=physical;
+	FXOnHit=question;
+[AvAffecterAoE]
+	ID=massiveGateOpen;
+	cloneFrom=adjacentAndSelf;
+	maxRange=1.5;
+[AvAffecter]
+	ID=massiveGateOpen; 
+	actorValue=;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	FXOnTile=sfx_magicHum_quiet;
+	FXOnTile=delay;
+	FXOnTile=ping;
+	FXOnTile=delay;
+	FXOnTile=darken_slow;
+	FXOnTile=horizSpark_many_sudden;
+	FXOnTile=horizSpark_many_wideArea;
+	FXOnTile=sfx_magicHum_quiet;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=magicHum;
+	FXOnTile=horizSpark_many_sudden;
+	FXOnTile=horizSpark_many_wideArea;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=ping;
+[AvAffecterAoE]
+	ID=massiveGateOpen;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=massiveGateOpen; 
+	actorValue=stun;
+	magnitude=1;
+	duration=24;
+	chance=100;
+[AvAffecterAoE]
+	ID=massiveGateOpen;
+	cloneFrom=adjacentAndSelf;
+	maxRange=9;
+[AvAffecter]
+	ID=massiveGateOpen; 
+	actorValue=;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	FXOnTile=delay;
+	FXOnTile=magicHum;
+	FXOnTile=horizSpark_many_sudden;
+	FXOnTile=horizSpark_many_wideArea;
+	FXOnTile=delay;
+	FXOnTile=magicHum;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=sfx_highHum;
+	FXOnTile=horizSpark_many_sudden;
+	FXOnTile=horizSpark_many_wideArea;
+	FXOnTile=shortBolt;
+	FXOnTile=tinyShakeHoriz_long;
+	FXOnTile=gate_expand_screen;
+	FXOnTile=delay;
+	FXOnTile=ping;
+	FXOnTile=earthquake_low;
+	FXOnTile=delay;
+	FXOnTile=smallShakeHoriz_long;
+	FXOnTile=ping;
+	FXOnTile=sfx_highHum;
+	FXOnTile=delay;
+	FXOnTile=smallShakeHoriz_long;
+	FXOnTile=pingRepeat_many;
+	FXOnTile=delay;
+	FXOnTile=smallShakeHoriz_long;
+	FXOnTile=delay;
+	FXOnTile=horizSpark_many_big2;
+	FXOnTile=sfx_highHum;
+	FXOnTile=delay;
+	FXOnTile=smallShakeHoriz_long;
+	FXOnTile=ping;
+	FXOnTile=horizSpark_many_big2;
+	FXOnTile=delay;
+	FXOnTile=smallShakeHoriz_long;
+	FXOnTile=ping;
+	FXOnTile=horizSpark_many_big2;
+	FXOnTile=delay;
+	FXOnTile=pingRepeat_many;
+	FXOnTile=sfx_higherHum;
+	FXOnTile=horizSpark_many_big2;
+	FXOnTile=smallShakeHoriz_long;
+	FXOnTile=delay;
+	FXOnTile=horizSpark_many_big2;
+	FXOnTile=horizSpark_many_sudden;
+	FXOnTile=horizSpark_many_wideArea;
+	FXOnTile=gate_expand_screen2;
+	FXOnTile=bigShakeHoriz;
+	FXOnTile=earthquake;
+	FXOnTile=sfx_highestHum;
+	FXOnTile=delay;
+	FXOnTile=horizSpark_many_big2;
+	FXOnTile=horizSpark_many_sudden;
+	FXOnTile=horizSpark_many_wideArea;
+	FXOnTile=bigShakeHoriz;
+	FXOnTile=delay;
+	FXOnTile=horizSpark_many_big2;
+	FXOnTile=bigShakeHoriz;
+	FXOnTile=gate_expand_screen2;
+	FXOnTile=delay;
+	FXOnTile=horizSpark_many_big2;
+	FXOnTile=sfx_highestHum;
+	FXOnTile=earthquake;
+	FXOnTile=bigShakeHoriz;
+	FXOnTile=delay;
+	FXOnTile=horizSpark_many_big2;
+	FXOnTile=horizSpark_many_big2;
+	FXOnTile=bigShakeHoriz;
+	FXOnTile=delay;
+--FXOnTile=BLACKEN;
+	
+[AvAffecterAoE]
+	ID=massiveGateOpen;
+	cloneFrom=oneTile;
+	
+[Action] ID=aerstoneInstalled; 
+	special=hideOnTurnOrder;
+[ActionAoE] 
+	ID=aerstoneInstalled;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=aerstoneInstalled; 
+	actorValue=trigger;
+	magnitude=tIncAerstoneG;
+	duration=;
+	chance=100;
+	FXOnTile=horizSpark_many_magicHum;
+	FXOnTile=sparkOut;
+[AvAffecterAoE]
+	ID=aerstoneInstalled;
+	cloneFrom=oneTile;
+
+	
+	
+
+[Action] ID=gale_action; 
+harmful=false;
+[ActionAoE] 
+	ID=gale_action;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=gale_action; 
+	harmful=false;
+	actorValue=bonusSpeed;
+	magnitude=-6;
+	duration=12;
+	chance=100 * m:tPlayer * m:overworld;
+	FXOnHit=darken_minor;
+	FXOnHit=windWhirlSlash;
+	FXOnHit=gustyBlast;
+[AvAffecterAoE]
+	ID=gale_action;
+	cloneFrom=oneTile;
+
+	
+
+[Action] ID=gust_action;
+harmful=false;
+[ActionAoE] 
+	ID=gust_action;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=gust_action; 
+	harmful=false;
+	actorValue=bonusSpeed;
+	magnitude=7;
+	duration=55;
+	chance=100 * m:tPlayer;
+	FXOnHit=blue_minorer;
+	FXOnHit=sidewardLines;
+	FXOnHit=sfx_schwee;
+[AvAffecterAoE]
+	ID=gust_action;
+	cloneFrom=oneTile;
+	
+[Action] ID=hazard_lightning_act;
+	special=hideOnTurnOrder;
+[ActionAoE] 
+	ID=hazard_lightning_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=hazard_lightning_act; 
+	fReq=m:tBoat;
+	actorValue=HP;
+	magnitude=-5;
+	duration=-2;
+	chance=100 * m:tPlayer;
+	element=lightning;
+	FXOnTile=sfx_thunderStrike;
+	FXOnTile=lightningbolt2_noOverlap;
+	FXOnTile=horizSpark_many;
+	FXOnHit=screenShock_instant;
+	FXOnHit=timeStop;
+[AvAffecterAoE]
+	ID=hazard_lightning_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=hazard_lightning_act; 
+	fReq=1 - m:tBoat - m:overworld;
+	actorValue=HP;
+	magnitude=-8 - t:HPMax / 25 + t:skill_Elec * nottsa:elementwalker + t:MagDef/2 * nottsa:elementwalker;
+	duration=-2;
+	chance=100;
+	element=lightning;
+	element=HPbased;
+	element=elementwalker;
+	FXOnTile=sfx_thunderStrike;
+	FXOnTile=lightningbolt2_noOverlap;
+	FXOnTile=horizSpark_many;
+	FXOnHit=screenShock_instant;
+	FXOnHit=timeStop;
+[AvAffecterAoE]
+	ID=hazard_lightning_act;
+	cloneFrom=oneTile;
+
+[Action] ID=build_cafe_act; 
+[ActionAoE] 
+	ID=build_cafe_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=build_cafe_act; 
+	actorValue=setPiece;
+	magnitude=spCafe;
+	chance=itemsZoneMoreThan:build_cafe:6 * 100;
+[AvAffecterAoE]
+	ID=build_cafe_act;
+	cloneFrom=oneTile;
+
+[Action] ID=build_shipwright_act; 
+[ActionAoE] 
+	ID=build_shipwright_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=build_shipwright_act; 
+	actorValue=setPiece;
+	magnitude=spShipwright;
+	chance=itemsZoneMoreThan:build_shipwright:6 * 100;
+[AvAffecterAoE]
+	ID=build_shipwright_act;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=build_items_act; 
+[ActionAoE] 
+	ID=build_items_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=build_items_act; 
+	actorValue=setPiece;
+	magnitude=spItems;
+	chance=itemsZoneMoreThan:build_items:6 * 100;
+[AvAffecterAoE]
+	ID=build_items_act;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=build_guild_act; 
+[ActionAoE] 
+	ID=build_guild_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=build_guild_act; 
+	actorValue=setPiece;
+	magnitude=spGuild;
+	chance=itemsZoneMoreThan:build_guild:6 * 100;
+[AvAffecterAoE]
+	ID=build_guild_act;
+	cloneFrom=oneTile;
+
+
+[Action] ID=build_smithy_act; 
+[ActionAoE] 
+	ID=build_smithy_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=build_smithy_act; 
+	actorValue=setPiece;
+	magnitude=spSmithy;
+	chance=itemsZoneMoreThan:build_smithy:6 * 100;
+[AvAffecterAoE]
+	ID=build_smithy_act;
+	cloneFrom=oneTile;
+
+[Action] ID=build_researcher_act; 
+[ActionAoE] 
+	ID=build_researcher_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=build_researcher_act; 
+	actorValue=setPiece;
+	magnitude=spResearcher;
+	chance=itemsZoneMoreThan:build_researcher:6 * 100;
+[AvAffecterAoE]
+	ID=build_researcher_act;
+	cloneFrom=oneTile;
+
+[Action] ID=build_cartographer_act; 
+[ActionAoE] 
+	ID=build_cartographer_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=build_cartographer_act; 
+	actorValue=setPiece;
+	magnitude=spCartographer;
+	chance=itemsZoneMoreThan:build_cartographer:6 * 100;
+[AvAffecterAoE]
+	ID=build_cartographer_act;
+	cloneFrom=oneTile;
+	
+[Action] ID=build_harbor_act; 
+[ActionAoE] 
+	ID=build_harbor_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=build_harbor_act; 
+	actorValue=setPiece;
+	magnitude=spHarbor;
+	chance=itemsZoneMoreThan:build_harbor:6 * 100;
+[AvAffecterAoE]
+	ID=build_harbor_act;
+	cloneFrom=oneTile;
+
+[Action] ID=build_home_act; 
+[ActionAoE] 
+	ID=build_home_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=build_home_act; 
+	actorValue=setPiece;
+	magnitude=spHome;
+	chance=itemsZoneMoreThan:build_home:6 * 100;
+[AvAffecterAoE]
+	ID=build_home_act;
+	cloneFrom=oneTile;
+
+[Action] ID=build_museum_act; 
+[ActionAoE] 
+	ID=build_museum_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=build_museum_act; 
+	actorValue=setPiece;
+	magnitude=spMuseum;
+	chance=itemsZoneMoreThan:build_museum:6 * 100;
+[AvAffecterAoE]
+	ID=build_museum_act;
+	cloneFrom=oneTile;
+
+[Action] ID=build_training_act; 
+[ActionAoE] 
+	ID=build_training_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=build_training_act; 
+	actorValue=setPiece;
+	magnitude=spTraining;
+	chance=itemsZoneMoreThan:build_training:6 * 100;
+[AvAffecterAoE]
+	ID=build_training_act;
+	cloneFrom=oneTile;
+
+
+
+
+
+
+
+

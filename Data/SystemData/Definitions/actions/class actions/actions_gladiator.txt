@@ -1,0 +1,295 @@
+
+[Action] ID=Gla_smash; 
+	name=猛击;
+	icon=icon_Gla_smash;
+	tooltip=向前发起鲁莽的攻击， +<math=20 + 5 * c:rank>% 伤害, 但是减少75%命中.;
+	rankUpTooltip=每级+5%伤害.;
+	tooltipIcons=<icon=noRanged>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	XPCost=90;
+	XPCost=200;
+	XPCost=400;
+	XPCost=800;
+	
+	special=moveCasterNextToTarget;
+	requiredWeaponElement=melee;
+	casterAnimation=weapon;
+	casterAnimationSpeed=0.8;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=chargeBurst;
+	FXOnCasterColor=Red;
+	FXOnCaster=sfx_risingSwishHigh;
+	
+	FXOnTarget=weaponFX;
+[ActionAoE]
+	ID=Gla_smash; shape=2; 
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 2;
+	airborne=false;
+	bypassAll=false;
+	occupyAll=true;
+	canSelectActors=true;
+	fReq=1 - m:actorInTheWayOfMoveToTarget;
+[AvAffecter]
+	ID=Gla_smash; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 1.2 + w:magnitude * 0.05 * c:rank;
+	chance=w:chance * 0.75;
+	duration=-2;
+	element=smash;
+	FXOnTile=woosh;
+	FXOnHit=ping;
+	FXOnHitColor=Red;
+	FXOnHit=manySplatter;
+	FXOnHitColor=Red;
+	FXOnHit=smallShakeHoriz;
+	FXOnHit=SLAM;
+[AvAffecterAoE]
+	ID=Gla_smash;
+	cloneFrom=oneTile;
+
+[Action] ID=Gla_swift; 
+	name=迅击;
+	icon=icon_Gla_swift;
+	tooltip=发起精确攻击造成75%伤害 +<math=c:rank * 5>%命中. 能够刺穿'守卫'状态且无法被反击.;
+	rankUpTooltip=每级+5%命中.;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	XPCost=90;
+	XPCost=250;
+	XPCost=350;
+	XPCost=500;
+	
+	FXOnCaster=swing;
+	
+	casterAnimation=weapon;
+	casterAnimationSpeed=1.5;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	requiredWeaponElement=weapon;
+	
+	FXOnTarget=weaponFX;
+[ActionAoE] 
+	ID=Gla_swift; shape=10; 
+[AvAffecter]
+	ID=Gla_swift; 
+	weaponAvAffecter=true;
+	removeTheseElementsFromWeaponAvAffecter=any;
+	magnitude=w:magnitude * 0.75;
+	chance=w:chance + c:rank * 0.05 * w:chance;
+	duration=-2;
+	FXOnHit=ThudShot;
+[AvAffecterAoE]
+	ID=Gla_swift;
+	shape=11;
+[AvAffecter]
+	ID=Gla_swift; 
+	FXOnTile=targetRet2;
+[AvAffecterAoE]
+	ID=Gla_swift;
+	shape=11;
+	
+
+
+[Action] ID=Gla_revenge; 
+	name=复仇;
+	icon=icon_Gla_revenge;
+	mpCost=5 * d:mpCostMult + d:mpCostMod;
+	tooltip=根据损失<icon=HP>生命值造成 +<math=40 + 10 * c:rank>% 伤害.;
+	rankUpTooltip=每级根据损失生命值+10%伤害.;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	XPCost=250;
+	XPCost=400;
+	XPCost=600;
+	XPCost=650;
+	XPCost=850;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	casterAnimationSpeed=0.6;
+	maxRank=5;
+	canExceedMaxRankBy=1;
+	
+	requiredWeaponElement=weapon;
+	
+	FXOnCaster=upwardLines;
+	FXOnCasterColor=Purple;
+	FXOnCaster=chargeSpiralFast_big;
+	FXOnCasterColor=Purple;
+	FXOnCaster=chargeSpiralFast;
+	FXOnCasterColor=Purple;
+	FXOnCaster=sfx_risingSwish;
+	
+	FXOnTarget=weaponFX;
+	FXOnTarget=sfx_thunderStrike_quiet;
+[ActionAoE] 
+	ID=Gla_revenge; shape=10; 
+[AvAffecter]
+	ID=Gla_revenge; 
+	weaponAvAffecter=true;
+	magnitude=m:percentHPLost * w:magnitude * 0.40 + m:percentHPLost * w:magnitude * 0.10 * c:rank + w:magnitude;
+	chance=w:chance;
+	duration=-2;
+	FXOnTile=whirlSlash_big;
+	FXOnTileColor=Purple;
+	FXOnTile=stomp;
+	FXOnTile=smallShock;
+	FXOnHit=chargeBurst;
+	FXOnHitColor=Purple;
+	FXOnHit=smallShakeHoriz;
+	FXOnHit=SLAM;
+[AvAffecterAoE]
+	ID=Gla_revenge;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=Gla_taunt; 
+	name=嘲讽;
+	icon=icon_Gla_taunt;
+	mpCost=1 * d:mpCostMult + d:mpCostMod;
+	tooltip=强迫敌人看着你,使敌人-40%<icon=PhysEva><icon=MagEva>物理、魔法闪避和<n=>-2<icon=PhysDef><icon=MagDef>物理、魔法防御，持续80<icon=time>.;
+	rankUpTooltip=每级增加影响范围.;
+	tooltipTopRight=;
+	
+	AIRatingBias = -60;
+	
+	special=attractEnemyAttentionInCombat;
+	
+	XPCost=150;
+	XPCost=400;
+	XPCost=700;
+	
+	FXOnCaster=chargeSpiralFast;
+	FXOnCaster=delay;
+	FXOnCaster=sfx_whistle_short;
+	FXOnCaster=exclamation;
+	FXOnCaster=chargeSpiralFast;
+	
+	casterAnimation=handsup_angry;
+	casterAnimationSpeed=1.5;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+[ActionAoE]
+	ID=Gla_taunt;
+	cloneFrom=adjacent;
+	needsLoS = true;
+	needsLoE = false;
+	airborne = true;
+	maxRange=2;
+	maxRangeBonus = c:rank;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=Gla_taunt; 
+	actorValue=PhysEva;
+	magnitude= -40;
+	duration=80;
+	chance=100;
+	FXOnTile=chargeFast_overlap;
+	FXOnHit=downwardLines;
+	FXOnHitColor=Purple;
+	FXOnHit=sfx_debuffMild;
+[AvAffecterAoE]
+	ID=Gla_taunt;
+	aoeCasterAsOrigin=true;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=Gla_taunt; 
+	visibleMiss=false;
+	actorValue=MagEva;
+	magnitude= -40;
+	duration=80;
+	chance=100;
+[AvAffecterAoE]
+	ID=Gla_taunt;
+	aoeCasterAsOrigin=true;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=Gla_taunt; 
+	visibleMiss=false;
+	actorValue=PhysDef;
+	magnitude= -2;
+	duration=80;
+	chance=100;
+[AvAffecterAoE]
+	ID=Gla_taunt;
+	aoeCasterAsOrigin=true;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=Gla_taunt; 
+	visibleMiss=false;
+	actorValue=MagDef;
+	magnitude= -2;
+	duration=80;
+	chance=100;
+[AvAffecterAoE]
+	ID=Gla_taunt;
+	aoeCasterAsOrigin=true;
+	canSelectAllies=false;
+	
+	
+
+[Action] ID=Gla_throwWeapon; 
+	name=投掷武器;
+	icon=icon_Gla_throwWeapon;
+	tooltip=投掷你的武器造成50%以上伤害! 武器类型影响投掷距离和伤害. 将落在目前脚下，然后可以被捡起来.;
+	rankUpTooltip=每级+1攻击距离.;
+	tooltipIcons=<icon=noRanged>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small><icon=skill_Fist_small>;
+	AIRatingBias=-8;
+	
+	XPCost=150;
+	XPCost=350;
+	XPCost=500;
+	
+	special=throwWeapon;
+	
+	casterAnimation=throw;
+	casterAnimationDependsOnWeaponHand=true;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	requiredWeaponElement=melee;
+	
+	FXOnTarget=weaponThrowFX;
+[ActionAoE] 
+	ID=Gla_throwWeapon; 
+	needsLoS = true;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 3;
+	maxRangeBonus = c:rank - w:throwRangePenalty;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Gla_throwWeapon; 
+	actorValue=HP;
+	weaponAvAffecter=true;
+	showWeaponAvAffecterFX=false;
+	magnitude=1.35 * w:magnitude - w:weight - w:throwDamageMod;
+	chance=d:fistAcc - w:weight * 2;
+	duration=-2;
+	FXOnTile=weaponThrowFX;
+	FXOnTile=swing2;
+	FXOnHit=manySplatter;
+	FXOnHit=sfx_slashingHit;
+[AvAffecterAoE]
+	ID=Gla_throwWeapon; cloneFrom=oneTile;
+[AvAffecter]
+	ID=Gla_throwWeapon; 
+	actorValue=summonItem;
+	magnitude=throwWeapon;
+	duration=1;
+[AvAffecterAoE]
+	ID=Gla_throwWeapon;
+	cloneFrom=oneTile;
+

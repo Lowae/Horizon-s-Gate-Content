@@ -1,0 +1,920 @@
+[Action] ID=gate_hellfire; 
+	name=Gate: Hellfire;
+	icon=icon_gate_hellfire;
+	mpCost=19;
+	chargeTime=16;
+	tooltip=Summon a gate to pure fire. Deals <thinnerIcon=skill_Fire><math=d:fireDmg20ScaleDisplay(16)> damage.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small>;
+	
+	XPCost=750;
+	
+	special=requiresCasting;
+	
+	casterAnimation=spellcast;
+	maxRank=1;
+	
+	FXOnCaster=darken_minor;
+	FXOnCaster=sfx_higherHum;
+	FXOnCaster=circle_form_big;
+	FXOnCaster=sfx_higherHum;
+	FXOnCaster=gate_flicker;
+	FXOnCaster=delay;
+	FXOnCaster=gate_flicker;
+	FXOnCaster=redden_major;
+	FXOnCaster=DramaticNyeaow;
+	FXOnCaster=delay;
+	FXOnCaster=gate_flicker;
+	FXOnCaster=fireburst;
+	FXOnCaster=delay;
+	FXOnCaster=gate_flicker;
+	FXOnCaster=fireburst;
+	FXOnCaster=delay;
+	FXOnCaster=gate_flicker;
+	FXOnCaster=fireburst;
+	FXOnCaster=delay;
+	FXOnCaster=gate_flicker;
+	FXOnCaster=fireburst;
+	FXOnCaster=delay;
+	FXOnCaster=gate_flicker;
+	FXOnCaster=fireburst;
+	FXOnCaster=delay;
+	FXOnCaster=fireburst;
+	FXOnCaster=delay;
+	FXOnCaster=delay;
+	FXOnCaster=gateClose_flicker;
+	FXOnCaster=fireburst;
+[ActionAoE] 
+	ID=gate_hellfire; 
+	needsLoS = false;
+	needsLoE = true;
+	airborne=true;
+	arc=true;
+	minRange = 4;
+	maxRange = 6;
+	canFloatMidair=true;
+[AvAffecter]
+	ID=gate_hellfire; 
+	actorValue=HP;
+	magnitude= d:fireDmg20Scale(16);
+	duration=-2;
+	chance=d:fireAcc;
+	element=magic;
+	element=fire;
+	element=explode;
+	FXOnTile=energyShots_big;
+	FXOnTile=medShakeHoriz;
+	FXOnTile=tallExplode_overlap;
+	FXOnTile=sfx_classicExplosion;
+	FXOnTile=flamethrower_rand;
+[AvAffecterAoE]
+	ID=gate_hellfire;
+	cloneFrom=adjacentAndSelf;
+	needsLoS = false;
+	needsLoE = true;
+	airborne=true;
+	arc=true;
+	minRange = 0;
+	maxRange = 3;
+	canFloatMidair=true;
+	
+	
+	
+
+[Action] ID=gate_gale; 
+	name=Gate: Gale;
+	icon=icon_gate_gale;
+	mpCost=16;
+	chargeTime=8;
+	tooltip=Summon a gate to high winds of a frozen tundra. Deals <thinnerIcon=skill_Wind><math=d:windDmgDisplay(9)> damage, chills, and pushes.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Wind_small><icon=skill_Ice_small>;
+	
+	XPCost=750;
+	
+	special=requiresCasting;
+	special=cancelChargingOnMove;
+	
+	casterAnimation=spellcast;
+	maxRank=1;
+	
+	FXOnCaster=darken_minor;
+	FXOnCaster=sfx_higherHum;
+	FXOnCaster=circle_form_big;
+	FXOnCaster=sfx_higherHum;
+	FXOnCaster=gate_flicker;
+	FXOnCaster=delay;
+	FXOnCaster=gate_flicker;
+	FXOnCaster=delay;
+	FXOnCaster=gate_flicker;
+	FXOnCaster=delay;
+	FXOnCaster=gate_flicker;
+	FXOnCaster=windWhirlSlash;
+	FXOnCaster=whiten;
+	FXOnCaster=delay;
+	FXOnCaster=gate_flicker;
+	FXOnCaster=windWhirlSlash;
+	FXOnCaster=delay;
+	FXOnCaster=gate_flicker;
+	FXOnCaster=windWhirlSlash;
+	FXOnCaster=delay;
+	FXOnCaster=windWhirlSlash;
+	FXOnCaster=delay;
+	FXOnCaster=windWhirlSlash;
+	FXOnCaster=delay;
+	FXOnCaster=gateClose_flicker;
+	FXOnCaster=windWhirlSlash;
+	FXOnTarget=sfx_gustyBlast;
+[ActionAoE] 
+	ID=gate_gale; shape = 2;
+	aoeCasterAsOrigin=true;
+	needsLoS = true;
+	needsLoE = true;
+	airborne = true;
+	minRange = 1;
+	maxRange = 1;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=gate_gale; 
+	actorValue=HP;
+	magnitude= d:windDmg(9);
+	duration=-2;
+	chance=d:windAcc;
+	FXOnTile=smallShakeHoriz;
+	FXOnTileColor=LightBlue;
+	FXOnTile=wind;
+	FXOnTileColor=LightBlue;
+	FXOnTile=smallShockwave_moving_moreOverlap;
+	FXOnTileColor=LightBlue;
+	FXOnTile=gustyBlast;
+	FXOnHit=windWhirlSlash;
+	FXOnHitColor=LightBlue;
+	FXOnHit=iceShards_rot_small;
+	element=magic;
+	element=wind;
+[AvAffecterAoE]
+	ID=gate_gale; shape=0;
+	aoeCasterAsOrigin=true;
+	needsLoS = true;
+	needsLoE = true;
+	airborne = true;
+	minRange = 1;
+	maxRange = 5.5;
+	coneAngle= 90;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=gate_gale; 
+	actorValue=chilled;
+	magnitude= 1;
+	duration=d:iceDur(4);
+	chance=d:iceAcc;
+	FXOnHit=frostsparkles;
+	FXOnHitColor=SkyBlue;
+	element=magic;
+	element=ice;
+[AvAffecterAoE]
+	ID=gate_gale; shape=0;
+	aoeCasterAsOrigin=true;
+	needsLoS = true;
+	needsLoE = true;
+	airborne = true;
+	minRange = 1;
+	maxRange = 5.5;
+	coneAngle= 90;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=gate_gale; 
+	actorValue=push;
+	magnitude=2;
+	duration=-2;
+	chance=d:iceAcc;
+	FXOnHit=pop;
+	FXOnHitColor=Blue;
+[AvAffecterAoE]
+	ID=gate_gale; shape=0;
+	aoeCasterAsOrigin=true;
+	needsLoS = true;
+	needsLoE = true;
+	airborne = true;
+	minRange = 1;
+	maxRange = 5.5;
+	coneAngle= 90;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=gate_gale; 
+	FXOnTile=delay;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=gate_gale;
+	cloneFrom=oneTile;
+	
+	
+	
+[Action] ID=gate_ash; 
+	name=Gate: Ash;
+	icon=icon_gate_ash;
+	mpCost=15;
+	chargeTime=8;
+	tooltip=Summon a gate to the Ruinous realm of a mad necromancer. Poisons and causes itching for <icon=time><math=60 + d:ruinDurMax(2)> and puts to sleep for <icon=time><math=d:ruinDurMax(1)>.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ruin_small>;
+	
+	XPCost=850;
+	
+	special=requiresCasting;
+	
+	casterAnimation=spellcast;
+	maxRank=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=darken_minor;
+[ActionAoE] 
+	ID=gate_ash; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	teleporting=true;
+	minRange = 2;
+	maxRange = 4;
+	canFloatMidair=true;
+	bypassAll=true;
+	canSelectActors=false;
+[AvAffecter]
+	ID=gate_ash; 
+	FXOnTile=sfx_higherHum;
+	FXOnTile=horizSpark_many_wideArea;
+	FXOnTile=darken_major_long;
+	FXOnTile=gateOpen_flicker;
+	FXOnTile=gate_flicker;
+	FXOnTile=sinisterSoundCue;
+[AvAffecterAoE]
+	ID=gate_ash;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=gate_ash;
+	actorValue=poison;
+	magnitude=1;
+	duration=60 + d:ruinDur(2);
+	chance=d:ruinAcc;
+	element=magic;
+	element=ruin;
+	useCasterAsOriginForDirectionalEffects=false;
+	FXOnTile=miasma_moving;
+	FXOnTileColor=Purple;
+	FXOnHit=smog;
+	FXOnHitColor=Purple;
+	FXOnHit=largePing;
+	FXOnHitColor=Purple;
+	FXOnHit=sfx_lowSquish;
+[AvAffecterAoE]
+	ID=gate_ash;
+	cloneFrom=adjacentAndSelf+1;
+	airborne=true;
+	arc=true;
+[AvAffecter]
+	ID=gate_ash;
+	actorValue=itchy;
+	magnitude=1;
+	duration=60 + d:ruinDur(2);
+	chance=d:ruinAcc;
+	element=magic;
+	element=ruin;
+[AvAffecterAoE]
+	ID=gate_ash;
+	cloneFrom=adjacentAndSelf+1;
+	airborne=true;
+	arc=true;
+[AvAffecter]
+	ID=gate_ash;
+	actorValue=sleep;
+	magnitude=1;
+	duration=d:ruinDur(1);
+	chance=d:ruinAcc;
+	element=magic;
+	element=ruin;
+[AvAffecterAoE]
+	ID=gate_ash;
+	cloneFrom=adjacentAndSelf+1;
+	airborne=true;
+	arc=true;
+[AvAffecter]
+	ID=gate_ash; 
+	FXOnTile=gate_flicker;
+	FXOnTile=delay;
+	FXOnTile=gate_flicker;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=gateClose_flicker;
+[AvAffecterAoE]
+	ID=gate_ash;
+	cloneFrom=oneTile;
+	
+	
+	
+
+[Action] ID=gate_bolt; 
+	name=Gate: Bolt;
+	icon=icon_gate_storm;
+	mpCost=6;
+	tooltip=Summon a gate to shoot lightning through.;
+	
+	XPCost=850;
+	
+	casterAnimation=spellcast;
+	casterAnimationSpeed=1.2;
+	maxRank=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=darken_minor;
+	FXOnTarget=delay;
+[ActionAoE]
+	ID=gate_bolt; 
+	cloneFrom=party;
+	maxRange=30;
+[AvAffecter]
+	ID=gate_bolt; 
+	actorValue=HP;
+	magnitude= d:elecDmg(1.7);
+	duration=-2;
+	chance=d:elecAcc;
+	element=elec;
+	element=magic;
+	FXOnTile=sfx_higherHum;
+	FXOnTile=gateOpen_above_flicker_fast;
+	FXOnTile=gate_above_flicker;
+	FXOnTile=DramaticNyeaow;
+	FXOnTile=sfx_elecBlast;
+[AvAffecterAoE]
+	ID=gate_bolt;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=gate_bolt; 
+	chance=100;
+	FXOnTile=thunderbolt;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=gateClose_above_flicker_fast;
+[AvAffecterAoE]
+	ID=gate_bolt;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=gate_armory;
+	name=Gate: Armory;
+	icon=icon_gate_armory;
+	AIRatingBias=15;
+	mpCost=17;
+	chargeTime=5;
+	tooltip=Summon a gate to send out a barrage of blades.;
+	cooldown=40;
+	
+	XPCost=1250;
+	
+	special=requiresCasting;
+	
+	casterAnimation=spellcast;
+	maxRank=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=darken_minor;
+	FXOnCaster=sfx_higherHum;
+	FXOnCaster=circle_form_big;
+	FXOnCaster=sfx_higherHum;
+	FXOnCaster=gate_flicker;
+	FXOnCaster=delay;
+	FXOnCaster=gate_flicker;
+	FXOnCaster=delay;
+	FXOnCaster=gate_flicker;
+	FXOnCaster=delay;
+	FXOnCaster=gate_flicker;
+	FXOnCaster=delay;
+	FXOnCaster=gate_flicker;
+	FXOnCaster=delay;
+	FXOnCaster=gate_flicker;
+	FXOnCaster=delay;
+	FXOnCaster=delay;
+	FXOnCaster=delay;
+	FXOnCaster=gateClose_flicker;
+[ActionAoE]
+	ID=gate_armory; 
+	needsLoS = false;
+	needsLoE = true;
+	airborne=true;
+	arc=true;
+	minRange = 4;
+	maxRange = 6;
+	canFloatMidair=true;
+[AvAffecter]
+	ID=gate_armory; 
+	actorValue=summonItem;
+	magnitude=sword_steel;
+	duration=1;
+	chance=62;
+	FXOnTile=throw_sword;
+	FXOnTile=throw_axe_overlap;
+	FXOnTile=throw_spear_overlap;
+	FXOnTile=bounce_sword;
+	FXOnTile=bounce_sword;
+	FXOnTile=medShakeHoriz;
+	FXOnHit=sfx_slashingHit;
+[AvAffecterAoE]
+	ID=gate_armory;
+	cloneFrom=adjacentAndSelf;
+	needsLoS = false;
+	needsLoE = true;
+	airborne=true;
+	arc=true;
+	minRange = 0;
+	maxRange = 2;
+	canFloatMidair=true;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=gate_armory; 
+	actorValue=HP;
+	magnitude= d:magicDmg(4) + t:PhysDef;
+	duration=-2;
+	chance=d:swordAcc;
+	element=physical;
+[AvAffecterAoE]
+	ID=gate_armory;
+	cloneFrom=adjacentAndSelf;
+	needsLoS = false;
+	needsLoE = true;
+	airborne=true;
+	arc=true;
+	minRange = 0;
+	maxRange = 2;
+	canFloatMidair=true;
+[AvAffecter]
+	ID=gate_armory; 
+	harmful=false;
+	element=windAnimate;
+[AvAffecterAoE]
+	ID=gate_armory;
+	cloneFrom=adjacent;
+	canSelectActors=false;
+	
+	
+
+[Action] ID=gate_plasma_bombs;
+	name=Gate: Plasma;
+	icon=icon_gate_plasma;
+	mpCost=12;
+	tooltip=Summon orbs of burning plasma on <math=c:MagAtk + 20 + c:rank>% of tiles in a wide area. These explode <icon=time>35 later, dealing <icon=HP><math=20> damage and inflicting Burn for <icon=time>70.;
+	AIRatingBias=30;
+	rankUpTooltip=Each rank adds +1% chance to summon plasma.;
+	tooltipTopRight=<icon=MagAtk_small>;
+	
+	XPCost=750;
+	XPCost=850;
+	XPCost=950;
+	
+	
+	casterAnimation=spellcast;
+	maxRank=3;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=darken_minor;
+	FXOnCaster=sfx_higherHum;
+	FXOnCaster=horizSpark_many_wideArea;
+[ActionAoE]
+	ID=gate_plasma_bombs; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=gate_plasma_bombs; 
+	actorValue=summonItem;
+	magnitude=plasma_bomb;
+	duration=1;
+	chance=c:MagAtk + 20 + c:rank;
+	FXOnTile=horizSpark_many_wideArea;
+	FXOnHit=gateClose;
+	FXOnHit=circle_form;
+	FXOnHit=sfx_higherHum;
+[AvAffecterAoE]
+	ID=gate_plasma_bombs;
+	needsLoS = false;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	minRange = 5;
+	maxRange = 7;
+	canFloatMidair=true;
+	occupyAll=false;
+	canSelectActors=false;
+	
+	
+
+[Action] ID=gate_cannon;
+	name=Gate: Cannon;
+	icon=icon_gate_cannon;
+	mpCost=30;
+	chargeTime=22;
+	tooltip=Summon a gate to a gigantic laser cannon. Deals <icon=HP><math=d:magicDmg20ScaleDisplay(70)> damage and breaks armor.;
+	
+	cooldown=40;
+	
+	XPCost=1750;
+	
+	special=requiresCasting;
+	
+	casterAnimation=spellcast;
+	maxRank=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=darken_minor;
+	FXOnCaster=sfx_highestHum;
+[ActionAoE]
+	ID=gate_cannon; 
+	cloneFrom=adjacent;
+	needsLoS=false;
+	needsLoE=false;
+	minRange=3;
+	maxRange=9;
+	canSelectActors=false;
+[AvAffecter]
+	ID=gate_cannon; 
+	visibleEvaluations=false;
+	useCasterAsOriginForDirectionalEffects=false;
+	FXOnTile=gateOpen_above;
+	FXOnTile=gate_above;
+	FXOnTile=delay;
+	FXOnTile=gate_above;
+	FXOnTile=delay;
+	FXOnTile=LongAmbientMurmur;
+	FXOnTile=magicHum;
+	FXOnTile=gate_cannon_in;
+	FXOnTile=gate_above;
+	FXOnTile=delay;
+	FXOnTile=w_risingDust_short;
+	FXOnTile=gate_above;
+	FXOnTile=gate_cannon_chargeSound;
+	FXOnTile=delay;
+	FXOnTile=w_suddenSparks;
+	FXOnTile=chargeSpiralMany_huge_below;
+	FXOnTile=cannon_chargeup_light1;
+	FXOnTile=w_suddenSparks;
+	FXOnTile=gate_above;
+	FXOnTile=delay;
+	FXOnTile=gate_above;
+	FXOnTile=delay;
+	FXOnTile=w_suddenSparks;
+	FXOnTile=gate_above;
+	FXOnTile=delay;
+	FXOnTile=gate_above;
+	FXOnTile=cannon_chargeup_light2;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=gate_above;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=gate_above;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=gate_above;
+	FXOnTile=laser_start;
+	FXOnTile=laser_flash;
+	FXOnTile=gate_above;
+	FXOnTile=laser_loop;
+	FXOnTile=laser_end;
+[AvAffecterAoE]
+	ID=gate_cannon; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=gate_cannon; 
+	visibleMiss=false;
+	actorValue=breakArmor;
+	magnitude=1;
+	duration=-2;
+	chance=d:magicAcc;
+	useCasterAsOriginForDirectionalEffects=false;
+	element=gateCannon;
+[AvAffecterAoE]
+	ID=gate_cannon; shape=2;
+	needsLoS = false;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	minRange = 2;
+	maxRange = 12;
+	canFloatMidair=true;
+	coneAngle=1;
+	forcedRot=90;
+	occupyAll=true;
+	bypassAll=true;
+[AvAffecter]
+	ID=gate_cannon; 
+	actorValue=HP;
+	magnitude=d:magicDmg20Scale(70);
+	duration=-2;
+	chance=d:magicAcc;
+	element=magic;
+	element=gateCannon;
+	useCasterAsOriginForDirectionalEffects=false;
+[AvAffecterAoE]
+	ID=gate_cannon; shape=2;
+	needsLoS = false;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	minRange = 2;
+	maxRange = 14;
+	canFloatMidair=true;
+	coneAngle=1;
+	forcedRot=90;
+	occupyAll=true;
+	bypassAll=true;
+	
+
+[Action] ID=gate_slam; 
+	name=Gate: Slam;
+	icon=icon_gate_slam;
+	casterAnimation=gate_slam;
+	casterAnimationSpeed=1;
+	
+	special=moveCasterToTarget;
+	
+	FXOnCaster=woosh;
+	FXOnCaster=delay;
+	FXOnCaster=delay;
+	FXOnCaster=darken;
+	
+	FXOnTarget=thunder;
+	FXOnTarget=bigShakeVert;
+	FXOnTarget=windBlast_spidest;
+[ActionAoE] 
+	ID=gate_slam;
+	cloneFrom=adjacent;
+	minRange=2;
+	maxRange=6;
+	airborne=true;
+	arc=true;
+	occupyAll=false;
+	canSelectActors=false;
+[AvAffecter]
+	ID=gate_slam; 
+	weaponAvAffecter=true;
+	actorValue=HP;
+	magnitude=d:spearDmg * 0.4;
+	duration=-2;
+	chance=d:spearAcc - c:immob * 200;
+	FXOnTile=terrain;
+	FXOnTile=SLAM;
+	element=physical;
+	element=melee;
+	element=smash;
+	element=heavySmash;
+[AvAffecterAoE]
+	ID=gate_slam;
+	cloneFrom=adjacent;
+	airborne=true;
+	arc=true;
+	maxRange=1;
+[AvAffecter]
+	ID=gate_slam; 
+	actorValue=stun;
+	magnitude=1;
+	duration=1;
+	chance=d:spearAcc - c:immob * 200;
+[AvAffecterAoE]
+	ID=gate_slam;
+	cloneFrom=adjacent;
+	airborne=true;
+	arc=true;
+	maxRange=1;
+[AvAffecter]
+	ID=gate_slam; 
+	actorValue=push;
+	magnitude=1;
+	duration=-2;
+	chance=d:spearAcc - c:immob * 200;
+[AvAffecterAoE]
+	ID=gate_slam;
+	cloneFrom=adjacent;
+	airborne=true;
+	arc=true;
+	maxRange=1;
+	
+	
+	
+[Action] ID=gate_realm;
+	name=Gate: Realm;
+	icon=icon_gate_void;
+	harmful=false;
+[AvAffecter]
+	ID=gate_realm; 
+	visibleEvaluations=false;
+	actorValue=superpush;
+	magnitude=2;
+	duration=;
+	chance=100;
+[AvAffecterAoE]
+	ID=gate_realm;
+	cloneFrom=adjacentAndSelf;
+	maxRange=5;
+[AvAffecter]
+	ID=gate_realm; 
+	harmful=false;
+	FXOnTile=sfx_highHum;
+	FXOnTile=horizSpark_many_sudden;
+	FXOnTile=horizSpark_many_wideArea;
+	FXOnTile=shortBolt;
+	FXOnTile=tinyShakeHoriz_long;
+	FXOnTile=gate_expand_screen;
+	FXOnTile=delay;
+	FXOnTile=ping;
+	FXOnTile=earthquake_low;
+	FXOnTile=delay;
+	FXOnTile=smallShakeHoriz_long;
+	FXOnTile=ping;
+	FXOnTile=sfx_highHum;
+	FXOnTile=delay;
+	FXOnTile=smallShakeHoriz_long;
+	FXOnTile=horizSpark_many_big2;
+	FXOnTile=pingRepeat_many;
+	FXOnTile=sfx_higherHum;
+	FXOnTile=horizSpark_many_big2;
+	FXOnTile=smallShakeHoriz_long;
+	FXOnTile=delay;
+	FXOnTile=horizSpark_many_big2;
+	FXOnTile=horizSpark_many_sudden;
+	FXOnTile=horizSpark_many_wideArea;
+	FXOnTile=gate_expand_screen2;
+	FXOnTile=bigShakeHoriz;
+	FXOnTile=earthquake;
+	FXOnTile=sfx_highestHum;
+	FXOnTile=delay;
+	FXOnTile=horizSpark_many_big2;
+	FXOnTile=horizSpark_many_sudden;
+	FXOnTile=horizSpark_many_wideArea;
+	FXOnTile=bigShakeHoriz;
+	FXOnTile=whiteFade_short;
+	FXOnTile=delay;
+	FXOnTile=horizSpark_many_big2;
+	FXOnTile=bigShakeHoriz;
+	FXOnTile=gate_expand_screen2;
+	FXOnTile=delay;
+	FXOnTile=horizSpark_many_big2;
+	FXOnTile=sfx_highestHum;
+	FXOnTile=earthquake;
+	FXOnTile=bigShakeHoriz;
+	FXOnTile=delay;
+	FXOnTile=horizSpark_many_big2;
+	FXOnTile=horizSpark_many_big2;
+	FXOnTile=bigShakeHoriz;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=gate_realm;
+	cloneFrom=oneTile;
+	
+	
+	
+	
+[Action] ID=gate_s1;
+	name=Gate: Realm;
+	icon=icon_gate_black;
+	mpCost=99;
+	chargeTime=10;
+	harmful=false;
+	tooltip=Summon a gate to draw in another landscape.;
+	
+	XPCost=3150;
+	
+	special=requiresCasting;
+	
+	casterAnimation=float_orbit_cast;
+	maxRank=1;
+	
+	AIRatingBias=-99;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=darken_minor;
+	FXOnCaster=sfx_highestHum;
+[ActionAoE]
+	ID=gate_s1; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=gate_s1; 
+	harmful=false;
+	visibleEvaluations=false;
+	actorValue=trigger;
+	magnitude=tS1;
+	duration=;
+	chance=100;
+[AvAffecterAoE]
+	ID=gate_s1;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=gate_s2;
+	name=Gate: Realm;
+	icon=icon_gate_black;
+	mpCost=99;
+	chargeTime=10;
+	harmful=false;
+	tooltip=Summon a gate to draw in another landscape.;
+	
+	XPCost=3150;
+	
+	special=requiresCasting;
+	
+	casterAnimation=float_orbit_cast;
+	maxRank=1;
+	
+	AIRatingBias=-99;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=darken_minor;
+	FXOnCaster=sfx_highestHum;
+[ActionAoE]
+	ID=gate_s2; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=gate_s2; 
+	harmful=false;
+	visibleEvaluations=false;
+	actorValue=trigger;
+	magnitude=tS2;
+	duration=;
+	chance=100;
+[AvAffecterAoE]
+	ID=gate_s2;
+	cloneFrom=oneTile;
+	
+	
+
+[Action] ID=gate_s3;
+	name=Gate: Realm;
+	icon=icon_gate_black;
+	mpCost=99;
+	chargeTime=10;
+	harmful=false;
+	tooltip=Summon a gate to draw in another landscape.;
+	
+	XPCost=3150;
+	
+	special=requiresCasting;
+	
+	casterAnimation=float_orbit_cast;
+	maxRank=1;
+	
+	AIRatingBias=-99;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=darken_minor;
+	FXOnCaster=sfx_highestHum;
+[ActionAoE]
+	ID=gate_s3; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=gate_s3; 
+	harmful=false;
+	visibleEvaluations=false;
+	actorValue=trigger;
+	magnitude=tS3;
+	duration=;
+	chance=100;
+[AvAffecterAoE]
+	ID=gate_s3;
+	cloneFrom=oneTile;
+	
+	

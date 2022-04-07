@@ -1,0 +1,516 @@
+
+[Action] ID=Bat_summonZoar; 
+	name=Summon Zoar;
+	icon=icon_Bat_summonZoar;
+	mpCost=10 * d:mpCostMult + d:mpCostMod;
+	tooltip=Summon a Zoar Bat that fights by your side for <icon=time>100.<n>It takes its first action in <icon=time><math=35 - 5*c:rank>.;
+	rankUpTooltip=Each rank makes the Zoar Bat act +5 <icon=time> sooner.;
+	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=skill_Wind_small>;
+	harmful=false;
+	
+	AIRatingBias = 20;
+	
+	XPCost=150;
+	XPCost=400;
+	XPCost=720;
+	XPCost=900;
+	XPCost=1250;
+	
+--special=cantUseInTravel;
+	special=redoMovementAnalysis;
+	
+	casterAnimation=handsup;
+	
+	maxRank=5;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=chargeBurst;
+	FXOnCaster=darken_minor;
+	FXOnCaster=sfx_whistle_short;
+	
+	
+	FXOnTarget=gustyBlast;
+	FXOnTarget=zoarbat_down;
+	FXOnTarget=ring_noOverlap;
+	FXOnTarget=sidedust_noOverlap;
+	FXOnTarget=sidedust_flip_noOverlap;
+[ActionAoE] 
+	ID=Bat_summonZoar;
+	cloneFrom=adjacent+2;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	occupyAll=false;
+	canSelectActors=false;
+[AvAffecter]
+	ID=Bat_summonZoar; 
+	harmful=false;
+	actorValue=summonActor_temp;
+	magnitude=bat_zoar_ally;
+	chance=100;
+	duration=-2;
+	FXOnTile=tinyShakeHoriz;
+[AvAffecterAoE]
+	ID=Bat_summonZoar;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Bat_summonZoar; 
+	visibleEvaluations=false;
+	harmful=false;
+	actorValue=removeTimer;
+	magnitude=1;
+	chance=100;
+	duration=100;
+[AvAffecterAoE]
+	ID=Bat_summonZoar;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Bat_summonZoar; 
+	visibleEvaluations=false;
+	harmful=false;
+	actorValue=TrueHPMax;
+	magnitude=c:PhysAtk * 0.6 + c:MagAtk * 0.6 + c:skill_Wind * 0.9;
+	chance=100;
+	duration=-2;
+	FXOnTile=delay_tiny;
+[AvAffecterAoE]
+	ID=Bat_summonZoar;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Bat_summonZoar; 
+	visibleEvaluations=false;
+	harmful=false;
+	actorValue=HP;
+	magnitude=c:PhysAtk * 0.6 + c:MagAtk * 0.6 + c:skill_Wind * 0.9;
+	chance=100;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Bat_summonZoar;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Bat_summonZoar; 
+	visibleEvaluations=false;
+	harmful=false;
+	actorValue=PhysAtk;
+	magnitude=c:PhysAtk * 0.2 + c:MagAtk * 0.2 + c:skill_Wind * 0.3;
+	chance=100;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Bat_summonZoar;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Bat_summonZoar; 
+	visibleEvaluations=false;
+	harmful=false;
+	actorValue=MagAtk;
+	magnitude=c:PhysAtk * 0.2 + c:MagAtk * 0.2 + c:skill_Wind * 0.3;
+	chance=100;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Bat_summonZoar;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Bat_summonZoar; 
+	harmful=false;
+	rankRequired=2;
+	actorValue=actTimer;
+	magnitude=5*c:rank - 5;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=Bat_summonZoar;
+	cloneFrom=oneTile;
+	
+[Action] ID=Bat_zSwarm; 
+	name=Z-Swarm;
+	icon=icon_Bat_zSwarm;
+	mpCost=1 * d:mpCostMult + d:mpCostMod;
+	tooltip=Batlings swarm the target, granting an ally +50%<icon=PhysEva> or inflicting -50%<icon=PhysEva> on an enemy for <icon=time>90.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=;
+	
+	XPCost=160;
+	XPCost=250;
+	XPCost=400;
+	
+	casterAnimation=spellcast;
+	maxRank=3;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=darken_minor;
+	
+	FXOnTarget=sfx_batFlutter;
+[ActionAoE] 
+	ID=Bat_zSwarm;
+	cloneFrom=adjacentAndSelf+1;
+	maxRangeBonus=c:rank;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=true;
+[AvAffecter]
+	ID=Bat_zSwarm; 
+	FXOnTile=batling_descend;
+	FXOnTile=delay;
+	FXOnTile=batling_swarm;
+[AvAffecterAoE]
+	ID=Bat_zSwarm;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Bat_zSwarm; 
+	harmful=false;
+	actorValue=PhysEva;
+	magnitude=50;
+	chance=100;
+	duration=90;
+	FXOnHit=sfx_schwee;
+[AvAffecterAoE]
+	ID=Bat_zSwarm;
+	cloneFrom=oneTile;
+	canSelectEnemies=false;
+[AvAffecter]
+	ID=Bat_zSwarm; 
+	actorValue=PhysEva;
+	magnitude=-50;
+	chance=100;
+	duration=90;
+	FXOnHit=Debuff_lowPitch;
+[AvAffecterAoE]
+	ID=Bat_zSwarm;
+	cloneFrom=oneTile;
+	canSelectEnemies=true;
+	canSelectAllies=false;
+	
+
+[Action] ID=Bat_zTorrent; 
+	name=Z-Torrent;
+	icon=icon_Bat_zTorrent;
+	mpCost=6 * d:mpCostMult + d:mpCostMod;
+	tooltip=An outpouring of Zoar batlings deals <math=c:PhysAtk * 0.5 + c:MagAtk * 0.5 + c:skill_Wind * 0.5><thinnerIcon=HP> damage and inflicts -1 <icon=moveDistance> for <icon=time>50 in a wide square.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=skill_Wind_small>;
+	
+	XPCost=220;
+	XPCost=850;
+	XPCost=1200;
+	
+	casterAnimation=handsup;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=darken_minor;
+	
+[ActionAoE] 
+	ID=Bat_zTorrent; 
+	cloneFrom=adjacent;
+	maxRange=2;
+	maxRangeBonus=c:rank;
+	needsLoE=false;
+	needsLoS=true;
+	arc=true;
+	airborne=true;
+	canFloatMidair=true;
+	occupyAll=false;
+[AvAffecter]
+	ID=Bat_zTorrent; 
+	actorValue=HP;
+	magnitude=-2 -c:PhysAtk * 0.5 - c:MagAtk * 0.5  - c:skill_Wind * 0.5 + t:PhysDef;
+	chance=100 - t:PhysEva * 0.3;
+	duration=-2;
+	element=physical;
+	element=ranged;
+	FXOnTile=batling_down;
+	FXOnTile=batling_down_noOverlap;
+	FXOnHit=strike;
+[AvAffecterAoE]
+	ID=Bat_zTorrent;
+	cloneFrom=adjacentAndSelf;
+	maxRange=2.5;
+	arc=true;
+	airborne=true;
+	canFloatMidair=true;
+	needsLoE=false;
+	needsLoS=true;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=Bat_zTorrent; 
+	visibleEvaluations=false;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=Bat_zTorrent;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Bat_zTorrent; 
+	actorValue=moveDistance;
+	magnitude=-1;
+	chance=100 - t:PhysEva * 0.3;
+	duration=50;
+	FXOnTile=batling_up;
+	FXOnHit=strikeUp;
+	FXOnHit=click;
+[AvAffecterAoE]
+	ID=Bat_zTorrent;
+	cloneFrom=adjacentAndSelf;
+	maxRange=2.5;
+	arc=true;
+	airborne=true;
+	canFloatMidair=true;
+	needsLoE=false;
+	needsLoS=true;
+	canSelectAllies=false;
+	
+	
+
+[Action] ID=Bat_flight; 
+	name=Flight;
+	icon=icon_Bat_flight;
+	harmful=false;
+	tooltip=Call a Zoar Bat to carry you a short distance.;
+	tooltipTopRight=;
+	
+	mpCost=1 * d:mpCostMult + d:mpCostMod;
+	
+	AIRatingBias = -999;
+	
+	XPCost=120;
+	
+	casterAnimation=handsup_instantCast_long;
+	maxRank=1;
+	special=moveCasterTowardTarget;
+	special=slowMovement;
+	
+	FXOnCaster=zoarbat_down_above;
+	FXOnTarget=sweat_above_move;
+	FXOnTarget=zoarbat_above_move;
+	
+[ActionAoE] 
+	ID=Bat_flight;
+	cloneFrom=adjacent;
+	minRange=3;
+	maxRange=4;
+	arc=true;
+	airborne=true;
+	needsLoE=true;
+	needsLoS=true;
+	occupyAll=false;
+	canSelectActors=false;
+[AvAffecter]
+	ID=Bat_flight; 
+	harmful=false;
+[AvAffecterAoE]
+	ID=Bat_flight;
+	cloneFrom=oneTile;
+	
+	
+
+[Action] ID=Bat_zoarnado; 
+	name=Zoarnado;
+	icon=icon_Bat_zoarnado;
+	mpCost=13 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=18 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
+	
+	tooltip=Send a Zoar colony to devastate a small area, dealing <math=10 + c:PhysAtk * 1.5 + c:MagAtk * 1.5 + c:skill_Wind * 1.5><thinnerIcon=HP> or more damage.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=skill_Wind_small>;
+	
+	XPCost=375;
+	XPCost=600;
+	XPCost=950;
+	
+	casterAnimation=handsup;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	special=requiresCharging;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=darken;
+	FXOnCaster=batling_diagonal_upRight_giant;
+	FXOnCaster=gustyBlast;
+	FXOnCaster=batling_diagonal_upRight_big;
+	FXOnCaster=batling_diagonal_upRight_big2;
+	FXOnCaster=delay;
+	FXOnCaster=delay;
+	FXOnCaster=batling_diagonal_upRight_small;
+	FXOnCaster=batling_diagonal_upRight_small2;
+	
+	
+[ActionAoE] 
+	ID=Bat_zoarnado; 
+	cloneFrom=adjacent;
+	maxRange=2;
+	maxRangeBonus=c:rank;
+	needsLoE=false;
+	needsLoS=false;
+	arc=true;
+	airborne=true;
+	canFloatMidair=true;
+	occupyAll=false;
+[AvAffecter]
+	ID=Bat_zoarnado; 
+	actorValue=HP;
+	magnitude=-5 -c:PhysAtk * 0.5 - c:MagAtk * 0.5  - c:skill_Wind * 0.5 + t:PhysDef * 0.75;
+	duration=-2;
+	chance=100 - t:PhysEva * 0.3;
+	element=physical;
+	FXOnTile=batling_diagonal_upRight;
+	FXOnHit=cut;
+	FXOnHit=sfx_slashingHit;
+[AvAffecterAoE]
+	ID=Bat_zoarnado;
+	cloneFrom=adjacentAndSelf;
+	maxRange=1;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=true;
+	canFloatMidair=true;
+[AvAffecter]
+	ID=Bat_zoarnado; 
+	actorValue=HP;
+	magnitude=-5 -c:PhysAtk * 0.5 - c:MagAtk * 0.5  - c:skill_Wind * 0.5 + t:PhysDef * 0.75;
+	duration=-2;
+	chance=100 - t:PhysEva * 0.3;
+	element=physical;
+	FXOnTile=batling_diagonal_upLeft;
+	FXOnHit=cut180;
+	FXOnHit=sfx_slashingHit;
+[AvAffecterAoE]
+	ID=Bat_zoarnado;
+	cloneFrom=adjacentAndSelf;
+	maxRange=1;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=true;
+	canFloatMidair=true;
+[AvAffecter]
+	ID=Bat_zoarnado; 
+	FXOnTile=delay;
+	FXOnTile=zoarbat_down_fast;
+	FXOnTile=windBlast_slam;
+	FXOnTile=SLAM;
+	FXOnTile=gustyBlast;
+	FXOnTile=bigShakeVert;
+[AvAffecterAoE]
+	ID=Bat_zoarnado;
+	cloneFrom=oneTile;
+	canFloatMidair=true;
+[AvAffecter]
+	ID=Bat_zoarnado; 
+	actorValue=HP;
+	magnitude=-5 -c:PhysAtk * 0.5 - c:MagAtk * 0.5  - c:skill_Wind * 0.5 + t:PhysDef * 0.75;
+	duration=-2;
+	chance=100 - t:PhysEva * 0.3;
+	element=physical;
+	FXOnHit=ThudShotBigger;
+	FXOnHit=manySplatter;
+[AvAffecterAoE]
+	ID=Bat_zoarnado;
+	cloneFrom=adjacentAndSelf;
+	maxRange=1;
+	arc=true;
+	airborne=true;
+	canFloatMidair=true;
+	needsLoE=false;
+	needsLoS=true;
+	
+	
+	
+
+[Action] ID=Bat_tailwind; 
+	name=Tailwind;
+	icon=icon_Bat_tailwind;
+	mpCost=6 * d:mpCostMult + d:mpCostMod;
+	tooltip=A breezy wind grants +1 <icon=moveDistance> to all allies for <icon=time><math=15 + c:rank * 10 + d:windDurMax(1)>.;
+	rankUpTooltip=Each rank increases duration by <icon=time>10.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Wind_small>;
+	
+	XPCost=180;
+	XPCost=750;
+	XPCost=1200;
+	
+	casterAnimation=handsup;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=darken_minor;
+	
+	FXOnTarget=sidewardLines_screen;
+	FXOnTarget=gustyBlast;
+[ActionAoE] 
+	ID=Bat_tailwind; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Bat_tailwind; 
+	harmful=false;
+	actorValue=moveDistance;
+	magnitude=1;
+	chance=100;
+	duration=15 + c:rank * 10 + d:windDurMax(1);
+	FXOnTile=upwardLines;
+	FXOnTile=sfx_schwee;
+[AvAffecterAoE]
+	ID=Bat_tailwind; shape=7;
+	cloneFrom=adjacentAndSelf;
+	maxRange=22;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	bypassAll=true;
+	canSelectEnemies=false;
+	
+
+[Action] ID=Bat_zWing; 
+	name=Z-Wing;
+	icon=icon_Bat_zWing;
+	harmful=false;
+	tooltip=You and allied Zoar Bats push adjacent creatures away.;
+	tooltipTopRight=;
+	
+	AIRatingBias = -999;
+	
+	XPCost=150;
+	
+	casterAnimation=spellcast;
+	casterAnimationSpeed=2;
+	maxRank=1;
+	
+	FXOnCaster=delay;
+	FXOnCaster=zoarbat_down_fast;
+	FXOnTarget=gustyBlast;
+[ActionAoE] 
+	ID=Bat_zWing;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Bat_zWing; 
+	actorValue=push;
+	magnitude=2;
+	duration=-2;
+	chance=100;
+	FXOnTile=smallShockwave_instant_moving;
+[AvAffecterAoE]
+	ID=Bat_zWing;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=Bat_zWing; 
+	visibleEvaluations=false;
+	element=batZWing;
+[AvAffecterAoE]
+	ID=Bat_zWing; shape=7;
+	cloneFrom=adjacentAndSelf;
+	maxRange=22;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	bypassAll=true;
+	canSelectEnemies=false;
+	
+	
+	

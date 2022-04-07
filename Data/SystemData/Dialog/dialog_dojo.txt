@@ -1,0 +1,713 @@
+--------------PORT6
+
+[DialogNode] ID=port6_dojo1;
+animations=sly;
+animations=meh;
+statements=Ah, looks like another keen-eyed <textIf=sailor=gIsLessThan:fame_combat:200><textIf=warrior=gIsMoreThan:fame_combat:199> has found their way to our dojo.;
+statements=This is the Dark Hammer dojo.<p> You here to try your luck?;
+
+[DialogOption] text=Fight;
+formulaReq=1-g:port6_dojo1;
+nodeToConnectTo=port6_dojo1_test;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=port6_dojo1_test;
+animations=sigh;
+animations=angry;
+statements=Good.<p> Go on down, and you'll fight our best.;
+statements=Give it your all.;
+specialEffect=action,mechanismArea;
+specialEffect=incDefaultNode;
+
+---
+
+
+[DialogNode] ID=port6_dojo2;
+animations=sigh;
+animations=sly;
+statements=Any time you're ready, you can challenge the Dark Hammer dojo.;
+statements=Just go down those stairs and take your best shot.;
+specialEffect=gotoIf,port6_dojo2_won,g:port6_dojo1;
+
+[DialogNode] ID=port6_dojo2_won;
+animations=scared;
+animations=sly;
+statements=I'm impressed!<p> Haven't seen a fight like that in ages.;
+statements=Take the rewards downstairs, and feel free to train with us. You'll be welcome anytime.;
+specialEffect=incDefaultNode;
+specialEffect=modGlobalVar,fame_combat,30;
+nextNodeID=;
+
+---
+
+[DialogNode] ID=port6_dojo3;
+animations=;
+statements=Hey there <pname=>.<p> Are you here to train?;
+[DialogOption] text=Hammer Skill<adjX=3><iconBig=skill_Hammer> Training;
+formulaReq=1-g:skill_Hammer_bonus;
+nodeToConnectTo=port6_dojo3_train;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=port6_dojo3_train;
+animations=sly;
+animations=sigh;
+animations=;
+statements=Training isn't cheap, but it's well worth it.;
+statements=All of your crew - current and future - will gain +1<adjX=1><iconBig=skill_Hammer>Hammer Skill.;
+statements=But, it'll cost you $10,000.;
+[DialogOption] text=Yes ($10,000);
+formulaReq=m:money - 9999;
+nodeToConnectTo=port6_dojo3_train_yes;
+[DialogOption] text=<color=SlateGray>Can't afford it...;
+formulaReq=10000 - m:money;
+nodeToConnectTo=previous;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=port6_dojo3_train_yes;
+animations=angry;
+animations=sly;
+statements=Right on.;
+statements=Let's go.<p> We've got training to do.;
+nextNodeID=port6_dojo3_train_yes2;
+
+[DialogNode] ID=port6_dojo3_train_yes2;
+specialEffect=subtract10000gp;
+specialEffect=incDefaultNode;
+specialEffect=modGlobalVar,skill_Hammer_bonus,1;
+specialEffect=refreshStatModifiers;
+specialEffect=modGlobalVar,fame_combat,5;
+specialEffect=fx,blackenScreen;
+specialEffect=fx,victory_fanfare_short;
+specialEffect=markDojoLocDone;
+nextNodeID=;
+
+---
+
+[DialogNode] ID=port6_dojo4;
+animations=sly;
+animations=happy;
+statements=Hey <pname=>.<p> How's our training working for you?;
+statements=Come back whenever.<p> I'd hate for you to forget how to hold a hammer.;
+
+
+--------------PORT7
+
+[DialogNode] ID=port7_dojo1;
+animations=chargePose;
+animations=handupPose;
+statements=Welcome, <textIf=esteemed =gIsMoreThan:fame_combat:499><textIf=traveler,=gIsLessThan:fame_combat:200><textIf=warrior,=gIsMoreThan:fame_combat:199> to the Dojo of the Flying Rock Fist!!!;
+statements=Do you come to test your strength against us?;
+
+[DialogOption] text=Fight;
+formulaReq=1-g:port7_dojo1;
+nodeToConnectTo=port7_dojo1_test;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=port7_dojo1_test;
+animations=;
+animations=handsupPose;
+statements=Very well! I applaud your courage.;
+statements=Enter the Flying Rock Fist sanctum and be prepared for combat from the first moment!!;
+specialEffect=action,mechanismArea;
+specialEffect=incDefaultNode;
+
+---
+
+
+[DialogNode] ID=port7_dojo2;
+animations=handoutPose;
+animations=handupPose;
+statements=Do you still seek the challenge of the Flying Rock Fist?;
+statements=The challenge awaits you down those stairs!;
+specialEffect=gotoIf,port7_dojo2_won,g:port7_dojo1;
+
+[DialogNode] ID=port7_dojo2_won;
+animations=handsupPose;
+animations=sigh;
+animations=;
+statements=Ah, you have succeeded! Well fought indeed. The Flying Rock Fist Dojo recognizes your achievement!!;
+statements=Your prize is our great trophy downstairs. Use it well!;
+statements=Feel free to avail yourself of our training anytime.;
+specialEffect=incDefaultNode;
+specialEffect=modGlobalVar,fame_combat,30;
+nextNodeID=;
+
+---
+
+[DialogNode] ID=port7_dojo3;
+animations=;
+statements=Welcome back, <pname=>. Do you seek guidance in the ways of the Flying Rock Fist?;
+[DialogOption] text=Punch Skill<adjX=3><iconBig=skill_Fist> Training;
+formulaReq=1-g:skill_Fist_bonus;
+nodeToConnectTo=port7_dojo3_train;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=port7_dojo3_train;
+animations=;
+animations=handsupPose;
+animations=sigh;
+statements=Wise indeed! We can teach you this profound knowledge.;
+statements=Should you learn it, all of your crew - current and future - will possess the power of +1<adjX=1><iconBig=skill_Fist>Punch Skill!!;
+statements=All this for the mere price of $10,000.;
+[DialogOption] text=Yes ($10,000);
+formulaReq=m:money - 9999;
+nodeToConnectTo=port7_dojo3_train_yes;
+[DialogOption] text=<color=SlateGray>Can't afford it...;
+formulaReq=10000 - m:money;
+nodeToConnectTo=previous;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=port7_dojo3_train_yes;
+animations=chargePose;
+animations=handsupPose;
+dialogFX=;
+dialogFX=tallExplode_rand;
+statements=Then so be it!;
+statements=<color=Red>I bestow upon you the wisdom of the Flying Rock Fist!!;
+nextNodeID=port7_dojo3_train_yes2;
+
+[DialogNode] ID=port7_dojo3_train_yes2;
+specialEffect=subtract10000gp;
+specialEffect=incDefaultNode;
+specialEffect=modGlobalVar,skill_Fist_bonus,1;
+specialEffect=refreshStatModifiers;
+specialEffect=modGlobalVar,fame_combat,5;
+specialEffect=fx,blackenScreen;
+specialEffect=fx,victory_fanfare_short;
+specialEffect=markDojoLocDone;
+nextNodeID=;
+
+---
+
+[DialogNode] ID=port7_dojo4;
+animations=sigh;
+animations=handupPose;
+statements=<pname=>, Master of the Flying Rock Fist. Welcome.;
+statements=Would that I could do anything further for you. <p=3>Go now, and show your skills unto the world!;
+
+---
+
+--------------PORT12
+
+[DialogNode] ID=port12_dojo1;
+animations=sly;
+animations=;
+statements='Ey.<p=2> <textIf=Fella=gIsLessThan:fame_combat:200><textIf=Tough guy=gIsMoreThan:fame_combat:199> like you, I bet you're lookin' for a challenge.;
+statements=Welcome to the Grey Gash Dojo.<p=> You interested?;
+
+[DialogOption] text=Fight;
+formulaReq=1-g:port12_dojo1;
+nodeToConnectTo=port12_dojo1_test;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=port12_dojo1_test;
+animations=stern;
+animations=angry;
+statements=Good fella.<p=> G'on in.;
+statements=Be ready for a fight the moment you go down those stairs.<p=> Give it your best shot.;
+specialEffect=action,mechanismArea;
+specialEffect=incDefaultNode;
+
+---
+
+
+[DialogNode] ID=port12_dojo2;
+animations=sly;
+animations=;
+statements=Ready whenever you are.;
+statements=Once you go down those stairs, it's go time.;
+specialEffect=gotoIf,port12_dojo2_won,g:port12_dojo1;
+
+[DialogNode] ID=port12_dojo2_won;
+animations=sly;
+animations=happy;
+statements=You really gave it to 'em down there.<p=> Well done.;
+statements=Help yourself to the chest in there.<p=> You deserve it.;
+specialEffect=incDefaultNode;
+specialEffect=modGlobalVar,fame_combat,30;
+nextNodeID=;
+
+---
+
+[DialogNode] ID=port12_dojo3;
+animations=;
+animations=sly;
+statements='Ey, <pname=>.;
+statements=Want to learn from the Grey Gash Dojo?<p=> You've earned the right.;
+[DialogOption] text=Dagger Skill<adjX=3><iconBig=skill_Dagger> Training;
+formulaReq=1-g:skill_Dagger_bonus;
+nodeToConnectTo=port12_dojo3_train;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=port12_dojo3_train;
+animations=sly;
+animations=sigh;
+statements=If you're up for it, all your crew, and any future crew you hire, will have +1<adjX=1><iconBig=skill_Dagger>Dagger Skill.;
+statements=Of course, these are precious secrets...<p=> so it'll cost you $10,000.;
+[DialogOption] text=Yes ($10,000);
+formulaReq=m:money - 9999;
+nodeToConnectTo=port12_dojo3_train_yes;
+[DialogOption] text=<color=SlateGray>Can't afford it...;
+formulaReq=10000 - m:money;
+nodeToConnectTo=previous;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=port12_dojo3_train_yes;
+animations=sly;
+animations=angry;
+statements=Good!<p=> Could use the new blood.;
+statements=Get ready for a workout<p=> - you'll be a master by the time we're through...!;
+nextNodeID=port12_dojo3_train_yes2;
+
+[DialogNode] ID=port12_dojo3_train_yes2;
+specialEffect=subtract10000gp;
+specialEffect=incDefaultNode;
+specialEffect=modGlobalVar,skill_Dagger_bonus,1;
+specialEffect=refreshStatModifiers;
+specialEffect=modGlobalVar,fame_combat,5;
+specialEffect=fx,blackenScreen;
+specialEffect=fx,victory_fanfare_short;
+specialEffect=markDojoLocDone;
+nextNodeID=;
+
+---
+
+[DialogNode] ID=port12_dojo4;
+animations=stern;
+animations=;
+statements='Ey <pname=>.<p=2> Welcome back to the dojo.;
+statements=Keep your blades sharp.;
+
+---
+
+
+--------------PORT15
+
+[DialogNode] ID=port15_dojo1;
+animations=sigh;
+animations=;
+statements=<textIf=Good to see an accomplished fighter. =gIsMoreThan:fame_combat:499><textIf=Welcome...=gIsLessThan:fame_combat:200><textIf=Welcome, warrior.=gIsMoreThan:fame_combat:199><p=2> This is the Sanctum of Spears.;
+statements=Would you test your skills against us?;
+
+[DialogOption] text=Fight;
+formulaReq=1-g:port15_dojo1;
+nodeToConnectTo=port15_dojo1_test;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=port15_dojo1_test;
+animations=;
+animations=angry;
+statements=I'll open the path for you, then.;
+statements=Once you step inside, you'll face the gauntlet.<p=> Prepare carefully.;
+specialEffect=action,mechanismArea;
+specialEffect=incDefaultNode;
+
+---
+
+
+[DialogNode] ID=port15_dojo2;
+animations=;
+statements=<textIf=Face your fear and enter the Sanctum. =gIsMoreThan:fame_combat:499><textIf=Prudence is wise. There's no shame in waiting until you're stronger.=gIsLessThan:fame_combat:200><textIf=It will be a challenge for you, but I believe you can make it through the gauntlet.=gIsMoreThan:fame_combat:199>;
+specialEffect=gotoIf,port15_dojo2_won,g:port15_dojo1;
+
+[DialogNode] ID=port15_dojo2_won;
+animations=happy;
+animations=;
+statements=Expertly done.;
+statements=Take the spear from the Sanctum as your prize.<p=2> You're always welcome here to train.;
+specialEffect=incDefaultNode;
+specialEffect=modGlobalVar,fame_combat,30;
+nextNodeID=;
+
+---
+
+[DialogNode] ID=port15_dojo3;
+animations=;
+statements=Welcome back to the Sanctum of Spears, <pname=>.;
+[DialogOption] text=Spear Skill<adjX=3><iconBig=skill_Spear> Training;
+formulaReq=1-g:skill_Spear_bonus;
+nodeToConnectTo=port15_dojo3_train;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=port15_dojo3_train;
+animations=;
+animations=;
+statements=I can show you the Sanctum's truths if you are ready.<p> It will grant +1<adjX=1><iconBig=skill_Spear>Spear Skill to every crew member you currently have and will have.;
+statements=However, I have to charge you $10,000 for this privilege.;
+[DialogOption] text=Yes ($10,000);
+formulaReq=m:money - 9999;
+nodeToConnectTo=port15_dojo3_train_yes;
+[DialogOption] text=<color=SlateGray>Can't afford it...;
+formulaReq=10000 - m:money;
+nodeToConnectTo=previous;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=port15_dojo3_train_yes;
+animations=happy;
+animations=;
+statements=Let us go into the Sanctum then,<p> <pname=>,<p> and train!;
+statements=I will teach you everything I know.;
+nextNodeID=port15_dojo3_train_yes2;
+
+[DialogNode] ID=port15_dojo3_train_yes2;
+specialEffect=subtract10000gp;
+specialEffect=incDefaultNode;
+specialEffect=modGlobalVar,skill_Spear_bonus,1;
+specialEffect=refreshStatModifiers;
+specialEffect=modGlobalVar,fame_combat,5;
+specialEffect=fx,blackenScreen;
+specialEffect=fx,victory_fanfare_short;
+specialEffect=markDojoLocDone;
+nextNodeID=;
+
+---
+
+[DialogNode] ID=port15_dojo4;
+animations=;
+animations=;
+statements=How goes it, <pname=>?;
+statements=You're welcome at the Sanctum of Spears anytime.;
+
+---
+
+
+--------------PORT20
+
+[DialogNode] ID=port20_dojo1;
+animations=sly;
+animations=chargePose;
+statements=Oi, a <textIf=big-time =gIsMoreThan:fame_combat:499><textIf=lil' =gIsLessThan:fame_combat:200>fighter showin' 'is face at the Whirlwind Dojo?;
+statements=We specialize in whips 'n' flails here.<p> You want a piece of the action?;
+
+[DialogOption] text=Fight;
+formulaReq=1-g:port20_dojo1;
+nodeToConnectTo=port20_dojo1_test;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=port20_dojo1_test;
+animations=sly;
+animations=angry;
+statements=Yeahh,<p> that's the stuff.;
+statements=Don't get scared now.<p> Go on in and see what you can do.;
+specialEffect=action,mechanismArea;
+specialEffect=incDefaultNode;
+
+---
+
+
+[DialogNode] ID=port20_dojo2;
+animations=sly;
+animations=chargePose;
+statements=Oi, you still putterin' around?;
+statements=Fight or leave already.;
+specialEffect=gotoIf,port20_dojo2_won,g:port20_dojo1;
+
+[DialogNode] ID=port20_dojo2_won;
+animations=handsupPose;
+animations=stern;
+animations=sly;
+animations=sigh;
+statements=Yeahhh,<p> I knew you were somethin' else!;
+statements=Take the loot downstairs -<p> it's yours.;
+statements=Y'know how to open it, don't ya?<p> Heh heh.<p> Take a real keen look 'round!;
+statements=An' if you want some real training, just say the word.;
+specialEffect=incDefaultNode;
+specialEffect=modGlobalVar,fame_combat,30;
+nextNodeID=;
+
+---
+
+[DialogNode] ID=port20_dojo3;
+animations=sly;
+statements=Oi, <pname=>. Here to train?;
+[DialogOption] text=Flail Skill<adjX=3><iconBig=skill_Flail> Training;
+formulaReq=1-g:skill_Flail_bonus;
+nodeToConnectTo=port20_dojo3_train;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=port20_dojo3_train;
+animations=;
+animations=sly;
+statements=Train with us, an' all your crew -<p> even future crew -<p> will get +1<adjX=1><iconBig=skill_Flail>Flail Skill.;
+statements=It'll cost $10,000.<p> You got what it takes?;
+[DialogOption] text=Yes ($10,000);
+formulaReq=m:money - 9999;
+nodeToConnectTo=port20_dojo3_train_yes;
+[DialogOption] text=<color=SlateGray>Can't afford it...;
+formulaReq=10000 - m:money;
+nodeToConnectTo=previous;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=port20_dojo3_train_yes;
+animations=sly;
+animations=chargePose;
+statements=Yeahhh, that's the stuff.;
+statements=Let's get crackin'!;
+nextNodeID=port20_dojo3_train_yes2;
+
+[DialogNode] ID=port20_dojo3_train_yes2;
+specialEffect=subtract10000gp;
+specialEffect=incDefaultNode;
+specialEffect=modGlobalVar,skill_Flail_bonus,1;
+specialEffect=refreshStatModifiers;
+specialEffect=modGlobalVar,fame_combat,5;
+specialEffect=fx,blackenScreen;
+specialEffect=fx,victory_fanfare_short;
+specialEffect=markDojoLocDone;
+nextNodeID=;
+
+---
+
+[DialogNode] ID=port20_dojo4;
+animations=;
+animations=sly;
+statements=<pname=>.<p> Proud to have ya.;
+statements=You've proven yerself.<p> Keep keepin' on.;
+
+---
+
+
+--------------PORT21
+
+[DialogNode] ID=port21_dojo1;
+animations=sigh;
+animations=;
+statements=This is the Shining Void dojo -<p> home of Eral's best swordsmen.;
+statements=<textIf=You look like you might survive, but... =gIsMoreThan:fame_combat:499>Are you sure you want to face them?;
+
+[DialogOption] text=Fight;
+formulaReq=1-g:port21_dojo1;
+nodeToConnectTo=port21_dojo1_test;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=port21_dojo1_test;
+animations=meh;
+animations=;
+statements=Varley has been looking for a challenge lately...<p> try not to disappoint him too badly.;
+statements=Go down those stairs to begin the fight.;
+specialEffect=action,mechanismArea;
+specialEffect=incDefaultNode;
+
+---
+
+
+[DialogNode] ID=port21_dojo2;
+animations=;
+animations=sly;
+statements=Welcome to the Shining Void dojo.;
+statements=The lower floor is open to you.<p> Don't go in until you're ready.;
+specialEffect=gotoIf,port21_dojo2_won,g:port21_dojo1;
+
+[DialogNode] ID=port21_dojo2_won;
+animations=scared;
+animations=happy;
+animations=;
+statements=Wow...<p> you beat Varley!;
+statements=That's incredible...<p> Take the Omnipode downstairs.<p> You deserve it!;
+statements=I hope you train with us.<p> We'd be honored to hone your skills.;
+specialEffect=incDefaultNode;
+specialEffect=modGlobalVar,fame_combat,50;
+nextNodeID=;
+
+---
+
+[DialogNode] ID=port21_dojo3;
+animations=sigh;
+statements=Please make use of our training, <pname=>.<p> We'd be glad for you to join us.;
+[DialogOption] text=Sword Skill<adjX=3><iconBig=skill_Sword> Training;
+formulaReq=1-g:skill_Sword_bonus;
+nodeToConnectTo=port21_dojo3_train;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=port21_dojo3_train;
+animations=;
+animations=sigh;
+statements=By training with us, all your crew, current and future, will gain a permanent +1<adjX=1><iconBig=skill_Sword>Sword Skill.;
+statements=This is serious training, however.<p> It will cost you $10,000.;
+[DialogOption] text=Yes ($10,000);
+formulaReq=m:money - 9999;
+nodeToConnectTo=port21_dojo3_train_yes;
+[DialogOption] text=<color=SlateGray>Can't afford it...;
+formulaReq=10000 - m:money;
+nodeToConnectTo=previous;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=port21_dojo3_train_yes;
+animations=happy;
+animations=chargePose;
+statements=Ah, excellent!;
+statements=Let's begin, shall we?;
+nextNodeID=port21_dojo3_train_yes2;
+
+[DialogNode] ID=port21_dojo3_train_yes2;
+specialEffect=subtract10000gp;
+specialEffect=incDefaultNode;
+specialEffect=modGlobalVar,skill_Sword_bonus,1;
+specialEffect=refreshStatModifiers;
+specialEffect=modGlobalVar,fame_combat,15;
+specialEffect=fx,blackenScreen;
+specialEffect=fx,victory_fanfare_short;
+specialEffect=markDojoLocDone;
+nextNodeID=;
+
+---
+
+[DialogNode] ID=port21_dojo4;
+animations=happy;
+animations=sigh;
+statements=Good to see you, <pname=>.;
+statements=The Shining Void dojo is always here for you.;
+
+---
+
+
+
+--------------PORT29
+
+[DialogNode] ID=port29_dojo1;
+animations=angry;
+statements=This is the Axe Lords' dojo. You want to fight us, <textIf=warrior?=gIsMoreThan:fame_combat:199><textIf=whelp?=gIsLessThan:fame_combat:200>;
+
+[DialogOption] text=Fight;
+formulaReq=1-g:port29_dojo1;
+nodeToConnectTo=port29_dojo1_test;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=port29_dojo1_test;
+animations=stern;
+animations=;
+statements=Hreh.<p> Go on in then!!;
+statements=Down those stairs...<p> and then you'll meet the Axe Lords.;
+specialEffect=action,mechanismArea;
+specialEffect=incDefaultNode;
+
+---
+
+
+[DialogNode] ID=port29_dojo2;
+animations=sly;
+animations=stern;
+statements=Not ready to fight?<p> I don't blame you.;
+statements=Go downstairs -<p> or don't.<p> I don't care.;
+specialEffect=gotoIf,port29_dojo2_won,g:port29_dojo1;
+
+[DialogNode] ID=port29_dojo2_won;
+animations=stern;
+animations=sly;
+animations=stern;
+statements=Hrf.<p> You got something, I'll give you that.;
+statements=Grab your reward from downstairs.<p> It's tradition.;
+statements=Let me know if you want to really know how to use an axe.;
+specialEffect=incDefaultNode;
+specialEffect=modGlobalVar,fame_combat,30;
+nextNodeID=;
+
+---
+
+[DialogNode] ID=port29_dojo3;
+animations=sly;
+statements=You've proven you can survive our training.<p> Want in on this?;
+[DialogOption] text=Axe Skill<adjX=3><iconBig=skill_Axe> Training;
+formulaReq=1-g:skill_Axe_bonus;
+nodeToConnectTo=port29_dojo3_train;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=port29_dojo3_train;
+animations=;
+animations=stern;
+statements=Take our training, and your current crew and any new crew gets +1<adjX=1><iconBig=skill_Axe>Axe Skill.;
+statements=Hrmph.<p> But it costs $10,000.<p> No exceptions.;
+[DialogOption] text=Yes ($10,000);
+formulaReq=m:money - 9999;
+nodeToConnectTo=port29_dojo3_train_yes;
+[DialogOption] text=<color=SlateGray>Can't afford it...;
+formulaReq=10000 - m:money;
+nodeToConnectTo=previous;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=port29_dojo3_train_yes;
+animations=angry;
+animations=sly;
+statements=Alright.<p> Shut your trap and listen to me.;
+statements=Right now, you know nothing.<p> When I'm done, you'll be an Axe Lord.;
+nextNodeID=port29_dojo3_train_yes2;
+
+[DialogNode] ID=port29_dojo3_train_yes2;
+specialEffect=subtract10000gp;
+specialEffect=incDefaultNode;
+specialEffect=modGlobalVar,skill_Axe_bonus,1;
+specialEffect=refreshStatModifiers;
+specialEffect=modGlobalVar,fame_combat,5;
+specialEffect=fx,blackenScreen;
+specialEffect=fx,victory_fanfare_short;
+specialEffect=markDojoLocDone;
+nextNodeID=;
+
+---
+
+[DialogNode] ID=port29_dojo4;
+animations=;
+animations=sly;
+animations=stern;
+statements=<pname=>.;
+statements=Got something to axe me?<p> Heheh.;
+statements=Nothin' for you here.<p> Get along.;
+
+---
+

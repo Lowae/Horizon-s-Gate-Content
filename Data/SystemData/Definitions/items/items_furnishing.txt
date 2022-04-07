@@ -1,0 +1,2937 @@
+
+
+[ItemType]  name=Sign;
+ID=sign_blacksmith; sprite=1939;
+special=cannotBePickedUp; special=canHangOnWalls;
+itemCategory=furnishing;
+depthMod=2050;
+[ItemReaction] 
+ID=sign_blacksmith; element=destroy; newID=X;
+[JournalEntry]
+ID=item_sign_blacksmith;
+category=item; halfPage=true;
+title=Sign;
+text=<itemBig=sign_blacksmith><title=Sign><brAdj=>A fine sign. The anvil picture emblazoned on it indicates that there must be some sort of blacksmithing establishment nearby.;
+
+[ItemType]  name=Fencepost;
+ID=fence_NW; sprite=896;
+itemCategory=furnishing;
+texture=items_building;
+weight=200;
+special=big; special=cannotBePickedUp; special=canHangOnWalls;
+blockWalking=true; blockJumping=true;
+pR=pGreyD; pB=zoneWood; pG=pFadeDarker;
+[ItemType]  name=Fencepost;
+ID=fence_N; sprite=897;
+itemCategory=furnishing;
+texture=items_building;
+weight=200;
+special=big; special=cannotBePickedUp; special=canHangOnWalls;
+blockWalking=true; blockJumping=true;
+pR=pGreyD; pB=zoneWood; pG=pFadeDarker;
+[ItemType]  name=Fencepost;
+ID=fence_NE; sprite=898;
+itemCategory=furnishing;
+texture=items_building;
+weight=200;
+special=big; special=cannotBePickedUp; special=canHangOnWalls;
+blockWalking=true; blockJumping=true;
+pR=pGreyD; pB=zoneWood; pG=pFadeDarker;
+[ItemType]  name=Fencepost;
+ID=fence_W; sprite=928;
+itemCategory=furnishing;
+texture=items_building;
+weight=200;
+special=big; special=cannotBePickedUp; special=canHangOnWalls;
+blockWalking=true; blockJumping=true;
+pR=pGreyD; pB=zoneWood; pG=pFadeDarker;
+[ItemType]  name=Fencepost;
+ID=fence_E; sprite=930;
+itemCategory=furnishing;
+texture=items_building;
+weight=200;
+special=big; special=cannotBePickedUp; special=canHangOnWalls;
+blockWalking=true; blockJumping=true;
+pR=pGreyD; pB=zoneWood; pG=pFadeDarker;
+[ItemType]  name=Fencepost;
+ID=fence_SW; sprite=960;
+itemCategory=furnishing;
+texture=items_building;
+weight=200;
+special=big; special=cannotBePickedUp; special=canHangOnWalls;
+blockWalking=true; blockJumping=true;
+pR=pGreyD; pB=zoneWood; pG=pFadeDarker;
+[ItemType]  name=Fencepost;
+ID=fence_SE; sprite=962;
+itemCategory=furnishing;
+texture=items_building;
+weight=200;
+special=big; special=cannotBePickedUp; special=canHangOnWalls;
+blockWalking=true; blockJumping=true;
+pR=pGreyD; pB=zoneWood; pG=pFadeDarker;
+[ItemType]  name=Fencepost;
+ID=fence_Mid; sprite=929;
+itemCategory=furnishing;
+texture=items_building;
+weight=200;
+special=big; special=cannotBePickedUp; special=canHangOnWalls;
+blockWalking=true; blockJumping=true;
+pR=pGreyD; pB=zoneWood; pG=pFadeDarker;
+
+[ItemType]  name=Metal Fence;
+ID=fence_metal; sprite=900;
+itemCategory=furnishing;
+texture=items_building;
+weight=200;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=noTooltips;
+blockWalking=true; blockJumping=true;
+pR=zoneStoneDark; pG=pFadeDarker;
+[ItemType]  name=Metal Fence;
+itemCategory=furnishing;
+ID=fence_metal_NS; sprite=931;
+cloneFrom=fence_metal;
+[ItemType]  name=Metal Fence;
+itemCategory=furnishing;
+ID=fence_metal_top_corner; sprite=899;
+cloneFrom=fence_metal;
+[ItemType]  name=Metal Fence;
+itemCategory=furnishing;
+ID=fence_metal_btm_corner; sprite=963;
+cloneFrom=fence_metal;
+[ItemType]  name=Metal Fence;
+itemCategory=furnishing;
+ID=fence_metal_NS_btm; sprite=901;
+cloneFrom=fence_metal;
+[ItemType]  name=Metal Fence;
+itemCategory=furnishing;
+ID=fence_metal_NS_top; sprite=902;
+cloneFrom=fence_metal;
+
+[ItemType]  name=Metal Fence;
+ID=fence_metal_mech; sprite=901;
+cloneFrom=fence_metal;
+[ItemReaction] 
+ID=fence_metal_mech; element=mech; newID=fence_metal_mech_off;
+[ItemType]  name=Metal Fence;
+ID=fence_metal_mech_off; sprite=933;
+itemCategory=furnishing;
+texture=items_building;
+weight=200;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=noTooltips;
+pR=zoneStoneDark; pG=pFadeDarker;
+[ItemReaction] 
+ID=fence_metal_mech_off; element=mech; newID=fence_metal_mech;
+
+[ItemType]  name=Table;
+itemCategory=furnishing;
+ID=table_small; sprite=1605;
+journalID=journal_table;
+weight=200; volume=100;
+special=big; special=itemsIgnoreBlockWalking; special=itemsOnSameTileAreRaised;
+blockWalking=true; blockJumping=true;
+depthMod=850;
+pB=zoneWood;
+[ItemReaction] 
+ID=table_small; element=explode; element=heavySlash; element=smash; element=fire; newID=debris_wood; fx=dust_wood; spawnItem=woodPlank;
+[ItemType]  name=Table;
+ID=table_small2; sprite=1609;
+cloneFrom=table_small;
+
+
+[ItemType]  name=Table;
+itemCategory=furnishing;
+ID=table_left; sprite=1602;
+journalID=journal_table;
+weight=200;
+special=big; special=cannotBePickedUp; 
+special=itemsIgnoreBlockWalking; special=itemsOnSameTileAreRaised;
+blockWalking=true; blockJumping=true;
+depthMod=850;
+pB=zoneWood;
+[ItemReaction] 
+ID=table_left; element=explode; element=heavySlash; element=smash; element=fire; newID=debris_wood; fx=dust_wood; spawnItem=woodPlank;
+[ItemType]  name=Table;
+itemCategory=furnishing;
+ID=table_mid; sprite=1603;
+journalID=journal_table;
+weight=200;
+special=big; special=cannotBePickedUp; 
+special=itemsIgnoreBlockWalking; special=itemsOnSameTileAreRaised;
+blockWalking=true; blockJumping=true;
+depthMod=850;
+pB=zoneWood;
+[ItemReaction] 
+ID=table_mid; element=explode; element=heavySlash; element=smash; element=fire; newID=debris_wood; fx=dust_wood; spawnItem=woodPlank;
+[ItemType]  name=Table;
+itemCategory=furnishing;
+ID=table_right; sprite=1604;
+journalID=journal_table;
+weight=200;
+special=big; special=cannotBePickedUp;
+ special=itemsIgnoreBlockWalking; special=itemsOnSameTileAreRaised;
+blockWalking=true; blockJumping=true;
+depthMod=850;
+pB=zoneWood;
+[ItemReaction] 
+ID=table_right; element=explode; element=heavySlash; element=smash; element=fire; newID=debris_wood; fx=dust_wood; spawnItem=woodPlank;
+[ItemType]  name=Table;
+ID=table_left2; sprite=1606;
+cloneFrom=table_left;
+[ItemType]  name=Table;
+ID=table_mid2; sprite=1607;
+cloneFrom=table_mid;
+[ItemType]  name=Table;
+ID=table_right2; sprite=1608;
+cloneFrom=table_right;
+
+[JournalEntry]
+ID=journal_table;
+category=item; halfPage=true;
+title=Table;
+text=<itemBig=table_small2><title=Table><brAdj=>Common furniture item used by humanoids. Its general use is pretty intuitive. Can be destroyed by axes or hammers if you need wood.;
+
+[ItemType]  name=Stone Pedestal;
+itemCategory=furnishing;
+ID=table_stone; sprite=536;
+texture=items_building;
+journalID=journal_table;
+weight=2000; volume=100;
+special=big; special=itemsIgnoreBlockWalking; special=itemsOnSameTileAreRaised;
+blockWalking=true; blockJumping=true;
+depthMod=850;
+pR=zoneStone;
+[ItemType]  name=Stone Pedestal;
+ID=table_stoneL; sprite=504;
+cloneFrom=table_stone;
+[ItemType]  name=Stone Pedestal;
+ID=table_stoneM; sprite=505;
+cloneFrom=table_stone;
+[ItemType]  name=Stone Pedestal;
+ID=table_stoneR; sprite=506;
+cloneFrom=table_stone;
+--tablecloths
+[ItemType]  name=Tablecloth;
+ID=tableclothL1; sprite=1443;
+itemCategory=furnishing;
+ special=cannotBePickedUp; special=noTooltips; special=ignoreBeingRaised_offsetOnly;
+ special=canAlwaysFitInTileWhenSpawned;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true; pB=zoneMisc2;
+[ItemType]  name=Tablecloth;
+ID=tableclothM1; sprite=1444;
+cloneFrom=tableclothL1; 
+[ItemType]  name=Tablecloth;
+ID=tableclothR1; sprite=1445;
+cloneFrom=tableclothL1;
+[ItemType]  name=Tablecloth;
+ID=tablecloth1; sprite=1446;
+cloneFrom=tableclothL1;
+
+
+[ItemType]  name=Tablecloth;
+ID=tableclothL2; sprite=1475;
+cloneFrom=tableclothL1; 
+[ItemType]  name=Tablecloth;
+ID=tableclothM2; sprite=1476;
+cloneFrom=tableclothL1; 
+[ItemType]  name=Tablecloth;
+ID=tableclothR2; sprite=1477;
+cloneFrom=tableclothL1;
+[ItemType]  name=Tablecloth;
+ID=tablecloth2; sprite=1478;
+cloneFrom=tableclothL1;
+
+
+
+--
+
+[ItemType]  name=Table;
+ID=stand_cornerBtm; sprite=1570;
+itemCategory=furnishing;
+journalID=journal_table;
+weight=9999; volume=100;
+special=big; special=itemsIgnoreBlockWalking; special=itemsOnSameTileAreRaised;
+blockWalking=true; blockJumping=true;
+pB=zoneWood;
+depthMod=1050;
+[ItemType]  name=Table;
+ID=stand_cornerTop; sprite=1571;
+cloneFrom=stand_cornerBtm;
+pB=zoneWood;
+[ItemType]  name=Table;
+cloneFrom=stand_cornerBtm;
+ID=stand_btm; sprite=1572;
+[ItemType]  name=Table;
+cloneFrom=stand_cornerBtm;
+ID=stand_side; sprite=1573;
+[ItemType]  name=Table;
+cloneFrom=stand_cornerBtm;
+ID=stand_top; sprite=1574;
+[ItemType]  name=Table;
+cloneFrom=stand_cornerBtm;
+ID=stand_center; sprite=1575;
+
+
+[ItemType]  name=Table;
+ID=table_big_SW; sprite=1576;
+depthMod=1050;
+cloneFrom=table_left;
+[ItemType]  name=Table;
+ID=table_big_S; sprite=1577;
+depthMod=1050;
+cloneFrom=table_mid;
+[ItemType]  name=Table;
+ID=table_big_SE; sprite=1578;
+depthMod=1050;
+cloneFrom=table_right;
+
+[ItemType]  name=Table;
+ID=table_big_W; sprite=1579;
+depthMod=1050;
+cloneFrom=table_left;
+[ItemType]  name=Table;
+ID=table_big_; sprite=1580;
+depthMod=1050;
+cloneFrom=table_mid;
+[ItemType]  name=Table;
+ID=table_big_E; sprite=1581;
+depthMod=1050;
+cloneFrom=table_right;
+
+[ItemType]  name=Table;
+ID=table_big_NW; sprite=1547;
+itemCategory=furnishing;
+journalID=journal_table;
+weight=9999; volume=100;
+special=itemsIgnoreBlockWalking;
+pB=zoneWood;
+depthMod=1050;
+[ItemType]  name=Table;
+ID=table_big_N; sprite=1548;
+itemCategory=furnishing;
+journalID=journal_table;
+weight=9999; volume=100;
+special=itemsIgnoreBlockWalking;
+pB=zoneWood;
+depthMod=1050;
+[ItemType]  name=Table;
+ID=table_big_NE; sprite=1549;
+itemCategory=furnishing;
+journalID=journal_table;
+weight=9999; volume=100;
+special=itemsIgnoreBlockWalking;
+pB=zoneWood;
+depthMod=1050;
+
+[ItemType]  name=Canopy;
+ID=canopy_T1; sprite=1552;
+itemCategory=furnishing;
+special=canHangOnWalls; special=cannotBePickedUp;
+special=ignoreBeingRaised; special=noPlayerPlacedItems;
+depthMod=2050;
+pR=pR;
+[ItemType]  name=Canopy;
+ID=canopy_Tmid1; sprite=1553;
+cloneFrom=canopy_T1;
+[ItemType]  name=Canopy;
+ID=canopy_B1; sprite=1584;
+cloneFrom=canopy_T1;
+[ItemType]  name=Canopy;
+ID=canopy_Bmid1; sprite=1585;
+cloneFrom=canopy_T1;
+
+[ItemType]  name=Canopy;
+ID=canopy_T2; sprite=1552;
+cloneFrom=canopy_T1;
+pR=pBlue;
+[ItemType]  name=Canopy;
+ID=canopy_Tmid2; sprite=1553;
+cloneFrom=canopy_T2;
+[ItemType]  name=Canopy;
+ID=canopy_B2; sprite=1584;
+cloneFrom=canopy_T2;
+[ItemType]  name=Canopy;
+ID=canopy_Bmid2; sprite=1585;
+cloneFrom=canopy_T2;
+
+[ItemType]  name=Canopy;
+ID=canopy_T3; sprite=1552;
+cloneFrom=canopy_T1;
+pR=overworld3;
+[ItemType]  name=Canopy;
+ID=canopy_Tmid3; sprite=1553;
+cloneFrom=canopy_T3;
+[ItemType]  name=Canopy;
+ID=canopy_B3; sprite=1584;
+cloneFrom=canopy_T3;
+[ItemType]  name=Canopy;
+ID=canopy_Bmid3; sprite=1585;
+cloneFrom=canopy_T3;
+
+
+[ItemType]  name=Canopy;
+ID=canopy_T4; sprite=1552;
+cloneFrom=canopy_T1;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+[ItemType]  name=Canopy;
+ID=canopy_Tmid4; sprite=1553;
+cloneFrom=canopy_T4;
+[ItemType]  name=Canopy;
+ID=canopy_B4; sprite=1584;
+cloneFrom=canopy_T4;
+[ItemType]  name=Canopy;
+ID=canopy_Bmid4; sprite=1585;
+cloneFrom=canopy_T4;
+
+[ItemType]  name=Curtain;
+ID=curtain1_top; sprite=385;
+itemCategory=furnishing; texture=items_building;
+journalID=journal_curtain;
+ special=cannotBePickedUp; special=ignoreBeingRaised_offsetOnly;
+ special=canHangOnWalls; special=canAlwaysFitInTileWhenSpawned; 
+special=quantityIncreasesPaletteRZoneMisc; stackable=true; pR=zoneMisc1; pB=zoneMisc2;
+[ItemReaction] 
+ID=curtain1_top; element=explode; element=slash; element=fire; element=elec; newID=curtain_frayed;
+
+[ItemType]  name=Curtain;
+ID=curtain1_mid; sprite=417;
+cloneFrom=curtain1_top;
+[ItemType]  name=Curtain;
+ID=curtain1_btm; sprite=449;
+cloneFrom=curtain1_top;
+
+
+[ItemType]  name=Curtain;
+ID=curtain1M_top; sprite=386;
+cloneFrom=curtain1_top;
+[ItemType]  name=Curtain;
+ID=curtain1M_mid; sprite=418;
+cloneFrom=curtain1_top;
+[ItemType]  name=Curtain;
+ID=curtain1M_btm; sprite=450;
+cloneFrom=curtain1_top;
+
+[ItemType]  name=Curtain;
+ID=curtain1R_top; sprite=387;
+cloneFrom=curtain1_top;
+[ItemType]  name=Curtain;
+ID=curtain1R_mid; sprite=419;
+cloneFrom=curtain1_top;
+[ItemType]  name=Curtain;
+ID=curtain1R_btm; sprite=451;
+cloneFrom=curtain1_top;
+
+[ItemType]  name=Curtain;
+ID=curtain1L_top; sprite=388;
+cloneFrom=curtain1_top;
+[ItemType]  name=Curtain;
+ID=curtain1L_mid; sprite=420;
+cloneFrom=curtain1_top;
+[ItemType]  name=Curtain;
+ID=curtain1L_btm; sprite=452;
+cloneFrom=curtain1_top;
+
+[ItemType]  name=Curtain;
+ID=curtain1_torn1_top; sprite=389;
+cloneFrom=curtain1_top;
+[ItemType]  name=Curtain;
+ID=curtain1_torn2_top; sprite=421;
+cloneFrom=curtain1_top;
+[ItemType]  name=Curtain;
+ID=curtain1_torn3_top; sprite=453;
+cloneFrom=curtain1_top;
+
+[JournalEntry]
+ID=journal_curtain;
+category=item; halfPage=true;
+title=Curtain;
+text=<itemBig=curtain1_top><title=Curtain><brAdj=>Wall-mounted cloth used either for adornment or privacy.;
+
+[ItemType]  name=Curtain;
+ID=curtain_frayed; sprite=1711;
+itemCategory=furnishing;
+special=noTooltips; special=cannotBePickedUp; special=ignoreBeingRaised_offsetOnly;
+special=canHangOnWalls; special=canAlwaysFitInTileWhenSpawned; 
+special=quantityIncreasesPaletteRZoneMisc;  pR=zoneMisc1; pB=zoneMisc2; stackable=true;
+
+[ItemType]  name=Seartial Banner;
+ID=banner_seartial_small1; sprite=393;
+itemCategory=furnishing; texture=items_building;
+ special=cannotBePickedUp; special=noTooltips; special=ignoreBeingRaised_offsetOnly;
+ special=canHangOnWalls; special=canAlwaysFitInTileWhenSpawned; 
+[ItemType]  name=Seartial Banner;
+ID=banner_seartial_big1; sprite=425;
+special=sprite2xHeight; depthMod=1050;
+cloneFrom=banner_seartial_small1;
+
+
+[ItemType]  name=Table (No Collisions);
+ID=stand_cornerBtm_harbor; sprite=1570;
+itemCategory=hazard;
+journalID=journal_table; special=noTooltips;
+weight=9999; volume=100;
+special=big; special=canAlwaysFitInTile;
+pB=zoneWood;
+[ItemType]  
+ID=stand_cornerTop_harbor; sprite=1571;
+cloneFrom=stand_cornerBtm_harbor;
+pB=zoneWood;
+[ItemType]  
+ID=stand_btm_harbor; sprite=1572;
+cloneFrom=stand_cornerBtm_harbor;
+[ItemType]  
+ID=stand_side_harbor; sprite=1573;
+cloneFrom=stand_cornerBtm_harbor;
+[ItemType]  
+ID=stand_top_harbor; sprite=1574;
+cloneFrom=stand_cornerBtm_harbor;
+[ItemType]  
+ID=stand_center_harbor; sprite=1575;
+cloneFrom=stand_cornerBtm_harbor;
+
+
+
+[ItemType]  name=Bookshelves;
+itemCategory=furnishing;
+ID=bookshelves; sprite=1632;
+journalID=journal_bookshelves;
+weight=2000;
+special=big; special=canHangOnWalls;
+special=sprite2xHeight;
+blockWalking=true; blockJumping=true;
+pB=zoneWood;
+pR=pCRed;
+pG=pCBlue;
+depthMod=1050;
+
+[ItemType]  name=Bookshelves;
+itemCategory=furnishing;
+ID=bookshelves2; sprite=1635;
+cloneFrom=bookshelves;
+
+[JournalEntry]
+ID=journal_bookshelves;
+category=item; halfPage=true; rarity=1;
+title=Bookshelves;
+text=<itemBig=bookshelves><title=Bookshelves><brAdj=>Shelves packed with books- a veritable treasure trove for any scholar. Unfortunately, all their text is incomprehensible to you.;
+
+[ItemType]  name=Bookshelf;
+itemCategory=furnishing;
+ID=bookshelves3; sprite=1636; special=canAssignSpecialTC;
+cloneFrom=bookshelves;
+[ItemReaction] 
+ID=bookshelves3; element=use; element=physical; newID=bookshelves2; action=mechanism; fx=chk;
+[JournalEntry]
+ID=item_bookshelves3;
+category=item; halfPage=true;
+title=Bookshelf;
+text=<itemBig=bookshelves3><title=Bookshelf><brAdj=>Something seems off about this particular shelf of books. There's an odd gap on one shelf, almost like there's something back there.;
+
+[ItemType]  name=Huge Bookshelf;
+itemCategory=furnishing;
+ID=bookshelves_bigL1; sprite=1441;
+journalID=journal_bookshelves;
+weight=2000;
+special=big; special=canHangOnWalls;
+special=sprite2xHeight;
+blockWalking=true; blockJumping=true;
+pB=zoneWood;
+pR=pCRed;
+pG=pCBlue;
+depthMod=1050;
+[ItemType]  name=Huge Bookshelf;
+ID=bookshelves_bigR1; sprite=1442;
+cloneFrom=bookshelves_bigL1;
+pG=pCGreen;
+
+
+[ItemType]  name=Shelves;
+itemCategory=furnishing;
+ID=shelves_big_empty1; sprite=1377;
+journalID=journal_shelf;
+weight=800;
+special=big; special=canHangOnWalls;
+special=sprite2xHeight;
+blockWalking=true; blockJumping=true;
+depthMod=1050;
+[ItemReaction] 
+ID=shelves_big_empty1; element=explode; element=shatter;  newID=shelves_big_broken1; fx=dust_wood;
+[ItemReaction] 
+ID=shelves_big_empty1; element=cutsc_destroy; newID=debris_wood; fx=dust_wood;
+
+[ItemType]  name=Shelves;
+ID=shelves_big_empty2; sprite=1377;
+special=dontCloneReactions;
+cloneFrom=shelves_big_empty1;
+[ItemReaction] 
+ID=shelves_big_empty2; element=explode; element=shatter; newID=shelves_big_broken2; fx=dust_wood;
+[ItemReaction] 
+ID=shelves_big_empty2; element=cutsc_destroy; newID=debris_wood; fx=dust_wood;
+
+[ItemType]  name=Shelves;
+ID=shelves_big_broken1; sprite=1378;
+cloneFrom=shelves_big_empty1;
+[ItemReaction] 
+ID=shelves_big_broken1; element=cutsc_destroy; newID=debris_wood; fx=dust_wood;
+[ItemType]  name=Shelves;
+ID=shelves_big_broken2; sprite=1379;
+cloneFrom=shelves_big_broken1;
+
+
+[ItemType]  name=Shelves;
+ID=shelves_big_stuff1; sprite=1380;
+itemCategory=furnishing;
+journalID=journal_shelf;
+weight=800;
+special=big; special=canHangOnWalls;
+special=sprite2xHeight;
+blockWalking=true; blockJumping=true;
+depthMod=1050;
+[ItemType]  name=Shelves;
+ID=shelves_big_stuff2; sprite=1381;
+cloneFrom=shelves_big_stuff1;
+[ItemType]  name=Shelves;
+ID=shelves_big_stuff3; sprite=1382;
+cloneFrom=shelves_big_stuff1;
+[ItemType]  name=Shelves;
+ID=shelves_big_stuff4; sprite=1383;
+cloneFrom=shelves_big_stuff1;
+[ItemType]  name=Shelves;
+ID=shelves_big_stuff5; sprite=1384;
+cloneFrom=shelves_big_stuff1;
+[ItemType]  name=Shelves;
+ID=shelves_big_stuff6; sprite=1385;
+cloneFrom=shelves_big_stuff1;
+
+
+[ItemType]  name=Shelves;
+itemCategory=furnishing;
+ID=shelves; sprite=1633;
+weight=800;
+journalID=journal_shelf;
+special=big; special=itemsIgnoreBlockWalking;
+special=sprite2xHeight;
+blockWalking=true; blockJumping=true;
+pB=zoneWood;
+depthMod=1050;
+[ItemReaction] 
+ID=shelves; element=explode; element=heavySlash; element=heavySmash; newID=debris_wood; fx=dust_wood; spawnItem=woodPlank;
+
+[JournalEntry]
+ID=journal_shelf;
+category=item; halfPage=true; rarity=0;
+title=Shelves;
+text=<itemBig=shelves><title=Shelves><brAdj=>When it comes to organizing and displaying possessions, shelves are as basic as it gets. You won't find much on them - mostly awkward, bulky items that are of no use to on-the-go adventurers.;
+
+
+
+
+[ItemType]  name=Dresser;
+itemCategory=furnishing;
+ID=dresser; sprite=1634;
+weight=200; volume=100;
+special=big; special=itemsIgnoreBlockWalking; special=itemsOnSameTileAreRaised;
+special=container; special=containerWood;
+special=sprite2xHeight;
+blockWalking=true; blockJumping=true;
+pB=zoneWood;
+depthMod=1050;
+
+[ItemType]  name=Stool;
+itemCategory=furnishing;
+ID=stool; sprite=1669;
+journalID=journal_stool;
+weight=100; volume = 100;
+special=big; special=actorsOnSameTileAreRaised;
+special=moveCostOverride_2;
+pB=pWood;
+[ItemReaction] 
+ID=stool; element=fire; element=explode; element=heavySlash; element=smash; newID=debris_wood; fx=dust_wood; spawnItem=woodPlank;
+[ItemType]  name=Stool;
+itemCategory=furnishing;
+ID=stool2; sprite=1637;
+cloneFrom=stool;
+pB=zoneWood;
+[ItemType]  name=Stool;
+itemCategory=furnishing;
+ID=stool3; sprite=1670;
+cloneFrom=stool;
+pB=zoneWood;
+[JournalEntry]
+ID=journal_stool;
+category=item; halfPage=true;
+title=Stool;
+text=<itemBig=stool><title=Stool><brAdj=>A little chair. Or a tall, thin bench. It's a circular thing for sitting on. You can sit on it. Also it slightly impedes movement in combat.;
+
+
+
+[ItemType]  name=Chest;
+ID=chest_stone1; sprite=739; itemCategory=furnishing; pR=zoneStone;
+description=A hefty, durable chest.;
+journalID=journal_chest;
+weight=300; volume=100; 
+special=container; special=big; special=container4x4; special=containerMetal;
+blockWalking=true; blockJumping=true;
+[ItemReaction] 
+ID=chest_stone1; element=use; newID=chest_stone1_open; fx=click;
+[ItemType]  name=Chest;
+ID=chest_stone1_open; sprite=740; itemCategory=furnishing; pR=zoneStone;
+description=A hefty, durable chest.;
+journalID=journal_chest;
+weight=300; volume=100; 
+special=container; special=big; special=container4x4; special=containerMetal;
+blockWalking=true; blockJumping=true;
+[ItemReaction] 
+ID=chest_stone1_open; element=closeContainer; newID=chest_stone1; fx=click;
+[ItemType]  name=Chest (Locked);
+ID=chest_stone1_locked; sprite=771; itemCategory=furnishing; pR=zoneStone;
+description=A hefty, durable chest. It's locked.;
+journalID=journal_chest;
+weight=300; volume=100; 
+special=container; special=big; special=container4x4; special=containerMetal;
+special=lockedContainer;
+blockWalking=true; blockJumping=true;
+ combineSound=unlock;
+combineWith=key; toMake=chest_stone1; consumeOnCombine=true;
+combineWith=lockpick; toMake=chest_stone1; consumeOnCombine=true;
+
+[ItemType]  name=Chest;
+ID=chest_stone2; sprite=741; itemCategory=furnishing; pR=zoneStone;
+description=A hefty, durable chest.;
+journalID=journal_chest;
+weight=300; volume=100; 
+special=container; special=big; special=container4x4; special=containerMetal;
+blockWalking=true; blockJumping=true;
+[ItemReaction] 
+ID=chest_stone2; element=use; newID=chest_stone2_open; fx=click;
+[ItemType]  name=Chest;
+ID=chest_stone2_open; sprite=742; itemCategory=furnishing; pR=zoneStone;
+description=A hefty, durable chest.;
+journalID=journal_chest;
+weight=300; volume=100; 
+special=container; special=big; special=container4x4; special=containerMetal;
+blockWalking=true; blockJumping=true;
+[ItemReaction] 
+ID=chest_stone2_open; element=closeContainer; newID=chest_stone2; fx=click;
+[ItemType]  name=Chest (Locked);
+ID=chest_stone2_locked; sprite=773; itemCategory=furnishing; pR=zoneStone;
+description=A hefty, durable chest. It's locked.;
+journalID=journal_chest;
+weight=300; volume=100; 
+special=container; special=big; special=container4x4; special=containerMetal;
+special=lockedContainer;
+blockWalking=true; blockJumping=true;
+ combineSound=unlock;
+combineWith=key; toMake=chest_stone2; consumeOnCombine=true;
+combineWith=lockpick; toMake=chest_stone2; consumeOnCombine=true;
+
+
+[ItemType]  name=Chest;
+ID=chest_wood1; sprite=743; itemCategory=furnishing; pR=zoneWood; pB=zoneStone;
+description=A sturdy wooden chest.;
+journalID=journal_chest;
+weight=300; volume=100; 
+special=container; special=big; special=container4x4; special=containerWood;
+blockWalking=true; blockJumping=true;
+[ItemReaction] 
+ID=chest_wood1; element=use; newID=chest_wood1_open; fx=click;
+[ItemType]  name=Chest;
+ID=chest_wood1_open; sprite=744; itemCategory=furnishing; pR=zoneWood; pB=zoneStone;
+description=A sturdy wooden chest.;
+journalID=journal_chest;
+weight=300; volume=100; 
+special=container; special=big; special=container4x4; special=containerWood;
+blockWalking=true; blockJumping=true;
+[ItemReaction] 
+ID=chest_wood1_open; element=closeContainer; newID=chest_wood1; fx=click;
+[ItemType]  name=Chest (Locked);
+ID=chest_wood1_locked; sprite=775; itemCategory=furnishing; pR=zoneWood; pB=zoneStone;
+description=A sturdy wooden chest. It's locked.;
+journalID=journal_chest;
+weight=300; volume=100; 
+special=container; special=big; special=container4x4; special=containerWood;
+special=lockedContainer;
+blockWalking=true; blockJumping=true;
+ combineSound=unlock;
+combineWith=key; toMake=chest_wood1; consumeOnCombine=true;
+combineWith=lockpick; toMake=chest_wood1; consumeOnCombine=true;
+
+[ItemType]  name=Chest;
+ID=chest_wood2; sprite=745; itemCategory=furnishing; pR=zoneWood; pB=zoneStone;
+description=A sturdy wooden chest.;
+journalID=journal_chest;
+weight=300; volume=100; 
+special=container; special=big; special=container4x4; special=containerWood;
+blockWalking=true; blockJumping=true;
+[ItemReaction] 
+ID=chest_wood2; element=use; newID=chest_wood2_open; fx=click;
+[ItemType]  name=Chest;
+ID=chest_wood2_open; sprite=746; itemCategory=furnishing; pR=zoneWood; pB=zoneStone;
+description=A sturdy wooden chest.;
+journalID=journal_chest;
+weight=300; volume=100; 
+special=container; special=big; special=container4x4; special=containerWood;
+blockWalking=true; blockJumping=true;
+[ItemReaction] 
+ID=chest_wood2_open; element=closeContainer; newID=chest_wood2; fx=click;
+[ItemType]  name=Chest (Locked);
+ID=chest_wood2_locked; sprite=777; itemCategory=furnishing; pR=zoneWood; pB=zoneStone;
+description=A sturdy wooden chest. It's locked.;
+journalID=journal_chest;
+weight=300; volume=100; 
+special=container; special=big; special=container4x4; special=containerWood;
+special=lockedContainer;
+blockWalking=true; blockJumping=true;
+ combineSound=unlock;
+combineWith=key; toMake=chest_wood2; consumeOnCombine=true;
+combineWith=lockpick; toMake=chest_wood2; consumeOnCombine=true;
+
+[JournalEntry]
+ID=journal_chest;
+category=item; halfPage=true;
+title=Chest;
+text=<itemBig=chest_stone1><itemBig=chest_wood2_locked><title=Chest><brAdj=>Storage container large enough to fit most anything, but too heavy to lug around. Some chests are mechanically sealed and must be unlocked using machines or explosives.;
+
+[ItemType]  name=Barrel;
+itemCategory=furnishing;
+ID=barrel; sprite=1588;
+journalID=journal_barrel;
+weight=200; volume=100;
+special=big; special=pushable;
+special=container; special=containerWood;
+blockWalking=true; blockJumping=true;
+pR=zoneWoodDark;
+pB=pGreyD2;
+pG=pFadeDarker;
+[ItemReaction] 
+ID=barrel; element=use; newID=barrel_open; fx=click;
+[ItemReaction] 
+ID=barrel; element=physical; element=smash;
+element=explode; element=fire; element=lightning;
+newID=barrel_broken; fx=dust_wood;
+[ItemType]  name=Barrel;
+itemCategory=furnishing;
+ID=barrel_open; sprite=1589;
+journalID=journal_barrel;
+weight=200; volume=100;
+special=big; special=pushable;
+special=container; special=containerWood;
+blockWalking=true; blockJumping=true;
+pR=zoneWoodDark;
+pB=pGreyD2;
+pG=pFadeDarker;
+[ItemReaction] 
+ID=barrel_open; element=closeContainer; newID=barrel; fx=click;
+[ItemReaction] 
+ID=barrel_open; element=physical; element=smash;
+element=explode; element=fire; element=lightning;
+newID=barrel_broken; fx=dust_wood;
+[JournalEntry]
+ID=journal_barrel;
+category=item; halfPage=true;
+title=Barrel;
+text=<itemBig=barrel><title=Barrel><brAdj=>A very popular container, due to how easy it is to move around by rolling. Typically used to contain water or alcohol.;
+
+
+[ItemType]  name=Barrel (Water);
+itemCategory=furnishing;
+ID=barrel_open_water; sprite=1620;
+journalID=journal_barrel_open_water;
+weight=200; volume=100;
+special=big;
+blockWalking=true; blockJumping=true;
+element=water;
+pR=zoneWoodDark;
+pB=pBlue2;
+pG=pFadeDarker;
+[ItemReaction] 
+ID=barrel_open_water; element=physical; element=smash;
+element=explode; element=fire; element=lightning;
+newID=barrel_broken_water; fx=dust_wood; action=barrel_water_act;
+[JournalEntry]
+ID=journal_barrel_open_water;
+category=item; halfPage=true;
+title=Water Barrel;
+text=<itemBig=barrel_open_water><title=Water Barrel><brAdj=>This barrel is full of clean drinking water. An attack can burst it, splashing a wide area and dealing 3 damage.;
+
+
+[ItemType]  name=Gunpowder Barrel;
+itemCategory=furnishing;
+ID=barrel_powder; sprite=1590;
+journalID=journal_barrel_powder;
+weight=200; volume=100;
+special=big;
+blockWalking=true; blockJumping=true;
+pR=p2;
+pB=pRed2;
+pG=pFadeDarker;
+[ItemReaction] 
+ID=barrel_powder; element=physical; element=smash;
+newID=barrel_broken_powder; fx=dust_wood;
+[ItemReaction] 
+ID=barrel_powder; element=physical; element=smash;
+element=explode; element=fire; element=lightning;
+newID=barrel_broken_powder; action=bombExplosion_25dmg;
+[JournalEntry]
+ID=journal_barrel_powder;
+category=item; halfPage=true;
+title=Gunpowder Barrel;
+text=<itemBig=barrel_powder><title=Gunpowder Barrel><brAdj=>A dangerous container, but how else are you going to store gunpowder? Be careful with your attacks around this, or risk taking 25 damage.;
+
+[ItemType]  name=Broken Barrel;
+itemCategory=furnishing;
+ID=barrel_broken; sprite=1622;
+journalID=journal_barrel;
+weight=200; volume=100;
+special=big;
+special=container; special=containerWood;
+blockWalking=true; blockJumping=false;
+pR=zoneWoodDark;
+pB=pGreyD2;
+pG=pFadeDarker;
+
+[ItemType]  name=Broken Barrel;
+ID=barrel_broken_water; sprite=1622;
+journalID=journal_barrel;
+weight=200; volume=100;
+special=big;
+blockWalking=true; blockJumping=false;
+pR=zoneWoodDark;
+pB=pGreyD2;
+pG=pFadeDarker;
+
+[ItemType]  name=Broken Barrel;
+ID=barrel_broken_powder;
+cloneFrom=barrel_broken_water;
+pR=p2;
+
+
+[ItemType]  name=Barrel (Weapons);
+itemCategory=furnishing;
+ID=barrel_weapons; sprite=1621;
+journalID=journal_barrel;
+weight=200; volume=100;
+special=big; special=sprite2xHeight;
+blockWalking=true; blockJumping=true;
+pR=zoneWoodDark;
+pB=pIron;
+pG=pFadeDarker;
+
+[ItemType]  name=Crate (Small);
+ID=crate_small; sprite=1652;
+itemCategory = furnishing;
+journalID=journal_crate;
+weight=200; volume=100;
+special=container; special=containerWood;
+special=big; special=pushable; 
+blockWalking=true; blockJumping=true;
+pR=zoneWoodDark;
+pB=pGreyD2;
+[ItemReaction] 
+ID=crate_small; element=smash; element=fire; element=explode; 
+newID=crate_small_damaged; fx=dust_wood;
+
+[ItemType]  name=Crate (Small, Damaged);
+ID=crate_small_damaged; sprite=1684;
+itemCategory = furnishing;
+journalID=journal_crate;
+weight=200; volume=100;
+special=container; special=containerWood;
+special=big; special=pushable; 
+blockWalking=true; blockJumping=true;
+pR=zoneWoodDark;
+pB=pGreyD2;
+
+
+[ItemType]  name=Crate;
+ID=crate_med; sprite=1616;
+itemCategory = furnishing;
+journalID=journal_crate;
+weight=500; volume=200;
+special=container;
+special=big; special=sprite2xHeight; special=container4x4; special=containerWood;
+blockWalking=true; blockJumping=true;
+depthMod=1050;
+pR=zoneWoodDark;
+[ItemReaction] 
+ID=crate_med; element=use; newID=crate_med_open; fx=click;
+[ItemType]  name=Crate;
+ID=crate_med_open; sprite=1617;
+itemCategory = furnishing;
+journalID=journal_crate;
+weight=500; volume=200;
+special=container;
+special=big; special=sprite2xHeight; special=container4x4; special=containerWood;
+blockWalking=true; blockJumping=true;
+depthMod=1050;
+pR=zoneWoodDark;
+[ItemReaction] 
+ID=crate_med_open; element=closeContainer; newID=crate_med; fx=click;
+
+[ItemType]  name=Crate (Large);
+ID=crate_big; sprite=1618;
+itemCategory = furnishing;
+journalID=journal_crate;
+weight=500; volume=300;
+special=container;
+special=big; special=sprite2xHeight; special=container5x5; special=containerWood;
+blockLoE=true; blockWalking=true; blockJumping=true;
+depthMod=1050;
+pR=zoneWoodDark;
+[ItemReaction] 
+ID=crate_big; element=use; newID=crate_big_open; fx=click;
+[ItemType]  name=Crate (Large);
+ID=crate_big_open; sprite=1619;
+itemCategory = furnishing;
+journalID=journal_crate;
+weight=500; volume=300;
+special=container;
+special=big; special=sprite2xHeight; special=container5x5; special=containerWood;
+blockLoE=true; blockWalking=true; blockJumping=true;
+depthMod=1050;
+pR=zoneWoodDark;
+[ItemReaction] 
+ID=crate_big_open; element=closeContainer; newID=crate_big; fx=click;
+[JournalEntry]
+ID=journal_crate;
+category=item; halfPage=true;
+title=Crate;
+text=<itemBig=crate_med><title=Crate><brAdj=>Classic cube container. Typically made of wood, often fortified with lateral planks for support. Small crates can be pushed.;
+
+
+[ItemType]  name=Bin;
+itemCategory=furnishing;
+ID=bin_empty; sprite=621;
+journalID=journal_bin;
+weight=10; volume=500;
+blockWalking=true;
+pB=pWood;
+[ItemReaction] 
+ID=bin_empty; element=explode; element=slash; element=smash; element=fire; newID=debris_wood; fx=dust_wood;
+[ItemType]  name=Bin (Cloth);
+itemCategory=furnishing;
+ID=bin_clothes1; sprite=622;
+journalID=journal_bin;
+weight=200; volume=100;
+blockWalking=true;
+pR=pGreen;
+pB=pWood;
+[ItemReaction] 
+ID=bin_clothes1; element=explode; element=slash; element=smash; element=fire; newID=debris_wood; fx=dust_wood; spawnItem=shirt_green;
+[ItemType]  name=Bin (Cloth);
+itemCategory=furnishing;
+ID=bin_clothes2; sprite=622;
+journalID=journal_bin;
+weight=200; volume=100;
+blockWalking=true;
+pR=pBlue;
+pB=pWood;
+[ItemReaction] 
+ID=bin_clothes2; element=explode; element=slash; element=smash; element=fire; newID=debris_wood; fx=dust_wood; spawnItem=shirt_blue;
+[ItemType]  name=Bin (Cloth);
+itemCategory=furnishing;
+ID=bin_clothes3; sprite=622;
+journalID=journal_bin;
+weight=200; volume=100;
+blockWalking=true;
+pR=pCRed;
+pB=pWood;
+[ItemReaction] 
+ID=bin_clothes3; element=explode; element=slash; element=smash;
+element=fire; newID=debris_wood; fx=dust_wood; spawnItem=shirt_red;
+[JournalEntry]
+ID=journal_bin;
+category=item; halfPage=true;
+title=Bin;
+text=<itemBig=bin_empty><title=Bin><brAdj=>A generic, all-purpose bin. Basically a receptacle for whatever. Not much use for travel, as there's no lid.;
+
+[ItemType]  name=Urn;
+itemCategory=furnishing;
+ID=urn_empty1; sprite=653;
+journalID=journal_urn;
+weight=10; volume=500;
+blockWalking=true;
+pR=pYellow6;
+[ItemReaction] 
+ID=urn_empty1; element=explode; element=physical; element=fire; newID=X; fx=dust_glass;
+
+
+[ItemType]  name=Urn;
+ID=urn_empty2; pR=pRedbrown2;
+cloneFrom=urn_empty1;
+[ItemType]  name=Urn;
+ID=urn_empty3; pR=pUnarmored;
+cloneFrom=urn_empty1;
+[ItemType]  name=Urn;
+ID=urn_empty4; pR=pTeal2;
+cloneFrom=urn_empty1;
+
+[ItemType]  name=Fancy Urn;
+ID=urn_fancy1_empty1; sprite=654;
+cloneFrom=urn_empty1; value=40;
+journalID=journal_urn_fancy;
+pR=pRedD; pB=pBlueD;
+[ItemType]  name=Fancy Urn;
+ID=urn_fancy1_empty2; 
+journalID=journal_urn_fancy;
+cloneFrom=urn_fancy1_empty1; value=40;
+pR=pBlueD; pB=pRedD;
+[JournalEntry]
+ID=journal_urn;
+category=item; halfPage=true; rarity=0;
+title=Urn;
+text=<itemBig=urn_empty1><title=Urn><brAdj=>This tall, rounded vase is suitable for carrying any sort of fluid and many sorts of solids. Though of sturdy make, it lacks distinguishing marks and seems designed for function over form.;
+
+[JournalEntry]
+ID=journal_urn_fancy;
+category=item; halfPage=true; rarity=1;
+title=Fancy Urn;
+text=<itemBig=urn_fancy1_empty1><title=Fancy Urn><brAdj=>A stylish wave pattern covers this colorful urn. Many hours went into the making of this vase. Such a fetching display piece could likely fetch a solid price.;
+
+
+[ItemType]  name=Pallet;
+itemCategory=furnishing;
+ID=pallet; sprite=1638; 
+weight=500; volume=300;
+special=itemsOnSameTileAreRaised; special=actorsOnSameTileAreRaised;
+raiseItemsDepth=900; special=raiseActorsDepth200;
+raiseItemsDepthMax=0;
+pB=zoneWood;
+[JournalEntry]
+ID=item_pallet;
+category=item; halfPage=true; rarity=0;
+title=Pallet;
+text=<itemBig=pallet><title=Pallet><brAdj=>A raised platform for supporting crates. Has convenient slots for a pallet jack or other wheeled device, making movement easy.;
+
+[ItemType]  name=Lumber;
+ID=lumber_pile1;  itemCategory=furnishing; 
+journalID=journal_lumber;
+sprite=1697; stackable=true;
+ special=cannotBePickedUp;
+ special=quantityChangesSprite_upTo4;
+ special=actorsOnSameTileAreRaised;
+ special=moveCostOverride_2;
+ pR=zoneWood;
+ pB=zoneWoodDark;
+[ItemReaction] 
+ID=lumber_pile1; element=heavySlash; newID=debris_wood; fx=break_tree; spawnItem=woodPlank; spawnItem=woodPlank; 
+[ItemReaction] 
+ID=lumber_pile1; element=explode; element=fire; fx=burnMany; spawnItem=fire; newID=X;
+[ItemType]  name=Lumber;
+ID=lumber_pile1_long_top; sprite=1729;
+cloneFrom=lumber_pile1;
+[ItemType]  name=Lumber;
+ID=lumber_pile1_long_btm; sprite=1761;
+cloneFrom=lumber_pile1;
+
+[JournalEntry]
+ID=journal_lumber;
+category=item; halfPage=true;
+title=Lumber;
+text=<itemBig=lumber_pile1><title=Lumber><brAdj=>Neatly stacked wood. These logs are too heavy to carry about, so just leave them here. They do slow your movement in combat, but otherwise don't matter.;
+
+[ItemType]  name=Large Bed;
+itemCategory=furnishing;
+ID=largeBed_top; sprite=633;
+journalID=journal_bed;
+ special=sprite2xWidth;
+ special=cannotBePickedUp;
+ special=actorsOnSameTileAreRaised; special=itemsOnSameTileAreRaised; blockWalking=true; blockJumping=true;
+pR=pWood; 
+pB=pBlue;
+[ItemReaction] 
+ID=largeBed_top; element=use; action=offerRest;
+
+[ItemType]  name=Large Bed;
+itemCategory=furnishing;
+ID=largeBed_btm; sprite=665;
+journalID=journal_bed;
+ special=sprite2xWidth;
+ special=cannotBePickedUp;
+ special=actorsOnSameTileAreRaised; special=itemsOnSameTileAreRaised;
+  blockWalking=true; blockJumping=true;
+pR=pWood; 
+pB=pBlue;
+[ItemReaction] 
+ID=largeBed_btm; element=use; action=offerRest;
+
+
+[ItemType]  name=Small Bed;
+itemCategory=furnishing;
+ID=smallBed; sprite=635;
+journalID=journal_bed;
+weight=500; volume=1000;
+ special=cannotBePickedUp;
+ special=sprite2xWidth;
+ special=sprite2xHeight;
+pR=pWood; 
+pB=pBlue;
+
+[ItemType]  name=Small Bed;
+itemCategory=furnishing;
+ID=smallBed_btm; sprite=637;
+journalID=journal_bed;
+weight=500; volume=1000;
+ special=cannotBePickedUp;
+ special=sprite2xWidth;
+ special=sprite2xHeight;
+blockWalking=true; blockJumping=true;
+pR=pWood; 
+pB=pBlue;
+depthMod=900;
+
+[ItemType]  name=Small Bed;
+itemCategory=furnishing;
+ID=smallBed2; 
+cloneFrom=smallBed;
+pR=zoneWoodDark; 
+pB=pGrey1Cloth;
+
+[JournalEntry]
+ID=journal_bed;
+category=item; halfPage=true;
+title=Bed;
+text=<itemBig=smallBed><title=Bed><brAdj=>Cozy-looking bed, complete with sheets and a pillow.;
+
+[ItemType]  name=Rug;
+ID=rug_corner; sprite=1610;
+journalID=journal_rug;
+itemCategory=furnishing;
+special=cannotBePickedUp; special=ignoreBeingRaised;
+special=noTooltips;
+pR=pYellow5; pB=pYellow5; pG=zoneDirt; 
+[ItemReaction] 
+ID=rug_corner; element=fire; element=elec; element=explode; newID=rug_frayed2; fx=fireEmbers;
+[JournalEntry]
+ID=journal_rug;
+category=item; halfPage=true;
+title=Rug;
+text=<itemBig=carpet_regal1_corner><title=Rug><brAdj=>Rugs range from ragged to regal, but their purpose is the same: to keep your feet comfy and clean.;
+
+[ItemType]  name=Rug;
+ID=rug_edge; sprite=1611;
+cloneFrom=rug_corner;
+[ItemType]  name=Rug;
+ID=rug_mid; sprite=1612;
+cloneFrom=rug_corner;
+
+[ItemType]  name=Rug;
+ID=rug_corner3; sprite=1610;
+itemCategory=furnishing;
+special=noTooltips;
+special=cannotBePickedUp; special=ignoreBeingRaised;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true; pB=zoneMisc1; pG=zoneDirt; 
+[ItemReaction] 
+ID=rug_corner3; element=fire; element=elec; element=explode; newID=rug_frayed2; fx=fireEmbers;
+[ItemType]  name=Rug;
+ID=rug_edge3; sprite=1611;
+cloneFrom=rug_corner3;
+[ItemType]  name=Rug;
+ID=rug_mid3; sprite=1612;
+cloneFrom=rug_corner3;
+
+[ItemType]  name=Rug;
+ID=rug_small_corner3; sprite=1770;
+itemCategory=furnishing;
+special=noTooltips;
+special=cannotBePickedUp; special=ignoreBeingRaised;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true; pB=zoneMisc1; pG=pFadeDarker; 
+[ItemType]  name=Rug;
+ID=rug_small_edge3; sprite=1771;
+cloneFrom=rug_small_corner3;
+
+[ItemType]  name=Rug;
+ID=rug_corner_inner1; sprite=1641;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true; pB=zoneMisc2; pG=zoneDirt;
+cloneFrom=rug_corner;
+[ItemType]  name=Rug;
+ID=rug_corner2; sprite=1642;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true; pB=zoneMisc2; pG=zoneDirt;
+cloneFrom=rug_corner;
+[ItemType]  name=Rug;
+ID=rug_edge2; sprite=1643;
+cloneFrom=rug_corner2;
+[ItemType]  name=Rug;
+ID=rug_mid2; sprite=1644;
+cloneFrom=rug_corner2;
+[ItemType]  name=Rug;
+ID=rug_corner_round2; sprite=1645;
+cloneFrom=rug_corner2;
+[ItemType]  name=Rug;
+ID=rug_frayed2; sprite=1647;
+itemCategory=furnishing;
+special=noTooltips;
+special=cannotBePickedUp; 
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+pB=zoneMisc2; pG=zoneDirt;
+
+
+
+---
+
+[ItemType]  name=Carpet;
+ID=carpet_corner1; sprite=1674;
+itemCategory=furnishing;
+journalID=journal_rug;
+special=cannotBePickedUp; special=ignoreBeingRaised;
+special=noTooltips;
+special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
+pB=zoneMisc4; pG=zoneDirt;
+[ItemReaction] 
+ID=carpet_corner1; element=fire; element=elec; element=explode; newID=rug_frayed2; fx=fireEmbers;
+[ItemType]  name=Carpet;
+ID=carpet_edge1; sprite=1675;
+cloneFrom=carpet_corner1;
+[ItemType]  name=Carpet;
+ID=carpet_corner2; sprite=1706;
+cloneFrom=carpet_corner1;
+[ItemType]  name=Carpet;
+ID=carpet_edge2; sprite=1707;
+cloneFrom=carpet_corner1;
+[ItemType]  name=Carpet;
+ID=carpet_corner3; sprite=1738;
+cloneFrom=carpet_corner1;
+[ItemType]  name=Carpet;
+ID=carpet_edge3; sprite=1739;
+cloneFrom=carpet_corner1;
+
+
+[ItemType]  name=Carpet;
+ID=carpet1; sprite=1676;
+cloneFrom=carpet_corner1;
+[ItemType]  name=Carpet;
+ID=carpet2; sprite=1677;
+cloneFrom=carpet_corner1;
+[ItemType]  name=Carpet;
+ID=carpet3; sprite=1678;
+cloneFrom=carpet_corner1;
+[ItemType]  name=Carpet;
+ID=carpet4; sprite=1679;
+cloneFrom=carpet_corner1;
+[ItemType]  name=Carpet;
+ID=carpet5; sprite=1708;
+cloneFrom=carpet_corner1;
+[ItemType]  name=Carpet;
+ID=carpet6; sprite=1709;
+cloneFrom=carpet_corner1;
+[ItemType]  name=Carpet;
+ID=carpet7; sprite=1710;
+cloneFrom=carpet_corner1;
+
+---
+[ItemType]  name=Regal Carpet;
+ID=carpet_regal1_corner; sprite=1614;
+pR=pR; pB=pB; pG=pG;
+itemCategory=furnishing;
+journalID=journal_rug;
+special=cannotBePickedUp; special=ignoreBeingRaised;
+special=noTooltips;
+[ItemType]  name=Regal Carpet;
+ID=carpet_regal1_edge; sprite=1613;
+cloneFrom=carpet_regal1_corner;
+[ItemType]  name=Regal Carpet;
+ID=carpet_regal1; sprite=1615;
+cloneFrom=carpet_regal1_corner;
+
+[ItemType]  name=Poster;
+itemCategory=furnishing; stackable=true;
+ID=posters; sprite=1495;
+pR=pWood;
+special=cannotBePickedUp; special=noTooltips;
+special=quantityChangesSprite_upTo2;
+special=canHangOnWalls;
+
+[ItemType]  name='High Mountain';
+itemCategory=furnishing;
+ID=painting_small1; sprite=1954;
+texture=items_building;
+special=cannotBePickedUp;
+special=canHangOnWalls;
+blockWalking=true; blockJumping=true;
+depthMod=1050;
+[JournalEntry]
+ID=item_painting_small1;
+category=artifact; halfPage=true; rarity=2;
+title='High Mountain';
+text=<itemBig=painting_small1><title='High Mountain'><brAdj=>A simple watercolor painting of a landscape against a cloudy sky.;
+
+[ItemType]  name='Sea Terror';
+ID=painting_small2; sprite=1955;
+cloneFrom=painting_small1;
+[JournalEntry]
+ID=item_painting_small2;
+category=artifact; halfPage=true; rarity=2;
+title='Sea Terror';
+text=<itemBig=painting_small2><title='Sea Terror'><brAdj=>An autobiographical painting of a sea monster the artist encountered on his way sailing home. Its dreadful visage haunts sailors' dreams at night.;
+[ItemType]  name='Snowy Night';
+ID=painting_small3; sprite=1956;
+cloneFrom=painting_small1;
+[JournalEntry]
+ID=item_painting_small3;
+category=artifact; halfPage=true; rarity=2;
+title='Snowy Night';
+text=<itemBig=painting_small3><title='Snowy Night'><brAdj=>A snow-covered landscape painted in muted colors. The painting conveys a sense of serenity and peace.;
+[ItemType]  name='Mountain Convoy';
+ID=painting_small4; sprite=1957;
+cloneFrom=painting_small1;
+[JournalEntry]
+ID=item_painting_small4;
+category=artifact; halfPage=true; rarity=2;
+title='Mountain Convoy';
+text=<itemBig=painting_small4><title='Mountain Convoy'><brAdj=>A group of non-descript travelers haul their gear across a perilous peak. Though the travelers' faces are blank and distant, their postures indicate bravery.;
+[ItemType]  name='Still Life';
+ID=painting_small5; sprite=1958;
+cloneFrom=painting_small1;
+[JournalEntry]
+ID=item_painting_small5;
+category=artifact; halfPage=true; rarity=2;
+title='Still Life';
+text=<itemBig=painting_small5><title='Still Life'><brAdj=>Brown pottery situated on a clean table. Dark shadows cut the scene in half.;
+[ItemType]  name='Peachture';
+ID=painting_small6; sprite=1959;
+cloneFrom=painting_small1;
+[JournalEntry]
+ID=item_painting_small6;
+category=artifact; halfPage=true; rarity=2;
+title='Peachture';
+text=<itemBig=painting_small6><title='Peachture'><brAdj=>A playful still life of a large peach lying in the grass. Clouds obscure the edges of the frame, as if the peach is being viewed from the sky.;
+[ItemType]  name='Aggression';
+ID=painting_small7; sprite=1960;
+cloneFrom=painting_small1;
+[JournalEntry]
+ID=item_painting_small7;
+category=artifact; halfPage=true; rarity=2;
+title='Aggression';
+text=<itemBig=painting_small7><title='Aggression'><brAdj=>Highly detailed view of a human mouth. Though the man is smiling broadly, his grin conveys a sense of menace.;
+[ItemType]  name='Looking Back';
+ID=painting_small8; sprite=1961;
+cloneFrom=painting_small1;
+[JournalEntry]
+ID=item_painting_small8;
+category=artifact; halfPage=true; rarity=2;
+title='Looking Back';
+text=<itemBig=painting_small8><title='Looking Back'><brAdj=>Simplistic picture of a human face looking in from the edge of the frame. The left side of the painting is completely blank.;
+[ItemType]  name='Sky spot';
+ID=painting_small9; sprite=1962;
+cloneFrom=painting_small1;
+[JournalEntry]
+ID=item_painting_small9;
+category=artifact; halfPage=true; rarity=2;
+title='Sky spot';
+text=<itemBig=painting_small9><title='Sky spot'><brAdj=>A human figure in a relaxed pose takes up the bottom right half of this picture. She appears to be observing some strange clouds forming in the sky.;
+[ItemType]  name='Boat';
+ID=painting_small10; sprite=1963;
+cloneFrom=painting_small1;
+[JournalEntry]
+ID=item_painting_small10;
+category=artifact; halfPage=true; rarity=3; rewardMod=-250;
+title='Boat';
+text=<itemBig=painting_small10><title='Boat'><brAdj=>This painting was hailed for its abstract simplicity. It was later revealed to be made by a 6-year old child, which made critics adore it even more.;
+[ItemType]  name='Crystalline';
+ID=painting_small11; sprite=1964;
+cloneFrom=painting_small1;
+[JournalEntry]
+ID=item_painting_small11;
+category=artifact; halfPage=true; rarity=2;
+title='Crystalline';
+text=<itemBig=painting_small11><title='Crystalline'><brAdj=>Closeup of a strange emerald-like material. The reflections and distortions of light within are realistic and convincing, yet (intentionally?) incorrect.;
+[ItemType]  name='Judgment';
+ID=painting_small12; sprite=1965;
+cloneFrom=painting_small1;
+[JournalEntry]
+ID=item_painting_small12;
+category=artifact; halfPage=true; rarity=2;
+title='Judgment';
+text=<itemBig=painting_small12><title='Judgment'><brAdj=>Still life of an old Rasmen-made mask. The shadows are accentuated to make the face appear even more judgmental and stern.;
+[ItemType]  name='Jungle Sample';
+ID=painting_small13; sprite=1966;
+cloneFrom=painting_small1;
+[JournalEntry]
+ID=item_painting_small13;
+category=artifact; halfPage=true; rarity=2;
+title='Jungle Sample';
+text=<itemBig=painting_small13><title='Jungle Sample'><brAdj=>This painting was originally crafted by a researcher interested only in cataloging the flora and fauna. The collector responsible for discovering it called it a 'masterpiece of nature's beauty'.;
+[ItemType]  name='Master Engraving';
+ID=painting_small14; sprite=1967;
+cloneFrom=painting_small1;
+[JournalEntry]
+ID=item_painting_small14;
+category=artifact; halfPage=true; rarity=2;
+title='Master Engraving';
+text=<itemBig=painting_small14><title='Master Engraving'><brAdj=>This strangely captivating piece depicts an engraving of an engraving of cheese. How you can tell it is an engraving of an engraving, you aren't sure.;
+[ItemType]  name='Earthquake';
+ID=painting_small15; sprite=1968;
+cloneFrom=painting_small1;
+[JournalEntry]
+ID=item_painting_small15;
+category=artifact; halfPage=true; rarity=2;
+title='Earthquake';
+text=<itemBig=painting_small15><title='Earthquake'><brAdj=>Small landscape of the aftermath of a severe earthquake in the forest. Few trees are left standing.;
+[ItemType]  name='Marble';
+ID=painting_small16; sprite=1969;
+cloneFrom=painting_small1;
+[JournalEntry]
+ID=item_painting_small16;
+category=artifact; halfPage=true; rarity=2;
+title='Marble';
+text=<itemBig=painting_small16><title='Marble'><brAdj=>A simplistic yet compelling image of a marble floor. The artist has gone on record as hating this particular piece, despite its popularity.;
+[ItemType]  name='Fruit Bouquet';
+ID=painting_small17; sprite=1970;
+cloneFrom=painting_small1;
+[JournalEntry]
+ID=item_painting_small17;
+category=artifact; halfPage=true; rarity=2;
+title='Fruit Bouquet';
+text=<itemBig=painting_small17><title='Fruit Bouquet'><brAdj=>A lovingly rendered bouquet of flowers, except each flower has been replaced by a brightly colored fruit. Strawberries feature prominently.;
+[ItemType]  name='Allseeing';
+ID=painting_small18; sprite=1971;
+cloneFrom=painting_small1;
+[JournalEntry]
+ID=item_painting_small18;
+category=artifact; halfPage=true; rarity=2;
+title='Allseeing';
+text=<itemBig=painting_small18><title='Allseeing'><brAdj=>A painting of a statue of Jasce the God-king. Clergy are expected, but not required, to have at least one such painting in their abodes.;
+[ItemType]  name='Soul in Prison';
+ID=painting_small19; sprite=1972;
+cloneFrom=painting_small1;
+[JournalEntry]
+ID=item_painting_small19;
+category=artifact; halfPage=true; rarity=2;
+title='Soul in Prison';
+text=<itemBig=painting_small19><title='Soul in Prison'><brAdj=>Sharp golden light cast upon a stone wall. The paint is laid on thick as paste, yet the lines remain sharp and clean.;
+[ItemType]  name='Dreams';
+ID=painting_small20; sprite=1973;
+cloneFrom=painting_small1;
+[JournalEntry]
+ID=item_painting_small20;
+category=artifact; halfPage=true; rarity=2;
+title='Dreams';
+text=<itemBig=painting_small20><title='Dreams'><brAdj=>Blurry figures stand upon a dark green velvet field. A lone tree stands in the background. ...on closer inspection, the tree is actually a tall, thin glass of beer.;
+[ItemType]  name='Melted Metal';
+ID=painting_small21; sprite=1974;
+cloneFrom=painting_small1;
+[JournalEntry]
+ID=item_painting_small21;
+category=artifact; halfPage=true; rarity=2;
+title='Melted Metal';
+text=<itemBig=painting_small21><title='Melted Metal'><brAdj=>Liquid metal pouring over stone and rubble. Small reflections in the metal reveal a number of Rasmen onlookers.;
+[ItemType]  name='Flames';
+ID=painting_small22; sprite=1975;
+cloneFrom=painting_small1;
+[JournalEntry]
+ID=item_painting_small22;
+category=artifact; halfPage=true; rarity=2;
+title='Flames';
+text=<itemBig=painting_small22><title='Flames'><brAdj=>An unnatural-looking green flame bursts forth upside down. When selling the piece, the artist was very explicit that the painting is not upside down, the flame is.;
+[ItemType]  name='Lock Detail';
+ID=painting_small23; sprite=1976;
+cloneFrom=painting_small1;
+[JournalEntry]
+ID=item_painting_small23;
+category=artifact; halfPage=true; rarity=2;
+title='Lock Detail';
+text=<itemBig=painting_small23><title='Lock Detail'><brAdj=>Extreme closeup of a lock on a bronze chest. Rusty scratches cover the exterior of the lock, as if the chest has been opened and closed a thousand times.;
+[ItemType]  name='Crub Life';
+ID=painting_small24; sprite=1977;
+cloneFrom=painting_small1;
+[JournalEntry]
+ID=item_painting_small24;
+category=artifact; halfPage=true; rarity=3; rewardMod=-950;
+title='Crub Life';
+text=<itemBig=painting_small24><title='Crub Life'><brAdj=><finalTextIf=An epic retelling of Crub history!=mainPlayerIsActorType:crub>According to the Crub, this is an epic retelling of Crub history, but all I see is a picture of a crab.;
+
+[ItemType]  name='Two Flowers';
+itemCategory=furnishing;
+ID=painting_wide1; sprite=1987;
+texture=items_building;
+special=cannotBePickedUp;
+special=canHangOnWalls;
+special=sprite2xWidth;
+blockWalking=true; blockJumping=true;
+depthMod=1050;
+[JournalEntry]
+ID=item_painting_wide1;
+category=artifact; halfPage=true; rarity=2;
+title='Two Flowers';
+text=<itemBig=painting_wide1><title='Two Flowers'><brAdj=>A very pretty, idyllic-looking landscape that prominently features two azaleas. Though the grass is blowing in the wind, the two flowers stand completely still.;
+[ItemType]  name='Night Eye';
+ID=painting_wide2; sprite=1989;
+cloneFrom=painting_wide1;
+[JournalEntry]
+ID=item_painting_wide2;
+category=artifact; halfPage=true; rarity=2;
+title='Night Eye';
+text=<itemBig=painting_wide2><title='Night Eye'><brAdj=>Creepy eyes glare down over a toothy grin. The face is slightly wall-eyed. Some critics find the piece comedic, while others see it as disturbing.;
+[ItemType]  name='Endless Dunes';
+ID=painting_wide3; sprite=1991;
+cloneFrom=painting_wide1;
+[JournalEntry]
+ID=item_painting_wide3;
+category=artifact; halfPage=true; rarity=2;
+title='Endless Dunes';
+text=<itemBig=painting_wide3><title='Endless Dunes'><brAdj=>A high angle of an orange desert tightly packed with dunes. The paint glitters from certain angles, as if individual grains of sand are shining.;
+[ItemType]  name='Decision';
+ID=painting_wide4; sprite=1993;
+cloneFrom=painting_wide1;
+[JournalEntry]
+ID=item_painting_wide4;
+category=artifact; halfPage=true; rarity=2;
+title='Decision';
+text=<itemBig=painting_wide4><title='Decision'><brAdj=>A determined-looking set of eyes stares across the frame. A small scar marks one of his bushy eyebrows. The man's bumpy nose appears to have been broken in the past.;
+
+[ItemType]  name='Knight #7';
+itemCategory=furnishing;
+ID=painting_huge1; sprite=1891;
+texture=items_building;
+special=cannotBePickedUp;
+special=canHangOnWalls;
+special=sprite2xWidth; special=sprite2xHeight;
+blockWalking=true; blockJumping=true;
+depthMod=1050;
+[JournalEntry]
+ID=item_painting_huge1;
+category=artifact; halfPage=true; rarity=2;
+title='Knight #7';
+text=<itemBig=painting_huge1><title='Knight #7'><brAdj=>A portrait of a rasmen knight in full armor with distinguishing marks removed. Part of a series of paintings meant to depict heroism without preference to nation or cause.;
+[ItemType]  name='Self-portrait';
+ID=painting_huge2; sprite=1897;
+cloneFrom=painting_huge1;
+[JournalEntry]
+ID=item_painting_huge2;
+category=artifact; halfPage=true; rarity=2;
+title='Self-portrait';
+text=<itemBig=painting_huge2><title='Self-portrait'><brAdj=>Some painters take their self-portrait seriously - others do this. Every wrinkle and fold is given ample attention and detail.;
+[ItemType]  name='Knight #4';
+ID=painting_huge3; sprite=1899;
+cloneFrom=painting_huge1;
+[JournalEntry]
+ID=item_painting_huge3;
+category=artifact; halfPage=true; rarity=2;
+title='Knight #4';
+text=<itemBig=painting_huge3><title='Knight #4'><brAdj=>A human knight struggling after a close battle. Some theorize this was a portrait of a Dralir rebel fighting against Jasce, but all emblems on the armor have been obscured.;
+
+[ItemType]  name=Wall Mount;
+itemCategory=furnishing;
+ID=mount_item; sprite=662;
+journalID=journal_wall_mount;
+pR=zoneWood;
+pB=pYellow;
+special=cannotBePickedUp;
+special=canHangOnWalls; special=itemsIgnoreBlockWalking;
+
+[ItemType]  name=Wall Mount;
+itemCategory=furnishing; 
+ID=mount_item_big; sprite=693;
+journalID=journal_wall_mount;
+pR=zoneWood;
+pB=pYellow;
+special=cannotBePickedUp;
+special=canHangOnWalls; special=itemsIgnoreBlockWalking;
+special=sprite2xWidth;
+
+[ItemType]  name=Entrailer;
+itemCategory=furnishing;
+ID=mount_redwyrm; sprite=1503;
+journalID=journal_small_wyrm_red;
+special=cannotBePickedUp; special=canHangOnWalls;
+[ItemType]  name=Reylock Lure;
+itemCategory=furnishing;
+ID=mount_reylock; sprite=1502;
+journalID=journal_reylock;
+special=cannotBePickedUp; special=canHangOnWalls; 
+[ItemType]  name=Angelfly Stinger;
+itemCategory=furnishing;
+ID=mount_angelfly; sprite=1535;
+journalID=journal_angelfly;
+special=cannotBePickedUp; special=canHangOnWalls; 
+[ItemType]  name=Amnitorsk;
+itemCategory=furnishing;
+ID=mount_turtle; sprite=1534;
+journalID=journal_turtle;
+special=cannotBePickedUp; special=canHangOnWalls; 
+[ItemType]  name=Spidest;
+itemCategory=furnishing;
+ID=mount_spidest; sprite=1532;
+journalID=journal_spidest;
+special=cannotBePickedUp; special=canHangOnWalls; special=sprite2xWidth;
+
+[JournalEntry]
+ID=journal_wall_mount;
+category=item; halfPage=true;
+title=Wall Mount;
+text=<itemBig=mount_item><title=Wall Mount><brAdj=>A nice mount for whatever object you care to show off. Put some shiny weapon or armor or something up there!;
+
+
+
+[ItemType]  name=Coffin;
+itemCategory=furnishing;
+ID=coffin_closed; sprite=563;
+journalID=journal_coffin;
+weight=500; volume=300;
+pR=zoneStoneDark;
+special=huge; special=cannotBePickedUp; special=sprite2xHeight; special=container; special=container2x3; special=containerSkull;
+blockWalking=true; blockJumping=true;
+depthMod=1050;
+[ItemReaction] 
+ID=coffin_closed; element=use; newID=coffin_open; fx=RockDrag;
+
+[ItemType]  name=Coffin;
+itemCategory=furnishing;
+ID=coffin_open; sprite=564;
+journalID=journal_coffin;
+weight=500; volume=300;
+pR=zoneStoneDark;
+special=huge; special=cannotBePickedUp; special=sprite2xHeight;
+special=container; special=container2x3; special=containerSkull;
+blockWalking=true; blockJumping=true;
+depthMod=1050;
+[ItemReaction] 
+ID=coffin_open; element=closeContainer; newID=coffin_closed; fx=RockDrag;
+
+[ItemType]  name=Coffin;
+itemCategory=furnishing;
+ID=coffin_empty; sprite=565;
+journalID=journal_coffin;
+weight=500;
+pR=zoneStoneDark;
+special=big; special=cannotBePickedUp; special=sprite2xHeight; special=itemsIgnoreBlockWalking; 
+special=itemsOnSameTileAreRaised;
+blockWalking=true; blockJumping=true;
+depthMod=1050;
+
+[JournalEntry]
+ID=journal_coffin;
+category=item; halfPage=true; rarity=1;
+title=Coffin;
+text=<itemBig=coffin_closed><title=Coffin><brAdj=>Stone container for the dead. Beliefs on what purpose a coffin serves vary, but nearly all of them agree opening ancient coffins is unwise.;
+
+[ItemType]  name=Sarcophagus;
+itemCategory=furnishing;
+ID=sarcophagus; sprite=531;
+weight=500;
+pR=zoneStoneDark;
+special=big; special=cannotBePickedUp; special=sprite2xWidth; special=canAssignSpecialTC; 
+blockWalking=true; blockJumping=true;
+depthMod=1050;
+[ItemReaction] 
+ID=sarcophagus; element=mechanical; action=moveSelf;
+[JournalEntry]
+ID=item_sarcophagus;
+category=item; halfPage=true; rarity=1;
+title=Sarcophagus;
+text=<itemBig=sarcophagus><title=Sarcophagus><brAdj=>An ornate, sealed receptacle, intended to carry and honor the dead. None of its markings betray its contents.;
+
+[ItemType]  name=Jasce Statue;
+itemCategory=furnishing;
+ID=statue_jasce; sprite=1429;
+weight=5000;
+journalID=journal_statue_jasce;
+pR=zoneStoneDark; special=canAssignSpecialTC; 
+special=big; special=cannotBePickedUp; special=sprite2xWidth; special=sprite2xHeight; special=canHangOnWalls;
+blockWalking=true; blockJumping=true;
+depthMod=1050;
+element=life;
+[ItemReaction] 
+ID=statue_jasce; element=mechanical; action=moveSelf;
+
+[ItemType]  name=Jasce Statue;
+ID=statue_jasce2;
+cloneFrom=statue_jasce;
+pR=pYellow4;
+
+[ItemType]  name=Jasce Statue;
+itemCategory=furnishing;
+ID=statue_jasce_small; sprite=1431;
+weight=500;
+journalID=journal_statue_jasce;
+pR=zoneStoneDark; special=canAssignSpecialTC; 
+special=big; special=cannotBePickedUp; special=canHangOnWalls;
+blockWalking=true; blockJumping=true; 
+[ItemReaction] 
+ID=statue_jasce_small; element=mechanical; action=moveSelf;
+[JournalEntry]
+ID=journal_statue_jasce;
+category=item; halfPage=true; rarity=1;
+title=Jasce Statue;
+text=<itemBig=statue_jasce_small><title=Jasce Statue><brAdj=>Idol dedicated to the God-king Jasce. This statue was crafted to resemble the face he wears most often.;
+
+[ItemType]  name=Jasce Statue;
+ID=statue_jasce_small2;
+cloneFrom=statue_jasce_small;
+pR=pYellow4;
+
+
+[ItemType]  name=Statue Frill;
+itemCategory=furnishing; stackable=true;
+ID=statue_frill; sprite=1463;
+weight=500;
+pR=zoneStoneDark;
+special=cannotBePickedUp; special=noTooltips;
+special=quantityChangesSprite_upTo2;
+blockWalking=true; blockJumping=true;
+
+[ItemType]  name=Wall Frill;
+itemCategory=furnishing;
+ID=wall_frill; sprite=1465;
+weight=500;
+depthMod=2050;
+pR=zoneStone;
+special=cannotBePickedUp; special=noTooltips;
+[ItemType]  name=Wall Frill;
+ID=wall_frill2; sprite=1433;
+cloneFrom=wall_frill;
+[ItemType]  name=Wall Frill;
+ID=wall_frill3; sprite=1434;
+cloneFrom=wall_frill;
+[ItemType]  name=Wall Frill;
+ID=wall_frill4; sprite=1435;
+cloneFrom=wall_frill;
+[ItemType]  name=Wall Frill;
+ID=wall_frill5; sprite=1466;
+cloneFrom=wall_frill;
+depthMod=0;
+[ItemType]  name=Carving;
+ID=bust_king1; sprite=1372;
+itemCategory=furnishing;
+journalID=journal_bust_king;
+special=cannotBePickedUp;
+special=canHangOnWalls;
+special=adjustSpriteYUp16;
+pR=pYellow;
+pB=pR;
+depthMod=0;
+[ItemType]  name=Carving;
+ID=bust_king2; sprite=1373;
+cloneFrom=bust_king1;
+
+[JournalEntry]
+ID=journal_bust_king;
+category=item; halfPage=true; rarity=1;
+title=Carving;
+text=<itemBig=bust_king2><title=Carving><brAdj=>Bust depicting the Miser-king Jarrod. Jarrod insisted that all important areas be surveyed by his likeness, as if that would somehow give him divine surveillance over his domain.;
+
+[ItemType]  name=Cracked Statue;
+ID=statue_king1; sprite=1374;
+description=Statue of the Miser-king Jarrod.;
+itemCategory=furnishing;
+special=cannotBePickedUp;
+special=canHangOnWalls;
+special=sprite2xHeight;
+pR=pYellow;
+pB=pR;
+depthMod=1050;
+blockWalking=true;
+blockJumping=true;
+[ItemReaction] 
+ID=statue_king1; element=explode; element=shatter; fx=dust_stone_big; newID=statue_king1_destroyed; spawnItem=powerlessKey;
+
+
+[JournalEntry]
+ID=item_statue_king1;
+category=item; halfPage=true; rarity=1;
+title=Cracked Statue;
+text=<itemBig=statue_king1><title=Cracked Statue><brAdj=>Statue depicting the late Miser-king Jarrod. Jarrod spent exorbitant amounts to have his likeness recreated all over the Golden Palace, but refused to ever pose for them. It is thought that most of his statues were modeled after a lookalike. This statue is cracked, but it would take more than a hammer to break it.;
+
+[ItemType]  name=Destroyed Statue;
+ID=statue_king1_destroyed; sprite=1375;
+itemCategory=furnishing;
+special=cannotBePickedUp;
+special=canHangOnWalls;
+special=sprite2xHeight;
+special=itemsIgnoreBlockWalking;
+special=noTooltip;
+pR=pYellow;
+pB=pR;
+blockWalking=true;
+blockJumping=true;
+
+[ItemType]  name=Seven Stones;
+ID=monument_7stones1; sprite=1281;
+journalID=journal_monument_7stones; texture=items_misc;
+itemCategory=furnishing;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=sprite2xHeight;
+depthMod=1050;
+blockWalking=true; blockJumping=true; blockLoE=true;
+
+[ItemType]  name=Seven Stones;
+ID=monument_7stones2; sprite=1282;
+cloneFrom=monument_7stones1;
+[ItemType]  name=Seven Stones;
+ID=monument_7stones3; sprite=1283;
+cloneFrom=monument_7stones1;
+[JournalEntry]
+ID=journal_monument_7stones;
+category=artifact; halfPage=true; rarity=3; rewardMod=-700;
+title=Seven Stones;
+text=<itemBig=monument_7stones1><title=Seven Stones><brAdj=>Religious relic of supreme importance. These stones document 6 Virtues and 7 Eras, engraved in Voidrock - a material so impossibly hard, yet brittle, that there is no known method of carving it. The ancient Graven writings on them have been translated by many sources - often coming to contradictory conclusions. The top of the 7th Stone was broken off and never recovered.;
+
+
+[ItemType]  name=Monument;
+itemCategory=furnishing;
+ID=statue_monument1; sprite=1437;
+weight=5000;
+journalID=journal_statue_monument;
+pR=pRedbrown2;
+special=big; special=cannotBePickedUp; special=sprite2xHeight; special=canHangOnWalls;
+blockWalking=true; blockJumping=true; blockLoE=true;
+depthMod=1050;
+[ItemType]  name=Monument;
+itemCategory=furnishing;
+ID=statue_monument2; sprite=1438;
+cloneFrom=statue_monument1;
+[ItemType]  name=Monument;
+itemCategory=furnishing;
+ID=statue_monument_both; sprite=1437; special=sprite2xWidth;
+cloneFrom=statue_monument1;
+[JournalEntry]
+ID=journal_statue_monument;
+category=artifact; halfPage=true; rarity=4;
+title=Monument;
+text=<itemBig=statue_monument_both><title=Monument><brAdj=>A monument carved with many perfectly circular holes that make up an odd symbol. The symbol doesn't belong to any religion you know of.;
+
+[ItemType]  name=Stone Sphere;
+ID=statue_orb1; sprite=912;
+texture=items_building;
+itemCategory=furnishing;
+special=cannotBePickedUp;
+special=canHangOnWalls;
+pR=zoneStone;
+pB=zoneStoneDark;
+pG=pFadeDarker;
+blockWalking=true; blockJumping=true;
+[ItemType]  name=Broken Sphere;
+ID=statue_orb2; sprite=913;
+cloneFrom=statue_orb1;
+
+[ItemType]  name=Elementalist Stone;
+ID=statue_elem1; sprite=914;
+journalID=journal_statue_elem;
+cloneFrom=statue_orb1;
+
+[ItemType]  name=<icon=skill_Ice> Elementalist Stone;
+ID=statue_elem_ice1; sprite=915;
+cloneFrom=statue_elem1;
+[ItemReaction] 
+ID=statue_elem_ice1; element=prayer; action=elemStone_ice_act;
+[ItemType]  name=<icon=skill_Fire> Elementalist Stone;
+ID=statue_elem_fire1; sprite=916;
+cloneFrom=statue_elem1;
+[ItemReaction] 
+ID=statue_elem_fire1; element=prayer; action=elemStone_fire_act;
+[ItemType]  name=<icon=skill_Elec> Elementalist Stone;
+ID=statue_elem_elec1; sprite=917;
+cloneFrom=statue_elem1;
+[ItemReaction] 
+ID=statue_elem_elec1; element=prayer; action=elemStone_elec_act;
+[ItemType]  name=<icon=skill_Wind> Elementalist Stone;
+ID=statue_elem_wind1; sprite=918;
+cloneFrom=statue_elem1;
+[ItemReaction] 
+ID=statue_elem_wind1; element=prayer; action=elemStone_wind_act;
+[ItemType]  name=<icon=skill_Life> Elementalist Stone;
+ID=statue_elem_life1; sprite=919;
+cloneFrom=statue_elem1;
+[ItemReaction] 
+ID=statue_elem_life1; element=prayer; action=elemStone_life_act;
+[ItemType]  name=<icon=skill_Ruin> Elementalist Stone;
+ID=statue_elem_ruin1; sprite=920;
+cloneFrom=statue_elem1;
+[ItemReaction] 
+ID=statue_elem_ruin1; element=prayer; action=elemStone_ruin_act;
+
+[ItemType]  name=Broken Stone;
+ID=statue_elem2; sprite=921;
+cloneFrom=statue_elem1;
+[JournalEntry]
+ID=journal_statue_elem;
+category=item; halfPage=true; rarity=2;
+title=Elementalist Stone;
+text=<itemBig=statue_elem1><title=Elementalist Stone><brAdj=>Stones like these are the primary place of worship for Elementalists. They are most often found in natural settings for maximum exposure to the elements.;
+
+[ItemType]  name=Lateen Sail;
+itemCategory=furnishing;
+journalID=journal_lateenSail;
+ID=sail_brace_furled; sprite=1345;
+texture=items_building;
+weight=500; special=cannotBePickedUp; special=cannotEverBePushed; 
+special=canBeInsideWalls; special=canFloatOnWater; special=sprite2xHeight; special=sprite2xWidth;
+pR=zoneWood; pB=pGrey;
+depthMod=2050;
+
+[ItemType]  name=Lateen Sail;
+itemCategory=furnishing;
+journalID=journal_lateenSail;
+ID=sail_brace; sprite=1410;
+texture=items_building;
+weight=500; special=cannotBePickedUp; special=cannotEverBePushed; 
+special=canBeInsideWalls; special=canFloatOnWater; special=sprite2xHeight;
+pR=zoneWood; pB=pGrey;
+depthMod=2050;
+
+[ItemType]  name=Lateen Sail;
+itemCategory=furnishing;
+journalID=journal_lateenSail;
+ID=sail_cloth; sprite=1441;
+texture=items_building;
+weight=500; special=cannotBePickedUp; special=cannotEverBePushed; 
+special=canBeInsideWalls; special=canFloatOnWater;
+pR=zoneWood; pB=pGrey;
+depthMod=2050;
+
+[ItemType]  name=Lateen Sail;
+itemCategory=furnishing;
+journalID=journal_lateenSail;
+ID=sail_brace_mid; sprite=1409;
+texture=items_building;
+weight=500; special=cannotBePickedUp; special=cannotEverBePushed; 
+special=canBeInsideWalls; special=canFloatOnWater;
+pR=zoneWood; pB=pGrey;
+depthMod=2050;
+
+[JournalEntry]
+ID=journal_lateenSail;
+category=item; halfPage=true; rarity=1;
+title=Lateen Sail;
+text=<itemBig=sail_brace><title=Lateen Sail><brAdj=>A triangular sail that offers good maneuverability, even allowing the ship to tack against the wind.;
+
+
+
+[ItemType]  name=Pole;
+itemCategory=furnishing;
+ID=mast_base; sprite=1380;
+texture=items_building;
+weight=500; special=cannotBePickedUp; special=cannotEverBePushed; 
+special=canBeInsideWalls; special=canFloatOnWater;
+pR=zoneWood;
+depthMod=1050;
+blockWalking=true; blockJumping=true; blockLoE=true;
+
+[ItemType]  name=Pole;
+itemCategory=furnishing;
+ID=mast_base_rope; sprite=1412;
+texture=items_building;
+weight=500; special=cannotBePickedUp; special=cannotEverBePushed; 
+special=canBeInsideWalls; special=canFloatOnWater;
+pR=zoneWood; pG=pYellow;
+depthMod=1050;
+blockWalking=true; blockJumping=true; blockLoE=true;
+
+[ItemType]  name=Pole;
+itemCategory=furnishing;
+ID=mast; sprite=1413;
+texture=items_building;
+weight=500; special=cannotBePickedUp; special=cannotEverBePushed; 
+special=canBeInsideWalls; special=canFloatOnWater;
+pR=zoneWood;
+depthMod=2050;
+
+[ItemType]  name=Pole;
+itemCategory=furnishing;
+ID=mast_rope; sprite=1381;
+texture=items_building;
+weight=500; special=cannotBePickedUp; special=cannotEverBePushed; 
+special=canBeInsideWalls; special=canFloatOnWater;
+pR=zoneWood; pG=pYellow;
+depthMod=2050;
+
+
+
+[ItemType]  name=Rigging;
+itemCategory=furnishing; 
+ID=rigging_beneath; sprite=1449;
+texture=items_building;
+ pR=zoneWoodDark; pG=pYellow; pB=pGrey1;
+special=cannotBePickedUp; special=cannotEverBePushed; special=drawSpecialTC;
+special=canBeInsideWalls; special=canFloatOnWater; special=canAssignSpecialTC;
+blockWalking=true; blockJumping=true; 
+[ItemType]  name=Rigging;
+itemCategory=furnishing; 
+ID=rigging_above; sprite=1449;
+texture=items_building;
+ pR=zoneWoodDark; pG=pYellow; pB=pGrey1;
+special=cannotBePickedUp; special=cannotEverBePushed; special=drawSpecialTCTopLayer;
+special=canBeInsideWalls; special=canFloatOnWater; special=canAssignSpecialTC;
+blockWalking=true; blockJumping=true; 
+
+
+[ItemType]  name=Railing;
+itemCategory=furnishing;
+ID=railing_horiz; sprite=1415;
+texture=items_building;
+weight=500; special=cannotBePickedUp; special=cannotEverBePushed; 
+special=canBeInsideWalls; special=canFloatOnWater;
+pR=zoneWoodDark;
+depthMod=1050;
+
+
+[ItemType]  name=Railing;
+itemCategory=furnishing;
+ID=railing_Corner_L; sprite=1414;
+cloneFrom=railing_horiz;
+
+[ItemType]  name=Railing;
+itemCategory=furnishing;
+ID=railing_Corner_L2; sprite=1382;
+cloneFrom=railing_horiz;
+
+[ItemType]  name=Railing;
+itemCategory=furnishing;
+ID=railing_Corner_R; sprite=1416;
+cloneFrom=railing_horiz;
+
+[ItemType]  name=Railing;
+itemCategory=furnishing;
+ID=railing_Corner_R2; sprite=1384;
+cloneFrom=railing_horiz;
+
+[ItemType]  name=Railing;
+itemCategory=furnishing;
+ID=railing_vertical; sprite=1419;
+cloneFrom=railing_horiz;
+
+[ItemType]  name=Railing;
+itemCategory=furnishing;
+ID=railing_vertical_half; sprite=1420;
+cloneFrom=railing_horiz;
+[ItemType]  name=Railing;
+itemCategory=furnishing;
+ID=railing_vertical_half_btm; sprite=1387;
+cloneFrom=railing_horiz;
+[ItemType]  name=Railing;
+itemCategory=furnishing;
+ID=railing_vertical_half_btm2; sprite=1388;
+cloneFrom=railing_horiz;
+[ItemType]  name=Railing;
+itemCategory=furnishing;
+ID=railing_vertical_half_end; sprite=1385;
+cloneFrom=railing_horiz;
+[ItemType]  name=Railing;
+itemCategory=furnishing;
+ID=railing_End_R; sprite=1417;
+cloneFrom=railing_horiz;
+[ItemType]  name=Railing;
+itemCategory=furnishing;
+ID=railing_End_L; sprite=1418;
+cloneFrom=railing_horiz;
+
+
+
+
+[ItemType]  name=Low Railing;
+itemCategory=furnishing;
+ID=boat_rail; sprite=1444;
+texture=items_building;
+weight=500; special=cannotBePickedUp; special=cannotEverBePushed; special=noTooltip; 
+special=canBeInsideWalls; special=canFloatOnWater;
+pR=zoneWoodDark;
+depthMod=1050;
+[ItemType]  name=Low Railing End;
+itemCategory=furnishing;
+ID=boat_rail_endL; sprite=1443;
+cloneFrom=boat_rail;
+[ItemType]  name=Low Railing End;
+itemCategory=furnishing;
+ID=boat_rail_endR; sprite=1445;
+cloneFrom=boat_rail;
+[ItemType]  name=Low Railing Corner;
+itemCategory=furnishing;
+ID=boat_rail_corner; sprite=1446;
+cloneFrom=boat_rail;
+
+
+
+
+[ItemType]  name=Gravestone;
+ID=gravestone1; sprite=1291; weight=900; volume=300;
+itemCategory=furnishing;
+special=cannotBePickedUp; special=big;
+blockWalking=true; blockJumping=true;
+pR=zoneStoneDark; pG=zoneGrass;
+journalID=journal_gravestone;
+element=ruin;
+
+[ItemType]  name=Gravestone;
+ID=gravestone2; sprite=1292;
+cloneFrom=gravestone1;
+
+[ItemType]  name=Gravestone;
+ID=gravestone3; sprite=1293;
+cloneFrom=gravestone1;
+[ItemType]  name=Gravestone;
+ID=gravestone4; sprite=1290;
+cloneFrom=gravestone1;
+[JournalEntry]
+ID=journal_gravestone;
+category=item; halfPage=true; rarity=1;
+title=Gravestone;
+text=<itemBig=gravestone1><title=Gravestone><brAdj=>Stone monuments to mark the burial of the deceased. Commonly inscribed with details of the deceased's life and accomplishments - alternately, they may be inscribed with elemental symbols to better commend them to the elemental spirits.;
+
+
+[ItemType]  name=Huge Rope;
+ID=rope_pile_huge1; sprite=1516;
+journalID=journal_rope_huge;
+description=; itemCategory=furnishing;
+special=cannotBePickedUp; special=noTooltips; special=cannotEverBePushed; 
+special=canHangOnWalls; special=canFloatOnWater; special=moveCostOverride_2; 
+pR=p50;
+[ItemReaction] 
+ID=rope_pile_huge1; element=fire; newID=fire;
+
+[ItemType]  name=Huge Rope;
+ID=rope_pile_huge2; sprite=1519;
+cloneFrom=rope_pile_huge1;
+
+[ItemType]  name=Huge Rope;
+ID=rope_huge1; sprite=1517;
+journalID=journal_rope_huge;
+itemCategory=furnishing;
+special=cannotBePickedUp; special=noTooltips; special=cannotEverBePushed; 
+special=canHangOnWalls; special=canFloatOnWater; 
+pR=p50;
+[ItemType]  name=Huge Rope;
+ID=rope_huge2; sprite=1518;
+cloneFrom=rope_huge1;
+[ItemReaction] 
+ID=rope_huge1; element=fire; newID=fire;
+
+[JournalEntry]
+ID=journal_rope_huge;
+category=item; halfPage=true;
+title=Lumber;
+text=<itemBig=rope_pile_huge2><title=Huge Rope><brAdj=>Pile of massive rope. Used for many purposes on ships, rigging, or even machinery. This particular rope is too thick and bulky to be carried or used by travelers.;
+
+
+----------------BOAT PARTS
+
+
+[ItemType]  name=Forecastle Corner;
+itemCategory=furnishing;
+ID=boat_fcastle_corner; sprite=1120; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltips;
+special=canHangOnWalls;
+blockWalking=true; blockJumping=true;
+weight=9000;
+[ItemType]  name=Forecastle Corner;
+ID=boat_fcastle_corner2; sprite=1152;
+cloneFrom=boat_fcastle_corner;
+
+[ItemType]  name=Bowsprit;
+itemCategory=furnishing;
+ID=boat_bowspritL1; sprite=1089; 
+texture=items_building;
+special=cannotBePickedUp;
+special=canHangOnWalls; special=canFloatOnWater;
+weight=9000;
+special=overrideTerrainCollisions; special=overrideMostCollisions;
+blockWalking=true; blockJumping=true;
+
+
+[ItemType]  name=Bowsprit;
+ID=boat_bowspritR1; sprite=1090; 
+cloneFrom=boat_bowspritL1;
+
+[ItemType]  name=Bowsprit;
+ID=boat_bowspritL2; sprite=1091; 
+cloneFrom=boat_bowspritL1;
+[ItemType]  name=Bowsprit;
+ID=boat_bowspritR2; sprite=1092; 
+cloneFrom=boat_bowspritL1;
+[ItemType]  name=Bowsprit;
+ID=boat_bowspritL3; sprite=1093; 
+cloneFrom=boat_bowspritL1;
+[ItemType]  name=Bowsprit;
+ID=boat_bowspritR3; sprite=1094; 
+cloneFrom=boat_bowspritL1;
+[ItemType]  name=Bowsprit;
+ID=boat_bowspritL4; sprite=1095; 
+cloneFrom=boat_bowspritL1;
+blockWalking=false; blockJumping=false;
+[ItemType]  name=Bowsprit;
+ID=boat_bowspritR4; sprite=1096; 
+cloneFrom=boat_bowspritL1;
+blockWalking=false; blockJumping=false;
+[ItemType]  name=Bowsprit;
+ID=boat_bowspritL5; sprite=1097; 
+cloneFrom=boat_bowspritL1;
+blockWalking=false; blockJumping=false;
+[ItemType]  name=Bowsprit;
+ID=boat_bowspritR5; sprite=1098; 
+cloneFrom=boat_bowspritL1;
+blockWalking=false; blockJumping=false;
+
+
+----
+
+[ItemType]  name=Prow Railing;
+itemCategory=furnishing;
+ID=boat_rail_frontL1; sprite=1099; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltips;
+special=canHangOnWalls; special=canFloatOnWater;
+weight=9000;
+special=overrideTerrainCollisions; special=overrideMostCollisions;
+blockWalking=true; blockJumping=true;
+
+[ItemType]  name=Prow Railing;
+ID=boat_rail_frontL2; sprite=1100; 
+cloneFrom=boat_rail_frontL1;
+
+[ItemType]  name=Prow Railing;
+ID=boat_rail_frontL3; sprite=1101; 
+cloneFrom=boat_rail_frontL1;
+
+[ItemType]  name=Prow Railing;
+ID=boat_rail_frontL4; sprite=1102; 
+itemCategory=furnishing;
+texture=items_building;
+special=cannotBePickedUp; special=noTooltips;
+special=canHangOnWalls; special=canFloatOnWater;
+weight=9000;
+blockWalking=false;  blockJumping=false;
+[ItemType]  name=Prow Railing;
+ID=boat_rail_frontL5; sprite=1103; 
+cloneFrom=boat_rail_frontL1;
+
+---
+
+[ItemType]  name=Side Railing (Curve);
+itemCategory=furnishing;
+ID=boat_rail_sideL1; sprite=1121; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltips;
+special=canHangOnWalls; special=canFloatOnWater;
+special=blockJumping_W; special=cannotBeRotated;
+weight=9000;
+[ItemReaction] 
+ID=boat_rail_sideL1; 
+element=physical; element=explode; element=fire; element=elec; element=ice;
+element=smash; element=slash; newID=boat_rail_sideLBroken; fx=dust_wood;
+
+[ItemType]  name=Stern Side Railing;
+itemCategory=furnishing;
+ID=boat_rail_sidesternL1; sprite=1129; 
+cloneFrom=boat_rail_sideL1;
+
+
+[ItemType]  name=Side Railing;
+ID=boat_rail_sideL2; sprite=1122; 
+cloneFrom=boat_rail_sideL1;
+special=adjustSpriteXNeg2;
+[ItemType]  name=Side Railing (2);
+ID=boat_rail_sideL3; sprite=1122; 
+cloneFrom=boat_rail_sideL1;
+special=adjustSpriteXNeg4;
+[ItemType]  name=Broken Side Railing;
+itemCategory=furnishing;
+ID=boat_rail_sideLBroken; sprite=1132; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltips;
+special=canHangOnWalls; special=canFloatOnWater;
+weight=9000;
+special=adjustSpriteXNeg2;
+
+[ItemType]  name=Side Railing (Curve);
+itemCategory=furnishing;
+ID=boat_rail_sideR1; sprite=1126; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltips;
+special=canHangOnWalls; special=canFloatOnWater;
+special=blockJumping_E; special=cannotBeRotated;
+weight=9000;
+[ItemReaction] 
+ID=boat_rail_sideR1; 
+element=physical; element=explode; element=fire; element=elec; element=ice;
+element=smash; element=slash; newID=boat_rail_sideRBroken; fx=dust_wood;
+
+
+[ItemType]  name=Stern Side Railing;
+itemCategory=furnishing;
+ID=boat_rail_sidesternR1; sprite=1225; 
+cloneFrom=boat_rail_sideR1;
+
+
+[ItemType]  name=Side Railing;
+ID=boat_rail_sideR2; sprite=1127; 
+cloneFrom=boat_rail_sideR1;
+special=adjustSpriteX2;
+[ItemType]  name=Side Railing (2);
+ID=boat_rail_sideR3; sprite=1127; 
+cloneFrom=boat_rail_sideR1;
+special=adjustSpriteX4;
+[ItemType]  name=Broken Side Railing;
+itemCategory=furnishing;
+ID=boat_rail_sideRBroken; sprite=1133; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltips;
+special=canHangOnWalls; special=canFloatOnWater;
+weight=9000;
+special=adjustSpriteX2;
+
+[ItemType]  name=Stern Railing;
+ID=boat_rail_back1; sprite=1123; 
+itemCategory=furnishing;
+texture=items_building;
+special=cannotBePickedUp; special=noTooltips;
+special=canHangOnWalls; special=canFloatOnWater;
+special=cannotBeRotated;
+special=blockJumping_W;
+special=blockJumping_S;
+weight=9000;
+depthMod=1050;
+[ItemReaction] 
+ID=boat_rail_back1; 
+element=physical; element=explode; element=fire; element=elec; element=ice;
+element=smash; element=slash; newID=boat_rail_sideLBroken; fx=dust_wood;
+[ItemType]  name=Stern Railing;
+ID=boat_rail_back2; sprite=1124; 
+itemCategory=furnishing;
+texture=items_building;
+special=cannotBePickedUp; special=noTooltips;
+special=canHangOnWalls; special=canFloatOnWater;
+special=cannotBeRotated;
+special=blockJumping_S;
+weight=9000;
+depthMod=1050;
+[ItemReaction] 
+ID=boat_rail_back2; 
+element=physical; element=explode; element=fire; element=elec; element=ice;
+element=smash; element=slash; newID=X; fx=dust_wood;
+
+[ItemType]  name=Stern Railing;
+ID=boat_rail_back3; sprite=1125; 
+itemCategory=furnishing;
+texture=items_building;
+special=cannotBePickedUp; special=noTooltips;
+special=canHangOnWalls; special=canFloatOnWater;
+weight=9000;
+depthMod=1050;
+[ItemReaction] 
+ID=boat_rail_back3; 
+element=physical; element=explode; element=fire; element=elec; element=ice;
+element=smash; element=slash; newID=X; fx=dust_wood;
+
+[ItemType]  name=Stern Railing;
+ID=boat_rail_backR1; sprite=1128; 
+itemCategory=furnishing;
+texture=items_building;
+special=cannotBePickedUp; special=noTooltips;
+special=canHangOnWalls; special=canFloatOnWater;
+special=cannotBeRotated;
+special=blockJumping_E;
+special=blockJumping_S;
+weight=9000;
+depthMod=1050;
+[ItemReaction] 
+ID=boat_rail_backR1; 
+element=physical; element=explode; element=fire; element=elec; element=ice;
+element=smash; element=slash; newID=boat_rail_sideRBroken; fx=dust_wood;
+
+---
+
+[ItemType]  name=Hatch;
+itemCategory=furnishing;
+ID=boat_hatch1; sprite=1153; 
+journalID=journal_hatch;
+texture=items_building;
+special=cannotBePickedUp; special=noTooltips;
+special=canHangOnWalls; special=preventTileReactions;
+weight=9000;
+[ItemType]  name=Hatch;
+ID=boat_hatch2; sprite=1154; 
+cloneFrom=boat_hatch1;
+
+[JournalEntry]
+ID=journal_hatch;
+category=item; halfPage=true; rarity=0;
+title=Hatch;
+text=<itemBig=boat_hatch1><title=Hatch><brAdj=>These large hatches open to allow the transfer of heavy loads of equipment and cargo. Aided by a pulley system, even cannons can be delivered through them.;
+
+
+
+[ItemType]  name=Steps;
+itemCategory=furnishing;
+ID=boat_steps1; sprite=1158; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltips;
+special=canHangOnWalls; special=preventTileReactions;
+special=overrideTerrainCollisions;
+weight=9000;
+
+[ItemType]  name=Forecastle Railing;
+itemCategory=furnishing;
+ID=boat_rail_fcastle1; sprite=1159; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltips;
+special=canHangOnWalls;
+special=blockJumping_S;
+depthMod=1050;
+weight=9000;
+[ItemReaction] 
+ID=boat_rail_fcastle1; 
+element=physical; element=explode; element=fire; element=elec; element=ice;
+element=smash; element=slash; newID=X; fx=dust_wood;
+[ItemType]  name=Forecastle Railing;
+ID=boat_rail_fcastle2; sprite=1160; 
+cloneFrom=boat_rail_fcastle1;
+[ItemType]  name=Forecastle Railing;
+ID=boat_rail_fcastle3; sprite=1161; 
+cloneFrom=boat_rail_fcastle1;
+
+[ItemType]  name=Forecastle Railing Bottom;
+ID=boat_rail_fcastle_btm1; sprite=1162; 
+itemCategory=furnishing;
+texture=items_building;
+special=cannotBePickedUp; special=noTooltips;
+special=canHangOnWalls;
+weight=9000;
+
+[ItemType]  name=Stern;
+itemCategory=furnishing;
+ID=boat_stern1; sprite=1185; 
+texture=items_building;
+special=cannotBePickedUp; special=noTooltips;
+special=canHangOnWalls; special=canFloatOnWater;
+special=slopeS;
+blockWalking=true; blockJumping=true;
+weight=9000;
+[ItemType]  name=Stern;
+ID=boat_stern2; sprite=1186;
+cloneFrom=boat_stern1;
+[ItemType]  name=Stern;
+ID=boat_stern3; sprite=1187;
+cloneFrom=boat_stern1;
+[ItemType]  name=Stern;
+ID=boat_stern4; sprite=1188;
+cloneFrom=boat_stern1;
+[ItemType]  name=Stern;
+ID=boat_stern5; sprite=1189;
+cloneFrom=boat_stern1;
+[ItemType]  name=Stern;
+ID=boat_stern6; sprite=1190;
+cloneFrom=boat_stern1;
+[ItemType]  name=Stern;
+ID=boat_stern7; sprite=1191;
+cloneFrom=boat_stern1;
+[ItemType]  name=Stern;
+ID=boat_stern8; sprite=1192;
+cloneFrom=boat_stern1;
+[ItemType]  name=Stern;
+ID=boat_stern9; sprite=1193;
+cloneFrom=boat_stern1;
+[ItemType]  name=Stern;
+ID=boat_stern10; sprite=1194;
+cloneFrom=boat_stern1;
+[ItemType]  name=Stern;
+ID=boat_stern11; sprite=1184;
+cloneFrom=boat_stern1;
+
+[ItemType]  name=Prow Floor;
+ID=boat_floor_prow1; sprite=1134; 
+itemCategory=furnishing;
+texture=items_building;
+special=cannotBePickedUp; special=noTooltips;
+special=canHangOnWalls; special=canFloatOnWater;
+weight=9000;
+[ItemType]  name=Prow Floor;
+ID=boat_floor_prow2; sprite=1135; 
+cloneFrom=boat_floor_prow1;
+
+[ItemType]  name=Oars;
+ID=boat_oars1; sprite=1130; 
+itemCategory=furnishing;
+texture=items_building;
+special=cannotBePickedUp; special=noTooltips;
+special=canHangOnWalls; special=canFloatOnWater;
+weight=9000;
+special=animated2Slow;
+special=adjustSpriteXNeg4;
+depthMod=-10;
+pR=pWood; pB=pFade;
+
+[ItemType]  name=Ship's Wheel;
+itemCategory=furnishing;
+ID=shipsWheel_L1; sprite=1222;
+texture=items_building;
+journalID=journal_shipsWheel;
+weight=500; special=cannotBePickedUp; special=cannotEverBePushed; 
+special=sprite2xHeight;
+special=blockJumping_N;
+
+
+[ItemType]  name=Ship's Wheel;
+ID=shipsWheel_R1; sprite=1223;
+cloneFrom=shipsWheel_L1;
+
+[JournalEntry]
+ID=journal_shipsWheel;
+category=item; halfPage=true; rarity=1;
+title=Ship's Wheel;
+text=<itemBig=shipsWheel_L1><adjX=-2><itemBig=shipsWheel_R1><title=Ship's Wheel><brAdj=>Spoked wheel used to steer ships. Often contains intricate Volskarn wiring to control auxiliary systems.;
+
+
+
+[ItemType]  name=Mast;
+itemCategory=furnishing;
+ID=mastL1; sprite=1217;
+texture=items_building;
+weight=500; special=cannotBePickedUp; special=cannotEverBePushed; 
+special=sprite2xHeight; special=canHangOnWalls; special=canAlwaysFitInTile;
+blockWalking=true; blockJumping=true; blockLoE=true;
+depthMod=1050;
+[ItemType]  name=Mast;
+ID=mastR1; sprite=1218;
+cloneFrom=mastL1;
+
+[ItemType]  name=Mast;
+ID=mastL2; sprite=1219;
+cloneFrom=mastL1;
+[ItemType]  name=Mast;
+ID=mastR2; sprite=1220;
+cloneFrom=mastL1;
+
+[ItemType]  name=Mast;
+ID=mast3; sprite=1224;
+cloneFrom=mastL1;
+
+[ItemType]  name=Rigging;
+itemCategory=furnishing;
+ID=fife_rail1; sprite=1221;
+texture=items_building;
+weight=500; special=cannotBePickedUp; special=cannotEverBePushed; 
+blockWalking=true;
+
+
+[ItemType]  name=Dock Edge;
+ID=dock_edge1; sprite=1057; 
+itemCategory=furnishing;
+texture=items_building;
+special=cannotBePickedUp; special=noTooltips; special=cannotEverBePushed; 
+special=canHangOnWalls; special=canFloatOnWater;
+
+[ItemType]  name=Dock Edge;
+ID=dock_edge2; sprite=1058; 
+cloneFrom=dock_edge1;
+
+
+
+
+[ItemType]  name=Forecastle Corner;
+ID=boat_fcastle_corner1b; sprite=1136; 
+cloneFrom=boat_fcastle_corner;
+pB=zoneMisc7;
+[ItemType]  name=Forecastle Corner;
+ID=boat_fcastle_corner2b; sprite=1168;
+cloneFrom=boat_fcastle_corner;
+pB=zoneMisc7;
+
+
+[ItemType]  name=Bowsprit;
+ID=boat_bowspritL1b; sprite=1105; 
+cloneFrom=boat_bowspritL1;
+pR=zoneMisc7;
+
+[ItemType]  name=Bowsprit;
+ID=boat_bowspritR1b; sprite=1106; 
+cloneFrom=boat_bowspritR1;
+pR=zoneMisc7;
+
+[ItemType]  name=Bowsprit;
+ID=boat_bowspritL2b; sprite=1107; 
+cloneFrom=boat_bowspritL2;
+pR=zoneMisc7;
+[ItemType]  name=Bowsprit;
+ID=boat_bowspritR2b; sprite=1108; 
+cloneFrom=boat_bowspritR2;
+pR=zoneMisc7;
+[ItemType]  name=Bowsprit;
+ID=boat_bowspritL3b; sprite=1109; 
+cloneFrom=boat_bowspritL3;
+pR=zoneMisc7;
+[ItemType]  name=Bowsprit;
+ID=boat_bowspritR3b; sprite=1110; 
+cloneFrom=boat_bowspritR3;
+pR=zoneMisc7;
+[ItemType]  name=Bowsprit;
+ID=boat_bowspritL4b; sprite=1111; 
+cloneFrom=boat_bowspritL4;
+pR=zoneMisc7;
+[ItemType]  name=Bowsprit;
+ID=boat_bowspritR4b; sprite=1112; 
+cloneFrom=boat_bowspritR4;
+pR=zoneMisc7;
+[ItemType]  name=Bowsprit;
+ID=boat_bowspritL5b; sprite=1113; 
+cloneFrom=boat_bowspritL5;
+pR=zoneMisc7;
+[ItemType]  name=Bowsprit;
+ID=boat_bowspritR5b; sprite=1114; 
+cloneFrom=boat_bowspritR5;
+pR=zoneMisc7;
+
+
+----
+
+[ItemType]  name=Prow Railing;
+itemCategory=furnishing;
+ID=boat_rail_frontL1b; sprite=1115; 
+cloneFrom=boat_rail_frontL1;
+pR=zoneMisc7;
+
+[ItemType]  name=Prow Railing;
+ID=boat_rail_frontL2b; sprite=1116; 
+cloneFrom=boat_rail_frontL2;
+pR=zoneMisc7;
+
+[ItemType]  name=Prow Railing;
+ID=boat_rail_frontL3b; sprite=1117; 
+cloneFrom=boat_rail_frontL3;
+pR=zoneMisc7;
+
+[ItemType]  name=Prow Railing;
+ID=boat_rail_frontL4b; sprite=1118; 
+cloneFrom=boat_rail_frontL4;
+pR=zoneMisc7;
+[ItemType]  name=Prow Railing;
+ID=boat_rail_frontL5b; sprite=1119; 
+cloneFrom=boat_rail_frontL5;
+pR=zoneMisc7;
+
+---
+
+[ItemType]  name=Side Railing (Curve);
+itemCategory=furnishing;
+ID=boat_rail_sideL1b; sprite=1137; 
+cloneFrom=boat_rail_sideL1;
+pR=zoneMisc7;
+
+
+[ItemType]  name=Side Railing;
+ID=boat_rail_sideL2b; sprite=1138; 
+cloneFrom=boat_rail_sideL1;
+special=adjustSpriteXNeg2;
+pR=zoneMisc7;
+[ItemType]  name=Side Railing (2);
+ID=boat_rail_sideL3b; sprite=1138; 
+cloneFrom=boat_rail_sideL1;
+special=adjustSpriteXNeg4;
+pR=zoneMisc7;
+[ItemType]  name=Broken Side Railing;
+itemCategory=furnishing;
+ID=boat_rail_sideLBroken_b; sprite=1148; 
+cloneFrom=boat_rail_sideLBroken;
+pR=zoneMisc7;
+
+[ItemType]  name=Side Railing (Curve);
+itemCategory=furnishing;
+ID=boat_rail_sideR1b; sprite=1142; 
+cloneFrom=boat_rail_sideR1;
+pR=zoneMisc7;
+
+[ItemType]  name=Side Railing;
+ID=boat_rail_sideR2b; sprite=1143; 
+cloneFrom=boat_rail_sideR1;
+special=adjustSpriteX2;
+pR=zoneMisc7;
+[ItemType]  name=Side Railing (2);
+ID=boat_rail_sideR3b; sprite=1143; 
+cloneFrom=boat_rail_sideR1;
+special=adjustSpriteX4;
+pR=zoneMisc7;
+[ItemType]  name=Broken Side Railing;
+ID=boat_rail_sideRBroken_b; sprite=1149; 
+cloneFrom=boat_rail_sideRBroken;
+pR=zoneMisc7;
+
+[ItemType]  name=Stern Side Railing;
+itemCategory=furnishing;
+ID=boat_rail_sidesternL1b; sprite=1145; 
+cloneFrom=boat_rail_sideL1;
+pR=zoneMisc7;
+
+[ItemType]  name=Stern Side Railing;
+itemCategory=furnishing;
+ID=boat_rail_sidesternR1b; sprite=1241; 
+cloneFrom=boat_rail_sideR1;
+pR=zoneMisc7;
+
+
+[ItemType]  name=Stern Railing;
+ID=boat_rail_back1b; sprite=1139;
+cloneFrom=boat_rail_back1;
+pR=zoneMisc7;
+
+
+[ItemType]  name=Stern Railing;
+ID=boat_rail_back2b; sprite=1140; 
+cloneFrom=boat_rail_back2;
+pR=zoneMisc7;
+
+[ItemType]  name=Stern Railing;
+ID=boat_rail_back3b; sprite=1141; 
+cloneFrom=boat_rail_back3;
+pR=zoneMisc7;
+
+[ItemType]  name=Stern Railing;
+ID=boat_rail_backR1b; sprite=1144; 
+cloneFrom=boat_rail_backR1;
+pR=zoneMisc7;
+
+[ItemType]  name=Stern Railing;
+ID=boat_rail_back2b_blockNJump; sprite=1140; 
+itemCategory=furnishing;
+texture=items_building;
+special=cannotBePickedUp; special=noTooltips;
+special=canHangOnWalls; special=canFloatOnWater;
+special=cannotBeRotated;
+special=blockJumping_N;
+special=adjustSpriteYUp16; special=adjustSpriteYUp8; special=adjustSpriteYUp4;
+weight=9000;
+depthMod=0;
+pR=zoneMisc7;
+[ItemReaction] 
+ID=boat_rail_back2b_blockNJump; 
+element=physical; element=explode; element=fire; element=elec; element=ice;
+element=smash; element=slash; newID=X; fx=dust_wood;
+
+---
+
+[ItemType]  name=Hatch;
+ID=boat_hatch1b; sprite=1169; 
+cloneFrom=boat_hatch1;
+pR=zoneMisc7;
+[ItemType]  name=Hatch;
+ID=boat_hatch2b; sprite=1170; 
+cloneFrom=boat_hatch1;
+pR=zoneMisc7;
+
+
+[ItemType]  name=Steps;
+ID=boat_steps1b; sprite=1158; 
+cloneFrom=boat_steps1;
+pR=zoneMisc7;
+
+
+
+[ItemType]  name=Forecastle Railing;
+ID=boat_rail_fcastle1b; sprite=1175; 
+cloneFrom=boat_rail_fcastle1;
+pR=zoneMisc7;
+
+[ItemType]  name=Forecastle Railing;
+ID=boat_rail_fcastle2b; sprite=1176; 
+cloneFrom=boat_rail_fcastle1b;
+pR=zoneMisc7;
+[ItemType]  name=Forecastle Railing;
+ID=boat_rail_fcastle3b; sprite=1177; 
+cloneFrom=boat_rail_fcastle1b;
+pR=zoneMisc7;
+
+[ItemType]  name=Forecastle Railing Bottom;
+ID=boat_rail_fcastle_btm1b; sprite=1178; 
+cloneFrom=boat_rail_fcastle_btm1;
+pR=zoneMisc7;
+
+
+[ItemType]  name=Stern;
+ID=boat_stern1b; sprite=1201; 
+cloneFrom=boat_stern1;
+pR=zoneMisc7;
+[ItemType]  name=Stern;
+ID=boat_stern2b; sprite=1202;
+cloneFrom=boat_stern1b;
+pR=zoneMisc7;
+[ItemType]  name=Stern;
+ID=boat_stern3b; sprite=1203;
+cloneFrom=boat_stern1b;
+pR=zoneMisc7;
+[ItemType]  name=Stern;
+ID=boat_stern4b; sprite=1204;
+cloneFrom=boat_stern1b;
+pR=zoneMisc7;
+[ItemType]  name=Stern;
+ID=boat_stern5b; sprite=1205;
+cloneFrom=boat_stern1b;
+pR=zoneMisc7;
+[ItemType]  name=Stern;
+ID=boat_stern6b; sprite=1206;
+cloneFrom=boat_stern1b;
+pR=zoneMisc7;
+[ItemType]  name=Stern;
+ID=boat_stern7b; sprite=1207;
+cloneFrom=boat_stern1b;
+pR=zoneMisc7;
+[ItemType]  name=Stern;
+ID=boat_stern8b; sprite=1208;
+cloneFrom=boat_stern1b;
+pR=zoneMisc7;
+[ItemType]  name=Stern;
+ID=boat_stern9b; sprite=1209;
+cloneFrom=boat_stern1b;
+pR=zoneMisc7;
+[ItemType]  name=Stern;
+ID=boat_stern10b; sprite=1210;
+cloneFrom=boat_stern1b;
+pR=zoneMisc7;
+[ItemType]  name=Stern;
+ID=boat_stern11b; sprite=1200;
+cloneFrom=boat_stern1b;
+pR=zoneMisc7;
+
+
+
+[ItemType]  name=Prow Floor;
+ID=boat_floor_prow1b; sprite=1150; 
+cloneFrom=boat_floor_prow1;
+pB=zoneMisc8;
+[ItemType]  name=Prow Floor;
+ID=boat_floor_prow2b; sprite=1151; 
+cloneFrom=boat_floor_prow1;
+pB=zoneMisc8;
+
+
+[ItemType]  name=Mast;
+ID=mastL1b; sprite=1233;
+cloneFrom=mastL1;
+pR=zoneMisc8;
+[ItemType]  name=Mast;
+ID=mastR1b; sprite=1234;
+cloneFrom=mastL1;
+pR=zoneMisc8;
+
+[ItemType]  name=Mast;
+ID=mastL2b; sprite=1235;
+cloneFrom=mastL1;
+pR=zoneMisc8;
+[ItemType]  name=Mast;
+ID=mastR2b; sprite=1236;
+cloneFrom=mastL1;
+pR=zoneMisc8;
+
+[ItemType]  name=Mast;
+ID=mast3b; sprite=1240;
+cloneFrom=mastL1;
+pR=zoneMisc8;
+
+[ItemType]  name=Fife Rail;
+ID=fife_rail1b; sprite=1237;
+cloneFrom=fife_rail1;
+pR=zoneMisc8;
+
+[ItemType]  name=Ship's Wheel;
+ID=shipsWheel_L1b; sprite=1222;
+cloneFrom=shipsWheel_L1;
+pR=zoneMisc8;
+
+
+[ItemType]  name=Ship's Wheel;
+ID=shipsWheel_R1b; sprite=1223;
+cloneFrom=shipsWheel_L1;
+pR=zoneMisc8;
+
+
+
+
+

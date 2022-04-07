@@ -1,0 +1,2309 @@
+
+[Action] ID=punch; 
+	applyWeaponBuffs=true;
+	tooltip=A mundane punch.;
+	casterAnimation=punch;
+	casterAnimationDependsOnWeaponHand=true;
+	requiredWeaponElement=fist;
+	icon=skill_Fist;
+[ActionAoE] 
+	ID=punch;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=punch; 
+	actorValue=HP;
+	magnitude=d:fistDmg;
+	duration=-2;
+	chance=d:fistAcc - 2;
+	element=physical;
+	element=melee;
+	FXOnTile=pop;
+[AvAffecterAoE]
+	ID=punch;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=bury; 
+	harmful=false;
+[ActionAoE] 
+	ID=bury;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=bury; 
+	harmful=false;
+	actorValue=bury;
+	magnitude=1;
+	duration=-2;
+	element=bury;
+	chance=100;
+[AvAffecterAoE]
+	ID=bury;
+	cloneFrom=oneTile;
+
+[Action] ID=unbury; 
+	harmful=false;
+[ActionAoE] 
+	ID=unbury;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=unbury; 
+	harmful=false;
+	actorValue=;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	element=dig;
+[AvAffecterAoE]
+	ID=unbury;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=swapActor_act;
+	special=swapTargetWithTarget_movement;
+	special=hideEvaluateWindow;
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+	numTargets=2;
+[ActionAoE] 
+	ID=swapActor_act;
+	cloneFrom=adjacentAndSelf;
+[AvAffecter]
+	ID=swapActor_act; 
+[AvAffecterAoE]
+	ID=swapActor_act;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=raiseHeight2; 
+	harmful=false;
+[ActionAoE] 
+	ID=raiseHeight2;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=raiseHeight2; 
+	harmful=false;
+	actorValue=height;
+	magnitude=2;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=raiseHeight2;
+	cloneFrom=oneTile;
+	
+[Action] ID=lowerHeight2; 
+	harmful=false;
+[ActionAoE] 
+	ID=lowerHeight2;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=lowerHeight2; 
+	harmful=false;
+	actorValue=height;
+	magnitude=-2;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=lowerHeight2;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=cancelPlayerShockwave; 
+[ActionAoE] 
+	ID=cancelPlayerShockwave;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cancelPlayerShockwave; 
+	harmful=false;
+	chance=100;
+	FXOnTile=smallShockwave_moving_noOverlap;
+	FXOnTileColor=pFade;
+[AvAffecterAoE]
+	ID=cancelPlayerShockwave;
+	cloneFrom=adjacentAndSelf;
+	maxRange=12;
+	occupyAll=true;
+	bypassAll=true;
+[AvAffecter]
+	ID=cancelPlayerShockwave;
+	harmful=false;
+	actorValue=cancel;
+	magnitude=2;
+	duration=-2;
+	chance=100;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=cancelPlayerShockwave;
+	cloneFrom=allParty;
+	
+[Action] ID=dramaticShockwave; 
+	harmful=false;
+[ActionAoE] 
+	ID=dramaticShockwave;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=dramaticShockwave; 
+	harmful=false;
+	chance=100;
+	FXOnTile=smallShockwave_moving_noOverlap;
+	FXOnTileColor=pFade;
+[AvAffecterAoE]
+	ID=dramaticShockwave;
+	cloneFrom=adjacentAndSelf;
+	maxRange=12;
+	occupyAll=true;
+	bypassAll=true;
+	
+	
+[Action] ID=awardXPAll; 
+	harmful=false;
+[ActionAoE] 
+	ID=awardXPAll;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=awardXPAll;
+	harmful=false;
+	actorValue=XP;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	FXOnTile=upwardLines_quick;
+[AvAffecterAoE]
+	ID=awardXPAll; shape=6;
+	minRange=0;
+	maxRange=99;
+	needsLoS=false;
+	needsLoE=false;
+	bypassAll=true;
+	occupyAll=true;
+
+	
+[Action] ID=convert1000XPtoStar; 
+	harmful=false;
+[ActionAoE] 
+	ID=convert1000XPtoStar;
+	cloneFrom=oneTile;
+	canSelectStackedActors=false;
+[AvAffecter]
+	ID=convert1000XPtoStar;
+	harmful=false;
+	actorValue=XP;
+	magnitude=-1000;
+	duration=-2;
+	chance=100 - 100 * m:moreThanOneActorAt;
+	FXOnTile=upwardLines_quick;
+[AvAffecterAoE]
+	ID=convert1000XPtoStar; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=convert1000XPtoStar;
+	harmful=false;
+	actorValue=star;
+	magnitude=1;
+	duration=-2;
+	chance=100 - 100 * m:moreThanOneActorAt;
+[AvAffecterAoE]
+	ID=convert1000XPtoStar; 
+	cloneFrom=oneTile;
+	canSelectStackedActors=false;
+
+[Action] ID=partyGoesFirst; 
+	harmful=false;
+[ActionAoE] 
+	ID=partyGoesFirst;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=partyGoesFirst;
+	harmful=false;
+	actorValue=actTimer;
+	magnitude=20;
+	duration=-2;
+	chance=100;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=partyGoesFirst;
+	cloneFrom=allParty;
+[AvAffecter]
+	ID=partyGoesFirst;
+	harmful=false;
+	actorValue=actTimer;
+	magnitude=-20;
+	duration=-2;
+	chance=100;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=partyGoesFirst;
+	cloneFrom=allEnemies;
+	
+	
+[Action] ID=actorFall_water; 
+	harmful=false;
+[ActionAoE] 
+	ID=actorFall_water;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=actorFall_water; 
+	actorValue=drowning;
+	magnitude=1;
+	duration=300;
+	chance=100;
+	FXOnHit=actorFall_waterFX;
+[AvAffecterAoE]
+	ID=actorFall_water;
+	cloneFrom=oneTile;
+	fReq=1 - m:occupiableTileTarget;
+[AvAffecter]
+	ID=actorFall_water; 
+	actorValue=wet;
+	magnitude=1;
+	duration=300;
+	chance=100;
+	element=water;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=actorFall_water;
+	cloneFrom=oneTile;
+	fReq=1 - m:occupiableTileTarget;
+[AvAffecter]
+	ID=actorFall_water; 
+	actorValue=HP;
+	magnitude=-t:HP;
+	duration=-2;
+	chance=100 * m:moreThanOneActorAt;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=actorFall_water;
+	cloneFrom=oneTile;
+	fReq=1 - m:occupiableTileTarget;
+[AvAffecter]
+	ID=actorFall_water; 
+	actorValue=removeActor_XP;
+	magnitude=1;
+	duration=-2;
+	chance=100 * m:incapped;
+	visibleEvaluations=false;
+	FXOnHit=actorFall_waterFX;
+[AvAffecterAoE]
+	ID=actorFall_water;
+	cloneFrom=oneTile;
+	fReq=1 - m:occupiableTileTarget;
+	
+[Action] ID=actorFall_pit; 
+	harmful=false;
+[ActionAoE] 
+	ID=actorFall_pit;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=actorFall_pit; 
+	actorValue=removeActor_XP;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	FXOnTile=actor_shrink;
+	FXOnTile=Debuff_highPitchChirp;
+[AvAffecterAoE]
+	ID=actorFall_pit;
+	cloneFrom=oneTile;
+	
+[Action] ID=harmlessWind; 
+	harmful=false;
+[ActionAoE] 
+	ID=harmlessWind;
+	cloneFrom=party;
+[AvAffecter]
+	ID=harmlessWind; 
+	harmful=false;
+	magnitude=0;
+	duration=-2;
+	element=wind;
+	chance=100;
+[AvAffecterAoE]
+	ID=harmlessWind;
+	cloneFrom=party;
+
+[Action] ID=dispelZone; 
+	harmful=false;
+[ActionAoE] 
+	ID=dispelZone;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=dispelZone; 
+	harmful=false;
+	actorValue=dispel;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	element=dispel;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=dispelZone; shape=8;
+	cloneFrom=oneTile;
+	maxRange=99;
+	bypassAll=true;
+	occupyAll=true;
+	
+[Action] ID=terrainFX15; 
+	harmful=false;
+[ActionAoE] 
+	ID=terrainFX15;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=terrainFX15; 
+	harmful=false;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	FXOnTile=terrain;
+[AvAffecterAoE]
+	ID=terrainFX15;
+	cloneFrom=adjacentAndSelf;
+	maxRange=15;
+	
+[Action] ID=lowerMorale; 
+[ActionAoE] 
+	ID=lowerMorale;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=lowerMorale; 
+	actorValue=morale;
+	magnitude=-1;
+	duration=90;
+	chance=100;
+[AvAffecterAoE]
+	ID=lowerMorale;
+	cloneFrom=adjacent;
+	airborne=true;
+	arc=true;
+	occupyAll=true;
+	bypassAll=true;
+	canSelectAllies=false;
+	maxRange=15;
+	
+
+[Action] ID=aegis_act; 
+harmful=false;
+special=usableEvenWhenCantAct;
+special=usableEvenWhenReacting;
+special=usableEvenWhenYourTurn;
+special=dontDelayOtherActions;
+[ActionAoE] 
+	ID=aegis_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=aegis_act; 
+	harmful=false;
+	FXOnTile=delay;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=aegis_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=aegis_act; 
+	harmful=false;
+	actorValue=aegis;
+	magnitude=-1;
+	duration=-2;
+	visibleMiss=false;
+	chance=m:tCurable * 100;
+[AvAffecterAoE]
+	ID=aegis_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=aegis_act; 
+	harmful=false;
+	actorValue=cure;
+	magnitude=1;
+	duration=-2;
+	visibleMiss=false;
+	chance=m:tCurable * 100;
+	FXOnHit=upwardLines_quick;
+	FXOnHitColor=White;
+	FXOnHit=briefAuraSound_wahwah;
+[AvAffecterAoE]
+	ID=aegis_act;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=negate_act; 
+harmful=false;
+special=usableEvenWhenCantAct;
+special=usableEvenWhenReacting;
+special=usableEvenWhenYourTurn;
+[ActionAoE] 
+	ID=negate_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=negate_act; 
+	harmful=false;
+	actorValue=negate;
+	magnitude=-1;
+	duration=-2;
+	chance=m:cLastDmgTakenGreaterThanX(0) * 100 - 100 * sa:enduringNegate * m:cLastDmgTakenLessThanHalfLifeSkillPlus2;
+	FXOnHit=hitDust_shatterNegate;
+	FXOnHit=square16_shine_big;
+	visibleMiss=false;
+[AvAffecterAoE]
+	ID=negate_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=negate_act; 
+	harmful=false;
+	actorValue=HPTrue;
+	magnitude=m:cLastDmgTaken;
+	duration=-2;
+	chance=m:cLastDmgTaken * 100;
+	visibleEvaluations=false;
+	visibleMiss=false;
+[AvAffecterAoE]
+	ID=negate_act;
+	cloneFrom=oneTile;
+	
+[Action] ID=poisoning; 
+	special=usableEvenWhenCantAct;
+[ActionAoE] 
+	ID=poisoning;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=poisoning; 
+--poison Level 1
+	fReq=cIs1:poison;
+	actorValue=HP;
+	magnitude=-1 - t:HPMax / 18;
+	duration=-2;
+	chance=100;
+	element=HPbased;
+	FXOnTile=poisoncloud;
+	FXOnTile=sfx_lowSquish;
+[AvAffecterAoE]
+	ID=poisoning;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=poisoning; 
+--poison Level 2
+	fReq=c:poison - 1;
+	actorValue=HP;
+	magnitude=-2 - t:HPMax / 10;
+	duration=-2;
+	chance=100;
+	element=HPbased;
+	FXOnTile=poisoncloud;
+	FXOnTile=sfx_lowSquish;
+	FXOnTile=poisoncloud;
+[AvAffecterAoE]
+	ID=poisoning;
+	cloneFrom=oneTile;
+[FormulaGlobal]
+ID=poison1FormulaAsCaster; formula=-1 - c:HPMax / 18;
+[FormulaGlobal]
+ID=poison2FormulaAsCaster; formula=-2 - c:HPMax / 10;
+	
+[Action] ID=regening; 
+harmful=false;
+	special=usableEvenWhenCantAct;
+[ActionAoE] 
+	ID=regening;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=regening; 
+	harmful=false;
+	actorValue=HP;
+	magnitude=3 + t:TrueHPMax / 6 - m:tBoat * 3;
+	duration=-2;
+	chance=100;
+	applyElementToTile=false;
+	element=life;
+	element=HPbased;
+	FXOnTile=upwardLines_quick;
+	FXOnTileColor=SkyBlue;
+	FXOnTile=sfx_healEcho;
+[AvAffecterAoE]
+	ID=regening;
+	cloneFrom=oneTile;
+[FormulaGlobal]
+ID=regenFormulaAsCaster; formula=3 + c:TrueHPMax / 6 - m:cBoat * 3;
+
+[Action] ID=burning; 
+	special=usableEvenWhenCantAct;
+[ActionAoE] 
+	ID=burning;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=burning; 
+	actorValue=HP;
+	magnitude=-1 - t:HPMax / 12;
+	duration=-2;
+	chance=100;
+	applyElementToTile=false;
+	element=fire;
+	element=HPbased;
+	element=burnStatus;
+	FXOnTile=burn;
+[AvAffecterAoE]
+	ID=burning;
+	cloneFrom=oneTile;
+[FormulaGlobal]
+ID=burningFormulaAsCaster; formula=-1 - c:HPMax / 12;
+
+[Action] ID=warming; 
+harmful=false;
+special=usableEvenWhenCantAct;
+[ActionAoE] 
+	ID=warming;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=warming; 
+	harmful=false;
+	actorValue=MP;
+	magnitude=c:warmth;
+	duration=-2;
+	chance=100;
+	FXOnTile=upwardLines_quick;
+	FXOnTileColor=Orange;
+	FXOnTile=briefAuraSound_wahwah;
+[AvAffecterAoE]
+	ID=warming;
+	cloneFrom=oneTile;
+	
+[Action] ID=tiring; 
+[ActionAoE] 
+	ID=tiring;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=tiring; 
+	visibleEvaluations=false;
+	actorValue=sleep;
+	magnitude=t:tired;
+	duration=20;
+	chance=10 * t:tired - 100 * t:sleep;
+[AvAffecterAoE]
+	ID=tiring;
+	cloneFrom=oneTile;
+
+[Action] ID=decaying; 
+	special=usableEvenWhenCantAct;
+[ActionAoE] 
+	ID=decaying;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=decaying; 
+	actorValue=HP;
+	magnitude=-t:decay + t:skill_Ruin + t:MagDef;
+	duration=-2;
+	chance=100;
+	applyElementToTile=false;
+	element=ruin;
+	element=decaying;
+	element=HPbased;
+	element=removeDecay;
+	FXOnTile=pingBip;
+	FXOnTileColor=Purple;
+	FXOnTile=hitDustQuiet;
+	FXOnTileColor=Purple;
+	FXOnTile=hitDustQuiet;
+	FXOnTileColor=Purple;
+	FXOnTile=smallShakeHoriz;
+	FXOnTile=sfx_highThwum;
+	FXOnTile=sfx_lowMurmur;
+	FXOnTile=sfx_debuffMild;
+	FXOnTile=smog;
+[AvAffecterAoE]
+	ID=decaying;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=dooming; 
+	special=usableEvenWhenCantAct;
+[ActionAoE] 
+	ID=dooming;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=dooming; 
+	visibleEvaluations=false;
+	actorValue=HP;
+	magnitude=-t:HP;
+	duration=-2;
+	chance=100;
+	FXOnTile=darken_major;
+	FXOnTile=sinisterSoundCue;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=dooming;
+	cloneFrom=oneTile;
+
+	
+
+[Action] ID=removing; 
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+	special=removeCaster;
+	harmful=false;
+	FXOnTarget=actor_flee;
+[ActionAoE] 
+	ID=removing;
+	cloneFrom=oneTile;
+	canSelectStackedActors=false;
+[AvAffecter]
+	ID=removing; 
+	visibleEvaluations=false;
+	harmful=false;
+[AvAffecterAoE]
+	ID=removing;
+	cloneFrom=oneTile;
+	canSelectStackedActors=false;
+	
+[Action] ID=drown; 
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+	special=removeCaster_XP;
+	attractAttention=false;
+	harmful=false;
+[ActionAoE] 
+	ID=drown;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=drown; 
+	harmful=false;
+	FXOnTile=actorFall_waterFX;
+[AvAffecterAoE]
+	ID=drown;
+	cloneFrom=oneTile;
+	
+[Action] ID=death; 
+	special=usableEvenWhenCantAct;
+    special=usableEvenWhenReacting;
+    special=usableEvenWhenYourTurn;
+[ActionAoE] 
+	ID=death;
+	cloneFrom=oneTile;
+[AvAffecter]
+--'mark' the corpse for death via handleDeaths trigger
+	ID=death; 
+	actorValue=dying;
+	magnitude=1;
+	duration=-3;
+	chance=100;
+[AvAffecterAoE]
+	ID=death;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=death; 
+	actorValue=trigger;
+	magnitude=tHandleDeaths;
+	duration=;
+	chance=100;
+[AvAffecterAoE]
+	ID=death;
+	cloneFrom=oneTile;
+
+[Action] ID=oilOnBurn; 
+	special=usableEvenWhenCantAct;
+[ActionAoE] 
+	ID=oilOnBurn;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=oilOnBurn; 
+	actorValue=HP;
+	magnitude=-1 - t:HPMax / 12;
+	duration=-2;
+	chance=100;
+	element=fire;
+	element=HPbased;
+	element=burnStatus;
+	FXOnTile=ThudShot;
+	FXOnTile=smallShakeHoriz;
+	FXOnTile=burnMany_lots;
+[AvAffecterAoE]
+	ID=oilOnBurn;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=oilOnBurn; 
+	visibleEvaluations=false;
+	actorValue=burn;
+	magnitude=1;
+	duration=tDur:burn;
+	chance=100;
+	element=fire;
+[AvAffecterAoE]
+	ID=oilOnBurn;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=raining; 
+	special=usableEvenWhenCantAct;
+	harmful=false;
+[ActionAoE] 
+	ID=raining;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=raining; 
+	harmful=false;
+	actorValue=wet;
+	magnitude=1;
+	duration=200;
+	chance=100;
+	element=water;
+	applyElementToTile=false;
+[AvAffecterAoE]
+	ID=raining;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=snowing; 
+	special=usableEvenWhenCantAct;
+	harmful=false;
+[ActionAoE] 
+	ID=snowing;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=snowing; 
+	harmful=false;
+	actorValue=chilled;
+	magnitude=1;
+	duration=200;
+	chance=100;
+	element=ice;
+	applyElementToTile=false;
+[AvAffecterAoE]
+	ID=snowing;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=gateShield_fx_act; 
+	harmful=false;
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+[ActionAoE] 
+	ID=gateShield_fx_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=gateShield_fx_act; 
+	visibleMiss=false;
+	harmful=false;
+	FXOnTile=horizSpark_many_wideArea;
+	FXOnTile=gateOpen_fast;
+	FXOnTile=gateClose_flicker_fast;
+[AvAffecterAoE]
+	ID=gateShield_fx_act;
+	cloneFrom=oneTile;
+
+[Action] ID=spreadFire; 
+	special=hideOnTurnOrder;
+	icon=skill_Fire;
+[ActionAoE] 
+	ID=spreadFire;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=spreadFire; 
+	visibleEvaluations=false;
+	actorValue=burn;
+	magnitude=1;
+	duration=50;
+	chance=100;
+	element=fire;
+	element=elementwalker;
+[AvAffecterAoE]
+	ID=spreadFire;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=spreadFire; 
+	magnitude=0;
+	duration=-2;
+	chance=100;
+	element=fire;
+[AvAffecterAoE]
+	ID=spreadFire;
+	cloneFrom=adjacent;
+	
+[Action] ID=spreadElec; 
+	special=hideOnTurnOrder;
+	icon=skill_Elec;
+[ActionAoE] 
+	ID=spreadElec;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=spreadElec; 
+	actorValue=HP;
+	magnitude=-5 - t:HPMax / 25 + t:skill_Elec * nottsa:elementwalker + t:MagDef/2 * nottsa:elementwalker;
+	duration=-2;
+	chance=100;
+	element=lightning;
+	element=HPbased;
+	element=elementwalker;
+	FXOnTile=horizSpark_many_smallArea;
+[AvAffecterAoE]
+	ID=spreadElec;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=spreadElec; 
+	magnitude=0;
+	duration=-2;
+	chance=100;
+	element=lightning;
+[AvAffecterAoE]
+	ID=spreadElec;
+	cloneFrom=adjacent;
+	
+[Action] ID=spreadDrainWater; 
+	special=hideOnTurnOrder;
+[ActionAoE] 
+	ID=spreadDrainWater;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=spreadDrainWater; 
+	element=drainWater;
+	FXOnTile=delay_tiniest;
+[AvAffecterAoE]
+	ID=spreadDrainWater;
+	cloneFrom=adjacentAndSelf;
+	
+
+[Action] ID=preserveRevive; 
+	harmful=false;
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+[ActionAoE] 
+	ID=preserveRevive;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=preserveRevive; 
+	harmful=false;
+	actorValue=preserve;
+	visibleEvaluations=false;
+	magnitude=-1 * m:incapped;
+	duration=-2;
+	chance=100 * m:incapped;
+	FXOnTile=delay;
+	FXOnHit=darken_minor;
+	FXOnHit=tallLight;
+	FXOnHit=actor_reviveGhost;
+	FXOnHit=sfx_longGoodAura;
+[AvAffecterAoE]
+	ID=preserveRevive;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=preserveRevive; 
+	harmful=false;
+	visibleEvaluations=false;
+	actorValue=revive;
+	magnitude=1 * m:incapped;
+	duration=-2;
+	chance=100 * m:incapped;
+	element=life;
+	FXOnHit=chargeSpiralFast_big;
+	FXOnHit=sparkles;
+	FXOnHit=upwardLinesQuick;
+	FXOnHit=whiten;
+	FXOnHit=delay;
+	FXOnHit=delay;
+[AvAffecterAoE]
+	ID=preserveRevive;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=lightningWeapon;
+[ActionAoE] 
+	ID=lightningWeapon;
+	cloneFrom=oneTile;
+	maxRange=12;
+[AvAffecter]
+	ID=lightningWeapon;
+	actorValue=HP;
+	magnitude=d:elecDmg0HalfDef(4);
+	duration=-2;
+	chance=d:elecProjectileAcc;
+	element=magic;
+	element=lightning;
+[AvAffecterAoE]
+	ID=lightningWeapon;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=lightningWeapon;
+	FXOnTile=lightningStrike;
+	FXOnTile=sfx_smallSpark;
+[AvAffecterAoE]
+	ID=lightningWeapon;
+	cloneFrom=oneTile;
+	
+[Action] ID=fireWeapon;
+[ActionAoE] 
+	ID=fireWeapon;
+	cloneFrom=oneTile;
+	maxRange=12;
+[AvAffecter]
+	ID=fireWeapon;
+	actorValue=HP;
+	magnitude=d:fireDmgHalfDef(4);
+	duration=-2;
+	chance=d:fireProjectileAcc;
+	element=magic;
+	element=fire;
+[AvAffecterAoE]
+	ID=fireWeapon;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=fireWeapon;
+	FXOnTile=burn;
+	FXOnTile=smallestShakeHoriz;
+[AvAffecterAoE]
+	ID=fireWeapon;
+	cloneFrom=oneTile;
+
+[Action] ID=iceWeapon;
+[ActionAoE] 
+	ID=iceWeapon;
+	cloneFrom=oneTile;
+	maxRange=12;
+[AvAffecter]
+	ID=iceWeapon;
+	actorValue=HP;
+	magnitude=d:iceDmgHalfDef(4);
+	duration=-2;
+	chance=d:iceProjectileAcc;
+	element=magic;
+	element=ice;
+[AvAffecterAoE]
+	ID=iceWeapon;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=iceWeapon;
+	FXOnTile=frostcloud;
+	FXOnTile=smallestShakeHoriz;
+[AvAffecterAoE]
+	ID=iceWeapon;
+	cloneFrom=oneTile;
+	
+[Action] ID=windWeapon;
+[ActionAoE] 
+	ID=windWeapon;
+	cloneFrom=oneTile;
+	maxRange=12;
+[AvAffecter]
+	ID=windWeapon;
+	actorValue=HP;
+	magnitude=d:windDmgHalfDef(4);
+	duration=-2;
+	chance=d:windProjectileAcc;
+	element=magic;
+	element=wind;
+[AvAffecterAoE]
+	ID=windWeapon;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=windWeapon;
+	FXOnTile=triSlash;
+	FXOnTile=gustyBlast;
+	FXOnTile=smallestShakeHoriz;
+[AvAffecterAoE]
+	ID=windWeapon;
+	cloneFrom=oneTile;
+	
+[Action] ID=iceSpiking; 
+FXOnTarget=iceExplosion_big;
+special=usableEvenWhenCantAct;
+[ActionAoE] 
+	ID=iceSpiking;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=iceSpiking; 
+	visibleMiss=false;
+	actorValue=HP;
+	magnitude=-c:iceSpikes + t:MagDef *0.5 + t:skill_Ice * 0.5;
+	duration=-2;
+	chance=100 - t:iceSpikes * 100;
+	element=ice;
+	FXOnTile=hitDustQuiet;
+[AvAffecterAoE]
+	ID=iceSpiking;
+	cloneFrom=adjacent;
+	canSelectAllies=false;
+	
+[Action] ID=heal; 
+	name=Heal;
+	harmful=false;
+	FXOnTarget=sparkles;
+	FXOnTarget=whiten;
+[ActionAoE] 
+	ID=heal; shape=0; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=heal; 
+	actorValue=HP;
+	harmful=false;
+	magnitude=99;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=heal;
+	cloneFrom=adjacentAndSelf;
+
+[Action] ID=explode; 
+	name=Explode!;
+	FXOnTarget=tallExplosion;
+	FXOnTarget=medExplosion;
+[ActionAoE] 
+	ID=explode; shape=0; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=explode; 
+	actorValue=HP;
+	magnitude=-15;
+	duration=-2;
+	chance=100;
+	element=explode;
+	element=fire;
+	element=kindle;
+[AvAffecterAoE]
+	ID=explode;
+	cloneFrom=adjacentAndSelf;
+	
+	
+[Action] ID=stormcannonBlast; 
+	FXOnTarget=horizSpark_many_sudden_hazard;
+	FXOnTarget=w_thunder;
+	FXOnTarget=sparkShower;
+	FXOnTarget=elecBlasts_4;
+	FXOnTarget=elecBlasts_4;
+	FXOnTile=horizSpark_many_sudden;
+[ActionAoE] 
+	ID=stormcannonBlast;
+	cloneFrom=oneTile;
+	needsLoE=false;
+	needsLoS=false;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=stormcannonBlast; 
+	element=cutsc_destroy;
+[AvAffecterAoE]
+	ID=stormcannonBlast;
+	cloneFrom=adjacent;
+	maxRange=3;
+[AvAffecter]
+	ID=stormcannonBlast; 
+	actorValue=HP;
+	magnitude=-134;
+	duration=-2;
+	chance=100;
+	element=fakeElec;
+	element=shatter;
+[AvAffecterAoE]
+	ID=stormcannonBlast;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=stormcannonBlast; 
+	actorValue=breakArmor;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=stormcannonBlast;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=stormcannonBlast; 
+	actorValue=superpush;
+	magnitude=2;
+	duration=90;
+	chance=100;
+[AvAffecterAoE]
+	ID=stormcannonBlast;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=stormcannonBlast; 
+	actorValue=HP;
+	magnitude=-m:target90PercentHPCantKill;
+	duration=-2;
+	chance=100;
+	element=fakeElec;
+	element=shatter;
+[AvAffecterAoE]
+	ID=stormcannonBlast;
+	cloneFrom=adjacent+3;
+[AvAffecter]
+	ID=stormcannonBlast; 
+	actorValue=superpush;
+	magnitude=3;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=stormcannonBlast;
+	cloneFrom=adjacent+3;
+[AvAffecter]
+	ID=stormcannonBlast; 
+	element=shatter;
+[AvAffecterAoE]
+	ID=stormcannonBlast;
+	cloneFrom=adjacent;
+	maxRange=5;
+	
+
+[Action] ID=cutsc_shipShoot; 
+	FXOnTarget=darken_minor;
+	FXOnTarget=ThudShotBigger;
+	FXOnTarget=energyShot_big_fromSouth;
+[ActionAoE] 
+	ID=cutsc_shipShoot;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cutsc_shipShoot; 
+	element=explode;
+[AvAffecterAoE]
+	ID=cutsc_shipShoot;
+	cloneFrom=oneTile;
+	
+[Action] ID=cutsc_explod; 
+[ActionAoE] 
+	ID=cutsc_explod;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cutsc_explod; 
+	actorValue=summonItem;
+	magnitude=fire_long_depthMod;
+	duration=1;
+	element=explode;
+	FXOnTile=tallExplode;
+[AvAffecterAoE]
+	ID=cutsc_explod;
+	cloneFrom=oneTile;
+
+[Action] ID=cutsc_destroy; 
+[ActionAoE] 
+	ID=cutsc_destroy;
+	cloneFrom=oneTile;
+	occupyAll=true;
+[AvAffecter]
+	ID=cutsc_destroy; 
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	element=destroy;
+[AvAffecterAoE]
+	ID=cutsc_destroy;
+	cloneFrom=adjacentAndSelf;
+	needsLoE=false;
+	needsLoS=false;
+	occupyAll=true;
+	bypassAll=true;
+	maxRange=9;
+	
+
+[Action] ID=cutsc_destroy2; 
+[ActionAoE] 
+	ID=cutsc_destroy2;
+	cloneFrom=oneTile;
+	occupyAll=true;
+[AvAffecter]
+	ID=cutsc_destroy2; 
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	element=destroy;
+[AvAffecterAoE]
+	ID=cutsc_destroy2;
+	cloneFrom=adjacentAndSelf;
+	needsLoE=false;
+	needsLoS=false;
+	occupyAll=true;
+	bypassAll=true;
+	maxRange=12;
+	
+	
+[Action] ID=cutsc_revive; 
+	harmful=false;
+	special=usableEvenWhenCantAct;
+[ActionAoE] 
+	ID=cutsc_revive;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cutsc_revive; 
+	harmful=false;
+	visibleEvaluations=false;
+	actorValue=revive;
+	magnitude=1 * m:incapped;
+	duration=-2;
+	chance=100 * m:incapped;
+	element=life;
+[AvAffecterAoE]
+	ID=cutsc_revive;
+	cloneFrom=oneTile;
+	
+[Action] ID=cutsc_gateIn; 
+[ActionAoE] 
+	ID=cutsc_gateIn;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cutsc_gateIn; 
+	FXOnTile=sfx_highestHum;
+	FXOnTile=horizSpark_many_wideArea;
+	FXOnTile=gateOpen;
+	FXOnTile=gateClose_flicker;
+[AvAffecterAoE]
+	ID=cutsc_gateIn;
+	cloneFrom=oneTile;
+
+	
+[Action] ID=superpush9; 
+	name=Explode!;
+[ActionAoE] 
+	ID=superpush9;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=superpush9; 
+	actorValue=superpush;
+	magnitude=4;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=superpush9;
+	cloneFrom=adjacentAndSelf;
+	maxRange=9;
+	
+[Action] ID=superpush7_5; 
+[ActionAoE] 
+	ID=superpush7_5;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=superpush7_5; 
+	actorValue=superpush;
+	magnitude=4;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=superpush7_5;
+	cloneFrom=adjacentAndSelf;
+	maxRange=7.5;
+	
+	
+[Action] ID=mechanism; 
+	name=Trigger Mechanism;
+	tooltip=Triggers hidden mechanisms in doors or machines.;
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=mechanism;
+	cloneFrom=oneTile;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=mechanism; 
+	harmful=false;
+	actorValue=;
+	magnitude= 0;
+	duration=0;
+	chance=100;
+	element=16;
+[AvAffecterAoE]
+	ID=mechanism;
+	aoeCasterAsOrigin=true;
+	ignoreCannotTarget=true;
+	
+
+[Action] ID=mechanism2; 
+	name=Trigger Mechanism;
+	tooltip=Triggers hidden mechanisms in doors or machines.;
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=mechanism2;
+	cloneFrom=oneTile;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=mechanism2; 
+	harmful=false;
+	actorValue=;
+	magnitude= 0;
+	duration=0;
+	chance=100;
+	element=mechanical2;
+[AvAffecterAoE]
+	ID=mechanism2;
+	aoeCasterAsOrigin=true;
+	ignoreCannotTarget=true;
+	
+	
+[Action] ID=use_action; 
+	name=Trigger Use;
+	harmful=false;
+[ActionAoE] 
+	ID=use_action;
+	cloneFrom=oneTile;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=use_action; 
+	harmful=false;
+	actorValue=;
+	magnitude= 0;
+	duration=0;
+	chance=100;
+	element=use;
+[AvAffecterAoE]
+	ID=use_action;
+	aoeCasterAsOrigin=true;
+	ignoreCannotTarget=true;
+	
+	
+[Action] ID=player_use_action; 
+	name=Use / Talk;
+	harmful=false;
+	casterAnimation=use;
+[ActionAoE] 
+	ID=player_use_action;
+	cloneFrom=adjacent;
+	maxRange=7.5;
+	airborne=false;
+	needsLoE=true;
+	needsLoS=true;
+	arc=true;
+	horizMax=0;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=player_use_action; 
+	harmful=false;
+	actorValue=interact;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=player_use_action;
+	cloneFrom=oneTile;
+	ignoreCannotTarget=true;
+	
+[Action] ID=player_look_action; 
+	name=Look;
+	harmful=false;
+	casterAnimation=use;
+	attractAttention=false;
+[ActionAoE] 
+	ID=player_look_action;
+	cloneFrom=adjacent;
+	maxRange=7.5;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=true;
+	arc=true;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=player_look_action; 
+	harmful=false;
+	actorValue=look;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=player_look_action;
+	cloneFrom=oneTile;
+	ignoreCannotTarget=true;
+	
+[Action] ID=somethingHappened_action; 
+	harmful=false;
+	icon=icon_elec;
+[ActionAoE]
+	ID=somethingHappened_action;
+	cloneFrom=oneTile;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=somethingHappened_action; 
+	harmful=false;
+	actorValue=;
+	magnitude= 0;
+	duration=0;
+	chance=100;
+	element=somethingHappened;
+[AvAffecterAoE]
+	ID=somethingHappened_action;
+	aoeCasterAsOrigin=true;
+	ignoreCannotTarget=true;
+
+
+[Action] ID=mechanismArea; 
+	name=Trigger Mechanism Adjacent: Range 1;
+	tooltip=Triggers hidden mechanisms in doors or machines within a square of size 1.;
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=mechanismArea; shape=0; 
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 1;
+	maxRange = 1.5;
+	bypassAll=true;
+	occupyAll=true;
+	teleporting=true;
+	airborne=true;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=mechanismArea; 
+	harmful=false;
+	actorValue=;
+	magnitude= 0;
+	duration=0;
+	chance=100;
+	element=16;
+[AvAffecterAoE]
+	ID=mechanismArea;
+	aoeCasterAsOrigin=true;
+	ignoreCannotTarget=true;
+
+	
+[Action] ID=mechanismArea2; 
+	name=Trigger Mechanism Adjacent: Range 2;
+	tooltip=Triggers hidden mechanisms in doors or machines within a square of size 2.;
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=mechanismArea2;
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 1;
+	maxRange = 2.5;
+	bypassAll=true;
+	occupyAll=true;
+	teleporting=true;
+	airborne=true;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=mechanismArea2; 
+	harmful=false;
+	actorValue=;
+	magnitude= 0;
+	duration=0;
+	chance=100;
+	element=16;
+[AvAffecterAoE]
+	ID=mechanismArea2;
+	aoeCasterAsOrigin=true;
+	ignoreCannotTarget=true;
+	
+
+[Action] ID=mechanismArea3; 
+	name=Trigger Mechanism Adjacent: Range 3;
+	tooltip=Triggers hidden mechanisms in doors or machines within a square of size 1.;
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=mechanismArea3;
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 1;
+	maxRange = 3.5;
+	bypassAll=true;
+	occupyAll=true;
+	teleporting=true;
+	airborne=true;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=mechanismArea3; 
+	harmful=false;
+	actorValue=;
+	magnitude= 0;
+	duration=0;
+	chance=100;
+	element=16;
+[AvAffecterAoE]
+	ID=mechanismArea3;
+	aoeCasterAsOrigin=true;
+	ignoreCannotTarget=true;
+	
+
+[Action] ID=mechanismArea5; 
+	name=Trigger Mechanism Adjacent: Range 5;
+	tooltip=Triggers hidden mechanisms in doors or machines within a square of size 5.;
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=mechanismArea5;
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 1;
+	maxRange = 5.5;
+	bypassAll=true;
+	occupyAll=true;
+	teleporting=true;
+	airborne=true;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=mechanismArea5; 
+	harmful=false;
+	actorValue=;
+	magnitude= 0;
+	duration=0;
+	chance=100;
+	element=16;
+[AvAffecterAoE]
+	ID=mechanismArea5;
+	aoeCasterAsOrigin=true;
+	ignoreCannotTarget=true;
+	
+
+[Action] ID=mechanismArea10; 
+	name=Trigger Mechanism Adjacent: Range 10;
+	tooltip=Triggers hidden mechanisms in doors or machines within a square of size 10.;
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=mechanismArea10;
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 1;
+	maxRange = 10.5;
+	bypassAll=true;
+	occupyAll=true;
+	teleporting=true;
+	airborne=true;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=mechanismArea10; 
+	harmful=false;
+	actorValue=;
+	magnitude= 0;
+	duration=0;
+	chance=100;
+	element=16;
+[AvAffecterAoE]
+	ID=mechanismArea10;
+	aoeCasterAsOrigin=true;
+	ignoreCannotTarget=true;
+	
+[Action] ID=mechanismArea_rotBased1; 
+	name=Trigger Mechanism RotBased: Range 1;
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=mechanismArea_rotBased1;
+	cloneFrom=oneTile;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=mechanismArea_rotBased1; 
+	harmful=false;
+	actorValue=;
+	magnitude= 0;
+	duration=0;
+	chance=100;
+	element=mechanical;
+[AvAffecterAoE]
+	ID=mechanismArea_rotBased1;
+	cloneFrom=adjacentAndSelf;
+	coneAngle=1;
+	ignoreCannotTarget=true;
+
+
+[Action] ID=mechanism2Area; 
+	name=Trigger Mechanism Adjacent: Range 1;
+	tooltip=Triggers hidden mechanisms in doors or machines within a square of size 1.;
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=mechanism2Area; shape=0; 
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 1;
+	maxRange = 1.5;
+	bypassAll=true;
+	occupyAll=true;
+	teleporting=true;
+	airborne=true;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=mechanism2Area; 
+	harmful=false;
+	actorValue=;
+	magnitude= 0;
+	duration=0;
+	chance=100;
+	element=mechanical2;
+[AvAffecterAoE]
+	ID=mechanism2Area;
+	aoeCasterAsOrigin=true;
+	ignoreCannotTarget=true;
+
+	
+[Action] ID=mechanism2Area2; 
+	name=Trigger Mechanism Adjacent: Range 2;
+	tooltip=Triggers hidden mechanisms in doors or machines within a square of size 2.;
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=mechanism2Area2; shape=0; 
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 1;
+	maxRange = 2.5;
+	bypassAll=true;
+	occupyAll=true;
+	teleporting=true;
+	airborne=true;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=mechanism2Area2; 
+	harmful=false;
+	actorValue=;
+	magnitude= 0;
+	duration=0;
+	chance=100;
+	element=mechanical2;
+[AvAffecterAoE]
+	ID=mechanism2Area2;
+	aoeCasterAsOrigin=true;
+	ignoreCannotTarget=true;
+	
+
+[Action] ID=mechanism2Area3; 
+	name=Trigger Mechanism Adjacent: Range 3;
+	tooltip=Triggers hidden mechanisms in doors or machines within a square of size 1.;
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=mechanism2Area3; shape=0; 
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 1;
+	maxRange = 3.5;
+	bypassAll=true;
+	occupyAll=true;
+	teleporting=true;
+	airborne=true;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=mechanism2Area3; 
+	harmful=false;
+	actorValue=;
+	magnitude= 0;
+	duration=0;
+	chance=100;
+	element=mechanical2;
+[AvAffecterAoE]
+	ID=mechanism2Area3;
+	aoeCasterAsOrigin=true;
+	ignoreCannotTarget=true;
+	
+
+[Action] ID=mechanism2Area5; 
+	name=Trigger Mechanism Adjacent: Range 5;
+	tooltip=Triggers hidden mechanisms in doors or machines within a square of size 5.;
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=mechanism2Area5; shape=0; 
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 1;
+	maxRange = 5.5;
+	bypassAll=true;
+	occupyAll=true;
+	teleporting=true;
+	airborne=true;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=mechanism2Area5; 
+	harmful=false;
+	actorValue=;
+	magnitude= 0;
+	duration=0;
+	chance=100;
+	element=mechanical2;
+[AvAffecterAoE]
+	ID=mechanism2Area5;
+	aoeCasterAsOrigin=true;
+	ignoreCannotTarget=true;
+	
+
+[Action] ID=mechanism2Area10; 
+	name=Trigger Mechanism Adjacent: Range 10;
+	tooltip=Triggers hidden mechanisms in doors or machines within a square of size 10.;
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=mechanism2Area10; shape=0; 
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 1;
+	maxRange = 10.5;
+	bypassAll=true;
+	occupyAll=true;
+	teleporting=true;
+	airborne=true;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=mechanism2Area10; 
+	harmful=false;
+	actorValue=;
+	magnitude= 0;
+	duration=0;
+	chance=100;
+	element=mechanical2;
+[AvAffecterAoE]
+	ID=mechanism2Area10;
+	aoeCasterAsOrigin=true;
+	ignoreCannotTarget=true;
+	
+	
+	
+	
+	
+[Action] ID=moveSelf; 
+	name=Move Self;
+	tooltip=Moves the caster.;
+	special=moveCasterTowardTarget;
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=moveSelf; shape=0; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=moveSelf; 
+	harmful=false;
+	actorValue=;
+	magnitude=0;
+	duration=0;
+	chance=0;
+[AvAffecterAoE]
+	ID=moveSelf; avNum=0;
+	aoeCasterAsOrigin=true;
+	shape=0; 
+
+[Action] ID=useSelf; 
+	name=Use Self;
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=useSelf;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=useSelf; 
+	harmful=false;
+	actorValue=;
+	magnitude=0;
+	duration=0;
+	chance=0;
+	element=use;
+[AvAffecterAoE]
+	ID=useSelf;
+	cloneFrom=oneTile;
+
+[Action] ID=useAll; 
+	name=Use All;
+	harmful=false;
+[ActionAoE] 
+	ID=useAll;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=useAll; 
+	harmful=false;
+	actorValue=;
+	magnitude=0;
+	duration=0;
+	chance=0;
+	element=use;
+[AvAffecterAoE]
+	ID=useAll;
+	cloneFrom=adjacent;
+	maxRange=15;
+
+[Action] ID=vines_wither_all; 
+	harmful=false;
+[ActionAoE] 
+	ID=vines_wither_all;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=vines_wither_all; 
+	harmful=false;
+	actorValue=;
+	magnitude=0;
+	duration=0;
+	chance=100;
+	element=vines_wither;
+[AvAffecterAoE]
+	ID=vines_wither_all;
+	cloneFrom=adjacentAndSelf;
+	shape=8;
+	
+
+[Action] ID=vines_growth_all; 
+	harmful=false;
+[ActionAoE] 
+	ID=vines_growth_all;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=vines_growth_all; 
+	harmful=false;
+	actorValue=;
+	magnitude=0;
+	duration=0;
+	chance=100;
+	element=vines_growth;
+[AvAffecterAoE]
+	ID=vines_growth_all;
+	cloneFrom=adjacentAndSelf;
+	shape=8;
+
+[Action] ID=castle_openGate_all; 
+	harmful=false;
+[ActionAoE] 
+	ID=castle_openGate_all;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=castle_openGate_all; 
+	harmful=false;
+	actorValue=;
+	magnitude=0;
+	duration=0;
+	chance=100;
+	element=openGates;
+[AvAffecterAoE]
+	ID=castle_openGate_all;
+	cloneFrom=adjacentAndSelf;
+	shape=8;
+[AvAffecter]
+	ID=castle_openGate_all; 
+	actorValue=trigger;
+	magnitude=tCastleGate_setOpen;
+	duration=;
+	chance=100;
+[AvAffecterAoE]
+	ID=castle_openGate_all;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=castle_closeGate_all; 
+	harmful=false;
+[ActionAoE] 
+	ID=castle_closeGate_all;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=castle_closeGate_all; 
+	harmful=false;
+	actorValue=;
+	magnitude=0;
+	duration=0;
+	chance=100;
+	element=closeGates;
+[AvAffecterAoE]
+	ID=castle_closeGate_all;
+	cloneFrom=adjacentAndSelf;
+	shape=8;
+[AvAffecter]
+	ID=castle_closeGate_all; 
+	actorValue=trigger;
+	magnitude=tCastleGate_setClose;
+	duration=;
+	chance=100;
+[AvAffecterAoE]
+	ID=castle_closeGate_all;
+	cloneFrom=oneTile;
+
+	
+[Action] ID=motionReaction; 
+	name=Motion Reaction;
+	tooltip=Triggers any motion sensing reactions in a small area.;
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=motionReaction;
+	cloneFrom=oneTile;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=motionReaction; 
+	harmful=false;
+	actorValue=;
+	magnitude= 0;
+	duration=0;
+	chance=100;
+	element=92;
+[AvAffecterAoE]
+	ID=motionReaction;
+	aoeCasterAsOrigin=true;
+	cloneFrom=adjacentAndSelf;
+	ignoreCannotTarget=true;
+	
+	
+[Action] ID=offerRest; 
+	harmful=false;
+	special=cantUseInCombat;
+[ActionAoE] 
+	ID=offerRest;
+	cloneFrom=oneTile;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=offerRest; 
+	harmful=false;
+	actorValue=trigger;
+	magnitude=offerRest;
+	duration=0;
+	chance=0;
+[AvAffecterAoE]
+	ID=offerRest;
+	cloneFrom=oneTile;
+	ignoreCannotTarget=true;
+	
+[Action] ID=spinylizard_react; 
+[ActionAoE] 
+	ID=spinylizard_react;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=spinylizard_react; 
+	actorValue=poison;
+	magnitude=1;
+	chance=100;
+	duration=40;
+	visibleMiss=false;
+	FXOnHit=hitDustQuiet;
+	FXOnHitColor=Green;
+	FXOnMiss=hitDustQuiet;
+	FXOnMissColor=Green;
+[AvAffecterAoE]
+	ID=spinylizard_react;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=myconid_death_act; 
+	harmful=false;
+	special=usableEvenWhenCantAct;
+	FXOnTarget=actor_flee;
+	FXOnTarget=delay;
+[ActionAoE] 
+	ID=myconid_death_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=myconid_death_act; 
+	harmful=false;
+	actorValue=summonItem;
+	magnitude=myconid_stone;
+	duration=1;
+[AvAffecterAoE]
+	ID=myconid_death_act;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=aspect_eye_death_act; 
+	harmful=false;
+	special=usableEvenWhenCantAct;
+	FXOnTarget=delay;
+[ActionAoE] 
+	ID=aspect_eye_death_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=aspect_eye_death_act; 
+	harmful=false;
+	element=slayAspect;
+[AvAffecterAoE]
+	ID=aspect_eye_death_act;
+	cloneFrom=allActors;
+	canSelectEnemies=false;
+	
+	
+[Action] ID=die_act; 
+[ActionAoE] 
+	ID=die_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=die_act; 
+	visibleEvaluations=false;
+	actorValue=HP;
+	magnitude=-999;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=die_act;
+	cloneFrom=oneTile;
+	
+[Action] ID=removing_aspect_act; 
+	special=usableEvenWhenCantAct;
+	harmful=false;
+	FXOnTarget=actor_flee;
+	FXOnTarget=pixelCloud_black_silent;
+[ActionAoE] 
+	ID=removing_aspect_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=removing_aspect_act; 
+	visibleEvaluations=false;
+	harmful=false;
+	actorValue=removeActor;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=removing_aspect_act;
+	cloneFrom=oneTile;
+	
+[Action] ID=salvagerBroke_act; 
+	harmful=false;
+	icon=icon_elec;
+[ActionAoE]
+	ID=salvagerBroke_act;
+	cloneFrom=oneTile;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=salvagerBroke_act; 
+	harmful=false;
+	actorValue=trigger;
+	magnitude=tSalvagerBroken;
+	duration=-2;
+	chance=100;
+	FXOnTile=sfx_infernoBlast;
+	FXOnTile=sfx_SLAM;
+[AvAffecterAoE]
+	ID=salvagerBroke_act;
+	aoeCasterAsOrigin=true;
+	ignoreCannotTarget=true;
+
+
+	
+	
+[Action] ID=stairs_act; 
+	harmful=false;
+	attractAttention=false;
+[ActionAoE] 
+	ID=stairs_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=stairs_act; 
+	harmful=false;
+	magnitude=0;
+	duration=1;
+	chance=m:tIsPlayer * 100;
+	element=stairs;
+[AvAffecterAoE]
+	ID=stairs_act;
+	cloneFrom=party;
+	maxRange=0;
+	
+
+[Action] ID=board1_act; 
+	name=Board Ship;
+	description=;
+	attractAttention=false;
+	
+	special=cantUseWithoutCrew;
+
+	special=dontLookAtTarget;
+	special=usableEvenWhenCantAct;
+    special=usableEvenWhenReacting;
+    special=usableEvenWhenYourTurn;
+	special=usableWithoutACaster;
+	icon=icon_default;
+[ActionAoE]
+	ID=board1_act; shape=17;
+	cloneFrom=adjacent;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=board1_act; 
+	actorValue=board;
+	magnitude=9;
+	duration=90;
+	chance=100 * m:tCrewNum;
+[AvAffecterAoE]
+	ID=board1_act;
+	cloneFrom=oneTile;
+	canSelectAllies=false;
+	
+[Action] ID=endBoarding_act; 
+	name=End Boarding;
+	icon=icon_timer;
+	description=;
+	attractAttention=false;
+
+	special=usableEvenWhenCantAct;
+    special=usableEvenWhenReacting;
+    special=usableEvenWhenYourTurn;
+	special=usableWithoutACaster;
+[ActionAoE]
+	ID=endBoarding_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=endBoarding_act; 
+	actorValue=trigger;
+	magnitude=tEndBoarding;
+	duration=;
+	chance=100;
+[AvAffecterAoE]
+	ID=endBoarding_act;
+	cloneFrom=oneTile;
+
+	
+---cutscene actions
+
+[Action] ID=chargeAtk_miss; 
+	casterAnimation=weapon;
+	special=moveCasterNextToTarget;
+	
+	FXOnTarget=weaponFX;
+	FXOnCaster=sidewardLines;
+	FXOnCaster=woosh;
+[ActionAoE]
+	ID=chargeAtk_miss; shape=2; 
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 4;
+	airborne=false;
+	bypassAll=false;
+	occupyAll=true;
+	canSelectActors=true;
+[AvAffecter]
+	ID=chargeAtk_miss; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.9;
+	chance=0;
+	duration=-2;
+[AvAffecterAoE]
+	ID=chargeAtk_miss;
+	cloneFrom=oneTile;
+	
+[Action] ID=chargeAtk_parried; 
+	casterAnimation=weapon;
+	special=moveCasterNextToTarget;
+	
+	FXOnTarget=weaponFX;
+	FXOnCaster=sidewardLines;
+	FXOnCaster=woosh;
+[ActionAoE]
+	ID=chargeAtk_parried; shape=2; 
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 4;
+	airborne=false;
+	bypassAll=false;
+	occupyAll=true;
+	canSelectActors=true;
+[AvAffecter]
+	ID=chargeAtk_parried; 
+	weaponAvAffecter=true;
+	magnitude=1;
+	visibleEvaluations=false;
+	chance=0;
+	duration=-2;
+	FXOnTile=hitDust_shield;
+[AvAffecterAoE]
+	ID=chargeAtk_parried;
+	cloneFrom=oneTile;
+	
+[Action] ID=attack_parried; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=attack_parried;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=attack_parried; 
+	visibleEvaluations=false;
+	actorValue=HP;
+	magnitude= 0;
+	duration=-2;
+	chance=100;
+	element=melee;
+	element=physical;
+	element=slash;
+	FXOnTile=cut;
+	FXOnTile=hitDust_shield;
+[AvAffecterAoE]
+	ID=attack_parried;
+	cloneFrom=oneTile;
+	
+[Action] ID=disarmIronSword; 
+	
+	casterAnimation=broadswing0_atkKeyMidway;
+	casterAnimationSpeed=1.15;
+[ActionAoE] 
+	ID=disarmIronSword;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=disarmIronSword; 
+	visibleEvaluations=false;
+	actorValue=HP;
+	magnitude= 0;
+	duration=-2;
+	chance=100;
+	element=melee;
+	element=physical;
+	element=slash;
+	FXOnTile=cut_overlap;
+	FXOnTile=disarmSwordSplash1;
+	FXOnTile=hitDust_shield;
+[AvAffecterAoE]
+	ID=disarmIronSword;
+	cloneFrom=oneTile;
+	
+[Action] ID=giantLightningStrike; 
+[ActionAoE] 
+	ID=giantLightningStrike;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=giantLightningStrike; 
+	visibleEvaluations=false;
+	actorValue=HP;
+	magnitude=-1;
+	duration=-2;
+	chance=100;
+	element=elec;
+	FXOnTile=giantLightning;
+	FXOnTile=terrain;
+[AvAffecterAoE]
+	ID=giantLightningStrike;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=giantLightningStrike; 
+	visibleEvaluations=false;
+	actorValue=summonItem_alwaysFit;
+	magnitude=fire;
+	duration=1;
+	chance=100;
+[AvAffecterAoE]
+	ID=giantLightningStrike;
+	cloneFrom=oneTile;
+	
+[Action] ID=relocate; 
+	attractAttention=false;
+[ActionAoE] 
+	ID=relocate;
+	forcedRot=90;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=relocate; 
+	visibleEvaluations=false;
+	actorValue=relocate;
+	magnitude= 1;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=relocate;
+	cloneFrom=oneTile;
+	
+
+	
+	
+[Action] ID=spawnBlocker; 
+	attractAttention=false;
+[ActionAoE] 
+	ID=spawnBlocker;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=spawnBlocker; 
+	visibleEvaluations=false;
+	actorValue=reposition;
+	magnitude= 4;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=spawnBlocker;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=spawnBlocker; 
+	visibleEvaluations=false;
+	actorValue=summonItem;
+	magnitude=blockedLoE;
+	duration=1;
+	chance=100;
+[AvAffecterAoE]
+	ID=spawnBlocker;
+	cloneFrom=oneTile;
+	occupyAll=true;
+	bypassAll=true;
+	
+	
+	

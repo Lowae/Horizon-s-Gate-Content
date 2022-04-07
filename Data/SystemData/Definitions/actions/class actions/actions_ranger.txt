@@ -1,0 +1,327 @@
+
+
+[Action] ID=Sha_contactShot; 
+	name=近程射击;
+	icon=icon_Sh_contactShot;
+	tooltip=射击邻近敌人造成 <math=100 + 10 * c:rank>% 伤害, 忽视武器的最小攻击距离.;
+	rankUpTooltip=每级+10%伤害.;
+	tooltipIcons=<icon=noMelee>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=ranged_small>;
+	
+	XPCost=150;
+	XPCost=500;
+	XPCost=900;
+	
+	AIRatingBias = -12;
+	
+	casterAnimation=weapon;
+	casterAnimationSpeed=1.2;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	requiredWeaponElement=ranged;
+	
+	FXOnCaster=chargeBurst;
+	FXOnTarget=weaponFX;
+[ActionAoE] 
+	ID=Sha_contactShot;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=Sha_contactShot; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 1 + w:magnitude * 0.1 * c:rank;
+	chance=w:chance;
+	duration=-2;
+	FXOnTile=ThudShotBigger;
+	FXOnHit=hitdashes;
+[AvAffecterAoE]
+	ID=Sha_contactShot;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=Sha_farshot; 
+	name=远程射击;
+	icon=icon_Sh_farshot;
+	tooltip=能够超出正常攻击距离 <math=c:rank> 格射击, 造成50%伤害.;
+	mpCost=1 * d:mpCostMult + d:mpCostMod;
+	rankUpTooltip=每级+1攻击距离.;
+	tooltipIcons=<icon=noMelee>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=ranged_small>;
+	
+	XPCost=175;
+	XPCost=500;
+	XPCost=900;
+	
+	
+	casterAnimation=weapon;
+	casterAnimationSpeed=0.65;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	requiredWeaponElement=ranged;
+	
+	FXOnCaster=chargeFast;
+	FXOnTarget=weaponFX;
+	FXOnTarget=chk;
+[ActionAoE] 
+	ID=Sha_farshot; shape=10;
+	maxRangeBonus=c:rank;
+[AvAffecter]
+	ID=Sha_farshot; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.5;
+	chance=w:chance;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Sha_farshot; shape=11;
+	
+	
+[Action] ID=Sha_focus; 
+	name=专注;
+	icon=icon_Sh_focus;
+	harmful=false;
+	tooltip=下回合获得双倍命中和 +<math=c:rank> <icon=PhysAtk>.;
+	tooltipTopRight=;
+	rankUpTooltip=每级 +1 <icon=PhysAtk>.;
+	
+	harmful=false;
+	attractAttention=false;
+	
+	XPCost=75;
+	XPCost=250;
+	XPCost=950;
+	
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	casterAnimation=charge;
+	FXOnCaster=chargeSpiralFast;
+	FXOnCasterColor=Green;
+	FXOnCaster=chargeSpiralFast_big;
+	FXOnCasterColor=Green;
+	FXOnCaster=chargeFast;
+	FXOnCasterColor=Green;
+	FXOnCaster=eyeGlint;
+	FXOnCaster=ting;
+	
+	FXOnCaster=sfx_powerup1;
+[ActionAoE] 
+	ID=Sha_focus;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Sha_focus;
+	harmful=false;
+	actorValue=Acc;
+	magnitude=1;
+	duration=-5;
+	chance=100;
+[AvAffecterAoE]
+	ID=Sha_focus;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Sha_focus;
+	harmful=false;
+	actorValue=PhysAtk;
+	magnitude=c:rank;
+	duration=-5;
+	chance=100;
+[AvAffecterAoE]
+	ID=Sha_focus;
+	cloneFrom=oneTile;
+
+
+
+[Action] ID=Sha_multishot; 
+	name=多重射击;
+	icon=icon_Sh_multishot;
+	mpCost=4 * d:mpCostMult + d:mpCostMod;
+	tooltip=射击 <math=1+c:rank> 个目标造成50%伤害.;
+	rankUpTooltip=每级 +1 目标.;
+	tooltipIcons=<icon=noMelee>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=ranged_small>;
+	
+	XPCost=250;
+	XPCost=650;
+	XPCost=1500;
+	
+	numTargets=c:rank + 1;
+	
+	casterAnimation=spinAttack;
+	casterAnimationSpeed=1.3;
+	casterAnimationDependsOnWeaponHand=true;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	requiredWeaponElement=ranged;
+	
+	FXOnCaster=eyeGlint;
+	FXOnCaster=sfx_highTing;
+	FXOnTarget=woosh;
+	FXOnTarget=weaponFX;
+[ActionAoE] 
+	ID=Sha_multishot; shape=10;
+	minRange=2;
+	maxRangeBonus=0;
+[AvAffecter]
+	ID=Sha_multishot; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.5;
+	chance=w:chance * 0.95;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Sha_multishot; shape=11;
+	
+	
+[Action] ID=Sha_powerShot; 
+	name=穿刺射击;
+	icon=icon_Sh_powershot;
+	tooltip=直线内穿刺射击造成 80% 伤害. 也能穿刺'守卫'.;
+	rankUpTooltip=每级+1最大攻击距离.;
+	tooltipIcons=<icon=noMelee>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=ranged_small>;
+	
+	XPCost=150;
+	XPCost=300;
+	XPCost=650;
+	XPCost=1350;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	casterAnimation=weapon;
+	casterAnimationSpeed=0.7;
+	
+	applyWeaponBuffs=true;
+	
+	requiredWeaponElement=ranged;
+	
+	FXOnCaster=chargeFast_big;
+	FXOnCaster=chargeFast;
+	FXOnTarget=woosh;
+	FXOnTarget=DramaticNyeaow;
+[ActionAoE] 
+	ID=Sha_powerShot; shape=2;
+	needsLoS = true;
+	needsLoE = true;
+	airborne = true;
+	arc = true;
+	minRange = 2;
+	maxRange = 2;
+	maxRangeBonus=c:rank;
+	bypassAll=false;
+	occupyAll=true;
+[AvAffecter]
+	ID=Sha_powerShot; 
+	actorValue=HP;
+	magnitude=w:magnitude * 0.80;
+	chance=w:chance;
+	duration=-2;
+	element=ranged;
+	FXOnTile=line;
+	FXOnTile=whiteExplosionVerySmall;
+	FXOnHit=ThudShot;
+	FXOnHit=smallShakeHoriz;
+[AvAffecterAoE]
+	ID=Sha_powerShot; shape=2;
+	coneAngle=1;
+	needsLoS = true;
+	needsLoE = true;
+	airborne = true;
+	arc = true;
+	minRange = 1;
+	maxRange = 0;
+	maxRangeBonus=0;
+	maxRangeAddDistanceFromCaster=true;
+	bypassAll=false;
+	occupyAll=true;
+	aoeCasterAsOrigin=true;
+	
+
+[Action] ID=Sha_chargeShot; 
+	name=Charge Shot;
+	icon=icon_Sh_chargeshot;
+	tooltip=Take a very delayed but powerful shot that deals +<math=30 + 10>% damage.;
+	rankUpTooltip=Each rank adds +10% damage.;
+	tooltipIcons=<icon=noMelee>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=ranged_small>;
+	
+	chargeTime=17;
+	
+	XPCost=200;
+	XPCost=450;
+	XPCost=700;
+	
+	maxRank=3;
+	
+	casterAnimation=weapon;
+	casterAnimationSpeed=0.6;
+	
+	special=requiresCharging;
+	special=cancelChargingOnMove;
+	requiredWeaponElement=ranged;
+	
+	FXOnCaster=chargeBurst;
+	FXOnCasterColor=Orange;
+	FXOnCaster=chargeSpiralFast_big;
+	FXOnCasterColor=Orange;
+	FXOnCaster=sfx_risingSwish;
+	FXOnCaster=darken_minor;
+	
+	FXOnTarget=weaponFX;
+[ActionAoE] 
+	ID=Sha_chargeShot; shape=10;
+[AvAffecter]
+	ID=Sha_chargeShot; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 1.3 + w:magnitude * 0.1 * c:rank;
+	chance=w:chance;
+	duration=-2;
+	FXOnTile=tinyShakeHoriz;
+	FXOnTileColor=Orange;
+	FXOnTile=whiteExplosionSmall;
+	FXOnTileColor=Orange;
+	FXOnTile=DramaticNyeaow;
+	FXOnHit=smallShakeHoriz;
+	FXOnHit=sfx_slashingHit;
+[AvAffecterAoE]
+	ID=Sha_chargeShot;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=Sha_headshot; 
+	name=Headshot;
+	icon=icon_Sh_headshot;
+	tooltip=Target enemy vitals for double damage, but with half accuracy.;
+	tooltipIcons=<icon=noMelee>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=ranged_small>;
+	
+	XPCost=180;
+	
+	requiredWeaponElement=ranged;
+	casterAnimation=weapon;
+	casterAnimationSpeed=0.8;
+	maxRank=1;
+	
+	FXOnCaster=chargeBurst;
+	FXOnCasterColor=Red;
+	FXOnCaster=sfx_risingSwishHigh;
+	
+	FXOnTarget=targetRet;
+	FXOnTarget=weaponFX;
+[ActionAoE]
+	ID=Sha_headshot; shape=10; 
+[AvAffecter]
+	ID=Sha_headshot; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 2;
+	chance=w:chance * 0.5;
+	duration=-2;
+	FXOnHit=hitdashes_rot45;
+	FXOnHitColor=White;
+	FXOnHit=ping;
+	FXOnHitColor=Red;
+	FXOnHit=manySplatter;
+	FXOnHitColor=Red;
+	FXOnHit=smallShakeHoriz;
+	FXOnHit=SLAM;
+[AvAffecterAoE]
+	ID=Sha_headshot;
+	cloneFrom=oneTile;
+
+	

@@ -1,0 +1,73 @@
+
+[DialogNode] ID=port25_guy1a;
+animations=sly;
+animations=;
+statements=What?;
+statements=I'm on break.;
+nextNodeID=;
+
+[DialogNode] ID=port25_guy2a;
+animations=;
+statements=I'm here to perfect my archery...<p> and I'm not leaving until I do.;
+nextNodeID=;
+
+[DialogNode] ID=port25_guy2b;
+animations=happy;
+statements=Nice shot!;
+nextNodeID=;
+
+[DialogNode] ID=port25_guy3a;
+animations=sigh;
+statements=Praise Jasce, brother.;
+nextNodeID=;
+specialEffect=facingRotPrev;
+
+[DialogNode] ID=port25_guy3b;
+animations=happy;
+statements=Praise, brother!;
+nextNodeID=;
+specialEffect=facingRotPrev;
+
+[DialogNode] ID=port25_guy4a;
+animations=;
+animations=;
+statements=I'm just waiting for my buddy to finish up.;
+statements=We've got a bigger temple in the Wall, but he likes this little one out here.;
+nextNodeID=;
+
+[DialogNode] ID=port25_guy5a;
+animations=;
+animations=;
+statements=Welcome to the Wall.;
+statements=Sorry, no entry.;
+nextNodeID=;
+
+
+[DialogNodeOverride] ID=maxRank_port25_guy5a;
+dialogNodeID_toOverride=port25_guy5a;
+fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=scared;
+animations=angry;
+statements=Oh!<p> <pnamefull=>!;
+statements=Jasce' will be done!;
+
+[DialogNode] ID=port25_guy6a;
+animations=sigh;
+statements=No entry, fella.;
+nextNodeID=;
+
+[DialogNodeOverride] ID=maxRank_port25_guy6a;
+dialogNodeID_toOverride=port25_guy6a;
+fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=;
+animations=angry;
+animations=;
+statements=Well met, <prank=>!;
+statements=None have been allowed entry except in accordance with direct orders, <pnamefull=>!;
+statements=All goes well here!;
+
+
+
+

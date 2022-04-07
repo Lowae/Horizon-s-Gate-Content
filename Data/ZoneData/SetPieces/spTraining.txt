@@ -1,0 +1,113 @@
+[Zone]  ID=spTraining; dark=False; timeUntilNewDay=22.2; showFogOfWar=True; fogOfWar=True; minimapEnabled=True; allowCameraPastZoneEdges=False; cantAct=False; cantGameOver=False; alwaysKeepWeaponsUnsheathed=False; peaceful=False; overseerMode=False; rollingPinStyle=False; drawSky=False; drawSky_overrideYpos=-1; boatZone=False; wind=False; overworld=False; canDropItems=True; 
+ travelSong=; travelSongVolume=1; travelSongPitch=0; combatSong=; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=0; darkG=0; darkB=0; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=; bgFX_sineWave=0; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=pDirt; zoneGrassPalette=pGreen; zoneGrassDarkPalette=pGreen2; zoneStonePalette=pGreyD; zoneStoneDarkPalette=p1; zoneStoneLightPalette=p1; zoneWaterPalette=pBlue; zoneDirtDarkPalette=pDirt; zoneWoodPalette=pWood; zoneWoodDarkPalette=pWoodDark; zoneMisc1Palette=pYellow6; zoneMisc2Palette=pWoodDark; zoneMisc3Palette=pYellow5; zoneMisc4Palette=pBlue; zoneMisc5Palette=pGreen; zoneMisc6Palette=pOrange; zoneMisc7Palette=pYellow; zoneMisc8Palette=pPurple; 
+
+combatMode=False; 
+
+[Item] ID=fade_f6; q=1; r=180; oX=0; oY=2; x=0; y=0;
+[Item] ID=fade_f6; q=1; r=180; x=0; y=1;
+[Item] ID=fade_f6; q=1; r=180; x=0; y=2;
+[Item] ID=fade_f6; q=1; r=180; x=0; y=3;
+[Item] ID=fade_f6; q=1; r=180; x=0; y=4;
+[Item] ID=fade_f6; q=1; r=180; x=0; y=5;
+[Item] ID=fade_f6; q=1; r=180; x=0; y=6;
+[Item] ID=sandbag_movable; q=1; x=1; y=2;
+[Item] ID=woodSupport2; q=1; r=-270; x=1; y=5;
+[Item] ID=woodSupport2; q=1; r=270; x=1; y=5;
+[Item] ID=sign_wall1; q=1; oX=0; oY=-2; x=1; y=5;
+[Item] ID=sign_icon_training; q=1; oX=0; oY=-2; x=1; y=5;
+[Item] ID=blockedWalkJump; q=1; x=1; y=5;
+[Item] ID=brazier; q=1; x=2; y=1;
+[Item] ID=travelPoint_7; q=1; r=90; x=2; y=2;
+[Item] ID=item_cantGrabOrPlace; q=1; x=2; y=2;
+[Item] ID=blocker_big; q=1; x=2; y=2;
+[Item] ID=table_small2; q=1; x=2; y=4;
+[Item] ID=useNote; q=1; x=2; y=4;
+[Item] ID=tile_cantTarget; q=1; x=2; y=4;
+[Item] ID=fade_f6; q=1; r=270; x=2; y=5;
+[Item] ID=fade_f6; q=1; r=270; x=3; y=5;
+[Item] ID=bullseye; q=1; x=4; y=0;
+[Item] ID=blockedWalkJump; q=1; x=4; y=0;
+[Item] ID=fade_f6; q=1; r=270; x=4; y=5;
+[Item] ID=sport_building_center; q=1; x=5; y=3;
+[Item] ID=fade_f6; q=1; r=270; x=5; y=5;
+[Item] ID=blockedWalkJump; q=1; x=6; y=0;
+[Item] ID=bullseye; q=1; x=6; y=0;
+[Item] ID=fade_f6; q=1; r=270; x=6; y=5;
+[Item] ID=fade_f6; q=1; r=270; x=7; y=5;
+[Item] ID=fade_f6; q=1; r=180; x=8; y=1;
+[Item] ID=fade_f6; q=1; r=180; x=8; y=2;
+[Item] ID=fade_f6; q=1; r=180; x=8; y=3;
+[Item] ID=fade_f6; q=1; r=180; x=8; y=4;
+[Item] ID=fade_f6; q=1; r=270; x=8; y=5;
+[Item] ID=fade_f6; q=1; r=180; x=8; y=5;
+[Item] ID=fade_f6; q=1; oX=0; oY=2; x=10; y=0;
+[Item] ID=fade_f6; q=1; x=10; y=1;
+[Item] ID=fade_f6; q=1; x=10; y=2;
+[Item] ID=fade_f6; q=1; x=10; y=3;
+[Item] ID=fade_f6; q=1; x=10; y=4;
+[Item] ID=fade_f6; q=1; x=10; y=5;
+[Item] ID=fade_f6; q=1; x=10; y=6;
+
+
+[Actor]ID=dummy_spTraining_; name=Dummy;
+actorTypeID=dummy; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=8,1; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=True; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=False; fearless=True; unkillable=True; factionBoss=False; faction=dummy; combatTeam=; clothPalette=pOrange; skinPalette=pOrange; armorPalette=pOrange; unarmoredPalette=pOrange; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0; bravery=1; intelligence=0; honor=1; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; keepWeaponsUnsheathedTimer=9999999; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=template_head; faceSprite=; legsSprite=dummy_legs; armLSprite=template_arm; armRSprite=template_arm; torsoSprite=template_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=shield_wood; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=9; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=sword_wood; cSlot=0; containerID=0;
+[ActorItem] ID=shield_wood; cSlot=1; containerID=1;
+
+
+[Actor]ID=dummy_spTraining_spTraining_; name=Dummy;
+actorTypeID=dummy; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=8,3; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=True; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=False; fearless=True; unkillable=True; factionBoss=False; faction=dummy; combatTeam=; clothPalette=pOrange; skinPalette=pOrange; armorPalette=pOrange; unarmoredPalette=pOrange; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0; bravery=1; intelligence=0; honor=1; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; keepWeaponsUnsheathedTimer=9999999; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=template_head; faceSprite=; legsSprite=dummy_legs; armLSprite=template_arm; armRSprite=template_arm; torsoSprite=template_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=dummy_spTraining_spTraining_spTraining_; name=Dummy;
+actorTypeID=dummy; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=8,5; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=True; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=False; fearless=True; unkillable=True; factionBoss=False; faction=dummy; combatTeam=; clothPalette=pOrange; skinPalette=pOrange; armorPalette=pOrange; unarmoredPalette=pOrange; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0; bravery=1; intelligence=0; honor=1; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; keepWeaponsUnsheathedTimer=9999999; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=template_head; faceSprite=; legsSprite=dummy_legs; armLSprite=template_arm; armRSprite=template_arm; torsoSprite=template_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=spear_wood; cSlot=1; containerID=0;
+
+
+
+[Trigger] numID=0; aliasID=;
+topX=2;topY=4;btmX=2;btmY=4;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=use; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=0; effectID=talk; sValue=; sValue2=sport_training1; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+

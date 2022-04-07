@@ -1,0 +1,1873 @@
+
+
+[LevelData] ID=jungle1_rock;
+minZoneSizeX = 36;
+minZoneSizeY = 28;
+maxZoneSizeX = 39;
+maxZoneSizeY = 30;
+
+wallChanceToZig = 0.5;
+wallChanceToZag = 0.3;
+
+minWallThickness = 8;
+maxWallThickness = 10;
+minWallFlatStretch = 3;
+
+chanceOfForwardPath = 0.2;
+
+worldSizeX = 2;
+worldSizeY = 2;
+
+wallType = caveSolid_Rock;
+wallTypeBottom = caveWall;
+defaultTile = dirt_smooth;
+
+wallTypeBottom_exit = caveWallGreen;
+defaultTile_exit = grass_lush;
+
+minExitWidth = 4;
+maxExitWidth = 7;
+exitCurveAverageDepth = 6;
+exitCurveVariation = 2;
+
+
+
+----
+minSetPiecesPerRoom = 1;
+maxSetPiecesPerRoom = 2;
+
+setPieces=spPillar1;
+setPiecesChanceToReroll=0;
+setPieces=spPillar2;
+setPiecesChanceToReroll=0;
+setPieces=spPillar3;
+setPiecesChanceToReroll=0;
+setPieces=spPillar4;
+setPiecesChanceToReroll=0;
+setPieces=spSogbogger1;
+setPiecesChanceToReroll=0.7;
+
+----
+centerPieceChance_normal = 0.8;
+centerPieceChance_deadEnd = 0.978;
+centerPieceChance_1stRoom = 0.4;
+
+centerPieces = spPill1;
+centerPiecesChanceToReroll = 0;
+centerPieces = spFly1;
+centerPiecesChanceToReroll = 0.4;
+centerPieces = spSplitworms1;
+centerPiecesChanceToReroll = 0;
+
+
+----
+spawnItems_onWall_chance = 0.1;
+spawnItems_onWall=ore_iron;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=ore_mythril;
+spawnItems_onWall_chanceToReroll=0.85;
+spawnItems_onWall=ore_volskarn;
+spawnItems_onWall_chanceToReroll=0.95;
+
+
+spawnItems_nearWall_chance = 0.14;
+spawnItems_nearWall=rubble;
+spawnItems_nearWall_chanceToReroll=0;
+
+spawnItems_nearCenter_chance = 0.04;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=rubble;
+spawnItems_nearCenter_chanceToReroll=0.5;
+
+
+[LevelDataZone]ID=jungle1_rock;
+
+zoneDirtPalette = pGreyD2er;
+zoneDirtDarkPalette = pGreyD2er;
+zoneGrass = pPurple;
+zoneGrassPalette = pPurple;
+
+travelSong=PerituneMaterial_Deep_Woods;
+travelSongVolume=0.8;
+combatSong=PerituneMaterial_Lost_place2;
+combatSongDelay=1;
+
+dark=true;
+darkR=85; darkG=85; darkB=85; 
+
+
+[LevelData] ID=jungle1;
+
+minZoneSizeX = 38;
+minZoneSizeY = 36;
+maxZoneSizeX = 40;
+maxZoneSizeY = 37;
+
+wallChanceToZig = 0.5;
+wallChanceToZag = 0.3;
+
+minWallThickness = 8;
+maxWallThickness = 10;
+minWallFlatStretch = 3;
+
+chanceOfForwardPath = 0.4;
+
+worldSizeX = 2;
+worldSizeY = 2;
+
+wallType = caveSolid_Rock;
+wallTypeBottom = caveWallGreen;
+defaultTile = grass_lush;
+
+wallTypeBottom_exit = ;
+defaultTile_exit = ;
+
+minExitWidth = 3;
+maxExitWidth = 5;
+exitCurveAverageDepth = 6;
+exitCurveVariation = 2;
+
+triggers=tVineWither;
+triggers=tVineGrowth;
+triggers=tEnterJungle;
+----
+
+otherLevelData=jungle1_swampy;
+otherLevelData_chance=0.08;
+otherLevelData_chance_deadEnd=0;
+otherLevelData=jungle1_supergrassy;
+otherLevelData_chance=0.17;
+otherLevelData_chance_deadEnd=0;
+otherLevelData=jungle1_spiders;
+otherLevelData_chance=0.1;
+otherLevelData_chance_deadEnd=0.25;
+otherLevelData=jungle1_spidest_lair;
+otherLevelData_chance=0;
+otherLevelData_chance_deadEnd=0.1;
+otherLevelData=jungle1_rock;
+otherLevelData_chance=0;
+otherLevelData_chance_deadEnd=0.1;
+
+----
+
+mandatoryCenterPieces=Secret1=spJ1_z1a;
+mandatoryCenterPieces=Secret1=spJ1_z2a;
+mandatoryCenterPieces=Secret1=spJ1_z3a;
+mandatoryCenterPieces=Secret1=spJ1_z4a;
+mandatoryCenterPieces=Secret1=spJ1_z5a;
+mandatoryCenterPieces=Secret1=spJ1_z6a;
+mandatoryCenterPieces=Secret1=spJ1_z7a;
+mandatoryCenterPieces=Secret1=spJ1_z8a;
+
+
+mandatorySetPieces=Loot1=spPillar_volskarn1;
+
+
+---
+minSetPiecesPerRoom = 2;
+maxSetPiecesPerRoom = 4;
+
+setPieces=spPillar1;
+setPiecesChanceToReroll=0.4;
+setPieces=spPillar2;
+setPiecesChanceToReroll=0.4;
+setPieces=spPillar3;
+setPiecesChanceToReroll=0.4;
+setPieces=spPillar4;
+setPiecesChanceToReroll=0.4;
+
+setPieces=spPool1;
+setPiecesChanceToReroll=0;
+setPieces=spPool2;
+setPiecesChanceToReroll=0;
+setPieces=spPool3;
+setPiecesChanceToReroll=0;
+
+setPieces=spPods1;
+setPiecesChanceToReroll=0;
+setPieces=spPods1;
+setPiecesChanceToReroll=0;
+
+setPieces=spRutroot1;
+setPiecesChanceToReroll=0.2;
+setPieces=spRutroot2;
+setPiecesChanceToReroll=0.2;
+
+setPieces=spBushes_grass1;
+setPiecesChanceToReroll=0;
+setPieces=spBushes_grass2;
+setPiecesChanceToReroll=0;
+setPieces=spBushes_grass3;
+setPiecesChanceToReroll=0;
+setPieces=spBushes_grass4;
+setPiecesChanceToReroll=0.5;
+setPieces=spBushes_grass5;
+setPiecesChanceToReroll=0;
+setPieces=spBushes_grass6;
+setPiecesChanceToReroll=0;
+
+setPieces=spSogbogger_grass1;
+setPiecesChanceToReroll=0.99;
+
+
+
+---
+centerPieceChance_normal = 0.98;
+centerPieceChance_deadEnd = 1;
+centerPieceChance_1stRoom = 0.1;
+
+centerPieces = spVineman1;
+centerPiecesChanceToReroll = 0 + g:vineWither * 0.3;
+centerPieces = spVineman2;
+centerPiecesChanceToReroll = 0 + g:vineWither * 0.3;
+centerPieces = spVineman3;
+centerPiecesChanceToReroll = 0 + g:vineWither * 0.3;
+centerPieces = spVineman4;
+centerPiecesChanceToReroll = 0 + g:vineWither * 0.3;
+centerPieces = spVineman5;
+centerPiecesChanceToReroll = 0 + g:vineWither * 0.3;
+centerPieces=spJHouse1;
+centerPiecesChanceToReroll=0.8;
+centerPieces=spJHouse2;
+centerPiecesChanceToReroll=0.8;
+centerPieces=spJHouse3;
+centerPiecesChanceToReroll=0.8;
+centerPieces=spJHouse4;
+centerPiecesChanceToReroll=0.8;
+centerPieces=spJHouse5;
+centerPiecesChanceToReroll=0.8;
+centerPieces=spJHouse6;
+centerPiecesChanceToReroll=0.8;
+centerPieces=spJHouse7;
+centerPiecesChanceToReroll=0.8;
+centerPieces=spJHouse8;
+centerPiecesChanceToReroll=0.8;
+centerPieces = spBrigands1;
+centerPiecesChanceToReroll = 0.35;
+centerPieces = spMaor1;
+centerPiecesChanceToReroll = 0.97;
+centerPieces = spMages1;
+centerPiecesChanceToReroll = 0.9;
+centerPieces = spRogues1;
+centerPiecesChanceToReroll = 0.85;
+centerPieces = spZibel1;
+centerPiecesChanceToReroll = 0.6;
+centerPieces = spZibel_asleep1;
+centerPiecesChanceToReroll = 0.98;
+centerPieces = spPill1;
+centerPiecesChanceToReroll = 0.7;
+centerPieces = spBirds1;
+centerPiecesChanceToReroll = 0.7;
+centerPieces = spSpiders1;
+centerPiecesChanceToReroll = 0.93;
+centerPieces = spSogbogger_grass1;
+centerPiecesChanceToReroll = 0.9;
+
+---
+
+spawnItems_onWall_chance = 0.55;
+spawnItems_onWall=random_vine;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=random_vine;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=random_vine;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=random_vine;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=random_vine;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=latticeWeed;
+spawnItems_onWall_chanceToReroll=0.22;
+spawnItems_onWall=latticeWeed_sprout;
+spawnItems_onWall_chanceToReroll=0.74;
+spawnItems_onWall=cliff_rock;
+spawnItems_onWall_chanceToReroll=0.91;
+spawnItems_onWall=ore_iron;
+spawnItems_onWall_chanceToReroll=0.99;
+spawnItems_onWall=caveFlower;
+spawnItems_onWall_chanceToReroll=0.995;
+spawnItems_onWall=ghost_grub;
+spawnItems_onWall_chanceToReroll=0.995;
+
+spawnItems_nearCenter_chance = 0.17;
+spawnItems_nearCenter=bush_huge1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=bush_big1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=bush1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=bush2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+
+spawnItems_nearCenter=tree3_base;
+spawnItems_nearCenter_chanceToReroll=0.55;
+spawnItems_nearCenter=tree_med;
+spawnItems_nearCenter_chanceToReroll=0.55;
+spawnItems_nearCenter=tree;
+spawnItems_nearCenter_chanceToReroll=0.55;
+spawnItems_nearCenter=tree_small;
+spawnItems_nearCenter_chanceToReroll=0.55;
+spawnItems_nearCenter=tree_big;
+spawnItems_nearCenter_chanceToReroll=0.55;
+spawnItems_nearCenter=grass_mid1;
+spawnItems_nearCenter_chanceToReroll=0;
+
+spawnItems_nearCenter=flower1;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=flowers1;
+spawnItems_nearCenter_chanceToReroll=0.8;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=pod_small1;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=pod_small2;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=pod_burst;
+spawnItems_nearCenter_chanceToReroll=0.25;
+spawnItems_nearCenter=pod_sickly;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=pod_blast;
+spawnItems_nearCenter_chanceToReroll=0.4;
+spawnItems_nearCenter=brambles;
+spawnItems_nearCenter_chanceToReroll=0.7;
+spawnItems_nearCenter=stash_dirt_loot2;
+spawnItems_nearCenter_chanceToReroll=0.96;
+spawnItems_nearCenter=stash_dirt_loot3;
+spawnItems_nearCenter_chanceToReroll=0.991;
+spawnItems_nearCenter=stash_dirt_loot4;
+spawnItems_nearCenter_chanceToReroll=0.995;
+
+
+specialSpawns=leafyTree_lower;
+specialSpawns=leafyTree_mid;
+specialSpawns=leafyTree_mid2;
+specialSpawns=leafyTree_mid2;
+specialSpawns=leafyTree_top;
+specialSpawns=vineUp;
+
+
+[LevelDataZone]ID=jungle1;
+
+zoneDirtPalette = pBlueD2;
+zoneDirtDarkPalette = pOrange_mix2;
+zoneGrassPalette = pPurple;
+zoneGrassDarkPalette = pMagenta;
+zoneWoodPalette = pPurple_mix2;
+zoneStoneDarkPalette = pYellow;
+zoneWaterPalette = pTeal;
+zoneMisc1Palette = pTeal;
+zoneMisc2Palette = pPurple;
+
+bgParallaxRatio =0;
+bgTerrainTypeID=grass;
+
+travelSong=PerituneMaterial_Deep_Woods;
+travelSongVolume=1;
+combatSong=PerituneMaterial_Lost_place2;
+combatSongDelay=1;
+
+dark=true;
+darkR=147; darkG=147; darkB=152; 
+
+zoneFX=w_risingDust_glow;
+zoneFXTime=10;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+
+
+
+[LevelData] ID=jungle1_supergrassy;
+cloneFrom=jungle1;
+
+cannotHaveMandatorySetOrCenterPieces=true;
+
+wallTypeBottom_exit = ;
+defaultTile_exit = ;
+
+minExitWidth = 1;
+maxExitWidth = 2;
+exitCurveAverageDepth = 3;
+exitCurveVariation = 1;
+
+
+---
+minSetPiecesPerRoom = 0;
+maxSetPiecesPerRoom = 0;
+
+
+centerPieceChance_normal = 1;
+centerPieceChance_deadEnd = 1;
+centerPieceChance_1stRoom = 1;
+
+centerPieces = spJungleHole1;
+centerPiecesChanceToReroll = 0;
+
+
+---
+
+spawnItems_onWall_chance = 0.1;
+spawnItems_onWall=latticeWeed;
+spawnItems_onWall_chanceToReroll=0.22;
+---
+spawnItems_nearWall_chance = 0.99;
+spawnItems_nearWall=grass_tall1;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=grass_mid1;
+spawnItems_nearWall_chanceToReroll=0.6;
+
+---
+spawnItems_nearCenter_chance = 1;
+spawnItems_nearCenter=grass_tall1;
+spawnItems_nearCenter_chanceToReroll=0;
+
+spawnItems_nearCenter=tree3_base;
+spawnItems_nearCenter_chanceToReroll=0.999;
+
+spawnItems_nearCenter=bush_huge1;
+spawnItems_nearCenter_chanceToReroll=0.99;
+spawnItems_nearCenter=bush_big1;
+spawnItems_nearCenter_chanceToReroll=0.99;
+---
+triggers=tVineWither;
+triggers=tVineGrowth;
+
+specialSpawns=leafyTree_lower;
+specialSpawns=leafyTree_mid;
+specialSpawns=leafyTree_mid2;
+specialSpawns=leafyTree_top;
+
+[LevelDataZone]ID=jungle1_supergrassy;
+
+minZoneSizeX = 46;
+minZoneSizeY = 35;
+maxZoneSizeX = 48;
+maxZoneSizeY = 37;
+
+zoneDirtPalette = pBlueD2;
+zoneDirtDarkPalette = pOrange_mix2;
+zoneGrassPalette = pPurple;
+zoneWoodPalette = pPurple_mix2;
+zoneWaterPalette = pTeal;
+zoneMisc1Palette = pTeal;
+zoneMisc2Palette = pPurple;
+
+travelSong=PerituneMaterial_Deep_Woods;
+travelSongVolume=1;
+combatSong=PerituneMaterial_Lost_place2;
+combatSongDelay=1;
+
+dark=true;
+darkR=147; darkG=147; darkB=154; 
+
+zoneFX=w_risingDust_glow;
+zoneFXTime=10;
+
+[LevelData] ID=jungle1_swampy;
+cloneFrom=jungle1;
+
+cannotHaveMandatorySetOrCenterPieces=true;
+
+minZoneSizeX = 59;
+minZoneSizeY = 47;
+maxZoneSizeX = 64;
+maxZoneSizeY = 53;
+
+minSetPiecesPerRoom = 0;
+maxSetPiecesPerRoom = 0;
+
+wallType = caveSolid_Rock;
+wallTypeBottom = caveWallGreen;
+defaultTile = water_edge2;
+
+wallTypeBottom_exit = caveWallGreen;
+defaultTile_exit = grass_lush;
+
+carvePath_betweenExits_terrainTypeID=grass_lush;
+carvePath_betweenExits_straight_minLength = 1;
+carvePath_betweenExits_turn_minLength = 2;
+carvePath_betweenExits_chanceToTurn = 0.4;
+carvePath_betweenExits_width = 2;
+
+---
+minSetPiecesPerRoom = 1;
+maxSetPiecesPerRoom = 2;
+
+setPieces=spIsland_grass1;
+setPiecesChanceToReroll=0;
+setPieces=spIsland_grass2;
+setPiecesChanceToReroll=0;
+setPieces=spIsland_grass3;
+setPiecesChanceToReroll=0;
+
+---
+centerPieceChance_normal = 0.3;
+centerPieceChance_deadEnd = 0.5;
+centerPieceChance_1stRoom = 0.2;
+
+centerPieces = spSerpent_water2;
+centerPiecesChanceToReroll = 0;
+---
+
+spawnItems_onWall_chance = 0.45;
+spawnItems_onWall=random_vine;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=random_vine;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=random_vine;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=random_vine;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=random_vine;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=latticeWeed;
+spawnItems_onWall_chanceToReroll=0.22;
+spawnItems_onWall=latticeWeed_sprout;
+spawnItems_onWall_chanceToReroll=0.74;
+spawnItems_onWall=cliff_rock;
+spawnItems_onWall_chanceToReroll=0.91;
+spawnItems_onWall=caveFlower;
+spawnItems_onWall_chanceToReroll=0.995;
+spawnItems_onWall=ghost_grub;
+spawnItems_onWall_chanceToReroll=0.995;
+
+spawnItems_nearCenter_chance = 0.03;
+spawnItems_nearCenter=bush_huge1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=bush_big1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=bush1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=bush2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_reed1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_reed2;
+spawnItems_nearCenter_chanceToReroll=0;
+--spawnItems_nearCenter=lily_bud1;
+--spawnItems_nearCenter_chanceToReroll=0;
+--spawnItems_nearCenter=lily_blossom1;
+--spawnItems_nearCenter_chanceToReroll=0.7;
+
+triggers=tVineWither;
+triggers=tVineGrowth;
+
+specialSpawns=lily_bud;
+specialSpawns=lily_blossom;
+specialSpawns=vineUp;
+
+[LevelDataZone]ID=jungle1_swampy;
+
+
+zoneDirtPalette = pBlueD2;
+zoneDirtDarkPalette = pOrange_mix2;
+zoneGrassPalette = pPurple;
+zoneWoodPalette = pPurple_mix2;
+zoneWaterPalette = pTeal;
+zoneMisc1Palette = pTeal;
+zoneMisc2Palette = pPurple;
+
+travelSong=PerituneMaterial_Deep_Woods;
+travelSongVolume=1;
+combatSong=PerituneMaterial_Lost_place2;
+combatSongDelay=1;
+
+dark=true;
+darkR=140; darkG=140; darkB=164; 
+
+zoneFX=w_risingDust_glow;
+zoneFXTime=10;
+zoneFX=dragonfly_spawn;
+zoneFXTime=999999;
+zoneFX=dragonfly_spawn;
+zoneFXTime=999999;
+zoneFX=dragonfly_spawn_flip;
+zoneFXTime=999999;
+zoneFX=dragonfly_spawn_flip;
+zoneFXTime=999999;
+
+
+[LevelData] ID=jungle1_spiders;
+cloneFrom=jungle1;
+
+minZoneSizeX = 44;
+minZoneSizeY = 35;
+maxZoneSizeX = 46;
+maxZoneSizeY = 37;
+
+wallType = caveSolid_Rock;
+wallTypeBottom = caveWallGreen;
+defaultTile = grass_lush;
+
+wallTypeBottom_exit = ;
+defaultTile_exit = ;
+
+minExitWidth = 3;
+maxExitWidth = 5;
+exitCurveAverageDepth = 6;
+exitCurveVariation = 2;
+
+---
+minSetPiecesPerRoom = 2;
+maxSetPiecesPerRoom = 4;
+
+setPieces=spPillar1;
+setPiecesChanceToReroll=0;
+setPieces=spPillar2;
+setPiecesChanceToReroll=0;
+setPieces=spPillar3;
+setPiecesChanceToReroll=0;
+setPieces=spPillar4;
+setPiecesChanceToReroll=0;
+
+setPieces=spSpiders1;
+setPiecesChanceToReroll=0.7;
+
+setPieces=spPods1;
+setPiecesChanceToReroll=0.3;
+
+setPieces=spRutroot1;
+setPiecesChanceToReroll=0.5;
+
+setPieces=spSogbogger_grass1;
+setPiecesChanceToReroll=0.99;
+
+---
+centerPieceChance_normal = 1;
+centerPieceChance_deadEnd = 1;
+centerPieceChance_1stRoom = 1;
+
+centerPieces = spSpiders1;
+centerPiecesChanceToReroll = 0;
+
+---
+
+spawnItems_onWall_chance = 0.75;
+spawnItems_onWall=web1;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=web1;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=web2;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=web3;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=random_vine;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=cliff_rock;
+spawnItems_onWall_chanceToReroll=0.91;
+spawnItems_onWall=caveFlower;
+spawnItems_onWall_chanceToReroll=0.999;
+spawnItems_onWall=ore_iron;
+spawnItems_onWall_chanceToReroll=0.999;
+
+spawnItems_nearCenter_chance = 0.16;
+spawnItems_nearCenter=brambles;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=web1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=web2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=web3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=web1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=web2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=web3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=bush_huge1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=bush_big1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=bush1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=bush2;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=plant_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=pod_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_burst;
+spawnItems_nearCenter_chanceToReroll=0.35;
+spawnItems_nearCenter=pod_sickly;
+spawnItems_nearCenter_chanceToReroll=0.65;
+spawnItems_nearCenter=pod_blast;
+spawnItems_nearCenter_chanceToReroll=0.7;
+spawnItems_nearCenter=web_sac1_med;
+spawnItems_nearCenter_chanceToReroll=0.9;
+spawnItems_nearCenter=web_sac1_good;
+spawnItems_nearCenter_chanceToReroll=0.95;
+spawnItems_nearCenter=stash_dirt_loot2;
+spawnItems_nearCenter_chanceToReroll=0.96;
+spawnItems_nearCenter=stash_dirt_loot3;
+spawnItems_nearCenter_chanceToReroll=0.98;
+spawnItems_nearCenter=stash_dirt_loot4;
+spawnItems_nearCenter_chanceToReroll=0.995;
+
+triggers=tVineWither;
+triggers=tVineGrowth;
+
+specialSpawns=web1_topWall;
+specialSpawns=vineUp;
+
+[LevelDataZone]ID=jungle1_spiders;
+
+zoneDirtPalette = pBlueD2;
+zoneDirtDarkPalette = pOrange_mix2;
+zoneGrassPalette = pPurple;
+zoneGrassDarkPalette = pMagenta;
+zoneWoodPalette = pPurple_mix2;
+zoneWaterPalette = pTeal;
+zoneMisc1Palette = pTeal;
+zoneMisc2Palette = pPurple;
+
+travelSong=PerituneMaterial_Deep_Woods;
+travelSongVolume=0.8;
+combatSong=PerituneMaterial_Lost_place2;
+combatSongDelay=1;
+
+dark=true;
+darkR=75; darkG=50; darkB=83; 
+
+zoneFX=w_risingDust_glow;
+zoneFXTime=10;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+
+
+[LevelData] ID=jungle1_spidest_lair;
+cloneFrom=jungle1;
+
+minZoneSizeX = 49;
+minZoneSizeY = 42;
+maxZoneSizeX = 56;
+maxZoneSizeY = 45;
+
+wallType = caveSolid_Rock;
+wallTypeBottom = caveWallGreen;
+defaultTile = grass_lush;
+
+wallTypeBottom_exit = ;
+defaultTile_exit = ;
+
+minExitWidth = 3;
+maxExitWidth = 5;
+exitCurveAverageDepth = 6;
+exitCurveVariation = 2;
+
+---
+minSetPiecesPerRoom = 2;
+maxSetPiecesPerRoom = 4;
+
+setPieces=spPillar1;
+setPiecesChanceToReroll=0;
+setPieces=spPillar2;
+setPiecesChanceToReroll=0;
+setPieces=spPillar2;
+setPiecesChanceToReroll=0;
+setPieces=spPillar3;
+setPiecesChanceToReroll=0;
+setPieces=spPillar4;
+setPiecesChanceToReroll=0;
+
+setPieces=spSpiders1;
+setPiecesChanceToReroll=0;
+setPieces=spSpiders1;
+setPiecesChanceToReroll=0;
+
+setPieces=spPods1;
+setPiecesChanceToReroll=0.3;
+
+setPieces=spRutroot1;
+setPiecesChanceToReroll=0.5;
+
+
+---
+centerPieceChance_normal = 1;
+centerPieceChance_deadEnd = 1;
+centerPieceChance_1stRoom = 1;
+
+centerPieces = spSpidest1;
+centerPiecesChanceToReroll = 0;
+
+---
+
+spawnItems_onWall_chance = 0.75;
+spawnItems_onWall=web1;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=web1;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=web2;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=web3;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=random_vine;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=cliff_rock;
+spawnItems_onWall_chanceToReroll=0.91;
+spawnItems_onWall=caveFlower;
+spawnItems_onWall_chanceToReroll=0.999;
+spawnItems_onWall=ore_iron;
+spawnItems_onWall_chanceToReroll=0.995;
+spawnItems_onWall=ore_mythril;
+spawnItems_onWall_chanceToReroll=0.995;
+spawnItems_onWall=ore_volskarn;
+spawnItems_onWall_chanceToReroll=0.997;
+
+
+spawnItems_nearCenter_chance = 0.15;
+spawnItems_nearCenter=web1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=web2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=web3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=web1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=web2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=web3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=bush_huge1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=bush_big1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=bush1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=bush2;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=plant_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=pod_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_burst;
+spawnItems_nearCenter_chanceToReroll=0.45;
+spawnItems_nearCenter=pod_sickly;
+spawnItems_nearCenter_chanceToReroll=0.8;
+spawnItems_nearCenter=pod_blast;
+spawnItems_nearCenter_chanceToReroll=0.9;
+spawnItems_nearCenter=brambles;
+spawnItems_nearCenter_chanceToReroll=0.4;
+spawnItems_nearCenter=web_sac1_med;
+spawnItems_nearCenter_chanceToReroll=0.9;
+spawnItems_nearCenter=web_sac1_good;
+spawnItems_nearCenter_chanceToReroll=0.95;
+spawnItems_nearCenter=stash_dirt_loot2;
+spawnItems_nearCenter_chanceToReroll=0.9;
+spawnItems_nearCenter=stash_dirt_loot3;
+spawnItems_nearCenter_chanceToReroll=0.96;
+spawnItems_nearCenter=stash_dirt_loot4;
+spawnItems_nearCenter_chanceToReroll=0.99;
+
+triggers=tVineWither;
+triggers=tVineGrowth;
+
+specialSpawns=web1_topWall;
+specialSpawns=vineUp;
+
+[LevelDataZone]ID=jungle1_spidest_lair;
+
+zoneDirtPalette = pBlueD2;
+zoneDirtDarkPalette = pOrange_mix2;
+zoneGrassPalette = pPurple;
+zoneGrassDarkPalette = pMagenta;
+zoneWoodPalette = pPurple_mix2;
+zoneWaterPalette = pTeal;
+zoneMisc1Palette = pTeal;
+zoneMisc2Palette = pPurple;
+
+travelSong=PerituneMaterial_Deep_Woods;
+travelSongVolume=0.8;
+combatSong=PerituneMaterial_Lost_place2;
+combatSongDelay=1;
+
+dark=true;
+darkR=39; darkG=25; darkB=45; 
+
+zoneFX=w_risingDust_glow;
+zoneFXTime=10;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+
+
+[LevelData] ID=jungle1_final;
+
+minZoneSizeX = 43;
+minZoneSizeY = 41;
+maxZoneSizeX = 45;
+maxZoneSizeY = 42;
+
+wallChanceToZig = 0.5;
+wallChanceToZag = 0.3;
+
+minWallThickness = 13;
+maxWallThickness = 15;
+minWallFlatStretch = 3;
+
+chanceOfForwardPath = 0.4;
+
+worldSizeX = 3;
+worldSizeY = 3;
+
+wallType = caveSolid_Rock;
+wallTypeBottom = caveWallGreen;
+defaultTile = grass_lush;
+
+wallTypeBottom_exit = ;
+defaultTile_exit = ;
+
+minExitWidth = 3;
+maxExitWidth = 5;
+exitCurveAverageDepth = 6;
+exitCurveVariation = 2;
+
+triggers=tVineWither;
+triggers=tVineGrowth;
+
+---
+minSetPiecesPerRoom = 2;
+maxSetPiecesPerRoom = 4;
+
+setPieces=spPillar1;
+setPiecesChanceToReroll=0.4;
+setPieces=spPillar2;
+setPiecesChanceToReroll=0.4;
+setPieces=spPillar3;
+setPiecesChanceToReroll=0.4;
+setPieces=spPillar4;
+setPiecesChanceToReroll=0.4;
+
+setPieces=spPool1;
+setPiecesChanceToReroll=0;
+setPieces=spPool2;
+setPiecesChanceToReroll=0;
+setPieces=spPool3;
+setPiecesChanceToReroll=0;
+
+setPieces=spPods1;
+setPiecesChanceToReroll=0;
+setPieces=spPods1;
+setPiecesChanceToReroll=0;
+
+setPieces=spRutroot1;
+setPiecesChanceToReroll=0.2;
+setPieces=spRutroot2;
+setPiecesChanceToReroll=0.2;
+
+
+setPieces=spBushes_grass1;
+setPiecesChanceToReroll=0;
+setPieces=spBushes_grass2;
+setPiecesChanceToReroll=0;
+setPieces=spBushes_grass3;
+setPiecesChanceToReroll=0;
+setPieces=spBushes_grass4;
+setPiecesChanceToReroll=0.5;
+setPieces=spBushes_grass5;
+setPiecesChanceToReroll=0;
+setPieces=spBushes_grass6;
+setPiecesChanceToReroll=0;
+
+---
+centerPieceChance_normal = 1;
+centerPieceChance_deadEnd = 1;
+centerPieceChance_1stRoom = 1;
+
+chooseCenterPiecesInOrder=true;
+
+centerPieces = spSpiders1;
+centerPiecesChanceToReroll = g1:partySizeMod - 1 + g:zone_travel4_enabled;
+centerPieces = spIgnis_enc1;
+centerPiecesChanceToReroll = g:ignis_enc1;
+centerPieces = spSpiders1;
+centerPiecesChanceToReroll = 0.7;
+centerPieces = spBrigands1;
+centerPiecesChanceToReroll = 0.55;
+centerPieces = spMaor1;
+centerPiecesChanceToReroll = 0.85;
+centerPieces = spMages1;
+centerPiecesChanceToReroll = 0.9;
+centerPieces = spRogues1;
+centerPiecesChanceToReroll = 0.85;
+centerPieces = spZibel1;
+centerPiecesChanceToReroll = 0.6;
+centerPieces = spZibel_asleep1;
+centerPiecesChanceToReroll = 0.98;
+
+---
+
+spawnItems_onWall_chance = 0.55;
+spawnItems_onWall=random_vine;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=random_vine;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=random_vine;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=random_vine;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=random_vine;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=latticeWeed;
+spawnItems_onWall_chanceToReroll=0.22;
+spawnItems_onWall=latticeWeed_sprout;
+spawnItems_onWall_chanceToReroll=0.74;
+spawnItems_onWall=cliff_rock;
+spawnItems_onWall_chanceToReroll=0.91;
+spawnItems_onWall=ore_iron;
+spawnItems_onWall_chanceToReroll=0.99;
+spawnItems_onWall=caveFlower;
+spawnItems_onWall_chanceToReroll=0.995;
+spawnItems_onWall=ghost_grub;
+spawnItems_onWall_chanceToReroll=0.995;
+
+spawnItems_nearCenter_chance = 0.13;
+spawnItems_nearCenter=bush_huge1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=bush_big1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=bush1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=bush2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=flower1;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=flowers1;
+spawnItems_nearCenter_chanceToReroll=0.8;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=pod_small1;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=pod_small2;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=pod_burst;
+spawnItems_nearCenter_chanceToReroll=0.65;
+spawnItems_nearCenter=pod_sickly;
+spawnItems_nearCenter_chanceToReroll=0.8;
+spawnItems_nearCenter=pod_blast;
+spawnItems_nearCenter_chanceToReroll=0.8;
+spawnItems_nearCenter=brambles;
+spawnItems_nearCenter_chanceToReroll=0.7;
+spawnItems_nearCenter=stash_dirt_loot2;
+spawnItems_nearCenter_chanceToReroll=0.96;
+spawnItems_nearCenter=stash_dirt_loot3;
+spawnItems_nearCenter_chanceToReroll=0.991;
+spawnItems_nearCenter=stash_dirt_loot4;
+spawnItems_nearCenter_chanceToReroll=0.995;
+
+specialSpawns=vineUp;
+
+[LevelDataZone]ID=jungle1_final;
+
+zoneDirtPalette = pBlueD2;
+zoneDirtDarkPalette = pOrange_mix2;
+zoneGrassPalette = pPurple;
+zoneGrassDarkPalette = pMagenta;
+zoneWoodPalette = pPurple_mix2;
+zoneWaterPalette = pTeal;
+zoneMisc1Palette = pTeal;
+zoneMisc2Palette = pPurple;
+
+travelSong=PerituneMaterial_Deep_Woods;
+travelSongVolume=1;
+combatSong=PerituneMaterial_Lost_place2;
+combatSongDelay=1;
+
+dark=true;
+darkR=147; darkG=147; darkB=152; 
+
+zoneFX=w_risingDust_glow;
+zoneFXTime=10;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+
+
+
+[LevelData] ID=jungle1_under_empty;
+cloneFrom=jungle1;
+
+minZoneSizeX = 38;
+minZoneSizeY = 30;
+maxZoneSizeX = 39;
+maxZoneSizeY = 32;
+
+wallType = caveSolid_Rock;
+wallTypeBottom = caveWallGreen;
+defaultTile = grass_lush;
+
+wallTypeBottom_exit = ;
+defaultTile_exit = ;
+
+minExitWidth = 3;
+maxExitWidth = 5;
+exitCurveAverageDepth = 6;
+exitCurveVariation = 2;
+
+chanceOfForwardPath = 0.2;
+
+worldSizeX = 2;
+worldSizeY = 3;
+
+otherLevelData=jungle1_under_spider;
+otherLevelData_chance=0.5;
+otherLevelData_chance_deadEnd=0.6;
+otherLevelData=jungle1_under;
+otherLevelData_chance=1;
+otherLevelData_chance_deadEnd=1;
+
+mandatoryCenterPieces=Core=spJ1_zCore1;
+
+
+---
+minSetPiecesPerRoom = 0;
+maxSetPiecesPerRoom = 0;
+
+---
+centerPieceChance_normal = 1;
+centerPieceChance_deadEnd = 1;
+centerPieceChance_1stRoom = 1;
+
+
+centerPieces = spLight1;
+centerPiecesChanceToReroll = 0;
+
+
+---
+
+spawnItems_onWall_chance = 0.75;
+spawnItems_onWall=random_vine;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=cliff_rock;
+spawnItems_onWall_chanceToReroll=0.91;
+spawnItems_onWall=caveFlower;
+spawnItems_onWall_chanceToReroll=0.999;
+spawnItems_onWall=ore_iron;
+spawnItems_onWall_chanceToReroll=0.95;
+
+spawnItems_nearCenter_chance = 0.2;
+spawnItems_nearCenter=brambles;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=bush_huge1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=bush_big1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=bush1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=bush2;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=vineFungus;
+spawnItems_nearCenter_chanceToReroll=0.98;
+spawnItems_nearCenter=vineFungus2;
+spawnItems_nearCenter_chanceToReroll=0.98;
+spawnItems_nearCenter=plant_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=bug_small;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=bugs5_small;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=bugs12_small;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=pod_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=sunbeam_foliage_big_dim;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=sunbeam_foliage_med_dim;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=sunbeam_foliage_small_dim;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=sunbeam_foliage_tiny_dim;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=stash_dirt_loot2;
+spawnItems_nearCenter_chanceToReroll=0.99;
+spawnItems_nearCenter=stash_dirt_loot3;
+spawnItems_nearCenter_chanceToReroll=0.995;
+
+
+specialSpawns=vineFungus_N;
+specialSpawns=vineFungus_S;
+specialSpawns=vineFungus_E;
+specialSpawns=vineFungus_W;
+specialSpawns=vineFungus_Ncap;
+specialSpawns=vineFungus_Scap;
+specialSpawns=vineFungus_Ecap;
+specialSpawns=vineFungus_Wcap;
+specialSpawns=vineUp;
+
+[LevelDataZone]ID=jungle1_under_empty;
+
+zoneDirtPalette = pGrey2blue_mix1;
+zoneDirtDarkPalette = pBluegreen;
+zoneGrassPalette = pGreen;
+zoneGrassDarkPalette = pLime;
+zoneWoodPalette = pBluegreen_mix2;
+zoneWaterPalette = pTeal;
+zoneMisc1Palette = pTeal;
+zoneMisc2Palette = pGreen;
+zoneStoneDarkPalette = pTeal;
+
+travelSong=PerituneMaterial_Lost_place3;
+travelSongVolume=1;
+combatSong=Pressure;
+combatSongDelay=1;
+
+dark=true;
+darkR=25; darkG=27; darkB=22; 
+
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+
+
+
+[LevelData] ID=jungle1_under;
+cloneFrom=jungle1;
+
+minZoneSizeX = 42;
+minZoneSizeY = 33;
+maxZoneSizeX = 44;
+maxZoneSizeY = 35;
+
+wallType = caveSolid_Rock;
+wallTypeBottom = caveWallGreen;
+defaultTile = grass_lush;
+
+wallTypeBottom_exit = ;
+defaultTile_exit = ;
+
+minExitWidth = 3;
+maxExitWidth = 5;
+exitCurveAverageDepth = 6;
+exitCurveVariation = 2;
+
+chanceOfForwardPath = 0.2;
+
+worldSizeX = 2;
+worldSizeY = 2;
+
+otherLevelData=jungle1_under_spider;
+otherLevelData_chance=0.5;
+otherLevelData_chance_deadEnd=0.7;
+
+triggers=tVineWither_noDust;
+triggers=tVineGrowth_noDust;
+---
+minSetPiecesPerRoom = 2;
+maxSetPiecesPerRoom = 3;
+
+setPieces=spPillar1;
+setPiecesChanceToReroll=0;
+setPieces=spPillar2;
+setPiecesChanceToReroll=0;
+setPieces=spPillar3;
+setPiecesChanceToReroll=0;
+setPieces=spPillar4;
+setPiecesChanceToReroll=0;
+
+setPieces=spVineFungus1;
+setPiecesChanceToReroll=0.75;
+setPieces=spVineFungus2;
+setPiecesChanceToReroll=0.75;
+setPieces=spVineFungus3;
+setPiecesChanceToReroll=0.75;
+setPieces=spVineFungus4;
+setPiecesChanceToReroll=0.75;
+setPieces=spVineFungus5;
+setPiecesChanceToReroll=0.75;
+
+setPieces=spChokepoint1;
+setPiecesChanceToReroll=0;
+setPieces=spChokepoint2;
+setPiecesChanceToReroll=0;
+setPieces=spChokepoint3;
+setPiecesChanceToReroll=0;
+setPieces=spChokepoint4;
+setPiecesChanceToReroll=0;
+
+setPieces=spBushes_grass1;
+setPiecesChanceToReroll=0;
+setPieces=spBushes_grass2;
+setPiecesChanceToReroll=0;
+setPieces=spBushes_grass3;
+setPiecesChanceToReroll=0;
+setPieces=spBushes_grass4;
+setPiecesChanceToReroll=0;
+setPieces=spBushes_grass5;
+setPiecesChanceToReroll=0;
+setPieces=spBushes_grass6;
+setPiecesChanceToReroll=0;
+
+
+
+setPieces=spPods1;
+setPiecesChanceToReroll=0.4;
+
+setPieces=spRutroot1;
+setPiecesChanceToReroll=0.5;
+setPieces=spRutroot2;
+setPiecesChanceToReroll=0.5;
+
+---
+centerPieceChance_normal = 0.5;
+centerPieceChance_deadEnd = 1;
+centerPieceChance_1stRoom = 0;
+
+centerPieces = spSplitworms_magic1;
+centerPiecesChanceToReroll = 0;
+
+
+---
+
+spawnItems_onWall_chance = 0.75;
+spawnItems_onWall=random_vine;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=cliff_rock;
+spawnItems_onWall_chanceToReroll=0.91;
+spawnItems_onWall=ore_iron;
+spawnItems_onWall_chanceToReroll=0.95;
+spawnItems_onWall=caveFlower;
+spawnItems_onWall_chanceToReroll=0.999;
+
+spawnItems_nearCenter_chance = 0.2;
+spawnItems_nearCenter=brambles;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=bush_huge1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=bush_big1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=bush1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=bush2;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=vineFungus;
+spawnItems_nearCenter_chanceToReroll=0.85;
+spawnItems_nearCenter=vineFungus2;
+spawnItems_nearCenter_chanceToReroll=0.85;
+spawnItems_nearCenter=plant_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=bug_small;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=bugs5_small;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=bugs12_small;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=pod_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_burst;
+spawnItems_nearCenter_chanceToReroll=0.45;
+spawnItems_nearCenter=pod_sickly;
+spawnItems_nearCenter_chanceToReroll=0.8;
+spawnItems_nearCenter=pod_blast;
+spawnItems_nearCenter_chanceToReroll=0.9;
+spawnItems_nearCenter=vineFungus;
+spawnItems_nearCenter_chanceToReroll=0.9;
+spawnItems_nearCenter=vineFungus2;
+spawnItems_nearCenter_chanceToReroll=0.9;
+spawnItems_nearCenter=sunbeam_foliage_big_dim;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=sunbeam_foliage_med_dim;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=sunbeam_foliage_small_dim;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=sunbeam_foliage_tiny_dim;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=stash_dirt_loot2;
+spawnItems_nearCenter_chanceToReroll=0.9;
+spawnItems_nearCenter=stash_dirt_loot3;
+spawnItems_nearCenter_chanceToReroll=0.91;
+spawnItems_nearCenter=stash_dirt_loot4;
+spawnItems_nearCenter_chanceToReroll=0.99;
+
+specialSpawns=vineFungus_N;
+specialSpawns=vineFungus_S;
+specialSpawns=vineFungus_E;
+specialSpawns=vineFungus_W;
+specialSpawns=vineFungus_Ncap;
+specialSpawns=vineFungus_Scap;
+specialSpawns=vineFungus_Ecap;
+specialSpawns=vineFungus_Wcap;
+specialSpawns=vineUp;
+
+
+[LevelDataZone]ID=jungle1_under;
+
+zoneDirtPalette = pGrey2blue_mix1;
+zoneDirtDarkPalette = pBluegreen;
+zoneGrassPalette = pGreen;
+zoneGrassDarkPalette = pLime;
+zoneWoodPalette = pBluegreen_mix2;
+zoneWaterPalette = pTeal;
+zoneMisc1Palette = pTeal;
+zoneMisc2Palette = pGreen;
+zoneStoneDarkPalette = pTeal;
+
+travelSong=PerituneMaterial_Lost_place3;
+travelSongVolume=1;
+combatSong=Pressure;
+combatSongDelay=1;
+
+dark=true;
+darkR=25; darkG=27; darkB=22; 
+
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+
+
+
+
+[LevelData] ID=jungle1_under_spider;
+cloneFrom=jungle1_under;
+
+minZoneSizeX = 42;
+minZoneSizeY = 33;
+maxZoneSizeX = 44;
+maxZoneSizeY = 35;
+
+wallType = caveSolid_Rock;
+wallTypeBottom = caveWallGreen;
+defaultTile = grass_lush;
+
+wallTypeBottom_exit = ;
+defaultTile_exit = ;
+
+minExitWidth = 3;
+maxExitWidth = 5;
+exitCurveAverageDepth = 6;
+exitCurveVariation = 2;
+
+cannotHaveMandatorySetOrCenterPieces=true;
+
+triggers=tVineWither_noDust;
+triggers=tVineGrowth_noDust;
+---
+minSetPiecesPerRoom = 2;
+maxSetPiecesPerRoom = 3;
+
+setPieces=spPillar1;
+setPiecesChanceToReroll=0;
+setPieces=spPillar2;
+setPiecesChanceToReroll=0;
+setPieces=spPillar3;
+setPiecesChanceToReroll=0;
+setPieces=spPillar4;
+setPiecesChanceToReroll=0;
+
+setPieces=spVineFungus1;
+setPiecesChanceToReroll=0.75;
+setPieces=spVineFungus2;
+setPiecesChanceToReroll=0.75;
+setPieces=spVineFungus3;
+setPiecesChanceToReroll=0.75;
+setPieces=spVineFungus4;
+setPiecesChanceToReroll=0.75;
+setPieces=spVineFungus5;
+setPiecesChanceToReroll=0.75;
+
+setPieces=spChokepoint1;
+setPiecesChanceToReroll=0;
+setPieces=spChokepoint2;
+setPiecesChanceToReroll=0;
+setPieces=spChokepoint3;
+setPiecesChanceToReroll=0;
+setPieces=spChokepoint4;
+setPiecesChanceToReroll=0;
+
+setPieces=spBushes_grass1;
+setPiecesChanceToReroll=0;
+setPieces=spBushes_grass2;
+setPiecesChanceToReroll=0;
+setPieces=spBushes_grass3;
+setPiecesChanceToReroll=0;
+setPieces=spBushes_grass4;
+setPiecesChanceToReroll=0;
+setPieces=spBushes_grass5;
+setPiecesChanceToReroll=0;
+setPieces=spBushes_grass6;
+setPiecesChanceToReroll=0;
+
+
+
+
+setPieces=spRutroot1;
+setPiecesChanceToReroll=0.5;
+setPieces=spRutroot2;
+setPiecesChanceToReroll=0.5;
+
+---
+centerPieceChance_normal = 1;
+centerPieceChance_deadEnd = 1;
+centerPieceChance_1stRoom = 0;
+
+centerPieces = spSpidersWhite1;
+centerPiecesChanceToReroll = 0;
+centerPieces = spSpidestWhite1;
+centerPiecesChanceToReroll = 0;
+
+
+---
+
+spawnItems_onWall_chance = 0.75;
+spawnItems_onWall=random_vine;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=web1;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=web1;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=web2;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=web3;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=cliff_rock;
+spawnItems_onWall_chanceToReroll=0.91;
+spawnItems_onWall=ore_iron;
+spawnItems_onWall_chanceToReroll=0.95;
+spawnItems_onWall=ore_mythril;
+spawnItems_onWall_chanceToReroll=0.98;
+spawnItems_onWall=ore_volskarn;
+spawnItems_onWall_chanceToReroll=0.997;
+spawnItems_onWall=caveFlower;
+spawnItems_onWall_chanceToReroll=0.999;
+
+spawnItems_nearCenter_chance = 0.2;
+spawnItems_nearCenter=brambles;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=bush_huge1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=bush_big1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=bush1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=bush2;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=vineFungus;
+spawnItems_nearCenter_chanceToReroll=0.95;
+spawnItems_nearCenter=vineFungus2;
+spawnItems_nearCenter_chanceToReroll=0.95;
+spawnItems_nearCenter=web1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=web2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=web3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=web1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=web2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=web3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=bug_small;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=bugs5_small;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=bugs12_small;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=pod_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_burst;
+spawnItems_nearCenter_chanceToReroll=0.45;
+spawnItems_nearCenter=pod_sickly;
+spawnItems_nearCenter_chanceToReroll=0.8;
+spawnItems_nearCenter=pod_blast;
+spawnItems_nearCenter_chanceToReroll=0.9;
+spawnItems_nearCenter=sunbeam_foliage_big_dim;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=sunbeam_foliage_med_dim;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=sunbeam_foliage_small_dim;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=sunbeam_foliage_tiny_dim;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=stash_dirt_loot2;
+spawnItems_nearCenter_chanceToReroll=0.91;
+spawnItems_nearCenter=stash_dirt_loot3;
+spawnItems_nearCenter_chanceToReroll=0.93;
+spawnItems_nearCenter=stash_dirt_loot4;
+spawnItems_nearCenter_chanceToReroll=0.99;
+spawnItems_nearCenter=web_sac1_med;
+spawnItems_nearCenter_chanceToReroll=0.9;
+spawnItems_nearCenter=web_sac1_good;
+spawnItems_nearCenter_chanceToReroll=0.94;
+
+specialSpawns=vineFungus_N;
+specialSpawns=vineFungus_S;
+specialSpawns=vineFungus_E;
+specialSpawns=vineFungus_W;
+specialSpawns=vineFungus_Ncap;
+specialSpawns=vineFungus_Scap;
+specialSpawns=vineFungus_Ecap;
+specialSpawns=vineFungus_Wcap;
+specialSpawns=vineUp;
+
+[LevelDataZone]ID=jungle1_under_spider;
+
+zoneDirtPalette = pGrey2blue_mix1;
+zoneDirtDarkPalette = pBluegreen;
+zoneGrassPalette = pGreen;
+zoneGrassDarkPalette = pLime;
+zoneWoodPalette = pBluegreen_mix2;
+zoneWaterPalette = pTeal;
+zoneMisc1Palette = pTeal;
+zoneMisc2Palette = pGreen;
+zoneStoneDarkPalette = pTeal;
+
+travelSong=PerituneMaterial_Lost_place3;
+travelSongVolume=1;
+combatSong=Pressure;
+combatSongDelay=1;
+
+dark=true;
+darkR=25; darkG=27; darkB=22; 
+
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX=worm_spawn;
+zoneFXTime=999999;

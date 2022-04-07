@@ -1,0 +1,445 @@
+[Zone]  ID=zStation1; dark=True; timeUntilNewDay=6.45583; showFogOfWar=False; fogOfWar=False; minimapEnabled=True; allowCameraPastZoneEdges=False; cantAct=False; cantGameOver=False; alwaysKeepWeaponsUnsheathed=False; peaceful=False; overseerMode=False; rollingPinStyle=False; drawSky=False; drawSky_overrideYpos=-1; boatZone=False; wind=True; overworld=False; canDropItems=True; 
+ travelSong=AmbientBeach; travelSongVolume=0.9; travelSongPitch=0; combatSong=PM-Prairie; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=102; darkG=102; darkB=153; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=ocean; bgFX_sineWave=20; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=pYellow5; zoneGrassPalette=pR; zoneGrassDarkPalette=pR; zoneStonePalette=p1; zoneStoneDarkPalette=p1; zoneStoneLightPalette=p1; zoneWaterPalette=pBlue2; zoneDirtDarkPalette=pR; zoneWoodPalette=pYellow5; zoneWoodDarkPalette=pYellow5; zoneMisc1Palette=p29; zoneMisc2Palette=p30; zoneMisc3Palette=pRed; zoneMisc4Palette=pBlue; zoneMisc5Palette=pGreen; zoneMisc6Palette=pOrange; zoneMisc7Palette=p1; zoneMisc8Palette=p2; 
+
+combatMode=False; 
+
+[Item] ID=boat_fcastle_corner; q=1; r=180; x=17; y=24;
+[Item] ID=mast3; q=1; x=17; y=25;
+[Item] ID=mast3; q=1; x=17; y=27;
+[Item] ID=boat_fcastle_corner; q=1; r=90; x=17; y=28;
+[Item] ID=boat_stern1; q=1; x=17; y=29;
+[Item] ID=boat_stern3; q=1; r=360; x=17; y=30;
+[Item] ID=boat_fcastle_corner; q=1; r=180; x=18; y=23;
+[Item] ID=boat_fcastle_corner2; q=1; r=180; x=18; y=24;
+[Item] ID=mast3; q=1; x=18; y=24;
+[Item] ID=boat_hatch1; q=1; x=18; y=25;
+[Item] ID=blocker_big; q=1; x=18; y=25;
+[Item] ID=travelPoint_nonspecific; q=1; x=18; y=25;
+[Item] ID=boat_hatch1; q=1; x=18; y=27;
+[Item] ID=blocker_big; q=1; x=18; y=27;
+[Item] ID=travelPoint_nonspecific; q=1; x=18; y=27;
+[Item] ID=boat_fcastle_corner2; q=1; r=90; x=18; y=28;
+[Item] ID=mast3; q=1; x=18; y=28;
+[Item] ID=boat_fcastle_corner; q=1; r=90; x=18; y=29;
+[Item] ID=boat_stern1; q=1; x=18; y=30;
+[Item] ID=boat_stern3; q=1; r=360; x=18; y=31;
+[Item] ID=boat_hatch1; q=1; x=19; y=24;
+[Item] ID=blocker_big; q=1; x=19; y=24;
+[Item] ID=travelPoint_nonspecific; q=1; x=19; y=24;
+[Item] ID=boat_hatch1; q=1; x=19; y=25;
+[Item] ID=blocker_big; q=1; x=19; y=25;
+[Item] ID=boat_hatch1; q=1; x=19; y=27;
+[Item] ID=blocker_big; q=1; x=19; y=27;
+[Item] ID=boat_hatch1; q=1; x=19; y=28;
+[Item] ID=blocker_big; q=1; x=19; y=28;
+[Item] ID=travelPoint_nonspecific; q=1; x=19; y=28;
+[Item] ID=boat_stern2; q=1; x=19; y=30;
+[Item] ID=boat_stern4; q=1; x=19; y=31;
+[Item] ID=boat_fcastle_corner; q=1; r=180; x=20; y=20;
+[Item] ID=boat_fcastle_corner; q=1; r=90; x=20; y=23;
+[Item] ID=boat_stern2; q=1; x=20; y=30;
+[Item] ID=boat_stern4; q=1; x=20; y=31;
+[Item] ID=mast3; q=1; x=21; y=21;
+[Item] ID=tile_cantTarget; q=1; x=21; y=21;
+[Item] ID=table_small; q=1; x=21; y=22;
+[Item] ID=repairTool; q=2; r=90; x=21; y=22;
+[Item] ID=tile_cantTarget; q=1; x=21; y=22;
+[Item] ID=item_cantGrabOrPlace; q=1; x=21; y=22;
+[Item] ID=blockedLoE; q=1; x=21; y=22;
+[Item] ID=mechanismPasser; q=1; bu=True; specialX=21; specialY=27; x=21; y=26;
+[Item] ID=wire; q=1; r=360; x=21; y=26;
+[Item] ID=wire; q=1; r=90; oX=2; oY=2; x=21; y=26;
+[Item] ID=mechanismPasser; q=1; bu=True; specialX=21; specialY=28; x=21; y=27;
+[Item] ID=wire_long; q=1; r=270; oX=-2; oY=0; x=21; y=27;
+[Item] ID=wire_long; q=1; r=270; x=21; y=28;
+[Item] ID=boat_stern2; q=1; x=21; y=30;
+[Item] ID=boat_stern4; q=1; x=21; y=31;
+[Item] ID=tile_cantTarget; q=1; x=22; y=21;
+[Item] ID=lumber_pile1_long_top; q=4; oX=2; oY=-4; x=22; y=21;
+[Item] ID=blockedWalkJump; q=1; x=22; y=21;
+[Item] ID=tile_cantTarget; q=1; x=22; y=22;
+[Item] ID=lumber_pile1_long_btm; q=4; oX=2; oY=-4; x=22; y=22;
+[Item] ID=blockedWalkJump; q=1; x=22; y=22;
+[Item] ID=wire; q=1; r=90; x=22; y=25;
+[Item] ID=wire; q=1; r=360; x=22; y=25;
+[Item] ID=mechanismPasser; q=1; bu=True; specialX=22; specialY=26; x=22; y=25;
+[Item] ID=mechanismPasser; q=1; bu=True; specialX=21; specialY=26; x=22; y=26;
+[Item] ID=wire; q=1; r=270; x=22; y=26;
+[Item] ID=wire; q=1; r=180; x=22; y=26;
+[Item] ID=lightSphere; q=1; x=22; y=29;
+[Item] ID=boat_stern2; q=1; x=22; y=30;
+[Item] ID=boat_stern4; q=1; x=22; y=31;
+[Item] ID=boat_fcastle_corner; q=1; r=180; x=23; y=19;
+[Item] ID=boat_fcastle_corner; q=1; r=270; x=23; y=20;
+[Item] ID=lightSphere; q=1; x=23; y=21;
+[Item] ID=boat_fcastle_corner; q=1; r=360; x=23; y=23;
+[Item] ID=wire; q=1; r=90; x=23; y=23;
+[Item] ID=wallSwitchUp; q=1; specialX=23; specialY=24; x=23; y=23;
+[Item] ID=wire_long; q=1; r=90; x=23; y=24;
+[Item] ID=mechanismPasser; q=1; bu=True; specialX=23; specialY=25; x=23; y=24;
+[Item] ID=wire; q=1; r=270; x=23; y=25;
+[Item] ID=wire; q=1; r=180; x=23; y=25;
+[Item] ID=mechanismPasser; q=1; bu=True; specialX=22; specialY=25; x=23; y=25;
+[Item] ID=sandbag_movable; q=1; x=23; y=28;
+[Item] ID=boat_fcastle_corner2; q=1; r=90; x=23; y=29;
+[Item] ID=boat_fcastle_corner; q=1; r=90; x=23; y=33;
+[Item] ID=boat_stern1; q=1; x=23; y=34;
+[Item] ID=boat_stern3; q=1; r=360; x=23; y=35;
+[Item] ID=boat_fcastle_corner; q=1; r=180; x=24; y=18;
+[Item] ID=boat_fcastle_corner2; q=1; r=-270; x=24; y=19;
+[Item] ID=mast3; q=1; x=24; y=19;
+[Item] ID=sandbag_movable; q=1; x=24; y=24;
+[Item] ID=boat_hatch1; q=1; x=24; y=26;
+[Item] ID=blocker_big; q=1; x=24; y=26;
+[Item] ID=sandbag_movable; q=1; x=24; y=27;
+[Item] ID=sandbag_movable; q=1; x=24; y=28;
+[Item] ID=sandbag_movable; q=1; x=24; y=31;
+[Item] ID=boat_fcastle_corner2; q=1; r=-360; x=24; y=33;
+[Item] ID=mast3; q=1; x=24; y=33;
+[Item] ID=boat_fcastle_corner; q=1; r=90; x=24; y=34;
+[Item] ID=boat_stern1; q=1; x=24; y=35;
+[Item] ID=boat_stern3; q=1; r=360; x=24; y=36;
+[Item] ID=boat_fcastle_corner; q=1; r=180; x=25; y=17;
+[Item] ID=boat_fcastle_corner2; q=1; r=-270; x=25; y=18;
+[Item] ID=mast3; q=1; x=25; y=18;
+[Item] ID=boat_hatch1; q=1; x=25; y=19;
+[Item] ID=blocker_big; q=1; x=25; y=19;
+[Item] ID=travelPoint_nonspecific; q=1; r=90; x=25; y=19;
+[Item] ID=sandbag_movable; q=1; x=25; y=22;
+[Item] ID=sandbag_movable; q=1; x=25; y=23;
+[Item] ID=sandbag_movable; q=1; x=25; y=24;
+[Item] ID=sandbag_movable; q=1; x=25; y=29;
+[Item] ID=boat_hatch1; q=1; x=25; y=33;
+[Item] ID=blocker_big; q=1; x=25; y=33;
+[Item] ID=travelPoint_nonspecific; q=1; r=270; x=25; y=33;
+[Item] ID=boat_fcastle_corner2; q=1; r=-360; x=25; y=34;
+[Item] ID=mast3; q=1; x=25; y=34;
+[Item] ID=boat_fcastle_corner; q=1; r=90; x=25; y=35;
+[Item] ID=boat_stern1; q=1; x=25; y=36;
+[Item] ID=boat_stern3; q=1; r=360; x=25; y=37;
+[Item] ID=boat_hatch1; q=1; x=26; y=18;
+[Item] ID=blocker_big; q=1; x=26; y=18;
+[Item] ID=travelPoint_nonspecific; q=1; r=90; x=26; y=18;
+[Item] ID=boat_hatch1; q=1; x=26; y=19;
+[Item] ID=blocker_big; q=1; x=26; y=19;
+[Item] ID=boat_hatch1; q=1; x=26; y=25;
+[Item] ID=blocker_big; q=1; x=26; y=25;
+[Item] ID=boat_hatch1; q=1; x=26; y=26;
+[Item] ID=blocker_big; q=1; x=26; y=26;
+[Item] ID=boat_hatch1; q=1; x=26; y=27;
+[Item] ID=blocker_big; q=1; x=26; y=27;
+[Item] ID=sandbag_movable; q=1; x=26; y=30;
+[Item] ID=boat_hatch1; q=1; x=26; y=33;
+[Item] ID=blocker_big; q=1; x=26; y=33;
+[Item] ID=boat_hatch1; q=1; x=26; y=34;
+[Item] ID=blocker_big; q=1; x=26; y=34;
+[Item] ID=travelPoint_nonspecific; q=1; r=270; x=26; y=34;
+[Item] ID=boat_stern2; q=1; x=26; y=36;
+[Item] ID=boat_stern4; q=1; x=26; y=37;
+[Item] ID=turret_omni_wind_movable; q=1; x=27; y=21;
+[Item] ID=boat_hatch1; q=1; x=27; y=23;
+[Item] ID=blocker_big; q=1; x=27; y=23;
+[Item] ID=boat_hatch1; q=1; x=27; y=25;
+[Item] ID=blocker_big; q=1; x=27; y=25;
+[Item] ID=machine_extractor; q=1; x=27; y=26;
+[Item] ID=carpet6; q=2; x=27; y=27;
+[Item] ID=carpet_corner1; q=2; r=180; x=27; y=27;
+[Item] ID=carpet_corner2; q=2; x=27; y=27;
+[Item] ID=blocker_big; q=1; x=27; y=27;
+[Item] ID=machine_pipe; q=1; oX=0; oY=-6; x=27; y=27;
+[Item] ID=boat_hatch1; q=1; x=27; y=29;
+[Item] ID=blocker_big; q=1; x=27; y=29;
+[Item] ID=boat_stern2; q=1; x=27; y=36;
+[Item] ID=boat_stern4; q=1; x=27; y=37;
+[Item] ID=boat_hatch1; q=1; x=28; y=18;
+[Item] ID=blocker_big; q=1; x=28; y=18;
+[Item] ID=travelPoint_nonspecific; q=1; r=90; x=28; y=18;
+[Item] ID=boat_hatch1; q=1; x=28; y=19;
+[Item] ID=blocker_big; q=1; x=28; y=19;
+[Item] ID=sandbag_movable; q=1; x=28; y=23;
+[Item] ID=boat_hatch1; q=1; x=28; y=25;
+[Item] ID=blocker_big; q=1; x=28; y=25;
+[Item] ID=boat_hatch1; q=1; x=28; y=26;
+[Item] ID=blocker_big; q=1; x=28; y=26;
+[Item] ID=boat_hatch1; q=1; x=28; y=27;
+[Item] ID=blocker_big; q=1; x=28; y=27;
+[Item] ID=boat_hatch1; q=1; x=28; y=33;
+[Item] ID=blocker_big; q=1; x=28; y=33;
+[Item] ID=boat_hatch1; q=1; x=28; y=34;
+[Item] ID=blocker_big; q=1; x=28; y=34;
+[Item] ID=travelPoint_nonspecific; q=1; r=270; x=28; y=34;
+[Item] ID=boat_stern2; q=1; x=28; y=36;
+[Item] ID=boat_stern4; q=1; x=28; y=37;
+[Item] ID=boat_fcastle_corner; q=1; r=-180; x=29; y=17;
+[Item] ID=boat_fcastle_corner2; q=1; r=270; x=29; y=18;
+[Item] ID=mast3; q=1; x=29; y=18;
+[Item] ID=boat_hatch1; q=1; x=29; y=19;
+[Item] ID=blocker_big; q=1; x=29; y=19;
+[Item] ID=travelPoint_nonspecific; q=1; r=90; x=29; y=19;
+[Item] ID=sandbag_movable; q=1; x=29; y=24;
+[Item] ID=turret_omni_wind_movable; q=1; x=29; y=28;
+[Item] ID=sandbag_movable; q=1; x=29; y=29;
+[Item] ID=boat_hatch1; q=1; x=29; y=33;
+[Item] ID=blocker_big; q=1; x=29; y=33;
+[Item] ID=travelPoint_nonspecific; q=1; r=270; x=29; y=33;
+[Item] ID=boat_fcastle_corner2; q=1; x=29; y=34;
+[Item] ID=mast3; q=1; x=29; y=34;
+[Item] ID=boat_fcastle_corner; q=1; r=-90; x=29; y=35;
+[Item] ID=boat_stern1; q=1; r=-360; x=29; y=36;
+[Item] ID=boat_stern3; q=1; r=-360; x=29; y=37;
+[Item] ID=boat_fcastle_corner; q=1; r=-180; x=30; y=18;
+[Item] ID=boat_fcastle_corner2; q=1; r=270; x=30; y=19;
+[Item] ID=mast3; q=1; x=30; y=19;
+[Item] ID=sandbag_movable; q=1; x=30; y=24;
+[Item] ID=boat_hatch1; q=1; x=30; y=26;
+[Item] ID=blocker_big; q=1; x=30; y=26;
+[Item] ID=sandbag_movable; q=1; x=30; y=27;
+[Item] ID=sandbag_movable; q=1; x=30; y=28;
+[Item] ID=sandbag_movable; q=1; x=30; y=30;
+[Item] ID=boat_fcastle_corner2; q=1; x=30; y=33;
+[Item] ID=mast3; q=1; x=30; y=33;
+[Item] ID=boat_fcastle_corner; q=1; r=-90; x=30; y=34;
+[Item] ID=boat_stern1; q=1; r=-360; x=30; y=35;
+[Item] ID=boat_stern3; q=1; r=-360; x=30; y=36;
+[Item] ID=boat_fcastle_corner; q=1; r=270; x=31; y=19;
+[Item] ID=boat_fcastle_corner; q=1; r=180; x=31; y=20;
+[Item] ID=lightSphere; q=1; x=31; y=21;
+[Item] ID=boat_fcastle_corner; q=1; r=90; x=31; y=23;
+[Item] ID=wire; q=1; r=90; x=31; y=23;
+[Item] ID=wallSwitchUp; q=1; specialX=31; specialY=24; x=31; y=23;
+[Item] ID=wire_long; q=1; r=90; x=31; y=24;
+[Item] ID=mechanismPasser; q=1; bu=True; specialX=31; specialY=25; x=31; y=24;
+[Item] ID=wire; q=1; r=270; x=31; y=25;
+[Item] ID=wire; q=1; r=90; x=31; y=25;
+[Item] ID=mechanismPasser; q=1; bu=True; specialX=31; specialY=26; x=31; y=25;
+[Item] ID=turret_omni_wind_movable; q=1; x=31; y=25;
+[Item] ID=wire_long; q=1; r=-90; x=31; y=26;
+[Item] ID=mechanismPasser; q=1; bu=True; specialX=31; specialY=27; x=31; y=26;
+[Item] ID=wire; q=1; r=270; x=31; y=27;
+[Item] ID=wire; q=1; r=360; x=31; y=27;
+[Item] ID=mechanismPasser; q=1; bu=True; specialX=32; specialY=27; x=31; y=27;
+[Item] ID=boat_fcastle_corner2; q=1; x=31; y=29;
+[Item] ID=boat_fcastle_corner; q=1; r=-90; x=31; y=33;
+[Item] ID=boat_stern1; q=1; r=-360; x=31; y=34;
+[Item] ID=boat_stern3; q=1; r=-360; x=31; y=35;
+[Item] ID=lumber_pile1; q=3; r=-360; x=32; y=21;
+[Item] ID=tile_cantTarget; q=1; x=32; y=21;
+[Item] ID=blockedWalkJump; q=1; x=32; y=21;
+[Item] ID=table_small; q=1; x=32; y=22;
+[Item] ID=posters; q=2; x=32; y=22;
+[Item] ID=tile_cantTarget; q=1; x=32; y=22;
+[Item] ID=blockedLoE; q=1; x=32; y=22;
+[Item] ID=wire; q=1; r=180; x=32; y=27;
+[Item] ID=wire; q=1; r=90; x=32; y=27;
+[Item] ID=mechanismPasser; q=1; bu=True; specialX=32; specialY=28; x=32; y=27;
+[Item] ID=wire_long; q=1; r=90; x=32; y=28;
+[Item] ID=lightSphere; q=1; x=32; y=29;
+[Item] ID=boat_stern2; q=1; x=32; y=30;
+[Item] ID=boat_stern4; q=1; x=32; y=31;
+[Item] ID=mast3; q=1; x=33; y=21;
+[Item] ID=tile_cantTarget; q=1; x=33; y=21;
+[Item] ID=stool3; q=1; x=33; y=22;
+[Item] ID=tile_cantTarget; q=1; x=33; y=22;
+[Item] ID=travelPoint_0; q=1; r=270; x=33; y=29;
+[Item] ID=boat_fcastle_corner; q=1; r=270; x=34; y=20;
+[Item] ID=boat_fcastle_corner; q=1; r=360; x=34; y=23;
+[Item] ID=fade_f8; q=1; r=-270; x=34; y=29;
+[Item] ID=boat_stern2; q=1; x=34; y=30;
+[Item] ID=fade_f4; q=1; r=270; x=34; y=30;
+[Item] ID=boat_stern4; q=1; x=34; y=31;
+[Item] ID=fade_f4; q=1; r=270; x=34; y=31;
+[Item] ID=fade_s4; q=1; r=270; x=34; y=32;
+[Item] ID=fade_s4; q=1; r=270; x=34; y=33;
+[Item] ID=fade_s4; q=1; r=270; x=34; y=34;
+[Item] ID=fade_s4; q=1; r=270; x=34; y=35;
+[Item] ID=fade_s4; q=1; r=270; x=34; y=36;
+[Item] ID=fade_s4; q=1; r=270; x=34; y=37;
+[Item] ID=fade_s4; q=1; r=270; x=34; y=38;
+[Item] ID=fade_s4; q=1; r=270; x=34; y=39;
+[Item] ID=fade_s4; q=1; r=270; x=34; y=40;
+[Item] ID=fade_s4; q=1; r=270; x=34; y=41;
+[Item] ID=fade_s4; q=1; r=270; x=34; y=42;
+[Item] ID=fade_s4; q=1; r=270; x=34; y=43;
+[Item] ID=fade_s4; q=1; r=270; x=34; y=44;
+[Item] ID=boat_hatch1; q=1; x=35; y=24;
+[Item] ID=blocker_big; q=1; x=35; y=24;
+[Item] ID=travelPoint_nonspecific; q=1; r=180; x=35; y=24;
+[Item] ID=boat_hatch1; q=1; x=35; y=25;
+[Item] ID=blocker_big; q=1; x=35; y=25;
+[Item] ID=boat_hatch1; q=1; x=35; y=27;
+[Item] ID=blocker_big; q=1; x=35; y=27;
+[Item] ID=boat_hatch1; q=1; x=35; y=28;
+[Item] ID=blocker_big; q=1; x=35; y=28;
+[Item] ID=travelPoint_nonspecific; q=1; r=180; x=35; y=28;
+[Item] ID=boat_stern2; q=1; x=35; y=30;
+[Item] ID=boat_stern4; q=1; x=35; y=31;
+[Item] ID=boat_fcastle_corner; q=1; r=-180; x=36; y=23;
+[Item] ID=boat_fcastle_corner2; q=1; r=270; x=36; y=24;
+[Item] ID=mast3; q=1; x=36; y=24;
+[Item] ID=boat_hatch1; q=1; x=36; y=25;
+[Item] ID=blocker_big; q=1; x=36; y=25;
+[Item] ID=travelPoint_nonspecific; q=1; r=180; x=36; y=25;
+[Item] ID=boat_hatch1; q=1; x=36; y=27;
+[Item] ID=blocker_big; q=1; x=36; y=27;
+[Item] ID=travelPoint_nonspecific; q=1; r=180; x=36; y=27;
+[Item] ID=boat_fcastle_corner2; q=1; x=36; y=28;
+[Item] ID=mast3; q=1; x=36; y=28;
+[Item] ID=boat_fcastle_corner; q=1; r=-90; x=36; y=29;
+[Item] ID=boat_stern1; q=1; r=-360; x=36; y=30;
+[Item] ID=boat_stern3; q=1; r=-360; x=36; y=31;
+[Item] ID=boat_fcastle_corner; q=1; r=-180; x=37; y=24;
+[Item] ID=mast3; q=1; x=37; y=25;
+[Item] ID=mast3; q=1; x=37; y=27;
+[Item] ID=boat_fcastle_corner; q=1; r=-90; x=37; y=28;
+[Item] ID=boat_stern1; q=1; r=-360; x=37; y=29;
+[Item] ID=boat_stern3; q=1; r=-360; x=37; y=30;
+
+
+[Actor]ID=human_zStation1_; name=Quaid;
+actorTypeID=human; sprite=; actorClass=sailor; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=33,22; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=False; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=False; fearless=False; unkillable=True; factionBoss=False; faction=none; combatTeam=; clothPalette=pCBlueD; skinPalette=pHuman8; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=merchant_station; aggressiveness=0; bravery=0; intelligence=0.5; honor=0.5; aiRating_bonusToNotMoving=0; aiRating_priorityMult=0; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+ headSprite=bandana_head2; faceSprite=fullbeard_face_male; legsSprite=legs_heavyBoots; armLSprite=sailor_arm; armRSprite=sailor_arm; torsoSprite=sailor_torso; shoulderLSprite=sailor_shoulder; shoulderRSprite=sailor_shoulder; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=33; MP=18; HPMax=33; MPMax=18; TrueHPMax=33; TrueMPMax=18; PhysAtk=2; PhysDef=7; MagDef=7; actTime=0; skill_Fist=1; sailor_XP_stars=0; 
+numRanksBought=TrueHPMax=3; 
+numRanksBought=skill_Fist=1; 
+chosenAbilityOfEachClass=sailor=Sai_heave; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=5; duration=-1;
+[ActorEffect]
+ actorValue=skill_Sword; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Axe; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Hammer; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Spear; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Flail; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Fist; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Dagger; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+
+[Trigger] numID=0; aliasID=tCS;
+topX=15;topY=21;btmX=16;btmY=22;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=True; fReq=1;
+[TriggerEffect] numID=0; effectID=removeActors_despawnable; sValue=; sValue2=; bValue1=True; bValue2=True; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=0; effectID=spawn_onItem; sValue=cleever1; sValue2=spawnpoint; bValue1=True; bValue2=False; fValue=-400; delay=0.1; fReq=1; taskString=; xValue=27; yValue=26;
+[TriggerEffect] numID=0; effectID=setGlobalVar_math; sValue=spawnPowerMod; sValue2=g:spawnPowerMod + 120; bValue1=False; bValue2=False; fValue=0; delay=0.3; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=1; aliasID=;
+topX=27;topY=26;btmX=27;btmY=26;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=somethingHappened; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=1; effectID=fx; sValue=fx_earthquake_mild; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0.5; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=1; effectID=preventInteraction; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=3; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=1; effectID=trigger; sValue=tIS; sValue2=g:spawnPowerMod - 40; bValue1=True; bValue2=False; fValue=0; delay=1; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=1; effectID=trigger; sValue=tCS; sValue2=; bValue1=True; bValue2=False; fValue=0; delay=2; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=1; effectID=pointCameraAt; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=27; yValue=27;
+
+
+
+[Trigger] numID=2; aliasID=tIS;
+topX=15;topY=19;btmX=16;btmY=20;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=True; fReq=1;
+[TriggerEffect] numID=2; effectID=trigger; sValue=tIS1; sValue2=gIsLessThan:spawnPowerMod:250; bValue1=True; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=2; effectID=trigger; sValue=tIS2; sValue2=gIsMoreThan:spawnPowerMod:250 + gIsLessThan:spawnPowerMod:500 - 1; bValue1=True; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=2; effectID=trigger; sValue=tIS3; sValue2=gIsMoreThan:spawnPowerMod:500; bValue1=True; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=2; effectID=fx; sValue=dust_impact; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=27; yValue=27;
+[TriggerEffect] numID=2; effectID=fx; sValue=pop; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=27; yValue=27;
+
+
+
+[Trigger] numID=3; aliasID=;
+topX=33;topY=33;btmX=37;btmY=45;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=True; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=3; effectID=setGlobalVar; sValue=readyToSalvage; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=3; effectID=setGlobalVar; sValue=spawnPowerMod; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=3; effectID=travel_leaveLocation; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=4; aliasID=;
+topX=38;topY=31;btmX=39;btmY=32;
+triggerImmediatelyOnEnteringZone=True; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=4; effectID=setGlobalVar; sValue=spawnPowerMod; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=4; effectID=setZoneSongs; sValue=; sValue2=PM-Prairie; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=5; aliasID=tIS1;
+topX=17;topY=17;btmX=17;btmY=17;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=True; fReq=1;
+[TriggerEffect] numID=5; effectID=addItem; sValue=loot_salvage1; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=27; yValue=27;
+[TriggerEffect] numID=5; effectID=setZoneSongs; sValue=; sValue2=PM-Prairie4; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=6; aliasID=tIS2;
+topX=18;topY=17;btmX=18;btmY=17;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=True; fReq=1;
+[TriggerEffect] numID=6; effectID=addItem; sValue=loot_salvage2; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=27; yValue=27;
+[TriggerEffect] numID=6; effectID=setZoneSongs; sValue=; sValue2=PM-Prairie3; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=7; aliasID=tIS3;
+topX=19;topY=17;btmX=19;btmY=17;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=True; fReq=1;
+[TriggerEffect] numID=7; effectID=addItem; sValue=loot_salvage3; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=27; yValue=27;
+[TriggerEffect] numID=7; effectID=setZoneSongs; sValue=; sValue2=PM-Rapid3Intro; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=8; aliasID=;
+topX=13;topY=24;btmX=14;btmY=25;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=combatEnd; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=8; effectID=removeActors_despawnable; sValue=; sValue2=; bValue1=True; bValue2=True; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=9; aliasID=;
+topX=26;topY=25;btmX=28;btmY=27;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=g:readyToSalvage;
+[TriggerEffect] numID=9; effectID=applyElement; sValue=mech; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=1; fReq=1; taskString=; xValue=27; yValue=26;
+[TriggerEffect] numID=9; effectID=setGlobalVar; sValue=readyToSalvage; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=9; effectID=fx; sValue=horizSpark_many; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=27; yValue=26;
+[TriggerEffect] numID=9; effectID=fx; sValue=sfx_bgMachineNoise_loud; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=27; yValue=26;
+
+
+
+[Trigger] numID=10; aliasID=;
+topX=39;topY=33;btmX=40;btmY=34;
+triggerImmediatelyOnEnteringZone=True; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=gTimeSinceMoreThanOrNeverAssigned:readyToSalvage:190;
+[TriggerEffect] numID=10; effectID=applyElement; sValue=repair; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=27; yValue=26;
+
+
+
+[Trigger] numID=11; aliasID=;
+topX=12;topY=22;btmX=13;btmY=23;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=combatStart; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=11; effectID=action; sValue=partyGoesFirst; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0.01; fReq=1; taskString=; xValue=27; yValue=26;
+
+
+

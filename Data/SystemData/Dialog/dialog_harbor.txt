@@ -1,0 +1,308 @@
+
+
+----------------------HARBOR
+
+[DialogNode] ID=harbor;
+animations=;
+statements=<randSetID=Ahoy/'Ey> there<rand=/ fella/ sailor>.<p=> Need to store a ship?;
+specialEffect=setDialogWindowSizeY,0;
+specialEffect=setPCDialogWindowSizeY,0;
+[DialogOption] text=Moor;
+formulaReq=m:fleetSize(1);
+nodeToConnectTo=harbor_moor;
+[DialogOption] text=<color=SlateGray>Moor;
+formulaReq=2-m:fleetSize;
+nodeToConnectTo=harbor_moor_noships;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+--'error'/mistake dialogs
+[DialogNode] ID=harbor_moor_noships;
+animations=sigh;
+statements=You've only got one ship, mate!<p=> Come back when you've got extra.;
+nextNodeID=;
+[DialogNode] ID=harbor_moor_tooMuchCrew;
+animations=sigh;
+statements=There's still crew on that ship, mate!<p=> Sort that out first and then come back to me.;
+nextNodeID=;
+[DialogNode] ID=harbor_moor_noroom;
+animations=sigh;
+statements=Ach, sorry, looks like we're full up.<p=> Ye'll have to take one out of storage first.;
+nextNodeID=;
+
+---buttons are out of order so they show up in alternating columns.
+[DialogNode] ID=harbor_moor;
+animations=;
+statements=We can fit up to 9 of your ships here. Which one would ye like to stow?;
+specialEffect=setPCDialogWindowSizeY,260;
+--#0
+[DialogOption] text=<actorBigPFleet=0><partyBoatName=0>;
+newLineOfOptions=true;
+formulaReq=m:fleetSize(1) - m:bCrewNum(0);
+nodeToConnectTo=harbor_moor_b0;
+[DialogOption] text=<color=SlateGray><actorBigPFleet=0><partyBoatName=0>  (<iconBig=icon_crew><math=m:bCrewNum(0)>);
+newLineOfOptions=true;
+formulaReq=m:fleetSize(1) + m:bCrewNum(0) - 1;
+nodeToConnectTo=harbor_moor_tooMuchCrew;
+--#5
+[DialogOption] text=<actorBigPFleet=5><partyBoatName=5>;
+formulaReq=m:fleetSize(5) - m:bCrewNum(5);
+nodeToConnectTo=harbor_moor_b5;
+[DialogOption] text=<color=SlateGray><actorBigPFleet=5><partyBoatName=5>  (<iconBig=icon_crew><math=m:bCrewNum(5)>);
+formulaReq=m:fleetSize(5) + m:bCrewNum(5) - 1;
+nodeToConnectTo=harbor_moor_tooMuchCrew;
+--#1
+[DialogOption] text=<actorBigPFleet=1><partyBoatName=1>;
+newLineOfOptions=true;
+formulaReq=m:fleetSize(1) - m:bCrewNum(1);
+nodeToConnectTo=harbor_moor_b1;
+[DialogOption] text=<color=SlateGray><actorBigPFleet=1><partyBoatName=1>  (<iconBig=icon_crew><math=m:bCrewNum(1)>);
+newLineOfOptions=true;
+formulaReq=m:fleetSize(1) + m:bCrewNum(1) - 1;
+nodeToConnectTo=harbor_moor_tooMuchCrew;
+--#6
+[DialogOption] text=<actorBigPFleet=6><partyBoatName=6>;
+formulaReq=m:fleetSize(6) - m:bCrewNum(6);
+nodeToConnectTo=harbor_moor_b6;
+[DialogOption] text=<color=SlateGray><actorBigPFleet=6><partyBoatName=6>  (<iconBig=icon_crew><math=m:bCrewNum(6)>);
+formulaReq=m:fleetSize(6) + m:bCrewNum(6) - 1;
+nodeToConnectTo=harbor_moor_tooMuchCrew;
+--#2
+[DialogOption] text=<actorBigPFleet=2><partyBoatName=2>;
+newLineOfOptions=true;
+formulaReq=m:fleetSize(2) - m:bCrewNum(2);
+nodeToConnectTo=harbor_moor_b2;
+[DialogOption] text=<color=SlateGray><actorBigPFleet=2><partyBoatName=2>  (<iconBig=icon_crew><math=m:bCrewNum(2)>);
+newLineOfOptions=true;
+formulaReq=m:fleetSize(2) + m:bCrewNum(2) - 1;
+nodeToConnectTo=harbor_moor_tooMuchCrew;
+--#7
+[DialogOption] text=<actorBigPFleet=7><partyBoatName=7>;
+formulaReq=m:fleetSize(7) - m:bCrewNum(7);
+nodeToConnectTo=harbor_moor_b7;
+[DialogOption] text=<color=SlateGray><actorBigPFleet=7><partyBoatName=7>  (<iconBig=icon_crew><math=m:bCrewNum(7)>);
+formulaReq=m:fleetSize(7) + m:bCrewNum(7) - 1;
+nodeToConnectTo=harbor_moor_tooMuchCrew;
+--#3
+[DialogOption] text=<actorBigPFleet=3><partyBoatName=3>;
+newLineOfOptions=true;
+formulaReq=m:fleetSize(3) - m:bCrewNum(3);
+nodeToConnectTo=harbor_moor_b3;
+[DialogOption] text=<color=SlateGray><actorBigPFleet=3><partyBoatName=3>  (<iconBig=icon_crew><math=m:bCrewNum(3)>);
+newLineOfOptions=true;
+formulaReq=m:fleetSize(3) + m:bCrewNum(3) - 1;
+nodeToConnectTo=harbor_moor_tooMuchCrew;
+--#8
+[DialogOption] text=<actorBigPFleet=8><partyBoatName=8>;
+formulaReq=m:fleetSize(8) - m:bCrewNum(8);
+nodeToConnectTo=harbor_moor_b8;
+[DialogOption] text=<color=SlateGray><actorBigPFleet=8><partyBoatName=8>  (<iconBig=icon_crew><math=m:bCrewNum(8)>);
+formulaReq=m:fleetSize(8) + m:bCrewNum(8) - 1;
+nodeToConnectTo=harbor_moor_tooMuchCrew;
+--#4
+[DialogOption] text=<actorBigPFleet=4><partyBoatName=4>;
+newLineOfOptions=true;
+formulaReq=m:fleetSize(4) - m:bCrewNum(4);
+nodeToConnectTo=harbor_moor_b4;
+[DialogOption] text=<color=SlateGray><actorBigPFleet=4><partyBoatName=4>  (<iconBig=icon_crew><math=m:bCrewNum(4)>);
+newLineOfOptions=true;
+formulaReq=m:fleetSize(4) + m:bCrewNum(4) - 1;
+nodeToConnectTo=harbor_moor_tooMuchCrew;
+
+[DialogOption] text=Nevermind;
+nodeToConnectTo=harbor;
+escOption=true;
+bottomOption=true;
+
+
+-----CONFIRM YES/NO
+
+--0
+[DialogNode] ID=harbor_moor_b0;
+animations=;
+statements=Want to keep <actorBigPFleet=0><partyBoatName=0> here? Y'can retrieve it anytime.;
+specialEffect=setPCDialogWindowSizeY,0;
+[DialogOption] text=Yes;
+nodeToConnectTo=harbor_moor_yes_b0;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=; escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=harbor_moor_yes_b0;
+animations=;
+statements=Arrite then. We'll hold onto 'er for ya.;
+specialEffect=removeFromFleet_slot,0;
+
+--1
+[DialogNode] ID=harbor_moor_b1;
+animations=;
+statements=Want to keep <actorBigPFleet=1><partyBoatName=1> here? Y'can retrieve it anytime.;
+specialEffect=setPCDialogWindowSizeY,0;
+[DialogOption] text=Yes;
+nodeToConnectTo=harbor_moor_yes_b1;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=; escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=harbor_moor_yes_b1;
+animations=;
+statements=Arrite then. We'll hold onto 'er for ya.;
+specialEffect=removeFromFleet_slot,1;
+
+--2
+[DialogNode] ID=harbor_moor_b2;
+animations=;
+statements=Want to keep <actorBigPFleet=2><partyBoatName=2> here? Y'can retrieve it anytime.;
+specialEffect=setPCDialogWindowSizeY,0;
+[DialogOption] text=Yes;
+nodeToConnectTo=harbor_moor_yes_b2;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=; escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=harbor_moor_yes_b2;
+animations=;
+statements=Arrite then. We'll hold onto 'er for ya.;
+specialEffect=removeFromFleet_slot,2;
+
+--3
+[DialogNode] ID=harbor_moor_b3;
+animations=;
+statements=Want to keep <actorBigPFleet=3><partyBoatName=3> here? Y'can retrieve it anytime.;
+specialEffect=setPCDialogWindowSizeY,0;
+[DialogOption] text=Yes;
+nodeToConnectTo=harbor_moor_yes_b3;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=; escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=harbor_moor_yes_b3;
+animations=;
+statements=Arrite then. We'll hold onto 'er for ya.;
+specialEffect=removeFromFleet_slot,3;
+
+
+--4
+[DialogNode] ID=harbor_moor_b4;
+animations=;
+statements=Want to keep <actorBigPFleet=4><partyBoatName=4> here? Y'can retrieve it anytime.;
+specialEffect=setPCDialogWindowSizeY,0;
+[DialogOption] text=Yes;
+nodeToConnectTo=harbor_moor_yes_b4;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=; escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=harbor_moor_yes_b4;
+animations=;
+statements=Arrite then. We'll hold onto 'er for ya.;
+specialEffect=removeFromFleet_slot,4;
+
+
+--5
+[DialogNode] ID=harbor_moor_b5;
+animations=;
+statements=Want to keep <actorBigPFleet=5><partyBoatName=5> here? Y'can retrieve it anytime.;
+specialEffect=setPCDialogWindowSizeY,0;
+[DialogOption] text=Yes;
+nodeToConnectTo=harbor_moor_yes_b5;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=; escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=harbor_moor_yes_b5;
+animations=;
+statements=Arrite then. We'll hold onto 'er for ya.;
+specialEffect=removeFromFleet_slot,5;
+
+
+--6
+[DialogNode] ID=harbor_moor_b6;
+animations=;
+statements=Want to keep <actorBigPFleet=6><partyBoatName=6> here? Y'can retrieve it anytime.;
+specialEffect=setPCDialogWindowSizeY,0;
+[DialogOption] text=Yes;
+nodeToConnectTo=harbor_moor_yes_b6;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=; escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=harbor_moor_yes_b6;
+animations=;
+statements=Arrite then. We'll hold onto 'er for ya.;
+specialEffect=removeFromFleet_slot,6;
+
+
+--7
+[DialogNode] ID=harbor_moor_b7;
+animations=;
+statements=Want to keep <actorBigPFleet=7><partyBoatName=7> here? Y'can retrieve it anytime.;
+specialEffect=setPCDialogWindowSizeY,0;
+[DialogOption] text=Yes;
+nodeToConnectTo=harbor_moor_yes_b7;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=; escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=harbor_moor_yes_b7;
+animations=;
+statements=Arrite then. We'll hold onto 'er for ya.;
+specialEffect=removeFromFleet_slot,7;
+
+
+--8
+[DialogNode] ID=harbor_moor_b8;
+animations=;
+statements=Want to keep <actorBigPFleet=8><partyBoatName=8> here? Y'can retrieve it anytime.;
+specialEffect=setPCDialogWindowSizeY,0;
+[DialogOption] text=Yes;
+nodeToConnectTo=harbor_moor_yes_b8;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=; escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=harbor_moor_yes_b8;
+animations=;
+statements=Arrite then. We'll hold onto 'er for ya.;
+specialEffect=removeFromFleet_slot,8;
+
+
+
+
+
+--------------------UNMOOR BOAT
+
+[DialogNode] ID=boat_unmoor;
+animations=;
+statements=(Take <actorName=> out of storage?);
+specialEffect=gotoNodeIf,boat_unmoor_ghost,m:overworld;
+[DialogOption] text=Commission;
+formulaReq=9 - m:fleetSize;
+nodeToConnectTo=boat_unmoor_yes;
+[DialogOption] text=<color=SlateGray>Commission;
+formulaReq=m:fleetSize - 8;
+nodeToConnectTo=boat_unmoor_cantFit;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=boat_unmoor_yes;
+statements=(<actorName=> was added to your fleet.);
+specialEffect=addToFleet;
+
+[DialogNode] ID=boat_unmoor_cantFit;
+statements=(You can only have 9 ships in your fleet.);
+
+
+[DialogNode] ID=boat_unmoor_ghost;
+animations=;
+statements=A vision of your old ship, <actorName=>, appears before you.;
+statements=Then the apparition fades, leaving only an uneasy feeling.;
+nextNodeID=boat_unmoor_ghost2;
+
+[DialogNode] ID=boat_unmoor_ghost2;
+specialEffect=removeTalker;
+nextNodeID=boat_unmoor_ghost3;
+
+[DialogNode] ID=boat_unmoor_ghost3;

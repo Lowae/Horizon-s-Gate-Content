@@ -1,0 +1,414 @@
+[Action] ID=Sch_study; 
+	name=Study;
+	icon=icon_Sch_question;
+	tooltip=Reveal a creature's current elemental resistances & weaknesses.;
+	rankUpTooltip=;
+	tooltipTopRight=;
+	
+	harmful=false;
+	attractAttention=false;
+	
+	XPCostUnlock=35;
+	maxRank=1;
+	
+	AIRatingBias = -999;
+	
+	FXOnCaster=question;
+	FXOnCasterColor=SkyBlue;
+	FXOnCaster=ting;
+	
+	FXOnTarget=study_targetRet2;
+[ActionAoE] 
+	ID=Sch_study;
+	needsLoS = true;
+	needsLoE = false;
+	minRange = 0;
+	maxRange = 5;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Sch_study; 
+	harmful=false;
+	actorValue=study;
+	magnitude= 1;
+	duration=-2;
+	chance=100;
+	FXOnTile=bipFlutter;
+	FXOnTile=scanInfo;
+	FXOnTile=bipFlutter;
+	FXOnTile=scanInfo_flip;
+[AvAffecterAoE]
+	ID=Sch_study;
+	cloneFrom=oneTile;
+	
+[Action] ID=Sch_focusEnergy; 
+	name=Focus Energy;
+	icon=icon_Sch_swirl;
+	mpCost=3 * d:mpCostMult + d:mpCostMod;
+	tooltip=Charge a spot with energy to heal an ally or harm an enemy with non-elemental magic.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small><icon=skill_Ice_small><icon=skill_Elec_small><icon=skill_Wind_small><icon=skill_Life_small><icon=skill_Ruin_small>;
+	attractAttention=false;
+	
+	XPCost=80;
+	XPCost=150;
+	XPCost=300;
+	XPCost=450;
+	XPCost=750;
+	
+	casterAnimation=crouch;
+	maxRank=5;
+	
+	FXOnTarget=dustCircle;
+	FXOnTargetColor=Blue;
+	FXOnTarget=upwardLines;
+	FXOnTargetColor=SkyBlue;
+	FXOnTarget=downwardLines;
+	FXOnTargetColor=SkyBlue;
+	FXOnTarget=sfx_lowAura;
+	FXOnTarget=sparkle;
+[ActionAoE] 
+	ID=Sch_focusEnergy;
+	needsLoS = false;
+	needsLoE = false;
+	airborne = true;
+	arc = true;
+	minRange = 0;
+	maxRange = 1;
+	maxRangeBonus=c:rank * 1;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Sch_focusEnergy; 
+	actorValue=HP;
+	magnitude= -c:MagAtk * 1.5 + t:MagDef
+	- c:skill_Fire * 0.3
+	- c:skill_Ice  * 0.3
+	- c:skill_Elec  * 0.3
+	- c:skill_Wind  * 0.3
+	- c:skill_Ruin  * 0.4
+	- c:skill_Life * 0.3
+	- 1;
+	duration=-2;
+	chance=d:magicAcc;
+	element=magic;
+	element=focus;
+	FXOnHit=sparkles;
+	FXOnHitColor=Red;
+[AvAffecterAoE]
+	ID=Sch_focusEnergy;
+	cloneFrom=oneTile;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=Sch_focusEnergy; 
+	harmful=false;
+	actorValue=HP;
+	magnitude= c:MagAtk * 1.5
+	+ c:skill_Fire * 0.4
+	+ c:skill_Ice * 0.4
+	+ c:skill_Elec * 0.4
+	+ c:skill_Wind * 0.4
+	+ c:skill_Ruin * 0.4
+	+ c:skill_Life * 1.1
+	+ t:skill_Life;
+	duration=-2;
+	chance=100;
+	element=magic;
+	element=focus;
+	element=removeDecay;
+	FXOnHit=sparkles;
+	FXOnHitColor=SkyBlue;
+[AvAffecterAoE]
+	ID=Sch_focusEnergy;
+	cloneFrom=oneTile;
+	canSelectEnemies=false;
+	
+[Action] ID=Sch_prayer; 
+	name=Prayer;
+	icon=icon_Sch_prayer;
+	tooltip=Recover <math=5 + c:MagAtk * 0.25
+	+ c:skill_Fire * 0.25
+	+ c:skill_Ice * 0.25
+	+ c:skill_Elec * 0.25
+	+ c:skill_Wind * 0.25
+	+ c:skill_Ruin * 0.25
+	+ c:skill_Life * 0.25><adjX=-4><icon=MP> for yourself and allies in a small area around you.;
+	rankUpTooltip=Each rank increases area of effect.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small><icon=skill_Ice_small><icon=skill_Elec_small><icon=skill_Wind_small><icon=skill_Life_small><icon=skill_Ruin_small>;
+	
+	special=usableEvenUnderZoneActRestrictions;
+	
+	harmful=false;
+	attractAttention=false;
+	
+	XPCost=70;
+	XPCost=650;
+	XPCost=1750;
+	
+	casterAnimation=crouch;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnTarget=sfx_highAura;
+	
+	FXOnCaster=chargeup;
+	FXOnCasterColor=Purple;
+	FXOnCaster=casting;
+	FXOnCasterColor=Purple;
+[ActionAoE] 
+	ID=Sch_prayer; 
+	cloneFrom=oneTile;
+	ignoreCannotTarget=true;
+[AvAffecter]
+	ID=Sch_prayer; 
+	harmful=false;
+	actorValue=MP;
+	magnitude=5 + c:MagAtk * 0.25
+	+ c:skill_Fire * 0.25
+	+ c:skill_Ice * 0.25
+	+ c:skill_Elec * 0.25
+	+ c:skill_Wind * 0.25
+	+ c:skill_Ruin * 0.25
+	+ c:skill_Life * 0.25;
+	duration=-2;
+	chance=100;
+	element=prayer;
+[AvAffecterAoE]
+	ID=Sch_prayer;
+	aoeCasterAsOrigin = true;
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 0;
+	maxRange = 0;
+	maxRangeBonus=c:rank;
+	bypassAll=true;
+	occupyAll=true;
+	canSelectEnemies=false;
+	ignoreCannotTarget=true;
+	
+[Action] ID=Sch_gust; 
+	name=Gust;
+	icon=icon_Sch_gust;
+	tooltip=Channel the wind to push and deal <thinnerIcon=skill_Wind><math=d:windDmg20LessScaleDisplay(3)> damage in a cone.;
+	rankUpTooltip=Each rank increases area of effect.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Wind_small>;
+	
+	XPCost=150;
+	XPCost=350;
+	XPCost=950;
+	
+	FXOnCaster=magicCharge;
+	FXOnTarget=sfx_gustyBlast;
+	
+	mpCost=7 * d:mpCostMult + d:mpCostMod;
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnTarget=smallShakeHoriz;
+[ActionAoE] 
+	ID=Sch_gust; shape = 2;
+	aoeCasterAsOrigin=true;
+	needsLoS = false;
+	needsLoE = true;
+	airborne = true;
+	minRange = 1;
+	maxRange = 0;
+	maxRangeBonus=c:rank;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Sch_gust; 
+	actorValue=HP;
+	magnitude= d:windDmg20LessScale(3);
+	duration=-2;
+	chance=d:windAcc;
+	FXOnTile=wind;
+	FXOnTileColor=LightBlue;
+	element=1;
+	element=35;
+[AvAffecterAoE]
+	ID=Sch_gust; shape=0;
+	aoeCasterAsOrigin=true;
+	needsLoS = false;
+	needsLoE = true;
+	airborne = true;
+	minRange = 1;
+	maxRange = 1.5;
+	maxRangeAddDistanceFromCaster=true;
+	maxRangeBonus = 0;
+	coneAngle= 90;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Sch_gust; 
+	actorValue=push;
+	magnitude= 1;
+	duration=-2;
+	chance=d:windAcc;
+	FXOnHit=pop;
+	FXOnHitColor=LightBlue;
+[AvAffecterAoE]
+	ID=Sch_gust; shape=0;
+	aoeCasterAsOrigin=true;
+	needsLoS = false;
+	needsLoE = true;
+	airborne = true;
+	minRange = 1;
+	maxRange = 1.5;
+	maxRangeAddDistanceFromCaster=true;
+	maxRangeBonus = 0;
+	coneAngle= 90;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+	
+[Action] ID=Sch_zap; 
+	name=Bolt;
+	icon=icon_Sch_zap;
+	tooltip=Shoot a lightning bolt in a straight line, dealing <thinnerIcon=skill_Elec><math=d:elecDmg20LessScaleDisplay(5)> damage.;
+	rankUpTooltip=Each rank adds +1 max range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Elec_small>;
+	
+	XPCost=150;
+	XPCost=250;
+	XPCost=550;
+	
+	FXOnCaster=magicCharge;
+	FXOnTarget=sfx_elecBlast;
+	
+	mpCost=5 * d:mpCostMult + d:mpCostMod;
+	
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+[ActionAoE] 
+	ID=Sch_zap; shape=2;
+	needsLoS = false;
+	needsLoE = true;
+	airborne = true;
+	arc = true;
+	minRange = 1;
+	maxRange = 3;
+	maxRangeBonus=c:rank;
+	bypassAll=false;
+	occupyAll=true;
+[AvAffecter]
+	ID=Sch_zap; 
+	actorValue=HP;
+	magnitude= d:elecDmg20LessScale(5);
+	duration=-2;
+	chance=d:elecAcc;
+	element=magic;
+	element=lightning;
+	FXOnTile=lightningbolt;
+	FXOnHit=spark;
+	FXOnHitColor=SkyBlue;
+	FXOnHit=smallShock;
+[AvAffecterAoE]
+	ID=Sch_zap;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+	maxRange=0;
+	maxRangeBonus=0;
+	maxRangeAddDistanceFromCaster=true;
+	
+[Action] ID=Sch_flame; 
+	name=Flame;
+	icon=icon_Sch_flame;
+	tooltip=Hurl a ball of fire at the target that deals <thinnerIcon=skill_Fire><math=d:fireDmg20LessScaleDisplay(5)> damage.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small>;
+	
+	XPCost=125;
+	XPCost=450;
+	XPCost=780;
+	
+	mpCost=5 * d:mpCostMult + d:mpCostMod;
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=sfx_highThwum_loud;
+	FXOnCasterColor=Red;
+	FXOnCaster=ping_noOverlap;
+	FXOnCasterColor=Red;
+	FXOnCaster=summonEnergyShot;
+	FXOnTarget=energyShot;
+[ActionAoE] 
+	ID=Sch_flame;
+	needsLoS = false;
+	needsLoE = true;
+	airborne = true;
+	arc = false;
+	minRange = 1;
+	maxRange = 3;
+	maxRangeBonus=c:rank * 1;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Sch_flame; 
+	actorValue=HP;
+	magnitude= d:fireDmg20LessScale(5);
+	duration=-2;
+	chance=d:fireProjectileAcc;
+	FXOnTile=smallExplode;
+	element=ranged;
+	element=magic;
+	element=fire;
+	element=kindle;
+[AvAffecterAoE]
+	ID=Sch_flame;
+	cloneFrom=oneTile;
+	
+[Action] ID=Sch_frost; 
+	name=Frost;
+	icon=icon_Sch_frost;
+	tooltip=Deal <thinnerIcon=skill_Ice><math=d:iceDmg20LessScaleDisplay(7)> damage in a small area.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ice_small>;
+	
+	XPCost=150;
+	XPCost=300;
+	XPCost=750;
+	XPCost=1250;
+	
+	mpCost=6 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=8 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	special=requiresCasting;
+	casterAnimation=spellcast;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnTarget=SandPuff;
+[ActionAoE] 
+	ID=Sch_frost; shape=0;
+	needsLoS = false;
+	needsLoE = false;
+	airborne = true;
+	minRange = 1;
+	maxRange = 2;
+	maxRangeBonus=c:rank * 1;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Sch_frost; 
+	actorValue=HP;
+	magnitude= d:iceDmg20LessScale(7);
+	duration=-2;
+	chance=d:iceAcc;
+	element=magic;
+	element=ice;
+	FXOnTile=frostcloud;
+	FXOnTileColor=SkyBlue;
+	FXOnHit=frostsparkles;
+	FXOnHitColor=SkyBlue;
+[AvAffecterAoE]
+	ID=Sch_frost; 
+	cloneFrom=adjacentAndSelf;

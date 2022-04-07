@@ -1,0 +1,86 @@
+---TRYING TO ENTER A PORT THAT HATES YOU---
+
+[DialogNode] ID=enterPort_hated;
+animations=;
+statements=<locName=> is an enemy port.<p=2> If we want to get in, we'll have to do it the hard way.;
+[DialogOption] text=Bribe ($<xAdj=-3><math=m:locWealth*-m:favorWithLoc*0.01><xAdj=-6>);
+formulaReq=m:money - m:locWealth*-m:favorWithLoc*0.01 + 1;
+nodeToConnectTo=enterPort_hated_bribe;
+[DialogOption] text=<color=SlateGray>Bribe ($<xAdj=-3><math=m:locWealth*-m:favorWithLoc*0.01><xAdj=-6>);
+formulaReq=m:locWealth*-m:favorWithLoc*0.01 - m:money;
+nodeToConnectTo=enterPort_hated_bribe_noMoney;
+[DialogOption] text=Intimidate (Requires<math=m:locWealth*0.75><xAdj=-8><iconBig=icon_crew>);
+formulaReq=m:pCrewNum - m:locWealth*0.75 + 1;
+newLineOfOptions=true;
+nodeToConnectTo=enterPort_hated_intimidate;
+[DialogOption] text=<color=SlateGray>Intimidate (Requires<math=m:locWealth*0.75><xAdj=-8><iconBig=icon_crew>);
+formulaReq=m:locWealth*0.75 - m:pCrewNum;
+newLineOfOptions=true;
+nodeToConnectTo=enterPort_hated_intimidate_notEnoughCrew;
+[DialogOption] text=Sneak in (-3% Morale);
+formulaReq=1-m:isItDaytime;
+newLineOfOptions=true;
+nodeToConnectTo=enterPort_hated_sneak;
+[DialogOption] text=<color=SlateGray>Sneak in (Only at night, -3% Morale);
+formulaReq=m:isItDaytime;
+newLineOfOptions=true;
+nodeToConnectTo=enterPort_hated_sneak_notNight;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+---
+[DialogNode] ID=enterPort_hated_bribe;
+animations=;
+statements=Alright, let's head in.;
+specialEffect=subtractgp,m:locWealth*-m:favorWithLoc*0.01;
+nextNodeID=enterPort_enter;
+
+[DialogNode] ID=enterPort_hated_bribe_noMoney;
+animations=sad;
+statements=We can't afford that, Commodore.;
+nextNodeID=enterPort_hated;
+
+---
+
+[DialogNode] ID=enterPort_hated_intimidate;
+animations=angry;
+statements=Right. I'll assemble the crew and we'll head in.;
+nextNodeID=enterPort_enter;
+
+
+[DialogNode] ID=enterPort_hated_intimidate_notEnoughCrew;
+animations=sigh;
+statements=Sorry, Commodore. We don't have enough crew to pull that off.;
+nextNodeID=enterPort_hated;
+---
+
+[DialogNode] ID=enterPort_hated_sneak;
+animations=sigh;
+statements=It's not pleasant, but we'll get in. Let's go.;
+specialEffect=crewMorale,-3;
+nextNodeID=enterPort_enter;
+
+[DialogNode] ID=enterPort_hated_sneak_notNight;
+animations=;
+statements=We have to wait until nightfall or we'll be detected.;
+nextNodeID=enterPort_hated;
+
+
+
+
+
+-----
+
+[DialogNode] ID=enterPort_enter;
+specialEffect=enterPort;
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,306 @@
+
+	
+[Action] ID=Ber_frenzy; 
+	name=Frenzy;
+	icon=icon_Ber_frenzy;
+	mpCost=3 * d:mpCostMult + d:mpCostMod;
+	tooltip=Attack <math=c:rank+1> separate targets for 80% damage.;
+	rankUpTooltip=Each rank increases number of targets by 1.;
+	tooltipIcons=<icon=noRanged>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	requiredWeaponElement=melee;
+	
+	XPCost=220;
+	XPCost=999;
+	
+	numTargets=c:rank+1;
+	
+	casterAnimation=spinAttack;
+	casterAnimationSpeed=1.8;
+	casterAnimationDependsOnWeaponHand=true;
+	
+	maxRank=2;
+	canExceedMaxRankBy=1;
+	
+	FXOnTarget=weaponFX;
+[ActionAoE] 
+	ID=Ber_frenzy; shape=10; 
+[AvAffecter]
+	ID=Ber_frenzy; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.8;
+	chance=w:chance;
+	duration=-2;
+	FXOnTile=whirlSlash_overlap;
+[AvAffecterAoE]
+	ID=Ber_frenzy;
+	cloneFrom=oneTile;
+	 
+	
+[Action] ID=Ber_scream; 
+	name=Scream;
+	icon=icon_Ber_scream;
+	mpCost=4 * d:mpCostMult + d:mpCostMod;
+	tooltip=Demoralize nearby enemies for <icon=time><math=61 + c:MagAtk*3> and boost your own morale. Works best against enemies looking directly at you.;
+	rankUpTooltip=Each rank increases area of effect.;
+	tooltipTopRight=<icon=MagAtk_small>;
+	
+	XPCost=130;
+	XPCost=600;
+	XPCost=1500;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnTarget=gustyBlast;
+	FXOnTarget=DramaticNyeaow;
+	
+	casterAnimation=handsup_angry;
+[ActionAoE]
+	ID=Ber_scream;
+	cloneFrom=adjacent;
+	needsLoS = true;
+	needsLoE = false;
+	airborne = true;
+	maxRangeBonus = c:rank;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=Ber_scream; 
+	actorValue=morale;
+	magnitude= -1;
+	duration=61 + c:MagAtk*3;
+	chance=100 * m:evaFacing;
+	FXOnHit=downwardLines;
+	FXOnHitColor=Purple;
+	FXOnHit=sfx_debuffMild;
+	FXOnMiss=chargeFast;
+	FXOnTile=wind;
+	FXOnTileColor=White;
+[AvAffecterAoE]
+	ID=Ber_scream;
+	aoeCasterAsOrigin=true;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=Ber_scream; 
+	visibleEvaluations=true;
+	actorValue=morale;
+	harmful=false;
+	magnitude= 1;
+	duration=70;
+	chance=100;
+[AvAffecterAoE]
+	ID=Ber_scream;
+	aoeCasterAsOrigin=true;
+	minRange=0;
+	maxRange=0;
+	maxRangeBonus = 0;
+	canSelectAllies=true;
+	
+
+[Action] ID=Ber_terrorize; 
+	name=Terrorize;
+	icon=icon_Ber_terrorize;
+	mpCost=2 * d:mpCostMult + d:mpCostMod;
+	tooltip=Glare into the target's eyes to severely demoralize for <icon=time><math=91 + c:MagAtk*3>, cancel their spellcasting, and delay their next turn by <icon=time><math=5>.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small>;
+	
+	XPCost=180;
+	XPCost=360;
+	XPCost=600;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	casterAnimation=cast_eyesOpen;
+	
+	
+	
+	FXOnCaster=sinisterSoundCue_low;
+	FXOnCaster=sfx_echoTing;
+	FXOnCaster=eyeGlint;
+	FXOnCaster=darken_major;
+	FXOnTarget=eyeGlint;
+[ActionAoE] 
+	ID=Ber_terrorize; shape=2;
+	cloneFrom=adjacent;	
+	maxRange=0;
+	maxRangeBonus=c:rank;
+[AvAffecter]
+	ID=Ber_terrorize; 
+	actorValue=morale;
+	magnitude=-2;
+	duration=91 + c:MagAtk*3;
+	chance=100 * m:evaFacing - 100 * t:blind - 100 * m:tFearless;
+	FXOnTile=downwardLines;
+	FXOnTileColor=Black;
+	FXOnTile=downwardLines;
+	FXOnTileColor=Black;
+	FXOnHit=starDonk;
+	FXOnHit=sfx_donkHit;
+[AvAffecterAoE]
+	ID=Ber_terrorize; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Ber_terrorize; 
+	visibleMiss = false;
+	actorValue=actTimer;
+	magnitude=-5;
+	chance=100 * m:evaFacing - 100 * t:blind - 100 * m:tFearless;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Ber_terrorize;
+	 cloneFrom=oneTile;
+[AvAffecter]
+	ID=Ber_terrorize; 
+	visibleMiss = false;
+	actorValue=cancel;
+	magnitude=1;
+	chance=100 * m:tCancel * m:evaFacing - 100 * t:blind - 100 * m:tFearless;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Ber_terrorize;
+	 cloneFrom=oneTile;
+	
+[Action] ID=Ber_rage; 
+	name=Rage;
+	icon=icon_Ber_rage;
+	tooltip=Cure negative statuses and gain +<adjX=-1><math=5+c:rank><adjX=-4><icon=PhysAtk> and -3<icon=PhysDef><icon=MagDef> for <icon=time>99. Can't be used again for <icon=time>99.;
+	rankUpTooltip=Each rank adds +1 <icon=PhysAtk>.;
+	tooltipTopRight=;
+	
+	harmful=false;
+	attractAttention=false;
+	
+	XPCost=150;
+	XPCost=700;
+	XPCost=950;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	cooldown=99;
+	
+	casterAnimation=charge2;
+	
+	FXOnCaster=actor_spreadRed;
+	FXOnCaster=sfx_laser_blast_high;
+	FXOnTarget=redden;
+[ActionAoE] 
+	ID=Ber_rage; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Ber_rage;
+	harmful=false;
+	actorValue=cure;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=Ber_rage;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Ber_rage;
+	harmful=false;
+	actorValue=PhysAtk;
+	magnitude=5+c:rank;
+	duration=99;
+	chance=100;
+[AvAffecterAoE]
+	ID=Ber_rage;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Ber_rage;
+	harmful=false;
+	actorValue=PhysDef;
+	magnitude=-3;
+	duration=99;
+	chance=100;
+[AvAffecterAoE]
+	ID=Ber_rage;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Ber_rage;
+	harmful=false;
+	actorValue=MagDef;
+	magnitude=-3;
+	duration=99;
+	chance=100;
+[AvAffecterAoE]
+	ID=Ber_rage;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=Ber_scatter; 
+	name=Scatter;
+	icon=icon_Ber_scatter;
+	tooltip=Step forward and strike a mighty blow that deals +30% damage and pushes all nearby enemies.;
+	rankUpTooltip=Each rank increases maximum distance moved by +1.;
+	tooltipIcons=<icon=noRanged>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	requiredWeaponElement=melee;
+	
+	mpCost=12 * d:mpCostMult + d:mpCostMod;
+	AIRatingBias = -14;
+	
+	
+	
+	
+	XPCost=350;
+	XPCost=950;
+	XPCost=2500;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	special=moveCasterNextToTarget;
+	
+	casterAnimation=jumpAttack_swing;
+	casterAnimationSpeed=1.3;
+	casterAnimationDependsOnWeaponHand=true;
+	
+	FXOnTarget=medShakeHoriz;
+	FXOnTarget=strike;
+[ActionAoE] 
+	ID=Ber_scatter; shape=2;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 0;
+	maxRangeBonus=c:rank;
+	occupyAll=true;
+	fReq=1 - m:actorInTheWayOfMoveToTarget;
+[AvAffecter]
+	ID=Ber_scatter; 
+	actorValue=HP;
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 1.3;
+	chance=w:chance;
+	duration=-2;
+	element=physical;
+	element=melee;
+	element=smash;
+	FXOnTile=sfx_classicExplosion;
+	FXOnTile=SLAM;
+	FXOnTile=terrain;
+[AvAffecterAoE]
+	ID=Ber_scatter;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Ber_scatter; 
+	useCasterAsOriginForDirectionalEffects=false;
+	actorValue=push;
+	magnitude=1;
+	chance=100;
+	duration=-2;
+	FXOnTile=smallShockwave_instant_moving;
+[AvAffecterAoE]
+	ID=Ber_scatter;
+	cloneFrom=adjacent+2;
+	arc=true;
+	airborne=true;
+	coneAngle=270;
+	canSelectAllies=false;
+
+	

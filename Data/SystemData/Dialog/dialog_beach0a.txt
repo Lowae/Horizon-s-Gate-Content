@@ -1,0 +1,1203 @@
+
+[DialogNode] ID=vang_beach1a;
+animations=crouchPose;
+animations=;
+animations=meh;
+animations=sigh;
+statements=<speed=0.5>Ugh...<p=> my head...;
+statements=Oh!;
+statements=It's you.;
+statements=So there were other survivors...;
+specialEffect=textOverlay_tween;
+
+[DialogOption] text=No thanks to you!;
+animation=angry;
+nodeToConnectTo=vang_beach1b;
+[DialogOption] text=Have you seen anyone else?;
+animation=;
+newLineOfOptions=true;
+nodeToConnectTo=vang_beach2a;
+
+[DialogNode] ID=vang_beach1b;
+animations=angry;
+statements=Wh-<p=> YOU were the one laying on the ground during the fight!;
+
+[DialogOption] text=Because YOU knocked me over!;
+animation=angry;
+nodeToConnectTo=vang_beach1c;
+[DialogOption] text=Forget it. You're clearly oblivious.;
+animation=stern;
+newLineOfOptions=true;
+nodeToConnectTo=vang_beach1d;
+
+
+[DialogNode] ID=vang_beach1c;
+animations=chargePose;
+statements=D-don't try to pin your clumsiness on me!<p=> You fell over for no reason just moments before!;
+nextNodeID=vang_beach1d;
+
+[DialogNode] ID=vang_beach1d;
+animations=stern;
+statements=Keh!<p=> Never mind!!<p=1.5> I'm going to go look for survivors...<p=> you just stay here and try not to tip over!;
+specialEffect=facingRot90;
+nextNodeID=vang_beach_leave;
+
+[DialogNode] ID=vang_beach2a;
+animations=;
+animations=sigh;
+statements=I haven't seen anyone besides you.;
+statements=Although I did just wake up a bit ago, so...;
+nextNodeID=vang_beach2b;
+
+[DialogNode] ID=vang_beach2b;
+animations=;
+statements=I'm going to go look for survivors.<p=> You stay put here.;
+nextNodeID=vang_beach_leave;
+
+
+[DialogNode] ID=vang_beach_leave;
+specialEffect=tSceneV1;
+
+
+
+-----------
+
+[DialogNode] ID=barr_beach1a;
+animations=scared;
+animations=angry;
+statements=<pname=> - you're alive!;
+statements=Give me a hand here!;
+nextNodeID=barr_beach1b;
+
+[DialogNode] ID=barr_beach1b;
+speakerOverride=pirate1;
+animations=swing;
+statements=Don't let either of 'em get away!;
+nextNodeID=barr_beach1c;
+
+[DialogNode] ID=barr_beach1c;
+specialEffect=tSceneB1;
+
+[DialogNode] ID=barr_beach2a;
+animations=happy;
+animations=sigh;
+animations=;
+statements=Thank you, <pname=><p=1.5> - and thank goodness you survived the shipwreck!;
+statements=Those thugs jumped me while I was checking out this trail...<p=> I think they're with the pirates who attacked us.;
+statements=Go ahead and grab their equipment...<p=> I'm sure we'll need it.;
+nextNodeID=;
+specialEffect=quietsave;
+
+
+
+[DialogNode] ID=barr_beach2b;
+animations=meh;
+animations=;
+statements=Got everything you need?;
+statements=I think Reeve went further ahead...<p=> we should try to catch up to her before those pirates find her.;
+
+[DialogOption] text=Reeve survived the wreck too?;
+animation=;
+nodeToConnectTo=barr_beach2c;
+[DialogOption] text=Did you see any other survivors?;
+animation=;
+newLineOfOptions=true;
+nodeToConnectTo=barr_beach2d;
+[DialogOption] text=Let's head out then.;
+animation=sigh;
+newLineOfOptions=true;
+nodeToConnectTo=barr_beach2f;
+
+[DialogNode] ID=barr_beach2c;
+animations=sly;
+animations=sigh;
+animations=;
+animations=sigh;
+statements=Yeah...<p=> she's not called the 'Dragon Tamer' for nothing!;
+statements=Actually...<p=> I was sort of in and out of consciousness after the lightning struck...<p=> but I'm pretty sure she saved me and Vang.;
+nextNodeID=barr_beach2e;
+
+[DialogNode] ID=barr_beach2d;
+animations=;
+animations=sigh;
+statements=Nobody besides Vang and Reeve.;
+statements=Actually...<p=> I was sort of in and out of consciousness after the lightning struck...<p=> but I'm pretty sure Reeve saved me and Vang.;
+nextNodeID=barr_beach2e;
+
+[DialogNode] ID=barr_beach2e;
+animations=;
+animations=sigh;
+statements=I remember being dragged ashore before passing out again.<p=> She headed up the path not long after I came to.;
+statements=I couldn't rouse Vang, so I tried to follow her and...<p=> here we are.;
+
+[DialogOption] text=Let's head out then.;
+animation=;
+nodeToConnectTo=barr_beach2f;
+
+[DialogNode] ID=barr_beach2f;
+animations=happy;
+animations=;
+statements=Right!<p=2> Oh, by the way-;
+statements=You earned some <color=DarkRed>XP<color=> from that fight.<p=> You should learn some new abilities with it -<p=> just <color=DarkRed>double-click yourself<color=> to take a look.;
+nextNodeID=barr_beach2g;
+
+[DialogNode] ID=barr_beach2g;
+specialEffect=tSceneB3;
+
+
+-------------------------------
+
+
+[DialogNode] ID=pirate_beach1a;
+speakerOverride=gorvall;
+animations=sly;
+statements=Ah, the rest of th' drowned rats showed up!<p=> That should make cleanup easy.;
+nextNodeID=pirate_beach1b;
+
+[DialogNode] ID=pirate_beach1b;
+speakerOverride=reeve_strong;
+animations=;
+statements=Don't get distracted, villain!<p=> Will you surrender, and face judgment in the courts of Dominio?;
+specialEffect=facingRot270;
+nextNodeID=pirate_beach1c;
+
+
+[DialogNode] ID=pirate_beach1c;
+speakerOverride=gorvall;
+animations=sly;
+animations=angry;
+statements=Don't make me laugh!<p=> Yer vastly outnumbered, so just give in!;
+statements=And don't think of runnin', either -<p=> I know this island like the back of me foot!;
+nextNodeID=pirate_beach1d;
+
+[DialogNode] ID=pirate_beach1d;
+speakerOverride=reeve_strong;
+animations=meh;
+statements=There's no getting through that thick skull of his...;
+specialEffect=facingRot180;
+nextNodeID=pirate_beach1e;
+
+[DialogNode] ID=pirate_beach1e;
+animations=happy;
+animations=sly;
+statements=<pname=>, Barr!<p=> Good to see you!;
+statements=Want to join me in showing these cowardly pirates some Dominian justice?;
+specialEffect=facingRot90;
+
+[DialogOption] text=With pleasure!;
+animation=sly;
+nodeToConnectTo=pirate_beach2a;
+[DialogOption] text=If we must.;
+animation=sigh;
+newLineOfOptions=true;
+nodeToConnectTo=pirate_beach2a;
+[DialogOption] text=Are you sure we can handle them?;
+animation=scared;
+newLineOfOptions=true;
+nodeToConnectTo=pirate_beach1g;
+
+
+[DialogNode] ID=pirate_beach1g;
+animations=happy;
+statements=Of course!<p=> Just stay where you feel safe and I'll take care of it.;
+nextNodeID=pirate_beach2b;
+specialEffect=playerAnim,idle;
+
+[DialogNode] ID=pirate_beach2a;
+animations=happy;
+statements=Great!;
+nextNodeID=pirate_beach2b;
+specialEffect=playerAnim,idle;
+
+[DialogNode] ID=pirate_beach2b;
+animations=angry;
+statements=Watch closely,<p=> pirates,<p=> and see what happens to those who cross Dominio!;
+specialEffect=facingRot270;
+nextNodeID=pirate_beach2c;
+specialEffect=playerAnim,idle;
+
+[DialogNode] ID=pirate_beach2c;
+specialEffect=tSceneR2;
+
+--
+
+[DialogNode] ID=pirate_beach3a;
+animations=happy;
+animations=handupPose;
+animations=angry;
+statements=Haha!<p=> So it goes with pirates!;
+statements=Well fought, you two.<p=> You do your country proud, as expected!;
+statements=Let's take this momentum and fight our way straight to that scoundrel Lagan!;
+
+[DialogOption] text=I'm with you!;
+animation=happy;
+nodeToConnectTo=pirate_beach3b;
+[DialogOption] text=Sure... but let's not get too reckless.;
+animation=meh;
+newLineOfOptions=true;
+nodeToConnectTo=pirate_beach3c;
+
+[DialogNode] ID=pirate_beach3b;
+animations=happy;
+animations=;
+statements=That's the spirit!;
+statements=Lead the way, Commodore!;
+nextNodeID=pirate_beach3d;
+
+[DialogNode] ID=pirate_beach3c;
+animations=scared;
+animations=happy;
+statements=Y-yes,<p=> of course!;
+statements=Lead the way, Commodore!;
+nextNodeID=pirate_beach3d;
+
+[DialogNode] ID=pirate_beach3d;
+specialEffect=tSceneR4;
+
+
+------------------
+
+[DialogNode] ID=cove_beach1a;
+animations=scared;
+animations=happy;
+statements=Wow!<p=> Now this is a proper pirate cove!;
+statements=How exciting!;
+nextNodeID=cove_beach1b;
+specialEffect=playerFacingRot,180;
+
+[DialogNode] ID=cove_beach1b;
+speakerOverride=barr;
+animations=meh;
+statements=Exciting isn't the word I'd use...;
+
+
+
+
+---------
+
+[DialogNode] ID=overhear_beach1a;
+animations=scared;
+animations=handoutPose;
+statements=Hold!;
+statements=<pname=>, look!;
+nextNodeID=overhear_beach1b;
+specialEffect=facingRot270;
+
+[DialogNode] ID=overhear_beach1b;
+speakerOverride=admiral;
+animations=;
+statements=...have been working on further arrangements.;
+nextNodeID=overhear_beach1c;
+specialEffect=facingRot180;
+specialEffect=tSceneA0;
+
+[DialogNode] ID=overhear_beach1c;
+speakerOverride=lagan;
+animations=sigh;
+statements=Right, of course.;
+nextNodeID=overhear_beach1d;
+
+[DialogNode] ID=overhear_beach1d;
+speakerOverride=reeve_strong;
+animations=scared;
+statements=T-that's the <color=DarkRed>High Admiral of Dominio<color=>!;
+nextNodeID=overhear_beach1e;
+specialEffect=facingRot270;
+
+[DialogNode] ID=overhear_beach1e;
+speakerOverride=barr;
+animations=angry;
+statements=Shhh!;
+nextNodeID=overhear_beach1f;
+specialEffect=facingRot90;
+
+[DialogNode] ID=overhear_beach1f;
+speakerOverride=admiral;
+animations=sigh;
+statements=I assume your operation went smoothly?;
+nextNodeID=overhear_beach1g;
+specialEffect=facingRot270;
+
+[DialogNode] ID=overhear_beach1g;
+speakerOverride=lagan;
+animations=handsupPose;
+statements=Hah, certainly!<p=> I got a few bruises, but in the end they were blown completely to smithereens!;
+nextNodeID=overhear_beach1h;
+
+[DialogNode] ID=overhear_beach1h;
+speakerOverride=admiral;
+animations=sly;
+animations=angry;
+statements='Bruises'...?;
+statements=They should not have even seen you, let alone bruised you!<p=> Don't tell me you tried to board?;
+nextNodeID=overhear_beach1i;
+specialEffect=facingRot180;
+
+
+[DialogNode] ID=overhear_beach1i;
+speakerOverride=lagan;
+animations=sigh;
+statements=W-well,<p=> after the first few strikes,<p=> they were completely helpless, so I just thought I'd try and grab...;
+nextNodeID=overhear_beach1j;
+
+[DialogNode] ID=overhear_beach1j;
+speakerOverride=admiral;
+animations=angry;
+animations=stern;
+statements=Lagan<p=> - I explicitly instructed you to do this completely undetected.;
+statements=Frankly, it's a miracle you weren't slaughtered.<p=> Even worse, you may have given some of them time to escape...;
+nextNodeID=overhear_beach1p;
+specialEffect=facingRot180;
+
+--[DialogNode] ID=overhear_beach1k;
+--speakerOverride=reeve_strong;
+--animations=scared;
+--statements=!;
+--nextNodeID=overhear_beach1l;
+--
+--[DialogNode] ID=overhear_beach1l;
+--speakerOverride=lagan;
+--animations=;
+--statements=Reeve?<p=> Who?;
+--nextNodeID=overhear_beach1m;
+--
+--[DialogNode] ID=overhear_beach1m;
+--speakerOverride=admiral;
+--animations=angry;
+--statements=The Dragon Tamer, you idiot!<p=> Ex-Vice Admiral?<p=> Mentioned in the letter?<p=> Any of this ring a bell?;
+--nextNodeID=overhear_beach1n;
+--
+--[DialogNode] ID=overhear_beach1n;
+--speakerOverride=lagan;
+--animations=sigh;
+--animations=handsupPose;
+--statements=OH!<p=> Y-yeah, of course!<p=> THAT Reeve...;
+--statements=W-well, I didn't run into her, so the fight went just fine!<p=> Didn't lose any crew!;
+--statements=And I guarantee they didn't launch any lifeboats!<p=> I kept an eye out for that!;
+--nextNodeID=overhear_beach1o;
+--
+--[DialogNode] ID=overhear_beach1o;
+--speakerOverride=admiral;
+--animations=stern;
+--animations=angry;
+--animations=meh;
+--statements=<speed=0.3>...;
+--statements=If she wasn't in the fight...<p=> are you telling me she's unaccounted for...?;
+--statements=Half the point of this was to get rid of her.;
+--nextNodeID=overhear_beach1p;
+
+
+[DialogNode] ID=overhear_beach1p;
+speakerOverride=lagan;
+animations=handsupPose;
+animations=chargePose;
+statements=No, no worries!!<p=> In fact, as we speak, my men are on the Stormcutter, salvaging the wreck!;
+statements=My men know how to deal with any survivors!;
+nextNodeID=overhear_beach1q;
+
+[DialogNode] ID=overhear_beach1q;
+speakerOverride=admiral;
+animations=stern;
+animations=;
+statements=Lagan.;
+statements=I expect you to follow the rest of your orders to the letter.;
+nextNodeID=overhear_beach1r;
+specialEffect=facingRot180;
+
+[DialogNode] ID=overhear_beach1r;
+speakerOverride=lagan;
+animations=handoutPose;
+statements=Of course!<p=> Not a soul will lay eyes on that door, don't you worry!;
+nextNodeID=overhear_beach1s;
+
+[DialogNode] ID=overhear_beach1s;
+speakerOverride=admiral;
+animations=;
+animations=meh;
+statements=See to it.;
+statements=I'll look forward to better news next time.;
+nextNodeID=overhear_beach1t;
+specialEffect=facingRot270;
+
+[DialogNode] ID=overhear_beach1t;
+specialEffect=tSceneA1;
+
+--
+
+[DialogNode] ID=overhear_beach2a;
+speakerOverride=lagan;
+animations=sigh;
+statements=<speed=0.5>...I blew the damn thing up, so who cares...?;
+nextNodeID=overhear_beach2b;
+
+[DialogNode] ID=overhear_beach2b;
+specialEffect=tSceneA2;
+
+--
+
+
+[DialogNode] ID=overhear_beach3a;
+speakerOverride=reeve_strong;
+animations=sigh;
+statements=<speed=0.3>...;
+nextNodeID=overhear_beach3b;
+
+[DialogNode] ID=overhear_beach3b;
+speakerOverride=barr;
+animations=scared;
+animations=sad;
+statements=<speed=0.5>I can't believe it...;
+statements=<speed=0.65>We've been betrayed by Dominio...;
+
+[DialogOption] text=This must be some sort of mistake...;
+animation=sad;
+nodeToConnectTo=overhear_beach3c;
+[DialogOption] text=They sent me off to be killed?!;
+animation=angry;
+newLineOfOptions=true;
+nodeToConnectTo=overhear_beach3c;
+[DialogOption] text=...;
+animation=sigh;
+newLineOfOptions=true;
+nodeToConnectTo=overhear_beach3c;
+
+[DialogNode] ID=overhear_beach3c;
+speakerOverride=reeve_strong;
+animations=sigh;
+statements=<speed=0.3>...;
+nextNodeID=overhear_beach3d;
+
+[DialogNode] ID=overhear_beach3d;
+speakerOverride=barr;
+animations=sad;
+animations=sigh;
+statements=<speed=0.7>Well...<p=> we,<p=> we can't go back to Dominio...;
+statements=If we tried to expose the Admiral, there's no way the courts would take our word over his...;
+nextNodeID=overhear_beach3d2;
+
+[DialogNode] ID=overhear_beach3d2;
+animations=sigh;
+statements=...<cmd=advanceDialog=1.5>;
+nextNodeID=overhear_beach3e;
+specialEffect=nextDialogNode_hideWindow;
+specialEffect=facingRot270;
+specialEffect=noSpeechFXLookOrAnim;
+
+[DialogNode] ID=overhear_beach3e;
+speakerOverride=barr;
+animations=stern;
+animations=;
+statements=<speed=0.5>...<p=><speed=> remember what Lagan said.;
+statements=His crew and ship are out right now.<p=> If we act before they get back, maybe we could get some kind of leverage, or something...;
+
+[DialogOption] text=If they have extra ships, we can steal them.;
+animation=sly;
+nodeToConnectTo=overhear_beach3f;
+[DialogOption] text=Maybe we can find evidence against the Admiral.;
+animation=sigh;
+newLineOfOptions=true;
+nodeToConnectTo=overhear_beach3f;
+[DialogOption] text=We could capture Lagan and use him as a hostage.;
+animation=angry;
+newLineOfOptions=true;
+nodeToConnectTo=overhear_beach3f;
+
+[DialogNode] ID=overhear_beach3f;
+speakerOverride=barr;
+animations=sigh;
+animations=;
+statements=Right.<p=> Something like that.;
+statements=Let's get moving.<p=> They could get back any minute.;
+specialEffect=facingRot180;
+
+------------------
+
+[DialogNode] ID=door_beach1a;
+animations=;
+statements=Is that the door that Lagan mentioned?;
+specialEffect=playerFacingRot,270;
+
+[DialogOption] text=Seems important.;
+animation=;
+nodeToConnectTo=door_beach1b;
+[DialogOption] text=Doesn't seem very important.;
+animation=sigh;
+newLineOfOptions=true;
+nodeToConnectTo=door_beach1b;
+[DialogOption] text=He's not doing a great job guarding it.;
+animation=sly;
+newLineOfOptions=true;
+nodeToConnectTo=door_beach1b;
+
+[DialogNode] ID=door_beach1b;
+animations=sigh;
+animations=sly;
+animations=;
+statements=Yeah.;
+statements=That reminds me -<p=> Commodore, you can <color=DarkRed>'LOOK'<color=> at objects with <color=DarkRed><keybind=examine><adjX=2><color=> to get more information about them.;
+statements=You can sell that info to researchers later...<p=> you should <color=DarkRed>LOOK<color=> at this door, just in case.;
+nextNodeID=door_beach1c;
+
+[DialogNode] ID=door_beach1c;
+specialEffect=addJournalGoal,@0.64,* 'LOOK' and sell the info to a researcher.;
+nextNodeID=;
+
+-----------------
+
+[DialogNode] ID=sc_beach1a;
+animations=;
+statements=Hold on<p=> - I think I see a letter on those shelves.;
+nextNodeID=sc_beach1a2;
+specialEffect=facingRot180;
+
+[DialogNode] ID=sc_beach1a2;
+specialEffect=tSceneB0;
+
+[DialogNode] ID=sc_beach1b;
+speakerOverride=barr;
+animations=handoutPose;
+statements=Here it is...<p=> let me read it.;
+specialEffect=attractAttention;
+specialEffect=facingRot270;
+nextNodeID=sc_beach1b2;
+
+[DialogNode] ID=sc_beach1b2;
+animations=meh;
+animations=;
+animations=scared;
+animations=sigh;
+animations=;
+statements=<color=SaddleBrown><speed=0.7>'Shortly before dawn, <pname=>'s ship will pass just south of the cove.';
+statements=<color=SaddleBrown><speed=0.7>'Use the Stormcutter's lightning to destroy it while remaining undetected.';
+statements=<color=SaddleBrown><speed=0.7>'Ensure that'<color=> - ;
+statements=<speed=0.7>...;
+statements=<color=SaddleBrown><speed=0.7>'Ensure that there are no survivors.<p=> Your payment will be delivered shortly after.';
+nextNodeID=sc_beach1b3;
+specialEffect=facingRot270;
+specialEffect=moveCamXY,0,-1;
+
+[DialogNode] ID=sc_beach1b3;
+speakerOverride=barr;
+animations=;
+statements=...there's no signature.;
+specialEffect=facingRot90;
+specialEffect=moveCamXY,0,0.5;
+
+[DialogOption] text=What did I do to deserve this?;
+animation=sad;
+nodeToConnectTo=sc_beach1c;
+[DialogOption] text=This still isn't good enough as proof, is it...;
+animation=sigh;
+newLineOfOptions=true;
+nodeToConnectTo=sc_beach1c;
+[DialogOption] text=...well damn.;
+animation=meh;
+newLineOfOptions=true;
+nodeToConnectTo=sc_beach1c;
+
+[DialogNode] ID=sc_beach1c;
+speakerOverride=reeve_strong;
+animations=meh;
+statements=<speed=0.7>This...<p=> this can't be real...;
+nextNodeID=sc_beach1c2;
+specialEffect=moveXY,-1,0;
+specialEffect=playerAnim,idle;
+
+[DialogNode] ID=sc_beach1c2;
+speakerOverride=reeve_strong;
+animations=sigh;
+statements=There's no way Dominio would just -<p=2> execute their own like this!;
+nextNodeID=sc_beach1c3;
+specialEffect=moveXY,1,0;
+
+[DialogNode] ID=sc_beach1c3;
+speakerOverride=reeve_strong;
+animations=chargePose;
+animations=handsupPose;
+animations=angry;
+statements=I served 35 years in the Dominian Navy for flamesake!!;
+statements=And <pname=> is a new commodore with a spotless record!;
+statements=This-<p=1.5> this has to be some sort of pirate trick!;
+nextNodeID=sc_beach1d;
+specialEffect=facingRot90;
+specialEffect=attractAttention;
+
+[DialogNode] ID=sc_beach1d;
+specialEffect=tSceneB1;
+
+--
+
+[DialogNode] ID=sc_beach2a;
+speakerOverride=lagan;
+animations=;
+statements=No trick,<p=> mate.;
+nextNodeID=sc_beach2b;
+specialEffect=facingRot90;
+specialEffect=attractAttention;
+specialEffect=moveY1;
+
+[DialogNode] ID=sc_beach2b;
+speakerOverride=reeve_strong;
+animations=chargePose;
+statements=<speed=0.7>YOU...!;
+nextNodeID=sc_beach2c;
+specialEffect=tSceneB1b;
+specialEffect=playerFacingRot,0;
+
+[DialogNode] ID=sc_beach2c;
+speakerOverride=lagan;
+animations=happy;
+animations=;
+animations=handoutPose;
+statements=Heh.<p=> You Dominio dogs are all the same.;
+statements=Always think everything is about you, don't you?;
+statements=Sometimes,<p=0.6> a ship just needs to be sunk, is all.;
+specialEffect=facingRot180;
+
+[DialogOption] text=What do you mean?;
+animation=sly;
+nodeToConnectTo=sc_beach2d;
+[DialogOption] text=If you know what this is about, spill it.;
+animation=angry;
+newLineOfOptions=true;
+nodeToConnectTo=sc_beach2d;
+
+[DialogNode] ID=sc_beach2d;
+speakerOverride=lagan;
+animations=handsupPose;
+animations=handoutPose;
+animations=happy;
+statements=Think about it.<p=> A ship manned by a promising young commodore, and an old war hero...;
+statements=Ambushed and sunk -<p=> by a greedy merchant House.<p=> Rather treasonous of them, isn't it?;
+statements=Sounds like quite a scandal.;
+statements=And a disbanded House won't get a vote in the courts, will it?;
+nextNodeID=sc_beach2e;
+specialEffect=facingRot90;
+specialEffect=playerAnim,idle;
+
+[DialogNode] ID=sc_beach2e;
+speakerOverride=barr;
+animations=angry;
+animations=scared;
+statements=That's madness...!;
+statements=Pinning this on one of the Houses?<p=> Is the Admiral plotting some sort of coup?;
+nextNodeID=sc_beach2f;
+specialEffect=moveX1;
+specialEffect=moveCamXY,-1,0;
+
+[DialogNode] ID=sc_beach2f;
+speakerOverride=lagan;
+animations=sigh;
+animations=handoutPose;
+statements=Heh.<p=> He never tells me the details.;
+statements=But now you little pawns see your place on the board.;
+nextNodeID=sc_beach2g;
+specialEffect=moveCamXY,1,0;
+
+[DialogNode] ID=sc_beach2g;
+speakerOverride=reeve_strong;
+animations=chargePose;
+statements=<speed=0.5>You pirate SCUM...!!;
+nextNodeID=sc_beach2h;
+specialEffect=moveCamXY,-0.5,1;
+
+[DialogNode] ID=sc_beach2h;
+specialEffect=tSceneB2;
+
+----
+
+[DialogNode] ID=sc_beach3a;
+speakerOverride=barr;
+animations=scared;
+statements=Reeve!!;
+nextNodeID=sc_beach3b;
+specialEffect=playerFacingRot,180;
+specialEffect=playerAnim,crouchPose;
+specialEffect=moveX1;
+
+[DialogNode] ID=sc_beach3b;
+speakerOverride=lagan;
+animations=happy;
+statements=Hahaha!<p=> So glad I kept that old prototype cannon around!;
+nextNodeID=sc_beach3b2;
+specialEffect=playerFacingRot,180;
+specialEffect=playerAnim,crouchPose;
+specialEffect=moveCamXY,1,0;
+
+[DialogNode] ID=sc_beach3b2;
+speakerOverride=lagan;
+animations=;
+statements=And you, <pname=> - ;
+nextNodeID=sc_beach3c;
+specialEffect=facingRot90;
+specialEffect=playerFacingRot,180;
+specialEffect=playerAnim,crouchPose;
+
+[DialogNode] ID=sc_beach3c;
+specialEffect=tSceneB3;
+
+--
+
+[DialogNode] ID=sc_beach4a;
+speakerOverride=lagan;
+animations=handoutPose1;
+animations=handoutPose1;
+animations=handoutPose1;
+statements=Foot's on the other hand now, isn't it!?;
+statements=Don't struggle, or you might cut yourself!<p=> Heheh!;
+statements=And you, Barr -<p=> don't move a muscle, or <pname=> gets it!;
+nextNodeID=sc_beach4b;
+specialEffect=playerFacingRot,90;
+
+[DialogNode] ID=sc_beach4b;
+speakerOverride=barr;
+animations=scared;
+statements=!!;
+nextNodeID=sc_beach4c;
+specialEffect=playerFacingRot,90;
+
+
+[DialogNode] ID=sc_beach4c;
+specialEffect=tSceneB4;
+
+--
+
+[DialogNode] ID=sc_beach5a;
+speakerOverride=lagan;
+animations=handoutPose1;
+statements=Just stay right there...!<p=> Hehehe!;
+specialEffect=playerFacingRot,90;
+
+[DialogOption] text=Do as he says, Barr!;
+animation=crouchPose;
+nodeToConnectTo=sc_beach5b;
+[DialogOption] text=Don't listen to him, Barr!;
+animation=crouchPose_angry;
+newLineOfOptions=true;
+nodeToConnectTo=sc_beach5b;
+
+[DialogNode] ID=sc_beach5b;
+speakerOverride=barr;
+animations=scared;
+statements=<speed=0.6>I-...!;
+nextNodeID=sc_beach5c;
+specialEffect=playerFacingRot,90;
+
+
+[DialogNode] ID=sc_beach5c;
+speakerOverride=lagan;
+animations=handoutPose1;
+statements=Hehe!<p=> Hahaha!!;
+nextNodeID=sc_beach5d;
+specialEffect=playerFacingRot,90;
+
+
+[DialogNode] ID=sc_beach5d;
+specialEffect=tSceneB5;
+
+--
+
+
+[DialogNode] ID=sc_beach6a;
+statements=<rfx=vfx_vang><speed=0.5>RrrrraaAGGGGHHH!<cmd=advanceDialog=1>;
+nextNodeID=sc_beach6b;
+specialEffect=playerFacingRot,90;
+
+[DialogNode] ID=sc_beach6b;
+specialEffect=tSceneB6;
+
+
+[DialogNode] ID=sc_beach7a;
+animations=chargePose;
+statements=Vang's here!! And-<cmd=advanceDialog=0.6>;
+nextNodeID=sc_beach7b;
+specialEffect=playerFacingRot,90;
+
+[DialogNode] ID=sc_beach7b;
+specialEffect=tSceneB7;
+
+
+[DialogNode] ID=sc_beach8a;
+animations=sad;
+statements=<speed=0.8>O-<p=>oh...<p=> did I mess everything up again...?;
+
+[DialogOption] text=Vang! Perfect timing!;
+animation=scared;
+nodeToConnectTo=sc_beach8b;
+[DialogOption] text=On the contrary - you saved us!;
+animation=happy;
+newLineOfOptions=true;
+nodeToConnectTo=sc_beach8b;
+[DialogOption] text=Do you EVER enter a room normally?;
+animation=sly;
+newLineOfOptions=true;
+nodeToConnectTo=sc_beach8b;
+
+[DialogNode] ID=sc_beach8b;
+speakerOverride=vang;
+animations=scared;
+statements=Uh...<p=> what?;
+nextNodeID=sc_beach8c;
+
+[DialogNode] ID=sc_beach8c;
+speakerOverride=barr;
+animations=scared;
+animations=sly;
+statements=T-thank Ensu!<p=> I thought we were all going to die!;
+statements=Vang, that was a hell of an entrance.;
+nextNodeID=sc_beach8d;
+specialEffect=playerAnim,idle;
+
+[DialogNode] ID=sc_beach8d;
+speakerOverride=vang;
+animations=scared;
+statements=What?<p=> Huh??;
+nextNodeID=sc_beach8e;
+
+[DialogNode] ID=sc_beach8e;
+speakerOverride=barr;
+animations=sad;
+statements=<speed=0.8>But...<p=> poor Reeve...;
+nextNodeID=sc_beach8e2;
+specialEffect=facingRot90;
+
+[DialogNode] ID=sc_beach8e2;
+specialEffect=tSceneB7b;
+
+[DialogNode] ID=sc_beach8f;
+speakerOverride=reeve;
+statements=<speed=0.6>U-ugh...;
+nextNodeID=sc_beach8g;
+
+[DialogNode] ID=sc_beach8g;
+specialEffect=tSceneB8;
+
+--
+
+[DialogNode] ID=sc_beach9a;
+speakerOverride=barr;
+animations=scared;
+statements=Reeve!<p=> You're alive!;
+specialEffect=facingRot90;
+nextNodeID=sc_beach9b;
+
+[DialogNode] ID=sc_beach9b;
+speakerOverride=reeve;
+animations=crouchPose;
+statements=<speed=0.6>J-just barely...<p=> heh...;
+statements=<speed=0.6>N-not... ready to keel over just yet...;
+nextNodeID=sc_beach9c;
+
+[DialogNode] ID=sc_beach9c;
+speakerOverride=barr;
+animations=crouchPose;
+statements=Don't move!<p=> You should rest.;
+specialEffect=moveY1;
+specialEffect=facingRot90;
+nextNodeID=sc_beach9d;
+
+[DialogNode] ID=sc_beach9d;
+speakerOverride=reeve;
+animations=crouchPose;
+animations=idle;
+statements=<speed=0.6>N-no time for that...<p=> nghf...;
+statements=<speed=0.8>Pirates will be back soon, remember...?;
+
+[DialogOption] text=She's right. We should make our escape.;
+animation=sigh;
+nodeToConnectTo=sc_beach9f;
+[DialogOption] text=Don't push yourself, Reeve. You need to recover.;
+animation=sad;
+newLineOfOptions=true;
+nodeToConnectTo=sc_beach9e;
+
+[DialogNode] ID=sc_beach9e;
+speakerOverride=reeve;
+animations=;
+statements=<speed=0.7>Keh...!<p=> P-plenty of time for that later...!;
+specialEffect=facingRot0;
+nextNodeID=sc_beach9f;
+
+
+[DialogNode] ID=sc_beach9f;
+speakerOverride=vang;
+animations=scared;
+animations=handsupPose;
+animations=chargePose;
+statements=Oh!<p=> I just remembered!;
+statements=On my way here I saw a bunch of empty ships docked!;
+statements=We should definitely steal them!;
+nextNodeID=sc_beach9g;
+
+[DialogNode] ID=sc_beach9g;
+speakerOverride=barr;
+animations=handupPose;
+statements=Right!<p=> Let's go then!;
+nextNodeID=sc_beach9h;
+
+[DialogNode] ID=sc_beach9h;
+specialEffect=tSceneB9;
+
+
+
+
+
+-----------------
+
+
+[DialogNode] ID=depart_barr_beach1a;
+animations=;
+animations=happy;
+statements=These are pretty small sailboats, but they'll get us to the nearest port.;
+statements=Plus, they're already loaded with supplies and gold!;
+nextNodeID=depart_barr_beach1b;
+specialEffect=setDefaultNode,depart_barr_beach2a;
+
+[DialogNode] ID=depart_barr_beach1b;
+animations=;
+statements=I think I'll take the one on the left there...;
+specialEffect=facingRot180;
+
+[DialogOption] text=We aren't sailing together?;
+animation=;
+nodeToConnectTo=depart_barr_beach1c;
+[DialogOption] text=Best of luck, Barr.;
+animation=sigh;
+newLineOfOptions=true;
+nodeToConnectTo=depart_barr_beach1d;
+
+
+[DialogNode] ID=depart_barr_beach1c;
+animations=sigh;
+animations=;
+animations=stern;
+animations=happy;
+statements=<pname=>...<p=> I'm afraid not.;
+statements=It was an honor to serve as your navigator, brief as it was.;
+statements=I don't want anything more to do with Dominio, or these pirates...<p=> I'm best off going alone from here.;
+statements=I'm sure you'll do just fine without me.;
+specialEffect=lookAtPlayer;
+
+[DialogOption] text=Best of luck, Barr.;
+animation=;
+nodeToConnectTo=;
+[DialogOption] text=Suit yourself.;
+animation=stern;
+newLineOfOptions=true;
+nodeToConnectTo=;
+
+
+[DialogNode] ID=depart_barr_beach1d;
+animations=sigh;
+animations=happy;
+statements=<pname=>...<p=> it was an honor to serve as your navigator, brief as it was.;
+statements=Best of luck to you too.;
+specialEffect=lookAtPlayer;
+
+
+[DialogNode] ID=depart_barr_beach2a;
+animations=happy;
+statements=Good luck, <pname=>.;
+
+--
+
+
+[DialogNode] ID=depart_vang_beach1a;
+animations=happy;
+animations=handsupPose;
+animations=happy;
+statements=These ships are a great find, aren't they?;
+statements=I've had it with the navy!<p=> I'm taking this one and I'm gonna see the world!;
+statements=I'll become a world-famous trader!<p=> Just wait!;
+specialEffect=setDefaultNode,depart_vang_beach2a;
+
+[DialogOption] text=I'm sure you will!;
+animation=happy;
+nodeToConnectTo=depart_vang_beach1a2;
+[DialogOption] text=...;
+animation=stern;
+newLineOfOptions=true;
+nodeToConnectTo=depart_vang_beach1a2;
+
+
+[DialogNode] ID=depart_vang_beach1a2;
+animations=concern;
+animations=sigh;
+statements=<speed=0.7><pname=>...<p=> I...;
+statements=I-<p=> owe you an apology.;
+nextNodeID=depart_vang_beach1b;
+
+[DialogNode] ID=depart_vang_beach1b;
+animations=stern;
+statements=I'm sorry.<p=> I really screwed everything up.;
+specialEffect=facingRot270;
+nextNodeID=depart_vang_beach1c;
+specialEffect=playerAnim,idle;
+
+[DialogNode] ID=depart_vang_beach1c;
+animations=concern;
+statements=Barr told me what really happened...<p=> how I...<p=> how it's my fault the ship was wrecked...;
+specialEffect=lookAtPlayer;
+
+[DialogOption] text=I'm glad you finally understand.;
+animation=stern;
+newLineOfOptions=true;
+nodeToConnectTo=depart_vang_beach1d2;
+[DialogOption] text=Everyone makes mistakes.;
+animation=sigh;
+newLineOfOptions=true;
+nodeToConnectTo=depart_vang_beach1d;
+[DialogOption] text=...;
+animation=meh;
+newLineOfOptions=true;
+nodeToConnectTo=depart_vang_beach1d3;
+
+[DialogNode] ID=depart_vang_beach1d;
+animations=sad;
+statements=Yeah...<p=> but, because of me-<p=> Dar, Shanks, and Mirra...<p=> they...;
+nextNodeID=depart_vang_beach1e;
+
+[DialogNode] ID=depart_vang_beach1d2;
+animations=sad;
+statements=Yeah...<p=> because of me-<p=> Dar, Shanks, and Mirra...<p=> they...;
+nextNodeID=depart_vang_beach1e;
+
+[DialogNode] ID=depart_vang_beach1d3;
+animations=sad;
+statements=Because of me-<p=> Dar, Shanks, and Mirra...<p=> they...;
+nextNodeID=depart_vang_beach1e;
+
+[DialogNode] ID=depart_vang_beach1e;
+animations=stern;
+animations=sigh;
+statements=<speed=0.7>Rgk...<p=> w-well...;
+statements=I could sit here and cry all day about it...<p=1.7> but we don't have time.;
+specialEffect=facingRot270;
+specialEffect=playerAnim,idle;
+nextNodeID=depart_vang_beach1f;
+
+[DialogNode] ID=depart_vang_beach1f;
+animations=handoutPose;
+animations=chargePose;
+animations=handsupPose;
+statements=<pname=>!<p=> Do your best!;
+statements=Keep an eye on the famous trader charts, or whatever!<p=> 'Cuz I'll be on there!;
+statements=So let's get outta here and make it happen!;
+specialEffect=lookAtPlayer;
+
+
+
+[DialogNode] ID=depart_vang_beach2a;
+animations=chargePose;
+statements=I'm all loaded up and ready to go!;
+
+
+---
+
+[DialogNode] ID=depart_reeve_beach1a;
+animations=;
+statements=That's the last of the cargo taken care of!;
+statements=I had to get Barr and Vang to help me, but I think I'm good now.;
+specialEffect=setDefaultNode,depart_reeve_beach2a;
+
+[DialogOption] text=How are you holding up?;
+animation=;
+nodeToConnectTo=depart_reeve_beach1b;
+[DialogOption] text=Are you sure you're fit for sailing?;
+animation=meh;
+newLineOfOptions=true;
+nodeToConnectTo=depart_reeve_beach1b;
+
+
+[DialogNode] ID=depart_reeve_beach1b;
+animations=happy;
+animations=meh;
+animations=sigh;
+animations=angry;
+animations=sigh;
+animations=angry;
+animations=;
+statements=Don't worry!!<p=> I've survived worse!;
+statements=...well...<p=> that might not be true.<p=> If we're being honest...;
+statements=It might be years before I can fight like I used to...<p=> if ever.;
+statements=But!<p=> I won't give up!;
+statements=<pname=>...<p=> I have to know.<p=1.5> I have to find out why -<p=2> what was worth betraying us for.;
+statements=Someday I'm coming back here to wreck those pirates and find out what's behind that door.;
+
+[DialogOption] text=I agree completely.;
+animation=angry;
+nodeToConnectTo=depart_reeve_beach1c;
+[DialogOption] text=As long as you can handle it then.;
+animation=sigh;
+newLineOfOptions=true;
+nodeToConnectTo=depart_reeve_beach1d;
+[DialogOption] text=You're on your own with that.;
+animation=stern;
+newLineOfOptions=true;
+nodeToConnectTo=depart_reeve_beach1e;
+
+
+[DialogNode] ID=depart_reeve_beach1c;
+animations=happy;
+animations=;
+statements=Thank you, <pname=>.<p> I really appreciate that.;
+statements=Let me know when you're ready to set sail.;
+
+[DialogNode] ID=depart_reeve_beach1d;
+animations=chargePose;
+animations=;
+statements=Right!<p=> I'll be training for it!;
+statements=Let me know when you're ready to set sail!;
+
+[DialogNode] ID=depart_reeve_beach1e;
+animations=chargePose;
+animations=;
+statements=I'll do it myself if I have to!;
+statements=Let me know when you're ready to set sail!;
+
+[DialogNode] ID=depart_reeve_beach2a;
+animations=;
+animations=happy;
+statements=Well then!;
+statements=Are you ready to set sail, Commodore?;
+[DialogOption] text=Let's go!;
+animation=handupPose;
+nodeToConnectTo=depart_reeve_beach2b;
+[DialogOption] text=Not just yet.;
+animation=sigh;
+newLineOfOptions=true;
+nodeToConnectTo=;
+
+[DialogNode] ID=depart_reeve_beach2b;
+specialEffect=tSceneC1;
+
+---
+
+
+[DialogNode] ID=depart_giveStuff1a;
+statements=You got a <actorBig_low=sailboat>Sailboat!;
+specialEffect=giveShip,sailboat,sailboat;
+nextNodeID=depart_giveStuff1b;
+
+[DialogNode] ID=depart_giveStuff1b;
+statements=You found 10 <itemBig_low=food>  Food and $1200!;
+nextNodeID=depart_giveStuff1c;
+specialEffect=addgp,1200;
+specialEffect=giveItem,food,10;
+
+[DialogNode] ID=depart_giveStuff1c;
+specialEffect=tSceneC2;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

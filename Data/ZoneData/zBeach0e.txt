@@ -1,0 +1,112 @@
+[Zone]  ID=zBeach0e; dark=True; timeUntilNewDay=24; showFogOfWar=False; fogOfWar=True; minimapEnabled=True; allowCameraPastZoneEdges=False; cantAct=False; cantGameOver=False; alwaysKeepWeaponsUnsheathed=False; peaceful=False; overseerMode=False; rollingPinStyle=False; drawSky=False; boatZone=False; wind=False; overworld=False; canDropItems=True; 
+ travelSong=PM-Investigation3; travelSongVolume=0.4; travelSongPitch=-0.03; song2=; song2Volume=1; song2Pitch=0; combatSong=; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=48; darkG=47; darkB=55; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=; bgFX_sineWave=0; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=pDirt; zoneGrassPalette=pGreen; zoneGrassDarkPalette=pGreen2; zoneStonePalette=p5; zoneStoneDarkPalette=p4; zoneStoneLightPalette=p2; zoneWaterPalette=pBlue; zoneDirtDarkPalette=pDirt; zoneWoodPalette=pWood; zoneWoodDarkPalette=pWoodDark; zoneMisc1Palette=p74; zoneMisc2Palette=pRed3; zoneMisc3Palette=pRed; zoneMisc4Palette=pBlue; zoneMisc5Palette=pGreen; zoneMisc6Palette=pOrange; zoneMisc7Palette=pYellow; zoneMisc8Palette=p40; 
+
+combatMode=False; 
+
+[Item] ID=sandbag_movable; q=1; x=14; y=14;
+[Item] ID=crate_big; q=1; x=14; y=18; containerID=0;
+[Item] ID=food; q=1; containedIn=0; cSlot=0;
+[Item] ID=food; q=1; containedIn=0; cSlot=1;
+[Item] ID=food; q=1; containedIn=0; cSlot=2;
+[Item] ID=food; q=1; containedIn=0; cSlot=3;
+[Item] ID=food; q=1; containedIn=0; cSlot=5;
+[Item] ID=food; q=1; containedIn=0; cSlot=6;
+[Item] ID=food; q=1; containedIn=0; cSlot=7;
+[Item] ID=pallet; q=1; x=14; y=19;
+[Item] ID=crate_med; q=1; x=14; y=19; containerID=1;
+[Item] ID=foodDX; q=1; containedIn=1; cSlot=0;
+[Item] ID=foodDX; q=1; containedIn=1; cSlot=1;
+[Item] ID=cargo_spice; q=1; containedIn=1; cSlot=2;
+[Item] ID=cargo_oil; q=1; containedIn=1; cSlot=4;
+[Item] ID=rung; q=1; x=14; y=20;
+[Item] ID=barrel_weapons; q=1; x=15; y=13;
+[Item] ID=tools2; q=1; x=15; y=18;
+[Item] ID=cargo_tools; q=1; x=15; y=19;
+[Item] ID=curtain1_torn1_top; q=1; x=16; y=11;
+[Item] ID=bin_clothes3; q=1; x=16; y=13;
+[Item] ID=pallet; q=1; x=17; y=13;
+[Item] ID=crate_med_open; q=1; x=17; y=13; containerID=2;
+[Item] ID=shears; q=1; containedIn=2; cSlot=0;
+[Item] ID=bandage; q=1; containedIn=2; cSlot=1;
+[Item] ID=bandage; q=1; containedIn=2; cSlot=4;
+[Item] ID=rung; q=1; containedIn=2; cSlot=6;
+[Item] ID=curtain1_top; q=1; x=18; y=11;
+[Item] ID=curtain1_btm; q=1; x=18; y=12;
+[Item] ID=sandbag_movable; q=1; x=19; y=13;
+[Item] ID=fade_s3_below; q=1; r=360; x=19; y=24;
+[Item] ID=fade_s1_below; q=1; x=19; y=25;
+[Item] ID=fade_s4; q=1; r=180; x=19; y=25;
+[Item] ID=sunbeam_line_huge_dim; q=1; r=180; x=19; y=26;
+[Item] ID=sunbeam_line; q=1; x=20; y=7;
+[Item] ID=curtain1_top; q=1; x=20; y=11;
+[Item] ID=buttonUp2; q=1; specialX=17; specialY=8; x=20; y=12;
+[Item] ID=curtain1_btm; q=1; x=20; y=12;
+[Item] ID=sandbag_movable; q=1; x=20; y=13;
+[Item] ID=travelPoint_0; q=1; r=270; x=20; y=22;
+[Item] ID=sunbeam_krypton_huge; q=1; x=20; y=23;
+[Item] ID=sunbeam_krypton_huge; q=1; x=20; y=24;
+[Item] ID=fade_s1_below; q=1; x=20; y=25;
+[Item] ID=fade_s4; q=1; r=180; x=20; y=25;
+[Item] ID=sandbag_movable; q=1; x=21; y=13;
+[Item] ID=sandbag_movable; q=1; x=21; y=14;
+[Item] ID=fade_s3_below; q=1; r=-360; x=21; y=24;
+[Item] ID=fade_s1_below; q=1; x=21; y=25;
+[Item] ID=fade_s4; q=1; r=180; x=21; y=25;
+[Item] ID=sunbeam_line_huge_dim; q=1; r=180; x=21; y=26;
+[Item] ID=curtain1_top; q=1; x=22; y=11;
+[Item] ID=curtain1_btm; q=1; x=22; y=12;
+[Item] ID=barrel_powder; q=1; x=23; y=13;
+[Item] ID=woodPlank; q=1; x=23; y=18;
+[Item] ID=curtain1_torn3_top; q=1; x=24; y=11;
+[Item] ID=crate_small; q=1; x=24; y=13; containerID=3;
+[Item] ID=bottle_beer; q=1; containedIn=3; cSlot=0;
+[Item] ID=bottle_beer; q=1; containedIn=3; cSlot=1;
+[Item] ID=bottle_beer; q=1; containedIn=3; cSlot=2;
+[Item] ID=bottle_beer; q=1; containedIn=3; cSlot=3;
+[Item] ID=bottle_beer; q=1; containedIn=3; cSlot=4;
+[Item] ID=barrel_open_water; q=1; x=25; y=19;
+[Item] ID=barrel_open_water; q=1; x=25; y=20;
+[Item] ID=shovel; q=40; x=26; y=14;
+[Item] ID=barrel_open_water; q=1; x=26; y=18;
+[Item] ID=barrel_open_water; q=1; x=26; y=19;
+[Item] ID=barrel_open_water; q=1; x=26; y=20;
+
+
+
+[Trigger] numID=0; aliasID=;
+topX=18;topY=25;btmX=22;btmY=25;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=0; effectID=travel_point; sValue=zBeach0c2; sValue2=; bValue1=False; bValue2=False; fValue=1; delay=0; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=1; aliasID=;
+topX=16;topY=7;btmX=18;btmY=9;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=mech; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=True; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=1; effectID=preventInteraction; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=5; delay=0; xValue=-1; yValue=-1;
+[TriggerEffect] numID=1; effectID=fx; sValue=fx_earthquake_mild; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=1.8; xValue=-1; yValue=-1;
+[TriggerEffect] numID=1; effectID=fx; sValue=fx_earthquake; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=3; xValue=-1; yValue=-1;
+[TriggerEffect] numID=1; effectID=trigger; sValue=tOpenGate; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=4.5; xValue=-1; yValue=-1;
+[TriggerEffect] numID=1; effectID=song; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=2; aliasID=tOpenGate;
+topX=15;topY=6;btmX=19;btmY=6;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=2; effectID=setGlobalVar; sValue=gateGravenOpen; sValue2=; bValue1=False; bValue2=False; fValue=1; delay=0; xValue=-1; yValue=-1;
+[TriggerEffect] numID=2; effectID=travel; sValue=eral; sValue2=; bValue1=True; bValue2=False; fValue=0; delay=0.1; xValue=467; yValue=392;
+
+
+
+[Trigger] numID=3; aliasID=;
+topX=16;topY=14;btmX=24;btmY=15;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=3; effectID=tryDialog; sValue=walkInBeach0e; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+

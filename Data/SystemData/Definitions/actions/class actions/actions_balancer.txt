@@ -1,0 +1,384 @@
+[Action] ID=Ba_condensate; 
+	name=Condensate;
+	icon=icon_Ba_condensate;
+	mpCost=5 * d:mpCostMult + d:mpCostMod;
+	tooltip=Create water, dealing <icon=icon_water><math=d:iceDmgDisplay(4)> damage in a small area.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ice_small>;
+	
+	XPCost=150;
+	XPCost=350;
+	XPCost=600;
+	
+	casterAnimation=spellcast;
+	maxRank=3;
+	
+	FXOnTarget=largePing;
+	FXOnTargetColor=SkyBlue;
+	FXOnTarget=sfx_splash;
+[ActionAoE] 
+	ID=Ba_condensate; 
+	needsLoS = true;
+	needsLoE = false;
+	minRange = 0;
+	maxRange = 2;
+	airborne=true;
+	arc=true;
+	maxRangeBonus = c:rank;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Ba_condensate; 
+	actorValue=HP;
+	magnitude=d:iceDmg(4);
+	duration=-2;
+	chance=d:iceAcc;
+	element=magic;
+	element=water;
+	FXOnTile=chargeBurst;
+	FXOnTileColor=SkyBlue;
+[AvAffecterAoE]
+	ID=Ba_condensate;
+	cloneFrom=adjacentAndSelf;
+[AvAffecter]
+	ID=Ba_condensate; 
+	visibleEvaluations=false;
+	actorValue=wet;
+	magnitude= 1;
+	duration=150;
+	chance=d:iceAcc;
+	element=water;
+[AvAffecterAoE]
+	ID=Ba_condensate;
+	cloneFrom=adjacentAndSelf;
+[AvAffecter]
+	ID=Ba_condensate; 
+	visibleEvaluations=false;
+	actorValue=summonItem;
+	magnitude=puddle;
+	duration=2;
+	chance=100;
+	FXOnTile=waterWave;
+	FXOnTileColor=SkyBlue;
+[AvAffecterAoE]
+	ID=Ba_condensate;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Ba_condensate; 
+	visibleEvaluations=false;
+	actorValue=summonItem;
+	magnitude=puddle;
+	duration=1;
+	chance=100;
+	FXOnTile=waterWave;
+	FXOnTileColor=SkyBlue;
+[AvAffecterAoE]
+	ID=Ba_condensate;
+	cloneFrom=adjacent;
+
+	
+
+[Action] ID=Ba_stonefoot; 
+	name=Stonefoot;
+	icon=icon_Ba_stonefoot;
+	mpCost=6 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=12 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
+	
+	tooltip=Raise the ground to entrap creatures' feet, immobilizing them for <icon=time><math=40 + c:MagAtk * 3 + c:rank * 20>.;
+	rankUpTooltip=Each rank increases duration by <icon=time>20.;
+	tooltipTopRight=<icon=MagAtk_small>;
+	
+	XPCost=120;
+	XPCost=340;
+	XPCost=900;
+	
+	special=requiresCasting;
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=chargeFast;
+	FXOnCasterColor=Brown;
+	FXOnTarget=rustle;
+	FXOnTarget=smallShakeHoriz;
+	FXOnTarget=BurnishSound;
+[ActionAoE] 
+	ID=Ba_stonefoot; 
+	needsLoS = true;
+	needsLoE = false;
+	minRange = 1;
+	maxRange = 3;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Ba_stonefoot; 
+	actorValue=immob;
+	magnitude=1;
+	duration=40 + c:MagAtk * 3 + c:rank * 20;
+	chance=d:magicAcc;
+	element=magic;
+	element=earth;
+	FXOnTile=upwardLines_quick;
+	FXOnTileColor=Brown;
+	FXOnTile=terrain;
+	
+	FXOnHit=chargeFeet;
+	FXOnHitColor=Brown;
+	FXOnMiss=chargeFeet;
+	FXOnMissColor=Brown;
+[AvAffecterAoE]
+	ID=Ba_stonefoot;
+	cloneFrom=adjacentAndSelf;
+[AvAffecter]
+--for visuals only
+	ID=Ba_stonefoot; 
+	actorValue=height;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	FXOnTile=delay_small;
+[AvAffecterAoE]
+--for visuals only
+	ID=Ba_stonefoot;
+	cloneFrom=adjacentAndSelf;
+	needsLoS = true;
+	needsLoE = true;
+	bypassAll=false;
+	occupyAll=false;
+[AvAffecter]
+--for visuals only
+	ID=Ba_stonefoot; 
+	actorValue=height;
+	magnitude=-1;
+	duration=-2;
+	chance=100;
+	FXOnTile=delay_small;
+[AvAffecterAoE]
+--for visuals only
+	ID=Ba_stonefoot;
+	cloneFrom=adjacentAndSelf;
+	needsLoS = true;
+	needsLoE = true;
+	bypassAll=false;
+	occupyAll=false;
+	
+	
+	
+
+[Action] ID=Ba_warmth; 
+	name=Warmth;
+	icon=icon_Ba_warmth;
+	mpCost=8 * d:mpCostMult + d:mpCostMod;
+	harmful=false;
+	tooltip=Protect an ally from cold & water effects and regenerate<n=><math=6 + c:skill_Fire * 0.5 + c:MagAtk * 0.5><adjX=-2><icon=MP>MP each turn for <icon=time><math=60 + d:fireDurMax(2) + 20 * c:rank>.;
+	rankUpTooltip=Each rank increases duration by <icon=time>20.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small>;
+	
+	XPCost=200;
+	XPCost=300;
+	XPCost=850;
+	XPCost=1600;
+	
+	special=requiresCasting;
+	casterAnimation=spellcast;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	FXOnTarget=sparkles;
+	FXOnTargetColor=OrangeRed;
+	FXOnTarget=sfx_lowestAura;
+[ActionAoE] 
+	ID=Ba_warmth; 
+	needsLoS = true;
+	needsLoE = false;
+	minRange = 0;
+	maxRange = 4;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Ba_warmth; 
+	harmful=false;
+	actorValue=warmth;
+	magnitude=6 + c:skill_Fire * 0.5 + c:MagAtk * 0.5;
+	duration=60 + d:fireDurMax(2) + c:rank * 20;
+	chance=100 * t:MPMax;
+	element=magic;
+[AvAffecterAoE]
+	ID=Ba_warmth;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=Ba_iceSpikes; 
+	name=Ice Carapace;
+	icon=icon_Ba_iceSpikes;
+	mpCost=8 * d:mpCostMult + d:mpCostMod;
+	harmful=false;
+	tooltip=Protect an ally from fire, and damage adjacent creatures for <thinnerIcon=skill_Ice><math=4 + c:skill_Ice * 0.5 + c:MagAtk * 0.5> at the end of the ally's turn for <icon=time><math=60 + d:iceDurMax(2) + 20 * c:rank>.;
+	rankUpTooltip=Each rank increases duration by <icon=time>20.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ice_small>;
+	
+	XPCost=350;
+	XPCost=500;
+	XPCost=850;
+	XPCost=1600;
+	
+	special=requiresCasting;
+	casterAnimation=spellcast;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	FXOnTarget=chargeBurst;
+	FXOnTargetColor=SkyBlue;
+	FXOnTarget=sfx_lowestAura;
+[ActionAoE] 
+	ID=Ba_iceSpikes; 
+	needsLoS = true;
+	needsLoE = false;
+	minRange = 0;
+	maxRange = 4;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Ba_iceSpikes; 
+	harmful=false;
+	actorValue=iceSpikes;
+	magnitude=5 + c:skill_Ice * 0.5 + c:MagAtk * 0.5;
+	duration=60 + d:iceDurMax(2) + c:rank * 20;
+	chance=100;
+	element=magic;
+	element=ice;
+	FXOnHit=iceExplosion_big;
+[AvAffecterAoE]
+	ID=Ba_iceSpikes;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=Ba_preserve; 
+	name=Preserve;
+	icon=icon_Ba_preserve;
+	mpCost=14 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=12 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
+	
+	harmful=false;
+	tooltip=Preserve an ally for <icon=time>300, automatically reviving them if they get knocked out. An already KO'd target is revived with 1<icon=HP>HP then Preserved.;
+	rankUpTooltip=;
+	tooltipTopRight=;
+	
+	XPCost=600;
+	
+	special=requiresCasting;
+	casterAnimation=spellcast;
+	maxRank=1;
+	
+	special=cantUseInTravel;
+	
+	FXOnTarget=spiral;
+	FXOnTargetColor=Pink;
+	FXOnTarget=spiral2;
+	FXOnTargetColor=Pink;
+	FXOnTarget=chargeFast;
+	FXOnTargetColor=Pink;
+	FXOnTarget=whiten;
+	FXOnTarget=Powerup_longerEchoBloop;
+[ActionAoE] 
+	ID=Ba_preserve; 
+	needsLoS = true;
+	needsLoE = false;
+	minRange = 0;
+	maxRange = 3;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Ba_preserve; 
+	harmful=false;
+	visibleEvaluations=false;
+	actorValue=revive;
+	magnitude=1;
+	duration=-2;
+	chance=d:reviveAcc;
+	element=magic;
+	element=life;
+[AvAffecterAoE]
+	ID=Ba_preserve;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Ba_preserve; 
+	harmful=false;
+	actorValue=preserve;
+	magnitude=1;
+	duration=300;
+	chance=100;
+	element=magic;
+	element=life;
+	FXOnHit=largePing;
+	FXOnHitColor=Pink;
+	FXOnHit=sfx_highestAura;
+[AvAffecterAoE]
+	ID=Ba_preserve;
+	cloneFrom=oneTile;
+	
+	
+
+[Action] ID=Ba_force; 
+	name=Force;
+	icon=icon_Ba_force;
+	mpCost=1 * d:mpCostMult + d:mpCostMod;
+	harmful=false;
+	tooltip=Gusts of wind push <math=c:rank> target(s) without harming them.;
+	rankUpTooltip=Each rank adds +1 target.;
+	tooltipTopRight=;
+	
+	numTargets=c:rank;
+	
+	XPCost=80;
+	XPCost=200;
+	XPCost=650;
+	
+	AIRatingBias = -999;
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+[ActionAoE] 
+	ID=Ba_force; 
+	needsLoS = true;
+	needsLoE = true;
+	arc=true;
+	airborne=true;
+	minRange = 1;
+	maxRange = 5;
+	bypassAll=false;
+	occupyAll=true;
+[AvAffecter]
+	ID=Ba_force; 
+--elemental rxns
+	harmful=false;
+	actorValue=;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	element=wind;
+	element=magic;
+[AvAffecterAoE]
+	ID=Ba_force;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Ba_force; 
+	harmful=false;
+	actorValue=push;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	FXOnTile=smallShockwave_moving;
+	FXOnTile=wind;
+[AvAffecterAoE]
+	ID=Ba_force;
+	cloneFrom=oneTile;

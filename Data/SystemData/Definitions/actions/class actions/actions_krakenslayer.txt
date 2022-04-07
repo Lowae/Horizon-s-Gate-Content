@@ -1,0 +1,332 @@
+[Action] ID=Kra_arcLance; 
+	name=Arc Lance;
+	icon=icon_Kra_arcLance;
+	tooltip=Attack with your weapon and stun for <icon=time><math=c:rank>. Sparks fly off diagonally from the target and deal <thinnerIcon=skill_Elec><math=d:elecDmgDisplay(4)> damage.;
+	rankUpTooltip=Each rank increases Stun duration by <icon=time>1.;
+	tooltipIcons=<icon=noRanged>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=melee_small><icon=skill_Elec_small>;
+	mpCost=6 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=150;
+	XPCost=250;
+	XPCost=330;
+	XPCost=700;
+	XPCost=1150;
+	
+	casterAnimation=weapon;
+	maxRank=5;
+	canExceedMaxRankBy=1;
+	requiredWeaponElement=melee;
+	
+	FXOnCaster=magicCharge;
+	FXOnCasterColor=Yellow;
+	FXOnCaster=darken_minor;
+	FXOnTarget=weaponFX;
+	FXOnTarget=shortBolt;
+[ActionAoE]
+	ID=Kra_arcLance; shape=10; 
+[AvAffecter]
+	ID=Kra_arcLance; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude;
+	chance=w:chance;
+	duration=-2;
+	FXOnTile=triSlash;
+	FXOnHit=sfx_slashingHit;
+[AvAffecterAoE]
+	ID=Kra_arcLance;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Kra_arcLance; 
+	actorValue=stun;
+	magnitude=1;
+	duration=c:rank;
+	chance=w:chance;
+	FXOnTile=elec_diag1_moving;
+	FXOnTileColor=Yellow;
+[AvAffecterAoE]
+	ID=Kra_arcLance;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Kra_arcLance; 
+	useCasterAsOriginForDirectionalEffects=false;
+	actorValue=HP;
+	magnitude= d:elecDmg(4);
+	duration=-2;
+	chance=d:elecAcc;
+	element=magic;
+	element=lightning;
+	FXOnTile=elec_diag1_moving;
+	FXOnTileColor=Yellow;
+	FXOnHit=spark;
+	FXOnHitColor=Yellow;
+	FXOnHit=smallShock;
+[AvAffecterAoE]
+	ID=Kra_arcLance; shape=25;
+	minRange=1;
+	maxRange=2;
+	airborne=true;
+	arc=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Kra_arcLance; 
+	useCasterAsOriginForDirectionalEffects=false;
+	FXOnTile=elec_diag2_moving;
+	FXOnTileColor=Orange;
+[AvAffecterAoE]
+	ID=Kra_arcLance; shape=25;
+	minRange=1;
+	maxRange=2;
+	airborne=true;
+	arc=true;
+	occupyAll=true;
+
+
+
+[Action] ID=Kra_jumpStrike; 
+	name=Jump Strike;
+	icon=icon_Kra_jumpStrike;
+	tooltip=Leap at the target and deal<n=>+<math=10 + c:rank*5>% damage. Range is increased by your <icon=jumpDistance>Jump.;
+	rankUpTooltip=Each rank increases damage by 5%.;
+	tooltipIcons=<icon=noRanged>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	mpCost=8 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=250;
+	XPCost=325;
+	XPCost=550;
+	XPCost=975;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	fReq=c:jumpDistance;
+	
+	casterAnimation=jumpStrike;
+	casterAnimationDependsOnWeaponHand=true;
+	special=moveCasterNextToTarget;
+	requiredWeaponElement=melee;
+	
+	FXOnTarget=strikeBig_noOverlap;
+	FXOnTarget=weaponFX;
+	FXOnCaster=upwardLines_quicker;
+	FXOnCaster=ground_impact_small;
+	FXOnCaster=woosh;
+[ActionAoE]
+	ID=Kra_jumpStrike; shape=2; 
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 1;
+	maxRangeBonus=c:jumpDistance;
+	airborne=true;
+	arc=false;
+	bypassAll=false;
+	occupyAll=true;
+	canSelectActors=true;
+	fReq=1 - m:unoccupiableTileInTheWayOfMoveToTarget - m:actorInTheWayOfMoveToTarget;
+[AvAffecter]
+	ID=Kra_jumpStrike; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 1.1 + c:rank * w:magnitude * 0.05;
+	chance=w:chance;
+	duration=-2;
+	FXOnTile=sfx_slam;
+	FXOnTile=terrain;
+	FXOnTile=smallShakeVert;
+	FXOnHit=sfx_slashingHit;
+[AvAffecterAoE]
+	ID=Kra_jumpStrike;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=Kra_impale; 
+	name=Impale;
+	icon=icon_Kra_impale;
+	tooltip=Deal half damage and inflict<n=>-<math=c:rank> <icon=moveDistance><icon=PhysDef> for a turn.;
+	rankUpTooltip=Each rank reduces <icon=moveDistance><icon=PhysDef> by 1 more.;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	XPCost=175;
+	XPCost=350;
+	XPCost=950;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	casterAnimation=weapon;
+--casterAnimationDependsOnWeaponHand=true;
+	
+	requiredWeaponElement=weapon;
+[ActionAoE] 
+	ID=Kra_impale; shape=10; 
+[AvAffecter]
+	ID=Kra_impale; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.5;
+	chance=w:chance;
+[AvAffecterAoE]
+	ID=Kra_impale;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Kra_impale; 
+	visibleMiss=false;
+	actorValue=PhysDef;
+	magnitude= -c:rank;
+	duration=-4;
+	chance=w:chance;
+	FXOnTile=triSlash;
+	FXOnTile=woosh;
+	FXOnHit=sfx_slashingHit;
+[AvAffecterAoE]
+	ID=Kra_impale;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Kra_impale; 
+	visibleMiss=false;
+	actorValue=moveDistance;
+	magnitude= -c:rank;
+	duration=-4;
+	chance=w:chance;
+	FXOnTile=whirlSlash;
+	FXOnHit=click;
+	FXOnHit=downwardLines_quick;
+[AvAffecterAoE]
+	ID=Kra_impale;
+	cloneFrom=oneTile;
+	
+	
+	
+
+[Action] ID=Kra_static; 
+	name=Static;
+	icon=icon_Kra_static;
+	tooltip=Electrify nearby targets for <thinnerIcon=skill_Elec><math=d:elecDmgDisplay(6)> damage. Empty tiles are filled with static fields that deal <thinnerIcon=skill_Elec>8 damage and last for <icon=time>60.;
+	rankUpTooltip=;
+	tooltipIcons=;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Elec_small>;
+	mpCost=5 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=275;
+	maxRank=1;
+	
+	casterAnimation=spellcast_chargePose;
+	
+	FXOnCaster=magicCharge;
+	FXOnCasterColor=SkyBlue;
+	FXOnCaster=darken_minor;
+	FXOnTarget=sfx_longFrash;
+	FXOnTarget=blue_major;
+[ActionAoE] 
+	ID=Kra_static;
+	cloneFrom=adjacent;
+	arc=true;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Kra_static; 
+	actorValue=HP;
+	magnitude= d:elecDmg(6);
+	duration=-2;
+	chance=d:elecAcc;
+	element=magic;
+	element=lightning;
+	FXOnTile=horizSpark_many_moving;
+	FXOnTileColor=SkyBlue;
+	FXOnTile=horizSpark_many;
+	FXOnTileColor=White;
+	FXOnTile=horizSpark_many;
+	FXOnTileColor=SkyBlue;
+	FXOnTile=elec_diag2_lessOverlap;
+	FXOnTileColor=SkyBlue;
+	FXOnTile=shortBolt;
+	FXOnHit=spark;
+	FXOnHitColor=SkyBlue;
+	FXOnHit=smallShock;
+[AvAffecterAoE]
+	ID=Kra_static;
+	aoeCasterAsOrigin=true;
+[AvAffecter]
+	ID=Kra_static; 
+	actorValue=summonItem;
+	magnitude=hazard_lightning;
+	duration=1;
+	chance=100;
+[AvAffecterAoE]
+	ID=Kra_static;
+	aoeCasterAsOrigin=true;
+	canSelectActors=false;
+	
+	
+	
+[Action] ID=Kra_shockBlast; 
+	name=Volt Blast;
+	icon=icon_Kra_shockBlast;
+	tooltip=Fire an electric orb that expands as it travels. Deals up to <thinnerIcon=skill_Elec><math=d:elecDmgDisplay(7)> damage, but damage is reduced as it travels.;
+	rankUpTooltip=Each rank adds +1 max range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Elec_small>;
+	mpCost=9 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=350;
+	XPCost=900;
+	
+	FXOnCaster=magicCharge;
+	FXOnCasterColor=Yellow;
+	FXOnCaster=darken_minor;
+	FXOnTarget=sfx_elecBlast;
+	FXOnTarget=DramaticNyeaow;
+	
+	casterAnimation=spellcast;
+	maxRank=2;
+	canExceedMaxRankBy=1;
+[ActionAoE] 
+	ID=Kra_shockBlast; shape=2;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 3;
+	maxRangeBonus=c:rank;
+	airborne=true;
+	bypassAll=false;
+	occupyAll=true;
+[AvAffecter]
+	ID=Kra_shockBlast; 
+	FXOnTile=circleExplosion_fancy_big_orb_shockBlast;
+	FXOnTileColor=LightYellow;
+[AvAffecterAoE]
+	ID=Kra_shockBlast;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Kra_shockBlast; 
+	FXOnTile=circleExplosion_fancy_big_shockBlast;
+	FXOnTileColor=LightYellow;
+[AvAffecterAoE]
+	ID=Kra_shockBlast;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Kra_shockBlast; 
+	actorValue=HP;
+	magnitude= d:elecDmg(9) + m:distFromCaster * 2;
+	duration=-2;
+	chance=d:elecAcc;
+	element=magic;
+	element=lightning;
+	FXOnTile=elecBlasts_4;
+	FXOnTileColor=Yellow;
+	FXOnHit=spark;
+	FXOnHitColor=Yellow;
+	FXOnHit=smallShock;
+[AvAffecterAoE]
+	ID=Kra_shockBlast;
+	maxRange=-2;
+	maxRangeBonus=0;
+	maxRangeAddDistanceFromCaster=true;
+	airborne=true;
+	bypassAll=false;
+	occupyAll=true;
+	
+	
+	
+	
+	
+	
+	

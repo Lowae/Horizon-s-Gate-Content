@@ -1,0 +1,328 @@
+
+[Action] ID=Bra_disorient; 
+	name=Disorient;
+	icon=icon_Bra_disorient;
+	tooltip=Deal <math=65 + 10 * c:rank>% damage and turn the enemy around.;
+	rankUpTooltip=Each rank increases damage by 10%.;
+	tooltipIcons=<icon=skill_Fist>Only;
+	tooltipTopRight=<icon=PhysAtk_small><icon=skill_Fist_small>;
+	
+	XPCost=80;
+	XPCost=160;
+	XPCost=400;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	requiredWeaponElement=fistWpn;
+	
+	maxRank=3;
+[ActionAoE] 
+	ID=Bra_disorient;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=Bra_disorient; 
+	actorValue=HP;
+	useSeparateChanceRoll=true;
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.65 + w:magnitude * 0.1 * c:rank;
+	chance=w:chance;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Bra_disorient;
+	 shape=11;
+[AvAffecter]
+	ID=Bra_disorient; 
+	actorValue=rotate;
+	magnitude=180;
+	duration=-2;
+	chance=w:chance;
+	FXOnTile=whirlSlash_big;
+	FXOnTile=sfx_tweep;
+[AvAffecterAoE]
+	ID=Bra_disorient;
+	cloneFrom=oneTile;
+	
+[Action] ID=Bra_pummel; 
+	name=连击;
+	icon=icon_Bra_pummel;
+	mpCost=4 * d:mpCostMult + d:mpCostMod;
+	tooltip=击打一名敌人 <math=2 + c:rank> 次，每次攻击50%命中造成50%伤害.;
+	rankUpTooltip=每级+1次攻击.;
+	tooltipIcons=<icon=skill_Fist>Only;
+	tooltipTopRight=<icon=PhysAtk_small><icon=skill_Fist_small>;
+	
+	XPCost=150;
+	XPCost=700;
+	XPCost=1500;
+	
+	casterAnimation=pummel;
+	
+	FXOnTarget=sfx_pummel;
+	
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	requiredWeaponElement=fistWpn;
+[ActionAoE] 
+	ID=Bra_pummel; shape=10; 
+[AvAffecter]
+	ID=Bra_pummel; 
+	actorValue=HP;
+	useSeparateChanceRoll=true;
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.5;
+	chance=w:chance * 0.5;
+	duration=-2;
+	FXOnTile=pummel;
+[AvAffecterAoE]
+	ID=Bra_pummel;
+	 shape=11;
+[AvAffecter]
+	ID=Bra_pummel; 
+	actorValue=HP;
+	useSeparateChanceRoll=true;
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.5;
+	chance=w:chance * 0.5;
+	duration=-2;
+	FXOnTile=pummel;
+[AvAffecterAoE]
+	ID=Bra_pummel;
+	 shape=11;
+[AvAffecter]
+	ID=Bra_pummel; 
+	actorValue=HP;
+	useSeparateChanceRoll=true;
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.5;
+	chance=w:chance * 0.5;
+	duration=-2;
+	FXOnTile=pummel;
+[AvAffecterAoE]
+	ID=Bra_pummel;
+	 shape=11;
+[AvAffecter]
+	ID=Bra_pummel; 
+	rankRequired=2;
+	actorValue=HP;
+	useSeparateChanceRoll=true;
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.5;
+	chance=w:chance * 0.5;
+	duration=-2;
+	FXOnTile=pummel;
+[AvAffecterAoE]
+	ID=Bra_pummel;
+	 shape=11;
+[AvAffecter]
+	ID=Bra_pummel; 
+	rankRequired=3;
+	actorValue=HP;
+	useSeparateChanceRoll=true;
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.5;
+	chance=w:chance * 0.5;
+	duration=-2;
+	FXOnTile=pummel;
+[AvAffecterAoE]
+	ID=Bra_pummel;
+	 shape=11;
+[AvAffecter]
+	ID=Bra_pummel; 
+	rankRequired=4;
+	actorValue=HP;
+	useSeparateChanceRoll=true;
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.5;
+	chance=w:chance * 0.5;
+	duration=-2;
+	FXOnTile=pummel;
+[AvAffecterAoE]
+	ID=Bra_pummel;
+	 shape=11;
+	
+
+[Action] ID=Bra_spinkick; 
+	name=旋风腿;
+	icon=icon_Bra_spinkick;
+	tooltip=向前猛冲对你周围的所有人造成80%的伤害.;
+	rankUpTooltip=每级 +1 移动距离.;
+	tooltipIcons=<icon=noAugments>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=skill_Fist_small>;
+	
+	XPCost=220;
+	XPCost=350;
+	XPCost=650;
+	
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	special=moveCasterTowardTarget;
+	casterAnimation=spinkick;
+	
+	FXOnCaster=spinSlashes;
+	FXOnCaster=woosh;
+	FXOnTarget=spinSlashes;
+[ActionAoE] 
+	ID=Bra_spinkick; shape=2;
+	needsLoE = true;
+	minRange = 0;
+	maxRange = 0;
+	maxRangeBonus=c:rank * 1;
+	airborne=true;
+	occupyAll=false;
+	canSelectActors=false;
+[AvAffecter]
+	ID=Bra_spinkick; 
+	actorValue=HP;
+	magnitude=d:fistDmg * 0.8;
+	duration=-2;
+	chance=d:fistAcc;
+	element=physical;
+	element=melee;
+	element=smash;
+	FXOnTile=pop;
+[AvAffecterAoE]
+	ID=Bra_spinkick;
+	cloneFrom=adjacent;
+	coneAngle=180;
+
+
+[Action] ID=Bra_grin; 
+	name=嬉笑;
+	icon=icon_Bra_grin;
+	tooltip=下回合将 <icon=PhysEva> 减至 0, 但是 <icon=PhysAtk>翻倍.<n=>40<icon=time>内无法再次使用.;
+	rankUpTooltip=;
+	tooltipTopRight=<icon=PhysAtk_small>;
+	harmful=false;
+	attractAttention=false;
+	
+	XPCost=170;
+	cooldown=40;
+	
+	maxRank=1;
+	casterAnimation=cast_eyesOpen;
+	FXOnCaster=sfx_echoTing;
+	FXOnCaster=eyeGlint;
+	FXOnCaster=darken_minor;
+[ActionAoE] 
+	ID=Bra_grin; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Bra_grin;
+	harmful=false;
+	actorValue=PhysAtk;
+	magnitude=c:PhysAtk;
+	duration=-5;
+	chance=100;
+[AvAffecterAoE]
+	ID=Bra_grin;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Bra_grin;
+	harmful=false;
+	visibleEvaluations=false;
+	actorValue=PhysEva;
+	magnitude=-c:PhysEva;
+	duration=-3;
+	chance=100;
+[AvAffecterAoE]
+	ID=Bra_grin;
+	cloneFrom=oneTile;
+	
+[Action] ID=Bra_knockout; 
+	name=击晕;
+	icon=icon_Bra_knockout;
+	tooltip=使对方昏睡持续 <icon=time>5.<n> 如果对方生命值低于50%, 持续时间改为 <icon=time><math=60 + 20 * c:rank>.;
+	rankUpTooltip=Each rank increases maximum duration by <icon=time>20.;
+	tooltipIcons=<icon=skill_Fist>Only;
+	tooltipTopRight=<icon=skill_Fist_small>;
+	
+	XPCost=120;
+	XPCost=240;
+	XPCost=480;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	requiredWeaponElement=fistWpn;
+	
+	FXOnTarget=swing;
+	FXOnTarget=strike;
+[ActionAoE] 
+	ID=Bra_knockout; 
+	cloneFrom=adjacent;	
+[AvAffecter]
+	ID=Bra_knockout; 
+	actorValue=sleep;
+	magnitude=1;
+	chance=d:fistAcc;
+	duration=5 + m:targetPercentHPLowerThan(0.5) * 55 + 20 * c:rank * m:targetPercentHPLowerThan(0.5);
+	FXOnHit=starDonk;
+	FXOnHit=sfx_donkHit;
+[AvAffecterAoE]
+	ID=Bra_knockout; 
+	cloneFrom=oneTile;
+	
+
+[Action] ID=Bra_suckerPunch; 
+	name=攻其不备;
+	icon=icon_Bra_suckerPunch;
+	mpCost=2 * d:mpCostMult + d:mpCostMod;
+	tooltip=突然的一击造成 <n=>+<math=5 + c:rank * 5>% 伤害, 推开并造成晕眩持续 <icon=time>8.<n=> <icon=time>99 内无法再次使用.;
+	rankUpTooltip=每级 +5% 伤害.;
+	tooltipIcons=<icon=skill_Fist>Only;
+	tooltipTopRight=<icon=PhysAtk_small><icon=skill_Fist_small>;
+	
+	XPCost=375;
+	XPCost=500;
+	XPCost=900;
+	XPCost=2000;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	cooldown=99;
+	
+	casterAnimation=swingDramatic;
+	casterAnimationSpeed=1.8;
+	casterAnimationDependsOnWeaponHand=true;
+	
+	requiredWeaponElement=fistWpn;
+	
+	FXOnCaster=GlassTing;
+	FXOnCaster=exclamation;
+	FXOnTarget=swing;
+	FXOnTarget=strike;
+[ActionAoE] 
+	ID=Bra_suckerPunch; cloneFrom=adjacent;	
+[AvAffecter]
+	ID=Bra_suckerPunch; 
+	actorValue=HP;
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 1.05 + w:magnitude * 0.05 * c:rank;
+	chance=d:fistAcc;
+	duration=-2;
+	FXOnHit=starDonks;
+	FXOnHit=sfx_donkHit;
+	FXOnHit=ThudShotBigger;
+	FXOnHit=medShakeHoriz;
+[AvAffecterAoE]
+	ID=Bra_suckerPunch;
+	 shape=11;
+[AvAffecter]
+	ID=Bra_suckerPunch; 
+	actorValue=stun;
+	magnitude=1;
+	duration=8;
+	chance=d:fistAcc;
+[AvAffecterAoE]
+	ID=Bra_suckerPunch; cloneFrom=oneTile;
+[AvAffecter]
+	ID=Bra_suckerPunch; 
+	actorValue=push;
+	magnitude=1;
+	duration=-2;
+	chance=d:fistAcc;
+[AvAffecterAoE]
+	ID=Bra_suckerPunch; cloneFrom=oneTile;
+	

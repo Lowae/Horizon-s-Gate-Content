@@ -1,0 +1,283 @@
+
+[Action] ID=So_inferno; 
+	name=Inferno;
+	icon=icon_So_inferno;
+	mpCost=7 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=15 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	tooltip=Unleash devastating fire in a small area, dealing <thinnerIcon=skill_Fire><math=d:fireDmg20ScaleDisplay(9) + c:rank> damage.;
+	rankUpTooltip=Each rank adds +1 damage.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small>;
+	
+	XPCost=150;
+	XPCost=950;
+	XPCost=2500;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	special=requiresCasting;
+	casterAnimation=spellcast;
+	
+	FXOnCaster=magicCharge;
+	
+	FXOnTarget=fireburst;
+	FXOnTarget=burn;
+[ActionAoE] 
+	ID=So_inferno; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	minRange = 1;
+	maxRange = 4;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=So_inferno; 
+	actorValue=HP;
+	magnitude=d:fireDmg20ScalePlusRank(9);
+	duration=-2;
+	chance=d:fireAcc;
+	element=magic;
+	element=fire;
+	element=kindle;
+	FXOnTile=tallExplosion;
+[AvAffecterAoE]
+	ID=So_inferno;
+	cloneFrom=adjacentAndSelf;
+	needsLoE = false;
+	bypassAll=true;
+	occupyAll=true;
+	airborne=true;
+	arc=true;
+
+
+
+[Action] ID=So_lightning; 
+	name=Lightning;
+	icon=icon_So_lightning;
+	mpCost=7 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=13 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	tooltip=Strike an area with a bolt of lightning, dealing <thinnerIcon=skill_Elec><math=d:elecDmg20ScaleDisplay(8)> damage.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Elec_small>;
+	
+	XPCost=150;
+	XPCost=750;
+	XPCost=1750;
+	
+	special=requiresCasting;
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnTarget=darken_minor;
+	
+	FXOnTarget=thunderbolt;
+	FXOnTarget=DramaticNyeaow;
+	FXOnTarget=sfx_elecBlast;
+	FXOnTarget=smallShakeHoriz;
+[ActionAoE] 
+	ID=So_lightning; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	minRange = 1;
+	maxRange = 3;
+	maxRangeBonus = c:rank;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=So_lightning; 
+	actorValue=HP;
+	magnitude= d:elecDmg20Scale(8);
+	duration=-2;
+	chance=d:elecAcc;
+	element=magic;
+	element=lightning;
+	FXOnTile=spark;
+	FXOnTileColor=SkyBlue;
+[AvAffecterAoE]
+	ID=So_lightning;
+	cloneFrom=adjacentAndSelf;
+	needsLoE = false;
+	bypassAll=true;
+	occupyAll=true;
+	airborne=true;
+	arc=true;
+
+	
+
+[Action] ID=So_blizzard; 
+	name=Blizzard;
+	icon=icon_So_blizzard;
+	mpCost=9 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=16 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	tooltip=Conjure an icy storm that blasts <math=c:rank+1> contiguous areas for <thinnerIcon=skill_Ice><math=d:iceDmgDisplay(9)> damage.;
+	rankUpTooltip=Each rank increases area of effect.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ice_small>;
+	
+	numTargets=c:rank+1;
+	minDistanceBetweenTargets=3;
+	maxDistanceBetweenTargets=3;
+	
+	XPCost=250;
+	XPCost=700;
+	XPCost=1200;
+	
+	FXOnCaster=magicCharge;
+	FXOnTarget=darken_minor;
+	FXOnTarget=sparkle;
+	FXOnTarget=iceShards_rot_small;
+	
+	special=requiresCasting;
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+[ActionAoE] 
+	ID=So_blizzard; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	minRange = 1;
+	maxRange = 5;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=So_blizzard; 
+	actorValue=HP;
+	magnitude= d:iceDmg(9);
+	duration=-2;
+	chance=d:iceAcc;
+	element=magic;
+	element=ice;
+	FXOnTile=frostcloud;
+	FXOnTile=iceExplosion;
+[AvAffecterAoE]
+	ID=So_blizzard;
+	cloneFrom=adjacentAndSelf;
+	needsLoE = false;
+	bypassAll=true;
+	occupyAll=true;
+	airborne=true;
+	arc=true;
+	
+
+[Action] ID=So_cyclone; 
+	name=Cyclone;
+	icon=icon_So_cyclone;
+	mpCost=11 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=15 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	tooltip=Create a vortex of wind that pushes enemies away from its center by <math=c:rank> tile(s) and deals <thinnerIcon=skill_Wind><math=d:windDmgDisplay(9)> damage.;
+	rankUpTooltip=Each rank increases distance pushed by 1.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Wind_small>;
+	
+	XPCost=220;
+	XPCost=350;
+	XPCost=500;
+	
+	special=requiresCasting;
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnTarget=darken_minor;
+[ActionAoE] 
+	ID=So_cyclone; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	minRange = 1;
+	maxRange = 4;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=So_cyclone; 
+	useCasterAsOriginForDirectionalEffects=false;
+	actorValue=HP;
+	magnitude= d:windDmg(9);
+	duration=-2;
+	chance=d:windAcc;
+	element=magic;
+	element=wind;
+	FXOnTile=smallShockwave_moving;
+	FXOnTile=windWhirlSlash;
+	FXOnTile=tinyShakeHoriz;
+[AvAffecterAoE]
+	ID=So_cyclone;
+	cloneFrom=adjacentAndSelf+1;
+	needsLoE = false;
+	bypassAll=true;
+	occupyAll=true;
+	airborne=true;
+	arc=true;
+[AvAffecter]
+	ID=So_cyclone; 
+	useCasterAsOriginForDirectionalEffects=false;
+	actorValue=push;
+	magnitude= c:rank;
+	duration=-2;
+	chance=d:windAcc;
+[AvAffecterAoE]
+	ID=So_cyclone;
+	cloneFrom=adjacent+1;
+	needsLoE = false;
+	bypassAll=true;
+	occupyAll=true;
+	airborne=true;
+	arc=true;
+	
+	
+	
+[Action] ID=So_shockBolts; 
+	name=Shock Bolts;
+	icon=icon_So_shockBolts;
+	mpCost=5 * d:mpCostMult + d:mpCostMod;
+	tooltip=Shoot <math=c:rank> orb(s) of electricity at your targets, dealing <thinnerIcon=skill_Elec><math=d:elecDmg20LessScaleDisplay(3)> damage.;
+	rankUpTooltip=Each rank increases number of targets by 1.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Elec_small>;
+	
+	XPCost=80;
+	XPCost=220;
+	XPCost=670;
+	XPCost=1250;
+	
+	numTargets=c:rank;
+	
+	casterAnimation=spellcast;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=sparkOut;
+[ActionAoE] 
+	ID=So_shockBolts; 
+	needsLoS = true;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 4;
+	airborne=true;
+	arc=false;
+	bypassAll=false;
+	occupyAll=true;
+[AvAffecter]
+	ID=So_shockBolts; 
+	actorValue=HP;
+	magnitude=d:elecDmg20LessScale(3);
+	duration=-2;
+	chance=d:elecProjectileAcc;
+	element=magic;
+	element=lightning;
+	element=ranged;
+	FXOnTile=sparkShot;
+	FXOnTile=spark;
+	FXOnHit=hitDust;
+	FXOnHit=tinyShakeHoriz;
+[AvAffecterAoE]
+	ID=So_shockBolts;
+	cloneFrom=oneTile;
+	
+	

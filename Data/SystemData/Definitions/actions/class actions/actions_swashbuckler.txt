@@ -1,0 +1,352 @@
+
+[Action] ID=Swa_boltBalestra; 
+	name=Bolt Balestra;
+	icon=icon_Swa_boltBalestra;
+	tooltip=Shoot a target for 80% damage, then charge to the target and swing your offhand weapon for 50% damage.;
+	rankUpTooltip=Each rank increases charge distance by +1.;
+	tooltipIcons=<icon=noMelee>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=ranged_small><icon=melee_small>;
+	
+	mpCost=4 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=285;
+	XPCost=750;
+	XPCost=1500;
+	
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	casterAnimation=swing_balestra;
+	casterAnimationDependsOnWeaponHand=true;
+	
+	special=moveCasterNextToTarget;
+	requiredWeaponElement=ranged;
+	
+	FXOnTarget=weaponFX;
+	FXOnCaster=sidewardLines;
+	FXOnCasterColor=White;
+	FXOnCaster=woosh;
+[ActionAoE]
+	ID=Swa_boltBalestra; shape=2; 
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 2;
+	maxRangeBonus=c:rank;
+	airborne=false;
+	bypassAll=false;
+	occupyAll=true;
+	canSelectActors=true;
+	fReq=1 - m:actorInTheWayOfMoveToTarget;
+[AvAffecter]
+	ID=Swa_boltBalestra; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.8;
+	chance=w:chance;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Swa_boltBalestra;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Swa_boltBalestra; 
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=Swa_boltBalestra;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Swa_boltBalestra; 
+	fReq=w2:melee;
+	actorValue=HP;
+	magnitude=w2:magnitude * 0.5;
+	duration=-2;
+	chance=w2:chance;
+	duration=-2;
+	FXOnTile=pop;
+	FXOnHit=sfx_slashingHit;
+	element=physical;
+	element=melee;
+[AvAffecterAoE]
+	ID=Swa_boltBalestra;
+	cloneFrom=oneTile;
+	
+
+
+
+[Action] ID=Swa_sweepStrikes; 
+	name=Sweeping Strikes;
+	icon=icon_Swa_sweepStrikes;
+	tooltip=Attack adjacent targets for half damage, then move up to <math=1+c:rank> tiles and do it again.;
+	rankUpTooltip=Each rank adds +1 distance moved.;
+	tooltipIcons=<icon=noAugments> <icon=noRanged>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	mpCost=2 * d:mpCostMult + d:mpCostMod;
+	AIRatingBias = -6;
+	
+	XPCost=250;
+	XPCost=650;
+	XPCost=1200;
+	
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	casterAnimation=spin_unspin;
+	special=moveCasterToTarget;
+	requiredWeaponElement=melee;
+	
+	FXOnCaster=actor_afterimage1;
+	FXOnCaster=sidewardLines;
+	FXOnCaster=windBlast_sweep1;
+[ActionAoE] 
+	ID=Swa_sweepStrikes;
+	needsLoS = true;
+	needsLoE = true;
+	arc=true;
+	minRange = 1;
+	maxRange = 1;
+	maxRangeBonus=c:rank;
+	canSelectActors=false;
+[AvAffecter]
+	ID=Swa_sweepStrikes; 
+	harmful=false;
+	element=usedMeleeWeaponAtk;
+	visibleEvaluations=false;
+	affectIntangible=true;
+[AvAffecterAoE]
+	ID=Swa_sweepStrikes;
+	aoeCasterAsOrigin=true;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Swa_sweepStrikes; 
+	weaponAvAffecter=false;
+	actorValue=HP;
+	magnitude=w:magnitude * 0.5;
+	chance=w:chance;
+	duration=-2;
+	element=physical;
+	element=melee;
+[AvAffecterAoE]
+	ID=Swa_sweepStrikes;
+	aoeCasterAsOrigin=true;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=Swa_sweepStrikes; 
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnTile=windBlast_sweep2;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=Swa_sweepStrikes;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Swa_sweepStrikes; 
+	weaponAvAffecter=false;
+	actorValue=HP;
+	magnitude=w:magnitude * 0.5;
+	chance=w:chance;
+	duration=-2;
+	element=physical;
+	element=melee;
+[AvAffecterAoE]
+	ID=Swa_sweepStrikes;
+	cloneFrom=adjacent;
+
+	
+[Action] ID=Swa_pincerAttack; 
+	name=Pincer Attack;
+	icon=icon_Swa_pincerAttack;
+	tooltip=Charge forward to deal 80% damage with your melee weapon. Deals +40% extra damage per ally adjacent to the target.;
+	rankUpTooltip=Each rank increases charge distance by +1.;
+	tooltipIcons=<icon=noRanged>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	mpCost=3 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=150;
+	XPCost=450;
+	XPCost=950;
+	
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	casterAnimation=weapon;
+	special=moveCasterNextToTarget;
+	requiredWeaponElement=melee;
+	
+	FXOnTarget=weaponFX;
+	FXOnCaster=sidewardLines;
+	FXOnCasterColor=White;
+	FXOnCaster=woosh;
+[ActionAoE]
+	ID=Swa_pincerAttack; shape=2; 
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 1;
+	maxRangeBonus=c:rank;
+	airborne=false;
+	bypassAll=false;
+	occupyAll=true;
+	canSelectActors=true;
+	fReq=1 - m:actorInTheWayOfMoveToTarget;
+[AvAffecter]
+	ID=Swa_pincerAttack; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.8 + w:magnitude * m:numAlliesExceptCasterNearTargetWithin(1) * 0.4;
+	chance=w:chance;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Swa_pincerAttack;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Swa_pincerAttack;
+	visibleEvaluations=false;
+	chance=100 - 100 * m:incapped;
+	FXOnHit=exclamation;
+[AvAffecterAoE]
+	ID=Swa_pincerAttack;
+	cloneFrom=adjacent;
+	canSelectEnemies=false;
+	coneAngle=280;
+	
+
+[Action] ID=Swa_maneuver; 
+	name=Maneuver;
+	icon=icon_Swa_maneuver;
+	harmful=false;
+	attractAttention=false;
+	tooltip=Move or swap with a nearby ally and boost morale for <icon=time><math=24+c:MagAtk*2+10*c:rank>.;
+	rankUpTooltip=Each rank increases duration by <icon=time>10.;
+	tooltipTopRight=<icon=MagAtk_small>;
+	
+	AIRatingBias = -20;
+	
+	XPCost=175;
+	XPCost=350;
+	XPCost=1200;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=swing2;
+	FXOnCaster=dustCircle;
+	FXOnCaster=sidewardLines;
+	FXOnTarget=sidewardLines;
+	
+	casterAnimation=jumpAbility2;
+	casterAnimationSpeed=1.5;
+	
+	special=swapCasterWithTarget_delay;
+[ActionAoE] 
+	ID=Swa_maneuver; shape=1;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 2;
+	canSelectEnemies=false;
+[AvAffecter]
+	ID=Swa_maneuver; 
+	harmful=false;
+	actorValue=morale;
+	magnitude=1;
+	duration=24+c:MagAtk*2 + 10 * c:rank;
+	chance=100;
+	affectIntangible=true;
+	FXOnHit=sfx_risingBipLow;
+	FXOnHit=sparkle;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=Swa_maneuver;
+	cloneFrom=oneTile;
+[AvAffecter]
+--this is only for display purposes
+	ID=Swa_maneuver; 
+	harmful=false;
+	actorValue=morale;
+	magnitude=1;
+	duration=24+c:MagAtk*2 + 10 * c:rank;
+	chance=100;
+	forActEvalPurposesOnly=true;
+[AvAffecterAoE]
+	ID=Swa_maneuver;
+	aoeCasterAsOrigin=true;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Swa_maneuver; 
+	harmful=false;
+	actorValue=morale;
+	magnitude=1;
+	duration=24+c:MagAtk*2 + 10 * c:rank;
+	chance=100;
+	affectIntangible=true;
+	FXOnTile=delay;
+	FXOnTile=delay;
+	FXOnHit=sfx_risingBipLow;
+	FXOnHit=sparkle;
+[AvAffecterAoE]
+	ID=Swa_maneuver;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=Swa_mug; 
+	name=Mug;
+	icon=icon_Swa_mug;
+	tooltip=Deal 90% damage, steal all gold, and cause the enemy to drop <math=c:rank> unequipped item(s). Deal +30% damage and lower morale for <icon=time><math=45 + 25 * c:rank> if successful.;
+	rankUpTooltip=Each rank makes the enemy drop an additional item and increases duration by <icon=time>25.;
+	tooltipIcons=<icon=noRanged>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	AIRatingBias = -9999;
+	
+	XPCost=180;
+	XPCost=275;
+	XPCost=400;
+	
+	casterAnimation=weapon;
+	casterAnimationSpeed=0.7;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	requiredWeaponElement=melee;
+	
+	FXOnCaster=eyeGlint;
+	FXOnCaster=sfx_highTing;
+	FXOnTarget=weaponFX;
+[ActionAoE] 
+	ID=Swa_mug; shape=10;
+[AvAffecter]
+	ID=Swa_mug; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.9 + w:magnitude * m:tDropItem * 0.3;
+	chance=w:chance;
+	duration=-2;
+	FXOnHit=hitDust;
+	FXOnHitColor=Yellow;
+[AvAffecterAoE]
+	ID=Swa_mug;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Swa_mug; 
+	actorValue=morale;
+	visibleMiss=false;
+	magnitude=-1;
+	chance=w:chance * m:tDropItem;
+	duration=45 + c:rank * 25;
+[AvAffecterAoE]
+	ID=Swa_mug;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Swa_mug; 
+	actorValue=dropItem;
+	visibleMiss=false;
+	magnitude=1;
+	chance=w:chance * m:tDropItem;
+	duration=-2;
+	FXOnHit=starDonk;
+	FXOnHit=sfx_coin;
+[AvAffecterAoE]
+	ID=Swa_mug;
+	cloneFrom=oneTile;

@@ -1,0 +1,478 @@
+
+[Action] ID=De_iceblood; 
+	name=Iceblood;
+	icon=icon_De_iceblood;
+	mpCost=8 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=12 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
+	
+	tooltip=Freeze enemy blood to deal<n><thinnerIcon=skill_Ice><math=d:iceDmgDisplay(3)> damage and inflict Chilled for <icon=time><math=110 + d:iceDurMax(2) + d:ruinDurMax(2)><finalTextIf=.=2-c:rank> and Poison for <icon=time><math=60 + d:iceDurMax(2) + d:ruinDurMax(2)>.;
+	rankUpTooltip=A 2nd rank also inflicts Poison for <icon=time><math=50>.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ice_small><icon=skill_Ruin_small>;
+	
+	XPCost=150;
+	XPCost=950;
+	
+	special=requiresCasting;
+	casterAnimation=spellcast;
+	maxRank=2;
+	
+	FXOnCaster=magicCharge;
+	
+	FXOnTarget=darken;
+	FXOnTargetColor=SkyBlue;
+	FXOnTarget=ringsDownward1_noOverlap;
+	FXOnTargetColor=SkyBlue;
+	FXOnTarget=sfx_zyew;
+	FXOnTarget=freezecloud;
+[ActionAoE] 
+	ID=De_iceblood; 
+	needsLoS = true;
+	needsLoE = false;
+	minRange = 1;
+	maxRange = 4;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=De_iceblood; 
+	actorValue=HP;
+	magnitude= d:iceDmg(3)- c:skill_Ruin + t:skill_Ruin;
+	duration=-2;
+	chance=d:iceAcc;
+	element=magic;
+	element=ice;
+	element=ruin;
+	FXOnTile=sfx_frost;
+	FXOnTile=delay;
+	FXOnTile=iceShards_rot_smaller;
+	FXOnHit=medShakeHoriz;
+[AvAffecterAoE]
+	ID=De_iceblood;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=De_iceblood; 
+	actorValue=chilled;
+	visibleMiss=false;
+	magnitude= 1;
+	duration=110 + d:ruinDur(2) + d:iceDur(2);
+	chance=d:iceAcc;
+	element=magic;
+	element=ice;
+	element=defiler;
+[AvAffecterAoE]
+	ID=De_iceblood;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=De_iceblood; 
+	rankRequired=2;
+	actorValue=poison;
+	visibleMiss=false;
+	magnitude= 1;
+	duration=60 + d:ruinDur(2) + d:iceDur(2);
+	chance=d:iceAcc;
+	element=magic;
+	element=ice;
+	element=defiler;
+[AvAffecterAoE]
+	ID=De_iceblood;
+	cloneFrom=oneTile;
+	
+	
+	
+	
+	
+[Action] ID=De_brainshock; 
+	name=Brainshock;
+	icon=icon_De_brainshock;
+	mpCost=8 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=12 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	
+	tooltip=Electrify enemy brain to deal <thinnerIcon=skill_Elec><math=d:elecDmgDisplay(3)> damage and inflict Disable for <icon=time><math=20 + d:elecDurMax(0.5) + d:ruinDurMax(0.5)><finalTextIf=.=2-c:rank> and Itchy for <icon=time><math=80 + d:elecDurMax(2) + d:ruinDurMax(2)>.;
+	rankUpTooltip=A 2nd rank also inflicts Itchy for <icon=time><math=90>.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Elec_small><icon=skill_Ruin_small>;
+	
+	XPCost=150;
+	XPCost=950;
+	
+	special=requiresCasting;
+	casterAnimation=spellcast;
+	maxRank=2;
+	
+	FXOnCaster=magicCharge;
+	
+	FXOnTarget=darken;
+	FXOnTargetColor=Yellow;
+	FXOnTarget=ringsDownward1_noOverlap;
+	FXOnTargetColor=Yellow;
+	FXOnTarget=sfx_zyew;
+[ActionAoE] 
+	ID=De_brainshock; 
+	needsLoS = true;
+	needsLoE = false;
+	minRange = 1;
+	maxRange = 4;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=De_brainshock; 
+	actorValue=HP;
+	magnitude= d:elecDmg(3) - c:skill_Ruin + t:skill_Ruin;
+	duration=-2;
+	chance=d:elecAcc;
+	element=magic;
+	element=elec;
+	element=ruin;
+	FXOnTile=delay;
+	FXOnTileColor=White;
+	FXOnTile=horizSpark_many_sudden;
+	FXOnTileColor=White;
+	FXOnTile=horizSpark_crazy_sudden_high;
+	FXOnTileColor=SkyBlue;
+	FXOnTile=horizSpark_crazy_sudden_high;
+	FXOnTileColor=Gold;
+	FXOnTile=delay;
+	FXOnTileColor=Yellow;
+	FXOnTile=horizSpark_crazy_sudden_high;
+	FXOnTileColor=SkyBlue;
+	FXOnTile=ping_square_large_high;
+	FXOnTileColor=Yellow;
+	FXOnTile=shortBolt;
+	FXOnHit=medShakeHoriz;
+[AvAffecterAoE]
+	ID=De_brainshock;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=De_brainshock; 
+	actorValue=disable;
+	visibleMiss=false;
+	magnitude= 1;
+	duration=20 + d:ruinDur(0.5) + d:elecDur(0.5);
+	chance=d:elecAcc;
+	element=magic;
+	element=elec;
+	element=defiler;
+[AvAffecterAoE]
+	ID=De_brainshock;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=De_brainshock; 
+	rankRequired=2;
+	actorValue=itchy;
+	visibleMiss=false;
+	magnitude= 1;
+	duration=80 + d:ruinDur(2) + d:elecDur(2);
+	chance=d:elecAcc;
+	element=magic;
+	element=elec;
+	element=defiler;
+[AvAffecterAoE]
+	ID=De_brainshock;
+	cloneFrom=oneTile;
+	
+	
+
+[Action] ID=De_gorgefire; 
+	name=Gorgefire;
+	icon=icon_De_gorgefire;
+	mpCost=8 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=12 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
+	
+	tooltip=Scorch enemy throat to deal <thinnerIcon=skill_Fire><math=d:fireDmgDisplay(3)> damage and inflict Silence for <icon=time><math=80 + d:fireDurMax(2) + d:ruinDurMax(2)><finalTextIf=.=2-c:rank> and Burn for <icon=time><math=20 + d:fireDurMax(2) + d:ruinDurMax(1)>.;
+	rankUpTooltip=A 2nd rank also inflicts Burn for <icon=time><math=30>.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small><icon=skill_Ruin_small>;
+	
+	XPCost=150;
+	XPCost=950;
+	
+	special=requiresCasting;
+	casterAnimation=spellcast;
+	maxRank=2;
+	
+	FXOnCaster=magicCharge;
+	
+	FXOnTarget=darken;
+	FXOnTargetColor=White;
+	FXOnTarget=ringsDownward1_noOverlap;
+	FXOnTargetColor=Red;
+	FXOnTarget=sfx_zyew;
+[ActionAoE] 
+	ID=De_gorgefire; 
+	needsLoS = true;
+	needsLoE = false;
+	minRange = 1;
+	maxRange = 4;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=De_gorgefire; 
+	actorValue=HP;
+	magnitude= d:fireDmg(3) - c:skill_Ruin + t:skill_Ruin;
+	duration=-2;
+	chance=d:fireAcc;
+	element=magic;
+	element=fire;
+	element=ruin;
+	FXOnTile=fireEmber;
+	FXOnTile=redden_major;
+	FXOnTile=shine_explosion_high;
+	FXOnTile=delay;
+	FXOnTile=shortBolt;
+	FXOnHit=medShakeHoriz;
+[AvAffecterAoE]
+	ID=De_gorgefire;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=De_gorgefire; 
+	actorValue=silence;
+	visibleMiss=false;
+	magnitude= 1;
+	duration=80 + d:ruinDur(2) + d:fireDur(2);
+	chance=d:fireAcc;
+	element=magic;
+	element=fire;
+	element=defiler;
+[AvAffecterAoE]
+	ID=De_gorgefire;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=De_gorgefire; 
+	rankRequired=2;
+	actorValue=burn;
+	visibleMiss=false;
+	magnitude= 1;
+	duration=20 + d:ruinDur(1) + d:fireDur(2);
+	chance=d:fireAcc;
+	element=magic;
+	element=fire;
+	element=defiler;
+[AvAffecterAoE]
+	ID=De_gorgefire;
+	cloneFrom=oneTile;
+	
+	
+
+[Action] ID=De_heartgrip; 
+	name=Heartgrip;
+	icon=icon_De_heartgrip;
+	mpCost=8 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=12 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
+	
+	tooltip=Crush enemy heart to deal <thinnerIcon=skill_Wind><math=d:windDmgDisplay(3)> damage and Stun for <icon=time><math=12 + d:windDurMax(0.5) + d:ruinDurMax(0.5)><finalTextIf=.=2-c:rank> and demoralize for <icon=time><math=20 + d:windDurMax(2) + d:ruinDurMax(2)>.;
+	rankUpTooltip=A 2nd rank also demoralizes for <icon=time><math=40>.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Wind_small><icon=skill_Ruin_small>;
+	
+	XPCost=150;
+	XPCost=950;
+	
+	
+	special=requiresCasting;
+	casterAnimation=spellcast;
+	maxRank=2;
+	
+	FXOnCaster=magicCharge;
+	
+	FXOnTarget=darken;
+	FXOnTargetColor=White;
+	FXOnTarget=ringsDownward1_noOverlap;
+	FXOnTargetColor=Black;
+	FXOnTarget=sfx_zyew;
+[ActionAoE] 
+	ID=De_heartgrip; 
+	needsLoS = true;
+	needsLoE = false;
+	minRange = 1;
+	maxRange = 4;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=De_heartgrip; 
+	actorValue=HP;
+	magnitude= d:windDmg(3)- c:skill_Ruin + t:skill_Ruin;
+	duration=-2;
+	chance=d:windAcc;
+	element=magic;
+	element=wind;
+	element=ruin;
+	FXOnTile=delay;
+	FXOnTileColor=White;
+	FXOnTile=heartbeat;
+	FXOnTileColor=White;
+	FXOnTile=largePing;
+	FXOnTileColor=Black;
+	FXOnHit=medShakeHoriz;
+[AvAffecterAoE]
+	ID=De_heartgrip;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=De_heartgrip; 
+	actorValue=stun;
+	visibleMiss=false;
+	magnitude= 1;
+	duration=12 + d:ruinDur(0.5) + d:windDur(0.5);
+	chance=d:windAcc;
+	element=magic;
+	element=wind;
+	element=defiler;
+[AvAffecterAoE]
+	ID=De_heartgrip;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=De_heartgrip; 
+	rankRequired=2;
+	actorValue=morale;
+	visibleMiss=false;
+	magnitude= -1;
+	duration=20 + d:ruinDur(2) + d:windDur(2);
+	chance=d:windAcc;
+	element=magic;
+	element=wind;
+	element=defiler;
+[AvAffecterAoE]
+	ID=De_heartgrip;
+	cloneFrom=oneTile;
+	
+	
+	
+[Action] ID=De_defile; 
+	name=Defile;
+	icon=icon_De_defile;
+	mpCost=5 * d:mpCostMult + d:mpCostMod;
+	tooltip=Weaken targets' essence in a small area to inflict -5<icon=MagDef> and -20<icon=MagEva> for <icon=time><math=80 + d:ruinDurMax(2)>.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ruin_small>;
+	
+	XPCost=200;
+	XPCost=400;
+	XPCost=600;
+	
+	casterAnimation=spellcast;
+	maxRank=3;
+	
+	FXOnCaster=magicCharge;
+	
+	FXOnTarget=darken;
+	FXOnTargetColor=White;
+[ActionAoE] 
+	ID=De_defile; 
+	needsLoS = true;
+	needsLoE = false;
+	minRange = 1;
+	maxRange = 3;
+	maxRangeBonus = c:rank;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=De_defile; 
+	actorValue=MagDef;
+	visibleMiss=false;
+	magnitude= -5;
+	duration=80 + d:ruinDurMax(2);
+	chance=d:ruinAcc;
+	FXOnTile=ringsDownward1_noOverlap;
+	FXOnTileColor=Purple;
+	FXOnTile=sfx_zyew;
+	FXOnTileColor=Purple;
+	FXOnTile=delay_mid;
+	FXOnTileColor=Purple;
+	FXOnTile=ringsDownward1_noOverlap;
+	FXOnTileColor=Purple;
+	FXOnTile=sfx_zyew;
+	FXOnTileColor=Purple;
+	FXOnTile=delay_mid;
+	FXOnTileColor=Purple;
+	FXOnTile=ringsDownward1_noOverlap;
+	FXOnTileColor=Purple;
+	FXOnTile=sfx_zyew;
+	FXOnTile=delay_mid;
+	FXOnHit=horizSpark_many_wideArea;
+	FXOnHitColor=Purple;
+	FXOnHit=horizSpark_many_sudden;
+	FXOnHitColor=Purple;
+	FXOnHit=horizSpark_many_sudden;
+	FXOnHitColor=Purple;
+	FXOnHit=horizSpark_many_sudden;
+	FXOnHitColor=Purple;
+	FXOnHit=horizSpark_many_sudden;
+	FXOnHitColor=Purple;
+	element=magic;
+	element=ruin;
+[AvAffecterAoE]
+	ID=De_defile;
+	cloneFrom=adjacentAndSelf;
+[AvAffecter]
+	ID=De_defile; 
+	actorValue=MagEva;
+	magnitude= -20;
+	duration=80 + d:ruinDurMax(2);
+	chance=d:ruinAcc;
+	element=magic;
+	element=ruin;
+[AvAffecterAoE]
+	ID=De_defile;
+	cloneFrom=adjacentAndSelf;
+	
+	
+
+
+[Action] ID=De_viral; 
+	name=Viral;
+	icon=icon_De_viral;
+	mpCost=4 * d:mpCostMult + d:mpCostMod;
+	tooltip=Spread negative status effects on the target(s) to all contiguous creatures.;
+	rankUpTooltip=Each rank increases number of targets by 1.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ruin_small>;
+
+	XPCost=350;
+	XPCost=750;
+	XPCost=1500;
+	
+	AIRatingBias = -999;
+	
+	numTargets=c:rank;
+	
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	
+	FXOnTarget=darken;
+[ActionAoE] 
+	ID=De_viral; 
+	needsLoS = true;
+	needsLoE = false;
+	minRange = 0;
+	maxRange = 4;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=De_viral; 
+	actorValue=viral;
+	magnitude= 1;
+	duration=-2;
+	chance=d:ruinAcc * 1.1 * m:tCurable;
+	FXOnTile=spiral;
+	FXOnTileColor=Green;
+	FXOnTile=spiral2;
+	FXOnTileColor=Green;
+	FXOnTile=viralShroud;
+	FXOnTileColor=DarkGreen;
+	FXOnTile=viralShroud_quiet;
+	FXOnTileColor=DarkGreen;
+	
+[AvAffecterAoE]
+	ID=De_viral;
+	cloneFrom=oneTile;
+	
+	

@@ -1,0 +1,906 @@
+
+
+[DialogNode] ID=town_trainer1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=0;
+statements=<rand=Watcha need?/Good to see ya./What's up?/Ready for more training!?/I'm all ears!/Heya!/Hi there!>;
+animations=;
+[DialogOption] text=Chat;
+nodeToConnectTo=town_trainer_chat;
+color=Orange;
+formulaReq=g:trainer_chat * 14 - g:town_trainer_chat;
+[DialogOption] text=Info;
+nodeToConnectTo=town_trainer_info1;
+newLineOfOptions=true;
+
+[DialogOption] text=Training;
+newLineOfOptions=true;
+formulaReq=17 - g:partySizeMod - g:XPShare - g1:TrueHPMax_bonus - g:PhysAtk_bonus - g:MagAtk_bonus - g1:TrueMPMax_bonus - g:moveDistance_bonus;
+nodeToConnectTo=town_trainer_training1;
+[DialogOption] text=Classes;
+newLineOfOptions=true;
+formulaReq=6 - g:mask_sage -g:mask_guardian -g:mask_rogue - g:mask_sorcerer - g:mask_sharpshooter - g:mask_berserker;
+nodeToConnectTo=town_trainer_class1;
+
+[DialogOption] text=Goodbye;
+bottomOption=true;
+nodeToConnectTo=;
+
+
+-----------
+
+[DialogNode] ID=town_trainer_training1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=3;
+statements=<rand=How 'bout those training programs?/Let's talk new training programs./You want to start some new training programs?/How about some new training programs?>;
+animations=;
+[DialogOption] text=Teamwork ($50);
+formulaReq=1 - g:partySizeMod;
+newLineOfOptions=true;
+nodeToConnectTo=town_trainer_training_team1;
+[DialogOption] text=Teamwork II ($100);
+--requires Team Size 5 AND requires 1st shortcut unlocked
+formulaReq=gIs1:partySizeMod * 10 + g:zone_travel2 + g:zone_travel4_enabled - 10 - gIs2:partySizeMod * 999;
+newLineOfOptions=true;
+nodeToConnectTo=town_trainer_training_team2;
+[DialogOption] text=XP Sharing ($100);
+formulaReq=1 - g:XPShare;
+newLineOfOptions=true;
+nodeToConnectTo=town_trainer_training_xp1;
+[DialogOption] text=XP Sharing II ($500);
+--requires XPShare
+formulaReq=g1:XPShare * 6 - g:XPShare;
+newLineOfOptions=true;
+nodeToConnectTo=town_trainer_training_xp2;
+[DialogOption] text=Endurance ($300);
+newLineOfOptions=true;
+formulaReq=1 - g:TrueHPMax_bonus;
+nodeToConnectTo=town_trainer_training_end1;
+[DialogOption] text=Strength ($300);
+newLineOfOptions=true;
+formulaReq=g1:TrueHPMax_bonus - g:PhysAtk_bonus;
+nodeToConnectTo=town_trainer_training_str1;
+[DialogOption] text=Focus ($300);
+newLineOfOptions=true;
+formulaReq=g1:TrueHPMax_bonus  - g:MagAtk_bonus;
+nodeToConnectTo=town_trainer_training_foc1;
+[DialogOption] text=Meditation ($300);
+newLineOfOptions=true;
+formulaReq=g1:TrueHPMax_bonus - g:TrueMPMax_bonus;
+nodeToConnectTo=town_trainer_training_med1;
+[DialogOption] text=Mobility ($800);
+newLineOfOptions=true;
+--requires Team Size 6
+formulaReq=g:partySizeMod - g:moveDistance_bonus - 1;
+nodeToConnectTo=town_trainer_training_move1;
+[DialogOption] text=Never mind.;
+bottomOption=true;
+nodeToConnectTo=town_trainer_endtalk;
+
+[DialogNode] ID=town_trainer_training_team1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=35;
+portraitIconFrames=36;
+portraitIconFrames=2;
+statements=They say there's safety in numbers.<p=> Two heads are better than one.<p=> Strength in numbers.<p=> Great minds think alike.<p=> Too many cooks.<p=> And so on.;
+statements=I tend to agree.<p=2> Right now these bumblers can barely work together as is -<p=2> but I want to do some teamwork exercises to fix that.;
+statements=To put it simply <p=>- with $50 I could increase our maximum team size from four to five.;
+[DialogOption] text=Let's do it! ($50);
+formulaReq=m:money - 49;
+nodeToConnectTo=town_trainer_training_team_get1;
+[DialogOption] text=Let's discuss other programs.;
+newLineOfOptions=true;
+nodeToConnectTo=town_trainer_training1;
+[DialogOption] text=Never mind.;
+nodeToConnectTo=town_trainer_endtalk;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=town_trainer_training_team_get1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=1;
+portraitIconFrames=2;
+specialEffect=subtract50gp;
+specialEffect=tPartySizeMod1;
+specialEffect=tUnlockFX;
+statements=Excellent! I'll begin the training right away.;
+statements=Starting with our next mission, we can field teams of 5 at a time!;
+nextNodeID=;
+
+
+------
+
+[DialogNode] ID=town_trainer_training_team2;
+portraitIcon=portrait_sivle;
+portraitIconFrames=30;
+portraitIconFrames=31;
+portraitIconFrames=33;
+statements=Bigger is better they say! But I say more is<n=>m<p=2>m<speed=0.6>mmm<speed=0.3>mmmmmmmm<p=>really good.;
+statements=Let's get our team size up to 6, then nothing can stand in our way! Quantity over quality!;
+statements=If you've got $100, I can start on this right away.;
+[DialogOption] text=Let's do it! ($100);
+formulaReq=m:money - 99;
+nodeToConnectTo=town_trainer_training_team_get2;
+[DialogOption] text=Let's discuss other programs.;
+newLineOfOptions=true;
+nodeToConnectTo=town_trainer_training1;
+[DialogOption] text=Never mind.;
+nodeToConnectTo=town_trainer_endtalk;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=town_trainer_training_team_get2;
+portraitIcon=portrait_sivle;
+portraitIconFrames=0;
+portraitIconFrames=1;
+specialEffect=subtract100gp;
+specialEffect=tPartySizeMod2;
+specialEffect=tUnlockFX;
+statements=All right, let's make it happen!;
+statements=Bring your best 6 men on the next mission and nothing can go wrong!;
+nextNodeID=;
+
+
+------
+
+
+
+[DialogNode] ID=town_trainer_training_xp1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=34;
+portraitIconFrames=34;
+portraitIconFrames=35;
+portraitIconFrames=36;
+statements=I can set up a sort of senior tutoring system, so that everyone - even new recruits - gets 5% of all the XP ever earned!;
+statements=For example, if a Scholar gets 100 XP, everyone else gets 5 Scholar XP for free!;
+statements=And don't worry, it would include XP earned in the past too. It's completely retroactive!;
+statements=Should take me $100 to organize... what do you think?;
+[DialogOption] text=Let's do it! ($100);
+formulaReq=m:money - 99;
+nodeToConnectTo=town_trainer_training_xp_get1;
+[DialogOption] text=Let's discuss other programs.;
+newLineOfOptions=true;
+nodeToConnectTo=town_trainer_training1;
+[DialogOption] text=Never mind.;
+nodeToConnectTo=town_trainer_endtalk;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=town_trainer_training_xp_get1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=1;
+portraitIconFrames=0;
+specialEffect=subtract100gp;
+specialEffect=tUnlockFX;
+specialEffect=tXPShare5;
+specialEffect=grantXPShare_5percent;
+statements=Great! I'll start it now!;
+statements=All our troops should be more experienced from here on!;
+nextNodeID=;
+
+
+------
+
+[DialogNode] ID=town_trainer_training_xp2;
+portraitIcon=portrait_sivle;
+portraitIconFrames=35;
+portraitIconFrames=36;
+portraitIconFrames=35;
+portraitIconFrames=34;
+portraitIconFrames=34;
+statements=So, I've noticed some inefficiencies with our tutoring program.;
+statements=As in it sucks and I hate it.<p=7> I want to do better.;
+statements=I think I can crank it up to 10% of all XP earned being granted to everyone, including past XP.;
+statements=But I'll need $500.;
+statements=Where will all that money go? How could I possibly spend that much?<p=4> Don't worry about it.;
+[DialogOption] text=Let's do it! ($500);
+formulaReq=m:money - 499;
+nodeToConnectTo=town_trainer_training_xp_get2;
+[DialogOption] text=Let's discuss other programs.;
+newLineOfOptions=true;
+nodeToConnectTo=town_trainer_training1;
+[DialogOption] text=Never mind.;
+nodeToConnectTo=town_trainer_endtalk;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=town_trainer_training_xp_get2;
+portraitIcon=portrait_sivle;
+portraitIconFrames=36;
+portraitIconFrames=0;
+specialEffect=subtract500gp;
+specialEffect=tUnlockFX;
+specialEffect=tXPShare10;
+specialEffect=grantXPShare_5percent;
+statements=Perfect! I'll get right on it!;
+statements=In fact, it's already done! I'm just that good!;
+nextNodeID=;
+
+
+
+------
+
+[DialogNode] ID=town_trainer_training_str1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=30;
+portraitIconFrames=31;
+portraitIconFrames=30;
+portraitIconFrames=31;
+portraitIconFrames=33;
+dialogFX=;
+dialogFX=tallExplode_rand;
+dialogFX=;
+dialogFX=;
+statements=Let's be honest.;
+statements=<speed=0.5>STRONGER IS BETTER!!!;
+statements=With $300, I can put together a program that'll give all our troops +1 <icon_big=PhysAtk> Physical Attack.;
+statements=Yes, all of them! Even the spindly-wristed mages!!;
+statements=Future recruits would benefit from it too. So how about it?;
+[DialogOption] text=Let's do it! ($300);
+formulaReq=m:money - 299;
+nodeToConnectTo=town_trainer_training_str_get1;
+[DialogOption] text=Let's discuss other programs.;
+newLineOfOptions=true;
+nodeToConnectTo=town_trainer_training1;
+[DialogOption] text=Never mind.;
+nodeToConnectTo=town_trainer_endtalk;
+newLineOfOptions=true;
+
+[DialogNode] ID=town_trainer_training_str_get1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=31;
+portraitIconFrames=30;
+portraitIconFrames=30;
+portraitIconFrames=31;
+dialogFX=tallExplode_rand;
+dialogFX=;
+dialogFX=;
+dialogFX=;
+specialEffect=subtract300gp;
+specialEffect=tUnlockFX;
+specialEffect=tPhysAtkBonus1;
+specialEffect=refreshStatMods;
+statements=YES! I'll show you the meaning of TRUE strength!!;
+statements=It's muscles!;
+statements=<speed=0.75>I- <p=2>yeah <p=2>it's muscles. <p=2>I guess <p=3>I mean I'd tell you. <p=2>I told you the meaning of true strength.;
+statements=...<p=8>I'll go start the training!!;
+nextNodeID=;
+
+
+--------------
+
+[DialogNode] ID=town_trainer_training_end1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=46;
+portraitIconFrames=44;
+portraitIconFrames=45;
+portraitIconFrames=44;
+portraitIconFrames=46;
+statements=Our troops, brave as they are... they can barely take a hit right now.;
+statements=I want to set up a $300 program that'll beat the stuffing out of them!;
+statements=By the end of it they should be roughly, approximately, abstractly speaking...<p=9> +3 <icon_big=HP> HP healthier.;
+statements=Naturally, all future recruits will suffer the same fa - I mean, receive the same training.;
+statements=Whaddaya think?;
+[DialogOption] text=Let's do it! ($300);
+formulaReq=m:money - 299;
+nodeToConnectTo=town_trainer_training_end_get1;
+[DialogOption] text=Let's discuss other programs.;
+newLineOfOptions=true;
+nodeToConnectTo=town_trainer_training1;
+[DialogOption] text=Never mind.;
+nodeToConnectTo=town_trainer_endtalk;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=town_trainer_training_end_get1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=46;
+portraitIconFrames=44;
+specialEffect=subtract300gp;
+specialEffect=tUnlockFX;
+specialEffect=tHPBonus3;
+specialEffect=refreshStatMods;
+statements=Good choice!<p=2> Good decision.<p=2> I like the cut of your jib.;
+statements=I'll get started cutting their jibs right away!;
+nextNodeID=;
+
+
+------------------
+
+[DialogNode] ID=town_trainer_training_foc1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=61;
+portraitIconFrames=60;
+portraitIconFrames=61;
+portraitIconFrames=62;
+portraitIconFrames=60;
+portraitIconFrames=63;
+statements=These punks lack focus!!;
+statements=Give me $300!!;
+statements=I'll make them focus or die trying!!;
+statements=They'd die, I mean. I would never die just from trying.;
+statements=<speed=0.5>...;
+statements=+1 <icon_big=MagAtk> Magic Attack?;
+[DialogOption] text=Let's do it! ($300);
+formulaReq=m:money - 299;
+nodeToConnectTo=town_trainer_training_foc_get1;
+[DialogOption] text=Let's discuss other programs.;
+newLineOfOptions=true;
+nodeToConnectTo=town_trainer_training1;
+[DialogOption] text=Never mind.;
+nodeToConnectTo=town_trainer_endtalk;
+newLineOfOptions=true;
+
+
+
+[DialogNode] ID=town_trainer_training_foc_get1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=61;
+portraitIconFrames=60;
+specialEffect=subtract300gp;
+specialEffect=tUnlockFX;
+specialEffect=tMagAtkBonus1;
+specialEffect=refreshStatMods;
+statements=Great! <p=2>Let's!!;
+statements=Consider them focused!;
+nextNodeID=;
+
+---------
+
+
+
+[DialogNode] ID=town_trainer_training_med1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=47;
+portraitIconFrames=47;
+portraitIconFrames=47;
+portraitIconFrames=49;
+statements=<speed=0.3>... meditation.;
+statements=...;
+statements=<speed=0.2>... is boring...;
+statements=But it might help some of our casters.;
+statements=If I started incorporating it... I could get our troops +5 <icon_big=MP> MP, I think.;
+statements=It would take me about $300 to do. What say you?;
+[DialogOption] text=Let's do it! ($300);
+formulaReq=m:money - 299;
+nodeToConnectTo=town_trainer_training_med_get1;
+[DialogOption] text=Let's discuss other programs.;
+newLineOfOptions=true;
+nodeToConnectTo=town_trainer_training1;
+[DialogOption] text=Never mind.;
+nodeToConnectTo=town_trainer_endtalk;
+newLineOfOptions=true;
+
+[DialogNode] ID=town_trainer_training_med_get1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=46;
+portraitIconFrames=44;
+specialEffect=subtract300gp;
+specialEffect=tUnlockFX;
+specialEffect=tMPBonus5;
+specialEffect=refreshStatMods;
+statements=Well said!;
+statements=I'll make them meditate so hard that they can't think of anything else!;
+nextNodeID=;
+
+
+[DialogNode] ID=town_trainer_training_move1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=50;
+portraitIconFrames=51;
+portraitIconFrames=50;
+portraitIconFrames=52;
+portraitIconFrames=51;
+portraitIconFrames=51;
+portraitIconFrames=50;
+statements=This is actually a very rigorous program I have in mind...;
+statements=In combat, positioning is everything.;
+statements=Just like speed is everything. And dodging. Also hitting.;
+statements=But the most everything is positioning. And our soldiers are trash at it.;
+statements=I want to get them faster on their feet, to the tune of +1 <icon_big=moveDistance> Move for every single one of them.;
+statements=It's not going to be easy. And giant beds of hot coals 'n' spikes don't come cheap.;
+statements=I need $800.;
+[DialogOption] text=Let's do it! ($800);
+formulaReq=m:money - 799;
+nodeToConnectTo=town_trainer_training_move_get1;
+[DialogOption] text=Let's discuss other programs.;
+newLineOfOptions=true;
+nodeToConnectTo=town_trainer_training1;
+[DialogOption] text=Never mind.;
+nodeToConnectTo=town_trainer_endtalk;
+newLineOfOptions=true;
+
+[DialogNode] ID=town_trainer_training_move_get1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=50;
+portraitIconFrames=51;
+portraitIconFrames=53;
+specialEffect=subtract800gp;
+specialEffect=tUnlockFX;
+specialEffect=tMoveBonus1;
+specialEffect=refreshStatMods;
+statements=I know it's expensive, but you really should consider <speed=0.5>how use...<speed=0.2>ful...;
+statements=Wait... you have that much money? <p=7>To give me?;
+statements=Good! <p=2>Great!!;
+statements=You won't regret it!;
+nextNodeID=;
+
+
+-----------------
+
+
+
+[DialogNode] ID=town_trainer_chat;
+specialEffect=modNodeIDGlobalVar_1;
+specialEffect=goToNodeID_plus_GlobalVar;
+specialEffect=tSet_trainer_chat0;
+
+[DialogNode] ID=town_trainer_chat1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=0;
+portraitIconFrames=2;
+portraitIconFrames=5;
+statements=Ah, I haven't had to train anybody in a long time... hope I'm not out of practice!;
+statements=And let's be honest. Your troops certainly are!;
+statements=But don't worry. I'll whip 'em into shape!;
+animations=;
+nextNodeID=town_trainer_endchat;
+
+[DialogNode] ID=town_trainer_chat2;
+portraitIcon=portrait_sivle;
+portraitIconFrames=1;
+portraitIconFrames=0;
+statements=Don't forget to fund some training programs!<p=2> It's a good investment, probably!;
+statements=Or, spend on some new classes! You can pay me in cash or in masks, either is fine!;
+animations=;
+nextNodeID=town_trainer_endchat;
+
+
+[DialogNode] ID=town_trainer_chat3;
+portraitIcon=portrait_sivle;
+portraitIconFrames=35;
+portraitIconFrames=34;
+portraitIconFrames=35;
+portraitIconFrames=34;
+statements=Hey, fighting tip!<p=2> Hit 'em in the back, your accuracy will be better!;
+statements=Another fighting tip!<p=2> The enemy usually goes for whoever they can do the most damage to! So watch out for your weak squishy mages!;
+statements=More fighting tips!<p=2> Attacking is necessary to beat the game!;
+statements=I'm like a pro over here!<p=2> I'm trainin' everybody, all the time, even you, free of charge!;
+animations=;
+nextNodeID=town_trainer_endchat;
+
+[DialogNode] ID=town_trainer_chat4;
+portraitIcon=portrait_sivle;
+portraitIconFrames=36;
+portraitIconFrames=35;
+portraitIconFrames=36;
+statements=By the way, you know about <color=Gold>Stars *<color=White> right?;
+statements=When you get 500xp in a class, you get a * that you can spend to upgrade a stat, permanently.;
+statements=Super useful, right? So don't forget it!;
+animations=;
+nextNodeID=town_trainer_endchat;
+
+[DialogNode] ID=town_trainer_chat5;
+portraitIcon=portrait_sivle;
+portraitIconFrames=1;
+portraitIconFrames=31;
+portraitIconFrames=32;
+portraitIconFrames=30;
+portraitIconFrames=30;
+statements=How's my favorite Captain doing?;
+statements=As for me, I'm doing great!<p=3> Sure feels good to not have to go wandering in a big stinky serpent!<p=2> Yep!;
+statements=Danger?<p=1> Suspense?<p=1> Adventure?<p=2> Who needs that, haha!<p=1> Not me!;
+statements=...;
+statements=Siiigh...;
+animations=;
+nextNodeID=town_trainer_endchat;
+
+[DialogNode] ID=town_trainer_chat6;
+portraitIcon=portrait_sivle;
+portraitIconFrames=10;
+portraitIconFrames=1;
+portraitIconFrames=6;
+portraitIconFrames=2;
+statements=You might be wondering why out here I'm training these scrubs instead of in there taking all the loot myself.;
+statements=Well, I promised my mum I'd stop killing people!<p=2> Okay?? <p=4>Obviously.;
+statements=And you just <speed=0.5>KNOW<speed=1> some uppity explorer would try to jank me in there, and then I'd have to kill 'im.<p=3> BAM, broken promise.;
+statements=Just can't do it.<p=2> Can't be done.<p=3> I'm sure you can relate.;
+animations=;
+nextNodeID=town_trainer_endchat;
+
+[DialogNode] ID=town_trainer_chat7;
+portraitIcon=portrait_sivle;
+portraitIconFrames=2;
+portraitIconFrames=1;
+portraitIconFrames=0;
+statements=I think at this point, I'm not completely embarassed for your troops anymore.;
+statements=No, really!<p=2> They're shaping up.<p=2> One of them even hit me while we were sparring!;
+statements=Just don't tell them I said that.;
+animations=;
+nextNodeID=town_trainer_endchat;
+
+[DialogNode] ID=town_trainer_chat8;
+portraitIcon=portrait_sivle;
+portraitIconFrames=27;
+portraitIconFrames=29;
+portraitIconFrames=28;
+statements=This training business isn't so bad... I think I'm actually improving too!;
+statements=Beating people up has never been as socially acceptable as this!;
+statements=Nice, isn't it?;
+animations=;
+nextNodeID=town_trainer_endchat;
+
+[DialogNode] ID=town_trainer_chat9;
+portraitIcon=portrait_sivle;
+portraitIconFrames=1;
+portraitIconFrames=81;
+portraitIconFrames=80;
+portraitIconFrames=82;
+statements=For someone who spends all their time making weapons, Zirel sure is a stickler about how I use them!;
+statements='Don't hit your trainees!'<p=3> 'Don't set up deathtraps!';
+statements='Don't juggle!'<p=3> 'Don't mimic stabbing me behind my back while I say dumb stuff!';
+statements=SHEESH!<p=3> I mean, ya shouldn't have made the weapon if it wasn't going to be used for ANYTHING!;
+animations=;
+nextNodeID=town_trainer_endchat;
+
+[DialogNode] ID=town_trainer_chat10;
+portraitIcon=portrait_sivle;
+portraitIconFrames=2;
+portraitIconFrames=4;
+portraitIconFrames=44;
+portraitIconFrames=46;
+statements=This 'Jarrod' guy that Alvora swallowed up...<p=2> sounds like a real piece a' work.; 
+statements=Lorim told me he was a paranoid king that had his family executed. And he wiped out an entire Rasmen village just because he thought they were creepy!;
+statements=<speed=0.7>Rasmen aren't creepy!<speed=1><p=2> Grr, if he were around in my day he woulda made a PRIME target!<p=2> I'da had his <color=Red>bloodied, severed head<color=White> on a plate, free of charge!;
+statements=Hm? Why are you giving me that look?;
+animations=;
+nextNodeID=town_trainer_endchat;
+
+[DialogNode] ID=town_trainer_chat11;
+portraitIcon=portrait_sivle;
+portraitIconFrames=10;
+portraitIconFrames=5;
+portraitIconFrames=56;
+portraitIconFrames=7;
+statements=<speed=0.5>Hmm...<speed=0.8> you know, Captain, I've been thinking...;
+statements=You're quiet,<p=1> you're strategic...<p=3> you would make a good assassin!;
+statements=I know some people if you wanted to pursue a new career!;
+statements=Hahaha!<p=2> I'm just joking, Captain.<p=5> I'm not in touch with those contacts anymore!;
+animations=;
+nextNodeID=town_trainer_endchat;
+
+[DialogNode] ID=town_trainer_chat12;
+portraitIcon=portrait_sivle;
+portraitIconFrames=24;
+portraitIconFrames=25;
+portraitIconFrames=24;
+portraitIconFrames=24;
+statements=<speed=0.5>...;
+statements=<speed=0.75>Today I've decided to bathe in my own ennui and despair, and contemplate life.;
+statements=<speed=0.75>That's why I'm wearing this dinner plate I found a couple minutes ago.;
+statements=...I don't own any blank masks.;
+statements=<speed=0.75>That's why I'm so filled with despair and ennui.;
+animations=;
+nextNodeID=town_trainer_endchat;
+
+[DialogNode] ID=town_trainer_chat13;
+portraitIcon=portrait_sivle;
+portraitIconFrames=5;
+portraitIconFrames=28;
+portraitIconFrames=29;
+statements=My trainees are really starting to shine!;
+statements=Maybe after this, I'll start my own school!<p=2> I can see it now: <speed=0.6>'Sivle's Training School o' Buttkickery!<p=2> Also Magic, and Stabbing!';
+statements=What do you think?<p=2> Too good, right?;
+animations=;
+nextNodeID=town_trainer_endchat;
+
+[DialogNode] ID=town_trainer_chat14;
+portraitIcon=portrait_sivle;
+portraitIconFrames=2;
+portraitIconFrames=3;
+portraitIconFrames=4;
+statements=Hey Cap.<p=2> Captain.<p=2> Cappy.<p=2> Capitane!;
+statements=Capster.<p=2> Capulet.<p=2> Capo.<p=2> Capisce.<p=2> Cappa.;
+statements=Ca-<p=5> huh?<p=4> No, I don't have anything to say.<p=2> Sorry.;
+animations=;
+nextNodeID=town_trainer_endchat;
+
+
+[DialogNode] ID=town_trainer_endchat;
+specialEffect=nextDialogNode_hideWindow;
+nextNodeID=town_trainer1;
+
+[DialogNode] ID=town_trainer_endtalk;
+specialEffect=nextDialogNode_hideWindow;
+nextNodeID=town_trainer1;
+
+-----------------
+
+[DialogNode] ID=town_trainer_class1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=3;
+statements=Interested in some new Classes for the troops?;
+animations=;
+[DialogOption] text=Rogue;
+formulaReq=1 - g:mask_rogue;
+nodeToConnectTo=town_trainer_class_rogue1;
+[DialogOption] text=Sharpshooter;
+formulaReq=g:mask_rogue - g:mask_sharpshooter;
+nodeToConnectTo=town_trainer_class_sharpshooter1;
+[DialogOption] text=Guardian;
+newLineOfOptions=true;
+formulaReq=1 - g:mask_guardian;
+nodeToConnectTo=town_trainer_class_guardian1;
+[DialogOption] text=Berserker;
+newLineOfOptions=true;
+formulaReq=g:mask_guardian - g:mask_berserker;
+nodeToConnectTo=town_trainer_class_berserker1;
+[DialogOption] text=Sage;
+newLineOfOptions=true;
+formulaReq=1 - g:mask_sage;
+nodeToConnectTo=town_trainer_class_sage1;
+[DialogOption] text=Sorcerer;
+newLineOfOptions=true;
+formulaReq=g:mask_sage - g:mask_sorcerer;
+nodeToConnectTo=town_trainer_class_sorcerer1;
+[DialogOption] text=Never mind.;
+nextNodeID=town_trainer_endtalk;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=town_trainer_class_rogue1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=2;
+portraitIconFrames=56;
+statements=I can set up some sneaky sort of stuff for $30.;
+statements=They'll learn to set traps, poison weapons, blind people, that sort of thing. Y'know, the fun stuff!;
+animations=;
+[DialogOption] text=Unlock Rogue ($30);
+formulaReq=m:money - 29;
+nodeToConnectTo=mask_rogue;
+[DialogOption] text=Let's discuss other Classes.;
+newLineOfOptions=true;
+nodeToConnectTo=town_trainer_class1;
+
+[DialogNode] ID=mask_rogue;
+portraitIcon=portrait_sivle;
+portraitIconFrames=1;
+statements=Alright! You'll have Rogues in your ranks before you know it!;
+specialEffect=subtract30gp;
+specialEffect=tUnlockFX;
+specialEffect=modNodeIDGlobalVar_1;
+nextNodeID=;
+
+[DialogNode] ID=town_trainer_class_sharpshooter1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=2;
+portraitIconFrames=3;
+statements=Tactically speaking, shooting someone is like stabbing someone, but way safer.;
+statements=So I think we should start training up some proper shooters. Do you have $30 to fund that?;
+animations=;
+[DialogOption] text=Unlock Sharpshooter ($30);
+formulaReq=m:money - 29;
+nodeToConnectTo=mask_sharpshooter;
+[DialogOption] text=Let's discuss other Classes.;
+newLineOfOptions=true;
+nodeToConnectTo=town_trainer_class1;
+
+[DialogNode] ID=mask_sharpshooter;
+portraitIcon=portrait_sivle;
+portraitIconFrames=1;
+statements=A safe choice! I'll set up a shooting range right away.;
+specialEffect=subtract30gp;
+specialEffect=tUnlockFX;
+specialEffect=modNodeIDGlobalVar_1;
+nextNodeID=;
+
+----
+
+[DialogNode] ID=town_trainer_class_guardian1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=2;
+portraitIconFrames=47;
+statements=Being a warrior is great and all, but sometimes you need a tough guy who uses a little more teamwork.;
+statements=A Guardian can revive and cheer on his pals, push people around, and... well... guard things.;
+animations=;
+[DialogOption] text=Unlock Guardian ($30);
+formulaReq=m:money - 29;
+nodeToConnectTo=mask_guardian;
+[DialogOption] text=Let's discuss other Classes.;
+newLineOfOptions=true;
+nodeToConnectTo=town_trainer_class1;
+
+
+[DialogNode] ID=mask_guardian;
+portraitIcon=portrait_sivle;
+portraitIconFrames=1;
+portraitIconFrames=47;
+statements=I'm on it! Guardian unlocked!!<p=6> Whatever that means!;
+statements=It means you can make whoever you want into a Guardian from here on!;
+specialEffect=subtract30gp;
+specialEffect=tUnlockFX;
+specialEffect=modNodeIDGlobalVar_1;
+nextNodeID=;
+
+
+[DialogNode] ID=town_trainer_class_berserker1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=10;
+portraitIconFrames=3;
+portraitIconFrames=2;
+statements=I really haven't been in the mood for blind fury and rage lately.;
+statements=I guess it would probably take about $30 worth of motivation to work up some proper wrath...;
+statements=What do you think? Should we get some berserker fury going around here?;
+[DialogOption] text=Unlock Berserker ($30);
+formulaReq=m:money - 29;
+nodeToConnectTo=mask_berserker;
+[DialogOption] text=Let's discuss other Classes.;
+newLineOfOptions=true;
+nodeToConnectTo=town_trainer_class1;
+
+
+[DialogNode] ID=mask_berserker;
+portraitIcon=portrait_sivle;
+portraitIconFrames=71;
+portraitIconFrames=70;
+portraitIconFrames=71;
+dialogFX=tallExplode_rand;
+dialogFX=;
+dialogFX=tallExplode_rand;
+statements=<speed=0.3>ALRIGHT!! LET'S DO IT!!!;
+statements=<speed=0.3>Keh... hm.<speed=1> Still not quite feeling it... <p=3>oh well.;
+statements=<speed=0.6>I'LL TRAIN SOME BERSERKERS ANYWAY!!;
+specialEffect=subtract30gp;
+specialEffect=tUnlockFX;
+specialEffect=modNodeIDGlobalVar_1;
+nextNodeID=;
+
+----
+
+[DialogNode] ID=town_trainer_class_sage1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=2;
+portraitIconFrames=4;
+portraitIconFrames=54;
+statements=As I've always said, the ideal strategy in combat is to not die.;
+statements=Dying is just really a pain. It puts a huge cramp on the whole combat thing, honestly.;
+statements=So, that's why we should work on training Sages! They're all about making their friends not die. And that's pretty much the best way to be, right?<p=13> Usually, anyway.;
+animations=;
+[DialogOption] text=Unlock Sage ($30);
+formulaReq=m:money - 29;
+nodeToConnectTo=mask_sage;
+[DialogOption] text=Let's discuss other Classes.;
+newLineOfOptions=true;
+nodeToConnectTo=town_trainer_class1;
+
+[DialogNode] ID=mask_sage;
+portraitIcon=portrait_sivle;
+portraitIconFrames=1;
+portraitIconFrames=54;
+statements=Great! I always knew you were a good strategist.;
+statements=Go make some of your soldiers Sages, and watch how much more not dying happens!;
+specialEffect=subtract30gp;
+specialEffect=tUnlockFX;
+specialEffect=modNodeIDGlobalVar_1;
+nextNodeID=;
+
+
+[DialogNode] ID=town_trainer_class_sorcerer1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=60;
+portraitIconFrames=60;
+portraitIconFrames=61;
+portraitIconFrames=64;
+portraitIconFrames=62;
+portraitIconFrames=63;
+dialogFX=;
+dialogFX=;
+dialogFX=tallExplode_rand;
+dialogFX=iceShards_rot;
+dialogFX=horizSpark_many_smallArea;
+dialogFX=;
+statements=I may not look like it, but I know a magic trick or two.;
+statements=Magic tricks like:;
+statements=<speed=0.2>INFERNO;
+statements=<speed=0.2>BLIZZARD;
+statements=<speed=0.3>SHOCK... laser...<speed=0.2> things...;
+statements=And all that other Sorcerer stuff. I could teach 'em for $30.;
+[DialogOption] text=Unlock Sorcerer ($30);
+formulaReq=m:money - 29;
+nodeToConnectTo=mask_sorcerer;
+[DialogOption] text=Let's discuss other Classes.;
+newLineOfOptions=true;
+nodeToConnectTo=town_trainer_class1;
+
+[DialogNode] ID=mask_sorcerer;
+portraitIcon=portrait_sivle;
+portraitIconFrames=61;
+portraitIconFrames=62;
+dialogFX=horizSpark_many;
+dialogFX=;
+statements=SHOCK BOLTS!;
+statements=That's what it was! Now I remember.;
+specialEffect=subtract30gp;
+specialEffect=tUnlockFX;
+specialEffect=modNodeIDGlobalVar_1;
+nextNodeID=;
+
+
+--------------------
+
+[DialogNode] ID=town_trainer0;
+portraitIcon=portrait_sivle;
+portraitIconFrames=0;
+portraitIconFrames=2;
+portraitIconFrames=1;
+portraitIconFrames=31;
+portraitIconFrames=35;
+portraitIconFrames=36;
+statements=Hey, you're that Captain or whatever, right?<p=3> Good to meet ya!;
+statements=I've already met your soldiers.<p=2> Gotta say, Lorim made the right call!<p=1> You guys are going to need me.;
+statements=If you want to implement new training programs or get new Classes, just come to me.<p=2> It'll take some extra funding, but I'll get it done no problem.;
+statements=Oh, and, if you find any masks during your expedition...<p=2> just bring those straight here!;
+statements=I love masks.<p=5> Could you tell?<p=2> Haha!;
+statements=They're inspiring to me.<p=2> Maybe I could come up with new Classes just for you, if you find some...!;
+
+specialEffect=incDefaultNode;
+nextNodeID=;
+
+
+[DialogNode] ID=town_trainer_info1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=0;
+animations=;
+statements=Whatcha got on your mind?;
+[DialogOption] text=Classes;
+nodeToConnectTo=town_trainer_info_class1;
+[DialogOption] text=Unlocking classes;
+newLineOfOptions=true;
+nodeToConnectTo=town_trainer_info_unlock1;
+[DialogOption] text=Stats;
+newLineOfOptions=true;
+nodeToConnectTo=town_trainer_info_stats1;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=town_trainer_info_class1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=5;
+portraitIconFrames=1;
+portraitIconFrames=0;
+portraitIconFrames=8;
+animations=;
+statements=Classes are the central ingredient to making a good soldier!;
+statements=You can equip a primary class and a secondary class.<p=2> When you equip a class, you can use that class' <color=Gold>Abilities<color=White>.;
+statements=Your primary class also grants you bonus stats while equipped.<p=2> For example, Warriors hit harder, and Rogues move farther.;
+statements=Remember - you only gain <color=Gold>XP<color=White> in your primary class!;
+nextNodeID=town_trainer_info1;
+
+
+[DialogNode] ID=town_trainer_info_unlock1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=0;
+portraitIconFrames=5;
+portraitIconFrames=1;
+portraitIconFrames=2;
+portraitIconFrames=0;
+animations=;
+statements=There are three ways to unlock classes.;
+statements=First,<p=1> you can pay me!<p=2> I can unlock classes for every recruit indefinitely, just a bit of money required!;
+statements=Second,<p=1> you can bring me a nice shiny mask.<p=1> I find them inspiring!<p=3> This also unlocks the class for every recruit indefinitely.;
+statements=Lastly,<p=1> if you get a particular recruit to meet the <color=Gold>XP requirements<color=White>, then only that recruit can use the class.<p=2> It's hard, but do-able.;
+statements=You can view <color=Gold>XP requirements<color=White> by hovering your mouse over <iconBig=classIcon_unknown> icons in the class window.;
+nextNodeID=town_trainer_info1;
+
+[DialogNode] ID=town_trainer_info_stats1;
+portraitIcon=portrait_sivle;
+portraitIconFrames=6;
+portraitIconFrames=2;
+portraitIconFrames=4;
+animations=;
+statements=Stats, huh?<p=2> Pretty confusing, aren't they?;
+statements=You can <color=Gold>hover over<color=White> a stat's icon with your mouse to see more info about it.;
+statements=I'm too lazy to tell you about each one, so go do that!;
+nextNodeID=town_trainer_info1;
+

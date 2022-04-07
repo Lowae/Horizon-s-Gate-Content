@@ -1,0 +1,1762 @@
+
+[ItemType]  name=Column;
+ID=column; sprite=576;  itemCategory=natural;
+journalID=journal_column;
+weight=300;
+special=huge; special=inheritTerrainPalettes; special=cannotBePickedUp;
+	blockLoS=false; blockLoE=true; blockWalking=true; blockJumping=false;
+pR=zoneDirt;
+[ItemReaction] 
+ID=column; element=heavySmash; element=explode; element=burrow; newID=debris; fx=dust_dirtDark;
+[JournalEntry]
+ID=journal_column;
+category=item; halfPage=true;
+title=Column;
+text=<itemBig=column><title=Column><brAdj=>Whether it is a natural formation or was once part of a structure you can't be sure. If it obstructs your path, bash it with a hammer!;
+[ItemType]  name=Stalagmite;
+ID=stalag; sprite=577;  itemCategory=natural;
+journalID=journal_stalag;
+weight=300;
+special=huge; special=inheritTerrainPalettes; special=cannotBePickedUp;
+	blockLoS=false; blockLoE=true; blockWalking=true; blockJumping=false;
+pR=zoneDirt;
+[ItemReaction] 
+ID=stalag; element=heavySmash; element=explode; element=burrow; newID=debris; fx=dust_dirtDark;
+
+
+[ItemType]  name=Stalagmites; 
+itemCategory=natural;
+ID=stalags; sprite=578; 
+journalID=journal_stalag;
+weight=300;
+special=huge; special=inheritTerrainPalettes; special=cannotBePickedUp;
+	blockLoS=false; blockLoE=true; blockWalking=true; blockJumping=false;
+pR=zoneDirt;
+[ItemReaction] 
+ID=stalags; element=smash; element=explode; element=burrow; newID=debris; fx=dust_dirtDark;
+[JournalEntry]
+ID=journal_stalag;
+category=item; halfPage=true;
+title=Stalagmite;
+text=<itemBig=stalags><title=Stalagmite><brAdj=>Natural rock formations caused by erosion. Not to be confused with stalacTites, which form at the Top of a cave.;
+
+[ItemType]  name=Debris;
+ID=debris; sprite=579; itemCategory=natural; 
+special=inheritTerrainPalettes; special=cannotBePickedUp; special=alwaysBelowOtherItems;
+pR=zoneDirt;
+[ItemReaction] 
+ID=debris; element=dig; newID=X;
+
+[ItemType]  name=Debris;
+ID=debris_secret; sprite=579; itemCategory=natural; 
+special=inheritTerrainPalettes; special=cannotBePickedUp; 
+special=alwaysBelowOtherItems;
+special=preventTileReactions;
+[ItemReaction] 
+ID=debris_secret; element=dig; newID=staircase_hole; fx=sfx_secretFound;
+
+[ItemType]  name=Staircase;
+ID=staircase_hole; sprite=611; itemCategory=natural; 
+journalID=item_staircase;
+special=inheritTerrainPalettes; special=cannotBePickedUp; 
+special=alwaysBelowOtherItems; special=preventTileReactions;
+pR=zoneDirt;
+
+
+[ItemType]  name=Rubble;
+ID=rubble; sprite=581;  itemCategory=natural;
+journalID=journal_rubble;
+special=inheritTerrainPalettes; special=cannotBePickedUp; 
+special=moveCostOverride_2; special=alwaysBelowOtherItems; 
+special=preventTileReactions;
+pR=zoneDirt;
+
+[ItemType]  name=Rubble;
+ID=rubble_water; sprite=613;  itemCategory=natural;
+journalID=journal_rubble;
+special=cannotBePickedUp; special=alwaysBelowOtherItems;
+special=preventTileReactions; 
+special=canFloatOnWater; special=canHangOnWalls;
+blockWalking=true;
+pR=zoneDirt; pB=zoneWater; 
+[ItemType]  name=Rubble;
+ID=rubble_stone; sprite=613;  itemCategory=natural;
+journalID=journal_rubble;
+special=cannotBePickedUp; 
+special=moveCostOverride_2; special=alwaysBelowOtherItems; 
+special=preventTileReactions;
+pR=zoneStone; pB=zoneStone; 
+[JournalEntry]
+ID=journal_rubble;
+category=item; halfPage=true;
+title=Rubble;
+text=<itemBig=rubble><title=Rubble><brAdj=>Rocky rubble. It's not a big deal, but it does slow you down in combat, and you can't push objects across it.;
+[ItemType]  name=Rubble;
+ID=rubble_coral; sprite=1975;  itemCategory=natural;
+special=cannotBePickedUp; 
+special=moveCostOverride_2; special=alwaysBelowOtherItems; 
+special=preventTileReactions; special=randomFlipWhenPlaced;
+pR=zoneDirtDark; pB=zoneDirt;
+
+
+[ItemType]  name=Coral;
+ID=reef_coral1; sprite=1977;  itemCategory=natural;
+journalID=journal_corals;
+special=cannotBePickedUp; 
+special=moveCostOverride_2;
+special=preventTileReactions; special=randomFlipWhenPlaced;
+special=canFloatOnWater;
+pR=pYellow; pB=zoneDirt;
+[ItemType]  name=Coral;
+ID=reef_coral2; sprite=1978;  
+cloneFrom=reef_coral1;
+pR=pMagenta;
+[ItemType]  name=Coral;
+ID=reef_coral3; sprite=1979;  
+cloneFrom=reef_coral1;
+pR=pRed;
+[ItemType]  name=Coral;
+ID=reef_coral4; sprite=1980;  
+cloneFrom=reef_coral1;
+pR=pPink;
+[ItemType]  name=Coral;
+ID=reef_coral5; sprite=1981;  
+cloneFrom=reef_coral1;
+pR=pGreen;
+[ItemType]  name=Coral;
+ID=reef_coral6; sprite=1982;  
+cloneFrom=reef_coral1;
+pR=pOrange;
+[ItemType]  name=Coral;
+ID=reef_coral7; sprite=1983;  
+cloneFrom=reef_coral1;
+pR=pOrange;
+[JournalEntry]
+ID=journal_corals;
+category=item; halfPage=true; rarity=1;
+title=Corals;
+text=<itemBig=reef_coral1><itemBig=reef_coral4><title=Corals><brAdj=>Corals are living invertebrates, many of which require light to grow. As such, coral flourishes in shallow, clear waters. Most are neither harmful nor useful, but there are always exceptions.;
+
+
+[ItemType]  name=Goldcoral;
+ID=coral_gold; sprite=2008; itemCategory=natural;
+stackable=true;
+weight=0; volume=0; value=150;
+special=convertIntoCashAtEnd; special=sellForFullValue;
+pR=pGold;
+description=Valuable coral often used in jewelry.;
+[JournalEntry]
+ID=item_coral_gold;
+category=item; halfPage=true; rarity=2;
+title=Goldcoral;
+text=<itemBig=coral_gold><title=Goldcoral><brAdj=>Precious coral that is even more valuable than its namesake. It serves no particular use, but its durability and color make it an attractive option for jewelry.;
+
+[ItemType]  name=Sea Plant;
+ID=reef_plant1; sprite=2000;  
+itemCategory=natural;
+special=cannotBePickedUp; special=noTooltips; special=randomFlipWhenPlaced;
+pR=pMagenta;
+pB=pOrange;
+[ItemType]  name=Sea Plant;
+ID=reef_plant2; sprite=2001;  
+cloneFrom=reef_plant1;
+[ItemType]  name=Sea Plant;
+ID=reef_plant3; sprite=2002;  
+cloneFrom=reef_plant1;
+
+[ItemType]  name=Sinkhole;
+ID=sinkhole; sprite=609;  itemCategory=natural;
+weight=300;
+journalID=journal_sinkhole;
+special=huge; special=inheritTerrainPalettes; special=cannotBePickedUp;
+	 special=moveCostOverride_2; special=alwaysBelowOtherItems;
+pR=zoneDirt;
+[ItemType]  name=Sinkhole;
+ID=sinkhole_large; sprite=610;  itemCategory=natural;
+weight=300;
+journalID=journal_sinkhole;
+special=huge; special=inheritTerrainPalettes; special=cannotBePickedUp;
+special=alwaysBelowOtherItems;
+blockWalking=true;
+pR=zoneDirt;
+[JournalEntry]
+ID=journal_sinkhole;
+category=item; halfPage=true; rarity=1;
+title=Sinkhole;
+text=<itemBig=sinkhole_large><title=Sinkhole><brAdj=>A deep, round pit that is too small for you. These are usually created by burrowing creatures, so don't put your face too close!;
+
+[ItemType]  name=Sinkhole;
+ID=sinkhole_below; sprite=609;  itemCategory=natural;
+weight=300;
+journalID=journal_sinkhole;
+special=big; special=cannotBePickedUp;
+special=alwaysBelowOtherItems; special=moveCostOverride_2;
+depthMod=-2000;
+pR=zoneWater;
+[ItemType]  name=Sinkhole;
+ID=sinkhole_large_below; sprite=610;
+cloneFrom=sinkhole_below;
+
+[ItemType]  name=Pushable Boulder;
+ID=boulder; sprite=56; 
+journalID=journal_pushable_boulder;
+special=pushable; special=big;
+special=removeWhenAtZoneEdge;
+weight=200; itemCategory=natural;
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=true;
+pR=zoneDirt;
+[JournalEntry]
+ID=journal_pushable_boulder;
+category=item; halfPage=true;
+title=Pushable Boulder;
+text=<itemBig=boulder><title=Pushable Boulder><brAdj=>This large rock slides around when you push into it. It can't go past rubble, though.;
+
+[ItemType]  name=Boulder;
+ID=boulder2; sprite=55; 
+journalID=journal_boulder;
+special=big;
+weight=200; itemCategory=natural;
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=true;
+pR=zoneDirt;
+[ItemReaction] 
+ID=boulder2; element=explode; newID=rubble; fx=dust_dirtDark;
+
+[ItemType]  name=Boulder;
+ID=boulder3; sprite=87; 
+journalID=journal_boulder;
+special=big;
+weight=200; itemCategory=natural;
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=true;
+pR=zoneDirt;
+[ItemReaction] 
+ID=boulder3; element=explode; newID=X; fx=dust_dirtDark;
+[JournalEntry]
+ID=journal_boulder;
+category=item; halfPage=true;
+title=Boulder;
+text=<itemBig=boulder3><title=Boulder><brAdj=>Hefty hunk of rock that can't be moved by any method. The only way to get past is with high explosives - nothing less will do.;
+
+
+[ItemType]  name=Cliff Rock;
+ID=cliff_rock; sprite=1187; 
+special=noTooltip;
+weight=2000; itemCategory=natural; special=cannotBePickedUp;
+special=inheritTerrainPalettes; special=canHangOnWalls; special=alwaysBelowOtherItems;
+blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=false;
+pR=zoneDirtDark;
+[ItemReaction] 
+ID=cliff_rock; element=tileReacted; newID=X;
+
+[ItemType]  name=Cliff Rock;
+ID=cliff_rock2; sprite=1186; 
+cloneFrom=cliff_rock;
+[ItemType]  name=Cliff Rock;
+ID=cliff_rock3; sprite=1185; 
+cloneFrom=cliff_rock;
+
+[ItemType]  name=Iron Ore;
+ID=ore_iron; sprite=27; 
+special=huge; special=canHangOnWalls; special=cannotEverBePushed;
+weight=200; itemCategory=natural;
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=true;
+pR=pIron;
+[ItemReaction] 
+ID=ore_iron; element=use; element=explode; element=pickaxe; element=melee;
+ newID=iron_chunk; fx=dust_stone;
+[JournalEntry]
+ID=item_ore_iron;
+category=item; halfPage=true; rarity=1;
+title=Iron Ore;
+text=<itemBig=ore_iron><title=Iron Ore><brAdj=>Naturally occurring formation of iron ore. You could easily free some valuable iron from these minerals.;
+
+[ItemType]  name=Mythril Ore;
+ID=ore_mythril; sprite=27; 
+special=huge; special=canHangOnWalls;  special=cannotEverBePushed;
+weight=200; itemCategory=natural;
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=true;
+pR=pMythril;
+[ItemReaction] 
+ID=ore_mythril; element=use; element=explode; element=pickaxe; element=melee; newID=mythril_chunk; fx=dust_stone;
+[JournalEntry]
+ID=item_ore_mythril;
+category=item; halfPage=true; rarity=1;
+title=Mythril Ore;
+text=<itemBig=ore_mythril><title=Mythril Ore><brAdj=>A rare sight -- ore of mythril, the finest known metal. This is what every prospector wishes to see.;
+
+[ItemType]  name=Volskarn;
+ID=ore_volskarn; sprite=851; 
+special=huge; special=canHangOnWalls;  special=cannotEverBePushed;
+weight=200; itemCategory=natural;
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=true;
+pR=zoneDirtDark;
+pB=pVolskarn;
+[ItemReaction] 
+ID=ore_volskarn; element=use; element=explode; element=pickaxe; element=melee; newID=volskarn_chunk; fx=dust_stone;
+
+[JournalEntry]
+ID=item_ore_volskarn;
+category=item; halfPage=true; rarity=1;
+title=Volskarn;
+text=<itemBig=ore_volskarn><title=Volskarn><brAdj=>A modest amount of Volskarn pokes out from these rocks. Harvesting it is simple, and highly recommended.;
+
+[ItemType]  name=Corpryst;
+ID=crystals1; sprite=846; 
+journalID=item_corpryst;
+special=huge; special=canHangOnWalls; special=sprite2xWidth; special=sprite2xHeight;
+weight=900; itemCategory=natural; depthMod=1050;
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=true;
+pR=pCorpryst;
+[ItemReaction] 
+ID=crystals1; element=explode; element=pickaxe; newID=corpryst; fx=sfx_breakRock;
+
+[ItemType]  name=Corpryst;
+ID=crystals2; sprite=848; 
+journalID=item_corpryst;
+special=huge; special=canHangOnWalls; special=sprite2xWidth; special=sprite2xHeight;
+weight=900; itemCategory=natural; depthMod=1050;
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=true;
+pR=pCorpryst;
+[ItemReaction] 
+ID=crystals2; element=explode; element=pickaxe; newID=corpryst;
+
+[ItemType]  name=Rock;
+ID=rock; sprite=54; 
+weight=1; volume=200; itemCategory=natural;
+pR=pDirt;
+blockWalking=true;
+blockJumping=true;
+
+[ItemType]  name=Rocks;
+ID=pebbles1; sprite=582;  itemCategory=natural;
+special=cannotBePickedUp; special=inheritTerrainPalettes; special=noTooltip;
+pR=zoneStoneLight;
+[ItemReaction] 
+ID=pebbles1; element=tileReacted; newID=X;
+[ItemType]  name=Rocks;
+ID=pebbles2; sprite=583;  itemCategory=natural;
+special=cannotBePickedUp; special=inheritTerrainPalettes; special=noTooltip;
+pR=zoneStoneLight;
+[ItemReaction] 
+ID=pebbles2; element=tileReacted; newID=X;
+
+[ItemType]  name=Rocks;
+ID=rocks1; sprite=384;  itemCategory=natural; stackable=true;
+special=cannotBePickedUp; special=inheritTerrainPalettes; special=noTooltip;
+special=quantityChangesSprite;
+pR=zDirt;
+[ItemReaction] 
+ID=rocks1; element=tileReacted; newID=X;
+
+[ItemType]  name=Rocks;
+ID=rocks2; sprite=384;  itemCategory=natural; stackable=true;
+special=cannotBePickedUp; special=noTooltip; special=quantityChangesSprite;
+pR=zoneStone;
+[ItemReaction] 
+ID=rocks2; element=tileReacted; newID=X;
+
+[ItemType]  name=Debris;
+ID=debris_small1; sprite=584;  itemCategory=natural;
+special=cannotBePickedUp; special=inheritTerrainPalettes; special=noTooltip;
+pR=zoneStone;
+[ItemReaction] 
+ID=debris_small1; element=tileReacted; newID=X;
+[ItemType]  name=Debris;
+ID=debris_small2; sprite=585;  itemCategory=natural;
+special=cannotBePickedUp; special=inheritTerrainPalettes; special=noTooltip;
+pR=zoneStone;
+[ItemReaction] 
+ID=debris_small2; element=tileReacted; newID=X;
+[ItemType]  name=Debris;
+ID=debris_small3; sprite=586;  itemCategory=natural;
+special=cannotBePickedUp; special=inheritTerrainPalettes; special=noTooltip;
+pR=zoneStone;
+[ItemReaction] 
+ID=debris_small3; element=tileReacted; newID=X;
+
+[ItemType]  name=Ice;
+ID=ice_rocks; sprite=416;  itemCategory=natural;
+special=cannotBePickedUp; special=canHangOnWalls; 
+blockWalking=true; 
+pR=pIce;
+[ItemReaction] 
+ID=ice_rocks; element=fire; element=heat; newID=puddle; fx=vaporCloud; spawnItem=puddle;
+
+[ItemType]  name=Ice;
+ID=ice_rocks_wallbase; 
+cloneFrom=ice_rocks;
+special=canHangOnWalls; special=adjustSpriteYUp16; 
+blockWalking=false; special=dontCloneReactions;
+[ItemReaction] 
+ID=ice_rocks_wallbase; element=fire; element=heat; newID=X; fx=vaporCloud;
+
+[ItemType]  name=Ironice;
+ID=ironice_rocks; sprite=416;  itemCategory=natural;
+special=cannotBePickedUp; special=canHangOnWalls; 
+blockWalking=true; 
+pR=pIronice;
+
+[ItemType]  name=Ironice;
+ID=ironice_rocks_wallbase; 
+cloneFrom=ironice_rocks;
+special=canHangOnWalls; special=adjustSpriteYUp16; 
+blockWalking=false; 
+
+[ItemType]  name=Blisters;
+ID=blisters1; sprite=1840;  itemCategory=natural;
+special=cannotBePickedUp; 
+special=noTooltip;
+special=alwaysBelowOtherItems;
+pG=pOrange_light;
+[ItemReaction] 
+ID=blisters1; element=tileReacted; newID=X;
+[ItemType]  name=Blisters;
+ID=blisters2; sprite=1841;
+cloneFrom=blisters1;
+[ItemType]  name=Blisters;
+ID=blisters3; sprite=2126;
+pR=zoneDirt;
+cloneFrom=blisters1;
+[ItemType]  name=Blisters;
+ID=blisters4; sprite=2127;
+pR=zoneDirt;
+cloneFrom=blisters1;
+[ItemType]  name=Blisters;
+ID=blisters5; sprite=2128;
+pR=zoneDirt;
+cloneFrom=blisters1;
+[ItemType]  name=Blisters;
+ID=blisters6; sprite=2129;
+pR=zoneDirt;
+cloneFrom=blisters1;
+
+[ItemType]  name=Wall Bubble;
+ID=wallBubble1; sprite=2120;
+special=animatedSlow;
+special=canHangOnWalls;
+blockWalking=true;
+blockJumping=true;
+pR=zoneDirtDark;
+cloneFrom=blisters1;
+[ItemType]  name=Wall Bubble;
+ID=wallBubble2; sprite=2124;
+special=canHangOnWalls;
+blockWalking=true;
+blockJumping=true;
+pR=zoneDirtDark;
+cloneFrom=blisters1;
+[ItemType]  name=Wall Bubble;
+ID=wallBubble3; sprite=2125;
+special=canHangOnWalls;
+blockWalking=true;
+blockJumping=true;
+pR=zoneDirtDark;
+cloneFrom=blisters1;
+
+[ItemType]  name=Footholds;
+ID=footholds; sprite=545;  itemCategory=natural;
+special=canHangOnWalls; special=huge; special=overrideTerrainCollisions; special=inheritTerrainPalettes; special=cannotBePickedUp;
+special=moveCostOverride_2;
+pR=zoneDirt;
+[ItemReaction] 
+ID=footholds; element=tileReacted; newID=X;
+
+[ItemType]  name=Foothold;
+ID=footholdsSmall; sprite=515;  itemCategory=natural;
+special=canHangOnWalls; special=huge; special=overrideTerrainCollisions; special=inheritTerrainPalettes; special=cannotBePickedUp;
+special=moveCostOverride_2;
+pR=zoneDirt;
+[ItemReaction] 
+ID=footholdsSmall; element=tileReacted; newID=X;
+[ItemReaction] 
+ID=footholdsSmall; element=destroy; newID=X; fx=fall_foothold;
+
+[ItemType]  name=Item Stash (Med);
+ID=stash_dirt_loot2; sprite=558; itemCategory=natural;
+journalID=journal_stash_dirt_loot;
+pR=zoneDirt; pB=zoneGrass; pG=zoneGrass;
+special=cannotBePickedUp; special=noTooltip;
+spawnFX=lootRemaining;
+[ItemReaction] 
+ID=stash_dirt_loot2; element=dig; element=use; element=melee; newID=stash_dug; spawnItem=loot2; fx=dust_dirt;
+[ItemType]  name=Item Stash (Nice);
+ID=stash_dirt_loot3;
+cloneFrom=stash_dirt_loot2; special=dontCloneReactions;
+[ItemReaction] 
+ID=stash_dirt_loot3; element=dig; element=use; element=melee; newID=stash_dug; spawnItem=loot3; fx=dust_dirt;
+[ItemType]  name=Item Stash (Good);
+ID=stash_dirt_loot4;
+cloneFrom=stash_dirt_loot2; special=dontCloneReactions;
+[ItemReaction] 
+ID=stash_dirt_loot4; element=dig; element=use; element=melee; newID=stash_dug; spawnItem=loot4; fx=dust_dirt;
+[ItemType]  name=Item Stash (Great);
+ID=stash_dirt_loot5;
+cloneFrom=stash_dirt_loot2; special=dontCloneReactions;
+[ItemReaction] 
+ID=stash_dirt_loot5; element=dig; element=use; element=melee; newID=stash_dug; spawnItem=loot5; fx=dust_dirt;
+
+[JournalEntry]
+ID=journal_stash_dirt_loot;
+category=item; halfPage=true;
+title=Item Stash;
+text=<itemBig=stash_dirt_loot2><title=Item Stash><brAdj=>This patch of dirt protrudes suspiciously. Looks like something interesting might be buried shallow enough that you can get at it with just your hands... 'Use' it to find out!;
+
+[ItemType]  name=Item Stash ($);
+ID=stash_dirt_loot_gp;
+cloneFrom=stash_dirt_loot2; special=dontCloneReactions;
+[ItemReaction] 
+ID=stash_dirt_loot_gp; element=dig; element=use; element=melee; newID=stash_dug; spawnItem=loot_gp_much; fx=dust_dirt;
+
+[ItemType]  name=Hidden Item Stash (Nice);
+ID=stash_dirt_loot3_h;
+spawnFX=;
+cloneFrom=stash_dirt_loot3;
+[ItemReaction] 
+ID=stash_dirt_loot3_h; element=dig; element=use; element=melee; newID=stash_dug; spawnItem=loot3; fx=dust_dirt;
+[ItemType]  name=Hidden Item Stash (Good);
+ID=stash_dirt_loot4_h;
+spawnFX=;
+cloneFrom=stash_dirt_loot4; 
+[ItemReaction] 
+ID=stash_dirt_loot4_h; element=dig; element=use; element=melee; newID=stash_dug; spawnItem=loot4; fx=dust_dirt;
+[ItemType]  name=Hidden Item Stash (Great);
+ID=stash_dirt_loot5_h;
+spawnFX=;
+cloneFrom=stash_dirt_loot5;
+[ItemReaction] 
+ID=stash_dirt_loot5_h; element=dig; element=use; element=melee; newID=stash_dug; spawnItem=loot5; fx=dust_dirt;
+
+[ItemType]  name=Hidden Item Stash ($);
+ID=stash_dirt_loot_gp_h;
+spawnFX=;
+cloneFrom=stash_dirt_loot_gp;
+[ItemReaction] 
+ID=stash_dirt_loot_gp_h; element=dig; element=use; element=melee; newID=stash_dug; spawnItem=loot_gp_much; fx=dust_dirt;
+
+[ItemType]  name=Empty Stash;
+ID=stash_dug; sprite=559; 
+weight=500; itemCategory=natural;
+pR=zoneDirt; pB=zoneGrass; pG=zoneGrass;
+special=cannotBePickedUp; special=noTooltip;
+
+[ItemType]  name=Anemone;
+ID=plant_anemone_med; sprite=1968; 
+pR=pPink; pG=pBlueD; pB=pRed;
+journalID=journal_plant_anemone;
+weight=0; itemCategory=natural;
+  element=life;
+special=animateEvery100Frames; special=cannotBePickedUp; special=randomFlipWhenPlaced; special=wiggleWhenMoved;
+special=reactionsDontPreventMoveUndo;
+[ItemReaction] 
+ID=plant_anemone_med; element=smash; element=heavySmash;
+element=water; element=ice;
+element=pressureMoveAcross; action=moveSelf; fx=TinyStep;
+[ItemReaction] 
+ID=plant_anemone_med; element=slash; element=heavySmash;
+element=fire; element=explode; element=ruin; newID=X; fx=WetSquish;
+
+[ItemType]  name=Anemone;
+ID=plant_anemone_small1; sprite=1972; 
+pR=pPink; pG=pBlueD; pB=pRed;
+  element=life;
+journalID=journal_plant_anemone;
+weight=0; itemCategory=natural;
+special=cannotBePickedUp; special=randomFlipWhenPlaced; special=wiggleWhenMoved;
+special=reactionsDontPreventMoveUndo;
+[ItemReaction] 
+ID=plant_anemone_small1; element=smash;
+element=water; element=ice;
+element=pressureMoveAcross; action=moveSelf; fx=TinyStep;
+[ItemReaction] 
+ID=plant_anemone_small1; element=slash; element=heavySmash;
+element=fire; element=explode; element=ruin; newID=X; fx=WetSquish;
+
+[ItemType]  name=Anemone;
+ID=plant_anemone_small2; sprite=1973; 
+cloneFrom=plant_anemone_small1;
+
+[ItemType]  name=Anemone;
+ID=plant_anemone_small3; sprite=1974; 
+cloneFrom=plant_anemone_small1;
+[JournalEntry]
+ID=journal_plant_anemone;
+category=item; halfPage=true; rarity=1;
+title=Sea Anemone;
+text=<itemBig=plant_anemone_med><title=Sea Anemone><brAdj=>Strange polyps that root themselves to the rocky ground. They live long, grow slowly, and just generally don't do a whole lot.;
+
+[ItemType]  name=?;
+ID=fish_spot1; sprite=2032; 
+pB=pFade;
+weight=0; itemCategory=natural;
+special=animated; special=cannotBePickedUp;
+special=randomFlipWhenPlaced; special=transparent;
+special=noTooltip; special=canHangOnWalls;
+special=canFloatOnWater; special=canOnlyBeOnWater;
+[ItemReaction] 
+ID=fish_spot1; element=catchFish; newID=X; action=spawn_fish_flop; fx=fishSplash;
+[ItemReaction] 
+ID=fish_spot1; element=physical; element=magic;  newID=X;
+
+[ItemType]  name=?;
+ID=fish_spot2; sprite=2032; 
+pB=pFade;
+weight=0; itemCategory=natural;
+special=animateEvery100Frames; special=cannotBePickedUp;
+special=randomFlipWhenPlaced; special=transparent;
+special=noTooltip; special=canHangOnWalls;
+special=canFloatOnWater; special=canOnlyBeOnWater;
+
+[ItemReaction] 
+ID=fish_spot2; element=catchFish; newID=X; action=spawn_fish_mag; fx=fishSplash;
+[ItemReaction] 
+ID=fish_spot2; element=physical; element=magic;  newID=X;
+
+[ItemType]  name=Submerged Object;
+ID=thing_submerged1; sprite=2004; 
+weight=0; itemCategory=natural;
+special=cannotBePickedUp;
+special=randomFlipWhenPlaced;
+special=randomRotateWhenPlaced;
+special=noTooltip; special=canHangOnWalls;
+special=canFloatOnWater; special=canOnlyBeOnWater;
+pR=pFadeDarker;
+[ItemReaction] 
+ID=thing_submerged1; element=tileReacted; newID=X;
+
+[ItemType]  name=Submerged Object;
+ID=thing_submerged2; sprite=2005; 
+cloneFrom=thing_submerged1;
+[ItemType]  name=Submerged Object;
+ID=thing_submerged3; sprite=2006; 
+cloneFrom=thing_submerged1;
+
+[ItemType]  name=Oddule Corpse;
+ID=body_oddule; sprite=1825; 
+journalID=journal_oddule;
+weight=1; itemCategory=natural;
+pR=pYellow;
+  element=ruin;
+blockWalking=true; blockJumping=true;
+special=cannotBePickedUp; special=randomFlipWhenPlaced;
+depthMod=10;
+
+[ItemType]  name=Oddule Corpse;
+ID=body_oddule_water; sprite=1826; 
+journalID=journal_oddule;
+weight=1000; itemCategory=natural;
+  element=ruin;
+pR=pYellow; pB=pFadeDark;
+special=overrideTerrainCollisions;
+special=cannotBePickedUp; special=randomFlipWhenPlaced;
+special=canFloatOnWater; special=canHangOnWalls;
+special=big; special=anim_bobUpAndDown_slow;
+special=itemsOnSameTileAreRaised;
+special=actorsOnSameTileAreRaised;
+
+
+[ItemType]  name=Tooth?;
+  ID=tooth_big1; sprite=1899; weight=500; 
+  itemCategory=natural;
+  journalID=journal_tooth;
+	pG=zoneGrass;
+	special=cannotBePickedUp; special=randomFlipWhenPlaced;
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=true;
+	pR=pGrey2;
+  element=life;
+[ItemReaction] 
+ID=tooth_big1; element=explode; element=heavySmash; newID=tooth_small1;
+
+[ItemType]  name=Tooth?;
+  ID=tooth_big2; sprite=1900; weight=500; 
+  itemCategory=natural;
+  journalID=journal_tooth;
+	pG=zoneGrass;
+	special=cannotBePickedUp; special=randomFlipWhenPlaced;
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=true;
+	pR=pGrey2;
+  element=life;
+[ItemReaction] 
+ID=tooth_big2; element=explode; element=heavySmash; newID=tooth_small1;
+
+[ItemType]  name=Tooth?;
+  ID=tooth_small1; sprite=1901; weight=500; 
+  itemCategory=natural;
+  journalID=journal_tooth;
+	pG=zoneGrass;
+	special=cannotBePickedUp; special=randomFlipWhenPlaced;
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=false;
+	pR=pGrey2;
+  element=life;
+  
+[ItemType]  name=Tooth?;
+  ID=tooth_small2; sprite=1902; weight=500; 
+  itemCategory=natural;
+  journalID=journal_tooth;
+	pG=zoneGrass;
+	special=cannotBePickedUp; special=randomFlipWhenPlaced;
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=false;
+	pR=pGrey2;
+  element=life;
+  
+[JournalEntry]
+ID=journal_tooth;
+category=item; halfPage=true; rarity=1;
+title=Tooth?;
+text=<itemBig=tooth_big1><title=Tooth?><brAdj=>A tough, toothy protrusion. This must belong to some very large beast. Not much you can do with it.;
+  
+
+
+
+
+[ItemType]  name=Cave;
+ID=caveDark; sprite=512;  itemCategory=natural;
+special=canHangOnWalls; special=big; special=cannotBePickedUp;
+special=overrideTerrainCollisions; special=inheritTerrainPalettes; special=preventTileReactions; special=noTooltips;
+blockJumping=true;
+
+[ItemType]  name=Bright Cave;
+ID=caveBright; sprite=513;  itemCategory=natural;
+special=canHangOnWalls; special=big; special=cannotBePickedUp; special=inheritTerrainPalettes; special=noTooltips;
+special=overrideTerrainCollisions; special=preventTileReactions;
+blockJumping=true;
+[ItemLight] 
+ID=caveBright; red=1; blue=0.8; green=1.0; alpha=1; size=0.7; flicker=0; texture=lightmaskCone;
+
+[ItemType]  name=Cave;
+ID=caveDark_wide; sprite=573;  itemCategory=natural;
+special=canHangOnWalls; special=big; special=cannotBePickedUp;
+special=overrideTerrainCollisions; special=inheritTerrainPalettes; special=preventTileReactions; special=noTooltips; special=sprite2xWidth;
+blockJumping=true;
+
+[ItemType]  name=Bright Cave;
+ID=caveBright_wide; sprite=605;  itemCategory=natural;
+special=canHangOnWalls; special=big; special=cannotBePickedUp; special=inheritTerrainPalettes; special=noTooltips; special=sprite2xWidth;
+special=overrideTerrainCollisions; special=preventTileReactions; 
+blockJumping=true;
+[ItemLight]
+ID=caveBright_wide; red=1; blue=0.8; green=1.0; alpha=1; size=1.2; flicker=0; texture=lightmaskCone; X=0; Y=0.2;
+
+[ItemType]  name=Bombable Cave;
+ID=bombableCave; sprite=734;  itemCategory=natural;
+pR=pB;
+special=canHangOnWalls; special=big; special=cannotBePickedUp;
+special=noTooltip; special=inheritTerrainPalettes; 
+special=preventTileReactions;
+[ItemReaction] 
+ID=bombableCave; element=explode; element=pickaxe; newID=caveDark; 
+fx=sfx_secretFound;
+
+
+
+
+
+
+[ItemType]  name=Vein;
+ID=vein1; sprite=1889; itemCategory=natural;
+pR=zoneDirt;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=noTooltips;
+[ItemType]  name=Vein;
+ID=vein2; sprite=1890; itemCategory=natural;
+pR=zoneDirt;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=noTooltips;
+
+
+[ItemType]  name=Thingy;
+ID=thingy_organic1; sprite=1844; itemCategory=natural;
+stackable=true;
+pR=zoneDirt; pG=pBluegreen;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=randomFlipWhenPlaced;
+special=noTooltips; special=quantityChangesSprite_upTo4;
+[ItemType]  name=Thingy;
+ID=thingy_organic2; cloneFrom=thingy_organic1;
+pG=pPink;
+[ItemType]  name=Thingy;
+ID=thingy_organic3; cloneFrom=thingy_organic1;
+pG=pPurple;
+[ItemType]  name=Thingy;
+ID=thingy_organic4; cloneFrom=thingy_organic1;
+pG=pGreen;
+
+[ItemType]  name=Web;
+ID=web1; sprite=1219; itemCategory=natural; 
+journalID=journal_web;
+special=cannotBePickedUp; special=canFloatOnWater;
+special=canBeInsideWalls; special=canHangOnWalls;
+special=randomRotateWhenPlaced;
+special=randomFlipWhenPlaced;
+ pR=pGhost;
+[ItemReaction] 
+ID=web1; element=fire; element=slash; element=explode; newID=X; fx=hitDustQuiet;
+[ItemType]  name=Web;
+ID=web2; sprite=1220; cloneFrom=web1;
+[ItemType]  name=Web;
+ID=web3; sprite=1218; cloneFrom=web1;
+
+[ItemType]  name=Web Sac;
+ID=web_sac1_med; sprite=1217; itemCategory=natural;
+journalID=journal_web_sac;
+pR=pGrey;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=randomFlipWhenPlaced;
+[ItemReaction] 
+ID=web_sac1_med; element=slash; element=smash; element=use; newID=web3; spawnItem=loot2; spawnItem=loot_bone_junk;
+fx=hitDust;
+
+[ItemType]  name=Web Sac;
+ID=web_sac1_good; sprite=1217; 
+cloneFrom=web_sac1_med;
+[ItemReaction] 
+ID=web_sac1_good; element=slash; element=smash; element=use; newID=web3; spawnItem=loot3; spawnItem=loot_bone_junk;
+fx=hitDust;
+
+[JournalEntry]
+ID=journal_web_sac;
+category=item; halfPage=true; rarity=1;
+title=Web Sac;
+text=<itemBig=web_sac1_med><title=Web Sac><brAdj=>Spiders wrap prey in webs to better feed on them. Spides, lacking intellect, also often wrap objects they don't understand in their web, out of curiosity and caution.;
+
+[JournalEntry]
+ID=journal_web;
+category=item; halfPage=true; rarity=1;
+title=Web;
+text=<itemBig=web1><itemBig=web2><title=Web><brAdj=>Spides and their ilk prefer actively hunting more than laying webs, but they are capable of both.;
+
+
+[ItemType]  name=Crack;
+ID=crack;  itemCategory=natural;
+sprite=726; stackable=true;
+ special=inheritTerrainPalettes; special=cannotBePickedUp;
+ special=canBeInsideWalls; special=noTooltip; special=quantityChangesSprite_upTo3;
+[ItemReaction] 
+ID=crack; element=tileReacted; newID=X;
+[ItemType]  name=Cracks;
+ID=cracks;  itemCategory=natural;
+sprite=730; stackable=true;
+ special=inheritTerrainPalettes; special=cannotBePickedUp;
+ special=canBeInsideWalls; special=noTooltip; special=quantityChangesSprite_upTo2;
+[ItemReaction] 
+ID=cracks; element=tileReacted; newID=X;
+
+[ItemType]  name=Water;
+ID=cliff_water;  itemCategory=natural;
+sprite=964;
+ pB=zoneWater; special=cannotBePickedUp; special=alwaysBelowOtherItems;
+ special=canHangOnWalls; special=noTooltip; special=animated;
+[ItemType]  name=Water;
+ID=cliff_water2;  itemCategory=natural;
+sprite=968; cloneFrom=cliff_water;
+[ItemType]  name=Water;
+ID=cliff_water3;  itemCategory=natural;
+sprite=972; cloneFrom=cliff_water;
+[ItemType]  name=Water;
+ID=cliff_water4;  itemCategory=natural;
+sprite=932; cloneFrom=cliff_water;
+[ItemType]  name=Water;
+ID=cliff_water5;  itemCategory=natural;
+sprite=936; cloneFrom=cliff_water; pR=zoneWater;
+
+[ItemType]  name=Dirt;
+ID=dirt_sandy1;  itemCategory=natural; 
+sprite=272; stackable=true;
+ special=cannotBePickedUp;
+special=ignoreBeingRaised;
+ special=canBeInsideWalls; special=noTooltip; special=quantityChangesSprite_upTo2;
+ pR=zoneDirt;
+[ItemReaction] 
+ID=dirt_sandy1; element=tileReacted; newID=X;
+[ItemType]  name=Dirt;
+ID=dirt_sandy2;  itemCategory=natural; 
+sprite=274; stackable=true;
+ special=cannotBePickedUp;
+special=ignoreBeingRaised;
+ special=canBeInsideWalls; special=noTooltip; special=quantityChangesSprite_upTo4;
+ pR=zoneDirt;
+[ItemReaction] 
+ID=dirt_sandy2; element=tileReacted; newID=X;
+
+[ItemType]  name=Solid Filth;
+ID=filth_solid;  itemCategory=natural; 
+sprite=753; stackable=true;
+special=cannotBePickedUp; special=canBeInsideWalls; special=noTooltip; special=canFloatOnWater;
+special=quantityChangesSprite_upTo5; pR=zoneDirt;
+[ItemReaction] 
+ID=filth_solid; element=tileReacted; element=water; newID=X;
+[ItemType]  name=Stain;
+ID=stain;  itemCategory=natural; 
+sprite=721; stackable=true;
+ special=transparent; special=cannotBePickedUp;
+ special=canBeInsideWalls; special=noTooltip; special=quantityChangesSprite_upTo5;
+[ItemReaction] 
+ID=stain; element=tileReacted; element=water; newID=X;
+[ItemType]  name=Filth;
+ID=filth;  sprite=753;
+cloneFrom=stain;
+
+
+[ItemType]  name=Stain;
+ID=stain_faint;  itemCategory=natural; 
+sprite=721; stackable=true;
+ special=verytransparent; special=cannotBePickedUp;
+ special=canBeInsideWalls; special=noTooltip; special=quantityChangesSprite_upTo5;
+[ItemReaction] 
+ID=stain_faint; element=tileReacted; element=water;  newID=X;
+[ItemType]  name=Filth;
+ID=filth_faint;  sprite=753;
+cloneFrom=stain_faint;
+
+[ItemType]  name=Stain;
+ID=stain_superfaint;  itemCategory=natural; 
+sprite=721; stackable=true;
+ special=supertransparent; special=cannotBePickedUp;
+ special=canBeInsideWalls; special=noTooltip; special=quantityChangesSprite_upTo5;
+[ItemReaction] 
+ID=stain_superfaint; element=tileReacted; element=water;  newID=X;
+[ItemType]  name=Filth;
+ID=filth_superfaint;  sprite=753;
+cloneFrom=stain_superfaint;
+
+[ItemType]  name=Scorch Marks;
+ID=scorchMarks; itemCategory=natural;
+ sprite=1049; special=cannotBePickedUp; special=canHangOnWalls; special=alwaysBelowOtherItems;
+ stackable=true; pR=pGreyD2;
+ 
+[ItemType]  name=Bug;
+ID=bug_small; sprite=1248; pR=zoneStoneDark;
+journalID=journal_bugs;
+weight=0; itemCategory=natural;
+special=animated; special=noTooltip;
+special=canHangOnWalls; special=reactsToPressure; special=cannotBePickedUp;
+[ItemReaction] 
+ID=bug_small; element=physical; element=magic; element=pressureMove; newID=X; fx=scatter_bug;
+
+[ItemType]  name=Bugs (5);
+ID=bugs5_small; sprite=1252; pR=zoneStoneDark;
+journalID=journal_bugs;
+weight=0; itemCategory=natural;
+special=animated; special=noTooltip;
+special=canHangOnWalls; special=reactsToPressure; special=cannotBePickedUp;
+[ItemReaction] 
+ID=bugs5_small; element=physical; element=magic; element=pressureMove; newID=X; fx=scatter_bugs5;
+
+
+[ItemType]  name=Bugs (12);
+ID=bugs12_small; sprite=1256; pR=zoneStoneDark;
+journalID=journal_bugs;
+weight=0; itemCategory=natural;
+special=animated; special=noTooltip;
+special=canHangOnWalls; special=reactsToPressure; special=cannotBePickedUp;
+[ItemReaction] 
+ID=bugs12_small; element=physical; element=magic; element=pressureMove; newID=X; fx=scatter_bugs12;
+
+[ItemType]  name=Bugs (Mass);
+ID=bugsMass_small; sprite=1260; pR=zoneStoneDark;
+journalID=journal_bugs;
+weight=0; itemCategory=natural;
+special=animated; special=noTooltip;
+special=canHangOnWalls; special=reactsToPressure; special=cannotBePickedUp;
+[ItemReaction] 
+ID=bugsMass_small; element=physical; element=magic; element=pressureMove; newID=bugs12_small; fx=scatter_bugsMass;
+
+
+[JournalEntry]
+ID=journal_bugs;
+category=item; halfPage=true; rarity=1;
+title=Bugs;
+text=<itemBig=bugs12_small><title=Bugs><brAdj=>Are they beetles? Or roaches? They're too elusive and small to get a good look! ...at least they're harmless. Don't worry about it.;
+
+[ItemType]  name=Jefri;
+ID=jeffery1; sprite=348;
+texture=items_misc;
+journalID=journal_jeffery;
+weight=0; itemCategory=natural;
+special=animatedPauseOnFrame1and3;
+special=canHangOnWalls; special=reactsToPressure; special=cannotBePickedUp;
+[ItemReaction] 
+ID=jeffery1; 
+element=physical; element=magic;
+element=pressureMove; newID=X; fx=jeffery_run;
+
+[ItemType]  name=Jefri;
+ID=jeffery2; sprite=380;
+cloneFrom=jeffery1;
+
+[ItemType]  name=Jefri;
+ID=jeffery3; sprite=412;
+cloneFrom=jeffery1;
+
+[JournalEntry]
+ID=journal_jeffery;
+category=creature; halfPage=true; rarity=2;
+title=Jefri;
+text=<itemBig=jeffery1><title=Jefri><brAdj=>Small mammals that seek and hunt smaller rodents. They are known for their curiosity and cleverness. Certain rare breeds of Jefri hunt larger prey in packs, but this kind appears harmless.;
+
+
+[ItemType]  name=Rodent;
+ID=rat1_runL; sprite=316;
+weight=0; itemCategory=natural;
+journalID=journal_rodent;
+texture=items_misc;
+special=animated2Slow;
+special=canHangOnWalls; special=reactsToPressure; special=cannotBePickedUp;
+pR=p29;
+pB=pBlue5;
+[ItemReaction] 
+ID=rat1_runL; 
+element=physical; element=magic; element=combatStart;
+element=pressureMove; newID=X; fx=rodent_runL;
+
+[ItemType]  name=Rodent;
+ID=rat1_runR; sprite=316;
+cloneFrom=rat1_runL;
+special=dontCloneReactions;
+[ItemReaction] 
+ID=rat1_runR; 
+element=physical; element=magic; element=combatStart;
+element=pressureMove; newID=X; fx=rodent_runR;
+
+[JournalEntry]
+ID=journal_rodent;
+category=creature; halfPage=true; rarity=1;
+title=Rodent;
+text=<itemBig=rat1_runL><title=Rodent><brAdj=>Vermin that wander dark and unkempt areas. Though they may be unsanitary, they pose no threat to you and will flee if approached.;
+
+[ItemType]  name=Crab;
+ID=crab1_runL; sprite=284;
+weight=0; itemCategory=natural;
+journalID=journal_crab;
+texture=items_misc;
+special=animatedPauseOnFrame1and3;
+special=canHangOnWalls; special=reactsToPressure; special=cannotBePickedUp;
+pR=p29;
+pB=pTeal;
+pG=pRed;
+[ItemReaction] 
+ID=crab1_runL; 
+element=physical; element=magic; element=combatStart;
+element=pressureMove; newID=X; fx=crab_runL;
+
+[ItemType]  name=Crab;
+ID=crab1_runR; sprite=284;
+cloneFrom=crab1_runL;
+special=dontCloneReactions;
+[ItemReaction] 
+ID=crab1_runR; 
+element=physical; element=magic; element=combatStart;
+element=pressureMove; newID=X; fx=crab_runR;
+[JournalEntry]
+ID=journal_crab;
+category=creature; halfPage=true; rarity=1;
+title=Crab;
+text=<itemBig=crab1_runL><title=Crab><brAdj=>This little crustacean buddy means you no harm. Frankly, it lacks the intellect to have any sort of intentions. It will no doubt skitter away soon to search for food.;
+
+
+[ItemType]  name=Bubble;
+ID=bubble_small; sprite=1859; pR=zoneDirt;
+journalID=;
+weight=0; itemCategory=natural;
+special=animated; special=noTooltip; special=inheritTerrainPalettes;
+special=canHangOnWalls; special=cannotBePickedUp;
+[ItemReaction] 
+ID=bubble_small; element=smash; element=dig; element=explode; newID=X; fx=WetSquish;
+
+[ItemType]  name=Bubble;
+ID=bubble_big; sprite=1827; pR=zoneDirt;
+pG=zoneDirt;
+weight=0; itemCategory=natural;
+special=animated; special=canHangOnWalls; special=cannotBePickedUp;
+special=oneClickToUse;
+blockWalking=true;
+[ItemReaction] 
+ID=bubble_big; element=use; element=physical; element=explode; newID=X; fx=dust_bubble; spawnItem=loot_none;
+
+[JournalEntry]
+ID=item_bubble_big;
+category=item; halfPage=true; rarity=1;
+title=Bubble;
+text=<itemBig=bubble_big><title=Bubble><brAdj=>These odd bubbles form inside Alvora on a regular basis. Disgusting, but no more than a mild inconvenience at most.;
+
+[ItemType]  name=Bubble (Acid);
+ID=bubble_big_acid; sprite=1827; 
+pR=zoneDirt;
+pG=pGreen;
+description=Strange bubble full of acid.;
+weight=0; itemCategory=natural; special=animated;
+special=canHangOnWalls; special=cannotBePickedUp;
+special=oneClickToUse;
+
+blockWalking=true;
+[ItemReaction] 
+ID=bubble_big_acid; element=use; element=physical; element=explode; newID=X; action=bubble_acid_action;
+
+[JournalEntry]
+ID=item_bubble_big_acid;
+category=item; halfPage=true; rarity=1;
+title=Bubble (Acid);
+text=<itemBig=bubble_big_acid><title=Bubble (Acid)><brAdj=>Where you have bubbles, and you also have acid, you may occasionally find bubbles full of acid. It seems to be under pressure - tap it and acid sprays out a fair distance!;
+
+[ItemType]  name=Blockage;
+ID=blockage_closed; sprite=1842; pR=zoneDirt;
+journalID=journal_blockage_closed;
+weight=0; itemCategory=natural;
+special=canHangOnWalls; special=cannotBePickedUp;
+blockWalking=true; blockJumping=true;
+[ItemReaction] 
+ID=blockage_closed; element=smash; element=slash; element=explode; newID=X; fx=dust_bubble;
+[ItemType]  name=Blockage;
+ID=blockage_closed2; sprite=1843; pR=zoneDirt;
+journalID=journal_blockage_closed;
+weight=0; itemCategory=natural;
+special=canHangOnWalls; special=cannotBePickedUp;
+blockWalking=true; blockJumping=true;
+[ItemReaction] 
+ID=blockage_closed2; element=use; element=smash; element=slash; element=explode; newID=X; fx=dust_bubble;
+
+[JournalEntry]
+ID=journal_blockage_closed;
+category=item; halfPage=true; rarity=1;
+title=Blockage;
+text=<itemBig=blockage_closed><title=Blockage><brAdj=>Stringy obstructions that hang down and block passage. Easily cleared with a bit of force.;
+
+
+[ItemType]  name=Bubble?;
+ID=bubble_big_item; sprite=1831; pR=zoneDirt;
+journalID=journal_bubble_big_item;
+weight=0; itemCategory=natural;
+special=animated; special=inheritTerrainPalettes;
+special=canHangOnWalls; special=cannotBePickedUp;
+special=oneClickToUse;
+blockWalking=true;
+[ItemReaction] 
+ID=bubble_big_item; element=use; element=physical; element=explode; newID=X; fx=dust_bubble; spawnItem=loot0;
+
+[ItemType]  name=Bubble?;
+ID=bubble_bigger_item; sprite=1835; pR=zoneDirt;
+journalID=journal_bubble_big_item;
+weight=0; itemCategory=natural;
+special=animated; special=inheritTerrainPalettes;
+special=canHangOnWalls; special=cannotBePickedUp;
+special=oneClickToUse;
+blockWalking=true;
+[ItemReaction] 
+ID=bubble_bigger_item; element=use; element=physical; element=explode; newID=X; fx=dust_bubble; spawnItem=loot2;
+action=spawn_gangle_chance2;
+
+[JournalEntry]
+ID=journal_bubble_big_item;
+category=item; halfPage=true; rarity=1;
+title=Bubble (Item);
+text=<itemBig=bubble_big_item><title=Bubble (Item)><brAdj=>This bubble has formed over an object of some sort. The item inside is obscured, but a quick pop and that will no longer be an issue.;
+
+[ItemType]  name=Bubble?;
+ID=bubble_huge_item; sprite=1839; pR=zoneDirt;
+journalID=journal_bubble_huge_item;
+weight=0; itemCategory=natural; special=inheritTerrainPalettes;
+special=canHangOnWalls; special=cannotBePickedUp;
+blockWalking=true; blockJumping=true;
+[ItemReaction] 
+ID=bubble_huge_item; element=melee; element=explode; newID=X; fx=dust_bubble; spawnItem=loot3; action=spawn_gangle_chance15;
+
+[ItemType]  name=Bubble?;
+ID=bubble_huge_item_safe; sprite=1839; pR=zoneDirt;
+journalID=journal_bubble_huge_item;
+weight=0; itemCategory=natural; special=inheritTerrainPalettes;
+special=canHangOnWalls; special=cannotBePickedUp;
+blockWalking=true; blockJumping=true;
+[ItemReaction] 
+ID=bubble_huge_item_safe; element=melee; element=explode; newID=X; fx=dust_bubble; spawnItem=loot3;
+
+[ItemType]  name=Bubble?;
+ID=bubble_huge_item_good_safe; sprite=1839; pR=zoneDirt;
+journalID=journal_bubble_huge_item;
+weight=0; itemCategory=natural; special=inheritTerrainPalettes;
+special=canHangOnWalls; special=cannotBePickedUp;
+blockWalking=true; blockJumping=true;
+[ItemReaction] 
+ID=bubble_huge_item_good_safe; element=melee; element=explode; newID=X; fx=dust_bubble; spawnItem=loot4;
+[ItemType]  name=Bubble?;
+ID=bubble_huge_item_great_safe; sprite=1839; pR=zoneDirt;
+journalID=journal_bubble_huge_item;
+weight=0; itemCategory=natural; special=inheritTerrainPalettes;
+special=canHangOnWalls; special=cannotBePickedUp;
+blockWalking=true; blockJumping=true;
+[ItemReaction] 
+ID=bubble_huge_item_great_safe; element=melee; element=explode; newID=X; fx=dust_bubble; spawnItem=loot5;
+
+[ItemType]  name=Bubble?;
+ID=bubble_huge_craftkit_safe; sprite=1839; pR=zoneDirt;
+journalID=journal_bubble_huge_item;
+weight=0; itemCategory=natural; special=inheritTerrainPalettes;
+special=canHangOnWalls; special=cannotBePickedUp;
+blockWalking=true; blockJumping=true;
+[ItemReaction] 
+ID=bubble_huge_craftkit_safe; element=melee; element=explode; newID=X; fx=dust_bubble; spawnItem=loot_craft_kit;
+
+[ItemType]  name=Bubble?;
+ID=bubble_huge_gp_safe; sprite=1839; pR=zoneDirt;
+journalID=journal_bubble_huge_item;
+weight=0; itemCategory=natural; special=inheritTerrainPalettes;
+special=canHangOnWalls; special=cannotBePickedUp;
+blockWalking=true; blockJumping=true;
+[ItemReaction] 
+ID=bubble_huge_gp_safe; element=melee; element=explode; newID=X; fx=dust_bubble; spawnItem=loot_gp_much;
+
+[JournalEntry]
+ID=journal_bubble_huge_item;
+category=item; halfPage=true; rarity=1;
+title=Huge Bubble (Item);
+text=<itemBig=bubble_huge_item_safe><title=Huge Bubble (Item)><brAdj=>What was once a bubble forming over an object has now hardened. A blow from most any melee weapon should do the trick. Supposedly, certain parasites can get stuck in bubbles like these.;
+
+
+[ItemType]  name=Pushable Blob;
+ID=blob_pushable; sprite=1793; 
+journalID=journal_blob_pushable;
+special=pushable; special=big; special=slideWhenPushed; special=animated;
+special=canReactIndefinitely; special=canReactWhileMoving;
+special=removeWhenAtZoneEdge;
+special=timer; special=timer_advanceOnScreenOnly; special=hideTimer;
+timer=1;
+weight=200; itemCategory=natural;
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=true;
+pR=zoneDirtDark;
+[ItemReaction] 
+ID=blob_pushable; element=itemPushed; element=timerUp; action=blob1_checkBurst;
+[ItemReaction] 
+ID=blob_pushable; element=burstSpread1; action=blob1_bursting;
+[ItemReaction] 
+ID=blob_pushable; element=burst1; element=explode; fx=dust_bubble_dark; newID=X;
+
+[ItemType]  name=Pushable Blob;
+ID=blob_pushable2; sprite=1793; 
+cloneFrom=blob_pushable;
+special=dontCloneReactions;
+pR=zoneDirt;
+[ItemReaction] 
+ID=blob_pushable2; element=itemPushed; element=timerUp; action=blob2_checkBurst;
+[ItemReaction] 
+ID=blob_pushable2; element=burstSpread2; action=blob2_bursting;
+[ItemReaction] 
+ID=blob_pushable2; element=burst2; element=explode; fx=dust_bubble; newID=X;
+
+[JournalEntry]
+ID=journal_blob_pushable;
+category=item; halfPage=true; rarity=1;
+title=Pushable Blob;
+text=<itemBig=blob_pushable><title=Pushable Blob><brAdj=>This bouncing jelly seems to cohere to itself far better than it should. By giving it a push, it slides onward until it hits something. Oddly, when it collides with another blob just like it, it bursts!;
+
+[ItemType]  name=Volatile Blob;
+ID=blob_pushable_explode; sprite=1793; 
+cloneFrom=blob_pushable;
+special=dontCloneReactions;
+pR=pBloodyMess;
+[ItemReaction] 
+ID=blob_pushable_explode; element=itemPushed; element=timerUp; action=blob3_checkBurst;
+[ItemReaction] 
+ID=blob_pushable_explode; element=burstSpread3; action=blob3_bursting;
+[ItemReaction] 
+ID=blob_pushable_explode; element=burst3; element=explode; fx=dust_bubble; newID=X; action=bombExplosion_small;
+[ItemLight]
+ID=blob_pushable_explode; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.2; flicker=0.1;
+
+[JournalEntry]
+ID=item_blob_pushable_explode;
+category=item; halfPage=true; rarity=1;
+title=Volatile Blob;
+text=<itemBig=blob_pushable_explode><title=Volatile Blob><brAdj=>Flashes brightly and emits a faint acrid smell. Still slides and collides like a 'normal' blob, but you should stand back if it's going to burst!;
+
+[ItemType]  name=Pushable Blob (?);
+ID=blob_pushable_item; sprite=1797; 
+special=pushable; special=big; special=slideWhenPushed; special=animated;
+special=canReactIndefinitely; special=canReactWhileMoving;
+special=timer; special=timer_advanceOnScreenOnly; special=hideTimer;
+timer=1;
+weight=200; itemCategory=natural;
+	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=true;
+pR=zoneDirtDark;
+[ItemReaction] 
+ID=blob_pushable_item; element=itemPushed; element=timerUp; action=blob1_checkBurst;
+[ItemReaction] 
+ID=blob_pushable_item; element=burstSpread1; action=blob1_bursting;
+[ItemReaction] 
+ID=blob_pushable_item; element=burst1; element=explode; fx=dust_bubble_dark; newID=X;
+spawnItem=loot3;
+
+[JournalEntry]
+ID=item_blob_pushable_item;
+category=item; halfPage=true; rarity=1;
+title=Pushable Blob (Item);
+text=<itemBig=blob_pushable_item><title=Pushable Blob (Item)><brAdj=>There's something in there! Trying to pop it is useless - it just slips away under force. If you want at whatever's inside, you'll have to find a matching blob, and get it to collide with this.;
+
+
+
+[ItemType]  name=Rotworm Nest;
+ID=nest_worm; sprite=1268; 
+special=big; special=cannotBePickedUp;
+special=randomFlipWhenPlaced; special=emitParticleEvery100Frames;
+weight=200; itemCategory=natural;
+	blockLoS=false; blockLoE=true; blockWalking=true; blockJumping=true;
+pR=pYellow4; pB=pPurpleD; spawnFX=worm_spawn_nest;
+depthMod=1050;
+[ItemReaction] 
+ID=nest_worm; element=physical; 
+element=fire; element=elec; element=ice; 
+newID=X; action=worm_nest_action;
+spawnItem=loot4; spawnItem=loot_bone_junk; spawnItem=loot2; spawnItem=loot_bone_junk;
+
+[JournalEntry]
+ID=item_nest_worm;
+category=item; halfPage=true; rarity=2;
+title=Rotworm Nest;
+text=<itemBig=nest_worm><title=Rotworm Nest><brAdj=>Rotworms don't actually build their nest, but instead live inside fungus that sprouts up in decaying bodies. They feed on the body and the fungus alike.<n=><n=>Some poor soul must have died under this thing. Perhaps some equipment still remains intact within?;
+
+[ItemType]  name=Rotshroom;
+ID=nest_worm_small1; sprite=1269; 
+ itemCategory=natural; 
+special=cannotBePickedUp; special=randomFlipWhenPlaced; special=noTooltip;
+pR=pYellow4;
+depthMod=1050;
+[ItemReaction] 
+ID=nest_worm_small1; element=slash; element=fire; newID=X; 
+[ItemType]  name=Rotshroom;
+ID=nest_worm_small2; sprite=1270;
+cloneFrom=nest_worm_small1;
+
+
+[ItemType]  name=Organic Seam;
+ID=organic_seam; sprite=1891; pR=zoneDirt;
+journalID=;
+weight=0; itemCategory=natural;
+special=animated; special=noTooltip; special=inheritTerrainPalettes;
+special=canHangOnWalls; special=cannotBePickedUp;
+[ItemReaction] 
+ID=organic_seam; element=dig; element=explode; newID=X; fx=WetSquish;
+
+[ItemType]  name=Organic Hole;
+ID=organic_hole; sprite=1863; pR=zoneDirt;
+journalID=;
+weight=0; itemCategory=natural;
+special=animated; special=noTooltip; special=inheritTerrainPalettes;
+special=canHangOnWalls; special=cannotBePickedUp;
+[ItemReaction] 
+ID=organic_hole; element=dig; element=explode; newID=X; fx=WetSquish;
+
+[ItemType]  name=Organic Hole (Slow);
+ID=organic_hole_slow; sprite=1895; pR=zoneDirt; 
+journalID=;
+weight=0; itemCategory=natural;
+special=animateEvery100Frames; special=noTooltip; special=inheritTerrainPalettes;
+special=canHangOnWalls; special=cannotBePickedUp;
+[ItemReaction]
+ID=organic_hole_slow; element=dig; element=explode; newID=X; fx=WetSquish;
+
+
+[ItemType]  name=Shell;
+ID=turtle_shell1; sprite=1906; 
+journalID=journal_turtle;
+pR=pTeal2; pB=pFadeDark;
+weight=0; itemCategory=natural;
+special=noTooltip; special=canHangOnWalls; special=cannotBePickedUp;
+special=canFloatOnWater; special=anim_bobUpAndDown_slow; 
+special=overrideTerrainCollisions; 
+special=itemsOnSameTileAreRaised; special=actorsOnSameTileAreRaised;
+
+[ItemType]  name=Shell;
+ID=turtle_shell2; sprite=1907; 
+cloneFrom=turtle_shell1;
+[ItemType]  name=Shell;
+ID=turtle_shell3; sprite=1908; 
+cloneFrom=turtle_shell1;
+[ItemType]  name=Shell;
+ID=turtle_shell4; sprite=1909; 
+cloneFrom=turtle_shell1;
+[ItemType]  name=Shell;
+ID=turtle_shell_edge; sprite=1904; 
+cloneFrom=turtle_shell1; 
+special=elementUsableForRestrictedAoEs;
+element=water;
+[ItemType]  name=Shell;
+ID=turtle_shell_edge2; sprite=1905; 
+cloneFrom=turtle_shell1;
+special=elementUsableForRestrictedAoEs;
+element=water;
+
+[ItemType]  name=Shell;
+ID=turtle_shell; sprite=1910; 
+journalID=journal_turtle;
+weight=1000; itemCategory=natural;
+pR=pTeal2; pB=pFadeDark;
+special=noTooltips; special=overrideTerrainCollisions;
+special=cannotBePickedUp; special=randomFlipWhenPlaced;
+special=canFloatOnWater; special=canHangOnWalls;
+special=big; special=anim_bobUpAndDown_slow;
+special=sprite2xWidth; special=sprite2xHeight;
+special=adjustSpriteY16;
+special=itemsOnSameTileAreRaised; special=actorsOnSameTileAreRaised;
+
+
+
+
+[ItemType]  name=Crystal;
+ID=turtle_crystal; sprite=1912; pR=pTeal_light;
+journalID=journal_turtle_tentacle;
+weight=0; itemCategory=natural; special=sprite2xHeight;
+special=canHangOnWalls; special=cannotBePickedUp;
+blockWalking=true; blockJumping=true;
+depthMod=1050;
+pR=pBlue;
+[ItemReaction] 
+ID=turtle_crystal; element=melee; element=explode; newID=X; fx=dust_glass; spawnItem=gem_big2; action=somethingHappened_action;
+
+
+[ItemType]  name=Slimy Tendrils;
+ID=graven_climbable; sprite=1879; pR=p68; 
+weight=0; itemCategory=natural; 
+special=canHangOnWalls; special=big; special=overrideTerrainCollisions; special=overrideMostCollisions; 
+special=cannotBePickedUp; special=moveCostOverride_2; special=climbAnim;
+[ItemReaction]
+ID=graven_climbable; element=tileReacted; newID=X;
+
+[ItemType]  name=Bone Sprout;
+ID=sprout_bone; sprite=2206; 
+journalID=journal_sprout_bone;
+weight=0; itemCategory=natural;
+special=cannotBePickedUp; special=wiggleWhenMoved;
+[ItemReaction]
+ID=sprout_bone; element=slash; element=smash; newID=sprout_bone_damaged; fx=dust_bubble; 
+[JournalEntry]
+ID=journal_sprout_bone;
+category=item; halfPage=true; rarity=4; rewardMod=0;
+title=Bone Sprout;
+text=<itemBig=sprout_bone><title=Bone Sprout><brAdj=>Bizarre tendril of bone interspersed with strange, purple veins that extend deep into the ground like roots. It reacts to no stimuli, and damaging the veins only results in indistinct purple mush. Whether this is a plant, a creature, or a living thing at all is unclear.;
+
+[ItemType]  name=Crushed Bone Sprout;
+ID=sprout_bone_damaged; sprite=2207; 
+journalID=journal_sprout_bone;
+weight=0; itemCategory=natural;
+special=cannotBePickedUp; special=wiggleWhenMoved;
+
+[ItemType]  name=Cliff Edge;
+ID=sideview_cliffEdge; sprite=1188;  itemCategory=natural;
+special=noTooltip; special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed;
+weight = 1000; element=earth;
+pR=zoneDirt;
+
+
+[ItemType]  name=Cliff Edge;
+ID=cliffEdge1_NW; sprite=256;  itemCategory=natural;
+special=noTooltip; special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed;
+weight = 1000; element=earth;
+pR=zoneDirt;
+pG=zoneDirtDark;
+
+[ItemType]  name=Cliff Edge;
+ID=cliffEdge1_N; sprite=257; 
+blockWalking=true; blockJumping=false;
+special=blockJumping_S;
+special=slopeN;
+cloneFrom=cliffEdge1_NW;
+
+[ItemType]  name=Cliff Edge;
+ID=cliffEdge1_W_top; sprite=288;
+blockWalking=true; blockJumping=false;
+special=slopeW;
+special=blockJumping_E; special=cannotBeRotated;
+cloneFrom=cliffEdge1_NW;
+
+[ItemType]  name=Cliff Edge;
+ID=cliffEdge1_E_top; sprite=289;
+blockWalking=true; blockJumping=false;
+special=slopeE;
+special=blockJumping_W; special=cannotBeRotated;
+cloneFrom=cliffEdge1_NW;
+
+[ItemType]  name=Cliff Edge;
+ID=cliffEdge1_W; sprite=320;
+blockWalking=true; blockJumping=false;
+special=blockJumping_E; special=cannotBeRotated;
+special=slopeW;
+cloneFrom=cliffEdge1_NW;
+
+[ItemType]  name=Cliff Edge;
+ID=cliffEdge1_E; sprite=321;
+blockWalking=true; blockJumping=false;
+special=blockJumping_W; special=cannotBeRotated;
+special=slopeE;
+cloneFrom=cliffEdge1_NW;
+
+[ItemType]  name=Cliff Edge;
+ID=cliffEdge1_corner; sprite=322;
+blockWalking=true; blockJumping=true;
+special=slopeS;
+cloneFrom=cliffEdge1_NW;
+
+[ItemType]  name=Cliff Edge;
+ID=cliffEdge1_corner1b; sprite=323;
+blockWalking=true; blockJumping=true;
+special=slopeS;
+cloneFrom=cliffEdge1_NW;
+
+[ItemType]  name=Cliff Edge;
+ID=cliffEdge1_corner2_top_W; sprite=258;
+blockWalking=true; blockJumping=false;
+special=blockJumping_E; special=blockJumping_S; special=cannotBeRotated;
+special=slopeW;
+cloneFrom=cliffEdge1_NW;
+
+[ItemType]  name=Cliff Edge;
+ID=cliffEdge1_corner2_top_E; sprite=259;
+blockWalking=true; blockJumping=false;
+special=blockJumping_W; special=blockJumping_S; special=cannotBeRotated;
+special=slopeE;
+cloneFrom=cliffEdge1_NW;
+
+[ItemType]  name=Cliff Edge;
+ID=cliffEdge1_corner2; sprite=290;
+blockWalking=true; blockJumping=true;
+special=slopeN;
+cloneFrom=cliffEdge1_NW;
+
+[ItemType]  name=Cliff Edge;
+ID=cliffEdge1_SW; sprite=352; 
+blockWalking=true; blockJumping=false;
+special=slopeS;
+cloneFrom=cliffEdge1_NW;
+
+[ItemType]  name=Cliff Edge;
+ID=cliffEdge1_S; sprite=353;
+blockWalking=true; blockJumping=false;
+special=blockJumping_N;
+special=slopeS;
+cloneFrom=cliffEdge1_NW;
+[ItemReaction]
+ID=cliffEdge1_S; element=spreadRope; action=spreadRope; spawnItem=rope_extended;
+
+[ItemType]  name=Cliff Edge;
+ID=cliffEdge1_S_stairs; sprite=354;
+cloneFrom=cliffEdge1_NW;
+
+[ItemType]  name=Cliff Edge;
+ID=cliffEdge1_S_overhang; sprite=355;
+blockWalking=true; blockJumping=false;
+special=blockJumping_N;
+special=slopeS;
+cloneFrom=cliffEdge1_NW;
+
+
+
+[ItemType]  name=Waterfall;
+ID=waterfall1; sprite=2040; 
+journalID=;
+itemCategory=natural;
+special=cannotBePickedUp; special=animated;
+special=moveCostOverride_2; special=sprite2xHeight;
+special=canHangOnWalls;
+special=canFloatOnWater;
+element=water;
+pR=zoneWater; pB=pGhost;
+[ItemType]  name=Waterfall;
+ID=waterfall_dirtEdge; sprite=2044; 
+journalID=;
+itemCategory=natural;
+special=cannotBePickedUp; special=noTooltips;
+special=canHangOnWalls; special=canFloatOnWater;
+pR=zoneDirt; pG=zoneDirtDark;
+depthMod=1050;
+
+[ItemType]  name=Cliff Edge;
+ID=dirtEdge_side1; sprite=2045; 
+journalID=;
+itemCategory=natural;
+special=cannotBePickedUp; special=noTooltips;
+special=canHangOnWalls; special=canFloatOnWater;
+pR=zoneDirt; pG=zoneDirtDark;
+depthMod=1050;
+
+[ItemType]  name=shoreEdge1;
+ID=shoreEdge1; sprite=2104; 
+itemCategory=natural;
+special=cannotBePickedUp; special=animated8Med;
+special=canHangOnWalls; special=noTooltips;
+special=canFloatOnWater;
+element=water; pR=zoneDirt; pG=zoneDirtDark;
+
+[ItemType]  name=shoreEdge1_grass;
+ID=shoreEdge1_grass; sprite=2136; 
+itemCategory=natural;
+special=cannotBePickedUp; special=animated8Med;
+special=canHangOnWalls; special=noTooltips;
+special=canFloatOnWater;
+element=water; pR=zoneGrass; pG=zoneDirtDark;
+
+
+[ItemType]  name=Rock Wall Edge;
+ID=rockEdge1_S_overhang; sprite=357; itemCategory=natural;
+special=noTooltip; special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed;
+weight = 1000; element=earth;
+blockWalking=true; blockJumping=true;
+special=slopeS;
+pR=zoneDirtDark;
+pB=pX;
+[ItemReaction]
+ID=rockEdge1_S_overhang; element=explode; action=pickaxe; newID=X;
+
+[ItemType]  name=Rock Wall;
+ID=rockEdge1_S_overhang_wall; sprite=357;
+cloneFrom=rockEdge1_S_overhang;
+pB=pBlack;
+
+[ItemType]
+ID=rockEdge1_overhang; sprite=358;
+blockWalking=true; blockJumping=false;
+special=slopeS;
+cloneFrom=rockEdge1_S_overhang;
+pR=zoneDirtDark;
+pB=pX;
+
+[ItemType]
+ID=rockEdge1_overhang2; sprite=359;
+blockWalking=true; blockJumping=false;
+special=slopeS;
+cloneFrom=rockEdge1_S_overhang;
+pR=zoneDirtDark;
+pB=pX;
+
+[ItemType]  name=Rock Edge (Dark);
+ID=rockEdge1_S_overhang_dark; sprite=325; itemCategory=natural;
+special=noTooltip; special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed;
+weight = 1000; element=earth;
+pR=zoneDirtDark;
+pB=pX;
+
+[ItemType]  name=Rock Wall (Dark);
+ID=rockEdge1_S_overhang_wall_dark; sprite=325;
+cloneFrom=rockEdge1_S_overhang_dark;
+pB=pBlack;
+
+[ItemType]
+ID=rockEdge1_overhang_dark; sprite=326;
+cloneFrom=rockEdge1_S_overhang_dark;
+[ItemType]
+ID=rockEdge1_overhang2_dark; sprite=327;
+cloneFrom=rockEdge1_S_overhang_dark;
+
+
+[ItemType]  name=Cliff Edge;
+ID=cliffEdge_doesNothing; sprite=260; itemCategory=natural;
+special=noTooltip; special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed;
+weight = 1000; element=earth;
+pR=zoneDirt;
+
+[ItemType]  name=Shell;
+ID=shell_slope1; sprite=609; 
+journalID=journal_shell_giant;
+texture=items_misc; itemCategory=natural;
+special=noTooltip; special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed;
+weight = 9000; special=quantityIncreasesPaletteRZoneMisc; stackable=true;
+pR=p29;
+blockWalking=true; blockJumping=false;
+special=blockJumping_S;
+[ItemType]  name=Shell;
+ID=shell_slope2; sprite=610; 
+cloneFrom=shell_slope1;
+
+
+[ItemType]  name=Shell;
+ID=shell_giant1; sprite=611; 
+journalID=journal_shell_giant;
+texture=items_misc; itemCategory=natural;
+special=noTooltip; special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed;
+special=sprite3xHeight; special=quantityIncreasesPaletteRZoneMisc; stackable=true;
+weight = 9000;
+pR=p29;
+blockWalking=true; blockJumping=true;
+depthMod=1050;
+
+[ItemType]  name=Shell;
+ID=shell_giant2; sprite=612; 
+cloneFrom=shell_giant1;
+[ItemType]  name=Shell;
+ID=shell_giant3; sprite=613; 
+cloneFrom=shell_giant1;
+[ItemType]  name=Shell;
+ID=shell_giant4; sprite=614; 
+cloneFrom=shell_giant1;
+
+[ItemType]  name=Shell;
+ID=shell_giant_top1; sprite=615; 
+journalID=journal_shell_giant;
+texture=items_misc; itemCategory=natural;
+special=noTooltip; special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed;
+special=quantityIncreasesPaletteRZoneMisc; stackable=true;
+weight = 9000;
+pR=p29;
+depthMod=2050;
+[ItemType]  name=Shell;
+ID=shell_giant_top2; sprite=616; 
+cloneFrom=shell_giant_top1;
+
+
+
+[ItemType]  name=Shell;
+ID=shell_giant_bottom1; sprite=707; 
+journalID=journal_shell_giant;
+texture=items_misc; itemCategory=natural;
+special=noTooltip; special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed;
+special=quantityIncreasesPaletteRZoneMisc; stackable=true;
+weight = 9000;
+pR=p29;
+[ItemType]  name=Shell;
+ID=shell_giant_bottom2; sprite=708; 
+cloneFrom=shell_giant_bottom1;
+[ItemType]  name=Shell;
+ID=shell_giant_bottom3; sprite=709; 
+cloneFrom=shell_giant_bottom1;
+[ItemType]  name=Shell;
+ID=shell_giant_bottom4; sprite=710; 
+cloneFrom=shell_giant_bottom1;
+
+
+[ItemType]  name=Shell;
+ID=shell_giant_below1; sprite=611; 
+depthMod=0;
+pR=p28;
+cloneFrom=shell_giant1;
+[ItemType]  name=Shell;
+ID=shell_giant_below2; sprite=612; 
+cloneFrom=shell_giant_below1;
+[ItemType]  name=Shell;
+ID=shell_giant_below3; sprite=613; 
+cloneFrom=shell_giant_below1;
+[ItemType]  name=Shell;
+ID=shell_giant_below4; sprite=614; 
+cloneFrom=shell_giant_below1;
+
+[ItemType]  name=Shell;
+ID=shell_giant_top_below1; sprite=615; 
+depthMod=0;
+pR=p28;
+cloneFrom=shell_giant_top1;
+
+[ItemType]  name=Shell;
+ID=shell_giant_top_below2; sprite=616; 
+depthMod=0;
+cloneFrom=shell_giant_top_below1;
+
+[JournalEntry]
+ID=journal_shell_giant;
+category=item; halfPage=true; rarity=3; rewardMod=-500;
+title=Giant Shell;
+text=<icon=j_giantShell><title=Giant Shell><brAdj=>         These humongous shells are taken from some unknown deep sea creature and used to assemble the Cleever's Shellships. They're quite hardy, yet surprisingly buoyant.;
+
+
+
+
+
+
+
+
+
+
+
+

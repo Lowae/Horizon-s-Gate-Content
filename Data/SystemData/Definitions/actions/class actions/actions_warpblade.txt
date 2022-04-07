@@ -1,0 +1,446 @@
+[Action] ID=wb_gateShift; 
+	name=Gate: Shift;
+	icon=icon_gate_shift;
+	mpCost=3 * d:mpCostMult + d:mpCostMod;
+	tooltip=Instantly teleport a short distance. This does not consume an action in combat, but can't be reused for <icon=time>20.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=;
+	
+	XPCost=220;
+	XPCost=1500;
+	
+	AIRatingBias = -999;
+	
+	casterAnimation=spellcast;
+	casterAnimationSpeed=1.75;
+	special=swapCasterWithTarget;
+	special=doesNotConsumeCombatAction;
+	cooldown=20;
+	
+	
+	maxRank=2;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=sfx_highestHum;
+	FXOnCaster=horizSpark_many_wideArea;
+	FXOnCaster=gateOpen_flicker_fast;
+	FXOnCaster=gateClose_fast;
+	
+[ActionAoE] 
+	ID=wb_gateShift;
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	teleporting=true;
+	minRange = 1;
+	maxRange = 0;
+	maxRangeBonus = c:rank + sa:gateAdept;
+	canSelectActors=false;
+	bypassAll=true;
+	occupyAll=false;
+[AvAffecter]
+	ID=wb_gateShift; 
+	harmful=false;
+	actorValue=wb_gateShift;
+	magnitude=0;
+	duration=-2;
+	chance=100;
+	FXOnTile=horizSpark_many_wideArea;
+	FXOnTile=gateOpen_fast;
+	FXOnTile=gateClose_flicker_fast;
+[AvAffecterAoE]
+	ID=wb_gateShift;
+	cloneFrom=oneTile;
+
+
+
+[Action] ID=wb_trick; 
+	name=Gate: Trick;
+	icon=icon_gate_trick;
+	mpCost=2 * d:mpCostMult + d:mpCostMod;
+	tooltip=Thrust your weapon through a gate, surprising the enemy on the other side with +10% accuracy.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipIcons=<icon=noRanged>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	XPCost=150;
+	XPCost=500;
+	XPCost=900;
+	
+	casterAnimation=weapon;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	requiredWeaponElement=melee;
+	
+	FXOnCaster=sfx_highestHum;
+	FXOnCaster=gateOpen_small_flicker_fast;
+	FXOnCaster=gateClose_small_flicker_fast;
+	
+	FXOnTarget=gateOpen_small_flicker_fast_overlap;
+	FXOnTarget=weaponFX;
+[ActionAoE] 
+	ID=wb_trick; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	teleporting=true;
+	minRange = 1;
+	maxRange = 1;
+	maxRangeBonus = c:rank + sa:gateAdept;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=wb_trick; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude;
+	chance=w:chance * 1.1;
+	duration=-2;
+	FXOnTile=gateClose_small_flicker_fast;
+[AvAffecterAoE]
+	ID=wb_trick;
+	cloneFrom=oneTile;
+	
+	
+	
+[Action] ID=wb_slam; 
+	name=Gate: Slam;
+	icon=icon_gate_slam;
+	casterAnimation=gate_slam;
+	casterAnimationSpeed=1;
+	mpCost=8 * d:mpCostMult + d:mpCostMod;
+	tooltip=Leap through gates to increase your falling speed, then slam into the ground, dealing 50% damage and pushing and stunning targets for <icon=time>2.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipIcons=<icon=noAugments>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=skill_Fist_small>;
+	
+	
+	XPCost=250;
+	XPCost=550;
+	XPCost=650;
+	
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	special=moveCasterToTarget;
+	
+	FXOnCaster=woosh;
+	FXOnCaster=darken;
+	FXOnCaster=gateClose_fast;
+	
+	FXOnTarget=thunder;
+	FXOnTarget=bigShakeVert;
+	FXOnTarget=windBlast_spidest;
+[ActionAoE] 
+	ID=wb_slam;
+	cloneFrom=adjacent;
+	minRange=2;
+	maxRange=2;
+	maxRangeBonus = c:rank + sa:gateAdept;
+	airborne=true;
+	arc=true;
+	needsLoE=false;
+	needsLoS=true;
+	occupyAll=false;
+	canSelectActors=false;
+[AvAffecter]
+	ID=wb_slam; 
+	actorValue=HP;
+	magnitude=d:fistDmg * 0.5 + d:magicDmgHalfDef(1) * 0.5;
+	duration=-2;
+	chance=100;
+	FXOnTile=terrain;
+	FXOnTile=SLAM;
+	element=physical;
+	element=melee;
+	element=smash;
+	element=heavySmash;
+[AvAffecterAoE]
+	ID=wb_slam;
+	cloneFrom=adjacent;
+	airborne=true;
+	arc=true;
+	maxRange=1;
+[AvAffecter]
+	ID=wb_slam; 
+	actorValue=stun;
+	magnitude=1;
+	duration=2;
+	chance=100;
+[AvAffecterAoE]
+	ID=wb_slam;
+	cloneFrom=adjacent;
+	airborne=true;
+	arc=true;
+	maxRange=1;
+[AvAffecter]
+	ID=wb_slam; 
+	useCasterAsOriginForDirectionalEffects=false;
+	actorValue=push;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=wb_slam;
+	cloneFrom=adjacent;
+	airborne=true;
+	arc=true;
+	maxRange=1;
+	
+	
+
+
+[Action] ID=wb_onslaught; 
+	name=Gate: Onslaught;
+	icon=icon_gate_onslaught;
+	mpCost=15 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=22 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	tooltip=Use gates to attack every enemy with your weapon for half damage.;
+	rankUpTooltip=;
+	tooltipIcons=<icon=noAugments><icon=noRanged>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	XPCost=999;
+	
+	casterAnimation=charge_disappear;
+	casterAnimationSpeed=0.8;
+	maxRank=1;
+	requiredWeaponElement=melee;
+	
+	special=requiresCasting;
+	special=cantUseInTravel;
+	
+	FXOnCaster=sfx_highestHum;
+	FXOnCaster=gateOpen_flicker;
+	FXOnCaster=actor_spreadPhantoms;
+	FXOnCaster=delay2;
+	FXOnCaster=delay2;
+	FXOnCaster=delay2;
+	FXOnCaster=delay2;
+	FXOnCaster=delay2;
+	FXOnCaster=delay2;
+	FXOnCaster=delay2;
+	FXOnCaster=gateClose_small_flicker_fast;
+	
+	FXOnTarget=screenShock_instant;
+	FXOnTarget=sfx_laser_blast_high;
+	FXOnCaster=gateClose_flicker;
+	
+[ActionAoE] 
+	ID=wb_onslaught; shape=17;
+	cloneFrom=adjacentAndSelf;
+	maxRange=22;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	bypassAll=true;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=wb_onslaught; 
+	weaponAvAffecter=false;
+	actorValue=HP;
+	magnitude=w:magnitude * 0.5;
+	chance=w:chance * 0.95;
+	duration=-2;
+	FXOnTile=sfx_highestHum_quiet;
+	FXOnTile=gateClose_flicker_overlap;
+	FXOnTile=cut_overlap;
+	FXOnTile=pop_noOverlap;
+	FXOnTile=hitDustQuiet;
+	FXOnTile=hitdashes;
+	FXOnTile=ThudShot;
+	element=physical;
+[AvAffecterAoE]
+	ID=wb_onslaught; shape=17;
+	cloneFrom=adjacentAndSelf;
+	maxRange=22;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	bypassAll=true;
+	canSelectAllies=false;
+	aoeCasterAsOrigin=true;
+	
+	
+
+[Action] ID=wb_cross; 
+	name=Gate: Cross;
+	icon=icon_gate_cross;
+	mpCost=12 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=12 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	tooltip=Perform two dashing attacks for 75% damage in a cross pattern, dealing heavy damage in the center.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipIcons=<icon=noRanged>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	XPCost=250;
+	XPCost=670;
+	XPCost=750;
+	
+	casterAnimation=anim_gateCross;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	requiredWeaponElement=melee;
+	
+	special=requiresCasting;
+	
+	FXOnCaster=darken;
+	FXOnCaster=sfx_highestHum;
+	FXOnCaster=gateOpen_small_flicker_fast;
+	FXOnCaster=gateClose_small_flicker_fast;
+	FXOnCaster=delay2;
+	FXOnCaster=delay2;
+	FXOnCaster=delay2;
+	FXOnCaster=delay2;
+	FXOnCaster=delay2;
+	FXOnCaster=delay2;
+	FXOnCaster=delay2;
+	FXOnCaster=delay2;
+	FXOnCaster=gateClose_small_flicker_fast;
+	
+	FXOnTarget=gateOpen_left_noOverlap;
+	FXOnTarget=gateOpen_right_noOverlap;
+[ActionAoE] 
+	ID=wb_cross; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	teleporting=true;
+	minRange = 3;
+	maxRange = 3;
+	maxRangeBonus = c:rank + sa:gateAdept;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=wb_cross; 
+	actorValue=HP;
+	magnitude=w:magnitude * 0.75;
+	chance=w:chance;
+	duration=-2;
+	element=physical;
+[AvAffecterAoE]
+	ID=wb_cross; shape=2;
+	minRange=1;
+	maxRange=2;
+	forcedRot=180;
+	coneAngle=1;
+	arc=true;
+	airborne=true;
+	teleporting=true;
+	needsLoE=false;
+	needsLoS=true;
+	
+[AvAffecter]
+	ID=wb_cross; 
+	weaponAvAffecter=true;
+	showWeaponAvAffecterFX=false;
+	actorValue=HP;
+	magnitude=w:magnitude * 0.75;
+	chance=w:chance;
+	duration=-2;
+	element=physical;
+	FXOnTile=delay;
+	FXOnTile=DramaticNyeaow;
+	FXOnTile=longslash;
+	FXOnTile=gateClose_left_noOverlap;
+	FXOnTile=gateClose_right_noOverlap;
+	FXOnTile=gateOpen_above_noOverlap;
+	FXOnTile=gateOpen_below_noOverlap;
+	FXOnHit=triSlash;
+	FXOnHit=sfx_slashingHit;
+[AvAffecterAoE]
+	ID=wb_cross;
+	cloneFrom=oneTile;
+	airborne=true;
+	teleporting=true;
+	teleporting=true;
+	
+[AvAffecter]
+	ID=wb_cross; 
+	actorValue=HP;
+	magnitude=w:magnitude * 0.75;
+	chance=w:chance;
+	duration=-2;
+	element=physical;
+[AvAffecterAoE]
+	ID=wb_cross; shape=2;
+	minRange=1;
+	maxRange=2;
+	forcedRot=0;
+	coneAngle=1;
+	arc=true;
+	airborne=true;
+	teleporting=true;
+	needsLoE=false;
+	needsLoS=true;
+	
+
+[AvAffecter]
+	ID=wb_cross; 
+	actorValue=HP;
+	magnitude=w:magnitude * 0.75;
+	chance=w:chance;
+	duration=-2;
+	element=physical;
+[AvAffecterAoE]
+	ID=wb_cross; shape=2;
+	minRange=1;
+	maxRange=2;
+	forcedRot=270;
+	coneAngle=1;
+	arc=true;
+	airborne=true;
+	teleporting=true;
+	needsLoE=false;
+	needsLoS=true;
+	
+[AvAffecter]
+	ID=wb_cross; 
+	actorValue=HP;
+	magnitude=w:magnitude * 0.75;
+	chance=w:chance;
+	duration=-2;
+	element=physical;
+	FXOnTile=DramaticNyeaow;
+	FXOnTile=longslash_rot;
+	FXOnTile=gateClose_above_noOverlap;
+	FXOnTile=gateClose_below_noOverlap;
+	FXOnHit=triSlash;
+	FXOnHit=sfx_slashingHit;
+[AvAffecterAoE]
+	ID=wb_cross;
+	cloneFrom=oneTile;
+	arc=true;
+	airborne=true;
+	teleporting=true;
+	
+[AvAffecter]
+	ID=wb_cross; 
+	actorValue=HP;
+	magnitude=w:magnitude * 0.75;
+	chance=w:chance;
+	duration=-2;
+	element=physical;
+[AvAffecterAoE]
+	ID=wb_cross; shape=2;
+	minRange=1;
+	maxRange=2;
+	forcedRot=90;
+	coneAngle=1;
+	arc=true;
+	airborne=true;
+	teleporting=true;
+	needsLoE=false;
+	needsLoS=true;
+[AvAffecter]
+	ID=wb_cross; 
+	FXOnHit=hitdashes;
+[AvAffecterAoE]
+	ID=wb_cross;
+	cloneFrom=oneTile;
+	
+	

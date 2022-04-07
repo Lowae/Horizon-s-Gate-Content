@@ -1,0 +1,171 @@
+[DialogNode] ID=merchant_station;
+animations=;
+statements=Need somethin'?;
+specialEffect=setPCDialogWindowSizeY;
+specialEffect=setNPCDialogWindowSizeY;
+
+[DialogOption] text=Buy <adjX=-1><math=m:maxFoodBuy><adjX=-12><iconBig=food><adjX=-2> Food ($<buyPrice=food> each);
+formulaReq=m:maxFoodBuy;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_autofill_food_station;
+[DialogOption] text=Trade;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_goods_station;
+[DialogOption] text=What is this place?;
+newLineOfOptions=true;
+formulaReq=1 - g1:D_merchant_station_explain2;
+nodeToConnectTo=merchant_station_explain;
+[DialogOption] text=Salvage;
+newLineOfOptions=true;
+formulaReq=g1:D_merchant_station_explain2 + itemsZone:machine_extractor - 1;
+nodeToConnectTo=merchant_station_salvage1;
+[DialogOption] text=Salvage;
+newLineOfOptions=true;
+formulaReq=g1:D_merchant_station_explain2 + itemsZone:machine_extractor_broken - 1;
+nodeToConnectTo=merchant_station_salvage_cant;
+
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+
+
+-----------------------
+
+[DialogNode] ID=merchant_goods_station;
+animations=;
+statements=What'd ya like?;
+specialEffect=enterBuyMode_location;
+specialEffect=setNPCDialogWindowSizeY,120;
+specialEffect=setPCDialogWindowSizeY,68;
+nextNodeID=merchant_station;
+[DialogOption] text=Back;
+nodeToConnectTo=merchant_station;
+escOption=true;
+bottomOption=true;
+
+
+
+[DialogNode] ID=merchant_autofill_food_station;
+animations=;
+statements=Fill yer cargo with <math=m:maxFoodBuy>food, for $<math=m:maxFoodBuy * buyPrice:food><adjX=-2>?;
+[DialogOption] text=Yes ($<math=m:maxFoodBuy * buyPrice:food><adjX=-6>);
+formulaReq=m:money - m:maxFoodBuy * buyPrice:food + 1;
+nodeToConnectTo=merchant_autofill_food_yes_station;
+[DialogOption] text=No;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_station;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=merchant_autofill_food_yes_station;
+animations=;
+statements=A'ight. Anything else?;
+specialEffect=autobuy_food;
+[DialogOption] text=Trade;
+nodeToConnectTo=merchant_goods_station;
+
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+-----------------------
+
+
+
+[DialogNode] ID=merchant_station_explain;
+animations=sly;
+animations=sigh;
+animations=stern;
+animations=;
+statements=This here's the ol' salvage station.<p=> Used to operate day and night, makin' quite a profit.;
+statements='Course now the Cleever get riled up anytime we run the thing, so everyone's gone and left.;
+statements=I just maintain the thing...<p=> although, now that I think about it...;
+statements=You seem like a strong fella...<p=> how'd ya like to make some profit?;
+[DialogOption] text=Profit?;
+animation=sly;
+nodeToConnectTo=merchant_station_explain2;
+[DialogOption] text=No thanks.;
+newLineOfOptions=true;
+nodeToConnectTo=merchant_station_explain_no;
+
+--
+
+[DialogNode] ID=merchant_station_explain2;
+animations=sly;
+animations=;
+animations=sly;
+animations=stern;
+statements=Yeah...<p=> I can run this machine here and drag up some real nice minerals.<p=> There's a load of mythril an' other stuff down there.;
+statements=The longer you hold off the Cleever, the more we can grab.;
+statements=They go straight for the machine, too -<p=> so you gotta keep 'em off it.<p=> We even got some little defenses y'can set up here.;
+statements=So anytime yer up for a little challenge -<p=> and some quick coin -<p=> just lemme know.;
+nextNodeID=;
+
+[DialogNode] ID=merchant_station_explain_no;
+animations=stern;
+statements=Suit yerself.<p=> Forget I mention'd it.;
+------
+
+[DialogNode] ID=merchant_station_salvage1;
+animations=sly;
+animations=;
+animations=;
+statement=You want to have a go at it?;
+statements=Just protect that big machine from the Cleever for<n=><iconBig=time>100 and ya can keep whatever we drag up.;
+statements=Every <iconBig=time>100 past that gets us even more, so do yer best...<p=> but don't overdo it.<p=> Y'still gotta be alive at the end a' the day, after all.;
+
+[DialogOption] text=Let's do it!;
+nodeToConnectTo=merchant_station_salvage_yes;
+[DialogOption] text=Nevermind.;
+newLineOfOptions=true;
+nodeToConnectTo=;
+
+--
+[DialogNode] ID=merchant_station_salvage_yes;
+animations=sly;
+animations=stern;
+statements=Tha's what I wanna hear!;
+statements=Once yer next to th' machine, I'll start 'er up!;
+nextNodeID=merchant_station_salvage_yes2;
+
+[DialogNode] ID=merchant_station_salvage_yes2;
+specialEffect=setGlobalVar,readyToSalvage,1;
+
+[DialogNode] ID=merchant_station_salvage_cant;
+animations=;
+animations=stern;
+animations=;
+statements=<textIfFinal=Nice fightin'. Lasted longer'n I could've.=800-g:spawnPowerMod>Helluva fight y'put up, there. Lasted through what,<n><math=g:spawnPowerMod/120>whole waves of 'em?;
+statements='Fraid I gotta fix the machine 'fore we can have another go.;
+statements=Come back in a tenday, should be up an' running by then.;
+
+
+--
+
+[DialogNodeOverride] ID=merchant_station_readyToSalvage;
+dialogNodeID_toOverride=merchant_station;
+completeOverride=true;
+fReq=g:readyToSalvage;
+animations=sly;
+statements=Changed yer mind?;
+[DialogOption] text=Let's not salvage.;
+nodeToConnectTo=merchant_station_readyToSalvage_cancel;
+[DialogOption] text=I'm ready!;
+nodeToConnectTo=merchant_station_readyToSalvage_ready;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=merchant_station_readyToSalvage_cancel;
+animations=;
+statements=A'ight, I'll power it down.;
+specialEffect=setGlobalVar,readyToSalvage,0;
+
+
+[DialogNode] ID=merchant_station_readyToSalvage_ready;
+animations=angry;
+statements=Head over to th' machine then, and brace yerself!;
+
+

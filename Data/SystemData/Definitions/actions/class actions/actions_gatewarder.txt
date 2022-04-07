@@ -1,0 +1,298 @@
+
+[Action] ID=gateW_gateSwap; 
+	name=Gate: Swap;
+	icon=icon_gate_swap;
+	mpCost=4 * d:mpCostMult + d:mpCostMod;
+	tooltip=Connect two points in space, teleporting yourself or allies between them.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=;
+	
+	XPCost=180;
+	XPCost=400;
+	XPCost=900;
+	
+	AIRatingBias = -999;
+	
+	casterAnimation=spellcast;
+	special=swapTargetWithTarget;
+	special=doNotShowConfirmOption;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	numTargets=2;
+	FXOnCaster=magicCharge;
+	
+	FXOnTarget=gateClose_fast;
+	FXOnTarget=horizSpark_many_wideArea;
+	FXOnTarget=sfx_highestHum;
+[ActionAoE] 
+	ID=gateW_gateSwap;
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	teleporting=true;
+	minRange = 0;
+	maxRange = 1;
+	maxRangeBonus = c:rank + sa:gateAdept;
+	canSelectEnemies=false;
+	bypassAll=true;
+	occupyAll=false;
+[AvAffecter]
+	ID=gateW_gateSwap; 
+	harmful=false;
+	chance=100;
+[AvAffecterAoE]
+	ID=gateW_gateSwap;
+	cloneFrom=oneTile;
+
+	
+	
+
+
+[Action] ID=gateW_gateShield; 
+	name=Gate: Shield;
+	icon=icon_gate_shield;
+	mpCost=4 * d:mpCostMult + d:mpCostMod;
+	tooltip=Grant an ally immunity to ranged attacks for <icon=time><math=35 + c:rank * 10 + c:MagAtk * 3>.;
+	rankUpTooltip=Each rank increases duration by <icon=time>10.;
+	tooltipTopRight=<icon=MagAtk_small>;
+	
+	XPCost=200;
+	XPCost=400;
+	XPCost=700;
+	
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnTarget=sfx_highestHum;
+	
+[ActionAoE] 
+	ID=gateW_gateShield;
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	teleporting=true;
+	minRange = 0;
+	maxRange = 4;
+	maxRangeBonus = sa:gateAdept;
+	canSelectEnemies=false;
+	bypassAll=true;
+	occupyAll=false;
+[AvAffecter]
+	ID=gateW_gateShield; 
+	harmful=false;
+	actorValue=gateShield;
+	magnitude=1;
+	duration=35 + c:rank * 10 + c:MagAtk * 3;
+	chance=100;
+	FXOnTile=horizSpark_many_wideArea;
+	FXOnTile=gateOpen_fast;
+	FXOnTile=gateClose_flicker_fast;
+	element=physical;
+[AvAffecterAoE]
+	ID=gateW_gateShield;
+	cloneFrom=oneTile;
+	
+	
+
+[Action] ID=gateW_barrage; 
+	name=Gate: Barrage;
+	icon=icon_gate_barrage;
+	mpCost=9 * d:mpCostMult + d:mpCostMod;
+	tooltip=Open <math=c:rank + 2> gates that deal <thinnerIcon=skill_Wind><math=d:windDmgDisplay(2) * 0.5> damage and push adjacent targets.;
+	rankUpTooltip=Each rank adds +1 target.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Wind_small>;
+	
+	XPCost=200;
+	XPCost=800;
+	XPCost=1600;
+	
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	numTargets=2 + c:rank;
+	minDistanceBetweenTargets=2;
+--maxDistanceBetweenTargets=3;
+	
+	FXOnCaster=magicCharge;
+	FXOnTarget=sfx_highestHum;
+	
+[ActionAoE] 
+	ID=gateW_barrage; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	teleporting=true;
+	minRange = 2;
+	maxRange = 5;
+	maxRangeBonus = sa:gateAdept;
+	bypassAll=true;
+	occupyAll=true;
+	canSelectActors=false;
+[AvAffecter]
+	ID=gateW_barrage;
+	visibleEvaluations=false;	
+	FXOnTile=delay;
+	FXOnTile=gateClose_small_flicker_fast;
+	FXOnTile=sfx_gustyBlast;
+[AvAffecterAoE]
+	ID=gateW_barrage;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=gateW_barrage; 
+	actorValue=HP;
+	magnitude=d:windDmg(2) * 0.5;
+	chance=d:windAcc;
+	duration=-2;
+	element=magic;
+	element=wind;
+	useCasterAsOriginForDirectionalEffects=false;
+	FXOnTile=smallShockwave_instant_moving;
+	FXOnHit=woosh;
+[AvAffecterAoE]
+	ID=gateW_barrage;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=gateW_barrage; 
+	actorValue=push;
+	magnitude=1;
+	chance=d:windAcc;
+	duration=-2;
+	useCasterAsOriginForDirectionalEffects=false;
+	FXOnHit=pop;
+	FXOnHit=largePing;
+	FXOnHit=click;
+[AvAffecterAoE]
+	ID=gateW_barrage;
+	cloneFrom=adjacent;
+	
+	
+
+	
+[Action] ID=gateW_void; 
+	name=Gate: Void;
+	icon=icon_gate_void;
+	mpCost=12 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=22 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	tooltip=Summon a gate to the blinding white void. All creatures looking in your direction are blinded for <icon=time>70.;
+	tooltipTopRight=<icon=MagAtk_small>;
+	
+	XPCost=800;
+	
+	special=requiresCasting;
+	
+	casterAnimation=spellcast;
+	maxRank=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=darken_minor;
+	FXOnCaster=sfx_higherHum;
+	FXOnCaster=circle_form_big;
+	FXOnCaster=sfx_higherHum;
+	FXOnCaster=gate_flicker;
+	FXOnCaster=delay;
+	FXOnCaster=gate_flicker;
+	FXOnCaster=delay;
+	FXOnCaster=gate_flicker;
+	FXOnCaster=delay;
+	FXOnCaster=gate_flicker;
+	FXOnCaster=whiten;
+	FXOnCaster=superSparkles;
+	FXOnCaster=gateOpen_flicker_white;
+	
+	FXOnTarget=sfx_shingEcho;
+	FXOnTarget=WHITEN;
+	FXOnTarget=delay;
+	FXOnTarget=whitePalette;
+[ActionAoE] 
+	ID=gateW_void; shape=7;
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	minRange = 1;
+	maxRange = 12;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=gateW_void; 
+	actorValue=blind;
+	magnitude= 1;
+	duration=70;
+	chance=d:magicAcc * m:evaFacing - 200 * t:blind;
+	element=magic;
+	FXOnHit=sparkles;
+	FXOnMiss=sparkles;
+[AvAffecterAoE]
+	ID=gateW_void; 
+	aoeCasterAsOrigin=true;
+	
+	
+	
+[Action] ID=gateW_avalanche; 
+	name=Gate: Avalanche;
+	icon=icon_gate_rock;
+	mpCost=7 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=13 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	tooltip=Summon falling rocks from a mountain, dealing <math=c:MagAtk * 1.2 + 14><thinnerIcon=HP> physical damage in a small area.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small>;
+	
+	XPCost=250;
+	XPCost=770;
+	XPCost=1500;
+	
+	special=requiresCasting;
+	
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=darken_minor;
+[ActionAoE] 
+	ID=gateW_avalanche; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	teleporting=true;
+	minRange = 1;
+	maxRange = 3;
+	maxRangeBonus = c:rank + sa:gateAdept;
+	canFloatMidair=true;
+	bypassAll=true;
+[AvAffecter]
+	ID=gateW_avalanche; 
+	FXOnTile=sfx_higherHum;
+	FXOnTile=horizSpark_many_wideArea_high;
+	FXOnTile=gateOpen_above_flicker;
+	FXOnTile=gate_above_flicker_longer;
+	FXOnTile=sfx_gustyBlast;
+	FXOnTile=sfx_classicExplosion;
+[AvAffecterAoE]
+	ID=gateW_avalanche;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=gateW_avalanche; 
+	actorValue=HP;
+	magnitude= -c:MagAtk * 1.2 - 15 + t:PhysDef;
+	duration=-2;
+	chance=100 * c:Acc - t:PhysEva * 0.4;
+	useCasterAsOriginForDirectionalEffects=false;
+	element=physical;
+	element=smash;
+	element=heavySmash;
+	FXOnTile=boulder_drop;
+[AvAffecterAoE]
+	ID=gateW_avalanche;
+	cloneFrom=adjacentAndSelf;
+	airborne=true;
+	arc=true;
+	

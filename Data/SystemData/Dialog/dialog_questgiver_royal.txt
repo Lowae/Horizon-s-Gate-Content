@@ -1,0 +1,1177 @@
+
+----------------------------ROYAL QUESTGIVER
+
+[DialogNode] ID=royal_questgiver;
+animations=;
+statements=Welcome, <pfullname=>.<p=> <finalTextIf=How can I help you?=gIs:playerRank:9 + gIsTalkerFaction:playerFaction - 1>What business do you have with the Council?;
+[DialogOption] text=Pledge service;
+formulaReq=1 - gIsString:playerFaction;
+nodeToConnectTo=royal_questgiver_pledge;
+[DialogOption] text=Request audience;
+formulaReq=gIsTalkerFaction:playerFaction + gIsLessThan:playerRank:3 - 1 - g:gIsString:royalQuestType - g:royalSummons;
+nodeToConnectTo=royal_questgiver_meeting_cant;
+[DialogOption] text=Request audience;
+formulaReq=gIsTalkerFaction:playerFaction + gIsMoreThan:playerRank:3 - 1 - g:gIsString:royalQuestType - g:royalSummons;
+nodeToConnectTo=royal_questgiver_meeting_can;
+
+[DialogOption] text=Summons;
+formulaReq=gIsString:royalQuestType + gIsTalkerFaction:playerFaction + g:royalSummons - 2 - gIsString:questLog * 1000;
+specialEffect=royalJobDialogOptions,royal_questgiver_jobs;
+newLineOfOptions=true;
+nodeToConnectTo=royal_questgiver_jobs;
+[DialogOption] text=Summons;
+formulaReq=gIsString:questType - g:questRoyal + g:royalSummons + gIsTalkerFaction:playerFaction  - 2;
+newLineOfOptions=true;
+nodeToConnectTo=royal_questgiver_jobs_already_busy;
+
+
+[DialogOption] text=Document delivered;
+--generic turning a quest in to the questgiver
+formulaReq=gIs:questType,letter + g:questCompleted + gIsTalker:questGiver - 2;
+newLineOfOptions=true;
+nodeToConnectTo=royal_questgiver_job_complete_letter;
+
+[DialogOption] text=Deliver document;
+--if you're delivering letter and this is the right location for it
+formulaReq=gIs:questType,letter + gIsTalkerFaction:questGoal - 1;
+newLineOfOptions=true;
+nodeToConnectTo=royal_questgiver_job_letter;
+
+
+[DialogOption] text=Deliver cargo;
+--if you have enough cargo and you're back at the original questGiver
+formulaReq=gIs:questType,cargo + gIsTalker:questGiver + cargoItem_g:questGoal:10 - 2;
+newLineOfOptions=true;
+nodeToConnectTo=royal_questgiver_job_complete_cargo;
+
+[DialogOption] text=Deliver cargo?;
+--if you DON'T have enough cargo
+formulaReq=gIs:questType,cargo + gIsTalker:questGiver + cargoItem_g:questGoal:1 - cargoItem_g:questGoal:10*100 - 2;
+newLineOfOptions=true;
+nodeToConnectTo=royal_questgiver_job_not_enough_cargo;
+
+[DialogOption] text=Deliver item;
+--if you have the item and you're back at the original questGiver
+formulaReq=gIs:questType,item + gIsTalker:questGiver + partyItem_g:questGoal:1 - 2;
+newLineOfOptions=true;
+nodeToConnectTo=royal_questgiver_job_complete_item;
+
+[DialogOption] text=Defeated enemy!;
+--if you beat the fleet
+formulaReq=gIs:questType,defeat * 100000 + g_gID:fleetsDefeated_:questGoal - g:questStartNum - 200000 + gIsTalker:questGiver * 100000;
+newLineOfOptions=true;
+nodeToConnectTo=royal_questgiver_job_complete_defeat;
+[DialogOption] text=Defeated battle fleet!;
+--if you beat the battle fleet
+formulaReq=gIs:questType,defeatbattle * 100000 + g_gID:battlefleetsDefeated_:questGoal - g:questStartNum - 200000 + gIsTalker:questGiver * 100000;
+newLineOfOptions=true;
+nodeToConnectTo=royal_questgiver_job_complete_defeatbattle;
+[DialogOption] text=Defeated elite fleet!;
+--if you beat the elite fleet
+formulaReq=gIs:questType,defeatelite * 100000 + g_gID:elitefleetsDefeated_:questGoal - g:questStartNum - 200000 + gIsTalker:questGiver * 100000;
+newLineOfOptions=true;
+nodeToConnectTo=royal_questgiver_job_complete_defeatelite;
+
+[DialogOption] text=Alliances made!;
+--if you made enough alliances and you're back at the original questGiver
+formulaReq=gIs:questType,alliance * 100000 + gIsTalker:questGiver * 100000 + 1 + g:alliancesMade - g:questGoal - g:questStartNum - 200000;
+newLineOfOptions=true;
+nodeToConnectTo=royal_questgiver_job_complete_ally;
+[DialogOption] text=Grove discovered!;
+--if you discovered the grove and you're back at the original questGiver
+formulaReq=gIs:questType,grove + gIsTalker:questGiver + gLocDiscovered:questGoal - 2;
+newLineOfOptions=true;
+nodeToConnectTo=royal_questgiver_job_complete_grove;
+[DialogOption] text=Current mission;
+formulaReq=gIsTalkerFaction:playerFaction + gIsString:questType + g:questRoyal - 2;
+newLineOfOptions=true;
+nodeToConnectTo=royal_questgiver_jobs_already_busy_royal;
+
+[DialogOption] text=Give Lost Documents;
+formulaReq=partyItem:lost_docs;
+newLineOfOptions=true;
+nodeToConnectTo=royal_questgiver_give_lost_documents;
+[DialogOption] text=Defect;
+formulaReq=gIsString:playerFaction - gIsTalkerFaction:playerFaction - m:playerFavorWithTargetBelow(0);
+newLineOfOptions=true;
+nodeToConnectTo=royal_questgiver_defect;
+[DialogOption] text=Info;
+newLineOfOptions=true;
+nodeToConnectTo=royal_questgiver_info;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNodeOverride] ID=royal_questgiver_angry;
+dialogNodeID_toOverride=royal_questgiver;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:admin + m:playerFavorWithTargetBelowNeg(40) - 1;
+animations=angry;
+statements=<pname=>.<p=> Be advised you are an enemy of the state.<p=> Linger here and I'll have you imprisoned personally.;
+
+
+----ALREADY BUSY
+
+[DialogNode] ID=royal_questgiver_jobs_already_busy;
+animations=sly;
+animations=;
+animations=stern;
+statements=Your service is requested, but you're in the middle of a prior job, it seems...;
+statements='<g=questLog>', apparently.;
+statements=Trivial compared to a direct request from the Council.<p=> You should cancel it immediately.;
+nextNodeID=;
+[DialogOption] text=Cancel job;
+nodeToConnectTo=royal_questgiver_jobs_cancel;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=royal_questgiver_jobs_already_busy_royal;
+animations=;
+animations=sigh;
+animations=;
+animations=sly;
+statements=The Council has given you this task:;
+statements='<g=questLog>'.;
+statements=Hurry up and perform the mission given you.;
+statements=<p=> ...unless you're saying you can't complete it?;
+nextNodeID=;
+[DialogOption] text=Cancel job;
+nodeToConnectTo=royal_questgiver_jobs_cancel_royal;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+--NOT ENOUGH CARGO
+
+[DialogNode] ID=royal_questgiver_job_not_enough_cargo;
+animations=stern;
+statements=<pname=>...<p=> You failed to bring enough. The Council requested 10, but you only have <math=cargoItem_g:questGoal><adjX=-4>.;
+nextNodeID=;
+
+--CAN'T MEET
+
+[DialogNode] ID=royal_questgiver_meeting_cant;
+animations=sigh;
+statements=The Council is too busy to meet with you, <pnamefull=>.<p=> If they have anything to convey to you, I will relay it for them.;
+nextNodeID=;
+
+[DialogNode] ID=royal_questgiver_meeting_can;
+animations=;
+statements=Certainly, <prank=>.<p=> Go on in.;
+nextNodeID=;
+
+
+---
+[DialogNode] ID=royal_questgiver_job_letter;
+animations=;
+animations=sigh;
+statements=An important document? Ah, I see...<p=> I'll take it from here.;
+statements=<textIf=Thank you. =11 + m:playerFavorWithTarget><p=>Return to your master<textIf= and give them my regards=41 + m:playerFavorWithTarget>.;
+specialEffect=fx,sfx_questComplete;
+specialEffect=setGlobalVar,questGoal,;
+specialEffect=setGlobalVar,questCompleted,1;
+nextNodeID=;
+
+
+[DialogNode] ID=royal_questgiver_jobs;
+animations=;
+statements=Ah, <pname=>. The Council has indeed summoned you.;
+statements=The Council has this task for you to perform.;
+
+
+--JOB COMPLETE
+
+[DialogNode] ID=royal_questgiver_job_complete;
+animations=;
+statements=<g=questLog>...;
+specialEffect=fx,sfx_questComplete;
+specialEffect=modFame,trade,5;
+specialEffect=modGlobalVar,questComplete_r,1;
+nextNodeID=royal_questgiver_job_complete2;
+
+[DialogNode] ID=royal_questgiver_job_complete_letter;
+animations=;
+statements=<g=questLog>... good.;
+specialEffect=fx,sfx_questComplete;
+specialEffect=modFame,trade,5;
+specialEffect=modGlobalVar,questComplete_r_letter,1;
+nextNodeID=royal_questgiver_job_complete2;
+
+
+[DialogNode] ID=royal_questgiver_job_complete_cargo;
+animations=;
+statements=<g=questLog>? The cargo all seems to be accounted for...;
+specialEffect=fx,sfx_questComplete;
+specialEffect=removeCargo_g,questGoal,10;
+specialEffect=modFame,trade,10;
+specialEffect=modGlobalVar,questComplete_r_cargo,1;
+nextNodeID=royal_questgiver_job_complete2;
+
+[DialogNode] ID=royal_questgiver_job_complete_item;
+animations=;
+statements=<g=questLog>... this looks like the item in question.;
+specialEffect=fx,sfx_questComplete;
+specialEffect=removeItem_g,questGoal,1;
+specialEffect=modFame,trade,1;
+specialEffect=modFame,explore,5;
+specialEffect=modGlobalVar,questComplete_r_item,1;
+nextNodeID=royal_questgiver_job_complete2;
+
+[DialogNode] ID=royal_questgiver_job_complete_ally;
+animations=;
+statements=<g=questLog> -<p=2> a difficult feat, to be sure.;
+specialEffect=fx,sfx_questComplete;
+specialEffect=modFame,trade,10;
+specialEffect=modGlobalVar,questComplete_r_alliance,1;
+nextNodeID=royal_questgiver_job_complete2;
+
+[DialogNode] ID=royal_questgiver_job_complete_defeat;
+animations=;
+statements=<g=questLog>. I have heard you were successful in this.;
+specialEffect=fx,sfx_questComplete;
+specialEffect=modFame,combat,10;
+specialEffect=modGlobalVar,questComplete_r_defeat,1;
+nextNodeID=royal_questgiver_job_complete2;
+
+[DialogNode] ID=royal_questgiver_job_complete_defeatbattle;
+animations=;
+statements=<g=questLog>...<p> excellent.;
+specialEffect=fx,sfx_questComplete;
+specialEffect=modFame,combat,20;
+specialEffect=modGlobalVar,questComplete_r_defeat,1;
+nextNodeID=royal_questgiver_job_complete2;
+
+[DialogNode] ID=royal_questgiver_job_complete_defeatelite;
+animations=;
+statements=<g=questLog>? Fantastic!;
+specialEffect=fx,sfx_questComplete;
+specialEffect=modFame,combat,50;
+specialEffect=modGlobalVar,questComplete_r_defeat,1;
+nextNodeID=royal_questgiver_job_complete2;
+
+
+
+[DialogNode] ID=royal_questgiver_job_complete_grove;
+animations=;
+statements=<g=questLog>?<p=> So you did find it.;
+specialEffect=fx,sfx_questComplete;
+specialEffect=removeItem_g,questGoal,1;
+specialEffect=modFame,trade,1;
+specialEffect=modFame,explore,10;
+specialEffect=modGlobalVar,questComplete_r_grove,1;
+nextNodeID=royal_questgiver_job_complete2;
+
+
+
+[DialogNode] ID=royal_questgiver_job_complete2;
+animations=sigh;
+animations=;
+animations=;
+statements=Well done.<p=> You've provided a valuable service to your country.;
+statements=In exchange for your service, I am authorized to grant you the rank of<speed=0.5><cmd=fx=longGoodAuraSound> <color=Blue><prank=><color=>!;
+statements=Continue to make a name for yourself, and we will surely call on you again.;
+specialEffect=modTalkerFavor,3;
+specialEffect=modGlobalVar,playerRank,1;
+specialEffect=refreshRoyalQuests;
+specialEffect=cleanUpQuest;
+specialEffect=setGlobalVarTo0,royalSummons;
+specialEffect=setGlobalVarTo0,royalQuestType;
+specialEffect=setGlobalVarTo0,royalQuestGoal;
+nextNodeID=royal_questgiver_job_complete3;
+
+[DialogNode] ID=royal_questgiver_job_complete3;
+specialEffect=nextDialogNode_hideWindow;
+nextNodeID=royal_questgiver_showFactionWindow_jobDone;
+
+
+--CANCEL JOB
+
+[DialogNode] ID=royal_questgiver_jobs_cancel;
+animations=;
+statements=A wise choice.<p=> Give me the $20 necessary and I will send the guild cancellation fee for you.;
+[DialogOption] text=Cancel ($20);
+formulaReq=m:money - 19;
+nodeToConnectTo=royal_questgiver_jobs_cancel_confirm;
+[DialogOption] text=<color=SlateGray>(Can't afford...);
+formulaReq=20-m:money;
+nodeToConnectTo=royal_questgiver_jobs_cancel_cantAfford;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=royal_questgiver_jobs_cancel_cantAfford;
+animations=scared;
+animations=angry;
+statements=Are you joking?<p=2> You can't afford the-!?;
+statements=...Tch!<p> Come back when you're ready to be serious!;
+
+
+[DialogNode] ID=royal_questgiver_jobs_cancel_confirm;
+animations=sigh;
+statements=Good.<p> Now, where were we...;
+specialEffect=subtract20gp;
+specialEffect=cancelQuest;
+nextNodeID=royal_questgiver;
+
+
+
+[DialogNode] ID=royal_questgiver_jobs_cancel_royal;
+animations=sly;
+statements=Truly? The Council will be most disappointed to hear of this.;
+[DialogOption] text=Cancel (-5 Favor);
+nodeToConnectTo=royal_questgiver_jobs_cancel_confirm_royal;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+
+[DialogNode] ID=royal_questgiver_jobs_cancel_confirm_royal;
+animations=sigh;
+animations=stern;
+statements=Fine.<p=> I shall inform them not to entrust such tasks to you in the future.;
+statements=Go on then.<p=> You are freed of your obligation.;
+specialEffect=modTalkerFavor,-5;
+specialEffect=cancelQuest;
+nextNodeID=;
+
+---- PLEDGE SERVICE
+
+[DialogNode] ID=royal_questgiver_pledge;
+animations=sly;
+animations=happy;
+animations=;
+statements=Oh?<p=2> <pname=>, you would like to serve the Seartial Alliance?;
+statements=Very good!<p=> All in good standing are welcome.;
+statements=We do require a $100 fee as a gesture of sincerity - after which, you would, for all intents and purposes, be considered a citizen of Seartial.;
+
+[DialogOption] text=Pledge loyalty ($100);
+formulaReq=m:money - 99;
+nodeToConnectTo=royal_questgiver_pledge_confirm;
+[DialogOption] text=<color=SlateGray>(Can't afford...);
+formulaReq=100-m:money;
+nodeToConnectTo=royal_questgiver_pledge_cantAfford;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=royal_questgiver_pledge_cantAfford;
+animations=sigh;
+statements=That's a shame.<p=> Please return when things are going better for you.;
+
+[DialogNode] ID=royal_questgiver_pledge_confirm;
+animations=;
+animations=sigh;
+animations=;
+animations=sigh;
+animations=;
+animations=happy;
+statements=Excellent!<p=> Let me grab these forms...;
+statements=<speed=0.85>Just sign here, and here...;
+statements=Fill this out, please.<p=> <speed=0.75>And this...;
+statements=Sign this here.<p=> And your full name please<speed=0.5>...;
+statements=Very good!;
+nextNodeID=royal_questgiver_pledge_confirm2;
+specialEffect=subtract100gp;
+
+[DialogNode] ID=royal_questgiver_pledge_confirm2;
+statements=Consider yourself officially a <color=Blue><prank=><color=> of Seartial, <pname=>!;
+specialEffect=fx,longGoodAuraSound;
+specialEffect=setGlobalVar,playerFaction,seartial;
+specialEffect=setGlobalVar,playerRank,1;
+nextNodeID=royal_questgiver_pledge_confirm3;
+
+[DialogNode] ID=royal_questgiver_pledge_confirm3;
+--dummy node for overrides
+nextNodeID=royal_questgiver_pledge_confirm4;
+
+[DialogNode] ID=royal_questgiver_pledge_confirm4;
+specialEffect=nextDialogNode_hideWindow;
+nextNodeID=royal_questgiver_showFactionWindow_pledge;
+
+
+[DialogNode] ID=royal_questgiver_defect;
+animations=sly;
+animations=;
+animations=stern;
+statements=Hm?<p=> You wish to change your loyalties?;
+statements=I can't say I blame you...<p=> however, understand that we cannot implicitly trust you.;
+statements=You must back your intentions with actions.<textIf= As a ranked member of a foreign nation, this will be very expensive for you.=g:playerRank-1>;
+[DialogOption] text=Pledge loyalty ($<math=g:playerRank * g:playerRank * 1000><adjX=-6>);
+formulaReq=m:money + 1 - g:playerRank * g:playerRank * 1000;
+nodeToConnectTo=royal_questgiver_defect_confirm;
+[DialogOption] text=<color=SlateGray>Can't afford ($<math=g:playerRank * g:playerRank * 1000><adjX=-6>);
+formulaReq=g:playerRank * g:playerRank * 1000 - m:money;
+nodeToConnectTo=royal_questgiver_defect_cantAfford;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=royal_questgiver_defect_cantAfford;
+animations=;
+statements=Understandable.<p=> It is a high price for a big decision.;
+
+[DialogNode] ID=royal_questgiver_defect_confirm;
+animations=sigh;
+animations=;
+animations=;
+statements=Let me make sure you understand the repercussions and have no regrets.;
+statements=First, your previous faction will hate you.<textIf= Second, you will lose your rank entirely.=g:playerRank - 1>;
+statements=You'll have to earn your way into Seartial's favor like anyone else.;
+[DialogOption] text=Pledge loyalty ($<math=g:playerRank * g:playerRank * 1000><adjX=-6>);
+formulaReq=m:money + 1 - g:playerRank * g:playerRank * 1000;
+nodeToConnectTo=royal_questgiver_defect_confirm2;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=royal_questgiver_defect_confirm2;
+animations=;
+animations=sigh;
+statements=Alright.<p=> We formally accept your gesture of good faith.;
+statements=Just fill out this paperwork...;
+statements=And, there we go!;
+specialEffect=subtractgp,g:playerRank * g:playerRank * 1000;
+specialEffect=modPlayerFactionFavor,-150;
+nextNodeID=royal_questgiver_defect_confirm2a;
+
+
+[DialogNode] ID=royal_questgiver_defect_confirm2a;
+specialEffect=setGlobalVar,playerFaction,seartial;
+specialEffect=setGlobalVar,playerRank,1;
+specialEffect=setGlobalVar,tracking_rumane,0;
+specialEffect=setGlobalVar,tracking_jasce,0;
+specialEffect=setGlobalVar,tracking_seartial,0;
+specialEffect=convertPlayerPortsToFaction,seartial;
+nextNodeID=royal_questgiver_defect_confirm3;
+
+
+[DialogNode] ID=royal_questgiver_defect_confirm3;
+statements=<pname=>, you are officially a <color=Blue><prank=><color=> of Seartial!;
+specialEffect=fx,longGoodAuraSound;
+specialEffect=cancelRoyalQuest;
+--clear all royal quest variables
+specialEffect=setGlobalVarTo0,questRoyal;
+specialEffect=setGlobalVarTo0,royalQuestType;
+specialEffect=setGlobalVarTo0,royalQuestGoal;
+--set num royal quests completed to 0
+specialEffect=setGlobalVarTo0,questComplete_r_cargo;
+specialEffect=setGlobalVarTo0,questComplete_r_letter;
+specialEffect=setGlobalVarTo0,questComplete_r_item;
+specialEffect=setGlobalVarTo0,questComplete_r_defeat;
+specialEffect=setGlobalVarTo0,questComplete_r_grove;
+specialEffect=setGlobalVarTo0,questComplete_r_ally;
+nextNodeID=royal_questgiver_defect_confirm4;
+
+[DialogNode] ID=royal_questgiver_defect_confirm4;
+specialEffect=nextDialogNode_hideWindow;
+nextNodeID=royal_questgiver_showFactionWindow_pledge;
+
+[DialogNode] ID=royal_questgiver_declineQuest;
+animations=stern;
+animations=;
+animations=;
+statements=Well...<p=> it is wise not to accept a quest you are not ready for.;
+statements=However, this is the task chosen for you, and it will not change.<p=> Don't think that by waiting around you can get out of it.;
+statements=Come back when you are prepared to undertake it.;
+
+[DialogNode] ID=royal_questgiver_give_lost_documents;
+animations=happy;
+animations=sigh;
+statements=Ah, excellent find, <pname=>.<p> I shall add these documents to the archives.;
+statements=<talkerFaction=> thanks you for your service.;
+specialEffect=modTalkerFactionFavor,2;
+specialEffect=removeItemFromParty,lost_docs,1;
+
+
+[DialogNode] ID=royal_questgiver_offlimits;
+animations=angry;
+statements=Excuse me!<p=> Entry to the Council Chamber is by appointment ONLY!;
+
+[DialogNode] ID=auspex_royal_questgiver_offlimits;
+animations=angry;
+animations=stern;
+statements=Hold it!<p=> Audiences with Jasce are not given so lightly!;
+statements=Only those who are explicity summoned to meet with Jasce may enter!;
+
+[DialogNode] ID=viceroy_royal_questgiver_offlimits;
+animations=angry;
+statements=Hold on, there!<p=> I'm sorry, but the king is not taking visitors!;
+
+--pledge version which sets goal for  royal quest
+[DialogNode] ID=royal_questgiver_showFactionWindow_pledge;
+statements=;
+specialEffect=showEscFactionWindow;
+specialEffect=fxOnPlayerRank,manyGlints_ignoreDarkness;
+nextNodeID=royal_questgiver_hideFactionWindow_pledge;
+
+[DialogNode] ID=royal_questgiver_hideFactionWindow_pledge;
+nextNodeID=royal_questgiver_newRank_endConvo;
+specialEffect=hideEscWindows;
+specialEffect=addJournalGoal,@0.7,* Join Jasce, Seartial, or Rumane.;
+specialEffect=completeJournalGoal,@1,* Join Jasce, Seartial, or Rumane.;
+specialEffect=addJournalGoal,@2,* Reach 200 fame and complete a royal quest.;
+
+--job done version which completes goal for royal quest
+[DialogNode] ID=royal_questgiver_showFactionWindow_jobDone;
+statements=;
+specialEffect=showEscFactionWindow;
+specialEffect=fxOnPlayerRank,manyGlints_ignoreDarkness;
+nextNodeID=royal_questgiver_hideFactionWindow_jobDone;
+
+[DialogNode] ID=royal_questgiver_hideFactionWindow_jobDone;
+nextNodeID=royal_questgiver_newRank_endConvo;
+specialEffect=hideEscWindows;
+specialEffect=completeJournalGoal,@0.9,* Reach 200 fame and complete a royal quest.;
+specialEffect=addJournalGoal,@1.75,* Reach 3rd royal rank and have an audience.;
+
+--for overrides
+[DialogNode] ID=royal_questgiver_newRank_endConvo;
+nextNodeID=;
+
+[DialogNode] ID=royal_questgiver_info;
+animations=sly;
+statements=What would you like to know about?;
+[DialogOption] text=Your nation;
+nodeToConnectTo=royal_questgiver_info_nation;
+[DialogOption] text=Royal ranks;
+newLineOfOptions=true;
+nodeToConnectTo=royal_questgiver_info_ranks;
+[DialogOption] text=Fame;
+newLineOfOptions=true;
+nodeToConnectTo=royal_questgiver_info_fame;
+[DialogOption] text=Favor;
+newLineOfOptions=true;
+nodeToConnectTo=royal_questgiver_info_favor;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=royal_questgiver;
+escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=royal_questgiver_info_ranks;
+animations=sigh;
+animations=;
+animations=;
+animations=sly;
+animations=happy;
+statements=It's quite simple.;
+statements=As your fame increases, royal tasks for you will be sent out.;
+statements=When you complete a task for us, you attain a higher rank, allowing you to gain more favor with us.;
+statements=People will treat you to better prices for Food and Repairs as your rank rises.;
+statements=And when you reach a certain rank, you may even be let in for an audience -<p> at which point you can make formal requests for assistance.;
+nextNodeID=royal_questgiver_info;
+
+[DialogNode] ID=royal_questgiver_info_fame;
+animations=sigh;
+animations=;
+animations=sly;
+animations=;
+animations=sigh;
+statements=There are three types of fame: Exploration, Combat, and Trade.;
+statements=Exploration fame is raised by discovering locations, selling research, or doing cartography.;
+statements=Combat fame increases whenever you fight - especially if you fight an enemy fleet.;
+statements=Trade fame can be gained by making a profit on trade goods, doing Guild jobs, or investing in ports.;
+statements=Acquire enough fame, and we may send out a summons for your assistance.;
+nextNodeID=royal_questgiver_info;
+[DialogNode] ID=royal_questgiver_info_favor;
+animations=sigh;
+animations=;
+animations=sly;
+animations=sigh;
+animations=;
+animations=happy;
+statements=There are many ways to influence favor with different factions.;
+statements=Defeating a merchant or battle fleet gains you favor with your faction -<p> and loses favor with who you attack.;
+statements=Investing in a port increases favor with your faction,<p> but reduces favor with that port's owner.;
+statements=You can also turn in <itemBig_low=lost_docs> Lost Documents to gain 2 favor each.;
+statements=Finally, you can donate at a religious center.<p> Whoever owns the port you donate in will view you more favorably.;
+statements=Once you attain a high enough rank,<p> you can exchange favor for rewards and assistance!;
+nextNodeID=royal_questgiver_info;
+
+
+[DialogNode] ID=royal_questgiver_info_nation;
+animations=sigh;
+animations=;
+animations=sly;
+statements=The Seartial Alliance is a republic, led by the Council -<p> elected representatives from our many provinces.;
+statements=The Council does everything in its power for the betterment of Seartial's citizens.;
+statements=I assure you, you will find no fairer or more just nation in Eral!;
+nextNodeID=royal_questgiver_info;
+
+
+[DialogNodeOverride] ID=royal_questgiver_newRank_endConvo_rank3;
+dialogNodeID_toOverride=royal_questgiver_newRank_endConvo;
+completeOverride=true;
+overrideSpecialEffects=true;
+fReq=talker:admin + gIs:playerRank:3 - 1;
+animations=;
+animations=;
+statements=Now that you have proven yourself reliable, <pfullname=>, the Council will set aside time to meet with you.;
+statements=If you desire an audience, follow the north passage.<p=> And of course, be on your best behaviour!;
+
+[DialogNodeOverride] ID=royal_questgiver_newRank_endConvo_rank9;
+dialogNodeID_toOverride=royal_questgiver_newRank_endConvo;
+completeOverride=true;
+overrideSpecialEffects=true;
+fReq=talker:admin + gIs:playerRank:9 - 1;
+animations=sly;
+animations=happy;
+statements=Quite incredible, <pfullname=> - you have attained the highest rank possible!;
+statements=Your service has been most invaluable, and beyond all expectations.;
+nextNodeID=royal_questgiver_newRank_gift_rank9;
+
+[DialogNode] ID=royal_questgiver_newRank_gift_rank9;
+animations=;
+animations=sly;
+animations=happy;
+statements=It is my honor to grant you this <itemBig_low=xpGemBig><color=DarkRed> Essence Crystal<color=> to commemorate this occasion.;
+statements=From here on, we will share our closest intel with you<p> - our fleets will be marked on your map at all times.;
+statements=In addition, your contributions will be <color=DarkRed>valued twice over<color=> from here on.<p> Continue to serve and Seartial will treat you well, <p> <pfullname>!;
+specialEffect=giveItem,xpGemBig,1;
+specialEffect=modPlayerFactionFavor,3;
+specialEffect=setGlobalVar,tracking_seartial,1;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+-----------------------------AUSPEX----
+[DialogNodeOverride] ID=auspex_royal_questgiver_angry;
+dialogNodeID_toOverride=royal_questgiver;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:auspex + m:playerFavorWithTargetBelowNeg(40) - 1;
+animations=angry;
+statements=<pname=>... how dare you show your face here.<p=> For what reason have you come?;
+
+
+[DialogNodeOverride] ID=auspex_royal_questgiver;
+dialogNodeID_toOverride=royal_questgiver;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:auspex;
+animations=;
+statements=Ah, <pfullname=>.<p=> <finalTextIf=How can we serve Jasce today?=gIs:playerRank:9 + gIsTalkerFaction:playerFaction - 1>What brings you before Jasce?;
+
+[DialogNodeOverride] ID=auspex_royal_questgiver_jobs;
+dialogNodeID_toOverride=royal_questgiver_jobs;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:auspex;
+animations=;
+animations=;
+statements=Jasce has called you to serve.;
+statements=Perform this task in His name.;
+
+[DialogNodeOverride] ID=auspex_royal_questgiver_job_not_enough_cargo;
+dialogNodeID_toOverride=royal_questgiver_job_not_enough_cargo;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:auspex;
+animations=stern;
+statements=This is not enough.<p=> Jasce requires 10, but you only brought <math=cargoItem_g:questGoal><adjX=-4>.;
+
+[DialogNodeOverride] ID=auspex_royal_questgiver_meeting_cant;
+dialogNodeID_toOverride=royal_questgiver_meeting_cant;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:auspex;
+animations=sigh;
+statements=Jasce has no reason to meet with you at this time.;
+
+[DialogNodeOverride] ID=auspex_royal_questgiver_jobs_already_busy;
+dialogNodeID_toOverride=royal_questgiver_jobs_already_busy;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:auspex;
+animations=stern;
+animations=sly;
+animations=angry;
+statements=Your service is required, but you have a prior obligation that must be dismissed.;
+statements='<g=questLog>'.;
+statements=Either complete this immediately or cancel it.;
+
+[DialogNodeOverride] ID=auspex_royal_questgiver_jobs_already_busy_royal;
+dialogNodeID_toOverride=royal_questgiver_jobs_already_busy_royal;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:auspex;
+animations=stern;
+animations=;
+animations=;
+animations=angry;
+statements=Jasce has already spoken-;
+statements='<g=questLog>'.;
+statements=Do this and be rewarded.;
+statements=<p=>...or fail and suffer the consequences.;
+
+[DialogNodeOverride] ID=auspex_royal_questgiver_jobs_cancel_royal;
+dialogNodeID_toOverride=royal_questgiver_jobs_cancel_royal;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:auspex;
+animations=sly;
+statements=Consider this decision carefully.;
+
+
+[DialogNodeOverride] ID=auspex_royal_questgiver_jobs_cancel_confirm_royal;
+dialogNodeID_toOverride=royal_questgiver_jobs_cancel_confirm_royal;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:auspex;
+animations=sly;
+animations=stern;
+statements=Hmph.<p=> I will apprise Jasce of your failure.;
+statements=Perhaps in the future you will redeem yourself.<p=> Until then...;
+
+[DialogNodeOverride] ID=auspex_royal_questgiver_give_lost_documents;
+dialogNodeID_toOverride=royal_questgiver_give_lost_documents;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:auspex;
+animations=sigh;
+animations=happy;
+statements=Very good, <pname=>.<p> These sorts of records are of value to Jasce.;
+statements=Continue in this manner and you will surely be rewarded.;
+
+
+[DialogNodeOverride] ID=auspex_royal_questgiver_pledge;
+dialogNodeID_toOverride=royal_questgiver_pledge;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:auspex;
+animations=happy;
+animations=;
+animations=happy;
+statements=Ah, another of the faithful!<p=> So you wish to serve Jasce?;
+statements=You may become an honorary citizen, and if you serve well, gain rewards both material and spiritual.;
+statements=Only a donation of $100 stands between you and serving the true God.;
+
+[DialogNodeOverride] ID=auspex_royal_questgiver_pledge_confirm;
+dialogNodeID_toOverride=royal_questgiver_pledge_confirm;
+completeOverride=false;
+fReq=talker:auspex;
+animations=happy;
+animations=;
+statements=Very good!;
+statements=I will personally see the paperwork done.;
+specialEffect=subtract100gp;
+
+[DialogNodeOverride] ID=auspex_royal_questgiver_pledge_confirm2;
+dialogNodeID_toOverride=royal_questgiver_pledge_confirm2;
+completeOverride=false;
+overrideSpecialEffects=true;
+fReq=talker:auspex;
+animations=;
+statements=<pname=>, I hereby pronounce you a <color=Blue><prank=><color=> of Jasce!;
+specialEffect=fx,longGoodAuraSound;
+specialEffect=setGlobalVar,playerFaction,jasce;
+specialEffect=setGlobalVar,playerRank,1;
+
+[DialogNodeOverride] ID=auspex_royal_questgiver_newRank_endConvo_rank3;
+dialogNodeID_toOverride=royal_questgiver_newRank_endConvo;
+completeOverride=true;
+overrideSpecialEffects=true;
+fReq=talker:auspex + gIs:playerRank:3 - 1;
+animations=;
+animations=happy;
+statements=With this accomplishment, <pfullname=>, Jasce has deemed you worthy of an audience.;
+statements=Jasce' chambers are to the north.<p=> Go, and bask in our Lord's presence!;
+
+
+[DialogNodeOverride] ID=auspex_royal_questgiver_newRank_endConvo_rank9;
+dialogNodeID_toOverride=royal_questgiver_newRank_endConvo;
+completeOverride=true;
+overrideSpecialEffects=true;
+fReq=talker:auspex + gIs:playerRank:9 - 1;
+animations=happy;
+animations=;
+statements=I did not think I would see such faith from you, <pfullname=> -<p> and I am ecstatic to be proven wrong!;
+statements=You have reached the highest rank possible!<p> Very impressive, to say the least!;
+nextNodeID=auspex_royal_questgiver_newRank_gift_rank9;
+
+[DialogNode] ID=auspex_royal_questgiver_newRank_gift_rank9;
+animations=happy;
+animations=sigh;
+animations=sly;
+animations=happy;
+animations=handsupPose;
+statements=Your rewards shall surely be great in the afterlife!;
+statements=In the meantime, Jasce would grant you this:<p=1.5> a powerful <itemBig_low=xpGemBig><color=DarkRed> Essence Crystal<color=>!;
+statements=From here on, I will share our closest intel with you<p> - Jasce' fleets will be marked on your map at all times.;
+statements=And because you have acquired such results, your work shall merit <color=DarkRed>twice the rewards<color=> from here on!;
+statements=Praise Jasce!;
+specialEffect=giveItem,xpGemBig,1;
+specialEffect=modPlayerFactionFavor,3;
+specialEffect=setGlobalVar,tracking_jasce,1;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+
+
+[DialogNodeOverride] ID=auspex_royal_questgiver_pledge_cantAfford;
+dialogNodeID_toOverride=royal_questgiver_pledge_cantAfford;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:auspex;
+animations=sigh;
+animations=;
+statements=That is a shame.<p=> Unfortunately, the donation is required to express your sincerity.;
+statements=Do not worry.<p=> Surely you will earn your way in due time.;
+
+[DialogNodeOverride] ID=auspex_royal_questgiver_jobs_cancel_cantAfford;
+dialogNodeID_toOverride=royal_questgiver_jobs_cancel_cantAfford;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:auspex;
+animations=stern;
+animations=angry;
+statements=<pname=>.<p=2> Consider this a sign to re-examine yourself and your service to Jasce.;
+statements=Go.;
+
+[DialogNodeOverride] ID=auspex_royal_questgiver_defect;
+dialogNodeID_toOverride=royal_questgiver_defect;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:auspex;
+animations=sly;
+animations=;
+animations=stern;
+statements=Interesting...<p=> so you wish to side with the one true God after all?;
+statements=Jasce is merciful.<p=> He forgives those that make amends with a pure heart.;
+statements=If your intentions are true, you must prove it.<textIf= Doubly so, in accordance with your rank.=g:playerRank - 1>;
+
+[DialogNodeOverride] ID=auspex_royal_questgiver_defect_confirm;
+dialogNodeID_toOverride=royal_questgiver_defect_confirm;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:auspex;
+animations=stern;
+animations=;
+animations=sigh;
+statements=Let me first make sure you understand the magnitude of this decision.;
+statements=Your previous master will loathe you.<textIf= Your rank will be gone.=g:playerRank - 1> There's no turning back after this.;
+statements=Still, it is a small price to pay compared to the rewards...<p=> will you pay it?;
+
+[DialogNodeOverride] ID=auspex_royal_questgiver_defect_confirm2;
+dialogNodeID_toOverride=royal_questgiver_defect_confirm2;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:auspex;
+animations=sigh;
+animations=;
+statements=Very good.<p=> Jasce will surely accept your repentance.;
+statements=See to it that this feeling of penitence remains in your heart, and serve your God-king well.;
+
+[DialogNodeOverride] ID=auspex_royal_questgiver_defect_confirm2a;
+dialogNodeID_toOverride=royal_questgiver_defect_confirm2a;
+completeOverride=true;
+overrideSpecialEffects=true;
+fReq=talker:auspex;
+specialEffect=setGlobalVar,playerFaction,jasce;
+specialEffect=setGlobalVar,playerRank,1;
+specialEffect=setGlobalVar,tracking_rumane,0;
+specialEffect=setGlobalVar,tracking_jasce,0;
+specialEffect=setGlobalVar,tracking_seartial,0;
+specialEffect=convertPlayerPortsToFaction,jasce;
+nextNodeID=royal_questgiver_defect_confirm3;
+
+[DialogNodeOverride] ID=auspex_royal_questgiver_defect_confirm3;
+dialogNodeID_toOverride=royal_questgiver_defect_confirm3;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:auspex;
+animations=;
+statements=<pname=>, you are now a true <color=Blue><prank=><color=> of Jasce!;
+
+
+[DialogNodeOverride] ID=auspex_royal_questgiver_defect_cantAfford;
+dialogNodeID_toOverride=royal_questgiver_defect_cantAfford;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:auspex;
+animations=stern;
+statements=Hmph.<p=> Return when you can back up your words with action.;
+
+
+[DialogNodeOverride] ID=auspex_royal_questgiver_info_nation;
+dialogNodeID_toOverride=royal_questgiver_info_nation;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:auspex;
+animations=happy;
+animations=;
+animations=stern;
+statements=Jasce is the home of the one true God-king.;
+statements=Followers of Jasce are greatly rewarded - in this life and the next.;
+statements=However, Jasce is merciful even to the ignorant. Non-believers may live in Jasce as well.;
+nextNodeID=royal_questgiver_info;
+
+
+
+-----------------------------VICEROY----
+
+[DialogNodeOverride] ID=viceroy_royal_questgiver_angry;
+dialogNodeID_toOverride=royal_questgiver;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:viceroy + m:playerFavorWithTargetBelowNeg(40) - 1;
+animations=angry;
+statements=<pname=>...<p=> enemy of Rumane.<p=> If you have business here, get to it before I have you thrown out.;
+
+
+[DialogNodeOverride] ID=viceroy_royal_questgiver;
+dialogNodeID_toOverride=royal_questgiver;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:viceroy;
+animations=;
+statements=Well met, <pnamefull=>.<p=> <finalTextIf=Is there anything I can help you with?=gIs:playerRank:9 + gIsTalkerFaction:playerFaction - 1>What brings you to the Great Hall?;
+
+[DialogNodeOverride] ID=viceroy_royal_questgiver_jobs;
+dialogNodeID_toOverride=royal_questgiver_jobs;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:viceroy;
+animations=;
+statements=Indeed, the King does have a task for you.;
+
+[DialogNodeOverride] ID=viceroy_royal_questgiver_job_not_enough_cargo;
+dialogNodeID_toOverride=royal_questgiver_job_not_enough_cargo;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:viceroy;
+animations=stern;
+statements=Your contribution is lacking.<p=> His Majesty needs 10, not <math=cargoItem_g:questGoal><adjX=-4>.;
+
+[DialogNodeOverride] ID=viceroy_royal_questgiver_meeting_cant;
+dialogNodeID_toOverride=royal_questgiver_meeting_cant;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:viceroy;
+animations=sigh;
+statements=His Majesty is not accepting visitors.;
+
+[DialogNodeOverride] ID=viceroy_royal_questgiver_jobs_already_busy;
+dialogNodeID_toOverride=royal_questgiver_jobs_already_busy;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:viceroy;
+animations=sigh;
+animations=;
+statements='<g=questLog>'... this is your current task, is it not?;
+statements=You should resign from this in order to serve the King.;
+
+[DialogNodeOverride] ID=viceroy_royal_questgiver_jobs_already_busy_royal;
+dialogNodeID_toOverride=royal_questgiver_jobs_already_busy_royal;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:viceroy;
+animations=;
+animations=sigh;
+statements=Your mission is '<g=questLog>'.;
+statements=Are you not able to complete this?;
+
+[DialogNodeOverride] ID=viceroy_royal_questgiver_jobs_cancel_royal;
+dialogNodeID_toOverride=royal_questgiver_jobs_cancel_royal;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:viceroy;
+animations=stern;
+statements=It would reflect very poorly upon you to give up, but if you must...;
+
+
+[DialogNodeOverride] ID=viceroy_royal_questgiver_jobs_cancel_confirm_royal;
+dialogNodeID_toOverride=royal_questgiver_jobs_cancel_confirm_royal;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:viceroy;
+animations=sigh;
+animations=;
+statements=That is most unfortunate.;
+statements=I only hope you prove yourself more capable in the future.;
+
+[DialogNodeOverride] ID=viceroy_royal_questgiver_give_lost_documents;
+dialogNodeID_toOverride=royal_questgiver_give_lost_documents;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:viceroy;
+animations=happy;
+animations=;
+statements=Thank you, <pname=>.<p> I'll deliver these to the library myself.;
+statements=These are much appreciated.<p> If you find any more, please bring them here.;
+
+
+[DialogNodeOverride] ID=viceroy_royal_questgiver_pledge;
+dialogNodeID_toOverride=royal_questgiver_pledge;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:viceroy;
+animations=;
+animations=sigh;
+animations=;
+statements=Another migrant to the Clanlands?;
+statements=Your like is welcome here.<p=> The King has need of skilled sailors such as yourself.;
+statements=If you contribute $100, I can officially welcome you to Rumane as a honorary citizen.;
+
+[DialogNodeOverride] ID=viceroy_royal_questgiver_pledge_confirm;
+dialogNodeID_toOverride=royal_questgiver_pledge_confirm;
+completeOverride=false;
+fReq=talker:viceroy;
+animations=;
+animations=;
+statements=I'm glad to hear it.;
+statements=Your contribution will be used well, and your presence welcomed.;
+specialEffect=subtract100gp;
+
+[DialogNodeOverride] ID=viceroy_royal_questgiver_pledge_confirm2;
+dialogNodeID_toOverride=royal_questgiver_pledge_confirm2;
+completeOverride=false;
+overrideSpecialEffects=true;
+fReq=talker:viceroy;
+animations=happy;
+statements=<pname=>, you are now a <color=Blue><prank=><color=> of Rumane!;
+specialEffect=fx,longGoodAuraSound;
+specialEffect=setGlobalVar,playerFaction,rumane;
+specialEffect=setGlobalVar,playerRank,1;
+
+[DialogNodeOverride] ID=viceroy_royal_questgiver_newRank_endConvo_rank3;
+dialogNodeID_toOverride=royal_questgiver_newRank_endConvo;
+completeOverride=true;
+overrideSpecialEffects=true;
+fReq=talker:viceroy + gIs:playerRank:3 - 1;
+animations=;
+animations=happy;
+statements=As a result of your endeavors, <pfullname=>, the King wishes to meet with you.;
+statements=The throne room lies north of here.<p=> Don't keep His Majesty waiting!;
+
+
+[DialogNodeOverride] ID=viceroy_royal_questgiver_newRank_endConvo_rank9;
+dialogNodeID_toOverride=royal_questgiver_newRank_endConvo;
+completeOverride=true;
+overrideSpecialEffects=true;
+fReq=talker:viceroy + gIs:playerRank:9 - 1;
+animations=happy;
+animations=sigh;
+statements=I never thought I'd see the day, <pfullname=> - but you have attained the highest rank possible!;
+statements=Allow me to personally thank you on behalf of King and country for your service!;
+nextNodeID=viceroy_royal_questgiver_newRank_gift_rank9;
+
+[DialogNode] ID=viceroy_royal_questgiver_newRank_gift_rank9;
+animations=sly;
+animations=;
+animations=happy;
+statements=Please, take this <itemBig_low=xpGemBig><color=DarkRed> Essence Crystal<color=> as a memento!<p> It is a valuable item, fitting your valuable service.;
+statements=From here on, I will share our closest intel with you<p> - our fleets will be marked on your map at all times.;
+statements=And I can guarantee your work will recieve <color=DarkRed>twice the recognition<color=> from now on!<p> Thank you, <pfullname>!;
+specialEffect=giveItem,xpGemBig,1;
+specialEffect=modPlayerFactionFavor,3;
+specialEffect=setGlobalVar,tracking_rumane,1;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+
+[DialogNodeOverride] ID=viceroy_royal_questgiver_pledge_cantAfford;
+dialogNodeID_toOverride=royal_questgiver_pledge_cantAfford;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:viceroy;
+animations=sigh;
+statements=Ah, I see.<p=> Perhaps another time, then.;
+
+[DialogNodeOverride] ID=viceroy_royal_questgiver_jobs_cancel_cantAfford;
+dialogNodeID_toOverride=royal_questgiver_jobs_cancel_cantAfford;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:viceroy;
+animations=stern;
+animations=;
+statements=If you cannot pay this yourself, you are in no position to serve His Majesty.;
+statements=Raise the necessary funds and come back then.;
+
+[DialogNodeOverride] ID=viceroy_royal_questgiver_defect;
+dialogNodeID_toOverride=royal_questgiver_defect;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:viceroy;
+animations=sly;
+animations=sigh;
+animations=;
+statements=I see.<p=> That is an unusual request, but not an impossible one.;
+statements=We can accept even those from opposing nations under certain conditions.;
+statements=In the past it would be much more difficult...<p=> but in these times, a proper donation is enough.<textIf= Because of your rank, I must ask for a larger sum.=g:playerRank - 1>;
+
+[DialogNodeOverride] ID=viceroy_royal_questgiver_defect_confirm;
+dialogNodeID_toOverride=royal_questgiver_defect_confirm;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:viceroy;
+animations=;
+animations=sigh;
+animations=;
+statements=Your eagerness is appreciated,<p=> but let me make sure you understand the results.;
+statements=Your previous faction will become a bitter enemy.;
+statements=<textIf= You will have no royal rank.=g:playerRank - 1> You join us as any other citizen would, with no special treatment.;
+statements=Does that sound agreeable?;
+
+[DialogNodeOverride] ID=viceroy_royal_questgiver_defect_confirm2;
+dialogNodeID_toOverride=royal_questgiver_defect_confirm2;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:viceroy;
+animations=;
+statements=Alright.<p=> You've made your passion clear.;
+
+[DialogNodeOverride] ID=viceroy_royal_questgiver_defect_confirm2a;
+dialogNodeID_toOverride=royal_questgiver_defect_confirm2a;
+completeOverride=true;
+overrideSpecialEffects=true;
+fReq=talker:viceroy;
+specialEffect=setGlobalVar,playerFaction,rumane;
+specialEffect=setGlobalVar,playerRank,1;
+specialEffect=setGlobalVar,tracking_rumane,0;
+specialEffect=setGlobalVar,tracking_jasce,0;
+specialEffect=setGlobalVar,tracking_seartial,0;
+specialEffect=convertPlayerPortsToFaction,rumane;
+nextNodeID=royal_questgiver_defect_confirm3;
+
+[DialogNodeOverride] ID=viceroy_royal_questgiver_defect_confirm3;
+dialogNodeID_toOverride=royal_questgiver_defect_confirm3;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:viceroy;
+animations=sigh;
+statements=<pname=>, it is my pleasure to pronounce you a <color=Blue><prank=><color=> of Rumane!;
+
+
+
+[DialogNodeOverride] ID=viceroy_royal_questgiver_defect_cantAfford;
+dialogNodeID_toOverride=royal_questgiver_defect_cantAfford;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:viceroy;
+animations=sigh;
+statements=I'm afraid we cannot make an exception for you.<p=> Return when you have the proper funds.;
+
+[DialogNodeOverride] ID=viceroy_royal_questgiver_info_nation;
+dialogNodeID_toOverride=royal_questgiver_info_nation;
+completeOverride=false;
+overrideSpecialEffects=false;
+fReq=talker:viceroy;
+animations=sigh;
+animations=;
+animations=happy;
+statements=Rumane - sometimes called the clanlands - is led by our wise King Revarr.;
+statements=Once wracked by clan disputes, now Rumane is one of the great world powers, thanks to His Majesty's efforts.;
+statements=We welcome new citizens of all creeds and origins.;
+nextNodeID=royal_questgiver_info;
+
+
+
+
+
+
+

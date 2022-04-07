@@ -1,0 +1,324 @@
+[Zone]  ID=spGroveEnc27; dark=False; timeUntilNewDay=22.2; showFogOfWar=True; fogOfWar=True; minimapEnabled=True; allowCameraPastZoneEdges=False; cantAct=False; cantGameOver=False; alwaysKeepWeaponsUnsheathed=False; peaceful=False; overseerMode=False; rollingPinStyle=False; drawSky=False; drawSky_overrideYpos=-1; boatZone=False; wind=False; overworld=False; canDropItems=True; 
+ travelSong=; travelSongVolume=1; travelSongPitch=0; combatSong=; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=0; darkG=0; darkB=0; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=; bgFX_sineWave=0; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=pDirt; zoneGrassPalette=overworld1; zoneGrassDarkPalette=overworld2; zoneStonePalette=pGreyD; zoneStoneDarkPalette=p1; zoneStoneLightPalette=p1; zoneWaterPalette=pBlue; zoneDirtDarkPalette=pDirt; zoneWoodPalette=pWood; zoneWoodDarkPalette=pWoodDark; zoneMisc1Palette=pYellow6; zoneMisc2Palette=pWoodDark; zoneMisc3Palette=pYellow5; zoneMisc4Palette=pBlue; zoneMisc5Palette=pGreen; zoneMisc6Palette=pOrange; zoneMisc7Palette=pYellow; zoneMisc8Palette=pPurple; 
+
+combatMode=False; 
+
+[Item] ID=pod_burst; q=1; r=-360; x=1; y=0;
+[Item] ID=plant_small3; q=1; x=1; y=2;
+[Item] ID=crate_small_damaged; q=1; x=1; y=4; containerID=0;
+[Item] ID=skull_dog1; q=1; containedIn=0; cSlot=0;
+[Item] ID=skull_elephant1; q=1; containedIn=0; cSlot=1;
+[Item] ID=skull2; q=1; containedIn=0; cSlot=2;
+[Item] ID=skull_dog2; q=1; containedIn=0; cSlot=3;
+[Item] ID=skull; q=1; containedIn=0; cSlot=4;
+[Item] ID=skull_elephant2; q=1; containedIn=0; cSlot=5;
+[Item] ID=skull_elephant1; q=1; containedIn=0; cSlot=6;
+[Item] ID=skull_dog1; q=1; containedIn=0; cSlot=7;
+[Item] ID=skull_dog2; q=1; containedIn=0; cSlot=8;
+[Item] ID=plant_small2; q=1; x=2; y=1;
+[Item] ID=bones2; q=1; x=3; y=1;
+[Item] ID=campfire_everlit; q=1; x=4; y=3;
+[Item] ID=tree_stump; q=1; x=5; y=1;
+[Item] ID=debris; q=1; x=5; y=5;
+[Item] ID=food; q=15; x=5; y=5;
+[Item] ID=bone_dust; q=1; x=6; y=2;
+[Item] ID=skull_dog1; q=1; x=6; y=4;
+[Item] ID=plant_small1; q=1; x=6; y=6;
+
+
+[Actor]ID=rasmen_spGroveEnc27_; name=Zeal;
+actorTypeID=rasmen; sprite=; actorClass=elementalist; secondaryClass=scholar; actorClass3=; actorClass4=; movementSpeed=6; position=4,2; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=KP-BossBattle1; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=True; faction=enemy; combatTeam=; clothPalette=pCPurple; skinPalette=pRasmen1; armorPalette=pSteel; unarmoredPalette=pUnarmored; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.7; bravery=1; intelligence=0.5; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=rasmen_head; faceSprite=rasmen_face_mask17; legsSprite=template_legs; armLSprite=elementalist_arm; armRSprite=elementalist_arm; torsoSprite=elementalist_torso; shoulderLSprite=elementalist_shoulder; shoulderRSprite=elementalist_shoulder; backSprite=;
+ supportAbilities=zeal;  supportAbilities=elementwalker;  supportAbilities=; HP=48; MP=31; HPMax=48; MPMax=31; TrueHPMax=48; TrueMPMax=31; skill_Fire=2; skill_Ice=1; skill_Elec=2; skill_Wind=1; Ele_condensate=1; Ele_shock=1; Sch_prayer=1; elementwalker=1; scholar_XP=0; elementalist_XP=0; elementalist_XP_stars=0; zeal=1; 
+numRanksBought=Sch_prayer=1; 
+numRanksBought=Ele_condensate=1; 
+numRanksBought=Ele_shock=1; 
+numRanksBought=elementwalker=1; 
+numRanksBought=skill_Elec=2; 
+numRanksBought=skill_Ice=1; 
+numRanksBought=skill_Fire=2; 
+numRanksBought=skill_Wind=1; 
+numRanksBought=zeal=1; 
+chosenAbilityOfEachClass=elementalist=Ele_condensate; 
+chosenAbilityOfEachClass=balancer=Ba_stonefoot; 
+chosenAbilityOfEachClass=enchanter=En_fireWpn; 
+chosenAbilityOfEachClass=scholar=Sch_flame; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=armor_steel; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=armor_steel; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Fire; sourceAVAffecter=steamWand; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=shield_wood; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=9; duration=-1;
+[ActorEffect]
+ actorValue=MagAtk; sourceAVAffecter=gloves_volskarn; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagAtk; sourceAVAffecter=elementalist; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=elementalist; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagEva; sourceAVAffecter=elementalist; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=5; duration=-1;
+[ActorEffect]
+ actorValue=skill_Fire; sourceAVAffecter=elementalist; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Ice; sourceAVAffecter=elementalist; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Elec; sourceAVAffecter=elementalist; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Wind; sourceAVAffecter=elementalist; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=sight; sourceAVAffecter=av_sight; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEvaFlank; sourceAVAffecter=av_PhysEvaFlank; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=8; duration=-1;
+[ActorEffect]
+ actorValue=blind; sourceAVAffecter=av_unblind; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=-200; duration=-1;
+[ActorEffect]
+ actorValue=silence; sourceAVAffecter=av_unsilence; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=-200; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=steamWand; cSlot=0;
+[ActorItem] ID=shield_wood; cSlot=1; containerID=0;
+[ActorItem] ID=armor_steel; cSlot=2; containerID=1;
+[ActorItem] ID=gloves_volskarn; cSlot=3;
+[ActorItem] ID=blindfold; cSlot=4;
+[ActorItem] ID=splint; cSlot=5;
+[ActorItem] ID=gp; q=2; cSlot=6;
+[ActorItem] ID=gp; q=44; cSlot=7;
+
+
+[Actor]ID=rasmen_spGroveEnc27_1; name=Risk;
+actorTypeID=rasmen; sprite=; actorClass=stormshot; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=5,3; destination=-1,-1; facingRot=180; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pCWhite; skinPalette=pRasmen2; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=0.9; intelligence=0.4; honor=0; aiRating_bonusToNotMoving=-2; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+ headSprite=rasmen_head; faceSprite=rasmen_face_mask5; legsSprite=template_legs; armLSprite=stormshot_armL; armRSprite=stormshot_armR; torsoSprite=stormshot_torso; shoulderLSprite=stormshot_shoulderL; shoulderRSprite=stormshot_shoulderR; backSprite=;
+ supportAbilities=spiralCurrent;  supportAbilities=;  supportAbilities=; HP=45; MP=23; HPMax=45; MPMax=23; TrueHPMax=45; TrueMPMax=23; skill_Bow=1; skill_Wind=3; Sto_blastShot=1; spiralCurrent=1; stormshot_XP=0; stormshot_XP_stars=0; 
+numRanksBought=Sto_blastShot=1; 
+numRanksBought=spiralCurrent=1; 
+numRanksBought=skill_Wind=3; 
+numRanksBought=skill_Bow=1; 
+chosenAbilityOfEachClass=stormshot=Sto_blastShot; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=skill_Hammer; sourceAVAffecter=gloves_handwrap; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Flail; sourceAVAffecter=gloves_handwrap; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Fist; sourceAVAffecter=gloves_handwrap; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Shield; sourceAVAffecter=gloves_handwrap; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=stormshot; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=8; duration=-1;
+[ActorEffect]
+ actorValue=MagEva; sourceAVAffecter=stormshot; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=12; duration=-1;
+[ActorEffect]
+ actorValue=skill_Bow; sourceAVAffecter=stormshot; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=skill_Aim; sourceAVAffecter=stormshot; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=skill_Wind; sourceAVAffecter=stormshot; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=sight; sourceAVAffecter=av_sight; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEvaFlank; sourceAVAffecter=av_PhysEvaFlank; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=8; duration=-1;
+[ActorEffect]
+ actorValue=blind; sourceAVAffecter=av_unblind; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=-200; duration=-1;
+[ActorEffect]
+ actorValue=silence; sourceAVAffecter=av_unsilence; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=-200; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=bow_steel; cSlot=0; containerID=0;
+[ActorItem] ID=gloves_handwrap; cSlot=3;
+[ActorItem] ID=hipFlask; cSlot=4;
+[ActorItem] ID=gp; q=3; cSlot=5;
+[ActorItem] ID=volcano_bakemeat; cSlot=7;
+
+
+[Actor]ID=rasmen_spGroveEnc27_0; name=Dusk;
+actorTypeID=rasmen; sprite=; actorClass=unmaker; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=2,3; destination=-1,-1; facingRot=360; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pCBlack; skinPalette=pRasmen3; armorPalette=pBoneDark; unarmoredPalette=pUnarmored; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=0.7; intelligence=0.5; honor=0.25; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+ headSprite=rasmen_head; faceSprite=rasmen_face_mask13; legsSprite=template_legs; armLSprite=unmaker_arm; armRSprite=unmaker_arm; torsoSprite=unmaker_torso; shoulderLSprite=unmaker_shoulder; shoulderRSprite=unmaker_shoulder; backSprite=;
+ supportAbilities=necromancy;  supportAbilities=criticalFocus;  supportAbilities=; HP=55; MP=27; HPMax=55; MPMax=27; TrueHPMax=55; TrueMPMax=27; skill_Ruin=2; Un_decay=1; Un_drain=1; criticalFocus=1; necromancy=1; sorcerer_XP=0; unmaker_XP=0; unmaker_XP_stars=0; 
+numRanksBought=skill_Ruin=2; 
+numRanksBought=necromancy=1; 
+numRanksBought=Un_drain=1; 
+numRanksBought=Un_decay=1; 
+numRanksBought=criticalFocus=1; 
+chosenAbilityOfEachClass=unmaker=Un_ruinTouch; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=armor_bonemeld; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=armor_bonemeld; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Ruin; sourceAVAffecter=armor_bonemeld; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=cloak_dark; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=16; duration=-1;
+[ActorEffect]
+ actorValue=MagEva; sourceAVAffecter=cloak_dark; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=5; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=shield_iron; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=12; duration=-1;
+[ActorEffect]
+ actorValue=MagAtk; sourceAVAffecter=unmaker; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagEva; sourceAVAffecter=unmaker; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=10; duration=-1;
+[ActorEffect]
+ actorValue=skill_Dagger; sourceAVAffecter=unmaker; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Ruin; sourceAVAffecter=unmaker; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=sight; sourceAVAffecter=av_sight; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEvaFlank; sourceAVAffecter=av_PhysEvaFlank; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=8; duration=-1;
+[ActorEffect]
+ actorValue=blind; sourceAVAffecter=av_unblind; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=-200; duration=-1;
+[ActorEffect]
+ actorValue=silence; sourceAVAffecter=av_unsilence; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=-200; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=flail_steel; cSlot=0; containerID=0;
+[ActorItem] ID=shield_iron; cSlot=1; containerID=1;
+[ActorItem] ID=armor_bonemeld; cSlot=2; containerID=2;
+[ActorItem] ID=cloak_dark; cSlot=3;
+[ActorItem] ID=mossMalt; cSlot=5;
+[ActorItem] ID=gp; q=28; cSlot=7;
+
+
+[Actor]ID=rasmen_spGroveEnc27_2; name=Precept;
+actorTypeID=rasmen; sprite=; actorClass=warden; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=4,4; destination=-1,-1; facingRot=270; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pCTeal; skinPalette=pRasmen1; armorPalette=pVolskarn; unarmoredPalette=pUnarmored; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.7; bravery=0.9; intelligence=0.7; honor=0.1; aiRating_bonusToNotMoving=1; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=robed_head; faceSprite=rasmen_face_mask; legsSprite=template_legs; armLSprite=warden_arm; armRSprite=warden_arm; torsoSprite=warden_torso; shoulderLSprite=warden_shoulder; shoulderRSprite=warden_shoulder; backSprite=;
+ supportAbilities=autoAegis;  supportAbilities=lastingShelter;  supportAbilities=; HP=43; MP=25; HPMax=43; MPMax=25; TrueHPMax=43; TrueMPMax=25; Wrd_guard=1; Wrd_negate=1; lastingShelter=1; autoAegis=1; warden_XP=0; 
+numRanksBought=Wrd_guard=1; 
+numRanksBought=lastingShelter=1; 
+numRanksBought=autoAegis=1; 
+numRanksBought=Wrd_negate=1; 
+chosenAbilityOfEachClass=ignisKnight=iK_oilEdge; 
+chosenAbilityOfEachClass=sage=Sa_heal; 
+chosenAbilityOfEachClass=warden=Wrd_aegis; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=armor_volskarn; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=armor_volskarn; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=cloak_hood; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=9; duration=-1;
+[ActorEffect]
+ actorValue=skill_Life; sourceAVAffecter=trigger_life; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=warden; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=warden; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=MagEva; sourceAVAffecter=warden; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=12; duration=-1;
+[ActorEffect]
+ actorValue=skill_Shield; sourceAVAffecter=warden; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Life; sourceAVAffecter=warden; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=sight; sourceAVAffecter=av_sight; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEvaFlank; sourceAVAffecter=av_PhysEvaFlank; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=8; duration=-1;
+[ActorEffect]
+ actorValue=blind; sourceAVAffecter=av_unblind; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=-200; duration=-1;
+[ActorEffect]
+ actorValue=silence; sourceAVAffecter=av_unsilence; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=-200; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=dagger_iron; cSlot=0; containerID=0;
+[ActorItem] ID=trigger_life; cSlot=1;
+[ActorItem] ID=armor_volskarn; cSlot=2; containerID=1;
+[ActorItem] ID=cloak_hood; cSlot=3;
+[ActorItem] ID=lost_docs; cSlot=5;
+[ActorItem] ID=gem_small1; cSlot=6;
+[ActorItem] ID=gp; q=37; cSlot=7;
+
+
+[Actor]ID=rasmen_spGroveEnc27_3; name=Zeugma;
+actorTypeID=rasmen; sprite=; actorClass=elementalist; secondaryClass=gladiator; actorClass3=; actorClass4=; movementSpeed=6; position=2,5; destination=-1,-1; facingRot=180; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pCRed; skinPalette=pTeal2; armorPalette=pIron; unarmoredPalette=pUnarmored; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.6; bravery=0.65; intelligence=0.5; honor=0.3; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=rasmen_head_hat1; faceSprite=rasmen_face_helm; legsSprite=template_legs; armLSprite=elementalist_arm; armRSprite=elementalist_arm; torsoSprite=elementalist_torso; shoulderLSprite=elementalist_shoulder; shoulderRSprite=elementalist_shoulder; backSprite=;
+ supportAbilities=stoneSavant;  supportAbilities=counter;  supportAbilities=; HP=57; MP=24; HPMax=57; MPMax=24; TrueHPMax=57; TrueMPMax=24; skill_Fire=1; skill_Ice=1; skill_Elec=1; Ele_freeze=1; Gla_smash=2; counter=1; stoneSavant=1; warrior_XP=0; gladiator_XP=0; elementalist_XP=0; elementalist_XP_stars=0; 
+numRanksBought=Gla_smash=2; 
+numRanksBought=stoneSavant=1; 
+numRanksBought=skill_Fire=1; 
+numRanksBought=skill_Elec=1; 
+numRanksBought=skill_Ice=1; 
+numRanksBought=Ele_freeze=1; 
+numRanksBought=counter=1; 
+chosenAbilityOfEachClass=elementalist=Ele_condensate; 
+chosenAbilityOfEachClass=warrior=Wa_shove; 
+chosenAbilityOfEachClass=gladiator=Gla_smash; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=armor_iron; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=bracers_metal; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=gauntlets; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Elec; sourceAVAffecter=trigger_elec; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagAtk; sourceAVAffecter=elementalist; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=elementalist; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagEva; sourceAVAffecter=elementalist; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=5; duration=-1;
+[ActorEffect]
+ actorValue=skill_Fire; sourceAVAffecter=elementalist; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Ice; sourceAVAffecter=elementalist; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Elec; sourceAVAffecter=elementalist; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Wind; sourceAVAffecter=elementalist; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=sight; sourceAVAffecter=av_sight; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEvaFlank; sourceAVAffecter=av_PhysEvaFlank; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=8; duration=-1;
+[ActorEffect]
+ actorValue=blind; sourceAVAffecter=av_unblind; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=-200; duration=-1;
+[ActorEffect]
+ actorValue=silence; sourceAVAffecter=av_unsilence; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=-200; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=axe_elec; cSlot=0; containerID=0;
+[ActorItem] ID=trigger_elec; cSlot=1;
+[ActorItem] ID=armor_iron; cSlot=2; containerID=1;
+[ActorItem] ID=bracers_metal; cSlot=3;
+[ActorItem] ID=gauntlets; cSlot=4;
+[ActorItem] ID=gp; q=19; cSlot=5;
+[ActorItem] ID=bottle_beer; cSlot=7;
+
+
+

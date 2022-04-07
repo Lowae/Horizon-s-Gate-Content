@@ -1,0 +1,51 @@
+--this example creates a short hop animation.
+--to test in-game, use the console command 'anim' (Ex: 'anim myAnimation')
+
+[Animation] ID=myAnimation;
+attackKeyframe=2; applyFrameToAllParts=false;
+
+[Keyframe] ID=myAnimation; frame=0; endTime=0.05;
+
+[Keyframe] ID=myAnimation; frame=0; endTime=0.15;
+offset=0,-4; directionalOffset=1,0;
+jostleMult=1;
+
+[Keyframe] ID=myAnimation; frame=0; endTime=0.3;
+offset=0,0; directionalOffset=2,0; fx=jump_impact;
+
+[Keyframe] ID=myAnimation; frame=0; endTime=0.5;
+offset=0,0; directionalOffset=2,0;
+
+[Keyframe] ID=myAnimation; frame=0; endTime=0.6;
+offset=0,0; directionalOffset=0,0;
+canStopHere=true;
+
+
+
+[Keyframe] ID=myAnimation; bodyPart=face;
+frame=2; endTime=0.25;
+
+[Keyframe] ID=myAnimation; bodyPart=face;
+frame=1; endTime=0.5;
+
+[Keyframe] ID=myAnimation; bodyPart=armR;
+frame=1; endTime=0.3;
+
+[Keyframe] ID=myAnimation; bodyPart=armR;
+frame=4; endTime=0.5;
+
+[Keyframe] ID=myAnimation; bodyPart=armL;
+frame=3; endTime=0.6;
+
+[Keyframe] ID=myAnimation; bodyPart=legs;
+frame=1; endTime=0.3;
+[Keyframe] ID=myAnimation; bodyPart=legs;
+frame=3; endTime=0.6;
+
+
+
+[Animation] ID=myAnimation0;
+cloneFrom=myAnimation;
+
+[Animation] ID=myAnimation1;
+cloneFrom=myAnimation; swapItems0And1=true;

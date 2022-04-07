@@ -1,0 +1,2321 @@
+----NOTES:
+--completeOverride - if false, uses original node's dialog options & nextNodeID
+---nextNodeID=
+--previous - goes to previous node
+--overridden - goes to node that was overridden
+--overrideNext - goes to the overridden node's nextNodeID
+
+
+
+
+
+
+
+
+
+-------------REEVE
+
+[DialogNodeOverride] ID=reeve_nearPirateCove1a;
+dialogNodeID_toOverride=nearPirateCove;
+fReq=partyOrCrew:reeve - g1:D_reeve_nearPirateCove1a;
+speakerOverride=reeve;
+animations=happy;
+animations=;
+statements=Ah, the open seas!;
+statements=I feel like I've been in that pirate cove for years!;
+
+[DialogOption] text=What next?;
+animation=sly;
+nodeToConnectTo=reeve_nearPirateCove1b;
+[DialogOption] text=We should head to a safe port.;
+newLineOfOptions=true;
+animation=sigh;
+nodeToConnectTo=reeve_nearPirateCove1c;
+
+[DialogNode] ID=reeve_nearPirateCove1b;
+animations=sly;
+animations=meh;
+animations=;
+statements=Well, we've only got enough <itemBig_low=food> Food for a few days...;
+statements=And let's be honest, this ship is a bit of a clunker.;
+statements=So, let's head to the nearest port and get a better one!;
+nextNodeID=reeve_nearPirateCove1d;
+
+[DialogNode] ID=reeve_nearPirateCove1c;
+animations=sly;
+animations=;
+statements=Agreed!;
+statements=This ship is a bit of a clunker.<p=> Let's hit port and get a better one!;
+nextNodeID=reeve_nearPirateCove1d;
+
+[DialogNode] ID=reeve_nearPirateCove1d;
+animations=sly;
+animations=;
+animations=angry;
+statements=If we follow the coast to the <color=DarkRed>northwest<color=>, we should find a friendly port.;
+statements=But watch out for <color=DarkRed>deep water<color=> - sea monsters hide there!;
+nextNodeID=reeve_nearPirateCove1e;
+
+[DialogNode] ID=reeve_nearPirateCove1e;
+
+specialEffect=quietsave,@3;
+specialEffect=preventInteraction,3;
+specialEffect=openJournal,@0.5,0;
+specialEffect=addJournalGoal,@1,* Return to Storm Cove and defeat the pirates.;
+specialEffect=addJournalGoal,@1.75,* Open the strange sealed door.;
+specialEffect=addJournalGoal,@2.5,* Buy a new ship.;
+
+
+
+[DialogNodeOverride] ID=reeve_wrongWay1a;
+dialogNodeID_toOverride=wrongWay;
+fReq=partyOrCrew:reeve - g1:D_reeve_wrongWay1a;
+speakerOverride=reeve;
+animations=;
+animations=;
+animations=sly;
+statements=Commodore, let's not go this way yet.;
+statements=We'll run out of food if we do.;
+statements=Take a look at your <color=DarkRed>map.<p><color=> Let's head in the general direction of <color=DarkRed>Searth<color=>, ok?;
+
+[DialogNodeOverride] ID=reeve_aspectBeaten1a;
+dialogNodeID_toOverride=aspectBeaten;
+fReq=party:reeve - g1:D_reeve_aspectBeaten1a;
+speakerOverride=reeve;
+animations=sigh;
+animations=scared;
+animations=stern;
+animations=meh;
+statements=<speed=0.7>T-that...<p> that was no animal we just fought, <pname=>...;
+statements=<speed=0.7>What WAS that?;
+statements=It's creeping me out just thinking about it...;
+statements=<speed=0.7>...well, what's done is done...<p> let's get out of here as soon as possible!;
+
+
+[DialogNodeOverride] ID=reeve_doorEnd1a;
+dialogNodeID_toOverride=doorEnd;
+fReq=party:reeve - g1:D_reeve_doorEnd1a;
+speakerOverride=reeve;
+animations=stern;
+animations=chargePose;
+animations=sly;
+statements=Here we are...<p> back at this blasted door.;
+statements=I can only imagine what sort of sprawling criminal lair lies behind it!!;
+statements=The question is...<p> how to open it?;
+
+
+[DialogNodeOverride] ID=reeve_doorEndOpen1a;
+dialogNodeID_toOverride=doorEndOpen;
+fReq=party:reeve - g1:D_reeve_doorEndOpen1a;
+speakerOverride=reeve;
+animations=scared;
+animations=sly;
+animations=chargePose;
+statements=It's open...!;
+statements=Well done, <pname=>!;
+statements=Let's go!<p> To put an end to the Admiral's wrongdoing!;
+nextNodeID=reeve_doorEndOpen1b;
+
+[DialogNode] ID=reeve_doorEndOpen1b;
+specialEffect=preventInteraction,2.4;
+specialEffect=openJournal,@1;
+specialEffect=addJournalGoal,@1.9,* Find the Admiral and bring him to justice.;
+
+[DialogNodeOverride] ID=reeve_walkInBeach0e1a;
+dialogNodeID_toOverride=walkInBeach0e;
+fReq=party:reeve - g1:D_reeve_walkInBeach0e1a - g:gateGravenOpen;
+speakerOverride=reeve;
+animations=scared;
+animations=chargePose;
+animations=handsupPose;
+statements=<speed=0.5>What...<p> it's just...;
+statements=What is this, their supply closet??<p> There's nothing here!;
+statements=They betrayed us for this?!;
+
+[DialogOption] text=Calm down, Reeve!;
+animation=angry;
+nodeToConnectTo=reeve_walkInBeach0e1b;
+[DialogOption] text=Relax. There must be something here.;
+newLineOfOptions=true;
+animation=sigh;
+nodeToConnectTo=reeve_walkInBeach0e1b;
+
+[DialogNode] ID=reeve_walkInBeach0e1b;
+animations=scared;
+animations=sigh;
+animations=;
+statements=<speed=0.5>Y-<p>you're right...<p> Sorry.;
+statements=I'm going to stay calm.<p> I won't make the same mistakes again.;
+statements=Let's look around.;
+
+[DialogNodeOverride] ID=reeve_openGGate1a;
+dialogNodeID_toOverride=openGGate;
+fReq=partyOrCrew:reeve - g1:D_reeve_openGGate1a;
+speakerOverride=reeve;
+animations=scared;
+animations=;
+animations=angry;
+statements=<speed=0.5>Woah...<p> a Gate...!;
+statements=And a huge one, at that!<p> We could sail an entire fleet in there!;
+statements=This could be a trap...<p> Who knows what they have waiting on the other side...?;
+
+[DialogOption] text=We'll have to go through anyway.;
+animation=sigh;
+nodeToConnectTo=reeve_openGGate1b;
+[DialogOption] text=Let's prepare a bit first.;
+newLineOfOptions=true;
+animation=;
+nodeToConnectTo=reeve_openGGate1b;
+
+[DialogNode] ID=reeve_openGGate1b;
+animations=stern;
+animations=;
+statements=...right!;
+statements=I'm ready whenever you are, Commodore.;
+
+[DialogNodeOverride] ID=reeve_enterCoveG1a;
+dialogNodeID_toOverride=enterCoveG;
+fReq=partyOrCrew:reeve - g1:D_reeve_enterCoveG1a;
+speakerOverride=reeve;
+animations=sly;
+animations=;
+animations=scared;
+statements=Where are we...?;
+statements=<speed=0.7>Hold on...<p> is this...<p> Graven?;
+statements=Are we in an entirely different realm??;
+
+[DialogOption] text=What is Graven?;
+animation=;
+nodeToConnectTo=reeve_enterCoveG1b;
+[DialogOption] text=Looks like it.;
+animation=sigh;
+newLineOfOptions=true;
+nodeToConnectTo=reeve_enterCoveG1c;
+
+[DialogNode] ID=reeve_enterCoveG1b;
+animations=;
+animations=sly;
+animations=meh;
+animations=sly;
+statements=Graven is one of the three realms, along with Eral and Limroft.;
+statements=You can only get from one to the other using Gates.;
+statements=<speed=0.8>And, well...<p> I haven't heard many good things about Graven...<p> mostly only heard about the gigantic monsters and living soil...;
+statements=What in the world could the Admiral want here?;
+nextNodeID=reeve_enterCoveG1d;
+
+[DialogNode] ID=reeve_enterCoveG1c;
+animations=scared;
+animations=meh;
+animations=sly;
+statements=If this is really Graven...;
+statements=Well...<p> I haven't heard many good things about Graven.<p> Mostly only heard about the gigantic monsters and living soil...;
+statements=What in the world could the Admiral want here?;
+nextNodeID=reeve_enterCoveG1d;
+
+--redundant addJournalGoal in case you didn't bring Reeve into the dungeon with you earlier
+[DialogNode] ID=reeve_enterCoveG1d;
+specialEffect=addJournalGoal,@0.7,* Find the Admiral and bring him to justice.;
+
+
+[DialogNodeOverride] ID=reeve_FDEntrance1a;
+dialogNodeID_toOverride=FDEntrance;
+fReq=party:reeve - g1:D_reeve_FDEntrance1a - g1:D_reeve_FD_lastChanceWarning;
+speakerOverride=reeve;
+animations=;
+statements=Commodore, look!;
+nextNodeID=reeve_FDEntrance1b;
+
+[DialogNode] ID=reeve_FDEntrance1b;
+animations=scared;
+animations=angry;
+animations=sigh;
+animations=stern;
+statements=Dominian soldiers!;
+statements=And that construction looks like Dominian work...<p> this place must be what the Admiral is hiding!;
+statements=We've got to get in and look around.;
+statements=I bet we can make short work of those soldiers, before they can even call for help.;
+specialEffect=cameraAtPoint,2,0;
+
+[DialogOption] text=Sounds like a plan.;
+animation=sigh;
+nodeToConnectTo=reeve_FDEntrance1d;
+[DialogOption] text=Isn't that a bit reckless?;
+animation=sly;
+newLineOfOptions=true;
+nodeToConnectTo=reeve_FDEntrance1c;
+
+[DialogNode] ID=reeve_FDEntrance1c;
+animations=meh;
+animations=sly;
+animations=;
+animations=sigh;
+statements=Look, those guards are barely paying attention.;
+statements=I bet they haven't had a single intruder since they started here.;
+statements=I believe we can do it, Commodore.;
+statements=Ah, but...<p> don't forget.;
+nextNodeID=reeve_FDEntrance1d;
+
+[DialogNode] ID=reeve_FDEntrance1d;
+animations=;
+animations=sigh;
+statements=This might be our last chance to do anything else we need to do.;
+statements=Once we go in there, we're not coming out until it's over...!;
+
+--warning if you don't have reeve in the landing party
+[DialogNodeOverride] ID=reeve_FD_lastChanceWarning;
+dialogNodeID_toOverride=FDEntrance; priority=9;
+completeOverride=true;
+fReq=partyOrCrew:reeve - party:reeve - g1:D_reeve_FDEntrance1a - g1:D_reeve_FD_lastChanceWarning;
+speakerOverride=reeve;
+specialEffect=delayDialog,0.5;
+specialEffect=noSpeechFXLookOrAnim;
+animations=scared;
+animations=meh;
+animations=;
+animations=sigh;
+statements=Commodore, wait!;
+statements=Before you go in,<p> I wanted to warn you...;
+statements=This might be your last chance to do anything else you need to do.;
+statements=Once you go in there, you're not coming out until it's over...!;
+
+[DialogNodeOverride] ID=reeve_FDWEntrance1a;
+dialogNodeID_toOverride=FDWEntrance;
+fReq=party:reeve - g1:D_reeve_FDWEntrance1a;
+speakerOverride=reeve;
+animations=;
+animations=meh;
+animations=happy;
+animations=scared;
+animations=happy;
+animations=meh;
+statements=As expected...;
+statements=This place is now nothing more than a big hole in the ground.;
+statements=Talk about a job well done!;
+statements=Oh-!<p=1.5> I thought I saw something moving around down there...;
+statements=Probably just my imagination...<p> or some <p>'living soil'<p> or something.;
+statements=Definitely nothing horrible or creepy.;
+nextNodeID=;
+
+[DialogNodeOverride] ID=reeve_FDWTrap1a;
+dialogNodeID_toOverride=FDWTrap;
+fReq=party:reeve - g1:D_reeve_FDWTrap1a;
+speakerOverride=reeve;
+animations=scared;
+animations=;
+animations=sly;
+statements=Well,<p> that was weird...;
+statements=That was clearly a trap,<p> but I thought everything in the facility lost power.;
+statements=Is someone still living here,<p> setting traps?;
+nextNodeID=;
+
+
+[DialogNodeOverride] ID=reeve_boat_unmoor_ghost3a;
+dialogNodeID_toOverride=boat_unmoor_ghost3;
+fReq=partyOrCrew:reeve - g1:D_reeve_boat_unmoor_ghost3a;
+speakerOverride=reeve;
+animations=scared;
+animations=sad;
+animations=meh;
+animations=happy;
+statements=Uh...;
+statements=You saw that too,<p> right Commodore...?;
+statements=Well,<p> l-<p>let's not worry about it...;
+statements=Must be at sea too long,<p> the ocean's playing tricks on our eyes!<p=1.7> Haha...<p> ha...;
+
+------ENTER PORT
+
+[DialogNodeOverride] ID=reeve_enterPort_dialog1a;
+dialogNodeID_toOverride=enterPort;
+fReq=party:reeve - g1:D_reeve_enterPort_dialog1a*99 - m:fleetSize + shipTypeInPlayerFleet:sailboat;
+speakerOverride=reeve;
+specialEffect=delayDialog,2;
+specialEffect=noSpeechFXLookOrAnim;
+animations=happy;
+animations=chargePose;
+animations=;
+statements=What a relief to make port...!;
+statements=Let's visit the <itemBig_low=sign_wall1><adjX=-18><itemBig_low=sign_icon_boat> Shipwright and get a proper ship!;
+statements=I'd recommend a <color=DarkRed>Caravel<color=> or a <color=DarkRed>Cog<color=>, personally.;
+
+
+--port5
+
+[DialogNodeOverride] ID=reeve_port5_dialog1a;
+dialogNodeID_toOverride=enterPort; priority=-3;
+fReq=party:reeve + loc:port5 - g1:D_reeve_port5_dialog1a - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,2;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sigh;
+animations=angry;
+animations=meh;
+statements=This port belongs to pirates, <pname=>.;
+statements=Let's tread carefully, and not stay overlong.;
+statements=...as if that would be difficult.<p> Look what a mess it is...!;
+
+
+--port6
+
+[DialogNodeOverride] ID=reeve_port6_dialog1a;
+dialogNodeID_toOverride=enterPort; priority=-3;
+fReq=party:reeve + loc:port6 - g1:D_reeve_port6_dialog1a - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,2;
+specialEffect=noSpeechFXLookOrAnim;
+animations=happy;
+animations=;
+animations=happy;
+statements=Ah, Searth!<p> Capital of Seartial.;
+statements=I've been here a few times as a diplomat...<p> and a few other times as a tourist.;
+statements=Not the cleanest city, but I like it anyway.;
+nextNodeID=reeve_port6_dialog1b;
+nextNodeID_fReq=party:hagger;
+nextNodeID=;
+
+[DialogNode] ID=reeve_port6_dialog1b;
+speakerOverride=hagger;
+animations=sly;
+statements=Since when's 'clean' got to do wi' liking somethin'?;
+nextNodeID=;
+
+--port8
+
+[DialogNodeOverride] ID=reeve_port8_dialog1a;
+dialogNodeID_toOverride=enterPort; priority=-3;
+fReq=party:reeve + loc:port8 - g1:D_reeve_port8_dialog1a - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,2;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sly;
+animations=happy;
+animations=sly;
+animations=meh;
+statements=Runewald...<p> the seat of power for Rumane.;
+statements=I've only been here once, but it made a big impression!;
+statements=Mostly the fact that everything is big!<p> Even the people are big.<p> And there's too many stairs.;
+statements=Okay, not that much of an impression.;
+
+
+--port11
+
+[DialogNodeOverride] ID=reeve_port11_dialog1a;
+dialogNodeID_toOverride=enterPort; priority=-3;
+fReq=party:reeve + loc:port11 - g1:D_reeve_port11_dialog1a - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,2;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sly;
+animations=happy;
+statements=Jascias, eh?<p> Haven't been here often.;
+statements=I wonder if we'll get to meet Jasce himself?<p> Even as Vice Admiral I never got to see him!;
+nextNodeID=reeve_port11_dialog1b;
+nextNodeID_fReq=party:hagger;
+nextNodeID=;
+
+[DialogNode] ID=reeve_port11_dialog1b;
+speakerOverride=hagger;
+animations=happy;
+animations=sly;
+statements=Forget Jasce, I want t'see th' cafe!;
+statements=This dry air 'as me parched!<p> How 'bout it, <pname=>?;
+nextNodeID=;
+
+
+--port13
+
+[DialogNodeOverride] ID=reeve_port13_dialog1a;
+dialogNodeID_toOverride=enterPort; priority=-3;
+fReq=party:reeve + loc:port13 - g1:D_reeve_port13_dialog1a - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,2;
+specialEffect=noSpeechFXLookOrAnim;
+animations=happy;
+animations=sly;
+statements=This is a cute little cave town.;
+statements=I don't think they get a lot of visitors...<p> so we can't expect much in the way of goods or ships.;
+nextNodeID=reeve_port13_dialog1b;
+nextNodeID_fReq=party:hagger;
+nextNodeID=;
+
+[DialogNode] ID=reeve_port13_dialog1b;
+speakerOverride=hagger;
+animations=happy;
+statements=They've a cafe.<p> Who's needin' aught else?;
+nextNodeID=;
+
+
+
+--port14
+
+[DialogNodeOverride] ID=reeve_port14_dialog1a;
+dialogNodeID_toOverride=enterPort; priority=-3;
+fReq=party:reeve + loc:port14 - g1:D_reeve_port14_dialog1a - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,2;
+specialEffect=noSpeechFXLookOrAnim;
+animations=happy;
+animations=scared;
+statements=What a nice little forest port!;
+statements=This is my first visit to the Riverlands...<p> I heard they have ships made of trees here!;
+nextNodeID=reeve_port14_dialog1b;
+nextNodeID_fReq=party:hagger;
+nextNodeID=reeve_port14_dialog1c;
+
+[DialogNode] ID=reeve_port14_dialog1b;
+speakerOverride=hagger;
+animations=sly;
+statements=What a novelty, eh?;
+nextNodeID=reeve_port14_dialog1c;
+
+
+[DialogNode] ID=reeve_port14_dialog1c;
+speakerOverride=reeve;
+animations=meh;
+animations=angry;
+statements=Er, well, I guess most ships are made of trees.<p> I mean like still-alive trees!;
+statements=It's more impressive than it sounds, alright??;
+nextNodeID=;
+
+
+
+--port19
+
+[DialogNodeOverride] ID=reeve_port19_dialog1a;
+dialogNodeID_toOverride=enterPort; priority=-3;
+fReq=party:reeve + loc:port19 - g1:D_reeve_port19_dialog1a - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,2;
+specialEffect=noSpeechFXLookOrAnim;
+animations=scared;
+animations=;
+animations=stern;
+statements=Oh, I've heard about this place.;
+statements=Seartial's Council set it up as a way to research the Shredded Land from safety.;
+statements=I think they just wanted an excuse to keep an eye on Jasce in this area...<p> but that's just me.;
+
+
+--port22
+
+[DialogNodeOverride] ID=reeve_port22_dialog1a;
+dialogNodeID_toOverride=enterPort; priority=-3;
+fReq=party:reeve + party:hagger + loc:port22 - g1:D_reeve_port22_dialog1a - 2;
+speakerOverride=reeve;
+specialEffect=delayDialog,2;
+specialEffect=noSpeechFXLookOrAnim;
+animations=meh;
+animations=;
+animations=stern;
+statements=Ugh.<p> What a gloomy place.;
+nextNodeID=reeve_port22_dialog1b;
+
+[DialogNode] ID=reeve_port22_dialog1b;
+speakerOverride=hagger;
+animations=sly;
+statements=Ain't no way to talk t'my hometown, Reeve!;
+nextNodeID=reeve_port22_dialog1c;
+
+[DialogNode] ID=reeve_port22_dialog1c;
+speakerOverride=reeve;
+animations=scared;
+animations=meh;
+statements=THIS place?<p=2> But, it's so...;
+statements=Actually, that explains a lot about you.;
+nextNodeID=reeve_port22_dialog1d;
+
+[DialogNode] ID=reeve_port22_dialog1d;
+speakerOverride=hagger;
+animations=happy;
+animations=sly;
+statements=Hah!<p> Fantlin used t'be greener 'n green back in th' day!;
+statements=Still a soft spot for 't.<p> Jes' wish they still served that fine mead!;
+nextNodeID=;
+
+
+--port24
+
+[DialogNodeOverride] ID=reeve_port24_dialog1a;
+dialogNodeID_toOverride=enterPort; priority=-3;
+fReq=party:reeve + loc:port24 - g1:D_reeve_port24_dialog1a - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,2;
+specialEffect=noSpeechFXLookOrAnim;
+animations=;
+animations=sly;
+animations=meh;
+animations=happy;
+statements=Commodore, are you familiar with Guide Chrysolits?;
+statements=They're like, big bug-y things you can use to track your latitude and longitude.;
+statements=Yeah, it's weird.<p> But they're great for navigating if you're making a long trip.;
+statements=This farm is where they're born!<p> We should buy one...<p> but only if we have extra cash.;
+
+
+--port25
+
+[DialogNodeOverride] ID=reeve_port25_dialog1a;
+dialogNodeID_toOverride=enterPort; priority=-3;
+fReq=party:reeve + loc:port25 - g1:D_reeve_port25_dialog1a - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,2;
+specialEffect=noSpeechFXLookOrAnim;
+animations=happy;
+animations=stern;
+animations=;
+statements=Never thought I'd visit Towerwall personally, but here we are!;
+statements=This is Jasce's main defense against the Maskheads and monsters from the Shredded Land.;
+statements=I heard part of the wall was breached by some sort of 'Gate' attack...<p> but it looks like the main fortress is holding steady.;
+
+
+
+--port27
+
+[DialogNodeOverride] ID=reeve_port27_dialog1a;
+dialogNodeID_toOverride=enterPort; priority=-3;
+fReq=party:reeve + loc:port27 - g1:D_reeve_port27_dialog1a - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,2;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sly;
+animations=meh;
+animations=happy;
+statements=Gonhaldr...<p> it's been a while.;
+statements=Not that I missed it.<p> It always stinks of smoke here.;
+statements=Still, they're good allies of Dominio.<p> And their craftsmanship is unbeatable!;
+
+
+--port29
+
+[DialogNodeOverride] ID=reeve_port29_dialog1a;
+dialogNodeID_toOverride=enterPort; priority=-3;
+fReq=party:reeve + loc:port29 - g1:D_reeve_port29_dialog1a - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,2;
+specialEffect=noSpeechFXLookOrAnim;
+animations=meh;
+animations=sly;
+animations=happy;
+statements=Redens...<p> there's an arena here, isn't there?;
+statements=Nothing like that would ever be legal in Dominio...<p> but I can't say I'm not intrigued.;
+statements=We should take a look!;
+
+
+--port30
+
+[DialogNodeOverride] ID=reeve_port30_dialog1a;
+dialogNodeID_toOverride=enterPort; priority=-3;
+fReq=party:reeve + loc:port30 - g1:D_reeve_port30_dialog1a - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,2;
+specialEffect=noSpeechFXLookOrAnim;
+animations=scared;
+animations=;
+animations=sly;
+statements=<speed=0.8>Crub...<p=2> town?;
+statements=<speed=0.3>Uhhhhh...;
+statements=I,<p> uh,<p> hope they don't recognize me...<p> I've fought a few Crub raids in my day...!;
+nextNodeID=reeve_port30_dialog1b;
+nextNodeID_fReq=party:hagger;
+nextNodeID=;
+
+[DialogNode] ID=reeve_port30_dialog1b;
+speakerOverride=hagger;
+animations=happy;
+statements=Jes' don't make a hubbub in th' Crub hub and they won't know ya,<p> bub!;
+nextNodeID=reeve_port30_dialog1c;
+
+[DialogNode] ID=reeve_port30_dialog1c;
+speakerOverride=reeve;
+animations=meh;
+statements=Shuddup.;
+nextNodeID=;
+
+
+
+-----------ENTER LOCATION
+
+[DialogNodeOverride] ID=reeve_enterGrove;
+dialogNodeID_toOverride=enterGrove; priority=999;
+completeOverride=true;
+fReq=gIs:firstmate:reeve - g1:D_reeve_enterGrove;
+speakerOverride=reeve;
+specialEffect=delayDialog,2;
+specialEffect=noSpeechFXLookOrAnim;
+animations=happy;
+animations=;
+animations=sly;
+statements=Ah, a nice lush grove!;
+statements=Groves usually have something valuable to discover, so let's take a look around.;
+statements=They're often home to dangerous animals, though, so stay on your toes!<textIf= Er... or tail!=mainPlayerIsActorType:fareem>;
+nextNodeID=;
+
+----LOCS
+
+[DialogNodeOverride] ID=reeve_cragrook1_dialog1a;
+dialogNodeID_toOverride=enterLoc; priority=9;
+completeOverride=true;
+fReq=party:reeve + loc:cragrook1 - g1:D_reeve_cragrook1_dialog1a - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,2;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sly;
+animations=;
+animations=happy;
+statements=This must be that international trade passage they closed down a few years ago...;
+statements=Looks like there's an official notice here.<p> It says:<color=DarkRed><p> "CLOSED BY ROYAL ORDER OF JASCE, RUMANE, AND SEARTIAL. ALL ENTRY FORBIDDEN.";
+statements=That's a first.<p> I don't think I've ever seen those three nations agree on anything before!;
+nextNodeID=reeve_cragrook1_dialog1b;
+nextNodeID_fReq=party:hagger;
+nextNodeID=;
+
+[DialogNode] ID=reeve_cragrook1_dialog1b;
+speakerOverride=hagger;
+animations=sly;
+animations=stern;
+statements=Now, why'd they close a big money-maker li' this place?;
+statements=Som'thin's fishy here, Commodore, no mistake.;
+nextNodeID=;
+
+
+[DialogNodeOverride] ID=reeve_bweaver1_dialog1a;
+dialogNodeID_toOverride=enterLoc; priority=9;
+completeOverride=true;
+fReq=party:reeve + loc:bweaver1 - g1:D_reeve_bweaver1_dialog1a - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,2;
+specialEffect=noSpeechFXLookOrAnim;
+animations=scared;
+animations=stern;
+animations=scared;
+statements=<speed=0.5>Ohh no.<p><speed=0.8> This is a huge Bloodweaver hive...;
+statements=Bloodweavers are vicious, Commodore...<p> and notoriously clever.;
+statements=So...<p> this might not end well.<p> L-<p>let's be careful.;
+
+[DialogNodeOverride] ID=reeve_snow1_dialog1a;
+dialogNodeID_toOverride=enterLoc; priority=9;
+completeOverride=true;
+fReq=party:reeve + loc:snow1 - g1:D_reeve_snow1_dialog1a - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,2;
+specialEffect=noSpeechFXLookOrAnim;
+animations=scared;
+animations=sigh;
+animations=stern;
+statements=<color=DarkBlue>Brr-!;
+statements=S-<p>so cold...<p> going to be r-<p>rough fighting here.;
+statements=W-well, no sense waiting... l-let's go...!;
+
+[DialogNodeOverride] ID=reeve_cave4_dialog1a;
+dialogNodeID_toOverride=enterLoc; priority=9;
+completeOverride=true;
+fReq=party:reeve + loc:cave4 - g1:D_reeve_cave4_dialog1a - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,2;
+specialEffect=noSpeechFXLookOrAnim;
+animations=stern;
+animations=sigh;
+statements=<color=DarkBlue>Rgh...<color=> I was hoping it would be warmer inside,<p> but if anything, it's even c-<p>colder!;
+statements=W-<p>will be tough to fight here...<p> but we'll have to make do.;
+
+[DialogNodeOverride] ID=reeve_desert1_dialog1a;
+dialogNodeID_toOverride=enterLoc; priority=9;
+completeOverride=true;
+fReq=party:reeve + loc:desert1 - g1:D_reeve_desert1_dialog1a - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,2;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sigh;
+animations=meh;
+animations=;
+statements=<speed=0.7>What a vast field...;
+statements=There must be something here...<p> but it might take a while to find it.;
+statements=Well, if we keep track using our map,<p> should be easy enough to comb the area.;
+
+[DialogNodeOverride] ID=reeve_beach4_dialog1a;
+dialogNodeID_toOverride=enterLoc; priority=9;
+completeOverride=true;
+fReq=party:reeve + loc:beach4 - g1:D_reeve_beach4_dialog1a - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,2;
+specialEffect=noSpeechFXLookOrAnim;
+animations=stern;
+animations=meh;
+animations=sigh;
+statements=Ah...<p> these must be the ruins of the old capital.;
+statements=<speed=0.9>Gonhaldr had it the worst during the Gate War...<p> completely razed to the ground.;
+statements=Nothing for us here,<p> Commodore,<p> unless you want to sift through the ashes.;
+
+[DialogNodeOverride] ID=reeve_farm1_dialog1a;
+dialogNodeID_toOverride=enterLoc; priority=9;
+completeOverride=true;
+fReq=party:reeve + loc:farm1 - g1:D_reeve_farm1_dialog1a - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,2;
+specialEffect=noSpeechFXLookOrAnim;
+animations=;
+animations=sly;
+animations=sigh;
+statements=This is supposed to be a farm, right?;
+statements=Shouldn't it be a little less...<p> quiet?;
+statements=<speed=0.8>...I'd be on guard, Commodore.;
+
+[DialogNodeOverride] ID=reeve_tower1_dialog1a;
+dialogNodeID_toOverride=enterLoc; priority=9;
+completeOverride=true;
+fReq=party:reeve + loc:tower1 - g1:D_reeve_tower1_dialog1a - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,2;
+specialEffect=noSpeechFXLookOrAnim;
+animations=meh;
+animations=sly;
+statements=Bleak sort of place...;
+statements=This was...<p> an old elementalist tower,<p> if I recall?;
+
+nextNodeID=reeve_tower1_dialog1b;
+nextNodeID_fReq=party:hagger;
+nextNodeID=reeve_tower1_dialog1b2;
+
+[DialogNode] ID=reeve_tower1_dialog1b;
+speakerOverride=hagger;
+animations=sigh;
+animations=sly;
+animations=stern;
+statements=<speed=0.5>Balkaloth...<p><speed=1> once th' tallest tower in Dralir.;
+statements=Th'say when Jasce laid seige 'gainst it,<p> 't rained for 30 days 'n nights.;
+statements=Then Jasce' hand came down 'n crushed it inta th' mud.;
+nextNodeID=reeve_tower1_dialog1c;
+
+[DialogNode] ID=reeve_tower1_dialog1c;
+speakerOverride=reeve;
+animations=happy;
+statements=I didn't figure you for a historian,<p> Hagger!;
+nextNodeID=reeve_tower1_dialog1d;
+
+[DialogNode] ID=reeve_tower1_dialog1d;
+speakerOverride=hagger;
+animations=sly;
+statements=Y'hear what ya need to,<p> sittin' in th' cafe all day!;
+nextNodeID=;
+
+[DialogNode] ID=reeve_tower1_dialog1b2;
+animations=;
+statements=Well,<p> let's see if we can find anything other than mud.;
+
+-------ENTER OVERWORLD
+
+--no food
+[DialogNodeOverride] ID=reeve_enterOverworld_dialog1a;
+dialogNodeID_toOverride=enterOverworld;
+fReq=partyOrCrew:reeve - cargoItem:food / m:pCrewNum - cargoItem:foodDX:3 - gTimeSinceLessThan:D_reeve_enterOverworld_dialog1a:20;
+speakerOverride=reeve;
+specialEffect=delayDialog,0.8;
+specialEffect=noSpeechFXLookOrAnim;
+animations=scared;
+animations=;
+statements=Commodore, we're <color=DarkRed>out of <iconBig=food>Food!<color=>;
+statements=We should get more as soon as possible.;
+
+--lots of discoveries
+
+[DialogNodeOverride] ID=reeve_enterOverworld_dialog2a;
+dialogNodeID_toOverride=enterOverworld;
+fReq=partyOrCrew:reeve + m:unreportedRareDiscoveries(5) + gTimeSinceMoreThanOrNeverAssigned:D_reeve_enterOverworld_dialog2a:999 - 2;
+speakerOverride=reeve;
+specialEffect=delayDialog,0.8;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sly;
+animations=happy;
+statements=Say, Commodore, we've made a lot of amazing discoveries lately.;
+statements=We should go report them to a researcher!<p> We'll make a fortune!;
+
+--get rid of sailboat dialog
+[DialogNodeOverride] ID=reeve_enterOverworld_dialog3a;
+dialogNodeID_toOverride=enterOverworld;
+fReq=partyOrCrew:reeve + m:fleetSize(1) + shipTypeInPlayerFleet:sailboat - g:D_reeve_enterOverworld_dialog3a - 2;
+speakerOverride=reeve;
+specialEffect=delayDialog,0.8;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sly;
+animations=happy;
+animations=;
+statements=Y'know, we should probably ditch that Sailboat.;
+statements=A fleet is only as fast as its slowest ship, after all!;
+statements=Let's sell it at the nearest port.;
+
+--too much cargo
+
+[DialogNodeOverride] ID=reeve_enterOverworld_dialog4a;
+dialogNodeID_toOverride=enterOverworld;
+fReq=partyOrCrew:reeve + m:cargoOverLimit - g:D_reeve_enterOverworld_dialog4a - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,0.8;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sly;
+animations=meh;
+animations=;
+statements=We've taken on <color=DarkRed>too much cargo<color=>, Commodore.;
+statements=That's going to slow us down and really hurt morale...;
+statements=Maybe we should drop some stuff off at port before sailing?;
+
+--never been to a cafe!
+
+[DialogNodeOverride] ID=reeve_enterOverworld_dialog5a;
+dialogNodeID_toOverride=enterOverworld;
+fReq=partyOrCrew:reeve + m:time_days(10) - g1:D_endCafeTalk - g1:D_reeve_enterOverworld_dialog5a - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,0.8;
+specialEffect=noSpeechFXLookOrAnim;
+animations=;
+animations=happy;
+animations=sly;
+statements=Commodore, if I may make a suggestion...;
+statements=We should visit a <itemBig_low=sign_wall1><adjX=-18><itemBig_low=sign_icon_cup> <color=DarkRed>Cafe<color=> some time.;
+statements=It'll give us a chance to discuss our plans in detail...<p> and it improves our <iconBig=icon_crewMorale> Crew Morale!;
+
+
+--duplicate cannons
+[DialogNodeOverride] ID=reeve_enterOverworld_dialog6a;
+dialogNodeID_toOverride=enterOverworld;
+fReq=partyOrCrew:reeve + m:anyDuplicateCannons - g:D_reeve_enterOverworld_dialog6a - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,0.8;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sly;
+animations=;
+animations=meh;
+animations=happy;
+statements=Commodore,<p> I just noticed...;
+statements=One of our ships has <color=DarkRed>two of the same cannon<color=> equipped.;
+statements=That isn't actually useful to us...<p> we only need one of each.;
+statements=Maybe we can sell the extra one?;
+
+--no cannons equipped, but we have some in cargo
+[DialogNodeOverride] ID=reeve_enterOverworld_dialog7a;
+dialogNodeID_toOverride=enterOverworld;
+fReq=partyOrCrew:reeve + m:noEquippedCannonsButSomeInCargo - g:D_reeve_enterOverworld_dialog7a - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,0.8;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sly;
+animations=;
+animations=;
+animations=happy;
+statements=One thing before we get underway,<p> Commodore...;
+statements=Our ships <color=DarkRed>have nothing equipped<color>, but we have <color=DarkRed>weapons in our cargo<color>.;
+statements=Let's equip those on our ships in the <color=DarkRed>Fleet Window<color>.;
+statements=Better safe than sorry!;
+
+
+---
+[DialogNodeOverride] ID=reeve_gameWon;
+dialogNodeID_toOverride=gameWon; priority=9999;
+completeOverride=true;
+overrideSpecialEffects=false;
+fReq=partyOrCrew:reeve - g:D_reeve_gameWon;
+speakerOverride=reeve;
+specialEffect=preventInteraction,6;
+specialEffect=preventInteraction,5.9,@0.1;
+specialEffect=completeJournalGoal,* Find the Admiral and bring him to justice.,@2;
+specialEffect=closeJournal,@6;
+specialEffect=delayDialog,6;
+specialEffect=noSpeechFXLookOrAnim;
+animations=happy;
+animations=;
+animations=sly;
+animations=happy;
+animations=meh;
+statements=<speed=0.5>Well, <pname=>...<p=2> we did it!;
+statements=We completely accomplished our goals!;
+statements=But I can tell you're still itching for more adventure...;
+statements=Let's set sail and go wherever the wind takes us!;
+statements=Er...<p=2> once we get out of here,<p> and back to somewhere that actually has wind!;
+
+
+
+
+--------------CAFE
+
+[DialogNodeOverride] ID=reeve_cafe_party_dialog1a;
+dialogNodeID_toOverride=cafe_party_dialog; priority=9999;
+completeOverride=true;
+overrideSpecialEffects=false;
+fReq=party:reeve - g1:D_reeve_cafe_party_dialog1a;
+speakerOverride=reeve;
+specialEffect=delayDialog,3;
+specialEffect=noSpeechFXLookOrAnim;
+animations=happy;
+animations=;
+statements=Ah...<p=> a good meal in a cafe makes it all worth it.;
+nextNodeID=reeve_cafe_party_dialog1a2;
+
+--hagger chimes in
+[DialogNodeOverride] ID=reeve_cafe_party_dialog1a_hagger_interrupt1;
+dialogNodeID_toOverride=reeve_cafe_party_dialog1a2;
+completeOverride=true;
+fReq=party:hagger - g:D_reeve_cafe_party_dialog1a_hagger_interrupt1;
+speakerOverride=hagger;
+animations=sly;
+statements=Y'got that right!;
+nextNodeID=overridden;
+
+
+[DialogNode] ID=reeve_cafe_party_dialog1a2;
+statements=What do you think, Commodore?<p=> What's our next move?;
+
+[DialogOption] text=I was about to ask you that.;
+animation=sigh;
+nodeToConnectTo=reeve_cafe_party_dialog1b;
+[DialogOption] text=I was thinking of exploring.;
+newLineOfOptions=true;
+animation=;
+nodeToConnectTo=reeve_cafe_party_dialog1c;
+[DialogOption] text=Maybe we could do some privateering?;
+newLineOfOptions=true;
+animation=sly;
+nodeToConnectTo=reeve_cafe_party_dialog1d;
+[DialogOption] text=We should raise more funds by trading.;
+newLineOfOptions=true;
+animation=;
+nodeToConnectTo=reeve_cafe_party_dialog1e;
+
+[DialogNode] ID=reeve_cafe_party_dialog1b;
+animations=meh;
+animations=;
+statements=Hmm...<p=> I think we should sail around the <color=DarkRed>Great Sea<color=> -<p=> that is, near the Capitals -<p=> for a bit, see what we can find.;
+statements=Researchers pay good money for journal entries -<p=> we could raise some funds that way.;
+nextNodeID=reeve_cafe_party_dialog1f;
+nextNodeID_fReq=1 - gIsString:playerFaction;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog1c;
+animations=happy;
+animations=meh;
+animations=;
+statements=Good idea!<p=> We could make some nice money selling journal entries to researchers!;
+statements=We should sail around the <color=DarkRed>Great Sea<color=> -<p=> that is, near the Capitals -<p=> for a bit, see what we can find.;
+statements=We can also earn a bit by expanding our world map and selling info to cartographers.;
+nextNodeID=reeve_cafe_party_dialog1f;
+nextNodeID_fReq=1 - gIsString:playerFaction;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog1d;
+animations=happy;
+animations=meh;
+animations=;
+animations=happy;
+statements=Privateering, eh?<p=> Pretty bold!;
+statements=It can be pretty expensive to get started with good cannons and crew...<p=> we should probably explore a bit first, sell some info to researchers, and so on...;
+statements=We should sail around the <color=DarkRed>Great Sea<color=> -<p=> that is, near the Capitals -<p=> for a bit, see what we can find.;
+statements=But after that, we can look for small Neutral fleets to pick on.<p=> That's the best way to get started.;
+nextNodeID=reeve_cafe_party_dialog1f;
+nextNodeID_fReq=1 - gIsString:playerFaction;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog1e;
+animations=sly;
+animations=;
+animations=happy;
+animations=;
+statements=Good thinking.<p=> I'm not too wise on trading, but I hear it's pretty simple.;
+statements=If you buy a trade good, you can sell it for a higher price at any other port.;
+statements=But you get the BEST price for finding the port that's furthest away from where the trade good is made!;
+statements=We should sail around the <color=DarkRed>Great Sea<color=> -<p=> that is, near the Capitals -<p=> for a bit, see what we can find.;
+nextNodeID=reeve_cafe_party_dialog1f;
+nextNodeID_fReq=1 - gIsString:playerFaction;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog1f;
+animations=sly;
+animations=meh;
+animations=handupPose;
+animations=sly;
+animations=;
+animations=happy;
+statements=<speed=0.8>Oh-<p=> and before I forget...;
+statements=I hate to say this...<p=> but we should ally ourselves with one of the big nations.;
+statements=<speed=0.5><color=DarkRed>Jasce<color=>, <color=DarkRed>Seartial<color=>, or <color=DarkRed>Rumane<color=>... <p=><speed=>if we buddy up with one of them, we can get all sorts of perks.;
+statements=We could get better ships, loads of gold, or even have THEM fight the pirates FOR us!;
+
+[DialogOption] text=Is it really worth it?;
+animation=meh;
+nodeToConnectTo=reeve_cafe_party_dialog1g;
+[DialogOption] text=What do I have to do for that?;
+newLineOfOptions=true;
+animation=sly;
+nodeToConnectTo=reeve_cafe_party_dialog1h;
+[DialogOption] text=But which one should we side with?;
+newLineOfOptions=true;
+animation=sigh;
+nodeToConnectTo=reeve_cafe_party_dialog1i;
+
+
+[DialogNode] ID=reeve_cafe_party_dialog1g;
+animations=happy;
+statements=It certainly is!;
+nextNodeID=reeve_cafe_party_dialog1h;
+
+[DialogNode] ID=reeve_cafe_party_dialog1h;
+animations=;
+statements=I imagine they'll charge you a small fee first...<p=> but after that, any ships we take down or investing we do gets us favor with them.;
+nextNodeID=reeve_cafe_party_dialog1i;
+
+[DialogNode] ID=reeve_cafe_party_dialog1i;
+animations=sly;
+animations=happy;
+statements=I think any of the nations should serve us just fine.;
+statements=I'll trust you to decide which is best!;
+nextNodeID=reeve_cafe_party_dialog1j;
+
+[DialogNode] ID=reeve_cafe_party_dialog1j;
+nextNodeID=endCafeTalk;
+specialEffect=preventInteraction,1;
+specialEffect=addJournalGoal,@1,* Join Jasce, Seartial, or Rumane.;
+
+--
+
+
+
+[DialogNodeOverride] ID=reeve_cafe_party_dialog2a;
+dialogNodeID_toOverride=cafe_party_dialog; priority=999;
+completeOverride=true;
+overrideSpecialEffects=false;
+fReq=party:reeve + totalFameLessThan:200 - 1 - locDiscovered:cave1 - g1:D_reeve_cafe_party_dialog2a*999;
+speakerOverride=reeve;
+specialEffect=delayDialog,3;
+specialEffect=noSpeechFXLookOrAnim;
+animations=;
+statements=So, Commodore, how are you feeling about our voyage so far?;
+nextNodeID=reeve_cafe_party_dialog1a2;
+
+[DialogOption] text=I'm feeling confident!;
+animation=angry;
+nodeToConnectTo=reeve_cafe_party_dialog2b;
+[DialogOption] text=I'm not sure where to go.;
+animation=meh;
+newLineOfOptions=true;
+nodeToConnectTo=reeve_cafe_party_dialog2c;
+[DialogOption] text=I'm completely lost!;
+newLineOfOptions=true;
+animation=sad;
+nodeToConnectTo=reeve_cafe_party_dialog2d;
+
+
+[DialogNode] ID=reeve_cafe_party_dialog2b;
+animations=happy;
+animations=;
+animations=sly;
+animations=happy;
+animations=angry;
+statements=Great!;
+statements=I feel the same.<p=> This is just the beginning of a grand adventure!;
+statements=And, I have an idea.<p=> There's a channel <color=DarkRed>south of Runewald<color=> I heard about a long time ago.;
+statements=Supposedly explorers have found all sorts of cool things there!<p=> And sometimes monsters too!;
+statements=We should check it out!;
+nextNodeID=reeve_cafe_party_dialog2e;
+nextNodeID_fReq=5 - m:pCrewNum;
+nextNodeID=reeve_cafe_party_dialog2f;
+
+[DialogNode] ID=reeve_cafe_party_dialog2c;
+animations=scared;
+animations=sly;
+animations=happy;
+statements=I know!<p=> I feel paralyzed by all the choices!;
+statements=But, I had an idea of where to start.<p=> There's a channel <color=DarkRed>south of Runewald<color=> that I've heard about.;
+statements=Supposedly explorers have found all sorts of cool things there!<p=> And sometimes monsters too!<p=> We should check it out!;
+nextNodeID=reeve_cafe_party_dialog2e;
+nextNodeID_fReq=5 - m:pCrewNum;
+nextNodeID=reeve_cafe_party_dialog2f;
+
+[DialogNode] ID=reeve_cafe_party_dialog2d;
+animations=happy;
+animations=;
+animations=sly;
+animations=happy;
+animations=angry;
+statements=Don't worry!<p=> You always have your map with you!<p=3> Oh, and me!;
+statements=We'll be perfectly safe while we stay in the Great Sea.<p=> And I had an idea of where to go within it.;
+statements=There's a channel <color=DarkRed>south of Runewald<color=> I've heard some rumors about.;
+statements=Supposedly explorers have found all sorts of cool things there!<p=> And sometimes monsters too!;
+statements=We should check it out!;
+nextNodeID=reeve_cafe_party_dialog2e;
+nextNodeID_fReq=5 - m:pCrewNum;
+nextNodeID=reeve_cafe_party_dialog2f;
+
+[DialogNode] ID=reeve_cafe_party_dialog2e;
+animations=angry;
+statements=We should hire more crew before we go, though.<p=1.5> Let's try to get <color=DarkRed>5 people<color=> to form a strong landing party!;
+nextNodeID=reeve_cafe_party_dialog2f;
+
+
+[DialogNode] ID=reeve_cafe_party_dialog2f;
+specialEffect=preventInteraction,1;
+specialEffect=addJournalGoal,@1,* Explore the channel south of Runewald.;
+nextNodeID=endCafeTalk;
+
+
+--
+
+[DialogNodeOverride] ID=reeve_cafe_party_dialog3a;
+dialogNodeID_toOverride=cafe_party_dialog; priority=-3;
+completeOverride=true;
+overrideSpecialEffects=false;
+fReq=party:reeve + totalFameMoreThan:150 - 1;
+--fReq=party:reeve + totalFameMoreThan:150 + gTimeSinceMoreThanOrNeverAssigned:D_reeve_cafe_party_dialog3a:80 - 2 - g:beatFD*99;
+speakerOverride=reeve;
+specialEffect=delayDialog,3;
+specialEffect=noSpeechFXLookOrAnim;
+animations=happy;
+animations=;
+statements=I'll never get tired of taking a nice, long break at a cafe!;
+statements=How about you, Commodore?<p=> You look like something's on your mind.;
+
+[DialogOption] text=What should we do next?;
+animation=sly;
+formulaReq=1 - g:D_reeve_cafe_party_dialog3b_none - g:beatFD*99;
+nodeToConnectTo=reeve_cafe_party_dialog3b;
+[DialogOption] text=Let's talk about our long-term goals.;
+animation=meh;
+newLineOfOptions=true;
+formulaReq=2 - g:laganDefeated - g:doorOpened - g:beatFD*99;
+nodeToConnectTo=reeve_cafe_party_dialog3c;
+[DialogOption] text=I wanted to ask something about you.;
+newLineOfOptions=true;
+animation=;
+formulaReq=4 - g:D_reeve_cafe_party_dialog3d_comm1a - g:D_reeve_cafe_party_dialog3d_dominio2a - g:D_reeve_cafe_party_dialog3d_dominio3a - g:D_reeve_cafe_party_dialog3d_dominio4a;
+nodeToConnectTo=reeve_cafe_party_dialog3d;
+[DialogOption] text=I want to ask about a journal entry.;
+newLineOfOptions=true;
+animation=;
+nodeToConnectTo=reeve_journal;
+[DialogOption] text=No, nothing.;
+newLineOfOptions=true;
+animation=sigh;
+escOption=true;
+nodeToConnectTo=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog3b;
+animations=meh;
+statements=<speed=0.5>Hmmm...;
+
+nextNodeID=reeve_cafe_party_dialog3b_research;
+nextNodeID_fReq=1 - gIsString:researcherContractID;
+
+nextNodeID=reeve_cafe_party_dialog3b_faction;
+nextNodeID_fReq=1 - gIsString:playerFaction;
+
+nextNodeID=reeve_cafe_party_dialog3b_summons;
+nextNodeID_fReq=g:royalSummons - g:questRoyal;
+
+nextNodeID=reeve_cafe_party_dialog3b_carto;
+nextNodeID_fReq=1 - gIsString:cartographerContractID;
+
+nextNodeID=reeve_cafe_party_dialog3b_lowRank;
+nextNodeID_fReq=gIsString:playerFaction + gIsMoreThan:playerRank:1 + gIsLessThan:playerRank:3 - g:D_reeve_cafe_party_dialog3b_lowRank*999 - 2;
+
+nextNodeID=reeve_cafe_party_dialog3b_lowExplore;
+nextNodeID_fReq=150 - g:fame_explore;
+
+nextNodeID=reeve_cafe_party_dialog3b_lowTrade;
+nextNodeID_fReq=100 - g:fame_trade;
+
+nextNodeID=reeve_cafe_party_dialog3b_medExplore;
+nextNodeID_fReq=400 - g:fame_explore;
+
+nextNodeID=reeve_cafe_party_dialog3b_highExplore;
+nextNodeID_fReq=1400 - g:fame_explore - g:D_reeve_cafe_party_dialog3b_highExplore * 9999;
+
+nextNodeID=reeve_cafe_party_dialog3b_journalGoals;
+nextNodeID_fReq=m:journalGoals - 2;
+
+nextNodeID=reeve_cafe_party_dialog3b_ready;
+nextNodeID_fReq=gIsMoreThan:fame_explore:800 + gIsMoreThan:fame_combat:400 + totalFameMoreThan:2000 - 2 - g:D_dialog_enemyCommodoreQuip_lagan;
+
+nextNodeID=reeve_cafe_party_dialog3b_none;
+
+[DialogNode] ID=reeve_cafe_party_dialog3b_research;
+animations=;
+animations=sly;
+animations=happy;
+statements=Well, we should really find a <color=DarkRed><itemBig_low=sign_icon_eyeglass> Researcher<color=> to sign with.;
+statements=We're leaving money on the table if we don't sell our discoveries to someone...<p> any reseacher will do.;
+statements=They all offer the same rates,<p> and you can quit the contract whenever,<p> so let's just find one in a convenient port and start selling!;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog3b_carto;
+animations=sly;
+animations=;
+animations=happy;
+statements=We haven't signed with a <color=DarkRed><itemBig_low=sign_wall1><adjX=-18><itemBig_low=sign_icon_compass> Cartographer<color=> yet, have we?;
+statements=Even if we don't sail around much, we can still sell what we've mapped to them.;
+statements=They all offer the same rates,<p> and you can quit the contract whenever,<p> so let's just find one in a convenient port and start selling!;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog3b_faction;
+animations=sly;
+animations=meh;
+animations=;
+animations=happy;
+statements=We ought to side with a big nation, next.;
+statements=<speed=0.6><color=DarkRed>Jasce<color=>, <color=DarkRed>Seartial<color=>, or <color=DarkRed>Rumane<color=>. <p=><speed=>The only differences that matter to us are their ships and ports.;
+statements=The sooner the better, because we'll only earn their favor while working under them.;
+statements=I'll let you decide which is the best choice!;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog3b_summons;
+animations=sly;
+animations=happy;
+statements=We heard that <pfaction> was looking to meet with us, right?;
+statements=Let's go visit and wrap that up.<p=> You might get a higher royal rank as a reward!;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog3b_lowExplore;
+animations=happy;
+animations=;
+animations=sly;
+statements=Let's keep exploring!;
+statements=We can't get a good grasp of our options until we know what the world is like.;
+statements=Let's check the area around each of the Capitals!;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog3b_medExplore;
+animations=happy;
+animations=sly;
+animations=happy;
+statements=Nothing for it but to keep exploring!;
+statements=There must be dozens of Groves out there, each with valuable discoveries waiting for us.;
+statements=Let's open the map and pick a blank spot to go to!;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog3b_highExplore;
+animations=happy;
+animations=sly;
+animations=happy;
+statements=There's always more out there to explore!;
+statements=We could try to learn about new locations by gossiping -<p> sometimes you can pick up latitude and longitude coordinates that way.;
+statements=Or, just sail around anywhere we haven't been!<p> That's easy, right?;
+nextNodeID=endCafeTalk;
+
+
+[DialogNode] ID=reeve_cafe_party_dialog3b_lowTrade;
+animations=sly;
+animations=;
+animations=happy;
+statements=What about doing some trading?<p> We could use the money, right?;
+statements=Let's fill our spare cargo with a trade good, then bring it as far away as we can.;
+statements=We're guaranteed to make a profit that way!;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog3b_lowRank;
+animations=sly;
+animations=;
+animations=happy;
+statements=<speed=0.5>Well...<p><speed=> we could always work on our royal rank!;
+statements=That means bringing up our fame, then doing whatever task they have set for us...;
+statements=It's a hassle, but I bet soon we'll be able to get an audience and ask for favors!;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog3b_journalGoals;
+animations=sly;
+animations=happy;
+statements=Let's take a look at the goals in our journal.;
+statements=I'm sure there must be something in there for us to do!;
+nextNodeID=reeve_cafe_party_dialog3b_journalGoals2;
+[DialogNode] ID=reeve_cafe_party_dialog3b_journalGoals2;
+specialEffect=openJournal,@1,0;
+nextNodeID=endCafeTalk;
+
+
+[DialogNode] ID=reeve_cafe_party_dialog3b_ready;
+animations=sly;
+animations=;
+animations=angry;
+animations=stern;
+statements=Well, Commodore...<p> I think it might be time.;
+statements=We should get our fleet battle-ready,<p> or ask for an escort fleet from our nation...;
+statements=And then take it to our old 'friends' at the pirate cove.;
+statements=If you're ready to take them on,<p> then so am I,<p> Commmodore!;
+nextNodeID=endCafeTalk;
+
+
+[DialogNode] ID=reeve_cafe_party_dialog3b_none;
+animations=sly;
+animations=happy;
+statements=I'm not sure!;
+statements=You've really gotten the hang of things now.<p=> I leave it up to you!;
+nextNodeID=endCafeTalk;
+
+
+--
+
+[DialogNode] ID=reeve_cafe_party_dialog3c;
+animations=sigh;
+animations=;
+statements=Good.<p=> I've been thinking about that.;
+statements=We need to accomplish two things:<p> defeat Lagan's fleet,<p=> and find a way to open that weird door.;
+
+[DialogOption] text=About the fleet...;
+animation=;
+formulaReq=1 - g:laganDefeated;
+nodeToConnectTo=reeve_cafe_party_dialog3c_f1;
+[DialogOption] text=About the door...;
+animation=;
+formulaReq=1 - g:doorOpened;
+newLineOfOptions=true;
+nodeToConnectTo=reeve_cafe_party_dialog3c_d1;
+formulaReq=
+
+[DialogOption] text=Nevermind.;
+animation=;
+newLineOfOptions=true;
+nodeToConnectTo=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog3c_f1;
+animations=;
+animations=sly;
+animations=;
+animations=angry;
+animations=sly;
+animations=happy;
+statements=I can see a few ways to sink them.;
+statements=The easiest way:<p=2> we can have someone else do it for us.;
+statements=Buddy up with a big nation, and have their ships escort us into the cove.;
+statements=Or, we can build up our own battle fleet.<p> That might be tough against their firepower.;
+statements=Although...<p> if we could find a way to make our ships resistant to lightning, we could nullify their biggest weapon.;
+statements=However we do it, I look forward to putting them in their place!;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog3c_d1;
+animations=sad;
+animations=;
+animations=sly;
+animations=happy;
+statements=I'm pretty clueless about that, sadly.;
+statements=The door didn't look like it had a traditional lock, or anything...<p> it's probably a magical device of some sort.;
+statements=It did look pretty ancient, though...<p> it can't be completely impenetrable!;
+statements=Let's just toss a bunch of high-grade explosives at it and blow it up!;
+nextNodeID=endCafeTalk;
+
+--
+
+[DialogNode] ID=reeve_cafe_party_dialog3d;
+animations=sly;
+animations=happy;
+statements=Me?<p> Heh,<p> well,<p> I guess I haven't talked about myself much.;
+statements=Ask away, then!;
+
+[DialogOption] text=Why let me be Commodore and not you?;
+animation=sly;
+formulaReq=1 - g:D_reeve_cafe_party_dialog3d_comm1a;
+nodeToConnectTo=reeve_cafe_party_dialog3d_comm1a;
+[DialogOption] text=Tell me about your time in Dominio.;
+animation=;
+newLineOfOptions=true;
+nodeToConnectTo=reeve_cafe_party_dialog3d_dominio1a;
+[DialogOption] text=Nevermind, forget it.;
+animation=;
+newLineOfOptions=true;
+nodeToConnectTo=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog3d_comm1a;
+animations=meh;
+animations=angry;
+animations=sigh;
+statements=<speed=0.8>Well, back in Dominio, I chose to serve as your first mate because...<p> I am getting on in years...;
+statements=I was feeling ready to step down.<p=> I thought I hit the top...<p> And I wanted to help other captains become better!;
+statements=Now, I'm not sure I ever knew what I was doing at all.;
+
+[DialogOption] text=How? Aren't you the legendary 'Dragon Tamer'?;
+animation=sly;
+nodeToConnectTo=reeve_cafe_party_dialog3d_comm1b;
+[DialogOption] text=But you even served as Vice Admiral of Dominio!;
+animation=scared;
+newLineOfOptions=true;
+nodeToConnectTo=reeve_cafe_party_dialog3d_comm1b;
+
+[DialogNode] ID=reeve_cafe_party_dialog3d_comm1b;
+animations=meh;
+animations=sigh;
+animations=meh;
+animations=happy;
+animations=;
+animations=sigh;
+statements=<speed=0.8>Right...<p> but...;
+statements=<pname=>...<p> when the storm struck your ship,<p> I rushed down to put out the fire without thinking.;
+statements=If I had kept my head on straight,<p> I could have stayed on deck and fought off the pirate attack.;
+statements=And when we faced Lagan in the cove,<p> I ran headfirst into a lightning cannon.;
+statements=<speed=0.7>I was overconfident.<p> And...<p> I realize now-<p> I always have been.;
+statements=How many people died under my command because I didn't make better decisions?;
+
+[DialogOption] text=...;
+animation=sigh;
+nodeToConnectTo=reeve_cafe_party_dialog3d_comm1d;
+[DialogOption] text=You can't think of it like that.;
+animation=sad;
+newLineOfOptions=true;
+nodeToConnectTo=reeve_cafe_party_dialog3d_comm1c;
+[DialogOption] text=That's just part of being in command.;
+animation=stern;
+newLineOfOptions=true;
+nodeToConnectTo=reeve_cafe_party_dialog3d_comm1c;
+[DialogOption] text=It's important to be decisive. You did your best.;
+animation=;
+newLineOfOptions=true;
+nodeToConnectTo=reeve_cafe_party_dialog3d_comm1c;
+
+[DialogNode] ID=reeve_cafe_party_dialog3d_comm1c;
+animations=;
+statements=I know.<p> You can't hold everyone's lives on your shoulders.;
+nextNodeID=reeve_cafe_party_dialog3d_comm1d;
+
+[DialogNode] ID=reeve_cafe_party_dialog3d_comm1d;
+animations=meh;
+animations=;
+animations=happy;
+statements=I'm just realizing how little thought I put into it, is all.;
+statements=<speed=0.7>I want to...<p> put more thought into it before I take command again.;
+statements=So until then,<p> you're stuck being Commodore,<p> Commodore!;
+nextNodeID=endCafeTalk;
+
+--
+
+[DialogNode] ID=reeve_cafe_party_dialog3d_dominio1a;
+animations=happy;
+animations=;
+statements=Well, that's most of my time!;
+statements=What do you want to hear about?;
+
+[DialogOption] text=Why do they call you 'Dragon Tamer'?;
+animation=sly;
+formulaReq=1 - g:D_reeve_cafe_party_dialog3d_dominio2a;
+nodeToConnectTo=reeve_cafe_party_dialog3d_dominio2a;
+[DialogOption] text=Why did you join the Dominio Navy?;
+animation=meh;
+newLineOfOptions=true;
+formulaReq=1 - g:D_reeve_cafe_party_dialog3d_dominio3a;
+nodeToConnectTo=reeve_cafe_party_dialog3d_dominio3a;
+[DialogOption] text=What was it like being Vice Admiral?;
+animation=;
+newLineOfOptions=true;
+formulaReq=1 - g:D_reeve_cafe_party_dialog3d_dominio4a;
+nodeToConnectTo=reeve_cafe_party_dialog3d_dominio4a;
+
+
+[DialogNode] ID=reeve_cafe_party_dialog3d_dominio2a;
+animations=happy;
+animations=;
+animations=handoutPose;
+animations=meh;
+animations=happy;
+animations=;
+animations=happy;
+animations=sly;
+statements=Hah!<p> Good question!;
+statements=The real story isn't as exciting as they tell it.;
+statements=We were sailing a Serpent fleet off the coast near Wraele...<p> when one of our Serpents starts going berserk.;
+statements=I think she got stung by something.<p> Really thrashing about,<p> almost capsized the ship.;
+statements=I jumped overboard onto her head and started calming her, like you do.;
+statements=Well,<p> I sort of missed at first,<p> and she bit me a little in the confusion...;
+statements=But I managed to get on after a bit<p> (get it??) <p>and calmed her down.;
+statements=That's the whole story, really!;
+
+[DialogOption] text=That's it?;
+animation=meh;
+newLineOfOptions=true;
+nodeToConnectTo=reeve_cafe_party_dialog3d_dominio2b;
+[DialogOption] text=That's pretty impressive.;
+animation=sly;
+newLineOfOptions=true;
+nodeToConnectTo=reeve_cafe_party_dialog3d_dominio2c;
+
+[DialogNode] ID=reeve_cafe_party_dialog3d_dominio2b;
+animations=happy;
+animations=meh;
+animations=happy;
+statements=I know, right??;
+statements=I think they played it up just because I hurt myself doing it.;
+statements=Ah, well!<p> What's done is done!;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog3d_dominio2c;
+animations=happy;
+animations=;
+animations=meh;
+animations=happy;
+statements=Hahah!<p> Thanks.;
+statements=It's a little silly that I get so much credit just 'cause I hopped in the water before anyone else.;
+statements=I think they played it up just because I hurt myself doing it.;
+statements=Ah, well!<p> What's done is done!;
+nextNodeID=endCafeTalk;
+
+--
+
+[DialogNode] ID=reeve_cafe_party_dialog3d_dominio3a;
+animations=;
+animations=sly;
+animations=happy;
+animations=;
+statements=That's a pretty simple one to answer for me.;
+statements=My father was a captain in the navy,<p> and we didn't really have another 'family business' to go into.;
+statements=Besides, I always loved going sailing and getting into fights as a kid!<p> So it was only natural.;
+statements=What about you?<p=1.5> Why did you join the Dominio Navy?;
+
+[DialogOption] text=I'm honestly not sure.;
+animation=meh;
+nodeToConnectTo=reeve_cafe_party_dialog3d_dominio3b;
+[DialogOption] text=I wanted to be a sailor.;
+animation=;
+newLineOfOptions=true;
+nodeToConnectTo=reeve_cafe_party_dialog3d_dominio3c;
+[DialogOption] text=It was my only option at the time.;
+animation=sigh;
+newLineOfOptions=true;
+nodeToConnectTo=reeve_cafe_party_dialog3d_dominio3d;
+[DialogOption] text=I don't want to talk about it.;
+animation=stern;
+newLineOfOptions=true;
+nodeToConnectTo=reeve_cafe_party_dialog3d_dominio3e;
+
+
+[DialogNode] ID=reeve_cafe_party_dialog3d_dominio3b;
+animations=happy;
+animations=sly;
+animations=meh;
+animations=;
+animations=happy;
+statements=Heh!<p> Just an impulse,<p> eh?;
+statements=I can relate.;
+statements=I wish it had turned out better, <speed=0.5>instead of...<p> all this...;
+statements=...but then again,<p> maybe this is better.;
+statements=If it isn't better yet,<p> let's make it better!<p> Off to wherever you want to sail next, Commodore!;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog3d_dominio3c;
+animations=happy;
+animations=sly;
+statements=As you should!<p> Nothing like the open sea!;
+statements=Speaking of, let's get back to it!;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog3d_dominio3d;
+animations=sad;
+animations=meh;
+animations=happy;
+animations=;
+statements=Ahh...<p> sorry to hear that.;
+statements=You must have been in a rough spot to have no choice...<p> and then<p=1.5><speed=0.5> all this happens...;
+statements=Then again...<p> now you can do anything you want!;
+statements=Maybe it was for the best.;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog3d_dominio3e;
+animations=sigh;
+animations=meh;
+animations=angry;
+animations=happy;
+statements=<speed=0.6>Ah...<p> gotcha.;
+statements=Well, it's a shame your time in the navy turned out like this...<p><speed=0.7> I can still hardly believe it...;
+statements=But, at least now we can make something of it!;
+statements=Wherever you want to sail to next,<p> Commodore,<p> I'm ready!;
+nextNodeID=endCafeTalk;
+
+--
+
+[DialogNode] ID=reeve_cafe_party_dialog3d_dominio4a;
+animations=meh;
+animations=sad;
+animations=meh;
+animations=sigh;
+animations=happy;
+statements=Lots and lots of paperwork.;
+statements=Just so, so much paperwork.;
+statements=An ocean of paperwork.<p=2> While I stared at the real ocean through a window.;
+statements=I don't wanna talk about it.<p> It's giving me a headache.;
+statements=More drinks, please!;
+nextNodeID=endCafeTalk;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------CAFE (FOOD)
+
+--port1 (Crisp Baguette)
+[DialogNodeOverride] ID=reeve_cafe_party_dialog_port1_1a;
+dialogNodeID_toOverride=cafe_party_dialog;
+completeOverride=true;
+overrideSpecialEffects=false;
+fReq=party:reeve - g1:D_reeve_cafe_party_dialog_port1_1a + loc:port1 - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,3;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sad;
+animations=meh;
+animations=happy;
+animations=sly;
+statements=Just bread, huh?<p=> No...<p=> toppings or anything...?;
+statements=<speed=0.6>*crunch* *munch*;
+statements=Oh!<p=> That's actually really good!;
+statements=Could still use a bit of meat on top, but I'll take it.;
+nextNodeID=endCafeTalk;
+
+--port2 (Rock Yam)
+[DialogNodeOverride] ID=reeve_cafe_party_dialog_port2_1a;
+dialogNodeID_toOverride=cafe_party_dialog;
+completeOverride=true;
+overrideSpecialEffects=false;
+fReq=party:reeve - g1:D_reeve_cafe_party_dialog_port2_1a + loc:port2 - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,3;
+specialEffect=noSpeechFXLookOrAnim;
+animations=happy;
+animations=sly;
+animations=happy;
+statements=Ah, I haven't had a fresh Rock Yam in ages!;
+statements=Stale ones, I've had plenty of.<p=> Navy used to love packaging these things in every meal.;
+statements=They stay good for ages, but nothing beats a really fresh one!;
+nextNodeID=endCafeTalk;
+
+--port3 (Hoppy Lager)
+[DialogNodeOverride] ID=reeve_cafe_party_dialog_port3_1a;
+dialogNodeID_toOverride=cafe_party_dialog;
+completeOverride=true;
+overrideSpecialEffects=false;
+fReq=party:reeve - g1:D_reeve_cafe_party_dialog_port3_1a + loc:port3 - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,3;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sly;
+animations=scared;
+animations=meh;
+statements=Mm?<p=> What is this?<p=> It looks all...<p=> fizzy.;
+statements=Gk!<p=> Tastes fizzy too!;
+statements=I'm not sure if I like it or hate it...;
+nextNodeID=reeve_cafe_party_dialog_port3_1b;
+nextNodeID_fReq=party:hagger;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port3_1b;
+speakerOverride=hagger;
+animations=sly;
+statements=Awh,<p=0.5> man up, fish'ead!<p=> If 't hurts goin' down, y'just swig it all in one go!;
+nextNodeID=reeve_cafe_party_dialog_port3_1c;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port3_1c;
+speakerOverride=reeve;
+animations=meh;
+statements=Eugh.<p=> I think I'll pass.;
+nextNodeID=endCafeTalk;
+
+
+
+--port4 (Reed Perch)
+[DialogNodeOverride] ID=reeve_cafe_party_dialog_port4_1a;
+dialogNodeID_toOverride=cafe_party_dialog;
+completeOverride=true;
+overrideSpecialEffects=false;
+fReq=party:reeve - g1:D_reeve_cafe_party_dialog_port4_1a + loc:port4 - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,3;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sly;
+animations=happy;
+statements=This is a pretty bleak place...<p> but they know how to cook a fish.;
+statements=In fact, this is so good I bet it'd taste just fine raw.;
+nextNodeID=reeve_cafe_party_dialog_port4_1b;
+nextNodeID_fReq=party:hagger;
+nextNodeID=reeve_cafe_party_dialog_port4_1d;
+
+
+[DialogNode] ID=reeve_cafe_party_dialog_port4_1b;
+speakerOverride=hagger;
+animations=meh;
+animations=sly;
+statements=Raw?<p> Just straigh' up, an entire fish?;
+statements=That a Falpa thing,<p> or a Reeve thing?;
+nextNodeID=reeve_cafe_party_dialog_port4_1c;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port4_1c;
+speakerOverride=reeve;
+animations=happy;
+statements=A little of both,<p> probably.;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port4_1d;
+speakerOverride=reeve;
+animations=sly;
+statements=That might just be me,<p> though.;
+nextNodeID=endCafeTalk;
+
+
+--port5 (Silk Pepper)
+[DialogNodeOverride] ID=reeve_cafe_party_dialog_port5_1a;
+dialogNodeID_toOverride=cafe_party_dialog;
+completeOverride=true;
+overrideSpecialEffects=false;
+fReq=party:reeve + party:hagger - g1:D_reeve_cafe_party_dialog_port5_1a + loc:port5 - 2;
+speakerOverride=reeve;
+specialEffect=delayDialog,3;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sly;
+animations=happy;
+statements=Say...<p> this isn't bad!;
+statements=Who knew a bunch of pirates would be able to cook?;
+nextNodeID=reeve_cafe_party_dialog_port5_1b;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port5_1b;
+speakerOverride=hagger;
+animations=angry;
+animations=stern;
+statements=<speed=0.5>Shhhh!!;
+statements=<color=DarkSlateGray>Reeve!<p> Ixnay on th' P-word!;
+nextNodeID=reeve_cafe_party_dialog_port5_1c;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port5_1c;
+speakerOverride=reeve;
+animations=scared;
+statements=What?<p> <color=DarkSlateGray>I thought basically everyone knew this port was...?;
+nextNodeID=reeve_cafe_party_dialog_port5_1d;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port5_1d;
+speakerOverride=hagger;
+animations=stern;
+statements=<color=DarkSlateGray>'S one thing t'know, an' another t' blab it in th'middle of th' cafe!;
+nextNodeID=reeve_cafe_party_dialog_port5_1e;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port5_1e;
+speakerOverride=reeve;
+animations=meh;
+animations=happy;
+statements=R-<p>right...<p> well...;
+statements=The food's still very good,<p> y'know,<p><speed=0.25> considering...;
+nextNodeID=reeve_cafe_party_dialog_port5_1f;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port5_1f;
+speakerOverride=hagger;
+animations=happy;
+statements=Y'got that right!;
+nextNodeID=endCafeTalk;
+
+--port6 (Blueshine)
+[DialogNodeOverride] ID=reeve_cafe_party_dialog_port6_1a;
+dialogNodeID_toOverride=cafe_party_dialog;
+completeOverride=true;
+overrideSpecialEffects=false;
+fReq=party:reeve - g1:D_reeve_cafe_party_dialog_port6_1a + loc:port6 - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,3;
+specialEffect=noSpeechFXLookOrAnim;
+animations=happy;
+animations=sly;
+animations=happy;
+statements=Ahh,<p=> this cafe is just like I remember!;
+statements=I last ate here nearly a decade ago, and they haven't changed a thing.<p=> Same old rug, even.;
+statements=The drinks are definitely better now, though!;
+nextNodeID=reeve_cafe_party_dialog_port6_1b;
+nextNodeID_fReq=party:hagger;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port6_1b;
+animations=meh;
+speakerOverride=hagger;
+statements=Not hardly!<p=> Used t'be half the price back then!;
+nextNodeID=endCafeTalk;
+
+
+--port8 (Bronze Draught)
+[DialogNodeOverride] ID=reeve_cafe_party_dialog_port8_1a;
+dialogNodeID_toOverride=cafe_party_dialog;
+completeOverride=true;
+overrideSpecialEffects=false;
+fReq=party:reeve - g1:D_reeve_cafe_party_dialog_port8_1a + loc:port8 - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,3;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sly;
+animations=scared;
+animations=meh;
+animations=sly;
+statements=Let's see if this is like last time...;
+statements=Pfggf...!;
+statements=Ugh.<p=> Yeah...<p=> yeah it is.<p=> Rumanians love the heavy stuff.;
+statements=For me, this stuff sits like lead in my stomach.<p=> Bleh.;
+nextNodeID=reeve_cafe_party_dialog_port8_1b;
+nextNodeID_fReq=party:hagger;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port8_1b;
+speakerOverride=hagger;
+animations=happy;
+statements=Then hand yer glass ov'r to me and let i' sit in MY stomach!<p=> Gyaha!;
+nextNodeID=endCafeTalk;
+
+--port10 (Beaf)
+[DialogNodeOverride] ID=reeve_cafe_party_dialog_port10_1a;
+dialogNodeID_toOverride=cafe_party_dialog;
+completeOverride=true;
+overrideSpecialEffects=false;
+fReq=party:reeve - g1:D_reeve_cafe_party_dialog_port10_1a + loc:port10 - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,3;
+specialEffect=noSpeechFXLookOrAnim;
+animations=scared;
+animations=meh;
+animations=meh;
+animations=scared;
+statements=Wow.<p=> They just serve it straight from the tin...?;
+statements=Ugh...<p=> what a depressing place.;
+statements=<speed=0.7>... *munch*;
+statements=Is it just me, or is it not that bad...?;
+nextNodeID=reeve_cafe_party_dialog_port10_1b;
+nextNodeID_fReq=party:hagger;
+nextNodeID=reeve_cafe_party_dialog_port10_1c;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port10_1b;
+animations=meh;
+speakerOverride=hagger;
+statements='S definit'ly just you.;
+nextNodeID=reeve_cafe_party_dialog_port10_1c;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port10_1c;
+speakerOverride=reeve;
+animations=happy;
+statements=Then again,<p> I'll eat any kind of meat,<p> pretty much.;
+nextNodeID=endCafeTalk;
+
+--port12 (Ruecumber)
+[DialogNodeOverride] ID=reeve_cafe_party_dialog_port12_1a;
+dialogNodeID_toOverride=cafe_party_dialog;
+completeOverride=true;
+overrideSpecialEffects=false;
+fReq=party:reeve - g1:D_reeve_cafe_party_dialog_port12_1a + loc:port12 - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,3;
+specialEffect=noSpeechFXLookOrAnim;
+animations=stern;
+animations=happy;
+animations=sly;
+animations=happy;
+statements=<speed=0.3>Hmm...!;
+statements=You know,<p> from the name,<p> I was expecting something much worse!;
+statements=This is...<p=1.4> well, it's not bad.<p> Not sure how to describe it...;
+statements=It's...<p=1.4> zesty, in a way!;
+nextNodeID=reeve_cafe_party_dialog_port12_1b;
+nextNodeID_fReq=party:hagger;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port12_1b;
+speakerOverride=hagger;
+animations=sly;
+statements=I dinna if I'd call it zest.;
+nextNodeID=reeve_cafe_party_dialog_port12_1c;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port12_1c;
+speakerOverride=reeve;
+animations=stern;
+statements=Well, maybe...<p> it's zest-ish...;
+nextNodeID=reeve_cafe_party_dialog_port12_1d;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port12_1d;
+speakerOverride=hagger;
+animations=happy;
+statements=Zest-esque?;
+nextNodeID=reeve_cafe_party_dialog_port12_1e;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port12_1e;
+speakerOverride=reeve;
+animations=scared;
+animations=happy;
+statements=Yes, exactly!;
+statements=You know,<p> Hagger,<p> you're a man of few words,<p> but you know just the right ones.;
+nextNodeID=reeve_cafe_party_dialog_port12_1f;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port12_1f;
+speakerOverride=hagger;
+animations=meh;
+statements=Th'flames yer on about?<p> I talk constan'ly!;
+nextNodeID=reeve_cafe_party_dialog_port12_1g;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port12_1g;
+speakerOverride=reeve;
+animations=sly;
+statements=Yes, but very few of the things you say are actually words.;
+nextNodeID=reeve_cafe_party_dialog_port12_1h;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port12_1h;
+speakerOverride=hagger;
+animations=happy;
+statements=Hah!<p=1.5> Y'got me there!;
+nextNodeID=endCafeTalk;
+
+
+--port13 (Pickled Skinkeyes)
+[DialogNodeOverride] ID=reeve_cafe_party_dialog_port13_1a;
+dialogNodeID_toOverride=cafe_party_dialog;
+completeOverride=true;
+overrideSpecialEffects=false;
+fReq=party:reeve - g1:D_reeve_cafe_party_dialog_port13_1a + loc:port13 - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,3;
+specialEffect=noSpeechFXLookOrAnim;
+animations=happy;
+statements=Mm, skinkeyes!<p> Haven't had these since I was a kid.;
+nextNodeID=reeve_cafe_party_dialog_port13_1b;
+nextNodeID_fReq=party:hagger;
+nextNodeID=reeve_cafe_party_dialog_port13_1c;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port13_1b;
+speakerOverride=hagger;
+animations=meh;
+statements=Wha' is this and why did we buy it.;
+nextNodeID=reeve_cafe_party_dialog_port13_1c;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port13_1c;
+speakerOverride=reeve;
+animations=happy;
+statements=Don't look at me like that.<p> Try it!<p> It's good!;
+nextNodeID=reeve_cafe_party_dialog_port13_1d;
+nextNodeID_fReq=party:hagger;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port13_1d;
+speakerOverride=hagger;
+animations=sly;
+animations=stern;
+statements=Some times I regret bein' a sailor.;
+statements=Never thought tha'd happen in a cafe.;
+nextNodeID=endCafeTalk;
+
+
+--port15 (Rimeberries)
+[DialogNodeOverride] ID=reeve_cafe_party_dialog_port15_1a;
+dialogNodeID_toOverride=cafe_party_dialog;
+completeOverride=true;
+overrideSpecialEffects=false;
+fReq=party:reeve - g1:D_reeve_cafe_party_dialog_port15_1a + loc:port15 - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,3;
+specialEffect=noSpeechFXLookOrAnim;
+animations=scared;
+animations=sad;
+animations=stern;
+statements=Oh!<p=2> <color=DarkBlue>C-<p>c-<p>cold!;
+statements=Sh-<p>shouldn'ta had a,<p> a whole h-<p>handful...;
+statements=I-<p>isn't the weather cold enough already, w-<p>without the food being cold, too!?;
+nextNodeID=endCafeTalk;
+
+
+--port16 (Mistral Vapor)
+[DialogNodeOverride] ID=reeve_cafe_party_dialog_port16_1a;
+dialogNodeID_toOverride=cafe_party_dialog;
+completeOverride=true;
+overrideSpecialEffects=false;
+fReq=party:reeve - g1:D_reeve_cafe_party_dialog_port16_1a + loc:port16 - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,3;
+specialEffect=noSpeechFXLookOrAnim;
+animations=sly;
+animations=meh;
+animations=;
+animations=sly;
+statements=This sounds like a sham...<p> but let's try it anyway.;
+statements=...;
+statements=It's not bad...<p> I guess.<p> Nice mint flavor.;
+statements=Still.<p> This is basically just a bottle of air, isn't it?;
+nextNodeID=reeve_cafe_party_dialog_port16_1b;
+nextNodeID_fReq=party:hagger;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port16_1b;
+speakerOverride=hagger;
+animations=happy;
+statements=Don' forget,<p> all the best things come 'n bottles!<p> Gaha!;
+nextNodeID=reeve_cafe_party_dialog_port16_1c;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port16_1c;
+speakerOverride=reeve;
+animations=meh;
+statements=A bottle of air, though?;
+nextNodeID=reeve_cafe_party_dialog_port16_1d;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port16_1d;
+speakerOverride=hagger;
+animations=sly;
+statements=Don' make me repeat myself!;
+nextNodeID=endCafeTalk;
+
+
+--port17 (Blood Durian)
+[DialogNodeOverride] ID=reeve_cafe_party_dialog_port17_1a;
+dialogNodeID_toOverride=cafe_party_dialog;
+completeOverride=true;
+overrideSpecialEffects=false;
+fReq=party:reeve - g1:D_reeve_cafe_party_dialog_port17_1a + loc:port17 - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,3;
+specialEffect=noSpeechFXLookOrAnim;
+animations=meh;
+animations=angry;
+animations=stern;
+animations=meh;
+animations=scared;
+animations=stern;
+statements=Ohhh no.<p> I'm already gagging just from the smell...;
+statements=Don't laugh.<p> If I'm eating this,<p> you are too,<p> Commodore.;
+statements=Well, bottoms up...!;
+statements=...;
+statements=Ugkh!<p> I-<p>it's like eating coffee solidified...<p=2> my heart's racing...!;
+statements=W-well,<p> just a little more probably wouldn't be<p> fatal...;
+nextNodeID=endCafeTalk;
+
+
+--port18 (Gojer Flank)
+[DialogNodeOverride] ID=reeve_cafe_party_dialog_port18_1a;
+dialogNodeID_toOverride=cafe_party_dialog;
+completeOverride=true;
+overrideSpecialEffects=false;
+fReq=party:reeve - g1:D_reeve_cafe_party_dialog_port18_1a + loc:port18 - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,3;
+specialEffect=noSpeechFXLookOrAnim;
+animations=scared;
+animations=happy;
+statements=Ooh, this is the good stuff.;
+statements=Commodore, you ever want me in a good mood,<p> just serve up some meat.;
+nextNodeID=reeve_cafe_party_dialog_port18_1b;
+nextNodeID_fReq=party:hagger;
+nextNodeID=reeve_cafe_party_dialog_port18_1c;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port18_1b;
+speakerOverride=hagger;
+animations=sly;
+animations=stern;
+statements=Hah!<p> Tha's wha...;
+statements=Heh.<p> Ne'r mind.;
+nextNodeID=reeve_cafe_party_dialog_port18_1c;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port18_1c;
+speakerOverride=reeve;
+animations=scared;
+animations=happy;
+statements=And this seasoning...!;
+statements=Well, honestly I don't care about the seasoning.<p> I just love a good side of steak!;
+nextNodeID=endCafeTalk;
+
+--port21 (Gloam Truffle)
+[DialogNodeOverride] ID=reeve_cafe_party_dialog_port21_1a;
+dialogNodeID_toOverride=cafe_party_dialog;
+completeOverride=true;
+overrideSpecialEffects=false;
+fReq=party:reeve + party:hagger - g1:D_reeve_cafe_party_dialog_port21_1a + loc:port21 - 2;
+speakerOverride=reeve;
+specialEffect=delayDialog,3;
+specialEffect=noSpeechFXLookOrAnim;
+animations=happy;
+animations=sly;
+statements=Mmm, that is tasty!;
+statements=Uh...<p> Hold on...<p> Hagger,<p> why are you,<p> uh,<p> glowing...?;
+nextNodeID=reeve_cafe_party_dialog_port21_1b;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port21_1b;
+speakerOverride=hagger;
+animations=happy;
+statements=Y'are too, ya blind fish!;
+nextNodeID=reeve_cafe_party_dialog_port21_1c;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port21_1c;
+speakerOverride=reeve;
+animations=scared;
+animations=angry;
+statements=I-<p=2> I am!;
+statements=Why am I glowing?;
+nextNodeID=reeve_cafe_party_dialog_port21_1d;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port21_1d;
+speakerOverride=hagger;
+animations=sly;
+statements=Relax.<p> 'S'th' truffles, mate.<p> Small side effect.;
+nextNodeID=reeve_cafe_party_dialog_port21_1e;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port21_1e;
+speakerOverride=reeve;
+animations=meh;
+animations=sad;
+statements=I don't like it.;
+statements=Why can't delicious things just be delicious,<p> and not have weird side effects...?;
+nextNodeID=endCafeTalk;
+
+--port27 (Naga Pepper)
+[DialogNodeOverride] ID=reeve_cafe_party_dialog_port27_1a;
+dialogNodeID_toOverride=cafe_party_dialog;
+completeOverride=true;
+overrideSpecialEffects=false;
+fReq=party:reeve - g1:D_reeve_cafe_party_dialog_port27_1a + loc:port27 - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,3;
+specialEffect=noSpeechFXLookOrAnim;
+animations=meh;
+animations=stern;
+animations=happy;
+statements=Just like Gonhaldr, to serve something fiery and smokey and tell you to like it.;
+statements=I think I'll have this...<p> little piece of it here...<p> and you can have the rest, Commodore.;
+statements=What, you don't want two?<p> You bought 'em, didn't you?;
+nextNodeID=endCafeTalk;
+
+
+--port29 (Stir Kebab)
+[DialogNodeOverride] ID=reeve_cafe_party_dialog_port29_1a;
+dialogNodeID_toOverride=cafe_party_dialog;
+completeOverride=true;
+overrideSpecialEffects=false;
+fReq=party:reeve - g1:D_reeve_cafe_party_dialog_port29_1a + loc:port29 - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,3;
+specialEffect=noSpeechFXLookOrAnim;
+animations=scared;
+statements=Ooh, fancy!;
+nextNodeID=reeve_cafe_party_dialog_port29_1b;
+nextNodeID_fReq=party:hagger;
+nextNodeID=reeve_cafe_party_dialog_port29_1c;
+
+
+[DialogNode] ID=reeve_cafe_party_dialog_port29_1b;
+speakerOverride=hagger;
+animations=sly;
+statements=In wha' world is a kebab fancy?;
+nextNodeID=reeve_cafe_party_dialog_port29_1c;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port29_1c;
+speakerOverride=reeve;
+animations=sly;
+animations=happy;
+statements=There's like 5 kinds of sauces on here!;
+statements=Commodore, I'll trade you for the ones with the red sauce!<p> Those are the best kind!;
+nextNodeID=endCafeTalk;
+
+--port30 (Rigor Oil)
+[DialogNodeOverride] ID=reeve_cafe_party_dialog_port30_1a;
+dialogNodeID_toOverride=cafe_party_dialog;
+completeOverride=true;
+overrideSpecialEffects=false;
+fReq=party:reeve - g1:D_reeve_cafe_party_dialog_port30_1a + loc:port30 - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,3;
+specialEffect=noSpeechFXLookOrAnim;
+animations=meh;
+animations=stern;
+statements=I know Crub must have their own tastes, but...<p> this is a bit much.;
+statements=Are we really expected to drink this whole thing?;
+nextNodeID=reeve_cafe_party_dialog_port30_1b;
+nextNodeID_fReq=party:hagger;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port30_1b;
+speakerOverride=hagger;
+animations=stern;
+animations=sly;
+animations=meh;
+statements='Sfer the effects, Reeve,<p> not fer the joy 'f it.;
+statements=Y'know, like vodka.;
+statements=Here,<p> pass 't over if y'ain't gonna finish it.;
+nextNodeID=reeve_cafe_party_dialog_port30_1c;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port30_1c;
+speakerOverride=reeve;
+animations=meh;
+statements=No, I'll finish it.<p> Just give me another<speed=0.7>...<p> couple hours...;
+nextNodeID=endCafeTalk;
+
+--port30 (Grand Bean)
+[DialogNodeOverride] ID=reeve_cafe_party_dialog_port31_1a;
+dialogNodeID_toOverride=cafe_party_dialog;
+completeOverride=true;
+overrideSpecialEffects=false;
+fReq=party:reeve - g1:D_reeve_cafe_party_dialog_port31_1a + loc:port31 - 1;
+speakerOverride=reeve;
+specialEffect=delayDialog,3;
+specialEffect=noSpeechFXLookOrAnim;
+animations=scared;
+animations=stern;
+statements=Woah.<p> Is this for real?<p> It's huge!;
+statements=I feel full just looking at it...;
+nextNodeID=reeve_cafe_party_dialog_port31_1b;
+nextNodeID_fReq=party:hagger;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port31_1b;
+speakerOverride=hagger;
+animations=happy;
+statements=I feel hungry lookin' at 't!<p> Les' dig in!;
+nextNodeID=endCafeTalk;
+
+
+[DialogNodeOverride] ID=reeve_cafe_party_dialog_port32_1a;
+dialogNodeID_toOverride=cafe_party_dialog;
+completeOverride=true;
+overrideSpecialEffects=false;
+fReq=party:reeve + party:hagger - g1:D_reeve_cafe_party_dialog_port32_1a + loc:port32 - 2;
+speakerOverride=reeve;
+specialEffect=delayDialog,3;
+specialEffect=noSpeechFXLookOrAnim;
+animations=;
+animations=sly;
+statements=Hmm.<p=1.5> Is this really what you'd call pie?;
+statements=Looks more like cake to me...<p> or is it possible to be both?;
+nextNodeID=reeve_cafe_party_dialog_port32_1b;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port32_1b;
+speakerOverride=hagger;
+animations=stern;
+animations=sly;
+animations=happy;
+statements=Don't y'start with that!<p=1.5> Tha's a road y'don't wanna go down.;
+statements=One time I argued with me mates fer five hours -<p=1.5> cake or pie, cake or pie?;
+statements=Ended with two broken ribs an' a black eye!;
+nextNodeID=reeve_cafe_party_dialog_port32_1c;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port32_1c;
+speakerOverride=reeve;
+animations=meh;
+animations=sly;
+statements=<speed=0.7>Yeesh.;
+statements=What did you all decide it was?;
+nextNodeID=reeve_cafe_party_dialog_port32_1d;
+
+[DialogNode] ID=reeve_cafe_party_dialog_port32_1d;
+speakerOverride=hagger;
+animations=sigh;
+statements=We decided it was a torte.;
+nextNodeID=endCafeTalk;
+
+
+
+
+
+
+
+
+
+
+
+
+

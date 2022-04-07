@@ -1,0 +1,172 @@
+
+[DialogNode] ID=openFleetWindow;
+nextNodeID=;
+specialEffect=exitDialog;
+specialEffect=openFleetWindow;
+
+
+[DialogNode] ID=openFleetWindow_talker;
+nextNodeID=;
+specialEffect=exitDialog;
+specialEffect=openFleetWindow_talker;
+
+[DialogNode] ID=gameOver_noMorale;
+statements=With <pname=>'s crew slowly dying<textIf= of starvation=1-cargoItem:food>, they finally became unable to continue.;
+statements=<pname=>'s fleet was never heard from again...;
+nextNodeID=gameOver;
+
+[DialogNode] ID=gameOver;
+specialEffect=gameOver;
+
+
+
+[DialogNode] ID=silent;
+nextNodeID=;
+animations=;
+statements=...;
+[DialogNode] ID=silent_sigh;
+nextNodeID=;
+animations=sigh;
+statements=...;
+
+[DialogNode] ID=test_junk;
+nextNodeID=;
+animations=;
+animations=;
+animations=;
+portraitIcon=portrait_gavin;
+portraitIconFrames=40;
+portraitIconFrames=71;
+portraitIconFrames=43;
+dialogSounds=;
+dialogSounds=dust_rise;
+dialogSounds=;
+statements=Watch me say 10...;
+statements=10...;
+statements=I did it...;
+
+[DialogNode] ID=testTalk;
+nextNodeID=;
+animations=;
+animations=angry;
+animations=sigh;
+portraitIcon=portrait_scuri18;
+portraitIconFrames=24;
+portraitIconFrames=90;
+portraitIconFrames=84;
+portraitIconFrames=34;
+dialogSounds=;
+dialogSounds=dust_rise;
+dialogSounds=tallExplode_rand;
+dialogSounds=;
+statements=Watch me count to 10!;
+statements=<gDyn=thing><n=><pause=><cmd=gAdd=thing=1><pause=><cmd=gAdd=thing=1><pause=><cmd=gAdd=thing=1><pause=><cmd=gAdd=thing=1><pause=><cmd=gAdd=thing=1><pause=><cmd=gAdd=thing=1><pause=><cmd=gAdd=thing=1><pause=><cmd=gAdd=thing=1><pause=><cmd=gAdd=thing=1>...;
+statements=10!!!;
+statements=I did it!;
+
+
+
+
+
+
+
+
+-----------------
+
+
+[DialogNode] ID=hole_exit;
+statements=(This hole is high above the water. From here, you can Gate back home safely.);
+statements=(Finish your journey?);
+
+[DialogOption] text=(Return to town);
+nodeToConnectTo=hole_exit_yes;
+[DialogOption] text=(No thanks.);
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=hole_exit_yes;
+specialEffect=tScoreScreen;
+nextNodeID=;
+
+
+[DialogNode] ID=walk_exit;
+statements=(This path leads to the exit.);
+statements=(Finish your journey?);
+
+[DialogOption] text=(Return to town);
+nodeToConnectTo=hole_exit_yes;
+[DialogOption] text=(No thanks.);
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+
+
+
+
+[DialogNode] ID=stats_dialog;
+statements=Time: <gameTime=><n=><n=>Total Runs: <g=missionsRun><n=>Runs Completed: <g=missionsSuccess><n=><n=>Total Recruits: <g=totalRecruits><n=>Recruits KO'd:<partyKOs=><n=>Enemies Defeated:<enemiesDefeated=><n=><n=>XP Earned: <g=earnedXPTotal><n=>$ Earned: <g=earnedCashTotal>;
+
+
+[DialogNode] ID=stats_dialog_auto;
+statements=<speed=0.8>Time: <gameTime=><n=><n=>Total Runs: <g=missionsRun><n=>Runs Completed: <g=missionsSuccess><n=><n=>Total Recruits: <g=totalRecruits><n=>Recruits KO'd:<partyKOs=><n=>Enemies Defeated:<enemiesDefeated=><n=><n=>XP Earned: <g=earnedXPTotal><n=>$ Earned: <g=earnedCashTotal><n=><n=>Vaults Discovered: <g=vaultsDiscovered><cmd=advanceDialog=11>;
+
+--------------
+
+[DialogNode] ID=bystander1;
+nextNodeID=;
+animations=;
+statements=Oy, mate.<p=> I see that furrow in yer brow there. I know whatcher thinkin'.;
+statements='Am I gonna miss out by buyin' an' sellin' in this port, as 'pposed to the others?';
+statements=Well lemme lay yer fears t'rest. In every port, the costs're the same for:<n=>items,<p=> cargo,<p=> ships,<p=> crew,<p=> research,<p=> cartography,<p=>, items,<p=>, uh... cargo...;
+statements=Er, lemme say it this way. The ONLY things that can change are costs for trade goods, repairs, an' food.;
+
+
+
+
+
+
+
+
+
+
+
+------------------TEST
+
+
+[DialogNode] ID=test;
+statements=test!;
+nextNodeID=test1;
+specialEffect=nextDialogNode_hideWindow;
+
+
+[DialogNode] ID=test1;
+statements=;
+nextNodeID=test2;
+specialEffect=showEscFactionWindow;
+
+[DialogNode] ID=test2;
+nextNodeID=;
+specialEffect=hideEscWindows;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,681 @@
+[Zone]  ID=zCaveIce1a; dark=True; timeUntilNewDay=24; showFogOfWar=True; fogOfWar=True; minimapEnabled=True; allowCameraPastZoneEdges=False; cantAct=False; cantGameOver=False; alwaysKeepWeaponsUnsheathed=False; peaceful=False; overseerMode=False; rollingPinStyle=False; drawSky=False; drawSky_overrideYpos=-1; boatZone=False; wind=True; overworld=False; canDropItems=True; 
+ travelSong=PM-IceCave; travelSongVolume=1; travelSongPitch=0; combatSong=PM-Seanchas; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=102; darkG=102; darkB=153; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=ocean; bgFX_sineWave=12; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=p26; zoneGrassPalette=p8; zoneGrassDarkPalette=overworld1; zoneStonePalette=pGreyD; zoneStoneDarkPalette=pGreyD2; zoneStoneLightPalette=pGreyD; zoneWaterPalette=pBlue; zoneDirtDarkPalette=p77; zoneWoodPalette=pWood; zoneWoodDarkPalette=pWoodDark; zoneMisc1Palette=pWoodDark; zoneMisc2Palette=pWoodDark; zoneMisc3Palette=pRed; zoneMisc4Palette=pBlue; zoneMisc5Palette=pGreen; zoneMisc6Palette=pOrange; zoneMisc7Palette=pYellow; zoneMisc8Palette=p12; 
+
+combatMode=False; zoneFX=wind_wavesS;zoneFXTime=1;zoneFX_x=43;zoneFX_y=12;
+
+[Item] ID=ice_rocks_wallbase; q=1; x=25; y=58;
+[Item] ID=rocks1; q=1; r=-360; x=25; y=59;
+[Item] ID=rocks1; q=1; x=26; y=66;
+[Item] ID=rubble; q=1; x=27; y=64;
+[Item] ID=rubble; q=1; x=27; y=65;
+[Item] ID=ice_rocks; q=1; x=27; y=66;
+[Item] ID=ice_rocks; q=1; x=27; y=67;
+[Item] ID=rubble; q=1; x=27; y=68;
+[Item] ID=rubble; q=1; x=28; y=65;
+[Item] ID=ice_rocks; q=1; x=28; y=66;
+[Item] ID=ice_rocks; q=1; x=28; y=67;
+[Item] ID=ice_rocks; q=1; x=28; y=68;
+[Item] ID=ice_rocks_wallbase; q=1; x=29; y=57;
+[Item] ID=rubble; q=1; x=29; y=69;
+[Item] ID=sunbeam_circle_huge_dull; q=1; x=31; y=33;
+[Item] ID=debris_small3; q=1; x=31; y=58;
+[Item] ID=ice_rocks; q=1; x=31; y=70;
+[Item] ID=ice_rocks_wallbase; q=1; x=32; y=52;
+[Item] ID=ice_rocks_wallbase; q=1; x=32; y=58;
+[Item] ID=ice_rocks; q=1; x=32; y=62;
+[Item] ID=ice_rocks; q=1; x=32; y=70;
+[Item] ID=stash_dirt_loot4; q=1; oX=0; oY=-8; x=32; y=76;
+[Item] ID=ice_rocks; q=1; x=32; y=76;
+[Item] ID=rubble; q=1; x=32; y=80;
+[Item] ID=ice_rocks; q=1; x=33; y=62;
+[Item] ID=ice_rocks; q=1; x=33; y=63;
+[Item] ID=ice_rocks; q=1; x=33; y=64;
+[Item] ID=ice_rocks_wallbase; q=1; x=33; y=76;
+[Item] ID=debris_small3; q=1; x=33; y=77;
+[Item] ID=ice_rocks; q=1; x=33; y=78;
+[Item] ID=ice_rocks; q=1; x=34; y=33;
+[Item] ID=ice_rocks_wallbase; q=1; x=34; y=51;
+[Item] ID=ice_rocks; q=1; x=34; y=63;
+[Item] ID=ice_rocks; q=1; x=34; y=64;
+[Item] ID=rubble; q=1; x=34; y=76;
+[Item] ID=ice_rocks_wallbase; q=1; x=35; y=33;
+[Item] ID=rocks1; q=1; x=35; y=51;
+[Item] ID=ice_rocks_wallbase; q=1; x=35; y=59;
+[Item] ID=ice_rocks; q=1; x=35; y=63;
+[Item] ID=rubble; q=1; x=35; y=64;
+[Item] ID=ice_rocks_wallbase; q=1; x=35; y=75;
+[Item] ID=ice_rocks; q=1; x=36; y=58;
+[Item] ID=ice_rocks; q=1; x=36; y=60;
+[Item] ID=ice_rocks; q=1; x=36; y=70;
+[Item] ID=ice_rocks; q=1; x=36; y=71;
+[Item] ID=rocks1; q=2; r=-360; x=36; y=74;
+[Item] ID=sunbeam_line_huge; q=1; r=180; oX=0; oY=16; x=36; y=89;
+[Item] ID=ice_rocks; q=1; x=37; y=32;
+[Item] ID=sunbeam_circle_huge_dark; q=1; x=37; y=34;
+[Item] ID=ice_rocks_wallbase; q=1; x=37; y=50;
+[Item] ID=ice_rocks; q=1; x=37; y=55;
+[Item] ID=ice_rocks; q=1; x=37; y=66;
+[Item] ID=ice_rocks; q=1; x=37; y=70;
+[Item] ID=ice_rocks; q=1; x=37; y=71;
+[Item] ID=travelPoint_0; q=1; r=270; x=37; y=83;
+[Item] ID=sunbeam_flipped; q=1; r=-360; x=38; y=18;
+[Item] ID=ice_rocks_wallbase; q=1; x=38; y=32;
+[Item] ID=ice_rocks; q=1; x=38; y=70;
+[Item] ID=ice_rocks; q=1; x=38; y=71;
+[Item] ID=rubble; q=1; x=38; y=73;
+[Item] ID=sunbeam_line_huge; q=1; r=180; oX=0; oY=16; x=38; y=89;
+[Item] ID=sunbeam_sq_6x6; q=1; oX=16; oY=0; x=38; y=89;
+[Item] ID=ice_rocks; q=1; x=39; y=30;
+[Item] ID=rocks1; q=1; r=-360; x=39; y=31;
+[Item] ID=debris_small3; q=1; x=39; y=50;
+[Item] ID=ice_rocks; q=1; x=39; y=55;
+[Item] ID=ice_rocks; q=1; x=39; y=56;
+[Item] ID=ice_rocks_wallbase; q=1; x=39; y=67;
+[Item] ID=ice_rocks; q=1; x=39; y=69;
+[Item] ID=ice_rocks; q=1; x=39; y=70;
+[Item] ID=rubble; q=1; x=39; y=78;
+[Item] ID=sunbeam_sq_6x6; q=1; oX=16; oY=0; x=39; y=89;
+[Item] ID=ice_rocks_wallbase; q=1; x=40; y=16;
+[Item] ID=cliffEdge1_S; q=1; x=40; y=17;
+[Item] ID=dirt_sandy2; q=1; r=270; x=40; y=17;
+[Item] ID=ice_rocks; q=1; x=40; y=18;
+[Item] ID=ice_rocks; q=1; x=40; y=19;
+[Item] ID=ice_rocks; q=1; x=40; y=23;
+[Item] ID=ice_rocks; q=1; x=40; y=25;
+[Item] ID=ice_rocks; q=1; x=40; y=26;
+[Item] ID=ice_rocks; q=1; x=40; y=30;
+[Item] ID=ice_rocks; q=1; x=40; y=32;
+[Item] ID=ice_rocks; q=1; x=40; y=34;
+[Item] ID=ice_rocks_wallbase; q=1; x=40; y=51;
+[Item] ID=ice_rocks; q=1; x=40; y=55;
+[Item] ID=ice_rocks; q=1; x=40; y=67;
+[Item] ID=ice_rocks_wallbase; q=1; x=40; y=75;
+[Item] ID=ice_rocks; q=1; x=40; y=76;
+[Item] ID=sunbeam_line_huge; q=1; r=180; oX=0; oY=16; x=40; y=89;
+[Item] ID=sunbeam_flipped; q=1; r=-360; x=41; y=9;
+[Item] ID=sunbeam_flipped; q=1; r=-360; x=41; y=11;
+[Item] ID=ice_rocks; q=1; x=41; y=14;
+[Item] ID=ice_rocks; q=1; x=41; y=16;
+[Item] ID=cliffEdge1_corner; q=1; x=41; y=17;
+[Item] ID=cliffEdge1_SW; q=1; x=41; y=18;
+[Item] ID=ice_rocks_wallbase; q=1; x=41; y=19;
+[Item] ID=rocks1; q=1; r=-360; x=41; y=20;
+[Item] ID=cliffEdge1_S; q=1; x=41; y=21;
+[Item] ID=dirt_sandy2; q=1; r=270; x=41; y=21;
+[Item] ID=ice_rocks; q=1; x=41; y=22;
+[Item] ID=ice_rocks; q=1; x=41; y=23;
+[Item] ID=ice_rocks; q=1; x=41; y=27;
+[Item] ID=ice_rocks_wallbase; q=1; x=41; y=30;
+[Item] ID=ice_rocks; q=1; x=41; y=33;
+[Item] ID=ice_rocks; q=1; x=41; y=67;
+[Item] ID=ice_rocks_wallbase; q=1; x=41; y=76;
+[Item] ID=rocks1; q=1; x=41; y=80;
+[Item] ID=shoreEdge1; q=1; x=41; y=85;
+[Item] ID=ice_rocks_wallbase; q=1; x=42; y=13;
+[Item] ID=ice_rocks; q=1; x=42; y=13;
+[Item] ID=puddleFrozen; q=2; r=-360; oX=0; oY=-16; x=42; y=14;
+[Item] ID=cliffEdge1_S; q=1; x=42; y=18;
+[Item] ID=dirt_sandy2; q=2; r=270; x=42; y=18;
+[Item] ID=ice_rocks_wallbase; q=1; x=42; y=19;
+[Item] ID=ice_rocks; q=1; x=42; y=20;
+[Item] ID=cliffEdge1_S_stairs; q=1; x=42; y=21;
+[Item] ID=ice_rocks; q=1; x=42; y=22;
+[Item] ID=ice_rocks; q=1; x=42; y=23;
+[Item] ID=ice_rocks; q=1; x=42; y=28;
+[Item] ID=ice_rocks; q=1; x=42; y=38;
+[Item] ID=ice_rocks_wallbase; q=1; x=42; y=50;
+[Item] ID=secretPassage; q=1; x=42; y=67;
+[Item] ID=pebbles1; q=1; r=180; x=42; y=76;
+[Item] ID=debris; q=1; x=42; y=77;
+[Item] ID=xpGem; q=1; bu=True; x=42; y=77;
+[Item] ID=rubble; q=1; x=42; y=81;
+[Item] ID=sunbeam_line_huge; q=1; r=180; oX=0; oY=16; x=42; y=89;
+[Item] ID=sunbeam_circle_huge_dull; q=1; x=43; y=8;
+[Item] ID=sunbeam_circle_small_dull; q=1; x=43; y=11;
+[Item] ID=sunbeam_circle_small_dull; q=1; x=43; y=12;
+[Item] ID=blockedWalkJumpNoRxns; q=1; x=43; y=12;
+[Item] ID=doorway_square_bright; q=1; oX=0; oY=-16; x=43; y=12;
+[Item] ID=ironice_chunk; q=1; r=360; x=43; y=13;
+[Item] ID=iceBlock_eternal; q=1; x=43; y=13;
+[Item] ID=puddleFrozen; q=4; x=43; y=14;
+[Item] ID=cliffEdge1_S_stairs; q=1; x=43; y=18;
+[Item] ID=cliffEdge1_S; q=1; x=43; y=21;
+[Item] ID=ice_rocks; q=1; x=43; y=22;
+[Item] ID=ice_rocks; q=1; x=43; y=37;
+[Item] ID=ice_rocks; q=1; x=43; y=38;
+[Item] ID=ice_rocks_wallbase; q=1; x=43; y=50;
+[Item] ID=secretPassage; q=1; x=43; y=67;
+[Item] ID=rubble; q=1; x=43; y=78;
+[Item] ID=ice_rocks_wallbase; q=1; x=44; y=13;
+[Item] ID=ice_rocks; q=1; x=44; y=13;
+[Item] ID=puddleFrozen; q=1; oX=0; oY=-16; x=44; y=14;
+[Item] ID=cliffEdge1_S; q=1; x=44; y=18;
+[Item] ID=dirt_sandy2; q=1; r=270; x=44; y=18;
+[Item] ID=ice_rocks; q=1; x=44; y=20;
+[Item] ID=cliffEdge1_S; q=1; x=44; y=21;
+[Item] ID=dirt_sandy2; q=1; r=-270; x=44; y=21;
+[Item] ID=ice_rocks; q=1; x=44; y=22;
+[Item] ID=ice_rocks; q=1; x=44; y=38;
+[Item] ID=ice_rocks_wallbase; q=1; x=44; y=66;
+[Item] ID=rubble; q=1; x=44; y=79;
+[Item] ID=sunbeam_flipped; q=1; r=180; x=45; y=9;
+[Item] ID=sunbeam_flipped; q=1; r=180; x=45; y=11;
+[Item] ID=ice_rocks; q=1; x=45; y=14;
+[Item] ID=ice_rocks; q=1; x=45; y=15;
+[Item] ID=ice_rocks; q=1; x=45; y=16;
+[Item] ID=cliffEdge1_corner; q=1; r=-360; x=45; y=17;
+[Item] ID=cliffEdge1_SW; q=1; r=-360; x=45; y=18;
+[Item] ID=ice_rocks_wallbase; q=1; x=45; y=19;
+[Item] ID=pebbles2; q=1; x=45; y=19;
+[Item] ID=ice_rocks; q=1; x=45; y=24;
+[Item] ID=ice_rocks; q=1; x=45; y=25;
+[Item] ID=ice_rocks; q=1; x=45; y=33;
+[Item] ID=ice_rocks_wallbase; q=1; x=45; y=50;
+[Item] ID=ice_rocks_wallbase; q=1; x=46; y=16;
+[Item] ID=cliffEdge1_S; q=1; x=46; y=17;
+[Item] ID=dirt_sandy2; q=2; r=270; x=46; y=17;
+[Item] ID=debris; q=1; oX=0; oY=-4; x=46; y=18;
+[Item] ID=gem_small2; q=1; bu=True; x=46; y=18;
+[Item] ID=ice_rocks; q=1; x=46; y=18;
+[Item] ID=ice_rocks; q=1; x=46; y=19;
+[Item] ID=ice_rocks_wallbase; q=1; x=46; y=30;
+[Item] ID=ice_rocks; q=1; x=46; y=31;
+[Item] ID=ice_rocks; q=1; x=46; y=32;
+[Item] ID=ice_rocks; q=1; x=46; y=33;
+[Item] ID=ice_rocks_wallbase; q=1; x=46; y=51;
+[Item] ID=rubble; q=1; x=46; y=68;
+[Item] ID=sunbeam_flipped; q=1; r=180; x=47; y=13;
+[Item] ID=ice_rocks; q=1; x=47; y=30;
+[Item] ID=ice_rocks; q=1; x=47; y=32;
+[Item] ID=boulder3; q=1; r=-360; x=47; y=33;
+[Item] ID=ice_rocks; q=1; x=47; y=36;
+[Item] ID=fade_s1_rounder_below; q=1; r=180; oX=0; oY=6; x=47; y=56;
+[Item] ID=rubble; q=1; x=47; y=65;
+[Item] ID=rubble; q=1; x=47; y=69;
+[Item] ID=rocks1; q=2; x=48; y=30;
+[Item] ID=fade_s1_below; q=1; oX=0; oY=4; x=48; y=56;
+[Item] ID=rubble; q=1; x=48; y=70;
+[Item] ID=sunbeam_flipped; q=1; r=180; x=49; y=24;
+[Item] ID=rubble; q=1; x=49; y=34;
+[Item] ID=fade_s1_below; q=1; oX=0; oY=2; x=49; y=56;
+[Item] ID=ice_rocks; q=1; x=49; y=65;
+[Item] ID=ice_rocks; q=1; x=49; y=69;
+[Item] ID=ice_rocks; q=1; x=50; y=30;
+[Item] ID=ice_rocks; q=1; x=50; y=35;
+[Item] ID=ice_rocks; q=1; x=50; y=36;
+[Item] ID=ice_rocks_wallbase; q=1; x=50; y=50;
+[Item] ID=fade_s1_below; q=1; x=50; y=56;
+[Item] ID=rubble; q=1; x=50; y=65;
+[Item] ID=rubble; q=1; x=50; y=69;
+[Item] ID=pebbles1; q=1; x=51; y=30;
+[Item] ID=debris_small3; q=1; x=51; y=30;
+[Item] ID=ice_rocks; q=1; x=51; y=34;
+[Item] ID=ice_rocks; q=1; x=51; y=36;
+[Item] ID=rubble; q=1; x=51; y=37;
+[Item] ID=ice_rocks; q=1; x=51; y=38;
+[Item] ID=fade_s1_below; q=1; x=51; y=56;
+[Item] ID=ice_rocks; q=1; x=51; y=66;
+[Item] ID=rubble; q=1; x=51; y=67;
+[Item] ID=ice_rocks; q=1; x=51; y=70;
+[Item] ID=sunbeam_flipped; q=1; r=180; x=52; y=25;
+[Item] ID=rubble; q=1; x=52; y=30;
+[Item] ID=pebbles1; q=1; r=180; x=52; y=34;
+[Item] ID=ice_rocks; q=1; x=52; y=35;
+[Item] ID=rubble; q=1; x=52; y=36;
+[Item] ID=ice_rocks; q=1; x=52; y=37;
+[Item] ID=rubble; q=1; x=52; y=39;
+[Item] ID=ice_rocks_wallbase; q=1; x=52; y=49;
+[Item] ID=fade_s1_below; q=1; oX=0; oY=2; x=52; y=56;
+[Item] ID=ice_rocks_wallbase; q=1; x=52; y=68;
+[Item] ID=ice_rocks; q=1; x=52; y=70;
+[Item] ID=rubble; q=1; x=53; y=34;
+[Item] ID=rubble; q=1; x=53; y=36;
+[Item] ID=rubble; q=1; x=53; y=37;
+[Item] ID=ice_rocks; q=1; x=53; y=38;
+[Item] ID=boulder3; q=1; r=360; x=53; y=44;
+[Item] ID=rubble; q=1; x=53; y=45;
+[Item] ID=fade_s1_below; q=1; oX=0; oY=4; x=53; y=56;
+[Item] ID=ore_volskarn; q=1; x=53; y=67;
+[Item] ID=ice_rocks; q=1; x=53; y=68;
+[Item] ID=rubble; q=1; x=53; y=69;
+[Item] ID=ice_rocks; q=1; x=53; y=70;
+[Item] ID=debris; q=1; oX=0; oY=-2; x=54; y=33;
+[Item] ID=gem_small1; q=1; bu=True; x=54; y=33;
+[Item] ID=ice_rocks; q=1; x=54; y=33;
+[Item] ID=rubble; q=1; x=54; y=35;
+[Item] ID=cliffEdge1_N; q=1; x=54; y=41;
+[Item] ID=fade_f11; q=1; r=90; x=54; y=41;
+[Item] ID=sunbeam_krypton_med_darker; q=1; x=54; y=41;
+[Item] ID=rubble; q=1; x=54; y=45;
+[Item] ID=ice_rocks_wallbase; q=1; x=54; y=50;
+[Item] ID=fade_s1_rounder_below; q=1; r=-180; oX=0; oY=6; x=54; y=56;
+[Item] ID=ice_rocks; q=1; x=55; y=33;
+[Item] ID=rubble; q=1; x=55; y=34;
+[Item] ID=ice_rocks; q=1; x=55; y=39;
+[Item] ID=ice_rocks; q=1; x=55; y=40;
+[Item] ID=rubble; q=1; x=56; y=33;
+[Item] ID=debris_small3; q=1; x=56; y=34;
+[Item] ID=rubble; q=1; x=56; y=35;
+[Item] ID=rubble; q=1; x=56; y=36;
+[Item] ID=rocks1; q=1; x=56; y=37;
+[Item] ID=ice_rocks; q=1; x=56; y=38;
+[Item] ID=ice_rocks; q=1; x=56; y=39;
+[Item] ID=rubble; q=1; x=56; y=44;
+[Item] ID=ice_rocks_wallbase; q=1; x=56; y=50;
+[Item] ID=ice_rocks; q=1; x=57; y=38;
+[Item] ID=rubble; q=1; x=57; y=39;
+[Item] ID=rubble; q=1; x=57; y=44;
+[Item] ID=boulder; q=1; x=58; y=39;
+[Item] ID=rubble; q=1; x=58; y=40;
+[Item] ID=rubble; q=1; x=58; y=41;
+[Item] ID=rubble; q=1; x=58; y=42;
+[Item] ID=rubble; q=1; x=58; y=43;
+[Item] ID=ice_rocks; q=1; x=59; y=39;
+[Item] ID=rubble; q=1; x=59; y=40;
+[Item] ID=rubble; q=1; x=59; y=44;
+[Item] ID=rubble; q=1; x=60; y=44;
+[Item] ID=ice_rocks; q=1; x=61; y=44;
+[Item] ID=rubble; q=1; x=61; y=45;
+[Item] ID=rubble; q=1; x=62; y=46;
+[Item] ID=ice_rocks_wallbase; q=1; x=62; y=46;
+[Item] ID=rubble; q=1; x=63; y=46;
+
+
+[Actor]ID=gemhide_zCaveIce1a_; name=Minral;
+actorTypeID=gemhide; sprite=actor_gemhide; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=7; position=30,66; destination=-1,-1; facingRot=450; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pBlue4; skinPalette=pBlueD; armorPalette=pOrange; unarmoredPalette=pOrange; aiScript=idle_hideAnim; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0; bravery=-100; intelligence=0.4; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=41; MP=23; HPMax=41; MPMax=23; TrueHPMax=41; TrueMPMax=23; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=gem_small2; cSlot=1;
+
+
+[Actor]ID=gemhide_zCaveIce1a_0; name=Amline;
+actorTypeID=gemhide; sprite=actor_gemhide; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=7; position=28,59; destination=-1,-1; facingRot=180; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pBlue4; skinPalette=pBlueD; armorPalette=pOrange; unarmoredPalette=pOrange; aiScript=idle_hideAnim; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0; bravery=-100; intelligence=0.4; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=43; HPMax=43; TrueHPMax=43; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=gem_small2; cSlot=1;
+
+
+[Actor]ID=icewolf_zCaveIce1a_; name=Seiver;
+actorTypeID=icewolf; sprite=actor_wolfR; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=36,33; destination=-1,-1; facingRot=360; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pR; skinPalette=pBW; armorPalette=pWhite; unarmoredPalette=pWhite; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=0.9; intelligence=0.3; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+
+ supportAbilities=criticalPhantom;  supportAbilities=;  supportAbilities=; HP=56; HPMax=56; TrueHPMax=56; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=icewolf_zCaveIce1a_0; name=Slavar;
+actorTypeID=icewolf; sprite=actor_wolfR; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=44,26; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pR; skinPalette=pBW; armorPalette=pWhite; unarmoredPalette=pWhite; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=0.9; intelligence=0.3; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+
+ supportAbilities=criticalPhantom;  supportAbilities=;  supportAbilities=; HP=55; MP=21; HPMax=55; MPMax=21; TrueHPMax=55; TrueMPMax=21; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=icewolf_zCaveIce1a_1; name=Lokrack;
+actorTypeID=icewolf; sprite=actor_wolfR; actorClass=balancer; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=43,25; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pR; skinPalette=pBW; armorPalette=pWhite; unarmoredPalette=pWhite; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=0.9; intelligence=0.3; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+
+ supportAbilities=criticalPhantom;  supportAbilities=sacrifice;  supportAbilities=; HP=62; MP=28; HPMax=62; MPMax=28; TrueHPMax=62; TrueMPMax=28; PhysAtk=3; skill_Life=1; Ba_iceSpikes=1; sacrifice=1; balancer_XP=0; balancer_XP_stars=0; defiler_XP=0; 
+numRanksBought=Ba_iceSpikes=1; 
+numRanksBought=skill_Life=1; 
+numRanksBought=sacrifice=1; 
+chosenAbilityOfEachClass=balancer=Ba_stonefoot; 
+chosenAbilityOfEachClass=defiler=De_iceblood; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=balancer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=balancer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=5; duration=-1;
+[ActorEffect]
+ actorValue=MagEva; sourceAVAffecter=balancer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=15; duration=-1;
+[ActorEffect]
+ actorValue=skill_Fire; sourceAVAffecter=balancer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Ice; sourceAVAffecter=balancer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Elec; sourceAVAffecter=balancer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Wind; sourceAVAffecter=balancer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Life; sourceAVAffecter=balancer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=icewolf_zCaveIce1a_2; name=Redroust;
+actorTypeID=icewolf; sprite=actor_wolfR; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=52,30; destination=-1,-1; facingRot=180; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pR; skinPalette=pBW; armorPalette=pWhite; unarmoredPalette=pWhite; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=0.9; intelligence=0.3; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+
+ supportAbilities=criticalPhantom;  supportAbilities=;  supportAbilities=; HP=56; MP=21; HPMax=56; MPMax=21; TrueHPMax=56; TrueMPMax=21; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=icewolf_zCaveIce1a_3; name=Acks;
+actorTypeID=icewolf; sprite=actor_wolfR; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=37,35; destination=-1,-1; facingRot=360; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pR; skinPalette=pBW; armorPalette=pWhite; unarmoredPalette=pWhite; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=0.9; intelligence=0.3; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+
+ supportAbilities=criticalPhantom;  supportAbilities=;  supportAbilities=; HP=61; HPMax=61; TrueHPMax=61; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=tent1; name=Grepa;
+actorTypeID=turtle_tentacle; sprite=actor_tentacle; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=5; position=78,0; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=turtle; clothPalette=pBW; skinPalette=pCoralHilt; armorPalette=zoneWater; unarmoredPalette=zoneWater; aiScript=hide_untilCalled_splash; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=1; intelligence=0.01; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=diving;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=27; HPMax=27; TrueHPMax=27; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=tent2; name=Blem;
+actorTypeID=turtle_tentacle; sprite=actor_tentacle; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=5; position=79,0; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=turtle; clothPalette=pBW; skinPalette=pCoralHilt; armorPalette=zoneWater; unarmoredPalette=zoneWater; aiScript=hide_untilCalled_splash; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=1; intelligence=0.01; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=diving;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=26; MP=33; HPMax=26; MPMax=33; TrueHPMax=26; TrueMPMax=33; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=tent0; name=Loul;
+actorTypeID=turtle_tentacle; sprite=actor_tentacle; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=5; position=78,1; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=turtle; clothPalette=pBW; skinPalette=pCoralHilt; armorPalette=zoneWater; unarmoredPalette=zoneWater; aiScript=hide_untilCalled_splash; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=1; intelligence=0.01; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=diving;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=28; MP=34; HPMax=28; MPMax=34; TrueHPMax=28; TrueMPMax=34; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=tent3; name=Clasp;
+actorTypeID=turtle_tentacle; sprite=actor_tentacle; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=5; position=79,1; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=turtle; clothPalette=pBW; skinPalette=pCoralHilt; armorPalette=zoneWater; unarmoredPalette=zoneWater; aiScript=hide_untilCalled_splash; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=1; intelligence=0.01; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=diving;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=27; HPMax=27; TrueHPMax=27; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=tent4; name=Gnoa;
+actorTypeID=turtle_tentacle; sprite=actor_tentacle; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=5; position=78,2; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=turtle; clothPalette=pBW; skinPalette=pCoralHilt; armorPalette=zoneWater; unarmoredPalette=zoneWater; aiScript=hide_untilCalled_splash; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=1; intelligence=0.01; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=diving;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=29; HPMax=29; TrueHPMax=29; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=serp0; name=Vorpall;
+actorTypeID=serpent_water; sprite=actor_serpent; actorClass=sorcerer; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=7; position=0,0; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=KP-BossBattle1; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=True; faction=enemy; combatTeam=; clothPalette=pR; skinPalette=p65; armorPalette=zoneWater; unarmoredPalette=zoneWater; aiScript=hide_untilCalled_splash; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=1; intelligence=0.2; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=diving;
+
+ supportAbilities=fireAdept;  supportAbilities=;  supportAbilities=; HP=72; MP=18; HPMax=72; MPMax=18; TrueHPMax=72; TrueMPMax=18; PhysAtk=9; MagAtk=9; PhysDef=3; MagDef=3; actTime=32; skill_Ice=1; So_inferno=1; fireAdept=1; sorcerer_XP=0; 
+numRanksBought=So_inferno=1; 
+numRanksBought=fireAdept=1; 
+chosenAbilityOfEachClass=ignisKnight=iK_oilEdge; 
+chosenAbilityOfEachClass=krakenslayer=Kra_arcLance; 
+chosenAbilityOfEachClass=sorcerer=So_inferno; 
+chosenAbilityOfEachClass=elementalist=Ele_condensate; 
+chosenAbilityOfEachClass=ravager=Rav_smite; 
+chosenAbilityOfEachClass=unmaker=Un_ruinTouch; 
+chosenAbilityOfEachClass=scholar=Sch_flame; 
+chosenAbilityOfEachClass=sage=Sa_heal; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=skill_Fire; sourceAVAffecter=fireAdept; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=skill_Ice; sourceAVAffecter=fireAdept; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=-1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Elec; sourceAVAffecter=fireAdept; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=-1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Wind; sourceAVAffecter=fireAdept; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=-1; duration=-1;
+[ActorEffect]
+ actorValue=MagAtk; sourceAVAffecter=sorcerer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=MagEva; sourceAVAffecter=sorcerer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=8; duration=-1;
+[ActorEffect]
+ actorValue=skill_Fire; sourceAVAffecter=sorcerer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Ice; sourceAVAffecter=sorcerer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Elec; sourceAVAffecter=sorcerer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Wind; sourceAVAffecter=sorcerer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=serp1; name=Slasz;
+actorTypeID=serpent_water; sprite=actor_serpent; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=7; position=1,0; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pR; skinPalette=p8; armorPalette=zoneWater; unarmoredPalette=zoneWater; aiScript=hide_untilCalled_splash; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=1; intelligence=0.2; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=diving;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=44; MP=15; HPMax=44; MPMax=15; TrueHPMax=44; TrueMPMax=15; PhysAtk=9; MagAtk=7; PhysDef=3; MagDef=3; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=serp2; name=Rauraln;
+actorTypeID=serpent_water; sprite=actor_serpent; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=7; position=0,1; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pR; skinPalette=p8; armorPalette=zoneWater; unarmoredPalette=zoneWater; aiScript=hide_untilCalled_splash; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=1; intelligence=0.2; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=diving;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=46; HPMax=46; TrueHPMax=46; PhysAtk=9; MagAtk=7; PhysDef=3; MagDef=3; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+
+[Trigger] numID=0; aliasID=;
+topX=34;topY=85;btmX=43;btmY=89;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=0; effectID=travel_leaveLocation; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=1; aliasID=;
+topX=33;topY=87;btmX=33;btmY=87;
+triggerImmediatelyOnEnteringZone=True; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=1; effectID=trigger; sValue=tEnterLoc; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=2; aliasID=setup;
+topX=28;topY=83;btmX=31;btmY=83;
+triggerImmediatelyOnEnteringZone=True; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1-g:caveIceMelt;
+[TriggerEffect] numID=2; effectID=weather; sValue=snow; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0.01; xValue=-1; yValue=-1;
+[TriggerEffect] numID=2; effectID=wind; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=90; delay=0.01; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=3; aliasID=;
+topX=39;topY=14;btmX=47;btmY=25;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=True; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=3; effectID=cancelIfItemPresent; sValue=iceBlock_eternal; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=43; yValue=13;
+[TriggerEffect] numID=3; effectID=trigger; sValue=meltcave; sValue2=; bValue1=False; bValue2=True; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=4; aliasID=meltcave;
+topX=48;topY=14;btmX=53;btmY=14;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=True; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=4; effectID=applyElementToZone; sValue=heat; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=5; xValue=-1; yValue=-1;
+[TriggerEffect] numID=4; effectID=preventInteraction; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=7.1; delay=0; xValue=-1; yValue=-1;
+[TriggerEffect] numID=4; effectID=addZoneFX; sValue=amb_droplets; sValue2=; bValue1=True; bValue2=False; fValue=20; delay=0; xValue=-1; yValue=-1;
+[TriggerEffect] numID=4; effectID=fx; sValue=amb_droplets; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+[TriggerEffect] numID=4; effectID=setZonePalettes; sValue=dirtDark; sValue2=p65; bValue1=False; bValue2=False; fValue=0; delay=2; xValue=-1; yValue=-1;
+[TriggerEffect] numID=4; effectID=setZonePalettes; sValue=dirtDark; sValue2=p4; bValue1=False; bValue2=False; fValue=0; delay=5; xValue=-1; yValue=-1;
+[TriggerEffect] numID=4; effectID=weather; sValue=none; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+[TriggerEffect] numID=4; effectID=wind; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=-360; delay=0; xValue=-1; yValue=-1;
+[TriggerEffect] numID=4; effectID=setZonePalettes; sValue=dirt; sValue2=p13; bValue1=False; bValue2=False; fValue=0; delay=2; xValue=-1; yValue=-1;
+[TriggerEffect] numID=4; effectID=setZonePalettes; sValue=dirt; sValue2=p16; bValue1=False; bValue2=False; fValue=0; delay=5; xValue=-1; yValue=-1;
+[TriggerEffect] numID=4; effectID=song; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+[TriggerEffect] numID=4; effectID=setZoneDarkness; sValue=255, 180, 180; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0.5; xValue=-1; yValue=-1;
+[TriggerEffect] numID=4; effectID=setZoneDarkness; sValue=230, 190, 80; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=5; xValue=-1; yValue=-1;
+[TriggerEffect] numID=4; effectID=removeActorType; sValue=gemhide; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+[TriggerEffect] numID=4; effectID=fx; sValue=darken_major_long; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=1.8; xValue=-1; yValue=-1;
+[TriggerEffect] numID=4; effectID=removeItem; sValue=puddle; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0.1; xValue=43; yValue=13;
+[TriggerEffect] numID=4; effectID=moveActor; sValue=tent0; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=46; yValue=55;
+[TriggerEffect] numID=4; effectID=moveActor; sValue=tent1; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=44; yValue=54;
+[TriggerEffect] numID=4; effectID=moveActor; sValue=tent2; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=55; yValue=55;
+[TriggerEffect] numID=4; effectID=moveActor; sValue=tent3; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=52; yValue=54;
+[TriggerEffect] numID=4; effectID=moveActor; sValue=tent4; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=50; yValue=55;
+[TriggerEffect] numID=4; effectID=setGlobalVar; sValue=caveIceMelt; sValue2=; bValue1=False; bValue2=False; fValue=1; delay=0; xValue=-1; yValue=-1;
+[TriggerEffect] numID=4; effectID=moveActor; sValue=serp0; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=35; yValue=66;
+[TriggerEffect] numID=4; effectID=moveActor; sValue=serp1; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=26; yValue=62;
+[TriggerEffect] numID=4; effectID=moveActor; sValue=serp2; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=29; yValue=59;
+[TriggerEffect] numID=4; effectID=addZoneFX; sValue=w_smog_hiss; sValue2=; bValue1=False; bValue2=False; fValue=0.15; delay=2.2; xValue=-1; yValue=-1;
+[TriggerEffect] numID=4; effectID=removeZoneFX; sValue=w_smog_hiss; sValue2=; bValue1=True; bValue2=False; fValue=0; delay=5.4; xValue=-1; yValue=-1;
+[TriggerEffect] numID=4; effectID=setZoneSongs; sValue=CC0-Stars; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=5; xValue=-1; yValue=-1;
+[TriggerEffect] numID=4; effectID=fx; sValue=w_smog_hiss; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=5.5; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=5; aliasID=;
+topX=43;topY=13;btmX=43;btmY=13;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=fire; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=5; effectID=trigger; sValue=meltcave; sValue2=; bValue1=False; bValue2=True; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=6; aliasID=;
+topX=45;topY=50;btmX=50;btmY=55;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=True; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=g:caveIceMelt;
+[TriggerEffect] numID=6; effectID=sendAISignal; sValue=stopHiding; sValue2=; bValue1=False; bValue2=False; fValue=13; delay=0; xValue=50; yValue=53;
+[TriggerEffect] numID=6; effectID=preventInteraction; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=1; delay=0; xValue=-1; yValue=-1;
+[TriggerEffect] numID=6; effectID=enterCombat; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=13; delay=1; xValue=50; yValue=53;
+
+
+
+[Trigger] numID=7; aliasID=;
+topX=42;topY=57;btmX=47;btmY=57;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=combatEnd; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=True; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=7; effectID=cancelIfEnemiesPresent; sValue=turtle_tentacle; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+[TriggerEffect] numID=7; effectID=removeItem; sValue=fade_s1_rounder_below; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=1; xValue=47; yValue=56;
+[TriggerEffect] numID=7; effectID=removeItem; sValue=fade_s1_rounder_below; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=1; xValue=54; yValue=56;
+[TriggerEffect] numID=7; effectID=removeItem; sValue=fade_s1_below; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=1; xValue=48; yValue=56;
+[TriggerEffect] numID=7; effectID=removeItem; sValue=fade_s1_below; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=1; xValue=49; yValue=56;
+[TriggerEffect] numID=7; effectID=removeItem; sValue=fade_s1_below; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=1; xValue=50; yValue=56;
+[TriggerEffect] numID=7; effectID=removeItem; sValue=fade_s1_below; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=1; xValue=51; yValue=56;
+[TriggerEffect] numID=7; effectID=removeItem; sValue=fade_s1_below; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=1; xValue=52; yValue=56;
+[TriggerEffect] numID=7; effectID=removeItem; sValue=fade_s1_below; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=1; xValue=53; yValue=56;
+[TriggerEffect] numID=7; effectID=fx; sValue=waterSplash; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0.5; xValue=48; yValue=56;
+[TriggerEffect] numID=7; effectID=fx; sValue=waterSplash; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0.5; xValue=49; yValue=56;
+[TriggerEffect] numID=7; effectID=fx; sValue=waterSplash; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0.5; xValue=50; yValue=56;
+[TriggerEffect] numID=7; effectID=fx; sValue=waterSplash; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0.5; xValue=51; yValue=56;
+[TriggerEffect] numID=7; effectID=fx; sValue=waterSplash; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0.5; xValue=52; yValue=56;
+[TriggerEffect] numID=7; effectID=fx; sValue=waterSplash; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0.5; xValue=53; yValue=56;
+[TriggerEffect] numID=7; effectID=fx; sValue=waterSplash; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0.5; xValue=54; yValue=56;
+[TriggerEffect] numID=7; effectID=fx; sValue=waterSplash; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0.5; xValue=47; yValue=56;
+[TriggerEffect] numID=7; effectID=fx; sValue=medShakeHoriz; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0.5; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=8; aliasID=;
+topX=25;topY=65;btmX=38;btmY=69;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=True; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=g:caveIceMelt;
+[TriggerEffect] numID=8; effectID=sendAISignal; sValue=stopHiding; sValue2=; bValue1=False; bValue2=False; fValue=13; delay=1; xValue=30; yValue=63;
+[TriggerEffect] numID=8; effectID=preventInteraction; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=2; delay=0; xValue=-1; yValue=-1;
+[TriggerEffect] numID=8; effectID=enterCombat; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=13; delay=2; xValue=30; yValue=63;
+[TriggerEffect] numID=8; effectID=fx; sValue=fx_earthquake_mild; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+

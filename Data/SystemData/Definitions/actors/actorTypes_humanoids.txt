@@ -1,0 +1,5370 @@
+[ActorType] ID=human; 
+name=Human;
+description=Humans may not be as common or powerful as other races, but they are sturdy, adaptable, and persistent. <br=> +10% Experience gained;
+journalID=journal_human;
+playerUsable= true;
+canSpawnWithClass = true;
+randomSkinPaletteOnSpawn = true;
+
+bodyStructure=human;
+humanoid = true;
+movementSpeed = 6;
+unarmedPower = 2;
+unarmedAction = punch;
+defaultValues=HP=30;
+defaultValues=HPMax = 30;
+defaultValues=TrueHPMax = 30;
+defaultValues=MP = 20;
+defaultValues=MPMax = 20;
+defaultValues=TrueMPMax = 20;
+defaultValues=PhysAtk = 3;
+defaultValues=PhysDef = 1;
+defaultValues=PhysEva= 0;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 1;
+defaultValues=MagEva= 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 3;
+defaultValues=actTime = 30;
+skinPalette = pHuman1;
+
+fxSpeech = sfx_speech;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = humanDeath;
+
+defaultBodyPartSprites=armR=template_arm;
+defaultBodyPartSprites=armL=template_arm;
+defaultBodyPartSprites=legs=template_legs;
+defaultBodyPartSprites=head=human_head_shortHair1;
+defaultBodyPartSprites=face=template_face;
+defaultBodyPartSprites=torso=template_torso;
+
+bodyPartSprites=head=human_head_shortHair1;
+bodyPartSprites=head=human_head_shortHair2;
+bodyPartSprites=head=human_head_shortHair3;
+bodyPartSprites=head=human_head_shortHair4;
+bodyPartSprites=head=human_head_ponytail;
+bodyPartSprites=head=human_head_pigtails_female;
+bodyPartSprites=head=human_head_longHair1;
+bodyPartSprites=head=human_head_longHair2;
+bodyPartSprites=head=human_head_longHair3;
+bodyPartSprites=head=human_head_afro;
+bodyPartSprites=head=human_head_mohawk;
+bodyPartSprites=head=human_head_sideburns_male;
+bodyPartSprites=head=human_head_bun_female;
+bodyPartSprites=head=template_head;
+bodyPartSprites=head=human_head_balding_male;
+bodyPartSprites=head=human_head_spikyHair;
+bodyPartSprites=head=human_head_beard_male;
+bodyPartSprites=head=human_head_beard2_male;
+bodyPartSprites=head=human_head_beard3_male;
+bodyPartSprites=head=human_head_beard4_male;
+bodyPartSprites=head=robed_head;
+bodyPartSprites=head=helmet_head;
+bodyPartSprites=head=helmet_head2;
+bodyPartSprites=head=turban_head;
+bodyPartSprites=head=bandana_head;
+bodyPartSprites=head=bandana_head2;
+bodyPartSprites=head=tricorne_head;
+
+
+bodyPartSprites=face=template_face;
+bodyPartSprites=face=meh_face;
+bodyPartSprites=face=sleepy_face;
+bodyPartSprites=face=feminine_face_female;
+bodyPartSprites=face=angry_face;
+bodyPartSprites=face=alert_face;
+bodyPartSprites=face=unibrow_face;
+bodyPartSprites=face=squinty_face;
+bodyPartSprites=face=sad_face;
+bodyPartSprites=face=mustache_face_male;
+bodyPartSprites=face=goatee_face_male;
+bodyPartSprites=face=beard_face_male;
+bodyPartSprites=face=fullbeard_face_male;
+bodyPartSprites=face=glasses_face;
+bodyPartSprites=face=shades_face;
+bodyPartSprites=face=masked_face;
+bodyPartSprites=face=masked_face2;
+
+bodyPartSprites=legs=template_legs;
+bodyPartSprites=legs=legs_dress;
+bodyPartSprites=legs=legs_lightArmor;
+bodyPartSprites=legs=legs_heavyBoots;
+
+skinPalettes=pHuman1;
+skinPalettes=pHuman2;
+skinPalettes=pHuman3;
+skinPalettes=pHuman4;
+skinPalettes=pHuman5;
+skinPalettes=pHuman6;
+skinPalettes=pHuman7;
+skinPalettes=pHuman8;
+skinPalettes=pHuman9;
+skinPalettes=pHuman10;
+skinPalettes=pHuman11;
+skinPalettes=pHuman12;
+skinPalettes=pHuman13;
+skinPalettes=pHuman14;
+skinPalettes=pHuman15;
+skinPalettes=pHuman16;
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+aggressiveness = 0.5;
+bravery = 0.5;
+honor = 0.4;
+intelligence = 0.5;
+
+defaultDialogNode = auto;
+dialog_speechFont=scuri;
+
+dialog_tryCombat_overconfident_fight = <mf=He/She> looks utterly unimpressed. Almost immediately <mf=he/she> charges at you!;
+anim_tryCombat_overconfident_fight=angry;
+
+dialog_tryCombat_overconfident_peace = <mf=He/She> tries to suppress a yawn before dismissively lowering <mf=his/her> weapons.;
+anim_tryCombat_overconfident_peace=sigh;
+
+dialog_tryCombat_confident_fight = <mf=He/She> eyes you cautiously, then moves in for the kill.;
+anim_tryCombat_confident_fight=angry;
+
+dialog_tryCombat_confident_peace = The <mf=man/woman> looks dismayed but not afraid. <mf=He/She> seems to be hoping to have peace with you.;
+
+dialog_tryCombat_uneasy_fight = <mf=He/She> seems quite afraid, but <mf=he/she> still moves to attack you.;
+anim_tryCombat_uneasy_fight = angry;
+
+dialog_tryCombat_uneasy_flee = Looks like you frightened <mf=him/her> -- <mf=he/she>'s running away!;
+anim_tryCombat_uneasy_flee=scared;
+
+dialog_tryCombat_scared_flee = Absolute panic fills <mf=his/her> face and <mf=he/she> turns to flee!;
+dialog_tryCombat_scared_flee=scared;
+
+--
+
+dialog_tryPeace_overconfident_fight = <mf=His/Her> lips curl in a malicious sneer, and <mf=he/she> attacks you!;
+anim_tryPeace_overconfident_fight=angry;
+
+dialog_tryPeace_overconfident_peace = <mf=He/She> carelessly gestures acceptance and then turns away. It seems your presence doesn't worry <mf=him/her>.;
+anim_tryPeace_overconfident_peace = sigh;
+
+dialog_tryPeace_confident_fight = <mf=He/She> narrows <mf=his/her> eyes in suspicion, then attacks!;
+anim_tryPeace_confident_fight=angry;
+
+dialog_tryPeace_confident_peace = <mf=He/She> pauses, considers, then strides forward to shake hands in friendship.;
+
+dialog_tryPeace_uneasy_fight = The <mf=man/woman> coughs nervously, then <mf=his/her> gaze hardens as <mf=he/she> advances with murderous intent.;
+anim_tryPeace_uneasy_fight = angry;
+
+dialog_tryPeace_uneasy_peace = <mf=He/She> is visibly nervous but also quite relieved at your offer, which is promptly accepted.;
+anim_tryPeace_uneasy_peace = happy;
+
+dialog_tryPeace_scared_peace = <mf=He/She> looks absolutely petrified, but eventually <mf=he/she> manages to convey acceptance.;
+anim_tryPeace_scared_peace = scared;
+
+dialog_tryPeace_scared_flee = The <mf=man/woman> barely stays still long enough to hear you before turning to run.;
+anim_tryPeace_scared_flee = scared;
+
+--
+
+dialog_tryBribe_overconfident_fight = <mf=He/She> looks disgusted by your paltry offering, and makes it clear <mf=he/she>'d rather have your neck!;
+anim_tryBribe_overconfident_fight=angry;
+
+dialog_tryBribe_overconfident_peace = <mf=He/She> smiles, refuses your gift, says something incomprehensible and claps you on the back. Seems like you've made a friend.;
+anim_tryBribe_overconfident_peace=happy;
+
+dialog_tryBribe_overconfident_bribe = The <mf=man/woman> calmly approaches, and accepts the gift without further discussion.;
+
+dialog_tryBribe_confident_peace = <mf=He/She> looks genuinely happy by your gesture, and refuses to accept it.;
+anim_tryBribe_confident_peace = happy;
+
+dialog_tryBribe_confident_bribe = The <mf=man/woman> is hesitant at first, but eventually takes your gift.;
+
+dialog_tryBribe_uneasy_bribe = <mf=He/She> seems quite scared of you, but gratefully accepts your gift.;
+anim_tryBribe_uneasy_bribe = sigh;
+
+dialog_tryBribe_scared_bribe = This person is clearly terrified of you, but eventually greed wins out over self-preservation and <mf=he/she> takes the offering.;
+anim_tryBribe_scared_bribe = scared;
+
+randomNames=Adams;
+randomNames=Ansen;
+randomNames=Aless;
+randomNames=Axem;
+randomNames=Alex;
+randomNames=Ares;
+randomNames=Anarim;
+randomNames=Anaxim;
+randomNames=Albin;
+randomNames=Blank;
+randomNames=Byron;
+randomNames=Borst;
+randomNames=Bobrum;
+randomNames=Bolise;
+randomNames=Bevar;
+randomNames=Burts;
+randomNames=Bozer;
+randomNames=Cole;
+randomNames=Cabbot;
+randomNames=Cele;
+randomNames=Corway;
+randomNames=Carle;
+randomNames=Cain;
+randomNames=Cana;
+randomNames=Drake;
+randomNames=Daros;
+randomNames=Den;
+randomNames=Desira;
+randomNames=Dyrum;
+randomNames=Dobbs;
+randomNames=Denton;
+randomNames=Drey;
+randomNames=Dankos;
+randomNames=Daulph;
+randomNames=Ellison;
+randomNames=Ein;
+randomNames=Elberg;
+randomNames=Esberg;
+randomNames=Falcon;
+randomNames=Falcohm;
+randomNames=Flacoe;
+randomNames=Flak;
+randomNames=Fox;
+randomNames=Foulte;
+randomNames=Finlam;
+randomNames=Graham;
+randomNames=Grante;
+randomNames=Glorian;
+randomNames=Gamondor;
+randomNames=Golve;
+randomNames=Guybucks;
+randomNames=Horas;
+randomNames=Helwen;
+randomNames=Hosea;
+randomNames=Hauldhagen;
+randomNames=Hidel;
+randomNames=Hank;
+randomNames=Iso;
+randomNames=Ina;
+randomNames=Ildas;
+randomNames=Jackson;
+randomNames=Joson;
+randomNames=Jens;
+randomNames=Jeffes;
+randomNames=Jay;
+randomNames=Jamison;
+randomNames=Jang;
+randomNames=Joao;
+randomNames=Jao;
+randomNames=Joof;
+randomNames=Jarto;
+randomNames=Jarks;
+randomNames=Karin;
+randomNames=Kines;
+randomNames=Kane;
+randomNames=Kyrin;
+randomNames=Kris;
+randomNames=Kriby;
+randomNames=Koime;
+randomNames=Lefte;
+randomNames=Lyre;
+randomNames=Lyra;
+randomNames=Latie;
+randomNames=Laio;
+randomNames=Lee;
+randomNames=Lin;
+randomNames=Lagi;
+randomNames=Lucca;
+randomNames=Myron;
+randomNames=Mortimer;
+randomNames=Marti;
+randomNames=Mochrie;
+randomNames=Nodd;
+randomNames=Ned;
+randomNames=Olif;
+randomNames=Orphes;
+randomNames=Olten;
+randomNames=Orren;
+randomNames=Oine;
+randomNames=Odo;
+randomNames=Pollos;
+randomNames=Phella;
+randomNames=Pikat;
+randomNames=Peebe;
+randomNames=Phyllis;
+randomNames=Quile;
+randomNames=Quin;
+randomNames=Quenton;
+randomNames=Ronderman;
+randomNames=Redd;
+randomNames=Reese;
+randomNames=Rondem;
+randomNames=Rex;
+randomNames=Snayk;
+randomNames=Smaus;
+randomNames=Sullen;
+randomNames=Severo;
+randomNames=Selproa;
+randomNames=Steele;
+randomNames=Slip;
+randomNames=Spinaker;
+randomNames=Sasz;
+randomNames=Sky;
+randomNames=Torberg;
+randomNames=Travor;
+randomNames=Tod;
+randomNames=Tamm;
+randomNames=Threekword;
+randomNames=Undway;
+randomNames=Underhill;
+randomNames=Vin;
+randomNames=Viktor;
+randomNames=Vendril;
+randomNames=Vernes;
+randomNames=Vlasko;
+randomNames=Venkly;
+randomNames=Wryn;
+randomNames=Wulf;
+randomNames=Whaetely;
+randomNames=Warren;
+randomNames=Xavier;
+randomNames=Yven;
+randomNames=Zeruda;
+randomNames=Zhen;
+
+ruinAvEffects=ruinAv_human1;
+ruinAvEffects=ruinAv_human2;
+[AvEffect]
+ID=ruinAv_human1;
+actorValue=PhysEva; magnitude=5; duration=-1;
+[AvEffect]
+ID=ruinAv_human2;
+actorValue=MagEva; magnitude=5; duration=-1;
+[ActorTypeReaction]
+ID=human;
+actorValues=XP; actorValues=XP_ignoreTired; healMultiplier=1.1;
+[JournalEntry]
+ID=journal_human;
+category=creature; halfPage=true; rarity=0;
+title=Human;
+text=<icon=j_human><title=Human><brAdj=>This familiar creature is one of the most diverse species in Eral. Humans are adaptable, durable, and persistent. They can be found in most areas, though in small numbers.<n=> Attitudes toward humans vary, but more often than not humans integrate easily into society.<br=>  +10% XP (and +10% * as a result);
+
+
+
+
+[ActorType] ID=scurio; 
+name=Scurio;
+description=Scuri are bipedals with a mixture of feline, vulpine, and musteline features. They act slightly faster than humans.<br=> -2 <icon=time> Time to Act;
+journalID=journal_scurio;
+playerUsable= true;
+canSpawnWithClass = true;
+randomSkinPaletteOnSpawn = true;
+
+bodyStructure=human;
+humanoid = true;
+movementSpeed = 8;
+unarmedPower = 2;
+unarmedAction = punch;
+
+defaultValues=HP = 30;
+defaultValues=HPMax = 30;
+defaultValues=TrueHPMax = 30;
+defaultValues=MP = 20;
+defaultValues=MPMax = 20;
+defaultValues=TrueMPMax= 20;
+defaultValues=PhysAtk = 3;
+defaultValues=PhysDef = 1;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 1;
+defaultValues=MagEva = 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 3;
+defaultValues=actTime= 30;
+
+defaultBodyPartSprites=armR=npc1_arm;
+defaultBodyPartSprites=armL=npc1_arm;
+defaultBodyPartSprites=legs=scur_legs;
+defaultBodyPartSprites=head=scur_head;
+defaultBodyPartSprites=face=scur_face;
+defaultBodyPartSprites=torso=template_torso;
+
+bodyPartSprites=head=scur_head;
+bodyPartSprites=head=scur_head3;
+bodyPartSprites=head=scur_head2;
+bodyPartSprites=head=scur_head4;
+bodyPartSprites=head=scur_head_hood;
+bodyPartSprites=head=scur_head_helm;
+bodyPartSprites=head=scur_head_helm_dark;
+bodyPartSprites=head=scur_head_helm2;
+bodyPartSprites=head=scur_head5;
+bodyPartSprites=head=scur_head6;
+bodyPartSprites=head=scur_head7;
+bodyPartSprites=head=scur_head8;
+bodyPartSprites=head=scur_head_hat1;
+bodyPartSprites=head=scur_head_hat2;
+bodyPartSprites=head=scur_head_hat3;
+bodyPartSprites=head=scur_head_hat4;
+
+bodyPartSprites=face=scur_face;
+bodyPartSprites=face=scur_face_angry;
+bodyPartSprites=face=scur_face_meh;
+bodyPartSprites=face=scur_face_scar;
+bodyPartSprites=face=scur_face_cat;
+bodyPartSprites=face=scur_face_mask;
+bodyPartSprites=face=scur_face_mask2;
+
+bodyPartSprites=legs=scur_legs;
+bodyPartSprites=legs=scur_legs_boots;
+bodyPartSprites=legs=scur_legs_dress;
+bodyPartSprites=legs=scur_legs2;
+
+skinPalettes=pScur2;
+skinPalettes=pOrange;
+skinPalettes=pCopper;
+skinPalettes=pYellow;
+skinPalettes=pYellow3;
+skinPalettes=pYellow4;
+skinPalettes=pScur3;
+skinPalettes=pSilver;
+skinPalettes=pGrey2;
+skinPalettes=pScur1;
+skinPalettes=p2;
+skinPalettes=p36;
+skinPalettes=p14;
+
+skinPalette = pScur2;
+clothPalette = pGreen;
+
+fxSpeech = sfx_speech;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = humanDeath;
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+aggressiveness = 0.55;
+bravery = 0.45;
+honor = 0.55;
+intelligence = 0.5;
+
+defaultDialogNode = auto;
+dialog_speechFont=scuri;
+
+
+dialog_tryCombat_overconfident_fight = <mf=He/She> gives a weaselly grin and swaggers toward you, weapons ready.;
+anim_tryCombat_overconfident_fight = angry;
+
+dialog_tryCombat_overconfident_peace = The Scuri frowns and takes a relaxed stance. <mf=He/She> extends a claw in a gesture of peace.;
+
+dialog_tryCombat_confident_fight = The Scuri bares its teeth begins circling you, ready to strike!;
+anim_tryCombat_confident_fight = angry;
+
+dialog_tryCombat_confident_peace = The Scuri gives a low bark and gestures toward the ground. Is <mf=he/she> trying to negotiate peace?;
+
+dialog_tryCombat_uneasy_fight = <mf=He/She> growls weakly. <mf=He/She> is obviously afraid, but still advances on you to fight.;
+anim_tryCombat_uneasy_fight = angry;
+
+dialog_tryCombat_uneasy_flee = The Scuri tucks <mf=his/her> tail between <mf=his/her> legs and runs!;
+anim_tryCombat_uneasy_flee = scared;
+
+dialog_tryCombat_scared_flee = The Scuri drops to all fours, scrambling to get away as fast as possible.;
+anim_tryCombat_scared_flee = scared;
+
+--
+
+dialog_tryPeace_overconfident_fight = The Scuri licks <mf=his/her> teeth nonchalantly as you present your offer. Then <mf=he/she> grins an evil grin...;
+anim_tryPeace_overconfident_fight = angry;
+
+dialog_tryPeace_overconfident_peace = The Scuri accepts your negotiation without hesitation or fear.;
+
+dialog_tryPeace_confident_fight = <mf=His/Her> tail twitches involuntarily while you speak. There is an awkward silence, until <mf=he/she> mutters something and begins approaching menacingly.;
+anim_tryPeace_confident_fight = angry;
+
+dialog_tryPeace_confident_peace = The Scuri chitters quietly until finally deciding to accept your offer.;
+
+dialog_tryPeace_uneasy_fight = <mf=His/Her> eyes dart across each of you nervously. Out of suspicious desperation, <mf=he/she> attacks you!;
+anim_tryPeace_uneasy_fight = angry;
+
+dialog_tryPeace_uneasy_peace = <mf=He/She> lets out a sigh of relief when you make it clear that you mean no harm.;
+anim_tryPeace_uneasy_peace = sigh;
+
+dialog_tryPeace_scared_peace = The Scuri winces in fear at your every movement, but with enough cajoling you manage to reach a peaceful accord.;
+anim_tryPeace_scared_peace = scared;
+
+dialog_tryPeace_scared_flee = The Scuri screeches and bolts the moment you even start communicating.;
+anim_tryPeace_scared_flee = scared;
+
+--
+
+dialog_tryBribe_overconfident_fight = The Scuri lets out a scornful laugh and knocks the gift from your hands. The only gift <mf=he/she> wants is your corpse!;
+anim_tryBribe_overconfident_fight = angry;
+
+dialog_tryBribe_overconfident_peace = <mf=He/She> chuckles happily and pushes the gift back into your hands.;
+anim_tryBribe_overconfident_peace = happy;
+
+dialog_tryBribe_overconfident_bribe = The Scuri is at first indifferent, then realizes that a gift is not to be wasted and takes it from you. <mf=He/She> waves you along.;
+
+dialog_tryBribe_confident_peace = Your generosity is startling to the Scuri, who is suddenly eager to be friendly. <mf=He/She> refuses your offer out of respect.;
+anim_tryBribe_confident_peace = happy;
+
+dialog_tryBribe_confident_bribe = The Scuri is slow to understand your intentions, but once <mf=he/she> does, <mf=he/she> snatches the gift from you and grins broadly.;
+anim_tryBribe_confident_bribe = happy;
+
+dialog_tryBribe_uneasy_bribe = The Scuri snarls fearfully like a cornered animal, until finally accepting your offer and warming up to you.;
+anim_tryBribe_uneasy_bribe = angry;
+
+dialog_tryBribe_scared_bribe = The Scuri stands paralyzed in fear. With shaking hands, <mf=he/she> slowly takes the gift as if to appease you.;
+anim_tryBribe_scared_bribe = scared;
+
+randomNames=Alles;
+randomNames=Bain;
+randomNames=Bouer;
+randomNames=Bira;
+randomNames=Coless;
+randomNames=Cohen;
+randomNames=Cavin;
+randomNames=Cevras;
+randomNames=Cass;
+randomNames=Castian;
+randomNames=Crantir;
+randomNames=Drax;
+randomNames=Dineh;
+randomNames=Daria;
+randomNames=Drey;
+randomNames=Elva;
+randomNames=Eoren;
+randomNames=Finn;
+randomNames=Fiera;
+randomNames=Gora;
+randomNames=Grey;
+randomNames=Gire;
+randomNames=Havet;
+randomNames=Hallik;
+randomNames=Inise;
+randomNames=Jefven;
+randomNames=Jen;
+randomNames=Kella;
+randomNames=Krya;
+randomNames=Kurit;
+randomNames=Kalt;
+randomNames=Kiva;
+randomNames=Lais;
+randomNames=Lembre;
+randomNames=Lang;
+randomNames=Lorl;
+randomNames=Maledis;
+randomNames=Melne;
+randomNames=Mori;
+randomNames=Morri;
+randomNames=Matthias;
+randomNames=Norwe;
+randomNames=Nira;
+randomNames=Olpha;
+randomNames=Ordolla;
+randomNames=Orne;
+randomNames=Oleah;
+randomNames=Penn;
+randomNames=Phyorr;
+randomNames=Perry;
+randomNames=Parro;
+randomNames=Rayn;
+randomNames=Rax;
+randomNames=Retta;
+randomNames=Silva;
+randomNames=Sinder;
+randomNames=Samwright;
+randomNames=Sieven;
+randomNames=Sol;
+randomNames=Shya;
+randomNames=Stine;
+randomNames=Sellewa;
+randomNames=Sorven;
+randomNames=Sagiar;
+randomNames=Sagard;
+randomNames=Stread;
+randomNames=Silas;
+randomNames=Tingel;
+randomNames=Treaen;
+randomNames=Tellen;
+randomNames=Tavia;
+randomNames=Teras;
+randomNames=Uve;
+randomNames=Uluas;
+randomNames=Uwain;
+randomNames=Veer;
+randomNames=Volen;
+randomNames=Wyve;
+
+constantAvEffects=av_scuri1;
+
+ruinAvEffects=ruinAv_scuri1;
+ruinAvEffects=ruinAv_scuri2;
+[AvEffect]
+ID=av_scuri1;
+actorValue=actTime; magnitude=-2; duration=-1;
+[AvEffect]
+ID=ruinAv_scuri1;
+actorValue=actTime; magnitude=-1; duration=-1;
+[AvEffect]
+ID=ruinAv_scuri2;
+actorValue=moveDistance; magnitude=1; duration=-1;
+[JournalEntry]
+ID=journal_scurio;
+category=creature; halfPage=true; rarity=1;
+title=Scurio;
+text=<icon=j_scurio><title=Scurio><brAdj=>Scuri are fur-covered bipedals with a mixture of feline, vulpine, & musteline features. They are one of the more common races, and are generally thought to be down-to-earth & simple. In reality their dispositions vary as widely as any human's.<br=>  -2 <icon=time> Time to Act;
+
+[ActorType] ID=rasmen;
+name=Rasmen;
+description=Faceless humanoids that 'see' by sensing the essence around them. They wear masks to better integrate into society.<br=> Immune to Blind & Silence<n=> +12% <icon=PhysEva>Dodge when flanked;
+journalID=journal_rasmen;
+playerUsable= true;
+canSpawnWithClass = true;
+randomSkinPaletteOnSpawn = true;
+
+bodyStructure=human;
+humanoid = true;
+movementSpeed = 6;
+unarmedPower = 2;
+unarmedAction = punch;
+
+defaultValues=HP = 30;
+defaultValues=HPMax = 30;
+defaultValues=TrueHPMax = 30;
+defaultValues=MP = 20;
+defaultValues=MPMax = 20;
+defaultValues=TrueMPMax = 20;
+defaultValues=PhysAtk = 3;
+defaultValues=PhysDef = 1;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 1;
+defaultValues=MagEva = 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 3;
+defaultValues=actTime= 30;
+
+skinPalette=pRasmen1;
+skinPalettes=pRasmen2;
+skinPalettes=pRasmen3;
+skinPalettes=pRasmen4;
+skinPalettes=pBlue2;
+skinPalettes=pTeal2;
+
+
+fxSpeech = sfx_speech;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = humanDeath;
+
+defaultBodyPartSprites=armR=template_arm;
+defaultBodyPartSprites=armL=template_arm;
+defaultBodyPartSprites=legs=template_legs;
+defaultBodyPartSprites=head=rasmen_head;
+defaultBodyPartSprites=face=rasmen_face;
+defaultBodyPartSprites=torso=template_torso;
+
+bodyPartSprites=head=rasmen_head;
+bodyPartSprites=head=rasmen_head_tall;
+bodyPartSprites=head=rasmen_head_hat1;
+bodyPartSprites=head=robed_head;
+bodyPartSprites=head=helmet_head;
+bodyPartSprites=head=helmet_head2;
+
+bodyPartSprites=face=rasmen_face;
+bodyPartSprites=face=rasmen_face2;
+bodyPartSprites=face=rasmen_face_mask;
+bodyPartSprites=face=rasmen_face_mask2;
+bodyPartSprites=face=rasmen_face_mask3;
+bodyPartSprites=face=rasmen_face_mask4;
+bodyPartSprites=face=rasmen_face_mask5;
+bodyPartSprites=face=rasmen_face_mask6;
+bodyPartSprites=face=rasmen_face_mask7;
+bodyPartSprites=face=rasmen_face_mask8;
+bodyPartSprites=face=rasmen_face_mask9;
+bodyPartSprites=face=rasmen_face_mask10;
+bodyPartSprites=face=rasmen_face_mask11;
+bodyPartSprites=face=rasmen_face_mask12;
+bodyPartSprites=face=rasmen_face_mask13;
+bodyPartSprites=face=rasmen_face_mask14;
+bodyPartSprites=face=rasmen_face_mask15;
+bodyPartSprites=face=rasmen_face_mask16;
+bodyPartSprites=face=rasmen_face_mask17;
+bodyPartSprites=face=rasmen_face_helm;
+
+bodyPartSprites=legs=template_legs;
+bodyPartSprites=legs=legs_dress;
+bodyPartSprites=legs=legs_lightArmor;
+bodyPartSprites=legs=legs_heavyBoots;
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+aggressiveness = 0.5;
+bravery = 0.5;
+honor = 0.55;
+intelligence = 0.5;
+
+defaultFaction = enemy;
+defaultDialogNode =auto;
+dialog_speechFont=foreignScript1;
+
+dialog_tryCombat_overconfident_fight = <mf=He/She> swaggers toward you, as cockily as a <mf=man/woman> without a face can be.;
+dialog_tryCombat_overconfident_peace = It doesn't seem like you're getting through to <mf=him/her>- <mf=he/she> is perfectly willing to ignore you.;
+dialog_tryCombat_confident_fight = <mf=He/She> makes no attempt to talk you down, and readies <mf=himself/herself> for battle!;
+dialog_tryCombat_confident_peace = The Rasmen holds up both hands calmly and waits for your response.;
+dialog_tryCombat_uneasy_fight = Though you've made a clear impact on <mf=his/her> morale, <mf=he/she> is still willing to fight.;
+dialog_tryCombat_uneasy_flee = <mf=He/She> turns away from you slowly - not unusual social behavior for a species without eyes. But then <mf=he/she> makes a run for it!;
+dialog_tryCombat_scared_flee = It only takes a moment for the Rasmen to realize <mf=he/she> stands no chance, and <mf=he/she> bolts!;
+
+dialog_tryPeace_overconfident_fight = <mf=He/She> does not even face you before uttering the command to attack!;
+dialog_tryPeace_overconfident_peace = You aren't sure the Rasmen is even paying attention to you, but then <mf=he/she> dismissively brushes you off with a wave of <mf=his/her> hand.;
+dialog_tryPeace_confident_fight = <mf=He/She> listens intently and silently, but in the end is not swayed by your peace offering.;
+dialog_tryPeace_confident_peace = The Rasmen strides forward and shakes your hand as a sign of friendship.;
+dialog_tryPeace_uneasy_fight = You sense desperation from this creature as <mf=he/she> deliberates. Eventually <mf=he/she> hardens <mf=his/her> resolve - to kill you, specifically.;
+dialog_tryPeace_uneasy_peace = <mf=He/She> exhales sharply, and seems relieved to accept.;
+dialog_tryPeace_scared_peace = <mf=He/She> shakes visibly and stutters with <mf=his/her> words, but it seems clear you've established peace between the two of you.;
+dialog_tryPeace_scared_flee = <mf=He/She> slowly backs away as you speak. A few seconds later <mf=he/she> drops the pretense and just runs for it.;
+
+dialog_tryBribe_overconfident_fight = If a Rasmen could sneer, it would look like this. <mf=He/She> is clearly unimpressed and intends to make that point with deadly force.;
+dialog_tryBribe_overconfident_peace = The Rasmen does not look at your gift, instead choosing to tug at a loose strand on <mf=his/her> clothes.;
+dialog_tryBribe_overconfident_bribe = Without hesitation your gift is snatched up and examined. It is found acceptable, and <mf=he/she> gcondescendingly waves you through.;
+dialog_tryBribe_confident_peace = <mf=He/She> nods repeatedly, but closes your fist over the money. It seems you can keep it.;
+dialog_tryBribe_confident_bribe = The bribe slips from your hand into <mf=his./hers.> <mf=He/She> tilts <mf=his/her> head, examines it, then claps you on the back in approval.;
+anim_tryBribe_confident_bribe = happy;
+dialog_tryBribe_uneasy_bribe = The Rasmen trembles, but attempts to remain composed while accepting your gift.;
+dialog_tryBribe_scared_bribe = In a pathetic manner the Rasmen scampers up, takes the gift, then prostrates <mf=himself/herself>.;
+
+randomNames=Ane;
+randomNames=Anger;
+randomNames=Al-wylo;
+randomNames=Aldous;
+randomNames=Alvi;
+randomNames=Akin;
+randomNames=Bor-girren;
+randomNames=Ban-aldes;
+randomNames=Baran;
+randomNames=Burvi;
+randomNames=Bore;
+randomNames=Couth;
+randomNames=Cauti;
+randomNames=Cal-evea;
+randomNames=Calaz-sieh;
+randomNames=Derial-sieh;
+randomNames=Devre;
+randomNames=Descend;
+randomNames=Dour;
+randomNames=Doss-viol;
+randomNames=Entire;
+randomNames=Enoue;
+randomNames=Farseas;
+randomNames=Gerea;
+randomNames=Gliv-aldes;
+randomNames=Jim;
+randomNames=Jeset;
+randomNames=Jack;
+randomNames=Jouska;
+randomNames=Kleai;
+randomNames=Kes-wrin;
+randomNames=Krea-wren;
+randomNames=Kilveat-phor;
+randomNames=Kenop;
+randomNames=Keubik;
+randomNames=Lek;
+randomNames=Lifte;
+randomNames=Lachesi;
+randomNames=Mindful;
+randomNames=Over;
+randomNames=Opia;
+randomNames=Oreia-set;
+randomNames=Pathe;
+randomNames=Pirea-wren;
+randomNames=Percept;
+randomNames=Redueor;
+randomNames=Reppep-arde;
+randomNames=Ryxae;
+randomNames=River;
+randomNames=Ryes;
+randomNames=Rubato;
+randomNames=Silent;
+randomNames=Sky;
+randomNames=Slove;
+randomNames=Sil;
+randomNames=Sun-deria;
+randomNames=Sun-calvid;
+randomNames=Sorr;
+randomNames=Sonder;
+randomNames=Tane-viol;
+randomNames=Ty-ereah;
+randomNames=Visage;
+randomNames=Vos-evea;
+randomNames=Violen;
+randomNames=Without;
+randomNames=Winding;
+randomNames=Winter;
+randomNames=Wander;
+randomNames=Wellis-evea;
+randomNames=Wriex;
+
+constantAvEffects=av_sight;
+constantAvEffects=av_PhysEvaFlank;
+constantAvEffects=av_unblind;
+constantAvEffects=av_unsilence;
+
+ruinAvEffects=ruinAv_rasmen1;
+ruinAvEffects=ruinAv_rasmen2;
+[ActorTypeDetectAoE]
+ID=rasmen;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=5;
+arc=true;
+airborne=true;
+occupyAll=true;
+[AvEffect]
+ID=av_sight;
+actorValue=sight; magnitude=1; duration=-1;
+[AvEffect]
+ID=av_PhysEvaFlank;
+actorValue=PhysEvaFlank; magnitude=12; duration=-1;
+[AvEffect]
+ID=av_unblind;
+actorValue=blind; magnitude=-200; duration=-1;
+[AvEffect]
+ID=av_unsilence;
+actorValue=silence; magnitude=-200; duration=-1;
+[AvEffect]
+ID=ruinAv_rasmen1;
+actorValue=PhysEva; magnitude=20; duration=-1;
+[AvEffect]
+ID=ruinAv_rasmen2;
+actorValue=MagEva; magnitude=5; duration=-1;
+[ActorTypeReaction]
+ID=rasmen;
+actorValues=blind; actorValues=silence; damageMultiplier=0;
+[JournalEntry]
+ID=journal_rasmen;
+category=creature; halfPage=true; rarity=1;
+title=Rasmen;
+text=<icon=j_rasmen><title=Rasmen><brAdj=>A common but strange creature. They lack eyes, and instead see by 'feeling' the essence around them. To better integrate into society, they wear masks with intricate carved faces and practice certain human behaviors, such as facing the person they speak to.<br=>  Immune to Blindness & Silence<n=>  +12% <icon=PhysEva>Dodge when flanked;
+
+[ActorType] ID=fareem;
+name=Fareem;
+description=Fareem are known for their powerful and agile serpentine tail. The rest of their body is covered in feathery plumage.<br=> +1 <icon=moveDistance> Move, +1 <icon=time> Time to Act;
+journalID=journal_fareem;
+playerUsable= true;
+canSpawnWithClass = true;
+randomSkinPaletteOnSpawn = true;
+
+bodyStructure=humanMed;
+humanoid = true;
+movementSpeed = 6;
+unarmedPower = 2;
+unarmedAction = punch;
+
+defaultValues=HP = 30;
+defaultValues=HPMax = 30;
+defaultValues=TrueHPMax = 30;
+defaultValues=MP = 20;
+defaultValues=MPMax = 20;
+defaultValues=TrueMPMax = 20;
+defaultValues=PhysAtk = 3;
+defaultValues=PhysDef = 1;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 1;
+defaultValues=MagEva = 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 3;
+defaultValues=actTime= 30;
+
+skinPalette=pBuralk;
+skinPalettes=pBuralk;
+skinPalettes=p23;
+skinPalettes=p24;
+skinPalettes=p25;
+skinPalettes=p3;
+skinPalettes=p4;
+skinPalettes=pVolskarnEmpty;
+skinPalettes=pGreyblue2;
+skinPalettes=p13;
+
+
+fxSpeech = sfx_speech;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = humanDeath;
+
+defaultBodyPartSprites=armR=fareem_arm;
+defaultBodyPartSprites=armL=fareem_arm;
+defaultBodyPartSprites=legs=fareem_legs;
+defaultBodyPartSprites=head=fareem_head;
+defaultBodyPartSprites=face=fareem_face;
+defaultBodyPartSprites=torso=template_torso;
+
+bodyPartSprites=head=fareem_head;
+bodyPartSprites=head=fareem_head2;
+bodyPartSprites=head=fareem_head3;
+bodyPartSprites=head=fareem_head4;
+bodyPartSprites=head=fareem_head5;
+
+bodyPartSprites=face=fareem_face;
+bodyPartSprites=face=angry_face;
+bodyPartSprites=face=goatee_face_male;
+bodyPartSprites=face=beard_face_male;
+bodyPartSprites=face=feminine_face_female;
+bodyPartSprites=face=angry_face_female;
+bodyPartSprites=face=masked_face;
+bodyPartSprites=face=masked_face2;
+
+bodyPartSprites=legs=fareem_legs;
+bodyPartSprites=legs=fareem_legs_armor;
+bodyPartSprites=legs=fareem_legs_armor_heavy;
+bodyPartSprites=legs=fareem_legs_cloth;
+
+partSpritesThatTakePriorityOverClass=armR;
+partSpritesThatTakePriorityOverClass=armL;
+
+idleAnim = idle;
+walkAnim = walk_fareem;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+aggressiveness = 0.5;
+bravery = 0.5;
+honor = 0.5;
+intelligence = 0.55;
+
+defaultFaction = enemy;
+defaultDialogNode =auto;
+dialog_speechFont=foreignScript1;
+
+
+--dialog_tryCombat_overconfident_fight = ;
+--dialog_tryCombat_overconfident_peace = ;
+--dialog_tryCombat_confident_fight = ;
+--dialog_tryCombat_confident_peace = ;
+--dialog_tryCombat_uneasy_fight = ;
+--dialog_tryCombat_uneasy_flee = ;
+--dialog_tryCombat_scared_flee = ;
+
+--dialog_tryPeace_overconfident_fight = ;
+--dialog_tryPeace_overconfident_peace = ;
+--dialog_tryPeace_confident_fight = ;
+--dialog_tryPeace_confident_peace = ;
+--dialog_tryPeace_uneasy_fight = ;
+--dialog_tryPeace_uneasy_peace = ;
+--dialog_tryPeace_scared_peace = ;
+--dialog_tryPeace_scared_flee = ;
+
+--dialog_tryBribe_overconfident_fight = ;
+--dialog_tryBribe_overconfident_peace = ;
+--dialog_tryBribe_overconfident_bribe = ;
+--dialog_tryBribe_confident_peace = ;
+--dialog_tryBribe_confident_bribe = ;
+--dialog_tryBribe_uneasy_bribe = ;
+--dialog_tryBribe_scared_bribe = ;
+
+randomNames=Aire;
+randomNames=Alqueon;
+randomNames=Alessia;
+randomNames=Belsir;
+randomNames=Bravor;
+randomNames=Cerrav;
+randomNames=Colsoa;
+randomNames=Durien;
+randomNames=Dareqin;
+randomNames=Dunrift;
+randomNames=Dorsanz;
+randomNames=Eykin;
+randomNames=Ezrea;
+randomNames=Ellter;
+randomNames=Edas;
+randomNames=Edea;
+randomNames=Este;
+randomNames=Estoera;
+randomNames=Felis;
+randomNames=Gyras;
+randomNames=Golven;
+randomNames=Hythol;
+randomNames=Iaven;
+randomNames=Lezare;
+randomNames=Laske;
+randomNames=Lizale;
+randomNames=Mior;
+randomNames=Melsen;
+randomNames=Morril;
+randomNames=Navir;
+randomNames=Norxe;
+randomNames=Olzen;
+randomNames=Osgile;
+randomNames=Ortos;
+randomNames=Ovondo;
+randomNames=Pyre;
+randomNames=Poryel;
+randomNames=Polsire;
+randomNames=Physa;
+randomNames=Quisir;
+randomNames=Raveil;
+randomNames=Riven;
+randomNames=Sila;
+randomNames=Spira;
+randomNames=Tysire;
+randomNames=Torres;
+randomNames=Unver;
+randomNames=Uvual;
+randomNames=Vera;
+randomNames=Vormav;
+randomNames=Vrin;
+randomNames=Vorn;
+randomNames=Virraz;
+randomNames=Zirra;
+randomNames=Zavell;
+randomNames=Zela;
+randomNames=Zellsire;
+randomNames=Zior;
+randomNames=Zie;
+randomNames=Zevia;
+
+constantAvEffects=av_fareem1;
+constantAvEffects=av_fareem2;
+ruinAvEffects=ruinAv_fareem1;
+ruinAvEffects=ruinAv_fareem2;
+[AvEffect]
+ID=av_fareem1;
+actorValue=moveDistance; magnitude=1; duration=-1;
+[AvEffect]
+ID=av_fareem2;
+actorValue=actTime; magnitude=1; duration=-1;
+[AvEffect]
+ID=ruinAv_fareem1;
+actorValue=PhysAtk; magnitude=1; duration=-1;
+[AvEffect]
+ID=ruinAv_fareem2;
+actorValue=MagAtk; magnitude=1; duration=-1;
+[JournalEntry]
+ID=journal_fareem;
+category=creature; halfPage=true; rarity=1;
+title=Fareem;
+text=<icon=j_fareem><title=Fareem><brAdj=>Feathery serpentine beings. From the waist up, their structure resembles a human's, but their lower body is a large, powerful snake tail. Fareem are incredibly agile and flexible, but are slow to act. They are hairless and instead have bright feathery plumage.<br=>  +1 <icon=moveDistance> Move, +1 <icon=time> Time to Act;
+
+[ActorType] ID=aphest;
+name=Aphest;
+description=Tall horned bipedals covered in pale downy fur. Powerful and mobile, but slow to act.<br=> +1 <icon=PhysAtk><icon=MagAtk> Attack<n=> +2 <icon=moveDistance> Move in straight lines<n=> +2 <icon=time> Time to Act;
+journalID=journal_aphest;
+bodyStructure=humanTall_longArms2;
+humanoid = true;
+playerUsable=true;
+canSpawnWithClass = true;
+randomSkinPaletteOnSpawn = true;
+
+movementSpeed = 6;
+unarmedPower = 2;
+unarmedAction = punch;
+deadAnim = die;
+
+movementType=walk_straightPlus2;
+
+defaultValues=HP = 30;
+defaultValues=HPMax = 30;
+defaultValues=TrueHPMax = 30;
+defaultValues=MP = 20;
+defaultValues=MPMax = 20;
+defaultValues=TrueMPMax = 20;
+defaultValues=PhysAtk = 3;
+defaultValues=PhysDef = 1;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 1;
+defaultValues=MagEva = 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 3;
+defaultValues=actTime = 30;
+
+
+defaultBodyPartSprites=armR=aphest_arm;
+defaultBodyPartSprites=armL=aphest_arm;
+defaultBodyPartSprites=legs=aphest_legs;
+defaultBodyPartSprites=head=aphest_head;
+defaultBodyPartSprites=face=aphest_face;
+defaultBodyPartSprites=torso=template_torso;
+
+bodyPartSprites=head=aphest_head;
+bodyPartSprites=head=aphest_head_antler;
+bodyPartSprites=head=aphest_head_antler2;
+bodyPartSprites=head=aphest_head2;
+bodyPartSprites=head=aphest_head3;
+bodyPartSprites=head=aphest_head4;
+bodyPartSprites=head=aphest_head_hat1;
+
+bodyPartSprites=face=aphest_face;
+bodyPartSprites=face=aphest_face2;
+bodyPartSprites=face=aphest_face3;
+
+bodyPartSprites=legs=aphest_legs;
+bodyPartSprites=legs=aphest_legs2;
+
+partSpritesThatTakePriorityOverClass=armR;
+partSpritesThatTakePriorityOverClass=armL;
+
+skinPalette = pSilver;
+clothPalette = pCGreen;
+
+skinPalettes = pSilver;
+skinPalettes = pGreyL;
+skinPalettes = p26;
+skinPalettes = p27;
+skinPalettes = p28;
+
+fxSpeech = sfx_speech;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = humanDeath;
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+aggressiveness = 0.55;
+bravery = 0.6;
+honor = 0.75;
+intelligence = 0.55;
+
+defaultFaction = enemy;
+defaultDialogNode =auto;
+dialog_speechFont=foreignScript1;
+
+
+randomNames=Anders;
+randomNames=Azoth;
+randomNames=Amor;
+randomNames=Andreas;
+randomNames=Agata;
+randomNames=Anke;
+randomNames=Anton;
+randomNames=Arne;
+randomNames=Audhil;
+randomNames=Axel;
+randomNames=Amunde;
+randomNames=Balder;
+randomNames=Bivan;
+randomNames=Bix;
+randomNames=Boris;
+randomNames=Boldflank;
+randomNames=Cor;
+randomNames=Coval;
+randomNames=Cal;
+randomNames=Callos;
+randomNames=Cirin;
+randomNames=Desthes;
+randomNames=Davin;
+randomNames=Dorim;
+randomNames=Dunran;
+randomNames=Dolekin;
+randomNames=Delvar;
+randomNames=Dom;
+randomNames=Dagna;
+randomNames=Emil;
+randomNames=Enker;
+randomNames=Enmor;
+randomNames=Ekran;
+randomNames=Ekrail;
+randomNames=Evela;
+randomNames=Everson;
+randomNames=Fole;
+randomNames=Fellgran;
+randomNames=Filibar;
+randomNames=Garris;
+randomNames=Garlan;
+randomNames=Grenna;
+randomNames=Hadyn;
+randomNames=Havar;
+randomNames=Heras;
+randomNames=Heelban;
+randomNames=Hadhaft;
+randomNames=Ivanos;
+randomNames=Imorra;
+randomNames=Logan;
+randomNames=Lorgath;
+randomNames=Linias;
+randomNames=Lino;
+randomNames=Lormal;
+randomNames=Loval;
+randomNames=Ladrius;
+randomNames=Modrin;
+randomNames=Matthias;
+randomNames=Mavan;
+randomNames=Meldow;
+randomNames=Mailliw;
+randomNames=Molnder;
+randomNames=Nedor;
+randomNames=Nicks;
+randomNames=Nonmin;
+randomNames=Nophil;
+randomNames=Nowarr;
+randomNames=Noll;
+randomNames=Oldrask;
+randomNames=Odir;
+randomNames=Oldren;
+randomNames=Olcar;
+randomNames=Oscara;
+randomNames=Ondervan;
+randomNames=Oldroa;
+randomNames=Olras;
+randomNames=Polda;
+randomNames=Pavel;
+randomNames=Roth;
+randomNames=Ridas;
+randomNames=Relrand;
+randomNames=Ransom;
+randomNames=Rovir;
+randomNames=Riptar;
+randomNames=Rakna;
+randomNames=Rutger;
+randomNames=Sigarn;
+randomNames=Soren;
+randomNames=Siglan;
+randomNames=Sanna;
+randomNames=Solstam;
+randomNames=Samuel;
+randomNames=Samoro;
+randomNames=Sadrik;
+randomNames=Sunmar;
+randomNames=Tybalt;
+randomNames=Theol;
+randomNames=Tykas;
+randomNames=Tymot;
+randomNames=Tykrast;
+randomNames=Ukris;
+randomNames=Velnor;
+
+constantAvEffects=av_aphest1;
+constantAvEffects=av_aphest2;
+constantAvEffects=av_aphest3;
+constantAvEffects=av_aphest4;
+ruinAvEffects=ruinAv_aphest1;
+[AvEffect]
+ID=av_aphest1;
+actorValue=PhysAtk; magnitude=1; duration=-1;
+[AvEffect]
+ID=av_aphest2;
+actorValue=MagAtk; magnitude=1; duration=-1;
+[AvEffect]
+ID=av_aphest3;
+actorValue=moveDistance; magnitude=2; duration=-1;
+[AvEffect]
+ID=av_aphest4;
+actorValue=actTime; magnitude=2; duration=-1;
+[AvEffect]
+ID=ruinAv_aphest1;
+actorValue=actTime; magnitude=-1; duration=-1;
+[JournalEntry]
+ID=journal_aphest;
+category=creature; halfPage=true; rarity=1;
+title=Aphest;
+text=<icon=j_aphest><title=Aphest><brAdj=>Tall horned bipedals covered in pale downy fur. Aphest horns vary widely in shape and size. Their digitgrade legs end in powerful tridactyl talons, allowing them to run at great speeds. They have a very imposing physical presence, and are known for being both soft-spoken and quick to anger.<br=>  +2 <icon=moveDistance> Move in straight lines, +2 <icon=time> Time to Act<n=>  +1 <icon=PhysAtk><icon=MagAtk> Attack;
+
+
+[ActorType] ID=falpa; 
+name=Falpa;
+description=Falpa have a broad, flat head with many eyes. Their mastery over magic helps them survive in cold waters.<br=> +10 <icon=MP> Max MP;
+journalID=journal_falpa;
+playerUsable= true;
+canSpawnWithClass = true;
+randomSkinPaletteOnSpawn = true;
+
+bodyStructure=human;
+humanoid = true;
+movementSpeed = 8;
+unarmedPower = 2;
+unarmedAction = punch;
+
+defaultValues=HP = 30;
+defaultValues=HPMax = 30;
+defaultValues=TrueHPMax = 30;
+defaultValues=MP = 20;
+defaultValues=MPMax = 20;
+defaultValues=TrueMPMax= 20;
+defaultValues=PhysAtk = 3;
+defaultValues=PhysDef = 1;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 1;
+defaultValues=MagEva = 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 3;
+defaultValues=actTime= 30;
+
+defaultBodyPartSprites=armR=flap_arm;
+defaultBodyPartSprites=armL=flap_arm;
+defaultBodyPartSprites=legs=flap_legs;
+defaultBodyPartSprites=head=flap_head;
+defaultBodyPartSprites=face=flap_face;
+defaultBodyPartSprites=torso=template_torso;
+
+bodyPartSprites=head=flap_head;
+bodyPartSprites=head=flap_head2;
+bodyPartSprites=head=flap_head3;
+bodyPartSprites=head=flap_head4;
+bodyPartSprites=head=flap_head5;
+bodyPartSprites=head=flap_head6;
+bodyPartSprites=head=flap_head7;
+bodyPartSprites=head=flap_head8;
+bodyPartSprites=head=flap_head9;
+
+bodyPartSprites=face=flap_face;
+bodyPartSprites=face=flap_face2;
+bodyPartSprites=face=flap_face3;
+
+bodyPartSprites=legs=flap_legs;
+bodyPartSprites=legs=flap_legs_dress;
+bodyPartSprites=legs=flap_legs_lightArmor;
+bodyPartSprites=legs=flap_legs_heavyBoots;
+
+partSpritesThatTakePriorityOverClass=armR;
+partSpritesThatTakePriorityOverClass=armL;
+
+skinPalettes=pBlue;
+skinPalettes=pGreyblue;
+skinPalettes=pVolskarnEmpty;
+skinPalettes=pYellow3;
+skinPalettes=pRedD;
+skinPalettes=pRedD2;
+
+skinPalette = pBlue;
+clothPalette = pCBlue;
+
+fxSpeech = sfx_speech;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = humanDeath;
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+aggressiveness = 0.52;
+bravery = 0.48;
+honor = 0.53;
+intelligence = 0.5;
+
+defaultDialogNode = auto;
+dialog_speechFont=scuri;
+
+constantAvEffects=av_falpa1;
+
+randomNames=Alar;
+randomNames=Alvik;
+randomNames=Aksel;
+randomNames=Albin;
+randomNames=Alvil;
+randomNames=Ane;
+randomNames=Arvid;
+randomNames=Asmund;
+randomNames=Berik;
+randomNames=Beryl;
+randomNames=Bivor;
+randomNames=Bissar;
+randomNames=Bine;
+randomNames=Cai;
+randomNames=Caille;
+randomNames=Civar;
+randomNames=Dorete;
+randomNames=Dovial;
+randomNames=Evind;
+randomNames=Elmung;
+randomNames=Enoek;
+randomNames=Espen;
+randomNames=Flemming;
+randomNames=Felis;
+randomNames=Ganns;
+randomNames=Gerren;
+randomNames=Gessaul;
+randomNames=Gulbrun;
+randomNames=Hassan;
+randomNames=Hisoa;
+randomNames=Ivik;
+randomNames=Jorn;
+randomNames=Keld;
+randomNames=Kaldom;
+randomNames=Kloge;
+randomNames=Lasov;
+randomNames=Lanssen;
+randomNames=Lassan;
+randomNames=Lars;
+randomNames=Livian;
+randomNames=Miroi;
+randomNames=Miora;
+randomNames=Moruna;
+randomNames=Magnis;
+randomNames=Mograi;
+randomNames=Nelsson;
+randomNames=Neils;
+randomNames=Nomiar;
+randomNames=Oglaf;
+randomNames=Petra;
+randomNames=Polver;
+randomNames=Rebek;
+randomNames=Ruben;
+randomNames=Sandar;
+randomNames=Sinban;
+randomNames=Silas;
+randomNames=Silvar;
+randomNames=Teor;
+randomNames=Tassar;
+randomNames=Tyra;
+randomNames=Vodar;
+randomNames=Vikita;
+[AvEffect]
+ID=av_falpa1;
+actorValue=TrueMPMax; magnitude=10; duration=-1;
+
+
+[JournalEntry]
+ID=journal_falpa;
+category=creature; halfPage=true; rarity=1;
+title=Falpa;
+text=<icon=j_falpa><title=Falpa><brAdj=>Semi-aquatic beings with great magical talent that originate from Dominio. They have been spotted further and further afield, some even migrating to landlocked countries. The typical Falpa is ambitious and adventurous. Their odd facial structure makes many distrust them.<br=>  +10 <icon=MP> Max MP;
+
+[ActorType] ID=maskhead;
+name=Maskhead;
+journalID=journal_maskhead;
+bodyStructure=humanGlowFace;
+fearless = true;
+canSpawnWithClass = true;
+randomSkinPaletteOnSpawn = true;
+
+humanoid = true;
+movementSpeed = 6;
+unarmedPower = 2;
+unarmedAction = punch;
+
+defaultValues=HP = 30;
+defaultValues=HPMax = 30;
+defaultValues=TrueHPMax= 30;
+defaultValues=MP = 20;
+defaultValues=MPMax = 20;
+defaultValues=TrueMPMax = 20;
+defaultValues=PhysAtk = 3;
+defaultValues=PhysDef = 2;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 1;
+defaultValues=MagEva = 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 3;
+defaultValues=actTime= 32;
+defaultValues=sight = 1;
+
+aggressiveness = 1;
+bravery = 1;
+honor = 0;
+intelligence = 0.5;
+
+fxOnPhysicalHPDmg = maskheadHit;
+fxOnOtherHPDmg = maskheadHitQuiet;
+fxOnDeath = hitDust_strong;
+fxOnDeath = maskDeath;
+
+
+defaultBodyPartSprites=armR=npc1_arm;
+defaultBodyPartSprites=armL=npc1_arm;
+defaultBodyPartSprites=legs=maskh_legs;
+defaultBodyPartSprites=head=maskh_head;
+defaultBodyPartSprites=face=maskh_face;
+defaultBodyPartSprites=torso=template_torso;
+
+bodyPartSprites=head=maskh_head;
+bodyPartSprites=head=maskh_head2;
+bodyPartSprites=head=maskh_head3;
+
+
+skinPalette = p37;
+armorPalette = pPurpleD;
+clothPalette = pPurpleD;
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+defaultFaction = maskhead;
+defaultDialogNode = ;
+
+randomNames=Xzer;
+randomNames=Xea;
+randomNames=Lazxe;
+randomNames=Hex;
+randomNames=Dor;
+randomNames=Mol'Das;
+randomNames=Virul;
+randomNames=Mol'Deor;
+randomNames=Xevi;
+randomNames=Endul;
+randomNames=Wrath;
+randomNames=Ord;
+randomNames=Doxs;
+randomNames=Mar'Enx;
+randomNames=Mol'Enx;
+randomNames=Sxek;
+randomNames=Corse;
+randomNames=Rask;
+randomNames=Xor;
+randomNames=Xand;
+randomNames=Mor'Del;
+randomNames=Vax;
+randomNames=Xoz;
+randomNames=Denx;
+randomNames=Mar'Leai;
+randomNames=Sonser;
+randomNames=Slor;
+randomNames=Entropy;
+randomNames=Excise;
+randomNames=Ves;
+randomNames=Erxa;
+randomNames=Mol'n;
+randomNames=Mar'seoth;
+randomNames=Ax'Deor;
+randomNames=Ivix;
+randomNames=Quex;
+randomNames=Raze;
+randomNames=Eye;
+randomNames=Hand;
+randomNames=Xol;
+randomNames=Perea;
+randomNames=Mar'vex;
+randomNames=Evisce;
+randomNames=Wroth;
+randomNames=En;
+randomNames=Zelos;
+randomNames=Dosz;
+randomNames=Mar'Det;
+randomNames=Exile;
+randomNames=Avern;
+randomNames=Kolva;
+
+ruinAvEffects=ruinAv_maskhead1;
+ruinAvEffects=ruinAv_maskhead2;
+[AvEffect]
+ID=ruinAv_maskhead1;
+actorValue=PhysAtk; magnitude=1; duration=-1;
+[AvEffect]
+ID=ruinAv_maskhead2;
+actorValue=MagAtk; magnitude=1; duration=-1;
+[ActorTypeReaction]
+ID=maskhead;
+actorValues=morale; actorValues=silence;
+damageMultiplier=0; healMultiplier=0;
+[ActorTypeLight]
+ID=maskhead; texture=lightmaskLine; red=1; blue=1; green=0.7; alpha=0.2; size=0.3; flicker=0; Y=-0.5; 
+[JournalEntry]
+ID=journal_maskhead;
+category=creature; halfPage=true; rarity=2;
+title=Maskhead;
+text=<icon=j_maskhead><title=Maskhead><brAdj=>Maskheads are hulking humanoids with waxy purple skin & a discolored wood-like mask with a broad eyehole. They are supposedly sapient, though they are universally hostile and do not speak. Despite this they are cunning fighters. Maskheads raid settlements often, though they have yet to attempt any kind of conquest.;
+
+[ActorType] ID=maskhulk;
+name=Maskhulk;
+journalID=journal_maskhulk;
+bodyStructure=humanTall_longArms1GlowFace;
+fearless = true;
+canSpawnWithClass = true;
+randomSkinPaletteOnSpawn = true;
+
+humanoid = true;
+movementSpeed = 6;
+unarmedPower = 2;
+unarmedAction = punch;
+
+defaultValues=HP = 50;
+defaultValues=HPMax = 50;
+defaultValues=TrueHPMax= 50;
+defaultValues=MP = 26;
+defaultValues=MPMax = 26;
+defaultValues=TrueMPMax = 26;
+defaultValues=PhysAtk = 5;
+defaultValues=PhysDef = 3;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 5;
+defaultValues=MagDef = 2;
+defaultValues=MagEva = 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 3;
+defaultValues=actTime= 32;
+defaultValues=sight = 1;
+
+aggressiveness = 1;
+bravery = 1;
+honor = 0;
+intelligence = 0.5;
+
+fxOnPhysicalHPDmg = maskheadHit;
+fxOnOtherHPDmg = maskheadHitQuiet;
+fxOnDeath = hitDust_strong;
+fxOnDeath = maskDeath;
+
+
+defaultBodyPartSprites=armR=wilderi_arm;
+defaultBodyPartSprites=armL=wilderi_arm;
+defaultBodyPartSprites=legs=maskhulk_legs;
+defaultBodyPartSprites=head=maskhulk_head;
+defaultBodyPartSprites=face=maskhulk_face;
+defaultBodyPartSprites=torso=template_torso;
+
+
+
+skinPalette = p37;
+armorPalette = pPurpleD;
+clothPalette = pPurpleD;
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+defaultFaction = maskhead;
+defaultDialogNode = ;
+
+randomNames=maskhead;
+
+ruinAvEffects=ruinAv_maskhulk1;
+ruinAvEffects=ruinAv_maskhulk2;
+[AvEffect]
+ID=ruinAv_maskhulk1;
+actorValue=PhysAtk; magnitude=3; duration=-1;
+[AvEffect]
+ID=ruinAv_maskhulk2;
+actorValue=MagAtk; magnitude=3; duration=-1;
+[ActorTypeReaction]
+ID=maskhulk;
+actorValues=morale; actorValues=silence;
+damageMultiplier=0; healMultiplier=0;
+[ActorTypeLight]
+ID=maskhulk; texture=lightmaskLine; red=1; blue=1; green=0.7; alpha=0.2; size=0.4; flicker=0; Y=-0.6; 
+[JournalEntry]
+ID=journal_maskhulk;
+category=creature; halfPage=true; rarity=3;
+title=Maskhulk;
+text=<icon=j_maskhulk><title=Maskhulk><brAdj=>Rarely, reports of extraordinarily large and powerful Maskheads have reached civilization. With two (sometimes more!) heads, a stature matching the tallest Wilderi, and the strength to match, Maskhulks are a fearsome enemy.;
+
+
+[ActorType] ID=jarf; 
+name=Jarf;
+journalID=journal_jarf;
+bodyStructure=human;
+canSpawnWithClass = true;
+randomSkinPaletteOnSpawn = true;
+
+humanoid = true;
+movementSpeed = 8;
+unarmedPower = 2;
+unarmedAction = punch;
+
+defaultValues=HP = 24;
+defaultValues=HPMax = 24;
+defaultValues=TrueHPMax = 24;
+defaultValues=MP = 20;
+defaultValues=MPMax = 20;
+defaultValues=TrueMPMax = 20;
+defaultValues=PhysAtk = 4;
+defaultValues=PhysDef = 1;
+defaultValues=PhysEva = 5;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 1;
+defaultValues=MagEva = 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 3;
+defaultValues=actTime = 28;
+
+defaultBodyPartSprites=armR=npc1_arm;
+defaultBodyPartSprites=armL=npc1_arm;
+defaultBodyPartSprites=legs=jarf_legs;
+defaultBodyPartSprites=head=jarf_head;
+defaultBodyPartSprites=face=jarf_face;
+defaultBodyPartSprites=torso=template_torso;
+
+skinPalette = pSilver;
+skinPalettes = pSilver;
+skinPalettes = pGreyL;
+clothPalette = paletteMagentaCloth;
+
+fxSpeech = sfx_cry;
+fxOnPhysicalHPDmg = hitDust;
+fxOnPhysicalHPDmg = sfx_cryRand;
+fxOnDeath = hitDust_strong;
+fxOnDeath = jarfDeath;
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+aggressiveness = 0.7;
+bravery = 0.55;
+honor = 0.3;
+intelligence = 0.4;
+
+defaultFaction = enemy;
+defaultDialogNode = auto;
+dialog_speechFont=scuri;
+
+dialog_tryCombat_overconfident_fight = <mf=He/She> sticks out <mf=his/her> tongue out at you immaturely, then howls a shrill battlecry!;
+anim_tryCombat_overconfident_fight=angry;
+
+dialog_tryCombat_overconfident_peace = <mf=He/She> makes a show out of yawning widely, then grins at you. Shortly <mf=he/she> stops paying any attention to you at all.;
+anim_tryCombat_overconfident_peace=sigh;
+
+dialog_tryCombat_confident_fight = The Jarf leaps in circles snarling and gnashing in a show of fury, then charges!;
+anim_tryCombat_confident_fight=angry;
+
+dialog_tryCombat_confident_peace = <mf=He/She> appraises you with narrowed eyes, then steps aside, as if to let you go past.;
+
+dialog_tryCombat_uneasy_fight = You've made the Jarf quite nervous, but still <mf=he/she> looks ready to fight.;
+anim_tryCombat_uneasy_fight = angry;
+
+dialog_tryCombat_uneasy_flee = The Jarf cries out loudly -- at first you think you've angered <mf=him/her>, but then <mf=he/she> turns to run!;
+anim_tryCombat_uneasy_flee = scared;
+
+dialog_tryCombat_scared_flee = Hissing, <mf=he/she> scrambles away from you like a wounded animal.;
+anim_tryCombat_scared_flee=scared;
+
+--
+
+dialog_tryPeace_overconfident_fight = The Jarf mimics your motions with disdain and laughs. From <mf=his/her> bared fangs, it looks like a mockery isn't the only thing <mf=he/she> wants to make out of you...!;
+anim_tryPeace_overconfident_fight=angry;
+
+dialog_tryPeace_overconfident_peace = <mf=He/She> chirps in agreement then waves <mf=his/her> hand at you dismissively.;
+anim_tryPeace_overconfident_peace = sigh;
+
+dialog_tryPeace_confident_fight = The short creature picks at <mf=his/her> teeth impatiently, then approaches with bloody intent.;
+anim_tryPeace_confident_fight= angry;
+
+dialog_tryPeace_confident_peace = <mf=He/She> taps <mf=his/her> forehead pensively while you speak. Once you finish, <mf=he/she> nods in understanding.;
+anim_tryPeace_confident_peace=sigh;
+
+dialog_tryPeace_uneasy_fight = The Jarf scowls, hackles raised, at your words. <mf=He/She> almost looks like <mf=he/she>'s about to run, then <mf=he/she> rushes you instead!;
+anim_tryPeace_uneasy_fight = angry;
+
+dialog_tryPeace_uneasy_peace = <mf=He/She> grins and lets out an anxious chuckle. <mf=His/Her> relief is palpable.;
+anim_tryPeace_uneasy_peace = happy;
+
+dialog_tryPeace_scared_peace = The frightened creature gnaws on <mf=his/her> own arm in an attempt to control <mf=him/her>self. <mf=He/She> is too scared to articulate anything, but otherwise remains docile.;
+anim_tryPeace_scared_peace = scared;
+
+dialog_tryPeace_scared_flee = Lacking the courage to even stand and hear you speak, the beast retreats.;
+anim_tryPeace_scared_flee = scared;
+
+--
+
+dialog_tryBribe_overconfident_fight = Your offer is met by raucous laughter -- the Jarf is so confident that <mf=he/she> recklessly tries to bite at your outstretched hands.;
+anim_tryBribe_overconfident_fight = angry;
+
+dialog_tryBribe_overconfident_peace = Smirking, <mf=he/she> examines your gift then gives it back to you. <mf=He/She> doesn't seem interested or intimidated.;
+anim_tryBribe_overconfident_peace = happy;
+
+dialog_tryBribe_overconfident_bribe = The Jarf strides forward, nods, and takes the bribe.;
+
+dialog_tryBribe_confident_peace = The small creature waves <mf=his/her> arms excitedly, pats you on the head (though <mf=he/she> can barely reach) and returns your gift to you.;
+anim_tryBribe_confident_peace = happy;
+
+dialog_tryBribe_confident_bribe = After inspecting your gift from every angle, <mf=he/she> takes it with a friendly nod.;
+
+dialog_tryBribe_uneasy_bribe = The Jarf snatches it from you and darts away. Soon understanding crosses <mf=his/her> face and <mf=he/she> becomes much friendlier.;
+anim_tryBribe_uneasy_bribe = happy;
+
+dialog_tryBribe_scared_bribe = <mf=He/She> yelps in alarm when you extend your hand. It takes a while before <mf=he/she> finally takes the gift.;
+anim_tryBribe_scared_bribe = scared;
+
+
+randomNames=Agrel;
+randomNames=Ark;
+randomNames=Ang;
+randomNames=Ax;
+randomNames=Bogg;
+randomNames=Burts;
+randomNames=Burneye;
+randomNames=Burn;
+randomNames=Bunch;
+randomNames=Bev;
+randomNames=Bell;
+randomNames=Boz;
+randomNames=Bula;
+randomNames=Doon;
+randomNames=Duck;
+randomNames=Din;
+randomNames=Dunder;
+randomNames=Drar;
+randomNames=Dillon;
+randomNames=Deekin;
+randomNames=Dang;
+randomNames=Div;
+randomNames=Dim;
+randomNames=Dast;
+randomNames=Dabs;
+randomNames=Dax;
+randomNames=Ears;
+randomNames=Gorga;
+randomNames=Gir;
+randomNames=Grabs;
+randomNames=Gib;
+randomNames=Gurg;
+randomNames=Girt;
+randomNames=Gor;
+randomNames=Indo;
+randomNames=Ink;
+randomNames=Irg;
+randomNames=Ilna;
+randomNames=Kidd;
+randomNames=Kell;
+randomNames=King;
+randomNames=Likell;
+randomNames=Lister;
+randomNames=Lop;
+randomNames=Lymba;
+randomNames=Lyle;
+randomNames=Monger;
+randomNames=Mins;
+randomNames=Munder;
+randomNames=Mirn;
+randomNames=Modo;
+randomNames=Pek;
+randomNames=Ponk;
+randomNames=Putz;
+randomNames=Phong;
+randomNames=Rang;
+randomNames=Reed;
+randomNames=Sid;
+randomNames=Sly;
+randomNames=Slick;
+randomNames=Sliddy;
+randomNames=Screed;
+randomNames=Sim;
+randomNames=Sulgmag;
+randomNames=Sang;
+randomNames=Vak;
+randomNames=Vova;
+randomNames=Vava;
+randomNames=Vink;
+randomNames=Veeya;
+randomNames=Van;
+randomNames=Yare;
+randomNames=Yeer;
+randomNames=Zim;
+randomNames=Zib;
+
+constantAvEffects=av_jarf1;
+constantAvEffects=av_jarf2;
+constantAvEffects=av_jarf3;
+ruinAvEffects=ruinAv_jarf1;
+[AvEffect]
+ID=av_jarf1;
+actorValue=actTime; magnitude=-3; duration=-1;
+[AvEffect]
+ID=av_jarf2;
+actorValue=PhysDef; magnitude=-1; duration=-1;
+[AvEffect]
+ID=av_jarf3;
+actorValue=MagDef; magnitude=-1; duration=-1;
+[AvEffect]
+ID=ruinAv_jarf1;
+actorValue=actTime; magnitude=-3; duration=-1;
+[JournalEntry]
+ID=journal_jarf;
+category=creature; halfPage=true; rarity=2;
+title=Jarf;
+text=<icon=j_jarf><title=Jarf><brAdj=>Jarf are diminutive grey-furred humanoids with a vicious overbite. Jarf are often impulsive and reckless, and have a fondness for pranks and simple things (like meat). Though as intelligent as any other species, Jarf tribes have a reputation for being barbaric or even feral.;
+
+[ActorType] ID=buralk;
+name=Buralk;
+description=Insectoid bipedals with a stout beetle-y torso and a thick exterior carapace.<br=> +1 <icon=PhysDef><icon=MagDef> Defenses;
+journalID=journal_buralk;
+bodyStructure=human;
+canSpawnWithClass = true;
+randomSkinPaletteOnSpawn = true;
+playerUnlockable=true;
+
+humanoid = true;
+movementSpeed = 6;
+unarmedPower = 2;
+unarmedAction = punch;
+
+defaultValues=HP= 30;
+defaultValues=HPMax = 30;
+defaultValues=TrueHPMax = 30;
+defaultValues=MP = 20;
+defaultValues=MPMax = 20;
+defaultValues=TrueMPMax = 20;
+defaultValues=PhysAtk = 3;
+defaultValues=PhysDef = 1;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 1;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 3;
+defaultValues=actTime = 30;
+
+
+defaultBodyPartSprites=armR=template_arm;
+defaultBodyPartSprites=armL=template_arm;
+defaultBodyPartSprites=legs=buralk_legs;
+defaultBodyPartSprites=head=buralk_head;
+defaultBodyPartSprites=face=buralk_face;
+defaultBodyPartSprites=torso=template_torso;
+
+bodyPartSprites=face=buralk_face;
+bodyPartSprites=face=buralk_face2;
+bodyPartSprites=face=buralk_face3;
+
+skinPalette = pBuralk;
+clothPalette = pCBlack;
+
+skinPalettes=pBuralk;
+skinPalettes=pCoralHilt;
+skinPalettes=pGreen2;
+skinPalettes=pTeal2;
+skinPalettes=pGreyblue2;
+skinPalettes=pRedbrown2;
+skinPalettes=pSepia;
+
+fxSpeech = sfx_bugPurr_q;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = buralkDeath;
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+aggressiveness = 0.4;
+bravery = 0.4;
+honor = 0.4;
+intelligence = 0.5;
+
+defaultFaction = enemy;
+defaultDialogNode = auto;
+dialog_speechFont=foreignScript1;
+
+--
+
+dialog_tryCombat_overconfident_fight = The Buralk draws closer without fear, intending to gut you even as you speak.;
+anim_tryCombat_overconfident_fight = angry;
+
+dialog_tryCombat_overconfident_peace = Though its insect face is hard to read, the closest emotion you can decipher is disinterest. <mf=He/She> waves you on and then ignores you entirely.;
+anim_tryCombat_overconfident_peace = sigh;
+
+dialog_tryCombat_confident_fight = <mf=He/She> buzzes aggressively and charges!;
+anim_tryCombat_confident_fight = angry;
+
+dialog_tryCombat_confident_peace = <mf=He/She> buzzes harshly and taps the ground, then waits for your response. Is that a peace offer?;
+anim_tryCombat_confident_peace = ;
+
+dialog_tryCombat_uneasy_fight = You tower over the Buralk, and it cowers, but then steels itself to fight.;
+anim_tryCombat_uneasy_fight = angry;
+
+dialog_tryCombat_uneasy_flee = With twitching antennae the Buralk skitters away!;
+anim_tryCombat_uneasy_flee = scared;
+
+dialog_tryCombat_scared_flee = The Buralk panics and tries to bug out!;
+anim_tryCombat_scared_flee = scared;
+
+--
+
+dialog_tryPeace_overconfident_fight = The Buralk mutters while you're speaking, then lets out a screech to shut you up. It clearly feels unthreatened and is not having any of it.;
+anim_tryPeace_overconfident_fight = angry;
+
+dialog_tryPeace_overconfident_peace = <mf=He/She> nods and pokes at the ground idly. Looks like you aren't worth worrying about.;
+anim_tryPeace_overconfident_peace = sigh;
+
+dialog_tryPeace_confident_fight = The Buralk chitters noisily over your words, then waves its arms about aggressively.;
+anim_tryPeace_confident_fight = angry;
+
+dialog_tryPeace_confident_peace = <mf=He/She> taps <mf=his/her> carapace rhythmically, as if considering. Finally <mf=he/she> nods in acceptance.;
+anim_tryPeace_confident_peace = ;
+
+dialog_tryPeace_uneasy_fight = The Buralk's uneasy stance at first makes it look like you've gotten through to <mf=him/her>, but then <mf=he/she> readies <mf=his/her> weapons.;
+anim_tryPeace_uneasy_fight = ;
+
+dialog_tryPeace_uneasy_peace = <mf=He/She> plays with <mf=his/her> antennae nervously, then extends <mf=his/her> hand (claw?) in friendship. Then <mf=he/she> thinks better of getting near you and simply stands uncomfortably.;
+anim_tryPeace_uneasy_peace = scared;
+
+dialog_tryPeace_scared_peace = The Buralk looks terrified and grovels in front of you.;
+anim_tryPeace_scared_peace = scared;
+
+dialog_tryPeace_scared_flee = Before you can even get the words out, <mf=he/she> has turned away to flee!;
+anim_tryPeace_scared_flee = scared;
+
+--
+
+dialog_tryBribe_overconfident_fight = <mf=He/She> doesn't wait to understand your offer, and screeches a battlecry!;
+anim_tryBribe_overconfident_fight = angry;
+
+dialog_tryBribe_overconfident_peace = The Buralk looks on your offer without comprehension. Eventually you just put the money away and <mf=he/she> seems content to let you by.;
+anim_tryBribe_overconfident_peace = ;
+
+dialog_tryBribe_overconfident_bribe = <mf=He/She> flexes <mf=his/her> digits and snatches your bribe, cackling.;
+anim_tryBribe_overconfident_bribe = happy;
+
+dialog_tryBribe_confident_peace = The Buralk bows in gratitude, but then turns down your offer.;
+anim_tryBribe_confident_peace = sigh;
+
+dialog_tryBribe_confident_bribe = The Buralk chitters happily, and gratefully counts out the coin.;
+anim_tryBribe_confident_bribe = happy;
+
+dialog_tryBribe_uneasy_bribe = <mf=He/She> seems stunned at the offer, but gladly takes it.;
+anim_tryBribe_uneasy_bribe = scared;
+
+dialog_tryBribe_scared_bribe = After many fearful beetle-y noises of protestation, it accepts your gift.;
+anim_tryBribe_scared_bribe = scared;
+
+randomNames=Asboli;
+randomNames=Amwrid;
+randomNames=Andelha;
+randomNames=Amnorne;
+randomNames=Adlemb;
+randomNames=Asbemchal;
+randomNames=Ballib;
+randomNames=Banchlid;
+randomNames=Brustehni;
+randomNames=Balboa;
+randomNames=Belprys;
+randomNames=Brinchang;
+randomNames=Borbin;
+randomNames=Bilhabin;
+randomNames=Baffordest;
+randomNames=Bulimbelor;
+randomNames=Brimbor;
+randomNames=Bormsilver;
+randomNames=Bankiln;
+randomNames=Burchwring;
+randomNames=Chaylwe;
+randomNames=Chormh;
+randomNames=Cin-aldevin;
+randomNames=Chambold;
+randomNames=Eldeaga;
+randomNames=Gringol;
+randomNames=Gurmb;
+randomNames=Gangorlien;
+randomNames=Gashgarren;
+randomNames=Galabrio;
+randomNames=Grimchold;
+randomNames=Hechanbel;
+randomNames=Jabile;
+randomNames=Kin-del;
+randomNames=Liddewo;
+randomNames=Leblindes;
+randomNames=Lamberril;
+randomNames=Mreyang;
+randomNames=Morohk;
+randomNames=Morgoa;
+randomNames=Mirbrin;
+randomNames=Mycorind;
+randomNames=Myhberl;
+randomNames=Manchol;
+randomNames=Ormyre;
+randomNames=Orchbring;
+randomNames=Opilor;
+randomNames=Omphalnes;
+randomNames=Olmgraf;
+randomNames=Olkorn;
+randomNames=Olbels;
+randomNames=Pinwryge;
+randomNames=Pilbring;
+randomNames=Pheachert;
+randomNames=Podaliand;
+randomNames=Pivias;
+randomNames=Plinchamb;
+randomNames=Pylondes;
+randomNames=Sandusket;
+randomNames=Sebolinas;
+randomNames=Ternmiel;
+randomNames=Trilmer;
+randomNames=Wreilkreg;
+randomNames=Worchends;
+randomNames=Wingbaelto;
+randomNames=Worlian;
+
+ruinAvEffects=ruinAv_buralk1;
+ruinAvEffects=ruinAv_buralk2;
+
+constantAvEffects=av_buralk1;
+constantAvEffects=av_buralk2;
+[AvEffect]
+ID=av_buralk1;
+actorValue=PhysDef; magnitude=1; duration=-1;
+[AvEffect]
+ID=av_buralk2;
+actorValue=MagDef; magnitude=1; duration=-1;
+[AvEffect]
+ID=ruinAv_buralk1;
+actorValue=PhysDef; magnitude=1; duration=-1;
+[AvEffect]
+ID=ruinAv_buralk2;
+actorValue=MagDef; magnitude=1; duration=-1;
+[JournalEntry]
+ID=journal_buralk;
+category=creature; halfPage=true; rarity=0;
+title=Buralk;
+text=<icon=j_buralk><title=Buralk><brAdj=>Insectoid bipedals with a stout beetle-y torso and thick exterior. Buralk are unable to speak most languages due to lacking vocal cords, though they can understand them perfectly well. This in combination with their short stature and insect resemblance means they are often discriminated against.<br=>  +1 <icon=PhysDef><icon=MagDef> Defenses;
+
+
+[ActorType] ID=myconid;
+name=Myconid;
+journalID=journal_myconid;
+bodyStructure=humanSmall;
+canSpawnWithClass = true;
+randomSkinPaletteOnSpawn = true;
+
+humanoid = true;
+movementSpeed = 6;
+unarmedPower = 4;
+unarmedAction = punch;
+
+defaultValues=HP= 45;
+defaultValues=HPMax = 45;
+defaultValues=TrueHPMax = 45;
+defaultValues=MP = 26;
+defaultValues=MPMax = 26;
+defaultValues=TrueMPMax = 26;
+defaultValues=PhysAtk = 5;
+defaultValues=PhysDef = 3;
+defaultValues=PhysEva = 10;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 3;
+defaultValues=MagEva = 10;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 3;
+defaultValues=actTime = 31;
+
+
+defaultBodyPartSprites=armR=myco_arm;
+defaultBodyPartSprites=armL=myco_arm;
+defaultBodyPartSprites=legs=myco_legs;
+defaultBodyPartSprites=head=myco_head;
+defaultBodyPartSprites=face=myco_face;
+defaultBodyPartSprites=torso=myco_torso;
+
+bodyPartSprites=face=myco_face2;
+bodyPartSprites=face=myco_face3;
+
+skinPalette = pGreyD2;
+
+clothPalette=pCBlack;
+
+fxSpeech = sfx_speech;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = myconidDeath;
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = pain_shake;
+
+disappearOnDeath=true;
+
+aggressiveness = 0.4;
+bravery = 1;
+honor = 0.6;
+intelligence = 0.4;
+
+defaultFaction = enemy;
+defaultDialogNode = auto;
+dialog_speechFont=foreignScript1;
+
+--
+
+dialog_tryCombat_overconfident_fight = ...;
+anim_tryCombat_overconfident_fight = ;
+
+dialog_tryCombat_overconfident_peace = ...;
+anim_tryCombat_overconfident_peace = ;
+
+dialog_tryCombat_confident_fight = ...;
+anim_tryCombat_confident_fight = ;
+
+dialog_tryCombat_confident_peace = ...;
+anim_tryCombat_confident_peace = ;
+
+dialog_tryCombat_uneasy_fight = ...;
+anim_tryCombat_uneasy_fight = ;
+
+dialog_tryCombat_uneasy_flee = ...;
+anim_tryCombat_uneasy_flee = ;
+
+dialog_tryCombat_scared_flee = ...;
+anim_tryCombat_scared_flee = ;
+
+--
+
+dialog_tryPeace_overconfident_fight = ...;
+anim_tryPeace_overconfident_fight = ;
+
+dialog_tryPeace_overconfident_peace = ...;
+anim_tryPeace_overconfident_peace = ;
+
+dialog_tryPeace_confident_fight = ...;
+anim_tryPeace_confident_fight = ;
+
+dialog_tryPeace_confident_peace = ...;
+anim_tryPeace_confident_peace = ;
+
+dialog_tryPeace_uneasy_fight = ...;
+anim_tryPeace_uneasy_fight = ;
+
+dialog_tryPeace_uneasy_peace = ...;
+anim_tryPeace_uneasy_peace = ;
+
+dialog_tryPeace_scared_peace = ...;
+anim_tryPeace_scared_peace = ;
+
+dialog_tryPeace_scared_flee = ...;
+anim_tryPeace_scared_flee = ;
+
+--
+
+dialog_tryBribe_overconfident_fight = ...;
+anim_tryBribe_overconfident_fight = ;
+
+dialog_tryBribe_overconfident_peace = ...;
+anim_tryBribe_overconfident_peace = ;
+
+dialog_tryBribe_overconfident_bribe = ...;
+anim_tryBribe_overconfident_bribe = ;
+
+dialog_tryBribe_confident_peace = ...;
+anim_tryBribe_confident_peace = ;
+
+dialog_tryBribe_confident_bribe = ...;
+anim_tryBribe_confident_bribe = ;
+
+dialog_tryBribe_uneasy_bribe = ...;
+anim_tryBribe_uneasy_bribe = ;
+
+dialog_tryBribe_scared_bribe = ...;
+anim_tryBribe_scared_bribe = ;
+
+randomNames=Blb;
+randomNames=Glk;
+randomNames=Bok;
+randomNames=Nmbg;
+randomNames=Drbb;
+randomNames=Plp;
+randomNames=Sifb;
+randomNames=Bisp;
+randomNames=Lmns;
+randomNames=Obb;
+randomNames=Brbe;
+randomNames=Alsb;
+randomNames=Brib;
+randomNames=Mulg;
+randomNames=Pbbt;
+randomNames=Bobt;
+randomNames=Quib;
+randomNames=Zob;
+randomNames=Bzb;
+randomNames=Bps;
+randomNames=Uba;
+randomNames=Grb;
+randomNames=Brwo;
+randomNames=Lib;
+randomNames=Opp;
+randomNames=Ab;
+randomNames=Bab;
+randomNames=Grgnrg;
+randomNames=Greg;
+randomNames=Gra;
+randomNames=Umb;
+randomNames=Brm;
+randomNames=Slb;
+randomNames=Zff;
+randomNames=Inb;
+randomNames=Bbbb;
+randomNames=Muul;
+randomNames=Skrm;
+randomNames=Plge;
+randomNames=Erw;
+randomNames=Vlg;
+randomNames=Vgl;
+randomNames=Owlhm;
+randomNames=Bewp;
+randomNames=Pwa;
+randomNames=Psk;
+randomNames=Lrg;
+randomNames=Zx;
+randomNames=Abb;
+randomNames=Gim;
+randomNames=Gom;
+randomNames=Mgmg;
+randomNames=Nohl;
+randomNames=Ppb;
+randomNames=Sulg;
+randomNames=Mag;
+randomNames=Klkl;
+randomNames=Mngg;
+randomNames=Uelm;
+randomNames=Um;
+randomNames=Ooom;
+randomNames=Coe;
+randomNames=Org;
+randomNames=Ehg;
+randomNames=Glk;
+randomNames=Blrk;
+randomNames=Urg;
+randomNames=Gugk;
+randomNames=Blne;
+randomNames=Klwg;
+randomNames=Ehbe;
+randomNames=Smng;
+randomNames=Sgg;
+randomNames=Gulf;
+randomNames=Bleg;
+randomNames=Belg;
+randomNames=Merew;
+randomNames=Sv;
+randomNames=Plg;
+randomNames=Olr;
+randomNames=Ew;
+randomNames=We;
+randomNames=Oll;
+randomNames=Vib;
+randomNames=Bx;
+randomNames=Buv;
+randomNames=Avz;
+randomNames=Nyaglag;
+randomNames=Arrrrg;
+randomNames=Yg;
+randomNames=Ygs;
+randomNames=Yggdra;
+randomNames=Egg;
+randomNames=Olp;
+randomNames=Glp;
+randomNames=Plug;
+randomNames=Nmnmm;
+randomNames=Emwe;
+randomNames=Sop;
+randomNames=Pog;
+randomNames=Pirgrer;
+randomNames=Lel;
+randomNames=Uguu;
+randomNames=Uwah;
+randomNames=Ohwoh;
+randomNames=Yag;
+randomNames=Yog;
+randomNames=Joll;
+randomNames=Luj;
+randomNames=Abg;
+randomNames=Agb;
+randomNames=Bhpth;
+randomNames=Frm;
+randomNames=Furkle;
+randomNames=Forg;
+randomNames=Flim;
+randomNames=Furm;
+randomNames=Ofrm;
+randomNames=Cof;
+randomNames=Goff;
+randomNames=Gorb;
+randomNames=Brgle;
+randomNames=Brgal;
+randomNames=Lingm;
+randomNames=Algm;
+randomNames=Ralgg;
+randomNames=Bolb;
+randomNames=Bulab;
+randomNames=Bomg;
+randomNames=Burmm;
+randomNames=Bugrim;
+randomNames=Bllig;
+randomNames=Bilge;
+randomNames=Bolmber;
+randomNames=Plung;
+randomNames=Pilm;
+randomNames=Mulp;
+randomNames=Mulf;
+randomNames=Slugm;
+randomNames=Sulfde;
+randomNames=Ilk;
+randomNames=Mnrm;
+randomNames=Murmer;
+randomNames=Immer;
+randomNames=Imrog;
+randomNames=Imname;
+randomNames=Migle;
+randomNames=Miflug;
+randomNames=Flimlam;
+randomNames=Mob;
+randomNames=Bog;
+randomNames=Bilch;
+randomNames=Leb;
+randomNames=Eblow;
+randomNames=Blouw;
+randomNames=Biblo;
+randomNames=Loblob;
+randomNames=Lomker;
+randomNames=Lomster;
+randomNames=Turnt;
+randomNames=Snaco;
+randomNames=Walg;
+randomNames=Glaw;
+randomNames=Glugg;
+randomNames=Gluig;
+randomNames=Gill;
+randomNames=Gilner;
+randomNames=Guiler;
+randomNames=Gyly;
+randomNames=Lygam;
+randomNames=Mygo;
+
+[ActorTypeReaction]
+ID=myconid;
+element=incapacitated; action=myconid_death_act;
+[ActorTypeReaction]
+ID=myconid;
+actorValues=poison; damageMultiplier=0;
+[ActorTypeReaction]
+ID=myconid;
+element=earth; damageMultiplier=0.5;
+[JournalEntry]
+ID=journal_myconid;
+category=creature; halfPage=true; rarity=4; rewardMod=250;
+title=Myconid;
+text=<icon=j_myconid><title=Myconid><brAdj=>This bizzare species is largely unknown. Their appearance is that of a large fungus, though they seem entirely sapient and mobile. When threatened, their bodies harden into a nearly unbreakable stone form. Because of this ability they build few structures and live in a nomadic tribal society.;
+
+[ActorType] ID=ferren; 
+name=Ferren;
+description=Tall, lithe humanoids with thin fur and a flowing mane. Known for being fastidious and intellectual.<br=> +3 <icon=MagDef> Magic Defense<n=> +15% <icon=MagEva> Magic Evasion;
+journalID=journal_ferren;
+bodyStructure=humanMed;
+humanoid = true;
+playerUsable=true;
+canSpawnWithClass = true;
+randomSkinPaletteOnSpawn = true;
+
+movementSpeed = 6;
+unarmedPower = 2;
+unarmedAction = punch;
+
+defaultValues=HP = 30;
+defaultValues=HPMax = 30;
+defaultValues=TrueHPMax = 30;
+defaultValues=MP = 20;
+defaultValues=MPMax = 20;
+defaultValues=TrueMPMax= 20;
+defaultValues=PhysAtk = 3;
+defaultValues=PhysDef = 1;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 1;
+defaultValues=MagEva = 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 3;
+defaultValues=actTime= 30;
+
+defaultBodyPartSprites=armR=template_arm;
+defaultBodyPartSprites=armL=template_arm;
+defaultBodyPartSprites=legs=ferren_legs;
+defaultBodyPartSprites=head=ferren_head;
+defaultBodyPartSprites=face=scur_face;
+defaultBodyPartSprites=torso=template_torso;
+
+bodyPartSprites=head=ferren_head;
+bodyPartSprites=head=ferren_head2;
+bodyPartSprites=head=ferren_head3;
+
+bodyPartSprites=face=scur_face;
+bodyPartSprites=face=scur_face_angry;
+
+
+skinPalette = pSilver;
+skinPalettes = pSilver;
+skinPalettes = pBone;
+skinPalettes = pGrey;
+
+fxSpeech = sfx_speech;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = humanDeath;
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+aggressiveness = 0.4;
+bravery = 0.6;
+honor = 0.7;
+intelligence = 0.7;
+
+defaultFaction = enemy;
+defaultDialogNode =auto;
+dialog_speechFont=foreignScript1;
+
+
+randomNames=scurio;
+
+constantAvEffects=av_ferren1;
+constantAvEffects=av_ferren2;
+[AvEffect]
+ID=av_ferren1;
+actorValue=MagDef; magnitude=3; duration=-1;
+[AvEffect]
+ID=av_ferren2;
+actorValue=MagEva; magnitude=15; duration=-1;
+
+[JournalEntry]
+ID=journal_ferren;
+category=creature; halfPage=true; rarity=1;
+title=Ferren;
+text=<icon=j_ferren><title=Ferren><brAdj=>Ferren are tall, lithe humanoids with thin fur and a flowing, luxurious mane. Despite having a vaguely bestial body structure, their nails and teeth are not very sharp. Ferren are known for being fastidious and intellectual. In some barbaric societies, they have been poached for their fur.<br=>  +3 <icon=MagDef> Magic Defense, +15% <icon=MagEva> Magic Evasion;
+
+[ActorType] ID=spinylizard; 
+name=Zyla;
+description=Lizard-like humanoid whose arms and shoulders bristle with toxic spines. <br=> Poison melee attackers<n=> 10% Resist vs. ranged attacks;
+journalID=journal_spinylizard;
+canSpawnWithClass = true;
+randomSkinPaletteOnSpawn = true;
+playerUnlockable=true;
+
+bodyStructure=humanMed;
+humanoid = true;
+movementSpeed = 6;
+unarmedPower = 2;
+unarmedAction = punch;
+defaultValues=HP=30;
+defaultValues=HPMax = 30;
+defaultValues=TrueHPMax = 30;
+defaultValues=MP = 20;
+defaultValues=MPMax = 20;
+defaultValues=TrueMPMax = 20;
+defaultValues=PhysAtk = 3;
+defaultValues=PhysDef = 1;
+defaultValues=PhysEva= 0;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 1;
+defaultValues=MagEva= 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 3;
+defaultValues=actTime = 30;
+
+skinPalette = pGreyD2;
+
+
+fxSpeech = sfx_speech;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = humanDeath;
+
+defaultBodyPartSprites=armR=spinylizard_arm;
+defaultBodyPartSprites=armL=spinylizard_arm;
+defaultBodyPartSprites=shoulderR=spinylizard_shoulder;
+defaultBodyPartSprites=shoulderL=spinylizard_shoulder;
+defaultBodyPartSprites=legs=spinylizard_legs;
+defaultBodyPartSprites=head=spinylizard_head;
+defaultBodyPartSprites=face=spinylizard_face;
+defaultBodyPartSprites=torso=template_torso;
+
+bodyPartSprites=head=spinylizard_head;
+bodyPartSprites=head=spinylizard_head_fangs;
+bodyPartSprites=head=spinylizard_head2;
+
+bodyPartSprites=face=spinylizard_face;
+bodyPartSprites=face=spinylizard_face_scowl;
+bodyPartSprites=face=spinylizard_face_evil;
+bodyPartSprites=face=spinylizard_face_slant;
+bodyPartSprites=face=spinylizard_face_brow;
+bodyPartSprites=face=spinylizard_face_sad;
+
+bodyPartSprites=shoulderR=spinylizard_shoulder;
+bodyPartSprites=shoulderL=spinylizard_shoulder;
+
+bodyPartSprites=legs=spinylizard_legs;
+bodyPartSprites=legs=spinylizard_legs2;
+bodyPartSprites=legs=spinylizard_legs3;
+
+partSpritesThatTakePriorityOverClass=shoulderR;
+partSpritesThatTakePriorityOverClass=shoulderL;
+
+skinPalettes=pGreyD2;
+skinPalettes=pGreyD;
+skinPalettes=pYellow3;
+skinPalettes=pYellow4;
+skinPalettes=pBoneDark;
+skinPalettes=pRedbrown2;
+skinPalettes=p1;
+skinPalettes=p5;
+skinPalettes=p7;
+skinPalettes=p12;
+skinPalettes=p13;
+skinPalettes=p14;
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+aggressiveness = 0.56;
+bravery = 0.53;
+honor = 0.48;
+intelligence = 0.5;
+
+defaultDialogNode = auto;
+dialog_speechFont=scuri;
+
+randomNames=Amanske;
+randomNames=Aulasa;
+randomNames=Angkarsa;
+randomNames=Annissal;
+randomNames=Angar;
+randomNames=Aghorra;
+randomNames=Aasik;
+randomNames=Byssa;
+randomNames=Belmissa;
+randomNames=Balmung;
+randomNames=Beolstar;
+randomNames=Bilious;
+randomNames=Bolste;
+randomNames=Bindal;
+randomNames=Caske;
+randomNames=Collos;
+randomNames=Camus;
+randomNames=Chalstra;
+randomNames=Chhhhuk;
+randomNames=Garvul;
+randomNames=Ghorr;
+randomNames=Giram;
+randomNames=Gram;
+randomNames=Gilmass;
+randomNames=Gostrag;
+randomNames=Golagros;
+randomNames=Golram;
+randomNames=Hulskarn;
+randomNames=Hhul;
+randomNames=Hgans;
+randomNames=Ividiu;
+randomNames=Indur;
+randomNames=Illusk;
+randomNames=Ilussa;
+randomNames=Kin;
+randomNames=Kilwa;
+randomNames=Klaask;
+randomNames=Korleai;
+randomNames=Kongvass;
+randomNames=Kinlast;
+randomNames=King;
+randomNames=Kisik;
+randomNames=Kamus;
+randomNames=Lastrak;
+randomNames=Lungvar;
+randomNames=Lichfar;
+randomNames=Likilli;
+randomNames=Liskque;
+randomNames=Lovia;
+randomNames=Molsa;
+randomNames=Malssung;
+randomNames=Mung;
+randomNames=Mulskore;
+randomNames=Milia;
+randomNames=Naskus;
+randomNames=Nossius;
+randomNames=Okane;
+randomNames=Philip;
+randomNames=Pulsq;
+randomNames=Qulna;
+randomNames=Qoske;
+randomNames=Vissique;
+randomNames=Vike;
+randomNames=Viske;
+randomNames=Vinial;
+randomNames=Vibeke;
+randomNames=Wuvesk;
+randomNames=Wikall;
+randomNames=Zann;
+
+[ActorTypeReaction]
+ID=spinylizard;
+element=melee; action=spinylizard_react;
+[ActorTypeReaction]
+ID=spinylizard;
+element=ranged; damageMultiplier=0.9;
+
+[JournalEntry]
+ID=journal_spinylizard;
+category=creature; halfPage=true; rarity=2;
+title=Zyla;
+text=<icon=j_zila><title=Zyla><brAdj=>Their shoulders and arms are covered in venomous spines that bristle when the Zyla tenses. In crowded cities, Zyla are often mandated to wear bulky protective gear to keep bystanders safe from accidental poisoning.<br=>  Poison melee attackers for <icon=time>40, 10% resist vs. ranged attacks;
+
+[ActorType] ID=wilderi; 
+name=Wilderi;
+description=The dominant race of Limroft. Wilderi are tall, strong, and have jutting horns on their back.<br=> +1 <icon=PhysAtk><icon=MagAtk> Attack<n=> 35% Resist vs. back attacks;
+journalID=journal_wilderi;
+playerUsable= true;
+canSpawnWithClass = true;
+randomSkinPaletteOnSpawn = true;
+
+bodyStructure=humanTall_longArms1;
+humanoid = true;
+movementSpeed = 6;
+unarmedPower = 2;
+unarmedAction = punch;
+defaultValues=HP=30;
+defaultValues=HPMax = 30;
+defaultValues=TrueHPMax = 30;
+defaultValues=MP = 20;
+defaultValues=MPMax = 20;
+defaultValues=TrueMPMax = 20;
+defaultValues=PhysAtk = 3;
+defaultValues=PhysDef = 1;
+defaultValues=PhysEva= 0;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 1;
+defaultValues=MagEva= 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 3;
+defaultValues=actTime = 30;
+skinPalette = p21;
+
+
+fxSpeech = sfx_speech;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = humanDeath;
+
+defaultBodyPartSprites=armR=wilderi_arm;
+defaultBodyPartSprites=armL=wilderi_arm;
+defaultBodyPartSprites=legs=wilderi_legs;
+defaultBodyPartSprites=head=bandana_head2;
+defaultBodyPartSprites=face=template_face;
+defaultBodyPartSprites=torso=template_torso;
+defaultBodyPartSprites=back=wilderi_back;
+
+bodyPartSprites=head=bandana_head2;
+bodyPartSprites=head=bandana_head;
+bodyPartSprites=head=human_head_beard_male;
+bodyPartSprites=head=human_head_beard2_male;
+bodyPartSprites=head=human_head_beard3_male;
+bodyPartSprites=head=human_head_beard4_male;
+bodyPartSprites=head=human_head_shortHair3;
+bodyPartSprites=head=human_head_shortHair4;
+bodyPartSprites=head=human_head_longHair1;
+bodyPartSprites=head=human_head_longHair2;
+bodyPartSprites=head=human_head_longHair3;
+bodyPartSprites=head=human_head_mohawk;
+bodyPartSprites=head=human_head_sideburns_male;
+bodyPartSprites=head=human_head_bun_female;
+bodyPartSprites=head=robed_head;
+bodyPartSprites=head=helmet_head;
+bodyPartSprites=head=helmet_head2;
+bodyPartSprites=head=turban_head;
+bodyPartSprites=head=tricorne_head;
+
+bodyPartSprites=face=template_face;
+bodyPartSprites=face=meh_face;
+bodyPartSprites=face=sleepy_face;
+bodyPartSprites=face=feminine_face_female;
+bodyPartSprites=face=angry_face;
+bodyPartSprites=face=alert_face;
+bodyPartSprites=face=unibrow_face;
+bodyPartSprites=face=squinty_face;
+bodyPartSprites=face=mustache_face_male;
+bodyPartSprites=face=goatee_face_male;
+bodyPartSprites=face=beard_face_male;
+bodyPartSprites=face=fullbeard_face_male;
+bodyPartSprites=face=glasses_face;
+bodyPartSprites=face=shades_face;
+bodyPartSprites=face=masked_face;
+bodyPartSprites=face=masked_face2;
+
+bodyPartSprites=legs=wilderi_legs;
+bodyPartSprites=legs=wilderi_legs2;
+
+partSpritesThatTakePriorityOverClass=armR;
+partSpritesThatTakePriorityOverClass=armL;
+
+skinPalettes=p21;
+skinPalettes=p18;
+skinPalettes=p19;
+skinPalettes=p20;
+skinPalettes=p22;
+skinPalettes=p11;
+skinPalettes=pGrey3;
+skinPalettes=pBlue5;
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+aggressiveness = 0.5;
+bravery = 0.5;
+honor = 0.4;
+intelligence = 0.5;
+
+defaultDialogNode = auto;
+dialog_speechFont=scuri;
+
+constantAvEffects=av_wilderi1;
+constantAvEffects=av_wilderi2;
+constantAvEffects=av_wilderi3;
+
+randomNames=Arron;
+randomNames=Arlin;
+randomNames=Axter;
+randomNames=Akila;
+randomNames=Akire;
+randomNames=Azan;
+randomNames=Byron;
+randomNames=Bila;
+randomNames=Borne;
+randomNames=Bolner;
+randomNames=Bunag;
+randomNames=Corvam;
+randomNames=Crimgar;
+randomNames=Covin;
+randomNames=Civan;
+randomNames=Codrey;
+randomNames=Cambas;
+randomNames=Collin;
+randomNames=Dols;
+randomNames=Dos;
+randomNames=Das;
+randomNames=Davos;
+randomNames=Dodrey;
+randomNames=Dulle;
+randomNames=Dulhan;
+randomNames=Divure;
+randomNames=Eoar;
+randomNames=Edord;
+randomNames=Ekla;
+randomNames=Eskar;
+randomNames=Eoman;
+randomNames=Fror;
+randomNames=Fingal;
+randomNames=Fillon;
+randomNames=Flure;
+randomNames=Fykar;
+randomNames=Fuyk;
+randomNames=Golrey;
+randomNames=Golder;
+randomNames=Gund;
+randomNames=Gurdar;
+randomNames=Griva;
+randomNames=Gillen;
+randomNames=Ingrid;
+randomNames=Inor;
+randomNames=Iskid;
+randomNames=Isa;
+randomNames=Iol;
+randomNames=Ilsa;
+randomNames=Jax;
+randomNames=Jom;
+randomNames=Johm;
+randomNames=Jorrin;
+randomNames=Jarret;
+randomNames=Jorr;
+randomNames=Jalh;
+randomNames=Krolle;
+randomNames=Kror;
+randomNames=Kilda;
+randomNames=Kalla;
+randomNames=Kivan;
+randomNames=Kopyr;
+randomNames=Korm;
+randomNames=Khyvan;
+randomNames=Khylur;
+randomNames=Norn;
+randomNames=Noldur;
+randomNames=Mul-khy;
+randomNames=Mul-das;
+randomNames=Mul-gin;
+randomNames=Mul-rund;
+randomNames=Mildris;
+randomNames=Moldvi;
+randomNames=Ovil;
+randomNames=Orrilin;
+randomNames=Ox;
+randomNames=Ondur;
+randomNames=Ollin;
+randomNames=Olhan;
+randomNames=Oilam;
+randomNames=Ogra;
+randomNames=Smidd;
+randomNames=Simn;
+randomNames=Silgar;
+randomNames=Sollar;
+randomNames=Timar;
+randomNames=Tomas;
+randomNames=Tyrval;
+randomNames=Tul-khy;
+randomNames=Tul-rund;
+randomNames=Tul-das;
+randomNames=Tul-gin;
+randomNames=Tul-ria;
+randomNames=Tomarr;
+randomNames=Ukar;
+randomNames=Ulris;
+randomNames=Uriste;
+randomNames=Undure;
+randomNames=Vord;
+randomNames=Wyd;
+randomNames=Wyvar;
+randomNames=Wiglan;
+randomNames=Wilber;
+randomNames=Willam;
+randomNames=Weor;
+[AvEffect]
+ID=av_wilderi1;
+actorValue=PhysAtk; magnitude=1; duration=-1;
+[AvEffect]
+ID=av_wilderi2;
+actorValue=MagAtk; magnitude=1; duration=-1;
+[AvEffect]
+ID=av_wilderi3;
+actorValue=backDefense; magnitude=35; duration=-1;
+[JournalEntry]
+ID=journal_wilderi;
+category=creature; halfPage=true; rarity=2;
+title=Wilderi;
+text=<icon=j_wilderi><title=Wilderi><brAdj=>The dominant species of Limroft. Wilderi possess great strength and have protective horns covering their back, so it is no wonder they flourish even in Eral. As they age, their horns continue to grow, sometimes impeding them. In extreme cases the horns must be broken off.<br=>  +1 <icon=PhysAtk><icon=MagAtk> Attack, 35% resist vs. back attacks;
+
+[ActorType] ID=vineman; 
+name=Vine;
+description=;
+journalID=journal_vineman;
+canSpawnWithClass = true;
+
+bodyStructure=human;
+humanoid = true;
+fearless=true;
+movementSpeed = 6;
+unarmedPower = 3;
+unarmedAction = punch;
+defaultValues=HP=32;
+defaultValues=HPMax = 32;
+defaultValues=TrueHPMax = 32;
+defaultValues=MP = 18;
+defaultValues=MPMax = 18;
+defaultValues=TrueMPMax = 18;
+defaultValues=PhysAtk = 6;
+defaultValues=PhysDef = 2;
+defaultValues=PhysEva= 0;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 4;
+defaultValues=MagEva= 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 4;
+defaultValues=actTime = 30;
+skinPalette=pBluegreen;
+clothPalette=pBluegreen;
+armorPalette=pBluegreen;
+
+ruinModeSupportAbility=greenTouch;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = hitDust;
+fxOnPhysicalHPDmg = sfx_vorpal_short;
+fxOnDeath = hitDust_strong;
+fxOnDeath = sfx_vorpal;
+
+defaultBodyPartSprites=armR=vine_arm;
+defaultBodyPartSprites=armL=vine_arm;
+defaultBodyPartSprites=legs=vine_legs;
+defaultBodyPartSprites=head=vine_head;
+defaultBodyPartSprites=face=;
+defaultBodyPartSprites=torso=template_torso;
+
+partSpritesThatTakePriorityOverClass=armR;
+partSpritesThatTakePriorityOverClass=armL;
+partSpritesThatTakePriorityOverClass=head;
+partSpritesThatTakePriorityOverClass=legs;
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+aggressiveness = 0.5;
+bravery = 11;
+honor = 0.0;
+intelligence = 0.2;
+
+defaultDialogNode = ;
+dialog_speechFont=scuri;
+
+randomNames=Abax;
+randomNames=Adan;
+randomNames=Adas;
+randomNames=Arnbea;
+randomNames=Arb;
+randomNames=Arrobis;
+randomNames=Angule;
+randomNames=Angis;
+randomNames=Anther;
+randomNames=Avuls;
+randomNames=Azale;
+randomNames=Burch;
+randomNames=Brush;
+randomNames=Bract;
+randomNames=Burak;
+randomNames=Core;
+randomNames=Churr;
+randomNames=Ceta;
+randomNames=Canopas;
+randomNames=Coriat;
+randomNames=Crink;
+randomNames=Dals;
+randomNames=Doull;
+randomNames=Ent;
+randomNames=Ecad;
+randomNames=Epige;
+randomNames=Eska;
+randomNames=Essen;
+randomNames=Earla;
+randomNames=Elid;
+randomNames=Frond;
+randomNames=Faun;
+randomNames=Flor;
+randomNames=Fern;
+randomNames=Ferm;
+randomNames=Folor;
+randomNames=Fall;
+randomNames=Gon;
+randomNames=Gall;
+randomNames=Girmn;
+randomNames=Grosk;
+randomNames=Gole;
+randomNames=Grum;
+randomNames=Grigar;
+randomNames=Harbao;
+randomNames=Helia;
+randomNames=Hyanc;
+randomNames=Hild;
+randomNames=Inmar;
+randomNames=Ive;
+randomNames=Jels;
+randomNames=Juls;
+randomNames=Koll;
+randomNames=Knot;
+randomNames=Lin;
+randomNames=Loof;
+randomNames=Lund;
+randomNames=Linf;
+randomNames=Lons;
+randomNames=Lign;
+randomNames=Legumes;
+randomNames=Legid;
+randomNames=Liminal;
+randomNames=Lichen;
+randomNames=Moff;
+randomNames=Moss;
+randomNames=Morn;
+randomNames=Mire;
+randomNames=Mors;
+randomNames=Minmos;
+randomNames=Malse;
+randomNames=Mildow;
+randomNames=Mildaw;
+randomNames=Molid;
+randomNames=Ond;
+randomNames=Ondoe;
+randomNames=Ondorr;
+randomNames=Oak;
+randomNames=Oaiks;
+randomNames=Ols;
+randomNames=Onto;
+randomNames=Plod;
+randomNames=Pilia;
+randomNames=Phyte;
+randomNames=Slidd;
+randomNames=Stolo;
+randomNames=Solim;
+randomNames=Trent;
+randomNames=Ton;
+randomNames=Trad;
+randomNames=Trena;
+randomNames=Terre;
+randomNames=Terros;
+randomNames=Tira;
+randomNames=Trea;
+randomNames=Ulds;
+randomNames=Vita;
+randomNames=Virgate;
+randomNames=Vulse;
+randomNames=Voum;
+randomNames=Wicks;
+randomNames=Yew;
+randomNames=Zalea;
+
+ruinAvEffects=ruinAv_vineman1;
+ruinAvEffects=ruinAv_vineman2;
+[AvEffect]
+ID=ruinAv_vineman1;
+actorValue=PhysAtk; magnitude=-1; duration=-1;
+[AvEffect]
+ID=ruinAv_vineman2;
+actorValue=MagDef; magnitude=-2; duration=-1;
+
+[ActorTypeDetectAoE]
+ID=vineman;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=3;
+arc=true;
+airborne=true;
+occupyAll=true;
+[ActorTypeReaction]
+ID=vineman;
+actorValues=blind; actorValues=morale; damageMultiplier=0;
+healMultiplier=0;
+[ActorTypeReaction]
+ID=vineman;
+element=vines_wither; newID=vineman_wither;
+
+[JournalEntry]
+ID=journal_vineman;
+category=creature; halfPage=true; rarity=4; rewardMod=-500;
+title=Vineman;
+text=<icon=j_vineman><title=Vineman><brAdj=>This man-shaped bundle of vines stands completely still until some percieved threat approaches, at which point it and all its allies react simultaneously. Oddly, it has no special weakness to Fire or Ruin. Very strange it should be found in such a small group, isolated from others of its kind - perhaps they got lost somehow?;
+
+[ActorType] ID=vineman_wither; 
+name=Vine;
+description=;
+journalID=journal_vineman_wither;
+canSpawnWithClass = true;
+
+bodyStructure=human;
+humanoid = true;
+fearless=true;
+movementSpeed = 6;
+unarmedPower = 3;
+unarmedAction = punch;
+defaultValues=HP=32;
+defaultValues=HPMax = 32;
+defaultValues=TrueHPMax = 32;
+defaultValues=MP = 18;
+defaultValues=MPMax = 18;
+defaultValues=TrueMPMax = 18;
+defaultValues=PhysAtk = 4;
+defaultValues=PhysDef = 2;
+defaultValues=PhysEva= 0;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 4;
+defaultValues=MagEva= 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 4;
+defaultValues=actTime = 30;
+skinPalette=pYellow;
+clothPalette=pYellow;
+armorPalette=pYellow;
+
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = hitDust;
+fxOnPhysicalHPDmg = sfx_vorpal_short;
+fxOnDeath = hitDust_strong;
+fxOnDeath = sfx_vorpal;
+
+defaultBodyPartSprites=armR=vine_arm;
+defaultBodyPartSprites=armL=vine_arm;
+defaultBodyPartSprites=legs=vine_legs;
+defaultBodyPartSprites=head=vine_head;
+defaultBodyPartSprites=face=;
+defaultBodyPartSprites=torso=template_torso;
+
+partSpritesThatTakePriorityOverClass=armL;
+partSpritesThatTakePriorityOverClass=armR;
+partSpritesThatTakePriorityOverClass=head;
+partSpritesThatTakePriorityOverClass=legs;
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+aggressiveness = 0.5;
+bravery = 11;
+honor = 0.0;
+intelligence = 0.2;
+
+defaultDialogNode = ;
+dialog_speechFont=scuri;
+
+randomNames=vineman;
+
+constantAvEffects=av_vineman_wither1;
+constantAvEffects=av_vineman_wither2;
+constantAvEffects=av_vineman_wither3;
+
+[ActorTypeDetectAoE]
+ID=vineman_wither;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=2;
+arc=true;
+airborne=true;
+occupyAll=true;
+[ActorTypeReaction]
+ID=vineman_wither;
+actorValues=blind; actorValues=morale; damageMultiplier=0;
+healMultiplier=0;
+[ActorTypeReaction]
+ID=vineman_wither;
+element=vines_growth; newID=vineman;
+[ActorTypeReaction]
+ID=vineman_wither;
+element=fire; element=ruin; damageMultiplier=1.3; healMultiplier=1;
+[AvEffect]
+ID=av_vineman_wither1;
+actorValue=MagDef; magnitude=-2; duration=-1;
+[AvEffect]
+ID=av_vineman_wither2;
+actorValue=actTime; magnitude=3; duration=-1;
+[AvEffect]
+ID=av_vineman_wither3;
+actorValue=moveDistance; magnitude=-1; duration=-1;
+
+[JournalEntry]
+ID=journal_vineman_wither;
+category=creature; halfPage=true; rarity=2;
+title=Vineman (Withered);
+text=<icon=j_vineman_wither><title=Vineman (Withered)><brAdj=>Now that its seed has been withered, the vinemen are slower and more fragile, and easily crumble when set ablaze. They are also seem less perceptive - or less aggressive? - and will only engage if you get very close to them.;
+
+[ActorType] ID=plantbugman; 
+name=Rakthol;
+description=;
+journalID=journal_plantbugman;
+canSpawnWithClass = false;
+disappearOnDeath=true;
+
+bodyStructure=humanSmall;
+humanoid = true;
+fearless=true;
+movementSpeed = 6;
+unarmedPower = 5;
+unarmedAction = punch_plantbugman_itch;
+defaultValues=HP=16;
+defaultValues=HPMax = 16;
+defaultValues=TrueHPMax = 16;
+defaultValues=MP = 13;
+defaultValues=MPMax = 13;
+defaultValues=TrueMPMax = 13;
+defaultValues=PhysAtk = 3;
+defaultValues=PhysDef = 1;
+defaultValues=PhysEva= 0;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 1;
+defaultValues=MagEva= 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 3;
+defaultValues=actTime = 34;
+skinPalette=pBlue;
+clothPalette=p85;
+armorPalette=p85;
+
+defaultSupportAbilities = setaeAura;
+ruinModeSupportAbility=greenTouch;
+
+XPMult=0.7;
+XPDecayPerKillMult=0.5;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = hitDust;
+fxOnPhysicalHPDmg = bluedust;
+fxOnPhysicalHPDmg = sfx_vorpal_short;
+fxOnDeath = hitDust_strong;
+fxOnDeath = bluedust_burst;
+fxOnDeath = pixelCloud_blue_quick;
+fxOnDeath = sfx_vorpal;
+
+defaultBodyPartSprites=armR=plantbugman_arm;
+defaultBodyPartSprites=armL=plantbugman_arm_fluff1;
+defaultBodyPartSprites=legs=plantbugman_legs_fluff1;
+defaultBodyPartSprites=head=plantbugman_head_fluff1;
+defaultBodyPartSprites=face=;
+defaultBodyPartSprites=torso=plantbugman_torso_tiny;
+
+partSpritesThatTakePriorityOverClass=armR;
+partSpritesThatTakePriorityOverClass=armL;
+partSpritesThatTakePriorityOverClass=head;
+partSpritesThatTakePriorityOverClass=legs;
+
+bodyPartSprites=head=plantbugman_head_fluff1;
+bodyPartSprites=head=plantbugman_head_fluff2;
+bodyPartSprites=head=plantbugman_head_fluff3;
+bodyPartSprites=head=plantbugman_head_fluff4;
+
+bodyPartSprites=legs=plantbugman_legs_fluff1;
+
+bodyPartSprites=armR=plantbugman_arm;
+bodyPartSprites=armR=plantbugman_arm_fluff1;
+bodyPartSprites=armL=plantbugman_arm;
+bodyPartSprites=armL=plantbugman_arm_fluff1;
+
+idleAnim = idle;
+walkAnim = walk_fast_lurch;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die_flicker;
+
+aggressiveness = 0.5;
+bravery = 11;
+honor = 0.0;
+intelligence = 0.2;
+
+defaultFaction=enemy;
+defaultDialogNode = ;
+dialog_speechFont=scuri;
+
+randomNames=vineman;
+
+ruinAvEffects=ruinAv_plantbugman1;
+ruinAvEffects=ruinAv_plantbugman2;
+ruinAvEffects=ruinAv_plantbugman_move1;
+
+[ActorTypeDetectAoE]
+ID=plantbugman;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=3;
+arc=true;
+airborne=true;
+occupyAll=true;
+[ActorTypeReaction]
+ID=plantbugman; actorValues=blind; actorValues=morale; actorValues=sleep; damageMultiplier=0; healMultiplier=0;
+[ActorTypeReaction]
+ID=plantbugman;
+element=fire; element=wind; damageMultiplier=1.3;
+[ActorTypeReaction]
+ID=plantbugman;
+element=life; element=antiUndead; damageMultiplier=1.3; healMultiplier=1;
+[AvEffect]
+ID=ruinAv_plantbugman_move1;
+actorValue=moveDistance; magnitude=1; duration=-1;
+[JournalEntry]
+ID=journal_plantbugman;
+category=creature; halfPage=true; rarity=3; rewardMod=-300;
+title=Rakthol;
+text=<portraitBig=plantbugman><title=Rakthol><brAdj=>Shambling plant-insect hybrids brought to life by a complex mix of Ruin and Preservation magic. Undead arthropod limbs are wrapped in writhing vines, both controlled by unseen forces. Itch-inducing pollen coats this particular Rakthol.;
+
+[ActorType] ID=plantbugman_mantis; 
+name=Mantis Rakthol;
+description=;
+journalID=journal_plantbugman_mantis;
+canSpawnWithClass = true;
+
+bodyStructure=humanMed;
+humanoid = true;
+fearless=true;
+movementSpeed = 6;
+unarmedPower = 4;
+unarmedAction = punch;
+defaultValues=HP=30;
+defaultValues=HPMax = 30;
+defaultValues=TrueHPMax = 30;
+defaultValues=MP = 14;
+defaultValues=MPMax = 14;
+defaultValues=TrueMPMax = 14;
+defaultValues=PhysAtk = 4;
+defaultValues=PhysDef = 1;
+defaultValues=PhysEva= 0;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 1;
+defaultValues=MagEva= 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 4;
+defaultValues=actTime = 30;
+skinPalette=p56;
+clothPalette=p56;
+armorPalette=p85;
+
+defaultSupportAbilities = indomitable;
+ruinModeSupportAbility=valiant;
+
+XPDecayPerKillMult=0.8;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = hitDust;
+fxOnPhysicalHPDmg = sfx_vorpal_short;
+fxOnDeath = hitDust_strong;
+fxOnDeath = sfx_vorpal;
+
+defaultBodyPartSprites=armR=plantbugman_arm_mantis1;
+defaultBodyPartSprites=armL=plantbugman_arm;
+defaultBodyPartSprites=legs=plantbugman_legs_mantis;
+defaultBodyPartSprites=head=plantbugman_head_mantis1;
+defaultBodyPartSprites=face=;
+defaultBodyPartSprites=torso=template_torso;
+
+partSpritesThatTakePriorityOverClass=armR;
+partSpritesThatTakePriorityOverClass=armL;
+partSpritesThatTakePriorityOverClass=head;
+partSpritesThatTakePriorityOverClass=legs;
+
+bodyPartSprites=head=plantbugman_head_mantis1;
+bodyPartSprites=head=plantbugman_head_mantis2;
+bodyPartSprites=head=plantbugman_head_mantis3;
+bodyPartSprites=armL=plantbugman_arm;
+bodyPartSprites=armL=plantbugman_arm_mantis1;
+bodyPartSprites=armL=plantbugman_arm_mantis2;
+
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+defaultFaction=enemy;
+aggressiveness = 0.7;
+bravery = 11;
+honor = 0.0;
+intelligence = 0.2;
+
+defaultDialogNode = ;
+dialog_speechFont=scuri;
+
+randomNames=vineman;
+
+ruinAvEffects=ruinAv_plantbugman1;
+ruinAvEffects=ruinAv_plantbugman2;
+[AvEffect]
+ID=ruinAv_plantbugman1;
+actorValue=PhysAtk; magnitude=2; duration=-1;
+[AvEffect]
+ID=ruinAv_plantbugman2;
+actorValue=MagAtk; magnitude=2; duration=-1;
+
+[ActorTypeDetectAoE]
+ID=plantbugman_mantis;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=3;
+arc=true;
+airborne=true;
+occupyAll=true;
+[ActorTypeReaction]
+ID=plantbugman_mantis; actorValues=morale; actorValues=sleep; damageMultiplier=0; healMultiplier=0;
+[ActorTypeReaction]
+ID=plantbugman_mantis;
+element=fire; damageMultiplier=1.3;
+[ActorTypeReaction]
+ID=plantbugman_mantis;
+element=life; element=antiUndead; damageMultiplier=1.3; healMultiplier=1;
+[JournalEntry]
+ID=journal_plantbugman_mantis;
+category=creature; halfPage=true; rarity=3; rewardMod=-150;
+title=Mantis Rakthol;
+text=<portraitBig=plantbugman_mantis><title=Mantis Rakthol><brAdj=>A reanimated Cave Mantis corpse makes up the majority of this Rakthol. It can still wield its vicious thoracic appendages with great force - and oddly, with even more skill than it had when alive.;
+
+[ActorType] ID=plantbugman_flower; 
+name=Flower Rakthol;
+description=;
+journalID=journal_plantbugman_flower;
+canSpawnWithClass = true;
+
+bodyStructure=human;
+humanoid = true;
+fearless=true;
+movementSpeed = 6;
+unarmedPower = 5;
+unarmedAction = punch;
+defaultValues=HP=30;
+defaultValues=HPMax = 30;
+defaultValues=TrueHPMax = 30;
+defaultValues=MP = 23;
+defaultValues=MPMax = 23;
+defaultValues=TrueMPMax = 23;
+defaultValues=PhysAtk = 3;
+defaultValues=PhysDef = 1;
+defaultValues=PhysEva= 0;
+defaultValues=MagAtk = 4;
+defaultValues=MagDef = 1;
+defaultValues=MagEva= 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 4;
+defaultValues=actTime = 30;
+skinPalette=p84;
+clothPalette=p83;
+armorPalette=p85;
+
+ruinModeSupportAbility=soulpierce;
+
+XPDecayPerKillMult=0.8;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = hitDust;
+fxOnPhysicalHPDmg = bluedust;
+fxOnPhysicalHPDmg = sfx_vorpal_short;
+fxOnDeath = bluedust_burst;
+fxOnDeath = hitDust_strong;
+fxOnDeath = sfx_vorpal;
+
+defaultBodyPartSprites=armR=plantbugman_arm_fluff1;
+defaultBodyPartSprites=armL=plantbugman_arm;
+defaultBodyPartSprites=legs=plantbugman_legs_fluff1;
+defaultBodyPartSprites=head=plantbugman_head_flower1;
+defaultBodyPartSprites=face=;
+defaultBodyPartSprites=torso=template_torso;
+
+partSpritesThatTakePriorityOverClass=armR;
+partSpritesThatTakePriorityOverClass=armL;
+partSpritesThatTakePriorityOverClass=head;
+partSpritesThatTakePriorityOverClass=legs;
+
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+defaultFaction=enemy;
+aggressiveness = 0.7;
+bravery = 11;
+honor = 0.0;
+intelligence = 0.2;
+
+defaultDialogNode = ;
+dialog_speechFont=scuri;
+
+randomNames=vineman;
+
+ruinAvEffects=ruinAv_plantbugman1;
+ruinAvEffects=ruinAv_plantbugman2;
+[ActorTypeDetectAoE]
+ID=plantbugman_flower;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=3;
+arc=true;
+airborne=true;
+occupyAll=true;
+[ActorTypeReaction]
+ID=plantbugman_flower; actorValues=blind; actorValues=silence; actorValues=morale; actorValues=sleep; damageMultiplier=0; healMultiplier=0;
+[ActorTypeReaction]
+ID=plantbugman_flower;
+element=fire; damageMultiplier=1.3;
+[ActorTypeReaction]
+ID=plantbugman_flower;
+element=life; element=antiUndead; damageMultiplier=1.5; healMultiplier=1;
+
+[JournalEntry]
+ID=journal_plantbugman_flower;
+category=creature; halfPage=true; rarity=3; rewardMod=-150;
+title=Flower Rakthol;
+text=<portraitBig=plantbugman_flower><title=Flower Rakthol><brAdj=>These sprouted bug remains surge with magical energy. Undead cannot normally use magic - perhaps the unusual flower attached to it is responsible for this uncanny abilty.;
+
+[ActorType] ID=plantbugman_fern; 
+name=Fern Rakthol;
+description=;
+journalID=journal_plantbugman_fern;
+canSpawnWithClass = true;
+disappearOnDeath=true;
+disappearOnDeath_dropItems=false;
+
+bodyStructure=human;
+humanoid = true;
+fearless=true;
+movementSpeed = 6;
+unarmedPower = 5;
+unarmedAction = punch;
+defaultValues=HP=30;
+defaultValues=HPMax = 30;
+defaultValues=TrueHPMax = 30;
+defaultValues=MP = 16;
+defaultValues=MPMax = 16;
+defaultValues=TrueMPMax = 16;
+defaultValues=PhysAtk = 3;
+defaultValues=PhysDef = 1;
+defaultValues=PhysEva= 10;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 1;
+defaultValues=MagEva= 5;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 4;
+defaultValues=actTime = 30;
+skinPalette=overworld2;
+clothPalette=overworld1;
+armorPalette=p85;
+
+ruinModeSupportAbility=swiftness;
+
+XPDecayPerKillMult=0.8;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = hitDust;
+fxOnPhysicalHPDmg = leaf_burst_short;
+fxOnPhysicalHPDmg = sfx_vorpal_short;
+fxOnDeath = hitDust_strong;
+fxOnDeath = leaf_burst;
+fxOnDeath = sfx_vorpal;
+
+defaultBodyPartSprites=armR=plantbugman_arm_fluff1;
+defaultBodyPartSprites=armL=plantbugman_arm;
+defaultBodyPartSprites=legs=plantbugman_legs_fluff1;
+defaultBodyPartSprites=head=plantbugman_head_bush1;
+defaultBodyPartSprites=face=;
+defaultBodyPartSprites=torso=template_torso;
+
+partSpritesThatTakePriorityOverClass=armR;
+partSpritesThatTakePriorityOverClass=armL;
+partSpritesThatTakePriorityOverClass=head;
+partSpritesThatTakePriorityOverClass=legs;
+
+bodyPartSprites=head=plantbugman_head_bush1;
+bodyPartSprites=head=plantbugman_head_bush2;
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die_flicker;
+
+defaultFaction=enemy;
+aggressiveness = 0.7;
+bravery = 11;
+honor = 0.0;
+intelligence = 0.2;
+
+defaultDialogNode = ;
+dialog_speechFont=scuri;
+
+randomNames=vineman;
+
+ruinAvEffects=ruinAv_plantbugman1;
+ruinAvEffects=ruinAv_plantbugman2;
+[ActorTypeDetectAoE]
+ID=plantbugman_fern;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=3;
+arc=true;
+airborne=true;
+occupyAll=true;
+[ActorTypeReaction]
+ID=plantbugman_fern; actorValues=blind; actorValues=silence; actorValues=morale; actorValues=sleep; damageMultiplier=0; healMultiplier=0;
+[ActorTypeReaction]
+ID=plantbugman_fern;
+element=fire; damageMultiplier=1.3;
+[ActorTypeReaction]
+ID=plantbugman_fern;
+element=life; element=antiUndead; damageMultiplier=1.3; healMultiplier=1;
+[ActorTypeReaction]
+ID=plantbugman_fern;
+element=incapped; action=dropBrambles;
+
+[JournalEntry]
+ID=journal_plantbugman_fern;
+category=creature; halfPage=true; rarity=3; rewardMod=-150;
+title=Fern Rakthol;
+text=<portraitBig=plantbugman_fern><title=Fern Rakthol><brAdj=>Thick foliage covers this insect-plant abomination. Unlike most shambling undead, this beast moves with alarming swiftness and skill. When destroyed, it crumples into a pile of treacherous brambles.;
+
+[ActorType] ID=plantbugman_pod; 
+name=Pod Rakthol;
+description=;
+journalID=journal_plantbugman_pod;
+canSpawnWithClass = true;
+disappearOnDeath=true;
+
+bodyStructure=humanSmall;
+humanoid = true;
+fearless=true;
+movementSpeed = 6;
+unarmedPower = 5;
+unarmedAction = punch;
+defaultValues=HP=1;
+defaultValues=HPMax = 1;
+defaultValues=TrueHPMax = 1;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 4;
+defaultValues=PhysDef = 1;
+defaultValues=PhysEva= 0;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 1;
+defaultValues=MagEva= 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 4;
+defaultValues=actTime = 44;
+skinPalette=pYellow2;
+clothPalette=pYellow2;
+armorPalette=pYellow5;
+
+ruinModeSupportAbility=reckless;
+
+XPMult=0.5;
+XPDecayPerKillMult=0.2;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = hitDust;
+fxOnPhysicalHPDmg = sfx_vorpal_short;
+fxOnDeath = hitDust_strong;
+fxOnDeath = sfx_vorpal;
+
+defaultBodyPartSprites=armR=;
+defaultBodyPartSprites=armL=;
+defaultBodyPartSprites=legs=plantbugman_legs_pod;
+defaultBodyPartSprites=head=plantbugman_head_pod1;
+defaultBodyPartSprites=face=;
+defaultBodyPartSprites=torso=plantbugman_torso_pod;
+
+partSpritesThatTakePriorityOverClass=armR;
+partSpritesThatTakePriorityOverClass=armL;
+partSpritesThatTakePriorityOverClass=head;
+partSpritesThatTakePriorityOverClass=legs;
+
+
+idleAnim = wiggle;
+walkAnim = walk_fast;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die_flicker;
+
+defaultFaction=enemy;
+aggressiveness = 0.7;
+bravery = 11;
+honor = 0.0;
+intelligence = 0.2;
+
+defaultDialogNode = ;
+dialog_speechFont=scuri;
+
+randomNames=vineman;
+
+ruinAvEffects=ruinAv_plantbugman1;
+ruinAvEffects=ruinAv_plantbugman2;
+ruinAvEffects=ruinAv_plantbugman_move1;
+[ActorTypeDetectAoE]
+ID=plantbugman_pod;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=3;
+arc=true;
+airborne=true;
+occupyAll=true;
+[ActorTypeReaction]
+ID=plantbugman_pod; actorValues=blind; actorValues=silence; actorValues=morale; actorValues=sleep; damageMultiplier=0; healMultiplier=0;
+[ActorTypeReaction]
+ID=plantbugman_pod;
+element=fire; damageMultiplier=1.3;
+[ActorTypeReaction]
+ID=plantbugman_pod;
+element=life; element=antiUndead; damageMultiplier=1.3; healMultiplier=1;
+[ActorTypeReaction]
+ID=plantbugman_pod;
+element=incapped; action=podman_burst_action;
+[JournalEntry]
+ID=journal_plantbugman_pod;
+category=creature; halfPage=true; rarity=3; rewardMod=-300;
+title=Pod Rakthol;
+text=<portraitBig=plantbugman_pod><title=Pod Rakthol><brAdj=>Mobile burst pod dragged along by thick vines and undead insect limbs. It is as fragile and dangerous as any normal burst pod.;
+
+
+[ActorType] ID=crub;
+name=Crub;
+description=Crub are short crustacean humanoids with a tough exterior.<br=> +2 <icon=PhysDef>Physical Defense<n=>Immune to Itchy & Wet<n=> 30% Weakness vs. Elec;
+journalID=journal_crub;
+bodyStructure=humanShort;
+canSpawnWithClass = true;
+randomSkinPaletteOnSpawn = true;
+playerUnlockable=true;
+
+humanoid = true;
+movementSpeed = 6;
+unarmedPower = 2;
+unarmedAction = punch;
+
+defaultValues=HP= 30;
+defaultValues=HPMax = 30;
+defaultValues=TrueHPMax = 30;
+defaultValues=MP = 20;
+defaultValues=MPMax = 20;
+defaultValues=TrueMPMax = 20;
+defaultValues=PhysAtk = 3;
+defaultValues=PhysDef = 1;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 1;
+defaultValues=MagEva = 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 3;
+defaultValues=actTime = 30;
+
+ruinModeSupportAbility=swiftness;
+
+defaultBodyPartSprites=armR=crab_arm;
+defaultBodyPartSprites=armL=crab_arm;
+defaultBodyPartSprites=legs=crab_legs;
+defaultBodyPartSprites=head=crab_head;
+defaultBodyPartSprites=face=crab_face;
+defaultBodyPartSprites=torso=template_torso;
+
+
+partSpritesThatTakePriorityOverClass=armR;
+partSpritesThatTakePriorityOverClass=armL;
+
+skinPalette = pRedD;
+clothPalette = pCBlack;
+
+skinPalettes=pRedD;
+skinPalettes=pOrange;
+skinPalettes=pRedD2;
+skinPalettes=pBluegreen;
+skinPalettes=pBlue;
+
+fxSpeech = sfx_monsterSassy;
+fxOnPhysicalHPDmg = hitDust;
+fxOnPhysicalHPDmg = sfx_monsterSassy_short;
+fxOnDeath = hitDust_strong;
+fxOnDeath = sfx_monsterSassy;
+
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+aggressiveness = 0.5;
+bravery = 0.65;
+honor = 0.3;
+intelligence = 0.4;
+
+defaultFaction = enemy;
+defaultDialogNode = ;
+dialog_speechFont=foreignScript1;
+
+constantAvEffects=av_crub1;
+
+
+randomNames=Ankah;
+randomNames=Anik;
+randomNames=Akkan;
+randomNames=Aik;
+randomNames=Ankana;
+randomNames=Ankadak;
+randomNames=Akedake;
+randomNames=Birk;
+randomNames=Bilk;
+randomNames=Bopar;
+randomNames=Banke;
+randomNames=Colmanka;
+randomNames=Curz;
+randomNames=Corra;
+randomNames=Corak;
+randomNames=Calh;
+randomNames=Curmer;
+randomNames=Corvey;
+randomNames=Cravian;
+randomNames=Curaka;
+randomNames=Corlake;
+randomNames=Candanda;
+randomNames=Corkama;
+randomNames=Cahanka;
+randomNames=Driss;
+randomNames=Dalk;
+randomNames=Dina;
+randomNames=Dolce;
+randomNames=Duble;
+randomNames=Dukar;
+randomNames=Dudkadu;
+randomNames=Dukande;
+randomNames=Elak;
+randomNames=Ededd;
+randomNames=Ecker;
+randomNames=Ecco;
+randomNames=Enkaner;
+randomNames=Echkar;
+randomNames=Flink;
+randomNames=Flank;
+randomNames=Flunk;
+randomNames=Fimer;
+randomNames=Gik;
+randomNames=Groak;
+randomNames=Gamkey;
+randomNames=Gokago;
+randomNames=Golko;
+randomNames=Gica;
+randomNames=Hull;
+randomNames=Horf;
+randomNames=Hurkan;
+randomNames=Hinky;
+randomNames=Hoak;
+randomNames=Holke;
+randomNames=Hokhark;
+randomNames=Inka;
+randomNames=Iun;
+randomNames=Ikker;
+randomNames=Jourk;
+randomNames=Jonk;
+randomNames=Jinty;
+randomNames=Jankja;
+randomNames=Jokjok;
+randomNames=Kolk;
+randomNames=Kahul;
+randomNames=Koul;
+randomNames=Koukka;
+randomNames=Kilim;
+randomNames=Lagk;
+randomNames=Lanc;
+randomNames=Lonc;
+randomNames=Lunk;
+randomNames=Limk;
+randomNames=Lomc;
+randomNames=Lormk;
+randomNames=Mihalc;
+randomNames=Molche;
+randomNames=Mico;
+randomNames=Mikah;
+randomNames=Monloker;
+randomNames=Nolce;
+randomNames=Noko;
+randomNames=Niol;
+randomNames=Nikko;
+randomNames=Nob;
+randomNames=Nocal;
+randomNames=Nimkame;
+randomNames=Nikalmakal;
+randomNames=Olke;
+randomNames=Ocal;
+randomNames=Onker;
+randomNames=Ollem;
+randomNames=Okayne;
+randomNames=Polk;
+randomNames=Pilav;
+randomNames=Pock;
+randomNames=Polpa;
+randomNames=Pim;
+randomNames=Pinte;
+randomNames=Plick;
+randomNames=Rolk;
+randomNames=Roile;
+randomNames=Rimm;
+randomNames=Reket;
+randomNames=Reeks;
+randomNames=Roncon;
+randomNames=Rogo;
+randomNames=Riglam;
+randomNames=Riska;
+randomNames=Stov;
+randomNames=Sloke;
+randomNames=Sanc;
+randomNames=Slack;
+randomNames=Sorko;
+randomNames=Slokker;
+randomNames=Spon;
+randomNames=Supi;
+randomNames=Sillim;
+randomNames=Tunec;
+randomNames=Tribis;
+randomNames=Trippe;
+randomNames=Turp;
+randomNames=Toc;
+randomNames=Takta;
+randomNames=Tolik;
+randomNames=Toto;
+randomNames=Tocko;
+randomNames=Unka;
+randomNames=Unile;
+randomNames=Usihr;
+randomNames=Uger;
+randomNames=Volc;
+randomNames=Vink;
+randomNames=Woppet;
+randomNames=Winle;
+randomNames=Wolxe;
+randomNames=Wonk;
+randomNames=Yunce;
+randomNames=York;
+randomNames=Yie;
+randomNames=Zok;
+
+ruinAvEffects=ruinAv_crub1;
+ruinAvEffects=ruinAv_crub2;
+ruinAvEffects=ruinAv_crub3;
+[AvEffect]
+ID=ruinAv_crub1;
+actorValue=PhysAtk; magnitude=1; duration=-1;
+[AvEffect]
+ID=ruinAv_crub2;
+actorValue=MagAtk; magnitude=1; duration=-1;
+[AvEffect]
+ID=ruinAv_crub3;
+actorValue=PhysDef; magnitude=2; duration=-1;
+[AvEffect]
+ID=av_crub1;
+actorValue=PhysDef; magnitude=2; duration=-1;
+[ActorTypeReaction]
+ID=crub;
+actorValues=itchy; actorValues=wet; damageMultiplier=0;
+[ActorTypeReaction]
+ID=crub;
+element=water; damageMultiplier=1; healMultiplier=1;
+[ActorTypeReaction]
+ID=crub;
+element=elec; damageMultiplier=1.3; healMultiplier=1;
+[JournalEntry]
+ID=journal_crub;
+category=creature; halfPage=true; rarity=2;
+title=Crub;
+text=<icon=j_crub><title=Crub><brAdj=>Crustaceans that form small hunter-gatherer societies around reefs and beaches. While some Crub groups are peaceful, many of them raid nearby settlements or passing ships. If a Crub loses a limb, it can regenerate within 1-2 years. This may be why Crub are so bold in combat.<br=>  Immune to Itchy & Wet<n=>  +2 <icon=PhysDef>Defense, 30% Weakness vs. Elec;
+
+
+[ActorType] ID=cleever;
+name=Cleever;
+description=Remorseless man-like arthropods.;
+journalID=journal_cleever;
+bodyStructure=humanTall_longArms2;
+canSpawnWithClass = true;
+randomSkinPaletteOnSpawn = true;
+playerUnlockable=false;
+
+humanoid = true;
+movementSpeed = 7;
+unarmedPower = 2;
+unarmedAction = punch;
+
+XPDecayPerKillMult=0.5;
+
+defaultValues=HP= 26;
+defaultValues=HPMax = 26;
+defaultValues=TrueHPMax = 26;
+defaultValues=MP = 20;
+defaultValues=MPMax = 20;
+defaultValues=TrueMPMax = 20;
+defaultValues=PhysAtk = 3;
+defaultValues=PhysDef = 1;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 1;
+defaultValues=MagEva = 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 3;
+defaultValues=actTime = 30;
+
+ruinModeSupportAbility=swiftness;
+
+defaultBodyPartSprites=armR=cleever_arm;
+defaultBodyPartSprites=armL=cleever_arm;
+defaultBodyPartSprites=legs=cleever_legs;
+defaultBodyPartSprites=head=cleever_head;
+defaultBodyPartSprites=head=cleever_head2;
+defaultBodyPartSprites=head=cleever_head3;
+defaultBodyPartSprites=back=cleever_back;
+defaultBodyPartSprites=face=;
+defaultBodyPartSprites=torso=template_torso;
+
+bodyPartSprites=legs=cleever_legs;
+bodyPartSprites=legs=cleever_legs2;
+bodyPartSprites=head=cleever_head;
+bodyPartSprites=head=cleever_head2;
+bodyPartSprites=head=cleever_head3;
+
+partSpritesThatTakePriorityOverClass=armR;
+partSpritesThatTakePriorityOverClass=armL;
+--partSpritesThatTakePriorityOverClass=shoulderR;
+--partSpritesThatTakePriorityOverClass=shoulderL;
+
+skinPalette = pRedD;
+clothPalette = pCRedD;
+
+skinPalettes=pRedD;
+skinPalettes=pRedD2;
+skinPalettes=pRedbrown;
+
+fxSpeech = sfx_vorpal_short;
+fxOnPhysicalHPDmg = hitDust;
+fxOnPhysicalHPDmg = sfx_vorpal_short;
+fxOnDeath = hitDust_strong;
+fxOnDeath = sfx_vorpal;
+
+
+idleAnim = idle;
+walkAnim = walk_fast_lurch;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+aggressiveness = 1;
+bravery = 1;
+honor = 0.0;
+intelligence = 0.35;
+
+defaultFaction = enemy;
+defaultDialogNode = ;
+dialog_speechFont=foreignScript1;
+
+constantAvEffects=av_cleever1;
+
+ruinAvEffects=ruinAv_cleever1;
+
+randomNames=An'av;
+randomNames=An'losa;
+randomNames=An'kove;
+randomNames=Akbara;
+randomNames=Aike;
+randomNames=Ailousk;
+randomNames=Alvi;
+randomNames=Allino;
+randomNames=Avol;
+randomNames=Diolsav;
+randomNames=Elcade;
+randomNames=Iklon;
+randomNames=Ikbrek;
+randomNames=Ilkhang;
+randomNames=Ilkwar;
+randomNames=Koval;
+randomNames=Koal;
+randomNames=Klov;
+randomNames=Karpa;
+randomNames=Klove;
+randomNames=Klok;
+randomNames=Konklowsk;
+randomNames=Kosnil;
+randomNames=Kovuul;
+randomNames=Kinsaka;
+randomNames=Lodov;
+randomNames=Liov;
+randomNames=Leev;
+randomNames=Livik;
+randomNames=Loskk;
+randomNames=Lok'av;
+randomNames=Lok'leah;
+randomNames=Losai;
+randomNames=Olanma;
+randomNames=Oldav;
+randomNames=Olna;
+randomNames=Olsam;
+randomNames=Sald;
+randomNames=Skole;
+randomNames=Sulk;
+randomNames=Onka;
+randomNames=Sensul;
+randomNames=Vyklo;
+randomNames=Vilok;
+randomNames=Vikov;
+randomNames=Vulklo;
+randomNames=Vulk;
+[ActorTypeReaction]
+ID=cleever;
+actorValues=silence; actorValues=blind; actorValues=itchy; actorValues=wet; damageMultiplier=0;
+[AvEffect]
+ID=av_cleever1;
+actorValue=actTime; magnitude=-2; duration=-1;
+[AvEffect]
+ID=ruinAv_cleever1;
+actorValue=actTime; magnitude=-2; duration=-1;
+[JournalEntry]
+ID=journal_cleever;
+category=creature; halfPage=true; rarity=2;
+title=Cleever;
+text=<icon=j_cleever><title=Cleever><brAdj=>Gangly, headless humanoids with crustacean shells. Their bodies are punctuated by long, spiny growths. Cleever raiders emerge from the depths on their shellships to attack passing fleets. No peaceful contact or successful communication has ever been recorded. If they have a culture, it is a brutal one: Cleever fight using weapons crafted from the shells & spines of their brethren.;
+
+
+[ActorType] ID=diecast; 
+name=Diecast;
+description=Diecast are odd, half-stone beings that hail from the realm of Graven.<br=> +8 <icon=HP> Max HP<n=> 30% Weakness vs. Ice;
+journalID=journal_diecast;
+canSpawnWithClass = true;
+randomSkinPaletteOnSpawn = true;
+playerUnlockable=true;
+
+bodyStructure=human;
+humanoid = true;
+movementSpeed = 6;
+unarmedPower = 2;
+unarmedAction = punch;
+
+defaultValues=HP = 30;
+defaultValues=HPMax = 30;
+defaultValues=TrueHPMax = 30;
+defaultValues=MP = 20;
+defaultValues=MPMax = 20;
+defaultValues=TrueMPMax = 20;
+defaultValues=PhysAtk = 3;
+defaultValues=PhysDef = 1;
+defaultValues=PhysEva= 0;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 1;
+defaultValues=MagEva= 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 3;
+defaultValues=actTime = 30;
+skinPalette = pGreyD2;
+clothPalette = pGreyD;
+
+fxSpeech = sfx_speech;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = humanDeath;
+
+defaultBodyPartSprites=armR=diecast_armR;
+defaultBodyPartSprites=armL=diecast_armL;
+defaultBodyPartSprites=legs=diecast_legs;
+defaultBodyPartSprites=head=diecast_head;
+defaultBodyPartSprites=face=oneEye_face;
+defaultBodyPartSprites=torso=template_torso;
+
+bodyPartSprites=head=diecast_head;
+bodyPartSprites=head=diecast_head2;
+bodyPartSprites=head=diecast_head3;
+
+bodyPartSprites=face=oneEye_face;
+bodyPartSprites=face=template_face;
+bodyPartSprites=face=meh_face;
+bodyPartSprites=face=sleepy_face;
+bodyPartSprites=face=angry_face;
+bodyPartSprites=face=unibrow_face;
+bodyPartSprites=face=masked_face;
+
+bodyPartSprites=legs=template_legs;
+bodyPartSprites=legs=legs_dress;
+bodyPartSprites=legs=legs_lightArmor;
+bodyPartSprites=legs=legs_heavyBoots;
+
+partSpritesThatTakePriorityOverClass=head;
+partSpritesThatTakePriorityOverClass=legs;
+
+skinPalettes=pGreyD2;
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+aggressiveness = 0.5;
+bravery = 0.6;
+honor = 0.5;
+intelligence = 0.5;
+
+defaultDialogNode = auto;
+defaultFaction = enemy;
+dialog_speechFont=ruluorn;
+
+randomNames=Colburn;
+randomNames=Retsear;
+randomNames=Velstone;
+randomNames=Bolhand;
+randomNames=Garqins;
+randomNames=Gorwind;
+randomNames=Basvite;
+randomNames=Milblaze;
+randomNames=Banhorn;
+randomNames=Tirflight;
+randomNames=Corbanner;
+randomNames=Plystone;
+randomNames=Alabilst;
+randomNames=Wystorm;
+randomNames=Polslide;
+randomNames=Borwhirl;
+randomNames=Jealvast;
+randomNames=Phisand;
+randomNames=Erastone;
+randomNames=Tycryst;
+randomNames=Borcrys;
+randomNames=Edcoven;
+randomNames=Andmaster;
+randomNames=Wryslite;
+randomNames=Zestrole;
+randomNames=Melmind;
+randomNames=Kolwind;
+randomNames=Lidesilt;
+randomNames=Orsleet;
+randomNames=Pelgrass;
+randomNames=Minraze;
+randomNames=Randoze;
+randomNames=Burquin;
+randomNames=Azjolt;
+randomNames=Anskarn;
+randomNames=Murskore;
+randomNames=Rycross;
+randomNames=Bilvind;
+randomNames=Lokill;
+randomNames=Indwrath;
+randomNames=Eldrane;
+randomNames=Midjolt;
+randomNames=Danzear;
+randomNames=Ophcross;
+randomNames=Hinstale;
+randomNames=Rastorrin;
+randomNames=Worsilt;
+randomNames=Ashslate;
+randomNames=Tearstone;
+randomNames=Inlathe;
+randomNames=Bolsilver;
+randomNames=Rysliver;
+randomNames=Ginsore;
+
+constantAvEffects=av_diecast1;
+
+ruinAvEffects=ruinAv_diecast1;
+ruinAvEffects=ruinAv_diecast2;
+[AvEffect]
+ID=ruinAv_diecast1;
+actorValue=PhysDef; magnitude=1; duration=-1;
+[AvEffect]
+ID=ruinAv_diecast2;
+actorValue=PhysAtk; magnitude=1; duration=-1;
+[AvEffect]
+ID=av_diecast1;
+actorValue=TrueHPMax; magnitude=8; duration=-1;
+
+[ActorTypeReaction]
+ID=diecast;
+element=ice; damageMultiplier=1.3; healMultiplier=1;
+
+[JournalEntry]
+ID=journal_diecast;
+category=creature; halfPage=true; rarity=3; rewardMod=100;
+title=Diecast;
+text=<icon=j_diecast><title=Diecast><brAdj=>Diecast are humanoids native to Graven. The process is not fully understood, but when they are 'born' they are melded with minerals & organic matter. Diecast are separated into social castes based on their composite materials- the lowest caste is common Graven rock, or 'junkstone'.<br=>  +8 <icon=HP> Max HP, 30% Weakness vs. Ice;
+
+[ActorType] ID=automaton; 
+name=Automaton;
+journalID=journal_automaton;
+playerUsable= false;
+canSpawnWithClass = true;
+randomSkinPaletteOnSpawn = false;
+
+unrevivable=true;
+bodyStructure=humanMedGlowFace;
+humanoid = true;
+movementSpeed = 6;
+unarmedPower = 4;
+unarmedAction = punch;
+defaultValues=HP=64;
+defaultValues=HPMax = 64;
+defaultValues=TrueHPMax = 64;
+defaultValues=MP = 32;
+defaultValues=MPMax = 32;
+defaultValues=TrueMPMax = 32;
+defaultValues=PhysAtk = 10;
+defaultValues=PhysDef = 6;
+defaultValues=PhysEva= 0;
+defaultValues=MagAtk = 6;
+defaultValues=MagDef = 2;
+defaultValues=MagEva= 0;
+defaultValues=Acc = 0.8;
+defaultValues=moveDistance = 3;
+defaultValues=actTime = 30;
+defaultValues=sight = 1;
+skinPalette = zoneStone;
+
+ruinModeSupportAbility=criticalGShield;
+
+fxSpeech = shortBolt;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = sfx_woodCrash;
+
+defaultBodyPartSprites=armR=template_arm;
+defaultBodyPartSprites=armL=template_arm;
+defaultBodyPartSprites=legs=automaton_legs;
+defaultBodyPartSprites=head=automaton_head;
+defaultBodyPartSprites=face=automaton_face;
+defaultBodyPartSprites=torso=template_torso;
+
+
+skinPalette=zoneMisc8;
+clothPalette=zoneMisc8;
+armorPalette=zoneMisc8;
+
+idleAnim = idle;
+walkAnim = automaton_walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+aggressiveness = 0.5;
+bravery = 1;
+honor = 0;
+intelligence = 0.5;
+
+defaultDialogNode = auto;
+dialog_speechFont=scuri;
+
+randomNames=AV-S101;
+randomNames=AV-S102;
+randomNames=AV-S103;
+randomNames=AV-S104;
+randomNames=AV-S105;
+randomNames=AV-S106;
+randomNames=AV-S107;
+randomNames=AV-S108;
+randomNames=AV-S109;
+randomNames=AV-S111;
+randomNames=AV-S112;
+randomNames=AV-S113;
+randomNames=AV-S114;
+randomNames=AV-S115;
+randomNames=AV-S116;
+randomNames=AV-S117;
+randomNames=AV-S118;
+randomNames=AV-S119;
+randomNames=AV-S121;
+randomNames=AV-S122;
+randomNames=AV-S123;
+randomNames=AV-S124;
+randomNames=AV-S125;
+randomNames=AV-S126;
+randomNames=AV-S127;
+randomNames=AV-S128;
+randomNames=AV-S129;
+randomNames=AV-S141;
+randomNames=AV-S142;
+randomNames=AV-S143;
+randomNames=AV-S144;
+randomNames=AV-S145;
+randomNames=AV-S146;
+randomNames=AV-S147;
+randomNames=AV-S148;
+randomNames=AV-S149;
+randomNames=AV-S171;
+randomNames=AV-S172;
+randomNames=AV-S173;
+randomNames=AV-S174;
+randomNames=AV-S175;
+randomNames=AV-S176;
+randomNames=AV-S177;
+randomNames=AV-S178;
+randomNames=AV-S179;
+randomNames=AV-S201;
+randomNames=AV-S202;
+randomNames=AV-S203;
+randomNames=AV-S204;
+randomNames=AV-S205;
+randomNames=AV-S206;
+randomNames=AV-S207;
+randomNames=AV-S208;
+randomNames=AV-S209;
+randomNames=AV-X101;
+randomNames=AV-X102;
+randomNames=AV-X103;
+randomNames=AV-X104;
+randomNames=AV-X105;
+randomNames=AV-X106;
+randomNames=AV-X107;
+randomNames=AV-X108;
+randomNames=AV-X109;
+randomNames=AV-P01;
+randomNames=AV-P02;
+randomNames=AV-P03;
+randomNames=AV-P04;
+randomNames=AV-P05;
+randomNames=AV-P06;
+randomNames=AV-P07;
+randomNames=AV-P08;
+randomNames=AV-P09;
+randomNames=AV-P11;
+randomNames=AV-P12;
+randomNames=AV-P13;
+randomNames=AV-P14;
+randomNames=AV-P15;
+randomNames=AV-P16;
+randomNames=AV-P77;
+randomNames=AV-P18;
+randomNames=AV-P19;
+
+ruinAvEffects=ruinAv_automaton1;
+ruinAvEffects=ruinAv_automaton2;
+[AvEffect]
+ID=ruinAv_automaton1;
+actorValue=PhysAtk; magnitude=-2; duration=-1;
+[AvEffect]
+ID=ruinAv_automaton2;
+actorValue=PhysDef; magnitude=-3; duration=-1;
+
+[ActorTypeReaction]
+ID=automaton;
+element=poison; element=life; element=ruin;
+damageMultiplier=0; healMultiplier=0;
+[ActorTypeReaction]
+ID=automaton;
+element=elec;
+damageMultiplier=1.5; healMultiplier=1;
+[ActorTypeReaction]
+ID=automaton;
+element=water;
+damageMultiplier=1.3; healMultiplier=1;
+[ActorTypeReaction]
+ID=automaton;
+actorValues=morale; actorValues=poison;
+actorValues=itchy; actorValues=decay;
+actorValues=regen; actorValues=blind;
+actorValues=sleep;
+damageMultiplier=0; healMultiplier=0;
+[ActorTypeReaction]
+ID=automaton; actorValues=drowning; action=drown;
+[ActorTypeLight]
+ID=automaton; texture=lightmaskLine; red=1; blue=1; green=0.7; alpha=0.2; size=0.3; flicker=0; Y=-0.5; 
+[JournalEntry]
+ID=journal_automaton;
+category=creature; halfPage=true; rarity=4;
+title=Automaton;
+text=<icon=j_automaton><title=Automaton><brAdj=>Extremely complex volskarn devices make up these rolling machines. They possess no actual AI, instead reacting to nearby essence with pre-programmed movements driven by a network of force triggers. Automatons are rarely used in proper military engagements due to extremely high component costs. Their attacks have massive power, but are mercifully quite inaccurate.;
+
+[ActorType] ID=zombie; 
+name=Undead;
+journalID=journal_undead;
+bodyStructure=humanGlowFace;
+humanoid = true;
+fearless=true;
+canSeeStatsTravelMode=false;
+unrevivable=true;
+
+movementSpeed = 11;
+unarmedPower = 5;
+unarmedAction = zombAttack;
+
+defaultValues=HP=60;
+defaultValues=HPMax = 60;
+defaultValues=TrueHPMax = 60;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 9;
+defaultValues=PhysDef = 5;
+defaultValues=PhysEva= 15;
+defaultValues=MagAtk = 1;
+defaultValues=MagDef = 5;
+defaultValues=MagEva= 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 4;
+defaultValues=actTime = 30;
+defaultValues=skill_Fist = 0;
+defaultValues=skill_Ruin = 2;
+defaultValues=sight = 1;
+skinPalette = pHuman1;
+
+ruinModeSupportAbility=ruinAura;
+
+defaultSupportAbilities = counter;
+
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = AngryPainBlubber;
+
+
+defaultBodyPartSprites=armR=zomb_arm;
+defaultBodyPartSprites=armL=zomb_arm;
+defaultBodyPartSprites=legs=zomb_legs;
+defaultBodyPartSprites=head=zomb_head;
+defaultBodyPartSprites=face=zomb_face;
+defaultBodyPartSprites=torso=zomb_torso;
+
+
+bodyPartSprites=face=zomb_face;
+--bodyPartSprites=face=zomb_face2;
+--bodyPartSprites=face=zomb_face3;
+--bodyPartSprites=face=zomb_face_creeper;
+
+
+skinPalettes=pHuman1;
+
+idleAnim = idle;
+walkAnim = fastwalk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+aggressiveness = 4;
+bravery = 4;
+honor = 0;
+intelligence = 0.3;
+
+defaultAI=chase;
+defaultDialogNode = ;
+
+constantAvEffects=av_undead1;
+constantAvEffects=av_undead2;
+[AvEffect]
+ID=av_undead1;
+actorValue=PhysAtk; magnitude=4; duration=-1;
+[AvEffect]
+ID=av_undead2;
+actorValue=skill_Ruin; magnitude=2; duration=-1;
+[ActorTypeReaction]
+ID=zombie;
+element=ruin;
+damageMultiplier=-1; healMultiplier=1;
+[ActorTypeReaction]
+ID=zombie;
+element=poison;
+damageMultiplier=0; healMultiplier=0;
+[ActorTypeReaction]
+ID=zombie;
+element=defiler;
+damageMultiplier=0.5; healMultiplier=0.5;
+[ActorTypeReaction]
+ID=zombie;
+element=life; element=antiUndead;
+damageMultiplier=2; healMultiplier=-1;
+[ActorTypeReaction]
+ID=zombie;
+element=bonemeld;
+damageMultiplier=5; healMultiplier=0;
+[ActorTypeReaction]
+ID=zombie;
+actorValues=morale; actorValues=poison;
+actorValues=itchy; actorValues=decay;
+actorValues=sleep;
+damageMultiplier=0; healMultiplier=0;
+[JournalEntry]
+ID=journal_undead;
+category=creature; halfPage=true; rarity=3;
+title=Undead;
+text=<icon=j_undead><title=Undead><brAdj=>One's essence slowly dissipates after death. However, with Ruin magic, this essence can be trapped & harnessed to create Undead. The undead are supernally strong and durable, feeling no pain. To commit necromancy is a grave sin in almost every society. Most necromancers are outcasts... or warlords, seeking to use the undead as shock troops.;
+
+
+[ActorType] ID=seekerZombie; 
+name=Undead;
+journalID=journal_undead;
+bodyStructure=humanGlowFace;
+humanoid = true;
+fearless=true;
+canSeeStatsTravelMode=false;
+randomSkinPaletteOnSpawn = true;
+unrevivable=true;
+
+movementSpeed = 11;
+unarmedPower = 6;
+unarmedAction = zombAttack;
+
+defaultValues=HP=60;
+defaultValues=HPMax = 60;
+defaultValues=TrueHPMax = 60;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 9;
+defaultValues=PhysDef = 6;
+defaultValues=PhysEva= 15;
+defaultValues=MagAtk = 1;
+defaultValues=MagDef = 4;
+defaultValues=MagEva= 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 7;
+defaultValues=actTime = 25;
+defaultValues=skill_Fist = 2;
+defaultValues=sight = 1;
+skinPalette = pGreyD2;
+
+ruinModeSupportAbility=reckless;
+
+fxSpeech = PainBlubberEcho;
+fxOnPhysicalHPDmg = hitDust;
+fxOnPhysicalHPDmg = PainBlubberEcho;
+fxOnDeath = hitDust_strong;
+fxOnDeath = AngryPainBlubber;
+
+defaultBodyPartSprites=armR=zomb_arm;
+defaultBodyPartSprites=armL=zomb_arm;
+defaultBodyPartSprites=legs=zomb_legs;
+defaultBodyPartSprites=head=zomb_head_beard;
+defaultBodyPartSprites=face=zomb_face_seeker;
+defaultBodyPartSprites=torso=zomb_torso;
+
+skinPalettes=pGreyD;
+skinPalettes=pGreyD2;
+
+idleAnim = idle;
+walkAnim = fastwalk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+aggressiveness = 0;
+bravery = 4;
+honor = 0;
+intelligence = 0;
+
+defaultAI=seekerZomb;
+defaultDialogNode = ;
+[ActorTypeDetectAoE]
+ID=seekerZombie;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=7;
+arc=true;
+airborne=true;
+occupyAll=true;
+coneAngle=1;
+[ActorTypeLight]
+ID=seekerZombie; texture=lightmaskLine; red=1; blue=1; green=1.0; alpha=0.7; size=0.5; flicker=0; Y=-0.5; 
+[ActorTypeReaction]
+ID=seekerZombie;
+element=ruin;
+damageMultiplier=-1; healMultiplier=1;
+[ActorTypeReaction]
+ID=seekerZombie;
+element=poison;
+damageMultiplier=0; healMultiplier=0;
+[ActorTypeReaction]
+ID=seekerZombie;
+element=defiler;
+damageMultiplier=0.5; healMultiplier=0.5;
+[ActorTypeReaction]
+ID=seekerZombie;
+element=life; element=antiUndead;
+damageMultiplier=2; healMultiplier=-1;
+[ActorTypeReaction]
+ID=seekerZombie;
+element=bonemeld;
+damageMultiplier=5; healMultiplier=0;
+[ActorTypeReaction]
+ID=seekerZombie;
+actorValues=morale; actorValues=poison;
+actorValues=itchy; actorValues=blind;
+actorValues=sleep; 
+damageMultiplier=0; healMultiplier=0;
+
+
+[ActorType] ID=aspect_eye; 
+name=Aspect;
+description=;
+journalID=journal_aspect_eye;
+canSpawnWithClass = true;
+
+bodyStructure=humanGlowFace;
+humanoid = true;
+fearless=true;
+canSeeStatsTravelMode=false;
+unrevivable=true;
+disappearOnDeath=true;
+rotatedCorpse=false;
+showAlertIcon=false;
+
+movementSpeed = 6;
+unarmedPower = 2;
+unarmedAction = eye_glare_aspect;
+
+defaultValues=HP=90;
+defaultValues=HPMax = 90;
+defaultValues=TrueHPMax = 90;
+defaultValues=MP = 44;
+defaultValues=MPMax = 44;
+defaultValues=TrueMPMax = 44;
+defaultValues=PhysAtk = 1;
+defaultValues=PhysDef = 2;
+defaultValues=PhysEva= 15;
+defaultValues=MagAtk = 5;
+defaultValues=MagDef = 3;
+defaultValues=MagEva= 10;
+defaultValues=Acc = 1.2;
+defaultValues=moveDistance = 3;
+defaultValues=actTime = 28;
+defaultValues=skill_Ruin = 2;
+skinPalette=pBlack;
+clothPalette=pGreyD2;
+armorPalette=pGreyD2;
+
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = hitDust;
+fxOnPhysicalHPDmg = sfx_vorpal_short;
+fxOnDeath = hitDust_strong;
+fxOnDeath = sfx_vorpal;
+fxOnDeath = spookyOccurence_loud;
+
+spawnFX_frame4 = pixelBlack_outward;
+
+powerLevelMult = 3;
+
+ruinModeSupportAbility=criticalDestroy;
+
+defaultBodyPartSprites=legs=aspect_legs;
+defaultBodyPartSprites=head=aspect_eye_head;
+defaultBodyPartSprites=armR=template_arm;
+defaultBodyPartSprites=armL=template_arm;
+defaultBodyPartSprites=face=aspect_face;
+defaultBodyPartSprites=torso=template_torso;
+
+partSpritesThatTakePriorityOverClass=head;
+partSpritesThatTakePriorityOverClass=legs;
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die_headfly;
+
+aggressiveness = 11;
+bravery = 11;
+honor = 0.0;
+intelligence = 0.9;
+
+defaultDialogNode = ;
+dialog_speechFont=scuri;
+
+
+[ActorTypeDetectAoE]
+ID=aspect_eye;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=7;
+arc=true;
+airborne=true;
+occupyAll=true;
+coneAngle=360;
+[ActorTypeReaction]
+ID=aspect_eye;
+actorValues=morale;
+actorValues=sleep;
+damageMultiplier=0;
+healMultiplier=1;
+[ActorTypeReaction]
+ID=aspect_eye;
+actorValues=preserve;
+damageMultiplier=0;
+healMultiplier=0;
+[ActorTypeReaction]
+ID=aspect_eye;
+element=HPbased; 
+damageMultiplier=0.7; healMultiplier=0.7;
+[ActorTypeReaction]
+ID=aspect_eye;
+element=ruin; 
+damageMultiplier=0.65; healMultiplier=1;
+[ActorTypeReaction]
+ID=aspect_eye;
+actorValues=frozen;
+actorValues=stun;
+actorValues=disable;
+actorValues=silence;
+actorValues=blind;
+damageMultiplier=0.7;
+healMultiplier=1;
+[ActorTypeReaction]
+ID=aspect_eye;
+element=incapacitated; action=aspect_eye_death_act;
+[ActorTypeReaction]
+ID=aspect_eye;
+element=combatStart;
+damageMultiplier=1; healMultiplier=1; action=lowerMorale;
+[JournalEntry]
+ID=journal_aspect_eye;
+category=creature; halfPage=true; rarity=0;
+title=Aspect;
+text=<icon=j_aspect><title=Aspect><brAdj=><font=ruluorn_small>Loremipsum D O L O R sitametid cumlegere eligendi mel eu tale autem aliquid. Sea mutat mollis necessitatibus utinusu semper ancillae forensibus. Vel an legimus phaedrum rationibus meicusensibus intellegam. Ad vel appareat singulis deterruisset qui cualii aliquam. Mundi persecutiad V E R sari U M id est te consulomnesque maiestatishis alia dissentiet his id. Eu insolens instructior eam primainterpretaris conclusionemque te qui. Ea summo possit rationibus eam.;
+
+
+[ActorType] ID=aspect_minion; 
+name=Aspect;
+description=;
+journalID=journal_aspect_minion;
+canSpawnWithClass = true;
+
+bodyStructure=human;
+humanoid = true;
+fearless=true;
+canSeeStatsTravelMode=false;
+unrevivable=true;
+disappearOnDeath=true;
+showAlertIcon=false;
+
+movementSpeed = 6;
+unarmedPower = 3;
+unarmedAction = punch;
+
+defaultValues=HP=34;
+defaultValues=HPMax = 34;
+defaultValues=TrueHPMax = 34;
+defaultValues=MP = 22;
+defaultValues=MPMax = 22;
+defaultValues=TrueMPMax = 22;
+defaultValues=PhysAtk = 5;
+defaultValues=PhysDef = 1;
+defaultValues=PhysEva= 0;
+defaultValues=MagAtk = 5;
+defaultValues=MagDef = 1;
+defaultValues=MagEva= 0;
+defaultValues=Acc = 1;
+defaultValues=sight = 1;
+defaultValues=moveDistance = 3;
+defaultValues=actTime = 33;
+skinPalette=pBlack;
+clothPalette=pGreyD2;
+armorPalette=pGreyD2;
+
+ruinModeSupportAbility=absorbAura;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = hitDust;
+fxOnPhysicalHPDmg = sfx_vorpal_short;
+fxOnDeath=pixelCloud_black_silent;
+fxOnDeath = hitDust_strong;
+fxOnDeath = sfx_vorpal;
+
+defaultBodyPartSprites=legs=aspect_legs;
+defaultBodyPartSprites=head=aspect_head;
+defaultBodyPartSprites=armR=template_arm;
+defaultBodyPartSprites=armL=template_arm;
+defaultBodyPartSprites=face=;
+defaultBodyPartSprites=torso=template_torso;
+
+partSpritesThatTakePriorityOverClass=head;
+partSpritesThatTakePriorityOverClass=legs;
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die_nohead;
+
+aggressiveness = 11;
+bravery = 11;
+honor = 0.0;
+intelligence = 0.2;
+
+defaultDialogNode = ;
+dialog_speechFont=scuri;
+
+
+[ActorTypeDetectAoE]
+ID=aspect_minion;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=7;
+arc=true;
+airborne=true;
+occupyAll=true;
+coneAngle=360;
+[ActorTypeReaction]
+ID=aspect_minion;
+actorValues=morale;
+actorValues=sleep;
+actorValues=blind;
+actorValues=silence;
+damageMultiplier=0;
+healMultiplier=1;
+[ActorTypeReaction]
+ID=aspect_minion;
+actorValues=preserve;
+damageMultiplier=0;
+healMultiplier=0;
+[ActorTypeReaction]
+ID=aspect_minion;
+element=ruin; 
+damageMultiplier=0.65; healMultiplier=1;
+[ActorTypeReaction]
+ID=aspect_minion;
+element=slayAspect; action=removing_aspect_act;
+
+[JournalEntry]
+ID=journal_aspect_minion;
+category=creature; halfPage=true; rarity=0;
+title=Aspect;
+text=<icon=j_aspect_minion><title=Aspect><brAdj=>                       <font=ruluorn_small>excepturi sint obcaecati cupiditate non provident siMilique sunt in culpa qui Officia deseruNt mollitia animi id est laborUm et d o l o r uM fuga. nulla pariatur Excepturi siNt obcaecati cupiditate non providenT.;
+
+
+[ActorType] ID=jasce; 
+name=Jasce;
+journalID=journal_jasce;
+playerUsable= false;
+canSeeStatsTravelMode=false;
+
+bodyStructure=humanMed;
+humanoid = true;
+movementSpeed = 8;
+unarmedPower = 7;
+unarmedAction = punch;
+
+defaultValues=HP = 30;
+defaultValues=HPMax = 30;
+defaultValues=TrueHPMax = 30;
+defaultValues=MP = 20;
+defaultValues=MPMax = 20;
+defaultValues=TrueMPMax= 20;
+defaultValues=PhysAtk = 3;
+defaultValues=PhysDef = 1;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 1;
+defaultValues=MagEva = 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 3;
+defaultValues=actTime= 30;
+
+defaultBodyPartSprites=armR=npc1_arm;
+defaultBodyPartSprites=armL=npc1_arm;
+defaultBodyPartSprites=legs=ferren_legs;
+defaultBodyPartSprites=head=scur_head;
+defaultBodyPartSprites=face=scur_face;
+defaultBodyPartSprites=torso=template_torso;
+
+skinPalette = pBlack;
+clothPalette = pCRed;
+
+fxSpeech = sfx_speech;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = humanDeath;
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+aggressiveness = 0.5;
+bravery = 99;
+honor = 0.3;
+intelligence = 3;
+
+dialog_speechFont=scuri;
+[JournalEntry]
+ID=journal_jasce;
+category=creature; halfPage=true; rarity=4;
+title=God-king Jasce;
+text=<icon=j_jasce><title=God-king Jasce><brAdj=>Jasce, self-proclaimed God of All Realms. He most commonly takes the appearance of a Scurio with black, white, or golden fur. 50 years ago he appeared in Dralir with a throng of supporters and declared his divinity. His bloody revolution crushed Dralir, which he took over and renamed after himself. Since then he has led with a firm hand, and his followers grow by the day.;
+
+
+
+[ActorType] ID=dummy; 
+name=Dummy;
+fearless=true;
+cannotStartCombat=true;
+defaultHostile=false;
+
+bodyStructure=human;
+humanoid = true;
+movementSpeed = 6;
+unarmedPower = 3;
+unarmedAction = punch;
+defaultValues=HP=30;
+defaultValues=HPMax = 30;
+defaultValues=TrueHPMax = 30;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 1;
+defaultValues=PhysEva= 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 1;
+defaultValues=MagEva= 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 0;
+defaultValues=jumpDistance = 0;
+defaultValues=actTime = 30;
+skinPalette = pOrange;
+armorPalette = pOrange;
+unarmoredPalette = pOrange;
+clothPalette = pOrange;
+
+defaultSupportAbilities = anchored;
+
+fxSpeech = sfx_speech;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+
+defaultBodyPartSprites=armR=template_arm;
+defaultBodyPartSprites=armL=template_arm;
+defaultBodyPartSprites=legs=dummy_legs;
+defaultBodyPartSprites=head=template_head;
+defaultBodyPartSprites=face=;
+defaultBodyPartSprites=torso=template_torso;
+
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = idle2;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = idle3;
+blockAnim = ;
+sleepAnim = idle3;
+drownAnim = idle3;
+criticalAnim = idle3;
+deadAnim = idle3;
+
+aggressiveness = 0;
+bravery = 1;
+honor = 1;
+intelligence = 0;
+
+dialog_speechFont=scuri;
+[ActorTypeReaction]
+ID=dummy;
+actorValues=push; actorValues=pushAt; actorValues=pull; actorValues=push_safe;
+damageMultiplier=0; healMultiplier=0;

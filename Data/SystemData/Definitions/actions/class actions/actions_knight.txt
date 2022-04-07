@@ -1,0 +1,274 @@
+[Action] ID=Wa_shove; 
+	name=猛撞;
+	icon=icon_Wa_push;
+	tooltip=使用武器推开对方 <math=c:rank> 格并造成90%伤害. 推到障碍物时会对你的目标和障碍物造成伤害.;
+	rankUpTooltip=每级 +1 推开距离.;
+	tooltipIcons=<icon=noRanged>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	XPCost=75;
+	XPCost=250;
+	XPCost=600;
+	
+	casterAnimation=shoulderbash;
+	casterAnimationDependsOnWeaponHand=true;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	requiredWeaponElement=melee;
+	
+	FXOnTarget=woosh;
+	FXOnTarget=weaponFX;
+[ActionAoE]
+	ID=Wa_shove; shape=10; 
+[AvAffecter]
+	ID=Wa_shove; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.9;
+	chance=w:chance;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Wa_shove;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Wa_shove; 
+	actorValue=push;
+	magnitude=c:rank;
+	duration=-2;
+	chance=w:chance;
+	FXOnHit=largePing;
+	FXOnHit=click;
+[AvAffecterAoE]
+	ID=Wa_shove;
+	cloneFrom=oneTile;
+
+
+[Action] ID=Wa_charge; 
+	name=冲锋;
+	icon=icon_Wa_charge;
+	tooltip=使用近战武器向前冲锋撞击远处的敌人，造成90%的伤害.;
+	rankUpTooltip=每级 +1 攻击距离.;
+	tooltipIcons=<icon=noRanged>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	XPCost=150;
+	XPCost=250;
+	XPCost=550;
+	XPCost=1200;
+	
+	casterAnimation=weapon;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	special=moveCasterNextToTarget;
+	requiredWeaponElement=melee;
+	
+	FXOnTarget=weaponFX;
+	FXOnCaster=sidewardLines;
+	FXOnCasterColor=Red;
+	FXOnCaster=woosh;
+[ActionAoE]
+	ID=Wa_charge; shape=2; 
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 1;
+	maxRangeBonus=c:rank;
+	airborne=false;
+	bypassAll=false;
+	occupyAll=true;
+	canSelectActors=true;
+	fReq=1 - m:actorInTheWayOfMoveToTarget;
+[AvAffecter]
+	ID=Wa_charge; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.9;
+	chance=w:chance;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Wa_charge;
+	cloneFrom=oneTile;
+	
+	
+
+[Action] ID=Wa_battlecry; 
+	name=战吼;
+	icon=icon_Wa_battlecry;
+	mpCost=2 * d:mpCostMult + d:mpCostMod;
+	tooltip=用你猛烈的战吼使敌人泄气持续 <icon=time><math=91+c:MagAtk*3>, 减少对方 <icon=PhysAtk><icon=MagAtk> 攻击和<icon=PhysDef><icon=MagDef> 防御.<n=>适合对抗直视你的敌人.;
+	rankUpTooltip=每级增加影响范围和效果.;
+	tooltipTopRight=<icon=MagAtk_small>;
+	
+	XPCost=220;
+	XPCost=560;
+	XPCost=900;
+	XPCost=1400;
+	
+	FXOnCaster=magicCharge;
+	FXOnTarget=gustyBlast;
+	FXOnTarget=DramaticNyeaow;
+	
+	casterAnimation=handsup_angry;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+[ActionAoE]
+	ID=Wa_battlecry; shape=0;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=Wa_battlecry; 
+	actorValue=morale;
+	magnitude= -1;
+	duration=91+c:MagAtk*3;
+	chance=100 * m:evaFacing + 20;
+	FXOnHit=downwardLines;
+	FXOnHitColor=Purple;
+	FXOnHit=sfx_debuffMild;
+	FXOnMiss=chargeFast;
+	FXOnTile=wind;
+	FXOnTileColor=White;
+[AvAffecterAoE]
+	ID=Wa_battlecry;
+	aoeCasterAsOrigin=true;
+	needsLoS = true;
+	needsLoE = false;
+	airborne = true;
+	minRange = 1;
+	maxRange = 2.5;
+	maxRangeBonus = c:rank;
+	coneAngle= 60;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+	canSelectAllies=false;
+	
+[Action] ID=Wa_Guard; 
+	name=守卫;
+	icon=icon_Wa_defend;
+	tooltip=减半受到的物理攻击伤害持续 <icon=time><math=60 + 20 * c:rank>.;
+	rankUpTooltip=每级 +<icon=time>20 持续时间.;
+	tooltipTopRight=;
+	harmful=false;
+	
+	mpCost=1 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=180;
+	XPCost=350;
+	XPCost=500;
+	
+	casterAnimation=charge;
+	maxRank=3;
+	
+	FXOnCaster=chargeFast;
+	FXOnCasterColor=SkyBlue;
+[ActionAoE]
+	ID=Wa_Guard;
+	cloneFrom=adjacentAndSelf;
+[AvAffecter]
+	ID=Wa_Guard;
+	harmful=false;
+	actorValue=guard;
+	magnitude=1;
+	duration=60 + 20 * c:rank;
+	chance=100;
+	FXOnHit=shield;
+	FXOnHitColor=SkyBlue;
+	FXOnTile=chargeFast;
+	FXOnTileColor=SkyBlue;
+	FXOnTile=sfx_sliceNoShingLow;
+[AvAffecterAoE]
+	ID=Wa_Guard;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=Wa_Bide; 
+	name=蓄力;
+	icon=icon_Wa_bide;
+	tooltip=准备蓄力攻击 +<math=20 + 10 * c:rank>% 伤害.;
+	rankUpTooltip=每级+10%伤害.;
+	tooltipIcons=<icon=noMove>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	chargeTime=15 * d:chargeTimeMult + d:chargeTimeMod;
+	
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	
+	XPCost=200;
+	XPCost=450;
+	XPCost=700;
+	
+	casterAnimation=weapon;
+	casterAnimationSpeed=0.7;
+	
+	requiredWeaponElement=weapon;
+	
+	special=requiresCharging;
+	special=cancelChargingOnMove;
+	
+	FXOnCaster=chargeBurst;
+	FXOnCasterColor=Gray;
+	FXOnCaster=sfx_risingSwish;
+	
+	FXOnTarget=weaponFX;
+[ActionAoE]
+	ID=Wa_Bide; shape=10;
+[AvAffecter]
+	ID=Wa_Bide; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 1.2 + w:magnitude * 0.1 * c:rank;
+	chance=w:chance;
+	duration=-2;
+	FXOnHit=hitDustQuiet;
+	FXOnHit=smallShakeHoriz;
+	FXOnHit=SLAM;
+[AvAffecterAoE]
+	ID=Wa_Bide;
+	 shape=11;
+	
+	
+[Action] ID=Wa_Brave; 
+	name=勇敢;
+	icon=icon_Wa_brave;
+	tooltip=增加4点 <icon=PhysAtk> 持续 <icon=time><math=70 + 30 * c:rank>.;
+	rankUpTooltip=每级 +<icon=time>30.;
+	tooltipTopRight=;
+	
+	harmful=false;
+	
+	maxRank=5;
+	canExceedMaxRankBy=1;
+	
+	XPCost=120;
+	XPCost=200;
+	XPCost=275;
+	XPCost=350;
+	XPCost=600;
+	
+	AIRatingMult=0.75;
+	
+	casterAnimation=charge;
+	
+	FXOnCaster=casting;
+	FXOnCasterColor=Red;
+	FXOnCaster=chargeSpiralFast_big;
+	FXOnCasterColor=Red;
+	FXOnCaster=chargeSpiralFast;
+	FXOnCasterColor=Red;
+	
+	FXOnTarget=sfx_powerup1;
+[ActionAoE]
+	ID=Wa_Brave; 
+	cloneFrom=adjacentAndSelf;
+	canSelectEnemies=false;
+[AvAffecter]
+	ID=Wa_Brave;
+	harmful=false;
+	actorValue=PhysAtk;
+	magnitude=4;
+	duration=70 + 30 * c:rank;
+	chance=100;
+	FXOnTile=upwardLines;
+	FXOnTileColor=Red;
+[AvAffecterAoE]
+	ID=Wa_Brave;
+	cloneFrom=oneTile;
+	

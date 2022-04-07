@@ -1,0 +1,124 @@
+
+[DialogNode] ID=port23_guy1a;
+animations=;
+animations=happy;
+statements=I worked up a powerful thirst!;
+statements=I don' wanna track mud inside, so Saul just sends the drinks out here t'me.;
+nextNodeID=;
+
+
+[DialogNode] ID=port23_guy2a;
+animations=sly;
+animations=sigh;
+statements=If you're sailing in deep water, you owe it to your crew to buy a cannon!;
+statements=No sense buying more than one of the same kind, though.<p> You can only use one at a time.;
+nextNodeID=;
+
+[DialogNode] ID=port23_guy3a;
+animations=sly;
+animations=sigh;
+statements=This here's a mining town...<p> but don't let that scare ya.;
+statements=Food's still good, and guild work pays jus' the same.;
+nextNodeID=;
+
+[DialogNode] ID=port23_guy4a;
+animations=sly;
+animations=sigh;
+animations=sly;
+statements=Hold on...<p> you look like a rough sort.;
+statements=No 'fense.<p> I mean you could hold your own in a fight.;
+statements=We got a use for someone like you.<p> Interested?;
+
+[DialogOption] text=Maybe. Tell me more.;
+animation=;
+nodeToConnectTo=port23_guy4b;
+[DialogOption] text=No thanks.;
+animation=sigh;
+newLineOfOptions=true;
+nodeToConnectTo=;
+
+[DialogNode] ID=port23_guy4b;
+animations=sigh;
+animations=;
+animations=sly;
+statements=Newest tunnel ran into some beasties.<p> Lost a good miner.;
+statements=Didn't get a good look at 'em but there's more than one.;
+statements=Clear the place out an' I reckon there's $500 in it for you.;
+
+[DialogOption] text=I'll do it.;
+animation=sly;
+formulaReq=m:partySize(5);
+nodeToConnectTo=port23_guy4c;
+[DialogOption] text=I'll do it.;
+animation=sly;
+formulaReq=1 - m:partySize(5);
+nodeToConnectTo=port23_guy4c_cant;
+[DialogOption] text=No thanks.;
+animation=sigh;
+newLineOfOptions=true;
+nodeToConnectTo=;
+
+[DialogNode] ID=port23_guy4c;
+animations=happy;
+animations=;
+statements=That's great.<p> I'll unlock the door for ya.;
+statements=Stay safe now, y'hear?;
+nextNodeID=;
+specialEffect=setDefaultNode,port23_guy5a;
+specialEffect=action,mechanismArea;
+
+[DialogNode] ID=port23_guy4c_cant;
+animations=sigh;
+animations=;
+animations=sigh;
+statements=Hol' on now.<p> I know I offered, but...;
+statements=Show me y'got at least 5 people to go in and I'll open 'er up.;
+statements=Just wouldn't rest easy with me lettin' ya go in with such a small group.;
+nextNodeID=;
+
+
+[DialogNode] ID=port23_guy5a;
+animations=sly;
+statements=How's it goin'?<p> Any luck?;
+
+[DialogOption] text=I cleared the tunnel.;
+animation=;
+formulaReq=g:clearedMinesPort23;
+nodeToConnectTo=port23_guy5b;
+[DialogOption] text=Not yet.;
+newLineOfOptions=true;
+nodeToConnectTo=;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=port23_guy5b;
+animations=happy;
+animations=;
+animations=sigh;
+statements=Great work!;
+statements=I said I'd pay $500...<p> but I can tell it weren't just a beastie.;
+nextNodeID=port23_guy5c;
+
+[DialogNode] ID=port23_guy5c;
+animations=happy;
+statements=Take this $550.;
+statements=And best of luck to ya.;
+specialEffect=addgp,550;
+specialEffect=setDefaultNode,port23_guy6a;
+specialEffect=fx,sfx_questComplete;
+specialEffect=modFame,combat,10;
+
+[DialogNode] ID=port23_guy6a;
+animations=sigh;
+animations=;
+statements=Business as usual now thanks to you.;
+statements=Take it easy.;
+
+
+
+
+
+
+
+

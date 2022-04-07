@@ -1,0 +1,102 @@
+--This example describes a group of a few Humans and one Scurio, most of which are Scholars.
+--They can be spawned by the Trigger 'spawn' effect.
+
+--They will be semi-scaled to the player party's power level -
+--If the player is strong, expect to see all 4 Humans spawn. If weak, only 2 of them will spawn.
+--This scaling can also add some additional stats/HP/etc., but not much.
+--The scaling can be influenced by the 'spawn' trigger.
+
+[SpawnData]
+ID=dudes;
+
+minActors = 1;
+maxActors = 5;
+
+--limits how many actorTypes can be rolled
+maxDifferentTypes = 99;
+
+actorTypesMins=human=2;
+actorTypesMaxes=human=4;
+actorTypesChanceToReroll=human=0;
+actorTypesMins=scurio=1;
+actorTypesMaxes=scurio=1;
+actorTypesChanceToReroll=scurio=0;
+actorClassesMins=scout=1;
+actorClassesMaxes=scout=1;
+actorClassesChanceToReroll=scout=0;
+actorClassesMins=scholar=0;
+actorClassesMaxes=scholar=5;
+actorClassesChanceToReroll=scholar=0;
+
+--most Actor variables can be overridden with this.
+--in this case we'll make them all smart.
+valuesDictOverrides=intelligence=1;
+
+--the Scurio will always spawn with an Essence Stone.
+mandatoryItemsPerActor_actorTypeID=scurio;
+mandatoryItemsPerActor_itemID=xpGem;
+
+--this lets Humans have a chance to have an Iron Shield
+optionalItemsPerActor_actorTypeID=human;
+optionalItemsPerActor_itemID=shield_iron;
+optionalItemsChanceToBeNothing=0;
+
+--this lets Humans have a chance to have a Dart (but with a 50% chance to be nothing instead)
+optionalItemsPerActor_actorTypeID=human;
+optionalItemsPerActor_itemID=dart;
+optionalItemsChanceToBeNothing=0.5;
+
+--this lets Scurio have a chance to have an Iron Shield
+optionalItemsPerActor_actorTypeID=scurio;
+optionalItemsPerActor_itemID=shield_iron;
+optionalItemsChanceToBeNothing=0;
+
+--spawnData will automatically pick appropriate weapons based on character skills.
+availableWeapons=sword_iron;
+availableWeapons=hammer_iron;
+availableWeapons=axe_iron;
+availableWeapons=flail_iron;
+availableArmors=armor_bone;
+availableArmors=armor_iron;
+
+--these two variables are only used by Fleet spawnData
+--fleetCargo;
+--fleetCargo_chanceToAdd;
+
+--this gives all of them +1 Phys Atk:
+bonusAVs=PhysAtk=1;
+
+minOptionalLootPerActor = 0;
+maxOptionalLootPerActor = 1;
+minGoldPerActor = 4;
+maxGoldPerActor = 10;
+
+headSpriteOverride=;
+clothPaletteOverride=pRed2;
+skinPaletteOverride=;
+
+--most enemies use the faction 'enemy', but there are exceptions.
+factionOverride=dudefaction;
+--idle AI stands around until an enemy is within their vision, then starts combat.
+aiOverride=idle;
+dialogOverride =;
+statementPrefixOverride =;
+
+--if dialogOverride_appendNum_max is > 0, finds an unused random dialogOverride# with # ranging from 1-max.
+--that description is as confusing to me as it is you. I don't really remember what this is for.
+dialogOverride_appendNum_max =-1;
+
+--when fought, use this song instead of the Zone's combat song
+musicOverride=;
+facingRotOverride=-1;
+braveryMult=1;
+
+hostile=true;
+
+canDespawn=true;
+canManipCorpse=true;
+noPassives=false;
+random10percentHPMPBoost=true;
+
+--FX to use when created by the 'spawn' trigger
+spawnFX=;

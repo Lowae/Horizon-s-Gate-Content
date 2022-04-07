@@ -1,0 +1,705 @@
+
+
+[LevelData] ID=reef1;
+minZoneSizeX = 42;
+minZoneSizeY = 34;
+maxZoneSizeX = 45;
+maxZoneSizeY = 37;
+
+worldSizeX = 2;
+worldSizeY = 2;
+
+chanceOfForwardPath = 0.3;
+
+----
+wallChanceToZig = 0.5;
+wallChanceToZag = 0.3;
+
+minWallThickness = 7;
+maxWallThickness = 10;
+minWallFlatStretch = 2;
+
+wallType = water_edge_smooth;
+wallTypeBottom = water_edge_smooth;
+----
+
+wallChanceToZig = 0.6;
+wallChanceToZag = 0.2;
+
+minWallThickness = 4;
+maxWallThickness = 6;
+minWallFlatStretch = 3;
+
+wallType = bgShadow_water;
+wallTypeBottom = water_edge_smooth;
+----
+borderTheseTiles = bgShadow_water=water_edge_smooth;
+
+defaultTile = dirt_rocky;
+
+
+defaultTile_exit = dirt_rocky;
+
+minExitWidth = 7;
+maxExitWidth = 9;
+exitCurveAverageDepth = 27;
+exitCurveVariation = 0;
+
+otherLevelData=reef1_water;
+otherLevelData_chance=0.4;
+otherLevelData_chance_deadEnd=0;
+otherLevelData=reef1_crubTown;
+otherLevelData_chance=0.3;
+otherLevelData_chance_deadEnd=0.3;
+
+mandatoryCenterPieces=Secret1=spR1_z1a;
+mandatoryCenterPieces=Secret1=spR1_z2a;
+mandatoryCenterPieces=Secret1=spR1_z3a;
+mandatoryCenterPieces=Secret1=spR1_z4a;
+mandatoryCenterPieces=Secret1=spR1_z5a;
+
+triggers=tEnterReef;
+----
+minSetPiecesPerRoom = 2;
+maxSetPiecesPerRoom = 4;
+
+setPieces=spPillar1;
+setPiecesChanceToReroll=0;
+setPieces=spPillar2;
+setPiecesChanceToReroll=0;
+setPieces=spPillar3;
+setPiecesChanceToReroll=0;
+setPieces=spPillar4;
+setPiecesChanceToReroll=0;
+
+setPieces=spPool_shallow1;
+setPiecesChanceToReroll=0;
+setPieces=spPool_shallow2;
+setPiecesChanceToReroll=0;
+setPieces=spPool_shallow3;
+setPiecesChanceToReroll=0;
+
+
+----
+centerPieceChance_normal = 1.0;
+centerPieceChance_deadEnd = 1.0;
+centerPieceChance_1stRoom = 0.65;
+
+centerPieces = spShellworm1;
+centerPiecesChanceToReroll = 0;
+centerPieces = spShellworm2;
+centerPiecesChanceToReroll = 0.7;
+centerPieces = spCrub1;
+centerPiecesChanceToReroll = 0.2;
+centerPieces = spBrigands_strong1;
+centerPiecesChanceToReroll = 0.95;
+centerPieces = spMaor1;
+centerPiecesChanceToReroll = 0.85;
+centerPieces = spMages1;
+centerPiecesChanceToReroll = 0.8;
+centerPieces = spRogues1;
+centerPiecesChanceToReroll = 0.8;
+centerPieces = spPill1;
+centerPiecesChanceToReroll = 0.98;
+centerPieces=spCrubHouse1;
+centerPiecesChanceToReroll=0.9;
+centerPieces=spCrubHouse2;
+centerPiecesChanceToReroll=0.9;
+centerPieces=spCrubHouse3;
+centerPiecesChanceToReroll=0.9;
+centerPieces=spCrubHouse4;
+centerPiecesChanceToReroll=0.9;
+centerPieces=spCrubHouse5;
+centerPiecesChanceToReroll=0.9;
+centerPieces=spCrubHouse6;
+centerPiecesChanceToReroll=0.9;
+centerPieces=spCrubHouse7;
+centerPiecesChanceToReroll=0.9;
+centerPieces=spCrubHouse8;
+centerPiecesChanceToReroll=0.9;
+
+
+----
+
+spawnItems_nearWall_chance = 0.14;
+spawnItems_nearWall=rubble_coral;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=coral;
+spawnItems_nearWall_chanceToReroll=0.8;
+spawnItems_nearWall=plant_anemone_med;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=plant_anemone_small1;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=plant_anemone_small2;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=plant_anemone_small3;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=puddle_zone;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=reef_coral1;
+spawnItems_nearWall_chanceToReroll=0.5;
+spawnItems_nearWall=reef_coral2;
+spawnItems_nearWall_chanceToReroll=0.5;
+spawnItems_nearWall=reef_coral3;
+spawnItems_nearWall_chanceToReroll=0.5;
+spawnItems_nearWall=reef_coral4;
+spawnItems_nearWall_chanceToReroll=0.5;
+spawnItems_nearWall=reef_coral5;
+spawnItems_nearWall_chanceToReroll=0.5;
+spawnItems_nearWall=reef_coral6;
+spawnItems_nearWall_chanceToReroll=0.5;
+spawnItems_nearWall=reef_coral7;
+spawnItems_nearWall_chanceToReroll=0.5;
+spawnItems_nearWall=coral_gold;
+spawnItems_nearWall_chanceToReroll=0.8;
+
+
+spawnItems_nearCenter_chance = 0.06;
+spawnItems_nearCenter=rubble_coral;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_anemone_med;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_anemone_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_anemone_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_anemone_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=reef_plant1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=reef_plant2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=reef_plant3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=rubble;
+spawnItems_nearCenter_chanceToReroll=0.7;
+spawnItems_nearCenter=puddle_zone;
+spawnItems_nearCenter_chanceToReroll=0.7;
+
+specialSpawns=fishSpot1;
+specialSpawns=fishSpot2;
+specialSpawns=deepwaterFix1;
+specialSpawns=deepwaterFix2;
+specialSpawns=deepwaterFixN;
+specialSpawns=deepwaterFixS;
+specialSpawns=deepwaterFixE;
+specialSpawns=deepwaterFixW;
+specialSpawns=deepwaterFixNE;
+specialSpawns=deepwaterFixNW;
+specialSpawns=deepwaterFixSE;
+specialSpawns=deepwaterFixSW;
+
+specialSpawns=thing_submerged1;
+specialSpawns=thing_submerged2;
+specialSpawns=thing_submerged3;
+
+
+[LevelDataZone]ID=reef1;
+
+zoneDirtPalette = pBluegreen_light;
+zoneDirtDarkPalette = pTeal;
+zoneWaterPalette = pPurpleD;
+zoneGrassPalette = pBlue;
+zoneStonePalette = pPurple;
+zoneStoneDarkPalette = pGrey2blue_mix1;
+zoneWoodPalette = pPurple;
+zoneMisc1Palette = pBluegreen;
+
+travelSong=PerituneMaterial_Resort3;
+travelSongVolume=0.8;
+combatSong=PerituneMaterial_Splash;
+
+dark=true;
+darkR=250; darkG=250; darkB=250; 
+
+[LevelData] ID=reef1_water;
+cloneFrom=reef1;
+
+cannotHaveMandatorySetOrCenterPieces=true;
+
+minZoneSizeX = 45;
+minZoneSizeY = 42;
+maxZoneSizeX = 46;
+maxZoneSizeY = 44;
+
+minSetPiecesPerRoom = 0;
+maxSetPiecesPerRoom = 0;
+
+wallType = bgShadow_water;
+wallTypeBottom = water_edge_smooth;
+defaultTile = water_edge_smooth;
+
+minWallThickness = 8;
+maxWallThickness = 10;
+minWallFlatStretch = 2;
+
+wallType_exit = water_edge_smooth;
+wallTypeBottom_exit = water_edge_smooth;
+defaultTile_exit = dirt_rocky;
+
+minExitWidth = 5;
+maxExitWidth = 6;
+exitCurveAverageDepth = 22;
+exitCurveVariation = 1;
+
+carvePath_betweenExits_terrainTypeID=dirt_rocky;
+carvePath_betweenExits_straight_minLength = 2;
+carvePath_betweenExits_turn_minLength = 2;
+carvePath_betweenExits_chanceToTurn = 0.4;
+carvePath_betweenExits_width = 3;
+
+---
+minSetPiecesPerRoom = 5;
+maxSetPiecesPerRoom = 7;
+
+setPieces=spTurtle1;
+setPiecesChanceToReroll=0;
+setPieces=spTurtle2;
+setPiecesChanceToReroll=0;
+setPieces=spTurtle3;
+setPiecesChanceToReroll=0;
+setPieces=spTurtle4;
+setPiecesChanceToReroll=0;
+setPieces=spTurtle5;
+setPiecesChanceToReroll=0;
+setPieces=spTurtle6;
+setPiecesChanceToReroll=0;
+setPieces=spTurtle7;
+setPiecesChanceToReroll=0;
+
+
+---
+centerPieceChance_normal = 0.98;
+centerPieceChance_deadEnd = 1.0;
+centerPieceChance_1stRoom = 0.2;
+
+centerPieces = spSerpent_water1;
+centerPiecesChanceToReroll = 0;
+centerPieces = spTurtle_boss1;
+centerPiecesChanceToReroll = 0;
+centerPieces = spTurtles1;
+centerPiecesChanceToReroll = 0;
+---
+
+spawnItems_onWall_chance = 0;
+spawnItems_onWall=random_vine;
+spawnItems_onWall_chanceToReroll=0;
+
+spawnItems_nearCenter_chance = 0.04;
+spawnItems_nearCenter=rubble_coral;
+spawnItems_nearCenter_chanceToReroll=0.4;
+spawnItems_nearCenter=coral;
+spawnItems_nearCenter_chanceToReroll=0.8;
+spawnItems_nearCenter=plant_anemone_med;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_anemone_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_anemone_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_anemone_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=puddle_zone;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=reef_coral1;
+spawnItems_nearCenter_chanceToReroll=0.6;
+spawnItems_nearCenter=reef_coral2;
+spawnItems_nearCenter_chanceToReroll=0.6;
+spawnItems_nearCenter=reef_coral3;
+spawnItems_nearCenter_chanceToReroll=0.6;
+spawnItems_nearCenter=reef_coral4;
+spawnItems_nearCenter_chanceToReroll=0.6;
+spawnItems_nearCenter=reef_coral5;
+spawnItems_nearCenter_chanceToReroll=0.6;
+spawnItems_nearCenter=reef_coral6;
+spawnItems_nearCenter_chanceToReroll=0.6;
+
+
+specialSpawns=fishSpot1;
+specialSpawns=fishSpot2;
+specialSpawns=deepwaterFix1;
+specialSpawns=deepwaterFix2;
+specialSpawns=deepwaterFixN;
+specialSpawns=deepwaterFixS;
+specialSpawns=deepwaterFixE;
+specialSpawns=deepwaterFixW;
+specialSpawns=deepwaterFixNE;
+specialSpawns=deepwaterFixNW;
+specialSpawns=deepwaterFixSE;
+specialSpawns=deepwaterFixSW;
+
+specialSpawns=thing_submerged1;
+specialSpawns=thing_submerged2;
+specialSpawns=thing_submerged3;
+
+specialSpawns=turtle_shell_item;
+specialSpawns=turtle_actor;
+
+
+[LevelDataZone]ID=reef1_water;
+
+
+zoneDirtPalette = pBluegreen_light;
+zoneDirtDarkPalette = pTeal;
+zoneWaterPalette = pPurpleD;
+zoneGrassPalette = pBlue;
+zoneStonePalette = pPurple;
+zoneStoneDarkPalette = pGrey2blue_mix1;
+zoneWoodPalette = pPurple;
+zoneMisc1Palette = pBluegreen;
+
+travelSong=PerituneMaterial_Resort3;
+travelSongVolume=0.8;
+combatSong=PerituneMaterial_Splash;
+
+dark=true;
+darkR=250; darkG=250; darkB=250; 
+
+
+[LevelData] ID=reef1_crubTown;
+cloneFrom=reef1;
+
+minZoneSizeX = 50;
+minZoneSizeY = 43;
+maxZoneSizeX = 51;
+maxZoneSizeY = 44;
+
+
+---
+minSetPiecesPerRoom = 4;
+maxSetPiecesPerRoom = 5;
+
+setPieces=spCrubHouse1;
+setPiecesChanceToReroll=0;
+setPieces=spCrubHouse2;
+setPiecesChanceToReroll=0;
+setPieces=spCrubHouse3;
+setPiecesChanceToReroll=0;
+setPieces=spCrubHouse4;
+setPiecesChanceToReroll=0;
+setPieces=spCrubHouse5;
+setPiecesChanceToReroll=0;
+setPieces=spCrubHouse6;
+setPiecesChanceToReroll=0;
+setPieces=spCrubHouse7;
+setPiecesChanceToReroll=0;
+setPieces=spCrubHouse8;
+setPiecesChanceToReroll=0;
+setPieces=spCrub1;
+setPiecesChanceToReroll=0.7;
+
+setPieces=spPool_shallow1;
+setPiecesChanceToReroll=0.9;
+setPieces=spPool_shallow2;
+setPiecesChanceToReroll=0.9;
+setPieces=spPool_shallow3;
+setPiecesChanceToReroll=0.9;
+
+
+---
+centerPieceChance_normal = 0;
+centerPieceChance_deadEnd = 0;
+centerPieceChance_1stRoom = 0;
+
+centerPieces = spCrubHouse6;
+centerPiecesChanceToReroll = 0;
+---
+
+spawnItems_nearWall_chance = 0.14;
+spawnItems_nearWall=rubble_coral;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=plant_anemone_med;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=plant_anemone_small1;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=plant_anemone_small2;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=plant_anemone_small3;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=puddle_zone;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=reef_coral1;
+spawnItems_nearWall_chanceToReroll=0.6;
+spawnItems_nearWall=reef_coral2;
+spawnItems_nearWall_chanceToReroll=0.6;
+spawnItems_nearWall=reef_coral3;
+spawnItems_nearWall_chanceToReroll=0.6;
+spawnItems_nearWall=reef_coral4;
+spawnItems_nearWall_chanceToReroll=0.6;
+
+spawnItems_nearCenter_chance = 0.04;
+spawnItems_nearCenter=rubble_coral;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_anemone_med;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_anemone_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_anemone_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_anemone_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=rubble;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=puddle_zone;
+spawnItems_nearCenter_chanceToReroll=0.5;
+
+specialSpawns=fishSpot1;
+specialSpawns=fishSpot2;
+specialSpawns=deepwaterFix1;
+specialSpawns=deepwaterFix2;
+specialSpawns=deepwaterFixN;
+specialSpawns=deepwaterFixS;
+specialSpawns=deepwaterFixE;
+specialSpawns=deepwaterFixW;
+specialSpawns=deepwaterFixNE;
+specialSpawns=deepwaterFixNW;
+specialSpawns=deepwaterFixSE;
+specialSpawns=deepwaterFixSW;
+
+
+specialSpawns=thing_submerged1;
+specialSpawns=thing_submerged2;
+specialSpawns=thing_submerged3;
+
+[LevelDataZone]ID=reef1_crubTown;
+
+zoneDirtPalette = pBluegreen_light;
+zoneDirtDarkPalette = pTeal;
+zoneWaterPalette = pPurpleD;
+zoneGrassPalette = pBlue;
+zoneStonePalette = pPurple;
+zoneStoneDarkPalette = pGrey2blue_mix1;
+zoneWoodPalette = pPurple;
+zoneMisc1Palette = pBluegreen;
+
+travelSong=PerituneMaterial_Resort3;
+travelSongVolume=0.7;
+combatSong=PerituneMaterial_Splash;
+
+dark=true;
+darkR=250; darkG=250; darkB=250; 
+
+[LevelData] ID=reef1_final;
+minZoneSizeX = 44;
+minZoneSizeY = 40;
+maxZoneSizeX = 45;
+maxZoneSizeY = 40;
+
+----
+wallChanceToZig = 0.5;
+wallChanceToZag = 0.3;
+
+minWallThickness = 13;
+maxWallThickness = 14;
+minWallFlatStretch = 2;
+
+wallType = water_edge_smooth;
+wallTypeBottom = water_edge_smooth;
+----
+
+wallChanceToZig = 0.6;
+wallChanceToZag = 0.2;
+
+minWallThickness = 9;
+maxWallThickness = 11;
+minWallFlatStretch = 3;
+
+wallType = bgShadow_water;
+wallTypeBottom = water_edge_smooth;
+----
+borderTheseTiles = bgShadow_water=water_edge_smooth;
+
+defaultTile = dirt_rocky;
+
+
+defaultTile_exit = dirt_rocky;
+
+minExitWidth = 7;
+maxExitWidth = 9;
+exitCurveAverageDepth = 33;
+exitCurveVariation = 0;
+
+
+
+
+cannotHaveMandatorySetOrCenterPieces=true;
+
+----
+minSetPiecesPerRoom = 2;
+maxSetPiecesPerRoom = 4;
+
+setPieces=spPillar1;
+setPiecesChanceToReroll=0;
+setPieces=spPillar2;
+setPiecesChanceToReroll=0;
+setPieces=spPillar3;
+setPiecesChanceToReroll=0;
+setPieces=spPillar4;
+setPiecesChanceToReroll=0;
+
+setPieces=spPool_shallow1;
+setPiecesChanceToReroll=0;
+setPieces=spPool_shallow2;
+setPiecesChanceToReroll=0;
+setPieces=spPool_shallow3;
+setPiecesChanceToReroll=0;
+
+
+----
+centerPieceChance_normal = 1.0;
+centerPieceChance_deadEnd = 1.0;
+centerPieceChance_1stRoom = 1;
+
+
+chooseCenterPiecesInOrder=true;
+
+centerPieces = spTurtle_enc2;
+centerPiecesChanceToReroll = k:turtle_tentacle * 0.2;
+centerPieces = spIgnis_enc2;
+centerPiecesChanceToReroll = 1 - g:ignis_enc1 + g:ignis_enc_2nd1;
+centerPieces = spTurtle_enc1;
+centerPiecesChanceToReroll = k:turtle;
+centerPieces = spShellworm2;
+centerPiecesChanceToReroll = 0.9;
+centerPieces = spBrigands_strong1;
+centerPiecesChanceToReroll = 0.9;
+centerPieces = spMaor1;
+centerPiecesChanceToReroll = 0.85;
+centerPieces = spMages1;
+centerPiecesChanceToReroll = 0.86;
+centerPieces = spRogues1;
+centerPiecesChanceToReroll = 0.86;
+centerPieces = spPill1;
+centerPiecesChanceToReroll = 0;
+
+----
+
+spawnItems_nearWall_chance = 0.14;
+spawnItems_nearWall=rubble_coral;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=coral;
+spawnItems_nearWall_chanceToReroll=0.8;
+spawnItems_nearWall=plant_anemone_med;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=plant_anemone_small1;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=plant_anemone_small2;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=plant_anemone_small3;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=puddle_zone;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=reef_coral1;
+spawnItems_nearWall_chanceToReroll=0.5;
+spawnItems_nearWall=reef_coral2;
+spawnItems_nearWall_chanceToReroll=0.5;
+spawnItems_nearWall=reef_coral3;
+spawnItems_nearWall_chanceToReroll=0.5;
+spawnItems_nearWall=reef_coral4;
+spawnItems_nearWall_chanceToReroll=0.5;
+spawnItems_nearWall=reef_coral5;
+spawnItems_nearWall_chanceToReroll=0.5;
+spawnItems_nearWall=reef_coral6;
+spawnItems_nearWall_chanceToReroll=0.5;
+spawnItems_nearWall=reef_coral7;
+spawnItems_nearWall_chanceToReroll=0.5;
+spawnItems_nearWall=coral_gold;
+spawnItems_nearWall_chanceToReroll=0.8;
+
+
+spawnItems_nearCenter_chance = 0.06;
+spawnItems_nearCenter=rubble_coral;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_anemone_med;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_anemone_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_anemone_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_anemone_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=reef_plant1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=reef_plant2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=reef_plant3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=rubble;
+spawnItems_nearCenter_chanceToReroll=0.7;
+spawnItems_nearCenter=puddle_zone;
+spawnItems_nearCenter_chanceToReroll=0.7;
+
+specialSpawns=fishSpot1;
+specialSpawns=fishSpot2;
+specialSpawns=deepwaterFix1;
+specialSpawns=deepwaterFix2;
+specialSpawns=deepwaterFixN;
+specialSpawns=deepwaterFixS;
+specialSpawns=deepwaterFixE;
+specialSpawns=deepwaterFixW;
+specialSpawns=deepwaterFixNE;
+specialSpawns=deepwaterFixNW;
+specialSpawns=deepwaterFixSE;
+specialSpawns=deepwaterFixSW;
+
+specialSpawns=thing_submerged1;
+specialSpawns=thing_submerged2;
+specialSpawns=thing_submerged3;
+
+[LevelDataZone]ID=reef1_final;
+
+zoneDirtPalette = pBluegreen_light;
+zoneDirtDarkPalette = pTeal;
+zoneWaterPalette = pPurpleD;
+zoneGrassPalette = pBlue;
+zoneStonePalette = pPurple;
+zoneStoneDarkPalette = pGrey2blue_mix1;
+zoneWoodPalette = pPurple;
+zoneMisc1Palette = pBluegreen;
+
+travelSong=PerituneMaterial_Resort3;
+travelSongVolume=0.8;
+combatSong=PerituneMaterial_Splash;
+
+dark=true;
+darkR=250; darkG=250; darkB=250; 
+

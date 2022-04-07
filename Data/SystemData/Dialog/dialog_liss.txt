@@ -1,0 +1,203 @@
+
+
+
+[DialogNode] ID=liss1a;
+animations=;
+animations=happy;
+statements=Hey, been a while since I had some customers!;
+statements=I thought I heard some ruckus up there -<p> did you have some trouble with the stairs?;
+
+[DialogOption] text=Were those your turrets up there?;
+animation=sly;
+nodeToConnectTo=liss2a;
+[DialogOption] text=We only had to fight for our lives!;
+animation=angry;
+newLineOfOptions=true;
+nodeToConnectTo=liss2b;
+
+
+[DialogNode] ID=liss2a;
+animations=sly;
+statements=Yep!<p> They <speed=0.5>sure a...<p=1.5><speed=> wait, what do you mean<p> 'were'?;
+nextNodeID=liss2c;
+
+
+[DialogNode] ID=liss2b;
+animations=sly;
+statements=<speed=0.8>Fight for your lives?<p> Why would...?;
+nextNodeID=liss2c;
+
+[DialogNode] ID=liss2c;
+animations=scared;
+animations=chargePose;
+animations=sad;
+statements=<speed=0.7>Oh!<p> Oh, no...<p> I forgot to turn the defenses off!;
+statements=They've been on since the last Cleever attack -<p> no wonder I haven't had any customers!;
+statements=Are you alright?<p> Did they hurt you?;
+[DialogOption] text=No, not at all.;
+animation=sigh;
+newLineOfOptions=true;
+nodeToConnectTo=liss3a;
+[DialogOption] text=Not much, no.;
+animation=stern;
+newLineOfOptions=true;
+nodeToConnectTo=liss3b;
+[DialogOption] text=Yes, quite a lot!;
+animation=angry;
+newLineOfOptions=true;
+nodeToConnectTo=liss3c;
+
+
+[DialogNode] ID=liss3a;
+animations=scared;
+statements=Really?<p> Not even a little?;
+nextNodeID=liss3d;
+
+[DialogNode] ID=liss3b;
+animations=scared;
+statements=Really?<p> You're sure?;
+nextNodeID=liss3d;
+
+[DialogNode] ID=liss3d;
+specialEffect=facingRot0;
+animations=stern;
+statements=<speed=0.8><color=Gray><rfx=>Guess they could use more work...;
+nextNodeID=liss3e;
+
+[DialogNode] ID=liss3c;
+animations=scared;
+statements=I'm sorry!<p> I won't let it happen again!;
+nextNodeID=liss3e;
+
+
+[DialogNode] ID=liss3e;
+animations=sigh;
+animations=scared;
+animations=stern;
+animations=handsupPose;
+animations=happy;
+animations=handupPose;
+statements=I really owe you some sort of compensation...;
+statements=This is supposed to be a nice shop, not a deathtrap!;
+statements=<speed=0.7>Hmmm...<p> but with the lack of customers...<p> I can't really give you any money...;
+statements=Oh, I know!<p> How about some exclusive training?;
+statements=I normally don't teach anyone, but I bet you would love to learn more about machines!;
+statements=Just let me know, and I'll give you the full course!;
+specialEffect=facingRotPrev;
+specialEffect=setDefaultNode,liss;
+nextNodeID=;
+
+-----------
+
+
+[DialogNode] ID=liss;
+animations=;
+statements=How goes it?;
+specialEffect=setPCDialogWindowSizeY;
+specialEffect=setNPCDialogWindowSizeY;
+
+[DialogOption] text=Buy <adjX=-1><math=m:maxFoodBuy><adjX=-12><iconBig=food><adjX=-2> Food ($<buyPrice=food> each);
+formulaReq=m:maxFoodBuy;
+newLineOfOptions=true;
+nodeToConnectTo=liss_autofill_food;
+[DialogOption] text=Buy Goods;
+newLineOfOptions=true;
+nodeToConnectTo=liss_goods;
+[DialogOption] text=Buy Items;
+newLineOfOptions=true;
+nodeToConnectTo=liss_items_buy;
+[DialogOption] text=Unlock <iconBig=classIcon_mechanist> Mechanist;
+formulaReq=1 - g:class_mechanist;
+newLineOfOptions=true;
+nodeToConnectTo=class_mechanist_ask;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=liss_autofill_food;
+animations=sly;
+statements=Fill your cargo with <math=m:maxFoodBuy>food, for $<math=m:maxFoodBuy * buyPrice:food><adjX=-2>?;
+[DialogOption] text=Yes ($<math=m:maxFoodBuy * buyPrice:food><adjX=-6>);
+formulaReq=m:money - m:maxFoodBuy * buyPrice:food + 1;
+nodeToConnectTo=liss_autofill_food_yes;
+[DialogOption] text=No;
+newLineOfOptions=true;
+nodeToConnectTo=liss;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=liss_autofill_food_yes;
+animations=happy;
+statements=Gotcha. Anything else?;
+specialEffect=autobuy_food;
+[DialogOption] text=Buy Goods;
+newLineOfOptions=true;
+nodeToConnectTo=liss_goods;
+[DialogOption] text=Buy Items;
+newLineOfOptions=true;
+nodeToConnectTo=liss_items_buy;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=liss_goods;
+animations=sly;
+statements=Anything look useful?;
+specialEffect=enterBuyMode_location;
+specialEffect=setNPCDialogWindowSizeY,120;
+specialEffect=setPCDialogWindowSizeY,68;
+nextNodeID=liss;
+[DialogOption] text=Back;
+nodeToConnectTo=liss;
+escOption=true;
+bottomOption=true;
+
+[DialogNode] ID=liss_items_buy;
+animations=;
+statements=Take a look.;
+specialEffect=enterBuyMode_locationItems;
+specialEffect=setNPCDialogWindowSizeY,120;
+specialEffect=setPCDialogWindowSizeY,68;
+[DialogOption] text=Back;
+nodeToConnectTo=liss;
+escOption=true;
+bottomOption=true;
+
+--
+
+
+[DialogNode] ID=class_mechanist_ask;
+animations=happy;
+animations=angry;
+statements=You ready to learn about machines?<p> I can teach you free of charge!;
+statements=You better pay attention, though!<p=1.5> This is time I could spend making machines instead!;
+[DialogOption] text=Yes;
+nodeToConnectTo=class_mechanist_train;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=;
+newLineOfOptions=true;
+bottomOption=true;
+
+
+[DialogNode] ID=class_mechanist_train;
+animations=handupPose;
+animations=sly;
+animations=happy;
+statements=Here we go then!;
+statements=Oh, where to start...?;
+statements=Let's make some turrets!<p> That's simple enough, right?;
+nextNodeID=class_mechanist_unlock;
+
+[DialogNode] ID=class_mechanist_unlock;
+specialEffect=setGlobalVar,class_mechanist,1;
+specialEffect=fx,blackenScreen;
+specialEffect=tTextOverlayPopup_classUnlocked;
+specialEffect=markTrainerLocDone;
+specialEffect=fx,longGoodAuraSound;
+nextNodeID=;
+
+
+

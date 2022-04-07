@@ -1,0 +1,125 @@
+[Zone]  ID=spGroveEnc25; dark=False; timeUntilNewDay=22.2; showFogOfWar=True; fogOfWar=True; minimapEnabled=True; allowCameraPastZoneEdges=False; cantAct=False; cantGameOver=False; alwaysKeepWeaponsUnsheathed=False; peaceful=False; overseerMode=False; rollingPinStyle=False; drawSky=False; drawSky_overrideYpos=-1; boatZone=False; wind=False; overworld=False; canDropItems=True; 
+ travelSong=; travelSongVolume=1; travelSongPitch=0; song2=; song2Volume=1; song2Pitch=0; combatSong=; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=0; darkG=0; darkB=0; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=; bgFX_sineWave=0; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=pDirt; zoneGrassPalette=overworld1; zoneGrassDarkPalette=overworld2; zoneStonePalette=pGreyD; zoneStoneDarkPalette=p1; zoneStoneLightPalette=p1; zoneWaterPalette=pBlue; zoneDirtDarkPalette=pDirt; zoneWoodPalette=pWood; zoneWoodDarkPalette=pWoodDark; zoneMisc1Palette=pYellow6; zoneMisc2Palette=pWoodDark; zoneMisc3Palette=pYellow5; zoneMisc4Palette=pBlue; zoneMisc5Palette=pGreen; zoneMisc6Palette=pOrange; zoneMisc7Palette=pYellow; zoneMisc8Palette=pPurple; 
+
+combatMode=False; 
+
+[Item] ID=bone_dust; q=1; x=1; y=2;
+[Item] ID=bones1; q=1; x=1; y=2;
+[Item] ID=plant_small3; q=1; x=1; y=6;
+[Item] ID=bones2; q=1; x=6; y=4;
+[Item] ID=skull2; q=1; r=270; x=6; y=4;
+[Item] ID=gp; q=2; x=6; y=4;
+[Item] ID=plant_small2; q=1; x=6; y=6;
+[Item] ID=sword_iron; q=1; x=7; y=4; containerID=0;
+
+
+[Actor]ID=serpent_water_spGroveEnc25_; name=Rove;
+actorTypeID=serpent_water; sprite=actor_serpent; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=7; position=4,2; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pR; skinPalette=p8; armorPalette=zoneWater; unarmoredPalette=zoneWater; aiScript=idle_hideAnim; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=1; intelligence=0.2; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=diving;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=39; HPMax=39; TrueHPMax=39; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=crub_spGroveEnc25_; name=Tamae;
+actorTypeID=crub; sprite=; actorClass=bathandler; secondaryClass=tactician; actorClass3=; actorClass4=; movementSpeed=6; position=2,2; destination=-1,-1; facingRot=450; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=PM-Seanchas; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=True; faction=enemy; combatTeam=; clothPalette=pCTeal; skinPalette=pRedD2; armorPalette=pCoral; unarmoredPalette=pUnarmored; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=0.65; intelligence=0.5; honor=0.3; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=; headSprite=crab_head; faceSprite=crab_face; legsSprite=crab_legs; armLSprite=crab_arm; armRSprite=crab_arm; torsoSprite=bathandler_torso; shoulderLSprite=bathandler_shoulder; shoulderRSprite=bathandler_shoulder; backSprite=;
+ supportAbilities=tamer;  supportAbilities=commandingAura;  supportAbilities=; HP=61; MP=23; HPMax=61; MPMax=23; TrueHPMax=61; TrueMPMax=23; skill_Flail=2; skill_Spear=1; skill_Elec=1; skill_Life=1; Bat_tailwind=1; Tac_command=1; commandingAura=1; tamer=1; tactician_XP=0; bathandler_XP=0; 
+numRanksBought=Bat_tailwind=1; 
+numRanksBought=tamer=1; 
+numRanksBought=Tac_command=1; 
+numRanksBought=commandingAura=1; 
+chosenAbilityOfEachClass=bathandler=Bat_summonZoar; 
+chosenAbilityOfEachClass=minstrel=Min_harmony; 
+chosenAbilityOfEachClass=shiftcloak=Sh_tumble; 
+chosenAbilityOfEachClass=spellslinger=Sp_fireImbue; 
+chosenAbilityOfEachClass=stormshot=Sto_blastShot; 
+chosenAbilityOfEachClass=swashbuckler=Swa_boltBalestra; 
+chosenAbilityOfEachClass=bombardier=Bom_activate; 
+chosenAbilityOfEachClass=blade=Bl_flashCut; 
+chosenAbilityOfEachClass=breaker=Br_breakWeapon; 
+chosenAbilityOfEachClass=tactician=Tac_command; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=armor_coral; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=armor_coral; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=-4; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=bracers_metal; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=gauntlets; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=bathandler; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=bathandler; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=8; duration=-1;
+[ActorEffect]
+ actorValue=MagEva; sourceAVAffecter=bathandler; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=8; duration=-1;
+[ActorEffect]
+ actorValue=jumpDistance; sourceAVAffecter=bathandler; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Dagger; sourceAVAffecter=bathandler; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Spear; sourceAVAffecter=bathandler; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Flail; sourceAVAffecter=bathandler; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Wind; sourceAVAffecter=bathandler; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=av_crub1; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=spear_coral; cSlot=0; containerID=0;
+[ActorItem] ID=whip_coral; cSlot=1; containerID=1;
+[ActorItem] ID=armor_coral; cSlot=2; containerID=2;
+[ActorItem] ID=bracers_metal; cSlot=3;
+[ActorItem] ID=gauntlets; cSlot=4;
+[ActorItem] ID=foodDX; cSlot=5;
+[ActorItem] ID=bandage; cSlot=6;
+[ActorItem] ID=gem_small2; cSlot=7;
+[ActorItem] ID=gp; q=132; cSlot=8;
+
+
+[Actor]ID=reylock_spGroveEnc25_; name=Corzas;
+actorTypeID=reylock; sprite=actor_reylock; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=4; position=0,3; destination=-1,-1; facingRot=360; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pBlue2; skinPalette=pBlue2; armorPalette=pR; unarmoredPalette=pR; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=0.6; intelligence=0.3; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=; faceSprite=actor_reylock_f;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=71; MP=22; HPMax=71; MPMax=22; TrueHPMax=71; TrueMPMax=22; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=reylock_spGroveEnc25_0; name=Bonecurse;
+actorTypeID=reylock; sprite=actor_reylock; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=4; position=5,5; destination=-1,-1; facingRot=990; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pMarble_deepPurple; skinPalette=pBlue4; armorPalette=pR; unarmoredPalette=pR; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=0.6; intelligence=0.3; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=; faceSprite=actor_reylock_f;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=74; MP=24; HPMax=74; MPMax=24; TrueHPMax=74; TrueMPMax=24; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+

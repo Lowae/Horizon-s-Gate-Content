@@ -1,0 +1,2549 @@
+
+[ItemType]  name=Allow Spread Chain Here;
+ID=chain_spreader; sprite=1508;
+special=cannotBePickedUp; special=invisible; special=canHangOnWalls; 
+special=elementUsableForRestrictedAoEs; special=noTooltip;
+special=canBeInsideWalls;
+element=spreadChain;
+depthMod=500;
+pG=pWhite;
+
+[ItemType]  name=Line;
+ID=fade_line; sprite=88; special=cannotBePickedUp;
+special=canHangOnWalls; special=canFloatOnWater; special=noTooltip;
+special=canBeInsideWalls; special=ignoreHeight; special=noTileHitbox;
+[ItemReaction] 
+ID=fade_line; element=tileReacted; newID=X;
+[ItemType]  name=Fade;
+ID=fade_s; sprite=58; special=transparent; special=cannotBePickedUp;
+special=canHangOnWalls; special=canFloatOnWater; special=noTooltip;
+special=canBeInsideWalls; special=ignoreBeingRaised; special=canAlwaysFitInTile;
+special=rollingPin_drawFlat; special=noTileHitbox;
+[ItemReaction] 
+ID=fade_s; element=tileReacted; element=removeShadow; newID=X;
+[ItemType]  name=Fade;
+ID=fade_s4; sprite=152;
+cloneFrom=fade_s;
+[ItemType]  name=Fade (SmallDiag);
+ID=fade_s4diag; sprite=183; 
+cloneFrom=fade_s;
+[ItemType]  name=Fade;
+ID=fade_s5; sprite=153;
+cloneFrom=fade_s;
+[ItemType]  name=Fade;
+ID=fade_s6; sprite=88;
+cloneFrom=fade_s;
+[ItemType]  name=Shade;
+ID=fade_s1; sprite=90; depthMod=2050; special=transparent; special=cannotBePickedUp; special=canBeInsideWalls;
+special=canHangOnWalls; special=canFloatOnWater; special=noTooltip;
+ special=ignoreBeingRaised;  special=noTileHitbox;
+[ItemReaction] 
+ID=fade_s1; element=removeShadow; newID=X;
+[ItemType]  name=Shade;
+ID=fade_s2; sprite=89; 
+cloneFrom=fade_s1;
+[ItemType]  name=Shade (30deg Diag);
+ID=fade_s1_diag30; sprite=215; 
+cloneFrom=fade_s1;
+[ItemType]  name=Shade (30deg Diag2);
+ID=fade_s2_diag30; sprite=216; 
+cloneFrom=fade_s1;
+[ItemType]  name=Shade (Curved);
+ID=fade_s3; sprite=122; 
+cloneFrom=fade_s1;
+[ItemType]  name=Shade (Rounded);
+ID=fade_s1_round; sprite=190; 
+cloneFrom=fade_s1;
+[ItemType]  name=Shade (Rounder);
+ID=fade_s1_rounder; sprite=191; 
+cloneFrom=fade_s1;
+
+
+[ItemType]  name=Shade (Below);
+ID=fade_s1_below; 
+cloneFrom=fade_s1;
+depthMod=0;
+[ItemType]  name=Shade (Below);
+ID=fade_s2_below; sprite=89; 
+cloneFrom=fade_s1_below;
+[ItemType]  name=Shade (Below, Curved);
+ID=fade_s3_below; sprite=122; 
+cloneFrom=fade_s1_below;
+[ItemType]  name=Shade (Rounded, Below);
+ID=fade_s1_round_below; sprite=190; 
+cloneFrom=fade_s1_below;
+[ItemType]  name=Shade (Rounder, Below);
+ID=fade_s1_rounder_below; sprite=191; 
+cloneFrom=fade_s1_below;
+
+[ItemType]  name=Gold;
+description=Commerce!;
+ID=gp; sprite=4; spriteWhenHeld=0; stackable=true;
+special=playerPickup; special=cannotBeTraded; special=autoEquipOnPickup; special=currency;
+special=quantityChangesSprite_upTo4; 
+weight=0; volume=1; value=1;
+[JournalEntry]
+ID=item_gp;
+category=item; halfPage=true;
+title=Gold;
+text=<itemBig=gp><title=Gold><brAdj=>Coin emblazoned with the symbol of commerce: $ Despite the name, it only contains traces of gold. Still, it's legal tender in most of Eral.;
+
+[ItemType]  name=Gold;
+description=Commerce!;
+journalID=item_gp;
+ID=gp_pile; sprite=39; spriteWhenHeld=0; stackable=true;
+special=playerPickup; special=cannotBeTraded; special=autoEquipOnPickup; special=currency;
+weight=0; volume=1; value=50;
+
+[ItemType]  name=Handful of Gold;
+ID=loot_gp3; sprite=5;
+value=7;
+pR=pGreyD2; pB=pGreyD;
+special=replaceWith_toMake_list;
+toMake=gp;
+
+[ItemType]  name=Much Gold;
+ID=loot_gp_much; sprite=5;
+value=29;
+pR=pGreyD2; pB=pGreyD;
+special=replaceWith_toMake_list;
+toMake=gp;
+[ItemType]  name=50 Gold;
+ID=loot_gp_much2; sprite=5;
+value=98;
+pR=pGreyD2; pB=pGreyD;
+special=replaceWith_toMake_list;
+toMake=gp;
+
+
+
+
+[ItemType]  name=Fade (Faint);
+ID=fade_f; sprite=58; special=verytransparent; special=cannotBePickedUp;
+special=canHangOnWalls; special=canFloatOnWater; special=noTooltip;
+special=canBeInsideWalls; special=ignoreBeingRaised; special=noTileHitbox;
+special=rollingPin_drawFlat;
+[ItemReaction] 
+ID=fade_f; element=tileReacted; element=removeShadow; newID=X;
+[ItemType]  name=Fade (Faint);
+ID=fade_f4; sprite=152;
+cloneFrom=fade_f;
+[ItemType]  name=Fade (Faint);
+ID=fade_f5; sprite=153;
+cloneFrom=fade_f;
+[ItemType]  name=Fade (Faint);
+ID=fade_f6; sprite=88;
+cloneFrom=fade_f;
+[ItemType]  name=Fade (Faint);
+ID=fade_f7; sprite=184;
+cloneFrom=fade_f;
+[ItemType]  name=Fade (Faint);
+ID=fade_f8; sprite=185;
+cloneFrom=fade_f;
+[ItemType]  name=Shade (Faint);
+ID=fade_f1; sprite=90; depthMod=2050; special=verytransparent; special=cannotBePickedUp; special=canBeInsideWalls;
+special=canHangOnWalls; special=canFloatOnWater; special=noTooltip; special=noTileHitbox;
+ special=ignoreBeingRaised; 
+[ItemReaction] 
+ID=fade_f1; element=removeShadow; newID=X;
+[ItemType]  name=Shade (Faint);
+ID=fade_f2; sprite=89; 
+cloneFrom=fade_f1;
+[ItemType]  name=Diag Split Shade (upper);
+ID=fade_s_diag_half1; sprite=185; 
+cloneFrom=fade_f1;
+[ItemType]  name=Diag Split Shade (lower);
+ID=fade_s_diag_half2; sprite=217; 
+cloneFrom=fade_f1;  depthMod=0; 
+
+[ItemType]  name=Shade (30deg Diag);
+ID=fade_f1_diag30; sprite=215; 
+cloneFrom=fade_f;
+[ItemType]  name=Shade (30deg Diag2);
+ID=fade_f2_diag30; sprite=216; 
+cloneFrom=fade_f;
+
+[ItemType]  name=Shade (Curved, Faint);
+ID=fade_f3; sprite=122; 
+cloneFrom=fade_f1;
+[ItemType]  name=Shade (Rounded, Faint);
+ID=fade_f1_round; sprite=190; 
+cloneFrom=fade_f1;
+[ItemType]  name=Shade (Rounder, Faint);
+ID=fade_f1_rounder; sprite=191; 
+cloneFrom=fade_f1;
+
+[ItemType]  name=Shade (Diag, Faint, Below);
+ID=fade_f9; sprite=186; 
+depthMod=0;
+cloneFrom=fade_f1;
+[ItemType]  name=Shade (Corner, Faint, Below);
+ID=fade_f10; sprite=187; 
+depthMod=0;
+cloneFrom=fade_f1;
+[ItemType]  name=Shade (Rectangle, Faint, Below);
+ID=fade_f11; sprite=188; 
+depthMod=0;
+cloneFrom=fade_f1;
+[ItemType]  name=Fade (Faint);
+ID=fade_f12; sprite=189;
+cloneFrom=fade_f;
+[ItemType]  name=Shade (SmallDiag, Faint);
+ID=fade_f13; sprite=183; 
+cloneFrom=fade_f1;
+depthMod=0;
+
+[ItemType]  name=Shade (Below, Stone Circle);
+ID=fade_f_stone1; sprite=1345; texture=items_misc;
+cloneFrom=fade_f1; depthMod=0; 
+[ItemType]  name=Shade (Below, Stone Circle);
+ID=fade_f_stone2; sprite=1346;
+cloneFrom=fade_f_stone1; depthMod=0; 
+
+[ItemType]  name=Figure;
+ID=figure_shadow1; sprite=1025; 
+texture=items_misc;
+special=cannotBePickedUp; special=canHangOnWalls; special=canFloatOnWater; special=noTooltip;
+special=canBeInsideWalls; special=sprite2xHeight;
+depthMod=1050;
+
+[ItemType]  name=Figure;
+ID=figure_shadow2; sprite=1026; 
+cloneFrom=figure_shadow1;
+[ItemType]  name=Figure;
+ID=figure_shadow3; sprite=1027; 
+cloneFrom=figure_shadow1;
+[ItemType]  name=Figure;
+ID=figure_shadow4; sprite=1028; 
+cloneFrom=figure_shadow1;
+[ItemType]  name=Figure;
+ID=figure_shadow5; sprite=1029; 
+cloneFrom=figure_shadow1;
+
+
+[ItemType]  name=Junk Box;
+description=Box of old stuff.;
+ID=box_junk; sprite=776; special=priorityContainer;
+volume=98;
+pR=pWood;
+special=container; special=containerWood; special=container5x5;
+[ItemType]  name=Vendor Inventory;
+description=Box of stuff.;
+ID=box_vendor; sprite=776; special=priorityContainer;
+volume=99;
+ special=shopContainer;
+ special=cannotBePickedUp;
+pR=pWoodDark;
+special=container; special=containerWood; special=container5x5;
+[ItemType]  name=Bag of Stuff;
+description=Bag of restockable goods. Click to open.;
+ID=bag_stuff; sprite=779; 
+volume=98;
+pR=pOrange; pB=pGreyD;
+special=container; special=infiniteStockContainer;
+ special=shopContainer;
+ special=cannotBePickedUp;
+ special=oneClickToUse;
+special=disappearFromCorpse;
+
+[ItemType]  name=Usually Nothing;
+ID=loot_none; sprite=779;
+description=Place on the ground to reveal the item.;
+value=2;
+pR=pBlack;
+special=replaceWith_toMake_list;
+toMake=;
+toMake=;
+toMake=;
+toMake=;
+toMake=;
+toMake=;
+toMake=;
+toMake=;
+toMake=;
+toMake=;
+toMake=;
+toMake=;
+toMake=;
+toMake=;
+toMake=gp;
+toMake=loot0;
+
+[ItemType]  name=Trashy Loot;
+ID=loot0; sprite=779;
+description=Place on the ground to reveal the item.;
+value=3;
+pR=pGreyD2; pB=pBlack;
+special=replaceWith_toMake_list;
+toMake=gp;
+toMake=gp;
+toMake=dart;
+toMake=bandage;
+toMake=bottle;
+toMake=woodPlank;
+toMake=loot_bone_junk;
+toMake=loot_bone_junk;
+toMake=loot_bone_junk;
+toMake=loot_bone_junk;
+
+toMake=loot_wood;
+toMake=loot1;
+
+[ItemType]  name=Weak Loot;
+ID=loot1; sprite=779;
+description=Place on the ground to reveal the item.;
+value=10;
+pR=pGreyD2; pB=pGreyD;
+special=replaceWith_toMake_list;
+toMake=gp;
+toMake=gp;
+toMake=gp;
+toMake=repairTool;
+toMake=dart;
+toMake=dart;
+toMake=dart_poison;
+toMake=dart_itchy;
+toMake=dart_sleep;
+toMake=itchPowder;
+toMake=lamp_off;
+toMake=bandage;
+toMake=bandage;
+toMake=splint;
+toMake=bottle;
+toMake=bottle_beer;
+toMake=bottle_oil;
+toMake=woodPlank;
+toMake=loot_bone_junk;
+
+toMake=machete;
+toMake=hatchet;
+
+toMake=loot_accessory1;
+toMake=loot_wood;
+toMake=trigger_dud;
+toMake=loot2;
+
+
+[ItemType]  name=Mediocre Loot;
+ID=loot2; sprite=779;
+description=Place on the ground to reveal the item.;
+value=30;
+pR=pGreyD;
+special=replaceWith_toMake_list;
+toMake=gp;
+toMake=gp;
+toMake=gp;
+toMake=loot_consumable1;
+
+toMake=loot_accessory2;
+toMake=loot_bone;
+toMake=loot_iron;
+toMake=loot_iron;
+toMake=loot3;
+
+
+[ItemType]  name=Nice Loot;
+ID=loot3; sprite=779;
+description=Place on the ground to reveal the item.;
+value=50;
+pR=pGrey2;
+special=replaceWith_toMake_list;
+toMake=gp;
+
+
+toMake=loot_accessory3;
+toMake=loot_steel;
+toMake=loot4;
+
+
+[ItemType]  name=Good Loot;
+ID=loot4; sprite=779;
+description=Place on the ground to reveal the item.;
+value=90;
+pR=pTeal;
+special=replaceWith_toMake_list;
+toMake=gp;
+
+toMake=gem_small1;
+
+toMake=loot_accessory4;
+toMake=loot_trigger;
+toMake=loot_steel;
+toMake=loot_craft_kit;
+toMake=loot5;
+
+
+[ItemType]  name=Great Loot;
+ID=loot5; sprite=779;
+description=Place on the ground to reveal the item.;
+value=150;
+pR=pBlue;
+special=replaceWith_toMake_list;
+toMake=gp;
+toMake=gem_small1;
+
+toMake=mythril_chunk;
+toMake=volskarn_chunk;
+toMake=loot_accessory5;
+toMake=loot_trigger_band;
+toMake=loot_mythril;
+toMake=loot6;
+
+[ItemType]  name=Amazing Loot;
+ID=loot6; sprite=779;
+description=Place on the ground to reveal the item.;
+value=250;
+pR=pGold; pB=pWhite;
+special=replaceWith_toMake_list;
+
+toMake=loot_accessory6;
+toMake=loot_elec;
+toMake=loot_wind;
+
+[ItemType]  name=Consumables Loot;
+ID=loot_consumable1; sprite=142;
+description=Place on the ground to reveal the item.;
+value=35;
+pR=pGold; pB=pWhite;
+special=replaceWith_toMake_list;
+toMake=minibomb;
+toMake=bomb;
+toMake=firebomb;
+toMake=lifeshard;
+
+[ItemType]  name=General Loot;
+ID=loot_general1; sprite=851;
+description=Place on the ground to reveal the item.;
+value=300;
+pR=pGold; pB=pWhite;
+special=replaceWith_toMake_list;
+toMake=gem_small1;
+toMake=gem_small1;
+toMake=gem_small1;
+toMake=gem_small1;
+toMake=gem_small1;
+toMake=gem_small1;
+toMake=gem_small1;
+toMake=gem_small1;
+toMake=lifeshard;
+toMake=lifeshard;
+toMake=lifeshard;
+toMake=loot_gp_much2;
+toMake=xpGem;
+toMake=loot_trigger_band;
+toMake=loot_trigger;
+toMake=focus_stone;
+
+
+[ItemType]  name=Possible Quest Items;
+ID=loot_quest; sprite=780;
+value=0;
+pR=pGold; pB=pWhite;
+special=replaceWith_toMake_list;
+
+toMake=loot_trigger;
+toMake=loot_trigger;
+toMake=loot_trigger_band;
+toMake=loot_accessory2;
+toMake=loot_accessory3;
+toMake=loot_accessory4;
+toMake=loot_accessory5;
+toMake=iron_chunk;
+toMake=mythril_chunk;
+toMake=steel_bar;
+toMake=coral;
+toMake=goop_gland;
+toMake=shellworm_plate;
+
+[ItemType]  name=Royal Quest Items;
+ID=loot_royal_quest; sprite=780;
+value=0;
+pR=pGold; pB=pG;
+special=replaceWith_toMake_list;
+
+toMake=comb;
+toMake=mirror;
+toMake=xpGem;
+toMake=xpGem;
+toMake=xpGem;
+toMake=steel_bar;
+toMake=silk_spide;
+toMake=lifeshard;
+toMake=studyTool;
+toMake=minibomb;
+
+[ItemType]  name=Royal Quest Items (Hard);
+ID=loot_royal_quest_hard; sprite=780;
+value=0;
+pR=pGold; pB=pB;
+special=replaceWith_toMake_list;
+
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=loot_mythril;
+toMake=volskarn_chunk;
+toMake=volskarn_chunk;
+toMake=loot_volskarn;
+toMake=bomb;
+toMake=coral;
+toMake=coral;
+toMake=trigger_elec;
+toMake=trigger_fire;
+toMake=trigger_ice;
+toMake=trigger_wind;
+toMake=trigger_life;
+toMake=trigger_ruin;
+
+[ItemType]  name=Salvage Loot 1;
+ID=loot_salvage1; sprite=780;
+value=0;
+pR=pVolskarn; pB=pMythril;
+special=replaceWith_toMake_list;
+
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=volskarn_chunk;
+toMake=volskarn_chunk;
+toMake=volskarn_chunk;
+toMake=volskarn_chunk;
+toMake=volskarn_chunk;
+toMake=volskarn_chunk;
+toMake=volskarn_chunk;
+toMake=volskarn_chunk;
+toMake=volskarn_chunk;
+toMake=volskarn_chunk;
+toMake=volskarn_chunk;
+toMake=volskarn_chunk;
+toMake=coral;
+toMake=coral;
+toMake=coral;
+toMake=coral;
+toMake=coral;
+toMake=coral;
+toMake=xpGem;
+toMake=xpGem;
+toMake=gem_small2;
+toMake=gem_small2;
+toMake=gem_small2;
+toMake=gem_small2;
+
+[ItemType]  name=Salvage Loot 2;
+ID=loot_salvage2; sprite=780;
+value=0;
+pR=pVolskarn; pB=pMythril;
+special=replaceWith_toMake_list;
+
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=mythril_chunk;
+toMake=volskarn_chunk;
+toMake=volskarn_chunk;
+toMake=volskarn_chunk;
+toMake=volskarn_chunk;
+toMake=volskarn_chunk;
+toMake=volskarn_chunk;
+toMake=volskarn_chunk;
+toMake=volskarn_chunk;
+toMake=volskarn_chunk;
+toMake=xpGem;
+toMake=xpGem;
+toMake=loot_trigger;
+toMake=loot_trigger_special;
+toMake=gem_big1;
+toMake=whistle_chunk;
+
+[ItemType]  name=Salvage Loot 3;
+ID=loot_salvage3; sprite=780;
+value=0;
+pR=pVolskarn; pB=pMythril;
+special=replaceWith_toMake_list;
+
+toMake=gem_big1;
+toMake=gem_big1;
+toMake=gem_big1;
+toMake=gem_big1;
+toMake=gem_big1;
+toMake=gem_big1;
+toMake=gem_big1;
+toMake=gem_big1;
+toMake=gem_big1;
+toMake=gem_big1;
+toMake=whistle_chunk;
+toMake=whistle_chunk;
+toMake=ironice_chunk;
+toMake=ironice_chunk;
+toMake=fish_mag;
+toMake=actionTablet_random;
+toMake=actionTablet_random;
+toMake=actionTablet_random;
+
+[ItemType]  name=Chain;
+ID=chain_extended; sprite=1508;
+special=cannotBePickedUp; special=big; special=canHangOnWalls;
+special=overrideTerrainCollisions; special=overrideMostCollisions;
+special=moveCostOverride_2;
+special=climbAnim;
+depthMod=500;
+pG=pIron;
+[ItemReaction] 
+ID=chain_extended; element=removeChain; newID=X;
+
+
+
+[ItemType]  name=Post Wrapped in Chains;
+ID=post_chain_wrapped; sprite=1509;
+weight=200;
+special=big; special=cannotBePickedUp; special=canHangOnWalls;
+special=elementUsableForRestrictedAoEs; element=spreadChain;
+blockWalking=true; blockJumping=true;
+pR=pIron;
+pB=zoneWood;
+pG=pFadeDark;
+[ItemReaction]
+ID=post_chain_wrapped; element=use; action=spreadChain; newID=post_chain_unwrapped;
+
+[ItemType]  name=Post;
+ID=post_chain_unwrapped; sprite=930;
+texture=items_building;
+weight=200;
+special=big; special=cannotBePickedUp; special=canHangOnWalls;
+pR=pIron;
+pB=zoneWood;
+pG=pFadeDark;
+
+[ItemType]  name=Plate;
+ID=plate; sprite=1934; value=3;
+description=Simple tin dish.;
+[JournalEntry]
+ID=item_plate;
+category=item; halfPage=true; rarity=0;
+title=Plate;
+text=<itemBig=plate><title=Plate><brAdj=>Broad dishware with a lip to keep food on it. Used almost universally around the world (some Rasmen prefer to eat off of small mats).;
+[ItemType]  name=Fork;
+ID=fork; sprite=1935; spriteWhenHeld=0; value=3;
+description=A common utensil.;
+[JournalEntry]
+ID=item_fork;
+category=item; halfPage=true; rarity=0;
+title=Fork;
+text=<itemBig=fork><title=Fork><brAdj=>A two-tined fork made for cooking or eating. The left tine is a bit wider so it can cut food more easily.;
+
+[ItemType]  name=Comb;
+description=A simple comb carved from antler horn.;
+ID=comb; sprite=113; spriteWhenHeld=113; itemCategory=tool;
+weight=0; volume=1; value=50; special=sellForFullValue;
+pR=pVolskarn;
+[JournalEntry]
+ID=item_comb;
+category=item; halfPage=true; rarity=1;
+title=Comb;
+text=<itemBig=comb><title=Comb><brAdj=>A personal grooming tool for rearranging one's hair. Some combs are highly decorative, occasionally being worn as a hairpiece. Others are merely functional.;
+[ItemType]  name=Mirror;
+description=A silver hand mirror.;
+ID=mirror; sprite=112; spriteWhenHeld=0; itemCategory=tool;
+weight=0; volume=1; value=80; special=sellForFullValue;
+[JournalEntry]
+ID=item_mirror;
+category=item; halfPage=true; rarity=1;
+title=Mirror;
+text=<itemBig=mirror><title=Mirror><brAdj=>A reflective looking-glass, likely once owned by a noble or a wealthy merchant. Judging by the silvered handle and rim, it might fetch a decent sum on the market.;
+
+[ItemType]  name=Toy Boat;
+description=A useless trinket.;
+itemCategory=thing;
+ID=toyboat; sprite=623;
+weight=1; volume=1;
+pB=pWood;
+[JournalEntry]
+ID=item_toyboat;
+category=item; halfPage=true; rarity=0;
+title=Toy Boat;
+text=<itemBig=toyboat><title=Toy Boat><brAdj=>The craftmanship is very crude, but it is somewhat reminiscent of a boat. Depending on the angle you look at it.;
+[ItemType]  name=Model Boat;
+description=Detailed ship replica.;
+itemCategory=thing;
+journalID=journal_boat_model;
+ID=boat_model1; sprite=1985;
+weight=1; volume=1; value=50;
+pB=pOrange;
+pG=pWood;
+[ItemType]  name=Model Boat;
+ID=boat_model2; sprite=1986;
+cloneFrom=boat_model1;
+[ItemType]  name=Model Boat;
+ID=boat_model3; sprite=1987;
+cloneFrom=boat_model1;
+[JournalEntry]
+ID=journal_boat_model;
+category=item; halfPage=true; rarity=1;
+title=Model Boat;
+text=<itemBig=boat_model1><title=Model Boat><brAdj=>This carefully constructed ship model is someone's proud creation. Each rig and timber is placed by hand. It almost looks like little people could live on it.;
+
+[ItemType]  name=Engraved 'W';
+ID=engraving_w; sprite=640; itemCategory=hide;
+special=inheritTerrainPalettes; special=cannotBePickedUp;
+[ItemType]  name=Engraved 'A';
+ID=engraving_a; sprite=641;  itemCategory=hide;
+special=inheritTerrainPalettes; special=cannotBePickedUp;
+[ItemType]  name=Engraved 'S';
+ID=engraving_s; sprite=642;  itemCategory=hide;
+special=inheritTerrainPalettes; special=cannotBePickedUp;
+[ItemType]  name=Engraved 'D';
+ID=engraving_d; sprite=643;  itemCategory=hide;
+special=inheritTerrainPalettes; special=cannotBePickedUp;
+[ItemType]  name=Engraved 'C';
+ID=engraving_c; sprite=644;  itemCategory=hide;
+special=inheritTerrainPalettes; special=cannotBePickedUp;
+[ItemType]  name=Engraved 'V';
+ID=engraving_v; sprite=646;  itemCategory=hide;
+special=inheritTerrainPalettes; special=cannotBePickedUp;
+[ItemType]  name=Engraved 'E';
+ID=engraving_e; sprite=647;  itemCategory=hide;
+special=inheritTerrainPalettes; special=cannotBePickedUp;
+[ItemType]  name=Engraved Arrow;
+ID=engraving_arrow; sprite=645; 
+special=inheritTerrainPalettes; special=cannotBePickedUp;
+
+
+
+[ItemType]  name=Random Bone;
+ID=loot_bone_junk; sprite=672;
+value=0;
+pR=pGreyD2;
+special=replaceWith_toMake_list;
+toMake=skull;
+toMake=skull2;
+toMake=bone;
+toMake=bones1;
+toMake=bones2;
+toMake=ribs1;
+toMake=ribs2;
+toMake=skull_elephant1;
+toMake=skull_elephant2;
+toMake=skull_dog1;
+toMake=skull_dog2;
+toMake=tusk;
+toMake=bone_spine;
+toMake=bone_dust;
+
+[ItemType]  name=Skull;
+ID=skull; sprite=672;
+journalID=journal_bone;
+  element=ruin;
+  combineSound=stomp;
+--requiredForCombining=anvil;
+combineWith=craft_sword; toMake=sword_bone; 
+combineWith=craft_dagger; toMake=dagger_bone; 
+combineWith=craft_axe; toMake=axe_bone; 
+combineWith=craft_hammer; toMake=hammer_bone; 
+combineWith=craft_spear; toMake=spear_bone; 
+combineWith=craft_shield; toMake=shield_bone; 
+combineWith=craft_flail; toMake=flail_bone; 
+combineWith=craft_whip; toMake=whip_bone; 
+combineWith=craft_bow; toMake=bow_bone; 
+combineWith=craft_xbow; toMake=xbow_bone; 
+combineWith=craft_knuckle; toMake=knuckle_bone;
+combineWith=craft_armor; toMake=armor_bone;  
+[ItemReaction] 
+ID=skull; element=explode; element=heavySmash; newID=bone_dust; fx=dust_bone;
+[ItemReaction] 
+ID=skull; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
+[ItemType]  name=Skull (Damaged);
+ID=skull2; sprite=686; 
+journalID=journal_bone;
+  element=ruin;
+  combineSound=stomp;
+--requiredForCombining=anvil;
+combineWith=craft_sword; toMake=sword_bone; 
+combineWith=craft_dagger; toMake=dagger_bone; 
+combineWith=craft_axe; toMake=axe_bone; 
+combineWith=craft_hammer; toMake=hammer_bone; 
+combineWith=craft_spear; toMake=spear_bone; 
+combineWith=craft_shield; toMake=shield_bone; 
+combineWith=craft_flail; toMake=flail_bone; 
+combineWith=craft_whip; toMake=whip_bone; 
+combineWith=craft_bow; toMake=bow_bone; 
+combineWith=craft_xbow; toMake=xbow_bone; 
+combineWith=craft_knuckle; toMake=knuckle_bone;
+combineWith=craft_armor; toMake=armor_bone;  
+[ItemReaction] 
+ID=skull2; element=explode; element=heavySmash; newID=bone_dust; fx=dust_bone;
+[ItemReaction] 
+ID=skull2; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
+[ItemType]  name=Bones;
+ID=bones1; sprite=673; 
+journalID=journal_bone;
+  element=ruin;
+  combineSound=stomp;
+--requiredForCombining=anvil;
+combineWith=craft_sword; toMake=sword_bone; 
+combineWith=craft_dagger; toMake=dagger_bone; 
+combineWith=craft_axe; toMake=axe_bone; 
+combineWith=craft_hammer; toMake=hammer_bone; 
+combineWith=craft_spear; toMake=spear_bone; 
+combineWith=craft_shield; toMake=shield_bone; 
+combineWith=craft_flail; toMake=flail_bone; 
+combineWith=craft_whip; toMake=whip_bone; 
+combineWith=craft_bow; toMake=bow_bone; 
+combineWith=craft_xbow; toMake=xbow_bone; 
+combineWith=craft_knuckle; toMake=knuckle_bone;
+combineWith=craft_armor; toMake=armor_bone;  
+[ItemReaction] 
+ID=bones1; element=explode; element=heavySmash; newID=bone_dust; fx=dust_bone;
+[ItemReaction] 
+ID=bones1; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
+[ItemType]  name=Ribs;
+ID=ribs1; sprite=674; 
+journalID=journal_bone;
+weight=1; volume=5;
+  element=ruin;
+  combineSound=stomp;
+--requiredForCombining=anvil;
+combineWith=craft_sword; toMake=sword_bone; 
+combineWith=craft_dagger; toMake=dagger_bone; 
+combineWith=craft_axe; toMake=axe_bone; 
+combineWith=craft_hammer; toMake=hammer_bone; 
+combineWith=craft_spear; toMake=spear_bone; 
+combineWith=craft_shield; toMake=shield_bone; 
+combineWith=craft_flail; toMake=flail_bone; 
+combineWith=craft_whip; toMake=whip_bone; 
+combineWith=craft_bow; toMake=bow_bone; 
+combineWith=craft_xbow; toMake=xbow_bone; 
+combineWith=craft_knuckle; toMake=knuckle_bone; 
+combineWith=craft_armor; toMake=armor_bone;  
+[ItemReaction] 
+ID=ribs1; element=explode; element=heavySmash; newID=bone_dust; fx=dust_bone;
+[ItemReaction] 
+ID=ribs1; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
+[ItemType]  name=Animal Skull;
+ID=skull_elephant1; sprite=675; 
+journalID=journal_bone;
+  element=ruin;
+  combineSound=stomp;
+--requiredForCombining=anvil;
+combineWith=craft_sword; toMake=sword_bone; 
+combineWith=craft_dagger; toMake=dagger_bone; 
+combineWith=craft_axe; toMake=axe_bone; 
+combineWith=craft_hammer; toMake=hammer_bone; 
+combineWith=craft_spear; toMake=spear_bone; 
+combineWith=craft_shield; toMake=shield_bone; 
+combineWith=craft_flail; toMake=flail_bone; 
+combineWith=craft_whip; toMake=whip_bone; 
+combineWith=craft_bow; toMake=bow_bone; 
+combineWith=craft_xbow; toMake=xbow_bone; 
+combineWith=craft_knuckle; toMake=knuckle_bone;
+combineWith=craft_armor; toMake=armor_bone;  
+[ItemReaction] 
+ID=skull_elephant1; element=explode; element=heavySmash; newID=bone_dust; fx=dust_bone;
+[ItemReaction] 
+ID=skull_elephant1; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
+[ItemType]  name=Animal Skull;
+ID=skull_elephant2; sprite=676; 
+journalID=journal_bone;
+  element=ruin;
+  combineSound=stomp;
+--requiredForCombining=anvil;
+combineWith=craft_sword; toMake=sword_bone; 
+combineWith=craft_dagger; toMake=dagger_bone; 
+combineWith=craft_axe; toMake=axe_bone; 
+combineWith=craft_hammer; toMake=hammer_bone; 
+combineWith=craft_spear; toMake=spear_bone; 
+combineWith=craft_shield; toMake=shield_bone; 
+combineWith=craft_flail; toMake=flail_bone; 
+combineWith=craft_whip; toMake=whip_bone; 
+combineWith=craft_bow; toMake=bow_bone; 
+combineWith=craft_xbow; toMake=xbow_bone; 
+combineWith=craft_knuckle; toMake=knuckle_bone;
+combineWith=craft_armor; toMake=armor_bone;  
+[ItemReaction] 
+ID=skull_elephant2; element=explode; element=heavySmash; newID=bone_dust; fx=dust_bone;
+[ItemReaction] 
+ID=skull_elephant2; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
+[ItemType]  name=Bone;
+ID=bone; sprite=677; 
+journalID=journal_bone;
+  element=ruin;
+  combineSound=stomp;
+--requiredForCombining=anvil;
+combineWith=craft_sword; toMake=sword_bone; 
+combineWith=craft_dagger; toMake=dagger_bone; 
+combineWith=craft_axe; toMake=axe_bone; 
+combineWith=craft_hammer; toMake=hammer_bone; 
+combineWith=craft_spear; toMake=spear_bone; 
+combineWith=craft_shield; toMake=shield_bone; 
+combineWith=craft_flail; toMake=flail_bone; 
+combineWith=craft_whip; toMake=whip_bone; 
+combineWith=craft_bow; toMake=bow_bone; 
+combineWith=craft_xbow; toMake=xbow_bone; 
+combineWith=craft_knuckle; toMake=knuckle_bone;
+combineWith=craft_armor; toMake=armor_bone;  
+[ItemReaction] 
+ID=bone; element=explode; element=heavySmash; newID=bone_dust; fx=dust_bone;
+[ItemReaction] 
+ID=bone; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
+[ItemType]  name=Skull;
+ID=skull_dog1; sprite=678; 
+journalID=journal_bone;
+  element=ruin;
+  combineSound=stomp;
+--requiredForCombining=anvil;
+combineWith=craft_sword; toMake=sword_bone; 
+combineWith=craft_dagger; toMake=dagger_bone; 
+combineWith=craft_axe; toMake=axe_bone; 
+combineWith=craft_hammer; toMake=hammer_bone; 
+combineWith=craft_spear; toMake=spear_bone; 
+combineWith=craft_shield; toMake=shield_bone; 
+combineWith=craft_flail; toMake=flail_bone; 
+combineWith=craft_whip; toMake=whip_bone; 
+combineWith=craft_bow; toMake=bow_bone; 
+combineWith=craft_xbow; toMake=xbow_bone; 
+combineWith=craft_knuckle; toMake=knuckle_bone;
+combineWith=craft_armor; toMake=armor_bone;  
+[ItemReaction] 
+ID=skull_dog1; element=explode; element=heavySmash; newID=bone_dust; fx=dust_bone;
+[ItemReaction] 
+ID=skull_dog1; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
+[ItemType]  name=Skull;
+ID=skull_dog2; sprite=679; 
+journalID=journal_bone;
+  element=ruin;
+  combineSound=stomp;
+--requiredForCombining=anvil;
+combineWith=craft_sword; toMake=sword_bone; 
+combineWith=craft_dagger; toMake=dagger_bone; 
+combineWith=craft_axe; toMake=axe_bone; 
+combineWith=craft_hammer; toMake=hammer_bone; 
+combineWith=craft_spear; toMake=spear_bone; 
+combineWith=craft_shield; toMake=shield_bone; 
+combineWith=craft_flail; toMake=flail_bone; 
+combineWith=craft_whip; toMake=whip_bone; 
+combineWith=craft_bow; toMake=bow_bone; 
+combineWith=craft_xbow; toMake=xbow_bone; 
+combineWith=craft_knuckle; toMake=knuckle_bone;
+combineWith=craft_armor; toMake=armor_bone;  
+[ItemReaction] 
+ID=skull_dog2; element=explode; element=heavySmash; newID=bone_dust; fx=dust_bone;
+[ItemReaction] 
+ID=skull_dog2; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
+[ItemType]  name=Bones;
+ID=bones2; sprite=680; 
+  element=ruin;
+journalID=journal_bone;
+  combineSound=stomp; 
+--requiredForCombining=anvil;
+combineWith=craft_sword; toMake=sword_bone; 
+combineWith=craft_dagger; toMake=dagger_bone; 
+combineWith=craft_axe; toMake=axe_bone; 
+combineWith=craft_hammer; toMake=hammer_bone; 
+combineWith=craft_spear; toMake=spear_bone; 
+combineWith=craft_shield; toMake=shield_bone; 
+combineWith=craft_flail; toMake=flail_bone; 
+combineWith=craft_whip; toMake=whip_bone; 
+combineWith=craft_bow; toMake=bow_bone; 
+combineWith=craft_xbow; toMake=xbow_bone; 
+combineWith=craft_knuckle; toMake=knuckle_bone; 
+combineWith=craft_armor; toMake=armor_bone;  
+[ItemReaction] 
+ID=bones2; element=explode; element=heavySmash; newID=bone_dust; fx=dust_bone;
+[ItemReaction] 
+ID=bones2; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
+[ItemType]  name=Bone Pile;
+ID=bonePile; sprite=57; special=canHangOnWalls; special=cannotBePickedUp;
+pR=pBone;
+journalID=journal_bone;
+  element=ruin;
+[ItemReaction] 
+ID=bonePile; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
+[ItemType]  name=Bone Pile;
+ID=bonePileDark; sprite=57; special=canHangOnWalls; special=cannotBePickedUp;
+journalID=journal_bone;
+pR=pBoneDark;
+  element=ruin;
+[ItemReaction] 
+ID=bonePileDark; element=bonemeld; newID=bone_wall_strong; fx=dust_bone;
+
+[ItemType]  name=Tusk;
+ID=tusk; sprite=681; 
+journalID=journal_bone;
+weight=1; volume=2;
+  element=ruin;
+[ItemReaction] 
+ID=tusk; element=explode; element=heavySmash; newID=bone_dust; fx=dust_bone;
+[ItemReaction] 
+ID=tusk; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
+[ItemType]  name=Ribcage;
+ID=ribs2; sprite=682;
+weight=1; volume=5; 
+journalID=journal_bone;
+  element=ruin;
+  combineSound=stomp;
+--requiredForCombining=anvil;
+combineWith=craft_sword; toMake=sword_bone; 
+combineWith=craft_dagger; toMake=dagger_bone; 
+combineWith=craft_axe; toMake=axe_bone; 
+combineWith=craft_hammer; toMake=hammer_bone; 
+combineWith=craft_spear; toMake=spear_bone; 
+combineWith=craft_shield; toMake=shield_bone; 
+combineWith=craft_flail; toMake=flail_bone; 
+combineWith=craft_whip; toMake=whip_bone; 
+combineWith=craft_bow; toMake=bow_bone; 
+combineWith=craft_xbow; toMake=xbow_bone; 
+combineWith=craft_knuckle; toMake=knuckle_bone; 
+combineWith=craft_armor; toMake=armor_bone;  
+[ItemReaction] 
+ID=ribs2; element=explode; element=heavySmash; newID=bone_dust; fx=dust_bone;
+[ItemReaction] 
+ID=ribs2; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
+[ItemType]  name=Spine;
+ID=bone_spine; sprite=685;
+weight=1; volume=5;
+journalID=journal_bone;
+  element=ruin;
+  combineSound=stomp;
+--requiredForCombining=anvil;
+combineWith=craft_sword; toMake=sword_bone; 
+combineWith=craft_dagger; toMake=dagger_bone; 
+combineWith=craft_axe; toMake=axe_bone; 
+combineWith=craft_hammer; toMake=hammer_bone; 
+combineWith=craft_spear; toMake=spear_bone; 
+combineWith=craft_shield; toMake=shield_bone; 
+combineWith=craft_flail; toMake=flail_bone; 
+combineWith=craft_whip; toMake=whip_bone; 
+combineWith=craft_bow; toMake=bow_bone; 
+combineWith=craft_xbow; toMake=xbow_bone; 
+combineWith=craft_knuckle; toMake=knuckle_bone; 
+combineWith=craft_armor; toMake=armor_bone;  
+[ItemReaction] 
+ID=bone_spine; element=explode; element=heavySmash; newID=bone_dust; fx=dust_bone;
+[ItemReaction] 
+ID=bone_spine; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
+
+[JournalEntry]
+ID=journal_bone;
+category=item; halfPage=true; 
+title=Bone;
+text=<itemBig=skull><itemBig=ribs2><title=Bone><brAdj=>Dense vertebrate tissue. Making tools & weapons out of bone is a longstanding tradition. It can also be a source of necromantic power.<n=>Keep in mind that most vendors will not pay you anything for bone or bone equipment.;
+
+[ItemType]  name=Bone Dust;
+ID=bone_dust; sprite=687; stackable=true;
+  element=ruin;
+combineWith=murkspore1; toMake=poisonDust; 
+combineWith=murkspore2; toMake=poisonDust; 
+combineWith=murkspore3; toMake=poisonDust; 
+combineWith=murkspore_main; toMake=poisonDust; 
+combineWith=murkspore_water; toMake=poisonDust; 
+combineWith=slugwort1; toMake=poisonDust;
+combineWith=slugwort2; toMake=poisonDust; 
+combineWith=slugwort3; toMake=poisonDust; 
+combineWith=slugwort4; toMake=poisonDust; 
+
+[ItemReaction] 
+ID=bone_dust; element=bonemeld; newID=bone_spikes; fx=dust_bone;
+[JournalEntry]
+ID=item_bone_dust;
+category=item; halfPage=true;
+title=Bone Dust;
+text=<itemBig=bone_dust><title=Bone Dust><brAdj=>Bone smashed & ground up into a grainy powder. Not especially useful, even to necromancers.;
+
+
+
+
+[ItemType]  name=Notes;
+description=Indicipherable, jargon-filled notes.;
+ID=notes_useless; sprite=865; 
+[JournalEntry]
+ID=item_notes_useless;
+category=item; halfPage=true;
+title=Notes;
+text=<itemBig=notes_useless><title=Notes><brAdj=>Notes full of ungrokable jargon, mispelings, incorrect punctuation. And sentence fragments.<n=>...also it's written in a language you can't read.;
+[ItemType]  name=Parchment;
+description=Blank paper.;
+ID=notes_blank; sprite=2026; 
+pR=pYellow4;
+[JournalEntry]
+ID=item_notes_blank;
+category=item; halfPage=true; rarity=0;
+title=Parchment;
+text=<itemBig=notes_blank><title=Parchment><brAdj=>This dried animal skin is ready to be written on. Not to be confused with vellum.;
+
+[ItemType]  name=<color=Gold>Map;
+description=A hastily scrawled map. <color=Gold>'Look'<color=White> at it to read it.;
+ID=map_bloodQ; sprite=866; 
+[JournalEntry]
+ID=item_map_bloodQ;
+category=item; halfPage=false;
+title=Map;
+text=<itemBig=map_bloodQ><title=Map><brAdj=><imgBig=j_bloodq_map>;
+
+[ItemType]  name=Scribbled Note;
+description=A short note on a scrap of paper. <color=Gold>'Look'<color=White> at it to read it.;
+pR=pYellow;
+pB=pBlackCloth;
+ID=note_necroBloodQ; sprite=870; 
+[JournalEntry]
+ID=item_note_necroBloodQ;
+category=item; halfPage=true;
+title=Scribbled Note;
+text=<itemBig=note_necroBloodQ><title=Scribbled Note><brAdj=>The note reads, <n=>    "Ekrast, the curiosity of your Jascian friends has caused me to upgrade my security.<n=>    If you have need of me, think back to the most basic texts about my trade. Then the path will be Revealed to you.<n=>    -V";
+
+
+[ItemType]  name=Book;
+description=Book;
+ID=book1; sprite=868; 
+pR=pRedCloth;
+pB=pGrey;
+
+
+[ItemType]  name=Notes: Void, pt. I;
+description=Some of Ekrast's notes. <color=Gold>'Look'<color=White> at it to read it.;
+ID=book_research_v1; sprite=867; value=10;
+pR=pGrey;
+pB=pBlackCloth;
+[JournalEntry]
+ID=item_book_research_v1;
+category=artifact; halfPage=true; rarity=1;
+title=Notes: Void, pt. I;
+text=<itemBig=book_research_v1><title=Notes: Void, pt. I><brAdj=>"Essence is sapped by the Void, yet our realm exists surrounded by it. What prevents the Void from sapping life from Limroft?<n=>    Popular theory is the cloudy atmosphere, but tests w/ water vapor show it has no protective effect- at least in smaller quantities.<n=>    Current theory- gravity-like effect, dependent on mass.";
+
+
+[ItemType]  name=Nature of the Void;
+description=A short treatise regarding the Void. <color=Gold>'Look'<color=White> at it to read it.;
+ID=book_void1; sprite=868; value=30;
+pR=pGreyblue2;
+pB=pGrey;
+[JournalEntry]
+ID=item_book_void1;
+category=artifact; halfPage=true; rarity=1;
+title=Nature of the Void;
+text=<itemBig=book_void1><title=Nature of the Void><brAdj=>"Above the skies of Eral, Limroft, and Graven, is the Void: an endless expanse of pure white light. Movement of thick clouds obscuring this light brings us day and night. But what is the true nature of the Void?<n=>    Little is known, except that direct exposure saps Essence from living beings. Many unfortunate experiments have proven this...";
+
+[ItemType]  name=Necromancy Revealed;
+description=An examination of the basics of Necromancy. <color=Gold>'Look'<color=White> at it to read it.;
+ID=book_necro1; sprite=868; value=30;
+pR=pBlackCloth;
+pB=pGrey;
+[JournalEntry]
+ID=item_book_necro1;
+category=artifact; halfPage=true; rarity=2;
+title=Necromancy Rev'd;
+text=<itemBig=book_necro1><title=Necromancy Revealed><brAdj=>"Though necromancy is rightfully condemned, we should not shy away from understanding its workings:<n=>    Necromancy is the use of Ruin magic on a newly-dead corpse to harness its essence. Essence normally dissipates within 2 weeks - but with necromancy, essence can be restrained indefinitely.";
+
+[ItemType]  name=Magic Essentials, vol. I;
+description=An examination of the basics of magic. <color=Gold>'Look'<color=White> at it to read it.;
+ID=book_magic1; sprite=869; value=30;
+pR=pPurpleD;
+pB=pYellow;
+[JournalEntry]
+ID=item_book_magic1;
+category=artifact; halfPage=true; rarity=1;
+title=Magic Essentials I;
+text=<itemBig=book_magic1><title=Magic Essentials, vol. I><brAdj=>"...in reality, magic is not a thing, or substance, but is instead an action, or a conversion. Three substances- matter, energy, and essence- make up the world: magic is using strength of mind to convert essence into energy.<n=>    Though creating matter is infeasible, there are tricks a clever mage can employ- such as causing condensation by changing temperature.";
+
+[ItemType]  name=Magic Essentials, vol. II;
+description=An examination of the basics of magic. <color=Gold>'Look'<color=White> at it to read it.;
+ID=book_magic2; sprite=869; value=30;
+pR=pPurpleD;
+pB=pYellow;
+[JournalEntry]
+ID=item_book_magic2;
+category=artifact; halfPage=false; rarity=1;
+title=Magic Essentials II;
+text=<itemBig=book_magic2><title=Magic Essentials, vol. II><brAdj=>"Magic manifests in 6 elements
+<n=><icon=skill_Fire>Fire - generate heat.<n=><icon=skill_Ice>Ice - reduce/remove heat.<n=><icon=skill_Elec>Lightning - electricity<n=><icon=skill_Wind>Wind (Force) - movement<n=><icon=skill_Life>Life (Preservation) -  restore original state<n=><icon=skill_Ruin>Ruin* - degrade state<n=>          *Ruin is viewed as a perversion in some circles. Its inclusion is for completeness, not to endorse or condemn any religious views.";
+
+[ItemType]  name=<color=Gold>Jasce's Crest;
+description=An engraved crest of Voidrock.;
+ID=voidrockCrest_jasce; sprite=898;
+ volume=1; value=19999;
+[JournalEntry]
+ID=item_voidrockCrest_jasce;
+category=artifact; halfPage=true; rarity=4; rewardMod=-200;
+title=Jasce's Crest;
+text=<itemBig=voidrockCrest_jasce><title=Jasce's Crest><brAdj=>Jasce's self-proclaimed proof of divinity. His symbol is engraved in what is supposedly Voidrock, an impossibly hard substance that cannot be carved by any mortal means. The appearance matches Voidrock, but no scholar has been allowed to verify it.;
+
+
+
+[ItemType]  name=Escape Gem;
+ID=gem_escape; sprite=875; value=100;
+volume=98;
+description=When carried, teleports you home safely when you are about to bleed out.;
+pR=pPurple;
+
+[ItemType]  name=Small Gem;
+ID=gem_small1; sprite=876; value=200;
+journalID=journal_gems;
+description=Small, valuable gem.; stackable=true;
+special=convertIntoCashAtEnd; special=sellForFullValue;
+[ItemType]  name=Big Gem;
+ID=gem_small2; sprite=844; value=400;
+journalID=journal_gems;
+description=A valuable gem.; stackable=true;
+special=convertIntoCashAtEnd; special=sellForFullValue;
+
+
+[ItemType]  name=Huge Gem;
+ID=gem_big1; sprite=845; value=1000; stackable=true;
+journalID=journal_gems;
+description=Highly valuable gem.;
+special=convertIntoCashAtEnd; special=sellForFullValue;
+[ItemType]  name=Massive Gem;
+ID=gem_big2; sprite=877; value=2500; stackable=true;
+journalID=journal_gems;
+description=Extremely valuable gem.;
+special=convertIntoCashAtEnd; special=sellForFullValue;
+
+[JournalEntry]
+ID=journal_gems;
+category=item; halfPage=true; rarity=2;
+title=Gems;
+text=<itemBig=gem_small2><itemBig=gem_big1><title=Gems><brAdj=>Gems big and small have been coveted since time immemorial. Regardless of function, their scarcity and shining appearance grants them inherent value.;
+
+[ItemType]  name=Crafting Kit Loot;
+ID=loot_craft_kit; sprite=802;
+value=150;
+pR=pGreyD2;
+special=replaceWith_toMake_list;
+special=replaceWith_globalVarMatch;
+toMake=craft_sword;
+toMake=craft_dagger;
+toMake=craft_hammer;
+toMake=craft_axe;
+toMake=craft_shield;
+toMake=craft_flail;
+toMake=craft_whip;
+toMake=craft_bow;
+toMake=craft_xbow;
+toMake=craft_spear;
+toMake=craft_knuckle;
+toMake=craft_rapier;
+toMake=craft_greatsword;
+toMake=craft_armor;
+
+[ItemType]  name=Class Mask Loot;
+ID=loot_mask; sprite=1056;
+value=250;
+pR=pGreyD2;
+special=replaceWith_toMake_list;
+special=replaceWith_globalVarMatch;
+toMake=mask_balancer;
+toMake=mask_sorcerer;
+toMake=mask_mechanist;
+toMake=mask_enchanter;
+toMake=mask_spellslinger;
+toMake=mask_unmaker;
+toMake=mask_gatekeeper;
+toMake=mask_shiftcloak;
+toMake=mask_defiler;
+toMake=mask_warpblade;
+
+toMake=loot_mask_weak;
+
+[ItemType]  name='Weak' Class Mask Loot;
+ID=loot_mask_weak; sprite=1056;
+value=140;
+pR=pBlue;
+special=replaceWith_toMake_list;
+special=replaceWith_globalVarMatch;
+toMake=mask_sharpshooter;
+toMake=mask_brawler;
+toMake=mask_sorcerer;
+toMake=mask_blade;
+toMake=mask_breaker;
+toMake=mask_berserker;
+
+
+[ItemType]  name=Mask;
+ID=mask_blank; sprite=1056; 
+weight=0; volume=1; value=0;
+description=A mysterious mask.;
+journalID=journal_mask;
+depthMod=1000;
+special=canHangOnWalls;
+special=setGlobalVarWhenConverted;
+special=canAssignSpecialTC;
+special=drawSpecialTC;
+
+[ItemType]  name=Scholarly Mask;
+ID=mask_scholar; sprite=1057;  spriteWhenHeld=1057;
+description=Mask of the Scholar.;
+cloneFrom=mask_blank;
+[ItemType]  name=War Mask;
+ID=mask_warrior; sprite=1064;  spriteWhenHeld=1064;
+description=Mask of the Warrior.;
+cloneFrom=mask_blank;
+[ItemType]  name=Surprised Mask;
+ID=mask_scout; sprite=1059;  spriteWhenHeld=1059;
+description=Mask of the Scout.;
+cloneFrom=mask_blank;
+[ItemType]  name=Roguish Mask;
+ID=mask_rogue; sprite=1060;  spriteWhenHeld=1060;
+description=Mask of the clever Rogue.;
+cloneFrom=mask_blank;
+[ItemType]  name=Keen Eye Mask;
+ID=mask_sharpshooter; sprite=1061;  spriteWhenHeld=1061;
+description=Mask of the Sharpshooter.;
+cloneFrom=mask_blank;
+[ItemType]  name=Raging Mask;
+ID=mask_brawler; sprite=1058; spriteWhenHeld=1058;
+description=Mask of the ferocious Brawler.;
+cloneFrom=mask_blank;
+[ItemType]  name=Stoic Mask;
+ID=mask_guardian; sprite=1069;  spriteWhenHeld=1069;
+description=Mask of the noble Guardian.;
+cloneFrom=mask_blank;
+[ItemType]  name=Dual Mask;
+ID=mask_balancer; sprite=1070; spriteWhenHeld=1070;
+description=Mask of the Balancer.;
+cloneFrom=mask_blank;
+[ItemType]  name=Powerful Mask;
+ID=mask_sorcerer; sprite=1071; spriteWhenHeld=1071;
+description=Mask of the mighty Sorcerer.;
+cloneFrom=mask_blank;
+[ItemType]  name=Thoughtful Mask;
+ID=mask_sage; sprite=1072; spriteWhenHeld=1072;
+description=Mask of the pensive Sage.;
+cloneFrom=mask_blank;
+[ItemType]  name=Half-Mask;
+ID=mask_mechanist; sprite=1073; spriteWhenHeld=1073;
+description=Mask of the genius Mechanist.;
+cloneFrom=mask_blank;
+[ItemType]  name=Shining Dragon Mask;
+ID=mask_blade; sprite=1074; spriteWhenHeld=1074;
+description=Mask of the Blade.;
+cloneFrom=mask_blank;
+[ItemType]  name=Rusty Dragon Mask;
+ID=mask_breaker; sprite=1075; spriteWhenHeld=1075;
+description=Mask of the Breaker.;
+cloneFrom=mask_blank;
+[ItemType]  name=Magic Sword Mask;
+ID=mask_enchanter; sprite=1076; spriteWhenHeld=1076;
+description=Mask of the Enchanter.;
+cloneFrom=mask_blank;
+[ItemType]  name=Magic Eye Mask;
+ID=mask_spellslinger; sprite=1077; spriteWhenHeld=1077;
+description=Mask of the Spell Archon.;
+cloneFrom=mask_blank;
+[ItemType]  name=Phantom Mask;
+ID=mask_unmaker; sprite=1067; spriteWhenHeld=1067;
+description=Mask of the dark Unmaker.;
+cloneFrom=mask_blank;
+[ItemType]  name=Sly Mask;
+ID=mask_gatekeeper; sprite=1078; spriteWhenHeld=1078;
+description=Mask of the ancient Gatekeeper.;
+cloneFrom=mask_blank;
+[ItemType]  name=Hollow Mask;
+ID=mask_shiftcloak; sprite=1065; spriteWhenHeld=1065;
+description=Mask of the elusive Shiftcloak.;
+cloneFrom=mask_blank;
+[ItemType]  name=Crazed Mask;
+ID=mask_berserker; sprite=1068; spriteWhenHeld=1068;
+description=Mask of the reckless Berserker.;
+cloneFrom=mask_blank;
+[ItemType]  name=Eager Mask;
+ID=mask_defiler; sprite=1062; spriteWhenHeld=1062;
+description=Mask of the evil Defiler.;
+cloneFrom=mask_blank;
+[ItemType]  name=Zoar Mask;
+ID=mask_bathandler; sprite=1079; spriteWhenHeld=1079;
+description=Mask of the resourceful and caring Bathandler.;
+cloneFrom=mask_blank;
+
+[ItemType]  name=Burning Mask;
+ID=mask_ignisKnight; sprite=1080; spriteWhenHeld=1080; 
+description=Mask of the scorched Ignis Knight.;
+cloneFrom=mask_blank;
+
+[ItemType]  name=Striped Mask;
+ID=mask_warpblade; sprite=1081; spriteWhenHeld=1081;
+description=Mask of the stern Warpblade.;
+cloneFrom=mask_blank;
+
+[JournalEntry]
+ID=journal_mask;
+category=item; halfPage=false; rarity=2;
+title=Mask;
+text=<itemBig=mask_warrior><itemBig=mask_scholar><itemBig=mask_scout><title=Mask><brAdj=>Rasmen are sometimes feared and distrusted for their alien appearance, and non-Rasmen have immense difficulty telling them apart. Their solution was to carve and wear masks such as these. Since Rasmen see by 'feeling' essence, wearing a mask does not inhibit their senses.<n=><n=>These masks, though of solid craftsmanship, often display bizarre and uncanny faces. It figures that a faceless species would have no inherent sense of normal facial structure.;
+
+
+
+[ItemType]  name=Arrow;
+ID=exitArrow1; sprite=2017;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=animated; special=fullTileHitbox; special=oneClickToUse;
+special=noTooltips;
+special=noPlayerPlacedItems;
+pG=pG; 
+[ItemReaction] 
+ID=exitArrow1; element=use; action=use;
+
+
+[ItemType]  name=Important Page;
+ID=useNote; sprite=2025;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=fullTileHitbox; special=oneClickToUse;
+special=noTooltips;
+pR=pYellow; 
+[ItemReaction] 
+ID=useNote; element=use; action=use;
+[ItemType]  name=Press <keybind=showTooltip> to see more info!;
+ID=infoNote1; sprite=2024;
+description=Yes, exactly like that!;
+special=cannotBePickedUp; special=canHangOnWalls;
+pR=pGreyD; 
+
+
+
+
+[ItemType]  name=Gate Device;
+ID=gateDevice; sprite=2049;
+special=canHangOnWalls; special=animated;
+special=noTooltips;
+special=cannotBePickedUp;
+pR=pPurple;
+pB=pGhost;
+pG=pBlue; 
+depthMod=1050;
+[JournalEntry]
+ID=item_gateDevice;
+category=artifact; halfPage=true; rarity=3; rewardMod=-200;
+title=Gate Device;
+text=<itemBig=gateDevice><title=Gate Device><brAdj=>An exceedingly high-quality Gate trigger device that allows remote monitoring and teleportation. It only works on willing participants bearing the proper equipment, however, and it requires special training & maintenance to use.;
+
+
+
+
+[ItemType]  name=Wood Loot; itemCategory=thing; 
+ID=loot_wood; sprite=105;
+texture=items_weapons;
+value=5;
+pR=pWood; pB=pWoodDark;
+special=replaceWith_toMake_list;
+toMake=sword_wood;
+toMake=dagger_wood;
+toMake=hammer_wood;
+toMake=bow_wood;
+toMake=xbow_wood;
+toMake=shield_wood;
+toMake=spear_wood;
+
+[ItemType]  name=Bone Loot;
+ID=loot_bone; sprite=105; itemCategory=thing; 
+texture=items_weapons;
+value=5;
+pR=pBone; pB=pBoneDark;
+special=replaceWith_toMake_list;
+toMake=sword_bone;
+toMake=dagger_bone;
+toMake=hammer_bone;
+toMake=bow_bone;
+toMake=xbow_bone;
+toMake=shield_bone;
+toMake=spear_bone;
+toMake=axe_bone;
+toMake=flail_bone;
+toMake=whip_bone;
+toMake=knuckle_bone;
+toMake=armor_bone;
+
+
+[ItemType]  name=Iron Loot;
+ID=loot_iron; sprite=105; itemCategory=thing; 
+texture=items_weapons;
+value=25;
+pR=pIron; pB=pIronHilt;
+special=replaceWith_toMake_list;
+toMake=sword_iron;
+toMake=axe_iron;
+toMake=rapier_iron;
+toMake=dagger_iron;
+toMake=greatsword_iron;
+toMake=hammer_iron;
+toMake=bow_iron;
+toMake=xbow_iron;
+toMake=shield_iron;
+toMake=flail_iron;
+toMake=whip_iron;
+toMake=knuckle_iron;
+toMake=spear_iron;
+toMake=armor_iron;
+
+[ItemType]  name=Steel Loot;
+ID=loot_steel; sprite=105; itemCategory=thing;
+texture=items_weapons;
+value=50;
+pR=pSteel; pB=pSteelHilt; 
+special=replaceWith_toMake_list;
+toMake=sword_steel;
+toMake=axe_steel;
+toMake=rapier_steel;
+toMake=dagger_steel;
+toMake=greatsword_steel;
+toMake=hammer_steel;
+toMake=bow_steel;
+toMake=xbow_steel;
+toMake=shield_steel;
+toMake=flail_steel;
+toMake=whip_steel;
+toMake=knuckle_steel;
+toMake=spear_steel;
+toMake=armor_steel;
+
+
+[ItemType]  name=Mythril Loot;
+ID=loot_mythril; sprite=105; itemCategory=thing; 
+texture=items_weapons;
+value=200;
+pR=pMythril; pB=pMythrilHilt;
+special=replaceWith_toMake_list;
+toMake=sword_mythril;
+toMake=axe_mythril;
+toMake=rapier_mythril;
+toMake=dagger_mythril;
+toMake=greatsword_mythril;
+toMake=hammer_mythril;
+toMake=bow_mythril;
+toMake=xbow_mythril;
+toMake=shield_mythril;
+toMake=flail_mythril;
+toMake=whip_mythril;
+toMake=knuckle_mythril;
+toMake=spear_mythril;
+toMake=armor_mythril;
+[ItemType]  name=Corpryst Loot;
+ID=loot_corpryst; sprite=105; itemCategory=thing; 
+texture=items_weapons;
+value=200;
+pR=pCorpryst; pB=pCorprystHilt;
+special=replaceWith_toMake_list;
+toMake=sword_corpryst;
+toMake=axe_corpryst;
+toMake=rapier_corpryst;
+toMake=dagger_corpryst;
+toMake=greatsword_corpryst;
+toMake=hammer_corpryst;
+toMake=shield_corpryst;
+toMake=flail_corpryst;
+toMake=whip_corpryst;
+toMake=knuckle_corpryst;
+toMake=spear_corpryst;
+toMake=armor_corpryst;
+[ItemType]  name=Coral Loot;
+ID=loot_coral; sprite=105; itemCategory=thing; 
+texture=items_weapons;
+value=45;
+pR=pCoral; pB=pCoralHilt;
+special=replaceWith_toMake_list;
+toMake=sword_coral;
+toMake=axe_coral;
+toMake=rapier_coral;
+toMake=dagger_coral;
+toMake=greatsword_coral;
+toMake=hammer_coral;
+toMake=bow_coral;
+toMake=xbow_coral;
+toMake=shield_coral;
+toMake=flail_coral;
+toMake=whip_coral;
+toMake=knuckle_coral;
+toMake=spear_coral;
+toMake=armor_coral;
+
+
+[ItemType]  name=Electric Loot;
+ID=loot_elec; sprite=105; itemCategory=thing; 
+texture=items_weapons;
+value=350;
+pR=pShockWeapon; pB=pShockWeaponHilt;
+special=replaceWith_toMake_list;
+toMake=sword_elec;
+toMake=axe_elec;
+toMake=rapier_elec;
+toMake=dagger_elec;
+toMake=greatsword_elec;
+toMake=hammer_elec;
+toMake=bow_elec;
+toMake=xbow_elec;
+toMake=shield_elec;
+toMake=flail_elec;
+toMake=whip_elec;
+toMake=knuckle_elec;
+toMake=spear_elec;
+toMake=armor_elec;
+
+[ItemType]  name=Wind Loot;
+ID=loot_wind; sprite=105; itemCategory=thing; 
+texture=items_weapons;
+value=400;
+pR=pWhistle; pB=pWhistleHilt;
+special=replaceWith_toMake_list;
+toMake=sword_wind;
+toMake=axe_wind;
+toMake=rapier_wind;
+toMake=dagger_wind;
+toMake=greatsword_wind;
+toMake=hammer_wind;
+toMake=bow_wind;
+toMake=xbow_wind;
+toMake=shield_wind;
+toMake=flail_wind;
+toMake=whip_wind;
+toMake=knuckle_wind;
+toMake=spear_wind;
+toMake=armor_wind;
+
+[ItemType]  name=Laser Loot;
+ID=loot_laser; sprite=105; itemCategory=thing; 
+texture=items_weapons;
+value=600;
+pR=pLaser; pB=pLaserHilt;
+special=replaceWith_toMake_list;
+toMake=sword_laser;
+toMake=axe_laser;
+toMake=rapier_laser;
+toMake=dagger_laser;
+toMake=greatsword_laser;
+toMake=hammer_laser;
+toMake=bow_laser;
+toMake=xbow_laser;
+toMake=shield_laser;
+toMake=flail_laser;
+toMake=whip_laser;
+toMake=knuckle_laser;
+toMake=spear_laser;
+toMake=armor_laser;
+
+[ItemType]  name=Ironice Loot;
+ID=loot_ironice; sprite=105; itemCategory=thing; 
+texture=items_weapons;
+value=800;
+pR=pIronice; pB=pIroniceHilt;
+special=replaceWith_toMake_list;
+toMake=sword_ironice;
+toMake=axe_ironice;
+toMake=rapier_ironice;
+toMake=dagger_ironice;
+toMake=greatsword_ironice;
+toMake=hammer_ironice;
+toMake=bow_ironice;
+toMake=xbow_ironice;
+toMake=shield_ironice;
+toMake=flail_ironice;
+toMake=whip_ironice;
+toMake=knuckle_ironice;
+toMake=spear_ironice;
+toMake=armor_ironice;
+
+[ItemType]  name=Volskarn Loot;
+ID=loot_volskarn; sprite=105; itemCategory=thing; 
+texture=items_weapons;
+value=150;
+pR=pVolskarn; pB=pVolskarnHilt;
+special=replaceWith_toMake_list;
+toMake=sword_volskarn;
+toMake=axe_volskarn;
+toMake=rapier_volskarn;
+toMake=dagger_volskarn;
+toMake=greatsword_volskarn;
+toMake=hammer_volskarn;
+toMake=bow_volskarn;
+toMake=xbow_volskarn;
+toMake=shield_volskarn;
+toMake=flail_volskarn;
+toMake=whip_volskarn;
+toMake=knuckle_volskarn;
+toMake=spear_volskarn;
+toMake=armor_volskarn;
+
+
+[ItemType]  name=All Equipment;
+ID=loot_equip_all; sprite=105; itemCategory=thing; 
+texture=items_weapons;
+value=700;
+pR=pIronice; pB=pIroniceHilt;
+special=replaceWith_toMake_list;
+toMake=loot_mythril;
+toMake=loot_coral;
+toMake=loot_elec;
+toMake=loot_wind;
+toMake=loot_laser;
+toMake=loot_volskarn;
+toMake=loot_equip_rare1;
+
+[ItemType]  name=Rare Equipment;
+ID=loot_equip_rare1; sprite=105; itemCategory=thing; 
+texture=items_weapons;
+value=600;
+special=replaceWith_toMake_list;
+toMake=gun_intimidator;
+toMake=rifle_blunderbuss;
+toMake=pistol_slide;
+toMake=pistol_force;
+toMake=pistol_dragon;
+toMake=axe_crab;
+toMake=flail_double;
+toMake=scimitar_whirl;
+toMake=whip_undeadkiller;
+toMake=whip_grapple;
+toMake=whip_lasher;
+toMake=luckshot;
+toMake=loot_ironice;
+toMake=loot_equip_rare2;
+toMake=loot_armor_rare2;
+
+[ItemType]  name=Rare Equipment;
+ID=loot_equip_rare2; sprite=105; itemCategory=thing; 
+texture=items_weapons;
+value=800;
+special=replaceWith_toMake_list;
+toMake=shield_barrier;
+toMake=greatsword_arc;
+toMake=hammer_blaster;
+toMake=bow_spirithail;
+toMake=sword_volskarver;
+toMake=rifle_scout;
+toMake=loot_armor_rare2;
+ 
+[ItemType]  name=Trigger Stone Loot;
+texture=items_weapons;
+ID=loot_trigger; sprite=110;
+value=90;
+pR=pWhite; itemCategory=thing; 
+special=replaceWith_toMake_list;
+toMake=trigger_elec;
+toMake=trigger_fire;
+toMake=trigger_ice;
+toMake=trigger_wind;
+toMake=trigger_life;
+toMake=trigger_ruin;
+toMake=trigger_water;
+toMake=loot_trigger_status;
+[ItemType]  name=Special Trigger Stone Loot;
+texture=items_weapons;
+ID=loot_trigger_special; sprite=109;
+value=150;
+pR=pWhite; itemCategory=thing; 
+special=replaceWith_toMake_list;
+toMake=trigger_fire_cage;
+toMake=trigger_elec_cage;
+toMake=trigger_life_light;
+toMake=trigger_ice_light;
+toMake=trigger_wind_light;
+[ItemType]  name=Status Trigger Stone Loot;
+texture=items_weapons;
+ID=loot_trigger_status; sprite=107;
+value=150;
+pR=pWhite; itemCategory=thing; 
+special=replaceWith_toMake_list;
+toMake=trigger_stun;
+toMake=trigger_push;
+toMake=trigger_growth;
+
+[ItemType]  name=Grove Shrine Pedestal Items;
+ID=loot_grove_shrine; sprite=868; itemCategory=thing; 
+value=200;
+special=replaceWith_toMake_list;
+toMake=loot6;
+toMake=gem_big1;
+toMake=actionTablet_random;
+toMake=actionTablet_random;
+
+
+
+[ItemType]  name=Fossils;
+ID=loot_fossils; sprite=2224;
+value=500;
+pR=pBlue;
+special=replaceWith_toMake_list;
+special=replaceWith_globalVarMatch;
+special=replaceWith_assign_globalVar;
+toMake=fossil1;
+toMake=fossil2;
+toMake=fossil3;
+toMake=fossil4;
+toMake=fossil5;
+toMake=fossil6;
+toMake=fossil7;
+toMake=fossil8;
+toMake=fossil9;
+toMake=fossil10;
+toMake=fossil11;
+toMake=fossil12;
+toMake=fossil13;
+toMake=fossil14;
+toMake=fossil15;
+toMake=fossil16;
+toMake=fossil17;
+
+
+[ItemType]  name=Fossil;
+ID=fossil1; sprite=2224; 
+weight=0; volume=1; value=0;
+description=An ancient fossil. 'Look' at it to research it.;
+special=sellForFullValue;
+pR=pDirt;
+spawnFX=lootRemaining;
+
+[JournalEntry]
+ID=item_fossil1;
+category=artifact; halfPage=true; rarity=3; rewardMod=250;
+title=Perfect Bone;
+text=<itemBig=fossil1><title=Perfect Bone><brAdj=>A bone, possibly a Humerus, that is in astonishingly good condition despite belonging to an ancient human.;
+
+
+[ItemType]  name=Fossil;
+ID=fossil2; sprite=2225; 
+cloneFrom=fossil1;
+[JournalEntry]
+ID=item_fossil2;
+category=artifact; halfPage=true; rarity=3; rewardMod=400;
+title=Giant's Hand;
+text=<itemBig=fossil2><title=Giant's Hand><brAdj=>Fossil of a lower arm and hand of abnormal size. No known species match its size, though some postulate that it belonged to a Wilderi with gigantism.;
+
+[ItemType]  name=Fossil;
+ID=fossil3; sprite=2226; 
+cloneFrom=fossil1;
+[JournalEntry]
+ID=item_fossil3;
+category=artifact; halfPage=true; rarity=3; rewardMod=-300;
+title=Sea Arthropod;
+text=<itemBig=fossil3><title=Sea Arthropod><brAdj=>Some sort of ocean-dwelling arthropod. The fossil is heavily damaged, to the point that the species can't be discerned.;
+
+[ItemType]  name=Fossil;
+ID=fossil4; sprite=2227; 
+special=sprite2xHeight;
+cloneFrom=fossil1;
+[JournalEntry]
+ID=item_fossil4;
+category=artifact; halfPage=true; rarity=4; rewardMod=-250;
+title=Tallsquid;
+text=<itemBig=fossil4><title=Tall Squid><brAdj=>The "Interminable Squid". These tentacles have been cut off- live tallsquids limbs can grow over 3 meters per year. The maximum possible length of their tentacles is unknown.;
+
+
+
+[ItemType]  name=Fossil;
+ID=fossil5; sprite=2256; 
+cloneFrom=fossil1;
+[JournalEntry]
+ID=item_fossil5;
+category=artifact; halfPage=true; rarity=3;
+title=Many-fin Scaleworm;
+text=<itemBig=fossil5><title=Many-fin Scale Worm><brAdj=>A serpent-like creature with a strong jaw. Known for its powerful fins that allow it to lunge at prey from a great distance.;
+[ItemType]  name=Fossil;
+ID=fossil6; sprite=2257; 
+cloneFrom=fossil1;
+[JournalEntry]
+ID=item_fossil6;
+category=artifact; halfPage=true; rarity=3; rewardMod=-100;
+title=Jumbo Prawn;
+text=<itemBig=fossil6><title=Jumbo Prawn><brAdj=>A prawn of exceptional size, well-preserved, though its much of its antennae and limbs are missing.;
+[ItemType]  name=Fossil;
+ID=fossil7; sprite=2258; 
+cloneFrom=fossil1;
+[JournalEntry]
+ID=item_fossil7;
+category=artifact; halfPage=true; rarity=3; rewardMod=-150;
+title=Gelfish;
+text=<itemBig=fossil7><title=Gelfish><brAdj=>Deep sea fish with low-density gelatinous flesh. This allows it to float without expending energy.;
+
+[ItemType]  name=Fossil;
+ID=fossil8; sprite=2228; 
+cloneFrom=fossil1;
+[JournalEntry]
+ID=item_fossil8;
+category=artifact; halfPage=true; rarity=3; rewardMod=-50;
+title=Scurio Skull;
+text=<itemBig=fossil8><title=Scurio Skull><brAdj=>Skull of a 200-year old Scurio missing half a jawbone. There's also a puncture on the back of the skull that may have been the real cause of death.;
+[ItemType]  name=Fossil;
+ID=fossil9; sprite=2229; 
+cloneFrom=fossil1;
+[JournalEntry]
+ID=item_fossil9;
+category=artifact; halfPage=true; rarity=3; rewardMod=-50;
+title=Rasmen Skull;
+text=<itemBig=fossil9><title=Rasmen Skull><brAdj=>Smooth skull of a long-dead Rasmen. As expected, there are no eyesockets or nostrils - only small holes on each cheek for the Rasmen's mouths.;
+
+[ItemType]  name=Fossil;
+ID=fossil10; sprite=2260; 
+cloneFrom=fossil1;
+[JournalEntry]
+ID=item_fossil10;
+category=artifact; halfPage=true; rarity=3; rewardMod=100;
+title=Velk Skull;
+text=<itemBig=fossil10><title=Velk Skull><brAdj=>Slightly damaged skull of a large, docile herbivore known as a Velk. Their docile nature has led them to near extinction.;
+[ItemType]  name=Fossil;
+ID=fossil11; sprite=2261; 
+cloneFrom=fossil1;
+[JournalEntry]
+ID=item_fossil11;
+category=artifact; halfPage=true; rarity=3; rewardMod=150;
+title=Giant Dewclaw;
+text=<itemBig=fossil11><title=Giant Dewclaw><brAdj=>Ancillary claw from an unknown, but extremely large, mammal. Because this dewclaw has grown quite long instead of being worn down by use, it seems likely to be vestigial.;
+
+[ItemType]  name=Fossil;
+ID=fossil12; sprite=2230; 
+cloneFrom=fossil1;
+[JournalEntry]
+ID=item_fossil12;
+category=artifact; halfPage=true; rarity=4; rewardMod=0;
+title=Multispide;
+text=<itemBig=fossil12><title=Multispide><brAdj=>Fossilized Spide, but with far too many legs. This rare and bizarre specimen should puzzle experts quite a bit.;
+
+[ItemType]  name=Fossil;
+ID=fossil13; sprite=2231; 
+cloneFrom=fossil1;
+[JournalEntry]
+ID=item_fossil13;
+category=artifact; halfPage=true; rarity=3; rewardMod=-150;
+title=Fine Fang;
+text=<itemBig=fossil13><title=Fine Fang><brAdj=>A lone canine, well-preserved. Perhaps it broke off in a fight, or it could be all that remains of an ancient spear.;
+
+[ItemType]  name=Fossil;
+ID=fossil14; sprite=2263; 
+cloneFrom=fossil1;
+[JournalEntry]
+ID=item_fossil14;
+category=artifact; halfPage=true; rarity=3; rewardMod=150;
+title=Koverra Tail;
+text=<itemBig=fossil14><title=Koverra Tail><brAdj=>The sharp, hooked tail of a Koverra beast. Koverra swing these with great force to pierce the hide of their prey.;
+
+[ItemType]  name=Fossil;
+ID=fossil15; sprite=2262; 
+cloneFrom=fossil1;
+[JournalEntry]
+ID=item_fossil15;
+category=artifact; halfPage=true; rarity=3; rewardMod=0;
+title=Bent Bone;
+text=<itemBig=fossil15><title=Bent Bone><brAdj=>Seemingly part of a humanoid forearm, bent to the extreme. Something strange and traumatic must have occured to the owner.;
+
+[ItemType]  name=Fossil;
+ID=fossil16; sprite=2264; 
+cloneFrom=fossil1;
+[JournalEntry]
+ID=item_fossil16;
+category=artifact; halfPage=true; rarity=4; rewardMod=100;
+title=Burmbler;
+text=<itemBig=fossil16><title=Burmbler><brAdj=>This small mushroom-like being hasn't been seen in ages. It supposedly photosynthesized like a plant, but could run away from threats on its two legs.;
+
+
+[ItemType]  name=Fossil;
+ID=fossil17; sprite=2232; 
+cloneFrom=fossil1;
+[JournalEntry]
+ID=item_fossil17;
+category=artifact; halfPage=true; rarity=3; rewardMod=150;
+title=Rock Crammel;
+text=<itemBig=fossil17><title=Rock Crammel><brAdj=>This bulky bug spends most of its life underground, feeding off worms and roots. The fossil is a rare look at a full-grown specimen.;
+
+---------FOOD
+
+[ItemType]  name=Base Food;
+ID=food_base; sprite=2380; 
+special=cannotBePickedUp; special=adjustSpriteYUp8;
+value=4; power=5;
+description=Don't use this. It's for cloning to food.;
+
+[ItemType]  name=Simple Bread;
+ID=food_basic1; sprite=2379; 
+cloneFrom=food_base;
+value=6; power=5;
+description=Decently tasty bread.; 
+[ItemEffect]  
+ID=food_basic1; actorValue=PhysEva; magnitude=2; duration=6;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+[ItemType]  name=Crisp Baguette;
+ID=food_bread1; sprite=2380; 
+cloneFrom=food_base;
+value=4; power=5;
+description=Fresh toasty long bread.; 
+[ItemEffect]  
+ID=food_bread1; actorValue=PhysEva; magnitude=3; duration=7;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+
+
+[ItemType]  name=Gloam Truffle;
+ID=food_mushroom1; sprite=2412; 
+cloneFrom=food_base;
+value=20; power=13;
+description=Rare, edible subspecies of Gloam Shroom.; 
+[ItemEffect]  
+ID=food_mushroom1; actorValue=glowing; magnitude=1; duration=2;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+[ItemEffect]  
+ID=food_mushroom1; actorValue=MagEva; magnitude=10; duration=12;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+[ItemType]  name=Sea Flower Souffle;
+ID=food_souffle1; sprite=2411; 
+cloneFrom=food_base;
+value=17; power=9;
+description=Fluffy baked egg & salted sea flower petals.; 
+[ItemEffect]
+ID=food_souffle1; actorValue=upwind; magnitude=1; duration=5;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+[ItemType]  name=Golden Bisque;
+ID=food_soup1; sprite=2381; 
+cloneFrom=food_base;
+value=11; power=8;
+description=Thick, creamy shellfish soup.; 
+[ItemEffect]
+ID=food_soup1; actorValue=PhysDef; magnitude=1; duration=6;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+[ItemType]  name=Pickled Skinkeyes;
+ID=food_jar1; sprite=2383; 
+cloneFrom=food_base;
+value=13; power=7;
+description=Crunchy & salty lizard lookers.; 
+[ItemEffect]
+ID=food_jar1; actorValue=skill_Elec; magnitude=1; duration=9;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+
+[ItemType]  name=Naga Pepper;
+ID=food_pepper1; sprite=2384; 
+cloneFrom=food_base;
+value=11; power=6;
+description=Painfully hot pepper served alone as a challenge.; 
+[ItemEffect]
+ID=food_pepper1; actorValue=skill_Fire; magnitude=1; duration=9;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+[ItemType]  name=Rimeberries;
+ID=food_berry1; sprite=2386; 
+cloneFrom=food_base;
+value=11; power=7;
+description=Berries served frozen & draped in a light dressing.; 
+[ItemEffect]
+ID=food_berry1; actorValue=skill_Ice; magnitude=1; duration=9;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+[ItemType]  name=Mistral Vapor;
+ID=food_vapor1; sprite=2385; 
+cloneFrom=food_base;
+value=13; power=6;
+description=Supposedly the bottled breath of a wind demon. Minty.; 
+[ItemEffect]
+ID=food_vapor1; actorValue=skill_Wind; magnitude=1; duration=9;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+
+[ItemType]  name=Sage Starfish;
+ID=food_starfish1; sprite=2391; 
+cloneFrom=food_base;
+value=13; power=7;
+description=Sea star roasted in herbs and garlic.; 
+[ItemEffect]
+ID=food_starfish1; actorValue=skill_Life; magnitude=1; duration=9;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+
+[ItemType]  name=Ruecumber;
+ID=food_cucumber1; sprite=2382; 
+cloneFrom=food_base;
+value=11; power=7;
+description=Extremely sour pickle with a strong aftertaste.; 
+[ItemEffect]  
+ID=food_cucumber1; actorValue=skill_Ruin; magnitude=1; duration=9;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+[ItemType]  name=Bronze Draught;
+ID=food_beer1; sprite=2387; 
+cloneFrom=food_base;
+value=6; power=12;
+description=Strong alcohol named for its metallic appearance.; 
+[ItemEffect]
+ID=food_beer1; actorValue=moveDistance; magnitude=-1; duration=3;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+[ItemType]  name=Hoppy Lager;
+ID=food_beer2; sprite=2418; 
+cloneFrom=food_base;
+value=10; power=8;
+description=Lager that is more foam than beer.; 
+[ItemEffect]
+ID=food_beer2; actorValue=jumpDistance; magnitude=1; duration=6;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+[ItemType]  name=Fin Fillet;
+ID=food_meat1; sprite=2413; 
+cloneFrom=food_base;
+value=16; power=7;
+description=Thin, delicate fins of a giant elasmocrinoid.; 
+[ItemEffect]
+ID=food_meat1; actorValue=downwind; magnitude=1; duration=3;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+[ItemType]  name=Beaf;
+ID=food_meat2; sprite=2414; 
+cloneFrom=food_base;
+value=4; power=3;
+description=Canned meat of unknown origin.; 
+[ItemEffect]  
+ID=food_meat2; actorValue=PhysAtk; magnitude=1; duration=6;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+[ItemEffect]  
+ID=food_meat2; actorValue=MagDef; magnitude=-1; duration=6;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+
+[ItemType]  name=Deep Wine;
+ID=food_beer3; sprite=2420; 
+cloneFrom=food_base;
+value=22; power=12;
+description=Aged red wine with an odd chalky aftertaste.; 
+[ItemEffect]
+ID=food_beer3; actorValue=MagAtk; magnitude=1; duration=8;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+
+[ItemType]  name=Reed Perch;
+ID=food_meat3; sprite=2421; 
+cloneFrom=food_base;
+value=8; power=7;
+description=Freshwater fish that hides among reeds.; 
+[ItemEffect]
+ID=food_meat3; actorValue=skill_Shield; magnitude=1; duration=8;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+[ItemType]  name=Rock Yam;
+ID=food_fruit1; sprite=2427; 
+cloneFrom=food_base;
+value=8; power=8;
+description=Tough exterior, juicy citrus interior.; 
+[ItemEffect]
+ID=food_fruit1; actorValue=PhysEva; magnitude=3; duration=9;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+
+[ItemType]  name=An Entire Onion;
+ID=food_onion1; sprite=2415; 
+cloneFrom=food_base;
+value=5; power=1;
+description=A common onion. Utensils are not allowed.; 
+[ItemEffect]  
+ID=food_onion1; actorValue=itchy; magnitude=1; duration=1;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+[ItemEffect]  
+ID=food_onion1; actorValue=PhysAtk; magnitude=1; duration=5;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+
+[ItemType]  name=Rutroot Surprise;
+ID=food_root1; sprite=2389; 
+cloneFrom=food_base;
+value=14; power=10;
+description=Chewy, tough root with meat, cheese, & gravy inside.; 
+[ItemEffect]
+ID=food_root1; actorValue=PhysDef; magnitude=1; duration=7;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+
+[ItemType]  name=Blueshine;
+ID=food_beer4; sprite=2395;
+cloneFrom=food_base;
+value=8; power=7;
+description=Distilled spirits with a pinch of sea salt.; 
+[ItemEffect]
+ID=food_beer4; actorValue=MagDef; magnitude=1; duration=7;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+
+[ItemType]  name=Tower Tankard;
+ID=food_beer5; sprite=2394; 
+cloneFrom=food_base;
+value=16; power=11;
+description=Hard cider poured to the brim.; 
+[ItemEffect]
+ID=food_beer5; actorValue=MagDef; magnitude=1; duration=6;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+
+[ItemType]  name=Citrind Jam;
+ID=food_jam1; sprite=2398; 
+cloneFrom=food_base;
+value=9; power=7;
+description=Zesty mix of citrus & pepper skins.; 
+[ItemEffect]
+ID=food_jam1; actorValue=PhysEva; magnitude=2; duration=7;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+[ItemEffect]
+ID=food_jam1; actorValue=MagEva; magnitude=5; duration=7;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+
+[ItemType]  name=Blood Durian;
+ID=food_durian1; sprite=2424; 
+cloneFrom=food_base;
+value=33; power=2;
+description=Wretched fruit that singes the heart.; 
+[ItemEffect]
+ID=food_durian1; actorValue=moveDistance; magnitude=1; duration=7;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+
+[ItemType]  name=Pepper Blossom;
+ID=food_pepper2; sprite=2392; 
+cloneFrom=food_base;
+value=9; power=7;
+description=Spicy-sweet peppers that grow in trios.; 
+[ItemEffect]
+ID=food_pepper2; actorValue=PhysEva; magnitude=3; duration=9;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+[ItemEffect]
+ID=food_pepper2; actorValue=MagEva; magnitude=3; duration=9;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+[ItemType]  name=Grand Bean;
+ID=food_bean1; sprite=2388; 
+cloneFrom=food_base;
+value=20; power=9;
+description=Gigantic bean that can sate any appetite.; 
+[ItemEffect]
+ID=food_bean1; actorValue=PhysDef; magnitude=1; duration=7;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+[ItemEffect]
+ID=food_bean1; actorValue=MagDef; magnitude=1; duration=7;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+
+[ItemType]  name=Cheesebarley Pie;
+ID=food_pie1; sprite=2430; 
+cloneFrom=food_base;
+value=15; power=9;
+description=Thick pie that manages to be both savory and sweet.; 
+[ItemEffect]
+ID=food_pie1; actorValue=MagEva; magnitude=8; duration=7;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+
+[ItemType]  name=Osso Cakes;
+ID=food_cake1; sprite=2425; 
+cloneFrom=food_base;
+value=12; power=6;
+description=Chalky, airy biscuits, lightly honeyed.; 
+[ItemEffect]
+ID=food_cake1; actorValue=skill_Bow; magnitude=1; duration=6;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+[ItemEffect]
+ID=food_cake1; actorValue=skill_Aim; magnitude=1; duration=6;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+
+[ItemType]  name=Flom Cake;
+ID=food_cake2; sprite=2429; 
+cloneFrom=food_base;
+value=7; power=6;
+description=Fluffy & sticky cake topped with bitter crumbs.; 
+[ItemEffect]
+ID=food_cake2; actorValue=MagEva; magnitude=2; duration=12;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+[ItemType]  name=Creamcake Pie;
+ID=food_pie2; sprite=2428; 
+cloneFrom=food_base;
+value=6; power=7;
+description=Dense sugary pie made from a secret family recipe.; 
+[ItemEffect]
+ID=food_pie2; actorValue=MagDef; magnitude=1; duration=4;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+
+[ItemType]  name=Gojer Flank;
+ID=food_meat4; sprite=2419; 
+cloneFrom=food_base;
+value=8; power=8;
+description=Seasoned steak cooked to perfection.;
+[ItemEffect]
+ID=food_meat4; actorValue=PhysEva; magnitude=3; duration=7;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+[ItemType]  name=Stir Kebab;
+ID=food_meat5; sprite=2390; 
+cloneFrom=food_base;
+value=11; power=8;
+description=Bits of Gojer meat, each with a unique dressing.; 
+[ItemEffect]
+ID=food_meat5; actorValue=PhysEva; magnitude=4; duration=7;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+[ItemEffect]
+ID=food_meat5; actorValue=MagEva; magnitude=4; duration=7;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+[ItemType]  name=Silk Pepper;
+ID=food_pepper3; sprite=2399; 
+cloneFrom=food_base;
+value=13; power=9;
+description=Slick pepper filled with vibrant sauces & meats.; 
+[ItemEffect]
+ID=food_pepper3; actorValue=PhysEva; magnitude=3; duration=5;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+[ItemEffect]
+ID=food_pepper3; actorValue=MagDef; magnitude=1; duration=5;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+[ItemType]  name=Rigor Oil;
+ID=food_drink1; sprite=2396; 
+cloneFrom=food_base;
+value=14; power=3;
+description=Unpleasant, slimy drink that heightens senses.; 
+[ItemEffect]
+ID=food_drink1; actorValue=PhysEva; magnitude=12; duration=8;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+[ItemEffect]
+ID=food_drink1; actorValue=MagEva; magnitude=3; duration=8;
+durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
+
+[ItemType]  name=Empty Spot;
+ID=build_empty; sprite=321; 
+texture=items_building;
+special=cannotBePickedUp; special=canHangOnWalls;
+stackable=true;
+pR=zoneDirt;
+combineWith=deed_cafe;
+toMake=build_cafe;
+consumeOnCombine=true;
+combineWith=deed_shipwright;
+toMake=build_shipwright;
+consumeOnCombine=true;
+combineWith=deed_items;
+toMake=build_items;
+consumeOnCombine=true;
+combineWith=deed_guild;
+toMake=build_guild;
+consumeOnCombine=true;
+combineWith=deed_smithy;
+toMake=build_smithy;
+consumeOnCombine=true;
+combineWith=deed_researcher;
+toMake=build_researcher;
+consumeOnCombine=true;
+combineWith=deed_cartographer;
+toMake=build_cartographer;
+consumeOnCombine=true;
+combineWith=deed_harbor;
+toMake=build_harbor;
+consumeOnCombine=true;
+combineWith=deed_home;
+toMake=build_home;
+consumeOnCombine=true;
+combineWith=deed_museum;
+toMake=build_museum;
+consumeOnCombine=true;
+combineWith=deed_training;
+toMake=build_training;
+consumeOnCombine=true;
+[JournalEntry]
+ID=item_build_empty;
+category=item; halfPage=true; rarity=0; 
+title=Empty Spot;
+text=<itemBig=build_empty><title=Empty Spot><brAdj=>This blank space looks like the ideal place to build a building. What do you think?;
+
+[ItemType]  name=Future Cafe;
+ID=build_cafe; sprite=322; 
+description=A building in progress.<n>'Use' to  <color=Red>CANCEL<color=> this construction.;
+texture=items_building;
+special=cannotBePickedUp; special=canHangOnWalls; stackable=true;
+pR=zoneDirt;
+pB=zoneWood;
+itemCategory=hidden;
+[ItemReaction] 
+ID=build_cafe; element=use; newID=build_empty; spawnItem=deed_cafe; quantitySetTo=1; fx=pop;
+[ItemReaction] 
+ID=build_cafe; element=newDay; action=build_cafe_act; quantityMod=1;
+
+[ItemType]  name=Future Shipwright;
+ID=build_shipwright; sprite=322; 
+cloneFrom=build_cafe;
+special=dontCloneReactions;
+[ItemReaction] 
+ID=build_shipwright; element=use; newID=build_empty; spawnItem=deed_shipwright; quantitySetTo=1; fx=pop;
+[ItemReaction] 
+ID=build_shipwright; element=newDay; action=build_shipwright_act; quantityMod=1;
+
+[ItemType]  name=Future Item Store;
+ID=build_items; sprite=322; 
+cloneFrom=build_cafe;
+special=dontCloneReactions;
+[ItemReaction] 
+ID=build_items; element=use; newID=build_empty; spawnItem=deed_items; quantitySetTo=1; fx=pop;
+[ItemReaction] 
+ID=build_items; element=newDay; action=build_items_act; quantityMod=1;
+
+[ItemType]  name=Future Guild;
+ID=build_guild; sprite=322; 
+cloneFrom=build_cafe;
+special=dontCloneReactions;
+[ItemReaction] 
+ID=build_guild; element=use; newID=build_empty; spawnItem=deed_guild; quantitySetTo=1; fx=pop;
+[ItemReaction] 
+ID=build_guild; element=newDay; action=build_guild_act; quantityMod=1;
+
+[ItemType]  name=Future Smithy;
+ID=build_smithy; sprite=322; 
+cloneFrom=build_cafe;
+special=dontCloneReactions;
+[ItemReaction] 
+ID=build_smithy; element=use; newID=build_empty; spawnItem=deed_smithy; quantitySetTo=1; fx=pop;
+[ItemReaction] 
+ID=build_smithy; element=newDay; action=build_smithy_act; quantityMod=1;
+
+[ItemType]  name=Future Researcher;
+ID=build_researcher; sprite=322; 
+cloneFrom=build_cafe;
+special=dontCloneReactions;
+[ItemReaction] 
+ID=build_researcher; element=use; newID=build_empty; spawnItem=deed_researcher; quantitySetTo=1; fx=pop;
+[ItemReaction] 
+ID=build_researcher; element=newDay; action=build_researcher_act; quantityMod=1;
+
+[ItemType]  name=Future Cartographer;
+ID=build_cartographer; sprite=322; 
+cloneFrom=build_cafe;
+special=dontCloneReactions;
+[ItemReaction] 
+ID=build_cartographer; element=use; newID=build_empty; spawnItem=deed_cartographer; quantitySetTo=1; fx=pop;
+[ItemReaction] 
+ID=build_cartographer; element=newDay; action=build_cartographer_act; quantityMod=1;
+
+[ItemType]  name=Future Harbor;
+ID=build_harbor; sprite=322; 
+cloneFrom=build_cafe;
+special=dontCloneReactions;
+[ItemReaction] 
+ID=build_harbor; element=use; newID=build_empty; spawnItem=deed_harbor; quantitySetTo=1; fx=pop;
+[ItemReaction] 
+ID=build_harbor; element=newDay; action=build_harbor_act; quantityMod=1;
+
+[ItemType]  name=Future Home;
+ID=build_home; sprite=322; 
+cloneFrom=build_cafe;
+special=dontCloneReactions;
+[ItemReaction] 
+ID=build_home; element=use; newID=build_empty; spawnItem=deed_home; quantitySetTo=1; fx=pop;
+[ItemReaction] 
+ID=build_home; element=newDay; action=build_home_act; quantityMod=1;
+
+
+[ItemType]  name=Future Museum;
+ID=build_museum; sprite=322; 
+cloneFrom=build_cafe;
+special=dontCloneReactions;
+[ItemReaction] 
+ID=build_museum; element=use; newID=build_empty; spawnItem=deed_museum; quantitySetTo=1; fx=pop;
+[ItemReaction] 
+ID=build_museum; element=newDay; action=build_museum_act; quantityMod=1;
+
+[ItemType]  name=Future Training Ground;
+ID=build_training; sprite=322; 
+cloneFrom=build_cafe;
+special=dontCloneReactions;
+[ItemReaction] 
+ID=build_training; element=use; newID=build_empty; spawnItem=deed_training; quantitySetTo=1; fx=pop;
+[ItemReaction] 
+ID=build_training; element=newDay; action=build_training_act; quantityMod=1;
+
+
+--
+
+[ItemType]  name=Harbor Deed;
+ID=deed_harbor; sprite=323; 
+texture=items_building; volume=99999;
+journalID=journal_deed;
+pR=pGold;
+pB=pOrange2;
+
+[ItemType]  name=Cafe Deed;
+ID=deed_cafe; sprite=327; 
+cloneFrom=deed_harbor;
+
+[ItemType]  name=Shipwright Deed;
+ID=deed_shipwright; sprite=324; 
+cloneFrom=deed_harbor;
+
+[ItemType]  name=Item Store Deed;
+ID=deed_items; sprite=328; 
+cloneFrom=deed_harbor;
+
+[ItemType]  name=Smithy Deed;
+ID=deed_smithy; sprite=326; 
+cloneFrom=deed_harbor;
+
+[ItemType]  name=Guild Deed;
+ID=deed_guild; sprite=325; 
+cloneFrom=deed_harbor;
+
+[ItemType]  name=Researcher Deed;
+ID=deed_researcher; sprite=329; 
+cloneFrom=deed_harbor;
+itemCategory=hidden;
+
+[ItemType]  name=Cartographer Deed;
+ID=deed_cartographer; sprite=330; 
+cloneFrom=deed_harbor;
+itemCategory=hidden;
+
+[ItemType]  name=Home Deed;
+ID=deed_home; sprite=331; 
+cloneFrom=deed_harbor;
+
+[ItemType]  name=Museum Deed;
+ID=deed_museum; sprite=332; 
+cloneFrom=deed_harbor;
+
+[ItemType]  name=Training Ground Deed;
+ID=deed_training; sprite=333; 
+cloneFrom=deed_harbor;
+[JournalEntry]
+ID=journal_deed;
+category=item; halfPage=true; rarity=1; 
+title=Deed;
+text=<itemBig=deed_home><title=Deed><brAdj=>Document that provides proof of land ownership. Place it on an Empty Spot to begin construction! Usually takes 7 days. You can cancel construction midway, but once the building is done, it's there forever.;

@@ -1,0 +1,506 @@
+
+--------RANDO
+
+[DialogNode] ID=sPort_random;
+
+nextNodeID=sPort_random40_market;
+nextNodeID_fReq=m:locWealth(40) * itemWithin:sign_icon_balance:5;
+nextNodeID=sPort_random60_market;
+nextNodeID_fReq=m:locWealth(60) * itemWithin:sign_icon_balance:5;
+nextNodeID=sPort_random60_guild;
+nextNodeID_fReq=m:locWealth(60) * itemWithin:sign_icon_letter:8 * actorWithDialogNodeID:questgiver;
+nextNodeID=sPort_random60_harbor;
+nextNodeID_fReq=m:locWealth(60) * itemWithin:sign_icon_anchor:8 * actorWithDialogNodeID:harbor;
+nextNodeID=sPort_random60_item;
+nextNodeID_fReq=m:locWealth(60) * itemWithin:sign_icon_bag:8 * actorWithDialogNodeID:merchant_items;
+nextNodeID=sPort_random60_smith;
+nextNodeID_fReq=m:locWealth(60) * itemWithin:sign_icon_anvil:8 * actorWithDialogNodeID:sport_merchant_smithy;
+nextNodeID=sPort_random60_cafe;
+nextNodeID_fReq=m:locWealth(60) * itemWithin:sign_icon_cup:8 * actorWithDialogNodeID:cafe;
+nextNodeID=sPort_random60_shipwright;
+nextNodeID_fReq=m:locWealth(60) * itemWithin:sign_icon_boat:8 * actorWithDialogNodeID:shipwright;
+nextNodeID=sPort_random60_museum;
+nextNodeID_fReq=m:locWealth(60) * itemWithin:sign_icon_museum:8 * actorWithDialogNodeID:sport_museum;
+nextNodeID=sPort_random60_training;
+nextNodeID_fReq=m:locWealth(60) * itemWithin:sign_icon_training:8 * actorWithDialogNodeID:sport_training;
+
+nextNodeID=sPort_random1_low;
+nextNodeID_fReq=1 - m:locWealth(40);
+nextNodeID=sPort_random1;
+
+
+[DialogNode] ID=sPort_random1;
+animations=;
+statements=<randSet=Was this building always here?/This feels different./Hey. Just stopping in for supplies./I don't remember all these buildings... what happened?/Did I take a wrong turn? This isn't the port I remember./I used to hate this place, but now it's not so bad./I might make it a regular thing to come here./This is a nice port to relax in./Why isn't this port more well known? It's actually pretty nice.>;
+specialEffect=setDefaultNode;
+
+[DialogNode] ID=sPort_random1_low;
+animations=sigh;
+statements=<randSet=They're actually building stuff in this dump? What a waste./Never thought I'd see a new face here./I thought I was the only one who ever visited this place./I can't believe someone actually built their house here willingly./Looks like someone's wasting their time and money on this port.../What are you doing here? I thought no one ever came to this port./I think I liked it better when it was quiet and empty.../Don't bother me. I just want to get out of here as quickly as possible./I'd never come here if I didn't have to resupply./Are you the one who's been improving this place?/I haven't been here in a long while... for good reason.>;
+specialEffect=setDefaultNode;
+
+
+---GUILD
+
+[DialogNode] ID=sPort_random60_guild;
+nextNodeID=sPort_random60_guild0a;
+nextNodeID_fReq=randIDIs:5:0 - actorWithDialogNodeID:sPort_random60_guild0a;
+nextNodeID=sPort_random60_guild1a;
+nextNodeID_fReq=randIDIs:5:1 - actorWithDialogNodeID:sPort_random60_guild1a;
+nextNodeID=sPort_random60_guild2a;
+nextNodeID_fReq=randIDIs:5:2 - actorWithDialogNodeID:sPort_random60_guild2a;
+nextNodeID=sPort_random60_guild3a;
+nextNodeID_fReq=randIDIs:5:3 - actorWithDialogNodeID:sPort_random60_guild3a;
+nextNodeID=sPort_random60_guild4a;
+nextNodeID_fReq=randIDIs:5:4 - actorWithDialogNodeID:sPort_random60_guild4a;
+
+nextNodeID=sPort_random1;
+
+[DialogNode] ID=sPort_random60_guild0a;
+animations=sly;
+statements=Nice to be able to take guild jobs,<p> even in a place as remote as this.;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_guild1a;
+animations=happy;
+statements=More guild work to gild my pockets,<p> heh heh...;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_guild2a;
+animations=happy;
+statements=Time to deliver more letters!;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_guild3a;
+animations=sly;
+statements=I hope there's a <randSet=Monster Den/Salvage/Deliver Cargo/stupidly easy> job today...;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_guild4a;
+animations=sigh;
+statements=I can't make up my mind about which job to take.;
+specialEffect=setDefaultNode;
+
+---HARBOR
+
+[DialogNode] ID=sPort_random60_harbor;
+nextNodeID=sPort_random60_harbor0a;
+nextNodeID_fReq=randIDIs:5:0 - actorWithDialogNodeID:sPort_random60_harbor0a;
+nextNodeID=sPort_random60_harbor1a;
+nextNodeID_fReq=randIDIs:5:1 - actorWithDialogNodeID:sPort_random60_harbor1a;
+nextNodeID=sPort_random60_harbor2a;
+nextNodeID_fReq=randIDIs:5:2 - actorWithDialogNodeID:sPort_random60_harbor2a;
+nextNodeID=sPort_random60_harbor3a;
+nextNodeID_fReq=randIDIs:5:3 - actorWithDialogNodeID:sPort_random60_harbor3a;
+nextNodeID=sPort_random60_harbor4a;
+nextNodeID_fReq=randIDIs:5:4 - actorWithDialogNodeID:sPort_random60_harbor4a;
+
+nextNodeID=sPort_random1;
+
+[DialogNode] ID=sPort_random60_harbor0a;
+animations=happy;
+animations=stern;
+statements=Finally, a harbor that isn't in a capital!;
+statements=I don't like to visit the capitals...;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_harbor1a;
+animations=happy;
+statements=I like to moor my trade ships and go exploring every now and then.;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_harbor2a;
+animations=sly;
+statements=I can trust <locName=> to keep my ships safe, right?;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_harbor3a;
+animations=happy;
+statements=A free harbor?<p> Who could ask for moor?;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_harbor4a;
+animations=sigh;
+statements=Thanks for building this harbor.<p> It's been a lifesaver.;
+specialEffect=setDefaultNode;
+
+
+
+---ITEM STORE
+
+[DialogNode] ID=sPort_random60_item;
+nextNodeID=sPort_random60_item0a;
+nextNodeID_fReq=randIDIs:5:0 - actorWithDialogNodeID:sPort_random60_item0a;
+nextNodeID=sPort_random60_item1a;
+nextNodeID_fReq=randIDIs:5:1 - actorWithDialogNodeID:sPort_random60_item1a;
+nextNodeID=sPort_random60_item2a;
+nextNodeID_fReq=randIDIs:5:2 - actorWithDialogNodeID:sPort_random60_item2a;
+nextNodeID=sPort_random60_item3a;
+nextNodeID_fReq=randIDIs:5:3 - actorWithDialogNodeID:sPort_random60_item3a;
+nextNodeID=sPort_random60_item4a;
+nextNodeID_fReq=randIDIs:5:4 - actorWithDialogNodeID:sPort_random60_item4a;
+
+nextNodeID=sPort_random1;
+
+[DialogNode] ID=sPort_random60_item0a;
+animations=happy;
+statements=What's a good port without a place to buy Beer?;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_item1a;
+animations=meh;
+statements=I always end up having to buy extra Bandages for every trip.;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_item2a;
+animations=stern;
+statements=How did that molotov recipe go,<p> again...?;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_item3a;
+animations=;
+statements=Having a proper item store here is so convenient.;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_item4a;
+animations=meh;
+animations=stern;
+statements=Somehow my crew keeps breaking all their equipment...;
+statements=Repair Tools don't grow on trees,<p> you know!;
+specialEffect=setDefaultNode;
+
+
+---SMITH
+
+[DialogNode] ID=sPort_random60_smith;
+nextNodeID=sPort_random60_smith0a;
+nextNodeID_fReq=randIDIs:5:0 - actorWithDialogNodeID:sPort_random60_smith0a;
+nextNodeID=sPort_random60_smith1a;
+nextNodeID_fReq=randIDIs:5:1 - actorWithDialogNodeID:sPort_random60_smith1a;
+nextNodeID=sPort_random60_smith2a;
+nextNodeID_fReq=randIDIs:5:2 - actorWithDialogNodeID:sPort_random60_smith2a;
+nextNodeID=sPort_random60_smith3a;
+nextNodeID_fReq=randIDIs:5:3 - actorWithDialogNodeID:sPort_random60_smith3a;
+nextNodeID=sPort_random60_smith4a;
+nextNodeID_fReq=randIDIs:5:4 - actorWithDialogNodeID:sPort_random60_smith4a;
+
+nextNodeID=sPort_random1;
+
+[DialogNode] ID=sPort_random60_smith0a;
+animations=happy;
+statements=I always come here to outfit my new crew.;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_smith1a;
+animations=happy;
+statements=Ooh, they have mythril!<p> I don't have to sail all the way to Bellrique now!;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_smith2a;
+animations=happy;
+statements=I just like the warmth of the forge.;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_smith3a;
+animations=;
+animations=sly;
+statements=I finally remembered to augment my equipment.;
+statements=Those Cleever won't know what hit 'em!;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_smith4a;
+animations=;
+animations=sly;
+statements=I'm glad they sell iron equipment...;
+statements=I'm still saving up for mythril.;
+specialEffect=setDefaultNode;
+
+
+---CAFE
+
+[DialogNode] ID=sPort_random60_cafe;
+nextNodeID=sPort_random60_cafe0a;
+nextNodeID_fReq=randIDIs:5:0 - actorWithDialogNodeID:sPort_random60_cafe0a;
+nextNodeID=sPort_random60_cafe1a;
+nextNodeID_fReq=randIDIs:5:1 - actorWithDialogNodeID:sPort_random60_cafe1a;
+nextNodeID=sPort_random60_cafe2a;
+nextNodeID_fReq=randIDIs:5:2 - actorWithDialogNodeID:sPort_random60_cafe2a;
+nextNodeID=sPort_random60_cafe3a;
+nextNodeID_fReq=randIDIs:5:3 - actorWithDialogNodeID:sPort_random60_cafe3a;
+nextNodeID=sPort_random60_cafe4a;
+nextNodeID_fReq=randIDIs:5:4 - actorWithDialogNodeID:sPort_random60_cafe4a;
+
+nextNodeID=sPort_random1;
+
+[DialogNode] ID=sPort_random60_cafe0a;
+animations=sigh;
+statements=Something about <locName=>'s cafe is extra cozy.;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_cafe1a;
+animations=;
+animations=sly;
+statements=It's great to have a cafe here.;
+statements=The crew always needs a pick-me-up when we're so far from home.;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_cafe2a;
+animations=sly;
+statements=I'm pretty hungry,<p> but...<p> is the <locFoodName=> here good?;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_cafe3a;
+animations=sly;
+animations=;
+statements="<locFoodEffects=>"<speed=0.5>...;
+statements=I always like to read the nutritional facts first.;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_cafe4a;
+animations=happy;
+statements=Most people are after the food,<p> but I'm just here for the gossip.;
+specialEffect=setDefaultNode;
+
+---SHIPWRIGHT
+
+[DialogNode] ID=sPort_random60_shipwright;
+nextNodeID=sPort_random60_shipwright0a;
+nextNodeID_fReq=randIDIs:5:0 - actorWithDialogNodeID:sPort_random60_shipwright0a;
+nextNodeID=sPort_random60_shipwright1a;
+nextNodeID_fReq=randIDIs:5:1 - actorWithDialogNodeID:sPort_random60_shipwright1a;
+nextNodeID=sPort_random60_shipwright2a;
+nextNodeID_fReq=randIDIs:5:2 - actorWithDialogNodeID:sPort_random60_shipwright2a;
+nextNodeID=sPort_random60_shipwright3a;
+nextNodeID_fReq=randIDIs:5:3 - actorWithDialogNodeID:sPort_random60_shipwright3a;
+nextNodeID=sPort_random60_shipwright4a;
+nextNodeID_fReq=randIDIs:5:4 - actorWithDialogNodeID:sPort_random60_shipwright4a;
+
+nextNodeID=sPort_random1;
+
+[DialogNode] ID=sPort_random60_shipwright0a;
+animations=scared;
+animations=happy;
+statements=We barely made it in one piece...;
+statements=Thank Ensu they repair ships here!;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_shipwright1a;
+animations=sly;
+statements=I bet a Cog would pay for itself if I loaded it up with goods...;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_shipwright2a;
+animations=angry;
+animations=stern;
+statements=Blasted megarays nicked my ship on the way in.;
+statements=I'm not leaving until it's in perfect shape!;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_shipwright3a;
+animations=;
+animations=happy;
+statements=Glad this is a <locFactionName=> port.;
+statements=I get such a good discount on repairs!;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_shipwright4a;
+animations=sigh;
+animations=;
+statements=Lost a good Caravel on the way here...;
+statements=Time to get a replacement!;
+specialEffect=setDefaultNode;
+
+
+---MUSEUM
+
+[DialogNode] ID=sPort_random60_museum;
+nextNodeID=sPort_random1;
+nextNodeID_fReq=3000 - m:museumValue;
+
+nextNodeID=sPort_random60_museum0a;
+nextNodeID_fReq=randIDIs:5:0 - actorWithDialogNodeID:sPort_random60_museum0a;
+nextNodeID=sPort_random60_museum1a;
+nextNodeID_fReq=randIDIs:5:1 - actorWithDialogNodeID:sPort_random60_museum1a;
+nextNodeID=sPort_random60_museum2a;
+nextNodeID_fReq=randIDIs:5:2 - actorWithDialogNodeID:sPort_random60_museum2a;
+nextNodeID=sPort_random60_museum3a;
+nextNodeID_fReq=randIDIs:5:3 - actorWithDialogNodeID:sPort_random60_museum3a;
+nextNodeID=sPort_random60_museum4a;
+nextNodeID_fReq=randIDIs:5:4 - actorWithDialogNodeID:sPort_random60_museum4a;
+
+nextNodeID=sPort_random1;
+
+[DialogNode] ID=sPort_random60_museum0a;
+animations=scared;
+animations=happy;
+statements=Wow,<p> a museum!;
+statements=They don't even have one of these in the capital!;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_museum1a;
+animations=;
+animations=sly;
+statements=Have you seen the museum yet?;
+statements=It's crazy what cool stuff people can find.;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_museum2a;
+animations=;
+animations=happy;
+statements=Never seen one a' those before.<p> Real interesting stuff.;
+statements=Not even sure what I was lookin' at, really.;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_museum3a;
+animations=sigh;
+animations=sly;
+statements=Some of those items look mighty valuable...;
+statements=Shame the curator seems to be paying pretty good attention to 'em.;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_museum4a;
+animations=;
+animations=happy;
+statements=I'm a sucker for a good museum.;
+statements=Sailed all the way here from <randSet=Redens/Searth/Runewald> just to see it!;
+specialEffect=setDefaultNode;
+
+---TRAINING
+
+[DialogNode] ID=sPort_random60_training;
+
+nextNodeID=sPort_random60_training0a;
+nextNodeID_fReq=randIDIs:5:0 - actorWithDialogNodeID:sPort_random60_training0a;
+nextNodeID=sPort_random60_training1a;
+nextNodeID_fReq=randIDIs:5:1 - actorWithDialogNodeID:sPort_random60_training1a;
+nextNodeID=sPort_random60_training2a;
+nextNodeID_fReq=randIDIs:5:2 - actorWithDialogNodeID:sPort_random60_training2a;
+nextNodeID=sPort_random60_training3a;
+nextNodeID_fReq=randIDIs:5:3 - actorWithDialogNodeID:sPort_random60_training3a;
+nextNodeID=sPort_random60_training4a;
+nextNodeID_fReq=randIDIs:5:4 - actorWithDialogNodeID:sPort_random60_training4a;
+
+nextNodeID=sPort_random1;
+
+[DialogNode] ID=sPort_random60_training0a;
+animations=angry;
+statements=This is just th' place to work out my aggression!<p> Hahah!;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_training1a;
+animations=happy;
+statements=Feels great to stretch the legs after such a long trip!;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_training2a;
+animations=sad;
+animations=stern;
+statements=Huff,<p> huff...<p> c-<p>can't talk...;
+statements=W-<p>worked out too hard...!<p> Gasp...;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_training3a;
+animations=sly;
+animations=stern;
+statements=A training center?;
+statements=Like I don't get enough hard work on the ship...!;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_training4a;
+animations=;
+animations=sly;
+statements=I can feel my skills getting rusty while sailing...;
+statements=Glad I can stop at <locName=> to keep 'em sharp!;
+specialEffect=setDefaultNode;
+
+
+---MARKET
+
+[DialogNode] ID=sPort_random60_market;
+nextNodeID=sPort_random60_market0a;
+nextNodeID_fReq=randIDIs:7:0 - actorWithDialogNodeID:sPort_random60_market0a;
+nextNodeID=sPort_random60_market1a;
+nextNodeID_fReq=randIDIs:7:1 - actorWithDialogNodeID:sPort_random60_market1a;
+nextNodeID=sPort_random60_market2a;
+nextNodeID_fReq=randIDIs:7:2 - actorWithDialogNodeID:sPort_random60_market2a;
+nextNodeID=sPort_random60_market3a;
+nextNodeID_fReq=randIDIs:7:3 - actorWithDialogNodeID:sPort_random60_market3a;
+nextNodeID=sPort_random60_market4a;
+nextNodeID_fReq=randIDIs:7:4 - actorWithDialogNodeID:sPort_random60_market4a;
+nextNodeID=sPort_random60_market5a;
+nextNodeID_fReq=randIDIs:7:5 - actorWithDialogNodeID:sPort_random60_market4a;
+nextNodeID=sPort_random60_market6a;
+nextNodeID_fReq=randIDIs:7:6 - actorWithDialogNodeID:sPort_random60_market4a;
+
+nextNodeID=sPort_random1;
+
+[DialogNode] ID=sPort_random60_market0a;
+animations=sly;
+animations=scared;
+animations=happy;
+statements=<speed=0.5>Hold on...;
+statements=Are you really THE <pfullname=>??
+statements=It's an honor to meet you!;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_market1a;
+animations=sly;
+statements=<locName=>'s doin' as good as ever, I see.;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_market2a;
+animations=;
+animations=meh;
+statements=This is the crew's favorite stop on our trade route.;
+statements=It's a real hassle to get 'em back on the ship...;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_market3a;
+animations=angry;
+statements=I liked to visit <locName=> before it was cool!;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_market4a;
+animations=;
+animations=happy;
+statements=I just had to come visit the port that <pfullname=> established!;
+statements=It did not disappoint!;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_market5a;
+animations=happy;
+statements=The other <locFactionNamePossessive=> ports have nothing on <locName=>!;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random60_market6a;
+animations=;
+animations=sly;
+statements=Glad I heard about this port...;
+statements=It's actually a great place to sell trade goods.;
+specialEffect=setDefaultNode;
+
+
+
+--
+
+[DialogNode] ID=sPort_random40_market;
+nextNodeID=sPort_random40_market0a;
+nextNodeID_fReq=randIDIs:6:0 - actorWithDialogNodeID:sPort_random40_market0a;
+nextNodeID=sPort_random40_market1a;
+nextNodeID_fReq=randIDIs:6:1 - actorWithDialogNodeID:sPort_random40_market1a;
+nextNodeID=sPort_random40_market2a;
+nextNodeID_fReq=randIDIs:6:2 - actorWithDialogNodeID:sPort_random40_market2a;
+nextNodeID=sPort_random40_market3a;
+nextNodeID_fReq=randIDIs:6:3 - actorWithDialogNodeID:sPort_random40_market3a;
+nextNodeID=sPort_random40_market4a;
+nextNodeID_fReq=randIDIs:6:4 - actorWithDialogNodeID:sPort_random40_market4a;
+nextNodeID=sPort_random40_market5a;
+nextNodeID_fReq=randIDIs:6:5 - actorWithDialogNodeID:sPort_random40_market5a;
+
+nextNodeID=sPort_random1;
+
+[DialogNode] ID=sPort_random40_market0a;
+animations=sly;
+animations=;
+statements=So this is <locName=>, eh?;
+statements=Not bad.;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random40_market1a;
+animations=happy;
+animations=sly;
+statements=Ahh,<p> shore leave.;
+statements=Used t'be I took it in <randSet=Runewald/Searth/Jascias>,<p> but <locName=> is a nice change of pace.;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random40_market2a;
+animations=;
+animations=happy;
+statements=I heard <locName=> was turning out to be quite the port...;
+statements=The rumors weren't wrong!;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random40_market3a;
+animations=happy;
+animations=;
+statements=Look at all the new buildings!;
+statements=This is the first time I'm happy <locName=> is part of my route.;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random40_market4a;
+animations=sly;
+animations=;
+statements=I'm pretty impressed...;
+statements=<locName=> has come a long way.;
+specialEffect=setDefaultNode;
+[DialogNode] ID=sPort_random40_market5a;
+animations=;
+animations=sigh;
+statements=Good to see a <locFactionNamePossessive=> port out here.;
+statements=Now I feel much safer sailing in the area.;
+specialEffect=setDefaultNode;
+
+
+
+
+
+
+

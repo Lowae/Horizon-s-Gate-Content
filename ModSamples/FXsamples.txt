@@ -1,0 +1,179 @@
+--here's an example making a new FX! This FX will make a giant screen-covering effect using the "fx_pop" texture.
+
+--NOTE: you can omit most properties when making your own FX! They are all listed here for reference.
+
+--first, we need a drawOrderFX in order to use a texture.
+[drawOrderFX]
+ID=megapop;
+
+texture=fx_pop;
+sourceRect=0,0,16,16;
+origin=8,8;
+pR = ;
+pG = ;
+pB = ;
+
+speed=1;
+timePerFrame=0.1;
+initialDelay = 0;
+duration=0.4;
+removeAtDestination = false;
+stopAtDestination = true;
+
+flickerEveryFrame = false;
+
+veloc=0,0;
+accel=0,0;
+rotVeloc=0;
+rotAccel=0;
+scaleVeloc=99;
+scaleAccel=0;
+alphaVeloc=0;
+alphaAccel=0;
+
+--appends "_" + rotation to texture string instead of using it to rotate
+addRotToTextureID = false;
+rotateBasedOnVelocity = false;
+roundRotToNearest = 0;
+useTerrainDepth = false;
+loop = true;
+
+ignoreDarkness = false;
+scaleLightSizeAndAlpha = false;
+loopAroundZoneEdge = false;
+drawOnlyIfRoofsAreDrawn = false;
+playWhileGameIsPaused = false;
+
+spawnFXatEnd =;
+spawnFXatEndColor =;
+spawnFXatEndAoEID =;
+spawnFXatEndIfActorNear =;
+spawnFXatEndIfActorNearColor =;
+spawnFXatEndIfActorNear_distance = 1;
+[drawOrderFXLight]
+ID=megapop; red=0.7; blue=1; green=0.7; alpha=0.9; size=0.8; flicker=0.04; 
+
+
+
+
+
+--now that we have a drawOrderFX, we can make an FXData!
+
+--let's make 3 megapops that spawn one after the other, with some random position offset.
+[FXData]
+ID=manyMegapops;
+particleID=megapop;
+
+numParticles=3;
+
+initialDelayIncreasePerParticle=0.2;
+randInitialDelay=0;
+initialDelayMod=0;
+
+percentDurationBeforeOverlapWithOtherFX = 0.3;
+		
+posOffset=-1,-1;
+randPos=2,2;
+
+posOffsetPerParticle=0,0;
+
+velocOffset=0,0;
+randVeloc=0,0;
+	
+accelOffset=0,0;
+randAccel=0,0;
+
+--if you are traveling to the target, make the target += this
+targetPosOffset=0,0;
+
+--if non-zero, rerolls randVeloc until veloc.Length exceeds minimum
+minimumVeloc = 0;
+--if non-zero, rerolls randPos until posOffset+randPosOffset.Length exceeds minimum
+minimumPosDist = 0;
+
+rotOffset = 0;
+rotVelocOffset = 0;
+rotOffsetPerParticle = 0;
+scaleOffset = 0;
+scaleVelocOffset = 0;
+scaleOffsetPerParticle = 0;
+scaleAccelOffset = 0;
+
+speedOffset = 0;
+
+randRot=0;
+randRotVeloc=0;
+randScale=0;
+randScaleVeloc=0;
+
+alphaOffset=0;
+alphaVelocOffset=0;
+randAlphaVeloc=0;
+alphaAccelOffset=0;
+
+durationMod=0;
+rand_durationMod=0;
+
+--this works, but it's best to avoid using it.
+depthMod=0;
+
+--if true, overrides any previous timeSpeedMod.
+timeSpeedModOverride = true;
+timeSpeedMod = 0;
+timeSpeedModDuration = 0;
+
+travelToTargetSpeed = 0;
+removeAtDestination = false;
+stopAtDestination = true;
+
+--if true, only draws the FX every other frame
+flicker = false;
+--if true, ignores the light attribute of the base particle
+hideLight = false;
+--if true, only use this effect in Intense Visuals mode
+intenseVisual = false;
+
+--each particle gets a portion of the given source rect (4 particles = divide into 4 chunks, etc)
+divideSourceRectBetweenParticles = false;
+
+--appends "_" + rotation to texture string instead of using it to rotate
+addRotToTextureID = false;
+--adds the rotation of the caster to particles
+addCasterRotation = false;
+--rounds rotation to nearest X when FX is first created
+roundRotToNearest = 0;
+
+rotateBasedOnVelocity = false;
+useTerrainDepth = false;
+
+loopAroundZoneEdge = false;
+drawOnlyIfRoofsAreDrawn = false;
+
+
+soundName = sfx_classicExplosion;
+--ranges from 0 to 2
+soundVolume = 1;
+--ranges from -1 to 1
+soundPitch = 0;
+--random number generated --  ranges from 0 to given number
+soundPitchRand = 0;
+--how much the origin of the sound affects volume
+soundDistanceMult = 1;
+--how far from the origin you must be before distance affects volume
+soundDropoffDist = 11;
+
+--FX to spawn when this FX ends.
+spawnFXatEnd = ;
+spawnFXatEndColor = ;
+--requires that this AoE is occupiable before spawning spawnFXatEnd
+spawnFXatEndAoEID = ;
+
+spawnFXatEndIfActorNear = ;
+spawnFXatEndIfActorNearColor = ;
+spawnFXatEndIfActorNear_distance = 1;
+
+pR = ;
+pG = ;
+pB = ;
+
+

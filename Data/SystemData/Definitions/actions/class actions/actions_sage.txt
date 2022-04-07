@@ -1,0 +1,287 @@
+
+[Action] ID=Sa_heal; 
+	name=Heal;
+	icon=icon_Sa_heal;
+	
+	mpCost=7 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=7 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	
+	tooltip=Fill a small area with life magic to heal <math=5 + c:MagAtk + c:skill_Life><adjX=-4><icon=HP>.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
+	harmful=false;
+	
+	AIRatingBias = -5;
+	
+	special=requiresCasting;
+	
+	XPCost=140;
+	XPCost=340;
+	XPCost=800;
+	
+	
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnTarget=chargeSpiralFast;
+	FXOnTargetColor=DeepPink;
+	FXOnTarget=sfx_lowAura;
+	FXOnTarget=pink_major;
+[ActionAoE] 
+	ID=Sa_heal;
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 0;
+	maxRange = 2;
+	airborne=true;
+	arc=true;
+	maxRangeBonus=c:rank;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Sa_heal; 
+	actorValue=HP;
+	harmful=false;
+	magnitude=5 + c:MagAtk + c:skill_Life + t:skill_Life;
+	duration=-2;
+	chance=100;
+	element=magic;
+	element=life;
+	FXOnTile=charge;
+	FXOnTileColor=DeepPink;
+	FXOnHit=sparkles;
+	FXOnHitColor=DeepPink;
+	FXOnHit=briefAuraSound;
+[AvAffecterAoE]
+	ID=Sa_heal;
+	cloneFrom=adjacentAndSelf;
+	
+
+[Action] ID=Sa_revive; 
+	name=Revive;
+	icon=icon_Sa_revive;
+	
+	mpCost=8 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=10 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	
+	tooltip=Revive a fallen ally and restore <math=c:MagAtk + c:skill_Life + c:rank * 5 - 2><adjX=-4><icon=HP>.;
+	rankUpTooltip=Each rank restores an additional 5 HP<icon=HP>.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
+	harmful=false;
+	
+	special=requiresCasting;
+	
+	XPCost=350;
+	XPCost=650;
+	XPCost=950;
+	
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	casterAnimation=spellcast;
+	FXOnCaster=magicCharge;
+	FXOnCaster=charge;
+	FXOnCasterColor=SkyBlue;
+	FXOnTarget=darken_minor;
+	FXOnTarget=tallLight;
+[ActionAoE] 
+	ID=Sa_revive;
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 1;
+	maxRange = 4;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Sa_revive;
+	harmful=false;
+	actorValue=revive;
+	magnitude=c:MagAtk + c:skill_Life + c:rank * 5 - 2;
+	duration=-2;
+	chance=d:reviveAcc;
+	element=magic;
+	element=life;
+	FXOnTile=chargeSpiralFast;
+	FXOnTile=chargeSpiralFast_big;
+	FXOnTile=sfx_longGoodAura_med;
+	FXOnTile=actor_reviveGhost;
+	FXOnHit=sparkles;
+	FXOnHit=upwardLinesQuick;
+	FXOnHit=Powerup_longerEchoBloop;
+	FXOnHit=whiten;
+	FXOnMiss=hitDustQuiet;
+[AvAffecterAoE]
+	ID=Sa_revive;
+	cloneFrom=oneTile;
+	
+	
+
+[Action] ID=Sa_growth; 
+	name=Growth;
+	icon=icon_Sa_growth;
+--icon_pB=pOrange;
+--icon_pG=pGreen;
+	mpCost=6 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=7 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	tooltip=Cause regeneration for <icon=time><math=40+d:lifeDurMax(2)+20 * c:rank> in a small area, and encourage plant growth.;
+	rankUpTooltip=Each rank increases duration by <icon=time>20.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
+	harmful=false;
+	
+	special=requiresCasting;
+	
+	AIRatingBias = -5;
+	
+	XPCost=180;
+	XPCost=350;
+	XPCost=500;
+	XPCost=700;
+	XPCost=900;
+	
+	casterAnimation=spellcast;
+	maxRank=5;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnTarget=sfx_lowestAura;
+[ActionAoE] 
+	ID=Sa_growth; shape=0; 
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 0;
+	maxRange = 3;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Sa_growth; 
+	actorValue=regen;
+	harmful=false;
+	magnitude=1;
+	duration=40 + d:lifeDurMax(2) + 20 * c:rank;
+	chance=100;
+	element=magic;
+	element=life;
+	element=growth;
+	FXOnTile=upwardLines;
+	FXOnTileColor=Green;
+	FXOnHit=sparkles;
+	FXOnHitColor=Green;
+	FXOnHit=sfx_risingBipLow;
+[AvAffecterAoE]
+	ID=Sa_growth;
+	cloneFrom=adjacentAndSelf;
+	
+	
+
+[Action] ID=Sa_cure; 
+	name=Cure;
+	icon=icon_Sa_cure;
+	mpCost=4 * d:mpCostMult + d:mpCostMod;
+	tooltip=Remove negative status effects in a small area.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=;
+	harmful=false;
+	
+	
+	XPCost=90;
+	XPCost=200;
+	XPCost=440;
+	
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnTarget=sfx_highAura;
+	FXOnTarget=sfx_risingSwishHigh;
+[ActionAoE] 
+	ID=Sa_cure; shape=0; 
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 0;
+	maxRange = 2;
+	airborne=true;
+	arc=true;
+	maxRangeBonus=c:rank * 1;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Sa_cure; 
+	actorValue=cure;
+	harmful=false;
+	magnitude=1;
+	duration=-2;
+	chance=100 * m:tCurable;
+	element=magic;
+	element=life;
+	FXOnTile=chargeBurst;
+	FXOnTileColor=Aqua;
+	FXOnHit=chargeSpiralFast_big;
+	FXOnHitColor=Aqua;
+	FXOnHit=sidewardLines;
+	FXOnHitColor=Aqua;
+	FXOnHit=ping;
+	FXOnHitColor=Aqua;
+	FXOnHit=sfx_lowTingQuiet;
+[AvAffecterAoE]
+	ID=Sa_cure;
+	cloneFrom=adjacentAndSelf;
+	
+	
+
+	
+[Action] ID=Sa_dispel; 
+	name=Dispel;
+	icon=icon_Sa_dispel;
+	mpCost=3 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=7 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	tooltip=Remove all status effects (positive or negative) and cancel magic in a small area.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=;
+	
+	XPCost=150;
+	XPCost=350;
+	XPCost=500;
+	
+	special=requiresCasting;
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=chargeFast;
+	FXOnCasterColor=SkyBlue;
+	FXOnCaster=sfx_risingBipLow;
+[ActionAoE] 
+	ID=Sa_dispel; 
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 0;
+	maxRange = 3;
+	maxRangeBonus = c:rank;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Sa_dispel; 
+	actorValue=dispel;
+	magnitude=100;
+	duration=-2;
+	chance=100;
+	element=magic;
+	element=dispel;
+	FXOnTile=vertLines;
+	FXOnTileColor=SkyBlue;
+	FXOnTile=bipFlutter;
+	FXOnHit=ping;
+	FXOnHitColor=SkyBlue;
+	FXOnHit=briefAuraSound_wahwah;
+[AvAffecterAoE]
+	ID=Sa_dispel;
+	cloneFrom=adjacentAndSelf;

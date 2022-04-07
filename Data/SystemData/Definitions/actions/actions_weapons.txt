@@ -1,0 +1,6075 @@
+[Action] ID=swordAttack; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=swordAttack;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=swordAttack; 
+	actorValue=HP;
+	magnitude= d:swordDmg;
+	duration=-2;
+	chance=d:swordAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	FXOnTile=cut;
+[AvAffecterAoE]
+	ID=swordAttack;
+	cloneFrom=oneTile;
+	
+[Action] ID=rapierAttack; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=thrust;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=rapierAttack; 
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=rapierAttack; 
+	actorValue=HP;
+	magnitude= d:rapierDmg;
+	duration=-2;
+	chance=d:rapierAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	FXOnTile=cut;
+[AvAffecterAoE]
+	ID=rapierAttack;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=greatswordAttack; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=broadswing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXChangesWithWeaponHand=true;
+	FXOnTarget=swipe;
+[ActionAoE] 
+	ID=greatswordAttack;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=greatswordAttack; 
+	actorValue=HP;
+	magnitude= d:gswordDmg;
+	duration=-2;
+	chance=d:gswordAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=heavySlash;
+[AvAffecterAoE]
+	ID=greatswordAttack;
+	aoeCasterAsOrigin=true;
+	maxRange = 1.5;
+	coneAngle=90;
+	
+[Action] ID=daggerAttack; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=thrust;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=cut;
+[ActionAoE] 
+	ID=daggerAttack;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=daggerAttack; 
+	actorValue=HP;
+	magnitude= d:daggerDmg;
+	duration=-2;
+	chance=d:daggerAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+[AvAffecterAoE]
+	ID=daggerAttack;
+	cloneFrom=oneTile;
+	
+[Action] ID=spearAttack; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=spear;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=stab;
+[ActionAoE] 
+	ID=spearAttack; shape=2; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	minRange = 1;
+	maxRange = 2;
+	bypassAll=false;
+	occupyAll=true;
+[AvAffecter]
+	ID=spearAttack; 
+	actorValue=HP;
+	magnitude= d:spearDmg;
+	duration=-2;
+	chance=d:spearAcc;
+	element=catchFish;
+	element=melee;
+	element=physical;
+	element=slash;
+	FXOnTile=cut;
+[AvAffecterAoE]
+	ID=spearAttack;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+	
+[Action] ID=hammerAttack; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=strike;
+[ActionAoE] 
+	ID=hammerAttack; 
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=hammerAttack; 
+	actorValue=HP;
+	magnitude= d:hammerDmg;
+	duration=-2;
+	chance=d:hammerAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	element=heavySmash;
+[AvAffecterAoE]
+	ID=hammerAttack;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=fistAttack; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=punch;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=pop;
+[ActionAoE] 
+	ID=fistAttack;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=fistAttack; 
+	actorValue=HP;
+	magnitude= d:fistDmg;
+	duration=-2;
+	chance=d:fistAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+[AvAffecterAoE]
+	ID=fistAttack; 
+	cloneFrom=oneTile;
+	
+[Action] ID=flailAttack; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationSpeed=1.1;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=sidestrike;
+[ActionAoE] 
+	ID=flailAttack;
+	airborne=true;
+	needsLoS = true;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 1.5;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=flailAttack; 
+	actorValue=HP;
+	magnitude= d:flailDmg;
+	duration=-2;
+	chance=d:flailAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+[AvAffecterAoE]
+	ID=flailAttack;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=whipAttack; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationSpeed=1.2;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=whipAttack;
+	airborne=true;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 3;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=whipAttack; 
+	actorValue=HP;
+	magnitude= d:whipDmg;
+	duration=-2;
+	chance=d:whipAcc;
+	element=melee;
+	element=physical;
+	FXOnTile=whirlSlash;
+	FXOnTile=popSilent;
+	FXOnTile=sfx_whipSnap;
+[AvAffecterAoE]
+	ID=whipAttack;
+	cloneFrom=oneTile;
+
+	
+[Action] ID=axeAttack; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=cut;
+[ActionAoE] 
+	ID=axeAttack;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=axeAttack; 
+	actorValue=HP;
+	magnitude= d:axeDmg;
+	duration=-2;
+	chance=d:axeAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=heavySlash;
+[AvAffecterAoE]
+	ID=axeAttack;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=shieldAttack; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=punch;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=popSilent;
+	FXOnTarget=sfx_wooshHigh;
+[ActionAoE] 
+	ID=shieldAttack;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=shieldAttack; 
+	actorValue=HP;
+	magnitude= d:shieldDmg;
+	duration=-2;
+	chance=d:shieldAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	FXOnHit=sfx_shieldHit;
+[AvAffecterAoE]
+	ID=shieldAttack;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=shieldAttack; 
+	actorValue=push;
+	magnitude=1;
+	duration=-2;
+	chance=d:shieldAcc;
+[AvAffecterAoE]
+	ID=shieldAttack;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=crossbowAttack; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=aim;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=chk;
+	FXOnTarget=hitDustQuiet_shorter;
+[ActionAoE] 
+	ID=crossbowAttack;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 4;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=crossbowAttack; 
+	actorValue=HP;
+	magnitude= d:aimDmg;
+	duration=-2;
+	chance=d:aimAcc;
+	element=ranged;
+	element=physical;
+	FXOnTile=line;
+	FXOnHit=pop;
+[AvAffecterAoE]
+	ID=crossbowAttack;
+	cloneFrom=oneTile;
+	
+[Action] ID=crossbowReload; 
+	name=Reload;
+	special=showConfirmOptionAlways;
+	
+	harmful=false;
+	casterAnimation=bow1;
+	FXOnCaster=reload;
+	AIRatingBias = 14;
+[ActionAoE] 
+	ID=crossbowReload;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=crossbowReload; 
+	harmful=false;
+	element=reloading;
+[AvAffecterAoE]
+	ID=crossbowReload;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=crossbowReload; 
+	actorValue=AIBonus;
+	magnitude= -5;
+	duration=-2;
+	chance=100 * sa:manOfWar;
+	visibleEvaluations=false;
+	visibleMiss=false;
+[AvAffecterAoE]
+	ID=crossbowReload;
+	cloneFrom=oneTile;
+	
+[Action] ID=bowAttack; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=bow;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=bowAttack;
+	needsLoS = false;
+	needsLoE = true;
+	arc=true;
+	minRange = 3;
+	maxRange = 4;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=bowAttack; 
+	actorValue=HP;
+	magnitude= d:bowDmg;
+	duration=-2;
+	chance=d:bowAcc;
+	element=physical;
+	element=ranged;
+	FXOnTile=arrow;
+	FXOnTile=chk;
+	FXOnTile=hitDustQuiet;
+	FXOnHit=pop;
+[AvAffecterAoE]
+	ID=bowAttack;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=swordAttack_laser; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=fireWpnEmbers;
+[ActionAoE] 
+	ID=swordAttack_laser;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=swordAttack_laser; 
+	actorValue=HP;
+	magnitude= d:swordDmg - c:skill_Fire * 0.5;
+	duration=-2;
+	chance=d:swordAcc + d:laserAccBonus;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=fire;
+	FXOnTile=cut;
+	FXOnTileColor=Red;
+	FXOnTile=sfx_zyew;
+[AvAffecterAoE]
+	ID=swordAttack_laser;
+	cloneFrom=oneTile;
+	
+[Action] ID=rapierAttack_laser; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=thrust;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=fireWpnEmbers;
+[ActionAoE] 
+	ID=rapierAttack_laser; 
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=rapierAttack_laser; 
+	actorValue=HP;
+	magnitude= d:rapierDmg - c:skill_Fire * 0.5;
+	duration=-2;
+	chance=d:rapierAcc + d:laserAccBonus;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=fire;
+	FXOnTile=cut;
+	FXOnTileColor=Red;
+	FXOnTile=sfx_zyew;
+[AvAffecterAoE]
+	ID=rapierAttack_laser;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=greatswordAttack_laser; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=broadswing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXChangesWithWeaponHand=true;
+	FXOnTarget=swipe;
+	FXOnTargetColor=Red;
+	FXOnTarget=sfx_zyew;
+[ActionAoE] 
+	ID=greatswordAttack_laser;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=greatswordAttack_laser; 
+	actorValue=HP;
+	magnitude= d:gswordDmg - c:skill_Fire * 0.5;
+	duration=-2;
+	chance=d:gswordAcc + d:laserAccBonus;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=heavySlash;
+	element=fire;
+	FXOnTile=fireWpnEmbers;
+[AvAffecterAoE]
+	ID=greatswordAttack_laser;
+	aoeCasterAsOrigin=true;
+	maxRange = 1.5;
+	coneAngle=90;
+	
+[Action] ID=daggerAttack_laser; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=thrust;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=cut;
+	FXOnTargetColor=Red;
+	FXOnTarget=sfx_zyew;
+	FXOnTarget=fireWpnEmbers;
+[ActionAoE] 
+	ID=daggerAttack_laser;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=daggerAttack_laser; 
+	actorValue=HP;
+	magnitude= d:daggerDmg - c:skill_Fire * 0.5;
+	duration=-2;
+	chance=d:daggerAcc + d:laserAccBonus;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=fire;
+[AvAffecterAoE]
+	ID=daggerAttack_laser;
+	cloneFrom=oneTile;
+	
+[Action] ID=spearAttack_laser; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=spear;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=stab;
+	FXOnTargetColor=Red;
+	FXOnTarget=sfx_zyew;
+[ActionAoE] 
+	ID=spearAttack_laser; shape=2; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	minRange = 1;
+	maxRange = 2;
+	bypassAll=false;
+	occupyAll=true;
+[AvAffecter]
+	ID=spearAttack_laser; 
+	actorValue=HP;
+	magnitude= d:spearDmg - c:skill_Fire * 0.5;
+	duration=-2;
+	chance=d:spearAcc + d:laserAccBonus;
+	element=catchFish;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=fire;
+	FXOnTile=cut;
+	FXOnTileColor=Red;
+	FXOnTile=fireWpnEmbers;
+[AvAffecterAoE]
+	ID=spearAttack_laser;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+	
+[Action] ID=hammerAttack_laser; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=strike;
+	FXOnTargetColor=Red;
+	FXOnTarget=sfx_zyew;
+	FXOnTarget=fireWpnEmbers;
+[ActionAoE] 
+	ID=hammerAttack_laser; 
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=hammerAttack_laser; 
+	actorValue=HP;
+	magnitude= d:hammerDmg - c:skill_Fire * 0.5;
+	duration=-2;
+	chance=d:hammerAcc + d:laserAccBonus;
+	element=melee;
+	element=physical;
+	element=smash;
+	element=heavySmash;
+	element=fire;
+[AvAffecterAoE]
+	ID=hammerAttack_laser;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=fistAttack_laser; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=punch;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=pop;
+	FXOnTargetColor=Red;
+	FXOnTarget=sfx_zyew;
+	FXOnTarget=fireWpnEmbers;
+[ActionAoE] 
+	ID=fistAttack_laser;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=fistAttack_laser; 
+	actorValue=HP;
+	magnitude= d:fistDmg - c:skill_Fire * 0.5;
+	duration=-2;
+	chance=d:fistAcc + d:laserAccBonus;
+	element=melee;
+	element=physical;
+	element=smash;
+	element=fire;
+[AvAffecterAoE]
+	ID=fistAttack_laser; 
+	cloneFrom=oneTile;
+	
+[Action] ID=flailAttack_laser; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationSpeed=1.1;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=sidestrike;
+	FXOnTargetColor=Red;
+	FXOnTarget=sfx_zyew;
+	FXOnTarget=fireWpnEmbers;
+[ActionAoE] 
+	ID=flailAttack_laser;
+	airborne=true;
+	needsLoS = true;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 1.5;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=flailAttack_laser; 
+	actorValue=HP;
+	magnitude= d:flailDmg - c:skill_Fire * 0.5;
+	duration=-2;
+	chance=d:flailAcc + d:laserAccBonus;
+	element=melee;
+	element=physical;
+	element=smash;
+	element=fire;
+[AvAffecterAoE]
+	ID=flailAttack_laser;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=whipAttack_laser; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationSpeed=1.2;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=whipAttack_laser;
+	airborne=true;
+	needsLoS = true;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 3;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=whipAttack_laser; 
+	actorValue=HP;
+	magnitude= d:whipDmg - c:skill_Fire * 0.5;
+	duration=-2;
+	chance=d:whipAcc + d:laserAccBonus;
+	element=melee;
+	element=physical;
+	element=fire;
+	
+	FXOnTile=whirlSlash;
+	FXOnTileColor=Red;
+	FXOnTile=popSilent;
+	FXOnTileColor=Red;
+	FXOnTile=sfx_whipSnap;
+	FXOnTile=sfx_zyew;
+	FXOnTile=fireWpnEmbers;
+[AvAffecterAoE]
+	ID=whipAttack_laser;
+	cloneFrom=oneTile;
+
+[Action] ID=axeAttack_laser; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=cut;
+	FXOnTargetColor=Red;
+	FXOnTarget=sfx_zyew;
+	FXOnTarget=fireWpnEmbers;
+[ActionAoE] 
+	ID=axeAttack_laser;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=axeAttack_laser; 
+	actorValue=HP;
+	magnitude= d:axeDmg - c:skill_Fire * 0.5;
+	duration=-2;
+	chance=d:axeAcc + d:laserAccBonus;
+	element=melee;
+	element=physical;
+	element=fire;
+	element=slash;
+	element=heavySlash;
+[AvAffecterAoE]
+	ID=axeAttack_laser;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=shieldAttack_laser; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=punch;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=popSilent;
+	FXOnTargetColor=Red;
+	FXOnTarget=sfx_wooshHigh;
+[ActionAoE] 
+	ID=shieldAttack_laser;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=shieldAttack_laser; 
+	actorValue=HP;
+	magnitude= d:shieldDmg - c:skill_Fire * 0.5;
+	duration=-2;
+	chance=d:shieldAcc + d:laserAccBonus;
+	element=melee;
+	element=physical;
+	element=smash;
+	element=fire;
+	FXOnHit=sfx_shieldHit;
+	FXOnHit=sfx_zyew;
+[AvAffecterAoE]
+	ID=shieldAttack_laser;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=shieldAttack_laser; 
+	actorValue=push;
+	magnitude=1;
+	duration=-2;
+	chance=d:shieldAcc + d:laserAccBonus;
+[AvAffecterAoE]
+	ID=shieldAttack_laser;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=crossbowAttack_laser; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=aim;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=hitDustQuiet;
+	FXOnTargetColor=Red;
+	FXOnTarget=sfx_zyew;
+	FXOnTarget=sfx_smallSpark;
+[ActionAoE] 
+	ID=crossbowAttack_laser;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 4;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=crossbowAttack_laser; 
+	actorValue=HP;
+	magnitude= d:aimDmg - c:skill_Fire * 0.5;
+	duration=-2;
+	chance=d:aimAcc + d:laserAccBonus;
+	element=ranged;
+	element=physical;
+	element=fire;
+	FXOnTile=line;
+	FXOnTileColor=Red;
+	FXOnHit=pop;
+	FXOnHitColor=Red;
+[AvAffecterAoE]
+	ID=crossbowAttack_laser;
+	cloneFrom=oneTile;
+
+[Action] ID=bowAttack_laser; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=bow;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=bowAttack_laser;
+	needsLoS = false;
+	needsLoE = true;
+	arc=true;
+	minRange = 3;
+	maxRange = 4;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=bowAttack_laser; 
+	actorValue=HP;
+	magnitude= d:bowDmg - c:skill_Fire * 0.5;
+	duration=-2;
+	chance=d:bowAcc + d:laserAccBonus;
+	element=physical;
+	element=ranged;
+	element=fire;
+	FXOnTile=arrow_laser;
+	FXOnTileColor=White;
+	FXOnTile=hitDustQuiet;
+	FXOnTileColor=Red;
+	FXOnTile=sfx_zyew;
+	FXOnTile=sfx_smallSpark;
+	FXOnHit=pop;
+	FXOnHitColor=Red;
+[AvAffecterAoE]
+	ID=bowAttack_laser;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=swordAttack_ice; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=frostsparkle;
+[ActionAoE] 
+	ID=swordAttack_ice;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=swordAttack_ice; 
+	actorValue=HP;
+	magnitude= d:swordDmg - c:skill_Ice * 0.5;
+	duration=-2;
+	chance=d:swordAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=ice;
+	FXOnTile=cut;
+	FXOnTileColor=SkyBlue;
+[AvAffecterAoE]
+	ID=swordAttack_ice;
+	cloneFrom=oneTile;
+	
+[Action] ID=rapierAttack_ice; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=thrust;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=frostsparkle;
+[ActionAoE] 
+	ID=rapierAttack_ice; 
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=rapierAttack_ice; 
+	actorValue=HP;
+	magnitude= d:rapierDmg - c:skill_Ice * 0.5;
+	duration=-2;
+	chance=d:rapierAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=ice;
+	FXOnTile=cut;
+	FXOnTileColor=SkyBlue;
+[AvAffecterAoE]
+	ID=rapierAttack_ice;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=greatswordAttack_ice; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=broadswing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXChangesWithWeaponHand=true;
+	FXOnTarget=swipe;
+	FXOnTargetColor=SkyBlue;
+[ActionAoE] 
+	ID=greatswordAttack_ice;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=greatswordAttack_ice; 
+	actorValue=HP;
+	magnitude= d:gswordDmg - c:skill_Ice * 0.5;
+	duration=-2;
+	chance=d:gswordAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=heavySlash;
+	element=ice;
+	FXOnTile=frostsparkle;
+[AvAffecterAoE]
+	ID=greatswordAttack_ice;
+	aoeCasterAsOrigin=true;
+	maxRange = 1.5;
+	coneAngle=90;
+	
+[Action] ID=daggerAttack_ice; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=thrust;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=cut;
+	FXOnTargetColor=SkyBlue;
+	FXOnTarget=frostsparkle;
+[ActionAoE] 
+	ID=daggerAttack_ice;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=daggerAttack_ice; 
+	actorValue=HP;
+	magnitude= d:daggerDmg - c:skill_Ice * 0.5;
+	duration=-2;
+	chance=d:daggerAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=ice;
+[AvAffecterAoE]
+	ID=daggerAttack_ice;
+	cloneFrom=oneTile;
+	
+[Action] ID=spearAttack_ice; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=spear;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=stab;
+	FXOnTargetColor=SkyBlue;
+[ActionAoE] 
+	ID=spearAttack_ice; shape=2; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	minRange = 1;
+	maxRange = 2;
+	bypassAll=false;
+	occupyAll=true;
+[AvAffecter]
+	ID=spearAttack_ice; 
+	actorValue=HP;
+	magnitude= d:spearDmg - c:skill_Ice * 0.5;
+	duration=-2;
+	chance=d:spearAcc;
+	element=catchFish;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=ice;
+	FXOnTile=cut;
+	FXOnTileColor=SkyBlue;
+	FXOnTile=frostsparkle;
+[AvAffecterAoE]
+	ID=spearAttack_ice;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+	
+[Action] ID=hammerAttack_ice; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=strike;
+	FXOnTargetColor=SkyBlue;
+	FXOnTarget=frostsparkle;
+[ActionAoE] 
+	ID=hammerAttack_ice; 
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=hammerAttack_ice; 
+	actorValue=HP;
+	magnitude= d:hammerDmg - c:skill_Ice * 0.5;
+	duration=-2;
+	chance=d:hammerAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	element=heavySmash;
+	element=ice;
+[AvAffecterAoE]
+	ID=hammerAttack_ice;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=fistAttack_ice; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=punch;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=pop;
+	FXOnTargetColor=SkyBlue;
+	FXOnTarget=frostsparkle;
+[ActionAoE] 
+	ID=fistAttack_ice;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=fistAttack_ice; 
+	actorValue=HP;
+	magnitude= d:fistDmg - c:skill_Ice * 0.5;
+	duration=-2;
+	chance=d:fistAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	element=ice;
+[AvAffecterAoE]
+	ID=fistAttack_ice; 
+	cloneFrom=oneTile;
+	
+[Action] ID=flailAttack_ice; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationSpeed=1.1;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=sidestrike;
+	FXOnTargetColor=SkyBlue;
+	FXOnTarget=frostsparkle;
+[ActionAoE] 
+	ID=flailAttack_ice;
+	airborne=true;
+	needsLoS = true;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 1.5;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=flailAttack_ice; 
+	actorValue=HP;
+	magnitude= d:flailDmg - c:skill_Ice * 0.5;
+	duration=-2;
+	chance=d:flailAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	element=ice;
+[AvAffecterAoE]
+	ID=flailAttack_ice;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=whipAttack_ice; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationSpeed=1.2;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=whipAttack_ice;
+	airborne=true;
+	needsLoS = true;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 3;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=whipAttack_ice; 
+	actorValue=HP;
+	magnitude= d:whipDmg - c:skill_Ice * 0.5;
+	duration=-2;
+	chance=d:whipAcc;
+	element=melee;
+	element=physical;
+	element=ice;
+	FXOnTile=whirlSlash;
+	FXOnTileColor=SkyBlue;
+	FXOnTile=popSilent;
+	FXOnTileColor=SkyBlue;
+	FXOnTile=sfx_whipSnap;
+	FXOnTile=frostsparkle;
+[AvAffecterAoE]
+	ID=whipAttack_ice;
+	cloneFrom=oneTile;
+
+[Action] ID=axeAttack_ice; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=cut;
+	FXOnTargetColor=SkyBlue;
+	FXOnTarget=frostsparkle;
+[ActionAoE] 
+	ID=axeAttack_ice;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=axeAttack_ice; 
+	actorValue=HP;
+	magnitude= d:axeDmg - c:skill_Ice * 0.5;
+	duration=-2;
+	chance=d:axeAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=heavySlash;
+	element=ice;
+[AvAffecterAoE]
+	ID=axeAttack_ice;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=shieldAttack_ice; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=punch;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=popSilent;
+	FXOnTargetColor=SkyBlue;
+	FXOnTarget=sfx_wooshHigh;
+[ActionAoE] 
+	ID=shieldAttack_ice;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=shieldAttack_ice; 
+	actorValue=HP;
+	magnitude= d:shieldDmg - c:skill_Ice * 0.5;
+	duration=-2;
+	chance=d:shieldAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	element=ice;
+	FXOnHit=sfx_shieldHit;
+	FXOnHit=frostsparkle;
+[AvAffecterAoE]
+	ID=shieldAttack_ice;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=shieldAttack_ice; 
+	actorValue=push;
+	magnitude=1;
+	duration=-2;
+	chance=d:shieldAcc;
+[AvAffecterAoE]
+	ID=shieldAttack_ice;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=crossbowAttack_ice; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=aim;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=hitDustQuiet_shorter;
+	FXOnTargetColor=SkyBlue;
+	FXOnTarget=chk;
+	FXOnTarget=frostsparkle;
+[ActionAoE] 
+	ID=crossbowAttack_ice;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 4;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=crossbowAttack_ice; 
+	actorValue=HP;
+	magnitude= d:aimDmg - c:skill_Ice * 0.5;
+	duration=-2;
+	chance=d:aimAcc;
+	element=ranged;
+	element=physical;
+	element=ice;
+	FXOnTile=line;
+	FXOnTileColor=SkyBlue;
+	FXOnHit=pop;
+	FXOnHitColor=SkyBlue;
+[AvAffecterAoE]
+	ID=crossbowAttack_ice;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=bowAttack_ice; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=bow;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=bowAttack_ice;
+	needsLoS = false;
+	needsLoE = true;
+	arc=true;
+	minRange = 3;
+	maxRange = 4;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=bowAttack_ice; 
+	actorValue=HP;
+	magnitude= d:bowDmg - c:skill_Ice * 0.5;
+	duration=-2;
+	chance=d:bowAcc;
+	element=physical;
+	element=ranged;
+	element=ice;
+	FXOnTile=arrow_ice;
+	FXOnTileColor=White;
+	FXOnTile=hitDustQuiet;
+	FXOnTileColor=SkyBlue;
+	FXOnTile=chk;
+	FXOnTile=frostsparkle;
+	FXOnHit=pop;
+	FXOnHitColor=SkyBlue;
+[AvAffecterAoE]
+	ID=bowAttack_ice;
+	cloneFrom=oneTile;
+	
+[Action] ID=swordAttack_wind; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnCaster=delay;
+	FXOnCaster=delay;
+	FXOnCaster=sfx_quickHum;
+	FXOnTarget=sfx_echoTing_quiet;
+[ActionAoE] 
+	ID=swordAttack_wind;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=swordAttack_wind; 
+	actorValue=HP;
+	magnitude= d:swordDmg - c:skill_Wind * 0.5;
+	duration=-2;
+	chance=d:swordAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=wind;
+	FXOnTile=cut;
+[AvAffecterAoE]
+	ID=swordAttack_wind;
+	cloneFrom=oneTile;
+	
+[Action] ID=rapierAttack_wind; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=thrust;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=cut;
+	FXOnTarget=sfx_highShingEcho;
+[ActionAoE] 
+	ID=rapierAttack_wind; 
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=rapierAttack_wind; 
+	actorValue=HP;
+	magnitude= d:rapierDmg - c:skill_Wind * 0.5;
+	duration=-2;
+	chance=d:rapierAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=wind;
+[AvAffecterAoE]
+	ID=rapierAttack_wind;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=greatswordAttack_wind; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=broadswing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXChangesWithWeaponHand=true;
+	FXOnCaster=delay;
+	FXOnCaster=delay;
+	FXOnCaster=delay;
+	FXOnCaster=sfx_gustyBlastHigh;
+	FXOnCaster=sfx_quickHumLow;
+	FXOnTarget=swipe;
+	FXOnTarget=sfx_quickHum;
+[ActionAoE] 
+	ID=greatswordAttack_wind;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=greatswordAttack_wind;
+	actorValue=HP;
+	magnitude= d:gswordDmg - c:skill_Wind * 0.5;
+	duration=-2;
+	chance=d:gswordAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=heavySlash;
+	element=wind;
+[AvAffecterAoE]
+	ID=greatswordAttack_wind;
+	aoeCasterAsOrigin=true;
+	maxRange = 1.5;
+	coneAngle=90;
+	
+[Action] ID=daggerAttack_wind; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=thrust;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=cut;
+[ActionAoE] 
+	ID=daggerAttack_wind;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=daggerAttack_wind; 
+	actorValue=HP;
+	magnitude= d:daggerDmg - c:skill_Wind * 0.5;
+	duration=-2;
+	chance=d:daggerAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=wind;
+	FXOnHit=sfx_lowShingEcho;
+[AvAffecterAoE]
+	ID=daggerAttack_wind;
+	cloneFrom=oneTile;
+	
+[Action] ID=spearAttack_wind; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=spear;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=stab;
+	FXOnTarget=sfx_shingEcho;
+[ActionAoE] 
+	ID=spearAttack_wind; shape=2; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	minRange = 1;
+	maxRange = 2;
+	bypassAll=false;
+	occupyAll=true;
+[AvAffecter]
+	ID=spearAttack_wind; 
+	actorValue=HP;
+	magnitude= d:spearDmg - c:skill_Wind * 0.5;
+	duration=-2;
+	chance=d:spearAcc;
+	element=catchFish;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=wind;
+	FXOnTile=cut;
+[AvAffecterAoE]
+	ID=spearAttack_wind;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+	
+[Action] ID=hammerAttack_wind; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=woosh;
+	FXOnTarget=strike;
+[ActionAoE] 
+	ID=hammerAttack_wind; 
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=hammerAttack_wind; 
+	actorValue=HP;
+	magnitude= d:hammerDmg - c:skill_Wind * 0.5;
+	duration=-2;
+	chance=d:hammerAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	element=heavySmash;
+	element=wind;
+	FXOnHit=sfx_chimeHit;
+[AvAffecterAoE]
+	ID=hammerAttack_wind;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=fistAttack_wind; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=punch;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=pop;
+	FXOnTarget=sfx_metalHitHigh;
+[ActionAoE] 
+	ID=fistAttack_wind;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=fistAttack_wind; 
+	actorValue=HP;
+	magnitude= d:fistDmg - c:skill_Wind * 0.5;
+	duration=-2;
+	chance=d:fistAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	element=wind;
+[AvAffecterAoE]
+	ID=fistAttack_wind; 
+	cloneFrom=oneTile;
+	
+[Action] ID=flailAttack_wind; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationSpeed=1.1;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnCaster=delay;
+	FXOnCaster=delay;
+	FXOnCaster=sfx_quickHum;
+	FXOnCaster=sfx_gustyBlastHigh;
+	FXOnTarget=sidestrike;
+[ActionAoE] 
+	ID=flailAttack_wind;
+	airborne=true;
+	needsLoS = true;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 1.5;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=flailAttack_wind; 
+	actorValue=HP;
+	magnitude= d:flailDmg - c:skill_Wind * 0.5;
+	duration=-2;
+	chance=d:flailAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	element=wind;
+[AvAffecterAoE]
+	ID=flailAttack_wind;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=whipAttack_wind; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationSpeed=1.2;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=whipAttack_wind;
+	airborne=true;
+	needsLoS = true;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 3;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=whipAttack_wind; 
+	actorValue=HP;
+	magnitude= d:whipDmg - c:skill_Wind * 0.5;
+	duration=-2;
+	chance=d:whipAcc;
+	element=melee;
+	element=physical;
+	element=wind;
+	FXOnTile=whirlSlash;
+	FXOnTile=popSilent;
+	FXOnTile=sfx_whipSnap;
+	FXOnTile=sfx_tweep;
+[AvAffecterAoE]
+	ID=whipAttack_wind;
+	cloneFrom=oneTile;
+
+[Action] ID=axeAttack_wind; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=cut;
+	FXOnTarget=sfx_gustyBlastHigh;
+[ActionAoE] 
+	ID=axeAttack_wind;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=axeAttack_wind; 
+	actorValue=HP;
+	magnitude= d:axeDmg - c:skill_Wind * 0.5;
+	duration=-2;
+	chance=d:axeAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=heavySlash;
+	element=wind;
+	FXOnTile=gustyBlast;
+[AvAffecterAoE]
+	ID=axeAttack_wind;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=shieldAttack_wind; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=punch;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=popSilent;
+	FXOnTarget=sfx_wooshHigh;
+[ActionAoE] 
+	ID=shieldAttack_wind;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=shieldAttack_wind; 
+	actorValue=HP;
+	magnitude= d:shieldDmg - c:skill_Wind * 0.5;
+	duration=-2;
+	chance=d:shieldAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	element=wind;
+	FXOnHit=sfx_shieldHit_reverb;
+[AvAffecterAoE]
+	ID=shieldAttack_wind;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=shieldAttack_wind; 
+	actorValue=push;
+	magnitude=1;
+	duration=-2;
+	chance=d:shieldAcc;
+[AvAffecterAoE]
+	ID=shieldAttack_wind;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=crossbowAttack_wind; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=aim;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=sfx_projectileThwip;
+	FXOnTarget=hitDustQuiet_shorter;
+[ActionAoE] 
+	ID=crossbowAttack_wind;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 5;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=crossbowAttack_wind; 
+	actorValue=HP;
+	magnitude= d:aimDmg - c:skill_Wind * 0.5;
+	duration=-2;
+	chance=d:aimAcc;
+	element=ranged;
+	element=physical;
+	element=wind;
+	FXOnTile=line;
+	FXOnHit=pop;
+[AvAffecterAoE]
+	ID=crossbowAttack_wind;
+	cloneFrom=oneTile;
+	
+[Action] ID=bowAttack_wind; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=bow;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=sfx_projectileThwip;
+	FXOnTarget=sfx_harpBow;
+[ActionAoE] 
+	ID=bowAttack_wind;
+	needsLoS = false;
+	needsLoE = true;
+	arc=true;
+	minRange = 3;
+	maxRange = 5;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=bowAttack_wind; 
+	actorValue=HP;
+	magnitude= d:bowDmg - c:skill_Wind * 0.5;
+	duration=-2;
+	chance=d:bowAcc;
+	element=physical;
+	element=ranged;
+	element=wind;
+	FXOnTile=arrow_fast;
+	FXOnTile=hitDustQuiet;
+	FXOnHit=pop;
+[AvAffecterAoE]
+	ID=bowAttack_wind;
+	cloneFrom=oneTile;
+	
+[Action] ID=swordAttack_elec; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=swordAttack_elec;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=swordAttack_elec; 
+	actorValue=HP;
+	magnitude= d:swordDmg - c:skill_Elec * 0.5;
+	duration=-2;
+	chance=d:swordAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=lightning;
+	FXOnTile=cut;
+	FXOnTile=horizSpark_many;
+[AvAffecterAoE]
+	ID=swordAttack_elec;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=swordAttack_elec; 
+	actorValue=stun;
+	magnitude=1;
+	duration=1;
+	chance=d:swordAcc;
+	element=lightning;
+[AvAffecterAoE]
+	ID=swordAttack_elec;
+	cloneFrom=oneTile;
+	
+[Action] ID=rapierAttack_elec; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=thrust;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=rapierAttack_elec; 
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=rapierAttack_elec; 
+	actorValue=HP;
+	magnitude= d:rapierDmg - c:skill_Elec * 0.5;
+	duration=-2;
+	chance=d:rapierAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=lightning;
+	FXOnTile=cut;
+	FXOnTile=horizSpark_many;
+[AvAffecterAoE]
+	ID=rapierAttack_elec;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=rapierAttack_elec; 
+	actorValue=stun;
+	magnitude=1;
+	duration=1;
+	chance=d:rapierAcc;
+	element=lightning;
+[AvAffecterAoE]
+	ID=rapierAttack_elec;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=greatswordAttack_elec; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=broadswing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXChangesWithWeaponHand=true;
+	FXOnTarget=swipe;
+[ActionAoE] 
+	ID=greatswordAttack_elec;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=greatswordAttack_elec; 
+	actorValue=HP;
+	magnitude= d:gswordDmg - c:skill_Elec * 0.5;
+	duration=-2;
+	chance=d:gswordAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=heavySlash;
+	element=lightning;
+	FXOnTile=horizSpark_many;
+[AvAffecterAoE]
+	ID=greatswordAttack_elec;
+	aoeCasterAsOrigin=true;
+	maxRange = 1.5;
+	coneAngle=90;
+[AvAffecter]
+	ID=greatswordAttack_elec; 
+	actorValue=stun;
+	magnitude=1;
+	duration=1;
+	chance=d:gswordAcc;
+	element=lightning;
+[AvAffecterAoE]
+	ID=greatswordAttack_elec;
+	aoeCasterAsOrigin=true;
+	maxRange = 1.5;
+	coneAngle=90;
+	
+[Action] ID=daggerAttack_elec; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=thrust;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=cut;
+[ActionAoE] 
+	ID=daggerAttack_elec;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=daggerAttack_elec; 
+	actorValue=HP;
+	magnitude= d:daggerDmg - c:skill_Elec * 0.5;
+	duration=-2;
+	chance=d:daggerAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=lightning;
+	FXOnTile=horizSpark_many;
+[AvAffecterAoE]
+	ID=daggerAttack_elec;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=daggerAttack_elec; 
+	actorValue=stun;
+	magnitude=1;
+	duration=1;
+	chance=d:daggerAcc;
+	element=lightning;
+[AvAffecterAoE]
+	ID=daggerAttack_elec;
+	cloneFrom=oneTile;
+	
+[Action] ID=spearAttack_elec; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=spear;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=stab;
+[ActionAoE] 
+	ID=spearAttack_elec; shape=2; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	minRange = 1;
+	maxRange = 2;
+	bypassAll=false;
+	occupyAll=true;
+[AvAffecter]
+	ID=spearAttack_elec; 
+	actorValue=HP;
+	magnitude= d:spearDmg - c:skill_Elec * 0.5;
+	duration=-2;
+	chance=d:spearAcc;
+	element=catchFish;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=lightning;
+	FXOnTile=cut;
+	FXOnTile=horizSpark_many;
+[AvAffecterAoE]
+	ID=spearAttack_elec;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+[AvAffecter]
+	ID=spearAttack_elec; 
+	actorValue=stun;
+	magnitude=1;
+	duration=1;
+	chance=d:spearAcc;
+	element=lightning;
+[AvAffecterAoE]
+	ID=spearAttack_elec;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+	
+[Action] ID=hammerAttack_elec; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=strike;
+[ActionAoE] 
+	ID=hammerAttack_elec; 
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=hammerAttack_elec; 
+	actorValue=HP;
+	magnitude= d:hammerDmg - c:skill_Elec * 0.5;
+	duration=-2;
+	chance=d:hammerAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	element=heavySmash;
+	element=lightning;
+	FXOnTile=horizSpark_many;
+[AvAffecterAoE]
+	ID=hammerAttack_elec;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=hammerAttack_elec; 
+	actorValue=stun;
+	magnitude=1;
+	duration=2;
+	chance=d:hammerAcc;
+	element=lightning;
+[AvAffecterAoE]
+	ID=hammerAttack_elec;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=fistAttack_elec; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=punch;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=pop;
+[ActionAoE] 
+	ID=fistAttack_elec;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=fistAttack_elec; 
+	actorValue=HP;
+	magnitude= d:fistDmg - c:skill_Elec * 0.5;
+	duration=-2;
+	chance=d:fistAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	element=lightning;
+	FXOnTile=horizSpark_many;
+[AvAffecterAoE]
+	ID=fistAttack_elec; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=fistAttack_elec; 
+	actorValue=stun;
+	magnitude=1;
+	duration=1;
+	chance=d:fistAcc;
+	element=lightning;
+[AvAffecterAoE]
+	ID=fistAttack_elec;
+	cloneFrom=oneTile;
+	
+[Action] ID=flailAttack_elec; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationSpeed=1.1;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=sidestrike;
+[ActionAoE] 
+	ID=flailAttack_elec;
+	airborne=true;
+	needsLoS = true;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 1.5;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=flailAttack_elec; 
+	actorValue=HP;
+	magnitude= d:flailDmg - c:skill_Elec * 0.5;
+	duration=-2;
+	chance=d:flailAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	element=lightning;
+	FXOnTile=horizSpark_many;
+[AvAffecterAoE]
+	ID=flailAttack_elec;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=flailAttack_elec; 
+	actorValue=stun;
+	magnitude=1;
+	duration=1;
+	chance=d:flailAcc;
+	element=lightning;
+[AvAffecterAoE]
+	ID=flailAttack_elec;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=whipAttack_elec; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationSpeed=1.2;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=whipAttack_elec;
+	airborne=true;
+	needsLoS = true;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 3;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=whipAttack_elec; 
+	actorValue=HP;
+	magnitude= d:whipDmg - c:skill_Elec * 0.5;
+	duration=-2;
+	chance=d:whipAcc;
+	element=melee;
+	element=physical;
+	element=lightning;
+	FXOnTile=whirlSlash;
+	FXOnTile=popSilent;
+	FXOnTile=sfx_whipSnap;
+	FXOnTile=horizSpark_many;
+[AvAffecterAoE]
+	ID=whipAttack_elec;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=whipAttack_elec; 
+	actorValue=stun;
+	magnitude=1;
+	duration=1;
+	chance=d:whipAcc;
+	element=lightning;
+[AvAffecterAoE]
+	ID=whipAttack_elec;
+	cloneFrom=oneTile;
+
+[Action] ID=axeAttack_elec; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=cut;
+[ActionAoE] 
+	ID=axeAttack_elec;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=axeAttack_elec; 
+	actorValue=HP;
+	magnitude= d:axeDmg - c:skill_Elec * 0.5;
+	duration=-2;
+	chance=d:axeAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=heavySlash;
+	element=lightning;
+	FXOnTile=horizSpark_many;
+[AvAffecterAoE]
+	ID=axeAttack_elec;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=axeAttack_elec; 
+	actorValue=stun;
+	magnitude=1;
+	duration=1;
+	chance=d:axeAcc;
+	element=lightning;
+[AvAffecterAoE]
+	ID=axeAttack_elec;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=shieldAttack_elec; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=punch;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=popSilent;
+	FXOnTarget=sfx_wooshHigh;
+[ActionAoE] 
+	ID=shieldAttack_elec;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=shieldAttack_elec; 
+	actorValue=HP;
+	magnitude= d:shieldDmg - c:skill_Elec * 0.5;
+	duration=-2;
+	chance=d:shieldAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	element=lightning;
+	FXOnHit=sfx_shieldHit;
+	FXOnTile=horizSpark_many;
+[AvAffecterAoE]
+	ID=shieldAttack_elec;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=shieldAttack_elec; 
+	actorValue=push;
+	magnitude=1;
+	duration=-2;
+	chance=d:shieldAcc;
+[AvAffecterAoE]
+	ID=shieldAttack_elec;
+	cloneFrom=oneTile;
+	
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+[Action] ID=shieldBlock_elec; 
+	FXOnTarget=popSilent;
+[ActionAoE] 
+	ID=shieldBlock_elec;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=shieldBlock_elec; 
+	actorValue=HP;
+	magnitude= d:shieldDmg * 0.2 - c:skill_Elec * 0.125;
+	duration=-2;
+	chance=100;
+	element=melee;
+	element=magic;
+	element=lightning;
+	FXOnTile=horizSpark_many;
+[AvAffecterAoE]
+	ID=shieldBlock_elec;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=crossbowAttack_elec; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=aim;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=chk;
+	FXOnTarget=hitDustQuiet_shorter;
+[ActionAoE] 
+	ID=crossbowAttack_elec;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 4;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=crossbowAttack_elec; 
+	actorValue=HP;
+	magnitude= d:aimDmg - c:skill_Elec * 0.5;
+	duration=-2;
+	chance=d:aimAcc;
+	element=ranged;
+	element=physical;
+	element=lightning;
+	FXOnTile=line;
+	FXOnHit=pop;
+	FXOnTile=horizSpark_many;
+[AvAffecterAoE]
+	ID=crossbowAttack_elec;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=crossbowAttack_elec; 
+	actorValue=stun;
+	magnitude=1;
+	duration=1;
+	chance=d:aimAcc;
+	element=lightning;
+[AvAffecterAoE]
+	ID=crossbowAttack_elec;
+	cloneFrom=oneTile;
+	
+[Action] ID=bowAttack_elec; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=bow;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=bowAttack_elec;
+	needsLoS = false;
+	needsLoE = true;
+	arc=true;
+	minRange = 3;
+	maxRange = 4;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=bowAttack_elec; 
+	actorValue=HP;
+	magnitude= d:bowDmg - c:skill_Elec * 0.5;
+	duration=-2;
+	chance=d:bowAcc;
+	element=physical;
+	element=ranged;
+	element=lightning;
+	FXOnTile=arrow;
+	FXOnTile=chk;
+	FXOnTile=hitDustQuiet;
+	FXOnTile=horizSpark_many;
+	FXOnHit=pop;
+[AvAffecterAoE]
+	ID=bowAttack_elec;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=bowAttack_elec; 
+	actorValue=stun;
+	magnitude=1;
+	duration=1;
+	chance=d:bowAcc;
+	element=lightning;
+[AvAffecterAoE]
+	ID=bowAttack_elec;
+	cloneFrom=oneTile;
+	
+[Action] ID=swordAttack_poison; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=swordAttack_poison;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=swordAttack_poison; 
+	actorValue=HP;
+	magnitude= d:swordDmg;
+	duration=-2;
+	chance=d:swordAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	FXOnTile=cut;
+	FXOnTileColor=Purple;
+[AvAffecterAoE]
+	ID=swordAttack_poison;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=swordAttack_poison; 
+	actorValue=poison;
+	visibleMiss=false;
+	magnitude=1;
+	duration=50 - d:swordDmg;
+	chance=d:swordAcc;
+[AvAffecterAoE]
+	ID=swordAttack_poison;
+	cloneFrom=oneTile;
+	
+[Action] ID=rapierAttack_poison; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=thrust;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=rapierAttack_poison; 
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=rapierAttack_poison; 
+	actorValue=HP;
+	magnitude= d:rapierDmg;
+	duration=-2;
+	chance=d:rapierAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	FXOnTile=cut;
+	FXOnTileColor=Purple;
+[AvAffecterAoE]
+	ID=rapierAttack_poison;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=rapierAttack_poison; 
+	actorValue=poison;
+	visibleMiss=false;
+	magnitude=1;
+	duration=50 - d:rapierDmg;
+	chance=d:rapierAcc;
+[AvAffecterAoE]
+	ID=rapierAttack_poison;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=daggerAttack_poison; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=thrust;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=cut;
+	FXOnTargetColor=Purple;
+[ActionAoE] 
+	ID=daggerAttack_poison;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=daggerAttack_poison; 
+	actorValue=HP;
+	magnitude= d:daggerDmg;
+	duration=-2;
+	chance=d:daggerAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+[AvAffecterAoE]
+	ID=daggerAttack_poison;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=daggerAttack_poison; 
+	actorValue=poison;
+	visibleMiss=false;
+	magnitude=1;
+	duration=50 - d:daggerDmg;
+	chance=d:daggerAcc;
+[AvAffecterAoE]
+	ID=daggerAttack_poison;
+	cloneFrom=oneTile;
+	
+[Action] ID=spearAttack_poison; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=spear;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=stab;
+	FXOnTargetColor=Purple;
+[ActionAoE] 
+	ID=spearAttack_poison; shape=2; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	minRange = 1;
+	maxRange = 2;
+	bypassAll=false;
+	occupyAll=true;
+[AvAffecter]
+	ID=spearAttack_poison; 
+	actorValue=HP;
+	magnitude= d:spearDmg;
+	duration=-2;
+	chance=d:spearAcc;
+	element=catchFish;
+	element=melee;
+	element=physical;
+	element=slash;
+	FXOnTile=cut;
+	FXOnTileColor=Purple;
+[AvAffecterAoE]
+	ID=spearAttack_poison;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+[AvAffecter]
+	ID=spearAttack_poison; 
+	actorValue=poison;
+	visibleMiss=false;
+	magnitude=1;
+	duration=50 - d:spearDmg;
+	chance=d:spearAcc;
+[AvAffecterAoE]
+	ID=spearAttack_poison;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+	
+	
+[Action] ID=fistAttack_poison; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=punch;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=pop;
+	FXOnTargetColor=Purple;
+[ActionAoE] 
+	ID=fistAttack_poison;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=fistAttack_poison; 
+	actorValue=HP;
+	magnitude= d:fistDmg;
+	duration=-2;
+	chance=d:fistAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+[AvAffecterAoE]
+	ID=fistAttack_poison; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=fistAttack_poison; 
+	actorValue=poison;
+	visibleMiss=false;
+	magnitude=1;
+	duration=50 - d:fistDmg;
+	chance=d:fistAcc;
+[AvAffecterAoE]
+	ID=fistAttack_poison;
+	cloneFrom=oneTile;
+	
+[Action] ID=flailAttack_poison; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationSpeed=1.1;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=sidestrike;
+	FXOnTargetColor=Purple;
+[ActionAoE] 
+	ID=flailAttack_poison;
+	airborne=true;
+	needsLoS = true;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 1.5;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=flailAttack_poison; 
+	actorValue=HP;
+	magnitude= d:flailDmg;
+	duration=-2;
+	chance=d:flailAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+[AvAffecterAoE]
+	ID=flailAttack_poison;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=flailAttack_poison; 
+	actorValue=poison;
+	visibleMiss=false;
+	magnitude=1;
+	duration=50 - d:flailDmg;
+	chance=d:flailAcc;
+[AvAffecterAoE]
+	ID=flailAttack_poison;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=whipAttack_poison; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationSpeed=1.2;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=whipAttack_poison;
+	airborne=true;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 3;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=whipAttack_poison; 
+	actorValue=HP;
+	magnitude= d:whipDmg;
+	duration=-2;
+	chance=d:whipAcc;
+	element=melee;
+	element=physical;
+	FXOnTile=whirlSlash;
+	FXOnTileColor=Purple;
+	FXOnTile=popSilent;
+	FXOnTileColor=Purple;
+	FXOnTile=sfx_whipSnap;
+[AvAffecterAoE]
+	ID=whipAttack_poison;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=whipAttack_poison; 
+	actorValue=poison;
+	visibleMiss=false;
+	magnitude=1;
+	duration=50 - d:whipDmg;
+	chance=d:whipAcc;
+[AvAffecterAoE]
+	ID=whipAttack_poison;
+	cloneFrom=oneTile;
+
+	
+[Action] ID=axeAttack_poison; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=cut;
+	FXOnTargetColor=Purple;
+[ActionAoE] 
+	ID=axeAttack_poison;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=axeAttack_poison; 
+	actorValue=HP;
+	magnitude= d:axeDmg;
+	duration=-2;
+	chance=d:axeAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=heavySlash;
+[AvAffecterAoE]
+	ID=axeAttack_poison;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=axeAttack_poison; 
+	actorValue=poison;
+	visibleMiss=false;
+	magnitude=1;
+	duration=50 - d:axeDmg;
+	chance=d:axeAcc;
+[AvAffecterAoE]
+	ID=axeAttack_poison;
+	cloneFrom=oneTile;
+	
+
+
+[Action] ID=greatswordAttack_poison; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=broadswing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXChangesWithWeaponHand=true;
+	FXOnTarget=swipe;
+	FXOnTargetColor=Purple;
+[ActionAoE] 
+	ID=greatswordAttack_poison;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=greatswordAttack_poison; 
+	actorValue=HP;
+	magnitude= d:gswordDmg;
+	duration=-2;
+	chance=d:gswordAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=heavySlash;
+[AvAffecterAoE]
+	ID=greatswordAttack_poison;
+	aoeCasterAsOrigin=true;
+	maxRange = 1.5;
+	coneAngle=90;
+[AvAffecter]
+	ID=greatswordAttack_poison; 
+	actorValue=poison;
+	visibleMiss=false;
+	magnitude=1;
+	duration=50 - d:gswordDmg;
+	chance=d:gswordAcc;
+[AvAffecterAoE]
+	ID=greatswordAttack_poison;
+	aoeCasterAsOrigin=true;
+	maxRange = 1.5;
+	coneAngle=90;
+	
+
+[Action] ID=bowAttack_poison; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=bow;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=bowAttack_poison;
+	needsLoS = false;
+	needsLoE = true;
+	arc=true;
+	minRange = 3;
+	maxRange = 4;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=bowAttack_poison; 
+	actorValue=HP;
+	magnitude= d:bowDmg;
+	duration=-2;
+	chance=d:bowAcc;
+	element=physical;
+	element=ranged;
+	FXOnTile=arrow;
+	FXOnTileColor=Purple;
+	FXOnTile=chk;
+	FXOnTileColor=Purple;
+	FXOnTile=hitDustQuiet;
+	FXOnTileColor=Purple;
+	FXOnHit=pop;
+	FXOnHitColor=Purple;
+[AvAffecterAoE]
+	ID=bowAttack_poison;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=bowAttack_poison; 
+	actorValue=poison;
+	visibleMiss=false;
+	magnitude=1;
+	duration=50 - d:bowDmg;
+	chance=d:bowAcc;
+[AvAffecterAoE]
+	ID=bowAttack_poison;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=crossbowAttack_poison; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=aim;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=chk;
+	FXOnTargetColor=Purple;
+	FXOnTarget=hitDustQuiet;
+	FXOnTargetColor=Purple;
+[ActionAoE] 
+	ID=crossbowAttack_poison;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 4;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=crossbowAttack_poison; 
+	actorValue=HP;
+	magnitude= d:aimDmg;
+	duration=-2;
+	chance=d:aimAcc;
+	element=ranged;
+	element=physical;
+	FXOnTile=line;
+	FXOnTileColor=Purple;
+	FXOnHit=pop;
+	FXOnHitColor=Purple;
+[AvAffecterAoE]
+	ID=crossbowAttack_poison;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=crossbowAttack_poison; 
+	actorValue=poison;
+	visibleMiss=false;
+	magnitude=1;
+	duration=50 - d:aimDmg;
+	chance=d:aimAcc;
+[AvAffecterAoE]
+	ID=crossbowAttack_poison;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=hammerAttack_poison; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=strike;
+	FXOnTargetColor=Purple;
+[ActionAoE] 
+	ID=hammerAttack_poison; 
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=hammerAttack_poison; 
+	actorValue=HP;
+	magnitude= d:hammerDmg;
+	duration=-2;
+	chance=d:hammerAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	element=heavySmash;
+[AvAffecterAoE]
+	ID=hammerAttack_poison;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=hammerAttack_poison; 
+	actorValue=poison;
+	visibleMiss=false;
+	magnitude=1;
+	duration=50 - d:hammerDmg;
+	chance=d:hammerAcc;
+[AvAffecterAoE]
+	ID=hammerAttack_poison;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=shieldAttack_poison; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=punch;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=popSilent;
+	FXOnTargetColor=Purple;
+	FXOnTarget=sfx_wooshHigh;
+[ActionAoE] 
+	ID=shieldAttack_poison;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=shieldAttack_poison; 
+	actorValue=HP;
+	magnitude= d:shieldDmg;
+	duration=-2;
+	chance=d:shieldAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	FXOnHit=sfx_shieldHit;
+[AvAffecterAoE]
+	ID=shieldAttack_poison;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=shieldAttack_poison; 
+	actorValue=poison;
+	visibleMiss=false;
+	magnitude=1;
+	duration=50 - d:shieldDmg;
+	chance=d:shieldAcc;
+[AvAffecterAoE]
+	ID=shieldAttack_poison;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=shieldAttack_poison; 
+	actorValue=push;
+	magnitude=1;
+	duration=-2;
+	chance=d:shieldAcc;
+[AvAffecterAoE]
+	ID=shieldAttack_poison;
+	cloneFrom=oneTile;
+	
+[Action] ID=shieldBlock_poison; 
+	FXOnTarget=popSilent;
+	FXOnTargetColor=Purple;
+	
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+[ActionAoE] 
+	ID=shieldBlock_poison;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=shieldBlock_poison; 
+	actorValue=poison;
+	magnitude=1;
+	duration=35 - d:shieldDmg;
+	chance=100;
+	visibleMiss=false;
+	FXOnHit=WetSquish;
+[AvAffecterAoE]
+	ID=shieldBlock_poison;
+	cloneFrom=oneTile;
+
+[Action] ID=swordAttack_wet; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=swordAttack_wet;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=swordAttack_wet; 
+	actorValue=HP;
+	magnitude= d:swordDmg;
+	duration=-2;
+	chance=d:swordAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=water;
+	FXOnTile=cut;
+	FXOnTileColor=Teal;
+[AvAffecterAoE]
+	ID=swordAttack_wet;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=swordAttack_wet; 
+	actorValue=wet;
+	visibleMiss=false;
+	magnitude=1;
+	duration=80 - d:swordDmg;
+	chance=d:swordAcc;
+	element=water;
+	FXOnHit=sfx_littleSplash;
+[AvAffecterAoE]
+	ID=swordAttack_wet;
+	cloneFrom=oneTile;
+	
+[Action] ID=rapierAttack_wet; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=thrust;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=rapierAttack_wet; 
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=rapierAttack_wet; 
+	actorValue=HP;
+	magnitude= d:rapierDmg;
+	duration=-2;
+	chance=d:rapierAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=water;
+	FXOnTile=cut;
+	FXOnTileColor=Teal;
+[AvAffecterAoE]
+	ID=rapierAttack_wet;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=rapierAttack_wet; 
+	actorValue=wet;
+	visibleMiss=false;
+	magnitude=1;
+	duration=80 - d:rapierDmg;
+	chance=d:rapierAcc;
+	element=water;
+	FXOnHit=sfx_littleSplash;
+[AvAffecterAoE]
+	ID=rapierAttack_wet;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=daggerAttack_wet; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=thrust;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=cut;
+	FXOnTargetColor=Teal;
+[ActionAoE] 
+	ID=daggerAttack_wet;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=daggerAttack_wet; 
+	actorValue=HP;
+	magnitude= d:daggerDmg;
+	duration=-2;
+	chance=d:daggerAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=water;
+[AvAffecterAoE]
+	ID=daggerAttack_wet;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=daggerAttack_wet; 
+	actorValue=wet;
+	visibleMiss=false;
+	magnitude=1;
+	duration=80 - d:daggerDmg;
+	chance=d:daggerAcc;
+	element=water;
+	FXOnHit=sfx_littleSplash;
+[AvAffecterAoE]
+	ID=daggerAttack_wet;
+	cloneFrom=oneTile;
+	
+[Action] ID=spearAttack_wet; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=spear;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=stab;
+	FXOnTargetColor=Teal;
+[ActionAoE] 
+	ID=spearAttack_wet; shape=2; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	minRange = 1;
+	maxRange = 2;
+	bypassAll=false;
+	occupyAll=true;
+[AvAffecter]
+	ID=spearAttack_wet; 
+	actorValue=HP;
+	magnitude= d:spearDmg;
+	duration=-2;
+	chance=d:spearAcc;
+	element=catchFish;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=water;
+	FXOnTile=cut;
+	FXOnTileColor=Teal;
+[AvAffecterAoE]
+	ID=spearAttack_wet;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+[AvAffecter]
+	ID=spearAttack_wet; 
+	actorValue=wet;
+	visibleMiss=false;
+	magnitude=1;
+	duration=80 - d:spearDmg;
+	chance=d:spearAcc;
+	element=water;
+	FXOnHit=sfx_littleSplash;
+[AvAffecterAoE]
+	ID=spearAttack_wet;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+	
+	
+[Action] ID=fistAttack_wet; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=punch;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=pop;
+	FXOnTargetColor=Teal;
+[ActionAoE] 
+	ID=fistAttack_wet;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=fistAttack_wet; 
+	actorValue=HP;
+	magnitude= d:fistDmg;
+	duration=-2;
+	chance=d:fistAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	element=water;
+[AvAffecterAoE]
+	ID=fistAttack_wet; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=fistAttack_wet; 
+	actorValue=wet;
+	visibleMiss=false;
+	magnitude=1;
+	duration=80 - d:fistDmg;
+	chance=d:fistAcc;
+	element=water;
+	FXOnHit=sfx_littleSplash;
+[AvAffecterAoE]
+	ID=fistAttack_wet;
+	cloneFrom=oneTile;
+	
+[Action] ID=flailAttack_wet; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationSpeed=1.1;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=sidestrike;
+	FXOnTargetColor=Teal;
+[ActionAoE] 
+	ID=flailAttack_wet;
+	airborne=true;
+	needsLoS = true;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 1.5;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=flailAttack_wet; 
+	actorValue=HP;
+	magnitude= d:flailDmg;
+	duration=-2;
+	chance=d:flailAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	element=water;
+[AvAffecterAoE]
+	ID=flailAttack_wet;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=flailAttack_wet; 
+	actorValue=wet;
+	visibleMiss=false;
+	magnitude=1;
+	duration=80 - d:flailDmg;
+	chance=d:flailAcc;
+	element=water;
+	FXOnHit=sfx_littleSplash;
+[AvAffecterAoE]
+	ID=flailAttack_wet;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=whipAttack_wet; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationSpeed=1.2;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=whipAttack_wet;
+	airborne=true;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 3;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=whipAttack_wet; 
+	actorValue=HP;
+	magnitude= d:whipDmg;
+	duration=-2;
+	chance=d:whipAcc;
+	element=melee;
+	element=physical;
+	element=water;
+	FXOnTile=whirlSlash;
+	FXOnTileColor=Teal;
+	FXOnTile=popSilent;
+	FXOnTileColor=Teal;
+	FXOnTile=sfx_whipSnap;
+[AvAffecterAoE]
+	ID=whipAttack_wet;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=whipAttack_wet; 
+	actorValue=wet;
+	visibleMiss=false;
+	magnitude=1;
+	duration=80 - d:whipDmg;
+	chance=d:whipAcc;
+	element=water;
+	FXOnHit=sfx_littleSplash;
+[AvAffecterAoE]
+	ID=whipAttack_wet;
+	cloneFrom=oneTile;
+
+	
+[Action] ID=axeAttack_wet; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=cut;
+	FXOnTargetColor=Teal;
+[ActionAoE] 
+	ID=axeAttack_wet;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=axeAttack_wet; 
+	actorValue=HP;
+	magnitude= d:axeDmg;
+	duration=-2;
+	chance=d:axeAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=heavySlash;
+	element=water;
+[AvAffecterAoE]
+	ID=axeAttack_wet;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=axeAttack_wet; 
+	actorValue=wet;
+	visibleMiss=false;
+	magnitude=1;
+	duration=80 - d:axeDmg;
+	chance=d:axeAcc;
+	element=water;
+	FXOnHit=sfx_littleSplash;
+[AvAffecterAoE]
+	ID=axeAttack_wet;
+	cloneFrom=oneTile;
+	
+	
+
+[Action] ID=greatswordAttack_wet; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=broadswing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXChangesWithWeaponHand=true;
+	FXOnTarget=swipe;
+	FXOnTargetColor=Teal;
+[ActionAoE] 
+	ID=greatswordAttack_wet;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=greatswordAttack_wet; 
+	actorValue=HP;
+	magnitude= d:gswordDmg;
+	duration=-2;
+	chance=d:gswordAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=heavySlash;
+	element=water;
+[AvAffecterAoE]
+	ID=greatswordAttack_wet;
+	aoeCasterAsOrigin=true;
+	maxRange = 1.5;
+	coneAngle=90;
+[AvAffecter]
+	ID=greatswordAttack_wet; 
+	actorValue=wet;
+	visibleMiss=false;
+	magnitude=1;
+	duration=80 - d:gswordDmg;
+	chance=d:gswordAcc;
+	FXOnHit=sfx_littleSplash;
+	element=water;
+[AvAffecterAoE]
+	ID=greatswordAttack_wet;
+	aoeCasterAsOrigin=true;
+	maxRange = 1.5;
+	coneAngle=90;
+	
+
+[Action] ID=bowAttack_wet; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=bow;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=bowAttack_wet;
+	needsLoS = false;
+	needsLoE = true;
+	arc=true;
+	minRange = 3;
+	maxRange = 4;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=bowAttack_wet; 
+	actorValue=HP;
+	magnitude= d:bowDmg;
+	duration=-2;
+	chance=d:bowAcc;
+	element=physical;
+	element=ranged;
+	element=water;
+	FXOnTile=arrow;
+	FXOnTileColor=Teal;
+	FXOnTile=chk;
+	FXOnTileColor=Teal;
+	FXOnTile=hitDustQuiet;
+	FXOnTileColor=Teal;
+	FXOnHit=pop;
+	FXOnHitColor=Teal;
+[AvAffecterAoE]
+	ID=bowAttack_wet;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=bowAttack_wet; 
+	actorValue=wet;
+	visibleMiss=false;
+	magnitude=1;
+	duration=80 - d:bowDmg;
+	chance=d:bowAcc;
+	element=water;
+	FXOnHit=sfx_littleSplash;
+[AvAffecterAoE]
+	ID=bowAttack_wet;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=crossbowAttack_wet; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=aim;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=chk;
+	FXOnTargetColor=Teal;
+	FXOnTarget=hitDustQuiet_shorter;
+	FXOnTargetColor=Teal;
+[ActionAoE] 
+	ID=crossbowAttack_wet;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 4;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=crossbowAttack_wet; 
+	actorValue=HP;
+	magnitude= d:aimDmg;
+	duration=-2;
+	chance=d:aimAcc;
+	element=ranged;
+	element=physical;
+	element=water;
+	FXOnTile=line;
+	FXOnTileColor=Teal;
+	FXOnHit=pop;
+	FXOnHitColor=Teal;
+[AvAffecterAoE]
+	ID=crossbowAttack_wet;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=crossbowAttack_wet; 
+	actorValue=wet;
+	visibleMiss=false;
+	magnitude=1;
+	duration=80 - d:aimDmg;
+	chance=d:aimAcc;
+	element=water;
+	FXOnHit=sfx_littleSplash;
+[AvAffecterAoE]
+	ID=crossbowAttack_wet;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=shieldAttack_wet; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=punch;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=popSilent;
+	FXOnTargetColor=Teal;
+	FXOnTarget=sfx_wooshHigh;
+[ActionAoE] 
+	ID=shieldAttack_wet;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=shieldAttack_wet; 
+	actorValue=HP;
+	magnitude= d:shieldDmg;
+	duration=-2;
+	chance=d:shieldAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	element=water;
+	FXOnHit=sfx_shieldHit;
+[AvAffecterAoE]
+	ID=shieldAttack_wet;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=shieldAttack_wet; 
+	actorValue=wet;
+	visibleMiss=false;
+	magnitude=1;
+	duration=80 - d:shieldDmg;
+	chance=d:shieldAcc;
+	element=water;
+	FXOnHit=sfx_littleSplash;
+[AvAffecterAoE]
+	ID=shieldAttack_wet;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=shieldAttack_wet; 
+	actorValue=push;
+	magnitude=1;
+	duration=-2;
+	chance=d:shieldAcc;
+[AvAffecterAoE]
+	ID=shieldAttack_wet;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=hammerAttack_wet; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=strike;
+	FXOnTargetColor=Teal;
+[ActionAoE] 
+	ID=hammerAttack_wet; 
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=hammerAttack_wet; 
+	actorValue=HP;
+	magnitude= d:hammerDmg;
+	duration=-2;
+	chance=d:hammerAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	element=heavySmash;
+	element=water;
+[AvAffecterAoE]
+	ID=hammerAttack_wet;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=hammerAttack_wet; 
+	actorValue=wet;
+	visibleMiss=false;
+	magnitude=1;
+	duration=80 - d:hammerDmg;
+	chance=d:hammerAcc;
+	element=water;
+	FXOnHit=sfx_littleSplash;
+[AvAffecterAoE]
+	ID=hammerAttack_wet;
+	cloneFrom=oneTile;
+	
+
+
+[Action] ID=slingshotAttack; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=bow;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=chk;
+	FXOnTarget=hitDustQuiet;
+[ActionAoE] 
+	ID=slingshotAttack;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 3;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=slingshotAttack; 
+	actorValue=HP;
+	magnitude= d:aimDmg;
+	duration=-2;
+	chance=d:aimAcc;
+	element=ranged;
+	element=physical;
+	FXOnTile=line;
+	FXOnHit=pop;
+[AvAffecterAoE]
+	ID=slingshotAttack;
+	cloneFrom=oneTile;
+	
+[Action] ID=slingshotAttack_lucky; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=bow;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=chk;
+	FXOnTarget=hitDustQuiet;
+[ActionAoE] 
+	ID=slingshotAttack_lucky;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 3;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=slingshotAttack_lucky; 
+	actorValue=HP;
+	magnitude= d:aimDmg;
+	duration=-2;
+	chance=d:aimAcc;
+	element=ranged;
+	element=physical;
+	FXOnTile=line;
+	FXOnHit=pop;
+[AvAffecterAoE]
+	ID=slingshotAttack_lucky;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=slingshotAttack_lucky; 
+	actorValue=HP;
+	visibleMiss=false;
+	magnitude= d:aimDmg;
+	duration=-2;
+	chance=d:aimAcc * 0.3;
+	element=ranged;
+	element=physical;
+	FXOnHit=ping;
+	FXOnHitColor=Red;
+	FXOnHit=manySplatter;
+	FXOnHitColor=Red;
+	FXOnHit=smallShakeHoriz;
+	FXOnHit=SLAM;
+[AvAffecterAoE]
+	ID=slingshotAttack_lucky;
+	cloneFrom=oneTile;
+	
+[Action] ID=javelinAttack; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=javelinAttack;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 3;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=javelinAttack; 
+	actorValue=HP;
+	magnitude=d:spearDmg;
+	duration=-2;
+	chance=d:spearAcc;
+	element=ranged;
+	element=physical;
+	element=slash;
+	FXOnTile=swing2;
+	FXOnTile=throw_spear;
+	FXOnTile=pop;
+	FXOnHit=sfx_slashingHit;
+[AvAffecterAoE]
+	ID=javelinAttack;
+	cloneFrom=oneTile;
+
+[Action] ID=javelinMythrilAttack; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=javelinMythrilAttack;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 3;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=javelinMythrilAttack; 
+	actorValue=HP;
+	magnitude=d:spearDmg;
+	duration=-2;
+	chance=d:spearAcc;
+	element=ranged;
+	element=physical;
+	element=slash;
+	FXOnTile=swing2;
+	FXOnTile=throw_mythril_spear;
+	FXOnTile=pop;
+	FXOnHit=sfx_slashingHit;
+[AvAffecterAoE]
+	ID=javelinMythrilAttack;
+	cloneFrom=oneTile;
+
+
+[Action] ID=axe_throwing_attack; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=axe_throwing_attack;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 3;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=axe_throwing_attack; 
+	actorValue=HP;
+	magnitude=d:axeDmg;
+	duration=-2;
+	chance=d:axeAcc;
+	element=ranged;
+	element=physical;
+	element=slash;
+	FXOnTile=swing2;
+	FXOnTile=throw_axe;
+	FXOnTile=pop;
+	FXOnHit=slash;
+	FXOnHit=sfx_slashingHit;
+[AvAffecterAoE]
+	ID=axe_throwing_attack;
+	cloneFrom=oneTile;
+	
+[Action] ID=mythril_axe_throwing_attack; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=mythril_axe_throwing_attack;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 3;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=mythril_axe_throwing_attack; 
+	actorValue=HP;
+	magnitude=d:axeDmg;
+	duration=-2;
+	chance=d:axeAcc;
+	element=ranged;
+	element=physical;
+	element=slash;
+	FXOnTile=swing2;
+	FXOnTile=throw_mythril_axe;
+	FXOnTile=pop;
+	FXOnHit=slash;
+	FXOnHit=sfx_slashingHit;
+[AvAffecterAoE]
+	ID=mythril_axe_throwing_attack;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=fireTriggerAttack; 
+	name=Fire Trigger;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=fireTriggerAttack;
+	cloneFrom=adjacent;
+	arc=true;
+	airborne=true;
+	maxRangeBonus=sa:stoneSavant * 2;
+[AvAffecter]
+	ID=fireTriggerAttack; 
+	actorValue=HP;
+	magnitude=d:fireDmgWpnPower(0) - sa:stoneSavant * 2;
+	duration=-2;
+	chance=d:fireAcc;
+	element=magic;
+	element=fire;
+	element=kindle;
+	FXOnTile=fireburst;
+[AvAffecterAoE]
+	ID=fireTriggerAttack;
+	cloneFrom=oneTile;
+
+	
+[Action] ID=fireTriggerInWeapon; 
+	name=Fire Trigger;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=fireTriggerInWeapon;
+	cloneFrom=oneTile;
+	maxRange=12;
+[AvAffecter]
+	ID=fireTriggerInWeapon; 
+	actorValue=HP;
+	prefixIcon=<item_low=trigger_fire>;
+	useSeparateChanceRoll=true;
+	visibleMiss=false;
+	magnitude=d:fireDmg(3) * 0.34 - sa:stoneSavant - sa:empowerAugment*2;
+	duration=-2;
+	chance=d:fireProjectileAcc + sa:empowerAugment*10;
+	element=magic;
+	element=weaponAugment;
+	element=fire;
+	FXOnTile=fireburst_noOverlap;
+[AvAffecterAoE]
+	ID=fireTriggerInWeapon;
+	cloneFrom=oneTile;
+	
+[Action] ID=iceTriggerAttack; 
+	name=Ice Trigger;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=iceTriggerAttack;
+	cloneFrom=adjacent;
+	arc=true;
+	airborne=true;
+	maxRangeBonus=sa:stoneSavant * 2;
+[AvAffecter]
+	ID=iceTriggerAttack; 
+	actorValue=HP;
+	magnitude=d:iceDmgWpnPower(0) - sa:stoneSavant * 2;
+	duration=-2;
+	chance=d:iceAcc;
+	element=magic;
+	element=ice;
+	FXOnTile=sfx_iceSnap;
+	FXOnTile=iceExplosion;
+[AvAffecterAoE]
+	ID=iceTriggerAttack;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=iceTriggerInWeapon; 
+	name=Ice Trigger;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=iceTriggerInWeapon;
+	cloneFrom=oneTile;
+	maxRange=12;
+[AvAffecter]
+	ID=iceTriggerInWeapon; 
+	actorValue=HP;
+	prefixIcon=<item_low=trigger_ice>;
+	useSeparateChanceRoll=true;
+	visibleMiss=false;
+	magnitude=d:iceDmg(3) * 0.34 - sa:stoneSavant - sa:empowerAugment*2;
+	duration=-2;
+	chance=d:iceProjectileAcc + sa:empowerAugment*10;
+	element=magic;
+	element=weaponAugment;
+	element=ice;
+	FXOnTile=sfx_iceSnap;
+	FXOnTile=iceExplosion_noOverlap;
+[AvAffecterAoE]
+	ID=iceTriggerInWeapon;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=windTriggerAttack; 
+	name=Wind Trigger;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=windTriggerAttack;
+	cloneFrom=adjacent;
+	arc=true;
+	airborne=true;
+	maxRangeBonus=sa:stoneSavant * 2;
+[AvAffecter]
+	ID=windTriggerAttack; 
+	actorValue=HP;
+	magnitude=d:windDmgWpnPower(0) - sa:stoneSavant * 2;
+	duration=-2;
+	chance=d:windAcc;
+	element=magic;
+	element=wind;
+	FXOnTile=spinSlashCyclone;
+	FXOnTile=gustyBlast;
+[AvAffecterAoE]
+	ID=windTriggerAttack;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=windTriggerInWeapon; 
+	name=Wind Trigger;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=windTriggerInWeapon;
+	cloneFrom=oneTile;
+	maxRange=12;
+[AvAffecter]
+	ID=windTriggerInWeapon; 
+	actorValue=HP;
+	prefixIcon=<item_low=trigger_wind>;
+	useSeparateChanceRoll=true;
+	visibleMiss=false;
+	magnitude=d:windDmg(3) * 0.34 - sa:stoneSavant - sa:empowerAugment*2;
+	duration=-2;
+	chance=d:windProjectileAcc + sa:empowerAugment*10;
+	element=magic;
+	element=weaponAugment;
+	element=wind;
+	FXOnTile=spinSlashCyclone_noOverlap;
+	FXOnTile=gustyBlast;
+[AvAffecterAoE]
+	ID=windTriggerInWeapon;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=elecTriggerAttack; 
+	name=Lightning Trigger;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=elecTriggerAttack;
+	cloneFrom=adjacent;
+	arc=true;
+	airborne=true;
+	maxRangeBonus=sa:stoneSavant * 2;
+[AvAffecter]
+	ID=elecTriggerAttack; 
+	actorValue=HP;
+	magnitude=d:elecDmgWpnPower(0) - sa:stoneSavant * 2;
+	duration=-2;
+	chance=d:elecAcc;
+	element=magic;
+	element=lightning;
+	FXOnTile=lightningStrike_mild;
+	FXOnTile=shortBolt;
+	FXOnTile=spark;
+[AvAffecterAoE]
+	ID=elecTriggerAttack;
+	cloneFrom=oneTile;
+
+
+[Action] ID=elecTriggerInWeapon; 
+	name=Lightning Trigger;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=elecTriggerInWeapon;
+	cloneFrom=oneTile;
+	maxRange=12;
+[AvAffecter]
+	ID=elecTriggerInWeapon; 
+	actorValue=HP;
+	prefixIcon=<item_low=trigger_elec>;
+	useSeparateChanceRoll=true;
+	visibleMiss=false;
+	magnitude=d:elecDmg(3) * 0.34 - sa:stoneSavant - sa:empowerAugment*2;
+	duration=-2;
+	chance=d:elecProjectileAcc + sa:empowerAugment*10;
+	element=magic;
+	element=weaponAugment;
+	element=lightning;
+	FXOnTile=lightningStrike_mild_noOverlap;
+	FXOnTile=shortBolt;
+[AvAffecterAoE]
+	ID=elecTriggerInWeapon;
+	cloneFrom=oneTile;
+		
+
+[Action] ID=lifeTriggerAttack; 
+	name=Life Trigger;
+	harmful=false;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=lifeTriggerAttack;
+	cloneFrom=adjacent;
+	arc=true;
+	airborne=true;
+	maxRangeBonus=sa:stoneSavant * 2;
+[AvAffecter]
+	ID=lifeTriggerAttack; 
+	harmful=false;
+	actorValue=HP;
+	magnitude=5 + w:Power + c:MagAtk + c:skill_Life + t:skill_Life * 0.5 + sa:stoneSavant * 2;
+	duration=-2;
+	chance=100;
+	element=magic;
+	element=life;
+	FXOnTile=sparkles;
+	FXOnTileColor=Gold;
+	FXOnTile=briefAuraSound;
+[AvAffecterAoE]
+	ID=lifeTriggerAttack;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=lifeTriggerInWeapon; 
+	name=Life Trigger;
+	harmful=false;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=lifeTriggerInWeapon;
+	cloneFrom=oneTile;
+	maxRange=12;
+[AvAffecter]
+	ID=lifeTriggerInWeapon; 
+	harmful=false;
+	prefixIcon=<item_low=trigger_life>;
+	actorValue=HP;
+	magnitude=8 + c:MagAtk * 0.5 + c:skill_Life * 0.5 + t:skill_Life * 0.5 + sa:stoneSavant + sa:empowerAugment*2;
+	duration=-2;
+	chance=100;
+	element=magic;
+	element=life;
+	element=weaponAugment;
+	FXOnTile=sparkles_noOverlap;
+	FXOnTileColor=Gold;
+	FXOnTile=briefAuraSound;
+[AvAffecterAoE]
+	ID=lifeTriggerInWeapon;
+	cloneFrom=oneTile;
+	
+[Action] ID=ruinTriggerAttack; 
+	name=Ruin Trigger;
+	harmful=false;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=ruinTriggerAttack;
+	cloneFrom=adjacent;
+	arc=true;
+	airborne=true;
+	maxRangeBonus=sa:stoneSavant * 2;
+[AvAffecter]
+	ID=ruinTriggerAttack; 
+	harmful=false;
+	actorValue=HP;
+	magnitude=d:ruinDmgWpnPower(0) - sa:stoneSavant * 2;
+	duration=-2;
+	chance=d:ruinAcc;
+	element=magic;
+	element=ruin;
+	FXOnTile=pingBip;
+	FXOnTileColor=Purple;
+	FXOnTile=largePing;
+	FXOnTileColor=Purple;
+	FXOnTile=Debuff_lowPitch;
+[AvAffecterAoE]
+	ID=ruinTriggerAttack;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=ruinTriggerInWeapon; 
+	name=Ruin Trigger;
+	harmful=false;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=ruinTriggerInWeapon;
+	cloneFrom=oneTile;
+	maxRange=12;
+[AvAffecter]
+	ID=ruinTriggerInWeapon; 
+	harmful=false;
+	prefixIcon=<item_low=trigger_ruin>;
+	useSeparateChanceRoll=true;
+	visibleMiss=false;
+	actorValue=HP;
+	magnitude=d:ruinDmg(3) * 0.34 - sa:stoneSavant - sa:empowerAugment*2;
+	duration=-2;
+	chance=d:ruinProjectileAcc + sa:empowerAugment*10;
+	element=magic;
+	element=weaponAugment;
+	element=ruin;
+	FXOnTile=pingBip_noOverlap;
+	FXOnTileColor=Purple;
+	FXOnTile=largePing_noOverlap;
+	FXOnTileColor=Purple;
+	FXOnTile=Debuff_lowPitch;
+[AvAffecterAoE]
+	ID=ruinTriggerInWeapon;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=burnTriggerAttack; 
+	name=Burn Trigger;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=burnTriggerAttack;
+	cloneFrom=adjacent;
+	arc=true;
+	airborne=true;
+	maxRangeBonus=sa:stoneSavant * 2;
+[AvAffecter]
+	ID=burnTriggerAttack; 
+	actorValue=burn;
+	magnitude=1;
+	duration=50 + d:fireDur(2) + sa:stoneSavant * 5;
+	chance=d:fireAcc * 0.85;
+	element=magic;
+	element=fire;
+	element=kindle;
+	FXOnTile=burnMany;
+	FXOnTile=burn;
+[AvAffecterAoE]
+	ID=burnTriggerAttack;
+	cloneFrom=oneTile;
+
+
+[Action] ID=burnTriggerInWeapon; 
+	name=Burn Trigger;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=burnTriggerInWeapon;
+	cloneFrom=adjacent;
+	maxRange=12;
+[AvAffecter]
+	ID=burnTriggerInWeapon; 
+	prefixIcon=<item_low=trigger_burn>;
+	useSeparateChanceRoll=true;
+	visibleMiss=false;
+	actorValue=burn;
+	magnitude=1;
+	duration=33 + d:fireDur(2) + sa:stoneSavant * 5;
+	chance=d:fireProjectileAcc * 0.4 + sa:empowerAugment*3;
+	element=magic;
+	element=fire;
+	element=weaponAugment;
+	element=kindle;
+	FXOnTile=burnMany_noOverlap;
+	FXOnHit=burn;
+[AvAffecterAoE]
+	ID=burnTriggerInWeapon;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=chillTriggerAttack; 
+	name=Chill Trigger;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=chillTriggerAttack;
+	cloneFrom=adjacent;
+	arc=true;
+	airborne=true;
+	maxRangeBonus=sa:stoneSavant * 2;
+[AvAffecter]
+	ID=chillTriggerAttack; 
+	actorValue=HP;
+	magnitude=d:iceDmgWpnPower(0) - sa:stoneSavant * 2;
+	duration=-2;
+	chance=d:iceAcc;
+	element=magic;
+	element=ice;
+[AvAffecterAoE]
+	ID=chillTriggerAttack;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=chillTriggerAttack; 
+	actorValue=chilled;
+	magnitude=1;
+	duration=50 + d:iceDur(2) + sa:stoneSavant * 5;
+	chance=d:iceAcc;
+	element=magic;
+	element=ice;
+	FXOnTile=frostcloud_spread;
+	FXOnTile=frostsparkle;
+[AvAffecterAoE]
+	ID=chillTriggerAttack;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=chillTriggerInWeapon; 
+	name=Chill Trigger;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=chillTriggerInWeapon;
+	cloneFrom=adjacent;
+	maxRange=12;
+[AvAffecter]
+	ID=chillTriggerInWeapon; 
+	visibleMiss=false;
+	prefixIcon=<item_low=trigger_chill>;
+	useSeparateChanceRoll=true;
+	actorValue=chilled;
+	magnitude=1;
+	duration=34 + d:iceDur(2) + sa:stoneSavant * 5;
+	chance=d:iceProjectileAcc + sa:empowerAugment * 10;
+	element=magic;
+	element=weaponAugment;
+	element=ice;
+	FXOnTile=frostcloud_spread_noOverlap;
+	FXOnHit=frostsparkle;
+[AvAffecterAoE]
+	ID=chillTriggerInWeapon;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=pushTriggerAttack; 
+	name=Push Trigger;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=pushTriggerAttack;
+	cloneFrom=adjacent;
+	arc=true;
+	airborne=true;
+	maxRangeBonus=sa:stoneSavant * 2;
+[AvAffecter]
+	ID=pushTriggerAttack; 
+	actorValue=HP;
+	magnitude=d:windDmgWpnPower(0) - sa:stoneSavant * 2;
+	duration=-2;
+	chance=d:windAcc;
+	element=magic;
+	element=wind;
+[AvAffecterAoE]
+	ID=pushTriggerAttack;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=pushTriggerAttack; 
+	actorValue=push;
+	magnitude=2;
+	duration=-2;
+	chance=d:windAcc + c:skill_Wind * c:MagAtk;
+	FXOnTile=smallShockwaves_moving;
+	FXOnTile=smallShockwave_moving;
+[AvAffecterAoE]
+	ID=pushTriggerAttack;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=pushTriggerInWeapon; 
+	name=Push Trigger;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=pushTriggerInWeapon;
+	cloneFrom=adjacent;
+	maxRange=12;
+[AvAffecter]
+	ID=pushTriggerInWeapon; 
+	actorValue=push;
+	prefixIcon=<item_low=trigger_push>;
+	visibleMiss=false;
+	magnitude=1;
+	duration=-2;
+	chance=w:chance + sa:empowerAugment*10;
+	FXOnTile=smallShockwaves_moving_noOverlap;
+	FXOnHit=smallShockwave_moving;
+[AvAffecterAoE]
+	ID=pushTriggerInWeapon;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=stunTriggerAttack; 
+	name=Stun Trigger;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=stunTriggerAttack;
+	cloneFrom=adjacent;
+	arc=true;
+	airborne=true;
+	maxRangeBonus=sa:stoneSavant * 2;
+[AvAffecter]
+	ID=stunTriggerAttack; 
+	actorValue=HP;
+	magnitude=d:elecDmgWpnPower(0) - sa:stoneSavant * 2;
+	duration=-2;
+	chance=d:elecAcc;
+	element=magic;
+	element=lightning;
+[AvAffecterAoE]
+	ID=stunTriggerAttack;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=stunTriggerAttack; 
+	actorValue=stun;
+	magnitude=1;
+	duration=d:elecDur(1) + sa:stoneSavant;
+	chance=d:elecAcc;
+	element=magic;
+	element=lightning;
+	FXOnTile=sparkUp;
+	FXOnTileColor=Turquoise;
+	FXOnTile=shortBolt;
+	FXOnTileColor=Turquoise;
+	FXOnTile=spark;
+	FXOnTileColor=Turquoise;
+[AvAffecterAoE]
+	ID=stunTriggerAttack;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=stunTriggerInWeapon; 
+	name=Stun Trigger;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=stunTriggerInWeapon;
+	cloneFrom=adjacent;
+	maxRange=12;
+[AvAffecter]
+	ID=stunTriggerInWeapon; 
+	actorValue=stun;
+	prefixIcon=<item_low=trigger_stun>;
+	visibleMiss=false;
+	magnitude=1;
+	duration=1 + d:elecDur(0.1);
+	chance=w:chance + sa:empowerAugment*10;
+	element=magic;
+	element=weaponAugment;
+	element=lightning;
+	FXOnTile=sparkUp_noOverlap;
+	FXOnTileColor=Turquoise;
+	FXOnTile=shortBolt;
+	FXOnHit=spark;
+	FXOnHitColor=Turquoise;
+[AvAffecterAoE]
+	ID=stunTriggerInWeapon;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=growthTriggerAttack; 
+	name=Growth Trigger;
+	harmful=false;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=growthTriggerAttack;
+	cloneFrom=adjacent;
+	arc=true;
+	airborne=true;
+	maxRangeBonus=sa:stoneSavant * 2;
+[AvAffecter]
+	ID=growthTriggerAttack; 
+	harmful=false;
+	actorValue=HP;
+	magnitude=1 + w:Power + c:MagAtk*0.5 + c:skill_Life*0.5 + t:skill_Life * 0.25 + sa:stoneSavant * 2;
+	duration=-2;
+	chance=100;
+	element=magic;
+	element=life;
+[AvAffecterAoE]
+	ID=growthTriggerAttack;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=growthTriggerAttack; 
+	harmful=false;
+	actorValue=regen;
+	magnitude=1;
+	duration=30 + d:lifeDurMax(2) + sa:stoneSavant * 5;
+	chance=100;
+	element=magic;
+	element=life;
+	element=growth;
+	FXOnTile=sparkles;
+	FXOnTileColor=Green;
+	FXOnTile=briefAuraSound;
+[AvAffecterAoE]
+	ID=growthTriggerAttack;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=growthTriggerInWeapon; 
+	name=Growth Trigger;
+	harmful=false;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=growthTriggerInWeapon;
+	cloneFrom=adjacent;
+	maxRange=12;
+[AvAffecter]
+	ID=growthTriggerInWeapon; 
+	harmful=false;
+	prefixIcon=<item_low=trigger_growth>;
+	visibleMiss=false;
+	useSeparateChanceRoll=true;
+	actorValue=regen;
+	magnitude=1;
+	duration=50 + d:lifeDur(2) + sa:stoneSavant * 5 + sa:empowerAugment*5;
+	chance=100;
+	element=magic;
+	element=life;
+	element=growth;
+	element=weaponAugment;
+	FXOnTile=sparkles_noOverlap;
+	FXOnTileColor=LightGreen;
+	FXOnTile=briefAuraSound;
+[AvAffecterAoE]
+	ID=growthTriggerInWeapon;
+	cloneFrom=oneTile;
+
+	
+
+[Action] ID=decayTriggerAttack; 
+	name=Decay Trigger;
+	harmful=true;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=decayTriggerAttack;
+	cloneFrom=adjacent;
+	arc=true;
+	airborne=true;
+	maxRangeBonus=sa:stoneSavant * 2;
+[AvAffecter]
+	ID=decayTriggerAttack; 
+	harmful=true;
+	actorValue=decay;
+	magnitude=1;
+	duration=-4;
+	chance=d:ruinAcc - 12 + c:skill_Ruin * 3 - 100 * t:decay + sa:stoneSavant * 4;
+	element=magic;
+	element=ruin;
+	FXOnTile=pingBip;
+	FXOnTileColor=Purple;
+	FXOnTile=downwardLines_quick;
+	FXOnTileColor=Purple;
+	FXOnHit=largePing;
+	FXOnHitColor=Purple;
+	FXOnHit=sfx_lowSquish;
+[AvAffecterAoE]
+	ID=decayTriggerAttack;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=decayTriggerInWeapon; 
+	name=Decay Trigger;
+	harmful=true;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=decayTriggerInWeapon;
+	cloneFrom=adjacent;
+	maxRange=12;
+[AvAffecter]
+	ID=decayTriggerInWeapon; 
+	harmful=true;
+	prefixIcon=<item_low=trigger_decay>;
+	useSeparateChanceRoll=true;
+	visibleMiss=false;
+	actorValue=decay;
+	magnitude=1;
+	duration=-4;
+	chance=d:ruinProjectileAcc * 0.5 - 12 + c:skill_Ruin + c:MagAtk - 100 * t:decay;
+	element=magic;
+	element=ruin;
+	element=weaponAugment;
+	FXOnTile=pingBip_noOverlap;
+	FXOnTileColor=Purple;
+	FXOnTile=downwardLines_quick_noOverlap;
+	FXOnTileColor=Purple;
+	FXOnHit=largePing;
+	FXOnHitColor=Purple;
+	FXOnHit=sfx_lowSquish;
+[AvAffecterAoE]
+	ID=decayTriggerInWeapon;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=waterTriggerAttack; 
+	name=Water Trigger;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=waterTriggerAttack;
+	cloneFrom=adjacent;
+	arc=true;
+	airborne=true;
+	maxRangeBonus=sa:stoneSavant * 2;
+[AvAffecter]
+	ID=waterTriggerAttack; 
+	actorValue=HP;
+	magnitude=d:iceDmgWpnPower(0) - sa:stoneSavant * 2;
+	duration=-2;
+	chance=d:iceAcc;
+	element=magic;
+	element=water;
+	FXOnTile=sfx_splash;
+	FXOnTileColor=SkyBlue;
+	FXOnTile=waterWave;
+	FXOnTileColor=SkyBlue;
+	FXOnTile=ping;
+	FXOnTileColor=SkyBlue;
+[AvAffecterAoE]
+	ID=waterTriggerAttack;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=waterTriggerAttack; 
+	visibleEvaluations=false;
+	actorValue=wet;
+	magnitude= 1;
+	duration=100;
+	chance=d:iceAcc;
+	element=water;
+[AvAffecterAoE]
+	ID=waterTriggerAttack;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=waterTriggerInWeapon; 
+	name=Water Trigger;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=waterTriggerInWeapon;
+	cloneFrom=adjacent;
+	maxRange=12;
+[AvAffecter]
+	ID=waterTriggerInWeapon; 
+	visibleMiss=false;
+	prefixIcon=<item_low=trigger_water>;
+	actorValue=wet;
+	magnitude= 1;
+	duration=150;
+	chance=w:chance * 1.1 + sa:empowerAugment*10;
+	element=water;
+	element=weaponAugment;
+	FXOnTile=waterWave_noOverlap;
+	FXOnTileColor=SkyBlue;
+	FXOnTile=sfx_splash;
+[AvAffecterAoE]
+	ID=waterTriggerInWeapon;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=PoisonFangInWeapon; 
+	name=P Fang;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=PoisonFangInWeapon;
+	cloneFrom=adjacent;
+	maxRange=12;
+[AvAffecter]
+	ID=PoisonFangInWeapon; 
+	prefixIcon=<item_low=fang_spidest>;
+	visibleMiss=false;
+	actorValue=poison;
+	magnitude=1;
+	duration=44 - w:magnitude;
+	chance=w:chance;
+	element=weaponAugment;
+	FXOnTile=pingBip_noOverlap;
+	FXOnTileColor=DarkGreen;
+	FXOnTile=WetSquish;
+[AvAffecterAoE]
+	ID=PoisonFangInWeapon;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=ItchyBarbInWeapon; 
+	name=Itch B;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=ItchyBarbInWeapon;
+	cloneFrom=adjacent;
+	maxRange=12;
+[AvAffecter]
+	ID=ItchyBarbInWeapon; 
+	prefixIcon=<item_low=barb_itchy>;
+	visibleMiss=false;
+	actorValue=itchy;
+	magnitude=1;
+	duration=54 - w:magnitude;
+	chance=w:chance;
+	element=weaponAugment;
+	FXOnTile=pingBip_noOverlap;
+	FXOnTileColor=Orange;
+	FXOnTile=WetSquish;
+[AvAffecterAoE]
+	ID=ItchyBarbInWeapon;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=GoopGlandInWeapon; 
+	name=Goop Gland;
+	casterAnimation=spellcast;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=GoopGlandInWeapon;
+	cloneFrom=adjacent;
+	maxRange=12;
+[AvAffecter]
+	ID=GoopGlandInWeapon; 
+	prefixIcon=<item_low=goop_gland>;
+	visibleMiss=false;
+	actorValue=moveDistance;
+	magnitude=-1;
+	duration=31 - w:magnitude;
+	chance=w:chance;
+	element=weaponAugment;
+	FXOnTileColor=Green;
+	FXOnTile=pingBip_noOverlap;
+	FXOnTileColor=Green;
+	FXOnTile=WetSquish;
+[AvAffecterAoE]
+	ID=GoopGlandInWeapon;
+	cloneFrom=oneTile;
+	
+[Action] ID=shieldAttack_barrier; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=punch;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=popSilent;
+	FXOnTarget=sfx_wooshHigh;
+[ActionAoE] 
+	ID=shieldAttack_barrier;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=shieldAttack_barrier; 
+	actorValue=HP;
+	magnitude= d:shieldDmg;
+	duration=-2;
+	chance=d:shieldAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	FXOnHit=sfx_shieldHit;
+[AvAffecterAoE]
+	ID=shieldAttack_barrier;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=shieldAttack_barrier; 
+	actorValue=summonItem;
+	harmful=false;
+	magnitude=barrier_item;
+	duration=1;
+	chance=100;
+	element=magic;
+	element=life;
+	FXOnTile=barrier;
+	FXOnTileColor=SkyBlue;
+	FXOnTile=castingFast;
+	FXOnTileColor=SkyBlue;
+[AvAffecterAoE]
+	ID=shieldAttack_barrier;
+	cloneFrom=oneTile;
+	canSelectActors=false;
+[AvAffecter]
+	ID=shieldAttack_barrier; 
+	actorValue=push;
+	magnitude=1;
+	duration=-2;
+	chance=d:shieldAcc;
+[AvAffecterAoE]
+	ID=shieldAttack_barrier;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=spearAttack_inspire; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=spear;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=stab;
+[ActionAoE] 
+	ID=spearAttack_inspire; shape=2; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	minRange = 1;
+	maxRange = 2;
+	bypassAll=false;
+	occupyAll=true;
+[AvAffecter]
+	ID=spearAttack_inspire; 
+	actorValue=HP;
+	magnitude= d:spearDmg;
+	duration=-2;
+	chance=d:spearAcc;
+	element=catchFish;
+	element=melee;
+	element=physical;
+	element=slash;
+	FXOnTile=whirlSlash_big;
+	FXOnTile=cut;
+[AvAffecterAoE]
+	ID=spearAttack_inspire;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+[AvAffecter]
+	ID=spearAttack_inspire; 
+	actorValue=morale;
+	useMyAoEWhenAddingAsWeaponAvAffecter=true;
+	visibleEvaluations=false;
+	harmful=false;
+	magnitude=1 - t:morale;
+	duration=30 + c:skill_Spear;
+	chance=100;
+[AvAffecterAoE]
+	ID=spearAttack_inspire; shape=0;
+	aoeCasterAsOrigin=true;
+	maxRange=2;
+	canSelectEnemies=false;
+	
+
+[Action] ID=spearAttack_crescent; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=spear;
+	casterAnimationDependsOnWeaponHand=true;
+	FXChangesWithWeaponHand=true;
+	FXOnTarget=swipe;
+[ActionAoE] 
+	ID=spearAttack_crescent; shape=2; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	minRange = 1;
+	maxRange = 2;
+	bypassAll=false;
+	occupyAll=true;
+[AvAffecter]
+	ID=spearAttack_crescent; 
+	actorValue=HP;
+	magnitude= d:spearDmg;
+	duration=-2;
+	chance=d:spearAcc - 5;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=heavySlash;
+[AvAffecterAoE]
+	ID=spearAttack_crescent; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=spearAttack_crescent; 
+	addAsWeaponAvAffecter=false;
+	actorValue=HP;
+	magnitude= d:spearDmg;
+	duration=-2;
+	chance=d:spearAcc - 5;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=heavySlash;
+[AvAffecterAoE]
+	ID=spearAttack_crescent; 
+	cloneFrom=oneTile;
+	maxRange=-1;
+	maxRangeAddDistanceFromCaster=true;
+	coneAngle_exclude1=40;
+	coneAngle_exclude2=40;
+	coneAngle_exclude2_offset=180;
+	
+
+[Action] ID=spearAttack_thresher; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=spear;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=stab;
+[ActionAoE] 
+	ID=spearAttack_thresher; shape=2; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	minRange = 1;
+	maxRange = 2;
+	bypassAll=false;
+	occupyAll=true;
+[AvAffecter]
+	ID=spearAttack_thresher; 
+	actorValue=HP;
+	magnitude= d:spearDmg*0.9 + d:spearDmg * 0.2 * m:distance(2);
+	duration=-2;
+	chance=d:spearAcc;
+	element=catchFish;
+	element=melee;
+	element=physical;
+	element=slash;
+	FXOnTile=cut;
+[AvAffecterAoE]
+	ID=spearAttack_thresher;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+	maxRange=2;
+[AvAffecter]
+	ID=spearAttack_thresher; 
+	addAsWeaponAvAffecter=false;
+	actorValue=rotate;
+	magnitude= 90;
+	duration=-2;
+	chance=d:spearAcc;
+	FXOnTile=cut;
+	FXOnTile=whirlSlashes_many;
+	FXOnHit=sfx_slashingHit;
+	FXOnHit=triSlash;
+[AvAffecterAoE]
+	ID=spearAttack_thresher;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+	minRange=2;
+	
+	
+	
+[Action] ID=hammerAttack_wrench; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=strike;
+[ActionAoE] 
+	ID=hammerAttack_wrench; 
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=hammerAttack_wrench; 
+	actorValue=HP;
+	magnitude= d:hammerDmg;
+	duration=-2;
+	chance=d:hammerAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	element=heavySmash;
+	element=antiMachine;
+	
+[AvAffecterAoE]
+	ID=hammerAttack_wrench;
+	cloneFrom=oneTile;
+
+
+[Action] ID=daggerAttack_chisel; 
+	applyWeaponBuffs=true;
+	icon=item_dagger_chisel_black;
+	
+	casterAnimation=thrust;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=cut;
+	FXOnTargetColor=Black;
+[ActionAoE] 
+	ID=daggerAttack_chisel;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=daggerAttack_chisel; 
+	actorValue=HP;
+	magnitude= d:daggerDmg;
+	duration=-2;
+	chance=d:daggerAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+[AvAffecterAoE]
+	ID=daggerAttack_chisel;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=daggerAttack_chisel; 
+	actorValue=PhysDef;
+	magnitude= d:daggerDmg * 0.3;
+	duration=40;
+	chance=d:daggerAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	FXOnHit=sfx_slashingHit;
+[AvAffecterAoE]
+	ID=daggerAttack_chisel;
+	cloneFrom=oneTile;
+
+[Action] ID=daggerAttack_twice; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=broadswing;
+	casterAnimationSpeed=2.5;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=cut;
+[ActionAoE] 
+	ID=daggerAttack_twice;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=daggerAttack_twice; 
+	actorValue=HP;
+	magnitude= d:daggerDmg;
+	duration=-2;
+	chance=d:daggerAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+[AvAffecterAoE]
+	ID=daggerAttack_twice;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=daggerAttack_twice; 
+	actorValue=HP;
+	magnitude=d:daggerDmg;
+	duration=-2;
+	chance=d:daggerAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	FXOnTile=delay_minor;
+	FXOnTile=delay_minor;
+	FXOnTile=cut2;
+[AvAffecterAoE]
+	ID=daggerAttack_twice;
+	cloneFrom=oneTile;
+			
+
+[Action] ID=whipAttack_lasher; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationSpeed=1.2;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=whipAttack_lasher;
+	airborne=true;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 3;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=whipAttack_lasher; 
+	actorValue=HP;
+	magnitude= d:whipDmg;
+	duration=-2;
+	chance=d:whipAcc;
+	element=melee;
+	element=physical;
+	FXOnTile=whirlSlash;
+	FXOnColor=DarkRed;
+	FXOnTile=popSilent;
+	FXOnColor=DarkRed;
+	FXOnTile=sfx_whipSnap;
+[AvAffecterAoE]
+	ID=whipAttack_lasher;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=whipAttack_lasher; 
+	actorValue=morale;
+	magnitude= -1;
+	duration=50 - d:whipDmg;
+	chance=d:whipAcc;
+	element=melee;
+	element=physical;
+	FXOnHit=blood;
+[AvAffecterAoE]
+	ID=whipAttack_lasher;
+	cloneFrom=oneTile;
+
+[Action] ID=whipAttack_grapple; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationSpeed=1.1;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=whipAttack_grapple; shape=2;
+	airborne=true;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 4;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=whipAttack_grapple; 
+	actorValue=HP;
+	magnitude=d:whipDmg;
+	duration=-2;
+	chance=d:whipAcc;
+	element=melee;
+	element=physical;
+	FXOnTile=whirlSlash;
+	FXOnTile=popSilent;
+	FXOnTile=sfx_whipSnap;
+[AvAffecterAoE]
+	ID=whipAttack_grapple;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=whipAttack_grapple; 
+	actorValue=pull;
+	magnitude= 2;
+	duration=-2;
+	chance=d:whipAcc;
+	element=melee;
+	element=physical;
+	FXOnHit=sidewardLines;
+[AvAffecterAoE]
+	ID=whipAttack_grapple;
+	cloneFrom=oneTile;
+
+
+[Action] ID=whipAttack_undeadkiller; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationSpeed=1.2;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=whipAttack_undeadkiller;
+	airborne=true;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 3;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=whipAttack_undeadkiller; 
+	actorValue=HP;
+	magnitude= d:whipDmg - c:skill_Life * 0.5;
+	duration=-2;
+	chance=d:whipAcc;
+	element=melee;
+	element=life;
+	element=physical;
+	element=antiUndead;
+	FXOnTile=whirlSlash;
+	FXOnTileColor=Gold;
+	FXOnTile=popSilent;
+	FXOnTileColor=Gold;
+	FXOnTile=sfx_whipSnap;
+[AvAffecterAoE]
+	ID=whipAttack_undeadkiller;
+	cloneFrom=oneTile;
+
+	
+[Action] ID=gunAttack_short; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=aim;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=darken_minor;
+	FXOnTarget=tinyShakeHoriz;
+[ActionAoE] 
+	ID=gunAttack_short;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 3;
+	maxRange = 5;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=gunAttack_short; 
+	actorValue=HP;
+	magnitude=d:aimDmg;
+	duration=-2;
+	chance=d:aimAcc;
+	element=ranged;
+	element=physical;
+	element=smash;
+	FXOnTile=wideLine_gun;
+	FXOnTile=line;
+	FXOnTile=hitDustQuiet;
+	FXOnHit=hitDustQuiet;
+	FXOnHit=pop;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=gunAttack_short;
+	cloneFrom=oneTile;
+
+[Action] ID=gunAttack_long; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=aim;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=darken_minor;
+	FXOnTarget=tinyShakeHoriz;
+[ActionAoE] 
+	ID=gunAttack_long;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 3;
+	maxRange = 6;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=gunAttack_long; 
+	actorValue=HP;
+	magnitude=d:aimDmg;
+	duration=-2;
+	chance=d:aimAcc;
+	element=ranged;
+	element=physical;
+	element=smash;
+	FXOnTile=wideLine_gun;
+	FXOnTile=line;
+	FXOnTile=hitDustQuiet;
+	FXOnHit=hitDustQuiet;
+	FXOnHit=pop;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=gunAttack_long;
+	cloneFrom=oneTile;
+	
+[Action] ID=gunAttack_wind; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=aim;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=darken_minor;
+	FXOnTarget=tinyShakeHoriz;
+[ActionAoE] 
+	ID=gunAttack_wind;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 3;
+	maxRange = 6;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=gunAttack_wind; 
+	actorValue=HP;
+	magnitude=d:aimDmg;
+	duration=-2;
+	chance=d:aimAcc + d:windGunAccBonus;
+	element=ranged;
+	element=physical;
+	element=smash;
+	FXOnTile=wideLine_gun;
+	FXOnTile=line;
+	FXOnTile=hitDustQuiet;
+	FXOnTile=whirlSlash_big;
+	FXOnHit=hitDustQuiet;
+	FXOnHit=pop;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=gunAttack_wind;
+	cloneFrom=oneTile;
+	
+[Action] ID=gunAttack_burst;
+	applyWeaponBuffs=true;
+	
+	casterAnimation=aim2hand;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=darken_minor;
+	FXOnTarget=tinyShakeHoriz;
+[ActionAoE] 
+	ID=gunAttack_burst;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 5;
+	airborne=true;
+	bypassAll=false;
+	occupyAll=true;
+[AvAffecter]
+	ID=gunAttack_burst; 
+	actorValue=HP;
+	magnitude=d:aimDmg * 0.5;
+	duration=-2;
+	chance=d:aimAcc;
+	element=ranged;
+	element=physical;
+	element=smash;
+	FXOnTile=hitDustQuiet;
+	FXOnTile=hitDustQuiet;
+	FXOnTile=hitDustQuiet;
+	FXOnTile=hitDustQuiet;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=gunAttack_burst;
+	cloneFrom=adjacentAndSelf;
+	needsLoE=true;
+	bypassAll=false;
+	airborne=true;
+[AvAffecter]
+	ID=gunAttack_burst; 
+	useMyAoEWhenAddingAsWeaponAvAffecter=true;
+	actorValue=HP;
+	magnitude=d:aimDmg * 0.5;
+	duration=-2;
+	chance=d:aimAcc;
+	element=ranged;
+	element=physical;
+	FXOnTile=hitdashes_small;
+[AvAffecterAoE]
+	ID=gunAttack_burst;
+	cloneFrom=oneTile;
+	needsLoE=true;
+	bypassAll=false;
+	airborne=true;
+[AvAffecter]
+	ID=gunAttack_burst; 
+	useMyAoEWhenAddingAsWeaponAvAffecter=true;
+	visibleEvaluations=false;
+	magnitude=0;
+	duration=-2;
+	chance=0;
+	FXOnTile=sfx_shotgun;
+	FXOnTile=whiteExplosionSmall;
+[AvAffecterAoE]
+	ID=gunAttack_burst;
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+	
+	
+[Action] ID=gunAttack_rifle; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=aim2hand;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=darken_minor;
+	FXOnTarget=tinyShakeHoriz;
+[ActionAoE] 
+	ID=gunAttack_rifle;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 3;
+	maxRange = 7;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=gunAttack_rifle; 
+	actorValue=HP;
+	magnitude=d:aimDmg;
+	duration=-2;
+	chance=d:aimAcc;
+	element=ranged;
+	element=physical;
+	element=smash;
+	FXOnTile=sfx_rifleShot;
+	FXOnTile=wideLine_gun;
+	FXOnTile=line;
+	FXOnTile=hitDustQuiet;
+	FXOnHit=hitDustQuiet;
+	FXOnHit=pop;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=gunAttack_rifle;
+	cloneFrom=oneTile;
+	
+[Action] ID=swordAttack_volskarn; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=jumpAttack_swing;
+	casterAnimationSpeed=0.65;
+	casterAnimationDependsOnWeaponHand=true;
+	
+	FXOnCaster=chargeFast;
+[ActionAoE] 
+	ID=swordAttack_volskarn;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=swordAttack_volskarn; 
+	actorValue=HP;
+	magnitude= d:swordDmg + d:magicDmg(0);
+	duration=-2;
+	chance=d:swordAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=magic;
+	FXOnTile=DramaticNyeaow;
+	FXOnTile=strikeBigUp;
+	FXOnTile=strikeHorizR;
+	FXOnTile=strikeHorizL;
+	FXOnTile=hitDustQuiet;
+[AvAffecterAoE]
+	ID=swordAttack_volskarn;
+	cloneFrom=oneTile;
+	
+[Action] ID=swordAttack_spin; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=broadswing;
+	casterAnimationSpeed=1.5;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=swordAttack_spin;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=swordAttack_spin; 
+	actorValue=HP;
+	magnitude= d:swordDmg;
+	duration=-2;
+	chance=d:swordAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	FXOnTile=whirlSlash_big;
+	FXOnTile=cut;
+[AvAffecterAoE]
+	ID=swordAttack_spin;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=swordAttack_spin; 
+	actorValue=rotate;
+	magnitude= 90;
+	duration=-2;
+	chance=d:swordAcc;
+[AvAffecterAoE]
+	ID=swordAttack_spin;
+	cloneFrom=oneTile;
+	
+[Action] ID=swordAttack_scimitar; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=broadswing;
+	casterAnimationSpeed=1.5;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=swordAttack_scimitar;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=swordAttack_scimitar; 
+	actorValue=HP;
+	magnitude= d:swordDmg;
+	duration=-2;
+	chance=d:swordAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	FXOnTile=whirlSlash_big;
+	FXOnTile=cut;
+[AvAffecterAoE]
+	ID=swordAttack_scimitar;
+	cloneFrom=oneTile;
+	
+[Action] ID=rapier_shining_miss_act; 
+	
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+[ActionAoE] 
+	ID=rapier_shining_miss_act;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=rapier_shining_miss_act; 
+	actorValue=blind;
+	magnitude=1;
+	duration=35;
+	chance=100 * m:evaFacing - 200 * t:sight - 200 * t:blind - 200 * m:dark;
+	FXOnHit=sfx_shingEcho;
+	FXOnHit=sparkles;
+	FXOnHit=eyeGlint;
+	visibleMiss=false;
+[AvAffecterAoE]
+	ID=rapier_shining_miss_act;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=fistAttack_slash; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=punch;
+	casterAnimationSpeed=1.15;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=cut;
+[ActionAoE] 
+	ID=fistAttack_slash;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=fistAttack_slash; 
+	actorValue=HP;
+	magnitude= d:fistDmg;
+	duration=-2;
+	chance=d:fistAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+[AvAffecterAoE]
+	ID=fistAttack_slash; 
+	cloneFrom=oneTile;
+	
+[Action] ID=fistAttack_8finger; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=punch;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=pop;
+[ActionAoE] 
+	ID=fistAttack_8finger;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=fistAttack_8finger; 
+	actorValue=HP;
+	magnitude= d:fistDmg;
+	duration=-2;
+	chance=d:fistAcc-8;
+	element=melee;
+	element=physical;
+	element=smash;
+[AvAffecterAoE]
+	ID=fistAttack_8finger; 
+	cloneFrom=oneTile;
+	
+[Action] ID=fistAttack_bdragon; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=punch;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=pop;
+	FXOnTargetColor=Red;
+[ActionAoE] 
+	ID=fistAttack_bdragon;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=fistAttack_bdragon; 
+	actorValue=HP;
+	magnitude= d:fistDmg;
+	duration=-2;
+	chance=d:fistAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	FXOnTile=sfx_heftyLaserShot;
+	FXOnTile=eruptFire;
+[AvAffecterAoE]
+	ID=fistAttack_bdragon; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=fistAttack_bdragon; 
+	actorValue=HP;
+	magnitude=d:fireDmg(4) * 0.34;
+	duration=-2;
+	chance=d:fireAcc;
+	element=fire;
+	element=kindle;
+	FXOnTile=flamethrower;
+[AvAffecterAoE]
+	ID=fistAttack_bdragon; 
+	aoeCasterAsOrigin=true;
+	arc=true;
+	coneAngle=1;
+	maxRange=2;
+	
+
+
+[Action] ID=bowAttack_spirithail; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=bow;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=bowAttack_spirithail;
+	needsLoS = false;
+	needsLoE = true;
+	arc=true;
+	minRange = 3;
+	maxRange = 4;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=bowAttack_spirithail; 
+	actorValue=HP;
+	magnitude= d:bowDmg - c:skill_Ruin * 0.5 + t:guard * d:bowDmg;
+	duration=-2;
+	chance=d:bowAcc;
+	element=physical;
+	element=ranged;
+	element=ruin;
+	FXOnTile=arrow_ice;
+	FXOnTileColor=White;
+	FXOnTile=chk;
+	FXOnTileColor=White;
+	FXOnTile=hitDustQuiet;
+	FXOnTileColor=White;
+	FXOnTile=ping_noOverlap;
+	FXOnTileColor=Purple;
+	FXOnHit=pop;
+[AvAffecterAoE]
+	ID=bowAttack_spirithail;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=bowAttack_gloam; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=bow;
+	casterAnimationDependsOnWeaponHand=true;
+[ActionAoE] 
+	ID=bowAttack_gloam;
+	needsLoS = false;
+	needsLoE = true;
+	arc=true;
+	minRange = 3;
+	maxRange = 4;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=bowAttack_gloam; 
+	actorValue=HP;
+	magnitude= d:bowDmg;
+	duration=-2;
+	chance=d:bowAcc;
+	element=physical;
+	element=ranged;
+	FXOnTile=arrow;
+	FXOnTileColor=Pink;
+	FXOnTile=chk;
+	FXOnTileColor=Pink;
+	FXOnTile=hitDustQuiet;
+	FXOnTileColor=Pink;
+	FXOnHit=pop;
+	FXOnHitColor=SkyBlue;
+[AvAffecterAoE]
+	ID=bowAttack_gloam;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=bowAttack_gloam; 
+	actorValue=glowing;
+	visibleMiss=false;
+	magnitude=1;
+	duration=60 - d:bowDmg;
+	chance=d:bowAcc;
+[AvAffecterAoE]
+	ID=bowAttack_gloam;
+	cloneFrom=oneTile;
+	
+[Action] ID=bowAttack_long; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=bow;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=sfx_projectileThwip;
+[ActionAoE] 
+	ID=bowAttack_long;
+	needsLoS = false;
+	needsLoE = true;
+	arc=true;
+	minRange = 4;
+	maxRange = 5;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=bowAttack_long; 
+	actorValue=HP;
+	magnitude= d:bowDmg;
+	duration=-2;
+	chance=d:bowAcc;
+	element=physical;
+	element=ranged;
+	FXOnTile=arrow_fast;
+	FXOnTile=chk;
+	FXOnTile=hitDustQuiet;
+	FXOnHit=pop;
+[AvAffecterAoE]
+	ID=bowAttack_long;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=flailAttack_double; 
+	applyWeaponBuffs=true;
+	
+	numTargets=2;
+	minDistanceBetweenTargets=1;
+	maxDistanceBetweenTargets=1;
+	
+	casterAnimation=broadswing;
+	casterAnimationSpeed=1.3;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=sidestrike;
+[ActionAoE] 
+	ID=flailAttack_double;
+	airborne=true;
+	needsLoS = true;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 1.5;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=flailAttack_double; 
+	actorValue=HP;
+	magnitude= d:flailDmg;
+	duration=-2;
+	chance=d:flailAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+[AvAffecterAoE]
+	ID=flailAttack_double;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=flailAttack_command; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=broadswing;
+	casterAnimationSpeed=1.3;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=sidestrike;
+[ActionAoE] 
+	ID=flailAttack_command;
+	airborne=true;
+	needsLoS = true;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 1.5;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=flailAttack_command; 
+	actorValue=HP;
+	magnitude= d:flailDmg;
+	duration=-2;
+	chance=d:flailAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	FXOnTile=sparkle;
+	FXOnTile=sfx_highTingQuiet;
+[AvAffecterAoE]
+	ID=flailAttack_command;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=flailAttack_command; 
+	actorValue=actTimer;
+	useMyAoEWhenAddingAsWeaponAvAffecter=true;
+--visibleEvaluations=false;
+	visibleMiss=false;
+	harmful=false;
+	magnitude=3;
+	duration=-2;
+	chance=100;
+	FXOnHit=upwardLines_quick_low_noOverlap;
+[AvAffecterAoE]
+	ID=flailAttack_command;
+	cloneFrom=adjacent;
+	canSelectEnemies=false;
+	fReq=m:targetExists*m:numEnemiesNearTargetWithin(1) - m:targetIsCurrentActor;
+	
+
+[Action] ID=axeAttack_crab; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=cut;
+	FXOnTargetColor=Orange;
+[ActionAoE] 
+	ID=axeAttack_crab;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=axeAttack_crab; 
+	actorValue=HP;
+	magnitude=d:axeDmg;
+	duration=-2;
+	chance=d:axeAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=heavySlash;
+[AvAffecterAoE]
+	ID=axeAttack_crab;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=axeAttack_crab; 
+	actorValue=itchy;
+	visibleMiss=false;
+	magnitude=1;
+	duration=70;
+	chance=d:axeAcc * 0.66;
+	FXOnTile=dust_cloud;
+	FXOnTileColor=Orange;
+[AvAffecterAoE]
+	ID=axeAttack_crab;
+	cloneFrom=oneTile;
+	
+[Action] ID=axeAttack_icepick; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=cut;
+	FXOnTargetColor=SkyBlue;
+[ActionAoE] 
+	ID=axeAttack_icepick;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=axeAttack_icepick; 
+	actorValue=HP;
+	magnitude=d:axeDmg + d:axeDmg * t:chilled * 0.4 + d:axeDmg * t:frozen * 0.8;
+	duration=-2;
+	chance=d:axeAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=heavySlash;
+[AvAffecterAoE]
+	ID=axeAttack_icepick;
+	cloneFrom=oneTile;
+	
+[Action] ID=axeAttack_hacker; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=slash;
+[ActionAoE]
+	ID=axeAttack_hacker;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=axeAttack_hacker; 
+	actorValue=HP;
+	magnitude=d:axeDmg;
+	duration=-2;
+	chance=d:axeAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=heavySlash;
+[AvAffecterAoE]
+	ID=axeAttack_hacker;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=axeAttack_hacker_buff; 
+icon=item_axe_hacker;
+	harmful=false;
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+	special=dontDelayOtherActions;
+[ActionAoE]
+	ID=axeAttack_hacker_buff;
+	cloneFrom=adjacentAndSelf;
+	maxRange=12;
+[AvAffecter]
+	ID=axeAttack_hacker_buff; 
+	harmful=false;
+	actorValue=skill_Axe;
+	magnitude=1 + cFromSource:skill_Axe:axeAttack_hacker_buff;
+	duration=-5;
+	chance=100 * m:inCombat;
+	visibleEvaluations=false;
+	useMyAoEWhenAddingAsWeaponAvAffecter=true;
+	affectIntangible=true;
+[AvAffecterAoE]
+	ID=axeAttack_hacker_buff;
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+
+[Action] ID=axeAttack_twain; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=strike;
+	FXOnTarget=jump_impact;
+[ActionAoE]
+	ID=axeAttack_twain;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=axeAttack_twain; 
+	actorValue=HP;
+	magnitude=d:axeDmg;
+	duration=-2;
+	chance=d:axeAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=heavySlash;
+[AvAffecterAoE]
+	ID=axeAttack_twain;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=axeAttack_twain; 
+	useMyAoEWhenAddingAsWeaponAvAffecter=true;
+	useCasterAsOriginForDirectionalEffects=false;
+	actorValue=push;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	FXOnTile=smallShockwave_moving_noOverlap;
+[AvAffecterAoE]
+	ID=axeAttack_twain;
+	cloneFrom=adjacent;
+	coneAngle_exclude1=90;
+	coneAngle_exclude2=90;
+	coneAngle_exclude2_offset=180;
+	
+[Action] ID=axeAttack_twain_true; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=strike;
+	FXOnTarget=jump_impact;
+[ActionAoE]
+	ID=axeAttack_twain_true;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=axeAttack_twain_true; 
+	actorValue=HP;
+	magnitude=-1;
+	duration=-2;
+	chance=d:axeAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=heavySlash;
+[AvAffecterAoE]
+	ID=axeAttack_twain_true;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=axeAttack_twain_true; 
+	actorValue=summonActor_splitTarget;
+	chance=d:axeAcc;
+[AvAffecterAoE]
+	ID=axeAttack_twain_true;
+	cloneFrom=oneTile;
+
+[Action] ID=hammerAttack_blaster; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=jumpAttack_swing;
+	casterAnimationSpeed=0.7;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnCaster=fireEmbers;
+	FXOnCaster=fireWpnEmbers;
+	FXOnCaster=sfx_schwee;
+	FXOnTarget=strikeBig;
+	FXOnTarget=sfx_shotgun;
+[ActionAoE] 
+	ID=hammerAttack_blaster; 
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=hammerAttack_blaster; 
+	actorValue=HP;
+	magnitude=d:hammerDmg - c:skill_Fire * 0.25;
+	duration=-2;
+	chance=d:hammerAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	element=heavySmash;
+	FXOnHit=manySplatter;
+[AvAffecterAoE]
+	ID=hammerAttack_blaster;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=hammerAttack_blaster; 
+	actorValue=HP;
+	magnitude=- w:Power * 0.5 + t:skill_Fire * 0.5 + t:MagDef * 0.5;
+	duration=-2;
+	chance=100;
+	element=fire;
+	FXOnTile=DramaticNyeaow;
+	FXOnTile=flamethrower_still;
+	useMyAoEWhenAddingAsWeaponAvAffecter=true;
+[AvAffecterAoE]
+	ID=hammerAttack_blaster;
+	aoeCasterAsOrigin=true;
+	cloneFrom=oneTile;
+	
+[Action] ID=hammerAttack_hand_dagger; 
+	applyWeaponBuffs=true;
+	icon=item_hammer_hand_dagger;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=cut;
+[ActionAoE] 
+	ID=hammerAttack_hand_dagger; 
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=hammerAttack_hand_dagger; 
+	actorValue=HP;
+	magnitude= d:hammerDmg;
+	duration=-2;
+	chance=d:hammerAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+[AvAffecterAoE]
+	ID=hammerAttack_hand_dagger;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=hammerAttack_hand_dagger; 
+	actorValue=PhysDef;
+	magnitude=-1;
+	duration=40;
+	chance=d:hammerAcc;
+[AvAffecterAoE]
+	ID=hammerAttack_hand_dagger;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=hammerAttack_anchor; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnTarget=strike;
+	FXOnTargetColor=DarkBlue;
+[ActionAoE] 
+	ID=hammerAttack_anchor; 
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=hammerAttack_anchor; 
+	actorValue=HP;
+	magnitude= d:hammerDmg;
+	duration=-2;
+	chance=d:hammerAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	element=heavySmash;
+	FXOnHit=smallShakeHoriz;
+	FXOnHit=sfx_hitMetalRand;
+	FXOnHit=sfx_donkHit;
+	FXOnHit=starDonk;
+[AvAffecterAoE]
+	ID=hammerAttack_anchor;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=hammerAttack_anchor; 
+	actorValue=stun;
+	visibleMiss=false;
+	magnitude=1;
+	duration=4;
+	chance=d:hammerAcc;
+[AvAffecterAoE]
+	ID=hammerAttack_anchor;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=giantStaffAttack; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=spear_slam;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnCaster=woosh;
+	FXOnTarget=SLAM;
+	FXOnTarget=medShakeHoriz;
+[ActionAoE] 
+	ID=giantStaffAttack; shape=2; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	minRange = 1;
+	maxRange = 1;
+	bypassAll=false;
+	occupyAll=true;
+[AvAffecter]
+	ID=giantStaffAttack; 
+	actorValue=HP;
+	magnitude= d:spearDmg * 0.9;
+	duration=-2;
+	chance=d:spearAcc;
+	element=melee;
+	element=physical;
+	element=smash;
+	element=heavySmash;
+	FXOnTile=terrain;
+	FXOnTile=horizSpark_many_smallArea;
+[AvAffecterAoE]
+	ID=giantStaffAttack;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+	maxRange = 2;
+[AvAffecter]
+	ID=giantStaffAttack; 
+	actorValue=HP;
+	magnitude= d:spearDmg * 1.2;
+	duration=-2;
+	chance=d:spearAcc;
+	element=melee;
+	element=magic;
+	element=elec;
+	FXOnTile=lightningStrike;
+	FXOnTile=terrain;
+	FXOnTile=horizSpark_many_smallArea;
+	FXOnHit=delay;
+	FXOnMiss=delay;
+[AvAffecterAoE]
+	ID=giantStaffAttack;
+	aoeCasterAsOrigin=true;
+	coneAngle = 1;
+	minRange = 3;
+	maxRange = 3;
+	
+
+[Action] ID=greatswordAttack_arc; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=broadswing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXChangesWithWeaponHand=true;
+	FXOnCaster=delay;
+	FXOnCaster=delay;
+	FXOnCaster=delay;
+	FXOnCaster=sfx_gustyBlastHigh;
+	FXOnTarget=swipe;
+	FXOnTargetColor=SkyBlue;
+	FXOnTarget=sfx_zyew;
+[ActionAoE] 
+	ID=greatswordAttack_arc; 
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=greatswordAttack_arc; 
+	actorValue=HP;
+	magnitude= d:gswordDmg - c:skill_Elec * 0.5;
+	duration=-2;
+	chance=d:gswordAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=heavySlash;
+	element=elec;
+	FXOnHit=horizSpark_many;
+[AvAffecterAoE]
+	ID=greatswordAttack_arc;
+	aoeCasterAsOrigin=true;
+	maxRange = 1.5;
+	coneAngle=90;
+	
+
+[Action] ID=greatswordAttack_omnipode_fire; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=broadswing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXChangesWithWeaponHand=true;
+	FXOnTarget=swipe;
+	FXOnTargetColor=Red;
+	FXOnTarget=burn;
+[ActionAoE] 
+	ID=greatswordAttack_omnipode_fire;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=greatswordAttack_omnipode_fire; 
+	actorValue=HP;
+	magnitude= d:gswordDmg - c:skill_Fire;
+	duration=-2;
+	chance=d:gswordAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=heavySlash;
+	element=fire;
+	FXOnTile=fireWpnEmbers;
+[AvAffecterAoE]
+	ID=greatswordAttack_omnipode_fire;
+	aoeCasterAsOrigin=true;
+	maxRange = 1.5;
+	coneAngle=90;
+	
+
+[Action] ID=greatswordAttack_omnipode_ice; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=broadswing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXChangesWithWeaponHand=true;
+	FXOnTarget=swipe;
+	FXOnTargetColor=SkyBlue;
+	FXOnTarget=frostsparkle;
+	FXOnTargetColor=SkyBlue;
+[ActionAoE] 
+	ID=greatswordAttack_omnipode_ice;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=greatswordAttack_omnipode_ice; 
+	actorValue=HP;
+	magnitude= d:gswordDmg - c:skill_Ice;
+	duration=-2;
+	chance=d:gswordAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=heavySlash;
+	element=ice;
+	FXOnTile=frostsparkle;
+	FXOnTileColor=SkyBlue;
+[AvAffecterAoE]
+	ID=greatswordAttack_omnipode_ice;
+	aoeCasterAsOrigin=true;
+	maxRange = 1.5;
+	coneAngle=90;
+	
+	
+[Action] ID=greatswordAttack_omnipode_elec; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=broadswing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXChangesWithWeaponHand=true;
+	FXOnTarget=swipe;
+	FXOnTargetColor=Yellow;
+	FXOnTarget=horizSpark_many;
+	FXOnTargetColor=Yellow;
+[ActionAoE] 
+	ID=greatswordAttack_omnipode_elec;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=greatswordAttack_omnipode_elec; 
+	actorValue=HP;
+	magnitude= d:gswordDmg - c:skill_Elec;
+	duration=-2;
+	chance=d:gswordAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=heavySlash;
+	element=elec;
+	FXOnTile=horizSpark;
+	FXOnTileColor=Yellow;
+[AvAffecterAoE]
+	ID=greatswordAttack_omnipode_elec;
+	aoeCasterAsOrigin=true;
+	maxRange = 1.5;
+	coneAngle=90;
+	
+[Action] ID=greatswordAttack_omnipode_wind; 
+	applyWeaponBuffs=true;
+	
+	casterAnimation=broadswing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXChangesWithWeaponHand=true;
+	FXOnTarget=swipe;
+	FXOnTargetColor=White;
+	FXOnTarget=slash;
+	FXOnTarget=sfx_gustyBlastHigh;
+[ActionAoE] 
+	ID=greatswordAttack_omnipode_wind;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=greatswordAttack_omnipode_wind; 
+	actorValue=HP;
+	magnitude= d:gswordDmg - c:skill_Wind;
+	duration=-2;
+	chance=d:gswordAcc;
+	element=melee;
+	element=physical;
+	element=slash;
+	element=heavySlash;
+	element=wind;
+	FXOnTile=slash;
+[AvAffecterAoE]
+	ID=greatswordAttack_omnipode_wind;
+	aoeCasterAsOrigin=true;
+	maxRange = 1.5;
+	coneAngle=90;
+	
+	
+[Action] ID=windWand_attack; 
+	applyWeaponBuffs=false;
+	
+	casterAnimation=swing;
+	casterAnimationDependsOnWeaponHand=true;
+	FXOnCaster=woosh;
+	FXOnTarget=tornado;
+	FXOnTarget=gustyBlast;
+	FXOnTarget=medShakeHoriz;
+[ActionAoE] 
+	ID=windWand_attack; shape=2; 
+	needsLoS = false;
+	needsLoE = true;
+	airborne=true;
+	arc=true;
+	minRange = 3;
+	maxRange = 3;
+	bypassAll=false;
+	occupyAll=true;
+	
+	
+[AvAffecter]
+	ID=windWand_attack; 
+	actorValue=HP;
+	magnitude= d:windDmg(8) * 0.5;
+	duration=-2;
+	chance=d:windAcc;
+	element=magic;
+	element=wind;
+	FXOnHit=pummel_wind;
+[AvAffecterAoE]
+	ID=windWand_attack;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+	minRange=1;
+	maxRange=1;	
+[AvAffecter]
+	ID=windWand_attack; 
+	actorValue=push;
+	magnitude= 1;
+	duration=-2;
+	chance=d:windAcc;
+	FXOnTile=smallShakeHoriz;
+	FXOnTile=delay;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=windWand_attack;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+	minRange=1;
+	maxRange=1;	
+	
+
+[AvAffecter]
+	ID=windWand_attack; 
+	actorValue=HP;
+	magnitude= d:windDmg(6) * 0.5;
+	duration=-2;
+	chance=d:windAcc;
+	element=magic;
+	element=wind;
+	FXOnTile=delay;
+	FXOnHit=pummel_wind;
+[AvAffecterAoE]
+	ID=windWand_attack;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+	minRange=2;
+	maxRange=2;	
+[AvAffecter]
+	ID=windWand_attack; 
+	actorValue=push;
+	magnitude= 1;
+	duration=-2;
+	chance=d:windAcc;
+	FXOnTile=smallShakeHoriz;
+	FXOnTile=delay;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=windWand_attack;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+	minRange=2;
+	maxRange=2;	
+	
+
+[AvAffecter]
+	ID=windWand_attack; 
+	actorValue=HP;
+	magnitude= d:windDmg(4) * 0.5;
+	duration=-2;
+	chance=d:windAcc;
+	element=magic;
+	element=wind;
+	FXOnTile=delay;
+	FXOnHit=pummel_wind;
+	FXOnTile=smallShakeHoriz;
+[AvAffecterAoE]
+	ID=windWand_attack;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+	minRange=3;
+	maxRange=3;	
+[AvAffecter]
+	ID=windWand_attack; 
+	actorValue=push;
+	magnitude= 1;
+	duration=-2;
+	chance=d:windAcc;
+[AvAffecterAoE]
+	ID=windWand_attack;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+	minRange=3;
+	maxRange=3;	
+	
+	
+
+[Action] ID=iceWand_attack; 
+	applyWeaponBuffs=false;
+	
+	casterAnimation=use_attack;
+	casterAnimationDependsOnWeaponHand=true;
+	
+	roundFacingTo90 = false;
+	
+	FXOnCaster=woosh;
+	FXOnTarget=gustyBlast;
+	FXOnTarget=smallShakeHoriz;
+[ActionAoE] 
+	ID=iceWand_attack; 
+	arc=true;
+	airborne=true;
+	cloneFrom=adjacent;
+	maxRange=1.5;
+[AvAffecter]
+	ID=iceWand_attack; 
+	actorValue=HP;
+	magnitude= d:iceDmg(2);
+	duration=-2;
+	chance=d:iceAcc;
+	element=magic;
+	element=ice;
+	FXOnTile=frostshot_spray;
+	FXOnTile=frostshot;
+[AvAffecterAoE]
+	ID=iceWand_attack;
+	aoeCasterAsOrigin=true;
+	arc=true;
+	airborne=true;
+	cloneFrom=adjacent;
+	maxRange=2.5;
+	coneAngle=80;
+[AvAffecter]
+	ID=iceWand_attack; 
+	actorValue=chilled;
+	magnitude=1;
+	duration=d:iceDur(5) + 20;
+	chance=d:iceAcc;
+	element=magic;
+	element=ice;
+	FXOnHit=frostsparkles;
+[AvAffecterAoE]
+	ID=iceWand_attack;
+	aoeCasterAsOrigin=true;
+	arc=true;
+	airborne=true;
+	cloneFrom=adjacent;
+	maxRange=2.5;
+	coneAngle=80;
+
+[Action] ID=steamWand_attack; 
+	applyWeaponBuffs=false;
+	
+	casterAnimation=use_attack;
+	casterAnimationDependsOnWeaponHand=true;
+	
+	roundFacingTo90 = false;
+	
+	FXOnCaster=woosh;
+	FXOnTarget=gustyBlast;
+	FXOnTarget=smallShakeHoriz;
+[ActionAoE] 
+	ID=steamWand_attack; 
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=steamWand_attack; 
+	actorValue=HP;
+	magnitude= d:fireDmg(6) * 0.5 + d:iceDmg(6) * 0.5;
+	duration=-2;
+	chance=d:fireAcc;
+	element=magic;
+	element=water;
+	FXOnTile=smoke_noOverlap_moving;
+	FXOnTile=smokeCloud;
+	FXOnTile=SandPuff;
+	FXOnTile=sfx_smallSpark_steam;
+[AvAffecterAoE]
+	ID=steamWand_attack; shape=2;
+	aoeCasterAsOrigin=true;
+	arc=true;
+	airborne=true;
+	maxRange=3;
+	coneAngle=90;
+[AvAffecter]
+	ID=steamWand_attack; 
+	visibleMiss=false;
+	actorValue=wet;
+	magnitude=1;
+	duration=d:fireDur(5) + d:iceDur(5) + 50;
+	chance=d:fireAcc;
+	element=magic;
+	element=water;
+[AvAffecterAoE]
+	ID=steamWand_attack; shape=2;
+	aoeCasterAsOrigin=true;
+	arc=true;
+	airborne=true;
+	maxRange=3;
+	coneAngle=90;
+	
+
+[Action] ID=shockWand_attack; 
+	applyWeaponBuffs=false;
+	
+	casterAnimation=use_attack;
+	casterAnimationSpeed=0.8;
+	casterAnimationDependsOnWeaponHand=true;
+	
+	roundFacingTo90 = false;
+	
+	FXOnCaster=horizSpark_many_sudden;
+	FXOnCasterColor=Orange;
+	FXOnTarget=sparkUp;
+	FXOnTargetColor=Orange;
+	FXOnTarget=smallShakeHoriz;
+[ActionAoE] 
+	ID=shockWand_attack; 
+	arc=true;
+	airborne=true;
+	cloneFrom=adjacent;
+	maxRange=2;
+[AvAffecter]
+	ID=shockWand_attack; 
+	actorValue=HP;
+	magnitude= d:elecDmg(2);
+	duration=-2;
+	chance=d:elecAcc;
+	element=magic;
+	element=elec;
+	FXOnTile=elecBlasts_4;
+	FXOnTileColor=Orange;
+	FXOnTile=tinyShakeHoriz;
+	FXOnTile=sfx_thunderStrike_small;
+[AvAffecterAoE]
+	ID=shockWand_attack;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=shockWand_attack; 
+	actorValue=stun;
+	magnitude=1;
+	duration=d:elecDur(0.5) + 3;
+	chance=d:elecAcc;
+	element=magic;
+	element=elec;
+[AvAffecterAoE]
+	ID=shockWand_attack;
+	cloneFrom=oneTile;
+
+
+[Action] ID=focusStone_act; 
+	harmful=false;
+	attractAttention=false;
+	
+	casterAnimation=crouch;
+	
+	FXOnTarget=sfx_highAura;
+	
+	FXOnCaster=chargeup;
+	FXOnCasterColor=Purple;
+	FXOnCaster=casting;
+	FXOnCasterColor=Purple;
+[ActionAoE] 
+	ID=focusStone_act; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=focusStone_act; 
+	harmful=false;
+	actorValue=MP;
+	magnitude=12 + c:MagAtk * 0.4
+	+ c:skill_Fire * 0.25
+	+ c:skill_Ice * 0.25
+	+ c:skill_Elec * 0.25
+	+ c:skill_Wind * 0.25
+	+ c:skill_Ruin * 0.25
+	+ c:skill_Life * 0.3;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=focusStone_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=focusStone_act; 
+	harmful=false;
+	actorValue=MagDef;
+	magnitude=2;
+	duration=52 + c:MagAtk * 2
+	+ c:skill_Fire + c:skill_Ice + c:skill_Elec + c:skill_Wind + c:skill_Ruin + c:skill_Life;
+	chance=100;
+[AvAffecterAoE]
+	ID=focusStone_act;
+	cloneFrom=oneTile;
+	
+
+	

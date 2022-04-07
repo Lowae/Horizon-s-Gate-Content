@@ -1,0 +1,69 @@
+
+[DialogNode] ID=port31_guy1a;
+animations=sly;
+statements=Is this place a boat or a city??;
+nextNodeID=;
+
+
+[DialogNode] ID=port31_guy2a;
+animations=;
+animations=sigh;
+statements=I came all this way to have a Barge built...;
+statements=But I spent so much to get here, I can no longer afford it!;
+nextNodeID=;
+
+[DialogNode] ID=port31_guy3a;
+animations=;
+statements=Sorry, I'm just the assistant.<p> Talk to Vannadir.;
+nextNodeID=;
+
+[DialogNode] ID=port31_guy4a;
+animations=sly;
+animations=;
+statements=Did you know they make Launch Buoys here??;
+statements=It's incredible!<p> I want to get a close look at one!;
+nextNodeID=;
+
+[DialogNode] ID=port31_guy5a;
+animations=;
+animations=meh;
+statements=Somebody's gotta do the loading and unloading...;
+statements=May as well be me.;
+nextNodeID=;
+
+[DialogNode] ID=port31_guy6a;
+animations=;
+animations=sigh;
+statements=This place is nice...;
+statements=Kinda makes me homesick for Dominio.;
+nextNodeID=;
+
+[DialogNode] ID=port31_guy7a;
+animations=sigh;
+animations=stern;
+statements=I was looking forward to shore leave...;
+statements=But this is just like being back on the boat...!;
+nextNodeID=;
+
+[DialogNode] ID=port31_guy8a;
+animations=;
+statements=Welcome to Bellrique.;
+nextNodeID=;
+
+[DialogNode] ID=port31_guy8b;
+animations=angry;
+animations=stern;
+animations=angry;
+statements=Hey,<p> you!<p=2> Stop!!;
+statements=<textIf=Don't you ever learn? =g:D_port31_guy8b2>There's a $50 fine for that!;
+nextNodeID=port31_guy8b2;
+
+[DialogNode] ID=port31_guy8b2;
+specialEffect=subtract50gp;
+statements=Pay up!<p=2> And be glad I don't have you hauled off!;
+nextNodeID=;
+
+
+
+
+

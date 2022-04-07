@@ -1,0 +1,488 @@
+
+
+[Action] ID=Mec_setTurret; 
+	name=Place Turret;
+	icon=icon_Mec_turret;
+	mpCost=10 * d:mpCostMult + d:mpCostMod;
+	tooltip=Place a turret that fires every <icon=time>20, dealing <math=13.5 + c:MagAtk*1.5 + c:skill_Elec*1.5><thinnerIcon=HP> damage. Fires 5 volleys before breaking. 'Use' to rotate.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Elec_small>;
+	
+	XPCost=250;
+	XPCost=450;
+	XPCost=600;
+	XPCost=700;
+	
+	casterAnimation=swing;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	special=redoMovementAnalysis;
+	
+	FXOnTarget=swing;
+[ActionAoE] 
+	ID=Mec_setTurret; shape=2;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 0;
+	maxRangeBonus=c:rank;
+	airborne=true;
+	bypassAll=false;
+	occupyAll=false;
+	canSelectActors=false;
+	fReq=canItemFit:mechanist_turret1;
+[AvAffecter]
+	ID=Mec_setTurret; 
+	actorValue=summonItem;
+	magnitude=mechanist_turret1;
+	duration=4.5 + c:MagAtk * 0.5 + c:skill_Elec * 0.5;
+	FXOnTile=throw_mechanist_turret1;
+[AvAffecterAoE]
+	ID=Mec_setTurret;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Mec_setTurret; 
+	actorValue=AIBonus;
+	magnitude=-13;
+	duration=-2;
+	chance = 100 - 100*m:tCanActBeforeX(19);
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=Mec_setTurret;
+	shape=2;
+	minRange=1;
+	maxRange=8;
+	needsLoE=true;
+	airborne=true;
+	arc=false;
+	furthestPossibleOnly=true;
+	coneAngle=1;
+	bypassAll=true;
+	occupyAll=true;
+	
+	
+[Action] ID=Mec_setWall; 
+	name=Portable Wall;
+	icon=icon_Mec_wall;
+	mpCost=6 * d:mpCostMult + d:mpCostMod;
+	tooltip=Deploy a wall up to <math=c:rank+2> panels long that lasts for <icon=time>120.<n>Can be broken by blunt weapon attacks.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=;
+	
+	AIRatingBias = -999;
+	
+	XPCost=150;
+	XPCost=500;
+	XPCost=950;
+	XPCost=1250;
+	
+	casterAnimation=swing;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	special=redoMovementAnalysis;
+	
+	FXOnTarget=swing;
+[ActionAoE] 
+	ID=Mec_setWall; shape=2;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 2;
+	maxRangeBonus=c:rank;
+	bypassAll=false;
+	occupyAll=false;
+	canSelectActors=false;
+	fReq=canItemFit:mechanist_wall;
+[AvAffecter]
+	ID=Mec_setWall; 
+	actorValue=summonItem;
+	magnitude=mechanist_wall;
+	duration=1;
+	FXOnTile=portableWallExtend;
+[AvAffecterAoE]
+	ID=Mec_setWall;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+	maxRange=0;
+	maxRangeBonus=0;
+	maxRangeAddDistanceFromCaster=true;
+	fReq=canItemFit:mechanist_wall;
+	
+
+
+[Action] ID=Mec_setTrap; 
+	name=Set Trap;
+	icon=icon_Mec_setTrap;
+	mpCost=2 * d:mpCostMult + d:mpCostMod;
+	tooltip=Toss out <math=c:rank> hidden mantrap(s). Whoever ends their movement on it takes <math=4 + c:PhysAtk + c:MagAtk><thinnerIcon=HP> damage and is immobilized for <icon=time><math=60 + c:PhysAtk*2 + c:MagAtk*2>.;
+	rankUpTooltip=Each rank adds +1 extra trap.;
+	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small>;
+	attractAttention=false;
+	
+	AIRatingBias = -999;
+	
+	numTargets=c:rank;
+	
+	XPCost=125;
+	XPCost=550;
+	XPCost=950;
+	
+	casterAnimation=swing;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	special=redoMovementAnalysis;
+	
+	FXOnTarget=throw_mantrap;
+	FXOnTarget=swing;
+[ActionAoE] 
+	ID=Mec_setTrap;
+	needsLoS=true;
+	needsLoE = true;
+	canSelectActors=false;
+	bypassAll=true;
+	occupyAll=false;
+	minRange = 1;
+	maxRange = 2;
+	fReq=canItemFit:rogueTrap;
+[AvAffecter]
+	ID=Mec_setTrap; 
+	actorValue=summonItem;
+	magnitude=rogueTrap;
+	duration=5 + c:PhysAtk + c:MagAtk;
+[AvAffecterAoE]
+	ID=Mec_setTrap;
+	cloneFrom=oneTile;
+	canSelectActors=false;
+	bypassAll=false;
+	occupyAll=false;
+	
+	
+	
+[Action] ID=Mec_setConveyor; 
+	name=Deploy Conveyor;
+	icon=icon_Mec_conveyor;
+	mpCost=4 * d:mpCostMult + d:mpCostMod;
+	tooltip=Deploy a conveyor belt up to<n><math=c:rank+2> panels long that lasts <icon=time><math=90 + 5*c:MagAtk + 5*c:skill_Elec> and pushes creatures on it every <icon=time>5.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Elec_small>;
+	
+	AIRatingBias = -999;
+	
+	XPCost=125;
+	XPCost=350;
+	XPCost=750;
+	XPCost=950;
+	
+	casterAnimation=swing;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	special=redoMovementAnalysis;
+	
+	FXOnTarget=swing;
+[ActionAoE] 
+	ID=Mec_setConveyor; shape=2;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 2;
+	maxRangeBonus=c:rank;
+	bypassAll=false;
+	occupyAll=false;
+	ignoreMovementCost=true;
+[AvAffecter]
+	ID=Mec_setConveyor; 
+	actorValue=summonItem;
+	magnitude=mechanist_conveyorBelt;
+	duration=18 + c:MagAtk + c:skill_Elec;
+	FXOnTile=conveyorExtend;
+[AvAffecterAoE]
+	ID=Mec_setConveyor;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+	maxRange=0;
+	maxRangeBonus=0;
+	maxRangeAddDistanceFromCaster=true;
+	ignoreMovementCost=true;
+	fReq=canItemFit:mechanist_conveyorBelt;
+[AvAffecter]
+	ID=Mec_setConveyor; 
+	actorValue=push;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=Mec_setConveyor;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+	maxRange=0;
+	maxRangeBonus=0;
+	maxRangeAddDistanceFromCaster=true;
+	ignoreMovementCost=true;
+	fReq=canItemFit:mechanist_conveyorBelt;
+	
+[Action] ID=Mec_setMedkit; 
+	name=Toss Medkit;
+	icon=icon_Mec_medkit;
+	mpCost=8 * d:mpCostMult + d:mpCostMod;
+	tooltip=Toss out <math=c:rank+1> medical kits.<n>Creatures that end their turn on a medkit heal <math=6 + c:MagAtk + c:skill_Life><thinnerIcon=HP>.<n>Heals <math=2 + c:MagAtk * 0.7 + c:skill_Life * 0.7><thinnerIcon=HP> when thrown directly at a target.;
+	rankUpTooltip=Each rank adds +1 target.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
+	attractAttention=false;
+	
+	AIRatingBias = 0;
+	
+	numTargets=c:rank+1;
+	
+	XPCost=150;
+	XPCost=750;
+	XPCost=900;
+	
+	casterAnimation=spinAttack;
+	casterAnimationSpeed=1.5;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	special=redoMovementAnalysis;
+	
+	FXOnTarget=throw_medkit;
+	FXOnTarget=swing;
+[ActionAoE] 
+	ID=Mec_setMedkit;
+	needsLoS=true;
+	needsLoE = true;
+	bypassAll=true;
+	occupyAll=false;
+	minRange = 1;
+	maxRange = 3;
+	airborne=true;
+[AvAffecter]
+	ID=Mec_setMedkit; 
+	harmful=false;
+	actorValue=HP;
+	magnitude=2 + c:MagAtk * 0.7 + c:skill_Life * 0.7 + t:skill_Life * 0.5;
+	duration=-2;
+	chance=100;
+	element=removeDecay;
+	element=replaceCapsule;
+	FXOnHit=sparkles;
+	FXOnHitColor=Red;
+	FXOnHit=briefAuraSound;
+[AvAffecterAoE]
+	ID=Mec_setMedkit;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Mec_setMedkit; 
+	actorValue=summonItem;
+	magnitude=medkit;
+	duration=6 + c:MagAtk + c:skill_Life;
+[AvAffecterAoE]
+	ID=Mec_setMedkit;
+	cloneFrom=oneTile;
+	canSelectActors=false;
+	bypassAll=false;
+	occupyAll=false;
+	fReq=canItemFit:medkit;
+	
+
+------------------
+
+
+
+[Action] ID=medkit_action; 
+	name=Medkit;
+	icon=;
+	tooltip=;
+	rankUpTooltip=;
+	attractAttention=false;
+	harmful=false;
+	
+	casterAnimation=use;
+[ActionAoE] 
+	ID=medkit_action;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=medkit_action; 
+	harmful=false;
+	actorValue=HP;
+	magnitude= c:rank + t:skill_Life * 0.5;
+	duration=-2;
+	chance=100;
+	element=removeDecay;
+	FXOnTile=sparkles;
+	FXOnTileColor=Red;
+	FXOnTile=briefAuraSound;
+[AvAffecterAoE]
+	ID=medkit_action;
+	cloneFrom=oneTile;
+
+
+
+
+[Action] ID=mechanist_turret_shoot; 
+	icon=icon_fire;
+	FXOnTarget=tinyShakeHoriz;
+[ActionAoE] 
+	ID=mechanist_turret_shoot;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=mechanist_turret_shoot; 
+	actorValue=HP;
+	magnitude=-c:rank + t:PhysDef * 0.5;
+	duration=-2;
+	chance=100 - t:PhysEva * m:evaFacing;
+	element=ranged;
+	element=physical;
+	element=smash;
+	FXOnTile=sfx_rifleShot;
+	FXOnTile=wideLine_gun;
+	FXOnTile=line;
+	FXOnTile=hitDustQuiet;
+	FXOnHit=hitDustQuiet;
+	FXOnHit=pop;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=mechanist_turret_shoot;
+	shape=2;
+	minRange=1;
+	maxRange=8;
+	needsLoE=true;
+	airborne=true;
+	arc=false;
+	furthestPossibleOnly=true;
+	coneAngle=1;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=mechanist_turret_shoot; 
+	actorValue=HP;
+	magnitude=-c:rank + t:PhysDef * 0.5;
+	duration=-2;
+	chance=100 - t:PhysEva * m:evaFacing;
+	element=ranged;
+	element=physical;
+	element=smash;
+	FXOnTile=delay;
+	FXOnTile=delay_small;
+	--FXOnTile=sfx_rifleShot;
+	FXOnTile=wideLine_gun;
+	FXOnTile=line;
+	FXOnTile=hitDustQuiet;
+	FXOnHit=hitDustQuiet;
+	FXOnHit=pop;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=mechanist_turret_shoot;
+	shape=2;
+	minRange=1;
+	maxRange=8;
+	needsLoE=true;
+	airborne=true;
+	arc=false;
+	furthestPossibleOnly=true;
+	coneAngle=1;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=mechanist_turret_shoot; 
+	actorValue=HP;
+	magnitude=-c:rank + t:PhysDef * 0.5;
+	duration=-2;
+	chance=100 - t:PhysEva * m:evaFacing;
+	element=ranged;
+	element=physical;
+	element=smash;
+	FXOnTile=delay;
+	FXOnTile=delay_small;
+	--FXOnTile=sfx_rifleShot;
+	FXOnTile=wideLine_gun;
+	FXOnTile=line;
+	FXOnTile=hitDustQuiet;
+	FXOnHit=hitDustQuiet;
+	FXOnHit=pop;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=mechanist_turret_shoot;
+	shape=2;
+	minRange=1;
+	maxRange=8;
+	needsLoE=true;
+	airborne=true;
+	arc=false;
+	furthestPossibleOnly=true;
+	coneAngle=1;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=mechanist_turret_shoot; 
+	actorValue=AIBonus;
+	magnitude=-50;
+	duration=-2;
+	chance=100 - t:PhysEva * m:evaFacing;
+[AvAffecterAoE]
+	ID=mechanist_turret_shoot;
+	shape=2;
+	minRange=1;
+	maxRange=8;
+	needsLoE=true;
+	airborne=true;
+	arc=false;
+	coneAngle=1;
+	bypassAll=true;
+	occupyAll=true;
+	
+[Action] ID=mechanist_turret_explode;
+	harmful=false; 
+	FXOnTarget=sfx_woodCrash;
+	FXOnTarget=hitDustQuiet;
+	FXOnTarget=hitDustQuiet;
+	FXOnTarget=tinyShakeHoriz;
+	FXOnTarget=horizSpark_many;
+	special=hideOnTurnOrder;
+[ActionAoE] 
+	ID=mechanist_turret_explode;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=mechanist_turret_explode; 
+	harmful=false;
+	magnitude=0;
+	duration=0;
+	chance=0;
+	FXOnTile=hitDustQuiet;
+	FXOnTile=terrain;
+[AvAffecterAoE]
+	ID=mechanist_turret_explode;
+	cloneFrom=oneTile;
+	
+	
+
+	
+[Action] ID=rogueTrap_cut; 
+[ActionAoE] 
+	ID=rogueTrap_cut;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=rogueTrap_cut; 
+	actorValue=HP;
+	magnitude=-c:rank + t:PhysDef;
+	duration=-2;
+	chance=100;
+	element=physical;
+	element=slash;
+	FXOnTile=slash;
+[AvAffecterAoE]
+	ID=rogueTrap_cut;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=rogueTrap_cut; 
+	actorValue=immob;
+	magnitude=1;
+	duration=50 + c:rank*2;
+	chance=100;
+	element=physical;
+[AvAffecterAoE]
+	ID=rogueTrap_cut;
+	cloneFrom=oneTile;

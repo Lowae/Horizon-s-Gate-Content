@@ -1,0 +1,286 @@
+[Action] ID=Sp_fireImbue; 
+	name=Fire Imbue;
+	icon=icon_Sp_fireImbue;
+--icon_pG=pRed;
+	tooltip=Burn target with a fiery weapon attack for <icon=time><math=10 + d:fireDurMax(2) + 15 * c:rank>.;
+	rankUpTooltip=Each rank increases duration by <icon=time>15.;
+	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=melee_small><icon=skill_Fire_small>;
+	mpCost=9 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=250;
+	XPCost=350;
+	XPCost=950;
+	
+	casterAnimation=weapon;
+	casterAnimationSpeed=0.5;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	requiredWeaponElement=weapon;
+	
+	FXOnCaster=sfx_schwee;
+	FXOnCasterColor=White;
+	FXOnCaster=chargeSpiralMany_big;
+	FXOnCasterColor=Red;
+	FXOnCaster=skill_Fire;
+	FXOnCasterColor=White;
+	
+	FXOnTarget=weaponFX;
+[ActionAoE] 
+	ID=Sp_fireImbue; shape=10; 
+[AvAffecter]
+	ID=Sp_fireImbue; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.75  + dMax0:fireDmg(0);
+	chance=w:chance;
+	element=magic;
+	element=fire;
+	duration=-2;
+	FXOnTile=smallShakeHoriz;
+	FXOnTile=tallExplode;
+[AvAffecterAoE]
+	ID=Sp_fireImbue;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Sp_fireImbue; 
+	visibleMiss=false;
+	actorValue=burn;
+	magnitude=1;
+	duration=10 + d:fireDur(2) + 15 * c:rank;
+	chance=w:chance;
+	element=magic;
+	element=fire;
+[AvAffecterAoE]
+	ID=Sp_fireImbue;
+	cloneFrom=oneTile;
+	
+	
+	
+[Action] ID=Sp_iceImbue; 
+	name=Ice Imbue;
+	icon=icon_Sp_iceImbue;
+	tooltip=Chill target with an icy weapon attack for <icon=time><math=50 + d:iceDurMax(2) + 30 * c:rank>.;
+	rankUpTooltip=Each rank increases duration by <icon=time>30.;
+	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=melee_small><icon=skill_Ice_small>;
+	mpCost=9 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=250;
+	XPCost=350;
+	XPCost=950;
+	
+	casterAnimation=weapon;
+	casterAnimationSpeed=0.5;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	requiredWeaponElement=weapon;
+	
+	FXOnCaster=sfx_schwee;
+	FXOnCasterColor=White;
+	FXOnCaster=chargeSpiralMany_big;
+	FXOnCasterColor=Blue;
+	FXOnCaster=skill_Ice;
+	FXOnCasterColor=White;
+	
+	FXOnTarget=weaponFX;
+[ActionAoE] 
+	ID=Sp_iceImbue; shape=10; 
+[AvAffecter]
+	ID=Sp_iceImbue; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.75  + dMax0:iceDmg(0);
+	chance=w:chance;
+	element=magic;
+	element=ice;
+	duration=-2;
+	FXOnTile=iceExplosion_big;
+	FXOnTile=smallShakeHoriz;
+[AvAffecterAoE]
+	ID=Sp_iceImbue;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Sp_iceImbue; 
+	visibleMiss=false;
+	actorValue=chilled;
+	magnitude=1;
+	duration=50 + d:iceDur(2) + 30 * c:rank;
+	chance=w:chance;
+	element=magic;
+	element=ice;
+[AvAffecterAoE]
+	ID=Sp_iceImbue;
+	cloneFrom=oneTile;
+	
+	
+	
+[Action] ID=Sp_elecImbue; 
+	name=Lightning Imbue;
+	icon=icon_Sp_elecImbue;
+	tooltip=Stun target with a lightning weapon attack for <icon=time><math=d:elecDurMax(1) + 4 * c:rank>.;
+	rankUpTooltip=Each rank increases duration by <icon=time>4.;
+	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=melee_small><icon=skill_Elec_small>;
+	mpCost=9 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=250;
+	XPCost=350;
+	XPCost=950;
+	
+	casterAnimation=weapon;
+	casterAnimationSpeed=0.5;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	requiredWeaponElement=weapon;
+	
+	FXOnCaster=sfx_schwee;
+	FXOnCasterColor=White;
+	FXOnCaster=chargeSpiralMany_big;
+	FXOnCasterColor=Yellow;
+	FXOnCaster=skill_Elec;
+	
+	FXOnTarget=weaponFX;
+[ActionAoE] 
+	ID=Sp_elecImbue; shape=10; 
+[AvAffecter]
+	ID=Sp_elecImbue; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.75 + dMax0:elecDmg(0);
+	chance=w:chance;
+	element=magic;
+	element=lightning;
+	duration=-2;
+	FXOnTile=lightningStrike;
+	FXOnTile=shortBolt;
+	FXOnTile=spark;
+	FXOnTile=DramaticNyeaow;
+[AvAffecterAoE]
+	ID=Sp_elecImbue;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Sp_elecImbue; 
+	visibleMiss=false;
+	actorValue=stun;
+	magnitude=1;
+	duration=d:elecDur(1) + 4 * c:rank;
+	chance=w:chance;
+	element=magic;
+	element=lightning;
+[AvAffecterAoE]
+	ID=Sp_elecImbue;
+	cloneFrom=oneTile;
+
+	
+
+[Action] ID=Sp_windImbue; 
+	name=Wind Imbue;
+	icon=icon_Sp_windImbue;
+	tooltip=Push target <math=c:rank+1> tiles with a wind weapon attack.;
+	rankUpTooltip=Each rank increases push distance by 1.;
+	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=melee_small><icon=skill_Wind_small>;
+	mpCost=9 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=150;
+	XPCost=350;
+	XPCost=950;
+	
+	casterAnimation=weapon;
+	casterAnimationSpeed=0.5;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	requiredWeaponElement=weapon;
+	
+	FXOnCaster=sfx_schwee;
+	FXOnCasterColor=White;
+	FXOnCaster=chargeSpiralMany_big;
+	FXOnCasterColor=White;
+	FXOnCaster=skill_Wind;
+	
+	FXOnTarget=weaponFX;
+[ActionAoE] 
+	ID=Sp_windImbue; shape=10; 
+[AvAffecter]
+	ID=Sp_windImbue; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.75  + dMax0:windDmg(0);
+	chance=w:chance;
+	element=magic;
+	element=wind;
+	duration=-2;
+	FXOnTile=pop;
+	FXOnTile=spinSlashCyclone;
+	FXOnTile=gustyBlast;
+	FXOnTile=tinyShakeHoriz;
+[AvAffecterAoE]
+	ID=Sp_windImbue;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Sp_windImbue; 
+	visibleMiss=false;
+	actorValue=push;
+	magnitude=1+c:rank;
+	duration=-2;
+	chance=w:chance;
+[AvAffecterAoE]
+	ID=Sp_windImbue;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=Sp_ruinImbue; 
+	name=Ruin Imbue;
+	icon=icon_Sp_ruinImbue;
+	tooltip=Corrode target's skin with a ruin weapon attack, causing itching for <icon=time><math=40 + d:ruinDurMax(2) + 50 * c:rank>.;
+	rankUpTooltip=Each rank increases duration by <icon=time>50.;
+	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=melee_small><icon=skill_Ruin_small>;
+	
+	mpCost=6 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=150;
+	XPCost=350;
+	XPCost=950;
+	
+	casterAnimation=weapon;
+	casterAnimationSpeed=0.5;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	requiredWeaponElement=weapon;
+	
+	FXOnCaster=sfx_schwee;
+	FXOnCasterColor=White;
+	FXOnCaster=chargeSpiralMany_big;
+	FXOnCasterColor=Purple;
+	FXOnCaster=skill_Ruin;
+	
+	FXOnTarget=weaponFX;
+[ActionAoE] 
+	ID=Sp_ruinImbue; shape=10; 
+[AvAffecter]
+	ID=Sp_ruinImbue; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.75 + dMax0:ruinDmg(0);
+	chance=w:chance;
+	element=magic;
+	element=ruin;
+	duration=-2;
+	FXOnTile=shroudExplode;
+	FXOnTileColor=Purple;
+	FXOnTile=sfx_debuffLow;
+	FXOnTile=miasma;
+	FXOnTile=sfx_lowMurmur;
+	FXOnTile=smallShakeHoriz;
+[AvAffecterAoE]
+	ID=Sp_ruinImbue;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Sp_ruinImbue; 
+	visibleMiss=false;
+	actorValue=itchy;
+	magnitude=1;
+	duration=40 + d:ruinDur(2) + 50 * c:rank;
+	chance=w:chance;
+	element=magic;
+	element=ruin;
+[AvAffecterAoE]
+	ID=Sp_ruinImbue;
+	cloneFrom=oneTile;

@@ -1,0 +1,410 @@
+
+[Action] ID=Un_wither; 
+	name=Wither;
+	icon=icon_Un_wither;
+	mpCost=10 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=15 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	tooltip=Deal <thinnerIcon=skill_Ruin><math=d:ruinDmgDisplay(5)> damage and Disable a target for up to <icon=time><math=20 + d:ruinDurMax(1) + 10 * c:rank>.;
+	rankUpTooltip=Each rank increases duration by <icon=time>10.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ruin_small>;
+	
+	XPCost=250;
+	XPCost=600;
+	XPCost=1200;
+	
+	special=requiresCasting;
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnCasterColor=Purple;
+	
+	FXOnTarget=spiral;
+	FXOnTargetColor=Purple;
+	FXOnTarget=spiral2;
+	FXOnTargetColor=Purple;
+	FXOnTarget=ping;
+	FXOnTargetColor=Purple;
+	FXOnTarget=sfx_debuffLow;
+	FXOnTarget=Thwummm;
+[ActionAoE] 
+	ID=Un_wither; 
+	needsLoS = true;
+	needsLoE = false;
+	minRange = 1;
+	maxRange = 3;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Un_wither; 
+	actorValue=HP;
+	magnitude= d:ruinDmg(5);
+	duration=-2;
+	chance=d:ruinAcc * 0.9;
+	element=magic;
+	element=ruin;
+	element=wither;
+	FXOnTile=ringsDownward;
+	FXOnTileColor=Purple;
+	FXOnTile=Debuff_lowPitch;
+	FXOnTile=smallShock;
+[AvAffecterAoE]
+	ID=Un_wither;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Un_wither; 
+	actorValue=disable;
+	visibleMiss=false;
+	magnitude= 1;
+	duration=20 + d:ruinDur(1) + 10 * c:rank;
+	chance=d:ruinAcc * 0.9;
+	element=magic;
+	element=ruin;
+[AvAffecterAoE]
+	ID=Un_wither;
+	cloneFrom=oneTile;
+	
+	
+	
+	
+
+[Action] ID=Un_soulburn; 
+	name=Soulburn;
+	icon=icon_Un_soulburn;
+	mpCost=3 * d:mpCostMult + d:mpCostMod;
+	tooltip=Inflict <math=d:ruinDmgDisplay(15)><icon=MP> MP damage in a small area.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ruin_small>;
+	
+	XPCost=120;
+	XPCost=250;
+	XPCost=400;
+	
+	casterAnimation=spellcast;
+	maxRank=3;
+	
+	FXOnTarget=explosionHorizBlue;
+	FXOnTarget=DramaticNyeaow;
+[ActionAoE] 
+	ID=Un_soulburn; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	minRange = 1;
+	maxRange = 3;
+	maxRangeBonus = c:rank;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Un_soulburn; 
+	actorValue=MP;
+	magnitude= d:ruinDmg(15);
+	duration=-2;
+	chance=d:ruinAcc;
+	element=magic;
+	element=ruin;
+	FXOnTile=burnBlue;
+[AvAffecterAoE]
+	ID=Un_soulburn;
+	cloneFrom=adjacentAndSelf;
+	
+	
+	
+
+[Action] ID=Un_decay; 
+	name=Decay;
+	icon=icon_Un_decay;
+	mpCost=8 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=12 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	tooltip=Inflict 'Decay' on an area, causing <thinnerIcon=skill_Ruin><math=d:ruinDmgDisplay(10)> damage on the targets' turn unless they receive healing before then.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ruin_small>;
+	
+	XPCost=250;
+	XPCost=480;
+	XPCost=950;
+	
+	special=requiresCasting;
+	casterAnimation=spellcast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnCasterColor=Purple;
+[ActionAoE] 
+	ID=Un_decay; 
+	needsLoS = true;
+	needsLoE = false;
+	minRange = 1;
+	maxRange = 2;
+	airborne=true;
+	arc=true;
+	maxRangeBonus=c:rank;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Un_decay; 
+	actorValue=decay;
+	magnitude=-d:ruinDmg(10);
+	duration=-6;
+	chance=d:ruinAcc - 100 * t:decay;
+	element=magic;
+	element=ruin;
+	FXOnTile=pingBip;
+	FXOnTileColor=Purple;
+	FXOnTile=downwardLines_quick;
+	FXOnTileColor=Purple;
+	FXOnHit=largePing;
+	FXOnHitColor=Purple;
+	FXOnHit=sfx_lowSquish;
+[AvAffecterAoE]
+	ID=Un_decay;
+	cloneFrom=adjacentAndSelf;
+	
+
+[Action] ID=Un_shroud; 
+	name=Shroud;
+	icon=icon_Un_shroud;
+	mpCost=6 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=9 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	tooltip=Blind <textIf= and Poison =c:rank-1> creatures in a small area for up to <icon=time><math=d:ruinDurMax(3)+60>.;
+	rankUpTooltip=With a 2nd rank the shroud also inflicts Poison.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ruin_small>;
+	
+	XPCost=150;
+	XPCost=950;
+	
+	special=requiresCasting;
+	casterAnimation=spellcast;
+	maxRank=2;
+	
+	FXOnCaster=magicCharge;
+	FXOnCasterColor=Purple;
+	
+	FXOnTarget=darken_minor;
+	FXOnTarget=sfx_highThwum;
+[ActionAoE] 
+	ID=Un_shroud; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	minRange = 1;
+	maxRange = 3;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Un_shroud; 
+	actorValue=blind;
+	magnitude=1;
+	duration=d:ruinDur(3) + 60;
+	chance=d:ruinAcc;
+	element=magic;
+	FXOnTile=shroudExplode;
+	FXOnTileColor=Purple;
+	FXOnHit=smog;
+[AvAffecterAoE]
+	ID=Un_shroud;
+	cloneFrom=adjacentAndSelf;
+[AvAffecter]
+	ID=Un_shroud; 
+	rankRequired=2;
+	actorValue=poison;
+	magnitude=1;
+	duration=d:ruinDur(2) + 60;
+	chance=d:ruinAcc;
+	FXOnTile=shroudExplode;
+	FXOnTileColor=DarkBlue;
+	element=magic;
+	element=ruin;
+[AvAffecterAoE]
+	ID=Un_shroud;
+	cloneFrom=adjacentAndSelf;
+	
+	
+	
+	
+
+[Action] ID=Un_ruinTouch; 
+	name=Ruin Touch;
+	icon=icon_Un_ruinTouch;
+	mpCost=4 * d:mpCostMult + d:mpCostMod;
+	tooltip=Deal <thinnerIcon=skill_Ruin><math=d:ruinDmgDisplay(6)> damage, and +30% extra damage for each negative status effect on the target. Also inflicts Itchy for up to <icon=time><math=20 + d:ruinDurMax(2) + 20 * c:rank>.;
+	rankUpTooltip=Each rank increases duration by <icon=time>20.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ruin_small>;
+	
+	XPCost=100;
+	XPCost=300;
+	XPCost=550;
+	XPCost=950;
+	
+	casterAnimation=spellcast;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	FXOnCasterColor=Purple;
+	FXOnTarget=chargeSpiralFast_big;
+	FXOnTargetColor=Purple;
+	FXOnTarget=pingRepeat;
+	FXOnTargetColor=Purple;
+	FXOnTarget=shadowWhirl;
+	FXOnTarget=risingChirpEcho;
+[ActionAoE] 
+	ID=Un_ruinTouch;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=Un_ruinTouch; 
+	actorValue=HP;
+	magnitude= d:ruinDmg(6);
+	duration=-2;
+	chance=d:ruinAcc;
+	element=magic;
+	element=ruin;
+	element=ruinTouch;
+[AvAffecterAoE]
+	ID=Un_ruinTouch;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Un_ruinTouch; 
+	actorValue=itchy;
+	magnitude= 1;
+	duration=20 + d:ruinDur(2) + 20 * c:rank;
+	chance=d:ruinAcc;
+	element=magic;
+	element=ruin;
+	FXOnHit=popSilent;
+	FXOnHitColor=Purple;
+	FXOnHit=tinyShakeHoriz;
+	FXOnHit=ThudShotBigger;
+[AvAffecterAoE]
+	ID=Un_ruinTouch;
+	cloneFrom=oneTile;
+	
+	
+
+[Action] ID=Un_drain; 
+	name=Drain;
+	icon=icon_Un_drain;
+	mpCost=4 * d:mpCostMult + d:mpCostMod;
+	tooltip=Deal <thinnerIcon=skill_Ruin><math=c:MagAtk + c:rank + c:skill_Ruin> damage to an adjacent enemy and heal<n=><icon=HP>HP & <icon=MP>MP for the same amount.;
+	rankUpTooltip=Each rank adds +1 damage and healing.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ruin_small>;
+	AIRatingBias=-5;
+	
+	XPCost=360;
+	XPCost=720;
+	maxRank=2;
+	canExceedMaxRankBy=1;
+	
+	casterAnimation=spellcast;
+	
+	FXOnCaster=magicCharge;
+	FXOnCasterColor=Purple;
+	FXOnTarget=darken_minor;
+	FXOnTarget=drain_purple;
+	FXOnTarget=ThudShotBigger;
+	FXOnTarget=sfx_elecBlast;
+[ActionAoE] 
+	ID=Un_drain;
+	shape=17;
+	cloneFrom=adjacent;
+	maxRange=1;
+	
+[AvAffecter]
+	ID=Un_drain; 
+	actorValue=HP;
+	magnitude= d:ruinDmg(1) - c:rank;
+	duration=-2;
+	chance=100;
+	element=magic;
+	element=ruin;
+[AvAffecterAoE]
+	ID=Un_drain;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Un_drain; 
+	harmful=false;
+	actorValue=HP;
+	magnitude=c:MagAtk + c:rank + c:skill_Ruin;
+	duration=-2;
+	chance=100;
+	element=magic;
+	element=ruin;
+	FXOnTile=delay;
+	FXOnTileColor=Purple;
+	FXOnTile=delay_minor;
+	FXOnTileColor=Purple;
+	FXOnTile=sparkles;
+	FXOnTileColor=Purple;
+	FXOnTile=briefAuraSound;
+[AvAffecterAoE]
+	ID=Un_drain;
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+[AvAffecter]
+	ID=Un_drain; 
+	harmful=false;
+	actorValue=MP;
+	magnitude=c:MagAtk + c:rank + c:skill_Ruin;
+	duration=-2;
+	chance=100;
+	element=magic;
+	element=ruin;
+[AvAffecterAoE]
+	ID=Un_drain;
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+	
+	
+	
+	
+	
+[Action] ID=Un_bonemeld; 
+	name=Bonemeld;
+	icon=icon_Un_bonemeld;
+	mpCost=6 * d:mpCostMult + d:mpCostMod;
+	tooltip=When cast on bone, creates sturdy walls. When cast on undead, deals major damage.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ruin_small>;
+	
+	XPCost=190;
+	XPCost=250;
+	XPCost=350;
+	
+	casterAnimation=spellcast;
+	maxRank=3;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=casting_bonedust;
+[ActionAoE] 
+	ID=Un_bonemeld; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	minRange = 1;
+	maxRange = 2;
+	maxRangeBonus = c:rank;
+	bypassAll=true;
+	occupyAll=true;
+	canSelectActors=false;
+[AvAffecter]
+	ID=Un_bonemeld; 
+	actorValue=HP;
+	magnitude= -1 - c:MagAtk - c:skill_Ruin;
+	duration=-2;
+	chance=d:ruinAcc * 1.3;
+	element=magic;
+	element=bonemeld;
+	FXOnTile=sfx_highThwum;
+	FXOnTile=casting_bonedust;
+[AvAffecterAoE]
+	ID=Un_bonemeld;
+	cloneFrom=adjacentAndSelf;
+	needsLoE=false;
+	needsLoS=false;

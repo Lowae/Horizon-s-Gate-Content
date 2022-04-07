@@ -1,0 +1,2366 @@
+[ActorClass] name=Sailor;
+ID=sailor;
+selectableClass=true;
+icon=classIcon_sailor;
+journalID=journal_sailor;
+
+description=Tough sailor accustomed to life on the seas.;
+paletteUI=pBlue2;
+--paletteActionR=pBlue2;
+--paletteActionG=pOrange;
+--paletteActionB=pTeal;
+
+actions=Sai_heave;
+actions=Sai_rope;
+actions=Sai_swagger;
+actions=Sai_steady;
+actions=Sai_smellingSalts;
+
+supportAbilities=counterPush;
+supportAbilities=saltyDog;
+supportAbilities=seaLegs;
+
+ruinModeSupportAbility=saltyDog;
+
+relevantStats=TrueHPMax;
+relevantStats=skill_Sword;
+relevantStats=skill_Axe;
+relevantStats=skill_Hammer;
+relevantStats=skill_Spear;
+relevantStats=skill_Flail;
+relevantStats=skill_Fist;
+relevantStats=skill_Dagger;
+
+bodyPart1=armR;
+bodyPartSprite1=sailor_arm;
+bodyPart2=armL;
+bodyPartSprite2=sailor_arm;
+bodyPart3=torso;
+bodyPartSprite3=sailor_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=sailor_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=sailor_shoulder;
+
+[ActorClassEffect]  ID=sailor; actorValue=PhysAtk; magnitude=2; duration=-1;
+[ActorClassEffect]  ID=sailor; actorValue=PhysDef; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=sailor; actorValue=MagDef; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=sailor; actorValue=PhysEva; magnitude=5; duration=-1;
+[ActorClassEffect]  ID=sailor; actorValue=skill_Sword; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=sailor; actorValue=skill_Axe; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=sailor; actorValue=skill_Hammer; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=sailor; actorValue=skill_Spear; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=sailor; actorValue=skill_Flail; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=sailor; actorValue=skill_Fist; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=sailor; actorValue=skill_Dagger; magnitude=1; duration=-1;
+[JournalEntry]
+ID=journal_sailor;
+category=actorClass; halfPage=true;
+title=Sailor;
+text=<icon=classIcon_sailor><title=Sailor><brAdj=>A seafarer wise in the ways of the ocean. Has basic skills that aid in combat and survival.;
+
+
+[ActorClass] name=Brawler;
+ID=brawler;
+selectableClass=true;
+icon=classIcon_brawler;
+journalID=journal_brawler;
+
+description=Martial artist that favors unarmed combat.;
+paletteUI=pBrown;
+--paletteActionR=pRedD;
+--paletteActionG=pOrange;
+--paletteActionB=pPurple;
+
+actions=Bra_pummel;
+--actions=Bra_disorient;
+actions=Bra_knockout;
+actions=Bra_spinkick;
+actions=Bra_suckerPunch;
+--actions=Bra_throwWeapon;
+actions=Bra_grin;
+
+
+supportAbilities=thousandFists;
+supportAbilities=brawlMaster;
+supportAbilities=ironHands;
+
+ruinModeSupportAbility=thousandFists;
+
+relevantStats=TrueHPMax;
+relevantStats=skill_Fist;
+relevantStats=skill_Dagger;
+--relevantStats=moveDistance;
+
+requiredStat=warrior_XP_total;
+requiredAmt=250;
+--fReq=g:class_brawler;
+
+bodyPart1=armR;
+bodyPartSprite1=brawler_arm;
+bodyPart2=armL;
+bodyPartSprite2=brawler_arm;
+bodyPart3=torso;
+bodyPartSprite3=brawler_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=brawler_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=brawler_shoulder;
+[ActorClassEffect]  ID=brawler; actorValue=PhysAtk; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=brawler; actorValue=PhysEva; magnitude=12; duration=-1;
+[ActorClassEffect]  ID=brawler; actorValue=MagEva; magnitude=5; duration=-1;
+[ActorClassEffect]  ID=brawler; actorValue=moveDistance; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=brawler; actorValue=skill_Fist; magnitude=2; duration=-1;
+[ActorClassEffect]  ID=brawler; actorValue=skill_Dagger; magnitude=1; duration=-1;
+
+[JournalEntry]
+ID=journal_brawler;
+category=actorClass; halfPage=true; rarity=1;
+title=Brawler;
+text=<icon=classIcon_brawler><title=Brawler><brAdj=>A Brawler fights dirty and often. They specialize in fisticuffs but can improvise with other weapons as necessary.;
+
+
+[ActorClass] name=Warrior;
+ID=warrior;
+selectableClass=true;
+icon=classIcon_warrior;
+journalID=journal_warrior;
+
+description=Heavily armed warrior trained in melee combat.;
+paletteUI=pGreyD2;
+--paletteActionR=pGreyD2;
+--paletteActionG=pOrange;
+--paletteActionB=pTeal;
+
+requiredStat=sailor_XP_total;
+requiredAmt=200;
+
+actions=Wa_shove;
+actions=Wa_charge;
+--actions=Wa_smash;
+--actions=Wa_Guard;
+actions=Wa_Brave;
+actions=Wa_Bide;
+actions=Wa_battlecry;
+
+supportAbilities=counter;
+supportAbilities=valiant;
+supportAbilities=combatready;
+
+ruinModeSupportAbility=counter;
+
+relevantStats=TrueHPMax;
+relevantStats=skill_Sword;
+relevantStats=skill_Axe;
+relevantStats=skill_Hammer;
+relevantStats=skill_Spear;
+relevantStats=skill_Flail;
+relevantStats=skill_Shield;
+
+bodyPart1=armR;
+bodyPartSprite1=warrior_arm;
+bodyPart2=armL;
+bodyPartSprite2=warrior_arm;
+bodyPart3=torso;
+bodyPartSprite3=warrior_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=warrior_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=warrior_shoulder;
+
+[ActorClassEffect]  ID=warrior; actorValue=PhysAtk; magnitude=2; duration=-1;
+[ActorClassEffect]  ID=warrior; actorValue=PhysDef; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=warrior; actorValue=PhysEva; magnitude=3; duration=-1;
+[ActorClassEffect]  ID=warrior; actorValue=skill_Sword; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=warrior; actorValue=skill_Axe; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=warrior; actorValue=skill_Hammer; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=warrior; actorValue=skill_Spear; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=warrior; actorValue=skill_Flail; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=warrior; actorValue=skill_Shield; magnitude=1; duration=-1;
+[JournalEntry]
+ID=journal_warrior;
+category=actorClass; halfPage=true;
+title=Warrior;
+text=<icon=classIcon_warrior><title=Warrior><brAdj=>There's nothing more straightforward than a Warrior. With the most raw melee power of any class, Warriors excel as front-liners.;
+
+[ActorClass] name=Gladiator;
+ID=gladiator;
+selectableClass=true;
+icon=classIcon_gladiator;
+journalID=journal_gladiator;
+
+description=Rough-and-tumble fighter that is ready for anything.;
+paletteUI=pRedD;
+--paletteActionR=pBlue2;
+--paletteActionG=pOrange;
+--paletteActionB=pTeal;
+
+actions=Gla_smash;
+actions=Gla_swift;
+actions=Gla_taunt;
+actions=Gla_revenge;
+actions=Gla_throwWeapon;
+
+supportAbilities=counterThrow;
+supportAbilities=reckless;
+supportAbilities=timedHits;
+supportAbilities=weaponMaster;
+
+ruinModeSupportAbility=weaponMaster;
+
+relevantStats=TrueHPMax;
+relevantStats=skill_Sword;
+relevantStats=skill_Axe;
+relevantStats=skill_Hammer;
+relevantStats=skill_Spear;
+relevantStats=skill_Flail;
+relevantStats=skill_Fist;
+relevantStats=skill_Dagger;
+relevantStats=skill_Shield;
+
+requiredStat=warrior_XP_total;
+requiredAmt=350;
+--fReq=g:class_gladiator;
+
+bodyPart1=armR;
+bodyPartSprite1=gladiator_armR;
+bodyPart2=armL;
+bodyPartSprite2=gladiator_armL;
+bodyPart3=torso;
+bodyPartSprite3=gladiator_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=gladiator_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=gladiator_shoulder;
+
+[ActorClassEffect]  ID=gladiator; actorValue=PhysAtk; magnitude=2; duration=-1;
+[ActorClassEffect]  ID=gladiator; actorValue=PhysEva; magnitude=12; duration=-1;
+[ActorClassEffect]  ID=gladiator; actorValue=MagEva; magnitude=5; duration=-1;
+[ActorClassEffect]  ID=gladiator; actorValue=skill_Sword; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=gladiator; actorValue=skill_Axe; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=gladiator; actorValue=skill_Hammer; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=gladiator; actorValue=skill_Spear; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=gladiator; actorValue=skill_Flail; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=gladiator; actorValue=skill_Fist; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=gladiator; actorValue=skill_Dagger; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=gladiator; actorValue=skill_Shield; magnitude=1; duration=-1;
+[JournalEntry]
+ID=journal_gladiator;
+category=actorClass; halfPage=true;
+title=Gladiator;
+text=<icon=classIcon_gladiator><title=Gladiator><brAdj=>Gladiators have a simple but versatile skillset that makes them effective in almost any situation. To them, 'dirty fighting' is a compliment.;
+
+[ActorClass] name=Scourge;
+ID=scourge;
+selectableClass=true;
+icon=classIcon_scourge;
+journalID=journal_scourge;
+
+description=Vicious killer that specializes in whips & flails.;
+paletteUI=pRed2;
+
+actions=Sco_yank;
+actions=Sco_lashstorm;
+actions=Sco_soulSplit;
+actions=Sco_torment;
+actions=Sco_bolas;
+
+supportAbilities=rivalry;
+supportAbilities=whipAndTear;
+supportAbilities=overeager;
+
+ruinModeSupportAbility=rivalry;
+
+relevantStats=TrueHPMax;
+relevantStats=skill_Dagger;
+relevantStats=skill_Flail;
+relevantStats=skill_Ruin;
+
+requiredStat=gladiator_XP_total;
+requiredAmt=350;
+requiredStat=rogue_XP_total;
+requiredAmt=250;
+
+bodyPart1=armR;
+bodyPartSprite1=scourge_armL;
+bodyPart2=armL;
+bodyPartSprite2=scourge_armR;
+bodyPart3=torso;
+bodyPartSprite3=scourge_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=scourge_shoulderL;
+bodyPart5=shoulderL;
+bodyPartSprite5=scourge_shoulderR;
+[ActorClassEffect]  ID=scourge; actorValue=PhysEva; magnitude=15; duration=-1;
+[ActorClassEffect]  ID=scourge; actorValue=MagEva; magnitude=5; duration=-1;
+[ActorClassEffect]  ID=scourge; actorValue=moveDistance; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=scourge; actorValue=skill_Dagger; magnitude=2; duration=-1;
+[ActorClassEffect]  ID=scourge; actorValue=skill_Flail; magnitude=2; duration=-1;
+[ActorClassEffect]  ID=scourge; actorValue=skill_Ruin; magnitude=1; duration=-1;
+
+[JournalEntry]
+ID=journal_scourge;
+category=actorClass; halfPage=true; rarity=2;
+title=Scourge;
+text=<icon=classIcon_scourge><title=Scourge><brAdj=>Torments enemies by whipping them to shreds. Provides a strong mix of power, reach, and debilitating effects.;
+
+
+
+[ActorClass] name=Rogue;
+ID=rogue;
+selectableClass=true;
+icon=classIcon_rogue;
+journalID=journal_rogue;
+
+description=Sneakthief with dirty tricks up each sleeve.;
+paletteUI=pYellow;
+--paletteActionR=pOrange;
+--paletteActionG=pYellow;
+--paletteActionB=pGreen;
+
+actions=Ro_poisonTip;
+actions=Ro_gouge;
+--actions=Ro_mug;
+actions=Ro_distract;
+actions=Ro_dash;
+actions=Ro_hide;
+--actions=Ro_setTrap;
+
+supportAbilities=backstab;
+supportAbilities=autoHide;
+supportAbilities=stealthsense;
+
+ruinModeSupportAbility=backstab;
+
+relevantStats=TrueHPMax;
+relevantStats=skill_Fist;
+relevantStats=skill_Dagger;
+relevantStats=skill_Bow;
+relevantStats=skill_Aim;
+--relevantStats=moveDistance;
+relevantStats=jumpDistance;
+
+requiredStat=scout_XP_total;
+requiredAmt=250;
+--fReq=g:class_rogue;
+
+bodyPart1=armR;
+bodyPartSprite1=rogue_arm;
+bodyPart2=armL;
+bodyPartSprite2=rogue_arm;
+bodyPart3=torso;
+bodyPartSprite3=rogue_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=rogue_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=rogue_shoulder;
+[ActorClassEffect]  ID=rogue; actorValue=PhysEva; magnitude=25; duration=-1;
+[ActorClassEffect]  ID=rogue; actorValue=MagEva; magnitude=15; duration=-1;
+[ActorClassEffect]  ID=rogue; actorValue=moveDistance; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=rogue; actorValue=jumpDistance; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=rogue; actorValue=skill_Fist; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=rogue; actorValue=skill_Dagger; magnitude=2; duration=-1;
+[ActorClassEffect]  ID=rogue; actorValue=skill_Bow; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=rogue; actorValue=skill_Aim; magnitude=1; duration=-1;
+[JournalEntry]
+ID=journal_rogue;
+category=actorClass; halfPage=true; rarity=1;
+title=Rogue;
+text=<icon=classIcon_rogue><title=Rogue><brAdj=>Evasive and tricky. Rogues use their weapons to debilitate rather than just dealing damage. As a result they prefer accurate weaponry.;
+
+[ActorClass] name=Scout;
+ID=scout;
+selectableClass=true;
+icon=classIcon_scout;
+journalID=journal_scout;
+
+description=Agile explorer with a basic but versatile skillset.;
+paletteUI=pGreen;
+--paletteActionR=pGreen;
+--paletteActionG=pOrange;
+--paletteActionB=pRed;
+
+requiredStat=sailor_XP_total;
+requiredAmt=200;
+
+actions=Sc_firestarter;
+--actions=Sc_swift;
+actions=Sc_trip;
+--actions=Sc_spot;
+actions=Sc_throwStone;
+actions=Sc_firstAid;
+actions=Sc_sidestep;
+
+supportAbilities=medic;
+supportAbilities=quickHands;
+supportAbilities=criticalSpeed;
+
+ruinModeSupportAbility=criticalSpeed;
+
+relevantStats=TrueHPMax;
+relevantStats=skill_Dagger;
+relevantStats=skill_Spear;
+relevantStats=skill_Flail;
+relevantStats=skill_Shield;
+relevantStats=skill_Bow;
+relevantStats=skill_Aim;
+
+
+bodyPart1=armR;
+bodyPartSprite1=scout_arm;
+bodyPart2=armL;
+bodyPartSprite2=scout_arm;
+bodyPart3=torso;
+bodyPartSprite3=scout_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=scout_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=scout_shoulder;
+[ActorClassEffect]  ID=scout; actorValue=PhysAtk; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=scout; actorValue=PhysEva; magnitude=15; duration=-1;
+[ActorClassEffect]  ID=scout; actorValue=moveDistance; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=scout; actorValue=skill_Dagger; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=scout; actorValue=skill_Spear; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=scout; actorValue=skill_Flail; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=scout; actorValue=skill_Bow; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=scout; actorValue=skill_Aim; magnitude=1; duration=-1;
+
+[JournalEntry]
+ID=journal_scout;
+category=actorClass; halfPage=true;
+title=Scout;
+text=<icon=classIcon_scout><title=Scout><brAdj=>Any good explorer has spent time as a Scout. Their solid melee & ranged fighting skills complement their flexible set of abilities.;
+
+
+[ActorClass] name=Sharpshooter;
+ID=ranger;
+selectableClass=true;
+icon=classIcon_ranger;
+journalID=journal_ranger;
+
+description=Ranged combat expert.;
+paletteUI=pOrange;
+--paletteActionR=pBrown;
+--paletteActionG=pYellow;
+--paletteActionB=pRed;
+
+actions=Sha_contactShot;
+--actions=Sha_headshot;
+actions=Sha_farshot;
+actions=Sha_multishot;
+actions=Sha_powerShot;
+--actions=Sha_chargeShot;
+actions=Sha_focus;
+
+supportAbilities=counterShot;
+supportAbilities=ricochet;
+supportAbilities=sniper;
+supportAbilities=artillery;
+
+ruinModeSupportAbility=counterShot;
+
+--relevantStats=TrueHPMax;
+relevantStats=skill_Bow;
+relevantStats=skill_Aim;
+relevantStats=jumpDistance;
+--relevantStats=moveDistance;
+
+requiredStat=scout_XP_total;
+requiredAmt=350;
+--fReq=g:class_sharpshooter;
+
+bodyPart1=armR;
+bodyPartSprite1=ranger_armL;
+bodyPart2=armL;
+bodyPartSprite2=ranger_armR;
+bodyPart3=torso;
+bodyPartSprite3=ranger_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=ranger_shoulderL;
+bodyPart5=shoulderL;
+bodyPartSprite5=ranger_shoulderR;
+[ActorClassEffect]  ID=ranger; actorValue=PhysEva; magnitude=15; duration=-1;
+[ActorClassEffect]  ID=ranger; actorValue=MagEva; magnitude=10; duration=-1;
+[ActorClassEffect]  ID=ranger; actorValue=skill_Bow; magnitude=2; duration=-1;
+[ActorClassEffect]  ID=ranger; actorValue=skill_Aim; magnitude=2; duration=-1;
+
+[JournalEntry]
+ID=journal_ranger;
+category=actorClass; halfPage=true; rarity=1;
+title=Sharpshooter;
+text=<icon=classIcon_ranger><title=Sharpshooter><brAdj=>Long-ranged damage dealer. Sharpshooters bring power to ranged weaponry. Almost nowhere on the battlefield is safe from their reach.;
+[ActorClass] name=Ranger;
+ID=ranger2;
+selectableClass=true;
+icon=classIcon_ranger2;
+journalID=journal_ranger2;
+
+description=Protector that fights & heals from a distance.;
+paletteUI=pGreen;
+
+actions=Ran_doubleTap;
+actions=Ran_applySalve;
+actions=Ran_applyToxin;
+actions=Ran_applyBarbs;
+actions=Ran_smokeBalm;
+
+supportAbilities=teamPlayer;
+supportAbilities=overgrowth;
+supportAbilities=instantAid;
+
+ruinModeSupportAbility=overgrowth;
+
+relevantStats=TrueMPMax;
+relevantStats=skill_Spear;
+relevantStats=skill_Bow;
+relevantStats=skill_Aim;
+relevantStats=skill_Life;
+
+requiredStat=ranger_XP_total;
+requiredAmt=350;
+requiredStat=sage_XP_total;
+requiredAmt=250;
+
+bodyPart1=armR;
+bodyPartSprite1=ranger2_armL;
+bodyPart2=armL;
+bodyPartSprite2=ranger2_armR;
+bodyPart3=torso;
+bodyPartSprite3=ranger2_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=ranger2_shoulderL;
+bodyPart5=shoulderL;
+bodyPartSprite5=ranger2_shoulderR;
+[ActorClassEffect]  ID=ranger2; actorValue=PhysEva; magnitude=10; duration=-1;
+[ActorClassEffect]  ID=ranger2; actorValue=MagEva; magnitude=8; duration=-1;
+[ActorClassEffect]  ID=ranger2; actorValue=skill_Spear; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=ranger2; actorValue=skill_Bow; magnitude=2; duration=-1;
+[ActorClassEffect]  ID=ranger2; actorValue=skill_Aim; magnitude=2; duration=-1;
+[ActorClassEffect]  ID=ranger2; actorValue=skill_Life; magnitude=2; duration=-1;
+
+[JournalEntry]
+ID=journal_ranger2;
+category=actorClass; halfPage=true; rarity=2;
+title=Ranger;
+text=<icon=classIcon_ranger2><title=Ranger><brAdj=>By mastering life magic, Rangers can grow a variety of helpful plants and unguents to improve their combat and healing prowess. Projectile weaponry allows them to deliver these potent creations from a safe distance.;
+
+
+[ActorClass] name=Sage;
+ID=sage;
+selectableClass=true;
+icon=classIcon_sage;
+journalID=journal_sage;
+
+description=Preservation mage - excels at healing and revival.;
+paletteUI=pBlueD;
+--paletteActionR=pBluegreen;
+--paletteActionG=pRed;
+--paletteActionB=pTeal;
+
+actions=Sa_heal;
+actions=Sa_growth;
+actions=Sa_cure;
+--actions=Sa_ward;
+--actions=Sa_barrier;
+actions=Sa_revive;
+actions=Sa_dispel;
+
+supportAbilities=greenTouch;
+supportAbilities=pureMind;
+supportAbilities=criticalRecovery;
+
+ruinModeSupportAbility=criticalRecovery;
+
+relevantStats=TrueMPMax;
+relevantStats=skill_Hammer;
+relevantStats=skill_Life;
+--relevantStats=moveDistance;
+
+requiredStat=scholar_XP_total;
+requiredAmt=250;
+--fReq=g:class_sage;
+
+bodyPart1=armR;
+bodyPartSprite1=sage_arm;
+bodyPart2=armL;
+bodyPartSprite2=sage_arm;
+bodyPart3=torso;
+bodyPartSprite3=sage_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=sage_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=sage_shoulder;
+[ActorClassEffect]  ID=sage; actorValue=MagAtk; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=sage; actorValue=MagDef; magnitude=2; duration=-1;
+[ActorClassEffect]  ID=sage; actorValue=MagEva; magnitude=12; duration=-1;
+[ActorClassEffect]  ID=sage; actorValue=skill_Hammer; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=sage; actorValue=skill_Life; magnitude=2; duration=-1;
+
+[JournalEntry]
+ID=journal_sage;
+category=actorClass; halfPage=true; rarity=1;
+title=Sage;
+text=<icon=classIcon_sage><title=Sage><brAdj=>User of Life magic, provider of healing and support. Sages can keep a group fighting through almost any injury.;
+
+[ActorClass] name=Scholar;
+ID=scholar;
+selectableClass=true;
+icon=classIcon_scholar;
+journalID=journal_scholar;
+
+description=Apprentice to all forms of magic.;
+paletteUI=pTeal;
+--paletteActionR=pTeal2;
+--paletteActionG=pOrange;
+--paletteActionB=pBlue;
+
+requiredStat=sailor_XP_total;
+requiredAmt=200;
+
+--actions=Sch_study;
+actions=Sch_flame;
+actions=Sch_zap;
+actions=Sch_frost;
+actions=Sch_gust;
+--actions=Sch_focusEnergy;
+actions=Sch_prayer;
+
+supportAbilities=teacher;
+supportAbilities=elementary;
+supportAbilities=meditative;
+
+ruinModeSupportAbility=meditative;
+
+relevantStats=TrueMPMax;
+relevantStats=skill_Fire;
+relevantStats=skill_Ice;
+relevantStats=skill_Elec;
+relevantStats=skill_Wind;
+relevantStats=skill_Life;
+
+bodyPart1=armR;
+bodyPartSprite1=scholar_arm;
+bodyPart2=armL;
+bodyPartSprite2=scholar_arm;
+bodyPart3=torso;
+bodyPartSprite3=scholar_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=scholar_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=scholar_shoulder;
+[ActorClassEffect]  ID=scholar; actorValue=MagAtk; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=scholar; actorValue=MagDef; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=scholar; actorValue=MagEva; magnitude=5; duration=-1;
+[ActorClassEffect]  ID=scholar; actorValue=skill_Fire; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=scholar; actorValue=skill_Ice; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=scholar; actorValue=skill_Elec; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=scholar; actorValue=skill_Wind; magnitude=1; duration=-1;
+
+[JournalEntry]
+ID=journal_scholar;
+category=actorClass; halfPage=true;
+title=Scholar;
+text=<icon=classIcon_scholar><title=Scholar><brAdj=>All mages begin as Scholars. Scholarly magic has unique advantages- their spells are very quick, and are diverse enough to fit any situation.;
+
+
+[ActorClass] name=Sorcerer;
+ID=sorcerer;
+selectableClass=true;
+icon=classIcon_sorcerer;
+journalID=journal_sorcerer;
+
+description=Magical powerhouse with devastating elemental spells.;
+paletteUI=pOrange;
+--paletteActionR=pRed;
+--paletteActionG=pYellow;
+--paletteActionB=pBlue;
+
+actions=So_inferno;
+actions=So_lightning;
+actions=So_blizzard;
+actions=So_cyclone;
+--actions=So_fireWhirl;
+actions=So_shockBolts;
+--actions=So_freeze;
+
+supportAbilities=fireAdept;
+supportAbilities=iceAdept;
+supportAbilities=elecAdept;
+supportAbilities=windAdept;
+supportAbilities=criticalFocus;
+
+ruinModeSupportAbility=criticalFocus;
+
+relevantStats=TrueMPMax;
+relevantStats=skill_Fire;
+relevantStats=skill_Ice;
+relevantStats=skill_Elec;
+relevantStats=skill_Wind;
+
+requiredStat=scholar_XP_total;
+requiredAmt=350;
+--fReq=g:class_sorcerer;
+
+bodyPart1=armR;
+bodyPartSprite1=sorcerer_arm;
+bodyPart2=armL;
+bodyPartSprite2=sorcerer_arm;
+bodyPart3=torso;
+bodyPartSprite3=sorcerer_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=sorcerer_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=sorcerer_shoulder;
+[ActorClassEffect]  ID=sorcerer; actorValue=MagAtk; magnitude=2; duration=-1;
+[ActorClassEffect]  ID=sorcerer; actorValue=MagEva; magnitude=8; duration=-1;
+[ActorClassEffect]  ID=sorcerer; actorValue=skill_Fire; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=sorcerer; actorValue=skill_Ice; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=sorcerer; actorValue=skill_Elec; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=sorcerer; actorValue=skill_Wind; magnitude=1; duration=-1;
+
+[JournalEntry]
+ID=journal_sorcerer;
+category=actorClass; halfPage=true; rarity=1;
+title=Sorcerer;
+text=<icon=classIcon_sorcerer><title=Sorcerer><brAdj=>Sorcery is the preferred magic of battlemages, both in skirmishes and open warfare. Devastates tight enemy formations.;
+
+
+
+[ActorClass] name=Berserker;
+ID=berserker;
+selectableClass=true;
+icon=classIcon_berserker;
+journalID=journal_berserker;
+
+description=Reckless and brutal bruiser.;
+paletteUI=pRedbrown;
+--paletteActionR=pRedbrown;
+--paletteActionG=pRed;
+--paletteActionB=pPurple;
+
+actions=Ber_frenzy;
+actions=Ber_rage;
+actions=Ber_scream;
+actions=Ber_terrorize;
+actions=Ber_scatter;
+--actions=Ber_revenge;
+--actions=Ber_taunt;
+
+
+supportAbilities=counterFrenzy;
+supportAbilities=vicious;
+supportAbilities=imposing;
+
+ruinModeSupportAbility=counterFrenzy;
+
+relevantStats=TrueHPMax;
+relevantStats=skill_Sword;
+relevantStats=skill_Axe;
+relevantStats=skill_Hammer;
+relevantStats=skill_Spear;
+relevantStats=skill_Flail;
+relevantStats=skill_Fist;
+
+requiredStat=brawler_XP_total;
+requiredAmt=300;
+fReq=g:class_berserker;
+
+bodyPart1=armR;
+bodyPartSprite1=berserker_arm;
+bodyPart2=armL;
+bodyPartSprite2=berserker_arm;
+bodyPart3=torso;
+bodyPartSprite3=berserker_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=berserker_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=berserker_shoulder;
+[ActorClassEffect]  ID=berserker; actorValue=PhysAtk; magnitude=2; duration=-1;
+[ActorClassEffect]  ID=berserker; actorValue=PhysEva; magnitude=15; duration=-1;
+[ActorClassEffect]  ID=berserker; actorValue=MagEva; magnitude=3; duration=-1;
+[ActorClassEffect]  ID=berserker; actorValue=skill_Sword; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=berserker; actorValue=skill_Axe; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=berserker; actorValue=skill_Hammer; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=berserker; actorValue=skill_Spear; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=berserker; actorValue=skill_Flail; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=berserker; actorValue=skill_Dagger; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=berserker; actorValue=skill_Fist; magnitude=1; duration=-1;
+[JournalEntry]
+ID=journal_berserker;
+category=actorClass; halfPage=true; rarity=1;
+title=Berserker;
+text=<icon=classIcon_berserker><title=Berserker><brAdj=>Berserkers are aggression defined. By attacking the most foes possible as viciously as possible, they keep all attention on themselves.;
+
+
+[ActorClass] name=Tactician;
+ID=tactician;
+selectableClass=true;
+icon=classIcon_tactician;
+journalID=journal_tactician;
+
+description=Strategist that commands the flow of battle.;
+paletteUI=pBlueD;
+
+actions=Tac_command;
+actions=Tac_hold;
+actions=Tac_advance;
+actions=Tac_withdraw;
+actions=Tac_masterstroke;
+
+supportAbilities=commandingAura;
+supportAbilities=rushGambit;
+supportAbilities=defenseGambit;
+supportAbilities=pensive;
+
+ruinModeSupportAbility=commandingAura;
+
+relevantStats=TrueMPMax;
+relevantStats=skill_Sword;
+relevantStats=skill_Axe;
+relevantStats=skill_Hammer;
+relevantStats=skill_Spear;
+relevantStats=skill_Flail;
+relevantStats=skill_Dagger;
+
+requiredStat=brawler_XP_total;
+requiredAmt=250;
+requiredStat=gladiator_XP_total;
+requiredAmt=350;
+fReq=g:class_tactician;
+
+bodyPart1=armR;
+bodyPartSprite1=tactician_arm;
+bodyPart2=armL;
+bodyPartSprite2=tactician_arm;
+bodyPart3=torso;
+bodyPartSprite3=tactician_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=tactician_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=tactician_shoulder;
+[ActorClassEffect]  ID=tactician; actorValue=MagAtk; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=tactician; actorValue=MagDef; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=tactician; actorValue=PhysEva; magnitude=5; duration=-1;
+[ActorClassEffect]  ID=tactician; actorValue=MagEva; magnitude=15; duration=-1;
+[ActorClassEffect]  ID=tactician; actorValue=skill_Sword; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=tactician; actorValue=skill_Axe; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=tactician; actorValue=skill_Hammer; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=tactician; actorValue=skill_Spear; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=tactician; actorValue=skill_Flail; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=tactician; actorValue=skill_Dagger; magnitude=1; duration=-1;
+[JournalEntry]
+ID=journal_tactician;
+category=actorClass; halfPage=true; rarity=1;
+title=Tactician;
+text=<icon=classIcon_tactician><title=Tactician><brAdj=>Mastermind of organized conflict. Gives orders to allies and greatly improves their efficiency.;
+
+[ActorClass] name=Guardian;
+ID=guardian;
+selectableClass=true;
+icon=classIcon_guardian;
+journalID=journal_guardian;
+
+description=Defensive juggernaut and protector of allies.;
+paletteUI=pBlue;
+--paletteActionR=pBlueD;
+--paletteActionG=pOrange;
+--paletteActionB=pTeal;
+
+actions=Gu_mightyBlock;
+--actions=Gu_holdTheLine;
+actions=Gu_impair;
+--actions=Gu_wideGuard;
+actions=Gu_discipline;
+actions=Gu_rally;
+actions=Gu_resuscitate;
+
+supportAbilities=shieldBash;
+supportAbilities=blockade;
+supportAbilities=defensive;
+supportAbilities=bulwark;
+
+ruinModeSupportAbility=defensive;
+
+relevantStats=TrueHPMax;
+relevantStats=skill_Sword;
+relevantStats=skill_Axe;
+relevantStats=skill_Hammer;
+relevantStats=skill_Spear;
+relevantStats=skill_Flail;
+relevantStats=skill_Shield;
+
+requiredStat=gladiator_XP_total;
+requiredAmt=300;
+fReq=g:class_guardian;
+
+bodyPart1=armR;
+bodyPartSprite1=knight_arm;
+bodyPart2=armL;
+bodyPartSprite2=knight_arm;
+bodyPart3=torso;
+bodyPartSprite3=guardian_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=guardian_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=guardian_shoulder;
+[ActorClassEffect]  ID=guardian; actorValue=PhysAtk; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=guardian; actorValue=PhysDef; magnitude=2; duration=-1;
+[ActorClassEffect]  ID=guardian; actorValue=MagDef; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=guardian; actorValue=skill_Sword; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=guardian; actorValue=skill_Spear; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=guardian; actorValue=skill_Axe; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=guardian; actorValue=skill_Hammer; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=guardian; actorValue=skill_Flail; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=guardian; actorValue=skill_Shield; magnitude=2; duration=-1;
+[JournalEntry]
+ID=journal_guardian;
+category=actorClass; halfPage=true; rarity=1;
+title=Guardian;
+text=<icon=classIcon_guardian><title=Guardian><brAdj=>Guardians are the toughest soldiers there are. They can defend against virtually anything while strengthening their allies.;
+
+
+[ActorClass] name=;
+ID=dummy6;
+selectableClass=true;
+
+
+
+[ActorClass] name=Bombardier;
+ID=bombardier;
+selectableClass=true;
+icon=classIcon_bombardier;
+journalID=journal_bombardier;
+
+description=Covers the battlefield with remote bombs.;
+paletteUI=pGreyD2;
+--paletteActionR=pGreyD;
+--paletteActionG=pRed;
+--paletteActionB=pBlue;
+
+actions=Bom_activate;
+actions=Bom_throwFlare;
+actions=Bom_throwPulse;
+actions=Bom_throwFrost;
+actions=Bom_throwHeal;
+
+
+supportAbilities=toolTalent;
+supportAbilities=activeArms;
+supportAbilities=mechMastery;
+
+ruinModeSupportAbility=toolTalent;
+
+relevantStats=TrueMPMax;
+relevantStats=skill_Dagger;
+relevantStats=skill_Aim;
+relevantStats=skill_Fire;
+relevantStats=skill_Ice;
+relevantStats=skill_Elec;
+relevantStats=skill_Wind;
+relevantStats=skill_Life;
+
+requiredStat=rogue_XP_total;
+requiredAmt=350;
+fReq=g:class_bombardier;
+
+bodyPart1=armR;
+bodyPartSprite1=bombardier_arm;
+bodyPart2=armL;
+bodyPartSprite2=bombardier_arm;
+bodyPart3=torso;
+bodyPartSprite3=bombardier_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=bombardier_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=bombardier_shoulder;
+[ActorClassEffect]  ID=bombardier; actorValue=PhysDef; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=bombardier; actorValue=MagDef; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=bombardier; actorValue=PhysEva; magnitude=5; duration=-1;
+[ActorClassEffect]  ID=bombardier; actorValue=MagEva; magnitude=3; duration=-1;
+[ActorClassEffect]  ID=bombardier; actorValue=skill_Dagger; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=bombardier; actorValue=skill_Aim; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=bombardier; actorValue=skill_Fire; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=bombardier; actorValue=skill_Ice; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=bombardier; actorValue=skill_Elec; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=bombardier; actorValue=skill_Wind; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=bombardier; actorValue=skill_Life; magnitude=1; duration=-1;
+[JournalEntry]
+ID=journal_bombardier;
+category=actorClass; halfPage=true; rarity=1;
+title=Bombardier;
+text=<icon=classIcon_bombardier><title=Bombardier><brAdj=>Hurls bombs and then detonates them later. Requires a long setup, but for a big payoff.;
+
+[ActorClass] name=Swashbuckler;
+ID=swashbuckler;
+selectableClass=true;
+icon=classIcon_swashbuckler;
+journalID=journal_swashbuckler;
+
+description=Highly mobile fighter that weaves in and out of melee.;
+paletteUI=pGreen;
+
+actions=Swa_boltBalestra;
+actions=Swa_sweepStrikes;
+actions=Swa_pincerAttack;
+actions=Swa_maneuver;
+actions=Swa_mug;
+
+supportAbilities=swiftness;
+supportAbilities=manOfWar;
+supportAbilities=heavyBandolier;
+
+ruinModeSupportAbility=swiftness;
+
+relevantStats=TrueHPMax;
+relevantStats=skill_Fist;
+relevantStats=skill_Dagger;
+relevantStats=skill_Sword;
+relevantStats=skill_Bow;
+relevantStats=skill_Aim;
+relevantStats=jumpDistance;
+
+requiredStat=rogue_XP_total;
+requiredAmt=350;
+requiredStat=ranger_XP_total;
+requiredAmt=250;
+fReq=g:class_swashbuckler;
+
+bodyPart1=armR;
+bodyPartSprite1=swashbuckler_arm;
+bodyPart2=armL;
+bodyPartSprite2=swashbuckler_arm;
+bodyPart3=torso;
+bodyPartSprite3=swashbuckler_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=swashbuckler_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=swashbuckler_shoulder;
+[ActorClassEffect]  ID=swashbuckler; actorValue=PhysAtk; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=swashbuckler; actorValue=PhysEva; magnitude=15; duration=-1;
+[ActorClassEffect]  ID=swashbuckler; actorValue=MagEva; magnitude=8; duration=-1;
+[ActorClassEffect]  ID=swashbuckler; actorValue=moveDistance; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=swashbuckler; actorValue=skill_Fist; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=swashbuckler; actorValue=skill_Dagger; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=swashbuckler; actorValue=skill_Sword; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=swashbuckler; actorValue=skill_Bow; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=swashbuckler; actorValue=skill_Aim; magnitude=1; duration=-1;
+[JournalEntry]
+ID=journal_swashbuckler;
+category=actorClass; halfPage=true; rarity=0;
+title=Swashbuckler;
+text=<icon=classIcon_swashbuckler><title=Swashbuckler><brAdj=>A debonair dilettante that gracefully combines melee and ranged weaponry. Excels in mobility and teamwork.
+
+
+[ActorClass] name=Stormshot;
+ID=stormshot;
+selectableClass=true;
+icon=classIcon_stormshot;
+journalID=journal_stormshot;
+
+description=Empowers and guides shots with wind magic.;
+paletteUI=pRedD;
+
+actions=Sto_blastShot;
+actions=Sto_multiblast;
+actions=Sto_scatterburst;
+actions=Sto_splitShot;
+actions=Sto_disruptionShot;
+
+supportAbilities=suppressiveFire;
+supportAbilities=spiralCurrent;
+supportAbilities=projectileMastery;
+
+ruinModeSupportAbility=projectileMastery;
+
+relevantStats=TrueMPMax;
+relevantStats=skill_Bow;
+relevantStats=skill_Aim;
+relevantStats=skill_Wind;
+
+requiredStat=ranger_XP_total;
+requiredAmt=500;
+fReq=g:class_stormshot;
+
+bodyPart1=armR;
+bodyPartSprite1=stormshot_armR;
+bodyPart2=armL;
+bodyPartSprite2=stormshot_armL;
+bodyPart3=torso;
+bodyPartSprite3=stormshot_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=stormshot_shoulderR;
+bodyPart5=shoulderL;
+bodyPartSprite5=stormshot_shoulderL;
+[ActorClassEffect]  ID=stormshot; actorValue=PhysEva; magnitude=8; duration=-1;
+[ActorClassEffect]  ID=stormshot; actorValue=MagEva; magnitude=12; duration=-1;
+[ActorClassEffect]  ID=stormshot; actorValue=skill_Bow; magnitude=2; duration=-1;
+[ActorClassEffect]  ID=stormshot; actorValue=skill_Aim; magnitude=2; duration=-1;
+[ActorClassEffect]  ID=stormshot; actorValue=skill_Wind; magnitude=1; duration=-1;
+
+[JournalEntry]
+ID=journal_stormshot;
+category=actorClass; halfPage=true; rarity=1;
+title=Stormshot;
+text=<icon=classIcon_stormshot><title=Stormshot><brAdj=>Blasts the battlefield with devastating wind-empowered shots. Has many tricks up their sleeve to hit the most enemies possible in any situation.;
+
+
+[ActorClass] name=;
+ID=dummy7;
+selectableClass=true;
+
+[ActorClass] name=Warden;
+ID=warden;
+selectableClass=true;
+icon=classIcon_warden;
+journalID=journal_warden;
+
+description=Defensive caster that shields allies.;
+paletteUI=pBlueD;
+--paletteActionR=pBluegreen;
+--paletteActionG=pRed;
+--paletteActionB=pTeal;
+
+actions=Wrd_aegis;
+actions=Wrd_negate;
+actions=Wrd_guard;
+actions=Wrd_ward;
+actions=Wrd_barrier;
+
+supportAbilities=lastingShelter;
+supportAbilities=autoAegis;
+supportAbilities=enduringNegate;
+
+ruinModeSupportAbility=lastingShelter;
+
+relevantStats=TrueHPMax;
+relevantStats=TrueMPMax;
+relevantStats=skill_Shield;
+relevantStats=skill_Life;
+--relevantStats=moveDistance;
+
+requiredStat=sage_XP_total;
+requiredAmt=350;
+fReq=g:class_warden;
+
+bodyPart1=armR;
+bodyPartSprite1=warden_arm;
+bodyPart2=armL;
+bodyPartSprite2=warden_arm;
+bodyPart3=torso;
+bodyPartSprite3=warden_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=warden_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=warden_shoulder;
+[ActorClassEffect]  ID=warden; actorValue=PhysDef; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=warden; actorValue=MagDef; magnitude=2; duration=-1;
+[ActorClassEffect]  ID=warden; actorValue=MagEva; magnitude=12; duration=-1;
+[ActorClassEffect]  ID=warden; actorValue=skill_Shield; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=warden; actorValue=skill_Life; magnitude=2; duration=-1;
+
+[JournalEntry]
+ID=journal_warden;
+category=actorClass; halfPage=true; rarity=1;
+title=Warden;
+text=<icon=classIcon_warden><title=Warden><brAdj=>Protector-mages named after Seartial's elite riot control troops. Wardens are respected and feared for their efficacy in extended conflict.;
+
+
+[ActorClass] name=Elementalist;
+ID=elementalist;
+selectableClass=true;
+icon=classIcon_elementalist;
+journalID=journal_elementalist;
+
+description=Artisan of the elements.;
+paletteUI=pRedD;
+
+actions=Ele_condensate;
+actions=Ele_windslash;
+actions=Ele_shock;
+actions=Ele_freeze;
+actions=Ele_fireWhirl;
+
+supportAbilities=elementwalker;
+supportAbilities=stoneSavant;
+supportAbilities=zeal;
+supportAbilities=elementMaster;
+
+ruinModeSupportAbility=zeal;
+
+relevantStats=TrueMPMax;
+relevantStats=skill_Fire;
+relevantStats=skill_Ice;
+relevantStats=skill_Elec;
+relevantStats=skill_Wind;
+
+requiredStat=sage_XP_total;
+requiredAmt=250;
+requiredStat=sorcerer_XP_total;
+requiredAmt=350;
+fReq=g:class_elementalist;
+
+bodyPart1=armR;
+bodyPartSprite1=elementalist_arm;
+bodyPart2=armL;
+bodyPartSprite2=elementalist_arm;
+bodyPart3=torso;
+bodyPartSprite3=elementalist_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=elementalist_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=elementalist_shoulder;
+[ActorClassEffect]  ID=elementalist; actorValue=MagAtk; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=elementalist; actorValue=MagDef; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=elementalist; actorValue=MagEva; magnitude=5; duration=-1;
+[ActorClassEffect]  ID=elementalist; actorValue=skill_Fire; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=elementalist; actorValue=skill_Ice; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=elementalist; actorValue=skill_Elec; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=elementalist; actorValue=skill_Wind; magnitude=1; duration=-1;
+
+[JournalEntry]
+ID=journal_elementalist;
+category=actorClass; halfPage=true; rarity=1;
+title=Elementalist;
+text=<icon=classIcon_elementalist><title=Elementalist><brAdj=>Bearer of complex magic techniques created by devotees of the Elementalist religion. Now non-believers and believers alike wield these spells for their remarkable effectiveness.;
+
+
+[ActorClass] name=Unmaker;
+ID=unmaker;
+selectableClass=true;
+icon=classIcon_unmaker;
+journalID=journal_unmaker;
+
+description=Debilitates and destroys enemies with Ruin magic.;
+paletteUI=pGreyD2;
+--paletteActionR=pPurple;
+--paletteActionG=pGreen;
+--paletteActionB=pBlue;
+
+actions=Un_ruinTouch;
+actions=Un_decay;
+actions=Un_wither;
+actions=Un_shroud;
+actions=Un_drain;
+--actions=Un_soulburn;
+--actions=Un_despair;
+
+supportAbilities=absorbMagic;
+supportAbilities=necromancy;
+supportAbilities=ruinAura;
+
+ruinModeSupportAbility=ruinAura;
+
+relevantStats=TrueHPMax;
+relevantStats=TrueMPMax;
+relevantStats=skill_Dagger;
+relevantStats=skill_Ruin;
+
+requiredStat=sorcerer_XP_total;
+requiredAmt=500;
+fReq=g:class_unmaker;
+
+bodyPart1=armR;
+bodyPartSprite1=unmaker_arm;
+bodyPart2=armL;
+bodyPartSprite2=unmaker_arm;
+bodyPart3=torso;
+bodyPartSprite3=unmaker_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=unmaker_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=unmaker_shoulder;
+[ActorClassEffect]  ID=unmaker; actorValue=MagAtk; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=unmaker; actorValue=MagEva; magnitude=10; duration=-1;
+[ActorClassEffect]  ID=unmaker; actorValue=skill_Dagger; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=unmaker; actorValue=skill_Ruin; magnitude=2; duration=-1;
+
+
+[JournalEntry]
+ID=journal_unmaker;
+category=actorClass; halfPage=true; rarity=1;
+title=Unmaker;
+text=<icon=classIcon_unmaker><title=Unmaker><brAdj=>Ruin mage that eschews necromancy for a nobler goal: totally obliterating enemies. Devastating to anyone within their reach.;
+
+
+[ActorClass] name=Breaker;
+ID=breaker;
+selectableClass=true;
+icon=classIcon_breaker;
+journalID=journal_breaker;
+
+description=Master of blunt weapons. Smashes equipment and body.;
+paletteUI=pBrown;
+--paletteActionR=pRedbrown;
+--paletteActionG=pRed;
+--paletteActionB=pOrange;
+
+actions=Br_breakWeapon;
+actions=Br_breakArmor;
+actions=Br_breakArms;
+actions=Br_breakLegs;
+actions=Br_shatter;
+--actions=Br_breakOut;
+--actions=Br_quake;
+
+supportAbilities=counterBreak;
+supportAbilities=stunningBlow;
+supportAbilities=brittleStone;
+
+ruinModeSupportAbility=stunningBlow;
+
+relevantStats=TrueHPMax;
+relevantStats=skill_Hammer;
+relevantStats=skill_Flail;
+relevantStats=skill_Fist;
+relevantStats=skill_Shield;
+
+requiredStat=warrior_XP_total;
+requiredAmt=400;
+requiredStat=berserker_XP_total;
+requiredAmt=250;
+fReq=g:class_breaker;
+
+bodyPart1=armR;
+bodyPartSprite1=breaker_arm;
+bodyPart2=armL;
+bodyPartSprite2=breaker_arm;
+bodyPart3=torso;
+bodyPartSprite3=breaker_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=breaker_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=breaker_shoulder;
+[ActorClassEffect]  ID=breaker; actorValue=PhysAtk; magnitude=2; duration=-1;
+[ActorClassEffect]  ID=breaker; actorValue=PhysDef; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=breaker; actorValue=PhysEva; magnitude=5; duration=-1;
+[ActorClassEffect]  ID=breaker; actorValue=skill_Hammer; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=breaker; actorValue=skill_Flail; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=breaker; actorValue=skill_Fist; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=breaker; actorValue=skill_Shield; magnitude=1; duration=-1;
+
+[JournalEntry]
+ID=journal_breaker;
+category=actorClass; halfPage=true; rarity=1;
+title=Breaker;
+text=<icon=classIcon_breaker><title=Breaker><brAdj=>Can only use blunt weapons. Systematically destroys an enemy like the rhythmic pounding of a hammer. Any blunt weapon - hammers, flails, fists, shields - works for their abilities.;
+
+
+[ActorClass] name=;
+ID=dummy12;
+selectableClass=true;
+
+[ActorClass] name=Blade;
+ID=blade;
+selectableClass=true;
+icon=classIcon_blade;
+journalID=journal_blade;
+
+description=Master of edged weapons. Cuts foes to shreds.;
+paletteUI=pBlueD;
+--paletteActionR=pGreyblue2;
+--paletteActionG=pRed;
+--paletteActionB=pBlue;
+
+actions=Bl_flashCut;
+actions=Bl_bladestorm;
+actions=Bl_shockwave;
+actions=Bl_rend;
+actions=Bl_perfect;
+--actions=Bl_doubleEdge;
+--actions=Bl_deathblow;
+
+supportAbilities=dualstrike;
+supportAbilities=tempest;
+supportAbilities=fragileEdge;
+
+ruinModeSupportAbility=tempest;
+
+relevantStats=TrueHPMax;
+relevantStats=skill_Dagger;
+relevantStats=skill_Sword;
+relevantStats=skill_Axe;
+relevantStats=skill_Spear;
+--relevantStats=moveDistance;
+
+requiredStat=rogue_XP_total;
+requiredAmt=300;
+requiredStat=guardian_XP_total;
+requiredAmt=250;
+fReq=g:class_blade;
+
+bodyPart1=armR;
+bodyPartSprite1=blade_arm;
+bodyPart2=armL;
+bodyPartSprite2=blade_arm;
+bodyPart3=torso;
+bodyPartSprite3=blade_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=blade_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=blade_shoulder;
+[ActorClassEffect]  ID=blade; actorValue=PhysAtk; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=blade; actorValue=PhysEva; magnitude=12; duration=-1;
+[ActorClassEffect]  ID=blade; actorValue=moveDistance; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=blade; actorValue=skill_Dagger; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=blade; actorValue=skill_Sword; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=blade; actorValue=skill_Axe; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=blade; actorValue=skill_Spear; magnitude=1; duration=-1;
+
+[JournalEntry]
+ID=journal_blade;
+category=actorClass; halfPage=true; rarity=1;
+title=Blade;
+text=<icon=classIcon_blade><title=Blade><brAdj=>Can only use edged weapons. Their amazing swiftness allows them to shred enemies close up and far away. Any edged weapon - swords, spears, axes, daggers, whips - works for their abilities.;
+
+
+
+
+
+
+
+
+
+[ActorClass] name=;
+ID=dummy8;
+selectableClass=true;
+
+[ActorClass] name=;
+ID=dummy_mech;
+selectableClass=false;
+
+[ActorClass] name=Mechanist;
+ID=mechanist;
+selectableClass=true;
+icon=classIcon_mechanist;
+journalID=journal_mechanist;
+
+description=Tinker and creator of various combat devices.;
+paletteUI=pGreyD2;
+--paletteActionR=pGreyD;
+--paletteActionG=pRed;
+--paletteActionB=pBlue;
+
+actions=Mec_setTurret;
+actions=Mec_setMedkit;
+actions=Mec_setWall;
+actions=Mec_setConveyor;
+actions=Mec_setTrap;
+
+
+supportAbilities=abilityScanner;
+supportAbilities=augmentCharger;
+supportAbilities=essenceConverter;
+
+ruinModeSupportAbility=toolTalent;
+
+relevantStats=TrueHPMax;
+relevantStats=TrueMPMax;
+relevantStats=skill_Dagger;
+relevantStats=skill_Hammer;
+relevantStats=skill_Aim;
+relevantStats=skill_Elec;
+relevantStats=skill_Life;
+
+requiredStat=bombardier_XP_total;
+requiredAmt=500;
+fReq=g:class_mechanist;
+
+bodyPart1=armR;
+bodyPartSprite1=mech_arm;
+bodyPart2=armL;
+bodyPartSprite2=mech_arm;
+bodyPart3=torso;
+bodyPartSprite3=mech_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=mech_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=mech_shoulder;
+[ActorClassEffect]  ID=mechanist; actorValue=PhysDef; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=mechanist; actorValue=MagDef; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=mechanist; actorValue=PhysEva; magnitude=5; duration=-1;
+[ActorClassEffect]  ID=mechanist; actorValue=MagEva; magnitude=5; duration=-1;
+[ActorClassEffect]  ID=mechanist; actorValue=skill_Dagger; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=mechanist; actorValue=skill_Hammer; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=mechanist; actorValue=skill_Aim; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=mechanist; actorValue=skill_Elec; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=mechanist; actorValue=skill_Life; magnitude=1; duration=-1;
+[JournalEntry]
+ID=journal_mechanist;
+category=actorClass; halfPage=true; rarity=1;
+title=Mechanist;
+text=<icon=classIcon_mechanist><title=Mechanist><brAdj=>Deploys walls and turrets to control the battlefield. Their machinations are as complex as their machines.;
+
+[ActorClass] name=Minstrel;
+ID=minstrel;
+selectableClass=true;
+icon=classIcon_minstrel;
+journalID=journal_minstrel;
+
+description=Songsmith that rallies allies.;
+paletteUI=pBlue2;
+--paletteActionR=pGreen;
+--paletteActionG=pOrange;
+--paletteActionB=pRed;
+
+requiredStat=swashbuckler_XP_total;
+requiredAmt=400;
+fReq=g:class_minstrel;
+
+actions=Min_harmony;
+actions=Min_rhapsody;
+actions=Min_shanty;
+actions=Min_virelai;
+actions=Min_ballad;
+
+supportAbilities=cheerful;
+supportAbilities=battleCaster;
+supportAbilities=criticalOath;
+
+ruinModeSupportAbility=battleCaster;
+
+relevantStats=TrueMPMax;
+relevantStats=skill_Dagger;
+relevantStats=skill_Spear;
+relevantStats=skill_Flail;
+relevantStats=skill_Life;
+
+
+bodyPart1=armR;
+bodyPartSprite1=minstrel_arm;
+bodyPart2=armL;
+bodyPartSprite2=minstrel_arm;
+bodyPart3=torso;
+bodyPartSprite3=minstrel_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=minstrel_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=minstrel_shoulder;
+[ActorClassEffect]  ID=minstrel; actorValue=MagAtk; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=minstrel; actorValue=PhysEva; magnitude=15; duration=-1;
+[ActorClassEffect]  ID=minstrel; actorValue=MagEva; magnitude=25; duration=-1;
+[ActorClassEffect]  ID=minstrel; actorValue=moveDistance; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=minstrel; actorValue=skill_Dagger; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=minstrel; actorValue=skill_Spear; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=minstrel; actorValue=skill_Flail; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=minstrel; actorValue=skill_Life; magnitude=1; duration=-1;
+
+[JournalEntry]
+ID=journal_minstrel;
+category=actorClass; halfPage=true;
+title=Minstrel;
+text=<icon=classIcon_minstrel><title=Minstrel><brAdj=>Heals and cheers on allies through the power of music and preservation magic. Casts slowly, but can reach any ally within hearing distance.;
+
+
+
+[ActorClass] name=Spell Archon;
+ID=spellslinger;
+selectableClass=true;
+icon=classIcon_spellslinger;
+journalID=journal_spellslinger;
+
+description=Simultaneously strikes with magic and metal.;
+paletteUI=pRedD;
+--paletteActionR=pOrange;
+--paletteActionG=pPurple;
+--paletteActionB=pBlue;
+
+actions=Sp_fireImbue;
+actions=Sp_iceImbue;
+actions=Sp_elecImbue;
+actions=Sp_windImbue;
+actions=Sp_ruinImbue;
+--actions=Sp_disruptionShot;
+--actions=Sp_multiblast;
+
+supportAbilities=imbueMomentum;
+supportAbilities=residue;
+supportAbilities=empowerAugment;
+
+ruinModeSupportAbility=imbueMomentum;
+
+relevantStats=TrueMPMax;
+relevantStats=skill_Fire;
+relevantStats=skill_Ice;
+relevantStats=skill_Elec;
+relevantStats=skill_Wind;
+relevantStats=skill_Ruin;
+
+requiredStat=stormshot_XP_total;
+requiredAmt=300;
+requiredStat=elementalist_XP_total;
+requiredAmt=400;
+fReq=g:class_spellslinger;
+
+bodyPart1=armR;
+bodyPartSprite1=spellslinger_armR;
+bodyPart2=armL;
+bodyPartSprite2=spellslinger_armL;
+bodyPart3=torso;
+bodyPartSprite3=spellslinger_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=spellslinger_shoulderR;
+bodyPart5=shoulderL;
+bodyPartSprite5=spellslinger_shoulderL;
+[ActorClassEffect]  ID=spellslinger; actorValue=PhysAtk; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=spellslinger; actorValue=MagDef; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=spellslinger; actorValue=PhysEva; magnitude=5; duration=-1;
+[ActorClassEffect]  ID=spellslinger; actorValue=MagEva; magnitude=5; duration=-1;
+[ActorClassEffect]  ID=spellslinger; actorValue=skill_Fire; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=spellslinger; actorValue=skill_Ice; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=spellslinger; actorValue=skill_Elec; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=spellslinger; actorValue=skill_Wind; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=spellslinger; actorValue=skill_Ruin; magnitude=1; duration=-1;
+
+[JournalEntry]
+ID=journal_spellslinger;
+category=actorClass; halfPage=true; rarity=1;
+title=Spell Archon;
+text=<icon=classIcon_spellslinger><title=Spell Archon><brAdj=>Rains magic down on the enemy, inflicting status effects as well as delivering raw power. Though many Archons prefer ranged weaponry, they are equally effective in melee combat.;
+
+
+
+
+[ActorClass] name=;
+ID=dummy10;
+selectableClass=true;
+
+
+[ActorClass] name=Enchanter;
+ID=enchanter;
+selectableClass=true;
+icon=classIcon_enchanter;
+journalID=journal_enchanter;
+
+description=Channels elements to enhance weapon attacks.;
+paletteUI=pBrown;
+--paletteActionR=pYellow;
+--paletteActionG=pRed;
+--paletteActionB=pBlue;
+
+actions=En_fireWpn;
+actions=En_iceWpn;
+actions=En_elecWpn;
+actions=En_windWpn;
+actions=En_elementalFury;
+--actions=En_forceLunge;
+--actions=En_discharge;
+
+supportAbilities=counterEnchant;
+supportAbilities=essenceFlow;
+supportAbilities=siphonEnchant;
+
+ruinModeSupportAbility=essenceFlow;
+
+relevantStats=TrueMPMax;
+relevantStats=skill_Fire;
+relevantStats=skill_Ice;
+relevantStats=skill_Elec;
+relevantStats=skill_Wind;
+
+requiredStat=warden_XP_total;
+requiredAmt=500;
+fReq=g:class_enchanter;
+
+bodyPart1=armR;
+bodyPartSprite1=enchanter_arm;
+bodyPart2=armL;
+bodyPartSprite2=enchanter_arm;
+bodyPart3=torso;
+bodyPartSprite3=enchanter_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=enchanter_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=enchanter_shoulder;
+[ActorClassEffect]  ID=enchanter; actorValue=PhysAtk; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=enchanter; actorValue=MagAtk; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=enchanter; actorValue=MagDef; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=enchanter; actorValue=skill_Fire; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=enchanter; actorValue=skill_Ice; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=enchanter; actorValue=skill_Elec; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=enchanter; actorValue=skill_Wind; magnitude=1; duration=-1;
+
+[JournalEntry]
+ID=journal_enchanter;
+category=actorClass; halfPage=true; rarity=1;
+title=Enchanter;
+text=<icon=classIcon_enchanter><title=Enchanter><brAdj=>By channeling elements into weapons, the Enchanter can turn their team into an overwhelming storm of magic and metal.;
+
+
+[ActorClass] name=Balancer;
+ID=balancer;
+selectableClass=true;
+icon=classIcon_balance;
+journalID=journal_balancer;
+
+description=Elemental mage that supports allies and hinders foes.;
+paletteUI=pYellow;
+--paletteActionR=pYellow;
+--paletteActionG=pRed;
+--paletteActionB=pTeal;
+
+--actions=Ba_condensate;
+--actions=Ba_shock;
+actions=Ba_stonefoot;
+actions=Ba_force;
+actions=Ba_warmth;
+actions=Ba_iceSpikes;
+actions=Ba_preserve;
+
+supportAbilities=lifeMirror;
+supportAbilities=geomancy;
+supportAbilities=quickCast;
+supportAbilities=criticalPreserve;
+
+ruinModeSupportAbility=lifeMirror;
+
+relevantStats=TrueMPMax;
+relevantStats=skill_Fire;
+relevantStats=skill_Ice;
+relevantStats=skill_Elec;
+relevantStats=skill_Wind;
+relevantStats=skill_Life;
+
+requiredStat=elementalist_XP_total;
+requiredAmt=350;
+fReq=g:class_balancer;
+
+bodyPart1=armR;
+bodyPartSprite1=balancer_arm;
+bodyPart2=armL;
+bodyPartSprite2=balancer_arm;
+bodyPart3=torso;
+bodyPartSprite3=balancer_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=balancer_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=balancer_shoulder;
+[ActorClassEffect]  ID=balancer; actorValue=MagDef; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=balancer; actorValue=PhysEva; magnitude=5; duration=-1;
+[ActorClassEffect]  ID=balancer; actorValue=MagEva; magnitude=15; duration=-1;
+[ActorClassEffect]  ID=balancer; actorValue=skill_Fire; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=balancer; actorValue=skill_Ice; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=balancer; actorValue=skill_Elec; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=balancer; actorValue=skill_Wind; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=balancer; actorValue=skill_Life; magnitude=1; duration=-1;
+
+[JournalEntry]
+ID=journal_balancer;
+category=actorClass; halfPage=true; rarity=1;
+title=Balancer;
+text=<icon=classIcon_balance><title=Balancer><brAdj=>Uses the elements in subtle ways to cripple foes and aid allies. Balancers are true masters of versatility.;
+
+
+[ActorClass] name=Defiler;
+ID=defiler;
+selectableClass=true;
+icon=classIcon_defiler;
+journalID=journal_defiler;
+
+description=Strips away essence with Ruin to cast spells inside the body.;
+paletteUI=pPurpleD;
+--paletteActionR=pPurple3;
+--paletteActionG=pRedD;
+--paletteActionB=pBlue;
+
+actions=De_iceblood;
+actions=De_brainshock;
+actions=De_gorgefire;
+actions=De_heartgrip;
+actions=De_viral;
+--actions=De_defile;
+--actions=De_destroy;
+
+
+supportAbilities=sacrifice;
+supportAbilities=soulpierce;
+supportAbilities=absorbAura;
+
+ruinModeSupportAbility=absorbAura;
+
+relevantStats=TrueMPMax;
+relevantStats=skill_Fire;
+relevantStats=skill_Ice;
+relevantStats=skill_Elec;
+relevantStats=skill_Wind;
+relevantStats=skill_Ruin;
+
+
+requiredStat=unmaker_XP_total;
+requiredAmt=500;
+fReq=g:class_defiler;
+
+bodyPart1=armR;
+bodyPartSprite1=defiler_arm;
+bodyPart2=armL;
+bodyPartSprite2=defiler_arm;
+bodyPart3=torso;
+bodyPartSprite3=defiler_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=defiler_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=defiler_shoulder;
+[ActorClassEffect]  ID=defiler; actorValue=MagAtk; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=defiler; actorValue=MagEva; magnitude=5; duration=-1;
+[ActorClassEffect]  ID=defiler; actorValue=skill_Fire; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=defiler; actorValue=skill_Ice; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=defiler; actorValue=skill_Elec; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=defiler; actorValue=skill_Wind; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=defiler; actorValue=skill_Ruin; magnitude=1; duration=-1;
+
+[JournalEntry]
+ID=journal_defiler;
+category=actorClass; halfPage=true; rarity=1;
+title=Defiler;
+text=<icon=classIcon_defiler><title=Defiler><brAdj=>Normally, one's essence prevents magic from being cast within the body. However, the sadistic Defiler uses Ruin magic to peel that essence away - allowing them to cruelly burn the target's insides.;
+
+
+[ActorClass] name=Ravager;
+ID=ravager;
+selectableClass=true;
+icon=classIcon_ravager;
+journalID=journal_ravager;
+
+description=Powers up devastating strikes with Ruin magic.;
+paletteUI=pRedD;
+--paletteActionR=pBlue2;
+--paletteActionG=pOrange;
+--paletteActionB=pTeal;
+
+actions=Rav_smite;
+actions=Rav_ruinshock;
+actions=Rav_quake;
+actions=Rav_despair;
+actions=Rav_destroy;
+
+supportAbilities=revel;
+supportAbilities=indomitable;
+supportAbilities=criticalDestroy;
+
+ruinModeSupportAbility=indomitable;
+
+relevantStats=TrueHPMax;
+relevantStats=skill_Sword;
+relevantStats=skill_Axe;
+relevantStats=skill_Hammer;
+relevantStats=skill_Spear;
+relevantStats=skill_Flail;
+relevantStats=skill_Dagger;
+relevantStats=skill_Ruin;
+
+requiredStat=berserker_XP_total;
+requiredAmt=400;
+requiredStat=unmaker_XP_total;
+requiredAmt=250;
+fReq=g:class_ravager;
+
+bodyPart1=armR;
+bodyPartSprite1=ravager_arm;
+bodyPart2=armL;
+bodyPartSprite2=ravager_arm;
+bodyPart3=torso;
+bodyPartSprite3=ravager_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=ravager_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=ravager_shoulder;
+
+[ActorClassEffect]  ID=ravager; actorValue=PhysAtk; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=ravager; actorValue=PhysDef; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=ravager; actorValue=MagEva; magnitude=5; duration=-1;
+[ActorClassEffect]  ID=ravager; actorValue=skill_Sword; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=ravager; actorValue=skill_Axe; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=ravager; actorValue=skill_Hammer; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=ravager; actorValue=skill_Spear; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=ravager; actorValue=skill_Flail; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=ravager; actorValue=skill_Shield; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=ravager; actorValue=skill_Ruin; magnitude=2; duration=-1;
+[JournalEntry]
+ID=journal_ravager;
+category=actorClass; halfPage=true;
+title=Ravager;
+text=<icon=classIcon_ravager><title=Ravager><brAdj=>The Ravager takes the cruel efficiency of Ruin magic and combines it with brute force. To show any weakness in front of them is to invite a quick and ruthless death.;
+
+
+[ActorClass] name=Krakenslayer;
+ID=krakenslayer;
+selectableClass=true;
+icon=classIcon_krakenslayer;
+journalID=journal_krakenslayer;
+
+description=Calls on lightning to strike down monsters of any size.;
+paletteUI=pYellow;
+
+actions=Kra_arcLance;
+actions=Kra_jumpStrike;
+actions=Kra_impale;
+actions=Kra_static;
+actions=Kra_shockBlast;
+
+
+
+supportAbilities=brutalReach;
+supportAbilities=staticBuildup;
+supportAbilities=giantKiller;
+
+ruinModeSupportAbility=giantKiller;
+
+
+relevantStats=TrueHPMax;
+relevantStats=skill_Sword;
+relevantStats=skill_Axe;
+relevantStats=skill_Hammer;
+relevantStats=skill_Spear;
+relevantStats=skill_Flail;
+relevantStats=skill_Elec;
+relevantStats=jumpDistance;
+
+requiredStat=tactician_XP_total;
+requiredAmt=400;
+requiredStat=enchanter_XP_total;
+requiredAmt=250;
+fReq=g:class_krakenslayer;
+
+bodyPart1=armR;
+bodyPartSprite1=krakenslayer_arm;
+bodyPart2=armL;
+bodyPartSprite2=krakenslayer_arm;
+bodyPart3=torso;
+bodyPartSprite3=krakenslayer_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=krakenslayer_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=krakenslayer_shoulder;
+[ActorClassEffect]  ID=krakenslayer; actorValue=PhysAtk; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=krakenslayer; actorValue=PhysDef; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=krakenslayer; actorValue=PhysEva; magnitude=5; duration=-1;
+[ActorClassEffect]  ID=krakenslayer; actorValue=skill_Sword; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=krakenslayer; actorValue=skill_Axe; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=krakenslayer; actorValue=skill_Hammer; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=krakenslayer; actorValue=skill_Spear; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=krakenslayer; actorValue=skill_Flail; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=krakenslayer; actorValue=skill_Elec; magnitude=2; duration=-1;
+[JournalEntry]
+ID=journal_krakenslayer;
+category=actorClass; halfPage=true; rarity=2;
+title=Krakenslayer;
+text=<icon=classIcon_krakenslayer><title=Krakenslayer><brAdj=>Harnesses the power of storms to slay man or beast. Boasts excellent offensive power and range.;
+
+
+[ActorClass] name=Ignis Knight;
+ID=ignisKnight;
+selectableClass=true;
+icon=classIcon_ignisKnight;
+journalID=journal_ignisKnight;
+
+description=Knight that combines fire and weaponry to deadly effect.;
+paletteUI=pRed2;
+--paletteActionR=pRed;
+--paletteActionG=pR;
+--paletteActionB=pBrown;
+
+actions=iK_oilEdge;
+--actions=iK_flareEdge;
+actions=iK_wrathStrike;
+actions=iK_burningWave;
+actions=iK_pyre;
+--actions=iK_ignisOrb;
+actions=iK_phoenix;
+
+
+
+supportAbilities=purifire;
+supportAbilities=smolder;
+supportAbilities=firewall;
+
+ruinModeSupportAbility=firewall;
+
+
+relevantStats=TrueHPMax;
+relevantStats=skill_Sword;
+relevantStats=skill_Axe;
+relevantStats=skill_Hammer;
+relevantStats=skill_Spear;
+relevantStats=skill_Flail;
+relevantStats=skill_Shield;
+relevantStats=skill_Fire;
+
+requiredStat=guardian_XP_total;
+requiredAmt=400;
+requiredStat=elementalist_XP_total;
+requiredAmt=250;
+fReq=g:class_ignisKnight;
+
+bodyPart1=armR;
+bodyPartSprite1=ignisKnight_arm;
+bodyPart2=armL;
+bodyPartSprite2=ignisKnight_arm2;
+bodyPart3=torso;
+bodyPartSprite3=ignisKnight_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=ignisKnight_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=ignisKnight_shoulder2;
+[ActorClassEffect]  ID=ignisKnight; actorValue=PhysAtk; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=ignisKnight; actorValue=PhysDef; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=ignisKnight; actorValue=PhysEva; magnitude=3; duration=-1;
+[ActorClassEffect]  ID=ignisKnight; actorValue=MagEva; magnitude=3; duration=-1;
+[ActorClassEffect]  ID=ignisKnight; actorValue=skill_Sword; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=ignisKnight; actorValue=skill_Axe; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=ignisKnight; actorValue=skill_Hammer; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=ignisKnight; actorValue=skill_Spear; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=ignisKnight; actorValue=skill_Flail; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=ignisKnight; actorValue=skill_Shield; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=ignisKnight; actorValue=skill_Fire; magnitude=2; duration=-1;
+[JournalEntry]
+ID=journal_ignisKnight;
+category=actorClass; halfPage=true; rarity=2;
+title=Ignis Knight;
+text=<icon=classIcon_ignisKnight><title=Ignis Knight><brAdj=>An infamous band of slash-and-burn mercenaries, the Ignis Knights have perfected their fiery and reckless fighting style.;
+
+
+[ActorClass] name=;
+ID=dummy13;
+selectableClass=true;
+
+
+
+[ActorClass] name=Shiftcloak;
+ID=shiftcloak;
+selectableClass=true;
+icon=classIcon_shiftcloak;
+journalID=journal_shiftcloak;
+
+description=A whirling cloak masks every movement and disorients foes.;
+paletteUI=pGreen;
+--paletteActionR=pGreen;
+--paletteActionG=pOrange;
+--paletteActionB=pGreyD;
+
+
+actions=Sh_tumble;
+actions=Sh_shadowSnap;
+actions=Sh_whirl;
+actions=Sh_shiftStab;
+--actions=Sh_suddenShot;
+actions=Sh_backstepShot;
+--actions=Sh_delay;
+
+supportAbilities=meleeMomentum;
+supportAbilities=rollingReload;
+supportAbilities=distractingAura;
+supportAbilities=adaptability;
+
+ruinModeSupportAbility=meleeMomentum;
+
+relevantStats=TrueHPMax;
+relevantStats=skill_Dagger;
+relevantStats=skill_Bow;
+relevantStats=skill_Aim;
+relevantStats=skill_Wind;
+--relevantStats=moveDistance;
+relevantStats=jumpDistance;
+
+requiredStat=blade_XP_total;
+requiredAmt=300;
+requiredStat=swashbuckler_XP_total;
+requiredAmt=300;
+fReq=g:class_shiftcloak;
+
+bodyPart1=armR;
+bodyPartSprite1=shiftcloak_armR;
+bodyPart2=armL;
+bodyPartSprite2=shiftcloak_armL;
+bodyPart3=torso;
+bodyPartSprite3=shiftcloak_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=shiftcloak_shoulderR;
+bodyPart5=shoulderL;
+bodyPartSprite5=shiftcloak_shoulderL;
+[ActorClassEffect]  ID=shiftcloak; actorValue=PhysEva; magnitude=30; duration=-1;
+[ActorClassEffect]  ID=shiftcloak; actorValue=MagEva; magnitude=25; duration=-1;
+[ActorClassEffect]  ID=shiftcloak; actorValue=moveDistance; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=shiftcloak; actorValue=skill_Dagger; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=shiftcloak; actorValue=skill_Bow; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=shiftcloak; actorValue=skill_Aim; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=shiftcloak; actorValue=skill_Wind; magnitude=1; duration=-1;
+
+[JournalEntry]
+ID=journal_shiftcloak;
+category=actorClass; halfPage=true; rarity=3; rewardMod=-500;
+title=Shiftcloak;
+text=<icon=classIcon_shiftcloak><title=Shiftcloak><brAdj=>Evades, blinds, and disorients foes with amazing speed. Uses a cloak as misdirection and to conceal deadly weaponry.;
+
+
+[ActorClass] name=Bat Handler;
+ID=bathandler;
+selectableClass=true;
+icon=classIcon_bathandler;
+journalID=journal_bathandler;
+
+description=Summons and controls powerful Zoar bats.;
+paletteUI=pRedbrown;
+--paletteActionR=pGreyblue;
+--paletteActionG=pRed;
+--paletteActionB=pPurple;
+
+actions=Bat_summonZoar;
+--actions=Bat_zSwarm;
+actions=Bat_zTorrent;
+actions=Bat_tailwind;
+actions=Bat_zoarnado;
+actions=Bat_flight;
+--actions=Bat_zWing;
+
+supportAbilities=batling;
+supportAbilities=tamer;
+supportAbilities=everswarm;
+
+ruinModeSupportAbility=batling;
+
+relevantStats=TrueHPMax;
+relevantStats=TrueMPMax;
+relevantStats=skill_Dagger;
+relevantStats=skill_Spear;
+relevantStats=skill_Flail;
+relevantStats=skill_Wind;
+relevantStats=jumpDistance;
+
+requiredStat=minstrel_XP_total;
+requiredAmt=250;
+requiredStat=guardian_XP_total;
+requiredAmt=200;
+fReq=g:class_bathandler;
+
+bodyPart1=armR;
+bodyPartSprite1=bathandler_arm;
+bodyPart2=armL;
+bodyPartSprite2=bathandler_arm;
+bodyPart3=torso;
+bodyPartSprite3=bathandler_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=bathandler_shoulder;
+bodyPart5=shoulderL;
+bodyPartSprite5=bathandler_shoulder;
+[ActorClassEffect]  ID=bathandler; actorValue=MagDef; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=bathandler; actorValue=PhysEva; magnitude=8; duration=-1;
+[ActorClassEffect]  ID=bathandler; actorValue=MagEva; magnitude=8; duration=-1;
+[ActorClassEffect]  ID=bathandler; actorValue=jumpDistance; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=bathandler; actorValue=skill_Dagger; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=bathandler; actorValue=skill_Spear; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=bathandler; actorValue=skill_Flail; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=bathandler; actorValue=skill_Wind; magnitude=1; duration=-1;
+[JournalEntry]
+ID=journal_bathandler;
+category=actorClass; halfPage=true; rarity=2;
+title=Bat Handler;
+text=<icon=classIcon_bathandler><title=Bat Handler><brAdj=>Amasses a surprisingly strong and loyal army by training Zoar Bats. Can send waves of bats sweeping across the battlefield with a single command.;
+
+[ActorClass] name=;
+ID=dummy15;
+selectableClass=true;
+
+[ActorClass] name=;
+ID=dummy16;
+selectableClass=true;
+
+
+[ActorClass] name=Gatewarder;
+ID=gatewarder;
+selectableClass=true;
+icon=classIcon_gatewarder;
+journalID=journal_gatewarder;
+
+description=Wields Gate magic to protect allies and disable foes.;
+paletteUI=pPurple;
+--paletteActionR=pPurpleD;
+--paletteActionG=pOrange;
+--paletteActionB=pTeal;
+
+actions=gateW_gateSwap;
+actions=gateW_avalanche;
+actions=gateW_barrage;
+actions=gateW_void;
+actions=gateW_gateShield;
+
+supportAbilities=resistant;
+supportAbilities=gateAdept;
+supportAbilities=criticalGShield;
+
+ruinModeSupportAbility=resistant;
+
+--supportAbilities=escapeGate;
+
+
+relevantStats=TrueMPMax;
+relevantStats=skill_Fire;
+relevantStats=skill_Ice;
+relevantStats=skill_Elec;
+relevantStats=skill_Wind;
+
+requiredStat=warden_XP_total;
+requiredAmt=700;
+requiredStat=gatekeeper_XP_total;
+requiredAmt=250;
+fReq=g:class_gatewarder;
+
+bodyPart1=armR;
+bodyPartSprite1=gatewarder_armR;
+bodyPart2=armL;
+bodyPartSprite2=gatewarder_armL;
+bodyPart3=torso;
+bodyPartSprite3=gatewarder_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=gatewarder_shoulderR;
+bodyPart5=shoulderL;
+bodyPartSprite5=gatewarder_shoulderL;
+[ActorClassEffect]  ID=gatewarder; actorValue=MagDef; magnitude=2; duration=-1;
+[ActorClassEffect]  ID=gatewarder; actorValue=PhysEva; magnitude=5; duration=-1;
+[ActorClassEffect]  ID=gatewarder; actorValue=MagEva; magnitude=10; duration=-1;
+[ActorClassEffect]  ID=gatewarder; actorValue=skill_Fire; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=gatewarder; actorValue=skill_Ice; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=gatewarder; actorValue=skill_Elec; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=gatewarder; actorValue=skill_Wind; magnitude=1; duration=-1;
+[JournalEntry]
+ID=journal_gatewarder;
+category=actorClass; halfPage=true; rarity=2;
+title=Gatewarder;
+text=<icon=classIcon_gatewarder><title=Gatewarder><brAdj=>Turns Gate magic into an even more profound art. Though they excel at protecting allies, don't underestimate their offensive power.;
+
+
+
+[ActorClass] name=Gatekeeper;
+ID=gatekeeper;
+selectableClass=true;
+icon=classIcon_gatekeeper;
+journalID=journal_gatekeeper;
+
+description=User of ancient and powerful Gate magic.;
+paletteUI=pPurple;
+--paletteActionR=pPurpleD;
+--paletteActionG=pOrange;
+--paletteActionB=pTeal;
+
+actions=gate;
+actions=gate_magma;
+actions=gate_storm;
+actions=gate_flood;
+actions=gate_sky;
+--actions=gate_avalanche;
+--actions=gate_void;
+
+supportAbilities=sunGate;
+supportAbilities=gateHand;
+supportAbilities=realmsense;
+
+ruinModeSupportAbility=realmsense;
+
+--supportAbilities=escapeGate;
+--supportAbilities=escapeGate_fake;
+
+
+relevantStats=TrueMPMax;
+relevantStats=skill_Fire;
+relevantStats=skill_Ice;
+relevantStats=skill_Elec;
+relevantStats=skill_Wind;
+
+requiredStat=balancer_XP_total;
+requiredAmt=300;
+requiredStat=warden_XP_total;
+requiredAmt=250;
+requiredStat=unmaker_XP_total;
+requiredAmt=250;
+fReq=g:class_gatekeeper;
+
+bodyPart1=armR;
+bodyPartSprite1=gatekeeper_armR;
+bodyPart2=armL;
+bodyPartSprite2=gatekeeper_armL;
+bodyPart3=torso;
+bodyPartSprite3=gatekeeper_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=gatekeeper_shoulderR;
+bodyPart5=shoulderL;
+bodyPartSprite5=gatekeeper_shoulderL;
+[ActorClassEffect]  ID=gatekeeper; actorValue=MagAtk; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=gatekeeper; actorValue=MagDef; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=gatekeeper; actorValue=MagEva; magnitude=5; duration=-1;
+[ActorClassEffect]  ID=gatekeeper; actorValue=skill_Fire; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=gatekeeper; actorValue=skill_Ice; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=gatekeeper; actorValue=skill_Elec; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=gatekeeper; actorValue=skill_Wind; magnitude=1; duration=-1;
+
+[JournalEntry]
+ID=journal_gatekeeper;
+category=actorClass; halfPage=true; rarity=2;
+title=Gatekeeper;
+text=<icon=classIcon_gatekeeper><title=Gatekeeper><brAdj=>With their tremendous power of will, creates Gates that transport material and energy from one point to the other.;
+
+
+
+[ActorClass] name=Warpblade;
+ID=warpblade;
+selectableClass=true;
+icon=classIcon_warpblade;
+journalID=journal_warpblade;
+
+description=Combines Gate magic & martial prowess.;
+paletteUI=pPurple;
+--paletteActionR=pPurple3;
+--paletteActionG=pOrange;
+--paletteActionB=pTeal;
+
+actions=wb_gateShift;
+actions=wb_trick;
+actions=wb_slam;
+actions=wb_cross;
+--actions=wb_barrage;
+actions=wb_onslaught;
+--actions=wb_gateShield;
+
+supportAbilities=counterWarp;
+supportAbilities=warplash;
+supportAbilities=gateleap;
+
+ruinModeSupportAbility=warplash;
+
+
+relevantStats=TrueHPMax;
+relevantStats=TrueMPMax;
+relevantStats=skill_Sword;
+relevantStats=skill_Axe;
+relevantStats=skill_Hammer;
+relevantStats=skill_Spear;
+relevantStats=skill_Flail;
+relevantStats=skill_Shield;
+
+requiredStat=gladiator_XP_total;
+requiredAmt=400;
+requiredStat=gatekeeper_XP_total;
+requiredAmt=250;
+fReq=g:class_warpblade;
+
+bodyPart1=armR;
+bodyPartSprite1=warpblade_armR;
+bodyPart2=armL;
+bodyPartSprite2=warpblade_armL;
+bodyPart3=torso;
+bodyPartSprite3=warpblade_torso;
+bodyPart4=shoulderR;
+bodyPartSprite4=warpblade_shoulderR;
+bodyPart5=shoulderL;
+bodyPartSprite5=warpblade_shoulderL;
+[ActorClassEffect]  ID=warpblade; actorValue=PhysAtk; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=warpblade; actorValue=MagAtk; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=warpblade; actorValue=MagEva; magnitude=3; duration=-1;
+[ActorClassEffect]  ID=warpblade; actorValue=skill_Sword; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=warpblade; actorValue=skill_Axe; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=warpblade; actorValue=skill_Hammer; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=warpblade; actorValue=skill_Spear; magnitude=1; duration=-1;
+[ActorClassEffect]  ID=warpblade; actorValue=skill_Flail; magnitude=1; duration=-1;
+[JournalEntry]
+ID=journal_warpblade;
+category=actorClass; halfPage=true; rarity=2;
+title=Warpblade;
+text=<icon=classIcon_warpblade><title=Warpblade><brAdj=>Using Gate magic affords the Warpblade unparalleled reach and power when it comes to martial arts.;
+

@@ -1,0 +1,332 @@
+
+
+
+[Action] ID=Rav_ruinshock; 
+	name=Ruinshock;
+	icon=icon_Rav_doubleEdge;
+	tooltip=Go all out with an attack, damaging yourself 30% and the opponent <math=120 + 10 * c:rank>% or more.;
+	rankUpTooltip=Each rank increases damage to the opponent by 10%.;
+	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=melee_small><icon=skill_Ruin_small>;
+	mpCost=3 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=330;
+	XPCost=530;
+	XPCost=630;
+	
+	casterAnimation=weapon;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	requiredWeaponElement=weapon;
+	
+	FXOnCaster=chargeSpiralFast_big;
+	FXOnCasterColor=DarkMagenta;
+	FXOnCaster=chargeSpiralFast;
+	FXOnCasterColor=DarkMagenta;
+	FXOnCaster=redden_minor;
+	FXOnCaster=sfx_schwee;
+	FXOnTarget=weaponFX;
+[ActionAoE] 
+	ID=Rav_ruinshock; shape=10; 
+[AvAffecter]
+	ID=Rav_ruinshock; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 1.1 + w:magnitude * 0.1 * c:rank + d:ruinDmgHalfDef(1) * 0.5;
+	chance=w:chance * 0.97;
+	duration=-2;
+	element=ruin;
+	element=magic;
+	FXOnHit=manySplatter;
+	FXOnHitColor=DarkMagenta;
+	FXOnHit=DramaticNyeaow;
+[AvAffecterAoE]
+	ID=Rav_ruinshock;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Rav_ruinshock; 
+	actorValue=HP;
+	magnitude= -0.32 * w:Power - c:PhysAtk * 0.32;
+	chance=100;
+	duration=-2;
+	FXOnHit=pop;
+[AvAffecterAoE]
+	ID=Rav_ruinshock;
+	aoeCasterAsOrigin=true;
+	cloneFrom=oneTile;
+
+[Action] ID=Rav_quake; 
+	name=Quake;
+	icon=icon_Rav_quake;
+	tooltip=Smash the ground, causing a shockwave that deals <math=30 + 10 * c:rank>% damage.;
+	rankUpTooltip=Each rank increases damage by 10%.;
+	tooltipIcons=<icon=noRanged>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	mpCost=4 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=350;
+	XPCost=500;
+	XPCost=800;
+	
+	casterAnimation=swing;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	requiredWeaponElement=melee;
+	
+	FXOnTarget=medShakeHoriz;
+	FXOnTarget=gustyBlast;
+	FXOnTarget=strikeBig;
+[ActionAoE] 
+	ID=Rav_quake;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=Rav_quake; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.4 + w:magnitude * 0.1 * c:rank;
+	chance=w:chance;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Rav_quake;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Rav_quake; 
+	actorValue=HP;
+	magnitude=w:magnitude * 0.4 + w:magnitude * 0.1 * c:rank;
+	chance=100;
+	duration=-2;
+	element=physical;
+	element=earth;
+	FXOnTile=terrain;
+	FXOnHit=pop;
+[AvAffecterAoE]
+	ID=Rav_quake;
+	aoeCasterAsOrigin=true;
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 2;
+	maxRange = 4;
+	coneAngle= 60;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+--purely for visuals
+	ID=Rav_quake; 
+	actorValue=height;
+	magnitude=-1;
+	duration=-2;
+	chance=100;
+	FXOnTile=delay_small;
+[AvAffecterAoE]
+--purely for visuals
+	ID=Rav_quake;
+	aoeCasterAsOrigin=true;
+	needsLoS = true;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 4;
+	coneAngle= 60;
+	bypassAll=false;
+	occupyAll=false;
+[AvAffecter]
+--purely for visuals
+	ID=Rav_quake; 
+	actorValue=height;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	FXOnTile=delay_small;
+[AvAffecterAoE]
+--purely for visuals
+	ID=Rav_quake;
+	aoeCasterAsOrigin=true;
+	needsLoS = true;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 4;
+	coneAngle= 60;
+	bypassAll=false;
+	occupyAll=false;
+
+[Action] ID=Rav_smite; 
+	name=Smite;
+	icon=icon_Rav_holdLine;
+	tooltip=Push multiple targets in front of you <math=c:rank> tile(s) and deal 75% damage or more.;
+	rankUpTooltip=Push 1 further with each rank.;
+	tooltipIcons=<icon=noRanged>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=melee_small><icon=skill_Ruin_small>;
+	mpCost=2 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=140;
+	XPCost=300;
+	XPCost=550;
+	
+	casterAnimation=shoulderbash;
+	casterAnimationDependsOnWeaponHand=true;
+	casterAnimationSpeed=0.85;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	requiredWeaponElement=melee;
+	
+	FXOnTarget=woosh;
+	FXOnTargetColor=White;
+	FXOnTarget=swipe;
+	FXOnTargetColor=DarkMagenta;
+	FXOnTarget=weaponFX;
+	FXOnTargetColor=White;
+[ActionAoE] 
+	ID=Rav_smite;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=Rav_smite; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.55 + d:ruinDmgHalfDef(1) * 0.5;
+	chance=w:chance;
+	duration=-2;
+	element=ruin;
+	element=magic;
+[AvAffecterAoE]
+	ID=Rav_smite;
+	aoeCasterAsOrigin=true;
+	minRange = 1;
+	maxRange = 1.5;
+	coneAngle=90;
+[AvAffecter]
+	ID=Rav_smite; 
+	actorValue=push;
+	magnitude=c:rank;
+	duration=-2;
+	chance=w:chance;
+	FXOnHit=ping;
+	FXOnHit=click;
+[AvAffecterAoE]
+	ID=Rav_smite;
+	aoeCasterAsOrigin=true;
+	minRange = 1;
+	maxRange = 1.5;
+	coneAngle=90;
+
+
+	
+[Action] ID=Rav_despair; 
+	name=Despair;
+	icon=icon_Rav_despair;
+	mpCost=2 * d:mpCostMult + d:mpCostMod;
+	tooltip=Lower morale of enemies in a large area around yourself for <icon=time><math=d:ruinDurMax(4) + 70> and steal <math=c:rank+3><adjX=-4><icon=MP>MP from them.;
+	rankUpTooltip=Each rank increases <icon=MP>MP stolen by 1.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ruin_small>;
+	
+	XPCost=180;
+	XPCost=400;
+	XPCost=1200;
+	
+	casterAnimation=crouchCast;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=chargeFast;
+	FXOnCasterColor=Purple;
+	FXOnCaster=charge;
+	FXOnCasterColor=Purple;
+	FXOnCaster=eyeOpen_purple;
+	FXOnCasterColor=White;
+	FXOnCaster=Thwummm;
+	FXOnTarget=gustyBlast;
+	FXOnTarget=sfx_lowDramaticN;
+[ActionAoE] 
+	ID=Rav_despair; 
+	aoeCasterAsOrigin = true;
+	needsLoS = false;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	minRange = 1;
+	maxRange = 3;
+	bypassAll=true;
+	occupyAll=true;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=Rav_despair; 
+	actorValue=morale;
+	magnitude=-1;
+	duration=d:ruinDur(4) + 70;
+	chance=d:ruinAcc;
+	FXOnTile=smallShockwave_instant_moving;
+	FXOnTileColor=Purple;
+	FXOnHit=downwardLines;
+	FXOnHitColor=Purple;
+	FXOnHit=sfx_debuffMild;
+[AvAffecterAoE]
+	ID=Rav_despair;
+	aoeCasterAsOrigin = true;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=Rav_despair; 
+	actorValue=MP;
+	magnitude=-c:rank-3;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=Rav_despair;
+	aoeCasterAsOrigin = true;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=Rav_despair; 
+	harmful=false;
+	actorValue=MP;
+	magnitude=m:numEnemiesWithinX(3) * c:rank + m:numEnemiesWithinX(3) * 3;
+	duration=-2;
+	chance=m:numEnemiesWithinX(3) * 100;
+	visibleMiss=false;
+	FXOnHit=upwardLines;
+	FXOnHitColor=MediumPurple;
+[AvAffecterAoE]
+	ID=Rav_despair;
+	aoeCasterAsOrigin = true;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=Rav_destroy; 
+	name=Destroy;
+	icon=icon_Rav_destroy;
+	mpCost=3 * d:mpCostMult + d:mpCostMod;
+	tooltip=Kill an enemy with 10<icon=HP>HP or less. Cannot miss.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=;
+	
+	XPCost=250;
+	XPCost=300;
+	XPCost=650;
+	
+	casterAnimation=handsup_angry;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=magicCharge;
+	
+	FXOnTarget=darken;
+	FXOnTarget=delay;
+	FXOnTarget=screenShock_instant;
+	FXOnTarget=sfx_laser_blast_high;
+[ActionAoE] 
+	ID=Rav_destroy; 
+	needsLoS = true;
+	needsLoE = false;
+	minRange = 1;
+	maxRange = 3;
+	maxRangeBonus = c:rank;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Rav_destroy; 
+	actorValue=HP;
+	visibleMiss=false;
+	magnitude= -10;
+	duration=-2;
+	chance=100 * m:tIsHP10OrLess;
+	FXOnTile=delay_minor;
+	FXOnTile=timeStop;
+[AvAffecterAoE]
+	ID=Rav_destroy;
+	cloneFrom=oneTile;
+	

@@ -1,0 +1,1077 @@
+[LevelData] ID=delve1;
+minZoneSizeX = 32;
+minZoneSizeY = 26;
+maxZoneSizeX = 32;
+maxZoneSizeY = 26;
+
+wallChanceToZig = 0.3;
+wallChanceToZag = 0.3;
+
+minWallThickness = 7;
+maxWallThickness = 8;
+minWallFlatStretch = 2;
+
+chanceOfForwardPath = 0;
+
+worldSizeX = 1;
+worldSizeY = 1;
+
+wallType = caveSolid_Rock;
+wallTypeBottom = caveWallGreen;
+defaultTile = grass;
+
+extraPureBlackBorder=4;
+extraPureBlackBorder_terrainTypeOverride=caveSolid_Rock;
+
+minExitWidth = 0;
+maxExitWidth = 0;
+exitCurveAverageDepth = 0;
+exitCurveVariation = 0;
+
+
+extraSetPieceTries=999;
+
+----
+centerPieceChance_normal = 1;
+centerPieceChance_deadEnd = 1;
+centerPieceChance_1stRoom = 1;
+
+centerPieces = spDelveDown1; centerPiecesChanceToReroll = 0;
+----
+minSetPiecesPerRoom = 4;
+maxSetPiecesPerRoom = 4;
+
+addGuaranteedSetPiecesFirst=true;
+guaranteedSetPieces = spDelveEntry1;
+guaranteedSetPieces = spDelveW1;
+
+setPieces=spDelveC1; setPiecesChanceToReroll=0.9;
+setPieces=spDelveC2; setPiecesChanceToReroll=0;
+setPieces=spDelveC3; setPiecesChanceToReroll=0;
+setPieces=spDelveC4; setPiecesChanceToReroll=0;
+setPieces=spDelveC5; setPiecesChanceToReroll=0;
+setPieces=spDelveC26; setPiecesChanceToReroll=0;
+setPieces=spDelveC27; setPiecesChanceToReroll=0;
+setPieces=spDelveC28; setPiecesChanceToReroll=0;
+setPieces=spDelveC29; setPiecesChanceToReroll=0;
+setPieces=spDelveC30; setPiecesChanceToReroll=0;
+setPieces=spDelveC31; setPiecesChanceToReroll=0;
+setPieces=spDelveC32; setPiecesChanceToReroll=0;
+setPieces=spDelveC33; setPiecesChanceToReroll=0;
+setPieces=spDelveC34; setPiecesChanceToReroll=0;
+setPieces=spDelveC35; setPiecesChanceToReroll=0;
+setPieces=spDelveC36; setPiecesChanceToReroll=0;
+setPieces=spDelveC37; setPiecesChanceToReroll=0;
+setPieces=spDelveC38; setPiecesChanceToReroll=0;
+setPieces=spDelveC39; setPiecesChanceToReroll=0;
+setPieces=spDelveC40; setPiecesChanceToReroll=0;
+
+----
+spawnItems_onWall_chance = 0.75;
+spawnItems_onWall=sunbeam_Y;
+spawnItems_onWall_chanceToReroll=0.2;
+spawnItems_onWall=cliff_rock;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=cliff_rock2;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=cliff_rock3;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=vines_hanging;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=vines_cliff;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=vines_cliff_wide;
+spawnItems_onWall_chanceToReroll=0.8;
+spawnItems_onWall=ore_iron;
+spawnItems_onWall_chanceToReroll=0.7;
+spawnItems_onWall=ore_mythril;
+spawnItems_onWall_chanceToReroll=0.99;
+spawnItems_onWall=ore_volskarn;
+spawnItems_onWall_chanceToReroll=0.99;
+spawnItems_onWall=brambles;
+spawnItems_onWall_chanceToReroll=0;
+
+
+spawnItems_nearWall_chance = 0.5;
+spawnItems_nearWall=pebbles1;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=pebbles2;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=rocks1;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=debris_small1;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=debris_small2;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=debris_small3;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=brambles;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=sunbeam_foliage_tiny_dark;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=sunbeam_foliage_small_dark;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=sunbeam_foliage_med_dark;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=sunbeam_foliage_big_dark;
+spawnItems_nearWall_chanceToReroll=0;
+
+canSpawnItemsWithinSetPieces=true;
+
+spawnItems_nearCenter_chance = 0.65;
+spawnItems_nearCenter=loot_bone_junk;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=rocks1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=stash_dirt_loot2;
+spawnItems_nearCenter_chanceToReroll=0.95;
+spawnItems_nearCenter=stash_dirt_loot3;
+spawnItems_nearCenter_chanceToReroll=0.97;
+spawnItems_nearCenter=stash_dirt_loot4;
+spawnItems_nearCenter_chanceToReroll=0.991;
+spawnItems_nearCenter=pod_burst;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_rand;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=pod_blast;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=flowers_healing1;
+spawnItems_nearCenter_chanceToReroll=0.95;
+spawnItems_nearCenter=brambles;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=grass_alt1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=sunbeam_foliage_tiny_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=sunbeam_foliage_small_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=sunbeam_foliage_med_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=sunbeam_foliage_big_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=sunbeam_foliage_tiny_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=sunbeam_foliage_small_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=sunbeam_foliage_med_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=sunbeam_foliage_big_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+
+specialSpawns=rubbleToBrambles;
+specialSpawns=spreadN_brambles;
+specialSpawns=spreadS_brambles;
+specialSpawns=spreadE_brambles;
+specialSpawns=spreadW_brambles;
+specialSpawns=spreadNE_brambles;
+specialSpawns=spreadNW_brambles;
+specialSpawns=spreadSE_brambles;
+specialSpawns=spreadSW_brambles;
+specialSpawns=tallGrassSpreadE;
+specialSpawns=tallGrassSpreadN;
+specialSpawns=tallGrassSpreadS;
+specialSpawns=tallGrassSpreadW;
+specialSpawns=grass_alt;
+specialSpawns=grassifyCaveWall;
+specialSpawns=gemhideSpawn;
+
+triggers=tDelveLose;
+
+[LevelDataZone]ID=delve1;
+
+zoneDirtPalette = p16;
+zoneDirtDarkPalette = p70;
+zoneGrassPalette = p71;
+zoneGrassDarkPalette = overworld1;
+zoneStoneLightPalette = p86;
+
+travelSong=CC0-Stars;
+travelSongVolume=0.9;
+combatSong=PM-Wonder2;
+combatSongDelay=1;
+
+dark=true;
+darkR=125; darkG=113; darkB=155; 
+
+bgTerrainTypeID=abyss;
+showFogOfWar=false;
+cantGameOver=true;
+
+zoneFX=w_risingDust_slower;
+zoneFXTime=0.4;
+zoneFX_x=-1; zoneFX_y=-1;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1; zoneFX_y=-1;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1; zoneFX_y=-1;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1; zoneFX_y=-1;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1; zoneFX_y=-1;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1; zoneFX_y=-1;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1; zoneFX_y=-1;
+
+[LevelData] ID=delve2;
+minZoneSizeX = 31;
+minZoneSizeY = 31;
+maxZoneSizeX = 31;
+maxZoneSizeY = 31;
+
+worldSizeX = 1;
+worldSizeY = 1;
+chanceOfForwardPath = 0;
+
+wallChanceToZig = 0.3;
+wallChanceToZag = 0.3;
+minWallThickness = 2;
+maxWallThickness = 2;
+minWallFlatStretch = 2;
+wallType = caveSolid_Rock;
+wallTypeBottom = caveWall;
+
+wallChanceToZig = 0.3;
+wallChanceToZag = 0.3;
+minWallThickness = 6;
+maxWallThickness = 7;
+minWallFlatStretch = 2;
+wallType = water_edge_smooth;
+wallTypeBottom = water_edge_smooth;
+
+wallChanceToZig = 0.3;
+wallChanceToZag = 0.3;
+minWallThickness = 3;
+maxWallThickness = 4;
+minWallFlatStretch = 2;
+wallType = caveSolid_Rock;
+wallTypeBottom = caveWall;
+
+defaultTile = dirt_smooth;
+
+extraPureBlackBorder=4;
+extraPureBlackBorder_terrainTypeOverride=caveSolid_Rock;
+
+minExitWidth = 0;
+maxExitWidth = 0;
+exitCurveAverageDepth = 0;
+exitCurveVariation = 0;
+
+extraSetPieceTries=999;
+
+----
+centerPieceChance_normal = 1;
+centerPieceChance_deadEnd = 1;
+centerPieceChance_1stRoom = 1;
+
+centerPieces = spDelveDown2; centerPiecesChanceToReroll = 0;
+
+----
+minSetPiecesPerRoom = 3;
+maxSetPiecesPerRoom = 3;
+
+addGuaranteedSetPiecesFirst=true;
+guaranteedSetPieces = spDelveEntry1;
+guaranteedSetPieces = spDelveW1;
+guaranteedSetPieces = spDelveC41;
+
+setPieces=spDelveC1; setPiecesChanceToReroll=0.9;
+setPieces=spDelveC6; setPiecesChanceToReroll=0;
+setPieces=spDelveC7; setPiecesChanceToReroll=0;
+setPieces=spDelveC8; setPiecesChanceToReroll=0;
+setPieces=spDelveC9; setPiecesChanceToReroll=0;
+setPieces=spDelveC10; setPiecesChanceToReroll=0;
+setPieces=spDelveC11; setPiecesChanceToReroll=0;
+setPieces=spDelveC12; setPiecesChanceToReroll=0;
+setPieces=spDelveC13; setPiecesChanceToReroll=0;
+setPieces=spDelveC14; setPiecesChanceToReroll=0;
+setPieces=spDelveC15; setPiecesChanceToReroll=0;
+setPieces=spDelveC16; setPiecesChanceToReroll=0.95;
+setPieces=spDelveC17; setPiecesChanceToReroll=0;
+setPieces=spDelveC18; setPiecesChanceToReroll=0;
+setPieces=spDelveC19; setPiecesChanceToReroll=0;
+setPieces=spDelveC20; setPiecesChanceToReroll=0;
+setPieces=spDelveC21; setPiecesChanceToReroll=0;
+setPieces=spDelveC22; setPiecesChanceToReroll=0;
+setPieces=spDelveC23; setPiecesChanceToReroll=0;
+setPieces=spDelveC24; setPiecesChanceToReroll=0;
+setPieces=spDelveC25; setPiecesChanceToReroll=0;
+setPieces=spDelveC41; setPiecesChanceToReroll=0;
+setPieces=spDelveC42; setPiecesChanceToReroll=0;
+setPieces=spDelveC43; setPiecesChanceToReroll=0;
+setPieces=spDelveC44; setPiecesChanceToReroll=0;
+setPieces=spDelveC45; setPiecesChanceToReroll=0;
+
+
+----
+spawnItems_onWall_chance = 0.6;
+spawnItems_onWall=sunbeam_Y;
+spawnItems_onWall_chanceToReroll=0.2;
+spawnItems_onWall=cliff_rock;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=cliff_rock2;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=cliff_rock3;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=glowshroomOn;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=glowshroomOn2;
+spawnItems_onWall_chanceToReroll=0;
+
+
+spawnItems_nearWall_chance = 0.5;
+spawnItems_nearWall=rubble;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=rubble_spikes;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=rubble_spikes;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=pebbles1;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=pebbles2;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=rocks1;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=debris_small1;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=debris_small2;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=debris_small3;
+spawnItems_nearWall_chanceToReroll=0;
+
+canSpawnItemsWithinSetPieces=true;
+
+spawnItems_nearCenter_chance = 0.25;
+spawnItems_nearCenter=loot_bone_junk;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=rocks1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=rubble_spikes;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=rubble;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=stalags;
+spawnItems_nearCenter_chanceToReroll=0.8;
+spawnItems_nearCenter=stash_dirt_loot2;
+spawnItems_nearCenter_chanceToReroll=0.9;
+spawnItems_nearCenter=stash_dirt_loot3;
+spawnItems_nearCenter_chanceToReroll=0.95;
+spawnItems_nearCenter=stash_dirt_loot4;
+spawnItems_nearCenter_chanceToReroll=0.99;
+spawnItems_nearCenter=pod_burst;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_rand;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=pod_blast;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=flowers_healing1;
+spawnItems_nearCenter_chanceToReroll=0.95;
+
+specialSpawns=gemhideSpawn;
+specialSpawns=lily_bud_onWater;
+specialSpawns=lily_blossom_onWater;
+specialSpawns=reed1_onWater;
+specialSpawns=reed2_onWater;
+specialSpawns=fishSpot1;
+specialSpawns=fishSpot2;
+
+triggers=tDelveLose;
+
+[LevelDataZone]ID=delve2;
+
+zoneDirtPalette = p70;
+zoneDirtDarkPalette = p25;
+zoneGrassPalette = overworld3;
+zoneStoneLightPalette = p86;
+zoneWaterPalette=p32;
+
+travelSong=CC0-Stars;
+travelSongVolume=0.9;
+combatSong=PM-LostPlace;
+combatSongDelay=1;
+
+dark=true;
+darkR=135; darkG=152; darkB=210; 
+
+bgTerrainTypeID=abyss;
+showFogOfWar=false;
+cantGameOver=true;
+
+zoneFX=w_risingDust_slower;
+zoneFXTime=0.4;
+zoneFX_x=-1; zoneFX_y=-1;
+
+
+[LevelData] ID=delve3;
+minZoneSizeX = 31;
+minZoneSizeY = 38;
+maxZoneSizeX = 31;
+maxZoneSizeY = 38;
+
+chanceOfForwardPath = 0;
+worldSizeX = 1;
+worldSizeY = 1;
+
+wallChanceToZig = 0;
+wallChanceToZag = 0;
+minWallThickness = 2;
+maxWallThickness = 2;
+minWallFlatStretch = 2;
+wallType = caveSolid_Rock;
+wallTypeBottom = caveWall;
+
+wallChanceToZig = 0;
+wallChanceToZag = 0;
+minWallThickness = 8;
+maxWallThickness = 8;
+minWallFlatStretch = 2;
+wallType = caveWallLedgeN;
+wallTypeBottom = caveWallLedgeN;
+
+wallChanceToZig = 0;
+wallChanceToZag = 0;
+minWallThickness = 8;
+maxWallThickness = 8;
+minWallFlatStretch = 2;
+wallType = caveSolid_Rock;
+wallTypeBottom = caveWallLedgeN;
+
+defaultTile = dirt_smooth;
+
+extraPureBlackBorder=4;
+extraPureBlackBorder_terrainTypeOverride=caveSolid_Rock;
+
+minExitWidth = 0;
+maxExitWidth = 0;
+exitCurveAverageDepth = 0;
+exitCurveVariation = 0;
+
+
+extraSetPieceTries=999;
+
+----
+centerPieceChance_normal = 1;
+centerPieceChance_deadEnd = 1;
+centerPieceChance_1stRoom = 1;
+
+centerPieces = spDelveDown3; centerPiecesChanceToReroll = 0;
+----
+minSetPiecesPerRoom = 9;
+maxSetPiecesPerRoom = 9;
+
+addGuaranteedSetPiecesFirst=true;
+guaranteedSetPieces = spDelveEntry3;
+
+setPieces=spDelveS1; setPiecesChanceToReroll=0;
+setPieces=spDelveS2; setPiecesChanceToReroll=0;
+setPieces=spDelveS3; setPiecesChanceToReroll=0;
+setPieces=spDelveS4; setPiecesChanceToReroll=0;
+setPieces=spDelveS5; setPiecesChanceToReroll=0;
+setPieces=spDelveS6; setPiecesChanceToReroll=0;
+setPieces=spDelveS7; setPiecesChanceToReroll=0;
+setPieces=spDelveS8; setPiecesChanceToReroll=0;
+setPieces=spDelveS9; setPiecesChanceToReroll=0;
+setPieces=spDelveS10; setPiecesChanceToReroll=0;
+setPieces=spDelveS11; setPiecesChanceToReroll=0;
+setPieces=spDelveS12; setPiecesChanceToReroll=0;
+setPieces=spDelveS13; setPiecesChanceToReroll=0;
+setPieces=spDelveS14; setPiecesChanceToReroll=0;
+setPieces=spDelveS15; setPiecesChanceToReroll=0;
+setPieces=spDelveS16; setPiecesChanceToReroll=0;
+setPieces=spDelveS17; setPiecesChanceToReroll=0;
+setPieces=spDelveS18; setPiecesChanceToReroll=0;
+setPieces=spDelveS19; setPiecesChanceToReroll=0;
+setPieces=spDelveS20; setPiecesChanceToReroll=0;
+
+----
+spawnItems_onWall_chance = 0.15;
+spawnItems_onWall=cliff_rock;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=cliff_rock2;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=cliff_rock3;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=glowshroomOn;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=glowshroomOn2;
+spawnItems_onWall_chanceToReroll=0;
+
+spawnItems_nearWall_chance = 0.15;
+spawnItems_nearWall=pebbles1;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=pebbles2;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=rocks1;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=debris_small1;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=debris_small2;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=debris_small3;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=rubble;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=rubble_spikes;
+spawnItems_nearWall_chanceToReroll=0;
+
+canSpawnItemsWithinSetPieces=true;
+
+spawnItems_nearCenter_chance = 0.2;
+spawnItems_nearCenter=loot_bone_junk;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=rubble;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=rubble_spikes;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=rocks1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=stash_dirt_loot2;
+spawnItems_nearCenter_chanceToReroll=0.95;
+spawnItems_nearCenter=stash_dirt_loot3;
+spawnItems_nearCenter_chanceToReroll=0.97;
+spawnItems_nearCenter=stash_dirt_loot4;
+spawnItems_nearCenter_chanceToReroll=0.991;
+spawnItems_nearCenter=pod_burst;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_rand;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=pod_blast;
+spawnItems_nearCenter_chanceToReroll=0.5;
+
+specialSpawns=cleanupFootholds;
+specialSpawns=cleanupCaveWallLedgeN1;
+specialSpawns=cleanupCaveWallLedgeN2;
+specialSpawns=caveWallLedgeN_cliffRock1;
+specialSpawns=caveWallLedgeN_cliffRock2;
+specialSpawns=caveWallLedgeN_cliffRock3;
+specialSpawns=caveSunbeams1;
+specialSpawns=caveSunbeams2;
+
+triggers=tDelveLose;
+
+[LevelDataZone]ID=delve3;
+
+zoneDirtPalette = p74;
+zoneDirtDarkPalette = p82;
+zoneGrassPalette = p71;
+zoneGrassDarkPalette = overworld1;
+zoneStoneLightPalette = p86;
+
+travelSong=CC0-Stars;
+travelSongVolume=0.9;
+combatSong=PM-Prairie3;
+combatSongDelay=1;
+
+dark=true;
+darkR=160; darkG=175; darkB=190; 
+
+bgTerrainTypeID=abyss;
+showFogOfWar=false;
+cantGameOver=true;
+
+[LevelData] ID=delve4;
+minZoneSizeX = 32;
+minZoneSizeY = 26;
+maxZoneSizeX = 32;
+maxZoneSizeY = 26;
+
+wallChanceToZig = 0.3;
+wallChanceToZag = 0.3;
+minWallThickness = 4;
+maxWallThickness = 5;
+minWallFlatStretch = 2;
+wallType = caveSolid_Rock;
+wallTypeBottom = caveWallGreen;
+
+wallChanceToZig = 0.3;
+wallChanceToZag = 0.3;
+minWallThickness = 7;
+maxWallThickness = 8;
+minWallFlatStretch = 2;
+wallType = bush2;
+wallTypeBottom = bush;
+
+wallChanceToZig = 0.3;
+wallChanceToZag = 0.3;
+minWallThickness = 4;
+maxWallThickness = 5;
+minWallFlatStretch = 2;
+wallType = caveSolid_Rock;
+wallTypeBottom = caveWallGreen;
+
+
+chanceOfForwardPath = 0;
+
+worldSizeX = 1;
+worldSizeY = 1;
+
+defaultTile = grass;
+--defaultTile = grass_lusher;
+
+extraPureBlackBorder=4;
+extraPureBlackBorder_terrainTypeOverride=caveSolid_Rock;
+
+minExitWidth = 0;
+maxExitWidth = 0;
+exitCurveAverageDepth = 0;
+exitCurveVariation = 0;
+
+
+extraSetPieceTries=999;
+
+----
+centerPieceChance_normal = 1;
+centerPieceChance_deadEnd = 1;
+centerPieceChance_1stRoom = 1;
+
+centerPieces = spDelveDown4; centerPiecesChanceToReroll = 0;
+----
+minSetPiecesPerRoom = 4;
+maxSetPiecesPerRoom = 4;
+
+addGuaranteedSetPiecesFirst=true;
+guaranteedSetPieces = spDelveEntry1;
+
+setPieces=spDelveC1; setPiecesChanceToReroll=0.9;
+setPieces=spDelveC2; setPiecesChanceToReroll=0;
+setPieces=spDelveC3; setPiecesChanceToReroll=0;
+setPieces=spDelveC4; setPiecesChanceToReroll=0;
+setPieces=spDelveC5; setPiecesChanceToReroll=0;
+setPieces=spDelveC26; setPiecesChanceToReroll=0;
+setPieces=spDelveC27; setPiecesChanceToReroll=0;
+setPieces=spDelveC28; setPiecesChanceToReroll=0;
+setPieces=spDelveC29; setPiecesChanceToReroll=0;
+setPieces=spDelveC30; setPiecesChanceToReroll=0;
+setPieces=spDelveC31; setPiecesChanceToReroll=0;
+setPieces=spDelveC32; setPiecesChanceToReroll=0;
+setPieces=spDelveC33; setPiecesChanceToReroll=0;
+setPieces=spDelveC34; setPiecesChanceToReroll=0;
+setPieces=spDelveC35; setPiecesChanceToReroll=0;
+setPieces=spDelveC36; setPiecesChanceToReroll=0;
+setPieces=spDelveC37; setPiecesChanceToReroll=0;
+setPieces=spDelveC38; setPiecesChanceToReroll=0;
+setPieces=spDelveC39; setPiecesChanceToReroll=0;
+setPieces=spDelveC40; setPiecesChanceToReroll=0;
+
+----
+spawnItems_onWall_chance = 0.75;
+spawnItems_onWall=sunbeam_Y;
+spawnItems_onWall_chanceToReroll=0.2;
+spawnItems_onWall=cliff_rock;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=cliff_rock2;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=cliff_rock3;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=vines_hanging;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=vines_cliff;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=vines_cliff_wide;
+spawnItems_onWall_chanceToReroll=0.8;
+spawnItems_onWall=ore_iron;
+spawnItems_onWall_chanceToReroll=0.8;
+spawnItems_onWall=ore_mythril;
+spawnItems_onWall_chanceToReroll=0.99;
+spawnItems_onWall=ore_volskarn;
+spawnItems_onWall_chanceToReroll=0.99;
+spawnItems_onWall=brambles;
+spawnItems_onWall_chanceToReroll=0;
+
+
+spawnItems_nearWall_chance = 0.5;
+spawnItems_nearWall=pebbles1;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=pebbles2;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=rocks1;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=debris_small1;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=debris_small2;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=debris_small3;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=brambles;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=sunbeam_foliage_tiny_dark;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=sunbeam_foliage_small_dark;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=sunbeam_foliage_med_dark;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=sunbeam_foliage_big_dark;
+spawnItems_nearWall_chanceToReroll=0;
+
+canSpawnItemsWithinSetPieces=true;
+
+spawnItems_nearCenter_chance = 0.65;
+spawnItems_nearCenter=loot_bone_junk;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=tree_small;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=tree_med;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=tree;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=tree_big;
+spawnItems_nearCenter_chanceToReroll=0.7;
+spawnItems_nearCenter=tree_small_leafy;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=tree_med_leafy;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=tree_leafy;
+spawnItems_nearCenter_chanceToReroll=0.6;
+spawnItems_nearCenter=tree_big_leafy;
+spawnItems_nearCenter_chanceToReroll=0.9;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=rocks1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=stash_dirt_loot2;
+spawnItems_nearCenter_chanceToReroll=0.95;
+spawnItems_nearCenter=stash_dirt_loot3;
+spawnItems_nearCenter_chanceToReroll=0.97;
+spawnItems_nearCenter=stash_dirt_loot4;
+spawnItems_nearCenter_chanceToReroll=0.991;
+spawnItems_nearCenter=pod_burst;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_rand;
+spawnItems_nearCenter_chanceToReroll=0.05;
+spawnItems_nearCenter=pod_blast;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=flowers_healing1;
+spawnItems_nearCenter_chanceToReroll=0.95;
+spawnItems_nearCenter=brambles;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=grass_alt1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=sunbeam_foliage_tiny_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=sunbeam_foliage_small_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=sunbeam_foliage_med_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=sunbeam_foliage_big_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=sunbeam_foliage_tiny_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=sunbeam_foliage_small_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=sunbeam_foliage_med_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=sunbeam_foliage_big_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+
+specialSpawns=rubbleToBrambles;
+specialSpawns=spreadN_brambles;
+specialSpawns=spreadS_brambles;
+specialSpawns=spreadE_brambles;
+specialSpawns=spreadW_brambles;
+specialSpawns=spreadNE_brambles;
+specialSpawns=spreadNW_brambles;
+specialSpawns=spreadSE_brambles;
+specialSpawns=spreadSW_brambles;
+specialSpawns=tallGrassSpreadE;
+specialSpawns=tallGrassSpreadN;
+specialSpawns=tallGrassSpreadS;
+specialSpawns=tallGrassSpreadW;
+specialSpawns=grass_alt;
+specialSpawns=grassifyCaveWall;
+specialSpawns=bush2Flower_still1;
+specialSpawns=bush2Flowers_still1;
+
+triggers=tDelveLose;
+
+[LevelDataZone]ID=delve4;
+
+zoneDirtPalette = p43;
+zoneDirtDarkPalette = p81;
+zoneGrassPalette = p52;
+zoneGrassDarkPalette = p40;
+zoneStoneLightPalette = p86;
+
+travelSong=CC0-DeepNoise;
+travelSongVolume=0.3;
+combatSong=PM-DeepWoods4;
+combatSongDelay=1;
+
+dark=true;
+darkR=188; darkG=103; darkB=135; 
+
+bgTerrainTypeID=abyss;
+showFogOfWar=false;
+cantGameOver=true;
+
+zoneFX=w_risingDust_slower;
+zoneFXTime=0.4;
+zoneFX_x=-1; zoneFX_y=-1;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1; zoneFX_y=-1;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1; zoneFX_y=-1;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1; zoneFX_y=-1;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1; zoneFX_y=-1;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1; zoneFX_y=-1;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1; zoneFX_y=-1;
+zoneFX=w_leaves;
+zoneFXTime=5;
+zoneFX_x=-1; zoneFX_y=-1;
+
+[LevelData] ID=delve5;
+minZoneSizeX = 31;
+minZoneSizeY = 26;
+maxZoneSizeX = 31;
+maxZoneSizeY = 26;
+
+wallChanceToZig = 0;
+wallChanceToZag = 0;
+
+minWallThickness = 8;
+maxWallThickness = 8;
+minWallFlatStretch = 2;
+
+chanceOfForwardPath = 0;
+
+worldSizeX = 1;
+worldSizeY = 1;
+
+wallType = caveSolid_Rock;
+wallTypeBottom = caveWall;
+defaultTile = grass_lush;
+
+extraPureBlackBorder=4;
+extraPureBlackBorder_terrainTypeOverride=caveSolid_Rock;
+
+minExitWidth = 0;
+maxExitWidth = 0;
+exitCurveAverageDepth = 0;
+exitCurveVariation = 0;
+
+extraSetPieceTries=999;
+
+----
+centerPieceChance_normal = 1;
+centerPieceChance_deadEnd = 1;
+centerPieceChance_1stRoom = 1;
+
+centerPieces = spDelveDown5; centerPiecesChanceToReroll = 0;
+
+----
+minSetPiecesPerRoom = 2;
+maxSetPiecesPerRoom = 2;
+
+addGuaranteedSetPiecesFirst=true;
+guaranteedSetPieces = spDelveEntry5;
+
+setPieces=spDelveC1; setPiecesChanceToReroll=0;
+setPieces=spDelveC1; setPiecesChanceToReroll=0;
+setPieces=spDelveC2; setPiecesChanceToReroll=0;
+setPieces=spDelveC3; setPiecesChanceToReroll=0;
+setPieces=spDelveC4; setPiecesChanceToReroll=0;
+setPieces=spDelveC5; setPiecesChanceToReroll=0;
+setPieces=spDelveC26; setPiecesChanceToReroll=0;
+setPieces=spDelveC27; setPiecesChanceToReroll=0;
+setPieces=spDelveC28; setPiecesChanceToReroll=0;
+setPieces=spDelveC29; setPiecesChanceToReroll=0;
+setPieces=spDelveC30; setPiecesChanceToReroll=0;
+setPieces=spDelveC31; setPiecesChanceToReroll=0;
+setPieces=spDelveC32; setPiecesChanceToReroll=0;
+setPieces=spDelveC33; setPiecesChanceToReroll=0;
+setPieces=spDelveC34; setPiecesChanceToReroll=0;
+setPieces=spDelveC35; setPiecesChanceToReroll=0;
+setPieces=spDelveC36; setPiecesChanceToReroll=0;
+setPieces=spDelveC37; setPiecesChanceToReroll=0;
+setPieces=spDelveC38; setPiecesChanceToReroll=0;
+setPieces=spDelveC39; setPiecesChanceToReroll=0;
+setPieces=spDelveC40; setPiecesChanceToReroll=0;
+
+----
+spawnItems_onWall_chance = 0.55;
+spawnItems_onWall=sunbeam_Y;
+spawnItems_onWall_chanceToReroll=0.2;
+spawnItems_onWall=cliff_rock;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=cliff_rock2;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=cliff_rock3;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=vines_hanging;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=vines_cliff;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=vines_cliff_wide;
+spawnItems_onWall_chanceToReroll=0.8;
+spawnItems_onWall=brambles;
+spawnItems_onWall_chanceToReroll=0;
+
+spawnItems_nearWall_chance = 0.35;
+spawnItems_nearWall=pebbles1;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=pebbles2;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=rocks1;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=debris_small1;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=debris_small2;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=debris_small3;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=brambles;
+spawnItems_nearWall_chanceToReroll=0;
+
+canSpawnItemsWithinSetPieces=true;
+
+spawnItems_nearCenter_chance = 0.45;
+spawnItems_nearCenter=loot_bone_junk;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=rocks1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=stash_dirt_loot2;
+spawnItems_nearCenter_chanceToReroll=0.95;
+spawnItems_nearCenter=stash_dirt_loot3;
+spawnItems_nearCenter_chanceToReroll=0.97;
+spawnItems_nearCenter=stash_dirt_loot4;
+spawnItems_nearCenter_chanceToReroll=0.991;
+spawnItems_nearCenter=pod_burst;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_rand;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=pod_blast;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=brambles;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=grass_alt1;
+spawnItems_nearCenter_chanceToReroll=0;
+
+specialSpawns=grass_alt;
+
+triggers=tDelveLose;
+
+[LevelDataZone]ID=delve5;
+
+zoneDirtPalette = p16;
+zoneDirtDarkPalette = p70;
+zoneGrassPalette = p52;
+zoneGrassDarkPalette = p40;
+zoneStoneLightPalette = p86;
+zoneStonePalette = p86;
+
+travelSong=CC0-Stars;
+travelSongVolume=0.9;
+combatSong=KK-DNA;
+combatSongDelay=1;
+
+dark=true;
+darkR=125; darkG=113; darkB=155; 
+
+bgTerrainTypeID=abyss;
+showFogOfWar=false;
+cantGameOver=true;
+
+zoneFX=w_risingDust_slower;
+zoneFXTime=0.4;
+zoneFX_x=-1; zoneFX_y=-1;

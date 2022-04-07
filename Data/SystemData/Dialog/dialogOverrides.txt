@@ -1,0 +1,77 @@
+----NOTES:
+--completeOverride - if false, uses original node's dialog options & nextNodeID
+---nextNodeID=
+--previous - goes to previous node
+--overridden - goes to node that was overridden
+--overrideNext - goes to the overridden node's nextNodeID
+
+
+
+
+
+
+-----------BARR
+
+[DialogNodeOverride] ID=barr_enterPort_dialog1;
+dialogNodeID_toOverride=enterPort;
+fReq=party:barr - g1:D_barr_enterPort_dialog1 - m:debug;
+speakerOverride=barr;
+specialEffect=delayDialog,3;
+specialEffect=noSpeechFXLookOrAnim;
+animations=happy;
+animations=;
+statements=What a relief to make port again...!;
+statements=Before we forget, let's visit the Market and restock our<iconBig=food>Food.;
+
+----
+
+
+[DialogNodeOverride] ID=barr_enterOverworld_dialog1;
+dialogNodeID_toOverride=enterOverworld;
+fReq=partyOrCrew:barr - cargoItem:food / m:pCrewNum - gTimeSinceLessThan:D_barr_enterOverworld_dialog1:20;
+speakerOverride=barr;
+specialEffect=delayDialog,0.8;
+specialEffect=noSpeechFXLookOrAnim;
+animations=;
+statements=Commodore, we're <color=DarkRed>out of <iconBig=food>Food!<color=> We should buy more as soon as possible.;
+
+
+
+----
+
+[DialogNodeOverride] ID=barr_cafe_party_dialog1;
+dialogNodeID_toOverride=cafe_party_dialog;
+completeOverride=true;
+fReq=party:barr - g1:D_barr_cafe_party_dialog1;
+speakerOverride=barr;
+specialEffect=delayDialog,3;
+specialEffect=noSpeechFXLookOrAnim;
+animations=happy;
+statements=It's good to relax every once and a while, isn't it, Commodore?;
+nextNodeID=endCafeTalk;
+
+
+
+----
+
+
+
+[DialogNodeOverride] ID=goss_cafe_party_interrupt_dialog1;
+dialogNodeID_toOverride=cafe_party;
+completeOverride=true;
+fReq=party:goss + loc:port20 - g1:D_goss_cafe_party_interrupt_dialog1 - 1;
+speakerOverride=goss;
+statements=...<pname=>.;
+statements=Let's eat here...;
+
+[DialogOption] text=Huh?;
+nodeToConnectTo=goss_cafe_party_interrupt_dialog1b;
+[DialogOption] text=Why?;
+newLineOfOptions=true;
+nodeToConnectTo=goss_cafe_party_interrupt_dialog1b;
+
+[DialogNode] ID=goss_cafe_party_interrupt_dialog1b;
+animations=sigh;
+statements=<speed=0.75>Because...;
+statements=...I want cake.;
+nextNodeID=overridden;

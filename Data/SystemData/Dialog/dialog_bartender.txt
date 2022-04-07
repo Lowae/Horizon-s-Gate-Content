@@ -1,0 +1,213 @@
+
+
+
+
+[DialogNode] ID=town_bartender1;
+portraitIcon=portrait_barkeep;
+portraitIconFrames=23;
+statements=<rand=Hey/Hi/Hello><rand= there/><rand=, Cap/, Captain/>. <rand=What can I/Something I can/Anything I can> <rand=get you?/help you with?>;
+animations=;
+[DialogOption] text=Advice;
+formulaReq=gIs1:missionsRun - g:partySizeMod * 100;
+nodeToConnectTo=town_bartender_advice0;
+[DialogOption] text=Advice;
+formulaReq=1 - g:partySizeMod - gIs1:missionsRun * 100;
+nodeToConnectTo=town_bartender_advice1;
+[DialogOption] text=Advice;
+formulaReq=g1:partySizeMod - g:zone_travel2_enabled ;
+nodeToConnectTo=town_bartender_advice2;
+[DialogOption] text=Advice;
+formulaReq=g1:partySizeMod * g:zone_travel2_enabled - g:zone_travel2;
+nodeToConnectTo=town_bartender_advice3;
+[DialogOption] text=Jobs;
+newLineOfOptions=true;
+nodeToConnectTo=town_bartender_job1;
+formulaReq=1-g:askNewQuestItem;
+[DialogOption] text=Jobs;
+nodeToConnectTo=town_bartender_job_alreadyRejected;
+formulaReq=g:askNewQuestItem;
+newLineOfOptions=true;
+[DialogOption] text=Goodbye;
+bottomOption=true;
+nodeToConnectTo=;
+
+
+
+[DialogNode] ID=town_bartender_no_rumors;
+portraitIcon=portrait_barkeep;
+portraitIconFrames=21;
+statements=<rand=Nothing/Haven't heard anything> <rand=interesting/new><rand= lately/ today/><rand=, I'm afraid/, unfortunately/, sorry>.;
+animations=;
+nextNodeID=;
+
+
+[DialogNode] ID=town_bartender_job1;
+portraitIcon=portrait_barkeep;
+portraitIconFrames=24;
+statements=I know someone who's looking for <itemBig_global_low=tavern_questItem> <itemName_global=tavern_questItem>. They'll pay $<itemValue_global=tavern_questItem> for one. Interested?;
+animations=;
+[DialogOption] text=I have one right here.;
+nodeToConnectTo=town_bartender_job_complete;
+formulaReq=partyItem_g:tavern_questItem;
+[DialogOption] text=I'll let you know if I find one.;
+nodeToConnectTo=;
+newLineOfOptions=true;
+[DialogOption] text=I'm not interested in that exchange.;
+nodeToConnectTo=town_bartender_job_requestNew;
+animations=sigh;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=town_bartender_job_alreadyRejected;
+portraitIcon=portrait_barkeep;
+portraitIconFrames=27;
+statements=Same as before- someone wants to buy <itemBig_global_low=tavern_questItem> <itemName_global=tavern_questItem> for $<itemValue_global=tavern_questItem>. I don't have anything different for you yet.;
+animations=;
+[DialogOption] text=Actually, I have one right here.;
+nodeToConnectTo=town_bartender_job_complete;
+formulaReq=partyItem_g:tavern_questItem;
+[DialogOption] text=Nevermind.;
+nodeToConnectTo=;
+newLineOfOptions=true;
+
+
+
+[DialogNode] ID=town_bartender_job_complete;
+portraitIcon=portrait_barkeep;
+portraitIconFrames=34;
+statements=Great! Here's your $<itemValue_global=tavern_questItem_previous> - I'll deliver this <itemBig_global_low=tavern_questItem_previous> <itemName_global=tavern_questItem_previous> next time I see them.;
+animations=happy;
+specialEffect=tRemoveQuestItem;
+specialEffect=giveQuestItemReward;
+specialEffect=reassignQuestItem;
+
+nextNodeID=;
+
+
+[DialogNode] ID=town_bartender_job_requestNew;
+portraitIcon=portrait_barkeep;
+portraitIconFrames=27;
+statements=Alright. I'll have something different for you next time.;
+animations=;
+specialEffect=tG_askNewQuestItem;
+nextNodeID=;
+
+[DialogNode] ID=town_bartender_advice0;
+portraitIcon=portrait_barkeep;
+portraitIconFrames=43;
+portraitIconFrames=22;
+portraitIconFrames=27;
+statements=Nothing for it but to go into the Serpent, Cap!;
+statements=Remember, once you go in, you can always just leave the way you came.;
+statements=If something too dangerous is in the way, just come back later when you're ready to handle it.;
+
+[DialogNode] ID=town_bartender_advice1;
+portraitIcon=portrait_barkeep;
+portraitIconFrames=2;
+portraitIconFrames=23;
+portraitIconFrames=24;
+statements=Your trainer Sivle came by earlier, blabbing about her <color=Gold>Teamwork<color=White> program.;
+statements=She seemed real passionate about it.<p=2> ...then again, I get the feeling she's the type to be passionate about everything.;
+statements=Apparently it'll increase your potential team size to 5.<p=> That sounds like a good first investment to me, Cap.;
+
+[DialogNode] ID=town_bartender_advice2;
+portraitIcon=portrait_barkeep;
+portraitIconFrames=33;
+portraitIconFrames=43;
+statements=Not much for me to say right now Cap - just get out there and explore!;
+statements=See if you can't make it far enough to find another shortcut back from the Serpent, aye?;
+
+[DialogNode] ID=town_bartender_advice3;
+portraitIcon=portrait_barkeep;
+portraitIconFrames=23;
+portraitIconFrames=43;
+portraitIconFrames=24;
+statements=I hear you've got your team set up pretty nicely, Cap!;
+statements=If I were in your shoes, I'd look into one of those <color=Gold>Gate trigger<color=White> shortcuts that Lorim's got.;
+statements=It's hard to make progress if you gotta slog through explored territory over and over, right?;
+
+-----------------
+
+[DialogNode] ID=town_bartender0;
+portraitIcon=portrait_barkeep;
+portraitIconFrames=23;
+portraitIconFrames=33;
+portraitIconFrames=24;
+portraitIconFrames=22;
+portraitIconFrames=23;
+portraitIconFrames=43;
+statements=Hey, you're the captain of one of those expeditions, aren't you?;
+statements=Pleasure to meet you. My name's Jonas.;
+statements=Good on you for heading up a venture like this!<p=2> Won't be long before someone finds the old golden vaults in there.<p=4> There's a good chance you'll be the first!;
+statements=By the way.<p=2> With so many people coming through, I hear a lot of odd jobs and requests for specific items.;
+statements=I can tip you off to that sort of thing, if you'd like.;
+statements=Otherwise, take it easy, and stop in for a drink anytime!;
+animations=;
+nextNodeID=;
+specialEffect=incDefaultNode;
+
+
+-----------------
+
+[DialogNode] ID=tavern_gil1;
+animations=sigh;
+statements=Can't talk.<p=2> Drinkin'.;
+nextNodeID=;
+specialEffect=incDefaultNode;
+
+
+[DialogNode] ID=tavern_gil2;
+animations=;
+statements=Still drinkin'.;
+nextNodeID=;
+specialEffect=incDefaultNode;
+
+[DialogNode] ID=tavern_gil3;
+animations=angry;
+statements=I said I was drinkin'!;
+nextNodeID=;
+specialEffect=incDefaultNode;
+
+[DialogNode] ID=tavern_gil4;
+animations=sigh;
+statements=I'm still not done drinkin'!;
+nextNodeID=;
+specialEffect=incDefaultNode;
+
+[DialogNode] ID=tavern_gil5;
+animations=angry;
+statements=Guess what I'm still busy doing.;
+nextNodeID=;
+specialEffect=incDefaultNode;
+
+[DialogNode] ID=tavern_gil6;
+animations=sigh;
+statements=Less thinkin', more drinkin'.;
+nextNodeID=;
+specialEffect=incDefaultNode;
+
+[DialogNode] ID=tavern_gil7;
+animations=;
+statements=Still gotta get one more drink in.;
+nextNodeID=;
+specialEffect=incDefaultNode;
+
+
+[DialogNode] ID=tavern_gil8;
+animations=angry;
+statements=I.<p=3> Am.<p=3> Still.<p=3> DRINKIN'!;
+nextNodeID=;
+specialEffect=incDefaultNode;
+
+[DialogNode] ID=tavern_gil9;
+animations=angry;
+statements=ALRIGHT already!<p=2> What do you want?!?;
+specialEffect=incDefaultNode;
+[DialogOption] text=...nevermind.;
+nodeToConnectTo=tavern_gil10;
+newLineOfOptions=true;
+
+[DialogNode] ID=tavern_gil10;
+animations=angry;
+statements=(grumble grumble);
+nextNodeID=;

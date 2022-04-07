@@ -1,0 +1,64 @@
+[Zone]  ID=spGroveEnc14; dark=False; timeUntilNewDay=22.2; showFogOfWar=True; fogOfWar=True; minimapEnabled=True; allowCameraPastZoneEdges=False; cantAct=False; cantGameOver=False; alwaysKeepWeaponsUnsheathed=False; peaceful=False; overseerMode=False; rollingPinStyle=False; drawSky=False; boatZone=False; wind=False; overworld=False; canDropItems=True; 
+ travelSong=; travelSongVolume=1; travelSongPitch=0; combatSong=; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=0; darkG=0; darkB=0; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=; bgFX_sineWave=0; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=pDirt; zoneGrassPalette=overworld1; zoneGrassDarkPalette=overworld2; zoneStonePalette=pGreyD; zoneStoneDarkPalette=p1; zoneStoneLightPalette=p1; zoneWaterPalette=pBlue; zoneDirtDarkPalette=pDirt; zoneWoodPalette=pWood; zoneWoodDarkPalette=pWoodDark; zoneMisc1Palette=pYellow6; zoneMisc2Palette=pWoodDark; zoneMisc3Palette=pYellow5; zoneMisc4Palette=pBlue; zoneMisc5Palette=pGreen; zoneMisc6Palette=pOrange; zoneMisc7Palette=pYellow; zoneMisc8Palette=pPurple; 
+
+combatMode=False; 
+
+[Item] ID=skull2; q=1; r=90; x=0; y=1;
+[Item] ID=bone_spine; q=1; x=1; y=4;
+[Item] ID=bones2; q=1; x=2; y=3;
+[Item] ID=skull_dog1; q=1; x=2; y=4;
+[Item] ID=bone_dust; q=1; x=2; y=5;
+[Item] ID=bones1; q=1; x=2; y=6;
+[Item] ID=bone_spine; q=1; x=3; y=2;
+[Item] ID=bone_dust; q=1; x=3; y=3;
+[Item] ID=satchel3; q=1; x=3; y=4; containerID=0;
+[Item] ID=bottle_beer; q=1; containedIn=0; cSlot=0;
+[Item] ID=bomb; q=1; containedIn=0; cSlot=1;
+[Item] ID=minibomb; q=1; containedIn=0; cSlot=2;
+[Item] ID=minibomb; q=1; containedIn=0; cSlot=3;
+[Item] ID=trigger_fire; q=1; containedIn=0; cSlot=4;
+[Item] ID=hatchet; q=1; containedIn=0; cSlot=5; containerID=1;
+[Item] ID=gp; q=63; containedIn=0; cSlot=6;
+[Item] ID=gp; q=3; containedIn=0; cSlot=7;
+[Item] ID=gp; q=1; containedIn=0; cSlot=9;
+[Item] ID=gp; q=2; containedIn=0; cSlot=10;
+[Item] ID=bones1; q=1; x=3; y=4;
+[Item] ID=bone; q=1; x=3; y=4;
+[Item] ID=skull_dog2; q=1; x=4; y=3;
+[Item] ID=bone_dust; q=1; x=4; y=4;
+[Item] ID=skull; q=1; x=4; y=7;
+[Item] ID=bones1; q=1; x=5; y=0;
+[Item] ID=bone_dust; q=1; x=5; y=2;
+[Item] ID=ribs2; q=1; x=5; y=3;
+[Item] ID=cargo_carapace; q=1; x=5; y=4;
+[Item] ID=tusk; q=1; x=5; y=5;
+[Item] ID=bones1; q=1; x=6; y=2;
+[Item] ID=bones2; q=1; r=90; x=6; y=3;
+[Item] ID=bone_dust; q=1; x=6; y=4;
+[Item] ID=skull_elephant1; q=1; x=6; y=6;
+
+
+[Actor]ID=loper_spGroveEnc0_; name=Rockbone;
+actorTypeID=loper; sprite=actor_loper; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=4,2; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pBone; skinPalette=pGrey9; armorPalette=pR; unarmoredPalette=pR; aiScript=wander_leash5; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=0.9; intelligence=0.3; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ supportAbilities=brittleArmor;  supportAbilities=boneHoard;  supportAbilities=; HP=118; MP=35; HPMax=118; MPMax=35; TrueHPMax=118; TrueMPMax=35; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=skull_dog1; cSlot=1;
+[ActorItem] ID=bone; cSlot=3;
+[ActorItem] ID=ribs1; cSlot=4;
+[ActorItem] ID=bones1; cSlot=5;
+[ActorItem] ID=bones2; cSlot=7;
+
+
+

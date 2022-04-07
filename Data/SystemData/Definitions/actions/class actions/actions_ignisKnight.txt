@@ -1,0 +1,520 @@
+
+
+[Action] ID=iK_oilEdge; 
+	name=Oil Edge;
+	icon=icon_iK_oilEdge;
+	tooltip=Deal half damage with your weapon and coat the enemy in Oil for <icon=time><math=50 + 30 * c:rank>.;
+	rankUpTooltip=Each rank increases duration by <icon=time>30.;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	XPCost=180;
+	XPCost=300;
+	XPCost=350;
+	XPCost=500;
+	
+	casterAnimation=weapon;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	requiredWeaponElement=weapon;
+	
+	FXOnCaster=chargeBurst;
+	FXOnCasterColor=Brown;
+	FXOnCaster=sfx_risingSwishHigh_quiet;
+	FXOnTarget=weaponFX;
+[ActionAoE] 
+	ID=iK_oilEdge; shape=10;
+[AvAffecter]
+	ID=iK_oilEdge; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.5;
+	chance=w:chance;
+	duration=-2;
+[AvAffecterAoE]
+	ID=iK_oilEdge; shape=11;
+[AvAffecter]
+	ID=iK_oilEdge; 
+	visibleMiss=false;
+	actorValue=oil;
+	magnitude=1;
+	duration=50 + 30 * c:rank;
+	chance=w:chance;
+	element=kindle;
+	FXOnTile=slash;
+	FXOnTileColor=Brown;
+	FXOnHit=ping;
+	FXOnHitColor=Brown;
+	FXOnHit=pixelSplash;
+	FXOnHitColor=Brown;
+	FXOnHit=tinyShakeHoriz;
+	FXOnHit=WetSquish;
+[AvAffecterAoE]
+	ID=iK_oilEdge;
+	cloneFrom=oneTile;
+	
+	
+
+
+[Action] ID=iK_flareEdge; 
+	name=Flare Edge;
+	icon=icon_iK_flareEdge;
+	tooltip=Deal half damage with your weapon and Blind nearby enemies with a flash of light - but only for <icon=time><math=30>.;
+	rankUpTooltip=Each rank increases area of effect.;
+	tooltipIcons=<icon=noRanged>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=melee_small>;
+	
+	XPCost=220;
+	XPCost=660;
+	
+	casterAnimation=weapon;
+	casterAnimationSpeed=0.8;
+	maxRank=2;
+	
+	requiredWeaponElement=melee;
+	
+	FXOnCaster=chargeBurst;
+	FXOnCaster=sfx_risingSwishHigh_quiet;
+	FXOnCaster=darken;
+	
+	FXOnTarget=weaponFX;
+	
+[ActionAoE] 
+	ID=iK_flareEdge;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=iK_flareEdge; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.5;
+	chance=w:chance;
+	duration=-2;
+	element=fire;
+[AvAffecterAoE]
+	ID=iK_flareEdge;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=iK_flareEdge; 
+	visibleEvaluations=false;
+	FXOnTile=vertlineFlash;
+	FXOnTile=horizlineFlash_low;
+	FXOnTile=sfx_shingEcho;
+	FXOnTile=whitePalette_short;
+[AvAffecterAoE]
+	ID=iK_flareEdge;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=iK_flareEdge; 
+	actorValue=blind;
+	magnitude=1;
+	duration=30;
+	chance=d:fireAcc * 0.8;
+[AvAffecterAoE]
+	ID=iK_flareEdge;
+	cloneFrom=adjacentAndSelf;
+	needsLoE=true;
+	needsLoS=true;
+	airborne=true;
+	arc=false;
+	coneAngle=200;
+	maxRangeBonus=c:rank;
+	
+[Action] ID=iK_wrathStrike; 
+	name=Wrath Strike;
+	icon=icon_iK_wrathStrike;
+	tooltip=Weapon attack that consumes Burn status on you or the target to deal +75% fire damage.;
+	rankUpTooltip=;
+	tooltipIcons=<icon=noRanged>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	requiredWeaponElement=melee;
+	
+	XPCost=250;
+	
+	maxRank=1;
+	
+	casterAnimation=jumpAttack_swing;
+	casterAnimationSpeed=1.2;
+	casterAnimationDependsOnWeaponHand=true;
+	
+	FXOnCaster=chargeBurst;
+	FXOnCasterColor=Red;
+	FXOnCaster=sfx_risingSwishHigh_quiet;
+--FXOnTarget=weaponFX;
+[ActionAoE] 
+	ID=iK_wrathStrike; shape=10;
+[AvAffecter]
+	ID=iK_wrathStrike; 
+	weaponAvAffecter=true;
+	visibleMiss=false;
+	actorValue=HP;
+	magnitude=w:magnitude * 1.75;
+	duration=-2;
+	chance=w:chance * max_tc:burn;
+	element=physical;
+	element=fire;
+	FXOnTile=DramaticNyeaow;
+	FXOnTile=timeSlow_minor;
+	FXOnTile=redden_minor;
+	FXOnTile=shine_bigExplosion;
+	FXOnTile=delay_minor;
+	FXOnTile=sfx_classicExplosion;
+	FXOnHit=medShakeHoriz;
+	FXOnHit=sfx_infernoBlast_quiet;
+	
+[AvAffecterAoE]
+	ID=iK_wrathStrike;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=iK_wrathStrike; 
+	visibleEvaluations=false;
+	harmful=false;
+	actorValue=burn;
+	magnitude=-1;
+	duration=-2;
+	chance=w:chance * max_tc:burn;
+[AvAffecterAoE]
+	ID=iK_wrathStrike;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=iK_wrathStrike; 
+	visibleEvaluations=false;
+	harmful=false;
+	actorValue=burn;
+	magnitude=-1;
+	duration=-2;
+	chance=100 * c:burn;
+	FXOnTile=fireWpnEmbers;
+[AvAffecterAoE]
+	ID=iK_wrathStrike;
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+	
+
+[Action] ID=iK_pyre; 
+	name=Pyre;
+	icon=icon_iK_pyre;
+	mpCost=10 * d:mpCostMult + d:mpCostMod;
+	tooltip=Burn yourself for <icon=time><math=100> with a giant explosion that scorches everything around you for <thinnerIcon=skill_Fire><math=d:fireDmgDisplay(8)> damage.;
+	rankUpTooltip=Each rank increases area of effect.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small>;
+	
+	XPCost=250;
+	XPCost=550;
+	
+	FXOnCaster=magicCharge;
+	FXOnCasterColor=Yellow;
+	FXOnCaster=darken;
+	FXOnCaster=fireWpnEmbers;
+	
+	FXOnTarget=redden_minor;
+	casterAnimation=handsup_angry;
+	casterAnimationSpeed=0.7;
+	maxRank=2;
+	canExceedMaxRankBy=1;
+[ActionAoE]
+	ID=iK_pyre;
+	cloneFrom=adjacent;
+	maxRangeBonus=c:rank;
+	airborne = true;
+	arc=true;
+[AvAffecter]
+	ID=iK_pyre; 
+	actorValue=burn;
+	magnitude=1;
+	duration=100;
+	chance=100;
+	element=magic;
+	element=fire;
+	FXOnTile=sfx_infernoBlast_high;
+	FXOnTile=fireWpnEmbers;
+	FXOnTile=tallExplosion;
+	FXOnTile=medExplosion;
+[AvAffecterAoE]
+	ID=iK_pyre;
+	aoeCasterAsOrigin=true;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=iK_pyre; 
+	actorValue=HP;
+	magnitude=d:fireDmg(8);
+	duration=-2;
+	chance=d:fireAcc;
+	element=magic;
+	element=fire;
+	element=kindle;
+	FXOnTile=flamethrower_overlap;
+	FXOnTile=fireEmbers_long;
+[AvAffecterAoE]
+	ID=iK_pyre;
+	aoeCasterAsOrigin=true;
+	
+
+[Action] ID=iK_phoenix; 
+	name=Phoenix;
+	icon=icon_iK_phoenix;
+	
+	mpCost=8 * d:mpCostMult + d:mpCostMod;
+	chargeTime=12;
+	
+	tooltip=Call down a fiery explosion that revives one ally and does <thinnerIcon=skill_Fire><math=d:fireDmgDisplay(6)> damage to adjacent creatures.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small><icon=skill_Life_small>;
+	
+	special=requiresCasting;
+	
+	XPCost=350;
+	XPCost=500;
+	XPCost=700;
+	
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	casterAnimation=spellcast;
+	
+	FXOnCaster=magicCharge;
+	FXOnCasterColor=Yellow;
+	FXOnCaster=darken_minor;
+	FXOnTarget=darken_minor;
+	FXOnTarget=tallLight;
+[ActionAoE] 
+	ID=iK_phoenix;
+	needsLoS = false;
+	needsLoE = false;
+	minRange = 1;
+	maxRange = 2;
+	maxRangeBonus=c:rank;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+	canSelectEnemies=false;
+[AvAffecter]
+	ID=iK_phoenix;
+	harmful=false;
+	actorValue=revive;
+	magnitude=c:MagAtk * 0.5 + c:skill_Life + c:skill_Fire * 1.5;
+	duration=-2;
+	chance=d:reviveAcc;
+	element=magic;
+	element=life;
+	FXOnTile=tileLine;
+	FXOnTileColor=Red;
+	FXOnTile=tileLine_overlap_small;
+	FXOnTileColor=Yellow;
+	FXOnTile=sfx_DramaticN_quiet;
+	FXOnTileColor=Red;
+	FXOnTile=whiteExplosionSmall_rand_overlap;
+	FXOnTileColor=Red;
+	FXOnTile=whiteExplosionSmall_rand_overlap;
+	FXOnTileColor=Red;
+	FXOnTile=smallShakeHoriz_long;
+	FXOnTile=flamethrowers_rand;
+	FXOnTile=flamethrowers_rand;
+	FXOnTile=flamethrowers_rand;
+	FXOnHit=sfx_longGoodAura_med;
+	FXOnHit=actor_reviveGhost;
+	FXOnHit=sparkles;
+	FXOnHitColor=Red;
+	FXOnHit=upwardLinesQuick;
+	FXOnHitColor=Red;
+	FXOnHit=Powerup_longerEchoBloop;
+	FXOnHit=redden;
+	FXOnHit=actor_spreadRed;
+[AvAffecterAoE]
+	ID=iK_phoenix;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=iK_phoenix; 
+	actorValue=HP;
+	magnitude=d:fireDmg(6);
+	duration=-2;
+	chance=d:fireAcc - 100 * m:incapped;
+	element=magic;
+	element=fire;
+	useCasterAsOriginForDirectionalEffects=false;
+[AvAffecterAoE]
+	ID=iK_phoenix;
+	cloneFrom=adjacent;
+	arc=true;
+	airborne=true;
+	blockedByLackOfActors=true;
+	
+	
+
+[Action] ID=iK_ignisOrb; 
+	name=Ignis Orb;
+	icon=icon_iK_ignisOrb;
+	mpCost=8 * d:mpCostMult + d:mpCostMod;
+	tooltip=A flaming orb strikes <math=2+c:rank> spots near eachother, damaging targets or leaving behind a pool of flames.;
+	rankUpTooltip=Each rank increases number of targets by 1.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small>;
+	
+	XPCost=150;
+	XPCost=600;
+	XPCost=750;
+	
+	numTargets=2 + c:rank;
+	minDistanceBetweenTargets=2;
+	maxDistanceBetweenTargets=3;
+	
+	FXOnCaster=magicCharge;
+	FXOnCasterColor=Yellow;
+	FXOnCaster=darken_minor;
+	
+	casterAnimation=spellcast;
+	maxRank=3;
+[ActionAoE]
+	ID=iK_ignisOrb;
+	cloneFrom=adjacent;
+	minRange=1;
+	maxRange=4;
+	arc=true;
+	airborne = true;
+[AvAffecter]
+	ID=iK_ignisOrb; 
+	actorValue=HP;
+	magnitude=d:fireDmg(5.5);
+	duration=-2;
+	chance=d:fireAcc;
+	element=magic;
+	element=fire;
+	element=kindle;
+	FXOnTile=energyShot_down;
+	FXOnTileColor=White;
+	FXOnTile=ringOut_noOverlap;
+	FXOnTileColor=Red;
+	FXOnTile=tinyShakeHoriz;
+	FXOnTile=sfx_zyew;
+	FXOnTile=fireWpnEmbers;
+	FXOnTile=fireWhirlEmbers;
+	FXOnTile=burn_noOverlap;
+	FXOnHit=ThudShot;
+[AvAffecterAoE]
+	ID=iK_ignisOrb; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=iK_ignisOrb; 
+	actorValue=summonItem;
+	harmful=false;
+	magnitude=fire;
+	duration=1;
+	chance=100;
+	element=magic;
+	element=fire;
+	FXOnTile=fireWhirlEmbers;
+[AvAffecterAoE]
+	ID=iK_ignisOrb; 
+	cloneFrom=oneTile;
+	canSelectActors=false;
+[AvAffecter]
+	ID=iK_ignisOrb; 
+	visibleEvaluations=false;
+	FXOnTile=energyShot_up;
+	FXOnTileColor=White;
+[AvAffecterAoE]
+	ID=iK_ignisOrb; 
+	cloneFrom=oneTile;
+	
+	
+
+[Action] ID=iK_burningWave; 
+	name=Burning Wave;
+	icon=icon_iK_burningWave;
+	tooltip=Create a crashing wave of fire with a swing of your weapon. Deals 50% damage and leaves a trail of fire behind.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipIcons=<icon=noRanged>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=melee_small><icon=skill_Fire_small>;
+	mpCost=8 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=360;
+	XPCost=500;
+	XPCost=800;
+	XPCost=990;
+	XPCost=2500;
+	
+	casterAnimation=jumpAttack_swing;
+	casterAnimationDependsOnWeaponHand=true;
+	maxRank=5;
+	canExceedMaxRankBy=1;
+	
+	requiredWeaponElement=melee;
+	
+	FXOnCaster=magicCharge;
+	FXOnCasterColor=Gold;
+	FXOnCaster=darken_minor;
+	FXOnTarget=weaponFX;
+	FXOnTarget=redden_minor;
+	FXOnTarget=sfx_longFrash;
+[ActionAoE] 
+	ID=iK_burningWave; shape=2;
+	minRange=1;
+	maxRange=1;
+	arc=true;
+	airborne=true;
+[AvAffecter]
+	ID=iK_burningWave; 
+	actorValue=HP;
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.35 + d:fireDmg20LessScale(1);
+	duration=-2;
+	chance=d:fireAcc;
+	FXOnTile=smallShakeHoriz;
+	FXOnTile=circleExplosion_fancy_wave;
+	FXOnTile=QuietBurnishSound;
+	FXOnTile=circleExplosion_fancy_wave2;
+	FXOnTile=fireEmbers_long;
+	element=magic;
+	element=fire;
+	element=kindle;
+[AvAffecterAoE]
+	ID=iK_burningWave; shape=2;
+	minRange=1;
+	maxRange=1;
+	maxRangeBonus=0;
+	arc=true;
+	airborne=true;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+[AvAffecter]
+	ID=iK_burningWave; 
+	actorValue=HP;
+	weaponAvAffecter=false;
+	magnitude=w:magnitude * 0.35 + d:fireDmg20LessScale(1);
+	duration=-2;
+	chance=d:fireAcc;
+	FXOnTile=smallShakeHoriz;
+	FXOnTile=circleExplosion_fancy_wave;
+	FXOnTile=QuietBurnishSound;
+	FXOnTile=circleExplosion_fancy_wave2;
+	FXOnTile=fireEmbers_long;
+	element=magic;
+	element=fire;
+	element=kindle;
+[AvAffecterAoE]
+	ID=iK_burningWave; shape=2;
+	minRange=2;
+	maxRange=2;
+	maxRangeBonus=c:rank;
+	arc=true;
+	airborne=true;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+[AvAffecter]
+	ID=iK_burningWave; 
+	weaponAvAffecter=false;
+	actorValue=summonItem;
+	harmful=false;
+	magnitude=fire_small;
+	duration=1;
+	chance=100;
+[AvAffecterAoE]
+	ID=iK_burningWave; shape=2;
+	minRange=1;
+	maxRange=2;
+	maxRangeBonus=c:rank;
+	arc=true;
+	airborne=true;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+	canSelectActors=false;
+	
+	
+	

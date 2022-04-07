@@ -1,0 +1,278 @@
+[LevelData] ID=test;
+minZoneSizeX = 35;
+minZoneSizeY = 30;
+maxZoneSizeX = 35;
+maxZoneSizeY = 30;
+
+wallChanceToZig = 0;
+wallChanceToZag = 0;
+
+minWallThickness = 7;
+maxWallThickness = 7;
+minWallFlatStretch = 2;
+
+chanceOfForwardPath = 1;
+
+worldSizeX = 2;
+worldSizeY = 2;
+
+wallType = caveSolid_org1;
+wallTypeBottom = orgWall1;
+defaultTile = dirt_bumpy;
+
+minExitWidth = 4;
+maxExitWidth = 4;
+exitCurveAverageDepth = 5;
+exitCurveVariation = 2;
+
+minSetPiecesPerRoom = 1;
+maxSetPiecesPerRoom = 1;
+
+setPieces=spPillar1;
+setPiecesChanceToReroll=0;
+
+----
+centerPieceChance_normal = 1;
+centerPieceChance_deadEnd = 1;
+
+centerPieces = test;
+centerPiecesChanceToReroll = 0;
+
+
+[LevelDataZone]ID=test;
+
+zoneDirtPalette = pOrange;
+zoneDirtDarkPalette = pGrey2blue_mix1;
+
+
+
+
+
+[LevelData] ID=l;
+minZoneSizeX = 38;
+minZoneSizeY = 27;
+maxZoneSizeX = 42;
+maxZoneSizeY = 34;
+
+wallChanceToZig = 0.3;
+wallChanceToZag = 0.2;
+
+minWallThickness = 6;
+maxWallThickness = 9;
+minWallFlatStretch = 2;
+
+worldSizeX = 4;
+worldSizeY = 4;
+
+wallType = caveSolid_Rock;
+wallTypeBottom = caveWall;
+defaultTile = dirt_smooth;
+
+zoneDirtPalette = pOrange;
+zoneDirtDarkPalette = pTeal;
+
+minSetPiecesPerRoom = 1;
+maxSetPiecesPerRoom = 2;
+setPieces=spChokepoint1;
+setPiecesChanceToReroll=0.4;
+setPieces=spChokepoint2;
+setPiecesChanceToReroll=0.4;
+setPieces=spChokepoint3;
+setPiecesChanceToReroll=0.4;
+setPieces=spChokepoint4;
+setPiecesChanceToReroll=0.4;
+setPieces=spPillar1;
+setPiecesChanceToReroll=0;
+setPieces=spPillar2;
+setPiecesChanceToReroll=0;
+
+----
+centerPieceChance_normal = 0.6;
+centerPieceChance_deadEnd = 0.95;
+
+centerPieces = spPill1;
+centerPiecesChanceToReroll = 0;
+centerPieces = spBrigands1;
+centerPiecesChanceToReroll = 0.9;
+centerPieces = spSpide1;
+centerPiecesChanceToReroll = 0.7;
+centerPieces = spPuzzle_organic1;
+centerPiecesChanceToReroll = 0;
+centerPieces = spPuzzle_organic2;
+centerPiecesChanceToReroll = 0;
+centerPieces = spPuzzle_organic3;
+centerPiecesChanceToReroll = 0;
+
+
+----
+
+spawnItems_nearWall_chance = 0.14;
+spawnItems_nearWall=rubble;
+spawnItems_nearWall_chanceToReroll=0;
+
+spawnItems_nearCenter_chance = 0.04;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=rubble;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=bubble_big;
+spawnItems_nearCenter_chanceToReroll=0.4;
+spawnItems_nearCenter=bubble_big_item;
+spawnItems_nearCenter_chanceToReroll=0.65;
+
+otherLevelData=jagged;
+otherLevelData_chance=1;
+otherLevelData=grassy;
+otherLevelData_chance=0.02;
+otherLevelData=stone;
+otherLevelData_chance=0.01;
+
+
+
+
+[LevelData] ID=stone;
+minZoneSizeX = 21;
+maxZoneSizeX = 21;
+minZoneSizeY = 21;
+maxZoneSizeY = 21;
+
+wallChanceToZig = 0;
+wallChanceToZag = 0;
+
+minWallThickness = 6;
+maxWallThickness = 6;
+
+wallType = stoneSolid;
+wallTypeBottom = brickWall;
+defaultTile = stoneTileFloor;
+
+zoneDirtPalette = pOrange;
+zoneDirtDarkPalette = pTeal;
+zoneStoneLightPalette = pOrange;
+zoneStonePalette = pOrange;
+zoneStoneDarkPalette = pTeal;
+
+minSetPiecesPerRoom = 1;
+maxSetPiecesPerRoom = 1;
+setPieces = spPillar3x3;
+setPiecesChanceToReroll = 0;
+
+
+centeredExits=true;
+
+[LevelData] ID=jagged;
+minZoneSizeX = 38;
+maxZoneSizeX = 42;
+
+minZoneSizeY = 27;
+maxZoneSizeY = 34;
+
+wallChanceToZig = 1;
+wallChanceToZag = 0.35;
+
+minWallThickness = 5;
+maxWallThickness = 10;
+
+wallType = caveSolid_Jagged;
+wallTypeBottom = caveWall_Jagged;
+defaultTile = dirt;
+
+zoneDirtPalette = pBlueD_light;
+zoneDirtDarkPalette = pBluegreen;
+
+minSetPiecesPerRoom = 1;
+maxSetPiecesPerRoom = 2;
+setPieces = spChokepoint1;
+setPiecesChanceToReroll = 0;
+setPieces = spChokepoint2;
+setPiecesChanceToReroll = 0;
+setPieces = spPillar1;
+setPiecesChanceToReroll = 0;
+
+centerPieces = spBrigands1;
+centerPiecesChanceToReroll = 0;
+centerPieces = spSpide1;
+centerPiecesChanceToReroll = 0;
+centerPieceChance_normal = 0.1;
+centerPieceChance_deadEnd = 0.9;
+
+spawnItems_nearWall_chance = 0.22;
+spawnItems_nearWall = rubble;
+spawnItems_nearWall_chanceToReroll = 0;
+
+spawnItems_nearCenter_chance = 0.04;
+spawnItems_nearCenter = pebbles1;
+spawnItems_nearCenter_chanceToReroll = 0;
+spawnItems_nearCenter = pebbles2;
+spawnItems_nearCenter_chanceToReroll = 0;
+spawnItems_nearCenter = debris_small1;
+spawnItems_nearCenter_chanceToReroll = 0;
+spawnItems_nearCenter = debris_small2;
+spawnItems_nearCenter_chanceToReroll = 0;
+spawnItems_nearCenter = debris_small3;
+spawnItems_nearCenter_chanceToReroll = 0;
+
+
+[LevelData] ID=grassy;
+minZoneSizeX = 36;
+maxZoneSizeX = 40;
+
+minZoneSizeY = 25;
+maxZoneSizeY = 32;
+
+wallChanceToZig = 0.27;
+wallChanceToZag = 0.1;
+minWallFlatStretch = 3;
+
+minWallThickness = 6;
+maxWallThickness = 8;
+
+wallType = caveSolid_Rock;
+wallTypeBottom = caveWallGreen;
+defaultTile = grass;
+
+zoneDirtPalette = pMagenta_light;
+zoneDirtDarkPalette = pYellow;
+zoneGrassPalette = pGreen;
+
+minSetPiecesPerRoom = 2;
+maxSetPiecesPerRoom = 3;
+setPieces = spBushes_grass1;
+setPiecesChanceToReroll = 0;
+setPieces = spBushes_grass2;
+setPiecesChanceToReroll = 0;
+setPieces = spBushes_grass3;
+setPiecesChanceToReroll = 0;
+setPieces = spBushes_grass4;
+setPiecesChanceToReroll = 0;
+setPieces = spBushes_grass5;
+setPiecesChanceToReroll = 0;
+setPieces = spBushes_grass6;
+setPiecesChanceToReroll = 0;
+setPieces = spPillar1;
+setPiecesChanceToReroll = 0;
+setPieces = spPillar2;
+setPiecesChanceToReroll = 0;
+
+
+spawnItems_onWall_chance = 0.1;
+spawnItems_onWall = latticeWeed;
+spawnItems_onWall_chanceToReroll= 0;
+			
+spawnItems_nearCenter_chance = 0.04;
+spawnItems_nearCenter = flower1;
+spawnItems_nearCenter_chanceToReroll = 0;
+spawnItems_nearCenter = flowers1;
+spawnItems_nearCenter_chanceToReroll = 0;
+spawnItems_nearCenter = plant_small1;
+spawnItems_nearCenter_chanceToReroll = 0;
+spawnItems_nearCenter = plant_small2;
+spawnItems_nearCenter_chanceToReroll = 0;

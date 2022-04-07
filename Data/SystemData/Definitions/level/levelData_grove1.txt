@@ -1,0 +1,744 @@
+
+
+[LevelData] ID=grove1_extra;
+
+minZoneSizeX = 26;
+minZoneSizeY = 20;
+maxZoneSizeX = 38;
+maxZoneSizeY = 21;
+
+--wall1
+wallChanceToZig = 0.5;
+wallChanceToZag = 0.3;
+
+minWallThickness = 4;
+maxWallThickness = 5;
+minWallFlatStretch = 3;
+
+wallType = bush2;
+wallTypeBottom = bush;
+--
+
+--wall2
+wallType = bush_alt_onBush;
+wallTypeBottom = bush;
+
+wallChanceToZig = 0.5;
+wallChanceToZag = 0.3;
+
+minWallThickness = 2;
+maxWallThickness = 3;
+minWallFlatStretch = 2;
+--
+
+extraPureBlackBorder = 8;
+
+chanceOfForwardPath = 1;
+
+worldSizeX = 1;
+worldSizeY = 1;
+
+defaultTile = grass_lush;
+
+
+wallTypeBottom_exit = ;
+defaultTile_exit = ;
+
+minExitWidth = 3;
+maxExitWidth = 5;
+exitCurveAverageDepth = 6;
+exitCurveVariation = 2;
+
+----
+
+
+carvePath_betweenExits_terrainTypeID=grass;
+carvePath_betweenExits_straight_minLength = 1;
+carvePath_betweenExits_turn_minLength = 2;
+carvePath_betweenExits_chanceToTurn = 0.4;
+carvePath_betweenExits_width = 3;
+
+carvePath_fromExitToCenterPiece_terrainTypeID = grass;
+carvePath_fromExitToCenterPiece_straight_minLength = 1;
+carvePath_fromExitToCenterPiece_turn_minLength = 2;
+carvePath_fromExitToCenterPiece_width = 2;
+carvePath_fromExitToCenterPiece_chanceToTurn = 0.3;
+----
+
+
+minSetPiecesPerRoom = 8;
+maxSetPiecesPerRoom = 13;
+
+guaranteedSetPieces=spTreetopCornerNW;
+guaranteedSetPieces=spTreetopCornerNE;
+guaranteedSetPieces=spTreetopCornerSW;
+guaranteedSetPieces=spTreetopCornerSE;
+guaranteedSetPieces=spTreetop1N;
+guaranteedSetPieces=spTreetop2N;
+guaranteedSetPieces=spTreetop1W;
+guaranteedSetPieces=spTreetop2E;
+
+setPieces=spPillar1;
+setPiecesChanceToReroll=0;
+setPieces=spPillar2;
+setPiecesChanceToReroll=0;
+setPieces=spPillar3;
+setPiecesChanceToReroll=0;
+setPieces=spPillar4;
+setPiecesChanceToReroll=0;
+setPieces=spPillar5;
+setPiecesChanceToReroll=0;
+setPieces=spTreetop1W;
+setPiecesChanceToReroll=0;
+setPieces=spTreetop2W;
+setPiecesChanceToReroll=0;
+setPieces=spTreetop1E;
+setPiecesChanceToReroll=0;
+setPieces=spTreetop2E;
+setPiecesChanceToReroll=0;
+
+---
+centerPieceChance_normal = 0;
+centerPieceChance_deadEnd = 0;
+centerPieceChance_1stRoom = 0;
+
+
+
+---
+
+
+spawnItems_nearCenter_chance = 0.06;
+spawnItems_nearCenter=bush_huge1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=bush_big1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=bush1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=bush2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=aldleafPlant;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=aldleafBush;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=plant_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+
+spawnItems_nearCenter=pod_burst;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=pod_blast;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=pod_sickly;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=pod_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+
+spawnItems_nearCenter=sunbeam_foliage_tiny_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=sunbeam_foliage_small_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=sunbeam_foliage_med_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=sunbeam_foliage_big_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+
+spawnItems_nearCenter=tree3_base;
+spawnItems_nearCenter_chanceToReroll=0.55;
+spawnItems_nearCenter=tree_med;
+spawnItems_nearCenter_chanceToReroll=0.55;
+spawnItems_nearCenter=tree;
+spawnItems_nearCenter_chanceToReroll=0.55;
+spawnItems_nearCenter=tree_small;
+spawnItems_nearCenter_chanceToReroll=0.55;
+spawnItems_nearCenter=tree_big;
+spawnItems_nearCenter_chanceToReroll=0.55;
+
+spawnItems_nearCenter=flower1;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=flower2;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=brambles;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=stash_dirt_loot2;
+spawnItems_nearCenter_chanceToReroll=0.96;
+spawnItems_nearCenter=stash_dirt_loot3;
+spawnItems_nearCenter_chanceToReroll=0.991;
+spawnItems_nearCenter=stash_dirt_loot4;
+spawnItems_nearCenter_chanceToReroll=0.995;
+
+spawnItems_nearWall_chance=0.02;
+spawnItems_nearWall=grass_tall1;
+spawnItems_nearWall_chanceToReroll=0;
+
+spawnItems_onWall_chance = 0.001;
+spawnItems_onWall=ghost_grub;
+spawnItems_onWall_chanceToReroll=0;
+
+---
+
+specialSpawns=leafyTree_lower;
+specialSpawns=leafyTree_mid;
+specialSpawns=leafyTree_mid2;
+specialSpawns=leafyTree_mid2;
+specialSpawns=leafyTree_top;
+
+specialSpawns=shadow_zoneEdgeN;
+specialSpawns=shadow_zoneEdgeS;
+--specialSpawns=shadow_zoneEdgeE;
+--specialSpawns=shadow_zoneEdgeW;
+specialSpawns=altBushCleanup1;
+specialSpawns=altBushCleanup2;
+specialSpawns=altBushCleanup3;
+
+specialSpawns=tallGrassSpreadN;
+specialSpawns=tallGrassSpreadS;
+specialSpawns=tallGrassSpreadE;
+specialSpawns=tallGrassSpreadW;
+
+specialSpawns=bush2Flower1;
+specialSpawns=bush2Flowers1;
+
+specialSpawns=grass_alt;
+specialSpawns=grass_anim;
+
+otherLevelData=grove1_deadEnd;
+otherLevelData_chance=0;
+otherLevelData_chance_deadEnd=1;
+
+triggers=tSetZoneDarknessToWorldDarkness;
+triggers=tEnterGrove;
+
+[LevelDataZone]ID=grove1_extra;
+
+zoneDirtPalette = pYellow4;
+zoneDirtDarkPalette = pYellow5;
+zoneGrassPalette = pGreen;
+zoneGrassDarkPalette = pGreen2;
+zoneWoodPalette = pWood;
+zoneStoneDarkPalette = pYellow;
+zoneWaterPalette = pTeal;
+zoneMisc1Palette = pTeal;
+zoneMisc2Palette = pPurple;
+
+bgParallaxRatio =0;
+bgTerrainTypeID=grass;
+
+travelSong=PM-DeepWoods;
+travelSongVolume=1;
+combatSong=PM-LostPlace2;
+combatSongDelay=1;
+
+dark=true;
+darkR=147; darkG=147; darkB=152; 
+
+zoneFX=w_risingDust_glow;
+zoneFXTime=10;
+zoneFX_x=-1;
+zoneFX_y=-1;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1;
+zoneFX_y=-1;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1;
+zoneFX_y=-1;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1;
+zoneFX_y=-1;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1;
+zoneFX_y=-1;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1;
+zoneFX_y=-1;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1;
+zoneFX_y=-1;
+zoneFX=amb_crickets;
+zoneFXTime=38;
+zoneFX_x=-1;
+zoneFX_y=-1;
+
+
+zoneFX=w_cloudshade;
+zoneFXTime=9999999;
+zoneFX_x=0;
+zoneFX_y=0;
+zoneFX=w_cloudshade;
+zoneFXTime=9999999;
+zoneFX_x=20;
+zoneFX_y=0;
+
+
+
+[LevelData] ID=grove1;
+cloneFrom=grove1_extra;
+
+---
+minZoneSizeX = 25;
+minZoneSizeY = 32;
+maxZoneSizeX = 29;
+maxZoneSizeY = 34;
+
+--minWallThickness = 3;
+--maxWallThickness = 4;
+
+extraPureBlackBorder = 6;
+
+worldSizeX = 1;
+worldSizeY = 2;
+
+---
+
+
+carvePath_fromExitToCenterPiece_terrainTypeID = grass;
+carvePath_fromExitToCenterPiece_straight_minLength = 1;
+carvePath_fromExitToCenterPiece_turn_minLength = 2;
+carvePath_fromExitToCenterPiece_width = 2;
+carvePath_fromExitToCenterPiece_chanceToTurn = 0.3;
+
+---
+
+minSetPiecesPerRoom = 8;
+maxSetPiecesPerRoom = 13;
+
+guaranteedSetPieces=spTreetopCornerNW;
+guaranteedSetPieces=spTreetopCornerNE;
+guaranteedSetPieces=spTreetopCornerSW;
+guaranteedSetPieces=spTreetopCornerSE;
+guaranteedSetPieces=spTreetop1W;
+guaranteedSetPieces=spTreetop2E;
+
+setPieces=spPillar1;
+setPiecesChanceToReroll=0;
+setPieces=spPillar2;
+setPiecesChanceToReroll=0;
+setPieces=spPillar3;
+setPiecesChanceToReroll=0;
+setPieces=spPillar4;
+setPiecesChanceToReroll=0;
+setPieces=spPillar5;
+setPiecesChanceToReroll=0;
+setPieces=spTreetop1W;
+setPiecesChanceToReroll=0;
+setPieces=spTreetop2W;
+setPiecesChanceToReroll=0;
+setPieces=spTreetop1E;
+setPiecesChanceToReroll=0;
+setPieces=spTreetop2E;
+setPiecesChanceToReroll=0;
+
+---
+chooseCenterPiecesInOrder = true;
+
+centerPieceChance_normal = 1;
+centerPieceChance_deadEnd = 0;
+centerPieceChance_1stRoom = 1;
+
+
+centerPieces = spGroveEnc;
+centerPiecesChanceToReroll = g:spGroveEnc_added - 30;
+centerPieces = spGrovePrize3;
+centerPiecesChanceToReroll = 0;
+
+
+otherLevelData=grove1_deadEnd;
+otherLevelData_chance=0;
+otherLevelData_chance_deadEnd=1;
+
+
+---
+
+spawnItems_onWall_chance = 0.001;
+spawnItems_onWall=ghost_grub;
+spawnItems_onWall_chanceToReroll=0;
+
+spawnItems_nearCenter_chance = 0.11;
+spawnItems_nearCenter=bush_huge1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=bush_big1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=bush1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=bush2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+
+spawnItems_nearCenter=sunbeam_foliage_tiny_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=sunbeam_foliage_small_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=sunbeam_foliage_med_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=sunbeam_foliage_big_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+
+spawnItems_nearCenter=flower1;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=flowers1;
+spawnItems_nearCenter_chanceToReroll=0.8;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=brambles;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=stash_dirt_loot2;
+spawnItems_nearCenter_chanceToReroll=0.95;
+spawnItems_nearCenter=stash_dirt_loot3;
+spawnItems_nearCenter_chanceToReroll=0.97;
+spawnItems_nearCenter=stash_dirt_loot4;
+spawnItems_nearCenter_chanceToReroll=0.99;
+
+specialSpawns=leafyTree_lower;
+specialSpawns=leafyTree_mid;
+specialSpawns=leafyTree_mid2;
+specialSpawns=leafyTree_mid2;
+specialSpawns=leafyTree_top;
+specialSpawns=shadow_zoneEdgeN;
+specialSpawns=shadow_zoneEdgeS;
+specialSpawns=shadow_zoneEdgeE;
+specialSpawns=shadow_zoneEdgeW;
+specialSpawns=altBushCleanup1;
+specialSpawns=altBushCleanup2;
+specialSpawns=altBushCleanup3;
+
+specialSpawns=tallGrassSpreadN;
+specialSpawns=tallGrassSpreadS;
+specialSpawns=tallGrassSpreadE;
+specialSpawns=tallGrassSpreadW;
+
+specialSpawns=bush2Flower1;
+specialSpawns=bush2Flowers1;
+
+specialSpawns=grass_alt;
+specialSpawns=grass_anim;
+
+triggers=tSetZoneDarknessToWorldDarkness;
+triggers=tEnterGrove;
+
+[LevelDataZone]ID=grove1;
+
+zoneDirtPalette = pYellow4;
+zoneDirtDarkPalette = pYellow5;
+zoneGrassPalette = overworld1;
+zoneGrassDarkPalette = overworld2;
+zoneWoodPalette = pWood;
+zoneStoneDarkPalette = pYellow;
+zoneWaterPalette = pTeal;
+zoneMisc1Palette = pTeal;
+zoneMisc2Palette = pPurple;
+
+bgParallaxRatio =0;
+bgTerrainTypeID=grass;
+
+travelSong=PM-DeepWoods;
+travelSongVolume=1;
+combatSong=PM-LostPlace2;
+combatSongDelay=1;
+
+dark=true;
+darkR=147; darkG=147; darkB=152; 
+
+zoneFX=w_risingDust_glow;
+zoneFXTime=10;
+zoneFX_x=-1;
+zoneFX_y=-1;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1;
+zoneFX_y=-1;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1;
+zoneFX_y=-1;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1;
+zoneFX_y=-1;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1;
+zoneFX_y=-1;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1;
+zoneFX_y=-1;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1;
+zoneFX_y=-1;
+zoneFX=amb_crickets;
+zoneFXTime=38;
+zoneFX_x=-1;
+zoneFX_y=-1;
+
+zoneFX=w_cloudshade;
+zoneFXTime=9999999;
+zoneFX_x=0;
+zoneFX_y=0;
+zoneFX=w_cloudshade;
+zoneFXTime=9999999;
+zoneFX_x=20;
+zoneFX_y=0;
+
+[LevelData] ID=grove1_deadEnd;
+cloneFrom=grove1_extra;
+
+---
+minZoneSizeX = 27;
+minZoneSizeY = 25;
+maxZoneSizeX = 28;
+maxZoneSizeY = 26;
+
+
+extraPureBlackBorder = 6;
+
+---
+
+
+carvePath_fromExitToCenterPiece_terrainTypeID = grass;
+carvePath_fromExitToCenterPiece_straight_minLength = 1;
+carvePath_fromExitToCenterPiece_turn_minLength = 2;
+carvePath_fromExitToCenterPiece_width = 2;
+carvePath_fromExitToCenterPiece_chanceToTurn = 0.3;
+
+---
+
+minSetPiecesPerRoom = 8;
+maxSetPiecesPerRoom = 13;
+
+guaranteedSetPieces=spTreetopCornerNW;
+guaranteedSetPieces=spTreetopCornerNE;
+guaranteedSetPieces=spTreetopCornerSW;
+guaranteedSetPieces=spTreetopCornerSE;
+guaranteedSetPieces=spTreetop1N;
+guaranteedSetPieces=spTreetop2N;
+guaranteedSetPieces=spTreetop1W;
+guaranteedSetPieces=spTreetop2E;
+
+setPieces=spPillar1;
+setPiecesChanceToReroll=0;
+setPieces=spPillar2;
+setPiecesChanceToReroll=0;
+setPieces=spPillar3;
+setPiecesChanceToReroll=0;
+setPieces=spPillar4;
+setPiecesChanceToReroll=0;
+setPieces=spPillar5;
+setPiecesChanceToReroll=0;
+setPieces=spTreetop1W;
+setPiecesChanceToReroll=0;
+setPieces=spTreetop2W;
+setPiecesChanceToReroll=0;
+setPieces=spTreetop1E;
+setPiecesChanceToReroll=0;
+setPieces=spTreetop2E;
+setPiecesChanceToReroll=0;
+setPieces=spTreetop1N;
+setPiecesChanceToReroll=0;
+setPieces=spTreetop2N;
+setPiecesChanceToReroll=0;
+
+---
+chooseCenterPiecesInOrder = true;
+
+centerPieceChance_normal = 1;
+centerPieceChance_deadEnd = 1;
+centerPieceChance_1stRoom = 1;
+
+centerPieces = spFossil1;
+centerPiecesChanceToReroll = allItemsSpawned:loot_fossils;
+centerPieces = spPlant1;
+centerPiecesChanceToReroll = allItemsSpawned:loot_plants;
+centerPieces = spGrovePrize1;
+centerPiecesChanceToReroll = 2 - allItemsSpawned:loot_fossils - allItemsSpawned:loot_plants;
+
+
+---
+
+spawnItems_onWall_chance = 0.001;
+spawnItems_onWall=ghost_grub;
+spawnItems_onWall_chanceToReroll=0;
+
+spawnItems_nearCenter_chance = 0.11;
+spawnItems_nearCenter=bush_huge1;
+spawnItems_nearCenter_chanceToReroll=0.2;
+spawnItems_nearCenter=bush_big1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=bush1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=bush2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=plant_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+
+spawnItems_nearCenter=sunbeam_foliage_tiny_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=sunbeam_foliage_small_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=sunbeam_foliage_med_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=sunbeam_foliage_big_dark;
+spawnItems_nearCenter_chanceToReroll=0;
+
+spawnItems_nearCenter=flower1;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=flowers1;
+spawnItems_nearCenter_chanceToReroll=0.8;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0.3;
+spawnItems_nearCenter=brambles;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=stash_dirt_loot2;
+spawnItems_nearCenter_chanceToReroll=0.95;
+spawnItems_nearCenter=stash_dirt_loot3;
+spawnItems_nearCenter_chanceToReroll=0.97;
+spawnItems_nearCenter=stash_dirt_loot4;
+spawnItems_nearCenter_chanceToReroll=0.99;
+
+specialSpawns=leafyTree_lower;
+specialSpawns=leafyTree_mid;
+specialSpawns=leafyTree_mid2;
+specialSpawns=leafyTree_mid2;
+specialSpawns=leafyTree_top;
+specialSpawns=shadow_zoneEdgeN;
+specialSpawns=shadow_zoneEdgeS;
+--specialSpawns=shadow_zoneEdgeE;
+--specialSpawns=shadow_zoneEdgeW;
+specialSpawns=altBushCleanup1;
+specialSpawns=altBushCleanup2;
+specialSpawns=altBushCleanup3;
+
+specialSpawns=bush2Flower1;
+specialSpawns=bush2Flowers1;
+
+specialSpawns=grass_alt;
+specialSpawns=grass_anim;
+
+triggers=tSetZoneDarknessToWorldDarkness;
+triggers=tEnterGrove;
+
+[LevelDataZone]ID=grove1_deadEnd;
+
+zoneDirtPalette = pYellow4;
+zoneDirtDarkPalette = pYellow5;
+zoneGrassPalette = overworld1;
+zoneGrassDarkPalette = overworld2;
+zoneWoodPalette = pWood;
+zoneStoneDarkPalette = pYellow;
+zoneWaterPalette = pTeal;
+zoneMisc1Palette = pTeal;
+zoneMisc2Palette = pPurple;
+
+bgParallaxRatio =0;
+bgTerrainTypeID=grass;
+
+travelSong=PM-DeepWoods;
+travelSongVolume=1;
+combatSong=PM-LostPlace2;
+combatSongDelay=1;
+
+dark=true;
+darkR=167; darkG=167; darkB=172; 
+
+zoneFX=w_risingDust_glow;
+zoneFXTime=10;
+zoneFX_x=-1;
+zoneFX_y=-1;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1;
+zoneFX_y=-1;
+zoneFX=beetle_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1;
+zoneFX_y=-1;
+zoneFX=bug_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1;
+zoneFX_y=-1;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1;
+zoneFX_y=-1;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1;
+zoneFX_y=-1;
+zoneFX=worm_spawn;
+zoneFXTime=999999;
+zoneFX_x=-1;
+zoneFX_y=-1;
+zoneFX=amb_crickets;
+zoneFXTime=38;
+zoneFX_x=-1;
+zoneFX_y=-1;
+
+zoneFX=w_cloudshade;
+zoneFXTime=9999999;
+zoneFX_x=0;
+zoneFX_y=0;
+zoneFX=w_cloudshade;
+zoneFXTime=9999999;
+zoneFX_x=20;
+zoneFX_y=0;

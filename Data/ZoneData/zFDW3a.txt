@@ -1,0 +1,931 @@
+[Zone]  ID=zFDW3a; dark=True; timeUntilNewDay=24; showFogOfWar=True; fogOfWar=True; minimapEnabled=True; allowCameraPastZoneEdges=False; cantAct=False; cantGameOver=False; alwaysKeepWeaponsUnsheathed=False; peaceful=False; overseerMode=False; rollingPinStyle=False; drawSky=False; drawSky_overrideYpos=-1; boatZone=False; wind=False; overworld=False; canDropItems=True; 
+ travelSong=ZP-ForgottenCastle; travelSongVolume=0.9; travelSongPitch=0; combatSong=KP-Battle2Intro; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=124; darkG=92; darkB=106; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=oceanB; bgFX_sineWave=12; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=p67; zoneGrassPalette=pGreen; zoneGrassDarkPalette=pGreen2; zoneStonePalette=pTeal2; zoneStoneDarkPalette=p81; zoneStoneLightPalette=p80; zoneWaterPalette=p69; zoneDirtDarkPalette=p68; zoneWoodPalette=pBlue5; zoneWoodDarkPalette=pYellow6; zoneMisc1Palette=p40; zoneMisc2Palette=p83; zoneMisc3Palette=p80; zoneMisc4Palette=pFadeDark; zoneMisc5Palette=pGreen; zoneMisc6Palette=pOrange; zoneMisc7Palette=p68; zoneMisc8Palette=pPurple; 
+
+combatMode=False; zoneFX=w_risingDust;zoneFXTime=1;zoneFX_x=-1;zoneFX_y=-1;
+
+[Item] ID=rubble; q=1; x=11; y=54;
+[Item] ID=blockedWalkJump; q=1; x=11; y=54;
+[Item] ID=pebbles1; q=1; x=11; y=55;
+[Item] ID=stormcannon2_broken; q=1; x=11; y=55;
+[Item] ID=dirt_sandy1; q=2; r=-90; x=11; y=56;
+[Item] ID=dirt_sandy2; q=1; r=360; x=11; y=56;
+[Item] ID=rubble; q=1; x=12; y=14;
+[Item] ID=xpDust; q=1; x=12; y=14;
+[Item] ID=xpGemBig; q=1; x=12; y=14;
+[Item] ID=rubble; q=1; x=12; y=15;
+[Item] ID=xpDust; q=1; x=12; y=15;
+[Item] ID=organic_hole_slow; q=1; x=12; y=16;
+[Item] ID=rocks1; q=1; r=-360; x=12; y=16;
+[Item] ID=rubble; q=1; x=12; y=54;
+[Item] ID=dirt_sandy1; q=1; r=-90; x=12; y=55;
+[Item] ID=dirt_sandy2; q=2; x=12; y=55;
+[Item] ID=dirt_sandy2; q=1; r=270; x=12; y=56;
+[Item] ID=rubble; q=1; x=13; y=14;
+[Item] ID=xpDust; q=1; x=13; y=14;
+[Item] ID=xpDust; q=1; x=13; y=15;
+[Item] ID=xpDust; q=1; x=13; y=16;
+[Item] ID=wall2_styleC1_static2; q=1; r=-360; x=13; y=49;
+[Item] ID=wall2_styleC1_static7; q=1; r=-360; x=13; y=50;
+[Item] ID=dirt_sandy2; q=2; r=360; x=13; y=51;
+[Item] ID=blockedWalkJump; q=1; x=13; y=51;
+[Item] ID=dirt_sandy2; q=1; r=360; x=13; y=52;
+[Item] ID=stormcannon1_broken; q=1; x=13; y=52;
+[Item] ID=dirt_sandy1; q=1; r=-180; x=13; y=53;
+[Item] ID=dirt_sandy1; q=2; r=-180; x=13; y=54;
+[Item] ID=wire; q=1; r=90; x=13; y=56;
+[Item] ID=wire; q=1; r=360; x=13; y=56;
+[Item] ID=rocks1; q=1; x=14; y=14;
+[Item] ID=xpDust; q=1; x=14; y=14;
+[Item] ID=wall1_styleC1top; q=1; x=14; y=49;
+[Item] ID=wall2_styleC1_static6; q=1; x=14; y=50;
+[Item] ID=blockedWalkJump; q=1; x=14; y=51;
+[Item] ID=stormcannon2_broken; q=1; x=14; y=52;
+[Item] ID=floor_cyber1; q=3; r=360; x=14; y=53;
+[Item] ID=wire_long; q=1; r=-180; x=14; y=56;
+[Item] ID=pebbles1; q=1; x=15; y=14;
+[Item] ID=pebbles2; q=1; x=15; y=15;
+[Item] ID=xpDust; q=1; x=15; y=16;
+[Item] ID=rubble; q=1; x=15; y=19;
+[Item] ID=wall1_styleC1top; q=1; x=15; y=49;
+[Item] ID=wire_long; q=1; r=90; x=15; y=49;
+[Item] ID=wall1_styleC1_static; q=1; x=15; y=50;
+[Item] ID=wire; q=1; r=270; x=15; y=50;
+[Item] ID=table_stone; q=1; x=15; y=51;
+[Item] ID=cannon_storm; q=1; r=360; x=15; y=51;
+[Item] ID=wire; q=1; r=90; x=15; y=56;
+[Item] ID=wire; q=1; r=180; x=15; y=56;
+[Item] ID=dirt_sandy2; q=2; r=270; x=15; y=56;
+[Item] ID=rubble; q=1; x=16; y=15;
+[Item] ID=xpDust; q=1; x=16; y=15;
+[Item] ID=rocks1; q=2; x=16; y=18;
+[Item] ID=xpDust; q=1; x=16; y=18;
+[Item] ID=rubble; q=1; x=16; y=19;
+[Item] ID=wall1_styleC1top; q=1; x=16; y=31;
+[Item] ID=dirt_sandy1; q=2; r=90; x=16; y=31;
+[Item] ID=wall1_styleC1_static; q=1; x=16; y=32;
+[Item] ID=dirt_sandy1; q=2; r=360; x=16; y=33;
+[Item] ID=dirt_sandy1; q=1; r=360; x=16; y=34;
+[Item] ID=dirt_sandy1; q=1; r=360; x=16; y=35;
+[Item] ID=wall1_styleC1top; q=1; x=16; y=49;
+[Item] ID=wall1_styleC1_static; q=1; x=16; y=50;
+[Item] ID=stormcannon1; q=1; x=16; y=51;
+[Item] ID=blockedWalkJump; q=1; x=16; y=52;
+[Item] ID=stormcannon1; q=1; x=16; y=53;
+[Item] ID=dirt_sandy2; q=1; r=270; x=16; y=56;
+[Item] ID=xpDust; q=1; x=17; y=16;
+[Item] ID=bubble_small; q=1; r=-360; x=17; y=17;
+[Item] ID=wall1_styleC1top; q=1; r=-360; x=17; y=31;
+[Item] ID=dirt_sandy1; q=1; r=90; x=17; y=31;
+[Item] ID=wall1_styleC1_static; q=1; x=17; y=32;
+[Item] ID=chest_stone1; q=1; oX=0; oY=-10; x=17; y=33; containerID=0;
+[Item] ID=lost_docs; q=1; containedIn=0; cSlot=0;
+[Item] ID=xpGem; q=1; containedIn=0; cSlot=1;
+[Item] ID=repairTool; q=1; containedIn=0; cSlot=2;
+[Item] ID=wall1_styleC1top; q=1; x=17; y=49;
+[Item] ID=wall1_styleC1_static; q=1; x=17; y=50;
+[Item] ID=stormcannon2; q=1; x=17; y=51;
+[Item] ID=blockedWalkJump; q=1; x=17; y=52;
+[Item] ID=stormcannon2; q=1; x=17; y=53;
+[Item] ID=shock_chunk; q=1; x=17; y=56;
+[Item] ID=debris_wood_dark; q=1; r=180; x=17; y=56;
+[Item] ID=rubble; q=1; x=18; y=16;
+[Item] ID=rubble; q=1; x=18; y=20;
+[Item] ID=wall1_styleC1top; q=1; x=18; y=31;
+[Item] ID=wall1_styleC1_static; q=1; x=18; y=32;
+[Item] ID=dirt_sandy1; q=1; r=270; x=18; y=35;
+[Item] ID=rubble; q=1; x=18; y=36;
+[Item] ID=wall2_styleC1_static3; q=1; r=-360; x=18; y=49;
+[Item] ID=wall2_styleC1_static8; q=1; r=-360; x=18; y=50;
+[Item] ID=table_stone; q=1; x=18; y=51;
+[Item] ID=cannon_storm; q=1; x=18; y=51;
+[Item] ID=floor_cyber1; q=7; x=18; y=56;
+[Item] ID=debris_wood_dark; q=1; x=18; y=56;
+[Item] ID=rubble; q=1; x=19; y=19;
+[Item] ID=fade_s4; q=1; r=180; x=19; y=28;
+[Item] ID=secretPassage; q=1; x=19; y=29;
+[Item] ID=secretPassage; q=1; x=19; y=30;
+[Item] ID=grate_mech1; q=1; x=19; y=31;
+[Item] ID=wall1_styleC1_static; q=1; x=19; y=32;
+[Item] ID=rungs_both; q=1; x=19; y=32;
+[Item] ID=dirt_sandy1; q=2; r=270; x=19; y=35;
+[Item] ID=rubble; q=1; x=19; y=36;
+[Item] ID=fade_s4; q=1; r=180; x=19; y=46;
+[Item] ID=secretPassage; q=1; x=19; y=47;
+[Item] ID=secretPassage; q=1; x=19; y=48;
+[Item] ID=secretPassage_seethru; q=1; x=19; y=49;
+[Item] ID=secretPassage_seethru; q=1; x=19; y=50;
+[Item] ID=floor_cyber2; q=2; r=-180; x=19; y=50;
+[Item] ID=wire; q=1; r=360; x=19; y=54;
+[Item] ID=shelves_big_broken1; q=1; x=19; y=56;
+[Item] ID=rubble; q=1; x=20; y=15;
+[Item] ID=rubble; q=1; x=20; y=20;
+[Item] ID=wall1_styleC1top; q=1; x=20; y=31;
+[Item] ID=wall1_styleC1_static; q=1; x=20; y=32;
+[Item] ID=dirt_sandy1; q=2; r=270; x=20; y=34;
+[Item] ID=rubble; q=1; x=20; y=35;
+[Item] ID=rubble; q=1; x=20; y=36;
+[Item] ID=wall2_styleC1_static2; q=1; r=-360; x=20; y=49;
+[Item] ID=wall2_styleC1_static7; q=1; r=-360; x=20; y=50;
+[Item] ID=dirt_sandy2; q=1; r=90; x=20; y=51;
+[Item] ID=wire; q=1; x=20; y=53;
+[Item] ID=wire_long; q=1; r=-180; x=20; y=54;
+[Item] ID=shelves_big_broken2; q=1; r=-360; x=20; y=56;
+[Item] ID=staircase_hole; q=1; x=21; y=15;
+[Item] ID=rubble; q=1; x=21; y=19;
+[Item] ID=rubble; q=1; x=22; y=15;
+[Item] ID=rubble; q=1; x=22; y=18;
+[Item] ID=dirt_sandy1; q=2; r=-360; x=22; y=27;
+[Item] ID=fade_s4; q=1; r=90; x=22; y=45;
+[Item] ID=secretPassage; q=1; x=23; y=45;
+[Item] ID=secretPassage; q=1; x=24; y=45;
+[Item] ID=dirt_sandy1; q=2; x=25; y=27;
+[Item] ID=rocks1; q=1; x=25; y=27;
+[Item] ID=fade_s4; q=1; r=270; x=25; y=45;
+[Item] ID=wall2_styleC1_static2; q=1; r=360; x=27; y=49;
+[Item] ID=wall2_styleC1_static7; q=1; x=27; y=50;
+[Item] ID=dirt_sandy2; q=1; r=90; x=27; y=51;
+[Item] ID=rungs_none; q=1; x=28; y=37;
+[Item] ID=rungs_none; q=1; x=28; y=38;
+[Item] ID=rungs_none; q=1; x=28; y=39;
+[Item] ID=rungs_none; q=1; x=28; y=40;
+[Item] ID=rungs_none; q=1; x=28; y=41;
+[Item] ID=rungs_btm; q=1; x=28; y=42;
+[Item] ID=rungs_both; q=1; x=28; y=43;
+[Item] ID=fade_s4; q=1; r=180; x=28; y=46;
+[Item] ID=secretPassage; q=1; x=28; y=47;
+[Item] ID=secretPassage; q=1; x=28; y=48;
+[Item] ID=secretPassage_seethru; q=1; x=28; y=49;
+[Item] ID=floor_cyber2; q=2; r=180; x=28; y=50;
+[Item] ID=secretPassage_seethru; q=1; x=28; y=50;
+[Item] ID=wall1_styleC1top; q=1; x=28; y=54;
+[Item] ID=wall1_styleC1_static; q=1; x=28; y=55;
+[Item] ID=wall2_styleC1_static3; q=1; x=29; y=49;
+[Item] ID=wall2_styleC1_static8; q=1; x=29; y=50;
+[Item] ID=wall2_styleC1top; q=1; x=29; y=54;
+[Item] ID=wall2_styleC1_static; q=1; x=29; y=55;
+[Item] ID=dirt_sandy1; q=2; r=180; x=29; y=58;
+[Item] ID=floor_cyber1; q=4; r=360; x=29; y=59;
+[Item] ID=wall1_styleC1top; q=1; x=30; y=49;
+[Item] ID=wall1_styleC1_static; q=1; x=30; y=50;
+[Item] ID=dirt_sandy2; q=1; r=270; x=30; y=50;
+[Item] ID=floor_cyber2; q=4; r=360; oX=0; oY=-2; x=30; y=57;
+[Item] ID=floor_cyber1; q=3; r=270; x=30; y=57;
+[Item] ID=rocks1; q=1; r=-360; x=30; y=57;
+[Item] ID=rubble; q=1; x=30; y=58;
+[Item] ID=dirt_sandy2; q=2; r=90; x=30; y=59;
+[Item] ID=wall1_styleC1top; q=1; x=31; y=49;
+[Item] ID=wall1_styleC1_static; q=1; x=31; y=50;
+[Item] ID=dirt_sandy2; q=2; r=270; x=31; y=50;
+[Item] ID=dirt_sandy2; q=1; r=90; x=31; y=51;
+[Item] ID=floor_cyber2; q=4; r=180; x=31; y=56;
+[Item] ID=rubble; q=1; x=31; y=57;
+[Item] ID=floor_cyber2; q=5; r=90; x=31; y=58;
+[Item] ID=debris_small3; q=1; r=360; x=31; y=58;
+[Item] ID=dirt_sandy1; q=1; r=90; x=31; y=59;
+[Item] ID=wall1_styleC1_static; q=1; x=31; y=62;
+[Item] ID=rungs_both; q=1; x=32; y=15;
+[Item] ID=rungs_both; q=1; x=32; y=16;
+[Item] ID=rungs_both; q=1; x=32; y=17;
+[Item] ID=rungs_both; q=1; x=32; y=18;
+[Item] ID=fade_s4; q=1; r=180; x=32; y=20;
+[Item] ID=secretPassage; q=1; x=32; y=21;
+[Item] ID=secretPassage; q=1; x=32; y=22;
+[Item] ID=grate_mech1; q=1; x=32; y=23;
+[Item] ID=wall1_styleC1_static; q=1; x=32; y=24;
+[Item] ID=rungs_both; q=1; x=32; y=24;
+[Item] ID=debris_wood_dark; q=1; r=-360; x=32; y=25;
+[Item] ID=dirt_sandy2; q=2; r=90; x=32; y=26;
+[Item] ID=dirt_sandy2; q=1; r=90; x=32; y=27;
+[Item] ID=dirt_sandy1; q=1; r=-360; x=32; y=30;
+[Item] ID=wall1_styleC1top; q=1; x=32; y=49;
+[Item] ID=wire_long; q=1; r=90; x=32; y=49;
+[Item] ID=wall1_styleC1_static; q=1; x=32; y=50;
+[Item] ID=dirt_sandy2; q=1; r=270; x=32; y=50;
+[Item] ID=wire; q=1; r=270; x=32; y=50;
+[Item] ID=dirt_sandy2; q=1; r=270; x=32; y=54;
+[Item] ID=floor_cyber1; q=4; x=32; y=57;
+[Item] ID=rocks1; q=2; x=32; y=57;
+[Item] ID=dirt_sandy1; q=1; r=90; x=32; y=58;
+[Item] ID=floor_cyber1; q=3; r=360; x=32; y=59;
+[Item] ID=secretPassage_seethru; q=1; x=32; y=61;
+[Item] ID=lockdown_closed; q=1; x=32; y=62;
+[Item] ID=wall1_styleC1top; q=1; x=33; y=23;
+[Item] ID=wall1_styleC1_static; q=1; x=33; y=24;
+[Item] ID=floor_cyber1; q=3; x=33; y=25;
+[Item] ID=shelves_big_broken1; q=1; r=360; x=33; y=25;
+[Item] ID=chest_stone1; q=1; x=33; y=26; containerID=1;
+[Item] ID=aerstone; q=1; containedIn=1; cSlot=0;
+[Item] ID=xpGem; q=1; containedIn=1; cSlot=1;
+[Item] ID=xpGem; q=1; containedIn=1; cSlot=2;
+[Item] ID=xpGemMed; q=1; containedIn=1; cSlot=4;
+[Item] ID=chest_stone1_open; q=1; x=33; y=28; containerID=2;
+[Item] ID=windWand; q=1; containedIn=2; cSlot=0;
+[Item] ID=iceWand; q=1; containedIn=2; cSlot=1;
+[Item] ID=steamWand; q=1; containedIn=2; cSlot=2;
+[Item] ID=shockWand; q=1; containedIn=2; cSlot=3;
+[Item] ID=dirt_sandy1; q=1; r=-360; x=33; y=29;
+[Item] ID=rubble; q=1; x=33; y=30;
+[Item] ID=dirt_sandy1; q=1; r=-360; x=33; y=31;
+[Item] ID=dirt_sandy1; q=2; r=-360; x=33; y=32;
+[Item] ID=wall1_styleC1top; q=1; x=33; y=49;
+[Item] ID=wall1_styleC1_static; q=1; x=33; y=50;
+[Item] ID=dirt_sandy2; q=1; r=270; x=33; y=55;
+[Item] ID=dirt_sandy1; q=2; r=180; x=33; y=56;
+[Item] ID=dirt_sandy1; q=1; r=180; x=33; y=57;
+[Item] ID=dirt_sandy1; q=2; r=180; x=33; y=58;
+[Item] ID=secretPassage_seethru; q=1; x=33; y=61;
+[Item] ID=lockdown_closed; q=1; x=33; y=62;
+[Item] ID=mechanismSplitter; q=1; bu=True; x=33; y=63;
+[Item] ID=travelPoint_0; q=1; r=270; x=33; y=71;
+[Item] ID=dirt_sandy1; q=2; r=-360; x=34; y=14;
+[Item] ID=rocks1; q=1; x=34; y=14;
+[Item] ID=wall2_styleC1_static2; q=1; x=34; y=23;
+[Item] ID=wall2_styleC1_static7; q=1; x=34; y=24;
+[Item] ID=dirt_sandy1; q=2; r=-360; x=34; y=25;
+[Item] ID=shelves_big_broken2; q=1; r=-360; x=34; y=25;
+[Item] ID=dirt_sandy1; q=1; r=-360; x=34; y=26;
+[Item] ID=dirt_sandy1; q=2; r=-360; x=34; y=27;
+[Item] ID=wall1_styleC1top; q=1; x=34; y=49;
+[Item] ID=wall1_styleC1_static; q=1; x=34; y=50;
+[Item] ID=dirt_sandy1; q=1; r=180; x=34; y=53;
+[Item] ID=dirt_sandy1; q=2; r=180; x=34; y=54;
+[Item] ID=dirt_sandy1; q=1; r=180; x=34; y=55;
+[Item] ID=rubble; q=1; x=34; y=56;
+[Item] ID=pebbles1; q=1; r=-90; x=34; y=57;
+[Item] ID=bubble_small; q=1; r=360; x=34; y=57;
+[Item] ID=debris_small2; q=1; x=34; y=58;
+[Item] ID=dirt_sandy1; q=2; r=90; x=34; y=59;
+[Item] ID=dirt_sandy2; q=1; r=270; x=34; y=60;
+[Item] ID=secretPassage_seethru; q=1; x=34; y=61;
+[Item] ID=lockdown_closed; q=1; x=34; y=62;
+[Item] ID=wall1_styleC1top; q=1; x=35; y=49;
+[Item] ID=wire; q=1; r=270; x=35; y=49;
+[Item] ID=wall1_styleC1_static; q=1; x=35; y=50;
+[Item] ID=dirt_sandy1; q=1; r=270; x=35; y=52;
+[Item] ID=rocks1; q=4; x=35; y=59;
+[Item] ID=dirt_sandy1; q=1; r=90; x=35; y=60;
+[Item] ID=wall1_styleC1_static; q=1; x=35; y=62;
+[Item] ID=wall1_styleC1top; q=1; x=36; y=49;
+[Item] ID=wall2_styleC1_static7; q=1; x=36; y=50;
+[Item] ID=dirt_sandy1; q=2; r=270; x=36; y=52;
+[Item] ID=rubble; q=1; x=36; y=53;
+[Item] ID=rubble; q=1; x=36; y=59;
+[Item] ID=rubble; q=1; x=37; y=14;
+[Item] ID=rubble; q=1; x=37; y=15;
+[Item] ID=wall1_styleC1top; q=1; x=37; y=49;
+[Item] ID=wall2_styleC1_static8; q=1; x=37; y=50;
+[Item] ID=dirt_sandy1; q=1; r=270; x=37; y=52;
+[Item] ID=sunbeam_flipped; q=1; r=180; x=37; y=54;
+[Item] ID=debris_small1; q=1; x=37; y=58;
+[Item] ID=bubble_small; q=1; r=-360; x=37; y=58;
+[Item] ID=organic_hole_slow; q=1; r=-360; x=37; y=58;
+[Item] ID=rubble; q=1; x=38; y=15;
+[Item] ID=rubble; q=1; x=38; y=32;
+[Item] ID=wall1_styleC1top; q=1; x=38; y=49;
+[Item] ID=wall1_styleC1_static; q=1; x=38; y=50;
+[Item] ID=dirt_sandy2; q=1; r=90; x=38; y=51;
+[Item] ID=dirt_sandy1; q=2; r=270; x=38; y=52;
+[Item] ID=sunbeam_flipped; q=1; r=180; x=38; y=54;
+[Item] ID=rocks1; q=6; x=38; y=58;
+[Item] ID=dirt_sandy1; q=2; x=38; y=59;
+[Item] ID=dirt_sandy2; q=2; r=90; x=38; y=59;
+[Item] ID=pebbles1; q=1; r=180; x=39; y=15;
+[Item] ID=rubble; q=1; x=39; y=16;
+[Item] ID=corpryst; q=1; x=39; y=16;
+[Item] ID=wall1_styleC1top; q=1; x=39; y=23;
+[Item] ID=chest_stone1; q=1; x=39; y=30; containerID=3;
+[Item] ID=knuckle_bdragon; q=1; containedIn=3; cSlot=0; containerID=4;
+[Item] ID=knuckle_bdragon; q=1; containedIn=3; cSlot=1; containerID=5;
+[Item] ID=trigger_fire; q=1; containedIn=3; cSlot=2;
+[Item] ID=band_fire_elec; q=1; containedIn=3; cSlot=3;
+[Item] ID=band_fire; q=1; containedIn=3; cSlot=4;
+[Item] ID=trigger_fire_cage; q=1; containedIn=3; cSlot=5;
+[Item] ID=trigger_fire; q=1; containedIn=3; cSlot=6;
+[Item] ID=rubble; q=1; x=39; y=31;
+[Item] ID=dirt_sandy1; q=1; r=90; x=39; y=31;
+[Item] ID=rubble; q=1; x=39; y=32;
+[Item] ID=wall1_styleC1top; q=1; x=39; y=49;
+[Item] ID=wire_long; q=1; r=90; x=39; y=49;
+[Item] ID=wall1_styleC1_static; q=1; r=-360; x=39; y=50;
+[Item] ID=wire_long; q=1; r=-90; x=39; y=50;
+[Item] ID=dirt_sandy2; q=1; r=270; x=39; y=51;
+[Item] ID=wire; q=1; r=-270; x=39; y=51;
+[Item] ID=wire; q=1; r=360; x=39; y=51;
+[Item] ID=dirt_sandy2; q=2; r=270; x=39; y=52;
+[Item] ID=rubble; q=1; x=39; y=53;
+[Item] ID=pebbles1; q=1; r=180; x=39; y=54;
+[Item] ID=rubble; q=1; x=39; y=55;
+[Item] ID=rubble; q=1; x=39; y=56;
+[Item] ID=debris_small3; q=1; x=39; y=57;
+[Item] ID=dirt_sandy2; q=3; r=90; x=39; y=58;
+[Item] ID=dirt_sandy1; q=1; r=-180; x=39; y=58;
+[Item] ID=rubble; q=1; x=40; y=14;
+[Item] ID=rubble; q=1; x=40; y=16;
+[Item] ID=wall2_styleC1_static2; q=1; x=40; y=23;
+[Item] ID=wall2_styleC1top; q=1; r=-360; x=40; y=56;
+[Item] ID=dirt_sandy1; q=1; r=-90; x=40; y=56;
+[Item] ID=wall2_styleC1_static; q=1; r=-360; x=40; y=57;
+[Item] ID=dirt_sandy2; q=1; r=90; x=40; y=58;
+[Item] ID=debris_secret; q=1; x=41; y=14;
+[Item] ID=rubble; q=1; x=41; y=16;
+[Item] ID=wall2_styleC1_static3; q=1; x=41; y=23;
+[Item] ID=wall2_styleC1_static8; q=1; x=41; y=24;
+[Item] ID=dirt_sandy2; q=1; r=270; x=41; y=24;
+[Item] ID=shelves_big_broken1; q=1; r=360; x=41; y=25;
+[Item] ID=dirt_sandy1; q=2; r=-270; x=41; y=26;
+[Item] ID=rubble; q=1; x=41; y=27;
+[Item] ID=debris_wood_dark; q=1; r=-360; x=41; y=27;
+[Item] ID=rubble; q=1; x=41; y=28;
+[Item] ID=sunbeam_flipped; q=1; r=180; x=41; y=52;
+[Item] ID=wall1_styleC1top; q=1; x=41; y=56;
+[Item] ID=wall1_styleC1_static; q=1; x=41; y=57;
+[Item] ID=dirt_sandy2; q=2; r=90; x=41; y=58;
+[Item] ID=pebbles2; q=1; x=42; y=15;
+[Item] ID=rubble; q=1; x=42; y=16;
+[Item] ID=corpryst; q=1; x=42; y=16;
+[Item] ID=wall1_styleC1top; q=1; x=42; y=23;
+[Item] ID=wall1_styleC1_static; q=1; x=42; y=24;
+[Item] ID=shelves_big_broken2; q=1; r=-360; x=42; y=25;
+[Item] ID=dirt_sandy2; q=1; r=270; x=42; y=26;
+[Item] ID=dirt_sandy1; q=1; r=360; x=42; y=27;
+[Item] ID=dirt_sandy1; q=2; r=360; x=42; y=28;
+[Item] ID=floor_cyber1; q=5; r=-360; x=42; y=29;
+[Item] ID=floor_cyber2; q=3; r=90; x=42; y=29;
+[Item] ID=dirt_sandy1; q=2; r=360; x=42; y=30;
+[Item] ID=dirt_sandy1; q=1; r=360; x=42; y=31;
+[Item] ID=barrel_powder; q=1; x=42; y=31;
+[Item] ID=dirt_sandy1; q=1; r=-180; x=42; y=32;
+[Item] ID=barrel_powder; q=1; x=42; y=32;
+[Item] ID=wall2_styleC1_static1; q=1; x=42; y=56;
+[Item] ID=wall2_styleC1_static6; q=1; x=42; y=57;
+[Item] ID=rubble; q=1; x=43; y=15;
+[Item] ID=corpryst; q=1; x=43; y=15;
+[Item] ID=wall1_styleC1top; q=1; x=43; y=23;
+[Item] ID=wire_long; q=1; r=-270; x=43; y=23;
+[Item] ID=wall1_styleC1_static; q=1; x=43; y=24;
+[Item] ID=wire; q=1; r=270; x=43; y=24;
+[Item] ID=debris_wood_dark; q=1; r=-360; x=43; y=25;
+[Item] ID=chest_stone1_open; q=1; x=43; y=26; containerID=6;
+[Item] ID=actionTablet_random; q=1; containedIn=6; cSlot=0;
+[Item] ID=cargo_tools; q=1; containedIn=6; cSlot=1;
+[Item] ID=cargo_tools; q=1; containedIn=6; cSlot=2;
+[Item] ID=cargo_tools; q=1; containedIn=6; cSlot=4;
+[Item] ID=repairTool; q=1; containedIn=6; cSlot=5;
+[Item] ID=chest_stone1; q=1; x=43; y=28; containerID=7;
+[Item] ID=corpryst; q=1; containedIn=7; cSlot=0;
+[Item] ID=armor_corpryst; q=1; containedIn=7; cSlot=1; containerID=8;
+[Item] ID=armor_volskarn; q=1; containedIn=7; cSlot=2; containerID=9;
+[Item] ID=armor_volskarn; q=1; containedIn=7; cSlot=3; containerID=10;
+[Item] ID=armor_volpryst; q=1; containedIn=7; cSlot=5; containerID=11;
+[Item] ID=dirt_sandy2; q=2; r=90; x=43; y=30;
+[Item] ID=dirt_sandy2; q=1; r=270; x=43; y=31;
+[Item] ID=barrel_powder; q=1; x=43; y=32;
+[Item] ID=wall2_styleC1top; q=1; r=360; x=43; y=56;
+[Item] ID=wall2_styleC1_static; q=1; r=360; x=43; y=57;
+[Item] ID=rubble; q=1; x=44; y=15;
+[Item] ID=wall1_styleC1top; q=1; x=44; y=23;
+[Item] ID=wall1_styleC1_static; q=1; x=44; y=24;
+[Item] ID=shelves_big_broken2; q=1; r=360; x=44; y=25;
+[Item] ID=dirt_sandy2; q=1; r=360; x=44; y=29;
+[Item] ID=debris_wood_dark; q=1; r=360; x=44; y=31;
+[Item] ID=floor_cyber1; q=3; r=360; x=44; y=32;
+[Item] ID=wall1_styleC1top; q=1; x=44; y=48;
+[Item] ID=wall2_styleC1_static7; q=1; r=-360; x=44; y=49;
+[Item] ID=wall1_styleC1top; q=1; x=45; y=23;
+[Item] ID=wall1_styleC1_static; q=1; x=45; y=24;
+[Item] ID=dirt_sandy2; q=1; r=90; x=45; y=25;
+[Item] ID=shelves_big_broken1; q=1; r=-360; x=45; y=25;
+[Item] ID=chest_stone1; q=1; x=45; y=26; containerID=12;
+[Item] ID=trigger_fire; q=1; containedIn=12; cSlot=0;
+[Item] ID=trigger_fire; q=1; containedIn=12; cSlot=1;
+[Item] ID=trigger_wind; q=1; containedIn=12; cSlot=2;
+[Item] ID=trigger_wind; q=1; containedIn=12; cSlot=4;
+[Item] ID=trigger_life; q=1; containedIn=12; cSlot=5;
+[Item] ID=chest_stone1_open; q=1; x=45; y=28; containerID=13;
+[Item] ID=javelin_mythril; q=1; containedIn=13; cSlot=0; containerID=14;
+[Item] ID=mythril_axe_throwing; q=1; containedIn=13; cSlot=1; containerID=15;
+[Item] ID=dagger_mythril; q=1; containedIn=13; cSlot=2; containerID=16;
+[Item] ID=axe_mythril; q=1; containedIn=13; cSlot=4; containerID=17;
+[Item] ID=armor_mythril; q=1; containedIn=13; cSlot=6; containerID=18;
+[Item] ID=armor_mythril; q=1; containedIn=13; cSlot=7; containerID=19;
+[Item] ID=dirt_sandy2; q=2; r=270; x=45; y=32;
+[Item] ID=wall1_styleC1top; q=1; x=45; y=48;
+[Item] ID=wall1_styleC1_static; q=1; x=45; y=49;
+[Item] ID=wall1_styleC1top; q=1; x=46; y=23;
+[Item] ID=wall2_styleC1_static6; q=1; x=46; y=24;
+[Item] ID=dirt_sandy2; q=2; r=90; x=46; y=25;
+[Item] ID=dirt_sandy2; q=1; r=270; x=46; y=32;
+[Item] ID=wall1_styleC1top; q=1; x=46; y=48;
+[Item] ID=wall1_styleC1_static; q=1; x=46; y=49;
+[Item] ID=blocker_reactions; q=1; x=47; y=13;
+[Item] ID=blocker_reactions; q=1; x=47; y=14;
+[Item] ID=blocker_reactions; q=1; x=47; y=15;
+[Item] ID=rubble; q=1; x=47; y=16;
+[Item] ID=wall1_styleC1top; q=1; x=47; y=23;
+[Item] ID=wire; q=1; r=-270; x=47; y=23;
+[Item] ID=wall1_styleC1_static; q=1; x=47; y=24;
+[Item] ID=shelves_big_empty1; q=1; x=47; y=25;
+[Item] ID=chest_stone1; q=1; x=47; y=26; containerID=20;
+[Item] ID=goggles; q=1; containedIn=20; cSlot=0;
+[Item] ID=goggles; q=1; containedIn=20; cSlot=1;
+[Item] ID=gauntlets; q=1; containedIn=20; cSlot=2;
+[Item] ID=gauntlets_power; q=1; containedIn=20; cSlot=3;
+[Item] ID=gauntlets; q=1; containedIn=20; cSlot=4;
+[Item] ID=gauntlets_volskarn; q=1; containedIn=20; cSlot=5;
+[Item] ID=bracers_metal; q=1; containedIn=20; cSlot=7;
+[Item] ID=necklace_spellcatcher; q=1; containedIn=20; cSlot=8;
+[Item] ID=necklace_spellcatcher; q=1; containedIn=20; cSlot=9;
+[Item] ID=chest_stone1_open; q=1; x=47; y=28; containerID=21;
+[Item] ID=shears; q=1; containedIn=21; cSlot=0;
+[Item] ID=shears; q=1; containedIn=21; cSlot=1;
+[Item] ID=saw; q=1; containedIn=21; cSlot=4;
+[Item] ID=saw; q=1; containedIn=21; cSlot=6;
+[Item] ID=machete; q=1; containedIn=21; cSlot=8; containerID=22;
+[Item] ID=hatchet; q=1; containedIn=21; cSlot=9; containerID=23;
+[Item] ID=sword_mythril; q=1; containedIn=21; cSlot=11; containerID=24;
+[Item] ID=axe_hacker; q=1; containedIn=21; cSlot=14; containerID=25;
+[Item] ID=wall1_styleC1top; q=1; x=47; y=48;
+[Item] ID=wall1_styleC1_static; q=1; x=47; y=49;
+[Item] ID=blocker_reactions; q=1; x=48; y=13;
+[Item] ID=blocker_reactions; q=1; x=48; y=14;
+[Item] ID=blocker_reactions; q=1; x=48; y=15;
+[Item] ID=caveDark_wide; q=1; x=48; y=15;
+[Item] ID=pebbles1; q=1; r=180; x=48; y=16;
+[Item] ID=sunbeam_krypton_big_dark; q=1; x=48; y=16;
+[Item] ID=travelPoint_1; q=1; r=90; x=48; y=16;
+[Item] ID=wall1_styleC1top; q=1; x=48; y=23;
+[Item] ID=wall1_styleC1_static; q=1; x=48; y=24;
+[Item] ID=shelves_big_empty2; q=1; r=-360; x=48; y=25;
+[Item] ID=wall1_styleC1top; q=1; x=48; y=48;
+[Item] ID=wall1_styleC1_static; q=1; x=48; y=49;
+[Item] ID=blocker_reactions; q=1; x=49; y=13;
+[Item] ID=blocker_reactions; q=1; x=49; y=14;
+[Item] ID=blocker_reactions; q=1; x=49; y=15;
+[Item] ID=debris_small3; q=1; r=180; x=49; y=16;
+[Item] ID=wall2_styleC1top; q=1; x=49; y=23;
+[Item] ID=wall2_styleC1_static; q=1; x=49; y=24;
+[Item] ID=wall2_styleC1top; q=1; r=360; x=49; y=48;
+[Item] ID=wall2_styleC1_static; q=1; r=360; x=49; y=49;
+[Item] ID=rubble; q=1; x=50; y=16;
+[Item] ID=pebbles1; q=1; x=50; y=17;
+[Item] ID=rocks1; q=1; x=50; y=17;
+[Item] ID=rubble; q=1; x=50; y=18;
+[Item] ID=rubble; q=1; x=50; y=19;
+[Item] ID=dirt_sandy1; q=2; r=90; x=50; y=20;
+[Item] ID=dirt_sandy2; q=1; x=50; y=20;
+[Item] ID=dirt_sandy2; q=1; x=50; y=21;
+[Item] ID=debris_wood_dark; q=1; r=-360; x=50; y=21;
+[Item] ID=shelves_big_broken1; q=1; r=360; x=50; y=22;
+[Item] ID=wire; q=1; r=180; x=50; y=42;
+[Item] ID=wall2_styleC1_static2; q=1; r=-360; x=51; y=18;
+[Item] ID=wall2_styleC1_static7; q=1; r=-360; x=51; y=19;
+[Item] ID=dirt_sandy1; q=1; r=90; x=51; y=20;
+[Item] ID=shelves_big_broken2; q=1; x=51; y=20;
+[Item] ID=shelves_big_broken2; q=1; r=-360; x=51; y=22;
+[Item] ID=wire; q=1; r=360; x=51; y=46;
+[Item] ID=dirt_sandy2; q=1; r=270; x=51; y=52;
+[Item] ID=wall1_styleC1top; q=1; x=52; y=18;
+[Item] ID=wall1_styleC1_static; q=1; x=52; y=19;
+[Item] ID=dirt_sandy2; q=1; r=90; x=52; y=20;
+[Item] ID=shelves_big_broken1; q=1; r=-360; x=52; y=20;
+[Item] ID=wire; q=1; r=-90; x=52; y=36;
+[Item] ID=wire; q=1; r=-180; x=52; y=37;
+[Item] ID=wire; q=1; r=-270; x=52; y=37;
+[Item] ID=wire_long; q=1; r=-180; x=52; y=46;
+[Item] ID=dirt_sandy2; q=1; r=180; x=52; y=51;
+[Item] ID=dirt_sandy2; q=2; r=180; x=52; y=52;
+[Item] ID=dirt_sandy1; q=1; r=-270; x=52; y=52;
+[Item] ID=wall1_styleC1top; q=1; x=53; y=18;
+[Item] ID=wall1_styleC1_static; q=1; x=53; y=19;
+[Item] ID=wall1_styleC1top; q=1; x=54; y=18;
+[Item] ID=wall1_styleC1_static; q=1; x=54; y=19;
+[Item] ID=tools1; q=1; x=54; y=19;
+[Item] ID=wall1_styleC1top; q=1; x=55; y=18;
+[Item] ID=wall1_styleC1_static; q=1; x=55; y=19;
+[Item] ID=tools2; q=1; x=55; y=19;
+[Item] ID=stool3; q=1; x=55; y=20;
+[Item] ID=wall1_styleC1top; q=1; x=56; y=18;
+[Item] ID=wall1_styleC1_static; q=1; x=56; y=19;
+[Item] ID=stand_cornerTop; q=1; x=56; y=20;
+[Item] ID=shock_chunk; q=1; x=56; y=20;
+[Item] ID=stand_side; q=1; x=56; y=21;
+[Item] ID=stand_cornerBtm; q=1; x=56; y=22;
+[Item] ID=repairTool; q=1; x=56; y=22;
+[Item] ID=wall1_styleC1top; q=1; x=57; y=18;
+[Item] ID=wall1_styleC1_static; q=1; x=57; y=19;
+[Item] ID=stand_cornerTop; q=1; r=-360; x=57; y=20;
+[Item] ID=debris_wood_dark; q=1; r=360; x=57; y=20;
+[Item] ID=stand_side; q=1; r=-360; x=57; y=21;
+[Item] ID=stand_cornerBtm; q=1; r=-360; x=57; y=22;
+[Item] ID=volskarn_chunk; q=1; x=57; y=22;
+
+
+[Actor]ID=actor_turret_caster_zFDW3a_; name=Negater;
+actorTypeID=actor_turret_caster; sprite=actor_turret_caster; actorClass=none; secondaryClass=warden; actorClass3=; actorClass4=; movementSpeed=4; position=48,51; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=s_5; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pRed2; skinPalette=pGrey4; armorPalette=p14; unarmoredPalette=p13; aiScript=untilCombat_invinc; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=10; bravery=10; intelligence=0.1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=0.5; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+
+ supportAbilities=bulwark;  supportAbilities=essenceFlow;  supportAbilities=; MP=51; MPMax=51; TrueMPMax=51; actTime=20; pureMind=1; sage_XP=0; bulwark=1; guardian_XP=0; Wrd_negate=2; warden_XP=0; essenceFlow=1; enchanter_XP=0; 
+numRanksBought=Wrd_negate=2; 
+numRanksBought=bulwark=1; 
+numRanksBought=pureMind=1; 
+numRanksBought=essenceFlow=1; 
+chosenAbilityOfEachClass=warden=Wrd_aegis; 
+chosenAbilityOfEachClass=sage=Sa_heal; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=invincible; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=9999939;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=mythril_chunk; cSlot=4;
+
+
+[Actor]ID=actor_turret_zFDW3a_zFDW3a_; name=T1-R3;
+actorTypeID=actor_turret; sprite=actor_turret; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=4; position=44,52; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=s_5; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pRed2; skinPalette=p12; armorPalette=p13; unarmoredPalette=p13; aiScript=untilCombat_invinc; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=10; bravery=10; intelligence=0.1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+
+ supportAbilities=bulwark;  supportAbilities=;  supportAbilities=; HP=60; HPMax=60; TrueHPMax=60; MagAtk=12; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=invincible; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=9999939;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=steel_bar; cSlot=4;
+
+
+[Actor]ID=actor_turret_zFDW3a_zFDW3a_zFDW3a_; name=T2-R3;
+actorTypeID=actor_turret; sprite=actor_turret; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=4; position=46,52; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=s_5; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pRed2; skinPalette=p12; armorPalette=p13; unarmoredPalette=p13; aiScript=untilCombat_invinc; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=10; bravery=10; intelligence=0.1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+
+ supportAbilities=bulwark;  supportAbilities=;  supportAbilities=; HP=60; HPMax=60; TrueHPMax=60; MagAtk=12; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=invincible; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=9999939;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=steel_bar; cSlot=4;
+
+
+[Actor]ID=actor_turret_zFDW3a_zFDW3a_zFDW3a_zFDW3a_zFDW3a_; name=T1-R1;
+actorTypeID=actor_turret; sprite=actor_turret; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=4; position=44,50; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=s_5; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pRed2; skinPalette=p12; armorPalette=p13; unarmoredPalette=p13; aiScript=untilCombat_invinc; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=10; bravery=10; intelligence=0.1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+
+ supportAbilities=bulwark;  supportAbilities=;  supportAbilities=; HP=60; HPMax=60; TrueHPMax=60; MagAtk=12; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=invincible; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=9999939;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=steel_bar; cSlot=4;
+
+
+[Actor]ID=actor_turret_zFDW3a_zFDW3a_zFDW3a_zFDW3a_zFDW3a_0; name=T2-R1;
+actorTypeID=actor_turret; sprite=actor_turret; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=4; position=46,50; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=s_5; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pRed2; skinPalette=p12; armorPalette=p13; unarmoredPalette=p13; aiScript=untilCombat_invinc; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=10; bravery=10; intelligence=0.1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+
+ supportAbilities=bulwark;  supportAbilities=;  supportAbilities=; HP=60; HPMax=60; TrueHPMax=60; MagAtk=12; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=invincible; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=9999939;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=steel_bar; cSlot=4;
+
+
+[Actor]ID=actor_turret_mobile_zFDW3a_; name=Turret;
+actorTypeID=actor_turret_mobile; sprite=actor_turret_mobile; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=4; position=45,51; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pRed2; skinPalette=p12; armorPalette=p13; unarmoredPalette=p13; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=10; bravery=10; intelligence=0.1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=linear;
+
+ supportAbilities=sniper;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=actor_turret_mobile_zFDW3a_0; name=Turret;
+actorTypeID=actor_turret_mobile; sprite=actor_turret_mobile; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=4; position=44,27; destination=-1,-1; facingRot=0; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=KP-BossBattle1; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pRed2; skinPalette=p12; armorPalette=p13; unarmoredPalette=p13; aiScript=patrol; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=10; bravery=10; intelligence=0.1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=linear;
+
+ supportAbilities=sniper;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=actor_turret_zFDW3a_zFDW3a_zFDW3a_zFDW3a_zFDW3a_zFDW3a_; name=Right Guster;
+actorTypeID=actor_turret; sprite=actor_turret; actorClass=none; secondaryClass=scholar; actorClass3=; actorClass4=; movementSpeed=4; position=54,29; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=s_5; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pRed2; skinPalette=p12; armorPalette=p82; unarmoredPalette=p13; aiScript=untilCombat_invinc; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=10; bravery=10; intelligence=0.1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+
+ supportAbilities=bulwark;  supportAbilities=;  supportAbilities=; HP=50; MP=44; HPMax=50; MPMax=44; TrueHPMax=50; TrueMPMax=44; MagAtk=8; skill_Wind=3; Sch_gust=3; scholar_XP=0; 
+numRanksBought=Sch_gust=3; 
+chosenAbilityOfEachClass=scholar=Sch_flame; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=invincible; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=9999939;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=steel_bar; cSlot=0;
+[ActorItem] ID=steel_bar; cSlot=1;
+[ActorItem] ID=trigger_wind; cSlot=4;
+
+
+[Actor]ID=actor_turret_caster_zFDW3a_0; name=Lightning Caster;
+actorTypeID=actor_turret_caster; sprite=actor_turret_caster; actorClass=none; secondaryClass=sorcerer; actorClass3=; actorClass4=; movementSpeed=4; position=55,24; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=s_5; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pRed2; skinPalette=pBW; armorPalette=p9; unarmoredPalette=p13; aiScript=untilCombat_invinc; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=10; bravery=10; intelligence=0.1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+
+ supportAbilities=bulwark;  supportAbilities=pureMind;  supportAbilities=; skill_Elec=5; So_inferno=0; So_lightning=3; So_blizzard=0; So_shockBolts=0; 
+chosenAbilityOfEachClass=sorcerer=So_inferno; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=invincible; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=9999939;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=shock_chunk; cSlot=4;
+
+
+[Actor]ID=actor_turret_zFDW3a_zFDW3a_zFDW3a_zFDW3a_zFDW3a_zFDW3a_zFDW3a_; name=Left Guster;
+actorTypeID=actor_turret; sprite=actor_turret; actorClass=none; secondaryClass=scholar; actorClass3=; actorClass4=; movementSpeed=4; position=48,29; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=s_5; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pRed2; skinPalette=p12; armorPalette=p82; unarmoredPalette=p13; aiScript=untilCombat_invinc; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=10; bravery=10; intelligence=0.1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+
+ supportAbilities=bulwark;  supportAbilities=;  supportAbilities=; HP=50; MP=44; HPMax=50; MPMax=44; TrueHPMax=50; TrueMPMax=44; MagAtk=8; skill_Wind=3; Sch_gust=3; scholar_XP=0; 
+numRanksBought=Sch_gust=3; 
+chosenAbilityOfEachClass=scholar=Sch_flame; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=invincible; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=9999939;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=steel_bar; cSlot=0;
+[ActorItem] ID=steel_bar; cSlot=1;
+[ActorItem] ID=trigger_wind; cSlot=4;
+
+
+[Actor]ID=actor_turret_caster_zFDW3a_0_zFDW3a_; name=Shock Caster;
+actorTypeID=actor_turret_caster; sprite=actor_turret_caster; actorClass=none; secondaryClass=elementalist; actorClass3=; actorClass4=; movementSpeed=4; position=52,24; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=s_5; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pRed2; skinPalette=p31; armorPalette=p40; unarmoredPalette=p13; aiScript=untilCombat_invinc; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=10; bravery=10; intelligence=0.1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+
+ supportAbilities=bulwark;  supportAbilities=pureMind;  supportAbilities=; skill_Elec=5; So_inferno=0; So_lightning=3; So_blizzard=0; So_shockBolts=0; Ele_shock=3; 
+chosenAbilityOfEachClass=sorcerer=So_inferno; 
+chosenAbilityOfEachClass=elementalist=Ele_condensate; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=invincible; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=9999939;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=shock_chunk; cSlot=4;
+
+
+[Actor]ID=actor_turret_mobile_zFDW3a_1; name=Turret;
+actorTypeID=actor_turret_mobile; sprite=actor_turret_mobile; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=4; position=54,23; destination=-1,-1; facingRot=180; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pRed2; skinPalette=p12; armorPalette=p13; unarmoredPalette=p13; aiScript=idle_ignoreAttention; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=10; bravery=10; intelligence=0.1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=linear;
+
+ supportAbilities=sniper;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=actor_turret_mobile_zFDW3a_1_zFDW3a_; name=Turret;
+actorTypeID=actor_turret_mobile; sprite=actor_turret_mobile; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=4; position=53,22; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pRed2; skinPalette=p12; armorPalette=p13; unarmoredPalette=p13; aiScript=idle_ignoreAttention; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=10; bravery=10; intelligence=0.1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=linear;
+
+ supportAbilities=sniper;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=actor_turret_mobile_zFDW3a_1_zFDW3a_0; name=Turret;
+actorTypeID=actor_turret_mobile; sprite=actor_turret_mobile; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=4; position=46,25; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pRed2; skinPalette=p12; armorPalette=p13; unarmoredPalette=p13; aiScript=idle_ignoreAttention; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=10; bravery=10; intelligence=0.1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=linear;
+
+ supportAbilities=sniper;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=actor_turret_zFDW3a_zFDW3a_zFDW3a_zFDW3a_zFDW3a_zFDW3a_zFDW3a_0; name=Mid Guster;
+actorTypeID=actor_turret; sprite=actor_turret; actorClass=none; secondaryClass=scholar; actorClass3=; actorClass4=; movementSpeed=4; position=51,34; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=s_5; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pRed2; skinPalette=p12; armorPalette=p82; unarmoredPalette=p13; aiScript=untilCombat_invinc; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=10; bravery=10; intelligence=0.1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+
+ supportAbilities=bulwark;  supportAbilities=;  supportAbilities=; HP=50; MP=44; HPMax=50; MPMax=44; TrueHPMax=50; TrueMPMax=44; MagAtk=8; skill_Wind=3; Sch_gust=3; scholar_XP=0; 
+numRanksBought=Sch_gust=3; 
+chosenAbilityOfEachClass=scholar=Sch_flame; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=invincible; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=9999939;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=steel_bar; cSlot=0;
+[ActorItem] ID=steel_bar; cSlot=1;
+[ActorItem] ID=trigger_wind; cSlot=4;
+
+
+[Actor]ID=actor_turret_zFDW3a_zFDW3a_zFDW3a_0_zFDW3a_; name=T1-R2;
+actorTypeID=actor_turret; sprite=actor_turret; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=4; position=57,26; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=s_5; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pRed2; skinPalette=p12; armorPalette=p13; unarmoredPalette=p13; aiScript=untilCombat_invinc; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=10; bravery=10; intelligence=0.1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+
+ supportAbilities=bulwark;  supportAbilities=;  supportAbilities=; HP=60; HPMax=60; TrueHPMax=60; MagAtk=12; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=invincible; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=9999939;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=steel_bar; cSlot=4;
+
+
+[Actor]ID=actor_turret_zFDW3a_zFDW3a_zFDW3a_0; name=T1-R1;
+actorTypeID=actor_turret; sprite=actor_turret; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=4; position=50,24; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=s_5; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pRed2; skinPalette=p12; armorPalette=p13; unarmoredPalette=p13; aiScript=untilCombat_invinc; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=10; bravery=10; intelligence=0.1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+
+ supportAbilities=bulwark;  supportAbilities=;  supportAbilities=; HP=60; HPMax=60; TrueHPMax=60; MagAtk=12; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=invincible; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=9999939;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=steel_bar; cSlot=4;
+
+
+[Actor]ID=actor_turret_mobile_zFDW3a_1_zFDW3a_1_zFDW3a_; name=Turret;
+actorTypeID=actor_turret_mobile; sprite=actor_turret_mobile; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=4; position=47,30; destination=-1,-1; facingRot=270; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pRed2; skinPalette=p12; armorPalette=p13; unarmoredPalette=p13; aiScript=idle_ignoreAttention; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=10; bravery=10; intelligence=0.1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=linear;
+
+ supportAbilities=sniper;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=actor_turret_zFDW3a_zFDW3a_zFDW3a_0_zFDW3a_zFDW3a_; name=T1-R3;
+actorTypeID=actor_turret; sprite=actor_turret; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=4; position=55,32; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=s_5; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pRed2; skinPalette=p12; armorPalette=p13; unarmoredPalette=p13; aiScript=untilCombat_invinc; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=10; bravery=10; intelligence=0.1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+
+ supportAbilities=bulwark;  supportAbilities=;  supportAbilities=; HP=60; HPMax=60; TrueHPMax=60; MagAtk=12; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=invincible; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=9999939;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=steel_bar; cSlot=4;
+
+
+[Actor]ID=actor_turret_caster_zFDW3a_0_zFDW3a_0; name=Lightning Caster;
+actorTypeID=actor_turret_caster; sprite=actor_turret_caster; actorClass=none; secondaryClass=sorcerer; actorClass3=; actorClass4=; movementSpeed=4; position=45,30; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=s_5; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pRed2; skinPalette=pBW; armorPalette=p9; unarmoredPalette=p13; aiScript=untilCombat_invinc; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=10; bravery=10; intelligence=0.1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+
+ supportAbilities=bulwark;  supportAbilities=pureMind;  supportAbilities=; skill_Elec=5; So_inferno=0; So_lightning=3; So_blizzard=0; So_shockBolts=0; 
+chosenAbilityOfEachClass=sorcerer=So_inferno; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=invincible; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=9999939;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=shock_chunk; cSlot=4;
+
+
+
+[Trigger] numID=0; aliasID=;
+topX=31;topY=74;btmX=36;btmY=74;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=0; effectID=travel_point; sValue=zFDW2a; sValue2=; bValue1=False; bValue2=False; fValue=1; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=1; aliasID=;
+topX=31;topY=63;btmX=36;btmY=63;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=True; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=1; effectID=applyElement; sValue=mech; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=33; yValue=63;
+
+
+
+[Trigger] numID=2; aliasID=;
+topX=41;topY=14;btmX=41;btmY=14;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=2; effectID=cancelIfItemNotPresent; sValue=staircase_hole; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=41; yValue=14;
+[TriggerEffect] numID=2; effectID=movePartyTo; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=90; delay=0.1; fReq=1; taskString=; xValue=20; yValue=17;
+[TriggerEffect] numID=2; effectID=preventInteraction; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=1; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=2; effectID=fx; sValue=blackenScreen_long; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=3; aliasID=;
+topX=21;topY=15;btmX=21;btmY=15;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=3; effectID=movePartyTo; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=90; delay=0.1; fReq=1; taskString=; xValue=41; yValue=15;
+[TriggerEffect] numID=3; effectID=preventInteraction; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=1; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+[TriggerEffect] numID=3; effectID=fx; sValue=blackenScreen_long; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=4; aliasID=;
+topX=48;topY=15;btmX=48;btmY=15;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=4; effectID=travel_point; sValue=zFDW4a; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+

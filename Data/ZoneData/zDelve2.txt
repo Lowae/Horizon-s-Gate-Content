@@ -1,0 +1,46 @@
+[Zone]  ID=zDelve2; dark=True; timeUntilNewDay=24; showFogOfWar=True; fogOfWar=True; minimapEnabled=True; allowCameraPastZoneEdges=False; cantAct=False; cantGameOver=False; alwaysKeepWeaponsUnsheathed=False; peaceful=False; overseerMode=False; rollingPinStyle=False; drawSky=False; drawSky_overrideYpos=-1; boatZone=False; wind=False; overworld=False; canDropItems=True; 
+ travelSong=; travelSongVolume=1; travelSongPitch=0; combatSong=; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=229; darkG=225; darkB=190; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=; bgFX_sineWave=0; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=p70; zoneGrassPalette=pGreen; zoneGrassDarkPalette=pGreen2; zoneStonePalette=p86; zoneStoneDarkPalette=p86; zoneStoneLightPalette=p86; zoneWaterPalette=pBlue; zoneDirtDarkPalette=p70; zoneWoodPalette=pWood; zoneWoodDarkPalette=pWoodDark; zoneMisc1Palette=pWoodDark; zoneMisc2Palette=pWoodDark; zoneMisc3Palette=pRed; zoneMisc4Palette=pBlue; zoneMisc5Palette=pGreen; zoneMisc6Palette=pOrange; zoneMisc7Palette=pYellow; zoneMisc8Palette=pPurple; 
+
+combatMode=False; 
+
+[Item] ID=staircase; q=1; x=18; y=13;
+[Item] ID=floor_stone7b; q=1; x=20; y=11;
+[Item] ID=spire_cath_top_noJ; q=1; oX=0; oY=2; x=21; y=10;
+[Item] ID=stone_pole2_noJ; q=1; x=21; y=11;
+[Item] ID=spire_cath_top_noJ; q=1; oX=0; oY=2; x=21; y=14;
+[Item] ID=stone_pole2_noJ; q=1; x=21; y=15;
+[Item] ID=blockedWalkJump; q=1; x=24; y=9;
+[Item] ID=coffin_closed; q=1; x=24; y=10; containerID=0;
+[Item] ID=bones1; q=1; containedIn=0; cSlot=0;
+[Item] ID=loot_bone_junk; q=1; containedIn=0; cSlot=1;
+[Item] ID=loot_accessory3; q=1; containedIn=0; cSlot=2; containerID=1;
+[Item] ID=loot_steel; q=1; containedIn=0; cSlot=3;
+[Item] ID=loot_general1; q=1; containedIn=0; cSlot=4;
+[Item] ID=spire_cath_top_noJ; q=1; oX=0; oY=2; x=27; y=10;
+[Item] ID=stone_pole2_noJ; q=1; x=27; y=11;
+[Item] ID=spire_cath_top_noJ; q=1; oX=0; oY=2; x=27; y=14;
+[Item] ID=stone_pole2_noJ; q=1; x=27; y=15;
+[Item] ID=floor_stone6b; q=1; r=-360; x=28; y=11;
+[Item] ID=travelPoint_0; q=1; r=180; x=28; y=13;
+[Item] ID=staircase_up; q=1; r=-360; x=30; y=13;
+
+
+
+[Trigger] numID=0; aliasID=;
+topX=18;topY=13;btmX=18;btmY=13;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=0; effectID=travel_procedural_point; sValue=delve2; sValue2=; bValue1=True; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=1; aliasID=;
+topX=30;topY=13;btmX=30;btmY=13;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=1; effectID=talk; sValue=; sValue2=delve_exit; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+

@@ -1,0 +1,326 @@
+
+
+[Action] ID=Ro_poisonTip; 
+	name=毒尖;
+	icon=icon_Ro_poisonTip;
+	tooltip=使用武器造成50%伤害，并施加中毒持续 <icon=time><math=40 + 20 * c:rank>.;
+	rankUpTooltip=每级增加持续时间 <icon=time>20.;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	XPCost=170;
+	XPCost=400;
+	XPCost=550;
+	XPCost=900;
+	
+	casterAnimation=weapon;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	requiredWeaponElement=weapon;
+	
+	FXOnCaster=chargeBurst;
+	FXOnCasterColor=Green;
+	FXOnTarget=weaponFX;
+[ActionAoE] 
+	ID=Ro_poisonTip; shape=10;
+[AvAffecter]
+	ID=Ro_poisonTip; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.5;
+	chance=w:chance;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Ro_poisonTip; shape=11;
+[AvAffecter]
+	ID=Ro_poisonTip; 
+	visibleMiss=false;
+	actorValue=poison;
+	magnitude=2;
+	duration=40 + 20 * c:rank;
+	chance=w:chance;
+	FXOnHit=slash;
+	FXOnHitColor=Green;
+	FXOnHit=ping;
+	FXOnHitColor=Green;
+	FXOnHit=WetSquish;
+[AvAffecterAoE]
+	ID=Ro_poisonTip;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=Ro_gouge; 
+	name=刺目;
+	icon=icon_Ro_gouge;
+	tooltip=使用武器造成50%伤害，并施加失明持续<icon=time><math=40 + 20 * c:rank>.;
+	rankUpTooltip=每级增加持续时间 <icon=time>20.;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	XPCost=200;
+	XPCost=420;
+	XPCost=600;
+	XPCost=950;
+	
+	casterAnimation=weapon;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	requiredWeaponElement=weapon;
+	
+	FXOnCaster=chargeBurst;
+	FXOnCasterColor=Black;
+	FXOnTarget=weaponFX;
+[ActionAoE] 
+	ID=Ro_gouge; shape=10;
+[AvAffecter]
+	ID=Ro_gouge; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.5;
+	chance=w:chance;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Ro_gouge; shape=11;
+[AvAffecter]
+	ID=Ro_gouge; 
+	visibleMiss=false;
+	actorValue=blind;
+	magnitude=1;
+	duration=40 + 20 * c:rank;
+	chance=w:chance;
+	FXOnTile=triSlash_overlap;
+	FXOnTileColor=Black;
+	FXOnTile=sfx_slashingHit;
+	FXOnTile=darken_minor;
+	FXOnHit=slash;
+	FXOnHitColor=Black;
+[AvAffecterAoE]
+	ID=Ro_gouge;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=Ro_distract; 
+	name=干扰;
+	icon=icon_Ro_distract;
+	tooltip=将一名敌人调转方向并打断其施法.;
+	rankUpTooltip=每级增加1攻击距离.;
+	tooltipTopRight=<icon=ranged_small>;
+	
+	attractAttention=false;
+	
+	XPCost=80;
+	XPCost=150;
+	XPCost=500;
+	
+	AIRatingBias = -2;
+	
+	casterAnimation=swing;
+	
+	maxRank=3;
+	canExceedMaxRankBy=1;
+[ActionAoE] 
+	ID=Ro_distract; 
+	needsLoS = true;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 2;
+	maxRangeBonus = c:rank;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Ro_distract; 
+	actorValue=rotate;
+	magnitude=180;
+	duration=-2;
+	chance=c:Acc * 100 + m:cHighestRangedSkill * 5 - t:MagEva;
+	FXOnTile=line;
+	FXOnTile=swing;
+	FXOnHit=question;
+	FXOnHit=ting;
+	FXOnHit=chk;
+[AvAffecterAoE]
+	ID=Ro_distract;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Ro_distract; 
+	visibleMiss = false;
+	actorValue=cancel;
+	magnitude=1;
+	chance=c:Acc * 210 * m:tCancel + c:skill_Aim - t:MagEva - 100;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Ro_distract;
+	 cloneFrom=oneTile;
+	
+
+[Action] ID=Ro_dash; 
+	name=疾跑;
+	icon=icon_Ro_dash;
+	harmful=false;
+	tooltip=沿直线快速奔跑.<n=>这不会消耗战斗中的行动机会，<icon=time>99 内无法再次使用.;
+	rankUpTooltip=每级增加1距离.;
+	tooltipTopRight=;
+	
+	mpCost=3 * d:mpCostMult + d:mpCostMod;
+	cooldown=99;
+	
+	AIRatingBias = -999;
+	
+	XPCost=350;
+	XPCost=900;
+	XPCost=1500;
+	
+	casterAnimation=fastwalk;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	special=moveCasterTowardTarget;
+	special=fastMovement;
+	special=doesNotConsumeCombatAction;
+	
+	FXOnCaster=sidewardLines;
+	FXOnCaster=dustCircle;
+	FXOnCaster=BrushSweep;
+[ActionAoE] 
+	ID=Ro_dash; shape=2;
+	needsLoS = true;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 1;
+	maxRangeBonus=c:rank;
+	canSelectActors=false;
+[AvAffecter]
+	ID=Ro_dash; 
+	actorValue=blank;
+	magnitude=0;
+	chance=0;
+	duration=0;
+[AvAffecterAoE]
+	ID=Ro_dash;
+	cloneFrom=oneTile;
+	
+	
+
+[Action] ID=Ro_hide; 
+	name=隐身;
+	icon=icon_Ro_hide;
+	attractAttention=false;
+	tooltip=在你下一回合结束前隐身. <n=> <icon=time>35 内无法再次使用.;
+	rankUpTooltip=;
+	tooltipTopRight=;
+	
+	harmful=false;
+	mpCost=2 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=180;
+	
+	cooldown=35;
+	
+	casterAnimation=charge;
+	maxRank=1;
+	
+	FXOnCaster=sidewardLines;
+	FXOnCasterColor=Gray;
+	FXOnCaster=upwardLines;
+	FXOnCasterColor=Gray;
+	FXOnCaster=downwardLines;
+	FXOnCasterColor=Gray;
+	FXOnCaster=smokeCloud;
+	FXOnCaster=Thwummm;
+	
+	FXOnTarget=smokeCloud;
+	FXOnTarget=Thwummm;
+[ActionAoE] 
+	ID=Ro_hide; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Ro_hide; 
+	harmful=false;
+	actorValue=invisible;
+	magnitude=1;
+	duration=-5;
+	chance=100;
+[AvAffecterAoE]
+	ID=Ro_hide; 
+	cloneFrom=oneTile;
+	
+	
+	
+[Action] ID=Ro_mug; 
+	name=Mug;
+	icon=icon_Ro_mug;
+	tooltip=Attack, steal all gold, and cause the enemy to drop <math=c:rank> other unequipped item(s). Lowers morale for <icon=time><math=75 + 25* c:rank> if successful.;
+	rankUpTooltip=Each rank makes the enemy drop an additional item. Also increases duration by <icon=time>25.;
+	tooltipIcons=<icon=noRanged>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	XPCost=300;
+	XPCost=330;
+	XPCost=390;
+	
+	casterAnimation=weapon;
+	casterAnimationSpeed=0.7;
+	maxRank=3;
+	requiredWeaponElement=melee;
+	
+	FXOnCaster=eyeGlint;
+	FXOnCaster=sfx_highTing;
+	FXOnTarget=weaponFX;
+[ActionAoE] 
+	ID=Ro_mug; shape=10;
+[AvAffecter]
+	ID=Ro_mug; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.9;
+	chance=w:chance * 0.9;
+	duration=-2;
+	FXOnHit=hitDust;
+	FXOnHitColor=Yellow;
+[AvAffecterAoE]
+	ID=Ro_mug;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Ro_mug; 
+	actorValue=morale;
+	visibleEvaluations=false;
+	visibleMiss=false;
+	magnitude=-1;
+	chance=w:chance * 0.9 * m:tDropItem;
+	duration=75 + c:rank * 25;
+[AvAffecterAoE]
+	ID=Ro_mug;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Ro_mug; 
+	actorValue=dropItem;
+	visibleMiss=false;
+	magnitude=1;
+	chance=w:chance * 0.9 * m:tDropItem;
+	duration=-2;
+	FXOnHit=starDonk;
+	FXOnHit=sfx_coin;
+[AvAffecterAoE]
+	ID=Ro_mug;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Ro_mug; 
+	rankRequired=2;
+	visibleEvaluations=false;
+	visibleMiss=false;
+	actorValue=dropItem;
+	magnitude=1;
+	chance=w:chance * 0.9 * m:tDropItem;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Ro_mug;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Ro_mug; 
+	rankRequired=3;
+	visibleEvaluations=false;
+	visibleMiss=false;
+	actorValue=dropItem;
+	magnitude=1;
+	chance=w:chance * 0.9 * m:tDropItem;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Ro_mug;
+	cloneFrom=oneTile;

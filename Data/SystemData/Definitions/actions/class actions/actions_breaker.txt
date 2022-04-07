@@ -1,0 +1,342 @@
+
+[Action] ID=Br_breakWeapon; 
+	name=Break Weapon;
+	icon=icon_Br_breakWeapon;
+	tooltip=Deal half damage and break enemy's weapon, reducing its damage to 1.;
+	rankUpTooltip=Each rank increases accuracy by 5%.;
+	tooltipIcons=<icon=bluntWeapons>Only;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	XPCost=150;
+	XPCost=460;
+	XPCost=850;
+	
+	casterAnimation=weapon;
+	casterAnimationSpeed=0.6;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	requiredWeaponElement=BreakerWpn;
+	
+	FXOnCaster=sfx_risingSwishHigh;
+	FXOnCasterColor=Red;
+	FXOnCaster=redden_tiny;
+	FXOnCasterColor=Red;
+	FXOnCaster=charge;
+	FXOnCasterColor=Red;
+	FXOnCaster=chargeSpiralFast_big;
+	FXOnCasterColor=Red;
+	FXOnCaster=chargeSpiralFast_big;
+	FXOnCasterColor=Red;
+[ActionAoE] 
+	ID=Br_breakWeapon; shape=10; 
+[AvAffecter]
+	ID=Br_breakWeapon; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.5;
+	chance=w:chance;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Br_breakWeapon;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Br_breakWeapon; 
+	actorValue=breakWeapon;
+	magnitude=1;
+	chance=w:chance * 0.75 * m:tBreakableWeapon + w:chance * c:rank * 0.05 * m:tBreakableWeapon;
+	duration=-2;
+	element=breakItem;
+	FXOnTile=chargeFast;
+	FXOnTileColor=Red;
+	FXOnTile=strike;
+	FXOnTileColor=Red;
+	FXOnHit=whiteExplosion;
+	FXOnHit=ThudShotBigger;
+	FXOnHit=sfx_lowIceSnap;
+	FXOnHit=tinyShakeHoriz;
+	FXOnMiss=woosh;
+[AvAffecterAoE]
+	ID=Br_breakWeapon;
+	cloneFrom=oneTile;
+	
+	
+
+[Action] ID=Br_breakArmor; 
+	name=Break Armor;
+	icon=icon_Br_breakArmor;
+	tooltip=Deal half damage and break enemy's armor, rendering it useless.;
+	rankUpTooltip=Each rank increases accuracy by 5%.;
+	tooltipIcons=<icon=bluntWeapons>Only;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	XPCost=150;
+	XPCost=360;
+	XPCost=750;
+	
+	casterAnimation=weapon;
+	casterAnimationSpeed=0.6;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	requiredWeaponElement=BreakerWpn;
+	
+	FXOnCaster=sfx_risingSwishHigh;
+	FXOnCasterColor=DarkRed;
+	FXOnCaster=redden_tiny;
+	FXOnCasterColor=DarkRed;
+	FXOnCaster=charge;
+	FXOnCasterColor=DarkRed;
+	FXOnCaster=chargeSpiralFast_big;
+	FXOnCasterColor=DarkRed;
+	FXOnCaster=chargeSpiralFast_big;
+	FXOnCasterColor=DarkRed;
+[ActionAoE]
+	ID=Br_breakArmor; shape=10; 
+[AvAffecter]
+	ID=Br_breakArmor; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.5;
+	chance=w:chance;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Br_breakArmor;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Br_breakArmor; 
+	actorValue=breakArmor;
+	magnitude=1;
+	chance=w:chance * 0.85 * m:tBreakableArmor + w:chance * c:rank * 0.05 * m:tBreakableArmor;
+	duration=-2;
+	element=breakItem;
+	FXOnTile=chargeFast;
+	FXOnTileColor=DarkRed;
+	FXOnTile=strike;
+	FXOnTileColor=DarkRed;
+	FXOnHit=whiteExplosion;
+	FXOnHit=ThudShotBigger;
+	FXOnHit=sfx_lowIceSnap;
+	FXOnHit=tinyShakeHoriz;
+	FXOnMiss=woosh;
+[AvAffecterAoE]
+	ID=Br_breakArmor;
+	cloneFrom=oneTile;
+	
+	
+	
+[Action] ID=Br_breakLegs; 
+	name=Break Legs;
+	icon=icon_Br_breakLegs;
+	tooltip=Deal half damage and smash enemy legs, immobilizing them for <icon=time><math=45 + 15 * c:rank> or more.;
+	rankUpTooltip=Each rank increases duration by <icon=time>15.;
+	tooltipIcons=<icon=bluntWeapons>Only;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	XPCost=220;
+	XPCost=520;
+	XPCost=900;
+	XPCost=1500;
+	
+	casterAnimation=broadswing;
+	casterAnimationSpeed=0.9;
+	casterAnimationDependsOnWeaponHand=true;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	requiredWeaponElement=BreakerWpn;
+	
+	FXOnCaster=sfx_risingSwishHigh;
+	FXOnCaster=chargeBurst;
+[ActionAoE] 
+	ID=Br_breakLegs; shape=10; 
+[AvAffecter]
+	ID=Br_breakLegs; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.5;
+	chance=w:chance;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Br_breakLegs;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Br_breakLegs; 
+	actorValue=immob;
+	magnitude=1;
+	chance=w:chance;
+	duration=35 + 15 * c:rank - w:magnitude * 2;
+	FXOnTile=strikeLegs;
+	FXOnTile=woosh;
+	FXOnHit=splatterLow;
+	FXOnHit=popSilent;
+	FXOnHit=ThudShot;
+	FXOnHit=click;
+[AvAffecterAoE]
+	ID=Br_breakLegs;
+	cloneFrom=oneTile;
+	
+	
+
+[Action] ID=Br_breakArms; 
+	name=Break Arms;
+	icon=icon_Br_breakArms;
+	tooltip=Deal half damage and smash enemy limbs, disabling them for <icon=time>40 or more.;
+	rankUpTooltip=Each rank increases accuracy by 5%.;
+	tooltipIcons=<icon=bluntWeapons>Only;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	XPCost=250;
+	XPCost=450;
+	XPCost=900;
+	
+	casterAnimation=swing;
+	casterAnimationSpeed=0.8;
+	casterAnimationDependsOnWeaponHand=true;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	requiredWeaponElement=BreakerWpn;
+	
+	FXOnCaster=sfx_risingSwishHigh;
+	FXOnCaster=chargeBurst;
+[ActionAoE] 
+	ID=Br_breakArms; shape=10; 
+[AvAffecter]
+	ID=Br_breakArms; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.5;
+	chance=w:chance;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Br_breakArms;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Br_breakArms; 
+	actorValue=disable;
+	magnitude=1;
+	chance=w:chance * 0.8 + w:chance * c:rank * 0.05;
+	duration=28 - w:magnitude;
+	FXOnTile=strikeBig;
+	FXOnTile=woosh;
+	FXOnHit=manySplatter;
+	FXOnHit=popSilent;
+	FXOnHit=ThudShot;
+	FXOnHit=click;
+[AvAffecterAoE]
+	ID=Br_breakArms;
+	cloneFrom=oneTile;
+	
+	
+
+[Action] ID=Br_shatter; 
+	name=Shatter;
+	icon=icon_Br_shatter;
+	tooltip=Deal +<math=40+10*c:rank>% damage per piece of broken equipment and per incapacitating status effect (disable, immobilize, stun, etc).;
+	rankUpTooltip=;
+	tooltipIcons=<icon=bluntWeapons>Only;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	mpCost=6 * d:mpCostMult + d:mpCostMod;
+	rankUpTooltip=Each rank increases damage by 10%.;
+	
+	XPCost=500;
+	XPCost=950;
+	
+	casterAnimation=jumpAttack_swing;
+	casterAnimationDependsOnWeaponHand=true;
+	casterAnimationSpeed=0.5;
+	maxRank=2;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=casting;
+	FXOnCaster=spiral;
+	FXOnCaster=spiral2;
+	FXOnCaster=spiral3;
+	FXOnCaster=spiral4;
+	FXOnCaster=sfx_risingSwish_low;
+	FXOnCaster=darken;
+	
+	requiredWeaponElement=BreakerWpn;
+[ActionAoE] 
+	ID=Br_shatter; shape=10; 
+[AvAffecter]
+	ID=Br_shatter; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude
+		+ w:magnitude * 0.4 * t:disable + w:magnitude * 0.1 * t:disable * c:rank
+		+ w:magnitude * 0.4 * t:immob + w:magnitude * 0.1 * t:immob * c:rank
+		+ w:magnitude * 0.4 * t:stun + w:magnitude * 0.1 * t:stun * c:rank
+		+ w:magnitude * 0.4 * t:sleep + w:magnitude * 0.1 * t:sleep * c:rank
+		+ w:magnitude * 0.4 * t:frozen + w:magnitude * 0.1 * t:frozen * c:rank
+		+ w:magnitude * 0.4 * dMin0:breakableEquipShatterBonus + w:magnitude * 0.1 * dMin0:breakableEquipShatterBonus * c:rank;
+	chance=w:chance * t:disable 
+		+ w:chance * t:immob
+		+ w:chance * t:stun
+		+ w:chance * t:sleep
+		+ w:chance * t:frozen
+		+ w:chance * dMin0:breakableEquipShatterBonus;
+	duration=-2;
+	
+	FXOnTile=sfx_pummel;
+	FXOnTile=pummel;
+	FXOnTile=pummel;
+	FXOnTile=pummel;
+	FXOnTile=pummel;
+	FXOnTile=delay;
+	FXOnTile=delay_small;
+	FXOnTile=strikeBig;
+	FXOnHit=whiteExplosion_expand;
+	FXOnHitColor=Red;
+	FXOnHit=ThudShotBigger;
+	FXOnHit=sfx_lowSlashingHit;
+	FXOnHit=smallShakeHoriz_long;
+	FXOnHit=redden_minor;
+	FXOnMiss=woosh;
+	element=shatter;
+[AvAffecterAoE]
+	ID=Br_shatter;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=Br_breakOut; 
+	name=Break Out;
+	icon=icon_Br_breakOut;
+	tooltip=Push all adjacent targets away and deal <math=50+10*c:rank>% damage.;
+	rankUpTooltip=Each rank increases damage by 10%.;
+	tooltipIcons=<icon=bluntWeapons>Only;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	
+	XPCost=180;
+	XPCost=320;
+	XPCost=400;
+	XPCost=600;
+	
+	casterAnimation=spinAttack;
+	casterAnimationDependsOnWeaponHand=true;
+	maxRank=4;
+	requiredWeaponElement=BreakerWpn;
+	
+	FXOnCaster=chargeBurst;
+[ActionAoE] 
+	ID=Br_breakOut;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=Br_breakOut; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.5 + w:magnitude * 0.1 * c:rank;
+	chance=w:chance;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Br_breakOut;
+	aoeCasterAsOrigin=true;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=Br_breakOut; 
+	actorValue=push;
+	magnitude=1;
+	duration=-2;
+	chance=w:chance;
+	FXOnTile=pop;
+	FXOnHit=click;
+[AvAffecterAoE]
+	ID=Br_breakOut;
+	aoeCasterAsOrigin=true;
+	cloneFrom=adjacent;
+	

@@ -1,0 +1,296 @@
+[Action] ID=Sai_heave; 
+	name=举起;
+	icon=icon_Sai_heave;
+	tooltip=向前将对方推开 <math=c:rank> 格. <n=>推到障碍物时会对你的目标和障碍物造成伤害.;
+	rankUpTooltip=每级增加1格推开距离.;
+	tooltipIcons=;
+	tooltipTopRight=;
+	
+	XPCost=75;
+	XPCost=250;
+	XPCost=500;
+	XPCost=950;
+	XPCost=1600;
+	
+	special=moveCasterNextToTarget;
+	casterAnimation=shoulderbash;
+	casterAnimationDependsOnWeaponHand=true;
+	maxRank=5;
+	canExceedMaxRankBy=1;
+	
+	FXOnTarget=swing;
+	FXOnCaster=sidewardLines;
+	FXOnCasterColor=White;
+	FXOnCaster=woosh;
+[ActionAoE]
+	ID=Sai_heave; shape=2; 
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 2;
+	airborne=false;
+	bypassAll=false;
+	occupyAll=true;
+	canSelectActors=true;
+	fReq=1 - m:actorInTheWayOfMoveToTarget;
+[AvAffecter]
+	ID=Sai_heave; 
+	actorValue=push;
+	magnitude=c:rank;
+	duration=-2;
+	chance=100;
+	FXOnHit=largePing;
+	FXOnHit=click;
+[AvAffecterAoE]
+	ID=Sai_heave;
+	cloneFrom=oneTile;
+
+[Action] ID=Sai_rope; 
+	name=绳套;
+	icon=icon_Sai_rope;
+	tooltip=扔出一根绳套抓住对方并拉向自己 <math=2+c:rank> 格.;
+	rankUpTooltip=每级增加1格拉向距离.;
+	tooltipIcons=;
+	tooltipTopRight=;
+	
+	XPCost=75;
+	XPCost=250;
+	XPCost=500;
+	
+	AIRatingBias = -8;
+	
+	casterAnimation=swing;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	FXOnTarget=woosh;
+[ActionAoE]
+	ID=Sai_rope; shape=2; 
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 3;
+	maxRangeBonus=c:rank;
+	airborne=true;
+	bypassAll=false;
+	occupyAll=true;
+	canSelectActors=true;
+[AvAffecter]
+	ID=Sai_rope; 
+	FXOnTile=ropeToss;
+	FXOnTile=delay_minor;
+	FXOnTile=delay_minor;
+	FXOnTile=delay_minor;
+	FXOnTile=delay_minor;
+[AvAffecterAoE]
+	ID=Sai_rope;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Sai_rope; 
+	FXOnTile=ropeToss_extend;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=Sai_rope;
+	aoeCasterAsOrigin=true;
+	minRange = 1;
+	maxRange=0;
+	maxRangeBonus=-1;
+	maxRangeAddDistanceFromCaster=true;
+	coneAngle=1;
+[AvAffecter]
+	ID=Sai_rope; 
+	actorValue=pull;
+	magnitude=3+c:rank;
+	duration=-2;
+	chance=100;
+	FXOnTile=delay;
+	FXOnHit=sidewardLines;
+	FXOnHitColor=White;
+	FXOnHit=largePing;
+	FXOnHitColor=Brown;
+	FXOnHit=click;
+[AvAffecterAoE]
+	ID=Sai_rope;
+	cloneFrom=oneTile;
+
+
+	
+	
+[Action] ID=Sai_steady; 
+	name=稳固;
+	icon=icon_Sai_steady;
+	tooltip=为队友施加'守卫'增益，受到物理伤害减半，持续时间 <icon=time><math=34 + c:PhysAtk*2 + 20 * c:rank> .;
+	rankUpTooltip=每级增加持续时间<icon=time>20.;
+	tooltipTopRight=<icon=PhysAtk_small>;
+	harmful=false;
+	mpCost=1 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=90;
+	XPCost=180;
+	XPCost=350;
+	XPCost=600;
+	XPCost=900;
+	
+	casterAnimation=charge;
+	casterAnimationSpeed=1.5;
+	maxRank=5;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=chargeFast;
+	FXOnCasterColor=SkyBlue;
+[ActionAoE]
+	ID=Sai_steady;
+	cloneFrom=adjacentAndSelf;
+--[AvAffecter]
+--	ID=Sai_steady; 
+--	actorValue=cure;
+--	harmful=false;
+--	magnitude=1;
+--	duration=-2;
+--	chance=100 * m:tCurable;
+--	FXOnHit=chargeSpiralFast_big;
+--	FXOnHitColor=Aqua;
+--	FXOnHit=sidewardLines;
+--	FXOnHitColor=Aqua;
+--	FXOnHit=ping;
+--	FXOnHitColor=Aqua;
+--	FXOnHit=sfx_lowTingQuiet;
+--[AvAffecterAoE]
+--	ID=Sai_steady;
+--	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Sai_steady;
+	harmful=false;
+	actorValue=guard;
+	magnitude=1;
+	duration=34 + c:PhysAtk*2 + 20 * c:rank;
+	chance=100;
+	FXOnTile=delay_minor;
+	FXOnHit=shield;
+	FXOnHitColor=SkyBlue;
+	FXOnTile=chargeFast;
+	FXOnTileColor=SkyBlue;
+	FXOnTile=sfx_sliceNoShingLow;
+[AvAffecterAoE]
+	ID=Sai_steady;
+	cloneFrom=oneTile;
+	
+[Action] ID=Sai_swagger; 
+	name=昂扬;
+	icon=icon_Sai_swagger;
+	harmful=false;
+	attractAttention=false;
+	tooltip=移动2格并且提升你的士气 <icon=time><math=34+c:MagAtk*2+20*c:rank>.<n=>士气高昂会增加 <icon=PhysAtk><icon=MagAtk> 攻击和 <icon=PhysDef><icon=MagDef> 防御.;
+	rankUpTooltip=每级增加持续时间 <icon=time>20.;
+	tooltipTopRight=<icon=MagAtk_small>;
+	
+	AIRatingBias = -15;
+	
+	XPCost=150;
+	XPCost=300;
+	XPCost=600;
+	XPCost=1200;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=swing2;
+	FXOnCaster=dustCircle;
+	FXOnCaster=sidewardLines;
+	
+	casterAnimation=jumpAbility;
+	casterAnimationSpeed=2;
+	
+	special=walkCasterToTarget;
+	special=cantUseInTravel;
+[ActionAoE] 
+	ID=Sai_swagger; shape=1;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 2;
+	canSelectActors=false;
+	canSelectEnemies=false;
+[AvAffecter]
+	ID=Sai_swagger; 
+	harmful=false;
+	actorValue=morale;
+	magnitude=1;
+	duration=34+c:MagAtk*2 + 20 * c:rank;
+	chance=100;
+	affectIntangible=true;
+	FXOnHit=sfx_risingBipLow;
+[AvAffecterAoE]
+	ID=Sai_swagger;
+	aoeCasterAsOrigin=true;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Sai_swagger; 
+	harmful=false;
+	actorValue=blank;
+[AvAffecterAoE]
+	ID=Sai_swagger;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=Sai_smellingSalts; 
+	name=嗅盐;
+	icon=icon_Sai_smellingsalts;
+	tooltip=复活一个相邻的倒下的队友，其将获得 1<icon=HP>HP<textIfFinal= .=2-c:rank>  和行动时间 +10 <icon=time>.;
+	rankUpTooltip=2级后复活的队友额外获得行动时间 +10 <icon=time>.;
+	tooltipTopRight=;
+	
+	harmful=false;
+	attractAttention=false;
+	mpCost=2 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=300;
+	XPCost=650;
+	
+	maxRank=2;
+	casterAnimation=handup;
+	casterAnimationSpeed=1.5;
+	FXOnCaster=chargeFast;
+	FXOnCasterColor=White;
+	FXOnTarget=darken_minor;
+[ActionAoE] 
+	ID=Sai_smellingSalts; 
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=Sai_smellingSalts; 
+	harmful=false;
+	rankRequired=2;
+	actorValue=actTimer;
+	magnitude=10;
+	duration=-2;
+	chance=d:reviveAcc;
+	FXOnHit=sidewardLines;
+	FXOnHit=sfx_schwee;
+	visibleMiss=false;
+[AvAffecterAoE]
+	ID=Sai_smellingSalts;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Sai_smellingSalts;
+	harmful=false;
+	actorValue=revive;
+	magnitude=1;
+	duration=-2;
+	chance=d:reviveAcc;
+	FXOnTile=briefAuraSound;
+	FXOnTileColor=White;
+	FXOnTile=dust_rise;
+	FXOnTileColor=White;
+	FXOnTile=dust_cloud;
+	FXOnTileColor=White;
+	FXOnTile=sfx_longGoodAura_med;
+	FXOnTile=actor_reviveGhost;
+	FXOnHit=tallLight;
+	FXOnHit=chargeSpiralFast_big;
+	FXOnHit=sparkles;
+	FXOnHit=upwardLinesQuick;
+	FXOnHit=whiten;
+	FXOnHit=Powerup_longerEchoBloop;
+	FXOnMiss=hitDustQuiet;
+[AvAffecterAoE]
+	ID=Sai_smellingSalts;
+	cloneFrom=oneTile;

@@ -1,0 +1,2369 @@
+[Action] ID=boardingGear_act; 
+	name=Boarding Gear;
+	icon=item_gear_boarding;
+	description=;
+	
+	special=cantUseWithoutCrew;
+
+	special=dontLookAtTarget;
+	special=usableEvenWhenCantAct;
+    special=usableEvenWhenReacting;
+    special=usableEvenWhenYourTurn;
+	special=usableWithoutACaster;
+[ActionAoE]
+	ID=boardingGear_act; shape=17;
+	cloneFrom=adjacent;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=boardingGear_act; 
+	actorValue=board;
+	magnitude=5;
+	duration=80;
+	chance=9999 * m:tCrewNum * AVrxn:board * m:cCanBoard - t:crewless * 99999 - m:tcControllable * 99999;
+[AvAffecterAoE]
+	ID=boardingGear_act;
+	cloneFrom=oneTile;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=boardingGear_act; 
+	actorValue=crewHP;
+	magnitude= -m:cCrewNum * 6;
+	duration=-2;
+	chance=100 - m:tControllable * 999;
+	FXOnTile=delay;
+	FXOnHit=pop;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=boardingGear_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=boardingGear_act; 
+	actorValue=crewHP;
+	magnitude= -m:tCrewNum * 3;
+	duration=-2;
+	chance=100 - m:tControllable * 999;
+	FXOnTile=delay;
+	FXOnHit=pop;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=boardingGear_act;
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+	
+
+[Action] ID=boardingHook_act; 
+	name=Boarding Hooks;
+	icon=item_gear_boarding_hook;
+	description=;
+	
+	special=cantUseWithoutCrew;
+
+	special=dontLookAtTarget;
+	special=usableEvenWhenCantAct;
+    special=usableEvenWhenReacting;
+    special=usableEvenWhenYourTurn;
+	special=usableWithoutACaster;
+[ActionAoE]
+	ID=boardingHook_act; shape=17;
+	cloneFrom=adjacent;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=boardingHook_act; 
+	actorValue=board;
+	magnitude=5;
+	duration=90;
+	chance=9999 * m:tCrewNum * AVrxn:board * m:cCanBoard - t:crewless * 99999 - m:tcControllable * 99999;
+[AvAffecterAoE]
+	ID=boardingHook_act;
+	cloneFrom=oneTile;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=boardingHook_act; 
+	actorValue=crewHP;
+	magnitude= -m:cCrewNum * 6;
+	duration=-2;
+	chance=100  - m:tControllable * 999;
+	FXOnTile=delay;
+	FXOnHit=pop;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=boardingHook_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=boardingHook_act; 
+	actorValue=crewHP;
+	magnitude= -m:tCrewNum * 3;
+	duration=-2;
+	chance=100  - m:tControllable * 999;
+	FXOnHit=pop;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=boardingHook_act;
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+	
+
+[Action] ID=boardingPlank_act; 
+	name=Boarding Corvus;
+	icon=item_gear_boarding_plank;
+	description=;
+	
+	special=cantUseWithoutCrew;
+
+	special=dontLookAtTarget;
+	special=usableEvenWhenCantAct;
+    special=usableEvenWhenReacting;
+    special=usableEvenWhenYourTurn;
+	special=usableWithoutACaster;
+[ActionAoE]
+	ID=boardingPlank_act; shape=17;
+	cloneFrom=adjacent;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=boardingPlank_act; 
+	actorValue=board;
+	magnitude=6;
+	duration=55;
+	chance=9999 * m:tCrewNum * AVrxn:board * m:cCanBoard - t:crewless * 99999 - m:tcControllable * 99999;
+[AvAffecterAoE]
+	ID=boardingPlank_act;
+	cloneFrom=oneTile;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=boardingPlank_act; 
+	actorValue=crewHP;
+	magnitude= -m:cCrewNum * 6;
+	duration=-2;
+	chance=100 - m:tControllable * 999;
+	FXOnTile=delay;
+	FXOnHit=pop;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=boardingPlank_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=boardingPlank_act; 
+	actorValue=crewHP;
+	magnitude= -m:tCrewNum * 3;
+	duration=-2;
+	chance=100 - m:tControllable * 999;
+	FXOnHit=pop;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=boardingPlank_act;
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+	
+[Action] ID=boardingSpines_act; 
+	name=Boarding Spines;
+	icon=item_gear_boarding;
+	description=;
+	
+	special=cantUseWithoutCrew;
+
+	special=dontLookAtTarget;
+	special=usableEvenWhenCantAct;
+    special=usableEvenWhenReacting;
+    special=usableEvenWhenYourTurn;
+	special=usableWithoutACaster;
+[ActionAoE]
+	ID=boardingSpines_act; shape=17;
+	cloneFrom=adjacent;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=boardingSpines_act; 
+	actorValue=board;
+	magnitude=5;
+	duration=60;
+	chance=9999 * m:tCrewNum * AVrxn:board * m:cCanBoard - t:crewless * 99999 - m:tcControllable * 99999;
+[AvAffecterAoE]
+	ID=boardingSpines_act;
+	cloneFrom=oneTile;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=boardingSpines_act; 
+	actorValue=crewHP;
+	magnitude= -m:cCrewNum * 6;
+	duration=-2;
+	chance=100 - m:tControllable * 999;
+	FXOnTile=delay;
+	FXOnHit=pop;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=boardingSpines_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=boardingSpines_act; 
+	actorValue=crewHP;
+	magnitude= -m:tCrewNum * 3;
+	duration=-2;
+	chance=100 - m:tControllable * 999;
+	FXOnTile=delay;
+	FXOnHit=pop;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=boardingSpines_act;
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+	
+	
+	
+[Action] ID=cannon_falconet_atk; 
+	name=Falconet;
+	icon=item_cannon_falconet;
+	applyWeaponBuffs=true;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+	special=endCombatTurn;
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	casterAnimation=s_0atk;
+	
+	FXOnCaster=delay_slightlyshorter;
+	FXOnCaster=cannonball_smoke;
+[ActionAoE] 
+	ID=cannon_falconet_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 4;
+	maxRangeBonus = d:cannonRangeBonus;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+	coneAngle_exclude1=90;
+	coneAngle_exclude2=90;
+	coneAngle_exclude2_offset=180;
+[AvAffecter]
+	ID=cannon_falconet_atk; 
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_falconet_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_falconet_atk;
+--add delay if we're firing only 1 cannon.
+	fReq=-m:cCrewNum + 3;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_falconet_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_falconet_atk;
+	fReq=m:cCrewNum-3;
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_falconet_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_falconet_atk; 
+	actorValue=HP;
+	magnitude= d:cannonDmg(3);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+	FXOnHit=actor_shards;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=cannon_falconet_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_falconet_atk;
+	fReq=m:cCrewNum-5;
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+--fire 3rd cannonball
+[AvAffecterAoE]
+	ID=cannon_falconet_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_falconet_atk;
+	fReq=m:cCrewNum-7;
+	FXOnTile=cannonball;
+--fire 4th
+[AvAffecterAoE]
+	ID=cannon_falconet_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_falconet_atk; 
+	actorValue=crewHP;
+	magnitude= d:cannonDmg_crewHP(3);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+[AvAffecterAoE]
+	ID=cannon_falconet_atk;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=cannon_falcon_atk; 
+	name=Falcon;
+	icon=item_cannon_falcon;
+	applyWeaponBuffs=true;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+	special=endCombatTurn;
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	casterAnimation=s_0atk;
+	
+	FXOnCaster=delay_slightlyshorter;
+	FXOnCaster=cannonball_smoke;
+[ActionAoE] 
+	ID=cannon_falcon_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 4;
+	maxRangeBonus = d:cannonRangeBonus;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+	coneAngle_exclude1=90;
+	coneAngle_exclude2=90;
+	coneAngle_exclude2_offset=180;
+[AvAffecter]
+	ID=cannon_falcon_atk; 
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_falcon_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_falcon_atk;
+--add delay if we're firing only 1 cannon.
+	fReq=-m:cCrewNum + 3;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_falcon_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_falcon_atk;
+	fReq=m:cCrewNum-3;
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_falcon_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_falcon_atk; 
+	actorValue=HP;
+	magnitude= d:cannonDmg(3);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+	FXOnHit=actor_shards;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=cannon_falcon_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_falcon_atk;
+	fReq=m:cCrewNum-5;
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+--fire 3rd cannonball
+[AvAffecterAoE]
+	ID=cannon_falcon_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_falcon_atk;
+	fReq=m:cCrewNum-7;
+	FXOnTile=cannonball;
+--fire 4th
+[AvAffecterAoE]
+	ID=cannon_falcon_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_falcon_atk; 
+	actorValue=crewHP;
+	magnitude= d:cannonDmg_crewHP(4);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+[AvAffecterAoE]
+	ID=cannon_falcon_atk;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=cannon_saker_atk; 
+	name=Saker;
+	icon=item_cannon_saker;
+	applyWeaponBuffs=true;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+	special=endCombatTurn;
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	casterAnimation=s_0atk;
+	
+	FXOnCaster=delay_slightlyshorter;
+	FXOnCaster=cannonball_smoke;
+[ActionAoE] 
+	ID=cannon_saker_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 5;
+	maxRangeBonus = d:cannonRangeBonus;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+	coneAngle_exclude1=80;
+	coneAngle_exclude2=80;
+	coneAngle_exclude2_offset=180;
+[AvAffecter]
+	ID=cannon_saker_atk; 
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_saker_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_saker_atk;
+--add delay if we're firing only 1 cannon.
+	fReq=-m:cCrewNum + 3;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_saker_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_saker_atk;
+	fReq=m:cCrewNum-3;
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_saker_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_saker_atk; 
+	actorValue=HP;
+	magnitude= d:cannonDmg(5);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+	FXOnHit=actor_shards;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=cannon_saker_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_saker_atk;
+	fReq=m:cCrewNum-5;
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+--fire 3rd cannonball
+[AvAffecterAoE]
+	ID=cannon_saker_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_saker_atk;
+	fReq=m:cCrewNum-7;
+	FXOnTile=cannonball;
+--fire 4th
+[AvAffecterAoE]
+	ID=cannon_saker_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_saker_atk; 
+	actorValue=crewHP;
+	magnitude=d:cannonDmg_crewHP(5);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+[AvAffecterAoE]
+	ID=cannon_saker_atk;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=cannon_saker_fore_atk; 
+	name=Fore Saker;
+	icon=item_cannon_saker_fore;
+	applyWeaponBuffs=true;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+	special=endCombatTurn;
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	casterAnimation=s_0atk;
+	
+	FXOnCaster=delay_slightlyshorter;
+	FXOnCaster=cannonball_smoke;
+[ActionAoE] 
+	ID=cannon_saker_fore_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 4;
+	maxRangeBonus = d:cannonRangeBonus;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+	coneAngle=80;
+[AvAffecter]
+	ID=cannon_saker_fore_atk; 
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_saker_fore_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_saker_fore_atk;
+--add delay if we're firing only 1 cannon.
+	fReq=-m:cCrewNum + 3;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_saker_fore_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_saker_fore_atk;
+	fReq=m:cCrewNum-3;
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_saker_fore_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_saker_fore_atk; 
+	actorValue=HP;
+	magnitude= d:cannonDmg(5);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+	FXOnHit=actor_shards;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=cannon_saker_fore_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_saker_fore_atk;
+	fReq=m:cCrewNum-5;
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+--fire 3rd cannonball
+[AvAffecterAoE]
+	ID=cannon_saker_fore_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_saker_fore_atk;
+	fReq=m:cCrewNum-7;
+	FXOnTile=cannonball;
+--fire 4th
+[AvAffecterAoE]
+	ID=cannon_saker_fore_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_saker_fore_atk; 
+	actorValue=crewHP;
+	magnitude=d:cannonDmg_crewHP(5);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+[AvAffecterAoE]
+	ID=cannon_saker_fore_atk;
+	cloneFrom=oneTile;
+	
+	
+
+[Action] ID=cannon_saker_aft_atk; 
+	name=Aft Saker;
+	icon=item_cannon_saker_aft;
+	applyWeaponBuffs=true;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+	special=endCombatTurn;
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	casterAnimation=s_0atk;
+	
+	FXOnCaster=delay_slightlyshorter;
+	FXOnCaster=cannonball_smoke;
+[ActionAoE] 
+	ID=cannon_saker_aft_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 4;
+	maxRangeBonus = d:cannonRangeBonus;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+	coneAngle_exclude1=270;
+[AvAffecter]
+	ID=cannon_saker_aft_atk; 
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_saker_aft_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_saker_aft_atk;
+--add delay if we're firing only 1 cannon.
+	fReq=-m:cCrewNum + 3;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_saker_aft_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_saker_aft_atk;
+	fReq=m:cCrewNum-3;
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_saker_aft_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_saker_aft_atk; 
+	actorValue=HP;
+	magnitude= d:cannonDmg(5);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+	FXOnHit=actor_shards;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=cannon_saker_aft_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_saker_aft_atk;
+	fReq=m:cCrewNum-5;
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+--fire 3rd cannonball
+[AvAffecterAoE]
+	ID=cannon_saker_aft_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_saker_aft_atk;
+	fReq=m:cCrewNum-7;
+	FXOnTile=cannonball;
+--fire 4th
+[AvAffecterAoE]
+	ID=cannon_saker_aft_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_saker_aft_atk; 
+	actorValue=crewHP;
+	magnitude=d:cannonDmg_crewHP(5);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+[AvAffecterAoE]
+	ID=cannon_saker_aft_atk;
+	cloneFrom=oneTile;
+	
+	
+
+[Action] ID=cannon_demiculverin_atk; 
+	name=Demi-culverin;
+	icon=item_cannon_demiculverin;
+	applyWeaponBuffs=true;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+	special=endCombatTurn;
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	casterAnimation=s_0atk;
+	
+	FXOnCaster=delay_slightlyshorter;
+	FXOnCaster=cannonball_smoke;
+[ActionAoE] 
+	ID=cannon_demiculverin_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 6;
+	maxRangeBonus = d:cannonRangeBonus;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+	coneAngle_exclude1=90;
+	coneAngle_exclude2=90;
+	coneAngle_exclude2_offset=180;
+[AvAffecter]
+	ID=cannon_demiculverin_atk; 
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+--cannonball #1
+[AvAffecterAoE]
+	ID=cannon_demiculverin_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_demiculverin_atk;
+--add delay if we're firing only 1 cannon.
+	fReq=-m:cCrewNum + 3;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_demiculverin_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_demiculverin_atk;
+	fReq=m:cCrewNum-3;
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+--fire 2nd cannonball if large crew
+[AvAffecterAoE]
+	ID=cannon_demiculverin_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_demiculverin_atk; 
+	actorValue=HP;
+	magnitude= d:cannonDmg(6);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+	FXOnHit=actor_shards;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=cannon_demiculverin_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_demiculverin_atk;
+	fReq=m:cCrewNum-5;
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+--fire 3rd cannonball if crew >= 7
+[AvAffecterAoE]
+	ID=cannon_demiculverin_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_demiculverin_atk;
+	fReq=m:cCrewNum-7;
+	FXOnTile=cannonball;
+--fire 4th
+[AvAffecterAoE]
+	ID=cannon_demiculverin_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_demiculverin_atk; 
+	actorValue=crewHP;
+	magnitude= d:cannonDmg_crewHP(6);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+[AvAffecterAoE]
+	ID=cannon_demiculverin_atk;
+	cloneFrom=oneTile;
+	
+
+
+[Action] ID=cannon_culverin_atk; 
+	name=Culverin;
+	icon=item_cannon_culverin;
+	applyWeaponBuffs=true;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+	special=endCombatTurn;
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	casterAnimation=s_0atk;
+	
+	FXOnCaster=delay_slightlyshorter;
+	FXOnCaster=cannonball_smoke;
+[ActionAoE] 
+	ID=cannon_culverin_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 6;
+	maxRangeBonus = d:cannonRangeBonus;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+	coneAngle_exclude1=90;
+	coneAngle_exclude2=90;
+	coneAngle_exclude2_offset=180;
+[AvAffecter]
+	ID=cannon_culverin_atk; 
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+--cannonball #1
+[AvAffecterAoE]
+	ID=cannon_culverin_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_culverin_atk;
+--add delay if we're firing only 1 cannon.
+	fReq=-m:cCrewNum + 3;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_culverin_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_culverin_atk;
+	fReq=m:cCrewNum-3;
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+--fire 2nd cannonball if large crew
+[AvAffecterAoE]
+	ID=cannon_culverin_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_culverin_atk; 
+	actorValue=HP;
+	magnitude= d:cannonDmg(7);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+	FXOnHit=actor_shards;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=cannon_culverin_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_culverin_atk;
+	fReq=m:cCrewNum-5;
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+--fire 3rd cannonball if crew >= 7
+[AvAffecterAoE]
+	ID=cannon_culverin_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_culverin_atk;
+	fReq=m:cCrewNum-7;
+	FXOnTile=cannonball;
+--fire 4th
+[AvAffecterAoE]
+	ID=cannon_culverin_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_culverin_atk; 
+	actorValue=crewHP;
+	magnitude= d:cannonDmg_crewHP(7);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+[AvAffecterAoE]
+	ID=cannon_culverin_atk;
+	cloneFrom=oneTile;
+	
+
+
+[Action] ID=cannon_demicannon_atk; 
+	name=Demi-cannon;
+	icon=item_cannon_demicannon;
+	applyWeaponBuffs=true;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+	special=endCombatTurn;
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	casterAnimation=s_0atk;
+	
+	FXOnCaster=delay_slightlyshorter;
+	FXOnCaster=cannonball_smoke;
+[ActionAoE] 
+	ID=cannon_demicannon_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 6;
+	maxRangeBonus = d:cannonRangeBonus;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+	coneAngle_exclude1=140;
+	coneAngle_exclude2=140;
+	coneAngle_exclude2_offset=180;
+[AvAffecter]
+	ID=cannon_demicannon_atk; 
+	FXOnTile=cannonball_big;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_demicannon_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_demicannon_atk;
+--add delay if we're firing only 1 cannon.
+	fReq=-m:cCrewNum + 3;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_demicannon_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_demicannon_atk;
+	fReq=m:cCrewNum-3;
+	FXOnTile=cannonball_big;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_demicannon_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_demicannon_atk; 
+	actorValue=HP;
+	magnitude= d:cannonDmg(8);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+	FXOnHit=actor_shards;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=cannon_demicannon_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_demicannon_atk;
+	fReq=m:cCrewNum-5;
+	FXOnTile=cannonball_big;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_demicannon_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_demicannon_atk;
+	fReq=m:cCrewNum-7;
+	FXOnTile=cannonball_big;
+--fire 4th
+[AvAffecterAoE]
+	ID=cannon_demicannon_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_demicannon_atk; 
+	actorValue=crewHP;
+	magnitude=d:cannonDmg_crewHP(9);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+[AvAffecterAoE]
+	ID=cannon_demicannon_atk;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=cannon_cannon_atk; 
+	name=Cannon;
+	icon=item_cannon_cannon;
+	applyWeaponBuffs=true;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+	special=endCombatTurn;
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	casterAnimation=s_0atk;
+	
+	FXOnCaster=delay_slightlyshorter;
+	FXOnCaster=cannonball_smoke;
+[ActionAoE] 
+	ID=cannon_cannon_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 6;
+	maxRangeBonus = d:cannonRangeBonus;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+	coneAngle_exclude1=140;
+	coneAngle_exclude2=140;
+	coneAngle_exclude2_offset=180;
+[AvAffecter]
+	ID=cannon_cannon_atk; 
+	FXOnTile=cannonball_big;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_cannon_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_cannon_atk;
+--add delay if we're firing only 1 cannon.
+	fReq=-m:cCrewNum + 3;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_cannon_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_cannon_atk;
+	fReq=m:cCrewNum-3;
+	FXOnTile=cannonball_big;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_cannon_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_cannon_atk; 
+	actorValue=HP;
+	magnitude= d:cannonDmg(9);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+	FXOnHit=actor_shards;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=cannon_cannon_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_cannon_atk;
+	fReq=m:cCrewNum-5;
+	FXOnTile=cannonball_big;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_cannon_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_cannon_atk;
+	fReq=m:cCrewNum-7;
+	FXOnTile=cannonball_big;
+--fire 4th
+[AvAffecterAoE]
+	ID=cannon_cannon_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_cannon_atk; 
+	actorValue=crewHP;
+	magnitude=d:cannonDmg_crewHP(9);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+[AvAffecterAoE]
+	ID=cannon_cannon_atk;
+	cloneFrom=oneTile;
+
+[Action] ID=cannon_lilbuster_atk; 
+	name=Lil' Buster;
+	icon=item_cannon_lilbuster;
+	applyWeaponBuffs=true;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+	special=endCombatTurn;
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	casterAnimation=s_0atk;
+	
+	FXOnCaster=delay_slightlyshorter;
+	FXOnCaster=cannonball_smoke;
+[ActionAoE] 
+	ID=cannon_lilbuster_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 3;
+	maxRangeBonus = d:cannonRangeBonus;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+	coneAngle_exclude1=120;
+	coneAngle_exclude2=120;
+	coneAngle_exclude2_offset=180;
+[AvAffecter]
+	ID=cannon_lilbuster_atk; 
+	FXOnTile=cannonball_big;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_lilbuster_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_lilbuster_atk;
+--add delay if we're firing only 1 cannon.
+	fReq=-m:cCrewNum + 3;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_lilbuster_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_lilbuster_atk;
+	fReq=m:cCrewNum-3;
+	FXOnTile=cannonball_big;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_lilbuster_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_lilbuster_atk; 
+	actorValue=HP;
+	magnitude= d:cannonDmg(9);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+	FXOnHit=actor_shards;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=cannon_lilbuster_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_lilbuster_atk;
+	fReq=m:cCrewNum-5;
+	FXOnTile=cannonball_big;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_lilbuster_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_lilbuster_atk;
+	fReq=m:cCrewNum-7;
+	FXOnTile=cannonball_big;
+--fire 4th
+[AvAffecterAoE]
+	ID=cannon_lilbuster_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_lilbuster_atk; 
+	actorValue=crewHP;
+	magnitude=d:cannonDmg_crewHP(9);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+[AvAffecterAoE]
+	ID=cannon_lilbuster_atk;
+	cloneFrom=oneTile;
+	
+	
+
+[Action] ID=cannon_basilisk_atk; 
+	name=Basilisk;
+	icon=item_cannon_basilisk;
+	applyWeaponBuffs=true;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+	special=endCombatTurn;
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	casterAnimation=s_0atk;
+	
+	FXOnCaster=delay_slightlyshorter;
+	FXOnCaster=cannonball_smoke;
+	FXOnCaster=cannonball_smoke;
+[ActionAoE] 
+	ID=cannon_basilisk_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 4;
+	maxRangeBonus = d:cannonRangeBonus;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+	coneAngle_exclude1=179;
+	coneAngle_exclude2=179;
+	coneAngle_exclude2_offset=180;
+[AvAffecter]
+	ID=cannon_basilisk_atk; 
+	FXOnTile=cannonball_huge;
+	FXOnTile=delay;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_basilisk_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_basilisk_atk; 
+	actorValue=HP;
+	magnitude= d:cannonDmg(20);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+	FXOnHit=ThudShotBigger_quiet;
+	FXOnHit=sfx_woodCrash;
+	FXOnHit=actor_shards;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=cannon_basilisk_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_basilisk_atk; 
+	actorValue=crewHP;
+	magnitude=d:cannonDmg_crewHP(10);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+[AvAffecterAoE]
+	ID=cannon_basilisk_atk;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=cannon_longnine_atk; 
+	name=Long Nine;
+	icon=item_cannon_longnine;
+	applyWeaponBuffs=true;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+	special=endCombatTurn;
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	casterAnimation=s_0atk;
+	
+	FXOnCaster=delay_slightlyshorter;
+	FXOnCaster=cannonball_smoke;
+[ActionAoE] 
+	ID=cannon_longnine_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 5;
+	maxRangeBonus = d:cannonRangeBonus;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+	coneAngle=30;
+[AvAffecter]
+	ID=cannon_longnine_atk; 
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+--cannonball #1
+[AvAffecterAoE]
+	ID=cannon_longnine_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_longnine_atk;
+--add delay if we're firing only 1 cannon.
+	fReq=-m:cCrewNum + 3;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_longnine_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_longnine_atk;
+	fReq=m:cCrewNum-3;
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+--fire 2nd cannonball if large crew
+[AvAffecterAoE]
+	ID=cannon_longnine_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_longnine_atk; 
+	actorValue=HP;
+	magnitude= d:cannonDmg(6);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+	FXOnHit=actor_shards;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=cannon_longnine_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_longnine_atk;
+	fReq=m:cCrewNum-5;
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+--fire 3rd cannonball if crew >= 7
+[AvAffecterAoE]
+	ID=cannon_longnine_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_longnine_atk;
+	fReq=m:cCrewNum-7;
+	FXOnTile=cannonball;
+--fire 4th
+[AvAffecterAoE]
+	ID=cannon_longnine_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_longnine_atk; 
+	actorValue=crewHP;
+	magnitude= d:cannonDmg_crewHP(6);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+[AvAffecterAoE]
+	ID=cannon_longnine_atk;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=cannon_longten_atk; 
+	name=Long Ten;
+	icon=item_cannon_longten;
+	applyWeaponBuffs=true;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+	special=endCombatTurn;
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	casterAnimation=s_0atk;
+	
+	FXOnCaster=delay_slightlyshorter;
+	FXOnCaster=cannonball_smoke;
+[ActionAoE] 
+	ID=cannon_longten_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 5;
+	maxRangeBonus = d:cannonRangeBonus;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+	coneAngle=30;
+[AvAffecter]
+	ID=cannon_longten_atk; 
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+--cannonball #1
+[AvAffecterAoE]
+	ID=cannon_longten_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_longten_atk;
+--add delay if we're firing only 1 cannon.
+	fReq=-m:cCrewNum + 3;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_longten_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_longten_atk;
+	fReq=m:cCrewNum-3;
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+--fire 2nd cannonball if large crew
+[AvAffecterAoE]
+	ID=cannon_longten_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_longten_atk; 
+	actorValue=HP;
+	magnitude= d:cannonDmg(7);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+	FXOnHit=actor_shards;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=cannon_longten_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_longten_atk;
+	fReq=m:cCrewNum-5;
+	FXOnTile=cannonball;
+	FXOnTile=delay;
+--fire 3rd cannonball if crew >= 7
+[AvAffecterAoE]
+	ID=cannon_longten_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_longten_atk;
+	fReq=m:cCrewNum-7;
+	FXOnTile=cannonball;
+--fire 4th
+[AvAffecterAoE]
+	ID=cannon_longten_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_longten_atk; 
+	actorValue=crewHP;
+	magnitude= d:cannonDmg_crewHP(7);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+[AvAffecterAoE]
+	ID=cannon_longten_atk;
+	cloneFrom=oneTile;
+	
+[Action] ID=cannon_harpoon_atk; 
+	name=Harpoon;
+	icon=item_cannon_harpoon;
+	applyWeaponBuffs=true;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+	special=endCombatTurn;
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	casterAnimation=s_0atk;
+	
+	FXOnCaster=delay_slightlyshorter;
+	FXOnCaster=cannonball_smoke;
+	FXOnCaster=smallestShakeHoriz;
+[ActionAoE] 
+	ID=cannon_harpoon_atk; 
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 3;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+	coneAngle=190;
+[AvAffecter]
+	ID=cannon_harpoon_atk; 
+	actorValue=HP;
+	magnitude= d:cannonDmg(4);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+	FXOnTile=throw_spear;
+	FXOnTile=pop;
+	FXOnTile=ThudShot;
+	FXOnHit=sfx_slashingHit;
+	FXOnHit=actor_shards;
+	FXOnHit=hitDustQuiet;
+	FXOnHit=smallShakeHoriz;
+[AvAffecterAoE]
+	ID=cannon_harpoon_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_harpoon_atk; 
+	actorValue=pull;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=cannon_harpoon_atk;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=cannon_grape_atk; 
+	name=Grapeshot;
+	icon=item_cannon_grape;
+	applyWeaponBuffs=true;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+	special=endCombatTurn;
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	casterAnimation=s_0atk;
+	
+	FXOnCaster=delay_slightlyshorter;
+	FXOnCaster=cannonball_smoke;
+[ActionAoE] 
+	ID=cannon_grape_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 4;
+	maxRangeBonus = d:cannonRangeBonus;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+	coneAngle_exclude1=90;
+	coneAngle_exclude2=90;
+	coneAngle_exclude2_offset=180;
+[AvAffecter]
+	ID=cannon_grape_atk; 
+	FXOnTile=cannonball_grapeshot;
+	FXOnTile=delay;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_grape_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_grape_atk; 
+	actorValue=HP;
+	magnitude= d:cannonDmg(2) * 0.5;
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+	FXOnHit=actor_shards;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=cannon_grape_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_grape_atk; 
+	actorValue=crewHP;
+	magnitude= d:cannonDmg_grape_crewHP(5);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+[AvAffecterAoE]
+	ID=cannon_grape_atk;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=cannon_chain_atk; 
+	name=Chain Shot;
+	icon=item_cannon_chain;
+	applyWeaponBuffs=true;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+	special=endCombatTurn;
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	casterAnimation=s_0atk;
+	
+	FXOnCaster=delay_slightlyshorter;
+	FXOnCaster=cannonball_smoke;
+[ActionAoE] 
+	ID=cannon_chain_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 3;
+	maxRangeBonus = d:cannonRangeBonus;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+	coneAngle_exclude1=90;
+	coneAngle_exclude2=90;
+	coneAngle_exclude2_offset=180;
+[AvAffecter]
+	ID=cannon_chain_atk; 
+	FXOnTile=cannonball_chain;
+	FXOnTile=delay;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_chain_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_chain_atk; 
+	actorValue=HP;
+	magnitude= d:cannonDmg(3);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+	FXOnHit=actor_shards;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=cannon_chain_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_chain_atk; 
+	actorValue=crewHP;
+	magnitude= d:cannonDmg_crewHP(3);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+[AvAffecterAoE]
+	ID=cannon_chain_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_chain_atk; 
+	actorValue=moveDistance;
+	magnitude=-1;
+	duration=-31;
+	chance=100;
+	element=ranged;
+	element=physical;
+[AvAffecterAoE]
+	ID=cannon_chain_atk;
+	cloneFrom=oneTile;
+	
+[Action] ID=cannon_spider_atk; 
+	name=Spider Shot;
+	icon=item_cannon_spider;
+	applyWeaponBuffs=true;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+	special=endCombatTurn;
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	casterAnimation=s_0atk;
+	
+	FXOnCaster=delay_slightlyshorter;
+	FXOnCaster=cannonball_smoke;
+[ActionAoE] 
+	ID=cannon_spider_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 3;
+	maxRangeBonus = d:cannonRangeBonus;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+	coneAngle_exclude1=90;
+	coneAngle_exclude2=90;
+	coneAngle_exclude2_offset=180;
+[AvAffecter]
+	ID=cannon_spider_atk; 
+	FXOnTile=cannonball_spider;
+	FXOnTile=delay;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_spider_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_spider_atk; 
+	actorValue=HP;
+	magnitude= d:cannonDmg(1);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+	FXOnHit=actor_shards;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=cannon_spider_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_spider_atk; 
+	actorValue=crewHP;
+	magnitude= d:cannonDmg_crewHP(1);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+[AvAffecterAoE]
+	ID=cannon_spider_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_spider_atk; 
+	actorValue=moveDistance;
+	magnitude=-2;
+	duration=-31;
+	chance=100;
+	element=ranged;
+	element=physical;
+[AvAffecterAoE]
+	ID=cannon_spider_atk;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=cannon_vol_atk; 
+	name=Vol Cannon;
+	icon=item_cannon_vol;
+	applyWeaponBuffs=true;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+	special=endCombatTurn;
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	casterAnimation=s_0atk;
+	
+	FXOnCaster=delay_slightlyshorter;
+	FXOnCaster=cannonball_smoke;
+[ActionAoE] 
+	ID=cannon_vol_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 5;
+	maxRangeBonus = d:cannonRangeBonus;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+--coneAngle_exclude1=80;
+coneAngle_exclude2=90;
+coneAngle_exclude2_offset=180;
+[AvAffecter]
+	ID=cannon_vol_atk; 
+	FXOnTile=cannonball_energy;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_vol_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_vol_atk;
+--add delay if we're firing only 1 cannon.
+	fReq=-m:cCrewNum + 3;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_vol_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_vol_atk;
+	fReq=m:cCrewNum-3;
+	FXOnTile=cannonball_energy;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_vol_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_vol_atk; 
+	actorValue=HP;
+	magnitude= d:cannonDmg(5);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=magic;
+	FXOnHit=actor_shards;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=cannon_vol_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_vol_atk;
+	fReq=m:cCrewNum-5;
+	FXOnTile=cannonball_energy;
+	FXOnTile=delay;
+--fire 3rd cannonball
+[AvAffecterAoE]
+	ID=cannon_vol_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_vol_atk;
+	fReq=m:cCrewNum-7;
+	FXOnTile=cannonball_energy;
+--fire 4th
+[AvAffecterAoE]
+	ID=cannon_vol_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_vol_atk; 
+	actorValue=crewHP;
+	magnitude=d:cannonDmg_crewHP(5);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=magic;
+[AvAffecterAoE]
+	ID=cannon_vol_atk;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=cannon_explode_atk; 
+	name=Explosive Shot;
+	icon=item_cannon_explode;
+	applyWeaponBuffs=true;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+	special=endCombatTurn;
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	casterAnimation=s_0atk;
+	
+	FXOnCaster=delay_slightlyshorter;
+	FXOnCaster=cannonball_smoke;
+	FXOnCaster=cannonball_smoke;
+[ActionAoE] 
+	ID=cannon_explode_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 3;
+	maxRangeBonus = d:cannonRangeBonus;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+	coneAngle_exclude1=100;
+	coneAngle_exclude2=100;
+	coneAngle_exclude2_offset=180;
+[AvAffecter]
+	ID=cannon_explode_atk; 
+	FXOnTile=cannonball_ash;
+	FXOnTile=delay;
+	FXOnTile=delay;
+[AvAffecterAoE]
+	ID=cannon_explode_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_explode_atk; 
+	actorValue=HP;
+	magnitude= d:cannonDmg(5);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=magic;
+	element=fire;
+	FXOnHit=ThudShotBigger_quiet;
+	FXOnHit=sfx_woodCrash;
+	FXOnHit=actor_shards;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=cannon_explode_atk;
+	cloneFrom=adjacentAndSelf;
+[AvAffecter]
+	ID=cannon_explode_atk; 
+	actorValue=crewHP;
+	magnitude=d:cannonDmg_crewHP(5);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=magic;
+	element=fire;
+[AvAffecterAoE]
+	ID=cannon_explode_atk;
+	cloneFrom=adjacentAndSelf;
+	
+	
+[Action] ID=cannon_swivel_atk; 
+	name=Swivel Gun;
+	icon=item_cannon_swivel;
+	applyWeaponBuffs=true;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+--doesn't end turn early
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	casterAnimation=s_0atk;
+	
+	FXOnCaster=delay_slightlyshorter;
+	FXOnCaster=cannonball_smoke;
+[ActionAoE] 
+	ID=cannon_swivel_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 3;
+	maxRangeBonus = d:cannonRangeBonus;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=cannon_swivel_atk; 
+	FXOnTile=cannonball_small;
+	FXOnTile=delay_minor;
+	FXOnTile=cannonball_small;
+	FXOnTile=delay_minor;
+	FXOnTile=cannonball_small;
+[AvAffecterAoE]
+	ID=cannon_swivel_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_swivel_atk; 
+	actorValue=HP;
+	magnitude= d:cannonDmg(2);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+	FXOnHit=actor_shards;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=cannon_swivel_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_swivel_atk; 
+	actorValue=crewHP;
+	magnitude= d:cannonDmg_crewHP(2);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+[AvAffecterAoE]
+	ID=cannon_swivel_atk;
+	cloneFrom=oneTile;
+	
+	
+
+[Action] ID=cannon_ram_atk; 
+	name=Ram;
+	icon=item_cannon_ram;
+	applyWeaponBuffs=true;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+	special=endCombatTurn;
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	casterAnimation=s_bumper;
+	
+[ActionAoE] 
+	ID=cannon_ram_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 1.5;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+	coneAngle=1;
+[AvAffecter]
+	ID=cannon_ram_atk; 
+	FXOnTile=pop;
+	FXOnTile=slash_quiet;
+[AvAffecterAoE]
+	ID=cannon_ram_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_ram_atk; 
+	actorValue=HP;
+	magnitude= d:cannonDmg(9);
+	duration=-2;
+	chance=100;
+	element=melee;
+	element=physical;
+	FXOnHit=sfx_woodCrash;
+	FXOnHit=actor_shards;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=cannon_ram_atk;
+	cloneFrom=oneTile;
+	
+[Action] ID=cannon_mythril_ram_atk; 
+	name=Mythril Ram;
+	icon=item_cannon_ram_mythril;
+	applyWeaponBuffs=true;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+	special=endCombatTurn;
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	casterAnimation=s_bumper;
+	
+[ActionAoE] 
+	ID=cannon_mythril_ram_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 1.5;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+	coneAngle=1;
+[AvAffecter]
+	ID=cannon_mythril_ram_atk; 
+	FXOnTile=pop;
+	FXOnTile=slash_quiet;
+[AvAffecterAoE]
+	ID=cannon_mythril_ram_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_mythril_ram_atk; 
+	actorValue=HP;
+	magnitude= d:cannonDmg(14);
+	duration=-2;
+	chance=100;
+	element=melee;
+	element=physical;
+	FXOnHit=sfx_woodCrash;
+	FXOnHit=actor_shards;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=cannon_mythril_ram_atk;
+	cloneFrom=oneTile;
+	
+	
+[Action] ID=cannon_thruster_act; 
+	name=Thruster;
+	icon=item_gear_thruster;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+	special=moveCasterToTarget;
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	FXOnTarget=gustyBlast;
+	FXOnCaster=sidewardLines;
+	FXOnCasterColor=White;
+	FXOnCaster=woosh;
+	FXOnCaster=ping;
+	
+[ActionAoE]
+	ID=cannon_thruster_act; 
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 2.5;
+	canSwim=true;
+	swimOnly=true;
+	airborne=false;
+	bypassAll=false;
+	occupyAll=false;
+	canSelectActors=false;
+	coneAngle=1;
+[AvAffecter]
+	ID=cannon_thruster_act; 
+	FXOnTile=ping;
+[AvAffecterAoE]
+	ID=cannon_thruster_act;
+	cloneFrom=oneTile;
+
+	
+
+[Action] ID=cannon_cyclone_atk; 
+	name=Cyclone Blaster;
+	icon=item_cannon_cyclone;
+	applyWeaponBuffs=true;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+	special=endCombatTurn;
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	casterAnimation=s_0atk;
+	
+	FXOnTarget=tornado_expand;
+	FXOnTarget=sfx_gustyBlast;
+	FXOnTarget=smallShakeHoriz;
+[ActionAoE] 
+	ID=cannon_cyclone_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 4.5;
+	maxRangeBonus = d:cannonRangeBonus;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+	coneAngle=1;
+[AvAffecter]
+	ID=cannon_cyclone_atk; 
+	FXOnTile=spinSlashCyclone;
+	FXOnTile=pop;
+	FXOnTile=slash_quiet;
+	FXOnTile=gustyBlast;
+[AvAffecterAoE]
+	ID=cannon_cyclone_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_cyclone_atk; 
+	actorValue=HP;
+	magnitude= d:cannonDmg(4);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=magic;
+	element=wind;
+	FXOnHit=hitDustQuiet;
+	FXOnHit=medShakeHoriz;
+[AvAffecterAoE]
+	ID=cannon_cyclone_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_cyclone_atk; 
+	actorValue=crewHP;
+	magnitude= d:cannonDmg_crewHP(4);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=magic;
+	element=wind;
+[AvAffecterAoE]
+	ID=cannon_cyclone_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_cyclone_atk; 
+	actorValue=rotate;
+	magnitude= 180;
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=magic;
+	element=wind;
+[AvAffecterAoE]
+	ID=cannon_cyclone_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_cyclone_atk; 
+	actorValue=moveDistance;
+	magnitude=-1;
+	duration=-4;
+	chance=100;
+	element=ranged;
+	element=magic;
+	element=wind;
+[AvAffecterAoE]
+	ID=cannon_cyclone_atk;
+	cloneFrom=oneTile;
+	
+[Action] ID=cannon_freeze_atk; 
+	name=Freeze Cannon;
+	icon=item_cannon_freeze;
+	applyWeaponBuffs=true;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+	special=endCombatTurn;
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	casterAnimation=s_0atk;
+	
+	FXOnTarget=DramaticNyeaow;
+[ActionAoE] 
+	ID=cannon_freeze_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 4.5;
+	maxRangeBonus = d:cannonRangeBonus;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+	coneAngle=1;
+[AvAffecter]
+	ID=cannon_freeze_atk; 
+	FXOnTile=icebolt;
+	FXOnTileColor=LightSkyBlue;
+	FXOnTile=frostcloud_moving;
+	FXOnTile=ice_sink_lowOverlap;
+[AvAffecterAoE]
+	ID=cannon_freeze_atk;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+	maxRange=0;
+	maxRangeBonus=0;
+	maxRangeAddDistanceFromCaster=true;
+[AvAffecter]
+	ID=cannon_freeze_atk; 
+	actorValue=summonItem;
+	magnitude=ice_rubble_water;
+	duration=1 + m:rand;
+	chance=100;
+	element=ranged;
+	element=magic;
+	element=ice;
+[AvAffecterAoE]
+	ID=cannon_freeze_atk;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+	maxRange=0;
+	maxRangeBonus=0;
+	maxRangeAddDistanceFromCaster=true;
+[AvAffecter]
+	ID=cannon_freeze_atk; 
+	actorValue=HP;
+	magnitude= d:cannonDmg(4);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=magic;
+	element=ice;
+	FXOnHit=hitDustQuiet;
+	FXOnHit=iceShards_rot_small;
+	FXOnHit=iceShards_rot_small;
+[AvAffecterAoE]
+	ID=cannon_freeze_atk;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+	maxRange=0;
+	maxRangeBonus=0;
+	maxRangeAddDistanceFromCaster=true;
+[AvAffecter]
+	ID=cannon_freeze_atk; 
+	actorValue=crewHP;
+	magnitude= d:cannonDmg_crewHP(4);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=magic;
+	element=ice;
+[AvAffecterAoE]
+	ID=cannon_freeze_atk;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+	maxRange=0;
+	maxRangeBonus=0;
+	maxRangeAddDistanceFromCaster=true;
+[AvAffecter]
+	ID=cannon_freeze_atk; 
+	actorValue=moveDistance;
+	magnitude=-1;
+	duration=-4;
+	chance=100;
+	element=ranged;
+	element=magic;
+	element=ice;
+[AvAffecterAoE]
+	ID=cannon_freeze_atk;
+	aoeCasterAsOrigin=true;
+	coneAngle=1;
+	maxRange=0;
+	maxRangeBonus=0;
+	maxRangeAddDistanceFromCaster=true;
+	
+[Action] ID=cannon_storm_atk; 
+	name=Storm Cannon;
+	icon=item_cannon_storm;
+	applyWeaponBuffs=true;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+	special=treatOriginRotAsDirectionFromCasterToTarget;
+	special=endCombatTurn;
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	casterAnimation=s_0atk;
+	
+	FXOnTarget=DramaticNyeaow;
+	FXOnTarget=stormCannonShoot_long_rot;
+[ActionAoE] 
+	ID=cannon_storm_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 1.5;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+	coneAngle=190;
+[AvAffecter]
+	ID=cannon_storm_atk; 
+	FXOnTile=horizSpark_many_sudden_hazard;
+	FXOnTile=w_thunder_lesser;
+	FXOnTile=sparkShower;
+	FXOnTile=elecBlasts_4;
+	FXOnTile=horizSpark_many_sudden;
+	FXOnHit=sparkShower;
+[AvAffecterAoE]
+	ID=cannon_storm_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_storm_atk; 
+	actorValue=HP;
+	magnitude= d:cannonDmg(7);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=magic;
+	element=elec;
+	FXOnHit=elecBlasts_4;
+[AvAffecterAoE]
+	ID=cannon_storm_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 0;
+	maxRange = 6.5;
+	maxRangeBonus = d:cannonRangeBonus;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+	coneAngle=1;
+[AvAffecter]
+	ID=cannon_storm_atk; 
+	actorValue=crewHP;
+	magnitude= d:cannonDmg_crewHP(7);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=magic;
+	element=elec;
+[AvAffecterAoE]
+	ID=cannon_storm_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 0;
+	maxRange = 6.5;
+	maxRangeBonus = d:cannonRangeBonus;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+	coneAngle=1;
+	
+	
+	
+
+[Action] ID=cannon_spineLauncher_atk; 
+	name=Spine Launcher;
+	icon=item_cannon_spineLauncher;
+	applyWeaponBuffs=true;
+	
+	special=cantUseWithoutCrew;
+	special=dontLookAtTarget;
+--doesn't end turn early
+	attractAttention=false;
+	roundFacingTo90=false;
+	
+	casterAnimation=s_0atk;
+	
+	FXOnCaster=delay_slightlyshorter;
+[ActionAoE] 
+	ID=cannon_spineLauncher_atk;
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 1;
+	maxRange = 2;
+	maxRangeBonus = d:cannonRangeBonus;
+	airborne=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=cannon_spineLauncher_atk; 
+	FXOnTile=cannon_arrow_cleeverSpine;
+	FXOnTile=delay_minor;
+	FXOnTile=cannon_arrow_cleeverSpine;
+	FXOnTile=delay_minor;
+	FXOnTile=cannon_arrow_cleeverSpine;
+[AvAffecterAoE]
+	ID=cannon_spineLauncher_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_spineLauncher_atk; 
+	actorValue=HP;
+	magnitude= d:cannonDmg(1);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+	FXOnHit=pop;
+	FXOnHit=actor_shards;
+	FXOnHit=hitDustQuiet;
+[AvAffecterAoE]
+	ID=cannon_spineLauncher_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_spineLauncher_atk; 
+	actorValue=crewHP;
+	magnitude= d:cannonDmg_crewHP(3);
+	duration=-2;
+	chance=100;
+	element=ranged;
+	element=physical;
+[AvAffecterAoE]
+	ID=cannon_spineLauncher_atk;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=cannon_spineLauncher_atk; 
+	FXOnTile=cannon_arrow_cleeverSpine;
+	FXOnTile=delay_minor;
+	FXOnTile=cannon_arrow_cleeverSpine;
+	fReq=m:cCrewNum-3;
+[AvAffecterAoE]
+	ID=cannon_spineLauncher_atk;
+	cloneFrom=oneTile;
+	
+	
+	
+	

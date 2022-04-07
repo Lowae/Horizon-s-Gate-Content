@@ -1,0 +1,2032 @@
+--MENU
+
+[DialogNode] ID=reeve_journal;
+animations=;
+statements=What do you want to ask about?;
+specialEffect=openJournal_interactive,18;
+specialEffect=setNPCDialogWindowSizeY,100;
+specialEffect=setPCDialogWindowSizeY,68;
+
+[DialogOption] text=Nevermind.;
+animation=sigh;
+escOption=true;
+nodeToConnectTo=endCafeTalk;
+
+
+------------------------------------------------
+--------- HUMANOIDS ----------------------------
+------------------------------------------------
+
+--HUMAN
+
+[DialogNodeOverride] ID=reeve_journal_human;
+dialogNodeID_toOverride=journal_human;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=sly;
+animations=;
+animations=happy;
+animations=meh;
+animations=sly;
+statements=Curious creatures,<p> aren't they?;
+statements=I've had a few human friends back in Dominio.;
+statements=They're a lot like us Falpa -<p=0.8> adventurous and eager! <p=2.5>Mostly, anyway.;
+statements=Although I have to admit,<p> I don't really get what the deal is with<p> 'hair'.;
+statements=It's like fur,<p> but all weird and patchy.; 
+nextNodeID=reeve_journal_human1a;
+nextNodeID_fReq=mainPlayerIsActorType:human+mainPlayerIsActorType:wilderi+party:hagger;
+nextNodeID=reeve_journal_human1b;
+
+[DialogNode] ID=reeve_journal_human1a;
+animations=scared;
+statements=I-<p>I mean,<p> uhhh,<p> present company excluded!<p=2> Nothing wrong with your hairs!;
+nextNodeID=reeve_journal_human2a;
+nextNodeID_fReq=party:hagger;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_journal_human1b;
+animations=happy;
+statements=I guess it's just a thing we Falpa will never get!;
+
+[DialogNode] ID=reeve_journal_human2a;
+speakerOverride=hagger;
+animations=sly;
+statements=Y'got that right.;
+nextNodeID=endCafeTalk;
+
+
+
+
+
+
+--SCURIO
+
+[DialogNodeOverride] ID=reeve_journal_scurio;
+dialogNodeID_toOverride=journal_scurio;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=sly;
+animations=;
+animations=sigh;
+animations=sly;
+statements=You know, Scuri are all over the place, but<textIf= aside from you,=mainPlayerIsActorType:scurio> I never really befriended any except for Barr!;
+statements=And even Barr I didn't talk to much.<p> He was a solid navigator,<p> but he kept to himself.;
+statements=He wasn't in the navy for very long before...<p=2> all that happened.;
+statements=I wonder what he's up to now?;
+nextNodeID=endCafeTalk;
+
+
+
+--RASMEN
+
+[DialogNodeOverride] ID=reeve_journal_rasmen;
+dialogNodeID_toOverride=journal_rasmen;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=meh;
+animations=happy;
+animations=;
+animations=sly;
+statements=It might be a little weird,<p> but sometimes I feel like I relate better to Rasmen than to other people.;
+statements=They have no eyes, and I have four -<p> but everybody looks at both of us like we're weird!;
+statements=I mean, I have no idea what their mood is half the time,<p> but still.;
+statements=Maybe I just relate to wanting to wear a cool mask all the time?;
+nextNodeID=endCafeTalk;
+
+
+
+--FAREEM
+
+[DialogNodeOverride] ID=reeve_journal_fareem;
+dialogNodeID_toOverride=journal_fareem;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=sad;
+animations=scared;
+animations=sly;
+animations=meh;
+statements=Don't tell anybody, but...<p> I feel bad for Fareem.;
+statements=Living without pants?<p> How do <textIfElse=you=they=mainPlayerIsActorType:fareem> even get by?;
+statements=<speed=0.7>No pockets?<p> No shoes?<p=2><speed=0.5> No LEGS?;
+statements=That just sounds incredibly inconvenient.<textIf= Well, to me, anyway.=mainPlayerIsActorType:fareem>;
+nextNodeID=endCafeTalk;
+
+
+--APHEST
+
+[DialogNodeOverride] ID=reeve_journal_aphest;
+dialogNodeID_toOverride=journal_aphest;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=sly;
+animations=;
+animations=scared;
+animations=angry;
+animations=scared;
+animations=;
+animations=happy;
+statements=You know,<p> I think the toughest fight I ever had was against an Aphest.;
+statements=Well, toughest one-on-one fight.<p> Against a person.;
+statements=He had this <speed=0.5>biiig<speed=1> greatsword,<p> and let me tell you,<p> those fellas can MOVE!;
+statements=I could barely get in on him thanks to his reach,<p> but he could lunge at me from almost anywhere!;
+statements=And this guy was good!<p> He was a battle-hardened pirate,<p> willing to do anything and fight anyone!!;
+statements=Shame I had to zap him.;
+statements=It's much more fun to do swordplay than go straight for the zapping, don't you think?;
+nextNodeID=endCafeTalk;
+
+
+--FALPA
+
+[DialogNodeOverride] ID=reeve_journal_falpa;
+dialogNodeID_toOverride=journal_falpa;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=;
+animations=sly;
+animations=meh;
+animations=angry;
+animations=;
+animations=meh;
+statements=I think my opinion on Falpa is going to be a little biased!;
+statements=Actually, I don't have that much to say.<p> We're pretty normal...<p=2> I don't get why some people treat us like we're weird.;
+statements=Well, I guess 4 eyes isn't that normal.<p> And most people can't swim or use magic as well as us...;
+statements=Also we don't really have chins...<p> or noses...<p> or ears...;
+statements=But that's all shallow stuff!<p> I met a human who didn't have any of those and he was just fine!;
+statements=Well,<p> fine in terms of personality anyway.;
+statements=He-<p=3> he had a rough life.;
+nextNodeID=endCafeTalk;
+
+
+--BURALK
+
+[DialogNodeOverride] ID=reeve_journal_buralk;
+dialogNodeID_toOverride=journal_buralk;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=happy;
+animations=;
+animations=meh;
+statements=I know this isn't normal,<p> but I think Buralk look SO cute.;
+statements=They're little guys with big round eyes!<p> Who cares if they're segmented!;
+statements=I guess I've never been bothered by bugs, so Buralk don't bother me either.;
+statements=<textIfElse=I hope you don't find that degrading or anything... I really don't know what being a Buralk is like.=It's a shame I don't know much Buralk speech though.=mainPlayerIsActorType:buralk>;
+nextNodeID=reeve_journal_human2a;
+nextNodeID_fReq=mainPlayerIsActorType:buralk;
+nextNodeID=endCafeTalk;
+
+[DialogNode] ID=reeve_journal_buralk1a;
+animations=happy;
+statements=I get compared to a fish all the time,<p> so being compared to a bug is basically the same,<p> right?;
+nextNodeID=endCafeTalk;
+
+
+--FERREN
+
+[DialogNodeOverride] ID=reeve_journal_ferren;
+dialogNodeID_toOverride=journal_ferren;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=;
+animations=meh;
+animations=happy;
+animations=sly;
+statements=They say Ferren hate to get wet,<p> but I think that's just a myth.;
+statements=But I've only ever known Ferren in the navy, so.<p=2> Maybe not a good indicator.;
+statements=Either way,<p> I've never seen anyone take water magic to the face and keep going like a Ferren!;
+statements=I've seen <speed=0.7>a LOT<speed=1> of people take water magic to the face.;
+nextNodeID=endCafeTalk;
+
+
+--ZYLA
+
+[DialogNodeOverride] ID=reeve_journal_spinylizard;
+dialogNodeID_toOverride=journal_spinylizard;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=;
+animations=sly;
+animations=happy;
+animations=sly;
+animations=;
+animations=sly;
+statements=Haven't met too many Zyla...<p> not a lot of Zyla get into the navy.;
+statements=They tend to not like tight spaces,<p> on account of the poison spines and all.;
+statements=And not a lot of navies will take them!<p> I'm glad Dominio allows them.;
+statements=The poison's not THAT bad, anyway!;
+statements=It's like,<p> what,<p><speed=0.7> 4 HP?<p=1.5> 5 HP?;
+statements=Hm?<p> I'm not supposed to say it like that?;
+nextNodeID=endCafeTalk;
+
+
+
+--WILDERI
+
+[DialogNodeOverride] ID=reeve_journal_wilderi;
+dialogNodeID_toOverride=journal_wilderi;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=sly;
+animations=scared;
+animations=;
+animations=sly;
+animations=meh;
+statements=Wilderi...<p=2.5> they're basically just really tall humans.<textIf= (No offense.)=mainPlayerIsActorType:wilderi>;
+statements=Isn't that kind of strange?<p> Where are the tall Rasmen?<p> Or the tall Falpa?;
+statements=I mean...<p> I guess Ferren are kind of like tall Scuri...<p=2.5> with extra tall fur.;
+statements=And Aphest are pretty tall...;
+statements=I don't really know where I'm going with this.;
+nextNodeID=endCafeTalk;
+
+
+--CRUB
+
+[DialogNodeOverride] ID=reeve_journal_crub;
+dialogNodeID_toOverride=journal_crub;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=;
+animations=sly;
+animations=happy;
+animations=;
+animations=scared;
+statements=I only know two things about Crub -;
+statements=They're very short,<p> and they're weak to lightning.;
+statements=That makes them <p>'not a big deal'<p> in my book!<textIf= Excluding you, of course!=mainPlayerIsActorType:crub>;
+statements=Though...<p=1.5> I actually had one of them walk up and congratulate me on a good fight after I chopped off his arms...;
+statements=Maybe I shouldn't underestimate them.;
+nextNodeID=endCafeTalk;
+
+
+
+--CLEEVER
+[DialogNodeOverride] ID=reeve_journal_cleever;
+dialogNodeID_toOverride=journal_cleever;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=angry;
+animations=meh;
+animations=angry;
+animations=;
+animations=meh;
+statements=Those guys are such a pain!;
+statements=They always pop up and attack whenever I'm trying to get something done!;
+statements=At least pirates have the decency to show themselves on the horizon before they jump you!!;
+statements=They've always been a nuisance,<p> but if anything,<p> they're even more aggressive lately.;
+statements=Unfortunately there's nothing to be done...<p> they always just retreat into the ocean and come back to hassle us later.;
+nextNodeID=endCafeTalk;
+
+
+--MASKHEAD
+[DialogNodeOverride] ID=reeve_journal_maskhead;
+dialogNodeID_toOverride=journal_maskhead;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=;
+animations=sly;
+animations=;
+animations=sly;
+animations=;
+statements=Maskheads were never really a problem in Dominio...<p> but they pose a real threat to the other nations.;
+statements=People say Maskheads come from the Shredded Land,<p> but they still manage to pop up just about anywhere to cause trouble.;
+statements=Thankfully they seem content to just do raids in small groups...;
+statements=Can you imagine a Maskhead fleet?<p> Or a Maskhead army?;
+statements=Now THAT would be a bad time.;
+nextNodeID=endCafeTalk;
+
+
+--ASPECT
+
+[DialogNodeOverride] ID=reeve_journal_aspect_eye;
+dialogNodeID_toOverride=journal_aspect_eye;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=scared;
+animations=stern;
+animations=;
+statements=Ugh...<p=1.5> don't remind me.;
+statements=I don't want to talk about it while I'm trying to eat.;
+statements=The less said about that thing,<p> the better!;
+nextNodeID=endCafeTalk;
+
+------------------------------------------------
+--------- CREATURES ----------------------------
+------------------------------------------------
+
+
+--SPIDE
+
+[DialogNodeOverride] ID=reeve_journal_spide;
+dialogNodeID_toOverride=journal_spide;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=sly;
+animations=happy;
+animations=;
+animations=sly;
+animations=meh;
+animations=stern;
+statements=Usually Spides are nothing but a nuisance,<p> but did you know Dominio has a number of Spidesilk farms?;
+statements=Yep, even those buggers can be useful!<p> I remember I had a nice spidesilk shawl I used to love...;
+statements=In fact, I think silk is Dominio's main export nowadays.;
+statements=I'm still a little bitter about when one farm accidentally let loose their stock...;
+statements=I did NOT enjoy helping clean that up.;
+statements=We kept finding stray Spides for weeks...<p> ugh.;
+nextNodeID=endCafeTalk;
+
+--GEMHIDE
+[DialogNodeOverride] ID=reeve_journal_gemhide;
+dialogNodeID_toOverride=journal_gemhide;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=sly;
+animations=meh;
+animations=happy;
+statements=I still don't get it-<p=2> how can something so shiny turn invisible?;
+statements=Maybe it's like,<p> it's so shiny that the light hitting it gets all tangled up...;
+statements=Or maybe they can control light using magic?<p=1.5> That would be quite a feat!;
+nextNodeID=endCafeTalk;
+
+--GANGLE
+[DialogNodeOverride] ID=reeve_journal_gangle;
+dialogNodeID_toOverride=journal_gangle;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=stern;
+animations=scared;
+animations=angry;
+animations=sad;
+animations=angry;
+statements=Gross!<p> I'm trying to eat!;
+statements=Gangles are just the worst.<p=1.5> THE<p> worst.;
+statements=They're normally land-bound,<p> thank goodness,<p> but one time they latched onto one of the Seaslithers!;
+statements=How dare they!;
+statements=The poor girl took it terribly...<p=2> didn't last much longer after that.;
+statements=Grr...<p=1.5> now I want to go fight some Gangles!;
+nextNodeID=endCafeTalk;
+
+
+--BLOODWEAVER
+[DialogNodeOverride] ID=reeve_journal_bweaver;
+dialogNodeID_toOverride=journal_bweaver;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=meh;
+animations=;
+animations=scared;
+animations=sly;
+animations=meh;
+statements=Bloodweavers...<p> ugh!;
+statements=Sometimes I think people are exaggerating about the Shredded Land...;
+statements="Oh, it's so dangerous!<p=2> So terrible!<p=2> The worst place ever!";
+statements=I think,<p> it can't really be that bad,<p> can it?;
+statements=Then I remember that Bloodweavers exist.;
+nextNodeID=endCafeTalk;
+
+--KRASK
+[DialogNodeOverride] ID=reeve_journal_krask;
+dialogNodeID_toOverride=journal_krask;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=;
+animations=sly;
+animations=;
+animations=happy;
+statements=Never really ran into Krask in Dominio...<p=2> which was nice.;
+statements=Not particularly looking to run into them now, either.;
+statements=I suppose of all the bugs to fight, they're not so bad.;
+statements=They do make a fun crunch sound when you hit 'em.;
+nextNodeID=endCafeTalk;
+
+--HEATLE
+[DialogNodeOverride] ID=reeve_journal_beetle_fire;
+dialogNodeID_toOverride=journal_beetle_fire;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=angry;
+animations=meh;
+animations=scared;
+animations=happy;
+statements=Those Heatles sure pack a wallop!;
+statements=They're like walking bombs,<p> just waiting to detonate!;
+statements=<speed=0.5>...hmmm...<p><speed=0.7> and they're kind of cannonball-shaped...;
+statements=Commodore, I think I have an idea!;
+statements=What?<p=2> What's with that look?;
+nextNodeID=endCafeTalk;
+
+
+--HUGE AMNITORSK
+[DialogNodeOverride] ID=reeve_journal_turtle_tentacle;
+dialogNodeID_toOverride=journal_turtle_tentacle;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=;
+animations=sly;
+animations=happy;
+animations=meh;
+statements=Amnitorsk are something we ran into pretty often around Dominio.;
+statements=They're too slow to catch a Seaslither,<p> but if you get caught off guard,<p> it's gonna hurt!;
+statements=I knew someone who harvested the crystals on their backs for a living<p=2> - he was a real crazy guy!;
+statements=<speed=0.5>Hee<speed=0.35>ee<speed=0.2>ee's <speed=0.7>probably dead by now.;
+nextNodeID=endCafeTalk;
+
+--ENTRAILER
+[DialogNodeOverride] ID=reeve_journal_small_wyrm_red;
+dialogNodeID_toOverride=journal_small_wyrm_red;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=angry;
+animations=stern;
+animations=sigh;
+animations=meh;
+statements=I hate those creepy crawlies!;
+statements=Sometimes they get at Seaslithers -<p> none of the ones I looked after, of course -<p> and really make a mess!;
+statements=We could usually clean up Entrailers if we found 'em quickly,<p> but if they got a chance to dig in,<p> <speed=0.7>well...; 
+statements=It gets real unpleasant,<p> I'll tell you that much.;
+nextNodeID=endCafeTalk;
+
+--ANTIAIR
+[DialogNodeOverride] ID=reeve_journal_antiair;
+dialogNodeID_toOverride=journal_antiair;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=scared;
+animations=sly;
+animations=;
+animations=angry;
+animations=happy;
+statements=Those are pretty amazing,<p> aren't they?;
+statements=How do they get them to aim?;
+statements=And how do they get them to <p>NOT<p=2> aim<p> at random people?;
+statements=I don't trust 'em.;
+statements=Also,<p> I want one!;
+nextNodeID=endCafeTalk;
+
+--SOGBOGGER
+[DialogNodeOverride] ID=reeve_journal_sogbogger;
+dialogNodeID_toOverride=journal_sogbogger;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=sigh;
+animations=stern;
+animations=meh;
+animations=happy;
+statements=Bleh!<p=1.5> Fighting Sogboggers is always a pain.;
+statements=I feel like I need a bath every time I even look at one.;
+statements=Assuming I actually see them...<p> their camouflage works better on me than I'd like to admit.;
+statements=All the more reason to keep to the ocean!<p=1.5> They can't get me there!;
+nextNodeID=endCafeTalk;
+
+--SPLITWORMS
+[DialogNodeOverride] ID=reeve_journal_splitworms;
+dialogNodeID_toOverride=journal_splitworms;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=meh;
+animations=sly;
+animations=happy;
+animations=;
+animations=happy;
+statements=I think...;
+statements=<speed=0.8>I think that I actually find fighting Splitworms...<p=2> therapeutic.;
+statements=I can just hack<p> and hack<p> and hack<p> and it's the right thing to do!;
+statements=Well, the <p>'right'<p> thing to do is use magic.<p=1.5> But still.;
+statements=Hacking away just feels like the right thing sometimes.;
+nextNodeID=endCafeTalk;
+
+--MAGIC SPLITWORMS
+[DialogNodeOverride] ID=reeve_journal_splitworms_magic;
+dialogNodeID_toOverride=journal_splitworms_magic;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=sly;
+animations=meh;
+animations=;
+animations=sigh;
+animations=happy;
+statements=I think...;
+statements=<speed=0.8>I think that fighting magic Splitworms...<p=2> sucks.;
+statements=It takes a lot of restraint to only hit 'em at the right time.;
+statements=There's no easy shortcut like with regular Splitworms.;
+statements=I like easy shortcuts!<p=2> In fact,<p> I just like cutting things in general!;
+nextNodeID=endCafeTalk;
+
+--DEMON DRAKE
+[DialogNodeOverride] ID=reeve_journal_dragonhead;
+dialogNodeID_toOverride=journal_dragonhead;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=angry;
+animations=sly;
+animations=stern;
+animations=;
+animations=happy;
+statements=Yeah!<p=1.5> Now that's what I'm talkin' about!!;
+statements=That's why I became a Krakenslayer!;
+statements=Big monsters!<p> Big stakes!!;
+statements=<speed=0.6>Big rew...<p><speed=1> well,<p> no reward from fighting that one I guess.;
+statements=Unless you count staying alive.;
+nextNodeID=endCafeTalk;
+
+--WARMECH
+[DialogNodeOverride] ID=reeve_journal_bigrobo;
+dialogNodeID_toOverride=journal_bigrobo;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=angry;
+animations=;
+animations=angry;
+animations=sly;
+animations=happy;
+animations=;
+animations=sigh;
+animations=;
+animations=sly;
+animations=happy;
+statements=Haha!<p> I'll never forget that thing!;
+statements=By far our most glorious moment,<p> Commodore!!;
+statements=I feel like...<p=2> we made a real big difference.;
+statements=Defeating the Admiral,<p> and putting a stop to his ridiculous plan!;
+statements=Who knows what evil nonsense he would've gotten up to if we hadn't!;
+statements=I can't even imagine the chaos in the Dominio leadership right now.<p> The Houses must be going nuts.;
+statements=<speed=0.1>...;
+statements=I don't really know how it'll all shake out...<p=1.5> for Dominio.;
+statements=<speed=0.6>Someday...<p=2> someday I'll go back.;
+statements=In disguise,<p> if I have to!;
+statements=But first -<p=2> more adventure!;
+nextNodeID=endCafeTalk;
+
+
+
+--AELOMANDER
+[DialogNodeOverride] ID=reeve_journal_windsalamander;
+dialogNodeID_toOverride=journal_windsalamander;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=;
+animations=happy;
+animations=sly;
+animations=;
+animations=happy;
+statements=What a strange little creature that was!;
+statements=And tough, too!<p> I'm surprised it could put out that much force magic.;
+statements=It's really amazing to think about how good at magic some animals can get!;
+statements=A lot of people think it's a complex intellectual process, using magic...;
+statements=But I'm living proof that it isn't!<p=2> Oh, and the animals are proof too!;
+nextNodeID=endCafeTalk;
+
+
+--BONE LOPER
+[DialogNodeOverride] ID=reeve_journal_loper;
+dialogNodeID_toOverride=journal_loper;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=;
+animations=sly;
+animations=meh;
+statements=A tough nut to crack, that one.;
+statements=It's like some sort of necromancer,<p> except instead of animating the dead,<p=2> it wears them as a hat.;
+statements=Although I wouldn't be surprised if that's fashionable among necromancers too.;
+nextNodeID=endCafeTalk;
+
+
+--SPRAX
+[DialogNodeOverride] ID=reeve_journal_spinedog;
+dialogNodeID_toOverride=journal_spinedog;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=;
+animations=stern;
+statements=Cute dogs!;
+statements=It's a shame they're so pointy and spiney...;
+statements=Why do they even make dogs that you can't pet??;
+nextNodeID=endCafeTalk;
+
+--SNAEVAR
+[DialogNodeOverride] ID=reeve_journal_icewolf;
+dialogNodeID_toOverride=journal_icewolf;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=angry;
+animations=happy;
+animations=sly;
+statements=Those wolves give off a real sinister feeling to me.;
+statements=Although I may just be biased against things that try to kill me.;
+statements=Still,<p> even if I met one in captivity...<p=1.7> I'd keep my distance.;
+nextNodeID=endCafeTalk;
+
+
+--KING HEATLE
+[DialogNodeOverride] ID=reeve_journal_beetle_fire_huge;
+dialogNodeID_toOverride=journal_beetle_fire_huge;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=scared;
+animations=happy;
+animations=sly;
+animations=happy;
+statements=I didn't know Heatles could even GET that big!;
+statements=I bet that's what I'll look like when I get old.<p=3> ...older.;
+statements=Big,<p> lumpy,<p=1.2> and covered in knives 'n' battle scars.;
+statements=And ready to explode in a giant fireball.;
+nextNodeID=endCafeTalk;
+
+--MANTLE
+[DialogNodeOverride] ID=reeve_journal_mantle;
+dialogNodeID_toOverride=journal_mantle;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=sly;
+animations=;
+animations=happy;
+animations=;
+animations=stern;
+animations=happy;
+statements=Isn't it fascinating how Mantles can feed on essence?;
+statements=I wonder if that has something to do with them being so good at magic?;
+statements=Well,<p> probably not.;
+statements=I'm pretty sure my old boss fed on essence,<p> and he was rubbish at magic.;
+statements=Yep, I wasn't always in the navy!<p=1.4> When I was a kid,<p> I had a regular job for a bit!;
+statements=I moved boxes!;
+statements=Glad that's over!;
+nextNodeID=endCafeTalk;
+
+
+--NETCHAL
+[DialogNodeOverride] ID=reeve_journal_netchal;
+dialogNodeID_toOverride=journal_netchal;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=angry;
+animations=;
+animations=happy;
+statements=I hate Netchals,<p> and I feel itchy just looking at them...;
+statements=But I admit it is pretty funny to watch them work together like that.;
+statements=I wish I could watch them without them trying to kill me.;
+nextNodeID=endCafeTalk;
+
+
+--SPIDEST
+[DialogNodeOverride] ID=reeve_journal_spidest;
+dialogNodeID_toOverride=journal_spidest;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=;
+animations=sly;
+animations=meh;
+animations=angry;
+animations=stern;
+animations=happy;
+statements=Commodore,<p> you know I don't mind bugs.;
+statements=Fighting them,<p> squishing them,<p> <speed=0.7>whatever...;
+statements=But...<p=2> even I have my limits.;
+statements=And Spidests aren't even close!!!;
+statements=Bring 'em on!<p> I'll fight 'em all!<p> I'll fight 'em with my eyes closed!;
+statements=But...<p=2> only one at a time,<p> please.;
+nextNodeID=endCafeTalk;
+
+------------------------------------------------
+--------- SEA MONSTERS -------------------------
+------------------------------------------------
+
+--GRISKER
+[DialogNodeOverride] ID=reeve_journal_sm_spitter;
+dialogNodeID_toOverride=journal_sm_spitter;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=;
+animations=sly;
+animations=happy;
+statements=I actually don't have much experience fighting Grisker!;
+statements=Dominio ships are usually so fast, we just kept our distance from them.;
+statements=I remember my CO saying...<p> "if you need to take one out, go in from the diagonal!<p> They can't shoot you there!";
+statements=I still don't really understand...<p=2> we're on the ocean.<p> Diagonal relative to what?;
+nextNodeID=endCafeTalk;
+
+--MEGARAY
+[DialogNodeOverride] ID=reeve_journal_sm_ray;
+dialogNodeID_toOverride=journal_sm_ray;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=sly;
+animations=stern;
+animations=;
+statements=Megarays...<p=2> the bane of underequipped sailors!;
+statements=Once you get a long range cannon with some power behind it,<p> you can deal with them before they even get near you.;
+statements=In the navy,<p> they were never a real problem...<p> but I do feel bad for all the civilian fleets we had to save from them.;
+nextNodeID=endCafeTalk;
+
+
+------------------------------------------------
+--------- ITEMS -------------------------------
+------------------------------------------------
+
+--COMB
+[DialogNodeOverride] ID=reeve_item_comb;
+dialogNodeID_toOverride=item_comb;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=sly;
+animations=meh;
+animations=scared;
+animations=happy;
+animations=sly;
+statements=What is this thing?;
+statements=Some kind of...<p> really inconvenient toothpick set?;
+statements=Ohhh!<p> I see.<p> It's another one of those 'hair' things.;
+statements=I'll never get all this 'hair' stuff.;
+statements=Can't you just use your hands to move it around instead of using a tiny tool?;
+nextNodeID=endCafeTalk;
+
+--TOY BOAT
+[DialogNodeOverride] ID=reeve_item_toyboat;
+dialogNodeID_toOverride=item_toyboat;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=;
+animations=sly;
+animations=happy;
+animations=sly;
+statements=How cute.<p> Reminds me of my first toy.;
+statements=I used to love playing with little boats.;
+statements=They were also really heavy.<p> I definitely hit the other kids with them.;
+statements=My parents said I was a terror to raise.<p> Haha!; 
+statements=I was just practicing for my future career -<p=2> hitting things!<p=2> Sometimes with boats!;
+nextNodeID=endCafeTalk;
+
+--BOAT MODEL
+[DialogNodeOverride] ID=reeve_journal_boat_model;
+dialogNodeID_toOverride=journal_boat_model;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=sly;
+animations=happy;
+animations=;
+statements=Oh,<p> I like it!;
+statements=I would have loved to play with one of these when I was a kid!;
+statements=What do you mean,<p> they're not for kids?;
+nextNodeID=endCafeTalk;
+
+--BONE DUST
+[DialogNodeOverride] ID=reeve_item_bone_dust;
+dialogNodeID_toOverride=item_bone_dust;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=;
+animations=sly;
+animations=;
+animations=happy;
+statements=There are some soothsayers out there that use bone dust.;
+statements=They think if you put it in water and swirl it around,<p> you can see portents of the future.;
+statements=I prefer the ones that read tea leaves.;
+statements=At least then you have something useful afterwards!;
+nextNodeID=endCafeTalk;
+
+--BONE
+[DialogNodeOverride] ID=reeve_journal_bone;
+dialogNodeID_toOverride=journal_bone;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=meh;
+animations=;
+animations=sly;
+animations=happy;
+statements=Using bones for equipment strikes me as a bit grim...;
+statements=But I can't say it's not effective.;
+statements=I've fought enough Cleever and pirates wearing the stuff to know!;
+statements=I've had more bones stabbed in me than I have bones in my skeleton!;
+nextNodeID=endCafeTalk;
+
+
+--GOLD
+[DialogNodeOverride] ID=reeve_item_gp;
+dialogNodeID_toOverride=item_gp;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=;
+animations=happy;
+animations=sly;
+animations=;
+animations=happy;
+statements=Money is nice,<p> but...<p> I've never been in it for the money.;
+statements=I just want to do something useful that I'm good at!;
+statements=Like if I were way richer,<p> what would I even spend it on?;
+statements=Better food?<p> Nicer equipment?;
+statements=...that sounds great,<p> actually.<p=1.7> Let's go earn some money,<p> Commodore!;
+nextNodeID=endCafeTalk;
+
+
+--NOTES
+[DialogNodeOverride] ID=reeve_item_notes_useless;
+dialogNodeID_toOverride=item_notes_useless;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=meh;
+animations=stern;
+animations=happy;
+statements=Ugh!<p> Don't make me look at paperwork, Commodore.<p> I beg of you.;
+statements=If there's ONE upside to being betrayed by my home country,<p> it's <speed=0.5>NO MORE PAPERWORK.;
+statements=So don't you betray me too,<p> Commodore!;
+nextNodeID=endCafeTalk;
+
+--PARCHMENT
+[DialogNodeOverride] ID=reeve_item_notes_blank;
+dialogNodeID_toOverride=item_notes_blank;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=meh;
+animations=sly;
+animations=happy;
+statements=Ah,<p> would-be paperwork.;
+statements=So pristine.<p=1.4> So unmarred by tedium.<p=1.4> A thing of beauty.;
+statements=Sorry.<p=2> Seeing a blank page makes me feel poetic,<p> apparently.;
+nextNodeID=endCafeTalk;
+
+
+--NATURE OF THE VOID
+[DialogNodeOverride] ID=reeve_item_book_void1;
+dialogNodeID_toOverride=item_book_void1;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=;
+animations=stern;
+animations=sly;
+animations=happy;
+statements=Pretty sure I read this book at the dentist once.;
+statements=At least,<p> it was some book about shiny bright white stuff.;
+statements=Oh,<p> I remember.<p=1.8> It was called "The Nature of Teeth".;
+statements=Pretty much the same book.;
+nextNodeID=endCafeTalk;
+
+
+--NECROMANCY REVEALED
+[DialogNodeOverride] ID=reeve_item_book_necro1;
+dialogNodeID_toOverride=item_book_necro1;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=scared;
+animations=meh;
+animations=;
+animations=meh;
+statements=This book is actually banned in Dominio right now.;
+statements=Or it was when I left.<p> It keeps getting banned and unbanned...;
+statements=It all depends on which Houses have the upper hand at the time.;
+statements=No one enforces the book bans anyway.<p> Thankfully.;
+nextNodeID=endCafeTalk;
+
+--STALAGMITES
+[DialogNodeOverride] ID=reeve_journal_stalag;
+dialogNodeID_toOverride=journal_stalag;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=;
+animations=sly;
+animations=;
+animations=happy;
+statements=Oh, I know the way to remember this!;
+statements=StalagMites form at the bottoM of a cave,<p> with an 'M'!;
+statements=And stalacTites...<p=2.5> don't!;
+statements=It's a perfect mnemonic!;
+nextNodeID=endCafeTalk;
+
+--GOLDCORAL
+[DialogNodeOverride] ID=reeve_item_coral_gold;
+dialogNodeID_toOverride=item_coral_gold;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=;
+animations=meh;
+animations=happy;
+statements=I used to have a nice Goldcoral brooch once!;
+statements=I remember I wore it during <speed=0.5>my...;
+statements=Nevermind.<p=1.5> I can't remember.;
+statements=Goldcoral is valuable though -<p=1.5> we should sell it when we get the chance!;
+nextNodeID=endCafeTalk;
+
+--BUGS
+[DialogNodeOverride] ID=reeve_journal_bugs;
+dialogNodeID_toOverride=journal_bugs;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=;
+animations=sly;
+animations=happy;
+statements=Bugs!<p=2> Cool!;
+statements=I used to collect bugs when I was a kid.<p=1.2> For about 2 days.;
+statements=My mom made me throw them all away the moment she found out.;
+statements=I still don't get it!<p> Who wouldn't want to keep a bunch of bugs in their desk drawer?;
+nextNodeID=endCafeTalk;
+
+
+--RODENT
+[DialogNodeOverride] ID=reeve_journal_rodent;
+dialogNodeID_toOverride=journal_rodent;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=meh;
+animations=stern;
+animations=;
+animations=sly;
+statements=Ugh.<p> Those can stay far away from me.;
+statements=I hear some people keep rats as pets,<p> but I can't understand that.;
+statements=And no,<p> I don't like mice either.;
+statements=I'm not SCARED of them,<p> but they are all gross.;
+nextNodeID=endCafeTalk;
+
+
+--CRAB
+[DialogNodeOverride] ID=reeve_journal_crab;
+dialogNodeID_toOverride=journal_crab;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=sly;
+animations=happy;
+statements=Crab!;
+statements=Thinking about crab<p=2> <speed=0.7>makes me hungry...;
+statements=Good thing we're in a cafe!;
+nextNodeID=endCafeTalk;
+
+--GLOAM SHROOM
+[DialogNodeOverride] ID=reeve_journal_gloamShroom;
+dialogNodeID_toOverride=journal_gloamShroom;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=;
+animations=happy;
+animations=sly;
+statements=I bet a mushroom soup made of Gloam shrooms would look really cool.;
+statements=Like some sort of glowy witch's brew!;
+statements=Don't try making that.<p> I'm pretty sure it would be fatal to eat.;
+nextNodeID=endCafeTalk;
+
+--LATTICE WEED
+[DialogNodeOverride] ID=reeve_item_latticeWeed;
+dialogNodeID_toOverride=item_latticeWeed;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=;
+animations=happy;
+animations=sly;
+animations=happy;
+statements=This one big building near my house used to be covered in Lattice Weed.;
+statements=When I was a kid,<p> I'd climb it all the way up to the roof!;
+statements=My parents would get so mad at me for that.<p=1.5> And so did the old guy who lived there.;
+statements=And I could never hide it,<p> because I'd always come back down covered in lattice seeds...;
+nextNodeID=endCafeTalk;
+
+--FLOWERS
+[DialogNodeOverride] ID=reeve_journal_flowers;
+dialogNodeID_toOverride=journal_flowers;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=;
+animations=meh;
+animations=scared;
+animations=stern;
+animations=;
+animations=stern;
+statements=Did you know there's all sorts of 'meanings' to giving flowers?;
+statements=Supposedly a tulip represents 'love',<p> a daisy means 'innocence',<p> a snapdragon means 'watch out for dragons'...;
+statements=Apparently giving someone an azalea in a black vase is a death threat!;
+statements=Talk about ridiculous!<p=2> Who can keep track of all that?;
+statements=If people took that stuff seriously,<p> I'd be scared to give anyone anything.;
+statements=Giving a slightly pink carnation in a blue-green vase on a Rounsday<p> probably means<p=2.5> 'I'm a giant idiot' or something.;
+nextNodeID=endCafeTalk;
+
+
+--GUIDE CHRYSOLIT
+[DialogNodeOverride] ID=reeve_item_guide_chrysolit;
+dialogNodeID_toOverride=item_guide_chrysolit;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=;
+animations=meh;
+statements=Never leave home without one of these buggers!;
+statements=These are standard issue in the Dominian navy.<p> Very expensive to import,<p> but it's worth it.;
+statements=They can be grown anywhere,<p> but getting one that isn't from the center of Eral adds a bunch of annoying math to the process.;
+nextNodeID=endCafeTalk;
+
+--REVIVE DUST
+[DialogNodeOverride] ID=reeve_item_reviveDust;
+dialogNodeID_toOverride=item_reviveDust;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=;
+animations=meh;
+animations=happy;
+statements=Now here's an item I'm well familiar with!;
+statements=We always kept a lot of this on hand when I was sparring.;
+statements=I uh...<p=1.5> tended to overdo it sometimes.;
+statements=Most of my sparring matches ended with someone unconscious.<p=2> Usually me.;
+nextNodeID=endCafeTalk;
+
+--LIFE DART
+[DialogNodeOverride] ID=reeve_item_dart_life;
+dialogNodeID_toOverride=item_dart_life;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=sly;
+animations=;
+animations=meh;
+animations=;
+statements=We trialed these for use in the Dominian navy once!;
+statements=It was surprisingly effective!<p=1.5> But,<p> complaints went way,<p> way up...;
+statements=There were also some public perception issues...;
+statements=In the end we dropped them pretty much immediately.;
+nextNodeID=endCafeTalk;
+
+--MEGABOMB
+[DialogNodeOverride] ID=reeve_item_bomb;
+dialogNodeID_toOverride=item_bomb;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=scared;
+animations=happy;
+animations=;
+statements=When it comes to explosives,<p> this is the real deal!;
+statements=I bet it could blow up almost anything!;
+statements=That includes us...<p=1.5> so let's be careful where we use them.;
+nextNodeID=endCafeTalk;
+
+--MEGABOMB (LIT)
+[DialogNodeOverride] ID=reeve_item_bombLit;
+dialogNodeID_toOverride=item_bombLit;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=meh;
+animations=sly;
+animations=stern;
+statements=Commodore.;
+statements=I know I'm reckless,<p=1.5> but this is something else.;
+statements=Maybe I should handle the Megabombs from now on...;
+nextNodeID=endCafeTalk;
+
+--MINIBOMB
+[DialogNodeOverride] ID=reeve_item_minibomb;
+dialogNodeID_toOverride=item_minibomb;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=;
+animations=happy;
+animations=sly;
+statements=Ah, the 'Pocket Inferno', as I like to call it!;
+statements=These aren't used by most navies -<p=1.5> for obvious reasons -<p=1.5> but they're still great for other military purposes.;
+statements=And they're great for our purposes!;
+statements=(Assuming our purposes involve a whole lot of fire!);
+nextNodeID=endCafeTalk;
+
+--LIFESHARD
+[DialogNodeOverride] ID=reeve_item_lifeshard;
+dialogNodeID_toOverride=item_lifeshard;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=stern;
+animations=sly;
+animations=;
+statements=I do love when chucking rocks at people's faces is actually helpful.;
+statements=Would it kill them to make Lifeshards in a nicer shape though?<p=1.5> I can barely get any distance with these.;
+statements=Maybe like a pointy star shape...<p> or a spear shape.;
+statements=I guess that might have downsides.;
+nextNodeID=endCafeTalk;
+
+--WOOD DEBRIS
+[DialogNodeOverride] ID=reeve_journal_debris_wood;
+dialogNodeID_toOverride=journal_debris_wood;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=;
+animations=sly;
+animations=happy;
+statements=You know me too well,<p> Commodore.;
+statements=I just have an <p>absolute<p> abundance<p> of opinions to share about tiny,<p> shredded pieces of wood.;
+statements=Where do I even start?;
+nextNodeID=endCafeTalk;
+
+--FIREBOMB
+[DialogNodeOverride] ID=reeve_item_firebomb;
+dialogNodeID_toOverride=item_firebomb;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=sly;
+animations=stern;
+animations=happy;
+statements=The firebomb is a pretty clever setup.;
+statements=A cheap way to fight.<p=1.5> In both senses of the word.;
+statements=Not that I won't make use of them if I need to!;
+nextNodeID=endCafeTalk;
+
+--FLOPFISH
+[DialogNodeOverride] ID=reeve_item_fish_flop;
+dialogNodeID_toOverride=item_fish_flop;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=;
+animations=sly;
+animations=;
+animations=happy;
+statements=Haha!;
+statements=I just remembered an old landsman I used to command for.;
+statements=His first day,<p> he slipped on the same puddle three times in a row!;
+statements=His mates called him 'Flopfish' for the rest of the voyage.;
+statements=Hahaha.<p=1.5> Old Floppy.<p=2> I hope he's doing well.;
+nextNodeID=endCafeTalk;
+
+
+--TRADE GOODS
+[DialogNodeOverride] ID=reeve_journal_tradeGoods;
+dialogNodeID_toOverride=journal_tradeGoods;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=sly;
+animations=happy;
+statements=I don't know much about trade,<p> but you can bet it's worth doing!;
+statements=Just ask at the market.<p> They'll explain the finicky details.;
+statements=I'll just smile and nod while I move the cargo.;
+nextNodeID=endCafeTalk;
+
+
+--LOST DOCUMENTS
+[DialogNodeOverride] ID=reeve_item_lost_docs;
+dialogNodeID_toOverride=item_lost_docs;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=meh;
+animations=stern;
+animations=;
+animations=sly;
+statements=This is the kind of paperwork I never want to touch or see again.;
+statements=Why does anyone even want these things?;
+statements=I guess it's like,<p> for historian reasons.<p=2> Or strategy.;
+statements=Like if you find out someone spent all their money on cannons last week,<p> it might not be a good time to attack them.;
+nextNodeID=endCafeTalk;
+
+--CRAFTING KIT
+[DialogNodeOverride] ID=reeve_journal_craft_item;
+dialogNodeID_toOverride=journal_craft_item;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=;
+animations=happy;
+animations=sly;
+statements=You would think that making weaponry would require a deep understanding of smithing and finely honed expertise of many years.;
+statements=Nope!<p=2> Just slap the material on the kit!;
+statements=They should really charge more for these kits,<p> considering that.;
+nextNodeID=endCafeTalk;
+
+
+------------------------------------------------
+--------- FURNISHINGS --------------------------
+------------------------------------------------
+
+--KEG
+[DialogNodeOverride] ID=reeve_item_keg;
+dialogNodeID_toOverride=item_keg;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=angry;
+animations=sigh;
+statements=Ah.<p> A keg like that brings back a lot of memories.;
+statements=None of which I will be sharing at this time.;
+statements=Or ever.;
+nextNodeID=endCafeTalk;
+
+--TABLE
+[DialogNodeOverride] ID=reeve_journal_table;
+dialogNodeID_toOverride=journal_table;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=sly;
+animations=;
+animations=happy;
+statements=What,<p> are we playing 'I Spy?';
+statements=I can't really think of anything interesting to say about tables right now.;
+statements=In fact...<p=2> why don't we table this discussion for later?;
+nextNodeID=endCafeTalk;
+
+--STOOL
+[DialogNodeOverride] ID=reeve_journal_stool;
+dialogNodeID_toOverride=journal_stool;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=;
+animations=happy;
+animations=meh;
+statements=You rarely see regular chairs anymore -<p=2> it's almost always stools.;
+statements=I think that's a good thing.<p=1.5> It means Wilderi and Zyla can have a seat too!;
+statements=Although I wouldn't want to read a long book on one of these.;
+nextNodeID=endCafeTalk;
+
+--BARREL (WATER)
+[DialogNodeOverride] ID=reeve_journal_barrel_open_water;
+dialogNodeID_toOverride=journal_barrel_open_water;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=sly;
+animations=happy;
+statements=We've always got copious amounts of these on board!;
+statements=You never see them getting loaded or unloaded?;
+statements=Don't worry.<p> While you're buying Food, that's when I take care of loading up the water!;
+nextNodeID=endCafeTalk;
+
+--MONUMENT
+[DialogNodeOverride] ID=reeve_journal_statue_monument;
+dialogNodeID_toOverride=journal_statue_monument;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=;
+animations=sly;
+animations=meh;
+statements=I don't recognize this symbol either, Commodore.;
+statements=Strange that they carved the holes so perfectly, but the rest of the slab is just a rough chunk of rock.;
+statements=I'm sure it's just a weird art piece...<p><speed=0.7> or something...;
+nextNodeID=endCafeTalk;
+
+--ELEMENTALIST STONE
+[DialogNodeOverride] ID=reeve_journal_statue_elem;
+dialogNodeID_toOverride=journal_statue_elem;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=;
+animations=sly;
+animations=;
+statements=I used to pray at elementalist stones before going on long voyages.;
+statements=Elementalism is quite popular in Dominio.<p=1.6> Much more than St. Ensu, or Jasce.;
+statements=Maybe I should pay my respects again sometime.;
+nextNodeID=endCafeTalk;
+
+
+------------------------------------------------
+--------- PAINTINGS ----------------------------
+------------------------------------------------
+
+--HIGH MOUNTAIN painting
+[DialogNodeOverride] ID=reeve_item_painting_small1;
+dialogNodeID_toOverride=item_painting_small1;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=angry;
+animations=;
+animations=angry;
+animations=stern;
+statements=That looks like a fun place to go.;
+statements=We should go climb a mountain,<p> Commodore!;
+statements=Why?;
+statements=Because it's there!;
+statements=Actually, nevermind.<p> That's not a good enough reason.;
+nextNodeID=endCafeTalk;
+
+--SEA TERROR painting
+[DialogNodeOverride] ID=reeve_item_painting_small2;
+dialogNodeID_toOverride=item_painting_small2;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=;
+animations=sly;
+animations=happy;
+statements=Ooh!;
+statements=What a great painting of a sea monster.;
+statements=Which is very redundant to say.<p=2> ALL paintings should be of sea monsters!;
+statements=Why paint something boring like a clay pot or fruit,<p> when you could paint a sea monster?;
+nextNodeID=endCafeTalk;
+
+--SNOWY NIGHT painting
+[DialogNodeOverride] ID=reeve_item_painting_small3;
+dialogNodeID_toOverride=item_painting_small3;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=sly;
+animations=meh;
+animations=sly;
+animations=happy;
+statements=Snow is nice enough...<p=1.7> but fighting in it is an ordeal.;
+statements=Sorry.<p=1.5> That's not the first thing you should think of when you look at a painting,<p> is it?;
+statements=My brain just automatically goes:<p=1.5> "What would it be like to fight there?";
+statements=It's a blessing and a curse,<p> really.;
+nextNodeID=endCafeTalk;
+
+
+--MOUNTAIN CONVOY painting
+[DialogNodeOverride] ID=reeve_item_painting_small4;
+dialogNodeID_toOverride=item_painting_small4;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=;
+animations=stern;
+animations=angry;
+animations=;
+animations=sly;
+animations=angry;
+statements=Looking at this just makes me very glad to be a sailor.;
+statements=Carrying everything you need with you?<p=1.5> What a hassle.;
+statements=I'd rather carry it all on the back of a great sea serpent!;
+statements=<speed=0.4>...;
+statements=Commodore,<p> I have an idea.;
+statements=We need to find a lot of rope,<p=1.5> some hooks,<p=2> and the nearest giant land serpent!;
+nextNodeID=endCafeTalk;
+
+
+--PEACHTURE painting
+[DialogNodeOverride] ID=reeve_item_painting_small6;
+dialogNodeID_toOverride=item_painting_small6;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=;
+animations=sly;
+animations=happy;
+statements=A peach lying in a field.;
+statements=I feel like this painting must have some deep message,<p> but I sure don't get it.;
+statements=The only message I get from it is,<p=2> "Mmm!<p> Lunch!";
+nextNodeID=endCafeTalk;
+
+--AGGRESSION painting
+[DialogNodeOverride] ID=reeve_item_painting_small7;
+dialogNodeID_toOverride=item_painting_small7;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=sly;
+animations=meh;
+animations=stern;
+animations=sly;
+animations=happy;
+statements=Is that what <textIfElse=your=human=mainPlayerIsActorType:human> teeth really look like?;
+statements=They're so...<p=2> dull!;
+statements=If this painting is supposed to be menacing,<p> they should really sharpen those teeth up.;
+statements=Add big,<p> pointy fangs!<p=1.5> And like a crazy forked tongue!<p=2> And fire breath!;
+statements=You'd think artists would be more creative.;
+nextNodeID=endCafeTalk;
+
+--LOOKING BACK painting
+[DialogNodeOverride] ID=reeve_item_painting_small8;
+dialogNodeID_toOverride=item_painting_small8;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=sly;
+animations=stern;
+animations=happy;
+statements=What's with this simple painting?;
+statements=My kid could draw better than this!;
+statements=That's what I'm supposed to say,<p> right?;
+nextNodeID=endCafeTalk;
+
+--SKY SPOT painting
+[DialogNodeOverride] ID=reeve_item_painting_small9;
+dialogNodeID_toOverride=item_painting_small9;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=sly;
+animations=;
+animations=stern;
+animations=;
+statements=That lady should get out of there.;
+statements=That big spot in the sky doesn't look good.;
+statements=Could be a swarm of bats,<p=1.4> or a storm.<p=3> Or a swarm of Storm Bats.;
+statements=You never know.;
+nextNodeID=endCafeTalk;
+
+
+--BOAT painting
+[DialogNodeOverride] ID=reeve_item_painting_small10;
+dialogNodeID_toOverride=item_painting_small10;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=;
+animations=sly;
+statements=Pretty sure I drew this exact painting as a kid.;
+statements=It does have a sort of charm to it,<p> I suppose.;
+statements=Right?<p=3> I guess?;
+nextNodeID=endCafeTalk;
+
+
+--CRYSTALLINE painting
+[DialogNodeOverride] ID=reeve_item_painting_small11;
+dialogNodeID_toOverride=item_painting_small11;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=stern;
+animations=happy;
+statements=I want armor that looks like that!;
+statements=Although it looks horribly brittle.<p=1.5> I bet it would shatter instantly.;
+statements=It'd be worth it though!;
+nextNodeID=endCafeTalk;
+
+
+--JUDGMENT painting
+[DialogNodeOverride] ID=reeve_item_painting_small12;
+dialogNodeID_toOverride=item_painting_small12;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=sly;
+animations=scared;
+statements=I love goofy-looking Rasmen masks like this.;
+statements=They really get weird with them!<p> They're not afraid to wear crazy stuff!;
+statements=Uhh,<p> no offense to any humans who actually look like that,<p> I mean...;
+nextNodeID=endCafeTalk;
+
+
+--JUNGLE SAMPLE painting
+[DialogNodeOverride] ID=reeve_item_painting_small13;
+dialogNodeID_toOverride=item_painting_small13;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=;
+animations=meh;
+animations=stern;
+animations=meh;
+statements=Yeah.;
+statements=I have to say,<p> this painting doesn't do it for me.;
+statements=Like,<p> why aren't there more sea monsters in it?;
+statements=I don't even see ONE.;
+nextNodeID=endCafeTalk;
+
+
+--MASTER ENGRAVING painting
+[DialogNodeOverride] ID=reeve_item_painting_small14;
+dialogNodeID_toOverride=item_painting_small14;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=sly;
+animations=happy;
+statements=I don't know for sure,<p> but I think the artist and I are on the same page here.;
+statements=<speed=0.7>Cheese <p>IS<p> pretty great.;
+nextNodeID=endCafeTalk;
+
+--MARBLE painting
+[DialogNodeOverride] ID=reeve_item_painting_small16;
+dialogNodeID_toOverride=item_painting_small16;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=meh;
+animations=stern;
+animations=angry;
+animations=;
+animations=happy;
+statements=Oh good.<p=2> A painting of a floor.;
+statements=I clearly know nothing about art,<p> because that sounds like a less than ideal subject to me.;
+statements=There couldn't POSSIBLY be ANYTHING more interesting to draw!;
+statements=...;
+statements=I do actually know nothing about art though.;
+nextNodeID=endCafeTalk;
+
+--FRUIT BOUQUET painting
+[DialogNodeOverride] ID=reeve_item_painting_small17;
+dialogNodeID_toOverride=item_painting_small17;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=;
+animations=sly;
+animations=meh;
+animations=;
+statements=Ah.<p> How pleasant.;
+statements=It's very...<p=3> well,<p> it's...;
+statements=<speed=0.6>Hmmm...;
+statements=I feel like I should say something about 'contours',<p=2> but I don't know what...;
+nextNodeID=endCafeTalk;
+
+--ALLSEEING painting
+[DialogNodeOverride] ID=reeve_item_painting_small18;
+dialogNodeID_toOverride=item_painting_small18;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=stern;
+animations=meh;
+statements=I have to say...<p=2> this is the last painting I would want hanging in my bedroom.;
+statements=Don't really have much to say about it beyond that.;
+nextNodeID=endCafeTalk;
+
+--SOUL IN PRISON painting
+[DialogNodeOverride] ID=reeve_item_painting_small19;
+dialogNodeID_toOverride=item_painting_small19;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=sly;
+animations=meh;
+animations=happy;
+statements=This picture feels like it's <p>WAY<p> too obvious about the symbolism...;
+statements=...and at the same time,<p> I don't understand it at all.;
+statements=That's how you know it's art!;
+nextNodeID=endCafeTalk;
+
+--DREAMS painting
+[DialogNodeOverride] ID=reeve_item_painting_small20;
+dialogNodeID_toOverride=item_painting_small20;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=;
+statements=Any painting named <p>'Dreams'<p> is automatically beyond me to understand.;
+statements=I'm not even going to touch this one.;
+nextNodeID=endCafeTalk;
+
+--MELTED METAL painting
+[DialogNodeOverride] ID=reeve_item_painting_small21;
+dialogNodeID_toOverride=item_painting_small21;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=;
+animations=stern;
+animations=happy;
+statements=I'm probably the last person you should be asking about art.;
+statements=I don't think it's possible to be LESS educated about painting,<p> or drawing,<p> or whatever<p> than I am...;
+statements=The only thing I can reliably draw is a sword.;
+nextNodeID=endCafeTalk;
+
+--CRUB LIFE painting
+[DialogNodeOverride] ID=reeve_item_painting_small24;
+dialogNodeID_toOverride=item_painting_small24;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=sly;
+animations=stern;
+statements=<speed=0.7>This is...<p=2> a picture of a crab?;
+statements=<speed=0.3>...<speed=0.6>this is just a picture of a crab.;
+nextNodeID=endCafeTalk;
+
+--SELF-PORTRAIT painting
+[DialogNodeOverride] ID=reeve_item_painting_huge2;
+dialogNodeID_toOverride=item_painting_huge2;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=scared;
+animations=sly;
+animations=happy;
+statements=Wow!;
+statements=The detail is incredible!;
+statements=Now I'm REALLY glad I'm not a human!;
+nextNodeID=endCafeTalk;
+
+------------------------------------------------
+--------- WEAPONS ----------------------------
+------------------------------------------------
+
+--SWORD
+[DialogNodeOverride] ID=reeve_journal_sword;
+dialogNodeID_toOverride=journal_sword;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=;
+animations=sly;
+animations=stern;
+animations=angry;
+animations=;
+statements=I like swords!;
+statements=They're the perfect choice if you just want a regular,<p> reliable weapon.;
+statements=Training in swordplay is also a very versatile investment...;
+statements=If you find yourself needing more accuracy,<p> start using a rapier!;
+statements=If you want more power,<p> grab a greatsword!;
+statements=Can't go wrong with a good ol' sword.;
+nextNodeID=endCafeTalk;
+
+--Life Trigger
+[DialogNodeOverride] ID=reeve_item_trigger_life;
+dialogNodeID_toOverride=item_trigger_life;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=;
+animations=meh;
+animations=sly;
+animations=happy;
+animations=stern;
+animations=meh;
+animations=sigh;
+animations=happy;
+statements=These trigger stones are what I owe my life to!;
+statements=And not just my life, but my lifestyle.;
+statements=Despite my career,<p> I...<p=3> I actually don't enjoy hurting people.;
+statements=I mean,<p> there is a little satisfaction when some big sonuva comes up all cocky,<p=1.5> thinking he's invincible...;
+statements=And you just give him a good swat in the leg,<p> and he's all<p> "ow!<p> my leg!!";
+statements=Er...<p> ahem.<p=2> But BESIDES that...;
+statements=If it weren't so easy to heal the people I fight...<p=2> I don't think I could bring myself to do it.;
+statements=Don't get me wrong -<p=2> I've killed people.<p=3> Intentionally and unintentionally.;
+statements=But that number is WAY smaller than it would otherwise be thanks to Life Triggers!;
+nextNodeID=endCafeTalk;
+
+
+--CLEEVER WEAPON
+[DialogNodeOverride] ID=reeve_journal_cleever_weapon;
+dialogNodeID_toOverride=journal_cleever_weapon;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=meh;
+animations=sly;
+animations=angry;
+animations=stern;
+statements=Ugh...<p=1.5> how morbid.;
+statements=Using the bodies of your friends as weapons?;
+statements=I've known people who would do that figuratively,<p> but to do it literally is too much...!;
+statements=Something tells me 'friend'<p> is not a concept the Cleever are familar with.;
+nextNodeID=endCafeTalk;
+
+--DRAGON SCIMITAR
+[DialogNodeOverride] ID=reeve_item_scimitar_dragon;
+dialogNodeID_toOverride=item_scimitar_dragon;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=happy;
+animations=;
+animations=angry;
+animations=stern;
+statements=Hey,<p> my old sword!;
+statements=It's good to know it wasn't lost forever back then.;
+statements=I bet Lagan pawned it as soon as he could!;
+statements=The idea makes me furious...<p> good thing it's back in our hands now.;
+nextNodeID=endCafeTalk;
+
+--BACKBLASTER
+[DialogNodeOverride] ID=reeve_item_hammer_blaster;
+dialogNodeID_toOverride=item_hammer_blaster;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=stern;
+animations=sly;
+animations=;
+statements=Now this is my kind of weapon!;
+statements=It's strong,<p=1.5> it's stupid,<p=1.5> and it explodes constantly.;
+statements=<speed=0.7>...I'm having second thoughts about using it now.;
+nextNodeID=endCafeTalk;
+
+--CANNONS
+[DialogNodeOverride] ID=reeve_journal_cannon;
+dialogNodeID_toOverride=journal_cannon;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=sly;
+animations=happy;
+animations=;
+animations=happy;
+animations=;
+statements=I'm more of a 'boarding gear' kind of lady...;
+statements=But I can't deny the effectiveness of a good broadside!;
+statements=You should grab multiple types of cannons if you want to cover all the angles.;
+statements=I like the Culverin/Saker combo myself.;
+statements=There's all sorts of cannons though...<p=1.7> try 'em out,<p> see what suits you best!;
+nextNodeID=endCafeTalk;
+
+--NULLROSE
+[DialogNodeOverride] ID=reeve_item_gear_nullrose;
+dialogNodeID_toOverride=item_gear_nullrose;
+completeOverride=true;
+overrideSpecialEffects=true;
+specialEffect=tJournalAsk;
+speakerOverride=reeve;
+fReq=talker:reeve;
+animations=sly;
+animations=;
+animations=scared;
+animations=;
+animations=happy;
+statements=Oooh.<p=1.5> Creepy looking.;
+statements=This looks like one of those things I absolutely should not touch.;
+statements=Like it'll suck your soul out if you so much as poke it!;
+statements=<speed=0.5>...;
+statements=So do you want to touch it first,<p> or shall I?;
+nextNodeID=endCafeTalk;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

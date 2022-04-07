@@ -1,0 +1,767 @@
+[Zone]  ID=zFireMtn3; dark=True; timeUntilNewDay=24; showFogOfWar=True; fogOfWar=True; minimapEnabled=True; allowCameraPastZoneEdges=False; cantAct=False; cantGameOver=False; alwaysKeepWeaponsUnsheathed=False; peaceful=False; overseerMode=False; rollingPinStyle=False; drawSky=False; boatZone=False; wind=False; overworld=False; canDropItems=True; 
+ travelSong=PM-LostPlace3; travelSongVolume=1; travelSongPitch=0; combatSong=PM-LostPlace2; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=197; darkG=160; darkB=120; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=; bgFX_sineWave=0; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=p35; zoneGrassPalette=pGreen; zoneGrassDarkPalette=pGreen2; zoneStonePalette=p36; zoneStoneDarkPalette=pGreyD2; zoneStoneLightPalette=p36; zoneWaterPalette=pBlue; zoneDirtDarkPalette=p11; zoneWoodPalette=p36; zoneWoodDarkPalette=p36; zoneMisc1Palette=pWoodDark; zoneMisc2Palette=pRed3; zoneMisc3Palette=pRed; zoneMisc4Palette=pBlue; zoneMisc5Palette=pGreen; zoneMisc6Palette=pOrange; zoneMisc7Palette=pYellow; zoneMisc8Palette=pPurple; 
+
+combatMode=False; 
+
+[Item] ID=pebbles2; q=1; x=9; y=31;
+[Item] ID=ghost_grub; q=1; r=360; x=10; y=10;
+[Item] ID=rubble; q=1; x=10; y=11;
+[Item] ID=debris_wood_dark; q=1; x=10; y=11;
+[Item] ID=boulder2; q=1; x=10; y=12;
+[Item] ID=rubble; q=1; x=10; y=13;
+[Item] ID=rubble; q=1; x=10; y=14;
+[Item] ID=rubble; q=1; x=10; y=15;
+[Item] ID=rubble; q=1; x=10; y=19;
+[Item] ID=rubble; q=1; x=10; y=26;
+[Item] ID=rocks1; q=1; x=10; y=28;
+[Item] ID=shelves_big_broken1; q=1; x=10; y=41;
+[Item] ID=rubble; q=1; x=10; y=42;
+[Item] ID=debris_wood_dark; q=1; r=360; x=10; y=42;
+[Item] ID=rubble; q=1; x=10; y=43;
+[Item] ID=pebbles1; q=1; r=180; x=10; y=44;
+[Item] ID=boulder2; q=1; x=11; y=10;
+[Item] ID=debris_small3; q=1; x=11; y=11;
+[Item] ID=rubble; q=1; x=11; y=12;
+[Item] ID=debris_small2; q=1; x=11; y=12;
+[Item] ID=rubble; q=1; x=11; y=13;
+[Item] ID=rubble; q=1; x=11; y=19;
+[Item] ID=gp; q=2; x=11; y=19;
+[Item] ID=boulder2; q=1; x=11; y=20;
+[Item] ID=street_edge_corner2; q=1; r=90; x=11; y=29;
+[Item] ID=street_edge2; q=1; x=11; y=30;
+[Item] ID=dirt_sandy2; q=1; r=180; x=11; y=30;
+[Item] ID=street_edge_corner2; q=1; x=11; y=31;
+[Item] ID=rubble; q=1; x=11; y=40;
+[Item] ID=shelves_big_broken2; q=1; r=-360; x=11; y=41;
+[Item] ID=rubble; q=1; x=11; y=42;
+[Item] ID=foodDX; q=1; x=11; y=42;
+[Item] ID=debris_small3; q=1; x=11; y=43;
+[Item] ID=stand_cornerTop; q=1; x=11; y=45;
+[Item] ID=stand_cornerBtm; q=1; x=11; y=46;
+[Item] ID=axe_throwing; q=1; x=11; y=46; containerID=0;
+[Item] ID=rubble; q=1; x=12; y=10;
+[Item] ID=rubble; q=1; x=12; y=11;
+[Item] ID=rubble; q=1; x=12; y=12;
+[Item] ID=rubble; q=1; x=12; y=19;
+[Item] ID=rubble; q=1; x=12; y=20;
+[Item] ID=debris_wood_dark; q=1; r=-360; x=12; y=20;
+[Item] ID=pebbles1; q=1; r=180; x=12; y=25;
+[Item] ID=street_edge_corner2; q=1; r=90; x=12; y=28;
+[Item] ID=street_edge_corner_inner2; q=1; r=90; x=12; y=29;
+[Item] ID=street_edge_corner_inner2; q=1; x=12; y=31;
+[Item] ID=street_edge_corner2; q=1; x=12; y=32;
+[Item] ID=rocks1; q=1; x=12; y=34;
+[Item] ID=mount_item; q=1; x=12; y=39;
+[Item] ID=bow_iron; q=1; x=12; y=39; containerID=1;
+[Item] ID=pebbles2; q=1; x=12; y=40;
+[Item] ID=debris_wood_dark; q=1; r=360; x=12; y=41;
+[Item] ID=stand_top; q=1; x=12; y=45;
+[Item] ID=axe_iron; q=1; x=12; y=45; containerID=2;
+[Item] ID=stand_btm; q=1; x=12; y=46;
+[Item] ID=chest_stone2_open; q=1; oX=0; oY=-10; x=12; y=47; containerID=3;
+[Item] ID=knuckle_iron; q=1; containedIn=3; cSlot=0; containerID=4;
+[Item] ID=knuckle_iron; q=1; containedIn=3; cSlot=1; containerID=5;
+[Item] ID=debris_small1; q=1; x=13; y=10;
+[Item] ID=rubble; q=1; x=13; y=11;
+[Item] ID=boulder2; q=1; x=13; y=18;
+[Item] ID=rubble; q=1; x=13; y=19;
+[Item] ID=street_edge_corner2; q=1; r=90; x=13; y=27;
+[Item] ID=street_edge_corner_inner2; q=1; r=90; x=13; y=28;
+[Item] ID=dirt_sandy2; q=1; r=180; x=13; y=28;
+[Item] ID=street_edge_corner_inner2; q=1; x=13; y=32;
+[Item] ID=street_edge_corner2; q=1; x=13; y=33;
+[Item] ID=stand_top; q=1; x=13; y=45;
+[Item] ID=dagger_iron; q=1; x=13; y=45; containerID=6;
+[Item] ID=stand_btm; q=1; x=13; y=46;
+[Item] ID=xbow_iron; q=1; x=13; y=46; containerID=7;
+[Item] ID=rubble; q=1; x=14; y=10;
+[Item] ID=rubble; q=1; x=14; y=18;
+[Item] ID=rubble; q=1; x=14; y=20;
+[Item] ID=rubble; q=1; x=14; y=21;
+[Item] ID=debris_small3; q=1; x=14; y=22;
+[Item] ID=street_edge2; q=1; r=90; x=14; y=27;
+[Item] ID=dirt_sandy2; q=1; r=270; x=14; y=27;
+[Item] ID=street_edge2; q=1; r=270; x=14; y=33;
+[Item] ID=dirt_sandy2; q=3; r=90; x=14; y=33;
+[Item] ID=stand_top; q=1; x=14; y=45;
+[Item] ID=stand_btm; q=1; x=14; y=46;
+[Item] ID=chest_stone2; q=1; oX=0; oY=-10; x=14; y=47; containerID=8;
+[Item] ID=laser_chunk; q=1; containedIn=8; cSlot=0;
+[Item] ID=rubble; q=1; x=15; y=18;
+[Item] ID=rocks1; q=1; x=15; y=19;
+[Item] ID=boulder2; q=1; x=15; y=20;
+[Item] ID=street_edge_corner2; q=1; r=180; x=15; y=27;
+[Item] ID=street_edge_corner_inner2; q=1; r=180; x=15; y=28;
+[Item] ID=dirt_sandy2; q=2; r=270; x=15; y=28;
+[Item] ID=street_edge_corner_inner2; q=1; r=270; x=15; y=32;
+[Item] ID=dirt_sandy2; q=2; r=90; x=15; y=32;
+[Item] ID=street_edge_corner2; q=1; r=270; x=15; y=33;
+[Item] ID=stand_top; q=1; x=15; y=45;
+[Item] ID=flail_steel; q=1; x=15; y=45; containerID=9;
+[Item] ID=stand_btm; q=1; x=15; y=46;
+[Item] ID=rapier_steel; q=1; x=15; y=46; containerID=10;
+[Item] ID=rubble; q=1; x=16; y=17;
+[Item] ID=boulder2; q=1; x=16; y=18;
+[Item] ID=street_edge_corner2; q=1; r=180; x=16; y=28;
+[Item] ID=street_edge_corner_inner2; q=1; r=180; x=16; y=29;
+[Item] ID=dirt_sandy1; q=2; r=-180; x=16; y=29;
+[Item] ID=street_edge_corner_inner2; q=1; r=270; x=16; y=31;
+[Item] ID=dirt_sandy2; q=1; r=90; x=16; y=31;
+[Item] ID=street_edge_corner2; q=1; r=270; x=16; y=32;
+[Item] ID=mount_item; q=1; x=16; y=39;
+[Item] ID=hammer_iron; q=1; x=16; y=39; containerID=11;
+[Item] ID=stand_top; q=1; x=16; y=45;
+[Item] ID=sword_iron; q=1; x=16; y=45; containerID=12;
+[Item] ID=stand_btm; q=1; x=16; y=46;
+[Item] ID=chest_stone2_open; q=1; oX=0; oY=-10; x=16; y=47; containerID=13;
+[Item] ID=rubble; q=1; x=17; y=14;
+[Item] ID=bones1; q=1; x=17; y=14;
+[Item] ID=pebbles2; q=1; x=17; y=15;
+[Item] ID=rubble; q=1; x=17; y=16;
+[Item] ID=box_small; q=1; x=17; y=16; containerID=14;
+[Item] ID=reviveDust; q=1; containedIn=14; cSlot=0;
+[Item] ID=bandage; q=1; containedIn=14; cSlot=1;
+[Item] ID=dart; q=1; containedIn=14; cSlot=2;
+[Item] ID=boulder2; q=1; x=17; y=17;
+[Item] ID=rubble; q=1; x=17; y=19;
+[Item] ID=street_edge_corner2; q=1; r=180; x=17; y=29;
+[Item] ID=street_edge2; q=1; r=180; x=17; y=30;
+[Item] ID=dirt_sandy2; q=3; x=17; y=30;
+[Item] ID=street_edge_corner2; q=1; r=270; x=17; y=31;
+[Item] ID=barrel_broken; q=1; x=17; y=40; containerID=15;
+[Item] ID=rubble; q=1; x=17; y=41;
+[Item] ID=debris_wood_dark; q=1; x=17; y=41;
+[Item] ID=stand_cornerTop; q=1; r=-360; x=17; y=45;
+[Item] ID=stand_cornerBtm; q=1; r=-360; x=17; y=46;
+[Item] ID=spear_iron; q=1; x=17; y=46; containerID=16;
+[Item] ID=rocks1; q=1; x=17; y=47;
+[Item] ID=rubble; q=1; x=17; y=48;
+[Item] ID=rubble; q=1; x=17; y=48;
+[Item] ID=rubble; q=1; x=18; y=11;
+[Item] ID=boulder2; q=1; x=18; y=12;
+[Item] ID=rubble; q=1; x=18; y=13;
+[Item] ID=rubble; q=1; x=18; y=15;
+[Item] ID=gp; q=3; x=18; y=15;
+[Item] ID=pebbles1; q=1; x=18; y=16;
+[Item] ID=rubble; q=1; x=18; y=17;
+[Item] ID=rubble; q=1; x=18; y=18;
+[Item] ID=debris_wood_dark; q=1; x=18; y=18;
+[Item] ID=rubble; q=1; x=18; y=32;
+[Item] ID=boulder2; q=1; x=18; y=41;
+[Item] ID=crate_small_damaged; q=1; x=18; y=42; containerID=17;
+[Item] ID=gp; q=22; containedIn=17; cSlot=0;
+[Item] ID=rubble; q=1; x=18; y=43;
+[Item] ID=gp; q=2; x=18; y=43;
+[Item] ID=debris_wood_dark; q=1; r=-360; x=18; y=44;
+[Item] ID=rubble; q=1; x=18; y=47;
+[Item] ID=rubble; q=1; x=19; y=28;
+[Item] ID=pebbles1; q=1; x=19; y=30;
+[Item] ID=rubble; q=1; x=22; y=28;
+[Item] ID=fade_line; q=1; r=180; x=23; y=8;
+[Item] ID=fade_line; q=1; r=180; x=23; y=9;
+[Item] ID=web2; q=1; r=-90; oX=0; oY=-16; x=23; y=9;
+[Item] ID=fade_line; q=1; r=180; x=23; y=10;
+[Item] ID=rubble; q=1; x=23; y=12;
+[Item] ID=boulder2; q=1; x=23; y=13;
+[Item] ID=rubble; q=1; x=23; y=14;
+[Item] ID=rubble; q=1; x=23; y=15;
+[Item] ID=rubble; q=1; x=23; y=16;
+[Item] ID=rubble; q=1; x=23; y=27;
+[Item] ID=rubble; q=1; x=23; y=30;
+[Item] ID=web1; q=1; r=-270; oX=0; oY=-16; x=24; y=8;
+[Item] ID=rubble; q=1; x=24; y=11;
+[Item] ID=rubble; q=1; x=24; y=13;
+[Item] ID=rubble; q=1; x=24; y=15;
+[Item] ID=debris_small2; q=1; x=24; y=16;
+[Item] ID=rubble; q=1; x=24; y=17;
+[Item] ID=rubble; q=1; x=24; y=29;
+[Item] ID=caveDark; q=1; x=25; y=10;
+[Item] ID=travelPoint_0; q=1; r=90; x=25; y=12;
+[Item] ID=pebbles1; q=1; r=-360; x=25; y=14;
+[Item] ID=pebbles2; q=1; x=25; y=16;
+[Item] ID=rubble; q=1; x=25; y=26;
+[Item] ID=boulder; q=1; x=25; y=30;
+[Item] ID=rubble; q=1; x=25; y=31;
+[Item] ID=debris_small3; q=1; x=26; y=11;
+[Item] ID=rubble; q=1; x=26; y=17;
+[Item] ID=rubble; q=1; x=26; y=30;
+[Item] ID=doorway_square_bright; q=1; x=27; y=8;
+[Item] ID=blockedWalkJump; q=1; x=27; y=8;
+[Item] ID=rubble; q=1; x=27; y=30;
+[Item] ID=rubble; q=1; x=28; y=11;
+[Item] ID=rocks1; q=1; x=28; y=16;
+[Item] ID=rubble; q=1; x=28; y=30;
+[Item] ID=rug_frayed2; q=1; x=29; y=14;
+[Item] ID=dirt_sandy1; q=2; x=29; y=14;
+[Item] ID=street_edge2; q=1; r=360; x=29; y=30;
+[Item] ID=dirt_sandy2; q=3; r=180; x=29; y=30;
+[Item] ID=rug_frayed2; q=1; r=90; x=30; y=14;
+[Item] ID=dirt_sandy2; q=2; r=180; x=30; y=14;
+[Item] ID=dirt_sandy1; q=1; r=270; x=30; y=14;
+[Item] ID=street_edge2; q=1; r=90; x=30; y=27;
+[Item] ID=boulder2; q=1; x=30; y=33;
+[Item] ID=rubble_stone; q=1; x=30; y=37;
+[Item] ID=boulder3; q=1; r=360; x=30; y=38;
+[Item] ID=boulder2; q=1; x=30; y=39;
+[Item] ID=rubble_stone; q=1; x=30; y=40;
+[Item] ID=doorway_square_bright; q=1; x=31; y=8;
+[Item] ID=blockedWalkJump; q=1; x=31; y=8;
+[Item] ID=doorway_square_dark; q=1; x=31; y=25;
+[Item] ID=blockedWalkJump; q=1; x=31; y=25;
+[Item] ID=street_edge2; q=1; r=90; x=31; y=27;
+[Item] ID=barrel_broken; q=1; x=31; y=28; containerID=18;
+[Item] ID=pebbles1; q=1; x=31; y=31;
+[Item] ID=rubble_stone; q=1; x=31; y=32;
+[Item] ID=rug_frayed2; q=1; r=90; x=32; y=13;
+[Item] ID=dirt_sandy1; q=1; r=90; x=32; y=13;
+[Item] ID=street_edge2; q=1; r=90; x=32; y=27;
+[Item] ID=debris_wood_dark; q=1; x=32; y=30;
+[Item] ID=pebbles2; q=1; r=-360; x=32; y=32;
+[Item] ID=brazierUnlit; q=1; x=32; y=34;
+[Item] ID=rubble; q=1; x=33; y=11;
+[Item] ID=armor_iron; q=1; r=270; x=33; y=11; containerID=19;
+[Item] ID=skull_dog2; q=1; x=33; y=11;
+[Item] ID=rug_frayed2; q=1; r=270; x=33; y=14;
+[Item] ID=dirt_sandy2; q=2; r=90; x=33; y=14;
+[Item] ID=rubble; q=1; x=33; y=17;
+[Item] ID=street_edge2; q=1; r=90; x=33; y=27;
+[Item] ID=debris_small1; q=1; x=33; y=29;
+[Item] ID=stool3; q=1; x=33; y=29;
+[Item] ID=debris_wood_dark; q=1; x=33; y=33;
+[Item] ID=street_edge_corner2; q=1; r=90; x=33; y=36;
+[Item] ID=street_edge; q=1; x=33; y=37;
+[Item] ID=street_edge_corner2; q=1; x=33; y=38;
+[Item] ID=rocks1; q=2; r=-360; x=33; y=38;
+[Item] ID=rubble; q=1; x=34; y=11;
+[Item] ID=bones1; q=1; x=34; y=11;
+[Item] ID=rug_frayed2; q=1; r=180; x=34; y=14;
+[Item] ID=dirt_sandy2; q=3; r=270; x=34; y=14;
+[Item] ID=dirt_sandy1; q=1; r=90; x=34; y=14;
+[Item] ID=rubble; q=1; x=34; y=17;
+[Item] ID=doorway_square_dark; q=1; x=34; y=25;
+[Item] ID=blockedWalkJump; q=1; x=34; y=25;
+[Item] ID=street_edge2; q=1; r=90; x=34; y=27;
+[Item] ID=street_edge_corner2; q=1; r=90; x=34; y=35;
+[Item] ID=bone_dust; q=1; x=34; y=35;
+[Item] ID=street_edge_corner_inner2; q=1; r=90; x=34; y=36;
+[Item] ID=street_edge_corner_inner2; q=1; x=34; y=38;
+[Item] ID=street_edge_corner2; q=1; x=34; y=39;
+[Item] ID=pebbles1; q=1; r=-360; x=34; y=39;
+[Item] ID=doorway_square_bright; q=1; x=35; y=8;
+[Item] ID=blockedWalkJump; q=1; x=35; y=8;
+[Item] ID=rug_frayed2; q=1; r=360; x=35; y=13;
+[Item] ID=dirt_sandy1; q=1; r=180; x=35; y=13;
+[Item] ID=dirt_sandy2; q=2; r=90; x=35; y=13;
+[Item] ID=street_edge2; q=1; r=90; x=35; y=27;
+[Item] ID=barrel_open_water; q=1; x=35; y=28;
+[Item] ID=pedestalL; q=1; x=35; y=35;
+[Item] ID=debris_wood_dark; q=1; r=360; x=35; y=37;
+[Item] ID=street_edge_corner_inner2; q=1; x=35; y=39;
+[Item] ID=street_edge_corner2; q=1; x=35; y=40;
+[Item] ID=bones1; q=1; x=35; y=41;
+[Item] ID=skull2; q=1; x=35; y=41;
+[Item] ID=dagger_steel; q=1; r=90; x=35; y=42; containerID=20;
+[Item] ID=bones2; q=1; x=35; y=42;
+[Item] ID=rubble_stone; q=1; x=35; y=43;
+[Item] ID=rug_frayed2; q=1; r=-360; x=36; y=14;
+[Item] ID=dirt_sandy1; q=2; r=180; x=36; y=14;
+[Item] ID=debris_small1; q=1; r=-360; x=36; y=17;
+[Item] ID=rubble; q=1; x=36; y=25;
+[Item] ID=pebbles1; q=1; r=-360; x=36; y=26;
+[Item] ID=street_edge2; q=1; r=90; x=36; y=27;
+[Item] ID=dirt_sandy1; q=1; r=90; x=36; y=27;
+[Item] ID=debris_wood_dark; q=1; r=360; x=36; y=27;
+[Item] ID=debris_wood_dark; q=1; r=-360; x=36; y=34;
+[Item] ID=pedestalMid; q=1; x=36; y=35;
+[Item] ID=pebbles1; q=1; r=180; x=37; y=11;
+[Item] ID=rubble; q=1; x=37; y=17;
+[Item] ID=caveDark_wide; q=1; x=37; y=24;
+[Item] ID=boulder; q=1; x=37; y=25;
+[Item] ID=rubble; q=1; x=37; y=26;
+[Item] ID=street_edge2; q=1; r=90; x=37; y=27;
+[Item] ID=debris_small3; q=1; x=37; y=27;
+[Item] ID=travelPoint_1; q=1; r=90; x=37; y=27;
+[Item] ID=pedestalMid; q=1; x=37; y=35;
+[Item] ID=pedestal; q=1; x=37; y=37;
+[Item] ID=trigger_fire_cage; q=1; x=37; y=37;
+[Item] ID=rubble; q=1; x=38; y=17;
+[Item] ID=rocks1; q=1; x=38; y=25;
+[Item] ID=rubble; q=1; x=38; y=26;
+[Item] ID=street_edge2; q=1; r=90; x=38; y=27;
+[Item] ID=rocks1; q=2; x=38; y=27;
+[Item] ID=pebbles2; q=1; x=38; y=28;
+[Item] ID=pedestalMid; q=1; x=38; y=35;
+[Item] ID=gem_small1; q=1; x=38; y=35;
+[Item] ID=doorway_square_bright; q=1; x=39; y=8;
+[Item] ID=blockedWalkJump; q=1; x=39; y=8;
+[Item] ID=street_edge2; q=1; r=90; x=39; y=27;
+[Item] ID=debris_small3; q=1; x=39; y=29;
+[Item] ID=pedestalL; q=1; r=-360; x=39; y=35;
+[Item] ID=street_edge_corner_inner2; q=1; r=-360; x=39; y=39;
+[Item] ID=street_edge_corner2; q=1; r=-360; x=39; y=40;
+[Item] ID=bones1; q=1; x=39; y=40;
+[Item] ID=abilityCrest; q=1; x=39; y=41;
+[Item] ID=rubble_stone; q=1; x=39; y=42;
+[Item] ID=bones2; q=1; r=90; x=39; y=42;
+[Item] ID=rubble_stone; q=1; x=39; y=43;
+[Item] ID=scorchMarks; q=1; x=40; y=11;
+[Item] ID=doorway_square_dark; q=1; x=40; y=25;
+[Item] ID=blockedWalkJump; q=1; x=40; y=25;
+[Item] ID=street_edge2; q=1; r=90; x=40; y=27;
+[Item] ID=rubble_stone; q=1; x=40; y=29;
+[Item] ID=street_edge_corner2; q=1; r=-90; x=40; y=35;
+[Item] ID=debris_wood_dark; q=1; r=-360; x=40; y=35;
+[Item] ID=street_edge_corner_inner2; q=1; r=-90; x=40; y=36;
+[Item] ID=rocks1; q=1; x=40; y=36;
+[Item] ID=street_edge_corner_inner2; q=1; r=-360; x=40; y=38;
+[Item] ID=street_edge_corner2; q=1; r=-360; x=40; y=39;
+[Item] ID=debris_wood_dark; q=1; r=-360; x=40; y=39;
+[Item] ID=street_edge2; q=1; r=90; x=41; y=27;
+[Item] ID=boulder2; q=1; x=41; y=29;
+[Item] ID=debris_wood_dark; q=1; r=-360; x=41; y=31;
+[Item] ID=stool3; q=1; x=41; y=33;
+[Item] ID=street_edge_corner2; q=1; r=-90; x=41; y=36;
+[Item] ID=street_edge; q=1; r=-360; x=41; y=37;
+[Item] ID=street_edge_corner2; q=1; r=-360; x=41; y=38;
+[Item] ID=street_edge2; q=1; r=90; x=42; y=27;
+[Item] ID=rubble_stone; q=1; r=360; x=42; y=28;
+[Item] ID=rocks1; q=1; x=42; y=29;
+[Item] ID=debris_small3; q=1; r=-360; x=42; y=32;
+[Item] ID=rubble_stone; q=1; x=42; y=34;
+[Item] ID=brazierSpilled; q=1; x=42; y=35;
+[Item] ID=doorway_square_bright; q=1; x=43; y=8;
+[Item] ID=blockedWalkJump; q=1; x=43; y=8;
+[Item] ID=doorway_square_dark; q=1; x=43; y=25;
+[Item] ID=blockedWalkJump; q=1; x=43; y=25;
+[Item] ID=street_edge2; q=1; r=90; x=43; y=27;
+[Item] ID=debris_wood_dark; q=1; r=360; x=43; y=28;
+[Item] ID=pebbles2; q=1; x=43; y=31;
+[Item] ID=boulder3; q=1; r=-360; x=43; y=32;
+[Item] ID=pebbles1; q=1; r=180; x=43; y=33;
+[Item] ID=rocks1; q=3; x=43; y=35;
+[Item] ID=debris_small3; q=1; r=-360; x=44; y=11;
+[Item] ID=street_edge2; q=1; r=90; x=44; y=27;
+[Item] ID=rubble_stone; q=1; x=44; y=28;
+[Item] ID=rubble_stone; q=1; x=44; y=30;
+[Item] ID=rubble_stone; q=1; x=44; y=31;
+[Item] ID=boulder2; q=1; x=44; y=32;
+[Item] ID=rubble_stone; q=1; x=44; y=33;
+[Item] ID=debris_wood_dark; q=1; r=360; x=44; y=34;
+[Item] ID=rubble_stone; q=1; x=44; y=37;
+[Item] ID=boulder2; q=1; x=44; y=38;
+[Item] ID=rubble_stone; q=1; x=44; y=39;
+[Item] ID=rubble_stone; q=1; x=44; y=41;
+[Item] ID=scorchMarks; q=1; r=360; x=45; y=10;
+[Item] ID=rubble; q=1; x=45; y=11;
+[Item] ID=bone_spine; q=1; r=90; x=45; y=14;
+[Item] ID=scorchMarks; q=1; r=-360; x=45; y=17;
+[Item] ID=rubble; q=1; x=45; y=30;
+[Item] ID=street_edge2; q=1; r=180; x=45; y=30;
+[Item] ID=dirt_sandy2; q=3; x=45; y=30;
+[Item] ID=rubble; q=1; x=46; y=11;
+[Item] ID=bone_dust; q=1; x=46; y=12;
+[Item] ID=bones1; q=1; x=46; y=13;
+[Item] ID=rubble; q=1; x=46; y=30;
+[Item] ID=doorway_square_bright; q=1; x=47; y=8;
+[Item] ID=blockedWalkJump; q=1; x=47; y=8;
+[Item] ID=rocks1; q=1; x=47; y=12;
+[Item] ID=pebbles2; q=1; x=47; y=17;
+[Item] ID=pebbles1; q=1; r=180; x=47; y=17;
+[Item] ID=rubble; q=1; x=47; y=30;
+[Item] ID=rubble; q=1; x=48; y=29;
+[Item] ID=rubble; q=1; x=48; y=30;
+[Item] ID=rubble; q=1; x=49; y=11;
+[Item] ID=bones2; q=1; x=49; y=11;
+[Item] ID=debris_small3; q=1; r=-360; x=49; y=17;
+[Item] ID=rubble; q=1; x=49; y=28;
+[Item] ID=rubble; q=1; x=49; y=29;
+[Item] ID=boulder3; q=1; r=-360; oX=0; oY=-2; x=49; y=30;
+[Item] ID=rubble; q=1; x=49; y=34;
+[Item] ID=boulder2; q=1; x=50; y=29;
+[Item] ID=rubble; q=1; x=50; y=30;
+[Item] ID=rubble; q=1; x=50; y=32;
+[Item] ID=gp; q=2; x=50; y=34;
+[Item] ID=rubble; q=1; x=50; y=35;
+[Item] ID=fade_line; q=1; x=51; y=8;
+[Item] ID=fade_line; q=1; x=51; y=9;
+[Item] ID=fade_line; q=1; x=51; y=10;
+[Item] ID=rocks1; q=6; r=-360; x=51; y=12;
+[Item] ID=debris_small3; q=1; x=51; y=13;
+[Item] ID=bone_dust; q=1; x=51; y=16;
+[Item] ID=rubble; q=1; x=51; y=28;
+[Item] ID=rubble; q=1; x=51; y=29;
+[Item] ID=rubble; q=1; x=51; y=31;
+[Item] ID=bones1; q=1; x=51; y=34;
+[Item] ID=rubble; q=1; x=52; y=14;
+[Item] ID=rubble; q=1; x=52; y=28;
+[Item] ID=boulder3; q=1; r=-360; x=52; y=29;
+[Item] ID=boulder; q=1; x=52; y=30;
+[Item] ID=rubble; q=1; x=52; y=31;
+[Item] ID=rubble; q=1; x=53; y=14;
+[Item] ID=rubble; q=1; x=53; y=30;
+[Item] ID=rubble; q=1; x=54; y=14;
+[Item] ID=rubble; q=1; x=55; y=14;
+[Item] ID=rubble; q=1; x=55; y=28;
+[Item] ID=rocks1; q=2; r=-360; x=55; y=29;
+[Item] ID=debris_small3; q=1; x=56; y=11;
+[Item] ID=rubble; q=1; x=56; y=13;
+[Item] ID=rubble; q=1; x=56; y=15;
+[Item] ID=rubble; q=1; x=56; y=16;
+[Item] ID=debris_small3; q=1; x=56; y=17;
+[Item] ID=rubble; q=1; x=56; y=19;
+[Item] ID=rubble; q=1; x=56; y=26;
+[Item] ID=rubble; q=1; x=56; y=31;
+[Item] ID=rubble; q=1; x=56; y=33;
+[Item] ID=boulder2; q=1; x=56; y=34;
+[Item] ID=debris_small3; q=1; x=56; y=41;
+[Item] ID=rubble; q=1; x=56; y=44;
+[Item] ID=bones1; q=1; x=56; y=44;
+[Item] ID=armor_steel; q=1; x=56; y=44; containerID=21;
+[Item] ID=skull; q=1; x=56; y=44;
+[Item] ID=hammer_mythril; q=1; r=180; x=56; y=45; containerID=22;
+[Item] ID=rubble; q=1; x=56; y=46;
+[Item] ID=boulder3; q=1; r=-360; x=56; y=47;
+[Item] ID=rubble; q=1; x=57; y=12;
+[Item] ID=rubble; q=1; x=57; y=14;
+[Item] ID=pebbles1; q=1; r=90; x=57; y=15;
+[Item] ID=rubble; q=1; x=57; y=18;
+[Item] ID=debris_small2; q=1; r=-360; x=57; y=19;
+[Item] ID=rubble; q=1; x=57; y=20;
+[Item] ID=boulder2; q=1; x=57; y=26;
+[Item] ID=rubble; q=1; x=57; y=28;
+[Item] ID=rubble; q=1; x=57; y=30;
+[Item] ID=boulder2; q=1; x=57; y=31;
+[Item] ID=rubble; q=1; x=57; y=32;
+[Item] ID=pebbles1; q=1; r=180; x=57; y=40;
+[Item] ID=rubble; q=1; x=57; y=41;
+[Item] ID=bones2; q=1; x=57; y=44;
+[Item] ID=rubble; q=1; x=57; y=45;
+[Item] ID=gp; q=2; x=57; y=45;
+[Item] ID=boulder2; q=1; x=57; y=46;
+[Item] ID=street_edge2; q=1; x=58; y=10;
+[Item] ID=dirt_sandy1; q=2; r=180; x=58; y=10;
+[Item] ID=street_edge2; q=1; r=360; x=58; y=11;
+[Item] ID=dirt_sandy2; q=2; r=180; x=58; y=11;
+[Item] ID=street_edge_corner; q=1; x=58; y=12;
+[Item] ID=debris_small1; q=1; x=58; y=19;
+[Item] ID=rubble; q=1; x=58; y=20;
+[Item] ID=rubble; q=1; x=58; y=25;
+[Item] ID=rubble; q=1; x=58; y=27;
+[Item] ID=boulder3; q=1; r=-360; x=58; y=28;
+[Item] ID=rubble; q=1; x=58; y=29;
+[Item] ID=boulder2; q=1; x=58; y=33;
+[Item] ID=rubble; q=1; x=58; y=40;
+[Item] ID=rocks1; q=1; r=360; x=58; y=44;
+[Item] ID=rubble; q=1; x=58; y=45;
+[Item] ID=bone_dust; q=1; x=58; y=45;
+[Item] ID=rubble; q=1; x=58; y=46;
+[Item] ID=street_edge2; q=1; r=270; x=59; y=12;
+[Item] ID=dirt_sandy2; q=2; r=-90; x=59; y=12;
+[Item] ID=rubble; q=1; x=59; y=14;
+[Item] ID=rubble; q=1; x=59; y=27;
+[Item] ID=rubble; q=1; x=59; y=28;
+[Item] ID=rubble; q=1; x=59; y=40;
+[Item] ID=rubble; q=1; x=59; y=44;
+[Item] ID=rubble; q=1; x=59; y=45;
+[Item] ID=statue_elem2; q=1; x=60; y=10;
+[Item] ID=street_edge2; q=1; r=270; x=60; y=12;
+[Item] ID=dirt_sandy2; q=3; r=-90; x=60; y=12;
+[Item] ID=pebbles1; q=1; r=180; x=60; y=21;
+[Item] ID=rocks1; q=1; r=-360; x=60; y=22;
+[Item] ID=rubble; q=1; x=60; y=27;
+[Item] ID=rubble; q=1; x=60; y=28;
+[Item] ID=rubble; q=1; x=60; y=37;
+[Item] ID=rubble; q=1; x=60; y=38;
+[Item] ID=rubble; q=1; x=60; y=43;
+[Item] ID=rubble; q=1; x=60; y=44;
+[Item] ID=boulder2; q=1; x=60; y=45;
+[Item] ID=street_edge2; q=1; r=270; x=61; y=12;
+[Item] ID=dirt_sandy2; q=1; r=90; x=61; y=12;
+[Item] ID=rug_frayed2; q=1; x=61; y=18;
+[Item] ID=dirt_sandy1; q=2; x=61; y=18;
+[Item] ID=dirt_sandy2; q=1; r=180; x=61; y=18;
+[Item] ID=rubble; q=1; x=61; y=26;
+[Item] ID=boulder2; q=1; x=61; y=43;
+[Item] ID=rubble; q=1; x=61; y=44;
+[Item] ID=street_edge2; q=1; r=180; x=62; y=10;
+[Item] ID=dirt_sandy1; q=1; x=62; y=10;
+[Item] ID=street_edge2; q=1; r=180; x=62; y=11;
+[Item] ID=dirt_sandy2; q=3; x=62; y=11;
+[Item] ID=street_edge_corner; q=1; r=270; x=62; y=12;
+[Item] ID=rug_frayed2; q=1; r=90; x=62; y=18;
+[Item] ID=dirt_sandy1; q=1; r=90; x=62; y=18;
+[Item] ID=dirt_sandy2; q=3; r=270; x=62; y=18;
+[Item] ID=rubble; q=1; x=62; y=25;
+[Item] ID=rubble; q=1; x=62; y=26;
+[Item] ID=pebbles2; q=1; x=62; y=40;
+[Item] ID=pebbles1; q=1; r=-180; x=62; y=41;
+[Item] ID=rubble; q=1; x=62; y=42;
+[Item] ID=rubble; q=1; x=62; y=43;
+[Item] ID=rubble; q=1; x=62; y=44;
+[Item] ID=pebbles2; q=1; x=63; y=10;
+[Item] ID=debris_wood_dark; q=1; r=-360; x=63; y=15;
+[Item] ID=boulder3; q=1; x=63; y=40;
+[Item] ID=rubble; q=1; x=63; y=41;
+[Item] ID=rocks1; q=1; r=-360; x=63; y=42;
+[Item] ID=rubble; q=1; x=63; y=43;
+[Item] ID=debris_wood_dark; q=1; r=-360; x=64; y=12;
+[Item] ID=stool3; q=1; r=90; x=64; y=12;
+[Item] ID=stand_cornerTop; q=1; x=64; y=13;
+[Item] ID=stand_side; q=1; x=64; y=14;
+[Item] ID=stain; q=4; r=90; x=64; y=14;
+[Item] ID=stand_side; q=1; x=64; y=15;
+[Item] ID=stand_side; q=1; x=64; y=16;
+[Item] ID=debris_wood_dark; q=1; x=64; y=16;
+[Item] ID=stand_cornerBtm; q=1; x=64; y=17;
+[Item] ID=stain; q=1; x=64; y=17;
+[Item] ID=chest_stone2; q=1; oX=0; oY=-6; x=64; y=19; containerID=23;
+[Item] ID=lost_docs; q=1; containedIn=23; cSlot=0;
+[Item] ID=debris_wood_dark; q=1; containedIn=23; cSlot=1;
+[Item] ID=rubble; q=1; x=64; y=26;
+[Item] ID=rubble; q=1; x=64; y=27;
+[Item] ID=boulder2; q=1; x=64; y=41;
+[Item] ID=rubble; q=1; x=64; y=42;
+[Item] ID=boulder3; q=1; r=-360; x=64; y=43;
+
+
+[Actor]ID=beetle_fire_zFireMtn3_; name=Grimfire;
+actorTypeID=beetle_fire; actorClass=sorcerer; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=49,13; destination=-1,-1; facingRot=360; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pRed3; skinPalette=pBlue2; armorPalette=pRed2; unarmoredPalette=pR; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=0.9; intelligence=0.26; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=46; MP=22; HPMax=46; MPMax=22; TrueHPMax=46; TrueMPMax=22; MagAtk=3; So_inferno=1; sorcerer_XP=0; 
+numRanksBought=So_inferno=1; 
+chosenAbilityOfEachClass=sorcerer=So_inferno; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=skill_Fire; sourceAVAffecter=band_fire; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagAtk; sourceAVAffecter=sorcerer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=MagEva; sourceAVAffecter=sorcerer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=8; duration=-1;
+[ActorEffect]
+ actorValue=skill_Fire; sourceAVAffecter=sorcerer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Ice; sourceAVAffecter=sorcerer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Elec; sourceAVAffecter=sorcerer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Wind; sourceAVAffecter=sorcerer; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=band_fire; cSlot=2;
+
+
+[Actor]ID=beetle_fire_zFireMtn3__0; name=Rodin;
+actorTypeID=beetle_fire; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=45,12; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pGreyD2; skinPalette=pGreyD2; armorPalette=pR; unarmoredPalette=pR; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=0.9; intelligence=0.26; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=35; HPMax=35; TrueHPMax=35; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=beetle_fire_zFireMtn3__0_zFireMtn3_; name=Draftweed;
+actorTypeID=beetle_fire; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=46,15; destination=-1,-1; facingRot=270; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pGreyD2; skinPalette=pGreyD2; armorPalette=pR; unarmoredPalette=pR; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=0.9; intelligence=0.26; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=beetle_fire_zFireMtn3__0_zFireMtn3__zFireMtn3_; name=Khomp;
+actorTypeID=beetle_fire; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=43,13; destination=-1,-1; facingRot=360; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pGreyD2; skinPalette=pGreyD2; armorPalette=pR; unarmoredPalette=pR; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=0.9; intelligence=0.26; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=beetle_fire_zFireMtn3__0_zFireMtn3__zFireMtn3__0; name=Endozer;
+actorTypeID=beetle_fire; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=50,16; destination=-1,-1; facingRot=720; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pGreyD2; skinPalette=pGreyD2; armorPalette=pR; unarmoredPalette=pR; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=0.9; intelligence=0.26; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=beetle_fire_zFireMtn3__1; name=Grigbone;
+actorTypeID=beetle_fire; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=35,30; destination=-1,-1; facingRot=1170; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pGreyD2; skinPalette=pGreyD2; armorPalette=pR; unarmoredPalette=pR; aiScript=hide_untilCalled_fallIn_idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=0.9; intelligence=0.26; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=37; HPMax=37; TrueHPMax=37; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=beetle_fire_zFireMtn3__1_zFireMtn3__zFireMtn3_; name=Gorsker;
+actorTypeID=beetle_fire; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=38,29; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pGreyD2; skinPalette=pGreyD2; armorPalette=pR; unarmoredPalette=pR; aiScript=hide_untilCalled_fallIn_idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=0.9; intelligence=0.26; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=35; HPMax=35; TrueHPMax=35; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=beetle_fire_zFireMtn3__1_zFireMtn3_; name=Wandrel;
+actorTypeID=beetle_fire; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=35,33; destination=-1,-1; facingRot=630; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pGreyD2; skinPalette=pGreyD2; armorPalette=pR; unarmoredPalette=pR; aiScript=hide_untilCalled_fallIn_idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=0.9; intelligence=0.26; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=33; MP=9; HPMax=33; MPMax=9; TrueHPMax=33; TrueMPMax=9; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=beetle_fire_zFireMtn3__1_zFireMtn3__zFireMtn3__zFireMtn3_; name=Boggar;
+actorTypeID=beetle_fire; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=39,32; destination=-1,-1; facingRot=900; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pGreyD2; skinPalette=pGreyD2; armorPalette=pR; unarmoredPalette=pR; aiScript=hide_untilCalled_fallIn_idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=0.9; intelligence=0.26; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=36; MP=7; HPMax=36; MPMax=7; TrueHPMax=36; TrueMPMax=7; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=beetle_fire_huge_zFireMtn3_; name=King Heatle;
+actorTypeID=beetle_fire_huge; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=4; position=37,31; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=KP-BossBattle1; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pGreyD2; skinPalette=pYellow5; armorPalette=pR; unarmoredPalette=pR; aiScript=hide_untilCalled_fallIn_idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=0.9; intelligence=0.7; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ supportAbilities=smolder;  supportAbilities=;  supportAbilities=; HP=112; HPMax=112; TrueHPMax=112; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=beetle_fire_zFireMtn3__2; name=Bolga;
+actorTypeID=beetle_fire; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=50,11; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pGreyD2; skinPalette=pGreyD2; armorPalette=pR; unarmoredPalette=pR; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=0.9; intelligence=0.26; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=37; MP=9; HPMax=37; MPMax=9; TrueHPMax=37; TrueMPMax=9; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+
+[Trigger] numID=1; aliasID=;
+topX=25;topY=10;btmX=25;btmY=10;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=1; effectID=travel_point; sValue=zFireMtn2; sValue2=; bValue1=False; bValue2=False; fValue=2; delay=0; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=0; aliasID=;
+topX=37;topY=24;btmX=37;btmY=24;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=0; effectID=travel_point; sValue=zFireMtn2; sValue2=; bValue1=False; bValue2=False; fValue=1; delay=0; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=2; aliasID=;
+topX=33;topY=28;btmX=41;btmY=33;topX+=30;topY+=33;btmX+=44;btmY+=43;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=True; triggerForEveryStepInArea=True; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=2; effectID=pointCameraAt; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0.2; xValue=37; yValue=29;
+[TriggerEffect] numID=2; effectID=preventInteraction; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=11; delay=0; xValue=-1; yValue=-1;
+[TriggerEffect] numID=2; effectID=applyElement; sValue=somethingHappened; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=2.3; xValue=40; yValue=25;
+[TriggerEffect] numID=2; effectID=applyElement; sValue=somethingHappened; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=2; xValue=34; yValue=25;
+[TriggerEffect] numID=2; effectID=applyElement; sValue=somethingHappened; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=3; xValue=43; yValue=25;
+[TriggerEffect] numID=2; effectID=applyElement; sValue=somethingHappened; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=2.6; xValue=31; yValue=25;
+[TriggerEffect] numID=2; effectID=enterCombat; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=9; delay=10; xValue=37; yValue=31;
+[TriggerEffect] numID=2; effectID=fx; sValue=fx_earthquake_mild; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0.2; xValue=-1; yValue=-1;
+[TriggerEffect] numID=2; effectID=fx; sValue=darken; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=7.5; xValue=-1; yValue=-1;
+[TriggerEffect] numID=2; effectID=sendAISignal; sValue=stopHiding; sValue2=; bValue1=False; bValue2=False; fValue=2; delay=4.6; xValue=34; yValue=30;
+[TriggerEffect] numID=2; effectID=sendAISignal; sValue=stopHiding; sValue2=; bValue1=False; bValue2=False; fValue=2; delay=5; xValue=39; yValue=32;
+[TriggerEffect] numID=2; effectID=sendAISignal; sValue=stopHiding; sValue2=; bValue1=False; bValue2=False; fValue=2; delay=5.5; xValue=35; yValue=33;
+[TriggerEffect] numID=2; effectID=sendAISignal; sValue=stopHiding; sValue2=; bValue1=False; bValue2=False; fValue=2; delay=5.8; xValue=38; yValue=29;
+[TriggerEffect] numID=2; effectID=sendAISignal; sValue=stopHiding; sValue2=; bValue1=False; bValue2=False; fValue=2; delay=8; xValue=37; yValue=31;
+[TriggerEffect] numID=2; effectID=fx; sValue=fx_shake; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=8.3; xValue=37; yValue=31;
+[TriggerEffect] numID=2; effectID=fx; sValue=scrundle; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=2.1; xValue=-1; yValue=-1;
+[TriggerEffect] numID=2; effectID=fx; sValue=boulder_drop_high; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=3.2; xValue=35; yValue=30;
+[TriggerEffect] numID=2; effectID=fx; sValue=boulder_drop_high; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=3.5; xValue=38; yValue=32;
+[TriggerEffect] numID=2; effectID=fx; sValue=boulder_drop_high; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=3.7; xValue=35; yValue=33;
+[TriggerEffect] numID=2; effectID=fx; sValue=boulder_drop_high; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=4; xValue=39; yValue=30;
+[TriggerEffect] numID=2; effectID=fx; sValue=boulder_drop_high; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=4.4; xValue=36; yValue=29;
+[TriggerEffect] numID=2; effectID=addItem; sValue=sunbeam_circle_med_dull; sValue2=; bValue1=False; bValue2=False; fValue=1; delay=4; xValue=37; yValue=32;
+[TriggerEffect] numID=2; effectID=addItem; sValue=sunbeam_line_huge; sValue2=; bValue1=False; bValue2=False; fValue=1; delay=3.5; xValue=35; yValue=22;
+[TriggerEffect] numID=2; effectID=addItem; sValue=sunbeam_line_huge; sValue2=; bValue1=False; bValue2=False; fValue=1; delay=4.2; xValue=39; yValue=22;
+[TriggerEffect] numID=2; effectID=addItem; sValue=sunbeam_line_huge; sValue2=; bValue1=False; bValue2=False; fValue=1; delay=7; xValue=37; yValue=22;
+[TriggerEffect] numID=2; effectID=fx; sValue=boulder_drop_high; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=6.2; xValue=37; yValue=30;
+[TriggerEffect] numID=2; effectID=fx; sValue=boulder_drop_high; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=6.5; xValue=37; yValue=31;
+[TriggerEffect] numID=2; effectID=fx; sValue=boulder_drop_high; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=6.8; xValue=37; yValue=31;
+[TriggerEffect] numID=2; effectID=fx; sValue=fx_earthquake_milder; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=5; xValue=-1; yValue=-1;
+[TriggerEffect] numID=2; effectID=song; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=3; aliasID=;
+topX=21;topY=6;btmX=22;btmY=7;
+triggerImmediatelyOnEnteringZone=True; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=True; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=3; effectID=fx; sValue=blackenScreen; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=4; aliasID=;
+topX=26;topY=4;btmX=27;btmY=5;
+triggerImmediatelyOnEnteringZone=True; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=True; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=gIsLessThan:fame_combat:50;
+[TriggerEffect] numID=4; effectID=removeActor; sValue=beetle_fire_zFireMtn3__2; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+[TriggerEffect] numID=4; effectID=removeActor; sValue=beetle_fire_zFireMtn3__1; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+

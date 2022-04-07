@@ -1,0 +1,456 @@
+
+[LevelData] ID=den1;
+minZoneSizeX = 37;
+minZoneSizeY = 31;
+maxZoneSizeX = 41;
+maxZoneSizeY = 33;
+
+wallChanceToZig = 0.5;
+wallChanceToZag = 0.3;
+
+minWallThickness = 10;
+maxWallThickness = 12;
+minWallFlatStretch = 3;
+
+
+chanceOfForwardPath = 0;
+
+worldSizeX = 1;
+worldSizeY = 1;
+
+wallType = caveSolid_Rock;
+wallTypeBottom = caveWall;
+defaultTile = dirt_smooth;
+
+wallTypeBottom_exit = caveWall;
+defaultTile_exit = sand;
+
+minExitWidth = 5;
+maxExitWidth = 7;
+exitCurveAverageDepth = 12;
+exitCurveVariation = 2;
+
+extraPureBlackBorder=4;
+
+
+----
+minSetPiecesPerRoom = 1;
+maxSetPiecesPerRoom = 2;
+
+setPieces=spPillar1;
+setPiecesChanceToReroll=0;
+setPieces=spPillar2;
+setPiecesChanceToReroll=0;
+setPieces=spPillar3;
+setPiecesChanceToReroll=0;
+setPieces=spPillar4;
+setPiecesChanceToReroll=0;
+setPieces=spPillar5;
+setPiecesChanceToReroll=0;
+setPieces=spHole1;
+setPiecesChanceToReroll=0;
+setPieces=spHole2;
+setPiecesChanceToReroll=0;
+
+----
+centerPieceChance_normal = 1;
+centerPieceChance_deadEnd = 1;
+centerPieceChance_1stRoom = 1;
+
+centerPieces = spEnc_spide1;
+centerPiecesChanceToReroll = 0;
+centerPieces = spEnc_fly1;
+centerPiecesChanceToReroll = 0;
+centerPieces = spEnc_spide2;
+centerPiecesChanceToReroll = 0.2;
+centerPieces = spEnc_splitworms1;
+centerPiecesChanceToReroll = 0.9;
+
+
+----
+spawnItems_onWall_chance = 0.12;
+spawnItems_onWall=sunbeam_Y;
+spawnItems_onWall_chanceToReroll=0.2;
+spawnItems_onWall=ore_iron;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=ore_mythril;
+spawnItems_onWall_chanceToReroll=0.92;
+spawnItems_onWall=ore_volskarn;
+spawnItems_onWall_chanceToReroll=0.97;
+
+
+spawnItems_nearWall_chance = 0.14;
+spawnItems_nearWall=rubble;
+spawnItems_nearWall_chanceToReroll=0;
+
+spawnItems_nearCenter_chance = 0.06;
+spawnItems_nearCenter=loot_bone_junk;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=rocks1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=flowers_healing1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=rubble_spikes;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=rubble;
+spawnItems_nearCenter_chanceToReroll=0.35;
+spawnItems_nearCenter=boulder2;
+spawnItems_nearCenter_chanceToReroll=0.85;
+spawnItems_nearCenter=stash_dirt_loot2;
+spawnItems_nearCenter_chanceToReroll=0.9;
+spawnItems_nearCenter=stash_dirt_loot3;
+spawnItems_nearCenter_chanceToReroll=0.95;
+spawnItems_nearCenter=stash_dirt_loot4;
+spawnItems_nearCenter_chanceToReroll=0.99;
+spawnItems_nearCenter=pod_burst;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_rand;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=pod_blast;
+spawnItems_nearCenter_chanceToReroll=0.5;
+
+specialSpawns=exitLight;
+specialSpawns=gemhideSpawn;
+
+[LevelDataZone]ID=den1;
+
+zoneDirtPalette = pBlue5;
+zoneDirtDarkPalette = pGreyblue2;
+zoneGrass = pPurple5;
+zoneGrassPalette = pPurple5;
+
+travelSong=CC0-Stars;
+travelSongVolume=0.8;
+combatSong=PM-LostPlace2;
+combatSongDelay=1;
+
+dark=true;
+darkR=115; darkG=123; darkB=155; 
+
+bgTerrainTypeID=abyss;
+
+
+[LevelData] ID=den2;
+minZoneSizeX = 37;
+minZoneSizeY = 35;
+maxZoneSizeX = 41;
+maxZoneSizeY = 37;
+
+wallChanceToZig = 0.5;
+wallChanceToZag = 0.3;
+
+minWallThickness = 10;
+maxWallThickness = 12;
+minWallFlatStretch = 3;
+
+
+chanceOfForwardPath = 0;
+
+worldSizeX = 1;
+worldSizeY = 1;
+
+wallType = caveSolid_Rock;
+wallTypeBottom = caveWall;
+defaultTile = dirt_smooth;
+
+wallTypeBottom_exit = caveWall;
+defaultTile_exit = sand;
+
+minExitWidth = 5;
+maxExitWidth = 7;
+exitCurveAverageDepth = 12;
+exitCurveVariation = 2;
+
+extraPureBlackBorder=4;
+
+----
+minSetPiecesPerRoom = 1;
+maxSetPiecesPerRoom = 2;
+
+setPieces=spPillar1;
+setPiecesChanceToReroll=0;
+setPieces=spPillar2;
+setPiecesChanceToReroll=0;
+setPieces=spPillar3;
+setPiecesChanceToReroll=0;
+setPieces=spPillar4;
+setPiecesChanceToReroll=0;
+setPieces=spPillar5;
+setPiecesChanceToReroll=0;
+setPieces=spHole1;
+setPiecesChanceToReroll=0;
+setPieces=spHole2;
+setPiecesChanceToReroll=0;
+
+----
+centerPieceChance_normal = 1;
+centerPieceChance_deadEnd = 1;
+centerPieceChance_1stRoom = 1;
+
+centerPieces = spEnc_zibel2;
+centerPiecesChanceToReroll = 0;
+centerPieces = spEnc_netchal1;
+centerPiecesChanceToReroll = 0;
+centerPieces = spEnc_maskhead1;
+centerPiecesChanceToReroll = 0;
+centerPieces = spEnc_bugs2;
+centerPiecesChanceToReroll = 0;
+
+
+----
+spawnItems_onWall_chance = 0.14;
+spawnItems_onWall=sunbeam_Y;
+spawnItems_onWall_chanceToReroll=0.2;
+spawnItems_onWall=ore_iron;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=ore_mythril;
+spawnItems_onWall_chanceToReroll=0.85;
+spawnItems_onWall=ore_volskarn;
+spawnItems_onWall_chanceToReroll=0.95;
+spawnItems_onWall=brambles;
+spawnItems_onWall_chanceToReroll=0;
+
+
+spawnItems_nearWall_chance = 0.17;
+spawnItems_nearWall=rubble;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=brambles;
+spawnItems_nearWall_chanceToReroll=0.5;
+
+spawnItems_nearCenter_chance = 0.07;
+spawnItems_nearCenter=loot_bone_junk;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=rocks1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=rubble;
+spawnItems_nearCenter_chanceToReroll=0.35;
+spawnItems_nearCenter=boulder2;
+spawnItems_nearCenter_chanceToReroll=0.85;
+spawnItems_nearCenter=stash_dirt_loot2;
+spawnItems_nearCenter_chanceToReroll=0.9;
+spawnItems_nearCenter=stash_dirt_loot3;
+spawnItems_nearCenter_chanceToReroll=0.95;
+spawnItems_nearCenter=stash_dirt_loot4;
+spawnItems_nearCenter_chanceToReroll=0.99;
+spawnItems_nearCenter=brambles;
+spawnItems_nearCenter_chanceToReroll=0;
+
+specialSpawns=exitLight;
+specialSpawns=gemhideSpawn;
+specialSpawns=spreadN_brambles;
+specialSpawns=spreadS_brambles;
+specialSpawns=spreadE_brambles;
+specialSpawns=spreadW_brambles;
+specialSpawns=spreadNE_brambles;
+specialSpawns=spreadNW_brambles;
+specialSpawns=spreadSE_brambles;
+specialSpawns=spreadSW_brambles;
+
+[LevelDataZone]ID=den2;
+
+zoneDirtPalette = p11;
+zoneDirtDarkPalette = p36;
+zoneGrass = overworld3;
+zoneGrassPalette = overworld3;
+
+travelSong=CC0-Stars;
+travelSongVolume=0.8;
+combatSong=PM-LostPlace2;
+combatSongDelay=1;
+
+dark=true;
+darkR=125; darkG=113; darkB=155; 
+
+bgTerrainTypeID=abyss;
+
+
+[LevelData] ID=den3;
+minZoneSizeX = 41;
+minZoneSizeY = 36;
+maxZoneSizeX = 42;
+maxZoneSizeY = 37;
+
+wallChanceToZig = 0.5;
+wallChanceToZag = 0.3;
+
+minWallThickness = 10;
+maxWallThickness = 12;
+minWallFlatStretch = 3;
+
+
+chanceOfForwardPath = 0;
+
+worldSizeX = 1;
+worldSizeY = 1;
+
+wallType = caveSolid_Rock;
+wallTypeBottom = caveWall;
+defaultTile = dirt_smooth;
+
+wallTypeBottom_exit = caveWall;
+defaultTile_exit = sand;
+
+minExitWidth = 12;
+maxExitWidth = 13;
+exitCurveAverageDepth = 18;
+exitCurveVariation = 1;
+
+extraPureBlackBorder=4;
+
+----
+minSetPiecesPerRoom = 1;
+maxSetPiecesPerRoom = 3;
+
+setPieces=spPillar1;
+setPiecesChanceToReroll=0;
+setPieces=spPillar2;
+setPiecesChanceToReroll=0;
+setPieces=spPillar3;
+setPiecesChanceToReroll=0;
+setPieces=spPillar4;
+setPiecesChanceToReroll=0;
+setPieces=spPillar5;
+setPiecesChanceToReroll=0;
+setPieces=spHole1;
+setPiecesChanceToReroll=0;
+setPieces=spHole2;
+setPiecesChanceToReroll=0;
+
+----
+centerPieceChance_normal = 1;
+centerPieceChance_deadEnd = 1;
+centerPieceChance_1stRoom = 1;
+
+centerPieces = spEnc_den3_bugs;
+centerPiecesChanceToReroll = 0;
+centerPieces = spEnc_den3_spidests;
+centerPiecesChanceToReroll = 0;
+centerPieces = spEnc_den3_maskhead;
+centerPiecesChanceToReroll = 0;
+
+
+----
+spawnItems_onWall_chance = 0.2;
+spawnItems_onWall=sunbeam_Y;
+spawnItems_onWall_chanceToReroll=0.2;
+spawnItems_onWall=ore_iron;
+spawnItems_onWall_chanceToReroll=0;
+spawnItems_onWall=ore_mythril;
+spawnItems_onWall_chanceToReroll=0.85;
+spawnItems_onWall=ore_volskarn;
+spawnItems_onWall_chanceToReroll=0.95;
+spawnItems_onWall=brambles;
+spawnItems_onWall_chanceToReroll=0;
+
+
+spawnItems_nearWall_chance = 0.24;
+spawnItems_nearWall=rubble;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=rubble_spikes;
+spawnItems_nearWall_chanceToReroll=0;
+spawnItems_nearWall=pod_burst;
+spawnItems_nearWall_chanceToReroll=0.2;
+
+spawnItems_nearCenter_chance = 0.21;
+spawnItems_nearCenter=loot_bone_junk;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pebbles2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=rocks1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small1;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small2;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=debris_small3;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=rubble;
+spawnItems_nearCenter_chanceToReroll=0.1;
+spawnItems_nearCenter=rubble_spikes;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_burst;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=pod_blast;
+spawnItems_nearCenter_chanceToReroll=0;
+spawnItems_nearCenter=loot_bone_junk;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=flowers_healing1;
+spawnItems_nearCenter_chanceToReroll=0.5;
+spawnItems_nearCenter=boulder2;
+spawnItems_nearCenter_chanceToReroll=0.85;
+spawnItems_nearCenter=stash_dirt_loot2;
+spawnItems_nearCenter_chanceToReroll=0.92;
+spawnItems_nearCenter=stash_dirt_loot3;
+spawnItems_nearCenter_chanceToReroll=0.96;
+spawnItems_nearCenter=stash_dirt_loot4;
+spawnItems_nearCenter_chanceToReroll=0.991;
+
+specialSpawns=exitLight;
+specialSpawns=gemhideSpawn;
+specialSpawns=spreadN_flowers_healing1;
+specialSpawns=spreadS_flowers_healing1;
+specialSpawns=spreadE_flowers_healing1;
+specialSpawns=spreadW_flowers_healing1;
+specialSpawns=spreadNE_flowers_healing1;
+specialSpawns=spreadNW_flowers_healing1;
+specialSpawns=spreadSE_flowers_healing1;
+specialSpawns=spreadSW_flowers_healing1;
+specialSpawns=spreadN_rubble_spikes;
+specialSpawns=spreadS_rubble_spikes;
+specialSpawns=spreadE_rubble_spikes;
+specialSpawns=spreadW_rubble_spikes;
+specialSpawns=spreadNE_rubble_spikes;
+specialSpawns=spreadNW_rubble_spikes;
+specialSpawns=spreadSE_rubble_spikes;
+specialSpawns=spreadSW_rubble_spikes;
+specialSpawns=spreadN_pod_burst;
+specialSpawns=spreadS_pod_burst;
+specialSpawns=spreadE_pod_burst;
+specialSpawns=spreadW_pod_burst;
+specialSpawns=spreadNE_pod_burst;
+specialSpawns=spreadNW_pod_burst;
+specialSpawns=spreadSE_pod_burst;
+specialSpawns=spreadSW_pod_burst;
+
+[LevelDataZone]ID=den3;
+
+zoneDirtPalette = p5;
+zoneDirtDarkPalette = p6;
+zoneGrassPalette = overworld2;
+zoneGrassDarkPalette = overworld3;
+
+travelSong=CC0-Pressure;
+travelSongVolume=0.9;
+combatSong=KP-BossBattle1;
+combatSongDelay=1;
+
+dark=true;
+darkR=125; darkG=113; darkB=155; 
+
+bgTerrainTypeID=abyss;

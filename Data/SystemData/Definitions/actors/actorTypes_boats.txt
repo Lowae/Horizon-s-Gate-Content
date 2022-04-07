@@ -1,0 +1,3514 @@
+
+[ActorType] ID=caravel;
+name=Caravel;
+description=Smallest ship. Fast, and well-suited to a small crew.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 600;
+journalID=journal_boat;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=false;
+
+iAmABoat=true;
+minimumCrew=3;
+inventorySize=2;
+
+defaultValues=HP = 20;
+defaultValues=HPMax = 20;
+defaultValues=TrueHPMax = 20;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 4;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 4;
+defaultValues=upwind = 2;
+defaultValues=actTime = 30;
+defaultValues=cargo = 25;
+
+aggressiveness = 0;
+bravery = 0.42;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_caravel;
+unarmedAction = ;
+skinPalette = pBrown;
+clothPalette = p26;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = none;
+defaultDialogNode = dialog_fleet;
+
+restrictedTurningInCombat=true;
+
+movementType=boat;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = boat_sail2;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=caravel;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+
+[ActorType] ID=lightgalley;
+name=Light Galley;
+description=Fastest small ship, but requires a big crew.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 720;
+journalID=journal_boat;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=false;
+
+iAmABoat=true;
+minimumCrew=4;
+inventorySize=2;
+
+defaultValues=HP = 18;
+defaultValues=HPMax = 18;
+defaultValues=TrueHPMax = 18;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 4;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 5;
+defaultValues=upwind = 4;
+defaultValues=actTime = 30;
+defaultValues=cargo = 28;
+
+aggressiveness = 0;
+bravery = 0.45;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_lightgalley;
+unarmedAction = ;
+skinPalette = pBrown;
+clothPalette = p26;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = none;
+defaultDialogNode = dialog_fleet;
+
+restrictedTurningInCombat=true;
+
+movementType=boat;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = boat_sail2;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=lightgalley;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+
+
+[ActorType] ID=cog;
+name=Cog;
+description=Simple trade ship. Good cargo space for its price.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 600;
+journalID=journal_boat;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=false;
+
+iAmABoat=true;
+minimumCrew=3;
+inventorySize=2;
+
+defaultValues=HP = 22;
+defaultValues=HPMax = 22;
+defaultValues=TrueHPMax = 22;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 3;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 3;
+defaultValues=upwind = 1;
+defaultValues=actTime = 30;
+defaultValues=cargo = 40;
+
+aggressiveness = 0;
+bravery = 0.5;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_cog;
+unarmedAction = ;
+skinPalette = pBrown;
+clothPalette = p26;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = none;
+defaultDialogNode = dialog_fleet;
+
+restrictedTurningInCombat=true;
+movementType=boat;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = boat_sail2;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=cog;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+
+[ActorType] ID=pinnace;
+name=Pinnace;
+description=Favorite of boarders. Small but combat-ready.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 900;
+journalID=journal_boat;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=false;
+
+iAmABoat=true;
+minimumCrew=3;
+inventorySize=3;
+
+defaultValues=HP = 24;
+defaultValues=HPMax = 24;
+defaultValues=TrueHPMax = 24;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 4;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 3;
+defaultValues=upwind = 2;
+defaultValues=actTime = 30;
+defaultValues=cargo = 28;
+
+aggressiveness = 0;
+bravery = 0.5;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_pinnace;
+unarmedAction = ;
+skinPalette = pBrown;
+clothPalette = p26;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = none;
+defaultDialogNode = dialog_fleet;
+
+restrictedTurningInCombat=true;
+movementType=boat;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = boat_sail2;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=pinnace;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+
+
+[ActorType] ID=carrack;
+name=Carrack;
+description=Traditional merchantman. Great cargo space.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 5200;
+journalID=journal_boat;
+shipTileWidth=10;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=false;
+
+iAmABoat=true;
+minimumCrew=4;
+inventorySize=2;
+
+defaultValues=HP = 32;
+defaultValues=HPMax = 32;
+defaultValues=TrueHPMax = 32;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 3;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 3;
+defaultValues=upwind = 0;
+defaultValues=actTime = 30;
+defaultValues=cargo = 100;
+
+aggressiveness = 0;
+bravery = 0.5;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_carrack;
+unarmedAction = ;
+skinPalette = pBrown;
+clothPalette = p26;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = none;
+defaultDialogNode = dialog_fleet;
+
+restrictedTurningInCombat=true;
+movementType=boat;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = boat_sail2;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=carrack;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+
+[ActorType] ID=brigantine;
+name=Brigantine;
+description=Flexible mid-sizer. Fit for travel, trade, or combat.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 6000;
+journalID=journal_boat;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=false;
+
+iAmABoat=true;
+minimumCrew=4;
+inventorySize=3;
+
+defaultValues=HP = 28;
+defaultValues=HPMax = 28;
+defaultValues=TrueHPMax = 28;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 4;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 3;
+defaultValues=upwind = 1;
+defaultValues=actTime = 30;
+defaultValues=cargo = 60;
+
+aggressiveness = 0;
+bravery = 0.5;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_brigantine;
+unarmedAction = ;
+skinPalette = pBrown;
+clothPalette = p26;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = none;
+defaultDialogNode = dialog_fleet;
+
+restrictedTurningInCombat=true;
+movementType=boat;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = boat_sail2;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=brigantine;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+
+[ActorType] ID=xebec;
+name=Xebec;
+description=Agile galley with moderate capacity.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 8000;
+journalID=journal_boat;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=false;
+
+iAmABoat=true;
+minimumCrew=5;
+inventorySize=3;
+
+defaultValues=HP = 33;
+defaultValues=HPMax = 33;
+defaultValues=TrueHPMax = 33;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 4;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 3;
+defaultValues=upwind = 3;
+defaultValues=actTime = 30;
+defaultValues=cargo = 70;
+
+aggressiveness = 0;
+bravery = 0.5;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_xebec;
+unarmedAction = ;
+skinPalette = pBrown;
+clothPalette = p26;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = none;
+defaultDialogNode = dialog_fleet;
+
+restrictedTurningInCombat=true;
+movementType=boat;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = boat_sail2;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=xebec;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+
+
+[ActorType] ID=drekkar;
+name=Drekkar;
+description=Galley longboat. Needs a healthy crew to stay swift.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 15000;
+journalID=journal_boat;
+shipTileWidth=10;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=false;
+
+iAmABoat=true;
+minimumCrew=6;
+inventorySize=4;
+
+defaultValues=HP = 46;
+defaultValues=HPMax = 46;
+defaultValues=TrueHPMax = 46;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 4;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 4;
+defaultValues=upwind = 3;
+defaultValues=actTime = 30;
+defaultValues=cargo = 80;
+
+aggressiveness = 0;
+bravery = 0.5;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_heavygalley;
+unarmedAction = ;
+skinPalette = pBrown;
+clothPalette = p26;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = none;
+defaultDialogNode = dialog_fleet;
+
+restrictedTurningInCombat=true;
+
+movementType=boat;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = boat_sail2;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=drekkar;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+
+[ActorType] ID=galleon;
+name=Galleon;
+description=Slow, but durable and powerful warship.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 17500;
+journalID=journal_boat;
+shipTileWidth=12;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=false;
+
+iAmABoat=true;
+minimumCrew=5;
+inventorySize=5;
+
+defaultValues=HP = 60;
+defaultValues=HPMax = 60;
+defaultValues=TrueHPMax = 60;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 3;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 2;
+defaultValues=upwind = 0;
+defaultValues=actTime = 30;
+defaultValues=cargo = 100;
+
+aggressiveness = 0;
+bravery = 0.5;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_galleon;
+unarmedAction = ;
+skinPalette = pBrown;
+clothPalette = p26;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = none;
+defaultDialogNode = dialog_fleet;
+
+restrictedTurningInCombat=true;
+movementType=boat;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = boat_sail2;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+
+[ActorTypeDetectAoE]
+ID=galleon;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+
+
+[ActorType] ID=barge;
+name=Barge;
+description=Massive transport ship prioritizing cargo above all else.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 18000;
+journalID=journal_boat;
+shipTileWidth=12;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=false;
+
+iAmABoat=true;
+minimumCrew=5;
+inventorySize=3;
+
+defaultValues=HP = 50;
+defaultValues=HPMax = 50;
+defaultValues=TrueHPMax = 50;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 3;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 1;
+defaultValues=upwind = 0;
+defaultValues=actTime = 30;
+defaultValues=cargo = 180;
+
+aggressiveness = 0;
+bravery = 0.5;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_barge;
+unarmedAction = ;
+skinPalette = pBrown;
+clothPalette = p26;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = none;
+defaultDialogNode = dialog_fleet;
+
+restrictedTurningInCombat=true;
+movementType=boat;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = boat_sail2;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+
+[ActorTypeDetectAoE]
+ID=barge;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+
+[ActorType] ID=frigate;
+name=Frigate;
+description=First-class sailing ship fit for any purpose.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 16000;
+journalID=journal_boat;
+shipTileWidth=10;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=false;
+
+iAmABoat=true;
+minimumCrew=4;
+inventorySize=3;
+
+defaultValues=HP = 40;
+defaultValues=HPMax = 40;
+defaultValues=TrueHPMax = 40;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 4;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 4;
+defaultValues=upwind = 1;
+defaultValues=actTime = 30;
+defaultValues=cargo = 90;
+
+aggressiveness = 0;
+bravery = 0.5;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_frigate;
+unarmedAction = ;
+skinPalette = pBrown;
+clothPalette = p26;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = none;
+defaultDialogNode = dialog_fleet;
+
+restrictedTurningInCombat=true;
+movementType=boat;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = boat_sail2;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=frigate;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+
+[ActorType] ID=fullrigged;
+name=Full-rigged;
+description=Massive, fully decked out warship.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 55000;
+journalID=journal_boat;
+shipTileWidth=12;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=false;
+
+iAmABoat=true;
+minimumCrew=6;
+inventorySize=6;
+
+defaultValues=HP = 64;
+defaultValues=HPMax = 64;
+defaultValues=TrueHPMax = 64;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 3;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 2;
+defaultValues=upwind = 0;
+defaultValues=actTime = 30;
+defaultValues=cargo = 130;
+
+aggressiveness = 0;
+bravery = 0.55;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_fullrigged;
+unarmedAction = ;
+skinPalette = pBrown;
+clothPalette = p26;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = none;
+defaultDialogNode = dialog_fleet;
+
+restrictedTurningInCombat=true;
+movementType=boat;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = boat_sail2;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+
+[ActorTypeDetectAoE]
+ID=fullrigged;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+
+
+[ActorType] ID=windjammer;
+name=Windjammer;
+description=Many-masted ship with amazing speed.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 48000;
+journalID=journal_boat;
+shipTileWidth=10;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=false;
+
+iAmABoat=true;
+minimumCrew=5;
+inventorySize=3;
+
+defaultValues=HP = 42;
+defaultValues=HPMax = 42;
+defaultValues=TrueHPMax = 42;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 4;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 5;
+defaultValues=upwind = 2;
+defaultValues=actTime = 30;
+defaultValues=cargo = 140;
+
+aggressiveness = 0;
+bravery = 0.5;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_windjammer;
+unarmedAction = ;
+skinPalette = pBrown;
+clothPalette = p26;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = none;
+defaultDialogNode = dialog_fleet;
+
+restrictedTurningInCombat=true;
+movementType=boat;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = boat_sail2;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=windjammer;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+
+
+[ActorType] ID=towership;
+name=Towership;
+description=Tall warship with increased cannon range.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 11500;
+journalID=journal_boat;
+shipTileWidth=10;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=false;
+
+iAmABoat=true;
+minimumCrew=4;
+inventorySize=4;
+
+defaultValues=HP = 33;
+defaultValues=HPMax = 33;
+defaultValues=TrueHPMax = 33;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 3;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 2;
+defaultValues=upwind = 0;
+defaultValues=actTime = 30;
+defaultValues=cargo = 70;
+
+aggressiveness = 0;
+bravery = 0.5;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_towership;
+unarmedAction = ;
+skinPalette = p12;
+clothPalette = p26;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = none;
+defaultDialogNode = dialog_fleet;
+
+restrictedTurningInCombat=true;
+movementType=boat;
+
+defaultSupportAbilities = cannon_longShot;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = boat_sail2;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+
+[ActorTypeDetectAoE]
+ID=towership;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+
+[ActorType] ID=ironclad;
+name=Ironclad;
+description=Galleon with a hull reinforced by iron.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 40000;
+journalID=journal_boat;
+shipTileWidth=12;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=false;
+
+iAmABoat=true;
+minimumCrew=5;
+inventorySize=5;
+
+defaultValues=HP = 72;
+defaultValues=HPMax = 72;
+defaultValues=TrueHPMax = 72;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 3;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 2;
+defaultValues=upwind = 0;
+defaultValues=actTime = 30;
+defaultValues=cargo = 100;
+
+aggressiveness = 0;
+bravery = 0.5;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_ironclad;
+unarmedAction = ;
+skinPalette = p12;
+clothPalette = p26;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = none;
+defaultDialogNode = dialog_fleet;
+
+restrictedTurningInCombat=true;
+movementType=boat;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = boat_sail2;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+
+[ActorTypeDetectAoE]
+ID=ironclad;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+
+
+[ActorType] ID=bwing_galleass;
+name=Blackwing Galleass;
+description=Powerful galleass with great maneuverability.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 40000;
+journalID=journal_boat;
+shipTileWidth=12;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=false;
+
+iAmABoat=true;
+minimumCrew=6;
+inventorySize=4;
+
+defaultValues=HP = 44;
+defaultValues=HPMax = 44;
+defaultValues=TrueHPMax = 44;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 5;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 4;
+defaultValues=upwind = 3;
+defaultValues=actTime = 30;
+defaultValues=cargo = 80;
+
+aggressiveness = 0;
+bravery = 0.5;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_bwinggalleass;
+unarmedAction = ;
+skinPalette = p5;
+clothPalette = p26;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = none;
+defaultDialogNode = dialog_fleet;
+
+restrictedTurningInCombat=true;
+
+movementType=boat;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = boat_sail2;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=bwing_galleass;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+
+
+[ActorType] ID=corvair;
+name=Corvair;
+description=Swift galley with extra speed & strength.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 12000;
+journalID=journal_boat;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=false;
+
+iAmABoat=true;
+minimumCrew=4;
+inventorySize=3;
+
+defaultValues=HP = 28;
+defaultValues=HPMax = 28;
+defaultValues=TrueHPMax = 28;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 5;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 5;
+defaultValues=upwind = 3;
+defaultValues=actTime = 30;
+defaultValues=cargo = 40;
+
+aggressiveness = 0;
+bravery = 0.5;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_corvair;
+unarmedAction = ;
+skinPalette = p5;
+clothPalette = p26;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = none;
+defaultDialogNode = dialog_fleet;
+
+restrictedTurningInCombat=true;
+
+movementType=boat;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = boat_sail2;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=corvair;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+
+[ActorType] ID=icereaver;
+name=Ice Reaver;
+description=Swift ironice cruiser. Versatile yet durable.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 13500;
+journalID=journal_boat;
+shipTileWidth=12;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=false;
+
+iAmABoat=true;
+minimumCrew=4;
+inventorySize=4;
+
+defaultValues=HP = 40;
+defaultValues=HPMax = 40;
+defaultValues=TrueHPMax = 40;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 4;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 2;
+defaultValues=upwind = 0;
+defaultValues=actTime = 30;
+defaultValues=cargo = 80;
+
+aggressiveness = 0;
+bravery = 0.46;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_icereaver;
+unarmedAction = ;
+skinPalette = pIronice;
+clothPalette = p26;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = none;
+defaultDialogNode = dialog_fleet;
+
+restrictedTurningInCombat=true;
+
+movementType=boat;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = boat_sail2;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=icereaver;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+[ActorTypeReaction]
+ID=icereaver;
+element=ice; damageMultiplier=0.5;
+
+
+[ActorType] ID=glacier;
+name=Glacier;
+description=Massive unsinkable ironice battleship.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 40000;
+journalID=journal_boat;
+shipTileWidth=16;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=false;
+
+iAmABoat=true;
+minimumCrew=7;
+inventorySize=5;
+
+defaultValues=HP = 98;
+defaultValues=HPMax = 98;
+defaultValues=TrueHPMax = 98;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 2;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 2;
+defaultValues=upwind = 1;
+defaultValues=actTime = 30;
+defaultValues=cargo = 180;
+
+aggressiveness = 0;
+bravery = 0.5;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_glacier;
+unarmedAction = ;
+skinPalette = pIronice;
+clothPalette = p26;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = none;
+defaultDialogNode = dialog_fleet;
+
+restrictedTurningInCombat=true;
+
+movementType=boat;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = boat_sail2;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=glacier;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+[ActorTypeReaction]
+ID=glacier;
+element=ice; damageMultiplier=0.5;
+
+
+[ActorType] ID=sailboat;
+name=Sailboat;
+description=A recreational boat, barely fit to sail.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 200;
+journalID=journal_boat;
+
+include45DegStance=true;
+
+iAmABoat=true;
+minimumCrew=1;
+inventorySize=2;
+
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=false;
+
+
+defaultValues=HP = 12;
+defaultValues=HPMax = 12;
+defaultValues=TrueHPMax = 12;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 2;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 2;
+defaultValues=upwind = 0;
+defaultValues=actTime = 30;
+defaultValues=cargo = 12;
+
+aggressiveness = 0;
+bravery = 0.4;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_sailboat;
+unarmedAction = ;
+skinPalette = pBrown;
+clothPalette = p26;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = none;
+defaultDialogNode = dialog_fleet;
+
+restrictedTurningInCombat=true;
+
+movementType=boat;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+--defaultBodyPartSprites=bow=pixel;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = boat_sail2;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=sailboat;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+
+[ActorType] ID=lotuscoracle;
+name=Lotus Coracle;
+description=Small leaf and petal boat with a regenerating hull.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 1100;
+journalID=journal_boat;
+
+include45DegStance=true;
+
+iAmABoat=true;
+minimumCrew=1;
+inventorySize=2;
+
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=false;
+
+
+defaultValues=HP = 14;
+defaultValues=HPMax = 14;
+defaultValues=TrueHPMax = 14;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 3;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 4;
+defaultValues=upwind = 1;
+defaultValues=actTime = 30;
+defaultValues=cargo = 22;
+defaultValues=regen = 1;
+
+aggressiveness = 0;
+bravery = 0.36;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_coracle;
+unarmedAction = ;
+skinPalette = p8;
+clothPalette = p26;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = none;
+defaultDialogNode = dialog_fleet;
+
+restrictedTurningInCombat=true;
+
+movementType=boat;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+--defaultBodyPartSprites=bow=pixel;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = boat_sail2;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=lotuscoracle;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+[ActorTypeReaction]
+ID=lotuscoracle;
+actorValues=regen; damageMultiplier=0;
+
+
+
+[ActorType] ID=livingfrigate;
+name=Living Frigate;
+description=Large versatile ship with a regenerating hull.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 18000;
+journalID=journal_boat;
+shipTileWidth=10;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=false;
+
+iAmABoat=true;
+minimumCrew=4;
+inventorySize=3;
+
+defaultValues=HP = 28;
+defaultValues=HPMax = 28;
+defaultValues=TrueHPMax = 28;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 4;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 4;
+defaultValues=upwind = 1;
+defaultValues=actTime = 30;
+defaultValues=cargo = 80;
+defaultValues=regen = 1;
+
+aggressiveness = 0;
+bravery = 0.5;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_living_frigate;
+unarmedAction = ;
+skinPalette = p8;
+clothPalette = p26;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = none;
+defaultDialogNode = dialog_fleet;
+
+restrictedTurningInCombat=true;
+movementType=boat;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = boat_sail2;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=livingfrigate;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+[ActorTypeReaction]
+ID=livingfrigate;
+actorValues=regen; damageMultiplier=0;
+
+[ActorType] ID=floatingforest;
+name=Floating Forest;
+description=Sylvan galleon with a regenerating hull.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 30000;
+journalID=journal_boat;
+shipTileWidth=12;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=false;
+
+iAmABoat=true;
+minimumCrew=5;
+inventorySize=4;
+
+defaultValues=HP = 40;
+defaultValues=HPMax = 40;
+defaultValues=TrueHPMax = 40;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 3;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 1;
+defaultValues=upwind = 1;
+defaultValues=actTime = 30;
+defaultValues=cargo = 100;
+defaultValues=regen = 1;
+
+aggressiveness = 0;
+bravery = 0.5;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_living_forest;
+unarmedAction = ;
+skinPalette = p8;
+clothPalette = p26;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = none;
+defaultDialogNode = dialog_fleet;
+
+restrictedTurningInCombat=true;
+movementType=boat;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = boat_sail2;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=floatingforest;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+[ActorTypeReaction]
+ID=floatingforest;
+actorValues=regen; damageMultiplier=0;
+
+[ActorType] ID=stormcutter;
+name=Stormcutter;
+description=Hi-tech modified frigate that controls lightning.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 38000;
+journalID=journal_boat;
+shipTileWidth=12;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=false;
+
+iAmABoat=true;
+minimumCrew=4;
+inventorySize=4;
+
+defaultValues=HP = 48;
+defaultValues=HPMax = 48;
+defaultValues=TrueHPMax = 48;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 4;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 4;
+defaultValues=upwind = 1;
+defaultValues=actTime = 30;
+defaultValues=cargo = 70;
+
+aggressiveness = 0;
+bravery = 1;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_stormcutter;
+unarmedAction = ;
+skinPalette = p51;
+clothPalette = p26;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = none;
+defaultDialogNode = dialog_fleet;
+
+restrictedTurningInCombat=true;
+movementType=boat;
+
+XPMult=1.5;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = boat_sail2;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeReaction]
+ID=stormcutter;
+element=elec; damageMultiplier=0.2;
+[ActorTypeDetectAoE]
+ID=stormcutter;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+
+
+[ActorType] ID=seaslither;
+name=Seaslither;
+description=Ship mounted atop a sea serpent. Agile and strong.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 11500;
+journalID=journal_boat;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=false;
+offsetFromRollpinYLimit=2;
+shipOffsetYMainMenu=4;
+
+iAmABoat=true;
+minimumCrew=3;
+inventorySize=3;
+
+defaultValues=HP = 36;
+defaultValues=HPMax = 36;
+defaultValues=TrueHPMax = 36;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 4;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 3;
+defaultValues=upwind = 3;
+defaultValues=actTime = 30;
+defaultValues=cargo = 50;
+
+aggressiveness = 0;
+bravery = 0.44;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_seaslither;
+defaultBodyPartSprites=underwater=actor_seaslither_under;
+
+unarmedAction = ;
+skinPalette = pBrown;
+clothPalette = p26;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = none;
+defaultDialogNode = dialog_fleet;
+
+restrictedTurningInCombat=true;
+
+movementType=boat;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = s_submerge_serpent_water;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=seaslither;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+
+[JournalEntry]
+ID=journal_boat;
+category=creature; halfPage=true; rarity=0;
+title=Ships;
+text=<actorBig=caravel><actorBig=galleon><adjX=-12><title=Ships><brAdj=>Each boat has strengths in different categories.<n><icon=HP_boat> <color=DarkRed>Hull<color=> is damage it can take before sinking.<n><icon=cargo> <color=DarkRed>Cargo<color=> is the maximum cargo you can sail with.<n><icon=crewMod> <color=DarkRed>Min. Crew<color=> is # of crew needed to sail normally.<n><icon=cannon> <color=DarkRed>Cannons<color=> is the # of cannon types it can equip.<n><icon=moveDistance_boat> <color=DarkRed>Move<color=> affects combat movement & sailing speed.<n><icon=downwind> <color=DarkRed>Downwind<color=> boosts sailing speed with the wind.<n><icon=upwind> <color=DarkRed>Upwind<color=> boosts sailing speed against the wind.;
+
+
+[ActorType] ID=shellship;
+name=Shellship;
+journalID=journal_shellship;
+description=Small Cleever ship.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 600;
+
+noFacingRotRows=true;
+include45DegStance=false;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=true;
+dieWhenCrewless=true;
+fearless=true;
+
+iAmABoat=true;
+minimumCrew=3;
+inventorySize=2;
+XPMult = 0.45;
+
+shipTileWidth=10;
+
+defaultValues=HP = 22;
+defaultValues=HPMax = 22;
+defaultValues=TrueHPMax = 22;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 3;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 1;
+defaultValues=upwind = 2;
+defaultValues=actTime = 30;
+defaultValues=cargo = 20;
+
+aggressiveness = 1;
+bravery = 1;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_shellship;
+unarmedAction = ;
+skinPalette = pBrown;
+clothPalette = p29;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = cleever;
+defaultDialogNode = dialog_fleet_sm;
+
+restrictedTurningInCombat=false;
+
+movementType=boat_anyDirection;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = s_submerge_serpent_water;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=shellship;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+
+[ActorType] ID=shellship2;
+name=Shellsloop;
+journalID=journal_shellship;
+description=Large Cleever ship.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 600;
+shipTileWidth=14;
+
+noFacingRotRows=true;
+include45DegStance=false;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=true;
+dieWhenCrewless=true;
+fearless=true;
+
+iAmABoat=true;
+minimumCrew=5;
+inventorySize=2;
+XPMult = 0.47;
+
+
+defaultValues=HP = 34;
+defaultValues=HPMax = 34;
+defaultValues=TrueHPMax = 34;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 4;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 1;
+defaultValues=upwind = 0;
+defaultValues=actTime = 30;
+defaultValues=cargo = 40;
+
+aggressiveness = 1;
+bravery = 1;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_shellship2;
+unarmedAction = ;
+skinPalette = pBrown;
+clothPalette = p29;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = cleever;
+defaultDialogNode = dialog_fleet_sm;
+
+restrictedTurningInCombat=false;
+
+movementType=boat_anyDirection;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = s_submerge_serpent_water;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=shellship2;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+
+
+[ActorType] ID=shellship_refit;
+name=Shellship;
+journalID=journal_shellship;
+description=Stolen & modified Cleever ship.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 2000;
+
+noFacingRotRows=false;
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=true;
+
+iAmABoat=true;
+minimumCrew=3;
+inventorySize=3;
+
+shipTileWidth=10;
+
+defaultValues=HP = 26;
+defaultValues=HPMax = 26;
+defaultValues=TrueHPMax = 26;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 4;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 2;
+defaultValues=upwind = 3;
+defaultValues=actTime = 30;
+defaultValues=cargo = 34;
+
+aggressiveness = 1;
+bravery = 0.72;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_refit_shellship;
+unarmedAction = ;
+skinPalette = pBrown;
+clothPalette = p29;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = cleever;
+defaultDialogNode = dialog_fleet_sm;
+
+
+restrictedTurningInCombat=true;
+movementType=boat;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = s_submerge_serpent_water;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=shellship_refit;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+
+
+[ActorType] ID=shellship2_refit;
+name=Shellsloop;
+journalID=journal_shellship;
+description=Refitted Cleever battleship.;
+bodyStructure=boat;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 9900;
+shipTileWidth=14;
+
+noFacingRotRows=false;
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=true;
+
+iAmABoat=true;
+minimumCrew=5;
+inventorySize=4;
+
+
+defaultValues=HP = 44;
+defaultValues=HPMax = 44;
+defaultValues=TrueHPMax = 44;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 4;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 2;
+defaultValues=upwind = 3;
+defaultValues=actTime = 30;
+defaultValues=cargo = 80;
+
+aggressiveness = 1;
+bravery = 0.8;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_refit_shellship2;
+unarmedAction = ;
+skinPalette = pBrown;
+clothPalette = p29;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = cleever;
+defaultDialogNode = dialog_fleet_sm;
+
+
+restrictedTurningInCombat=true;
+movementType=boat;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_woodCrash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = s_submerge_serpent_water;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=shellship2_refit;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+
+[JournalEntry]
+ID=journal_shellship;
+category=creature; halfPage=true; rarity=3; rewardMod=-600;
+title=Shellship;
+text=<actorBig=shellship><title=Shellship><brAdj=>Shellship of the remorseless Cleever, cobbled together from stolen lumber, seaweed, and giant shells. Their method of propulsion is a mystery - it can move in any direction at any moment, and it sinks the moment the Cleever onboard are vanquished. Despite its ramshackle construction, it can endure a fair amount of cannon fire, and the Cleever on it are still a menace.;
+
+
+[ActorType] ID=submerged;
+name=Unknown;
+description=An unknown submerged entity.;
+bodyStructure=single;
+movementSpeed = 5;
+unarmedPower = 0;
+weight = 500;
+value = 0;
+spriteDepthOffset=-90;
+offsetFromRollpinYLimit=10;
+journalID=;
+previewSprite=actor_submerged_icon;
+shipTileWidth=16;
+boardingAnimationShake=false;
+
+alwaysRoundFacingTo90 = true;
+noFacingRotRows=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=true;
+canSeeStats=false;
+canSeeStatsTravelMode=false;
+dieWhenCrewless=true;
+XPMult = 0.25;
+
+iAmABoat=true;
+minimumCrew=1;
+inventorySize=2;
+
+defaultValues=HP = 9999;
+defaultValues=HPMax = 9999;
+defaultValues=TrueHPMax = 9999;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 4;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 3;
+defaultValues=upwind = 3;
+defaultValues=actTime = 30;
+defaultValues=cargo = 15;
+
+aggressiveness = 1;
+bravery = 0.9;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_submerged;
+unarmedAction = board1_act;
+skinPalette = pFadeDarker;
+clothPalette = pFadeDarker;
+armorPalette = pGreyD2;
+unarmoredPalette = pGreyD2;
+defaultFaction = fleet;
+defaultDialogNode = dialog_fleet_submerged;
+defaultAI=idle_sm;
+
+restrictedTurningInCombat=false;
+
+movementType=deepwater;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_quietSplash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = s_submerge_serpent_water;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=submerged;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+[ActorTypeReaction]
+ID=submerged;
+actorValues=HP; actorValues=moveDistance; actorValues=board; damageMultiplier=0;
+[ActorTypeReaction]
+ID=submerged;
+actorValues=crewHP; damageMultiplier=1.5;
+
+[ActorType] ID=sm_squid;
+name=Bigal Squid;
+description=A huge squid monster.;
+bodyStructure=single;
+movementSpeed = 5;
+unarmedPower = 2;
+weight = 500;
+value = 900;
+journalID=journal_sm_squid;
+
+alwaysRoundFacingTo90 = true;
+noFacingRotRows=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=true;
+
+iAmABoat=true;
+
+minimumCrew=0;
+inventorySize=2;
+XPMult = 0.25;
+
+defaultValues=HP = 2;
+defaultValues=HPMax = 2;
+defaultValues=TrueHPMax = 2;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 2;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 2;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 4;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 1;
+defaultValues=upwind = 1;
+defaultValues=actTime = 30;
+defaultValues=cargo = 10;
+
+aggressiveness = 1;
+bravery = 0.9;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_sm_squid;
+unarmedAction = bumpAttack_ship;
+skinPalette = pPink;
+clothPalette = pFadeDarker;
+armorPalette = pR;
+unarmoredPalette = pR;
+defaultFaction = fleet;
+defaultDialogNode = dialog_fleet_sm;
+defaultAI=idle_sm;
+
+restrictedTurningInCombat=false;
+
+movementType=deepwater_boat;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_quietSplash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = s_submerge_serpent_water;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=sm_squid;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+[ActorTypeReaction]
+ID=sm_squid;
+actorValues=crewHP; actorValues=moveDistance; actorValues=crewless; actorValues=board; damageMultiplier=0;
+[JournalEntry]
+ID=journal_sm_squid;
+category=creature; halfPage=true; rarity=5; rewardMod=1000;
+title=Bigal Squid;
+text=<actorBig=sm_squid><title=Bigal Squid><brAdj=>The dreaded Bigal Squid strikes fear into the hearts of all sailors. Tales of its piercing gaze and thunderous roar have made their way across Eral. Legend tells of when it snapped the entire Dralir Armada in two with one swipe of its tendril. Myth recalls when its tentacles sundered Bellrique from the Riverlands, creating an entire continent. This is that Bigal Squid. ...right?;
+
+
+[ActorType] ID=sm_spitter;
+name=Grisker;
+description=Gelatinous tower that fires in straight lines.;
+bodyStructure=single;
+movementSpeed = 4;
+unarmedPower = 2;
+weight = 500;
+value = 550;
+journalID=journal_sm_spitter;
+
+alwaysRoundFacingTo90 = true;
+noFacingRotRows=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=true;
+
+iAmABoat=true;
+powerLevelMult = 0.85;
+XPMult = 0.25;
+
+minimumCrew=0;
+inventorySize=2;
+
+defaultValues=HP = 12;
+defaultValues=HPMax = 12;
+defaultValues=TrueHPMax = 12;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 2;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 5;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 1;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 1;
+defaultValues=upwind = 1;
+defaultValues=actTime = 30;
+defaultValues=cargo = 10;
+
+aggressiveness = 1;
+bravery = 1.2;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_sm_brainsquid;
+unarmedAction = sm_spitAtk_line;
+skinPalette = pGreen2;
+clothPalette = pFadeDarker;
+armorPalette = pR;
+unarmoredPalette = pR;
+defaultFaction = fleet;
+defaultDialogNode = dialog_fleet_sm;
+defaultAI=idle_sm;
+
+restrictedTurningInCombat=false;
+
+movementType=boat_anyDirection;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_quietSplash;
+fxOnDeath = WetSquish;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = s_submerge_serpent_water;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die_fast;
+[ActorTypeDetectAoE]
+ID=sm_spitter;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+[ActorTypeReaction]
+ID=sm_spitter;
+actorValues=crewHP; actorValues=moveDistance; actorValues=crewless; actorValues=board; damageMultiplier=0;
+[JournalEntry]
+ID=journal_sm_spitter;
+category=creature; halfPage=true; rarity=3; rewardMod=-100;
+title=Grisker;
+text=<actorBig=sm_spitter><title=Grisker><brAdj=>These towering gelatinous sea creatures emerge from the depths seemingly just to pick on sailors. Though very slow, it can fire magic flames a great distance. Their linear attacks are easily avoided when alone, but they often spend time near Megarays - a dangerous combination.;
+[ActorType] ID=sm_ray;
+name=Megaray;
+journalID=journal_sm_ray;
+description=Large hostile ray.;
+bodyStructure=single;
+movementSpeed = 6;
+unarmedPower = 2;
+weight = 500;
+value = 10;
+journalID=journal_sm_ray;
+offsetFromRollpinYLimit=6;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=true;
+
+iAmABoat=true;
+powerLevelMult = 0.5;
+XPMult = 0.3;
+
+minimumCrew=0;
+inventorySize=2;
+
+defaultValues=HP = 8;
+defaultValues=HPMax = 8;
+defaultValues=TrueHPMax = 8;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 2;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 2;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 4;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 1;
+defaultValues=upwind = 1;
+defaultValues=actTime = 30;
+defaultValues=cargo = 10;
+
+aggressiveness = 1;
+bravery = 1;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_sm_ray;
+unarmedAction = bumpAttack_ship;
+skinPalette = pG;
+clothPalette = pB;
+armorPalette = pR;
+unarmoredPalette = pR;
+defaultFaction = fleet;
+defaultDialogNode = dialog_fleet_sm;
+defaultAI=idle_sm;
+
+restrictedTurningInCombat=true;
+
+movementType=deepwater_boat;
+
+defaultSupportAbilities = slowStart;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater;
+fxOnDeath = waterSplash_small;
+fxOnDeath = sfx_quietSplash;
+
+idleAnim = s_01234loop_slow;
+walkAnim = s_01234loop_boat;
+jumpAnim = s_submerge_serpent_water;
+painAnim = s_pain5;
+dodgeAnim = s_dodge;
+deadAnim = sm_die;
+[ActorTypeDetectAoE]
+ID=sm_ray;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+[ActorTypeReaction]
+ID=sm_ray;
+actorValues=crewHP; actorValues=crewless; actorValues=board; damageMultiplier=0;
+
+[JournalEntry]
+ID=journal_sm_ray;
+category=creature; halfPage=true; rarity=2;
+title=Megaray;
+text=<actorBig=sm_ray><title=Megaray><brAdj=>Ship-sized rays that are relentlessly aggressive. Any boat passing through deep water should beware of Megaray attacks. They may start slow, but once they close the distance they will repeatedly ram the nearest ship they can find. Its fat can be harvested and processed into oil, but few find it worthwhile to pursue such a dangerous trade.;
+
+[ActorType] ID=sm_devil_ray;
+name=Devil Ray;
+journalID=journal_sm_devil_ray;
+description=Powerful aggressive ray.;
+bodyStructure=single;
+movementSpeed = 6;
+unarmedPower = 2;
+weight = 500;
+value = 300;
+journalID=journal_sm_devil_ray;
+offsetFromRollpinYLimit=6;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=true;
+
+iAmABoat=true;
+powerLevelMult = 0.75;
+XPMult = 0.4;
+
+minimumCrew=0;
+inventorySize=2;
+
+defaultValues=HP = 14;
+defaultValues=HPMax = 14;
+defaultValues=TrueHPMax = 14;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 4;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 4;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 5;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 3;
+defaultValues=upwind = 2;
+defaultValues=actTime = 30;
+defaultValues=cargo = 10;
+
+aggressiveness = 1;
+bravery = 1;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_sm_devil_ray;
+unarmedAction = bumpAttack_ship;
+skinPalette = pG;
+clothPalette = pB;
+armorPalette = pR;
+unarmoredPalette = pR;
+defaultFaction = fleet;
+defaultDialogNode = dialog_fleet_sm;
+defaultAI=idle_sm;
+
+restrictedTurningInCombat=true;
+
+movementType=deepwater_boat;
+
+defaultSupportAbilities = slowStart;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater;
+fxOnDeath = waterSplash_small;
+fxOnDeath = sfx_quietSplash;
+
+idleAnim = s_01234loop_slow;
+walkAnim = s_01234loop_boat;
+jumpAnim = s_submerge_serpent_water;
+painAnim = s_pain5;
+dodgeAnim = s_dodge;
+deadAnim = sm_die;
+[ActorTypeDetectAoE]
+ID=sm_devil_ray;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+[ActorTypeReaction]
+ID=sm_devil_ray;
+actorValues=crewHP; actorValues=crewless; actorValues=board; damageMultiplier=0;
+
+
+[JournalEntry]
+ID=journal_sm_devil_ray;
+category=creature; halfPage=true; rarity=2;
+title=Devil Ray;
+text=<actorBig=sm_devil_ray><title=Devil Ray><brAdj=>The even-more-ornery cousin of the Megaray. Devil Rays are faster, stronger, and more determined than ever to sink any ship that dares tread in its ocean.;
+
+[ActorType] ID=sm_frost_ray;
+name=Crystal Ray;
+journalID=journal_sm_frost_ray;
+description=Icy hostile ray.;
+bodyStructure=single;
+movementSpeed = 6;
+unarmedPower = 2;
+weight = 500;
+value = 500;
+journalID=journal_sm_frost_ray;
+offsetFromRollpinYLimit=6;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=true;
+
+iAmABoat=true;
+powerLevelMult = 0.85;
+XPMult = 0.4;
+
+minimumCrew=0;
+inventorySize=2;
+
+defaultValues=HP = 13;
+defaultValues=HPMax = 13;
+defaultValues=TrueHPMax = 13;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 2;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 4;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 1;
+defaultValues=upwind = 1;
+defaultValues=actTime = 30;
+defaultValues=cargo = 10;
+
+aggressiveness = 1;
+bravery = 1;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_sm_frost_ray;
+unarmedAction = bumpAttack_ship;
+innateActions = sm_freeze_atk;
+skinPalette = pG;
+clothPalette = pB;
+armorPalette = pR;
+unarmoredPalette = pR;
+defaultFaction = fleet;
+defaultDialogNode = dialog_fleet_sm;
+defaultAI=idle_sm;
+
+restrictedTurningInCombat=true;
+
+movementType=deepwater_boat;
+
+defaultSupportAbilities = slowStart;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater;
+fxOnDeath = waterSplash_small;
+fxOnDeath = sfx_quietSplash;
+
+idleAnim = s_01234loop_slow;
+walkAnim = s_01234loop_boat;
+jumpAnim = s_submerge_serpent_water;
+painAnim = s_pain5;
+dodgeAnim = s_dodge;
+deadAnim = sm_die;
+[ActorTypeDetectAoE]
+ID=sm_frost_ray;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+[ActorTypeReaction]
+ID=sm_frost_ray;
+actorValues=crewHP; actorValues=crewless; actorValues=board; damageMultiplier=0;
+
+[JournalEntry]
+ID=journal_sm_frost_ray;
+category=creature; halfPage=true; rarity=2;
+title=Crystal Ray;
+text=<actorBig=sm_frost_ray><title=Crystal Ray><brAdj=>A type of Megaray that only lives in colder climates. In addition to its ram attack, it can also breathe a short beam of ice to damage ships and create ice floes that hinder passage. Best to steer clear of them.;
+
+
+[ActorType] ID=sm_snake;
+name=Seasnake;
+journalID=journal_sm_snake;
+description=Large hostile snake.;
+movementSpeed = 6;
+unarmedPower = 6;
+weight = 500;
+value = 10;
+offsetFromRollpinYLimit=6;
+
+include45DegStance=true;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=true;
+
+bodyStructure=seasnake;
+multiPartCollisions=true;
+extendTailWhenSpawnedOnlyIfAestheticTail=true;
+distBetweenTailParts=0.6;
+
+iAmABoat=true;
+
+minimumCrew=0;
+inventorySize=2;
+
+defaultValues=HP = 25;
+defaultValues=HPMax = 25;
+defaultValues=TrueHPMax = 25;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 2;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 2;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 3;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 1;
+defaultValues=upwind = 1;
+defaultValues=actTime = 30;
+defaultValues=cargo = 10;
+
+aggressiveness = 1;
+bravery = 1;
+honor = 0;
+intelligence = 0;
+
+unarmedAction = sm_attack;
+
+previewSprite = actor_sm_snake_preview;
+defaultSprite = actor_sm_snake;
+skinPalette = pG;
+clothPalette = pFadeDarker;
+armorPalette = p8;
+unarmoredPalette = pGreyblue2;
+defaultFaction = fleet;
+defaultDialogNode = dialog_fleet_sm;
+defaultAI=idle_sm;
+
+defaultBodyPartSprites=front=actor_sm_snake;
+defaultBodyPartSprites=mid1=actor_sm_snake_segment;
+defaultBodyPartSprites=tail=actor_sm_snake_tail;
+
+restrictedTurningInCombat=true;
+
+movementType=boat;
+
+defaultSupportAbilities = slowStart;
+
+skinPalette = pGreen2;
+clothPalette = pFadeDarker;
+armorPalette = pGreyblue2;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater;
+fxOnDeath = waterSplash_small;
+fxOnDeath = sfx_quietSplash;
+
+idleAnim = s_01loop_slower2;
+walkAnim = s_walk_boat;
+jumpAnim = s_submerge_serpent_water;
+painAnim = s_pain5;
+dodgeAnim = s_dodge;
+deadAnim = sm_die;
+[ActorTypeDetectAoE]
+ID=sm_snake;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+[ActorTypeReaction]
+ID=sm_snake;
+actorValues=crewHP; actorValues=crewless; actorValues=board; damageMultiplier=0;
+
+[JournalEntry]
+ID=journal_sm_snake;
+category=creature; halfPage=true; rarity=3;
+title=Seasnake;
+text=<actorBig=sm_snake><title=Seasnake><brAdj=>Snakey.;
+
+[ActorType] ID=sm_shellsnake;
+name=Shellsnake;
+journalID=journal_sm_shellsnake;
+description=Large hostile shellsnake.;
+movementSpeed = 6;
+unarmedPower = 6;
+weight = 500;
+value = 10;
+offsetFromRollpinYLimit=6;
+
+--include45DegStance=true;
+lockFacingRotTo=90;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=true;
+
+bodyStructure=shellsnake;
+multiPartCollisions=true;
+extendTailWhenSpawnedOnlyIfAestheticTail=true;
+distBetweenTailParts=0.8;
+nonRotatingTailPartsUseFacingRotFlip=false;
+
+iAmABoat=true;
+
+minimumCrew=0;
+inventorySize=2;
+
+defaultValues=HP = 25;
+defaultValues=HPMax = 25;
+defaultValues=TrueHPMax = 25;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 2;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 2;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 3;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 1;
+defaultValues=upwind = 1;
+defaultValues=actTime = 30;
+defaultValues=cargo = 10;
+
+aggressiveness = 1;
+bravery = 1;
+honor = 0;
+intelligence = 0;
+
+unarmedAction = sm_attack;
+
+previewSprite = actor_sm_snake_preview;
+defaultSprite = actor_sm_shellsnake;
+skinPalette = pG;
+clothPalette = pFadeDarker;
+armorPalette = p8;
+unarmoredPalette = pGreyblue2;
+defaultFaction = fleet;
+defaultDialogNode = dialog_fleet_sm;
+defaultAI=idle_sm;
+
+defaultBodyPartSprites=front=actor_sm_shellsnake;
+defaultBodyPartSprites=mid1=actor_sm_shellsnake_segment2;
+defaultBodyPartSprites=mid2=actor_sm_shellsnake_segment;
+defaultBodyPartSprites=mid3=actor_sm_shellsnake_segment2;
+defaultBodyPartSprites=mid4=actor_sm_shellsnake_segment3;
+defaultBodyPartSprites=mid5=actor_sm_shellsnake_segment4;
+
+restrictedTurningInCombat=true;
+
+movementType=boat;
+
+defaultSupportAbilities = slowStart;
+
+skinPalette = pYellow;
+clothPalette = pFadeDarker;
+armorPalette = p54;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater;
+fxOnDeath = waterSplash_small;
+fxOnDeath = sfx_quietSplash;
+
+idleAnim = s_01loop_slower2;
+walkAnim = s_walk_boat;
+jumpAnim = s_submerge_serpent_water;
+painAnim = s_pain5;
+dodgeAnim = s_dodge;
+deadAnim = sm_die;
+[ActorTypeDetectAoE]
+ID=sm_shellsnake;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+[ActorTypeReaction]
+ID=sm_shellsnake;
+actorValues=crewHP; actorValues=crewless; actorValues=board; damageMultiplier=0;
+
+[JournalEntry]
+ID=journal_sm_shellsnake;
+category=creature; halfPage=true; rarity=3;
+title=Shellsnake;
+text=<actorBig=sm_shellsnake><title=Seasnake><brAdj=>Snakey.;
+
+
+[ActorType] ID=sm_torsk;
+name=Amnitorsk;
+journalID=journal_turtle_tentacle;
+description=Large turtle.;
+bodyStructure=single;
+movementSpeed = 5;
+unarmedPower = 7;
+weight = 500;
+value = 0;
+journalID=journal_turtle_tentacle;
+offsetFromRollpinYLimit=4;
+shipTileWidth=12;
+
+alwaysRoundFacingTo90 = true;
+noFacingRotRows=true;
+include45DegStance=false;
+adjustSpriteY=2;
+
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=true;
+dieWhenCrewless=true;
+
+iAmABoat=true;
+
+minimumCrew=0;
+inventorySize=2;
+powerLevelMult = 1.5;
+XPMult = 0.25;
+
+defaultValues=HP = 38;
+defaultValues=HPMax = 38;
+defaultValues=TrueHPMax = 38;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 3;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 3;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 1;
+defaultValues=upwind = 1;
+defaultValues=actTime = 30;
+defaultValues=cargo = 10;
+
+aggressiveness = 1;
+bravery = 1.2;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_sm_torsk;
+unarmedAction = sm_elecAttack;
+innateActions=sm_waterPull;
+skinPalette = pGreen;
+clothPalette = pFadeDarker;
+armorPalette = pTeal2;
+unarmoredPalette = pTeal2;
+defaultFaction = fleet;
+defaultDialogNode = dialog_fleet_sm;
+defaultAI=idle_sm;
+
+restrictedTurningInCombat=false;
+
+movementType=boat_anyDirection;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_quietSplash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = s_submerge_serpent_water;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=sm_torsk;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+[ActorTypeReaction]
+ID=sm_torsk;
+actorValues=moveDistance; damageMultiplier=0;
+
+[ActorType] ID=sm_torsk_mother;
+name=Mother Amnitorsk;
+journalID=journal_turtle_tentacle;
+description=Large turtle carrying its offspring.;
+bodyStructure=single;
+movementSpeed = 5;
+unarmedPower = 7;
+weight = 500;
+value = 0;
+journalID=journal_turtle_tentacle;
+offsetFromRollpinYLimit=4;
+shipTileWidth=12;
+
+alwaysRoundFacingTo90 = true;
+noFacingRotRows=true;
+include45DegStance=false;
+adjustSpriteY=2;
+
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=true;
+dieWhenCrewless=true;
+
+iAmABoat=true;
+
+minimumCrew=0;
+inventorySize=2;
+powerLevelMult = 1.5;
+XPMult = 0.25;
+
+defaultValues=HP = 38;
+defaultValues=HPMax = 38;
+defaultValues=TrueHPMax = 38;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 3;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 3;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 1;
+defaultValues=upwind = 1;
+defaultValues=actTime = 30;
+defaultValues=cargo = 10;
+
+aggressiveness = 1;
+bravery = 1.3;
+honor = 0;
+intelligence = 0;
+
+defaultSprite = actor_sm_torsk_mother;
+unarmedAction = sm_elecAttack;
+innateActions = boardingGear_act;
+skinPalette = pGreen;
+clothPalette = pFadeDarker;
+armorPalette = pTeal2;
+unarmoredPalette = pTeal2;
+defaultFaction = fleet;
+defaultDialogNode = dialog_fleet_sm;
+defaultAI=idle_sm;
+
+restrictedTurningInCombat=false;
+
+movementType=boat_anyDirection;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater_serpent;
+fxOnDeath = moveWater_serpent;
+fxOnDeath = sfx_quietSplash;
+
+idleAnim = boat_idle;
+walkAnim = boat_sail;
+jumpAnim = s_submerge_serpent_water;
+painAnim = s_1;
+dodgeAnim = s_dodge;
+deadAnim = boat_die;
+[ActorTypeDetectAoE]
+ID=sm_torsk_mother;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+[ActorTypeReaction]
+ID=sm_torsk_mother;
+actorValues=moveDistance; damageMultiplier=0;
+
+
+[ActorType] ID=sm_knell;
+name=Knell;
+description=Menace of the oceans.;
+bodyStructure=knell;
+movementSpeed = 6;
+unarmedPower = 2;
+weight = 500;
+value = 0;
+journalID=;
+
+noFacingRotRows=true;
+lockFacingRotTo=90;
+include45DegStance=false;
+humanoid = false;
+rotatedCorpse=false;
+disappearOnDeath=true;
+fearless=false;
+defaultHostile=true;
+
+
+iAmABoat=true;
+powerLevelMult = 10.0;
+XPMult = 1;
+
+minimumCrew=0;
+inventorySize=2;
+
+defaultValues=HP = 20;
+defaultValues=HPMax = 20;
+defaultValues=TrueHPMax = 20;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 16;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 20;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 1;
+defaultValues=jumpDistance = 0;
+defaultValues=downwind = 2;
+defaultValues=upwind = 2;
+defaultValues=actTime = 30;
+defaultValues=cargo = 100;
+
+aggressiveness = 1;
+bravery = 99;
+honor = 0;
+intelligence = 0;
+
+previewSprite=actor_sm_knell_eye;
+defaultSprite = ;
+unarmedAction = heart_quake;
+innateActions=heart_quake;
+skinPalette = pBlack;
+clothPalette = pR;
+armorPalette = pFade;
+unarmoredPalette = pFade;
+defaultFaction = fleet;
+defaultDialogNode = dialog_fleet_sm;
+defaultAI=idle_sm;
+
+restrictedTurningInCombat=false;
+
+movementType=boat_anyDirection;
+
+
+defaultBodyPartSprites=face=actor_sm_knell_eye;
+defaultBodyPartSprites=wingL=actor_sm_knell;
+defaultBodyPartSprites=wingR=actor_sm_knell;
+
+extraBodyHurtboxes=0,1;
+extraBodyHurtboxes_protected=true;
+extraBodyHurtboxes=0,2;
+extraBodyHurtboxes_protected=true;
+extraBodyHurtboxes=0,3;
+extraBodyHurtboxes_protected=true;
+extraBodyHurtboxes=0,4;
+extraBodyHurtboxes_protected=true;
+extraBodyHurtboxes=0,5;
+extraBodyHurtboxes_protected=true;
+extraBodyHurtboxes=0,6;
+extraBodyHurtboxes_protected=true;
+
+fxSpeech = ;
+fxOnPhysicalHPDmg = moveWater;
+fxOnPhysicalHPDmg = sfx_thumpShot;
+fxOnDeath = moveWater;
+fxOnDeath = waterSplash_small;
+fxOnDeath = sfx_quietSplash;
+
+idleAnim = s_0121loop_slower;
+walkAnim = s_0121loop_slow;
+jumpAnim = s_0121loop_slow_even;
+painAnim = s_0121loop;
+dodgeAnim = s_dodge;
+deadAnim = s_12to3;
+[ActorTypeDetectAoE]
+ID=sm_knell;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=9;
+arc=true;
+airborne=true;
+occupyAll=true;
+[ActorTypeReaction]
+ID=sm_knell;
+actorValues=crewHP; actorValues=moveDistance; actorValues=crewless; actorValues=board; damageMultiplier=0;
+
+

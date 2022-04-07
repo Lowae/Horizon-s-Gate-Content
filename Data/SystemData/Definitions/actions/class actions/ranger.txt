@@ -1,0 +1,636 @@
+
+[SupportAbility] ID=instantAid;
+name=Instant Aid;
+icon=iconP_Ran_instantAid;
+tooltip=Your first non-harmful single-<n>target ability each combat does not consume an action, but Max MP is reduced by 8<adjX=-1><icon=MP><adjX=-2>.;
+XPCostUnlock=750;
+canBeGivenToAI=false;
+--Instant Aid applies to:
+--Swagger, Steady, Smellingsalts, First Aid, Sidestep, Grin, Brave, Hide, Focus, Rage, Now!, Hold!, Mighty Block, Maneuver, Aegis, Negate, Fire Enchant, Ice Enchant, Lightning Enchant, Wind Enchant, Warmth, Ice Carapace, Tumble, Summon Zoar, Flight, Gate: Shield, Gate
+--If only one target is selected, also applies to:
+--Advance!, Withdraw!, Barrier, Force
+
+[SupportAbilityReaction]
+ID=instantAid; element=combatStart; action=instantAid_act;
+[SupportAbilityEffect]
+ID=instantAid; actorValue=MPMax; magnitude =-8; duration=-1;
+
+[ActorValue]
+ID=status_instantAid;
+bubbleIcon=instantAidStatus;
+maximum=1;
+harmfulMagnitude = -1;
+showDamageNumbersMagnitude = false;
+showDamageNumbersSign = false;
+canBeRemovedByNonspecificAVEffectRemoval = false;
+--the actual 'free action' & removal part of this status effect is hardcoded in InputManager.executeSelectedAction()
+
+[ActorValueReaction]
+ID=status_instantAid; element=combatEnd; newID=X;
+
+[Action] ID=instantAid_act; 
+	icon=iconP_Ran_instantAid;
+	harmful=false;
+	attractAttention=false;
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+[ActionAoE]
+	ID=instantAid_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=instantAid_act;
+	harmful=false;
+	actorValue=status_instantAid;
+	magnitude=1;
+	duration=-1;
+	chance=100;
+[AvAffecterAoE]
+	ID=instantAid_act;
+	cloneFrom=oneTile;
+	
+--
+
+[SupportAbility] ID=overgrowth;
+name=Overgrowth;
+icon=iconP_Ran_overgrowth;
+tooltip=Gain Regen for <icon=time>50 when you get healed to full HP.;
+XPCostUnlock=300;
+[SupportAbilityReaction]
+ID=overgrowth; actorValues=HP; action=overgrowth_act;
+
+[Action] ID=overgrowth_act; 
+	icon=iconP_Ran_overgrowth;
+	harmful=false;
+	attractAttention=false;
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+[ActionAoE]
+	ID=overgrowth_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=overgrowth_act;
+	harmful=false;
+	actorValue=regen;
+	magnitude=1;
+	duration=50;
+	chance=100 - m:targetPercentHPLost * 9999;
+	visibleMiss=false;
+[AvAffecterAoE]
+	ID=overgrowth_act;
+	cloneFrom=oneTile;
+	
+	
+[SupportAbility] ID=teamPlayer;
+name=Team Player;
+icon=iconP_Ran_teamPlayer;
+tooltip=Weapon attacks deal 95% less damage to allies.;
+XPCostUnlock=150;
+
+--------
+
+[Action] ID=Ran_doubleTap; 
+	name=Double Tap;
+	icon=icon_Ran_doubleTap;
+	tooltip=Attack twice for <math=15 + 5 * c:rank>% damage. Both attacks apply secondary effects.;
+	rankUpTooltip=Each rank adds +5% damage (to enemies only).;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	mpCost=4 * d:mpCostMult + d:mpCostMod;
+	applyWeaponBuffs=true;
+	
+	AIRatingBias=-9999;
+	
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	
+	XPCost=220;
+	XPCost=440;
+	XPCost=880;
+	XPCost=1600;
+	
+	casterAnimation=weapon;
+	casterAnimationSpeed=2.4;
+	--casterAnimationLoops=1;
+	
+	special=doNotApplyActionUsedToItemUsed;
+	queueAnotherAction=Ran_doubleTap2;
+	
+	requiredWeaponElement=weapon;
+	
+	FXOnCaster=sidewardLines;
+	FXOnCaster=woosh;
+	
+	FXOnTarget=weaponFX;
+[ActionAoE]
+	ID=Ran_doubleTap; shape=10;
+[AvAffecter]
+	ID=Ran_doubleTap; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.15 + w:magnitude * 0.05 * c:rank * m:diffHostile + w:magnitude * 0.05 * m:sameHostile;
+	chance=w:chance;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Ran_doubleTap;
+	 shape=11;
+
+[Action] ID=Ran_doubleTap2; 
+	name=Double Tap;
+	icon=icon_Ran_doubleTap;
+	tooltip=Attack twice for <math=15 + 5 * c:rank>% damage. Both attacks apply secondary effects.;
+	rankUpTooltip=Each rank adds +5% damage (to enemies only).;
+	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
+	applyWeaponBuffs=true;
+	
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	
+	XPCost=220;
+	XPCost=440;
+	XPCost=880;
+	XPCost=1600;
+	
+	casterAnimation=weapon;
+	casterAnimationSpeed=2.4;
+	
+	requiredWeaponElement=weapon;
+	
+	FXOnCaster=sidewardLines;
+	FXOnCaster=woosh;
+	
+	FXOnTarget=weaponFX;
+[ActionAoE]
+	ID=Ran_doubleTap2; shape=10;
+[AvAffecter]
+	ID=Ran_doubleTap2; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.15 + w:magnitude * 0.05 * c:Ran_doubleTap * m:diffHostile + w:magnitude * 0.05 * m:sameHostile;
+	chance=w:chance;
+	duration=-2;
+[AvAffecterAoE]
+	ID=Ran_doubleTap2;
+	 shape=11;
+	 	 
+
+[Action] ID=Ran_applySalve; 
+	name=Apply Salve;
+	icon=icon_Ran_applySalve;
+	mpCost=3 * d:mpCostMult + d:mpCostMod;
+	harmful=false;
+	tooltip=Apply a healing salve to an ally's weapons for <icon=time>40, making weapon attacks heal <math=10 + c:rank + c:MagAtk + c:skill_Life><adjX=-4><icon=HP><adjX=-2> and cure negative status effects.;
+	rankUpTooltip=Each rank increases healing by +1<icon=HP>.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
+	attractAttention=false;
+	
+	XPCost=125;
+	XPCost=250;
+	XPCost=400;
+	XPCost=600;
+	
+	casterAnimation=use_attack;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=sfx_bottle;
+	FXOnTarget=chargeSpiralFast;
+	FXOnTargetColor=Pink;
+	FXOnTarget=chargeSpiralFast_big;
+	FXOnTargetColor=Pink;
+	FXOnTarget=splot_pink;
+	FXOnTarget=sfx_loudSquish;
+[ActionAoE] 
+	ID=Ran_applySalve; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	minRange = 0;
+	maxRange = 1;
+	bypassAll=true;
+	occupyAll=true;
+	canSelectEnemies=false;
+[AvAffecter]
+	ID=Ran_applySalve; 
+	harmful=false;
+	actorValue=status_Ran_salve;
+	magnitude=11 + c:rank + c:MagAtk + c:skill_Life;
+	duration=40;
+	chance=100;
+[AvAffecterAoE]
+	ID=Ran_applySalve;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=Ran_applyToxin; 
+	name=Apply Toxin;
+	icon=icon_Ran_applyToxin;
+	mpCost=3 * d:mpCostMult + d:mpCostMod;
+	harmful=false;
+	tooltip=Apply a vile toxin to an ally's weapons for <icon=time>40, making weapon attacks inflict poison and a random status effect<n>(<icon_low=itchyStatus><icon_low=silenceStatus><icon_low=blindStatus><icon_low=oilStatus><icon_low=immobStatus><icon_low=disableStatus><icon_low=sleepStatus><adjX=-2>) for <icon=time><math=15 + 15*c:rank + c:MagAtk*1.5 + c:skill_Life*1.5>.;
+	rankUpTooltip=Each rank increases inflicted status duration by <icon=time>15.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
+	attractAttention=false;
+	
+	XPCost=125;
+	XPCost=275;
+	XPCost=500;
+	XPCost=750;
+	
+	casterAnimation=use_attack;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=sfx_bottle;
+	FXOnTarget=chargeSpiralFast;
+	FXOnTargetColor=Green;
+	FXOnTarget=chargeSpiralFast_big;
+	FXOnTargetColor=Green;
+	FXOnTarget=splot_green;
+	FXOnTarget=sfx_loudSquish;
+[ActionAoE] 
+	ID=Ran_applyToxin; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	minRange = 0;
+	maxRange = 1;
+	bypassAll=true;
+	occupyAll=true;
+	canSelectEnemies=false;
+[AvAffecter]
+	ID=Ran_applyToxin; 
+	harmful=false;
+	actorValue=status_Ran_toxin;
+	magnitude=15 + 15*c:rank + c:MagAtk*1.5 + c:skill_Life*1.5;
+	duration=40;
+	chance=100;
+[AvAffecterAoE]
+	ID=Ran_applyToxin;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=Ran_applyBarbs; 
+	name=Apply Barbs;
+	icon=icon_Ran_applyBarbs;
+	mpCost=3 * d:mpCostMult + d:mpCostMod;
+	harmful=false;
+	tooltip=Apply vicious barbs to an ally's weapons for <icon=time>40, causing weapon attacks to deal 6<icon=HP> more damage and demoralize<n>for <icon=time><math=25 + 20*c:rank + c:MagAtk*1.5 + c:skill_Life*1.5>.;
+	rankUpTooltip=Each rank increases demoralize duration by <icon=time>20.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
+	attractAttention=false;
+	
+	XPCost=125;
+	XPCost=275;
+	XPCost=500;
+	XPCost=750;
+	
+	casterAnimation=use_attack;
+	maxRank=4;
+	canExceedMaxRankBy=1;
+	
+	FXOnCaster=sfx_bottle;
+	FXOnTarget=chargeSpiralFast;
+	FXOnTargetColor=Red;
+	FXOnTarget=chargeSpiralFast_big;
+	FXOnTargetColor=Red;
+	FXOnTarget=splot_red;
+	FXOnTarget=sfx_loudSquish;
+[ActionAoE] 
+	ID=Ran_applyBarbs; 
+	needsLoS = true;
+	needsLoE = false;
+	airborne=true;
+	arc=true;
+	minRange = 0;
+	maxRange = 1;
+	bypassAll=true;
+	occupyAll=true;
+	canSelectEnemies=false;
+[AvAffecter]
+	ID=Ran_applyBarbs; 
+	harmful=false;
+	actorValue=status_Ran_barbs;
+	magnitude=25 + 20*c:rank + c:MagAtk*1.5 + c:skill_Life*1.5;
+	duration=40;
+	chance=100;
+[AvAffecterAoE]
+	ID=Ran_applyBarbs;
+	cloneFrom=oneTile;
+	
+
+[Action] ID=Ran_smokeBalm; 
+	name=Smoke Balm;
+	icon=icon_Ran_smokeBalm;
+	mpCost=6 * d:mpCostMult + d:mpCostMod;
+	tooltip=Fill a square area with healing smoke that lasts for <icon=time>80, grants +25%<adjX=2><icon=PhysEva>, and heals<n><math=2 + c:MagAtk * 0.4 + c:skill_Life * 0.4><adjX=-4><icon=HP><adjX=-2> when first thrown and when ending your turn in it.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
+	
+	AIRatingBias = -999;
+	
+	XPCost=250;
+	XPCost=400;
+	XPCost=800;
+	
+	casterAnimation=swing;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	special=redoMovementAnalysis;
+	
+	FXOnTarget=swing;
+	FXOnTarget=throw_kraskbomb;
+[ActionAoE] 
+	ID=Ran_smokeBalm;
+	cloneFrom=adjacent;
+	maxRangeBonus = c:rank;
+	arc=true;
+	airborne=true;
+	canSelectActors=false;
+	fReq=canItemFit:smoke_balm1;
+[AvAffecter]
+	ID=Ran_smokeBalm; 
+	FXOnTile=step;
+	FXOnTile=bounce_kraskbomb;
+[AvAffecterAoE]
+	ID=Ran_smokeBalm;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Ran_smokeBalm; 
+	useCasterAsOriginForDirectionalEffects=false;
+	FXOnTile=mist_noOverlap_moving;
+	FXOnTile=mist_lowOverlap_moving;
+[AvAffecterAoE]
+	ID=Ran_smokeBalm;
+	cloneFrom=adjacentAndSelf;
+	maxRange=1.5;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Ran_smokeBalm; 
+	harmful=false;
+	actorValue=HP;
+	magnitude=2 + c:MagAtk * 0.4 + c:skill_Life * 0.4;
+	duration=-2;
+	chance=100;
+	element=magic;
+	element=life;
+	FXOnHit=sparkles;
+	FXOnHit=briefAuraSound;
+[AvAffecterAoE]
+	ID=Ran_smokeBalm;
+	cloneFrom=adjacentAndSelf;
+	maxRange=1.5;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Ran_smokeBalm; 
+	element=wind;
+[AvAffecterAoE]
+	ID=Ran_smokeBalm;
+	cloneFrom=adjacentAndSelf;
+	maxRange=1.5;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+[AvAffecter]
+	ID=Ran_smokeBalm; 
+	useCasterAsOriginForDirectionalEffects=false;
+	actorValue=summonItem;
+	magnitude=smoke_balm1;
+	duration=3 + c:MagAtk * 0.4 + c:skill_Life * 0.4;
+	FXOnTile=mist_noOverlap_moving;
+	FXOnTile=mist_lowOverlap_moving;
+[AvAffecterAoE]
+	ID=Ran_smokeBalm;
+	cloneFrom=adjacentAndSelf;
+	maxRange=1.5;
+	airborne=true;
+	arc=true;
+	bypassAll=true;
+	occupyAll=true;
+	
+[Action] ID=smoke_balm1_act; 
+	harmful=false;
+	attractAttention=false;
+	special=hideOnTurnOrder;
+[ActionAoE] 
+	ID=smoke_balm1_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=smoke_balm1_act; 
+	harmful=false;
+	actorValue=HP;
+	magnitude=c:rank;
+	duration=-2;
+	chance=100;
+	element=magic;
+	element=life;
+	FXOnHit=sparkles;
+	FXOnHit=briefAuraSound;
+[AvAffecterAoE]
+	ID=smoke_balm1_act;
+	cloneFrom=oneTile;
+	
+
+---------------"APPLY X" STATUS EFFECTS
+
+[ActorValue]
+ID=status_Ran_salve;
+name=Wpn Salve;
+icon=Salve;
+bubbleIcon=ranSalveStatus;
+harmfulMagnitude = -1;
+elementReactionModifiesDuration = true;
+damageNumberColor_Positive = DeepPink;
+damageNumberColor_Negative = DarkBlue;
+showDamageNumbers = false;
+showDamageNumbersSign = false;
+showDamageNumbersMagnitude = false;
+AIValue = 0.25;
+[ActorValueReaction]
+ID=status_Ran_salve; element=weaponBuff; action=status_Ran_salve_act;
+[ActorValueReaction]
+ID=status_Ran_salve; actorValues=status_Ran_toxin; aiRatingMod=-18;
+--the actual removal of salve is hardcoded
+[ActorValueReaction]
+ID=status_Ran_salve; actorValues=status_Ran_barbs; aiRatingMod=-18;
+--the actual removal of salve is hardcoded
+
+
+[Action] ID=status_Ran_salve_act;
+	icon=icon_Ran_applySalve;
+	harmful=false;
+	FXOnTarget=delay_tiny;
+	attractAttention=false;
+[ActionAoE] 
+	ID=status_Ran_salve_act;
+	cloneFrom=oneTile;
+	maxRange=12;
+[AvAffecter]
+	ID=status_Ran_salve_act; 
+	prefixIcon=<icon_tiny=icon_Ran_applySalve>;
+	actorValue=HP;
+	harmful=false;
+	magnitude=c:status_Ran_salve + t:skill_Life * 0.25;
+	duration=-2;
+	chance=100;
+	element=magic;
+	element=life;
+	FXOnTile=sparkles;
+	FXOnTileColor=DeepPink;
+	FXOnTile=briefAuraSound;
+[AvAffecterAoE]
+	ID=status_Ran_salve_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=status_Ran_salve_act; 
+	actorValue=cure;
+	harmful=false;
+	magnitude=1;
+	duration=-2;
+	chance=100 * m:tCurable;
+	visibleEvaluations=false;
+	visibleMiss=false;
+	FXOnHit=sidewardLines;
+	FXOnHitColor=Aqua;
+	FXOnHit=ping;
+	FXOnHitColor=Aqua;
+	FXOnHit=sfx_lowTingQuiet;
+[AvAffecterAoE]
+	ID=status_Ran_salve_act;
+	cloneFrom=oneTile;
+	
+
+[ActorValue]
+ID=status_Ran_toxin;
+name=Wpn Toxin;
+icon=Toxin;
+bubbleIcon=ranToxinStatus;
+harmfulMagnitude = -1;
+elementReactionModifiesDuration = true;
+damageNumberColor_Positive = Green;
+damageNumberColor_Negative = DarkBlue;
+showDamageNumbers = false;
+showDamageNumbersSign = false;
+showDamageNumbersMagnitude = false;
+AIValue = 0.5;
+[ActorValueReaction]
+ID=status_Ran_toxin; element=weaponBuff; action=status_Ran_toxin_act;
+[ActorValueReaction]
+ID=status_Ran_toxin; actorValues=status_Ran_salve; aiRatingMod=-18;
+--the actual removal of toxin is hardcoded
+[ActorValueReaction]
+ID=status_Ran_toxin; actorValues=status_Ran_barbs; aiRatingMod=-18;
+--the actual removal of toxin is hardcoded
+
+
+[Action] ID=status_Ran_toxin_act;
+	icon=icon_Ran_applyToxin;
+	FXOnTarget=delay_minor;
+	attractAttention=false;
+[ActionAoE] 
+	ID=status_Ran_toxin_act;
+	cloneFrom=oneTile;
+	maxRange=12;
+[AvAffecter]
+	ID=status_Ran_toxin_act; 
+	prefixIcon=<icon_tiny=icon_Ran_applyToxin>;
+	actorValue=poison;
+	magnitude=1;
+	duration=c:status_Ran_toxin;
+	chance=w:chance;
+	visibleMiss=false;
+	FXOnHit=ping;
+	FXOnHitColor=Green;
+	FXOnHit=WetSquish;
+[AvAffecterAoE]
+	ID=status_Ran_toxin_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=status_Ran_toxin_act; 
+	actorValue=randomDebuff;
+	magnitude=1;
+	duration=c:status_Ran_toxin;
+	chance=w:chance - 999*AVrxnImmune:poison;
+	visibleMiss=false;
+[AvAffecterAoE]
+	ID=status_Ran_toxin_act;
+	cloneFrom=oneTile;
+	
+
+
+[ActorValue]
+ID=status_Ran_barbs;
+name=Wpn Barbs;
+icon=Barbs;
+bubbleIcon=ranBarbsStatus;
+harmfulMagnitude = -1;
+elementReactionModifiesDuration = true;
+damageNumberColor_Positive = Green;
+damageNumberColor_Negative = DarkBlue;
+showDamageNumbers = false;
+showDamageNumbersSign = false;
+showDamageNumbersMagnitude = false;
+AIValue = 0.5;
+[ActorValueReaction]
+ID=status_Ran_barbs; element=weaponBuff; action=status_Ran_barbs_act;
+[ActorValueReaction]
+ID=status_Ran_barbs; actorValues=status_Ran_salve; aiRatingMod=-18;
+--the actual removal of toxin is hardcoded
+[ActorValueReaction]
+ID=status_Ran_barbs; actorValues=status_Ran_toxin; aiRatingMod=-18;
+--the actual removal of toxin is hardcoded
+
+
+[Action] ID=status_Ran_barbs_act;
+	icon=icon_Ran_applyBarbs;
+	FXOnTarget=delay_minor;
+	attractAttention=false;
+[ActionAoE] 
+	ID=status_Ran_barbs_act;
+	cloneFrom=oneTile;
+	maxRange=12;
+[AvAffecter]
+	ID=status_Ran_barbs_act; 
+	prefixIcon=<icon_tiny=icon_Ran_applyBarbs>;
+	actorValue=HP;
+	magnitude=-6;
+	duration=-2;
+	chance=w:chance;
+	visibleMiss=false;
+	element=physical;
+	FXOnHit=blood;
+	FXOnHit=sfx_slashingHit;
+[AvAffecterAoE]
+	ID=status_Ran_barbs_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=status_Ran_barbs_act; 
+	actorValue=morale;
+	magnitude=-1;
+	duration=c:status_Ran_barbs;
+	chance=w:chance;
+	visibleEvaluations=false;
+	visibleMiss=false;
+[AvAffecterAoE]
+	ID=status_Ran_barbs_act;
+	cloneFrom=oneTile;
+	
+
+
+
+
+
+
+
+
+

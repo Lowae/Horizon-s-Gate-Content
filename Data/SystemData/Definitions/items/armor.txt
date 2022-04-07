@@ -1,0 +1,1622 @@
+[ItemType]  name=Trigger Band Loot;
+ID=loot_trigger_band; sprite=779;
+value=150;
+pR=pR; itemCategory=armor; 
+special=replaceWith_toMake_list;
+toMake=band_elec;
+toMake=band_fire;
+toMake=band_ice;
+toMake=band_wind;
+toMake=band_life;
+toMake=band_ruin;
+
+
+[ItemType]  name=Weak Accessory Loot;
+ID=loot_accessory1; sprite=232; itemCategory=armor; 
+value=10;
+pR=pGreyD2;
+special=replaceWith_toMake_list;
+toMake=cloak;
+toMake=hood;
+toMake=cloak_hood;
+
+[ItemType]  name=Mediocre Accessory Loot;
+ID=loot_accessory2; sprite=232; itemCategory=armor; 
+value=30;
+pR=pGreyD;
+special=replaceWith_toMake_list;
+toMake=cloak_fine;
+toMake=hood_fine;
+toMake=cloak_hood_fine;
+toMake=loot_accessory3;
+
+[ItemType]  name=Nice Accessory Loot;
+ID=loot_accessory3; sprite=232; itemCategory=armor; 
+value=50;
+pR=pGrey2; 
+special=replaceWith_toMake_list;
+toMake=bracers_archer;
+toMake=scope;
+toMake=gauntlets;
+toMake=bracers_metal;
+toMake=bracers_heavy;
+toMake=gloves_volskarn;
+toMake=focus_stone;
+toMake=loot_accessory4;
+
+[ItemType]  name=Good Accessory Loot;
+ID=loot_accessory4; sprite=232; itemCategory=armor; 
+value=90;
+pR=pTeal; 
+special=replaceWith_toMake_list;
+toMake=cloak_ash;
+toMake=cloak_grounding;
+toMake=coat_winter;
+toMake=loot_trigger_band;
+toMake=loot_trigger_band;
+toMake=belt_dart;
+toMake=loot_accessory5;
+
+
+[ItemType]  name=Great Accessory Loot;
+ID=loot_accessory5; sprite=232; itemCategory=armor; 
+value=150;
+pR=pBlue; 
+special=replaceWith_toMake_list;
+toMake=cloak_dark;
+toMake=necklace_spellward;
+toMake=gauntlets_volskarn;
+toMake=band_fire_elec;
+toMake=band_ice_wind;
+toMake=band_life_ruin;
+toMake=cloak_war;
+toMake=necklace_lifebead;
+toMake=loot_accessory6;
+
+[ItemType]  name=Amazing Accessory Loot;
+ID=loot_accessory6; sprite=232; itemCategory=armor; 
+value=250;
+pR=pGold; 
+special=replaceWith_toMake_list;
+toMake=necklace_spellcatcher;
+toMake=scarf_wind;
+toMake=hood_blood;
+toMake=cloak_blood;
+toMake=cloak_bullgrig;
+toMake=necklace_viral;
+toMake=band_aer;
+toMake=stepladder_magic;
+toMake=gauntlets_power;
+toMake=acc_goldscabbard;
+toMake=gloves_silver;
+
+
+[ItemType]  name=Rare Armor;
+ID=loot_armor_rare2; sprite=228; itemCategory=armor; 
+value=800;
+special=replaceWith_toMake_list;
+toMake=armor_purp;
+toMake=armor_bonemeld;
+toMake=armor_aer;
+toMake=armor_volpryst;
+toMake=armor_laser;
+
+[ItemType]  name=Red Shirt;
+ID=shirt_red; sprite=192; itemCategory=3;
+ volume=3; value=4;
+pR=pCRed;
+	combineWith=shears; toMake=bandage;
+[ItemEffect]  
+ID=shirt_red; actorValue=PhysEva; magnitude=1; duration=-1;
+
+[ItemType]  name=Blue Shirt;
+ID=shirt_blue;
+cloneFrom=shirt_red;
+pR=pCBlue;
+
+[ItemType]  name=Dark Blue Shirt;
+ID=shirt_blueD;
+cloneFrom=shirt_red;
+pR=pCBlueD;
+[ItemType]  name=Green Shirt;
+ID=shirt_green;
+cloneFrom=shirt_red;
+pR=pCGreen;
+[ItemType]  name=Dark Red Shirt;
+ID=shirt_redD;
+cloneFrom=shirt_red;
+pR=pCRedD;
+[ItemType]  name=Purple Shirt;
+ID=shirt_purple;
+cloneFrom=shirt_red;
+pR=pCPurple;
+[ItemType]  name=Yellow Shirt;
+ID=shirt_yellow;
+cloneFrom=shirt_red;
+pR=pCYellow;
+[ItemType]  name=Grey Shirt;
+ID=shirt_grey;
+cloneFrom=shirt_red;
+pR=pCGrey;
+[ItemType]  name=White Shirt;
+ID=shirt_white;
+cloneFrom=shirt_red;
+pR=pCWhite;
+[ItemType]  name=Black Shirt;
+ID=shirt_black;
+cloneFrom=shirt_red;
+pR=pCBlack;
+
+[ItemType]  name=Bone Cuirass;
+description=Cuirass reinforced with bone.;
+ID=armor_bone; sprite=228; itemCategory=3;
+weight=4; volume=15; value=0;
+pR=pBoneDark;
+combineWith=furnace_lit; toMake=bones1; 
+combineWith=furnace2_lit; toMake=bones1; 
+combineWith=furnace_everlit1; toMake=bones1; 
+combineWith=furnace_everlit2; toMake=bones1; 
+[ItemEffect]
+ID=armor_bone; actorValue=PhysDef; magnitude=1; duration=-1;
+[ItemEffect]  
+ID=armor_bone; actorValue=skill_Ruin; magnitude=1; duration=-1;
+[ItemReaction] 
+ID=armor_bone; element=bonemeld; newID=armor_bonemeld; fx=dust_bone;
+[JournalEntry]
+ID=item_armor_bone;
+category=equipment; halfPage=true; rarity=1;
+title=Bone Cuirass;
+text=<itemBig=armor_bone><title=Bone Cuirass><brAdj=>Effective, macabre armor. It's a bit too barbaric for anyone to want to buy it from you, but it's still serviceable protection.;
+
+
+[ItemType]  name=Bonemeld Armor;
+description=Bone armor fitted & strengthened by magic.;
+ID=armor_bonemeld; sprite=198; itemCategory=3;
+weight=4; volume=15; value=170;
+pR=pBoneDark;
+[ItemEffect]
+ID=armor_bonemeld; actorValue=PhysDef; magnitude=1; duration=-1;
+[ItemEffect]  
+ID=armor_bonemeld; actorValue=MagDef; magnitude=1; duration=-1;
+[ItemEffect]  
+ID=armor_bonemeld; actorValue=skill_Ruin; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_armor_bonemeld;
+category=equipment; halfPage=true; rarity=2;
+title=Bonemeld Armor;
+text=<itemBig=armor_bonemeld><title=Bonemeld Armor><brAdj=>Ruin magic has shaped this armor & layered the bone for extra protection. In a civilized place you might be condemned for owning this.;
+
+
+[ItemType]  name=Mystic Maille;
+description=Mystical chain shirt that helps its wearer resist magic effects.;
+ID=armor_purp; sprite=193; itemCategory=3;
+weight=8; volume=10; value=2400;
+pR=pPurple;
+[ItemEffect]  
+ID=armor_purp; actorValue=PhysDef; magnitude=1; duration=-1;
+[ItemEffect]  
+ID=armor_purp; actorValue=MagDef; magnitude=2; duration=-1;
+[ItemEffect]  
+ID=armor_purp; actorValue=MagEva; magnitude=10; duration=-1;
+[JournalEntry]
+ID=item_armor_purp;
+category=equipment; halfPage=true; rarity=3;
+title=Mystic Maille;
+text=<itemBig=armor_purp><title=Mystic Maille><brAdj=>This otherwise unremarkable chain shirt shines with a pale light. Through unknown means, it repels magic.;
+
+[ItemType]  name=Iron Mail;
+description=Metal armor granting basic protection.;
+ID=armor_iron; sprite=193; itemCategory=3;
+weight=6; volume=15; value=25;
+pR=pIron;
+combineWith=furnace_lit; toMake=iron_chunk; 
+combineWith=furnace2_lit; toMake=iron_chunk;
+combineWith=furnace_everlit1; toMake=iron_chunk; 
+combineWith=furnace_everlit2; toMake=iron_chunk; 
+[ItemEffect]  
+ID=armor_iron; actorValue=PhysDef; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_armor_iron;
+category=equipment; halfPage=true;
+title=Iron Mail;
+text=<itemBig=armor_iron><title=Iron Mail><brAdj=>Hundreds of iron rings comprise this mail shirt. It wards off cuts and stabs, but does little to lessen the impact of the blow.;
+
+[ItemType]  name=Steel Hauberk;
+description=Metal armor granting good protection.;
+ID=armor_steel; sprite=194; itemCategory=3;
+weight=10; volume=15; value=125;
+pR=pSteel;
+combineWith=furnace_lit; toMake=steel_bar; 
+combineWith=furnace2_lit; toMake=steel_bar;
+combineWith=furnace_everlit1; toMake=steel_bar; 
+combineWith=furnace_everlit2; toMake=steel_bar;
+[ItemEffect]  
+ID=armor_steel; actorValue=PhysDef; magnitude=1; duration=-1;
+[ItemEffect]  
+ID=armor_steel; actorValue=MagDef; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_armor_steel;
+category=equipment; halfPage=true;
+title=Steel Hauberk;
+text=<itemBig=armor_steel><title=Steel Hauberk><brAdj=>Fine mail of steel that grants significant protection. It would take exceptional strength and sharpness to pierce it.;
+
+[ItemType]  name=Mythril Vest;
+description=Chain shirt of fine mythril.;
+ID=armor_mythril; sprite=199; itemCategory=3;
+weight=8; volume=13; value=900;
+pR=pMythril;
+combineWith=furnace_lit; toMake=mythril_chunk; 
+combineWith=furnace2_lit; toMake=mythril_chunk;
+combineWith=furnace_everlit1; toMake=mythril_chunk; 
+combineWith=furnace_everlit2; toMake=mythril_chunk;
+[ItemEffect]
+ID=armor_mythril; actorValue=PhysDef; magnitude=2; duration=-1;
+[ItemEffect]
+ID=armor_mythril; actorValue=MagDef; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_armor_mythril;
+category=equipment; halfPage=true; rarity=1;
+title=Mythril Vest;
+text=<itemBig=armor_mythril><title=Mythril Vest><brAdj=>The lightest and strongest armor money can buy. Only worn by elite soldiers of the wealthiest groups.;
+
+[ItemType]  name=Reactor Plate;
+description=Platemail specially built to deflect magical energy.;
+ID=armor_laser; sprite=200; itemCategory=3;
+weight=10; volume=15; value=2500;
+pR=pLaser;
+pB=pLaserHilt;
+combineWith=furnace_lit; toMake=laser_chunk; 
+combineWith=furnace2_lit; toMake=laser_chunk;
+combineWith=furnace_everlit1; toMake=laser_chunk; 
+combineWith=furnace_everlit2; toMake=laser_chunk;
+[ItemEffect]  
+ID=armor_laser; actorValue=PhysDef; magnitude=2; duration=-1;
+[ItemEffect]  
+ID=armor_laser; actorValue=MagDef; magnitude=3; duration=-1;
+[ItemEffect]  
+ID=armor_laser; actorValue=PhysEva; magnitude=-3; duration=-1;
+[JournalEntry]
+ID=item_armor_laser;
+category=equipment; halfPage=true; rarity=1;
+title=Reactor Plate;
+text=<itemBig=armor_laser><title=Reactor Plate><brAdj=>This armor is inlaid with raw laser, which appears to repel harmful magic. It's uncomfortably warm, though.;
+
+[ItemType]  name=Electric Armor;
+description=Dangerous-looking armor that augments the user's electrical prowess.;
+ID=armor_elec; sprite=201; itemCategory=3;
+weight=10; volume=15; value=1250;
+pR=pShockWeaponHilt;
+pB=pShockWeapon;
+combineWith=furnace_lit; toMake=shock_chunk; 
+combineWith=furnace2_lit; toMake=shock_chunk;
+combineWith=furnace_everlit1; toMake=shock_chunk; 
+combineWith=furnace_everlit2; toMake=shock_chunk;
+[ItemEffect]  
+ID=armor_elec; actorValue=PhysDef; magnitude=2; duration=-1;
+[ItemEffect]  
+ID=armor_elec; actorValue=skill_Elec; magnitude=1; duration=-1;
+[ItemEffect]  
+ID=armor_elec; actorValue=PhysEva; magnitude=-5; duration=-1;
+[JournalEntry]
+ID=item_armor_elec;
+category=equipment; halfPage=true; rarity=1;
+title=Electric Armor;
+text=<itemBig=armor_elec><title=Electric Armor><brAdj=>Ingenuity can be risky- but never more risky than wearing this sparking piece of plate. The raw electrical power might still be worth it.;
+
+[ItemType]  name=Fang Armor;
+description=Jagged armor that grants immunity to Poison.;
+ID=armor_fang; sprite=201; itemCategory=3;
+weight=9; volume=15; value=150;
+pR=pFangWeaponHilt;
+pB=pFangWeapon;
+combineWith=furnace_lit; toMake=fang_spidest; 
+combineWith=furnace2_lit; toMake=fang_spidest;
+combineWith=furnace_everlit1; toMake=fang_spidest; 
+combineWith=furnace_everlit2; toMake=fang_spidest;
+[ItemEffect]  
+ID=armor_fang; actorValue=PhysDef; magnitude=1; duration=-1;
+[ItemEffect]  
+ID=armor_fang; actorValue=MagDef; magnitude=1; duration=-1;
+[ItemEffect]  
+ID=armor_fang; actorValue=PhysEva; magnitude=-5; duration=-1;
+[ItemReaction] 
+ID=armor_fang; actorValues=poison; damageMultiplier=0;
+[JournalEntry]
+ID=item_armor_fang;
+category=equipment; halfPage=true; rarity=1;
+title=Fang Armor;
+text=<itemBig=armor_fang><title=Fang Armor><brAdj=>This ramshackle piece of protective gear is bulky and awkward, but at least it cannot be penetrated by poison.;
+
+
+
+[ItemType]  name=Ironice Plate;
+description=Heavy armor made from Ironice. Uncomfortable, but effective.;
+ID=armor_ironice; sprite=202; itemCategory=3;
+weight=10; volume=15; value=4000;
+pR=pIronice;
+combineWith=furnace_lit; toMake=ironice_chunk; 
+combineWith=furnace2_lit; toMake=ironice_chunk;
+combineWith=furnace_everlit1; toMake=ironice_chunk; 
+combineWith=furnace_everlit2; toMake=ironice_chunk;
+[ItemEffect]  
+ID=armor_ironice; actorValue=PhysDef; magnitude=4; duration=-1;
+[ItemEffect]  
+ID=armor_ironice; actorValue=MagDef; magnitude=2; duration=-1;
+[ItemEffect]  
+ID=armor_ironice; actorValue=PhysEva; magnitude=-10; duration=-1;
+[JournalEntry]
+ID=item_armor_ironice;
+category=equipment; halfPage=true; rarity=1;
+title=Ironice Plate;
+text=<itemBig=armor_ironice><title=Ironice Plate><brAdj=>It's near impossible to pierce- which is good, because it's also near impossible to dodge while wearing it. The cold doesn't help.;
+
+[ItemType]  name=Wind Mail;
+description=Armor that seems to deflect blows.;
+ID=armor_wind; sprite=203; itemCategory=3;
+weight=8; volume=15; value=1800;
+pR=pWhistle;
+combineWith=furnace_lit; toMake=whistle_chunk; 
+combineWith=furnace2_lit; toMake=whistle_chunk;
+combineWith=furnace_everlit1; toMake=whistle_chunk; 
+combineWith=furnace_everlit2; toMake=whistle_chunk;
+[ItemEffect]  
+ID=armor_wind; actorValue=PhysDef; magnitude=2; duration=-1;
+[ItemEffect]  
+ID=armor_wind; actorValue=MagDef; magnitude=1; duration=-1;
+[ItemEffect]  
+ID=armor_wind; actorValue=PhysEva; magnitude=8; duration=-1;
+[JournalEntry]
+ID=item_armor_wind;
+category=equipment; halfPage=true; rarity=1;
+title=Wind Mail;
+text=<itemBig=armor_wind><title=Wind Mail><brAdj=>In addition to being light, it seems to have an almost magical ability to turn away attacks. Perhaps it's the wind you hear whistling through it...?;
+
+[ItemType]  name=Corpryst Armor;
+description=Bulky armor of Corpryst stone.;
+ID=armor_corpryst; sprite=224; itemCategory=3;
+weight=10; volume=15; value=750;
+pR=pCorpryst;
+combineWith=furnace_lit; toMake=corpryst; 
+combineWith=furnace2_lit; toMake=corpryst;
+combineWith=furnace_everlit1; toMake=corpryst; 
+combineWith=furnace_everlit2; toMake=corpryst;
+[ItemEffect]
+ID=armor_corpryst; actorValue=PhysDef; magnitude=2; duration=-1;
+[ItemEffect]
+ID=armor_corpryst; actorValue=MagDef; magnitude=1; duration=-1;
+[ItemEffect]
+ID=armor_corpryst; actorValue=PhysEva; magnitude=-10; duration=-1;
+[JournalEntry]
+ID=item_armor_corpryst;
+category=equipment; halfPage=true; rarity=2;
+title=Corpryst Armor;
+text=<itemBig=armor_corpryst><title=Corpryst Armor><brAdj=>Chunky plates of Corpryst that provide solid protection. Usually worn by Diecast from the strange realm of Graven.;
+
+[ItemType]  name=Coral Armor;
+description=Armor made from chunks of rock coral.;
+ID=armor_coral; sprite=204; itemCategory=3;
+weight=6; volume=15; value=120;
+pR=pCoral; pB=pCoralHilt;
+combineWith=furnace_lit; toMake=coral; 
+combineWith=furnace2_lit; toMake=coral;
+combineWith=furnace_everlit1; toMake=coral; 
+combineWith=furnace_everlit2; toMake=coral;
+[ItemEffect]  
+ID=armor_coral; actorValue=PhysDef; magnitude=2; duration=-1;
+[ItemEffect]  
+ID=armor_coral; actorValue=PhysEva; magnitude=-4; duration=-1;
+[JournalEntry]
+ID=item_armor_coral;
+category=equipment; halfPage=true; rarity=1;
+title=Coral Armor;
+text=<itemBig=armor_coral><title=Coral Armor><brAdj=>Chunks of rock coral placed strategically make for a suprisingly strong defense. Favored armor of Crub, for good reason.;
+
+[ItemType]  name=Volskarn Mail;
+description=Metal armor with Volskarn. Easy to augment.;
+ID=armor_volskarn; sprite=193; itemCategory=3;
+weight=6; volume=15; value=800;
+pR=pVolskarn;
+special=enhanceSlots_3;
+combineWith=furnace_lit; toMake=volskarn_chunk; 
+combineWith=furnace2_lit; toMake=volskarn_chunk;
+combineWith=furnace_everlit1; toMake=volskarn_chunk; 
+combineWith=furnace_everlit2; toMake=volskarn_chunk; 
+[ItemEffect]  
+ID=armor_volskarn; actorValue=PhysDef; magnitude=1; duration=-1; 
+[ItemEffect]  
+ID=armor_volskarn; actorValue=MagDef; magnitude=1; duration=-1;
+
+[JournalEntry]
+ID=item_armor_volskarn;
+category=equipment; halfPage=true; rarity=1;
+title=Volskarn Mail;
+text=<itemBig=armor_volskarn><title=Volskarn Mail><brAdj=>In addition to absorbing some of the magic coming your way, Volskarn armor can house more augment materials. When properly augmented, it performs better than normally superior armors.;
+
+[ItemType]  name=Shellworm Plate;
+description=Nearly impenetrable, but extremely heavy armor.;
+ID=armor_shellworm; sprite=194; itemCategory=3;
+weight=12; volume=15; value=950;
+pR=pPurpleD;
+combineWith=furnace_lit; toMake=shellworm_plate; 
+combineWith=furnace2_lit; toMake=shellworm_plate;
+combineWith=furnace_everlit1; toMake=shellworm_plate; 
+combineWith=furnace_everlit2; toMake=shellworm_plate; 
+[ItemEffect]  
+ID=armor_shellworm; actorValue=PhysDef; magnitude=5; duration=-1;
+[ItemEffect]  
+ID=armor_shellworm; actorValue=moveDistance; magnitude=-1; duration=-1;
+
+[JournalEntry]
+ID=item_armor_shellworm;
+category=equipment; halfPage=true; rarity=1;
+title=Shellworm Plate;
+text=<itemBig=armor_shellworm><title=Shellworm Plate><brAdj=>Created from the husk of a Shellworm, this armor is amazingly strong but widely disregarded for its clunkiness. The plate it is made from is completely inflexible and weighs the wearer down significantly.;
+
+[ItemType]  name=Aerstone Plate;
+description=Thick armor crafted from material lighter than air.;
+ID=armor_aer; sprite=224; itemCategory=3;
+weight=0; volume=15; value=900;
+pR=pBW;
+[ItemEffect]  
+ID=armor_aer; actorValue=PhysDef; magnitude=3; duration=-1;
+[ItemEffect]  
+ID=armor_aer; actorValue=MagDef; magnitude=1; duration=-1;
+[ItemEffect]  
+ID=armor_aer; actorValue=jumpDistance; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_armor_aer;
+category=equipment; halfPage=true; rarity=1;
+title=Aerstone Plate;
+text=<itemBig=armor_aer><title=Aerstone Plate><brAdj=>It's rare that material as valuable as Aerstone is turned to such mundane purposes as armor, but when it is, it's exceedingly effective.;
+
+
+[ItemType]  name=Robe of the Elements;
+description=Bulky robe with trigger stones woven within.;
+ID=armor_robe_element; sprite=205; itemCategory=3;
+weight=4; volume=15; value=2500;
+pR=p68; pB=p81; special=enhanceSlots_1;
+[ItemEffect]
+ID=armor_robe_element; actorValue=skill_Fire; magnitude=1; duration=-1;
+[ItemEffect]
+ID=armor_robe_element; actorValue=skill_Ice; magnitude=1; duration=-1;
+[ItemEffect]
+ID=armor_robe_element; actorValue=skill_Elec; magnitude=1; duration=-1;
+[ItemEffect]
+ID=armor_robe_element; actorValue=skill_Wind; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_armor_robe_element;
+category=equipment; halfPage=true; rarity=2;
+title=Robe of the Elements;
+text=<itemBig=armor_robe_element><title=Robe of the Elements><brAdj=>Thick robe often awarded to Elementalist teachers. The sleeves are lined with trigger stones, each ready to be used by the wearer, and each padded in such a way as to not interfere with eachother. Unfortunately this bulk prevents use with proper armor, and makes it less augmentable than usual.;
+
+
+[ItemType]  name=Aldleaf Clothes;
+description=Makeshift clothes fashioned from wide, sturdy leaves stitched together.;
+ID=armor_leaf; sprite=195; itemCategory=3;
+weight=4; volume=3; value=8;
+pR=p57;
+	combineWith=shears; toMake=aldleaf;
+[ItemEffect]  
+ID=armor_leaf; actorValue=PhysEva; magnitude=6; duration=-1;
+[JournalEntry]
+ID=item_armor_leaf;
+category=equipment; halfPage=true; rarity=1;
+title=Aldleaf Clothes;
+text=<itemBig=armor_leaf><title=Aldleaf Clothes><brAdj=>Aldleaf may be sturdy for a plant, but it's not sturdy for armor. Still, this is better than nothing.;
+[ItemType]  name=Spidesilk Shirt;
+description=Cloth coated in webbing for added protection.;
+ID=armor_silk; sprite=196; itemCategory=3;
+journalID=item_silk_spide;
+weight=4; volume=3; value=30;
+pR=pGrey;
+combineWith=shears; toMake=silk_spide;
+combineWith=furnace_lit; toMake=silk_spide; 
+combineWith=furnace2_lit; toMake=silk_spide; 
+combineWith=furnace_everlit1; toMake=silk_spide; 
+combineWith=furnace_everlit2; toMake=silk_spide; 
+[ItemEffect]  
+ID=armor_silk; actorValue=PhysEva; magnitude=18; duration=-1;
+
+[ItemType]  name=Spellward Necklace;
+description=Necklace that repels incoming energy.; 
+weight=0; volume=1; value=180;
+itemCategory=4;
+ID=necklace_spellward; sprite=161; pR=pGold; pB=pGreyD;
+[ItemEffect]  
+ID=necklace_spellward; actorValue=MagDef; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_necklace_spellward;
+category=equipment; halfPage=true; rarity=1;
+title=Spellward Necklace;
+text=<itemBig=necklace_spellward><title=Spellward Necklace><brAdj=>Magic energy is directed outward, providing minor protection. This is standard wear for Seartial's magic abuse investigators.;
+
+[ItemType]  name=Spellcatcher Amulet;
+description=Necklace that draws incoming energy inward and absorbs it.; 
+weight=0; volume=1; value=850;
+itemCategory=4;
+ID=necklace_spellcatcher; sprite=161; pR=pSilver; pB=pGold;
+[ItemEffect]  
+ID=necklace_spellcatcher; actorValue=MagDef; magnitude=2; duration=-1;
+[JournalEntry]
+ID=item_necklace_spellcatcher;
+category=equipment; halfPage=true; rarity=2;
+title=Spellcatcher Amulet;
+text=<itemBig=necklace_spellcatcher><title=Spellcatcher Amulet><brAdj=>Directs magic inward to its core, where it is harmlessly absorbed. Council members often wear these to protect against mage-assassins.;
+
+[ItemType]  name=Admiral's Locket;
+ID=necklace_admiral_locket; sprite=161; pR=pGold; pB=p81;
+description=Magic locket once owned by the High Admiral of Dominio.; 
+weight=0; volume=1; value=850;
+itemCategory=4;
+[ItemEffect]
+ID=necklace_admiral_locket; actorValue=MagDef; magnitude=2; duration=-1;
+[ItemEffect]
+ID=necklace_admiral_locket; actorValue=actTime; magnitude=-1; duration=-1;
+[JournalEntry]
+ID=item_necklace_admiral_locket;
+category=equipment; halfPage=true; rarity=3; rewardMod=-300;
+title=Admiral's Locket;
+text=<itemBig=necklace_admiral_locket><title=Admiral's Locket><brAdj=>Picture locket that holds a small painting, which is now bloodstained beyond all recognition. Absorbs magic as capably as any Spellcatcher Amulet.;
+
+[ItemType]  name=Hood;
+ID=hood; sprite=235;
+description=A basic cloth head covering.; 
+weight=0; volume=1; value=8;
+itemCategory=4; 
+pR=pGreen3;
+combineWith=shears; toMake=bandage;
+[ItemEffect]
+ID=hood; actorValue=PhysEva; magnitude=3; duration=-1;
+[JournalEntry]
+ID=item_hood;
+category=equipment; halfPage=true;
+title=Hood;
+text=<itemBig=hood><title=Hood><brAdj=>Some hoods may be worn for fashion or religious purposes, but this ragged hood is surely only for protection from the weather.;
+
+[ItemType]  name=Fine Hood;
+ID=hood_fine; sprite=235;
+description=A comfy cloth head covering.; 
+weight=0; volume=1; value=15;
+itemCategory=4; 
+pR=p8;
+combineWith=shears; toMake=bandage;
+[ItemEffect]
+ID=hood_fine; actorValue=PhysEva; magnitude=5; duration=-1;
+[JournalEntry]
+ID=item_hood_fine;
+category=equipment; halfPage=true;
+title=Fine Hood;
+text=<itemBig=hood_fine><title=Fine Hood><brAdj=>This comfortable hood likely belonged to a traveling merchant, or some other well-to-do wanderer.;
+
+[ItemType]  name=Blood Shawl;
+ID=hood_blood; sprite=235;
+description=Shawl soaked in magic-repelling blood.; 
+journalID=journal_hood_blood;
+weight=0; volume=1; value=800;
+itemCategory=4; 
+pR=pCRed;
+[ItemEffect]
+ID=hood_blood; actorValue=PhysEva; magnitude=3; duration=-1;
+[ItemEffect]
+ID=hood_blood; actorValue=MagEva; magnitude=12; duration=-1;
+[JournalEntry]
+ID=journal_hood_blood;
+category=equipment; halfPage=true; rarity=3; rewardMod = -600;
+title=Blood Mantle;
+text=<itemBig=hood_blood><itemBig=cloak_blood><title=Blood Mantle><brAdj=>The blood of the Koverra beast has odd, magic-repelling properties. Hunting one is a monumental feat, but by doing so items like this are made.;
+
+[ItemType]  name=Blood Cloak;
+ID=cloak_blood; sprite=229;
+journalID=journal_hood_blood;
+description=Cloak soaked in magic-repelling blood.; 
+weight=0; volume=3; value=800;
+itemCategory=4; 
+pR=pCRed;
+combineWith=hood_blood; toMake=cloak_hood_blood; consumeOnCombine=true;
+[ItemEffect]
+ID=cloak_blood; actorValue=PhysEva; magnitude=4; duration=-1;
+[ItemEffect]
+ID=cloak_blood; actorValue=MagEva; magnitude=12; duration=-1;
+
+[ItemType]  name=Blood Mantle;
+ID=cloak_hood_blood; sprite=236;
+description=Cloak & hood soaked in magic-repelling blood.; 
+journalID=journal_hood_blood;
+weight=0; volume=3; value=1600;
+itemCategory=4; 
+pR=pCRed;
+[ItemEffect]
+ID=cloak_hood_blood; actorValue=PhysEva; magnitude=7; duration=-1;
+[ItemEffect]
+ID=cloak_hood_blood; actorValue=MagEva; magnitude=20; duration=-1;
+
+
+[ItemType]  name=Cloak;
+ID=cloak; sprite=229;
+description=A thick cloak of coarse fabric.; 
+weight=0; volume=3; value=14;
+itemCategory=4; 
+pR=pGreen3;
+combineWith=hood; toMake=cloak_hood; consumeOnCombine=true;
+combineWith=shears; toMake=bandage;
+[ItemEffect]
+ID=cloak; actorValue=PhysEva; magnitude=6; duration=-1;
+[JournalEntry]
+ID=item_cloak;
+category=equipment; halfPage=true;
+title=Cloak;
+text=<itemBig=cloak><title=Cloak><brAdj=>Cloth draped over the shoulders, made from the wool of an ur-camelid. This cloak lacks a hood, but is still serviceable.;
+
+[ItemType]  name=Hooded Cloak;
+ID=cloak_hood; sprite=236;
+description=Cloak & hood of coarse fabric.; 
+weight=0; volume=3; value=22;
+itemCategory=4; 
+pR=pGreen3;
+combineWith=shears; toMake=bandage;
+[ItemEffect]
+ID=cloak_hood; actorValue=PhysEva; magnitude=9; duration=-1;
+[JournalEntry]
+ID=item_cloak_hood;
+category=equipment; halfPage=true;
+title=Hooded Cloak;
+text=<itemBig=cloak_hood><title=Hooded Cloak><brAdj=>A cam-wool cloak & hood. Poor quality, but beggars can't be choosers (and you've seen many a beggar wearing cloth just like this).;
+
+[ItemType]  name=Fine Cloak;
+ID=cloak_fine; sprite=229;
+description=A light, well-made cloak.; 
+weight=0; volume=3; value=25;
+itemCategory=4; 
+pR=p8;
+combineWith=hood_fine; toMake=cloak_hood_fine; consumeOnCombine=true;
+combineWith=shears; toMake=bandage;
+[ItemEffect]  
+ID=cloak_fine; actorValue=PhysEva; magnitude=8; duration=-1;
+[JournalEntry]
+ID=item_cloak_fine;
+category=equipment; halfPage=true;
+title=Fine Cloak;
+text=<itemBig=cloak_fine><title=Fine Cloak><brAdj=>A fine cam-wool cloak inlaid with comfortable linen. Cozy, yet does not restrict your movement.;
+
+
+[ItemType]  name=Fine Hooded Cloak;
+ID=cloak_hood_fine; sprite=236;
+description=Cloak & hood of superior quality.; 
+weight=0; volume=3; value=40;
+itemCategory=4; 
+pR=p8;
+combineWith=shears; toMake=bandage;
+[ItemEffect]
+ID=cloak_hood_fine; actorValue=PhysEva; magnitude=13; duration=-1;
+[JournalEntry]
+ID=item_cloak_hood_fine;
+category=equipment; halfPage=true;
+title=Fine Hooded Cloak;
+text=<itemBig=cloak_hood_fine><title=Fine Hooded Cloak><brAdj=>A cloak & hood befitting someone of high station. It serves well in both fashion and function.;
+
+[ItemType]  name=Dark Mantle;
+ID=cloak_dark; sprite=230;
+description=Cape that obscures the wearer.; 
+weight=0; volume=3; value=760;
+itemCategory=4; 
+pR=pPurpleD;
+pB=pPurpleD;
+[ItemEffect]
+ID=cloak_dark; actorValue=PhysEva; magnitude=16; duration=-1;
+[ItemEffect]
+ID=cloak_dark; actorValue=MagEva; magnitude=5; duration=-1;
+[JournalEntry]
+ID=item_cloak_dark;
+category=equipment; halfPage=true; rarity=2;
+title=Dark Mantle;
+text=<itemBig=cloak_dark><title=Dark Mantle><brAdj=>Sinister-looking, but still a very practical piece of clothing. The material and design is foreign.;
+
+[ItemType]  name=Aer Mantle;
+ID=cloak_aer; sprite=237;
+description=Silverweave cloak with aerstone-infused clasp.; 
+weight=0; volume=3; value=2500;
+itemCategory=4; 
+pR=p8;
+pB=pBW;
+pG=pGold;
+[ItemEffect]
+ID=cloak_aer; actorValue=PhysEva; magnitude=13; duration=-1;
+[ItemEffect]
+ID=cloak_aer; actorValue=jumpDistance; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_cloak_aer;
+category=equipment; halfPage=true; rarity=2;
+title=Aer Mantle;
+text=<itemBig=cloak_aer><title=Aer Mantle><brAdj=>A rarity beloved by scouts and hunters, this cloak provides excellent protection (thanks to its hardy silverweave) while also improving mobility (thanks to its golden Aerstone clasp). ;
+
+
+
+[ItemType]  name=Ash Cape;
+ID=cloak_ash; sprite=231;
+description=Flame-retardant covering that grants 40% fire resist.; 
+weight=1; volume=3; value=200;
+itemCategory=4; 
+pR=pGreyD2;
+[ItemEffect]
+ID=cloak_ash; actorValue=PhysEva; magnitude=7; duration=-1;
+[ItemReaction]
+ID=cloak_ash; element=fire; damageMultiplier=0.6;
+[JournalEntry]
+ID=item_cloak_ash;
+category=equipment; halfPage=true; rarity=2;
+title=Ash Cape;
+text=<itemBig=cloak_ash><title=Ash Cape><brAdj=>Chemically treated cloth that resists fire. These are slightly infamous for being worn by soldiers or brigands using scorched earth tactics.;
+
+[ItemType]  name=War Cloak;
+ID=cloak_war; sprite=233;
+description=Thick cloak with metal plates to deflect attacks.; 
+weight=3; volume=5; value=1200;
+itemCategory=4;
+pR=pCRed;
+pB=pGreyD;
+[ItemEffect]
+ID=cloak_war; actorValue=PhysDef; magnitude=1; duration=-1;
+[ItemEffect]
+ID=cloak_war; actorValue=PhysEva; magnitude=7; duration=-1;
+[JournalEntry]
+ID=item_cloak_war;
+category=equipment; halfPage=true; rarity=2;
+title=War Cloak;
+text=<itemBig=cloak_war><title=War Cloak><brAdj=>The thickest possible fabric with metal plates overlaid. Often worn by Seartial's Great Wardens in dire circumstances.;
+
+[ItemType]  name=Grounding Cape;
+ID=cloak_grounding; sprite=233;
+description=Rubbery cloth with metal lining that grants 40% electric resist.; 
+weight=1; volume=4; value=200;
+itemCategory=4;
+pR=pShockWeaponHilt;
+pB=pShockWeapon;
+[ItemEffect]
+ID=cloak_grounding; actorValue=PhysEva; magnitude=7; duration=-1;
+[ItemReaction]
+ID=cloak_grounding; element=lightning; damageMultiplier=0.6;
+[JournalEntry]
+ID=item_cloak_grounding;
+category=equipment; halfPage=true; rarity=1;
+title=Grounding Cape;
+text=<itemBig=cloak_grounding><title=Grounding Cape><brAdj=>The rubbery 'cloth' is synthetic, and produced at great expense. It only grants partial protection, so it's not surprising these are rare.;
+
+[ItemType]  name=Winter Coat;
+ID=coat_winter; sprite=232;
+description=Thick, well-made coat that grants 40% ice resist.; 
+weight=1; volume=4; value=200;
+itemCategory=4;
+pR=p46;
+[ItemEffect]
+ID=coat_winter; actorValue=PhysEva; magnitude=7; duration=-1;
+[ItemReaction]
+ID=coat_winter; element=ice; damageMultiplier=0.6;
+
+[JournalEntry]
+ID=item_coat_winter;
+category=equipment; halfPage=true; rarity=1;
+title=Winter Coat;
+text=<itemBig=coat_winter><title=Winter Coat><brAdj=>Although made of mundane materials, it provides almost magical levels of protection against the cold. Such craftsmanship is necessary to survive the highest peaks of Rumane.;
+
+[ItemType]  name=Firestorm Cloak;
+ID=cloak_firestorm; sprite=234;
+description=Cloak coated in sparkling fire triggers.; 
+weight=1; volume=3; value=5500;
+itemCategory=4;
+pR=pRed3;
+pB=pR;
+action=cloak_firestorm_act;
+[ItemLight]
+ID=cloak_firestorm; red=1; blue=0.3; green=0.5; alpha=0.25; size=0.12; flicker=0.01;
+[ItemEffect]
+ID=cloak_firestorm; actorValue=PhysEva; magnitude=8; duration=-1;
+[ItemEffect]
+ID=cloak_firestorm; actorValue=MagEva; magnitude=4; duration=-1;
+[ItemEffect]
+ID=cloak_firestorm; actorValue=skill_Fire; magnitude=1; duration=-1;
+[ItemReaction]
+ID=cloak_firestorm; element=moveAbilUsed; action=cloak_firestorm_act_onMoveAbil;
+[JournalEntry]
+ID=item_cloak_firestorm;
+category=equipment; halfPage=true; rarity=4; rewardMod=250;
+title=Firestorm Cloak;
+text=<itemBig=cloak_firestorm><title=Firestorm Cloak><brAdj=>An amazingly well-crafted cloak that leaves behind flames whenever the wearer uses a movement ability. Can also be used to make the fire triggers all burst in quick succession, propelling the user forward in a fiery blaze.;
+
+[ItemType]  name=Bullgrig Mantle;
+ID=cloak_bullgrig; sprite=234;
+description=Scaly cloak that grants immunity to Poison.; 
+weight=1; volume=3; value=950;
+itemCategory=4;
+pR=pBuralk;
+pB=pG;
+[ItemEffect]
+ID=cloak_bullgrig; actorValue=PhysEva; magnitude=8; duration=-1;
+[ItemEffect]
+ID=cloak_bullgrig; actorValue=MagEva; magnitude=4; duration=-1;
+[ItemReaction] 
+ID=cloak_bullgrig; actorValues=poison; damageMultiplier=0;
+[JournalEntry]
+ID=item_cloak_bullgrig;
+category=equipment; halfPage=true; rarity=2;
+title=Bullgrig Mantle;
+text=<itemBig=cloak_bullgrig><title=Bullgrig Mantle><brAdj=>Hide of the grotesque Bullgrig, complete with emptied venom sacs. It provides solid protection and is impervious to poison.;
+
+[ItemType]  name=Torsk Cape;
+ID=cloak_turtle; sprite=238;
+description=Cloak protected by Amnitorsk scutes. Reduces damage from back attacks by 20%.; 
+weight=3; volume=5; value=2400;
+itemCategory=4;
+pR=pTeal2;
+pB=p8;
+[ItemEffect]
+ID=cloak_turtle; actorValue=PhysEva; magnitude=12; duration=-1;
+[ItemEffect]
+ID=cloak_turtle; actorValue=MagEva; magnitude=4; duration=-1;
+[ItemEffect]
+ID=cloak_turtle; actorValue=backDefense; magnitude=20; duration=-1;
+[JournalEntry]
+ID=item_cloak_turtle;
+category=equipment; halfPage=true; rarity=2;
+title=Torsk Cape;
+text=<itemBig=cloak_turtle><title=Torsk Cape><brAdj=>This meticulously crafted garb has many shards of Amnitorsk shell arranged in a pleasing concentric pattern. While not as impenetrable as live Amnitorsk, it still provides substantial protection from back attacks.;
+
+[ItemType]  name=Kingly Furs;
+ID=cloak_kingfur; sprite=239;
+description=Regal and fierce-looking mantle of furs. Makes positive morale last 20% longer.; 
+weight=3; volume=5; value=5750;
+itemCategory=4;
+pR=p60;
+pG=p40;
+pB=p9;
+[ItemEffect]
+ID=cloak_kingfur; actorValue=PhysAtk; magnitude=1; duration=-1;
+[ItemEffect]
+ID=cloak_kingfur; actorValue=PhysEva; magnitude=9; duration=-1;
+[ItemReaction]
+ID=cloak_kingfur; actorValues=morale; healMultiplier=1.2;
+[JournalEntry]
+ID=item_cloak_kingfur;
+category=equipment; halfPage=true; rarity=2;
+title=Kingly Furs;
+text=<itemBig=cloak_kingfur><title=Kingly Furs><brAdj=>Created by the humble people of Fivili, this cloak represents the culmination of many generations' worth of skill and perseverance. None of its constituent furs have any special properties, but just wearing it inspires you to fight with beastly ferocity.;
+
+
+[ItemType]  name=Warding Sash;
+description=Magic garment that Wards its wearer at the start of combat.;
+ID=cloak_ward; sprite=226; itemCategory=4;
+weight=1; volume=2; value=8600;
+pR=pGold;
+[ItemEffect]  
+ID=cloak_ward; actorValue=MagEva; magnitude=4; duration=-1;
+[ItemReaction]
+ID=cloak_ward; element=combatStart; action=cloak_ward_action;
+[JournalEntry]
+ID=item_cloak_ward;
+category=equipment; halfPage=true; rarity=4; rewardMod=500;
+title=Warding Sash;
+text=<itemBig=cloak_ward><title=Warding Sash><brAdj=>This miraculous sash of mythril weave is lined with triggers that activate to instantly ward the user - albeit only once per battle.;
+
+
+[ItemType]  name=Overcoat;
+ID=overcoat; sprite=232;
+description=Thick coat that prevents you from getting Wet.; 
+weight=1; volume=5; value=30;
+itemCategory=4; 
+pR=pYellow5;
+[ItemEffect]
+ID=overcoat; actorValue=PhysEva; magnitude=8; duration=-1;
+[ItemReaction] 
+ID=overcoat; actorValues=wet; damageMultiplier=0;
+[JournalEntry]
+ID=item_overcoat;
+category=equipment; halfPage=true;
+title=Overcoat;
+text=<itemBig=overcoat><title=Overcoat><brAdj=>With enough cloth, even the strongest downpour can be ignored. It even has a fold out hood on the back!;
+
+[ItemType]  name=Scarf;
+ID=scarf; sprite=165;
+description=Cozy scarf makes you immune to being Chilled.; 
+weight=0; volume=2; value=25;
+itemCategory=4; 
+pR=pCRed;
+[ItemEffect]
+ID=scarf; actorValue=PhysEva; magnitude=5; duration=-1;
+[ItemReaction] 
+ID=scarf; actorValues=chilled; damageMultiplier=0;
+[JournalEntry]
+ID=item_scarf;
+category=equipment; halfPage=true;
+title=Scarf;
+text=<itemBig=scarf><title=Scarf><brAdj=>This neck-wrap is made for cold weather, and is quite toasty. Thankfully it's just the right length for you.;
+
+
+[ItemType]  name=Trailing Wind;
+ID=scarf_wind; sprite=165;
+description=Wind trigger-lined scarf that amplifies Wind skill, but makes you easier to push around.; 
+weight=0; volume=2; value=880;
+itemCategory=4; 
+pR=pBlue;
+[ItemEffect]
+ID=scarf_wind; actorValue=PhysEva; magnitude=8; duration=-1;
+[ItemEffect]
+ID=scarf_wind; actorValue=skill_Wind; magnitude=2; duration=-1;
+[ItemReaction] 
+ID=scarf_wind; actorValues=push; actorValues=pushAt; damageMultiplier=2;
+
+[JournalEntry]
+ID=item_scarf_wind;
+category=equipment; halfPage=true; rarity=2;
+title=Trailing Wind;
+text=<itemBig=scarf_wind><title=Trailing Wind><brAdj=>Where these scarves are produced is unknown. According to myth, they arrive on the wind to choose their new owner. Their propensity for blowing away at the slightest breeze is probably the origin of this idea.;
+
+[ItemType]  name=Goggles;
+ID=goggles; sprite=171;
+description=Protective goggles that keep you from being Blinded.; 
+weight=0; volume=1; value=30;
+itemCategory=4; 
+pR=pCopper;
+pB=pIce;
+[ItemReaction] 
+ID=goggles; actorValues=blind; damageMultiplier=0;
+[JournalEntry]
+ID=item_goggles;
+category=equipment; halfPage=true;
+title=Goggles;
+text=<itemBig=goggles><title=Goggles><brAdj=>A leather strap, a metal rim, and a lens makes up a single goggle. This pair is perfect for reckless engineers & mages.;
+
+[ItemType]  name=Crystal Goggles;
+ID=goggles_crystal; sprite=139;
+description=Goggles with a single ironice lens. Prevents Blind and increases accuracy by 8%.; 
+weight=0; volume=1; value=5750;
+itemCategory=4; action=studyTool_action;
+pR=pGold; pB=pIce; pG=pIronice;
+[ItemEffect]
+ID=goggles_crystal; actorValue=Acc; magnitude=0.08; duration=-1;
+[ItemEffect]
+ID=goggles_crystal; actorValue=PhysEva; magnitude=3; duration=-1;
+[ItemReaction] 
+ID=goggles_crystal; actorValues=blind; damageMultiplier=0;
+[JournalEntry]
+ID=item_goggles_crystal;
+category=equipment; halfPage=true; rarity=3; rewardMod=100;
+title=Crystal Goggles;
+text=<itemBig=goggles_crystal><title=Crystal Goggles><brAdj=>One of the lenses is made of highly refined Ironice. It even has dials that allow you to focus and magnify, and it can be 'used' like a Magnifying Glass to replicate the Scholar's 'Elementary' ability.;
+ 
+[ItemType]  name=Thorn Bracelet;
+ID=band_thorn; sprite=169;
+description=Uncomfortable armlet keeps you from being put to Sleep.; 
+weight=0; volume=1; value=20;
+itemCategory=4; 
+pR=pGreyD2;
+[ItemEffect]
+ID=band_thorn; actorValue=PhysEva; magnitude=3; duration=-1;
+[ItemReaction] 
+ID=band_thorn; actorValues=sleep; damageMultiplier=0;
+[JournalEntry]
+ID=item_band_thorn;
+category=equipment; halfPage=true; rarity=1;
+title=Thorn Bracelet;
+text=<itemBig=band_thorn><title=Thorn Bracelet><brAdj=>It's unclear what the original purpose of this armlet was. Either by accident or by design, it pinches you awake if you fall asleep.;
+
+[ItemType]  name=Gauntlets;
+ID=gauntlets; sprite=172;
+description=Sturdy steel gloves keep the hands safe when attacking.; 
+weight=2; volume=3; value=150;
+itemCategory=4; 
+pR=pIron;
+[ItemEffect]
+ID=gauntlets; actorValue=PhysAtk; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_gauntlets;
+category=equipment; halfPage=true; rarity=1;
+title=Gauntlets;
+text=<itemBig=gauntlets><title=Gauntlets><brAdj=>Protecting the hands is very important in close combat. With these steel gauntlets, you can attack with full force and not have to worry.;
+
+[ItemType]  name=Volskarn Gauntlets;
+ID=gauntlets_volskarn; sprite=174;
+description=Gauntlets with a volskarn core.; 
+weight=2; volume=3; value=1750;
+itemCategory=4; 
+pR=pIron;
+pB=pVolskarn;
+[ItemEffect]
+ID=gauntlets_volskarn; actorValue=PhysAtk; magnitude=1; duration=-1;
+[ItemEffect]
+ID=gauntlets_volskarn; actorValue=MagAtk; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_gauntlets_volskarn;
+category=equipment; halfPage=true; rarity=2;
+title=Volskarn Gauntlets;
+text=<itemBig=gauntlets_volskarn><title=Volskarn Gauntlets><brAdj=>The Volskarn helps the wearer store and direct essence as needed. Only a master craftsman could have created these.;
+
+[ItemType]  name=Volskarn Gloves;
+ID=gloves_volskarn; sprite=174;
+description=Leather gloves studded with Volskarn.; 
+weight=1; volume=2; value=275;
+itemCategory=4; 
+pR=pUnarmored;
+pB=pVolskarn;
+[ItemEffect]
+ID=gloves_volskarn; actorValue=MagAtk; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_gloves_volskarn;
+category=equipment; halfPage=true; rarity=1;
+title=Volskarn Gloves;
+text=<itemBig=gloves_volskarn><title=Volskarn Gloves><brAdj=>Though they offer no protection, the Volskarn in these gloves helps the wearer store and direct essence with little effort.;
+
+[ItemType]  name=Power Gauntlets;
+ID=gauntlets_power; sprite=174;
+description=Force-powered metal gloves that strengthen your attacks.; 
+weight=5; volume=3; value=5500;
+itemCategory=4; 
+pR=pGreyblue2;
+pB=pSilver;
+[ItemEffect]
+ID=gauntlets_power; actorValue=PhysAtk; magnitude=2; duration=-1;
+[ItemEffect]
+ID=gauntlets_power; actorValue=PhysEva; magnitude=-5; duration=-1;
+[JournalEntry]
+ID=item_gauntlets_power;
+category=equipment; halfPage=true; rarity=2;
+title=Power Gauntlets;
+text=<itemBig=gauntlets_power><title=Power Gauntlets><brAdj=>Imbues your swings with extra force, thanks to the wind triggers wired in. Regrettably, such power leaves you open to being attacked in return.;
+
+[ItemType]  name=Whetstone Pendant;
+description=Easy-access whetstone to keep your blades sharp.; 
+weight=0; volume=1; value=120;
+itemCategory=4;
+ID=necklace_whetstone; sprite=177; pR=p48; pB=pGreyD2;
+[ItemEffect]  
+ID=necklace_whetstone; actorValue=skill_Dagger; magnitude=1; duration=-1;
+[ItemEffect]  
+ID=necklace_whetstone; actorValue=skill_Sword; magnitude=1; duration=-1;
+[ItemEffect]  
+ID=necklace_whetstone; actorValue=skill_Axe; magnitude=1; duration=-1;
+[ItemEffect]  
+ID=necklace_whetstone; actorValue=skill_Spear; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_necklace_whetstone;
+category=equipment; halfPage=true; rarity=1;
+title=Whetstone Pendant;
+text=<itemBig=necklace_whetstone><title=Whetstone Pendant><brAdj=>A simple sharpening stone dangling from a string. Having a constant reminder to keep your tools sharp does wonders for blade maintenance.;
+
+[ItemType]  name=Golden Scabbard;
+description=Shining resizable sheath that preserves any blade.; 
+weight=0; volume=1; value=8000;
+itemCategory=4;
+ID=acc_goldscabbard; sprite=209; pR=p9; pB=pBlue2;
+[ItemEffect]  
+ID=acc_goldscabbard; actorValue=skill_Dagger; magnitude=2; duration=-1;
+[ItemEffect]  
+ID=acc_goldscabbard; actorValue=skill_Sword; magnitude=2; duration=-1;
+[ItemEffect]  
+ID=acc_goldscabbard; actorValue=skill_Axe; magnitude=2; duration=-1;
+[ItemEffect]  
+ID=acc_goldscabbard; actorValue=skill_Spear; magnitude=2; duration=-1;
+[JournalEntry]
+ID=item_acc_goldscabbard;
+category=equipment; halfPage=true; rarity=3;
+title=Golden Scabbard;
+text=<itemBig=acc_goldscabbard><title=Golden Scabbard><brAdj=>This masterpiece scabbard can be refit as needed, even to cover the edges of axes or spears. In doing so it keeps blades in perfect condition.;
+
+
+[ItemType]  name=Rough Handwraps;
+description=Hand padding to help you give and take hard blows.; 
+weight=0; volume=1; value=120;
+itemCategory=4;
+ID=gloves_handwrap; sprite=178; pR=pGrey;
+[ItemEffect]  
+ID=gloves_handwrap; actorValue=skill_Hammer; magnitude=1; duration=-1;
+[ItemEffect]  
+ID=gloves_handwrap; actorValue=skill_Flail; magnitude=1; duration=-1;
+[ItemEffect]  
+ID=gloves_handwrap; actorValue=skill_Fist; magnitude=1; duration=-1;
+[ItemEffect]  
+ID=gloves_handwrap; actorValue=skill_Shield; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_gloves_handwrap;
+category=equipment; halfPage=true; rarity=1;
+title=Rough Handwraps;
+text=<itemBig=gloves_handwrap><title=Rough Handwraps><brAdj=>Simple padding that aids in taking or dealing harsh impacts. Rough, yet comfortable enough not to impede dexterity.;
+
+[ItemType]  name=Silver Mitts;
+description=Fine fingerless gloves lined with mythril that lend power to blunt weapons.; 
+weight=0; volume=1; value=8000;
+itemCategory=4;
+ID=gloves_silver; sprite=210; pR=p56; pB=pSilver;
+[ItemEffect]  
+ID=gloves_silver; actorValue=skill_Hammer; magnitude=2; duration=-1;
+[ItemEffect]  
+ID=gloves_silver; actorValue=skill_Flail; magnitude=2; duration=-1;
+[ItemEffect]  
+ID=gloves_silver; actorValue=skill_Fist; magnitude=2; duration=-1;
+[ItemEffect]  
+ID=gloves_silver; actorValue=skill_Shield; magnitude=2; duration=-1;
+[JournalEntry]
+ID=item_gloves_silver;
+category=equipment; halfPage=true; rarity=3;
+title=Silver Mitts;
+text=<itemBig=gloves_silver><title=Silver Mitt><brAdj=>Cleanly-designed gloves that handily absorb impacts and look stylish while doing it. The mythril lining lets you give attacks your all without worrying about your hands' safety.;
+
+[ItemType]  name=Bracers;
+ID=bracers_archer; sprite=173;
+description=Leather arm guards that assist in archery.; 
+weight=1; volume=1; value=100;
+itemCategory=4; 
+pR=pUnarmored;
+[ItemEffect]
+ID=bracers_archer; actorValue=skill_Bow; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_bracers_archer;
+category=equipment; halfPage=true; rarity=1;
+title=Bracers;
+text=<itemBig=bracers_archer><title=Bracers><brAdj=>Bracers protect an archer's inner forearm from a stray bowstring or fletching. They also keep loose sleeves from catching.;
+
+[ItemType]  name=Scope;
+ID=scope; sprite=1514;
+description=Spyglass retrofitted for use with missile weapons.; 
+weight=0; volume=1; value=100;
+itemCategory=4; 
+pR=pIron;
+pB=pIce;
+[ItemEffect]
+ID=scope; actorValue=skill_Aim; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_scope;
+category=equipment; halfPage=true; rarity=1;
+title=Scope;
+text=<itemBig=scope><title=Scope><brAdj=>A curious device made by a master atilliator. Helps line up targets. When equipped, it increases your skill with projectiles. However, it is useless for bows.;
+
+[ItemType]  name=Vambraces;
+ID=bracers_metal; sprite=173;
+description=Metal bracers to protect the arms.; 
+weight=2; volume=3; value=100;
+itemCategory=4; 
+pR=pIron;
+[ItemEffect]
+ID=bracers_metal; actorValue=PhysDef; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_bracers_metal;
+category=equipment; halfPage=true; rarity=1;
+title=Vambraces;
+text=<itemBig=bracers_metal><title=Vambraces><brAdj=>Vambraces are a standard part of full plate armor. They offer much-needed protection to the forearms.;
+
+[ItemType]  name=Volbraces;
+ID=bracers_vol; sprite=176;
+description=Vambraces with embedded volskarn.; 
+weight=2; volume=3; value=1750;
+itemCategory=4; 
+pR=pIron;
+pB=pVolskarn;
+[ItemEffect]
+ID=bracers_vol; actorValue=PhysDef; magnitude=1; duration=-1;
+[ItemEffect]
+ID=bracers_vol; actorValue=MagDef; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_bracers_vol;
+category=equipment; halfPage=true; rarity=1;
+title=Volbraces;
+text=<itemBig=bracers_vol><title=Volbraces><brAdj=>These fine vambraces have been lined with Volskarn, allowing them to absorb incoming magic while also protecting against physical attacks.;
+
+
+[ItemType]  name=Heavy Vambraces;
+ID=bracers_heavy; sprite=208;
+description=Weighty arm bands that sacrifice speed for defense.; 
+weight=14; volume=3; value=250;
+itemCategory=4; 
+pR=p2;
+[ItemEffect]
+ID=bracers_heavy; actorValue=PhysDef; magnitude=2; duration=-1;
+[ItemEffect]
+ID=bracers_heavy; actorValue=actTime; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_bracers_heavy;
+category=equipment; halfPage=true; rarity=1;
+title=Heavy Vambraces;
+text=<itemBig=bracers_heavy><title=Heavy Vambraces><brAdj=>Vambraces taken to the extreme, occasionally worn by palace guards or riot control. When your only task is to stand between your attacker and what you would protect, reaction time becomes less important.;
+
+
+[ItemType]  name=Hip Flask;
+ID=hipFlask; sprite=1515;
+description=Liquid courage. Use to improve morale - and while worn, bad morale lasts half as long.; 
+weight=0; volume=1; value=20;
+itemCategory=4; 
+pR=pIron;
+action=drink_hipflask;
+[ItemReaction]
+ID=hipFlask; actorValues=morale; damageMultiplier=0.5;
+[JournalEntry]
+ID=item_hipFlask;
+category=equipment; halfPage=true;
+title=Hip Flask;
+text=<itemBig=hipFlask><title=Hip Flask><brAdj=>A discreet container for alcoholic beverages. Some become dependent on it. When worn, it provides comfort in bad circumstances - and you can drink from it for a small morale boost.;
+
+[ItemType]  name=Pocketwatch;
+ID=acc_pocketwatch; sprite=179;
+description=A fine timepiece.<n=>Grants +30% <icon=time> if you end your turn without acting.<n=><adjX=18><getHourMinTime=>; 
+weight=0; volume=1; value=300;
+special=dontWarnForUseInContainer;
+itemCategory=4; 
+pR=pGold;
+pB=pGrey;
+action=acc_pocketwatch_act;
+[ItemReaction]
+ID=acc_pocketwatch; element=noActionTaken; action=acc_pocketwatch_react;
+[JournalEntry]
+ID=item_acc_pocketwatch;
+category=equipment; halfPage=true;
+title=Pocketwatch;
+text=<itemBig=acc_pocketwatch><title=Pocketwatch><brAdj=>A fascinating device that keeps time with a complex set of tiny gears. It's accurate to the minute! Wearing it makes you feel like you'll never be late again.;
+
+[ItemType]  name=Dart Bandolier;
+ID=belt_dart; sprite=180;
+description=Belt full of infinite weak darts.; 
+weight=0; volume=1; value=2000;
+itemCategory=4; 
+pR=p50;
+pB=pIron;
+pG=pGold;
+action=dart_belt_action;
+[ItemEffect]
+ID=belt_dart; actorValue=PhysEva; magnitude=6; duration=-1;
+[JournalEntry]
+ID=item_belt_dart;
+category=equipment; halfPage=true; rarity=2;
+title=Dart Bandolier;
+text=<itemBig=belt_dart><title=Dart Bandolier><brAdj=>An uncountable multitude of darts bristle from this belt. You can never run out, so throw them with abandon! They only deal 90% as much damage as the real deal, however.;
+
+[ItemType]  name=Power Belt;
+ID=belt_power; sprite=181;
+description=Cool belt.; 
+weight=0; volume=1; value=2000;
+itemCategory=4; 
+pR=p56;
+pG=pGold;
+[ItemEffect]
+ID=belt_power; actorValue=PhysAtk; magnitude=2; duration=-1;
+[JournalEntry]
+ID=item_belt_power;
+category=equipment; halfPage=true; rarity=2;
+title=Power Belt;
+text=<itemBig=belt_power><title=Power Belt><brAdj=>This belt glows with unnatural power. (Unnatural because it is a belt, not unnatural as in supernatural or anything.);
+
+[ItemType]  name=Blindfold;
+ID=blindfold; sprite=1513;
+description=Strip of ragged cloth that covers the eyes.; 
+weight=0; volume=1; value=1;
+itemCategory=4; 
+pR=pGrey;
+[ItemEffect]
+ID=blindfold; actorValue=blind; magnitude=1; duration=-1; canBeRemovedByNonspecificAVEffectRemoval=false;
+[ItemReaction]
+ID=blindfold; actorValues=blind; damageMultiplier=0; healMultiplier=0;
+[JournalEntry]
+ID=item_blindfold;
+category=equipment; halfPage=true;
+title=Blindfold;
+text=<itemBig=blindfold><title=Blindfold><brAdj=>Cloth wrapped around the eyes to disable the wearer's sight. Symbolically intriguing, but functionally useless.;
+
+[ItemType]  name=Gag;
+ID=gag; sprite=1513;
+description=Thick cloth used to stuff in the mouth, preventing speech.; 
+weight=0; volume=1; value=1;
+itemCategory=4; 
+pR=pGreyD2;
+[ItemEffect]
+ID=gag; actorValue=silence; magnitude=1; duration=-1;
+[ItemReaction]
+ID=gag; actorValues=silence; damageMultiplier=0; healMultiplier=0;
+[JournalEntry]
+ID=item_gag;
+category=equipment; halfPage=true;
+title=Gag;
+text=<itemBig=gag><title=Gag><brAdj=>Cloth covering the wearer's mouth to prevent any speech. Not the most useful piece of gear.;
+
+[ItemType]  name=Thaw Ring;
+ID=ring_thaw; sprite=163;
+description=Ring that heats up in extreme cold. Halves duration of Chilled and Frozen effects when worn.; 
+weight=0; volume=1; value=50;
+itemCategory=4; 
+pR=pRed;
+pB=pR;
+[ItemReaction] 
+ID=ring_thaw; actorValues=chilled; actorValues=frozen; damageMultiplier=0.5;
+
+[JournalEntry]
+ID=item_ring_thaw;
+category=equipment; halfPage=true; rarity=1;
+title=Thaw Ring;
+text=<itemBig=ring_thaw><title=Thaw Ring><brAdj=>Originally crafted by a Rumanian engineer as a joke for her husband, who complained bitterly about the cold. It was soon discovered to be actually quite practical in cold climes.;
+
+[ItemType]  name=Sharp Ring;
+ID=ring_sharp; sprite=164;
+description=Ring with a sharp edge. Halves duration of Immobilize.; 
+weight=0; volume=1; value=50;
+itemCategory=4; 
+pR=pIron;
+pB=pIron;
+[ItemReaction] 
+ID=ring_sharp; actorValues=immob; damageMultiplier=0.5;
+
+[JournalEntry]
+ID=item_ring_sharp;
+category=equipment; halfPage=true; rarity=1;
+title=Sharp Ring;
+text=<itemBig=ring_sharp><title=Sharp Ring><brAdj=>Ring for those who need a rope-cutter wherever they go. Also makes an effective escape tool when tied up.;
+
+[ItemType]  name=Bloodring;
+ID=ring_blood; sprite=163;
+description=Macabre device that absorbs essence from shed blood. Restores 2<icon=MP> when damaged.; 
+weight=0; volume=1; value=900;
+itemCategory=4; 
+pR=pR;
+[ItemEffect]  
+ID=ring_blood; actorValue=MagDef; magnitude=1; duration=-1;
+[ItemReaction] 
+ID=ring_blood; 
+actorValues=HP; action=ring_blood_act;
+[JournalEntry]
+ID=item_ring_blood;
+category=equipment; halfPage=true; rarity=3; rewardMod=-200;
+title=Bloodring;
+text=<itemBig=ring_blood><title=Bloodring><brAdj=>Ring devised by the berserker Larav, an unstoppable warrior who healed his wounds using essence from his own blood. Larav fought tirelessly to protect Lask from Maskheads, falling only when one of the fiends chopped off his finger. This ring and its duplicates are now more often used by necromancers who are all too willing to fuel it with the blood of others.;
+
+[ItemType]  name=Viral Amulet;
+ID=necklace_viral;
+description=Cursed necklace that spreads negative status effects to all contiguous creatures.; 
+weight=0; volume=1; value=660;
+itemCategory=4; sprite=160; pR=pGreen; pB=pPurple;
+[ItemReaction] 
+ID=necklace_viral; 
+actorValues=poison; actorValues=burn; actorValues=stun; actorValues=silence;
+actorValues=frozen; actorValues=oil; actorValues=wet; actorValues=immob;
+actorValues=disable; actorValues=sleep; actorValues=itchy; actorValues=chilled;
+actorValues=blind; actorValues=decay; 
+ action=necklace_viral_act;
+[ItemReaction] 
+ID=necklace_viral; element=physical; element=magic;
+ action=necklace_viral_act;
+ 
+[JournalEntry]
+ID=item_necklace_viral;
+category=equipment; halfPage=true; rarity=3; rewardMod=250;
+title=Viral Necklace;
+text=<itemBig=necklace_viral><title=Viral Necklace><brAdj=>This cruel device was once gifted to a hated noble's sickly daughter. The sickness soon spread to the noble's family, nearly killing them before the necklace's sinister purpose was noticed.;
+ 
+[ItemType]  name=Lifebead Necklace;
+ID=necklace_lifebead;
+description=Necklace of many small Life triggers that amplifies healing received by 25%.; 
+weight=0; volume=1; value=700;
+itemCategory=4; sprite=162; pR=pGold; pB=pYellow;
+[ItemEffect]  
+ID=necklace_lifebead; actorValue=skill_Life; magnitude=1; duration=-1;
+[ItemReaction] 
+ID=necklace_lifebead; actorValues=HP; healMultiplier=1.25;
+
+[JournalEntry]
+ID=item_necklace_lifebead;
+category=equipment; halfPage=true; rarity=2;
+title=Lifebead Necklace;
+text=<itemBig=necklace_lifebead><title=Lifebead Necklace><brAdj=>Necklace created to speed up recovery of the severely injured. Initially designed for sick patients, its potency in combat made it popular with traveling warrior-sages.;
+
+
+[ItemType]  name=Fire Band;
+ID=band_fire; sprite=167;
+description=Bracelet with a fire trigger embedded, for easier casting.; 
+weight=0; volume=1; value=350;
+itemCategory=4; 
+pR=pSilver;
+pB=pR;
+[ItemEffect]
+ID=band_fire; actorValue=skill_Fire; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_band_fire;
+category=equipment; halfPage=true; rarity=1;
+title=Fire Band;
+text=<itemBig=band_fire><title=Fire Band><brAdj=>Keeping a fire trigger close at hand makes pyromancy that much easier. These are invaluable to certain cold-blooded races.;
+
+[ItemType]  name=Ice Band;
+ID=band_ice; sprite=167;
+description=Bracelet with an ice trigger embedded, for easier casting.; 
+weight=0; volume=1; value=350;
+itemCategory=4; 
+pR=pIce;
+pB=pBlue2;
+[ItemEffect]
+ID=band_ice; actorValue=skill_Ice; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_band_ice;
+category=equipment; halfPage=true; rarity=1;
+title=Ice Band;
+text=<itemBig=band_ice><title=Ice Band><brAdj=>Enhances cold magic. Prized by those living in tropical and desert climates. Most of them are crafted by the Ironice architects of Rumane.;
+
+[ItemType]  name=Lightning Band;
+ID=band_elec; sprite=167;
+description=Band with a lightning trigger embedded, for easier casting.; 
+weight=0; volume=1; value=350;
+itemCategory=4; 
+pR=pSilver;
+pB=pGold;
+[ItemEffect]
+ID=band_elec; actorValue=skill_Elec; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_band_elec;
+category=equipment; halfPage=true; rarity=1;
+title=Lightning Band;
+text=<itemBig=band_elec><title=Lightning Band><brAdj=>Powers up lightning magic. These are exceptionally popular among battlemages, who favor lightning for its strength and precision.;
+
+[ItemType]  name=Wind Band;
+ID=band_wind; sprite=167;
+description=Armband with a force trigger embedded, for easier casting.; 
+weight=0; volume=1; value=350;
+itemCategory=4; 
+pR=pSilver;
+pB=pIce;
+[ItemEffect]
+ID=band_wind; actorValue=skill_Wind; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_band_wind;
+category=equipment; halfPage=true; rarity=1;
+title=Wind Band;
+text=<itemBig=band_wind><title=Wind Band><brAdj=>Makes wind magic a breeze! The envy of laborers everywhere. Wind magic helps any time heavy objects are involved.;
+
+[ItemType]  name=Life Band;
+ID=band_life; sprite=167;
+description=Bracelet with a life trigger embedded, for easier casting.; 
+weight=0; volume=1; value=350;
+itemCategory=4; 
+pR=pGold;
+pB=pHoneyglow;
+[ItemEffect]
+ID=band_life; actorValue=skill_Life; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_band_life;
+category=equipment; halfPage=true; rarity=1;
+title=Life Band;
+text=<itemBig=band_life><title=Life Band><brAdj=>Aids Preservation magic. Every wealthy healer has one of these. Despite being almost universally beneficial, they are heavily regulated.;
+
+[ItemType]  name=Ruin Band;
+ID=band_ruin; sprite=167;
+description=Bracelet with a ruin trigger embedded, for easier casting.; 
+weight=0; volume=1; value=350;
+itemCategory=4; 
+pR=pSilver;
+pB=pPurpleD;
+[ItemEffect]
+ID=band_ruin; actorValue=skill_Ruin; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_band_ruin;
+category=equipment; halfPage=true; rarity=1;
+title=Ruin Band;
+text=<itemBig=band_ruin><title=Ruin Band><brAdj=>Enhances Ruin magic. In certain cities, these are illegal due to their association with necromancy. Best to keep it out of sight.;
+
+
+[ItemType]  name=Blitz Band;
+ID=band_fire_elec; sprite=168;
+description=Band pulsing with fire and lightning.; 
+weight=0; volume=1; value=650;
+itemCategory=4; 
+pR=pGold;
+pB=pR;
+[ItemEffect]
+ID=band_fire_elec; actorValue=skill_Fire; magnitude=1; duration=-1;
+[ItemEffect]
+ID=band_fire_elec; actorValue=skill_Elec; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_band_fire_elec;
+category=equipment; halfPage=true; rarity=2;
+title=Blitz Band;
+text=<itemBig=band_fire_elec><title=Blitz Band><brAdj=>Powerful bracelet used by elite battlemages. Many warmongers have grown rich smuggling these across national borders.;
+
+[ItemType]  name=Aqueous Band;
+ID=band_ice_wind; sprite=168;
+description=Band emanating icy wind.; 
+weight=0; volume=1; value=650;
+itemCategory=4; 
+pR=pSilver;
+pB=pBlue2;
+[ItemEffect]
+ID=band_ice_wind; actorValue=skill_Ice; magnitude=1; duration=-1;
+[ItemEffect]
+ID=band_ice_wind; actorValue=skill_Wind; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_band_ice_wind;
+category=equipment; halfPage=true; rarity=2;
+title=Aqueous Band;
+text=<itemBig=band_ice_wind><title=Aqueous Band><brAdj=>Bracelet of wealthy sailors. Most can be found on the arms of naval officers and merchants hailing from Island Fortress Dominio.;
+
+[ItemType]  name=Infinity Band;
+ID=band_life_ruin; sprite=168;
+description=Band with power of life and death.; 
+weight=0; volume=1; value=750;
+itemCategory=4; 
+pR=pGold;
+pB=pPurpleD;
+[ItemEffect]
+ID=band_life_ruin; actorValue=skill_Life; magnitude=1; duration=-1;
+[ItemEffect]
+ID=band_life_ruin; actorValue=skill_Ruin; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_band_life_ruin;
+category=equipment; halfPage=true; rarity=2;
+title=Infinity Band;
+text=<itemBig=band_life_ruin><title=Infinity Band><brAdj=>No one knows the source of these amazingly well-crafted bands. Possessing one is often illegal, because of how well they serve necromancers.;
+
+[ItemType]  name=Aer Band;
+ID=band_aer; sprite=168;
+description=Rare band that improves jumping ability.; 
+weight=0; volume=1; value=1250;
+itemCategory=4; 
+pR=pBW;
+pB=pSilver;
+[ItemEffect]
+ID=band_aer; actorValue=jumpDistance; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_band_aer;
+category=equipment; halfPage=true; rarity=3; rewardMod=100;
+title=Aer Band;
+text=<itemBig=band_aer><title=Aer Band><brAdj=>Contains traces of Aerstone to increase jump distance. The Aerstone is melded with the metal and cannot be extracted.;
+
+
+
+
+[ItemType]  name=Void Veil;
+description=Gossamer cloak that greatly reduces duration of most status effects.;
+ID=cloak_veil; sprite=231; itemCategory=4;
+weight=1; volume=2; value=29000;
+pR=pWhite;
+[ItemEffect]  
+ID=cloak_veil; actorValue=veil; magnitude=1; duration=-1;
+[ItemEffect]  
+ID=cloak_veil; actorValue=moveDistance; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_cloak_veil;
+category=equipment; halfPage=true; rarity=5; rewardMod=500;
+title=Void Veil;
+text=<itemBig=cloak_veil><title=Void Veil><brAdj=>Cloak of purest white. It has an otherworldly quality to it- it must have been acquired from another realm.;
+ 
+
+
+[ItemType]  name=Volpryst Armor;
+description=Flawlessly crafted armor of Corpryst & Volskarn.;
+ID=armor_volpryst; sprite=202; itemCategory=3;
+weight=10; volume=15; value=9900;
+pR=p82;
+[ItemEffect]
+ID=armor_volpryst; actorValue=PhysDef; magnitude=2; duration=-1;
+[ItemEffect]
+ID=armor_volpryst; actorValue=MagDef; magnitude=2; duration=-1;
+[ItemEffect]
+ID=armor_volpryst; actorValue=MagAtk; magnitude=1; duration=-1;
+[JournalEntry]
+ID=item_armor_volpryst;
+category=equipment; halfPage=true; rarity=3;
+title=Volpryst Armor;
+text=<itemBig=armor_volpryst><title=Volpryst Armor><brAdj=>Chunky Corpryst armor combined with Volskarn, masterfully crafted to increase defense and magic prowess at the same time.;
+
+
+[ItemType]  name=God Band;
+description=Unfairly good bracelet.;
+ID=god_band; sprite=169; itemCategory=4;
+weight=10; volume=15; value=39999;
+pR=pBW;
+[ItemEffect]
+ID=god_band; actorValue=PhysDef; magnitude=15; duration=-1;
+[ItemEffect]
+ID=god_band; actorValue=MagDef; magnitude=15; duration=-1;
+[ItemEffect]
+ID=god_band; actorValue=PhysAtk; magnitude=8; duration=-1;
+[ItemEffect]
+ID=god_band; actorValue=MagAtk; magnitude=8; duration=-1;
+
+[ItemType]  name=Speed Suit;
+description=Crazy good armor.;
+ID=armor_speedSuit; sprite=198; itemCategory=3;
+weight=10; volume=15; value=92500;
+pR=pGreyD;
+[ItemEffect]
+ID=armor_speedSuit; actorValue=actTime; magnitude=-25; duration=-1;
+[ItemEffect]
+ID=armor_speedSuit; actorValue=moveDistance; magnitude=2; duration=-1;
+[ItemEffect]
+ID=armor_speedSuit; actorValue=jumpDistance; magnitude=2; duration=-1;

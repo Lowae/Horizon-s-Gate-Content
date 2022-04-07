@@ -1,0 +1,124 @@
+
+--------------------RESEARCHER PATRON
+
+[DialogNode] ID=researcher;
+animations=idle;
+statements=<textIf=Hello. Have you brought me anything new?=gIsTalker:researcherContractID><textIf=Bring any discoveries you find to me, and I'll pay you well for them.=1-gIsTalker:researcherContractID>;
+
+[DialogOption] text=Contract;
+--rebuke if you already have a contract with another researcher
+formulaReq=gIsString:researcherContractID - gIsTalker:researcherContractID;
+nodeToConnectTo=researcher_contract_withAnother;
+[DialogOption] text=Contract;
+--form a new contract
+formulaReq=1 - gIsString:researcherContractID;
+nodeToConnectTo=researcher_contract;
+[DialogOption] text=Report;
+--can only report if you have a contract
+formulaReq=gIsTalker:researcherContractID;
+nodeToConnectTo=researcher_report;
+specialEffect=research_report,researcher_report;
+[DialogOption] text=Terminate;
+--end contract
+newLineOfOptions=true;
+formulaReq=gIsTalker:researcherContractID;
+nodeToConnectTo=researcher_contract_terminate;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=researcher_report;
+animations=;
+statements=;
+
+[DialogNode] ID=researcher_afterReport;
+specialEffect=completeJournalGoal,@0.8,* 'LOOK' and sell the info to a researcher.;
+
+--CONTRACT
+
+
+
+[DialogNode] ID=researcher_contract;
+animations=;
+animations=;
+animations=;
+statements=Let me explain what a contract between us entails.;
+statements=You go out into the world and 'Look' at creatures, items, fossils- anything. This adds an entry to your journal.;
+statements=I'll pay you for each entry you bring me. And I'll pay more for rarer finds.;
+statements=Of course, you can only sell each journal entry once... no bringing it to other researchers. And while you're under contract, you only sell to me.;
+statements=How does that sound? Shall we form a contract?;
+
+[DialogOption] text=Yes;
+nodeToConnectTo=researcher_contract_yes;
+[DialogOption] text=No;
+nodeToConnectTo=researcher_contract_no;
+
+[DialogNode] ID=researcher_contract_yes;
+animations=sigh;
+animations=;
+statements=Very good! Consider our agreement finalized.;
+statements=Bring me your discoveries any time.;
+specialEffect=setGlobalVarToTalkerID,researcherContractID;
+specialEffect=setGlobalVarToLocID,researcherContractLoc;
+specialEffect=fx,sfx_positiveNote2;
+nextNodeID=;
+
+
+[DialogNode] ID=researcher_contract_no;
+animations=;
+statements=Fair enough. I'll be here if you reconsider.;
+nextNodeID=;
+
+[DialogNode] ID=researcher_contract_withAnother;
+animations=sigh;
+animations=;
+statements=I'm sorry, but you already have a contract with another researcher.;
+statements=Terminate your contract with them first, then come back here.;
+nextNodeID=;
+
+
+
+
+
+--TERMINATE CONTRACT
+
+[DialogNode] ID=researcher_contract_terminate;
+animations=;
+animations=sigh;
+statements=You want to terminate our contract?;
+statements=Unfortunate, but it's your decision.<p=1> There is a small termination fee of $300, however.;
+nextNodeID=;
+[DialogOption] text=Nevermind;
+nodeToConnectTo=researcher_contract_terminate_no;
+[DialogOption] text=Pay ($300);
+newLineOfOptions=true;
+formulaReq=m:money - 299;
+nodeToConnectTo=researcher_contract_terminate_yes;
+[DialogOption] text=<color=SlateGray>(Can't afford...);
+newLineOfOptions=true;
+formulaReq=300 - m:money;
+nodeToConnectTo=researcher_contract_terminate_no;
+
+[DialogNode] ID=researcher_contract_terminate_yes;
+animations=;
+animations=sigh;
+statements=So be it. I'll take your $300 and file the paperwork.;
+statements=Good luck in your future endeavors.;
+nextNodeID=;
+specialEffect=subtract300gp;
+specialEffect=setGlobalVarTo0,researcherContractID;
+specialEffect=setGlobalVarTo0,researcherContractLoc;
+
+[DialogNode] ID=researcher_contract_terminate_no;
+animations=;
+statements=Alright. Inform me if you change your mind.;
+nextNodeID=;
+
+
+
+
+
+
+
+

@@ -1,0 +1,187 @@
+[DialogNode] ID=port8_guy1a;
+animations=;
+statements=Life...!<p> Life...!;
+nextNodeID=;
+specialEffect=facingRotPrev;
+
+[DialogNode] ID=port8_guy2a;
+animations=stern;
+statements=I want a Drekkar...<p> but then I'd have to feed a bigger crew.<p> What a pain.;
+nextNodeID=;
+specialEffect=facingRotPrev;
+
+[DialogNode] ID=port8_guy3a;
+animations=;
+statements=Talk to Roni.<p> I'm just the bookkeeper.;
+nextNodeID=;
+
+[DialogNode] ID=port8_guy4a;
+animations=;
+statements=I been sailin' for 20 years, and nothin' beats shore leave at Runewald!;
+nextNodeID=;
+
+[DialogNode] ID=port8_guy5a;
+animations=;
+statements=Uhh, which way is it to the <rand=cafe/temple/trainer/harbor/shipwright/guild>, again?;
+nextNodeID=;
+
+[DialogNode] ID=port8_guy6a;
+animations=happy;
+animations=;
+statements=Hey, tough guy.<p> Word to the wise.;
+statements=Got any spare trigger stones, use the anvil to put 'em in your weapons.<p> Y'won't regret it.;
+nextNodeID=;
+
+[DialogNode] ID=port8_guy7a;
+animations=angry;
+animations=stern;
+animations=;
+statements=It boils my blood!;
+statements=This so-called elementalist temple still has a shrine to Ruin!<p> In this day and age!;
+statements=Bah!<p> I expected better in the capital of Rumane!;
+nextNodeID=;
+
+[DialogNode] ID=port8_guy8a;
+animations=stern;
+statements=Don't trouble me, please.<p> I'm just paying my respects.;
+nextNodeID=;
+specialEffect=facingRotPrev;
+
+[DialogNode] ID=port8_guy9a;
+animations=sly;
+statements=I should get on the King's good side...<p> then I could buy Food here for cheap!;
+nextNodeID=;
+
+[DialogNode] ID=port8_guy10a;
+animations=happy;
+statements=You can see the whole city from up here!;
+nextNodeID=;
+
+[DialogNode] ID=port8_guy11a;
+animations=;
+animations=sigh;
+animations=;
+statements=You here to help Rubinn with his research?;
+statements=Go on in.<p> He'll pay ya well.;
+statements=Me?<p>  I'm his assistant.<p>  I'm on break.;
+nextNodeID=;
+
+[DialogNode] ID=port8_guy12a;
+animations=;
+animations=;
+statements=U-urhgh...;
+statements=I drank way, way too much...;
+nextNodeID=;
+specialEffect=facingRotPrev;
+
+[DialogNode] ID=port8_guy13a;
+animations=;
+animations=sigh;
+statements=I was considering a guild job...<p> but they all look too hard.;
+statements=I guess it only costs $20 to cancel...<p> may as well give it a shot.;
+nextNodeID=;
+
+
+
+
+
+
+[DialogNode] ID=port8_guard1a;
+animations=sigh;
+statements=The palace is ahead, right up these stairs.;
+nextNodeID=;
+
+[DialogNodeOverride] ID=maxRank_port8_guard1a;
+dialogNodeID_toOverride=port8_guard1a;
+fReq=gIs:playerFaction:rumane + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=;
+statements=On the way to the palace again, <pnamefull=>?;
+
+[DialogNode] ID=port8_guard2a;
+animations=sly;
+statements=You wouldn't believe how many hooligans try to jump these fences and mess with the garden.;
+nextNodeID=;
+
+[DialogNodeOverride] ID=maxRank_port8_guard2a;
+dialogNodeID_toOverride=port8_guard2a;
+fReq=gIs:playerFaction:rumane + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=;
+statements=Good to see you, <prank=>.;
+
+[DialogNode] ID=port8_guard3a;
+animations=;
+statements=You're welcome to enter and speak with the Viceroy.;
+nextNodeID=;
+
+[DialogNodeOverride] ID=maxRank_port8_guard3a;
+dialogNodeID_toOverride=port8_guard3a;
+fReq=gIs:playerFaction:rumane + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=sigh;
+statements=Let me know if there's aught I can do for you, <prank=>.;
+
+[DialogNode] ID=port8_guard4a;
+animations=;
+statements=You're clear to enter.;
+nextNodeID=;
+
+[DialogNodeOverride] ID=maxRank_port8_guard4a;
+dialogNodeID_toOverride=port8_guard4a;
+fReq=gIs:playerFaction:rumane + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=scared;
+statements=You think a guard could become a <prank=> too, someday?;
+
+--when you enter the garden
+[DialogNode] ID=guardman_garden_yell;
+animations=angry;
+animations=stern;
+statements=Hey!<p> Get out of there!;
+statements=I'm not paid enough for this...;
+nextNodeID=;
+
+[DialogNodeOverride] ID=maxRank_guardman_garden_yell;
+dialogNodeID_toOverride=guardman_garden_yell;
+fReq=gIs:playerFaction:rumane + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=angry;
+animations=scared;
+animations=happy;
+statements=Hey!!;
+statements=O-<p>oh, it's you,<p> <pnamefull=>...;
+statements=Uh...<p> enjoy the garden!;
+
+[DialogNode] ID=guardman_garden_yell2;
+animations=stern;
+animations=sigh;
+statements=Leave the garden alone,<p> already!<textIf= Uh, if you could, please.=gIs:playerFaction:rumane + gIs:playerRank:9 - 1>;
+statements=I'm really not paid enough for this...;
+nextNodeID=;
+
+[DialogNode] ID=port8_royal1_guard1a;
+animations=;
+statements=The Viceroy is ready to speak with you.;
+nextNodeID=;
+
+[DialogNodeOverride] ID=maxRank_port8_royal1_guard1a;
+dialogNodeID_toOverride=port8_royal1_guard1a;
+fReq=gIs:playerFaction:rumane + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=;
+statements=The Viceroy is eager to meet with you, <pnamefull=>.;
+
+[DialogNode] ID=port8_royal1_guard2a;
+animations=;
+statements=Be respectful when speaking to the Viceroy.;
+nextNodeID=;
+
+[DialogNodeOverride] ID=maxRank_port8_royal1_guard2a;
+dialogNodeID_toOverride=port8_royal1_guard2a;
+fReq=gIs:playerFaction:rumane + gIs:playerRank:9 - 1;
+completeOverride=true; overrideSpecialEffects=true;
+animations=happy;
+statements=At your service, <pnamefull=>.;
+
+

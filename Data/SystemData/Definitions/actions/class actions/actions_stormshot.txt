@@ -1,0 +1,362 @@
+
+[Action] ID=Sto_blastShot; 
+	name=Blast Shot;
+	icon=icon_Sto_blastShot;
+	mpCost=8 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=12 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	
+	tooltip=Fire a delayed blast that deals 120% damage or more.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipIcons=<icon=noMelee>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=ranged_small><icon=skill_Wind_small>;
+	
+	XPCost=150;
+	XPCost=550;
+	XPCost=1500;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	casterAnimation=weapon;
+	casterAnimationSpeed=0.7;
+	requiredWeaponElement=ranged;
+	
+	FXOnCaster=sfx_quickHumHigh;
+	FXOnCaster=glintRot;
+	FXOnCaster=glint;
+	FXOnCaster=sfx_magicCharge;
+	FXOnCaster=delay;
+	FXOnCaster=tileLine;
+	FXOnCaster=DramaticNyeaow;
+	
+	FXOnTarget=largePing;
+	FXOnTarget=delay;
+	FXOnTarget=largePing;
+	FXOnTarget=delay;
+	FXOnTarget=delay;
+[ActionAoE] 
+	ID=Sto_blastShot; shape=10;
+	maxRangeBonus=c:rank - 2;
+	needsLoE=false;
+[AvAffecter]
+	ID=Sto_blastShot; 
+	weaponAvAffecter=true;
+	showWeaponAvAffecterFX=false;
+	actorValue=HP;
+	magnitude=w:magnitude * 0.7 + dMax0:windDmg(2);
+	chance=w:chance;
+	duration=-2;
+	element=magic;
+	element=wind;
+	FXOnTile=tileLine_overlap;
+	FXOnTile=DramaticNyeaow;
+	FXOnTile=whiteExplosionSmall_rand_overlap;
+	FXOnTile=smallShakeHoriz;
+[AvAffecterAoE]
+	ID=Sto_blastShot; 
+	cloneFrom=adjacentAndSelf;
+	
+
+
+[Action] ID=Sto_multiblast; 
+	name=Multiblast;
+	icon=icon_Sto_multiblast;
+	mpCost=15 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=15 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
+	
+	tooltip=Fire <math=c:rank+2> large blasts that deal 120% damage or more.;
+	rankUpTooltip=Each rank adds +1 target.;
+	tooltipIcons=<icon=noMelee>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=ranged_small><icon=skill_Wind_small>;
+	
+	XPCost=550;
+	XPCost=750;
+	XPCost=1100;
+	
+	numTargets=c:rank + 2;
+	
+	casterAnimation=weapon;
+	casterAnimationSpeed=0.7;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	requiredWeaponElement=ranged;
+	minDistanceBetweenTargets=3;
+	
+	FXOnCaster=sfx_highShingEcho;
+	FXOnCaster=glintRot;
+	FXOnCaster=glint;
+	FXOnCaster=delay;
+	FXOnCaster=tileLine;
+	FXOnCaster=DramaticNyeaow;
+	FXOnCaster=tileLine;
+	FXOnCaster=DramaticNyeaow;
+	FXOnCaster=tileLine;
+	FXOnCaster=DramaticNyeaow;
+	
+	FXOnTarget=largePing;
+	FXOnTarget=delay;
+	FXOnTarget=largePing;
+	FXOnTarget=delay;
+	FXOnTarget=delay;
+[ActionAoE] 
+	ID=Sto_multiblast; shape=10;
+	maxRangeBonus=0;
+	needsLoE=false;
+[AvAffecter]
+	ID=Sto_multiblast; 
+	weaponAvAffecter=true;
+	showWeaponAvAffecterFX=false;
+	actorValue=HP;
+	magnitude=w:magnitude * 0.7 + dMax0:windDmg(2);
+	chance=w:chance;
+	duration=-2;
+	element=magic;
+	element=wind;
+	FXOnTile=tileLine_overlap;
+	FXOnTile=sfx_DramaticN_quiet;
+	FXOnTile=whiteExplosionSmall_rand_overlap;
+	FXOnTile=smallShakeHoriz;
+[AvAffecterAoE]
+	ID=Sto_multiblast; 
+	cloneFrom=adjacentAndSelf;
+	
+	
+	
+
+[Action] ID=Sto_scatterburst; 
+	name=Scatterburst;
+	icon=icon_Sto_scatterburst;
+	mpCost=4 * d:mpCostMult + d:mpCostMod;
+	
+	tooltip=Fire a shot that bursts into smaller projectiles, dealing<n=><math=25 + c:rank * 5>% damage in a huge area.;
+	rankUpTooltip=Each rank increases damage by 5%.;
+	tooltipIcons=<icon=noMelee>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=ranged_small>;
+	
+	XPCost=175;
+	XPCost=350;
+	XPCost=950;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	casterAnimation=weapon;
+	casterAnimationSpeed=0.9;
+	requiredWeaponElement=ranged;
+	
+	FXOnCaster=magicCharge;
+	FXOnCaster=delay;
+	FXOnTarget=tinyShakeHoriz;
+[ActionAoE] 
+	ID=Sto_scatterburst; shape=10;
+	maxRangeBonus=0;
+	needsLoE=false;
+[AvAffecter]
+	ID=Sto_scatterburst; 
+	weaponAvAffecter=true;
+	actorValue=HP;
+	magnitude=w:magnitude * 0.25 + w:magnitude * 0.05 * c:rank;
+	chance=w:chance;
+	duration=-2;
+	FXOnTile=pop;
+	FXOnTile=sfx_breakRock;
+[AvAffecterAoE]
+	ID=Sto_scatterburst; 
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Sto_scatterburst; 
+	actorValue=HP;
+	magnitude=w:magnitude * 0.25 + w:magnitude * 0.05 * c:rank;
+	chance=w:chance;
+	duration=-2;
+	element=physical;
+	element=ranged;
+	FXOnTile=line;
+	FXOnTile=hitDustQuiet;
+	FXOnTile=delay_tinier;
+	FXOnTile=chk_quiet;
+	useCasterAsOriginForDirectionalEffects=false;
+[AvAffecterAoE]
+	ID=Sto_scatterburst; 
+	cloneFrom=adjacent;
+	maxRange=3;
+	needsLoE=true;
+	arc=false;
+	airborne=true;
+	
+	
+[Action] ID=Sto_splitShot; 
+	name=Split Shot;
+	icon=icon_Sto_splitShot;
+	tooltip=Shoot a target for half damage. Two extra shots split off diagonally, each dealing 70% damage.;
+	rankUpTooltip=Each rank adds +1 range.;
+	tooltipIcons=<icon=noMelee>;
+	tooltipTopRight=<icon=PhysAtk_small><icon=ranged_small>;
+	mpCost=6 * d:mpCostMult + d:mpCostMod;
+	
+	XPCost=175;
+	XPCost=750;
+	XPCost=1250;
+	maxRank=3;
+	canExceedMaxRankBy=1;
+	
+	casterAnimation=weapon;
+	requiredWeaponElement=ranged;
+	
+	FXOnCaster=magicCharge;
+	FXOnTarget=weaponFX;
+[ActionAoE]
+	ID=Sto_splitShot; shape=2; 
+	cloneFrom=adjacent;
+	maxRange = 2;
+	maxRangeBonus=c:rank;
+	airborne=true;
+	arc=false;
+	needsLoE=true;
+[AvAffecter]
+	ID=Sto_splitShot; 
+	weaponAvAffecter=true;
+	magnitude=w:magnitude * 0.5;
+	chance=w:chance;
+	duration=-2;
+	element=physical;
+	element=ranged;
+	FXOnTile=hitdashes;
+	FXOnTile=pop;
+	FXOnTile=sfx_highDramaticN_quiet;
+	FXOnHit=sfx_slashingHit;
+[AvAffecterAoE]
+	ID=Sto_splitShot;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Sto_splitShot; 
+	weaponAvAffecter=false;
+	useCasterAsOriginForDirectionalEffects=false;
+	actorValue=HP;
+	magnitude= w:magnitude * 0.7;
+	chance=w:chance;
+	duration=-2;
+	element=physical;
+	element=ranged;
+	FXOnTile=line;
+	FXOnTile=hitDustQuiet;
+	FXOnHit=chk_quiet;
+	useCasterAsOriginForDirectionalEffects=false;
+[AvAffecterAoE]
+	ID=Sto_splitShot; shape=25;
+	minRange=1;
+	maxRange=2;
+	airborne=true;
+	arc=false;
+	bypassAll=false;
+	needsLoE=true;
+	occupyAll=true;
+	coneAngle=180;
+
+
+[Action] ID=Sto_disruptionShot; 
+	name=Disrupt Shot;
+	icon=icon_Sto_disruptionShot;
+	tooltip=Deal +30% extra damage per negative status effect on the target, then dispel status effects and interrupt casting.;
+	tooltipIcons=<icon=noMelee>;	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=ranged_small><icon=skill_Wind_small>;
+	mpCost=6 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
+	chargeTime=7 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
+	rankUpTooltip=Each rank adds +1 range.;
+	
+	XPCost=300;
+	XPCost=600;
+	
+	casterAnimation=weapon;
+	casterAnimationSpeed=1;
+	maxRank=2;
+	canExceedMaxRankBy=1;
+	requiredWeaponElement=ranged;
+	
+	FXOnCaster=magicCharge;
+	FXOnCasterColor=MediumPurple;
+	FXOnCaster=darken_minor;
+	FXOnCasterColor=White;
+	FXOnCaster=chargeFast;
+	FXOnCasterColor=White;
+	FXOnCaster=Thwummm;
+	FXOnCasterColor=White;
+	FXOnCaster=delay;
+	FXOnCasterColor=White;
+	FXOnCaster=delay;
+	FXOnCasterColor=White;
+	FXOnCaster=tileLine;
+	FXOnCasterColor=MediumPurple;
+	FXOnCaster=DramaticNyeaow;
+	FXOnCaster=delay;
+	FXOnCaster=delay;
+	FXOnCaster=delay;
+	
+	FXOnTarget=darken;
+	FXOnTargetColor=White;
+	FXOnTarget=spiral;
+	FXOnTargetColor=MediumPurple;
+	FXOnTarget=spiral2;
+	FXOnTargetColor=MediumPurple;
+	FXOnTarget=spiral3;
+	FXOnTargetColor=MediumPurple;
+	FXOnTarget=spiral4;
+	FXOnTargetColor=MediumPurple;
+[ActionAoE] 
+	ID=Sto_disruptionShot; shape=10;
+	maxRangeBonus=c:rank - 1;
+[AvAffecter]
+	ID=Sto_disruptionShot; 
+	weaponAvAffecter=true;
+	showWeaponAvAffecterFX=false;
+	actorValue=HP;
+	magnitude=w:magnitude * 0.85
+		+ dMax0:windDmg(0)
+		+ w:magnitude * 0.4 * t:casting
+		+ w:magnitude * 0.4 * t:charging;
+	chance=w:chance;
+	duration=-2;
+	element=magic;
+	element=ranged;
+	element=wind;
+	element=ruinTouch;
+	FXOnTile=delay;
+	FXOnTileColor=White;
+	FXOnTile=delay;
+	FXOnTileColor=White;
+	FXOnTile=tinyHorizShake;
+	FXOnTileColor=White;
+	FXOnTile=hailLine;
+	FXOnTileColor=MediumPurple;
+	FXOnTile=sfx_lowDramaticN;
+	FXOnTileColor=White;
+	FXOnTile=delay;
+	FXOnTileColor=White;
+	FXOnTile=delay;
+	FXOnTileColor=White;
+	FXOnTile=whiteExplosionSmall;
+	FXOnTileColor=MediumPurple;
+	
+	FXOnTile=cut_randBig;
+	FXOnTileColor=MediumPurple;
+	FXOnTile=sfx_slashingHit;
+	FXOnTileColor=MediumPurple;
+	FXOnTile=gustyBlast;
+	FXOnTileColor=MediumPurple;
+	FXOnTile=manySplatter;
+	FXOnTileColor=MediumPurple;
+	FXOnTile=smallShakeHoriz;
+	
+	FXOnHit=starDonk;
+	FXOnHit=whiten;
+	FXOnHit=medHorizShake;
+[AvAffecterAoE]
+	ID=Sto_disruptionShot;
+	 cloneFrom=oneTile;
+[AvAffecter]
+	ID=Sto_disruptionShot; 
+	actorValue=dispel;
+	magnitude=100;
+	chance=w:chance;
+	duration=-2;
+	element=dispel;
+[AvAffecterAoE]
+	ID=Sto_disruptionShot;
+	 cloneFrom=oneTile;

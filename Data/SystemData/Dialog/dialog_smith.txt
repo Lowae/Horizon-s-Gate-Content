@@ -1,0 +1,496 @@
+
+
+-----------------
+
+[DialogNode] ID=town_smith1;
+portraitIcon=portrait_zirel;
+portraitIconFrames=40;
+statements=<rand=Yo./Captain.> <rand=Need something?/What do you need?/>;
+animations=;
+[DialogOption] text=Chat;
+nodeToConnectTo=town_smith_chat;
+color=Orange;
+formulaReq=g:smith_chat * 15 - g:town_trainer_chat;
+[DialogOption] text=Buy;
+newLineOfOptions=true;
+nodeToConnectTo=town_smith_buy;
+[DialogOption] text=Sell;
+nodeToConnectTo=town_smith_sell;
+formulaReq=m:partySize;
+[DialogOption] text=Info;
+nodeToConnectTo=town_smith_info1;
+newLineOfOptions=true;
+[DialogOption] text=Upgrade ($50);
+nodeToConnectTo=town_smith_upgrade1;
+formulaReq=1 - g:steelUnlocked;
+newLineOfOptions=true;
+[DialogOption] text=Upgrade ($200);
+nodeToConnectTo=town_smith_upgrade2;
+formulaReq=g:steelUnlocked - g:mythrilUnlocked;
+newLineOfOptions=true;
+[DialogOption] text=Goodbye;
+bottomOption=true;
+nodeToConnectTo=;
+
+
+
+[DialogNode] ID=town_smith_buy;
+portraitIcon=portrait_zirel;
+portraitIconFrames=40;
+animations=;
+statements=<rand=Right./Got it./Here's what I got./Hurry it up./Go for it.>;
+specialEffect=enterBuyMode;
+[DialogOption] text=Sell;
+formulaReq=m:partySize;
+nodeToConnectTo=town_smith_sell;
+[DialogOption] text=Info;
+nodeToConnectTo=town_smith_info1;
+newLineOfOptions=true;
+[DialogOption] text=Upgrade ($50);
+nodeToConnectTo=town_smith_upgrade1;
+formulaReq=1 - g:steelUnlocked;
+newLineOfOptions=true;
+[DialogOption] text=Upgrade ($200);
+nodeToConnectTo=town_smith_upgrade2;
+formulaReq=g:steelUnlocked - g:mythrilUnlocked;
+newLineOfOptions=true;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+[DialogNode] ID=town_smith_sell;
+portraitIcon=portrait_zirel;
+portraitIconFrames=41;
+animations=;
+statements=<rand=Yeah?/Let's see it./Okay./Hm./Got something worthwhile?/Let's see what you have.>;
+specialEffect=enterSellMode;
+[DialogOption] text=Buy;
+nodeToConnectTo=town_smith_buy;
+[DialogOption] text=Info;
+nodeToConnectTo=town_smith_info1;
+newLineOfOptions=true;
+[DialogOption] text=Upgrade ($50);
+nodeToConnectTo=town_smith_upgrade1;
+formulaReq=1 - g:steelUnlocked;
+newLineOfOptions=true;
+[DialogOption] text=Upgrade ($200);
+nodeToConnectTo=town_smith_upgrade2;
+formulaReq=g:steelUnlocked - g:mythrilUnlocked;
+newLineOfOptions=true;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+
+[DialogNode] ID=town_smith_info1;
+portraitIcon=portrait_zirel;
+portraitIconFrames=0;
+animations=;
+statements=What do you want to know?;
+[DialogOption] text=Weapon types;
+nodeToConnectTo=town_smith_weapons1;
+[DialogOption] text=Crafting;
+newLineOfOptions=true;
+nodeToConnectTo=town_smith_craft1;
+[DialogOption] text=Augmenting;
+newLineOfOptions=true;
+nodeToConnectTo=town_smith_enhance1;
+[DialogOption] text=Goodbye;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=town_smith_weapons1;
+portraitIcon=portrait_zirel;
+portraitIconFrames=40;
+animations=;
+statements=Which weapon you use can change how you fight in important ways.;
+nextNodeID=town_smith_weapons2;
+
+[DialogNode] ID=town_smith_weapons2;
+portraitIcon=portrait_zirel;
+portraitIconFrames=0;
+animations=;
+statements=Ask me about any type and I'll give you the basics.;
+[DialogOption] text=Swords;
+nodeToConnectTo=town_smith_weapons_sword;
+[DialogOption] text=Daggers;
+nodeToConnectTo=town_smith_weapons_dagger;
+[DialogOption] text=Hammers;
+nodeToConnectTo=town_smith_weapons_hammer;
+[DialogOption] text=Axes;
+newLineOfOptions=true;
+nodeToConnectTo=town_smith_weapons_axe;
+[DialogOption] text=Spears;
+nodeToConnectTo=town_smith_weapons_spear;
+[DialogOption] text=Flails;
+nodeToConnectTo=town_smith_weapons_flail;
+[DialogOption] text=Knuckles;
+nodeToConnectTo=town_smith_weapons_knuckle;
+[DialogOption] text=Shields;
+newLineOfOptions=true;
+nodeToConnectTo=town_smith_weapons_shield;
+[DialogOption] text=Bows;
+nodeToConnectTo=town_smith_weapons_bow;
+[DialogOption] text=Crossbows;
+nodeToConnectTo=town_smith_weapons_xbow;
+[DialogOption] text=Never mind.;
+nodeToConnectTo=town_smith_endtalk;
+bottomOption=true;
+
+
+[DialogNode] ID=town_smith_weapons_sword;
+portraitIcon=portrait_zirel;
+portraitIconFrames=20;
+portraitIconFrames=53;
+statements=Swords <iconBig=skill_Sword> are versatile and good in all areas.;
+statements=Rapiers trade damage for accuracy, whereas Greatswords trade accuracy for a wide area of effect.<p=2> Y'need two hands for a greatsword, as well.;
+nextNodeID=town_smith_weapons2;
+
+[DialogNode] ID=town_smith_weapons_dagger;
+portraitIcon=portrait_zirel;
+portraitIconFrames=18;
+portraitIconFrames=73;
+statements=Daggers <iconBig=skill_Dagger> are extremely accurate, but weak.<p=2> I'd say 10% more accurate<p=2> - or even more once you get good with 'em.;
+statements=Rogues like 'em so they can land their abilities' debilitating side effects.;
+nextNodeID=town_smith_weapons2;
+
+[DialogNode] ID=town_smith_weapons_hammer;
+portraitIcon=portrait_zirel;
+portraitIconFrames=73;
+portraitIconFrames=11;
+statements=Hammers <iconBig=skill_Hammer> are 10% less accurate, but they're strong and ignore half the enemy's defense.<p=2> You want to wreck someone's day, take a hammer.;
+statements=This's the most damaging melee weapon. They can also break obstacles that other weapons can't.;
+nextNodeID=town_smith_weapons2;
+
+[DialogNode] ID=town_smith_weapons_axe;
+portraitIcon=portrait_zirel;
+portraitIconFrames=21;
+portraitIconFrames=40;
+statements=Axes <iconBig=skill_Axe> are 5% less accurate, but hurt more than swords.<p=2> It's the middle ground between strength and speed.;
+statements=They also tear through wooden obstacles like no other weapon can.;
+nextNodeID=town_smith_weapons2;
+
+[DialogNode] ID=town_smith_weapons_spear;
+portraitIcon=portrait_zirel;
+portraitIconFrames=10;
+portraitIconFrames=73;
+statements=Spears <iconBig=skill_Spear> don't hurt as much as a sword, but the long range can be real useful.;
+statements=Y'can also hit two at a time if you line 'em up right.;
+nextNodeID=town_smith_weapons2;
+
+[DialogNode] ID=town_smith_weapons_flail;
+portraitIcon=portrait_zirel;
+portraitIconFrames=73;
+portraitIconFrames=12;
+portraitIconFrames=40;
+statements=Flails <iconBig=skill_Flail> ain't as strong as swords, but they can attack diagonally.<p=2> Makes 'em great for angling past shields.;
+statements=They also ignore a tiny bit of armor,<p=1> like 10%,<p=2> so they can be as good as a sword sometimes.;
+statements=Whips are the reverse<p=2> - they're 10% worse against armor<p=2> - but they got great range and high accuracy.;
+nextNodeID=town_smith_weapons2;
+
+[DialogNode] ID=town_smith_weapons_knuckle;
+portraitIcon=portrait_zirel;
+portraitIconFrames=10;
+portraitIconFrames=30;
+statements=Knuckle <iconBig=skill_Knuckle> weapons are basic, but if you get skilled with them they become very accurate.;
+statements=Brawlers need 'em to use their abilities.<p=2> Not much else to say about them, really.;
+nextNodeID=town_smith_weapons2;
+
+[DialogNode] ID=town_smith_weapons_shield;
+portraitIcon=portrait_zirel;
+portraitIconFrames=11;
+portraitIconFrames=40;
+statements=Shields <iconBig=skill_Shield> are all about the defensive bonuses.<p=2> Every point you put into that skill makes yer shield give more evasion.;
+statements=You can attack with them, and it'll push the enemy around.<p=2> But they've got bad accuracy and damage, so it's not always worth it.;
+nextNodeID=town_smith_weapons2;
+
+[DialogNode] ID=town_smith_weapons_bow;
+portraitIcon=portrait_zirel;
+portraitIconFrames=73;
+portraitIconFrames=18;
+statements=Bows <iconBig=skill_Bow> are real strong and versatile.<p=2> You can arc your shots over friendlies, and they've got great range.;
+statements=If you want a reliable ranged weapon, this's the way to go.<p=2> Takes two hands to use, naturally.;
+nextNodeID=town_smith_weapons2;
+
+[DialogNode] ID=town_smith_weapons_xbow;
+portraitIcon=portrait_zirel;
+portraitIconFrames=73;
+portraitIconFrames=40;
+portraitIconFrames=8;
+statements=Crossbows <iconBig=skill_Aim> deal the most damage of any weapon, at range, and they only need one hand!;
+statements=But.<p=4> Y'gotta reload them after every shot<p=2> - that takes a turn.<p=2> And y'can't arc the shots over your teammates.;
+statements=They're great in a pinch,<p=1> but I'd weigh them against bows before y'make a decision.;
+nextNodeID=town_smith_weapons2;
+
+---
+
+[DialogNode] ID=town_smith_craft1;
+portraitIcon=portrait_zirel;
+portraitIconFrames=11;
+portraitIconFrames=12;
+portraitIconFrames=10;
+animations=;
+animations=;
+animations=;
+statements=It's really simple. All you need is a crafting kit, and an ingredient. Like Iron Ore.;
+statements=Just drag the ingredient onto the kit. Simple.;
+statements=If you want to undo your work, drag it into the furnace. You'll get the original components back.;
+nextNodeID=town_smith_info1;
+
+
+[DialogNode] ID=town_smith_enhance1;
+portraitIcon=portrait_zirel;
+portraitIconFrames=10;
+portraitIconFrames=11;
+portraitIconFrames=40;
+animations=;
+animations=;
+animations=;
+statements=You can put certain items inside your weapons and armor. Y'know, like trigger stones, or raw material.;
+statements=Drag the weapon or armor onto the anvil to open it up, then put the material in there.;
+statements=It's an easy way to make your equipment stronger. Don't forget it.;
+nextNodeID=town_smith_info1;
+
+---
+
+[DialogNode] ID=town_smith_upgrade1;
+portraitIcon=portrait_zirel;
+portraitIconFrames=10;
+portraitIconFrames=73;
+statements=If you get me $50, I can start producing and selling steel weapons and armor.;
+statements=What do you think? Pretty good deal, right?;
+[DialogOption] text=Let's upgrade! ($50);
+formulaReq=m:money - 50;
+nodeToConnectTo=town_smith_upgrade_buy1;
+[DialogOption] text=I don't have that much...;
+formulaReq=50 - m:money;
+nodeToConnectTo=;
+[DialogOption] text=Never mind.;
+nodeToConnectTo=town_smith_endtalk;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=town_smith_upgrade_buy1;
+portraitIcon=portrait_zirel;
+portraitIconFrames=74;
+portraitIconFrames=73;
+specialEffect=subtract50gp;
+statements=Alright! Let's get this underway!;
+statements=I'll have this place overflowing with steel in no time!;
+nextNodeID=town_smith_upgrade_buy_get1;
+
+[DialogNode] ID=town_smith_upgrade_buy_get1;
+specialEffect=tAddSteel;
+specialEffect=tUnlockFX;
+
+---
+
+[DialogNode] ID=town_smith_upgrade2;
+portraitIcon=portrait_zirel;
+portraitIconFrames=73;
+portraitIconFrames=40;
+statements=With another $200, I could start making mythril equipment for ya.;
+statements=I know it's a hard sell. But the stuff doesn't come cheap.;
+[DialogOption] text=Let's upgrade! ($200);
+formulaReq=m:money - 200;
+nodeToConnectTo=town_smith_upgrade_buy2;
+[DialogOption] text=I don't have that much...;
+formulaReq=200 - m:money;
+nodeToConnectTo=;
+[DialogOption] text=Never mind.;
+nodeToConnectTo=town_smith_endtalk;
+newLineOfOptions=true;
+
+
+[DialogNode] ID=town_smith_upgrade_buy2;
+portraitIcon=portrait_zirel;
+portraitIconFrames=74;
+portraitIconFrames=19;
+specialEffect=subtract200gp;
+statements=Great! I didn't think you could afford it!;
+statements=Ah, to work in mythril again... I can't wait!;
+nextNodeID=town_smith_upgrade_buy_get2;
+
+
+[DialogNode] ID=town_smith_upgrade_buy_get2;
+specialEffect=tAddMythril;
+specialEffect=tUnlockFX;
+
+
+-----------------
+
+[DialogNode] ID=town_smith_chat;
+specialEffect=modNodeIDGlobalVar_1;
+specialEffect=goToNodeID_plus_GlobalVar;
+specialEffect=tSet_smith_chat0;
+
+[DialogNode] ID=town_smith_chat1;
+portraitIcon=portrait_zirel;
+portraitIconFrames=40;
+portraitIconFrames=41;
+portraitIconFrames=40;
+statements=Don't forget to grab some equipment before you set out.;
+statements=I've got some weapons and armor in the corner there. Buy whatever you need from it.;
+statements=Don't worry about running out. I keep that thing restocked at all times.;
+animations=;
+nextNodeID=town_smith_endchat;
+
+[DialogNode] ID=town_smith_chat2;
+portraitIcon=portrait_zirel;
+portraitIconFrames=40;
+portraitIconFrames=40;
+statements=If an enemy breaks your equipment, get a repair kit. I've got some if you have need of 'em.;
+statements=Until you repair the item, it'll be completely useless, so don't put it off.;
+nextNodeID=town_smith_endchat;
+
+[DialogNode] ID=town_smith_chat3;
+portraitIcon=portrait_zirel;
+portraitIconFrames=40;
+portraitIconFrames=41;
+statements=I don't charge you for equipment just for the hell of it, you know.;
+statements=Raw material isn't cheap. So don't come complaining to me about prices.;
+nextNodeID=town_smith_endchat;
+
+[DialogNode] ID=town_smith_chat4;
+portraitIcon=portrait_zirel;
+portraitIconFrames=50;
+portraitIconFrames=40;
+portraitIconFrames=41;
+statements=What? What do you want?;
+statements=Don't think getting chummy will get you a discount.;
+statements=You mind your work and I'll take care of mine.;
+nextNodeID=town_smith_endchat;
+
+[DialogNode] ID=town_smith_chat5;
+portraitIcon=portrait_zirel;
+portraitIconFrames=30;
+portraitIconFrames=40;
+statements=If you've got nothing better to do, then spend some time augmenting your equipment.;
+statements=Drag it onto the anvil and add some trigger stones or other material. You're missing out on a big advantage if you don't.;
+nextNodeID=town_smith_endchat;
+
+[DialogNode] ID=town_smith_chat6;
+portraitIcon=portrait_zirel;
+portraitIconFrames=40;
+portraitIconFrames=73;
+statements=Talkative, aren't you?;
+statements=No gems of wisdom for you today. Sorry.;
+nextNodeID=town_smith_endchat;
+
+[DialogNode] ID=town_smith_chat7;
+portraitIcon=portrait_zirel;
+portraitIconFrames=0;
+portraitIconFrames=15;
+portraitIconFrames=20;
+portraitIconFrames=40;
+statements=This's the most active I've been outside of a war.;
+statements=I can't say I mind. I was raised on weapons crafting.;
+statements=Nails, hinges, fences... don't need to do anything but hold together.;
+statements=But a weapon is more than that.;
+nextNodeID=town_smith_endchat;
+
+
+[DialogNode] ID=town_smith_chat8;
+portraitIcon=portrait_zirel;
+portraitIconFrames=40;
+portraitIconFrames=41;
+portraitIconFrames=40;
+statements=Sivle just stopped by to borrow a bunch of flails for a 'training exercise'.;
+statements=She's an odd one... I wouldn't trust her if I were you.;
+statements=Not that I trust any of you at all, for that matter.;
+nextNodeID=town_smith_endchat;
+
+
+[DialogNode] ID=town_smith_chat9;
+portraitIcon=portrait_zirel;
+portraitIconFrames=94;
+portraitIconFrames=40;
+portraitIconFrames=41;
+statements=Rrg... my tail's been acting up...;
+statements=Hell if I'll let it slow me down though. Don't need any apprentices in my way, just gotta do it myself!;
+statements='s a weak blacksmith that can't handle the job themselves.;
+nextNodeID=town_smith_endchat;
+
+[DialogNode] ID=town_smith_chat10;
+portraitIcon=portrait_zirel;
+portraitIconFrames=40;
+portraitIconFrames=50;
+portraitIconFrames=73;
+statements=I'm hearing some thugs are preying on other explorers up there.;
+statements=If you find them wielding my weapons... show 'em no mercy.;
+statements=And if they aren't... punish 'em for their bad decision-making.;
+nextNodeID=town_smith_endchat;
+
+[DialogNode] ID=town_smith_chat11;
+portraitIcon=portrait_zirel;
+portraitIconFrames=18;
+statements=Don't bother me today.<p=2> I've got a big order to fill.;
+nextNodeID=town_smith_endchat;
+
+[DialogNode] ID=town_smith_chat12;
+portraitIcon=portrait_zirel;
+portraitIconFrames=20;
+portraitIconFrames=41;
+portraitIconFrames=50;
+portraitIconFrames=63;
+statements=Besides gettin' to craft weapons...<p=4> I got another reason to be here.;
+statements=Long time ago,<p=1> couple people I knew were crushed by buildings Alvora knocked down.;
+statements=It wasn't some big tragedy, mind you.<p=3> I barely knew them.;
+statements=Still.<p=1> Being here, doing this...<p=3> it's sort of like getting back at her.<p=2> Taking back what she took from us.;
+nextNodeID=town_smith_endchat;
+
+
+
+[DialogNode] ID=town_smith_chat13;
+portraitIcon=portrait_zirel;
+portraitIconFrames=30;
+portraitIconFrames=40;
+portraitIconFrames=73;
+statements=I got nothin' interesting to say, so take this time to augment your equipment.;
+statements=I know I've said it before.<p=3> And I'll keep saying it.;
+statements=You're responsible for your soldiers' gear.<p=2> And I'm responsible for nagging you to buy more of it.;
+nextNodeID=town_smith_endchat;
+
+[DialogNode] ID=town_smith_chat14;
+portraitIcon=portrait_zirel;
+portraitIconFrames=10;
+portraitIconFrames=73;
+statements=Seeing all this young blood arming up for battle makes me wish I were fighting age again.;
+statements=Then again, I never did have much of a sword arm.<p=2> I was all force and no finesse, hah!;
+nextNodeID=town_smith_endchat;
+
+[DialogNode] ID=town_smith_chat15;
+portraitIcon=portrait_zirel;
+portraitIconFrames=31;
+portraitIconFrames=73;
+statements=Doin' alright, Captain.;
+statements=Keep up the good work.;
+nextNodeID=town_smith_endchat;
+
+[DialogNode] ID=town_smith_endchat;
+specialEffect=nextDialogNode_hideWindow;
+nextNodeID=town_smith1;
+
+--------------------------------
+
+[DialogNode] ID=town_smith0;
+portraitIcon=portrait_zirel;
+portraitIconFrames=31;
+portraitIconFrames=40;
+portraitIconFrames=50;
+portraitIconFrames=73;
+statements=You the one Lorim talked about?;
+statements=Zirel.<p=4> You want weapons or armor, you come here.;
+statements=Don't underestimate the value of good equipment.<p=2> Your cadets'll thank you for it.;
+statements=I'll also buy any crap y'don't need.<p=2> Charitable, right?;
+animations=;
+
+specialEffect=incDefaultNode;
+nextNodeID=town_smith_endtalk;
+
+[DialogNode] ID=town_smith_endtalk;
+specialEffect=nextDialogNode_hideWindow;
+nextNodeID=town_smith1;
+

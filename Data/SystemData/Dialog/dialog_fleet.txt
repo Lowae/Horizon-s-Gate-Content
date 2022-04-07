@@ -1,0 +1,263 @@
+
+[DialogNode] ID=dialog_fleet;
+animations=;
+statements=<color=DarkRed><portraitBigCommodore=><commodoreName=><color=> commands a <fleetdesc=>.<n=><textIf=An allied fleet is nearby.=m:numFactionAlliesWithin(2)-1>;
+specialEffect=talkToFlagship;
+specialEffect=setDialogWindowSizeY;
+specialEffect=resetPCDialogWindowSizeY;
+nextNodeID=;
+[DialogOption] text=(Inspect);
+nodeToConnectTo=dialog_fleet_inspect;
+specialEffect=showFleetInfo,dialog_fleet_inspect;
+[DialogOption] text=(Chat);
+newLineOfOptions=true;
+formulaReq=3-m:distanceFleet - m:tHostile * 100;
+nodeToConnectTo=dialog_fleet_chat;
+[DialogOption] text=<color=DarkRed>(Attack!);
+newLineOfOptions=true;
+formulaReq=3-m:distanceFleet;
+nodeToConnectTo=dialog_fleet_attack;
+[DialogOption] text=<color=SlateGray>(Not close enough to attack);
+newLineOfOptions=true;
+formulaReq=m:distanceFleet-2;
+nodeToConnectTo=dialog_fleet;
+[DialogOption] text=(Other Fleet);
+newLineOfOptions=true;
+formulaReq=m:numNPCsAt-1;
+nodeToConnectTo=dialog_fleet;
+specialEffect=talkToOtherActor;
+[DialogOption] text=Done;
+nodeToConnectTo=;
+bottomOption=true;
+
+
+
+[DialogNode] ID=dialog_fleet_inspect;
+statements=Info automatically fills in here from showFleetInfo;
+nextNodeID=dialog_fleet;
+
+[DialogNode] ID=dialog_fleet_attack;
+statements=Are you sure you want to attack?<color=DarkRed><textIf= You will be fighting two fleets at once.=m:numFactionAlliesWithin(2)-1>;
+[DialogOption] text=<color=DarkRed>Yes;
+nodeToConnectTo=playerEnterFleetBattle;
+[DialogOption] text=No;
+newLineOfOptions=true;
+escOption=true;
+nodeToConnectTo=;
+
+---
+
+[DialogNode] ID=dialog_fleet_chat;
+statements=<fleetChat=>;
+specialEffect=talkToCommodore;
+
+[DialogOption] text=(Gossip);
+nodeToConnectTo=dialog_fleet_chat_gossip;
+[DialogOption] text=(Trade);
+newLineOfOptions=true;
+nodeToConnectTo=dialog_fleet_chat_trade;
+[DialogOption] text=Done;
+nodeToConnectTo=dialog_fleet;
+escOption=true;
+bottomOption=true;
+
+
+[DialogNode] ID=dialog_fleet_chat_refuse;
+animations=angry;
+statements=We have nothing to say to the likes of you!;
+specialEffect=talkToCommodore;
+nextNodeID=dialog_fleet;
+
+[DialogNode] ID=dialog_fleet_chat_gossip;
+statements=<gossip=>;
+specialEffect=talkToCommodore;
+nextNodeID=dialog_fleet_chat;
+
+
+[DialogNode] ID=dialog_fleet_chat_trade;
+statements=Here's what we can spare...<p=> I'm <color=DarkRed>charging you extra<color=> though!;
+specialEffect=talkToFlagship;
+specialEffect=enterBuyMode_fleet;
+specialEffect=setBuyPriceMult,1.5;
+specialEffect=setNPCDialogWindowSizeY,120;
+specialEffect=setPCDialogWindowSizeY,68;
+
+[DialogOption] text=Done<textIfFinal==1-m:gamepad> (<keybind=endTurn>);
+nodeToConnectTo=dialog_fleet_chat;
+bottomOption=true;
+
+
+
+
+
+---------------------------------------------
+
+[DialogNode] ID=playerEnterFleetBattle;
+specialEffect=autosave;
+specialEffect=enterFleetBattle_player;
+nextNodeID=;
+
+[DialogNode] ID=enterFleetBattle;
+specialEffect=enterFleetBattle;
+nextNodeID=;
+
+
+---------------
+
+[DialogNode] ID=dialog_wonFleetBattle;
+animations=;
+statements=Victory!;
+specialEffect=recoverOverboardPartyActors;
+specialEffect=setDialogWindowSizeY;
+specialEffect=setupFleetLooting;
+specialEffect=tMusicGentlePiano2;
+nextNodeID=dialog_XPreport;
+
+[DialogNode] ID=dialog_XPreport;
+animations=;
+statements=Crew status report:<n><XPbreakdown=>;
+specialEffect=setDialogWindowSizeY,800;
+nextNodeID=dialog_captureShips;
+
+
+[DialogNode] ID=dialog_captureShips;
+animations=;
+statements=These ships can be captured.;
+specialEffect=setDialogWindowSizeY;
+specialEffect=captureShips_afterCombat,dialog_captureShips;
+nextNodeID=;
+
+
+[DialogNode] ID=dialog_lootFleet;
+animations=;
+statements=Here's all the cargo we could salvage.;
+specialEffect=setDialogWindowSizeY, 100;
+specialEffect=lootFleet_afterCombat;
+specialEffect=closeFleetWindow;
+nextNodeID=;
+[DialogOption] text=Done!<textIfFinal==1-m:gamepad> (<keybind=endTurn>);
+nodeToConnectTo=dialog_lootFleet_confirm;
+[DialogOption] text=Back;
+newLineOfOptions=true;
+nodeToConnectTo=dialog_captureShips;
+
+[DialogNode] ID=dialog_lootFleet_confirm;
+animations=;
+statements=Are you sure you're done?;
+specialEffect=setDialogWindowSizeY;
+[DialogOption] text=Yes!;
+nodeToConnectTo=dialog_enemyCommodoreQuip;
+[DialogOption] text=Back;
+newLineOfOptions=true;
+nodeToConnectTo=dialog_captureShips;
+
+
+
+[DialogNode] ID=dialog_enemyCommodoreQuip;
+nextNodeID=dialog_endFleetBattle;
+
+[DialogNode] ID=dialog_endFleetBattle;
+specialEffect=tNoMusic;
+specialEffect=setGlobalVar,fleetBattleStarted,0;
+specialEffect=setGlobalVar,autosaveInOverworld,1;
+specialEffect=t_travel_gVars;
+nextNodeID=;
+
+
+-----------------
+
+--Important Node. It is used by the system for aggressive boats.
+[DialogNode] ID=dialog_fleet_aggressive_attack;
+animations=;
+statements=<color=DarkRed><portraitBigCommodore=><commodoreName=><color=>'s <fleetdesc=> is attacking!<n=><textIf=An allied fleet is joining them!=m:numFactionAlliesWithin(2)-1>;
+specialEffect=setDialogWindowSizeY;
+specialEffect=resetPCDialogWindowSizeY;
+nextNodeID=dialog_enemyCommodoreAttack;
+
+[DialogNode] ID=dialog_enemyCommodoreAttack;
+specialEffect=talkToCommodore;
+nextNodeID=enterFleetBattle;
+
+
+-----------------
+
+[DialogNode] ID=dialog_fleet_submerged;
+animations=;
+statements=There appears to be something submerged under the water here.;
+--if you are adjacent, cut straight to combat
+specialEffect=gotoIf,dialog_fleet_submerged_attacking,2-m:distanceFleet;
+nextNodeID=;
+[DialogOption] text=<color=DarkRed>(Attack!);
+newLineOfOptions=true;
+formulaReq=3-m:distanceFleet;
+nodeToConnectTo=dialog_fleet_attack;
+[DialogOption] text=<color=SlateGray>(Not close enough to attack);
+newLineOfOptions=true;
+formulaReq=m:distanceFleet-2;
+nodeToConnectTo=dialog_fleet_submerged;
+[DialogOption] text=(Cancel);
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=dialog_fleet_submerged_attacking;
+animations=;
+statements=Sea monsters rapidly approach your fleet!<textIf= A second group of sea monsters joins them!=m:numFactionAlliesWithin(2)-1><textIf= They seem hesitant to attack your powerful fleet.=m:playerStrongerThanFleet>;
+[DialogOption] text=<color=DarkRed>(Fight!);
+nodeToConnectTo=enterFleetBattle;
+[DialogOption] text=Distract with 10<iconBig=food>;
+formulaReq=cargoItem:food - 9 - m:playerStrongerThanFleet*9999;
+newLineOfOptions=true;
+nodeToConnectTo=dialog_fleet_submerged_giveFood;
+[DialogOption] text=Ignore;
+formulaReq=m:playerStrongerThanFleet;
+newLineOfOptions=true;
+nodeToConnectTo=dialog_fleet_submerged_ignore;
+
+
+
+[DialogNode] ID=dialog_fleet_submerged_giveFood;
+animations=;
+statements=You dump the food overboard.<p=> They ravenously devour it, allowing you an easy escape.;
+nextNodeID=dialog_fleet_submerged_giveFood2;
+
+[DialogNode] ID=dialog_fleet_submerged_giveFood2;
+specialEffect=lose10Food;
+specialEffect=fxOnTalker,waterSplash_small;
+specialEffect=fxOnTalker,sfx_quietSplash;
+specialEffect=removeTalker;
+
+
+
+[DialogNode] ID=dialog_fleet_submerged_ignore;
+animations=;
+statements=You ignore them, and they eventually lose interest.;
+nextNodeID=dialog_fleet_submerged_ignore2;
+
+[DialogNode] ID=dialog_fleet_submerged_ignore2;
+specialEffect=fxOnTalker,waterSplash_small;
+specialEffect=fxOnTalker,sfx_quietSplash;
+specialEffect=removeTalker;
+
+-----------------
+
+[DialogNode] ID=dialog_fleet_sm;
+animations=;
+statements=There is a menacing <actorName=> floating here.;
+--if you are adjacent, cut straight to combat
+specialEffect=gotoIf,dialog_fleet_submerged_attacking,2-m:distanceFleet;
+nextNodeID=;
+[DialogOption] text=<color=DarkRed>(Attack!);
+newLineOfOptions=true;
+formulaReq=3-m:distanceFleet;
+nodeToConnectTo=playerEnterFleetBattle;
+[DialogOption] text=<color=SlateGray>(Not close enough to attack);
+newLineOfOptions=true;
+formulaReq=m:distanceFleet-2;
+nodeToConnectTo=dialog_fleet_sm;
+[DialogOption] text=Done;
+nodeToConnectTo=;
+bottomOption=true;
+
+-------------------
+
+

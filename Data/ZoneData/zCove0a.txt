@@ -1,0 +1,59 @@
+[Zone]  ID=zCove0a; dark=True; timeUntilNewDay=24; showFogOfWar=False; fogOfWar=False; minimapEnabled=True; allowCameraPastZoneEdges=False; cantAct=False; cantGameOver=False; alwaysKeepWeaponsUnsheathed=False; peaceful=False; overseerMode=False; rollingPinStyle=False; drawSky=False; boatZone=True; wind=False; overworld=False; canDropItems=True; 
+ travelSong=; travelSongVolume=1; travelSongPitch=0; combatSong=; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=45; darkG=48; darkB=59; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=oceanB; bgFX_sineWave=0; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=p20; zoneGrassPalette=pGreen; zoneGrassDarkPalette=pGreen2; zoneStonePalette=pGreyD; zoneStoneDarkPalette=pGreyD2; zoneStoneLightPalette=pGreyD; zoneWaterPalette=p48; zoneDirtDarkPalette=p20; zoneWoodPalette=pWood; zoneWoodDarkPalette=pWoodDark; zoneMisc1Palette=pWoodDark; zoneMisc2Palette=pWoodDark; zoneMisc3Palette=pRed; zoneMisc4Palette=pBlue; zoneMisc5Palette=pGreen; zoneMisc6Palette=pOrange; zoneMisc7Palette=pYellow; zoneMisc8Palette=pPurple; 
+
+combatMode=False; 
+
+[Item] ID=rockEdge1_overhang; q=1; x=26; y=27;
+[Item] ID=rockEdge1_overhang; q=1; x=27; y=22;
+[Item] ID=rockEdge1_S_overhang; q=1; x=28; y=21;
+[Item] ID=rockEdge1_overhang2; q=1; x=29; y=22;
+[Item] ID=rockEdge1_S_overhang; q=1; x=30; y=22;
+[Item] ID=rockEdge1_S_overhang_wall; q=1; x=31; y=22;
+[Item] ID=caveBright; q=1; x=31; y=22;
+[Item] ID=sunbeam_circle_med_dull; q=1; x=31; y=22;
+[Item] ID=travelPoint_0; q=1; r=90; x=31; y=23;
+[Item] ID=travelPoint_1; q=1; r=270; x=31; y=31;
+[Item] ID=rockEdge1_S_overhang; q=1; x=32; y=22;
+[Item] ID=rockEdge1_S_overhang; q=1; x=33; y=22;
+[Item] ID=rockEdge1_S_overhang; q=1; x=34; y=22;
+[Item] ID=rockEdge1_overhang2; q=1; x=35; y=23;
+[Item] ID=rockEdge1_overhang2; q=1; x=36; y=25;
+
+
+
+[Trigger] numID=0; aliasID=;
+topX=25;topY=19;btmX=30;btmY=19;
+triggerImmediatelyOnEnteringZone=True; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=True; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=0; effectID=preventInteraction; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=6.5; delay=0; xValue=-1; yValue=-1;
+[TriggerEffect] numID=0; effectID=cutsceneMode; sValue=; sValue2=; bValue1=True; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+[TriggerEffect] numID=0; effectID=movement; sValue=sailboat; sValue2=; bValue1=False; bValue2=False; fValue=2.5; delay=1; xValue=31; yValue=23;
+[TriggerEffect] numID=0; effectID=fx; sValue=fadeToWhite; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=3; xValue=-1; yValue=-1;
+[TriggerEffect] numID=0; effectID=travel; sValue=eral; sValue2=; bValue1=True; bValue2=False; fValue=90; delay=6.4; xValue=467; yValue=392;
+[TriggerEffect] numID=0; effectID=song; sValue=PM-Bazaar; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=1; xValue=-1; yValue=-1;
+[TriggerEffect] numID=0; effectID=cutsceneMode; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=6.4; xValue=-1; yValue=-1;
+[TriggerEffect] numID=0; effectID=setGlobalVar; sValue=enableFormationPhase; sValue2=; bValue1=False; bValue2=False; fValue=1; delay=0; xValue=-1; yValue=-1;
+[TriggerEffect] numID=0; effectID=setGlobalVar; sValue=enableEnemyRandomActTimers; sValue2=; bValue1=False; bValue2=False; fValue=1; delay=0; xValue=-1; yValue=-1;
+[TriggerEffect] numID=0; effectID=disableUI; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+[TriggerEffect] numID=0; effectID=enableUI; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=4.9; xValue=-1; yValue=-1;
+[TriggerEffect] numID=0; effectID=setGlobalVar; sValue=dontAutosaveAfterCombat; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=1; aliasID=;
+topX=31;topY=23;btmX=31;btmY=23;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1-m:cutsceneMode;
+[TriggerEffect] numID=1; effectID=travel_leaveLocation; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=2; aliasID=;
+topX=28;topY=32;btmX=34;btmY=32;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=g:laganFleetSpawned;
+[TriggerEffect] numID=2; effectID=travel_point; sValue=zBeach0d2; sValue2=; bValue1=False; bValue2=False; fValue=1; delay=0; xValue=-1; yValue=-1;
+
+
+
