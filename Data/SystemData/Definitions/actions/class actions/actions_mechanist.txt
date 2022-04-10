@@ -1,11 +1,11 @@
 
 
 [Action] ID=Mec_setTurret; 
-	name=Place Turret;
+	name=放置炮塔;
 	icon=icon_Mec_turret;
 	mpCost=10 * d:mpCostMult + d:mpCostMod;
-	tooltip=Place a turret that fires every <icon=time>20, dealing <math=13.5 + c:MagAtk*1.5 + c:skill_Elec*1.5><thinnerIcon=HP> damage. Fires 5 volleys before breaking. 'Use' to rotate.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=放置一个炮塔每隔<icon=time>20造成<math=13.5 + c:MagAtk*1.5 + c:skill_Elec*1.5><thinnerIcon=HP>伤害.<n>在损坏前可射击5次.<n>'使用'来旋转.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Elec_small>;
 	
 	XPCost=250;
@@ -63,11 +63,11 @@
 	
 	
 [Action] ID=Mec_setWall; 
-	name=Portable Wall;
+	name=便携墙壁;
 	icon=icon_Mec_wall;
 	mpCost=6 * d:mpCostMult + d:mpCostMod;
-	tooltip=Deploy a wall up to <math=c:rank+2> panels long that lasts for <icon=time>120.<n>Can be broken by blunt weapon attacks.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=部署一面墙壁最长<math=c:rank+2>格持续<icon=time>120.<n>可被钝器打碎.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=;
 	
 	AIRatingBias = -999;
@@ -113,11 +113,11 @@
 
 
 [Action] ID=Mec_setTrap; 
-	name=Set Trap;
+	name=设置陷阱;
 	icon=icon_Mec_setTrap;
 	mpCost=2 * d:mpCostMult + d:mpCostMod;
-	tooltip=Toss out <math=c:rank> hidden mantrap(s). Whoever ends their movement on it takes <math=4 + c:PhysAtk + c:MagAtk><thinnerIcon=HP> damage and is immobilized for <icon=time><math=60 + c:PhysAtk*2 + c:MagAtk*2>.;
-	rankUpTooltip=Each rank adds +1 extra trap.;
+	tooltip=扔出<math=c:rank>个隐蔽的陷阱. 无论谁经过都将受到<math=4 + c:PhysAtk + c:MagAtk><thinnerIcon=HP>伤害且被'定身'持续<icon=time><math=60 + c:PhysAtk*2 + c:MagAtk*2>.;
+	rankUpTooltip=每级+1陷阱数.;
 	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small>;
 	attractAttention=false;
 	
@@ -162,11 +162,11 @@
 	
 	
 [Action] ID=Mec_setConveyor; 
-	name=Deploy Conveyor;
+	name=部署传送带;
 	icon=icon_Mec_conveyor;
 	mpCost=4 * d:mpCostMult + d:mpCostMod;
-	tooltip=Deploy a conveyor belt up to<n><math=c:rank+2> panels long that lasts <icon=time><math=90 + 5*c:MagAtk + 5*c:skill_Elec> and pushes creatures on it every <icon=time>5.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=部署一个最长<math=c:rank+2>格的传送带,<n>保留<icon=time><math=90 + 5*c:MagAtk + 5*c:skill_Elec><n>而且每隔<icon=time>5将生物推到上面.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Elec_small>;
 	
 	AIRatingBias = -999;
@@ -225,11 +225,11 @@
 	fReq=canItemFit:mechanist_conveyorBelt;
 	
 [Action] ID=Mec_setMedkit; 
-	name=Toss Medkit;
+	name=投掷医疗包;
 	icon=icon_Mec_medkit;
 	mpCost=8 * d:mpCostMult + d:mpCostMod;
-	tooltip=Toss out <math=c:rank+1> medical kits.<n>Creatures that end their turn on a medkit heal <math=6 + c:MagAtk + c:skill_Life><thinnerIcon=HP>.<n>Heals <math=2 + c:MagAtk * 0.7 + c:skill_Life * 0.7><thinnerIcon=HP> when thrown directly at a target.;
-	rankUpTooltip=Each rank adds +1 target.;
+	tooltip=投掷<math=c:rank+1>个医疗包.<n>在医疗兵上的生物回合结束时恢复<math=6 + c:MagAtk + c:skill_Life><thinnerIcon=HP>.<n>当直接扔向目标时恢复<math=2 + c:MagAtk * 0.7 + c:skill_Life * 0.7><thinnerIcon=HP>.;
+	rankUpTooltip=每级+1目标.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
 	attractAttention=false;
 	
@@ -293,7 +293,7 @@
 
 
 [Action] ID=medkit_action; 
-	name=Medkit;
+	name=医疗包;
 	icon=;
 	tooltip=;
 	rankUpTooltip=;

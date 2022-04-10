@@ -1,9 +1,9 @@
 
 [Action] ID=Bl_flashCut; 
-	name=Flash Cut;
+	name=幻影斩;
 	icon=icon_Bl_flashcut;
-	tooltip=Dash forward through opponents, cutting them for 90% damage.;
-	rankUpTooltip=Each rank adds +1 max range.;
+	tooltip=向前冲过敌人,切割他们造成90%伤害.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipIcons=<icon=noAugments> <icon=slashWeapons>Only;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	
@@ -67,10 +67,10 @@
 	
 
 [Action] ID=Bl_bladestorm; 
-	name=Bladestorm;
+	name=剑刃风暴;
 	icon=icon_Bl_bladestorm;
-	tooltip=A torrent of slashes against nearby enemies deals half damage.;
-	rankUpTooltip=Each rank increases area of effect.;
+	tooltip=对附近敌人疯狂切割造成50%伤害.;
+	rankUpTooltip=每级增加影响范围.;
 	tooltipIcons=<icon=noAugments> <icon=slashWeapons>Only;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	
@@ -127,10 +127,10 @@
 	
 
 [Action] ID=Bl_perfect; 
-	name=Perfect Strike;
+	name=完美一击;
 	icon=icon_Bl_perfectStrike;
-	tooltip=Deliver a weak strike for <math=30 + 10 * c:rank>% damage that cannot miss.;
-	rankUpTooltip=Each rank increases damage by 10%.;
+	tooltip=发动一次必中攻击造成<math=30 + 10 * c:rank>%伤害.;
+	rankUpTooltip=每级+10%伤害.;
 	tooltipIcons=<icon=slashWeapons>Only;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	
@@ -163,10 +163,10 @@
 	 
 
 [Action] ID=Bl_rend; 
-	name=Rend;
+	name=撕裂;
 	icon=icon_Bl_rend;
-	tooltip=Cut into armor, dealing half damage and -3<icon=PhysDef> for <icon=time><math=40 + 30 * c:rank>.;
-	rankUpTooltip=Each rank increases duration by <icon=time>30.;
+	tooltip=划破盔甲,造成50%伤害且-3<icon=PhysDef>持续<icon=time><math=40 + 30 * c:rank>.;
+	rankUpTooltip=每级+<icon=time>30持续时间.;
 	tooltipIcons=<icon=slashWeapons>Only;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	
@@ -209,10 +209,10 @@
 	
 
 [Action] ID=Bl_shockwave; 
-	name=Shockwave;
+	name=冲击波;
 	icon=icon_Bl_shockwave;
-	tooltip=Make a ranged attack with your blade for 75% damage.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=用你的锋刃进行远程攻击，<n>造成75%的伤害.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipIcons=<icon=slashWeapons>Only;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small><icon=skill_Wind_small>;
 	mpCost=1 * d:mpCostMult + d:mpCostMod;
@@ -252,9 +252,9 @@
 	
 	
 [Action] ID=Bl_deathblow; 
-	name=Deathblow;
+	name=致命一击;
 	icon=icon_Bl_deathblow;
-	tooltip=Deal +50% extra damage to a target that is in critical condition or asleep.;
+	tooltip=对处于危急状态或'昏睡'的目标造成+50%伤害.;
 	rankUpTooltip=;
 	tooltipIcons=<icon=slashWeapons>Only;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;

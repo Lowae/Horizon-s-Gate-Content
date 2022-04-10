@@ -1,10 +1,10 @@
 
 [Action] ID=Bat_summonZoar; 
-	name=Summon Zoar;
+	name=召唤Zoar;
 	icon=icon_Bat_summonZoar;
 	mpCost=10 * d:mpCostMult + d:mpCostMod;
-	tooltip=Summon a Zoar Bat that fights by your side for <icon=time>100.<n>It takes its first action in <icon=time><math=35 - 5*c:rank>.;
-	rankUpTooltip=Each rank makes the Zoar Bat act +5 <icon=time> sooner.;
+	tooltip=召唤一只Zoar蝙蝠在你身边战斗<n>持续<icon=time>100.<n>在<icon=time><math=35 - 5*c:rank>开始第一次行动.;
+	rankUpTooltip=每级加快Zoar蝙蝠行动时间5<icon=time>.;
 	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=skill_Wind_small>;
 	harmful=false;
 	
@@ -122,11 +122,11 @@
 	cloneFrom=oneTile;
 	
 [Action] ID=Bat_zSwarm; 
-	name=Z-Swarm;
+	name=Z-集结;
 	icon=icon_Bat_zSwarm;
 	mpCost=1 * d:mpCostMult + d:mpCostMod;
-	tooltip=Batlings swarm the target, granting an ally +50%<icon=PhysEva> or inflicting -50%<icon=PhysEva> on an enemy for <icon=time>90.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=召唤成群结队的吸血蝙蝠,<n>给予队友+50%<icon=PhysEva>或对敌人造成-50%<icon=PhysEva>持续<icon=time>90.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=;
 	
 	XPCost=160;
@@ -183,11 +183,11 @@
 	
 
 [Action] ID=Bat_zTorrent; 
-	name=Z-Torrent;
+	name=Z-狂潮;
 	icon=icon_Bat_zTorrent;
 	mpCost=6 * d:mpCostMult + d:mpCostMod;
-	tooltip=An outpouring of Zoar batlings deals <math=c:PhysAtk * 0.5 + c:MagAtk * 0.5 + c:skill_Wind * 0.5><thinnerIcon=HP> damage and inflicts -1 <icon=moveDistance> for <icon=time>50 in a wide square.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=召唤源源不断的Zoar吸血蝙蝠<n>在方形区域内造成<math=c:PhysAtk * 0.5 + c:MagAtk * 0.5 + c:skill_Wind * 0.5><thinnerIcon=HP>伤害<n>且施加-1<icon=moveDistance>持续<icon=time>50.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=skill_Wind_small>;
 	
 	XPCost=220;
@@ -265,10 +265,10 @@
 	
 
 [Action] ID=Bat_flight; 
-	name=Flight;
+	name=飞行;
 	icon=icon_Bat_flight;
 	harmful=false;
-	tooltip=Call a Zoar Bat to carry you a short distance.;
+	tooltip=命令一个Zoar蝙蝠带你移动一段距离.;
 	tooltipTopRight=;
 	
 	mpCost=1 * d:mpCostMult + d:mpCostMod;
@@ -307,13 +307,13 @@
 	
 
 [Action] ID=Bat_zoarnado; 
-	name=Zoarnado;
+	name=Zoar巢群;
 	icon=icon_Bat_zoarnado;
 	mpCost=13 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=18 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
 	
-	tooltip=Send a Zoar colony to devastate a small area, dealing <math=10 + c:PhysAtk * 1.5 + c:MagAtk * 1.5 + c:skill_Wind * 1.5><thinnerIcon=HP> or more damage.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=派遣一个Zoar群体摧毁一小片区域,<n>造成<math=10 + c:PhysAtk * 1.5 + c:MagAtk * 1.5 + c:skill_Wind * 1.5><thinnerIcon=HP>以上伤害.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=skill_Wind_small>;
 	
 	XPCost=375;
@@ -422,11 +422,11 @@
 	
 
 [Action] ID=Bat_tailwind; 
-	name=Tailwind;
+	name=顺风;
 	icon=icon_Bat_tailwind;
 	mpCost=6 * d:mpCostMult + d:mpCostMod;
-	tooltip=A breezy wind grants +1 <icon=moveDistance> to all allies for <icon=time><math=15 + c:rank * 10 + d:windDurMax(1)>.;
-	rankUpTooltip=Each rank increases duration by <icon=time>10.;
+	tooltip=一阵微风为队友带来+1<icon=moveDistance>持续<icon=time><math=15 + c:rank * 10 + d:windDurMax(1)>.;
+	rankUpTooltip=每级+<icon=time>10持续时间.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Wind_small>;
 	
 	XPCost=180;

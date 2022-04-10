@@ -1,9 +1,9 @@
 [Action] ID=Ele_condensate; 
-	name=Condensate;
+	name=冷凝水;
 	icon=icon_Ele_condensate;
 	mpCost=5 * d:mpCostMult + d:mpCostMod;
-	tooltip=Create water, dealing <thinnerIcon=icon_water><math=d:iceDmg20LessScaleDisplay(3)> damage in a small area.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=制造水,在小范围内造成<thinnerIcon=icon_water><math=d:iceDmg20LessScaleDisplay(3)>伤害.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ice_small>;
 	
 	XPCost=150;
@@ -81,13 +81,13 @@
 
 
 [Action] ID=Ele_shock; 
-	name=Shock;
+	name=触电;
 	icon=icon_Ele_shock;
 	mpCost=10 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=14 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
 	
-	tooltip=Electrify a small area, stunning for up to <icon=time><math=2 + d:elecDurMax(1) + 3 * c:rank> and dealing <thinnerIcon=skill_Elec><math=d:elecDmgDisplay(4)> damage.;
-	rankUpTooltip=Each rank increases duration by <icon=time>3.;
+	tooltip=使一小块区域充电,范围内眩晕<icon=time><math=2 + d:elecDurMax(1) + 3 * c:rank>且造成<thinnerIcon=skill_Elec><math=d:elecDmgDisplay(4)>伤害.;
+	rankUpTooltip=每级+<icon=time>3持续时间.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Elec_small>;
 	
 	XPCost=270;
@@ -154,13 +154,13 @@
 
 
 [Action] ID=Ele_freeze; 
-	name=Freeze;
+	name=冻结;
 	icon=icon_Ele_freeze;
 	mpCost=14 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=15 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
 	
-	tooltip=Freeze a target for up to <icon=time><math=14 + d:iceDurMax(1) + c:rank * 8> and deal <thinnerIcon=skill_Ice><math=d:iceDmgDisplay(7)> damage. When used on empty space, creates an ice block and returns 12<icon=MP>.;
-	rankUpTooltip=Each rank increases frozen duration by <icon=time>8.;
+	tooltip='冻结'一个目标<icon=time><math=14 + d:iceDurMax(1) + c:rank * 8>且造成<thinnerIcon=skill_Ice><math=d:iceDmgDisplay(7)>伤害.当对空地使用时,创造一块冰块且返回12<icon=MP>.;
+	rankUpTooltip=每级+<icon=time>8冻结时间.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ice_small>;
 	
 	AIRatingBias = -7;
@@ -243,12 +243,12 @@
 	
 
 [Action] ID=Ele_fireWhirl; 
-	name=Fire Whirl;
+	name=火龙卷;
 	icon=icon_Ele_fireWhirl;
 	mpCost=12 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=14 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
-	tooltip=Summon a fiery tornado that lasts for <icon=time>80 and scorches adjacent creatures every <icon=time>20 for <thinnerIcon=skill_Fire><math=d:fireDmgDisplay(5)> damage.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=召唤一股烈焰龙卷风,持续<icon=time>80且每隔<icon=time>20灼烧附近生物造成<thinnerIcon=skill_Fire><math=d:fireDmgDisplay(5)>伤害.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small>;
 	
 	AIRatingBias = 0;
@@ -314,10 +314,10 @@
 	
 
 [Action] ID=Ele_windslash; 
-	name=Windslash;
+	name=风刃;
 	icon=icon_Ele_windslash;
-	tooltip=Slicing winds cut through a wide line in front of you to deal <thinnerIcon=skill_Wind><math=d:windDmgDisplay(6)> damage.;
-	rankUpTooltip=Each rank adds +1 max range.;
+	tooltip=以风刃将前方划开一道宽缝造成<thinnerIcon=skill_Wind><math=d:windDmgDisplay(6)>伤害.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipIcons=<icon=noMove>;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Wind_small>;
 	

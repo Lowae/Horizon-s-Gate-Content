@@ -1,8 +1,8 @@
 
 [Action] ID=Gu_mightyBlock; 
-	name=Mighty Block;
+	name=强大的盾;
 	icon=icon_Gu_mightyBlock;
-	tooltip=Make an ally nearly invulnerable to physical attacks until their next turn.;
+	tooltip=使一名队友几乎免疫物理攻击直到他回合开始.;
 	rankUpTooltip=;
 	tooltipTopRight=;
 	
@@ -60,10 +60,10 @@
 
 	
 [Action] ID=Gu_resuscitate; 
-	name=Resuscitate;
+	name=复兴;
 	icon=icon_Gu_resuscitate;
-	tooltip=Revive an adjacent fallen ally, restoring <math=c:skill_Life + c:MagAtk + 10 * c:rank>% HP.;
-	rankUpTooltip=Each rank increases restored HP by 10%.;
+	tooltip=复活一个相邻倒下的盟友,恢复<math=c:skill_Life + c:MagAtk + 10 * c:rank>% HP.;
+	rankUpTooltip=每级+10%恢复生命.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
 	harmful=false;
 	attractAttention=false;
@@ -110,10 +110,10 @@
 	
 	
 [Action] ID=Gu_rally; 
-	name=Rally;
+	name=团结;
 	icon=icon_Gu_rally;
-	tooltip=Inspire your allies, increasing their morale for <icon=time><math=34+ c:MagAtk*2 + 20 * c:rank>.<n=>Good morale increases <icon=PhysAtk><icon=MagAtk> attack and <icon=PhysDef><icon=MagDef> defense.;
-	rankUpTooltip=Each rank increases duration by <icon=time>20.;
+	tooltip=激励你的队友,提升'士气'持续<icon=time><math=34+ c:MagAtk*2 + 20 * c:rank>.<n=>士气高昂会增加<icon=PhysAtk><icon=MagAtk>攻击和<icon=PhysDef><icon=MagDef>防御.;
+	rankUpTooltip=每级+<icon=time>20持续时间.;
 	tooltipTopRight=<icon=MagAtk_small>;
 	
 	harmful=false;
@@ -159,10 +159,10 @@
 	
 	
 [Action] ID=Gu_discipline; 
-	name=Discipline;
+	name=自律;
 	icon=icon_Gu_discipline;
-	tooltip=Through sheer fortitude, cure negative status effects.;
-	rankUpTooltip=Each rank increases area of effect.;
+	tooltip=通过不屈的意志,治疗负面状态.;
+	rankUpTooltip=每级增加影响范围.;
 	tooltipTopRight=;
 	
 	harmful=false;
@@ -199,10 +199,10 @@
 	
 	
 [Action] ID=Gu_impair; 
-	name=Impair;
+	name=削弱;
 	icon=icon_Gu_impair;
-	tooltip=Inflict -<math=c:rank + 2> <icon=PhysAtk><icon=MagAtk> for <icon=time>90 and deal half damage.;
-	rankUpTooltip=Further reduce enemy <icon=PhysAtk><icon=MagAtk> by +1.;
+	tooltip=施加-<math=c:rank + 2> <icon=PhysAtk><icon=MagAtk>持续<icon=time>90且造成50%伤害.;
+	rankUpTooltip=每级+1<icon=PhysAtk><icon=MagAtk>减少值.;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	
 	XPCost=150;

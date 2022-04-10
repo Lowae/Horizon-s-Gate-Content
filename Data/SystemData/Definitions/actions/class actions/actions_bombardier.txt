@@ -1,8 +1,8 @@
 [Action] ID=Bom_activate; 
-	name=Activate;
+	name=激活;
 	icon=icon_Bom_activate;
 	mpCost=1 * d:mpCostMult + d:mpCostMod;
-	tooltip=Charge <math=c:rank> spot(s) with energy to activate remote bombs.;
+	tooltip=使用能量充能<math=c:rank>个目标地点以激活远程炸弹.;
 	rankUpTooltip=Each rank adds +1 target.;
 	tooltipTopRight=;
 	autolearnedByAI=true;
@@ -46,11 +46,11 @@
 
 
 [Action] ID=Bom_throwFlare; 
-	name=Remote Flare;
+	name=遥控火焰弹;
 	icon=icon_Bom_flare;
 	mpCost=4 * d:mpCostMult + d:mpCostMod;
-	tooltip=Toss a device that explodes when Activated, dealing <thinnerIcon=skill_Fire><math=d:fireDmgDisplay(11)> damage and stunning for <icon=time>2.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=投掷一个当激活时会爆炸的装置,<n>造成<thinnerIcon=skill_Fire><math=d:fireDmgDisplay(11)>伤害且眩晕<icon=time>2.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small>;
 	
 	special=limitRemoteBombsTo5InTravelMode;
@@ -115,11 +115,11 @@
 	
 
 [Action] ID=Bom_throwPulse; 
-	name=Remote Pulse;
+	name=遥控脉冲弹;
 	icon=icon_Bom_pulse;
 	mpCost=4 * d:mpCostMult + d:mpCostMod;
-	tooltip=Toss a device that explodes when Activated, dealing <thinnerIcon=skill_Wind><math=d:windDmgDisplay(11)> damage and pushing 1 tile.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=投掷一个当激活时会爆炸的装置,<n>造成<thinnerIcon=skill_Wind><math=d:windDmgDisplay(11)>伤害且推开1格.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Wind_small>;
 	
 	special=limitRemoteBombsTo5InTravelMode;
@@ -186,11 +186,11 @@
 
 	
 [Action] ID=Bom_throwFrost; 
-	name=Remote Frost;
+	name=遥控冰霜弹;
 	icon=icon_Bom_frost;
 	mpCost=4 * d:mpCostMult + d:mpCostMod;
-	tooltip=Toss a device that bursts when Activated, dealing <thinnerIcon=skill_Ice><math=d:iceDmgDisplay(11)> damage and spreading ice across the ground.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=投掷一个当激活时会爆发的装置,<n>造成<thinnerIcon=skill_Ice><math=d:iceDmgDisplay(11)>伤害并在地面上散布冰块.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ice_small>;
 	
 	special=limitRemoteBombsTo5InTravelMode;
@@ -257,11 +257,11 @@
 	
 
 [Action] ID=Bom_throwHeal; 
-	name=Remote Heal;
+	name=遥控生命弹;
 	icon=icon_Bom_heal;
 	mpCost=4 * d:mpCostMult + d:mpCostMod;
-	tooltip=Toss a device that bursts when Activated, healing <math=d:lifeDmgDisplay(11)><thinnerIcon=HP> and curing status effects.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=投掷一个当激活时爆炸的装备,恢复<math=d:lifeDmgDisplay(11)><thinnerIcon=HP>和治疗状态效果.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
 	
 	special=limitRemoteBombsTo5InTravelMode;
@@ -328,7 +328,7 @@
 	
 
 [Action] ID=mechanist_flare_explode; 
-	name=Remote Flare;
+	name=遥控火焰弹;
 	
 	FXOnTarget=whiten;
 	FXOnTarget=explosionHoriz_flare;
@@ -371,7 +371,7 @@
 	
 
 [Action] ID=mechanist_pulse_explode; 
-	name=Remote Pulse;
+	name=遥控脉冲弹;
 	
 	FXOnTarget=whiten;
 	FXOnTarget=ping_noOverlap;
@@ -413,7 +413,7 @@
 	
 
 [Action] ID=mechanist_frost_explode; 
-	name=Remote Frost;
+	name=遥控冰霜弹;
 	
 	FXOnTarget=whiten;
 	FXOnTarget=iceShards_rot_small;
@@ -453,7 +453,7 @@
 	
 
 [Action] ID=mechanist_heal_explode; 
-	name=Remote Heal;
+	name=遥控生命弹;
 	harmful=false;
 	
 	FXOnTarget=largePingRepeat;

@@ -1,11 +1,11 @@
 
 [Action] ID=En_fireWpn; 
-	name=Fire Enchant;
+	name=火焰附魔;
 	icon=icon_En_fireWpn;
 	mpCost=7 * d:mpCostMult + d:mpCostMod;
 	harmful=false;
-	tooltip=Enchant a target's weapons with magic flames for <icon=time><math=50 + c:rank * 50 + c:skill_Fire * 5 + c:MagAtk * 5>,<n=>adding <thinnerIcon=skill_Fire>7 extra damage.;
-	rankUpTooltip=Each rank increases duration by <icon=time>50.;
+	tooltip=为目标的武器附魔火焰魔法,<n>持续<icon=time><math=50 + c:rank * 50 + c:skill_Fire * 5 + c:MagAtk * 5>,<n=>额外增加<thinnerIcon=skill_Fire>7伤害.;
+	rankUpTooltip=每级+<icon=time>50持续时间.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small>;
 	
 	XPCost=150;
@@ -55,12 +55,12 @@
 	
 
 [Action] ID=En_iceWpn; 
-	name=Ice Enchant;
+	name=冰霜附魔;
 	icon=icon_En_iceWpn;
 	mpCost=7 * d:mpCostMult + d:mpCostMod;
 	harmful=false;
-	tooltip=Enchant a target's weapons with magical ice for <icon=time><math=50 + c:rank * 50 + c:skill_Ice * 5 + c:MagAtk * 5>,<n=>adding <thinnerIcon=skill_Ice>7 extra damage.;
-	rankUpTooltip=Each rank increases duration by <icon=time>50.;
+	tooltip=为目标的武器附魔冰霜魔法,<n>持续<icon=time><math=50 + c:rank * 50 + c:skill_Ice * 5 + c:MagAtk * 5>,<n=>额外增加<thinnerIcon=skill_Ice>7伤害.;
+	rankUpTooltip=每级+<icon=time>50持续时间.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ice_small>;
 	
 	XPCost=150;
@@ -109,12 +109,12 @@
 
 	
 [Action] ID=En_elecWpn; 
-	name=Lightning Enchant;
+	name=闪电附魔;
 	icon=icon_En_elecWpn;
 	mpCost=7 * d:mpCostMult + d:mpCostMod;
 	harmful=false;
-	tooltip=Enchant a target's weapons with magic lightning for <icon=time><math=50 + c:rank * 50 +  c:skill_Elec * 5 + c:MagAtk * 5>,<n=>adding <thinnerIcon=skill_Elec>7 extra damage.;
-	rankUpTooltip=Each rank increases duration by <icon=time>50.;
+	tooltip=为目标的武器附魔闪电魔法,<n>持续<icon=time><math=50 + c:rank * 50 +  c:skill_Elec * 5 + c:MagAtk * 5>,<n=>额外增加<thinnerIcon=skill_Elec>7伤害.;
+	rankUpTooltip=每级+<icon=time>50持续时间.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Elec_small>;
 	
 	XPCost=150;
@@ -164,12 +164,12 @@
 	
 
 [Action] ID=En_windWpn; 
-	name=Wind Enchant;
+	name=疾风附魔;
 	icon=icon_En_windWpn;
 	mpCost=7 * d:mpCostMult + d:mpCostMod;
 	harmful=false;
-	tooltip=Enchant a target's weapons with magical wind for <icon=time><math=50 + c:rank * 50 + c:skill_Wind * 5 + c:MagAtk * 5>,<n=>adding <thinnerIcon=skill_Wind>7 extra damage.;
-	rankUpTooltip=Each rank increases duration by <icon=time>50.;
+	tooltip=为目标的武器附魔疾风魔法,<n>持续<icon=time><math=50 + c:rank * 50 + c:skill_Wind * 5 + c:MagAtk * 5>,<n=>额外增加<thinnerIcon=skill_Wind>7伤害.;
+	rankUpTooltip=每级+<icon=time>50持续时间.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Wind_small>;
 	
 	XPCost=150;
@@ -220,11 +220,11 @@
 	
 
 [Action] ID=En_forceLunge; 
-	name=Force Lunge;
+	name=疾风突刺;
 	icon=icon_En_forceLunge;
 	mpCost=4 * d:mpCostMult + d:mpCostMod;
-	tooltip=Launch yourself forward to deal wind damage and push an enemy.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=向前突刺,再次疾风伤害且推开敌人.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipIcons=<icon=noRanged>;
 	tooltipTopRight=;
 	
@@ -279,10 +279,10 @@
 	
 
 [Action] ID=En_elementalFury; 
-	name=Elemental Fury;
+	name=元素之怒;
 	icon=icon_En_elementalFury;
-	tooltip=Grant nearby enchanted allies +5<icon=PhysAtk> for 1 turn. Also renews enchantments for up to <icon=time><math=85 + c:MagAtk*5>.;
-	rankUpTooltip=Each rank increases area of effect.;
+	tooltip=增强附近队友,获得+5<icon=PhysAtk>持续1回合.同时刷新附魔魔法持续时间至<icon=time><math=85 + c:MagAtk*5>.;
+	rankUpTooltip=每级增加影响范围和效果.;
 	harmful=false;
 	tooltipTopRight=<icon=MagAtk_small>;
 	
@@ -462,10 +462,10 @@
 	
 
 [Action] ID=En_discharge; 
-	name=Discharge;
+	name=释放;
 	icon=icon_En_discharge;
-	tooltip=Channel your enchantments and positive status effects into a powerful weapon attack.;
-	rankUpTooltip=Each rank increases damage by 10%.;
+	tooltip=汇聚你的附魔和正面效果造成一次强力攻击.;
+	rankUpTooltip=每级+10%伤害.;
 	tooltipIcons=<icon=noRanged>;
 	tooltipTopRight=;
 	mpCost=10 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
@@ -548,9 +548,9 @@
 	
 
 [Action] ID=En_antipode; 
-	name=Antipode;
+	name=对映体;
 	icon=icon_En_antipode;
-	tooltip=A combination ice, fire, and lightning attack that deals massive damage.;
+	tooltip=冰霜,火焰,闪电的组合攻击,造成大量伤害.;
 	rankUpTooltip=;
 	tooltipIcons=;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small><icon=skill_Ice_small><icon=skill_Elec_small>;

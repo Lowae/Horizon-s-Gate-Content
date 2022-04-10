@@ -2,14 +2,14 @@
 	
 
 [Action] ID=Min_harmony; 
-	name=Harmony;
+	name=和弦;
 	icon=icon_Min_harmony;
 	
 	mpCost=6 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=20 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
 	
-	tooltip=Heal all allies for <math=2 + c:rank + c:MagAtk* 0.5 + c:skill_Life* 0.5><adjX=-4><icon=HP>.;
-	rankUpTooltip=Each rank increases HP healed by 1<icon=HP>.;
+	tooltip=治愈所有队友<math=2 + c:rank + c:MagAtk* 0.5 + c:skill_Life* 0.5><adjX=-4><icon=HP>.;
+	rankUpTooltip=每级+1治愈<icon=HP>.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
 	
 	XPCost=150;
@@ -70,14 +70,14 @@
 	
 
 [Action] ID=Min_rhapsody; 
-	name=Rhapsody;
+	name=狂想曲;
 	icon=icon_Min_rhapsody;
 	
 	mpCost=6 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=20 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
 	
-	tooltip=Restore <math=1 + c:rank + c:MagAtk* 0.5 + c:skill_Life* 0.5><adjX=-4><icon=MP> for all allies.;
-	rankUpTooltip=Each rank increases MP restored by 1<icon=MP>.;
+	tooltip=恢复所有队友<math=1 + c:rank + c:MagAtk* 0.5 + c:skill_Life* 0.5><adjX=-4><icon=MP>.;
+	rankUpTooltip=每级+1恢复<icon=MP>.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
 	
 	XPCost=150;
@@ -137,14 +137,14 @@
 	
 
 [Action] ID=Min_shanty; 
-	name=Shanty;
+	name=船夫曲;
 	icon=icon_Min_shanty;
 	
 	mpCost=6 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=20 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
 	
-	tooltip=Boost morale of all allies for <icon=time><math=30+c:rank*10 + c:MagAtk>.;
-	rankUpTooltip=Each rank increases duration by <icon=time>10.;
+	tooltip=鼓舞所有队友'士气'持续<icon=time><math=30+c:rank*10 + c:MagAtk>.;
+	rankUpTooltip=每级+<icon=time>10持续时间.;
 	tooltipTopRight=<icon=MagAtk_small>;
 	
 	XPCost=150;
@@ -204,13 +204,13 @@
 	
 
 [Action] ID=Min_virelai; 
-	name=Virelai;
+	name=二韵诗;
 	icon=icon_Min_virelai;
 	
 	mpCost=4 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=15 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
 	
-	tooltip=Cure negative status effects on all allies.;
+	tooltip=清除所有队友负面状态.;
 	rankUpTooltip=;
 	tooltipTopRight=;
 	
@@ -271,14 +271,14 @@
 	
 
 [Action] ID=Min_ballad; 
-	name=War Ballad;
+	name=战争民谣;
 	icon=icon_Min_ballad;
 	
 	mpCost=9 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=35 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
 	
-	tooltip=Grant living allies Ward and Guard for <icon=time><math=20+c:rank*5 + d:lifeDurMax(0.5)>, and revive fallen allies with 1<icon=HP> HP.;
-	rankUpTooltip=Each rank increases duration by <icon=time>5.;
+	tooltip=给予所有存活的队友'守卫'和'护佑'状态,<n>持续<icon=time><math=20+c:rank*5 + d:lifeDurMax(0.5)>,复活倒下的队友恢复1<icon=HP> HP.;
+	rankUpTooltip=每级+<icon=time>5持续时间.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
 	
 	XPCost=175;

@@ -17,9 +17,9 @@ ID=item_studyTool;
 category=item; halfPage=true; rarity=1;
 title=Magnifying Glass;
 text=<itemBig=studyTool><title=Magnifying Glass><brAdj=>This deceptively simple tool can reveal knowledge to you. It replicates the Scholar's 'Elementary' ability, although it takes a turn to use.;
-[ItemType]  name=Repair Tools;
+[ItemType]  name=维修工具;
 ID=repairTool;  itemCategory=tool;
-description=Kit for fixing broken equipment. Drag it onto an item to repair it.; stackable=true;
+description=修理损坏装备的工具.拖到对应物品上使用.; stackable=true;
  sprite=800; spriteWhenHeld=0; 
  pR=pBlue; pB=pIron;
  special=repairTool; special=consumeOnUse; special=quantityChangesSprite_upTo2;
@@ -99,8 +99,8 @@ text=<itemBig=guide_chrysolit><title=Guide Chrysolit><brAdj=>This pupating creat
 
 
 
-[ItemType]  name=Essence Stone;
-description=A small brittle crystal. It can improve the skills of the user.;
+[ItemType]  name=精石;
+description=一种小而易碎的晶体.可以提升使用者的技能.;
 ID=xpGem; sprite=45; action=xpGem_awardXP; itemCategory=1; special=consumeOnUse; stackable=true;
 pR=pTeal;
  volume=1; value=300;
@@ -237,8 +237,8 @@ title=Toxic Powder;
 text=<itemBig=poisonDust><title=Toxic Powder><brAdj=>When Bone Dust is applied to Slugvine, this vile powder is the result. It has no practical purpose other than to sicken your enemies.;
 
 
-[ItemType]  name=Dart;
-description=One-use attack item. Can be used even when your hands are full.; itemCategory=1;
+[ItemType]  name=飞镖;
+description=一次性攻击物品.即使双手没空也可以使用.; itemCategory=1;
 ID=dart; sprite=98; spriteWhenHeld=130;
 weight=0; volume=1; value=8; stackable=true;
 special=consumeOnUse;
@@ -649,8 +649,8 @@ ID=rope_extended; element=removeRope; element=tileReacted; newID=X; action=remov
 ID=rope_extended; element=slash; action=removeRope;
 
 
-[ItemType]  name=Oil Can;
-description=A small sealed container filled with flammable oil.;
+[ItemType]  name=油桶;
+description=装满可燃油的密封小容器.;
 ID=oilCan; sprite=1921; itemCategory=1;
 weight=3; volume=5; value=4;
 special=stackCannotBeSplit; special=consumeOnUse;
@@ -675,8 +675,8 @@ category=item; halfPage=true;
 title=Oily Rag;
 text=<itemBig=oilyRag><title=Oily Rag><brAdj=>A filthy, oily, flammable rag - the final ingredient of a Firebomb. Otherwise, it's completely useless.;
 
-[ItemType]  name=Bottle;
-description=An empty glass bottle.; itemCategory=1;
+[ItemType]  name=瓶子;
+description=一个空的玻璃瓶.; itemCategory=1;
 weight=1; volume=3; value=3;
 ID=bottle; sprite=1923; stackable=true; combineSound=sfx_bottle;
 	combineWith=oilCan; toMake=bottle_oil; consumeOnCombine=true;
@@ -689,8 +689,8 @@ category=item; halfPage=true;
 title=Bottle;
 text=<itemBig=bottle><title=Bottle><brAdj=>A versatile glass bottle. Can contain all kinds of fluids. Just drag it onto what you want to fill it with.;
 
-[ItemType]  name=Beer;
-description=A bottle of beer. Restores energy if drank in moderation.;
+[ItemType]  name=啤酒;
+description=一瓶啤酒.适度饮用可以恢复体力.;
 weight=1; volume=3; value=9; itemCategory=1;
 journalID=journal_beer;
 special=convertIntoCashAtEnd;
@@ -818,30 +818,30 @@ category=item; halfPage=true;
 title=Beer;
 text=<itemBig=mug_beer><title=Beer><brAdj=>Popular alcoholic beverage. Found in some form in most cultures. Restores energy and improves morale (provided you drink in moderation).;
 
-[ItemType]  name=Shears;
+[ItemType]  name=大剪刀;
 ID=shears; sprite=1537; 
 weight=1; volume=1; value=8; itemCategory=tool;
-description=Basic scissors. Often used to cut cloth into bandages.; 
+description=基本的剪刀.通常用来把布切成绷带.; 
 [JournalEntry]
 ID=item_shears;
 category=item; halfPage=true;
 title=Shears;
 text=<itemBig=shears><title=Shears><brAdj=>Primitive scissors made of two blades connected by a strip of springy metal. On the plus side, they're equally effective for left-handed users.;
 
-[ItemType]  name=Bandages;
+[ItemType]  name=绷带;
 ID=bandage; sprite=1538; 
 stackable=true;
 weight=0; volume=1; value=8;
 pR=pGrey;
-description=Useful in a pinch to heal minor injuries.;
+description=在紧急情况下可以治疗轻伤.;
 action=bandage_action; itemCategory=consumable; special=consumeOnUse;
 	combineWith=oilCan; toMake=oilyRag; consumeOnCombine=true;
 	combineWith=woodPlank; toMake=splint; consumeOnCombine=true;
 [JournalEntry]
 ID=item_bandage;
 category=item; halfPage=true;
-title=Bandage;
-text=<itemBig=bandage><title=Bandage><brAdj=>Cloth cut into strips. Wraps around an injury to reduce blood flow. A Scout with 'Medic' is even better at using these.;
+title=绷带;
+text=<itemBig=bandage><title=绷带><brAdj=>切成条状的布包裹伤口以减少血液流动. 一个学会'Medic'的侦察员更擅长使用这些.;
 	
 [ItemType]  name=Splint;
 ID=splint; sprite=1539; 
@@ -857,7 +857,7 @@ category=item; halfPage=true;
 title=Splint;
 text=<itemBig=splint><title=Splint><brAdj=>Cloth wrapped around wood holds the injured limb in place, providing support and preventing further injury.;
 
-[ItemType]  name=Wood Plank;
+[ItemType]  name=木板;
 ID=woodPlank; sprite=624; stackable=true;
 weight=3; volume=5; value=4; itemCategory=1;
 pB=pWood;
@@ -869,7 +869,7 @@ combineWith=craft_spear; toMake=spear_wood;
 combineWith=craft_shield; toMake=shield_wood;
 combineWith=craft_bow; toMake=bow_wood; 
 combineWith=craft_xbow; toMake=xbow_wood; 
-description=A wooden plank usable for almost any purpose.; 
+description=几乎可以用于任何用途的木板.; 
 [JournalEntry]
 ID=item_woodPlank;
 category=item; halfPage=true;

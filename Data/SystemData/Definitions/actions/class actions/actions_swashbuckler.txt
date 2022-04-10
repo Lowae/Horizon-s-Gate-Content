@@ -1,9 +1,9 @@
 
 [Action] ID=Swa_boltBalestra; 
-	name=Bolt Balestra;
+	name=突刺射击;
 	icon=icon_Swa_boltBalestra;
-	tooltip=Shoot a target for 80% damage, then charge to the target and swing your offhand weapon for 50% damage.;
-	rankUpTooltip=Each rank increases charge distance by +1.;
+	tooltip=射击一个目标造成80%的伤害,然后对目标冲锋,<n>并挥舞你的副手武器造成50%的伤害.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipIcons=<icon=noMelee>;
 	tooltipTopRight=<icon=PhysAtk_small><icon=ranged_small><icon=melee_small>;
 	
@@ -75,10 +75,10 @@
 
 
 [Action] ID=Swa_sweepStrikes; 
-	name=Sweeping Strikes;
+	name=回旋横扫;
 	icon=icon_Swa_sweepStrikes;
-	tooltip=Attack adjacent targets for half damage, then move up to <math=1+c:rank> tiles and do it again.;
-	rankUpTooltip=Each rank adds +1 distance moved.;
+	tooltip=攻击相邻目标造成50%伤害, 然后向前移动<math=1+c:rank>格再次发动攻击.;
+	rankUpTooltip=每级+1移动距离.;
 	tooltipIcons=<icon=noAugments> <icon=noRanged>;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	
@@ -158,10 +158,10 @@
 
 	
 [Action] ID=Swa_pincerAttack; 
-	name=Pincer Attack;
+	name=夹击;
 	icon=icon_Swa_pincerAttack;
-	tooltip=Charge forward to deal 80% damage with your melee weapon. Deals +40% extra damage per ally adjacent to the target.;
-	rankUpTooltip=Each rank increases charge distance by +1.;
+	tooltip=向前冲锋,使用近战武器造成80%的伤害.<n>目标周围每有一名队友额外+40%伤害.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipIcons=<icon=noRanged>;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	
@@ -216,12 +216,12 @@
 	
 
 [Action] ID=Swa_maneuver; 
-	name=Maneuver;
+	name=调动;
 	icon=icon_Swa_maneuver;
 	harmful=false;
 	attractAttention=false;
-	tooltip=Move or swap with a nearby ally and boost morale for <icon=time><math=24+c:MagAtk*2+10*c:rank>.;
-	rankUpTooltip=Each rank increases duration by <icon=time>10.;
+	tooltip=移动或和队友交换位置<n>且为双方提升'士气'持续<icon=time><math=24+c:MagAtk*2+10*c:rank>.;
+	rankUpTooltip=每级+<icon=time>10持续时间.;
 	tooltipTopRight=<icon=MagAtk_small>;
 	
 	AIRatingBias = -20;
@@ -293,10 +293,10 @@
 	
 	
 [Action] ID=Swa_mug; 
-	name=Mug;
+	name=抢劫;
 	icon=icon_Swa_mug;
-	tooltip=Deal 90% damage, steal all gold, and cause the enemy to drop <math=c:rank> unequipped item(s). Deal +30% damage and lower morale for <icon=time><math=45 + 25 * c:rank> if successful.;
-	rankUpTooltip=Each rank makes the enemy drop an additional item and increases duration by <icon=time>25.;
+	tooltip=造成90%的伤害,偷走所有金币,并导致敌人掉落<math=c:rank>件为装备道具.<n>如果成功额外造成30%伤害且降低'士气'持续<icon=time><math=45 + 25 * c:rank>.;
+	rankUpTooltip=每级+1掉落道具且+<icon=time>25负面状态持续时间.;
 	tooltipIcons=<icon=noRanged>;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	

@@ -1,9 +1,9 @@
 [Action] ID=gate; 
-	name=Gate;
+	name=门;
 	icon=icon_gate;
 	mpCost=3 * d:mpCostMult + d:mpCostMod;
-	tooltip=Connect two points in space, teleporting yourself to the target.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=连接空间中的两点，将你自己传送到目标.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=;
 	harmful=false;
 	
@@ -54,13 +54,13 @@
 	
 	
 [Action] ID=gate_magma; 
-	name=Gate: Magma;
+	name=门: 岩浆;
 	icon=icon_firegate;
 	mpCost=12 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=17 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
 	
-	tooltip=Summon a gate to fire from the depths of the earth. Deals <thinnerIcon=skill_Fire><math=d:fireDmg20ScaleDisplay(14)> damage.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=从地心深处召唤一扇岩浆之门.<n>造成<thinnerIcon=skill_Fire><math=d:fireDmg20ScaleDisplay(14)>伤害.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small>;
 	
 	XPCost=350;
@@ -126,12 +126,12 @@
 	
 	
 [Action] ID=gate_storm; 
-	name=Gate: Storm;
+	name=门: 风暴;
 	icon=icon_gate_storm;
 	mpCost=12 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=17 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
-	tooltip=Summon a gate to storm clouds, covering an area with lightning. Deals <thinnerIcon=skill_Elec><math=d:elecDmg20ScaleDisplay(14)> damage.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=召唤风暴之门,用闪电覆盖一片区域.<n>造成<thinnerIcon=skill_Elec><math=d:elecDmg20ScaleDisplay(14)>伤害.;
+	rankUpTooltip=每级+1攻击距离;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Elec_small>;
 	
 	XPCost=350;
@@ -199,12 +199,12 @@
 	
 	
 [Action] ID=gate_flood; 
-	name=Gate: Flood;
+	name=门: 洪水;
 	icon=icon_gate_water;
 	mpCost=14 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=20 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
-	tooltip=Summon a gate to the bottom of the ocean to flood a wide area. Deals <thinnerIcon=icon_water><math=d:iceDmgDisplay(10)> damage.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=召唤海底之门.淹没大片区域.<n>造成<thinnerIcon=icon_water><math=d:iceDmgDisplay(10)>伤害.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ice_small>;
 	
 	special=requiresCasting;
@@ -328,12 +328,12 @@
 	cloneFrom=oneTile;
 
 [Action] ID=gate_sky; 
-	name=Gate: Sky;
+	name=门: 狂风;
 	icon=icon_gate_sky;
 	mpCost=12 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=18 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
-	tooltip=Create a gate to a vicious gale, pulling creatures inward and dealing <thinnerIcon=skill_Wind><math=d:windDmgDisplay(13)> damage in the center.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=召唤一扇狂风之门,将生物拉至中心.<n>中心区域造成<thinnerIcon=skill_Wind><math=d:windDmgDisplay(13)>伤害.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Wind_small>;
 	
 	special=requiresCasting;
@@ -486,10 +486,10 @@
 	
 	
 [Action] ID=gate_item; 
-	name=Gate: Item;
+	name=门: 道具;
 	icon=icon_gate_item;
 	mpCost=2 * d:mpCostMult + d:mpCostMod;
-	tooltip=Swap items at the target with a personal storage space somewhere in the void. Does not work on obstructed terrain, or on certain items.;
+	tooltip=将目标物品与空间中的<n>个人存储空间某处交换.<n>在障碍物地形或某些特殊物品无法使用.;
 	rankUpTooltip=;
 	
 	XPCost=200;

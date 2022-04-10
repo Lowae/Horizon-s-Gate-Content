@@ -1,9 +1,9 @@
 
 [Action] ID=Br_breakWeapon; 
-	name=Break Weapon;
+	name=粉碎武器;
 	icon=icon_Br_breakWeapon;
-	tooltip=Deal half damage and break enemy's weapon, reducing its damage to 1.;
-	rankUpTooltip=Each rank increases accuracy by 5%.;
+	tooltip=造成50%伤害且击碎敌人的武器,<n>将其伤害降至1.;
+	rankUpTooltip=每级+5%命中.;
 	tooltipIcons=<icon=bluntWeapons>Only;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	
@@ -62,10 +62,10 @@
 	
 
 [Action] ID=Br_breakArmor; 
-	name=Break Armor;
+	name=粉碎护甲;
 	icon=icon_Br_breakArmor;
-	tooltip=Deal half damage and break enemy's armor, rendering it useless.;
-	rankUpTooltip=Each rank increases accuracy by 5%.;
+	tooltip=造成50%伤害且粉碎敌人护甲,<n>使其失效.;
+	rankUpTooltip=每级+5%命中.;
 	tooltipIcons=<icon=bluntWeapons>Only;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	
@@ -124,10 +124,10 @@
 	
 	
 [Action] ID=Br_breakLegs; 
-	name=Break Legs;
+	name=断腿;
 	icon=icon_Br_breakLegs;
-	tooltip=Deal half damage and smash enemy legs, immobilizing them for <icon=time><math=45 + 15 * c:rank> or more.;
-	rankUpTooltip=Each rank increases duration by <icon=time>15.;
+	tooltip=造成50%伤害且猛击敌人腿部,<n>造成'定身'持续<icon=time><math=45 + 15 * c:rank>或更长时间.;
+	rankUpTooltip=每级+<icon=time>15持续时间.;
 	tooltipIcons=<icon=bluntWeapons>Only;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	
@@ -176,10 +176,10 @@
 	
 
 [Action] ID=Br_breakArms; 
-	name=Break Arms;
+	name=断臂;
 	icon=icon_Br_breakArms;
-	tooltip=Deal half damage and smash enemy limbs, disabling them for <icon=time>40 or more.;
-	rankUpTooltip=Each rank increases accuracy by 5%.;
+	tooltip=造成50%伤害且猛击敌人四肢,造成'残废'持续<icon=time>40或更长时间.;
+	rankUpTooltip=每级+5%命中.;
 	tooltipIcons=<icon=bluntWeapons>Only;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	
@@ -227,14 +227,14 @@
 	
 
 [Action] ID=Br_shatter; 
-	name=Shatter;
+	name=碎裂;
 	icon=icon_Br_shatter;
-	tooltip=Deal +<math=40+10*c:rank>% damage per piece of broken equipment and per incapacitating status effect (disable, immobilize, stun, etc).;
+	tooltip=每个被粉碎的装备或丧失行动能力的<n>负面状态('残废','定身','眩晕'等等)<n>额外+<math=40+10*c:rank>%伤害.;
 	rankUpTooltip=;
 	tooltipIcons=<icon=bluntWeapons>Only;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	mpCost=6 * d:mpCostMult + d:mpCostMod;
-	rankUpTooltip=Each rank increases damage by 10%.;
+	rankUpTooltip=每级+10%额外伤害.;
 	
 	XPCost=500;
 	XPCost=950;
@@ -296,10 +296,10 @@
 	
 
 [Action] ID=Br_breakOut; 
-	name=Break Out;
+	name=冲出;
 	icon=icon_Br_breakOut;
-	tooltip=Push all adjacent targets away and deal <math=50+10*c:rank>% damage.;
-	rankUpTooltip=Each rank increases damage by 10%.;
+	tooltip=推开所有相邻目标,并造成<math=50+10*c:rank>%伤害.;
+	rankUpTooltip=每级+10%伤害.;
 	tooltipIcons=<icon=bluntWeapons>Only;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	

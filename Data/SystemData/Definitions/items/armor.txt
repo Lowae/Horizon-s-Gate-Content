@@ -91,7 +91,7 @@ toMake=acc_goldscabbard;
 toMake=gloves_silver;
 
 
-[ItemType]  name=Rare Armor;
+[ItemType]  name=稀有的盔甲;
 ID=loot_armor_rare2; sprite=228; itemCategory=armor; 
 value=800;
 special=replaceWith_toMake_list;
@@ -101,7 +101,7 @@ toMake=armor_aer;
 toMake=armor_volpryst;
 toMake=armor_laser;
 
-[ItemType]  name=Red Shirt;
+[ItemType]  name=红色衬衫;
 ID=shirt_red; sprite=192; itemCategory=3;
  volume=3; value=4;
 pR=pCRed;
@@ -109,46 +109,46 @@ pR=pCRed;
 [ItemEffect]  
 ID=shirt_red; actorValue=PhysEva; magnitude=1; duration=-1;
 
-[ItemType]  name=Blue Shirt;
+[ItemType]  name=蓝色衬衫;
 ID=shirt_blue;
 cloneFrom=shirt_red;
 pR=pCBlue;
 
-[ItemType]  name=Dark Blue Shirt;
+[ItemType]  name=深蓝色衬衫;
 ID=shirt_blueD;
 cloneFrom=shirt_red;
 pR=pCBlueD;
-[ItemType]  name=Green Shirt;
+[ItemType]  name=绿色衬衫;
 ID=shirt_green;
 cloneFrom=shirt_red;
 pR=pCGreen;
-[ItemType]  name=Dark Red Shirt;
+[ItemType]  name=深红色衬衫;
 ID=shirt_redD;
 cloneFrom=shirt_red;
 pR=pCRedD;
-[ItemType]  name=Purple Shirt;
+[ItemType]  name=紫色衬衫;
 ID=shirt_purple;
 cloneFrom=shirt_red;
 pR=pCPurple;
-[ItemType]  name=Yellow Shirt;
+[ItemType]  name=黄色衬衫;
 ID=shirt_yellow;
 cloneFrom=shirt_red;
 pR=pCYellow;
-[ItemType]  name=Grey Shirt;
+[ItemType]  name=灰色衬衫;
 ID=shirt_grey;
 cloneFrom=shirt_red;
 pR=pCGrey;
-[ItemType]  name=White Shirt;
+[ItemType]  name=白色衬衫;
 ID=shirt_white;
 cloneFrom=shirt_red;
 pR=pCWhite;
-[ItemType]  name=Black Shirt;
+[ItemType]  name=黑色衬衫;
 ID=shirt_black;
 cloneFrom=shirt_red;
 pR=pCBlack;
 
-[ItemType]  name=Bone Cuirass;
-description=Cuirass reinforced with bone.;
+[ItemType]  name=骨制胸甲;
+description=用骨头加固的胸甲.;
 ID=armor_bone; sprite=228; itemCategory=3;
 weight=4; volume=15; value=0;
 pR=pBoneDark;
@@ -169,8 +169,8 @@ title=Bone Cuirass;
 text=<itemBig=armor_bone><title=Bone Cuirass><brAdj=>Effective, macabre armor. It's a bit too barbaric for anyone to want to buy it from you, but it's still serviceable protection.;
 
 
-[ItemType]  name=Bonemeld Armor;
-description=Bone armor fitted & strengthened by magic.;
+[ItemType]  name=融合骨制盔甲;
+description=由魔法强化的骨甲.;
 ID=armor_bonemeld; sprite=198; itemCategory=3;
 weight=4; volume=15; value=170;
 pR=pBoneDark;
@@ -187,8 +187,8 @@ title=Bonemeld Armor;
 text=<itemBig=armor_bonemeld><title=Bonemeld Armor><brAdj=>Ruin magic has shaped this armor & layered the bone for extra protection. In a civilized place you might be condemned for owning this.;
 
 
-[ItemType]  name=Mystic Maille;
-description=Mystical chain shirt that helps its wearer resist magic effects.;
+[ItemType]  name=神秘的链甲;
+description=神秘链衫，帮助佩戴者抵抗魔法效果.;
 ID=armor_purp; sprite=193; itemCategory=3;
 weight=8; volume=10; value=2400;
 pR=pPurple;
@@ -204,8 +204,8 @@ category=equipment; halfPage=true; rarity=3;
 title=Mystic Maille;
 text=<itemBig=armor_purp><title=Mystic Maille><brAdj=>This otherwise unremarkable chain shirt shines with a pale light. Through unknown means, it repels magic.;
 
-[ItemType]  name=Iron Mail;
-description=Metal armor granting basic protection.;
+[ItemType]  name=铁铠甲;
+description=提供最基本保护的金属盔甲.;
 ID=armor_iron; sprite=193; itemCategory=3;
 weight=6; volume=15; value=25;
 pR=pIron;
@@ -221,8 +221,8 @@ category=equipment; halfPage=true;
 title=Iron Mail;
 text=<itemBig=armor_iron><title=Iron Mail><brAdj=>Hundreds of iron rings comprise this mail shirt. It wards off cuts and stabs, but does little to lessen the impact of the blow.;
 
-[ItemType]  name=Steel Hauberk;
-description=Metal armor granting good protection.;
+[ItemType]  name=钢锁子甲;
+description=提供良好保护的金属盔甲.;
 ID=armor_steel; sprite=194; itemCategory=3;
 weight=10; volume=15; value=125;
 pR=pSteel;
@@ -518,7 +518,7 @@ combineWith=furnace_everlit2; toMake=silk_spide;
 ID=armor_silk; actorValue=PhysEva; magnitude=18; duration=-1;
 
 [ItemType]  name=Spellward Necklace;
-description=Necklace that repels incoming energy.; 
+description=能抵挡外来能量的项链.; 
 weight=0; volume=1; value=180;
 itemCategory=4;
 ID=necklace_spellward; sprite=161; pR=pGold; pB=pGreyD;
@@ -631,9 +631,9 @@ ID=cloak_hood_blood; actorValue=PhysEva; magnitude=7; duration=-1;
 ID=cloak_hood_blood; actorValue=MagEva; magnitude=20; duration=-1;
 
 
-[ItemType]  name=Cloak;
+[ItemType]  name=斗篷;
 ID=cloak; sprite=229;
-description=A thick cloak of coarse fabric.; 
+description=一件用粗布做成的厚斗篷.; 
 weight=0; volume=3; value=14;
 itemCategory=4; 
 pR=pGreen3;
@@ -647,9 +647,9 @@ category=equipment; halfPage=true;
 title=Cloak;
 text=<itemBig=cloak><title=Cloak><brAdj=>Cloth draped over the shoulders, made from the wool of an ur-camelid. This cloak lacks a hood, but is still serviceable.;
 
-[ItemType]  name=Hooded Cloak;
+[ItemType]  name=连帽斗篷;
 ID=cloak_hood; sprite=236;
-description=Cloak & hood of coarse fabric.; 
+description=粗布制作的连帽斗篷.; 
 weight=0; volume=3; value=22;
 itemCategory=4; 
 pR=pGreen3;
@@ -662,9 +662,9 @@ category=equipment; halfPage=true;
 title=Hooded Cloak;
 text=<itemBig=cloak_hood><title=Hooded Cloak><brAdj=>A cam-wool cloak & hood. Poor quality, but beggars can't be choosers (and you've seen many a beggar wearing cloth just like this).;
 
-[ItemType]  name=Fine Cloak;
+[ItemType]  name=精致的斗篷;
 ID=cloak_fine; sprite=229;
-description=A light, well-made cloak.; 
+description=一件质地轻盈、制作精良的斗篷.; 
 weight=0; volume=3; value=25;
 itemCategory=4; 
 pR=p8;
@@ -679,9 +679,9 @@ title=Fine Cloak;
 text=<itemBig=cloak_fine><title=Fine Cloak><brAdj=>A fine cam-wool cloak inlaid with comfortable linen. Cozy, yet does not restrict your movement.;
 
 
-[ItemType]  name=Fine Hooded Cloak;
+[ItemType]  name=精致的连帽斗篷;
 ID=cloak_hood_fine; sprite=236;
-description=Cloak & hood of superior quality.; 
+description=品质卓越的连帽斗篷.; 
 weight=0; volume=3; value=40;
 itemCategory=4; 
 pR=p8;
@@ -747,9 +747,9 @@ category=equipment; halfPage=true; rarity=2;
 title=Ash Cape;
 text=<itemBig=cloak_ash><title=Ash Cape><brAdj=>Chemically treated cloth that resists fire. These are slightly infamous for being worn by soldiers or brigands using scorched earth tactics.;
 
-[ItemType]  name=War Cloak;
+[ItemType]  name=战争斗篷;
 ID=cloak_war; sprite=233;
-description=Thick cloak with metal plates to deflect attacks.; 
+description=带有金属板的厚斗篷，以抵御攻击.; 
 weight=3; volume=5; value=1200;
 itemCategory=4;
 pR=pCRed;
@@ -897,9 +897,9 @@ title=Warding Sash;
 text=<itemBig=cloak_ward><title=Warding Sash><brAdj=>This miraculous sash of mythril weave is lined with triggers that activate to instantly ward the user - albeit only once per battle.;
 
 
-[ItemType]  name=Overcoat;
+[ItemType]  name=大衣;
 ID=overcoat; sprite=232;
-description=Thick coat that prevents you from getting Wet.; 
+description=防止你淋湿的厚外套.; 
 weight=1; volume=5; value=30;
 itemCategory=4; 
 pR=pYellow5;
@@ -913,9 +913,9 @@ category=equipment; halfPage=true;
 title=Overcoat;
 text=<itemBig=overcoat><title=Overcoat><brAdj=>With enough cloth, even the strongest downpour can be ignored. It even has a fold out hood on the back!;
 
-[ItemType]  name=Scarf;
+[ItemType]  name=围巾;
 ID=scarf; sprite=165;
-description=Cozy scarf makes you immune to being Chilled.; 
+description=舒适的围巾让你对寒冷免疫.; 
 weight=0; volume=2; value=25;
 itemCategory=4; 
 pR=pCRed;
@@ -949,9 +949,9 @@ category=equipment; halfPage=true; rarity=2;
 title=Trailing Wind;
 text=<itemBig=scarf_wind><title=Trailing Wind><brAdj=>Where these scarves are produced is unknown. According to myth, they arrive on the wind to choose their new owner. Their propensity for blowing away at the slightest breeze is probably the origin of this idea.;
 
-[ItemType]  name=Goggles;
+[ItemType]  name=护目镜;
 ID=goggles; sprite=171;
-description=Protective goggles that keep you from being Blinded.; 
+description=护目镜可以防止你失明.; 
 weight=0; volume=1; value=30;
 itemCategory=4; 
 pR=pCopper;
@@ -998,9 +998,9 @@ category=equipment; halfPage=true; rarity=1;
 title=Thorn Bracelet;
 text=<itemBig=band_thorn><title=Thorn Bracelet><brAdj=>It's unclear what the original purpose of this armlet was. Either by accident or by design, it pinches you awake if you fall asleep.;
 
-[ItemType]  name=Gauntlets;
+[ItemType]  name=铁制手套;
 ID=gauntlets; sprite=172;
-description=Sturdy steel gloves keep the hands safe when attacking.; 
+description=坚固的铁制手套在攻击时保护双手安全.; 
 weight=2; volume=3; value=150;
 itemCategory=4; 
 pR=pIron;
@@ -1044,9 +1044,9 @@ category=equipment; halfPage=true; rarity=1;
 title=Volskarn Gloves;
 text=<itemBig=gloves_volskarn><title=Volskarn Gloves><brAdj=>Though they offer no protection, the Volskarn in these gloves helps the wearer store and direct essence with little effort.;
 
-[ItemType]  name=Power Gauntlets;
+[ItemType]  name=强力铁手套;
 ID=gauntlets_power; sprite=174;
-description=Force-powered metal gloves that strengthen your attacks.; 
+description=强力金属手套，增强你的攻击力.; 
 weight=5; volume=3; value=5500;
 itemCategory=4; 
 pR=pGreyblue2;
@@ -1138,9 +1138,9 @@ category=equipment; halfPage=true; rarity=3;
 title=Silver Mitts;
 text=<itemBig=gloves_silver><title=Silver Mitt><brAdj=>Cleanly-designed gloves that handily absorb impacts and look stylish while doing it. The mythril lining lets you give attacks your all without worrying about your hands' safety.;
 
-[ItemType]  name=Bracers;
+[ItemType]  name=护腕;
 ID=bracers_archer; sprite=173;
-description=Leather arm guards that assist in archery.; 
+description=有助于射箭的皮革护腕.; 
 weight=1; volume=1; value=100;
 itemCategory=4; 
 pR=pUnarmored;
@@ -1152,9 +1152,9 @@ category=equipment; halfPage=true; rarity=1;
 title=Bracers;
 text=<itemBig=bracers_archer><title=Bracers><brAdj=>Bracers protect an archer's inner forearm from a stray bowstring or fletching. They also keep loose sleeves from catching.;
 
-[ItemType]  name=Scope;
+[ItemType]  name=望远镜;
 ID=scope; sprite=1514;
-description=Spyglass retrofitted for use with missile weapons.; 
+description=为远程武器改装的小望远镜.; 
 weight=0; volume=1; value=100;
 itemCategory=4; 
 pR=pIron;
@@ -1280,9 +1280,9 @@ category=equipment; halfPage=true; rarity=2;
 title=Power Belt;
 text=<itemBig=belt_power><title=Power Belt><brAdj=>This belt glows with unnatural power. (Unnatural because it is a belt, not unnatural as in supernatural or anything.);
 
-[ItemType]  name=Blindfold;
+[ItemType]  name=眼罩;
 ID=blindfold; sprite=1513;
-description=Strip of ragged cloth that covers the eyes.; 
+description=用来遮住眼睛的一条破布.; 
 weight=0; volume=1; value=1;
 itemCategory=4; 
 pR=pGrey;
@@ -1312,9 +1312,9 @@ category=equipment; halfPage=true;
 title=Gag;
 text=<itemBig=gag><title=Gag><brAdj=>Cloth covering the wearer's mouth to prevent any speech. Not the most useful piece of gear.;
 
-[ItemType]  name=Thaw Ring;
+[ItemType]  name=融雪戒指;
 ID=ring_thaw; sprite=163;
-description=Ring that heats up in extreme cold. Halves duration of Chilled and Frozen effects when worn.; 
+description=在极冷的环境下会升温.佩戴时, 冰冻持续时间和效果减半.; 
 weight=0; volume=1; value=50;
 itemCategory=4; 
 pR=pRed;
@@ -1328,9 +1328,9 @@ category=equipment; halfPage=true; rarity=1;
 title=Thaw Ring;
 text=<itemBig=ring_thaw><title=Thaw Ring><brAdj=>Originally crafted by a Rumanian engineer as a joke for her husband, who complained bitterly about the cold. It was soon discovered to be actually quite practical in cold climes.;
 
-[ItemType]  name=Sharp Ring;
+[ItemType]  name=锐利戒指;
 ID=ring_sharp; sprite=164;
-description=Ring with a sharp edge. Halves duration of Immobilize.; 
+description=边缘锋利的戒指. Halves duration of Immobilize.; 
 weight=0; volume=1; value=50;
 itemCategory=4; 
 pR=pIron;
@@ -1344,9 +1344,9 @@ category=equipment; halfPage=true; rarity=1;
 title=Sharp Ring;
 text=<itemBig=ring_sharp><title=Sharp Ring><brAdj=>Ring for those who need a rope-cutter wherever they go. Also makes an effective escape tool when tied up.;
 
-[ItemType]  name=Bloodring;
+[ItemType]  name=嗜血戒指;
 ID=ring_blood; sprite=163;
-description=Macabre device that absorbs essence from shed blood. Restores 2<icon=MP> when damaged.; 
+description=从鲜血中吸取精华的恐怖装置, 受伤时恢复1<icon=MP>.; 
 weight=0; volume=1; value=900;
 itemCategory=4; 
 pR=pR;
@@ -1361,9 +1361,9 @@ category=equipment; halfPage=true; rarity=3; rewardMod=-200;
 title=Bloodring;
 text=<itemBig=ring_blood><title=Bloodring><brAdj=>Ring devised by the berserker Larav, an unstoppable warrior who healed his wounds using essence from his own blood. Larav fought tirelessly to protect Lask from Maskheads, falling only when one of the fiends chopped off his finger. This ring and its duplicates are now more often used by necromancers who are all too willing to fuel it with the blood of others.;
 
-[ItemType]  name=Viral Amulet;
+[ItemType]  name=病毒护符;
 ID=necklace_viral;
-description=Cursed necklace that spreads negative status effects to all contiguous creatures.; 
+description=被诅咒的项链, 会将负面的状态效果传染给邻近的生物.; 
 weight=0; volume=1; value=660;
 itemCategory=4; sprite=160; pR=pGreen; pB=pPurple;
 [ItemReaction] 

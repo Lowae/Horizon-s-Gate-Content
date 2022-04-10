@@ -1,10 +1,10 @@
 
 [Action] ID=gateW_gateSwap; 
-	name=Gate: Swap;
+	name=门: 交换;
 	icon=icon_gate_swap;
 	mpCost=4 * d:mpCostMult + d:mpCostMod;
-	tooltip=Connect two points in space, teleporting yourself or allies between them.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=连接空间中的两个点,<n>在它们之间传送你自己或队友.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=;
 	
 	XPCost=180;
@@ -51,11 +51,11 @@
 
 
 [Action] ID=gateW_gateShield; 
-	name=Gate: Shield;
+	name=门: 护盾;
 	icon=icon_gate_shield;
 	mpCost=4 * d:mpCostMult + d:mpCostMod;
-	tooltip=Grant an ally immunity to ranged attacks for <icon=time><math=35 + c:rank * 10 + c:MagAtk * 3>.;
-	rankUpTooltip=Each rank increases duration by <icon=time>10.;
+	tooltip=给予队友远程攻击免疫持续<icon=time><math=35 + c:rank * 10 + c:MagAtk * 3>.;
+	rankUpTooltip=每级+<icon=time>10持续时间.;
 	tooltipTopRight=<icon=MagAtk_small>;
 	
 	XPCost=200;
@@ -100,11 +100,11 @@
 	
 
 [Action] ID=gateW_barrage; 
-	name=Gate: Barrage;
+	name=门: 倾泻;
 	icon=icon_gate_barrage;
 	mpCost=9 * d:mpCostMult + d:mpCostMod;
-	tooltip=Open <math=c:rank + 2> gates that deal <thinnerIcon=skill_Wind><math=d:windDmgDisplay(2) * 0.5> damage and push adjacent targets.;
-	rankUpTooltip=Each rank adds +1 target.;
+	tooltip=打开<math=c:rank + 2>扇门造成<thinnerIcon=skill_Wind><math=d:windDmgDisplay(2) * 0.5>伤害且推开附近目标.;
+	rankUpTooltip=每级+1目标.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Wind_small>;
 	
 	XPCost=200;
@@ -176,11 +176,11 @@
 
 	
 [Action] ID=gateW_void; 
-	name=Gate: Void;
+	name=门: 虚无;
 	icon=icon_gate_void;
 	mpCost=12 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=22 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
-	tooltip=Summon a gate to the blinding white void. All creatures looking in your direction are blinded for <icon=time>70.;
+	tooltip=召唤一扇通往令人炫目的白色虚无之门.<n>所有看向你的生物施加'失明'持续<icon=time>70.;
 	tooltipTopRight=<icon=MagAtk_small>;
 	
 	XPCost=800;
@@ -236,12 +236,12 @@
 	
 	
 [Action] ID=gateW_avalanche; 
-	name=Gate: Avalanche;
+	name=门: 山崩;
 	icon=icon_gate_rock;
 	mpCost=7 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=13 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
-	tooltip=Summon falling rocks from a mountain, dealing <math=c:MagAtk * 1.2 + 14><thinnerIcon=HP> physical damage in a small area.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=召唤从山上的落石,<n>在小范围内造成<math=c:MagAtk * 1.2 + 14><thinnerIcon=HP>物理伤害.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=MagAtk_small>;
 	
 	XPCost=250;

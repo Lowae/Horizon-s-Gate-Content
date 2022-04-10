@@ -577,10 +577,10 @@ combineWith=furnace2_lit; toMake=woodPlank;
 combineWith=furnace_everlit1; toMake=woodPlank; 
 combineWith=furnace_everlit2; toMake=woodPlank; 
  
-[ItemType]  name=Wooden Shiv;
+[ItemType]  name=木刀;
 texture=items_weapons; 
 ID=dagger_wood; pR=pWood; pB=pWoodDark;
-description=An improvised dagger.;
+description=一把临时的匕首.;
 journalID=journal_dagger;
 weight=1; volume=1; value=5;
 power=3;
@@ -607,10 +607,10 @@ combineWith=furnace2_lit; toMake=woodPlank;
 combineWith=furnace_everlit1; toMake=woodPlank; 
 combineWith=furnace_everlit2; toMake=woodPlank; 
 
-[ItemType]  name=Wooden Shield;
+[ItemType]  name=木盾;
 texture=items_weapons; 
 ID=shield_wood; pR=pWood; pB=pWoodDark;
-description=A decent round wooden shield.;
+description=一面像样的木制圆盾.;
 journalID=journal_shield;
 sprite=106; spriteWhenHeld=138; itemCategory=weapon; element=shield;
 weight=3; volume=5; value=5;
@@ -623,10 +623,10 @@ combineWith=furnace_everlit2; toMake=woodPlank;
 [ItemEffect]  
 ID=shield_wood; actorValue=PhysEva; magnitude=9; duration=-1;
 
-[ItemType]  name=Wood Bow;
+[ItemType]  name=木弓;
 texture=items_weapons; 
 ID=bow_wood; pR=pWood; pB=pWoodDark;
-description=A simple straight bow. Requires both hands to use.;
+description=一把简易直弓.需要双手使用.;
 journalID=journal_bow;
 sprite=182; spriteWhenHeld=214; itemCategory=weapon; element=bow; special=twoHanded;
 weight=1; volume=5; value=5;
@@ -894,10 +894,10 @@ ID=knuckle_bone; actorValue=skill_Ruin; magnitude=1; duration=-1;
   
 
  
-[ItemType]  name=Iron Sword;
+[ItemType]  name=铁剑;
 texture=items_weapons; 
 ID=sword_iron; pR=pIron; pB=pIronHilt;
-description=A double-edged blade.;
+description=一把双刃剑.;
 journalID=journal_sword;
 weight=2; volume=5; value=25;
 power=5;
@@ -939,10 +939,10 @@ combineWith=furnace2_lit; toMake=iron_chunk;
 combineWith=furnace_everlit1; toMake=iron_chunk; 
 combineWith=furnace_everlit2; toMake=iron_chunk; 
 
-[ItemType]  name=Iron Axe;
+[ItemType]  name=铁斧;
 texture=items_weapons; 
 ID=axe_iron; pR=pIron; pB=pIronHilt;
-description=Fit for carving enemies or wood. Highly damaging but less accurate.;
+description=适合切割敌人或者木头. 伤害较高但是命中率低.;
 journalID=journal_axe;
 weight=3; volume=5; value=25;
 power=6;

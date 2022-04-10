@@ -6878,7 +6878,7 @@ title=Huge Amnitorsk;
 text=<actorBig=sm_torsk><title=Huge Amnitorsk><brAdj=>Amnitorsk grow to such immense sizes that they can pose a serious threat to sailors. As it grows larger, excess chemicals secreted from a small 'blowhole' on its shell build up and crystallize. This crystal is extremely valuable, but removing it without getting zapped by the Amnitorsk's tentacles is difficult. Some enterprising sailors will even board them just to steal these crystals.;
 
 [ActorType] ID=minecart;
-name=Minecart;
+name=矿车;
 journalID=journal_minecart;
 bodyStructure=single;
 movementSpeed = 12;
@@ -6960,12 +6960,12 @@ ID=minecart; texture=lightmask; red=1; blue=1; green=1; alpha=0.2; size=0.2; fli
 [JournalEntry]
 ID=journal_minecart;
 category=item; halfPage=true;
-title=Minecart;
-text=<actorBig=minecart><title=Minecart><brAdj=>Cart for easy transport of goods and tools - but it can only travel on rails. It has a small Gloam lamp mounted on it. 'Use' it to hitch a ride.;
+title=矿车;
+text=<actorBig=minecart><title=矿车><brAdj=>手推车运输货物和工具很方便-<n>但它只能在轨道上运行.<n=>一个小的灯安装在上面.可以'用'它搭个便车.;
 
 
 [ActorType] ID=skiff;
-name=Boat;
+name=船;
 bodyStructure=single;
 movementSpeed = 5;
 unarmedPower = 0;
@@ -7044,11 +7044,11 @@ damageMultiplier=0; healMultiplier=0;
 [JournalEntry]
 ID=journal_skiff;
 category=item; halfPage=true;
-title=Skiff;
-text=<actorBig=skiff><title=Skiff><brAdj=>Very small but practical boat. Can get you past shallow and deep water just fine, but rubble will block you.;
+title=小船;
+text=<actorBig=skiff><title=小船><brAdj=>非常小但很实用的船。<n>可以让你顺利通过浅水区和深水区，<n>但碎石会挡住你。;
 
 [ActorType] ID=cycle;
-name=Autocycle;
+name=摩托车;
 bodyStructure=single;
 movementSpeed = 18;
 unarmedPower = 0;
@@ -7129,8 +7129,8 @@ damageMultiplier=0; healMultiplier=0;
 [JournalEntry]
 ID=journal_autocycle;
 category=item; halfPage=true;
-title=Autocycle;
-text=<actorBig=cycle><title=Autocycle><brAdj=>Complex, expensive device containing dozens of force triggers. Drive it at high speed! Doesn't handle rough terrain well.;
+title=摩托车;
+text=<actorBig=cycle><title=摩托车><brAdj=>复杂，昂贵的设备包含数十个强力触发器.<n>可以高速驾驶!不能很好的应对崎岖的地形.;
 
 
 
@@ -7382,7 +7382,7 @@ ID=actor_sword;
 actorValues=drowning; damageMultiplier=0; healMultiplier=0;
 
 [ActorType] ID=actor_turret;
-name=Turret;
+name=炮塔;
 journalID=journal_actor_turret;
 bodyStructure=single;
 movementSpeed = 4;
@@ -7504,11 +7504,11 @@ ID=actor_turret; actorValues=drowning; action=drown;
 [JournalEntry]
 ID=journal_actor_turret;
 category=item; halfPage=true; rarity=3; rewardMod=-650;
-title=Turret;
-text=<actorBig=actor_turret><title=Turret><brAdj=>Sturdy cannon device wired to an essence sensor array. Its function is simple: fire at any nearby living things. It has no real AI, instead relying on raw chemical and mechanical reactions to determine its targets.;
+title=炮塔;
+text=<actorBig=actor_turret><title=炮塔><brAdj=>坚固的加农炮装置连接着传感器阵列.<n>它的功能很简单:向附近的任何生物开火.<n>它没有真正的智能,<n>而是依靠原始的化学和机械反应来确定目标.;
 
 [ActorType] ID=actor_turret_caster;
-name=Caster Turret;
+name=施法者炮塔;
 cloneFrom=actor_turret;
 defaultSprite = actor_turret_caster;
 journalID=journal_actor_turret_caster;
@@ -7544,8 +7544,8 @@ randomNames=Caster Turret;
 [JournalEntry]
 ID=journal_actor_turret_caster;
 category=item; halfPage=true; rarity=3; rewardMod=-550;
-title=Caster Turret;
-text=<actorBig=actor_turret_caster><title=Caster Turret><brAdj=>The complex trigger layout in this machine replicates a single spell and repeatedly casts it on nearby targets. Unlike most turrets, the machinery within is quite fragile.;
+title=施法者炮塔;
+text=<actorBig=actor_turret_caster><title=施法者炮塔><brAdj=>这台机器复杂的触发布局复制了一个咒语<n>并在附近的目标上重复施放.<n>不像大多数炮塔，机器内部是相当脆弱的.;
 
 [ActorType] ID=actor_turret_caster_gate;
 name=Gate Caster;

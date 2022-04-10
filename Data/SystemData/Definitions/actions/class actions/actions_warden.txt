@@ -1,10 +1,10 @@
 
 
 [Action] ID=Wrd_guard; 
-	name=Guard;
+	name=守卫;
 	icon=icon_Wrd_guard;
-	tooltip=Halve incoming physical damage to a small group<n>for <icon=time><math=25 + d:lifeDurMax(0.5) + 10 * c:rank>.;
-	rankUpTooltip=Each rank increases duration by <icon=time>10.;
+	tooltip=为范围内施加'守卫',<n>减半受到的物理伤害持续<icon=time><math=25 + d:lifeDurMax(0.5) + 10 * c:rank>.;
+	rankUpTooltip=每级+<icon=time>10持续时间.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
 	harmful=false;
 	
@@ -54,9 +54,9 @@
 	
 
 [Action] ID=Wrd_ward; 
-	name=Ward;
+	name=防护;
 	icon=icon_Wrd_ward;
-	tooltip=Halve incoming magic damage to a small group for <icon=time><math=30 + d:lifeDurMax(1) + 20 * c:rank>.;
+	tooltip=为范围内施加'防护',<n>减半受到的魔法伤害持续<icon=time><math=30 + d:lifeDurMax(1) + 20 * c:rank>.;
 	rankUpTooltip=Each rank increases duration by <icon=time>20.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
 	
@@ -108,11 +108,11 @@
 	
 
 [Action] ID=Wrd_barrier; 
-	name=Barrier;
+	name=屏障;
 	icon=icon_Wrd_barrier;
 	mpCost=7 * d:mpCostMult + d:mpCostMod;
-	tooltip=Create <math=c:rank + 2> contiguous magical barriers that block attacks and movement for <icon=time>70. Barriers can be broken with ruin magic or repeated physical attacks.;
-	rankUpTooltip=Each rank increases number of barriers by 1.;
+	tooltip=创造<math=c:rank + 2>个连续的魔法屏障,阻挡攻击和移动持续<icon=time>70.<n>屏障可以被破坏魔法或重复的物理攻击破坏.;
+	rankUpTooltip=每级+1屏障数.;
 	tooltipTopRight=;
 	harmful=false;
 	
@@ -161,10 +161,10 @@
 	
 
 [Action] ID=Wrd_aegis; 
-	name=Aegis;
+	name=神盾;
 	icon=icon_Wrd_aegis;
-	tooltip=Cure negative status effects and grant 'Aegis', protecting an ally from the next negative status effect for <icon=time><math=80 + d:lifeDurMax(2)>.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=治疗负面状态效果并施加'神盾',<n>保护队友使其免疫下一次负面效果持续<icon=time><math=80 + d:lifeDurMax(2)>.;
+	rankUpTooltip=每级+1施放距离.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
 	
 	harmful=false;
@@ -238,10 +238,10 @@
 
 
 [Action] ID=Wrd_negate; 
-	name=Negate;
+	name=无效化;
 	icon=icon_Wrd_negate;
-	tooltip=Protect an ally from one attack's damage for <icon=time><math=80 + d:lifeDurMax(2)>.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=保护一个盟友使其免受一次攻击的伤害持续<icon=time><math=80 + d:lifeDurMax(2)>.;
+	rankUpTooltip=每级+1施放距离.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
 	
 	harmful=false;

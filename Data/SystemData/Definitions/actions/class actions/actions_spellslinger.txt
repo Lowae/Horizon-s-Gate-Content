@@ -1,9 +1,9 @@
 [Action] ID=Sp_fireImbue; 
-	name=Fire Imbue;
+	name=灌注火焰;
 	icon=icon_Sp_fireImbue;
 --icon_pG=pRed;
-	tooltip=Burn target with a fiery weapon attack for <icon=time><math=10 + d:fireDurMax(2) + 15 * c:rank>.;
-	rankUpTooltip=Each rank increases duration by <icon=time>15.;
+	tooltip=将火焰能量注入武器,<n>攻击目标造成'燃烧'持续<icon=time><math=10 + d:fireDurMax(2) + 15 * c:rank>.;
+	rankUpTooltip=每级+<icon=time>15持续时间.;
 	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=melee_small><icon=skill_Fire_small>;
 	mpCost=9 * d:mpCostMult + d:mpCostMod;
 	
@@ -57,10 +57,10 @@
 	
 	
 [Action] ID=Sp_iceImbue; 
-	name=Ice Imbue;
+	name=灌注冰霜;
 	icon=icon_Sp_iceImbue;
-	tooltip=Chill target with an icy weapon attack for <icon=time><math=50 + d:iceDurMax(2) + 30 * c:rank>.;
-	rankUpTooltip=Each rank increases duration by <icon=time>30.;
+	tooltip=将冰霜能量注入武器,<n>攻击目标造成'寒冷'持续<icon=time><math=50 + d:iceDurMax(2) + 30 * c:rank>.;
+	rankUpTooltip=每级+<icon=time>30持续时间.;
 	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=melee_small><icon=skill_Ice_small>;
 	mpCost=9 * d:mpCostMult + d:mpCostMod;
 	
@@ -114,10 +114,10 @@
 	
 	
 [Action] ID=Sp_elecImbue; 
-	name=Lightning Imbue;
+	name=灌注闪电;
 	icon=icon_Sp_elecImbue;
-	tooltip=Stun target with a lightning weapon attack for <icon=time><math=d:elecDurMax(1) + 4 * c:rank>.;
-	rankUpTooltip=Each rank increases duration by <icon=time>4.;
+	tooltip=将闪电能量注入武器,<n>攻击目标造成'眩晕'持续<icon=time><math=d:elecDurMax(1) + 4 * c:rank>.;
+	rankUpTooltip=每级+<icon=time>4持续时间.;
 	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=melee_small><icon=skill_Elec_small>;
 	mpCost=9 * d:mpCostMult + d:mpCostMod;
 	
@@ -172,10 +172,10 @@
 	
 
 [Action] ID=Sp_windImbue; 
-	name=Wind Imbue;
+	name=灌注疾风;
 	icon=icon_Sp_windImbue;
-	tooltip=Push target <math=c:rank+1> tiles with a wind weapon attack.;
-	rankUpTooltip=Each rank increases push distance by 1.;
+	tooltip=将疾风能量注入武器,推开目标<math=c:rank+1>格.;
+	rankUpTooltip=每级+1推开距离.;
 	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=melee_small><icon=skill_Wind_small>;
 	mpCost=9 * d:mpCostMult + d:mpCostMod;
 	
@@ -227,10 +227,10 @@
 	
 	
 [Action] ID=Sp_ruinImbue; 
-	name=Ruin Imbue;
+	name=灌注毁灭;
 	icon=icon_Sp_ruinImbue;
-	tooltip=Corrode target's skin with a ruin weapon attack, causing itching for <icon=time><math=40 + d:ruinDurMax(2) + 50 * c:rank>.;
-	rankUpTooltip=Each rank increases duration by <icon=time>50.;
+	tooltip=将毁灭能量注入武器,<n>攻击会侵蚀对方的皮肤,造成'瘙痒'持续<icon=time><math=40 + d:ruinDurMax(2) + 50 * c:rank>.;
+	rankUpTooltip=每级+<icon=time>50持续时间.;
 	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=melee_small><icon=skill_Ruin_small>;
 	
 	mpCost=6 * d:mpCostMult + d:mpCostMod;

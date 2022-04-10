@@ -1,9 +1,9 @@
 [Action] ID=wb_gateShift; 
-	name=Gate: Shift;
+	name=门: 相位;
 	icon=icon_gate_shift;
 	mpCost=3 * d:mpCostMult + d:mpCostMod;
-	tooltip=Instantly teleport a short distance. This does not consume an action in combat, but can't be reused for <icon=time>20.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=瞬间短距离移动.<n>在战斗中不会消耗行动机会,<n>但是<icon=time>20内无法再次使用.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=;
 	
 	XPCost=220;
@@ -56,11 +56,11 @@
 
 
 [Action] ID=wb_trick; 
-	name=Gate: Trick;
+	name=门: 戏法;
 	icon=icon_gate_trick;
 	mpCost=2 * d:mpCostMult + d:mpCostMod;
-	tooltip=Thrust your weapon through a gate, surprising the enemy on the other side with +10% accuracy.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=使用武器穿过一扇门,<n>让另一边的敌人大吃一惊,+10%命中.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipIcons=<icon=noRanged>;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	
@@ -105,13 +105,13 @@
 	
 	
 [Action] ID=wb_slam; 
-	name=Gate: Slam;
+	name=门: 猛摔;
 	icon=icon_gate_slam;
 	casterAnimation=gate_slam;
 	casterAnimationSpeed=1;
 	mpCost=8 * d:mpCostMult + d:mpCostMod;
-	tooltip=Leap through gates to increase your falling speed, then slam into the ground, dealing 50% damage and pushing and stunning targets for <icon=time>2.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=跳进门来增加下坠速度,<n>然后猛撞地面,造成50%伤害.<n>推开敌人且造成'眩晕'持续<icon=time>2.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipIcons=<icon=noAugments>;
 	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=skill_Fist_small>;
 	
@@ -192,11 +192,11 @@
 
 
 [Action] ID=wb_onslaught; 
-	name=Gate: Onslaught;
+	name=门: 猛攻;
 	icon=icon_gate_onslaught;
 	mpCost=15 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=22 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
-	tooltip=Use gates to attack every enemy with your weapon for half damage.;
+	tooltip=通过门使用武器攻击所有敌人,<n>造成50%伤害.;
 	rankUpTooltip=;
 	tooltipIcons=<icon=noAugments><icon=noRanged>;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
@@ -267,12 +267,12 @@
 	
 
 [Action] ID=wb_cross; 
-	name=Gate: Cross;
+	name=门: 十字;
 	icon=icon_gate_cross;
 	mpCost=12 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=12 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
-	tooltip=Perform two dashing attacks for 75% damage in a cross pattern, dealing heavy damage in the center.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=发动十字攻击,每次造成75%伤害,<n>对中心造成大量伤害.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipIcons=<icon=noRanged>;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	

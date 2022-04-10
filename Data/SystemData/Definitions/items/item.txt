@@ -76,8 +76,8 @@ cloneFrom=fade_s1_below;
 ID=fade_s1_rounder_below; sprite=191; 
 cloneFrom=fade_s1_below;
 
-[ItemType]  name=Gold;
-description=Commerce!;
+[ItemType]  name=金币;
+description=贸易!;
 ID=gp; sprite=4; spriteWhenHeld=0; stackable=true;
 special=playerPickup; special=cannotBeTraded; special=autoEquipOnPickup; special=currency;
 special=quantityChangesSprite_upTo4; 
@@ -85,30 +85,30 @@ weight=0; volume=1; value=1;
 [JournalEntry]
 ID=item_gp;
 category=item; halfPage=true;
-title=Gold;
-text=<itemBig=gp><title=Gold><brAdj=>Coin emblazoned with the symbol of commerce: $ Despite the name, it only contains traces of gold. Still, it's legal tender in most of Eral.;
+title=金币;
+text=<itemBig=gp><title=金币><brAdj=>刻有商业符号的硬币:$,<n>尽管名字如此，但它只含有少量的黄金.<n>而且,在Eral的大部分地区都是法定货币.;
 
-[ItemType]  name=Gold;
-description=Commerce!;
+[ItemType]  name=金币;
+description=贸易!;
 journalID=item_gp;
 ID=gp_pile; sprite=39; spriteWhenHeld=0; stackable=true;
 special=playerPickup; special=cannotBeTraded; special=autoEquipOnPickup; special=currency;
 weight=0; volume=1; value=50;
 
-[ItemType]  name=Handful of Gold;
+[ItemType]  name=一些金币;
 ID=loot_gp3; sprite=5;
 value=7;
 pR=pGreyD2; pB=pGreyD;
 special=replaceWith_toMake_list;
 toMake=gp;
 
-[ItemType]  name=Much Gold;
+[ItemType]  name=很多金币;
 ID=loot_gp_much; sprite=5;
 value=29;
 pR=pGreyD2; pB=pGreyD;
 special=replaceWith_toMake_list;
 toMake=gp;
-[ItemType]  name=50 Gold;
+[ItemType]  name=50金币;
 ID=loot_gp_much2; sprite=5;
 value=98;
 pR=pGreyD2; pB=pGreyD;
@@ -657,45 +657,45 @@ pR=pIron;
 pB=zoneWood;
 pG=pFadeDark;
 
-[ItemType]  name=Plate;
+[ItemType]  name=盘子;
 ID=plate; sprite=1934; value=3;
-description=Simple tin dish.;
+description=简单的盘子.;
 [JournalEntry]
 ID=item_plate;
 category=item; halfPage=true; rarity=0;
-title=Plate;
-text=<itemBig=plate><title=Plate><brAdj=>Broad dishware with a lip to keep food on it. Used almost universally around the world (some Rasmen prefer to eat off of small mats).;
-[ItemType]  name=Fork;
+title=盘子;
+text=<itemBig=plate><title=盘子><brAdj=>一种宽的用来盛食物的盘子.全世界都在使用<n>(有些Rasmen更喜欢用小垫子)).;
+[ItemType]  name=叉子;
 ID=fork; sprite=1935; spriteWhenHeld=0; value=3;
-description=A common utensil.;
+description=一个常见的餐具.;
 [JournalEntry]
 ID=item_fork;
 category=item; halfPage=true; rarity=0;
-title=Fork;
-text=<itemBig=fork><title=Fork><brAdj=>A two-tined fork made for cooking or eating. The left tine is a bit wider so it can cut food more easily.;
+title=叉子;
+text=<itemBig=fork><title=叉子><brAdj=>为做饭或吃东西而制造的双叉.<n>它的左尖端稍宽一些,可以更容易地切食物.;
 
-[ItemType]  name=Comb;
-description=A simple comb carved from antler horn.;
+[ItemType]  name=梳子;
+description=用鹿角雕刻而成的简单梳子.;
 ID=comb; sprite=113; spriteWhenHeld=113; itemCategory=tool;
 weight=0; volume=1; value=50; special=sellForFullValue;
 pR=pVolskarn;
 [JournalEntry]
 ID=item_comb;
 category=item; halfPage=true; rarity=1;
-title=Comb;
-text=<itemBig=comb><title=Comb><brAdj=>A personal grooming tool for rearranging one's hair. Some combs are highly decorative, occasionally being worn as a hairpiece. Others are merely functional.;
-[ItemType]  name=Mirror;
-description=A silver hand mirror.;
+title=梳子;
+text=<itemBig=comb><title=梳子><brAdj=>用来整理头发的个人工具.有些梳子<n>有很强的装饰性,有时被用作假发.<n>其他的只是功能性的.;
+[ItemType]  name=镜子;
+description=一面银制手工镜.;
 ID=mirror; sprite=112; spriteWhenHeld=0; itemCategory=tool;
 weight=0; volume=1; value=80; special=sellForFullValue;
 [JournalEntry]
 ID=item_mirror;
 category=item; halfPage=true; rarity=1;
-title=Mirror;
-text=<itemBig=mirror><title=Mirror><brAdj=>A reflective looking-glass, likely once owned by a noble or a wealthy merchant. Judging by the silvered handle and rim, it might fetch a decent sum on the market.;
+title=镜子;
+text=<itemBig=mirror><title=镜子><brAdj=>一面反射镜子,可能曾为贵族或富商所拥有.<n>从银色的把手和边缘来看,<n>可能会在市场上卖个好价钱.;
 
-[ItemType]  name=Toy Boat;
-description=A useless trinket.;
+[ItemType]  name=玩具船;
+description=一个没什么用的小装饰品.;
 itemCategory=thing;
 ID=toyboat; sprite=623;
 weight=1; volume=1;
@@ -703,10 +703,10 @@ pB=pWood;
 [JournalEntry]
 ID=item_toyboat;
 category=item; halfPage=true; rarity=0;
-title=Toy Boat;
-text=<itemBig=toyboat><title=Toy Boat><brAdj=>The craftmanship is very crude, but it is somewhat reminiscent of a boat. Depending on the angle you look at it.;
-[ItemType]  name=Model Boat;
-description=Detailed ship replica.;
+title=玩具船;
+text=<itemBig=toyboat><title=玩具船><brAdj=>虽然工艺很粗糙,但还是有点像船.<n>这取决于你看它的角度.;
+[ItemType]  name=模型船;
+description=船的精细复制品.;
 itemCategory=thing;
 journalID=journal_boat_model;
 ID=boat_model1; sprite=1985;
@@ -722,8 +722,8 @@ cloneFrom=boat_model1;
 [JournalEntry]
 ID=journal_boat_model;
 category=item; halfPage=true; rarity=1;
-title=Model Boat;
-text=<itemBig=boat_model1><title=Model Boat><brAdj=>This carefully constructed ship model is someone's proud creation. Each rig and timber is placed by hand. It almost looks like little people could live on it.;
+title=模型船;
+text=<itemBig=boat_model1><title=模型船><brAdj=>这个精心建造的船模是某人引以为傲的作品.<n>每个装置和木料都是手工放置的.<n>看起来就像小矮人也可以在上面生活.;
 
 [ItemType]  name=Engraved 'W';
 ID=engraving_w; sprite=640; itemCategory=hide;
@@ -1040,7 +1040,7 @@ combineWith=craft_armor; toMake=armor_bone;
 ID=ribs2; element=explode; element=heavySmash; newID=bone_dust; fx=dust_bone;
 [ItemReaction] 
 ID=ribs2; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
-[ItemType]  name=Spine;
+[ItemType]  name=脊柱;
 ID=bone_spine; sprite=685;
 weight=1; volume=5;
 journalID=journal_bone;
@@ -1067,10 +1067,10 @@ ID=bone_spine; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
 [JournalEntry]
 ID=journal_bone;
 category=item; halfPage=true; 
-title=Bone;
-text=<itemBig=skull><itemBig=ribs2><title=Bone><brAdj=>Dense vertebrate tissue. Making tools & weapons out of bone is a longstanding tradition. It can also be a source of necromantic power.<n=>Keep in mind that most vendors will not pay you anything for bone or bone equipment.;
+title=骨骼;
+text=<itemBig=skull><itemBig=ribs2><title=骨骼><brAdj=>致密的脊椎动物组织.<n>用骨头制作工具和武器是一个长期的传统.<n>它也可以是亡灵力量的来源.<n=>不过商贩不会买你的骨制器具.;
 
-[ItemType]  name=Bone Dust;
+[ItemType]  name=骨灰;
 ID=bone_dust; sprite=687; stackable=true;
   element=ruin;
 combineWith=murkspore1; toMake=poisonDust; 
@@ -1088,49 +1088,49 @@ ID=bone_dust; element=bonemeld; newID=bone_spikes; fx=dust_bone;
 [JournalEntry]
 ID=item_bone_dust;
 category=item; halfPage=true;
-title=Bone Dust;
-text=<itemBig=bone_dust><title=Bone Dust><brAdj=>Bone smashed & ground up into a grainy powder. Not especially useful, even to necromancers.;
+title=骨灰;
+text=<itemBig=bone_dust><title=骨灰><brAdj=>骨头粉碎成的粉末,没什么用,<n>即使是对亡灵法师.;
 
 
 
 
-[ItemType]  name=Notes;
-description=Indicipherable, jargon-filled notes.;
+[ItemType]  name=笔记;
+description=难懂的充满专业术语的笔记.;
 ID=notes_useless; sprite=865; 
 [JournalEntry]
 ID=item_notes_useless;
 category=item; halfPage=true;
-title=Notes;
-text=<itemBig=notes_useless><title=Notes><brAdj=>Notes full of ungrokable jargon, mispelings, incorrect punctuation. And sentence fragments.<n=>...also it's written in a language you can't read.;
-[ItemType]  name=Parchment;
-description=Blank paper.;
+title=笔记;
+text=<itemBig=notes_useless><title=笔记><brAdj=>笔记里满是令人难以理解的术语、<n>错别字和错误的标点符号.和片段.<n=>...而且是用一种你看不懂的语言写的.;
+[ItemType]  name=羊皮纸;
+description=空白的纸.;
 ID=notes_blank; sprite=2026; 
 pR=pYellow4;
 [JournalEntry]
 ID=item_notes_blank;
 category=item; halfPage=true; rarity=0;
-title=Parchment;
-text=<itemBig=notes_blank><title=Parchment><brAdj=>This dried animal skin is ready to be written on. Not to be confused with vellum.;
+title=羊皮纸;
+text=<itemBig=notes_blank><title=羊皮纸><brAdj=>这张干动物皮可以用来写字了.<n>不要和牛皮纸弄混了.;
 
-[ItemType]  name=<color=Gold>Map;
-description=A hastily scrawled map. <color=Gold>'Look'<color=White> at it to read it.;
+[ItemType]  name=<color=Gold>地图;
+description=一张潦草的地图. 对它用<color=Gold>'Look'<color=White>来阅读.;
 ID=map_bloodQ; sprite=866; 
 [JournalEntry]
 ID=item_map_bloodQ;
 category=item; halfPage=false;
-title=Map;
-text=<itemBig=map_bloodQ><title=Map><brAdj=><imgBig=j_bloodq_map>;
+title=地图;
+text=<itemBig=map_bloodQ><title=地图><brAdj=><imgBig=j_bloodq_map>;
 
-[ItemType]  name=Scribbled Note;
-description=A short note on a scrap of paper. <color=Gold>'Look'<color=White> at it to read it.;
+[ItemType]  name=潦草笔记;
+description=在小纸片上写下的简短便条.用<color=Gold>'Look'<color=White>来阅读.;
 pR=pYellow;
 pB=pBlackCloth;
 ID=note_necroBloodQ; sprite=870; 
 [JournalEntry]
 ID=item_note_necroBloodQ;
 category=item; halfPage=true;
-title=Scribbled Note;
-text=<itemBig=note_necroBloodQ><title=Scribbled Note><brAdj=>The note reads, <n=>    "Ekrast, the curiosity of your Jascian friends has caused me to upgrade my security.<n=>    If you have need of me, think back to the most basic texts about my trade. Then the path will be Revealed to you.<n=>    -V";
+title=潦草笔记;
+text=<itemBig=note_necroBloodQ><title=潦草笔记><brAdj=>便条上写着, <n=>    "Ekrast,你的充满好奇心的来自<n>Jascian的朋友促使我升级了安全系统.<n=>   如果你需要我, 回想一下关于我交易的最基本的内容.<n>然后你会明白的.<n=>    -V";
 
 
 [ItemType]  name=Book;
@@ -1227,22 +1227,22 @@ description=A valuable gem.; stackable=true;
 special=convertIntoCashAtEnd; special=sellForFullValue;
 
 
-[ItemType]  name=Huge Gem;
+[ItemType]  name=巨大的宝石;
 ID=gem_big1; sprite=845; value=1000; stackable=true;
 journalID=journal_gems;
-description=Highly valuable gem.;
+description=高价值的宝石.;
 special=convertIntoCashAtEnd; special=sellForFullValue;
-[ItemType]  name=Massive Gem;
+[ItemType]  name=超大的宝石;
 ID=gem_big2; sprite=877; value=2500; stackable=true;
 journalID=journal_gems;
-description=Extremely valuable gem.;
+description=非常高价值的宝石.;
 special=convertIntoCashAtEnd; special=sellForFullValue;
 
 [JournalEntry]
 ID=journal_gems;
 category=item; halfPage=true; rarity=2;
-title=Gems;
-text=<itemBig=gem_small2><itemBig=gem_big1><title=Gems><brAdj=>Gems big and small have been coveted since time immemorial. Regardless of function, their scarcity and shining appearance grants them inherent value.;
+title=宝石;
+text=<itemBig=gem_small2><itemBig=gem_big1><title=宝石><brAdj=>自古以来,人们就对宝石垂涎欲滴.<n>不管功能如何,它们的稀缺性和<n>闪亮的外观赋予了它们内在的价值.;
 
 [ItemType]  name=Crafting Kit Loot;
 ID=loot_craft_kit; sprite=802;
@@ -1298,10 +1298,10 @@ toMake=mask_breaker;
 toMake=mask_berserker;
 
 
-[ItemType]  name=Mask;
+[ItemType]  name=面具;
 ID=mask_blank; sprite=1056; 
 weight=0; volume=1; value=0;
-description=A mysterious mask.;
+description=一个神秘的面具.;
 journalID=journal_mask;
 depthMod=1000;
 special=canHangOnWalls;
@@ -1309,21 +1309,21 @@ special=setGlobalVarWhenConverted;
 special=canAssignSpecialTC;
 special=drawSpecialTC;
 
-[ItemType]  name=Scholarly Mask;
+[ItemType]  name=学者面具;
 ID=mask_scholar; sprite=1057;  spriteWhenHeld=1057;
-description=Mask of the Scholar.;
+description=学者的面具.;
 cloneFrom=mask_blank;
-[ItemType]  name=War Mask;
+[ItemType]  name=战士面具;
 ID=mask_warrior; sprite=1064;  spriteWhenHeld=1064;
-description=Mask of the Warrior.;
+description=战士的面具.;
 cloneFrom=mask_blank;
-[ItemType]  name=Surprised Mask;
+[ItemType]  name=惊奇面具;
 ID=mask_scout; sprite=1059;  spriteWhenHeld=1059;
-description=Mask of the Scout.;
+description=侦察员的面具.;
 cloneFrom=mask_blank;
-[ItemType]  name=Roguish Mask;
+[ItemType]  name=流氓面具;
 ID=mask_rogue; sprite=1060;  spriteWhenHeld=1060;
-description=Mask of the clever Rogue.;
+description=灵巧盗贼的面具.;
 cloneFrom=mask_blank;
 [ItemType]  name=Keen Eye Mask;
 ID=mask_sharpshooter; sprite=1061;  spriteWhenHeld=1061;

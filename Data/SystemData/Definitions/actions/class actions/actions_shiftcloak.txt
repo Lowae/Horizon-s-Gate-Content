@@ -1,9 +1,9 @@
 [Action] ID=Sh_tumble; 
-	name=Tumble;
+	name=翻滚;
 	icon=icon_Sh_tumble;
 	harmful=false;
-	tooltip=Quickly tumble to a better position, even moving through enemies.<n=>Cures 'Immobilized' status.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=快速地滚到一个更好的位置,<n>甚至穿过敌人.<n=>治疗自身'定身'状态.;
+	rankUpTooltip=每级+1距离.;
 	tooltipTopRight=;
 	
 	XPCost=150;
@@ -54,10 +54,10 @@
 	
 
 [Action] ID=Sh_whirl; 
-	name=Whirl;
+	name=旋转;
 	icon=icon_Sh_whirl;
-	tooltip=Spin nearby enemies 180 degrees and deal <thinnerIcon=skill_Wind><math=d:windDmgDisplay(4)> damage. Cures 'Burn' status.;
-	rankUpTooltip=Each rank increases area of effect.;
+	tooltip=使附近敌人快速旋转180度<n>且造成<thinnerIcon=skill_Wind><math=d:windDmgDisplay(4)>伤害.治疗自身'燃烧'状态.;
+	rankUpTooltip=每级增加影响范围.;
 	harmful=false;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Wind_small>;
 	mpCost=1 * d:mpCostMult + d:mpCostMod;
@@ -129,10 +129,10 @@
 	maxRangeBonus=c:rank;
 	
 [Action] ID=Sh_shadowSnap; 
-	name=Shadow Snap;
+	name=暗影穿梭;
 	icon=icon_Sh_shadowSnap;
 	harmful=false;
-	tooltip=Blind adjacent creatures for <icon=time><math=58 + c:MagAtk*2> then move past them. Cures 'Blind' status.;
+	tooltip=使邻近的生物'失明'持续<icon=time><math=58 + c:MagAtk*2><n>然后穿梭过去.治疗自身'失明'状态.;
 	rankUpTooltip=Each rank adds +1 distance moved.;
 	tooltipTopRight=<icon=MagAtk_small>;
 	mpCost=6 * d:mpCostMult + d:mpCostMod;
@@ -194,11 +194,11 @@
 	
 
 [Action] ID=Sh_shiftStab; 
-	name=Shift Stab;
+	name=换位突刺;
 	icon=icon_Sh_shiftStab;
 	harmful=false;
-	tooltip=Move past an opponent, then attack for +20% damage.<n=>If there is no room behind the target, you land in front of them.;
-	rankUpTooltip=Each rank adds +1 distance.;
+	tooltip=穿过目标,然后攻击造成+20%伤害.<n=>如果目标身后没有空间,<n>你将会落在目标前方.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	tooltipIcons=<icon=noRanged>;
 	mpCost=1 * d:mpCostMult + d:mpCostMod;
@@ -245,10 +245,10 @@
 	
 
 [Action] ID=Sh_suddenShot; 
-	name=Sudden Shot;
+	name=突然射击;
 	icon=icon_Sh_suddenShot;
-	tooltip=A +30% more accurate shot obscured by motions of the cloak.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=一次+30命中的射击被斗篷动作所遮蔽.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipIcons=<icon=skill_Dagger><icon=skill_Bow><icon=skill_Aim> Only;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	mpCost=2 * d:mpCostMult + d:mpCostMod;
@@ -289,11 +289,11 @@
 	cloneFrom=oneTile;
 	
 [Action] ID=Sh_backstepShot; 
-	name=Backstep Shot;
+	name=后撤射击;
 	icon=icon_Sh_backstepShot;
 	harmful=false;
-	tooltip=Step backwards while shooting a wide area for 90% damage.;
-	rankUpTooltip=Each rank increases area of effect.;
+	tooltip=后退一步,射击大范围区域造成90%伤害.;
+	rankUpTooltip=每级增加影响范围.;
 	tooltipIcons=<icon=noAugments> <icon=skill_Dagger><icon=skill_Bow><icon=skill_Aim> Only;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	
@@ -344,8 +344,8 @@
 [Action] ID=Sh_delay; 
 	name=Delay;
 	icon=icon_Sh_delay;
-	tooltip=Threatening movements slow <math=c:rank> targets' next turn by <icon=time>5 and inflict -2 <icon=moveDistance> Move for a turn.;
-	rankUpTooltip=Each rank adds +1 target.;
+	tooltip=恐吓行为，推迟<math=c:rank>目标下回合时间<icon=time>5且下回合-2<icon=moveDistance>移动距离.;
+	rankUpTooltip=每级+1目标.;
 	tooltipTopRight=;
 	
 	XPCost=100;

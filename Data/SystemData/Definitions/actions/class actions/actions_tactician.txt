@@ -1,13 +1,13 @@
 
 
 [Action] ID=Tac_command; 
-	name=Now!;
+	name=立刻!;
 	icon=icon_Tac_command;
 	mpCost=7 * d:mpCostMult + d:mpCostMod;
 	cooldown=50;
 	harmful=false;
-	tooltip=Immediately grant an ally a turn. Can't be used again for <icon=time>50.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=立即给予一个盟友一次回合.<icon=time>50内无法再次使用.;
+	rankUpTooltip=每级+1施放距离.;
 	tooltipTopRight=;
 	
 	XPCost=250;
@@ -67,12 +67,12 @@
 	
 
 [Action] ID=Tac_hold; 
-	name=Hold!;
+	name=坚持!;
 	icon=icon_Tac_hold;
 	mpCost=1 * d:mpCostMult + d:mpCostMod;
 	harmful=false;
-	tooltip=Delay an ally's <icon=time>Time to Act by 10, but cure negative status effects and boost morale for <icon=time><math=74+c:MagAtk*2>.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=延迟盟友的10<icon=time>行动时间,<n>但治疗负面状态效果并提升'士气'持续<icon=time><math=74+c:MagAtk*2>.;
+	rankUpTooltip=每级+1施放距离.;
 	tooltipTopRight=<icon=MagAtk_small>;
 	
 	XPCost=75;
@@ -155,12 +155,12 @@
 	
 	
 [Action] ID=Tac_advance; 
-	name=Advance!;
+	name=前进!;
 	icon=icon_Tac_advance;
 	mpCost=1 * d:mpCostMult + d:mpCostMod;
 	harmful=false;
-	tooltip=Instruct <math=c:rank> <adjX=2><textIf=ally=2-c:rank><textIf=allies=c:rank-1><adjX=2> to move<n=>forward up to 3 tiles and gain +2 <icon=PhysAtk><icon=MagAtk> next turn.;
-	rankUpTooltip=Each rank adds +1 target.;
+	tooltip=命令<math=c:rank>名<adjX=2><textIf=队友=2-c:rank><textIf=队友=c:rank-1><adjX=2>向前移动3格<n>且下回合+2<icon=PhysAtk><icon=MagAtk>.;
+	rankUpTooltip=每级+1目标.;
 	tooltipTopRight=;
 	
 	XPCost=125;
@@ -237,12 +237,12 @@
 	
 	
 [Action] ID=Tac_withdraw; 
-	name=Withdraw!;
+	name=撤退!;
 	icon=icon_Tac_withdraw;
 	mpCost=1 * d:mpCostMult + d:mpCostMod;
 	harmful=false;
-	tooltip=Instruct <math=c:rank> <adjX=2><textIf=ally=2-c:rank><textIf=allies=c:rank-1><adjX=2> to move backward up to 3 tiles and gain +2 <icon=PhysDef><icon=MagDef> next turn.;
-	rankUpTooltip=Each rank adds +1 target.;
+	tooltip=命令<math=c:rank>名<adjX=2><textIf=队友=2-c:rank><textIf=队友=c:rank-1><adjX=2>向后移动3格<n>且下回合获得+2 <icon=PhysDef><icon=MagDef>.;
+	rankUpTooltip=每级+1目标.;
 	tooltipTopRight=;
 	
 	XPCost=125;
@@ -319,12 +319,12 @@
 	
 
 [Action] ID=Tac_masterstroke; 
-	name=Masterstroke;
+	name=绝招;
 	icon=icon_Tac_masterstroke;
 	mpCost=15 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=35 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
 	harmful=false;
-	tooltip=All allies immediately get a turn. Can't be used again for <icon=time>50. Also can't be used on the first turn of combat.;
+	tooltip=所有队友立即获得一回合.<n><icon=time>50内无法再次使用.<n>战斗中不能在第一回合使用.;
 	rankUpTooltip=;
 	tooltipTopRight=;
 	

@@ -2,10 +2,10 @@
 
 
 [Action] ID=Rav_ruinshock; 
-	name=Ruinshock;
+	name=毁灭冲击;
 	icon=icon_Rav_doubleEdge;
-	tooltip=Go all out with an attack, damaging yourself 30% and the opponent <math=120 + 10 * c:rank>% or more.;
-	rankUpTooltip=Each rank increases damage to the opponent by 10%.;
+	tooltip=全力以赴发动攻击,<n>对自己造成30%伤害对目标造成<math=120 + 10 * c:rank>%以上伤害.;
+	rankUpTooltip=每级+10%对目标造成的伤害.;
 	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=melee_small><icon=skill_Ruin_small>;
 	mpCost=3 * d:mpCostMult + d:mpCostMod;
 	
@@ -54,10 +54,10 @@
 	cloneFrom=oneTile;
 
 [Action] ID=Rav_quake; 
-	name=Quake;
+	name=地震;
 	icon=icon_Rav_quake;
-	tooltip=Smash the ground, causing a shockwave that deals <math=30 + 10 * c:rank>% damage.;
-	rankUpTooltip=Each rank increases damage by 10%.;
+	tooltip=震击地面,产生冲击波造成<math=30 + 10 * c:rank>%伤害.;
+	rankUpTooltip=每级+10%伤害.;
 	tooltipIcons=<icon=noRanged>;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	
@@ -147,10 +147,10 @@
 	occupyAll=false;
 
 [Action] ID=Rav_smite; 
-	name=Smite;
+	name=重推;
 	icon=icon_Rav_holdLine;
-	tooltip=Push multiple targets in front of you <math=c:rank> tile(s) and deal 75% damage or more.;
-	rankUpTooltip=Push 1 further with each rank.;
+	tooltip=将多个目标推开<math=c:rank>格且造成75%以上伤害.;
+	rankUpTooltip=每级+1推开距离.;
 	tooltipIcons=<icon=noRanged>;
 	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=melee_small><icon=skill_Ruin_small>;
 	mpCost=2 * d:mpCostMult + d:mpCostMod;
@@ -207,10 +207,10 @@
 
 	
 [Action] ID=Rav_despair; 
-	name=Despair;
+	name=绝望;
 	icon=icon_Rav_despair;
 	mpCost=2 * d:mpCostMult + d:mpCostMod;
-	tooltip=Lower morale of enemies in a large area around yourself for <icon=time><math=d:ruinDurMax(4) + 70> and steal <math=c:rank+3><adjX=-4><icon=MP>MP from them.;
+	tooltip=自身周围大范围内降低敌人'士气'持续<icon=time><math=d:ruinDurMax(4) + 70>且偷取<math=c:rank+3><adjX=-4><icon=MP>MP.;
 	rankUpTooltip=Each rank increases <icon=MP>MP stolen by 1.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ruin_small>;
 	
@@ -285,11 +285,11 @@
 	
 
 [Action] ID=Rav_destroy; 
-	name=Destroy;
+	name=毁坏;
 	icon=icon_Rav_destroy;
 	mpCost=3 * d:mpCostMult + d:mpCostMod;
-	tooltip=Kill an enemy with 10<icon=HP>HP or less. Cannot miss.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=杀死一名低于10<icon=HP>HP的敌人.必中.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=;
 	
 	XPCost=250;

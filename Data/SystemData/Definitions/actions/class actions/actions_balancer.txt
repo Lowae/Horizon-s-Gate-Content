@@ -79,13 +79,13 @@
 	
 
 [Action] ID=Ba_stonefoot; 
-	name=Stonefoot;
+	name=固足;
 	icon=icon_Ba_stonefoot;
 	mpCost=6 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=12 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
 	
-	tooltip=Raise the ground to entrap creatures' feet, immobilizing them for <icon=time><math=40 + c:MagAtk * 3 + c:rank * 20>.;
-	rankUpTooltip=Each rank increases duration by <icon=time>20.;
+	tooltip=升高地面使生物的脚陷入,<n>造成'定身'持续<icon=time><math=40 + c:MagAtk * 3 + c:rank * 20>.;
+	rankUpTooltip=每级+<icon=time>20持续时间.;
 	tooltipTopRight=<icon=MagAtk_small>;
 	
 	XPCost=120;
@@ -168,12 +168,12 @@
 	
 
 [Action] ID=Ba_warmth; 
-	name=Warmth;
+	name=温暖;
 	icon=icon_Ba_warmth;
 	mpCost=8 * d:mpCostMult + d:mpCostMod;
 	harmful=false;
-	tooltip=Protect an ally from cold & water effects and regenerate<n=><math=6 + c:skill_Fire * 0.5 + c:MagAtk * 0.5><adjX=-2><icon=MP>MP each turn for <icon=time><math=60 + d:fireDurMax(2) + 20 * c:rank>.;
-	rankUpTooltip=Each rank increases duration by <icon=time>20.;
+	tooltip=保护队友免受寒冷和水的影响,<n=>每回合恢复<math=6 + c:skill_Fire * 0.5 + c:MagAtk * 0.5><adjX=-2><icon=MP>MP持续<icon=time><math=60 + d:fireDurMax(2) + 20 * c:rank>.;
+	rankUpTooltip=每级+<icon=time>20持续时间.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small>;
 	
 	XPCost=200;
@@ -213,12 +213,12 @@
 	
 	
 [Action] ID=Ba_iceSpikes; 
-	name=Ice Carapace;
+	name=冰壳;
 	icon=icon_Ba_iceSpikes;
 	mpCost=8 * d:mpCostMult + d:mpCostMod;
 	harmful=false;
-	tooltip=Protect an ally from fire, and damage adjacent creatures for <thinnerIcon=skill_Ice><math=4 + c:skill_Ice * 0.5 + c:MagAtk * 0.5> at the end of the ally's turn for <icon=time><math=60 + d:iceDurMax(2) + 20 * c:rank>.;
-	rankUpTooltip=Each rank increases duration by <icon=time>20.;
+	tooltip=保护一个队友免受火的伤害,<n>在队友回合结束时对目标附近敌人<n>造成<thinnerIcon=skill_Ice><math=4 + c:skill_Ice * 0.5 + c:MagAtk * 0.5>伤害持续<icon=time><math=60 + d:iceDurMax(2) + 20 * c:rank>.;
+	rankUpTooltip=每级+<icon=time>20持续时间.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ice_small>;
 	
 	XPCost=350;
@@ -260,13 +260,13 @@
 	
 
 [Action] ID=Ba_preserve; 
-	name=Preserve;
+	name=保护;
 	icon=icon_Ba_preserve;
 	mpCost=14 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=12 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
 	
 	harmful=false;
-	tooltip=Preserve an ally for <icon=time>300, automatically reviving them if they get knocked out. An already KO'd target is revived with 1<icon=HP>HP then Preserved.;
+	tooltip=保护一个队友持续<icon=time>300,<n>当被击倒时自动复活.<n>已经被KO的目标立即复活<n>恢复1<icon=HP>HP再施加'保护'.;
 	rankUpTooltip=;
 	tooltipTopRight=;
 	
@@ -328,12 +328,12 @@
 	
 
 [Action] ID=Ba_force; 
-	name=Force;
+	name=强迫;
 	icon=icon_Ba_force;
 	mpCost=1 * d:mpCostMult + d:mpCostMod;
 	harmful=false;
-	tooltip=Gusts of wind push <math=c:rank> target(s) without harming them.;
-	rankUpTooltip=Each rank adds +1 target.;
+	tooltip=一阵强风推动<math=c:rank>个目标,无伤害.;
+	rankUpTooltip=每级+1目标.;
 	tooltipTopRight=;
 	
 	numTargets=c:rank;

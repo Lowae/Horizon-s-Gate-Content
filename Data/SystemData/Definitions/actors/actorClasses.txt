@@ -1,10 +1,10 @@
-[ActorClass] name=Sailor;
+[ActorClass] name=水手;
 ID=sailor;
 selectableClass=true;
 icon=classIcon_sailor;
 journalID=journal_sailor;
 
-description=Tough sailor accustomed to life on the seas.;
+description=习惯了海上生活的坚强水手.;
 paletteUI=pBlue2;
 --paletteActionR=pBlue2;
 --paletteActionG=pOrange;
@@ -56,17 +56,17 @@ bodyPartSprite5=sailor_shoulder;
 [JournalEntry]
 ID=journal_sailor;
 category=actorClass; halfPage=true;
-title=Sailor;
-text=<icon=classIcon_sailor><title=Sailor><brAdj=>A seafarer wise in the ways of the ocean. Has basic skills that aid in combat and survival.;
+title=水手;
+text=<icon=classIcon_sailor><title=水手><brAdj=>对海洋了如指掌的海员.<n>具备战斗和生存的基本技能.;
 
 
-[ActorClass] name=Brawler;
+[ActorClass] name=拳手;
 ID=brawler;
 selectableClass=true;
 icon=classIcon_brawler;
 journalID=journal_brawler;
 
-description=Martial artist that favors unarmed combat.;
+description=喜欢徒手格斗的武术家.;
 paletteUI=pBrown;
 --paletteActionR=pRedD;
 --paletteActionG=pOrange;
@@ -116,17 +116,17 @@ bodyPartSprite5=brawler_shoulder;
 [JournalEntry]
 ID=journal_brawler;
 category=actorClass; halfPage=true; rarity=1;
-title=Brawler;
-text=<icon=classIcon_brawler><title=Brawler><brAdj=>A Brawler fights dirty and often. They specialize in fisticuffs but can improvise with other weapons as necessary.;
+title=拳手;
+text=<icon=classIcon_brawler><title=拳手><brAdj=>拳手经常肮脏地打架.<n>他们擅长拳击赛,<n>但也可以在必要时临时使用其他武器.;
 
 
-[ActorClass] name=Warrior;
+[ActorClass] name=战士;
 ID=warrior;
 selectableClass=true;
 icon=classIcon_warrior;
 journalID=journal_warrior;
 
-description=Heavily armed warrior trained in melee combat.;
+description=近身搏斗的重装战士.;
 paletteUI=pGreyD2;
 --paletteActionR=pGreyD2;
 --paletteActionG=pOrange;
@@ -180,16 +180,16 @@ bodyPartSprite5=warrior_shoulder;
 [JournalEntry]
 ID=journal_warrior;
 category=actorClass; halfPage=true;
-title=Warrior;
-text=<icon=classIcon_warrior><title=Warrior><brAdj=>There's nothing more straightforward than a Warrior. With the most raw melee power of any class, Warriors excel as front-liners.;
+title=战士;
+text=<icon=classIcon_warrior><title=战士><brAdj=>没有什么比战士更直接的了.<n>拥有所有职业中最原始的近战能力,<n>在前线表现出色.;
 
-[ActorClass] name=Gladiator;
+[ActorClass] name=角斗士;
 ID=gladiator;
 selectableClass=true;
 icon=classIcon_gladiator;
 journalID=journal_gladiator;
 
-description=Rough-and-tumble fighter that is ready for anything.;
+description=乱斗士,准备好应对一切.;
 paletteUI=pRedD;
 --paletteActionR=pBlue2;
 --paletteActionG=pOrange;
@@ -247,16 +247,16 @@ bodyPartSprite5=gladiator_shoulder;
 [JournalEntry]
 ID=journal_gladiator;
 category=actorClass; halfPage=true;
-title=Gladiator;
-text=<icon=classIcon_gladiator><title=Gladiator><brAdj=>Gladiators have a simple but versatile skillset that makes them effective in almost any situation. To them, 'dirty fighting' is a compliment.;
+title=角斗士;
+text=<icon=classIcon_gladiator><title=角斗士><brAdj=>角斗士有一个简单但全能的技能组合.<n>使他们在几乎任何情况下都有效.<n>对他们来说,'阴招'是一种赞美.;
 
-[ActorClass] name=Scourge;
+[ActorClass] name=鞭笞者;
 ID=scourge;
 selectableClass=true;
 icon=classIcon_scourge;
 journalID=journal_scourge;
 
-description=Vicious killer that specializes in whips & flails.;
+description=恶毒的杀手，专门使用鞭子和连枷.;
 paletteUI=pRed2;
 
 actions=Sco_yank;
@@ -301,18 +301,18 @@ bodyPartSprite5=scourge_shoulderR;
 [JournalEntry]
 ID=journal_scourge;
 category=actorClass; halfPage=true; rarity=2;
-title=Scourge;
-text=<icon=classIcon_scourge><title=Scourge><brAdj=>Torments enemies by whipping them to shreds. Provides a strong mix of power, reach, and debilitating effects.;
+title=鞭笞者;
+text=<icon=classIcon_scourge><title=鞭笞者><brAdj=>把敌人抽打成碎片来折磨他们. 提供强力、接触性的负面效果.;
 
 
 
-[ActorClass] name=Rogue;
+[ActorClass] name=盗贼;
 ID=rogue;
 selectableClass=true;
 icon=classIcon_rogue;
 journalID=journal_rogue;
 
-description=Sneakthief with dirty tricks up each sleeve.;
+description=每个袖子里都有肮脏手段的鬼鬼祟祟的小偷.;
 paletteUI=pYellow;
 --paletteActionR=pOrange;
 --paletteActionG=pYellow;
@@ -365,16 +365,16 @@ bodyPartSprite5=rogue_shoulder;
 [JournalEntry]
 ID=journal_rogue;
 category=actorClass; halfPage=true; rarity=1;
-title=Rogue;
-text=<icon=classIcon_rogue><title=Rogue><brAdj=>Evasive and tricky. Rogues use their weapons to debilitate rather than just dealing damage. As a result they prefer accurate weaponry.;
+title=盗贼;
+text=<icon=classIcon_rogue><title=盗贼><brAdj=>躲藏和诡计多端.<n>盗贼使用武器削弱对方而不仅是造成伤害.<n>因此,他们更喜欢命中高的武器.;
 
-[ActorClass] name=Scout;
+[ActorClass] name=侦察员;
 ID=scout;
 selectableClass=true;
 icon=classIcon_scout;
 journalID=journal_scout;
 
-description=Agile explorer with a basic but versatile skillset.;
+description=具有基础的技能但多才多艺的敏捷探索家.;
 paletteUI=pGreen;
 --paletteActionR=pGreen;
 --paletteActionG=pOrange;
@@ -428,17 +428,17 @@ bodyPartSprite5=scout_shoulder;
 [JournalEntry]
 ID=journal_scout;
 category=actorClass; halfPage=true;
-title=Scout;
-text=<icon=classIcon_scout><title=Scout><brAdj=>Any good explorer has spent time as a Scout. Their solid melee & ranged fighting skills complement their flexible set of abilities.;
+title=侦察员;
+text=<icon=classIcon_scout><title=侦察员><brAdj=>任何优秀的探险家都曾做过侦察兵.<n>他们坚实的近战和远程战斗技能<n>补足了他们灵活的能力.;
 
 
-[ActorClass] name=Sharpshooter;
+[ActorClass] name=神射手;
 ID=ranger;
 selectableClass=true;
 icon=classIcon_ranger;
 journalID=journal_ranger;
 
-description=Ranged combat expert.;
+description=远程作战专家.;
 paletteUI=pOrange;
 --paletteActionR=pBrown;
 --paletteActionG=pYellow;
@@ -487,15 +487,15 @@ bodyPartSprite5=ranger_shoulderR;
 [JournalEntry]
 ID=journal_ranger;
 category=actorClass; halfPage=true; rarity=1;
-title=Sharpshooter;
-text=<icon=classIcon_ranger><title=Sharpshooter><brAdj=>Long-ranged damage dealer. Sharpshooters bring power to ranged weaponry. Almost nowhere on the battlefield is safe from their reach.;
-[ActorClass] name=Ranger;
+title=神射手;
+text=<icon=classIcon_ranger><title=神射手><brAdj=>远程伤害制造者.<n>神枪手为远程武器带来力量.<n>战场上几乎没有一个地方是安全的.;
+[ActorClass] name=游骑兵;
 ID=ranger2;
 selectableClass=true;
 icon=classIcon_ranger2;
 journalID=journal_ranger2;
 
-description=Protector that fights & heals from a distance.;
+description=远距离战斗和治疗的保护者.;
 paletteUI=pGreen;
 
 actions=Ran_doubleTap;
@@ -541,17 +541,17 @@ bodyPartSprite5=ranger2_shoulderR;
 [JournalEntry]
 ID=journal_ranger2;
 category=actorClass; halfPage=true; rarity=2;
-title=Ranger;
-text=<icon=classIcon_ranger2><title=Ranger><brAdj=>By mastering life magic, Rangers can grow a variety of helpful plants and unguents to improve their combat and healing prowess. Projectile weaponry allows them to deliver these potent creations from a safe distance.;
+title=游骑兵;
+text=<icon=classIcon_ranger2><title=游骑兵><brAdj=>通过掌握生命魔法,<n>游骑兵可以种植各种有益的植物<n>和制作药膏来提高他们的战斗和治疗能力.<n>投射武器可以让他们在安全距离内发射这些<n>强大的创造物.;
 
 
-[ActorClass] name=Sage;
+[ActorClass] name=贤者;
 ID=sage;
 selectableClass=true;
 icon=classIcon_sage;
 journalID=journal_sage;
 
-description=Preservation mage - excels at healing and revival.;
+description=保护型发射 - 擅长治愈和恢复.;
 paletteUI=pBlueD;
 --paletteActionR=pBluegreen;
 --paletteActionG=pRed;
@@ -599,16 +599,16 @@ bodyPartSprite5=sage_shoulder;
 [JournalEntry]
 ID=journal_sage;
 category=actorClass; halfPage=true; rarity=1;
-title=Sage;
-text=<icon=classIcon_sage><title=Sage><brAdj=>User of Life magic, provider of healing and support. Sages can keep a group fighting through almost any injury.;
+title=贤者;
+text=<icon=classIcon_sage><title=贤者><brAdj=>使用生命魔法,,提供治疗和支援.<n>贤者可以让团队保持战斗无论受到什么伤害.;
 
-[ActorClass] name=Scholar;
+[ActorClass] name=学者;
 ID=scholar;
 selectableClass=true;
 icon=classIcon_scholar;
 journalID=journal_scholar;
 
-description=Apprentice to all forms of magic.;
+description=成为各种魔法的学徒.;
 paletteUI=pTeal;
 --paletteActionR=pTeal2;
 --paletteActionG=pOrange;
@@ -659,17 +659,17 @@ bodyPartSprite5=scholar_shoulder;
 [JournalEntry]
 ID=journal_scholar;
 category=actorClass; halfPage=true;
-title=Scholar;
-text=<icon=classIcon_scholar><title=Scholar><brAdj=>All mages begin as Scholars. Scholarly magic has unique advantages- their spells are very quick, and are diverse enough to fit any situation.;
+title=学者;
+text=<icon=classIcon_scholar><title=学者><brAdj=>所有的法师都是从学者开始的.<n>学者的魔法有独特的优势-施放法术非常快,<n>并且足够多样化以适应任何情况.;
 
 
-[ActorClass] name=Sorcerer;
+[ActorClass] name=魔法师;
 ID=sorcerer;
 selectableClass=true;
 icon=classIcon_sorcerer;
 journalID=journal_sorcerer;
 
-description=Magical powerhouse with devastating elemental spells.;
+description=拥有毁灭性元素魔法的组织.;
 paletteUI=pOrange;
 --paletteActionR=pRed;
 --paletteActionG=pYellow;
@@ -721,18 +721,18 @@ bodyPartSprite5=sorcerer_shoulder;
 [JournalEntry]
 ID=journal_sorcerer;
 category=actorClass; halfPage=true; rarity=1;
-title=Sorcerer;
-text=<icon=classIcon_sorcerer><title=Sorcerer><brAdj=>Sorcery is the preferred magic of battlemages, both in skirmishes and open warfare. Devastates tight enemy formations.;
+title=魔法师;
+text=<icon=classIcon_sorcerer><title=魔法师><brAdj=>巫术是魔法之战的首选魔法.<n>无论是小规模战斗还是公开战争.<n>摧毁敌人密集的编队.;
 
 
 
-[ActorClass] name=Berserker;
+[ActorClass] name=狂战士;
 ID=berserker;
 selectableClass=true;
 icon=classIcon_berserker;
 journalID=journal_berserker;
 
-description=Reckless and brutal bruiser.;
+description=鲁莽和残忍的彪形大汉.;
 paletteUI=pRedbrown;
 --paletteActionR=pRedbrown;
 --paletteActionG=pRed;
@@ -788,17 +788,17 @@ bodyPartSprite5=berserker_shoulder;
 [JournalEntry]
 ID=journal_berserker;
 category=actorClass; halfPage=true; rarity=1;
-title=Berserker;
-text=<icon=classIcon_berserker><title=Berserker><brAdj=>Berserkers are aggression defined. By attacking the most foes possible as viciously as possible, they keep all attention on themselves.;
+title=狂战士;
+text=<icon=classIcon_berserker><title=狂战士><brAdj=>狂战士具有攻击性.<n>通过尽可能残暴地攻击敌人,<n>将所有注意力都集中在自己身上.;
 
 
-[ActorClass] name=Tactician;
+[ActorClass] name=战术师;
 ID=tactician;
 selectableClass=true;
 icon=classIcon_tactician;
 journalID=journal_tactician;
 
-description=Strategist that commands the flow of battle.;
+description=指挥战斗的战略家.;
 paletteUI=pBlueD;
 
 actions=Tac_command;
@@ -851,16 +851,16 @@ bodyPartSprite5=tactician_shoulder;
 [JournalEntry]
 ID=journal_tactician;
 category=actorClass; halfPage=true; rarity=1;
-title=Tactician;
-text=<icon=classIcon_tactician><title=Tactician><brAdj=>Mastermind of organized conflict. Gives orders to allies and greatly improves their efficiency.;
+title=战术师;
+text=<icon=classIcon_tactician><title=战术师><brAdj=>有组织冲突的策划者.<n>给盟友下达命令并大大提高他们的效率.;
 
-[ActorClass] name=Guardian;
+[ActorClass] name=守卫者;
 ID=guardian;
 selectableClass=true;
 icon=classIcon_guardian;
 journalID=journal_guardian;
 
-description=Defensive juggernaut and protector of allies.;
+description=防御的主宰和队友的保护者.;
 paletteUI=pBlue;
 --paletteActionR=pBlueD;
 --paletteActionG=pOrange;
@@ -915,8 +915,8 @@ bodyPartSprite5=guardian_shoulder;
 [JournalEntry]
 ID=journal_guardian;
 category=actorClass; halfPage=true; rarity=1;
-title=Guardian;
-text=<icon=classIcon_guardian><title=Guardian><brAdj=>Guardians are the toughest soldiers there are. They can defend against virtually anything while strengthening their allies.;
+title=守卫者;
+text=<icon=classIcon_guardian><title=守卫者><brAdj=>守卫者是最坚韧的战士.<n>他们可以加强盟友的同时抵御一切.;
 
 
 [ActorClass] name=;
@@ -925,13 +925,13 @@ selectableClass=true;
 
 
 
-[ActorClass] name=Bombardier;
+[ActorClass] name=投弹手;
 ID=bombardier;
 selectableClass=true;
 icon=classIcon_bombardier;
 journalID=journal_bombardier;
 
-description=Covers the battlefield with remote bombs.;
+description=用远程炸弹覆盖战场.;
 paletteUI=pGreyD2;
 --paletteActionR=pGreyD;
 --paletteActionG=pRed;
@@ -987,16 +987,16 @@ bodyPartSprite5=bombardier_shoulder;
 [JournalEntry]
 ID=journal_bombardier;
 category=actorClass; halfPage=true; rarity=1;
-title=Bombardier;
-text=<icon=classIcon_bombardier><title=Bombardier><brAdj=>Hurls bombs and then detonates them later. Requires a long setup, but for a big payoff.;
+title=投弹手;
+text=<icon=classIcon_bombardier><title=投弹手><brAdj=>投掷炸弹,然后稍后引爆.<n>需要很长时间的准备,但收益很高.;
 
-[ActorClass] name=Swashbuckler;
+[ActorClass] name=游荡者;
 ID=swashbuckler;
 selectableClass=true;
 icon=classIcon_swashbuckler;
 journalID=journal_swashbuckler;
 
-description=Highly mobile fighter that weaves in and out of melee.;
+description=高度机动的战士,在混战中不断迂回.;
 paletteUI=pGreen;
 
 actions=Swa_boltBalestra;
@@ -1047,17 +1047,17 @@ bodyPartSprite5=swashbuckler_shoulder;
 [JournalEntry]
 ID=journal_swashbuckler;
 category=actorClass; halfPage=true; rarity=0;
-title=Swashbuckler;
-text=<icon=classIcon_swashbuckler><title=Swashbuckler><brAdj=>A debonair dilettante that gracefully combines melee and ranged weaponry. Excels in mobility and teamwork.
+title=游荡者;
+text=<icon=classIcon_swashbuckler><title=游荡者><brAdj=>一名快活的业务爱好者,<n>将近战和远程武器优雅地结合在一起.<n>善于机动和团队合作.
 
 
-[ActorClass] name=Stormshot;
+[ActorClass] name=疾风射手;
 ID=stormshot;
 selectableClass=true;
 icon=classIcon_stormshot;
 journalID=journal_stormshot;
 
-description=Empowers and guides shots with wind magic.;
+description=使用风魔法赋能和引导射击.;
 paletteUI=pRedD;
 
 actions=Sto_blastShot;
@@ -1100,21 +1100,21 @@ bodyPartSprite5=stormshot_shoulderL;
 [JournalEntry]
 ID=journal_stormshot;
 category=actorClass; halfPage=true; rarity=1;
-title=Stormshot;
-text=<icon=classIcon_stormshot><title=Stormshot><brAdj=>Blasts the battlefield with devastating wind-empowered shots. Has many tricks up their sleeve to hit the most enemies possible in any situation.;
+title=疾风射手;
+text=<icon=classIcon_stormshot><title=疾风射手><brAdj=>使用强大的风赋能毁灭性射击战场.<n>在任何情况下,他们有许多手段来打击最多的敌人.;
 
 
 [ActorClass] name=;
 ID=dummy7;
 selectableClass=true;
 
-[ActorClass] name=Warden;
+[ActorClass] name=护佑者;
 ID=warden;
 selectableClass=true;
 icon=classIcon_warden;
 journalID=journal_warden;
 
-description=Defensive caster that shields allies.;
+description=保护盟友的防御施法者.;
 paletteUI=pBlueD;
 --paletteActionR=pBluegreen;
 --paletteActionG=pRed;
@@ -1161,17 +1161,17 @@ bodyPartSprite5=warden_shoulder;
 [JournalEntry]
 ID=journal_warden;
 category=actorClass; halfPage=true; rarity=1;
-title=Warden;
-text=<icon=classIcon_warden><title=Warden><brAdj=>Protector-mages named after Seartial's elite riot control troops. Wardens are respected and feared for their efficacy in extended conflict.;
+title=护佑者;
+text=<icon=classIcon_warden><title=护佑者><brAdj=>以Seartial的精英防爆部队命名的保护型法师.<n>护佑者因其长期为解决纷争效力而受到尊重和畏惧.;
 
 
-[ActorClass] name=Elementalist;
+[ActorClass] name=元素使;
 ID=elementalist;
 selectableClass=true;
 icon=classIcon_elementalist;
 journalID=journal_elementalist;
 
-description=Artisan of the elements.;
+description=元素的艺匠.;
 paletteUI=pRedD;
 
 actions=Ele_condensate;
@@ -1220,17 +1220,17 @@ bodyPartSprite5=elementalist_shoulder;
 [JournalEntry]
 ID=journal_elementalist;
 category=actorClass; halfPage=true; rarity=1;
-title=Elementalist;
-text=<icon=classIcon_elementalist><title=Elementalist><brAdj=>Bearer of complex magic techniques created by devotees of the Elementalist religion. Now non-believers and believers alike wield these spells for their remarkable effectiveness.;
+title=元素使;
+text=<icon=classIcon_elementalist><title=元素使><brAdj=>信仰元素信徒创造的复杂元素魔法持有者宗派.<n>现在非信仰者和信仰者都在使用这些法术,<n>因为它们具有非凡的效力.;
 
 
-[ActorClass] name=Unmaker;
+[ActorClass] name=毁灭者;
 ID=unmaker;
 selectableClass=true;
 icon=classIcon_unmaker;
 journalID=journal_unmaker;
 
-description=Debilitates and destroys enemies with Ruin magic.;
+description=用毁灭魔法削弱并摧毁敌人.;
 paletteUI=pGreyD2;
 --paletteActionR=pPurple;
 --paletteActionG=pGreen;
@@ -1278,17 +1278,17 @@ bodyPartSprite5=unmaker_shoulder;
 [JournalEntry]
 ID=journal_unmaker;
 category=actorClass; halfPage=true; rarity=1;
-title=Unmaker;
-text=<icon=classIcon_unmaker><title=Unmaker><brAdj=>Ruin mage that eschews necromancy for a nobler goal: totally obliterating enemies. Devastating to anyone within their reach.;
+title=毁灭者;
+text=<icon=classIcon_unmaker><title=毁灭者><brAdj=>毁灭法师为了一个更高尚的目标而避开死灵术:<n>彻底消灭敌人.<n>对他们所能接触的人都是毁灭性的.;
 
 
-[ActorClass] name=Breaker;
+[ActorClass] name=粉碎者;
 ID=breaker;
 selectableClass=true;
 icon=classIcon_breaker;
 journalID=journal_breaker;
 
-description=Master of blunt weapons. Smashes equipment and body.;
+description=钝器大师.粉碎装备甚至躯体.;
 paletteUI=pBrown;
 --paletteActionR=pRedbrown;
 --paletteActionG=pRed;
@@ -1341,21 +1341,21 @@ bodyPartSprite5=breaker_shoulder;
 [JournalEntry]
 ID=journal_breaker;
 category=actorClass; halfPage=true; rarity=1;
-title=Breaker;
-text=<icon=classIcon_breaker><title=Breaker><brAdj=>Can only use blunt weapons. Systematically destroys an enemy like the rhythmic pounding of a hammer. Any blunt weapon - hammers, flails, fists, shields - works for their abilities.;
+title=粉碎者;
+text=<icon=classIcon_breaker><title=粉碎者><brAdj=>只能使用钝器武器.<n>如有节奏的锤击一样系统地摧毁敌人.<n>任何钝器--锤子,连枷,拳头,盾牌等<n>都适用他们的能力.;
 
 
 [ActorClass] name=;
 ID=dummy12;
 selectableClass=true;
 
-[ActorClass] name=Blade;
+[ActorClass] name=剑圣;
 ID=blade;
 selectableClass=true;
 icon=classIcon_blade;
 journalID=journal_blade;
 
-description=Master of edged weapons. Cuts foes to shreds.;
+description=利刃武器大师.把敌人切成碎片.;
 paletteUI=pBlueD;
 --paletteActionR=pGreyblue2;
 --paletteActionG=pRed;
@@ -1409,8 +1409,8 @@ bodyPartSprite5=blade_shoulder;
 [JournalEntry]
 ID=journal_blade;
 category=actorClass; halfPage=true; rarity=1;
-title=Blade;
-text=<icon=classIcon_blade><title=Blade><brAdj=>Can only use edged weapons. Their amazing swiftness allows them to shred enemies close up and far away. Any edged weapon - swords, spears, axes, daggers, whips - works for their abilities.;
+title=剑圣;
+text=<icon=classIcon_blade><title=剑圣><brAdj=>只能使用利刃武器.<n>他们惊人的速度能让他们够随处撕碎敌人.<n>任何利刃武器-剑,矛,斧,匕首,鞭子<n>-都适用他们的能力.;
 
 
 
@@ -1428,13 +1428,13 @@ selectableClass=true;
 ID=dummy_mech;
 selectableClass=false;
 
-[ActorClass] name=Mechanist;
+[ActorClass] name=机械师;
 ID=mechanist;
 selectableClass=true;
 icon=classIcon_mechanist;
 journalID=journal_mechanist;
 
-description=Tinker and creator of various combat devices.;
+description=各种战斗设备的修补匠和创造者.;
 paletteUI=pGreyD2;
 --paletteActionR=pGreyD;
 --paletteActionG=pRed;
@@ -1487,16 +1487,16 @@ bodyPartSprite5=mech_shoulder;
 [JournalEntry]
 ID=journal_mechanist;
 category=actorClass; halfPage=true; rarity=1;
-title=Mechanist;
-text=<icon=classIcon_mechanist><title=Mechanist><brAdj=>Deploys walls and turrets to control the battlefield. Their machinations are as complex as their machines.;
+title=机械师;
+text=<icon=classIcon_mechanist><title=机械师><brAdj=>部署墙壁和炮塔来控制战场.<n>他们的阴谋诡计就像他们的机器一样复杂.;
 
-[ActorClass] name=Minstrel;
+[ActorClass] name=吟游诗人;
 ID=minstrel;
 selectableClass=true;
 icon=classIcon_minstrel;
 journalID=journal_minstrel;
 
-description=Songsmith that rallies allies.;
+description=集结盟友的作曲家;
 paletteUI=pBlue2;
 --paletteActionR=pGreen;
 --paletteActionG=pOrange;
@@ -1547,18 +1547,18 @@ bodyPartSprite5=minstrel_shoulder;
 [JournalEntry]
 ID=journal_minstrel;
 category=actorClass; halfPage=true;
-title=Minstrel;
-text=<icon=classIcon_minstrel><title=Minstrel><brAdj=>Heals and cheers on allies through the power of music and preservation magic. Casts slowly, but can reach any ally within hearing distance.;
+title=吟游诗人;
+text=<icon=classIcon_minstrel><title=吟游诗人><brAdj=>借助音乐和保护性魔法为队友治疗和鼓舞.<n>施法缓慢,<n>但可以触达声音范围内的所有队友.;
 
 
 
-[ActorClass] name=Spell Archon;
+[ActorClass] name=符文执政官;
 ID=spellslinger;
 selectableClass=true;
 icon=classIcon_spellslinger;
 journalID=journal_spellslinger;
 
-description=Simultaneously strikes with magic and metal.;
+description=兼修魔法与金属武器.;
 paletteUI=pRedD;
 --paletteActionR=pOrange;
 --paletteActionG=pPurple;
@@ -1614,8 +1614,8 @@ bodyPartSprite5=spellslinger_shoulderL;
 [JournalEntry]
 ID=journal_spellslinger;
 category=actorClass; halfPage=true; rarity=1;
-title=Spell Archon;
-text=<icon=classIcon_spellslinger><title=Spell Archon><brAdj=>Rains magic down on the enemy, inflicting status effects as well as delivering raw power. Though many Archons prefer ranged weaponry, they are equally effective in melee combat.;
+title=符文执政官;
+text=<icon=classIcon_spellslinger><title=符文执政官><brAdj=>如降雨般倾泻魔法于敌人,<n>造成状态效果和释放原始力量.<n>尽管许多执政官更喜欢远程武器,<n>但在近战中同样适用.;
 
 
 
@@ -1625,13 +1625,13 @@ ID=dummy10;
 selectableClass=true;
 
 
-[ActorClass] name=Enchanter;
+[ActorClass] name=附魔师;
 ID=enchanter;
 selectableClass=true;
 icon=classIcon_enchanter;
 journalID=journal_enchanter;
 
-description=Channels elements to enhance weapon attacks.;
+description=通过元素增强武器攻击.;
 paletteUI=pBrown;
 --paletteActionR=pYellow;
 --paletteActionG=pRed;
@@ -1682,17 +1682,17 @@ bodyPartSprite5=enchanter_shoulder;
 [JournalEntry]
 ID=journal_enchanter;
 category=actorClass; halfPage=true; rarity=1;
-title=Enchanter;
-text=<icon=classIcon_enchanter><title=Enchanter><brAdj=>By channeling elements into weapons, the Enchanter can turn their team into an overwhelming storm of magic and metal.;
+title=附魔师;
+text=<icon=classIcon_enchanter><title=附魔师><brAdj=>附魔师通过引导元素汇聚于武器上,<n>将他们团队变成势不可挡的元素和金属风暴.;
 
 
-[ActorClass] name=Balancer;
+[ActorClass] name=平衡者;
 ID=balancer;
 selectableClass=true;
 icon=classIcon_balance;
 journalID=journal_balancer;
 
-description=Elemental mage that supports allies and hinders foes.;
+description=支援盟友且阻碍敌人的元素法师.;
 paletteUI=pYellow;
 --paletteActionR=pYellow;
 --paletteActionG=pRed;
@@ -1746,17 +1746,17 @@ bodyPartSprite5=balancer_shoulder;
 [JournalEntry]
 ID=journal_balancer;
 category=actorClass; halfPage=true; rarity=1;
-title=Balancer;
-text=<icon=classIcon_balance><title=Balancer><brAdj=>Uses the elements in subtle ways to cripple foes and aid allies. Balancers are true masters of versatility.;
+title=平衡者;
+text=<icon=classIcon_balance><title=平衡者><brAdj=>使用精妙的魔法来削弱敌人和帮助队友.<n>平衡者才是多才多艺的大师.;
 
 
-[ActorClass] name=Defiler;
+[ActorClass] name=亵渎者;
 ID=defiler;
 selectableClass=true;
 icon=classIcon_defiler;
 journalID=journal_defiler;
 
-description=Strips away essence with Ruin to cast spells inside the body.;
+description=用毁灭能量剥离本体并在其内施法.;
 paletteUI=pPurpleD;
 --paletteActionR=pPurple3;
 --paletteActionG=pRedD;
@@ -1810,17 +1810,17 @@ bodyPartSprite5=defiler_shoulder;
 [JournalEntry]
 ID=journal_defiler;
 category=actorClass; halfPage=true; rarity=1;
-title=Defiler;
-text=<icon=classIcon_defiler><title=Defiler><brAdj=>Normally, one's essence prevents magic from being cast within the body. However, the sadistic Defiler uses Ruin magic to peel that essence away - allowing them to cruelly burn the target's insides.;
+title=亵渎者;
+text=<icon=classIcon_defiler><title=Defiler><brAdj=>通常,人的本体会阻止魔法在体内释放.<n>然而,残虐亵渎者使用毁灭魔法剥去这一本体<n> - 能让他们残忍地燃烧目标的内脏.;
 
 
-[ActorClass] name=Ravager;
+[ActorClass] name=破坏者;
 ID=ravager;
 selectableClass=true;
 icon=classIcon_ravager;
 journalID=journal_ravager;
 
-description=Powers up devastating strikes with Ruin magic.;
+description=使用毁灭魔法增强极具破坏性的攻击.;
 paletteUI=pRedD;
 --paletteActionR=pBlue2;
 --paletteActionG=pOrange;
@@ -1877,17 +1877,17 @@ bodyPartSprite5=ravager_shoulder;
 [JournalEntry]
 ID=journal_ravager;
 category=actorClass; halfPage=true;
-title=Ravager;
-text=<icon=classIcon_ravager><title=Ravager><brAdj=>The Ravager takes the cruel efficiency of Ruin magic and combines it with brute force. To show any weakness in front of them is to invite a quick and ruthless death.;
+title=破坏者;
+text=<icon=classIcon_ravager><title=Ravager><brAdj=>破坏者使用毁灭魔法的残虐效果并与蛮力结合.<n>在他们面前任何的软弱表现<n>都会招致快速无情的死亡.;
 
 
-[ActorClass] name=Krakenslayer;
+[ActorClass] name=海妖杀手;
 ID=krakenslayer;
 selectableClass=true;
 icon=classIcon_krakenslayer;
 journalID=journal_krakenslayer;
 
-description=Calls on lightning to strike down monsters of any size.;
+description=召唤闪电击倒任何大小的怪物.;
 paletteUI=pYellow;
 
 actions=Kra_arcLance;
@@ -1942,17 +1942,17 @@ bodyPartSprite5=krakenslayer_shoulder;
 [JournalEntry]
 ID=journal_krakenslayer;
 category=actorClass; halfPage=true; rarity=2;
-title=Krakenslayer;
-text=<icon=classIcon_krakenslayer><title=Krakenslayer><brAdj=>Harnesses the power of storms to slay man or beast. Boasts excellent offensive power and range.;
+title=海妖杀手;
+text=<icon=classIcon_krakenslayer><title=海妖杀手><brAdj=>利用风暴的力量杀死人类或野兽.<n>具有出色的进攻能力和射程.;
 
 
-[ActorClass] name=Ignis Knight;
+[ActorClass] name=火焰骑士;
 ID=ignisKnight;
 selectableClass=true;
 icon=classIcon_ignisKnight;
 journalID=journal_ignisKnight;
 
-description=Knight that combines fire and weaponry to deadly effect.;
+description=将火焰与武器结合一起产生致命效果的骑士.;
 paletteUI=pRed2;
 --paletteActionR=pRed;
 --paletteActionG=pR;
@@ -2014,8 +2014,8 @@ bodyPartSprite5=ignisKnight_shoulder2;
 [JournalEntry]
 ID=journal_ignisKnight;
 category=actorClass; halfPage=true; rarity=2;
-title=Ignis Knight;
-text=<icon=classIcon_ignisKnight><title=Ignis Knight><brAdj=>An infamous band of slash-and-burn mercenaries, the Ignis Knights have perfected their fiery and reckless fighting style.;
+title=火焰骑士;
+text=<icon=classIcon_ignisKnight><title=火焰骑士><brAdj=>火焰骑士是一群臭名昭著的刀耕火种雇佣兵.<n>不断完善着他们充满火焰的鲁莽的战斗风格;
 
 
 [ActorClass] name=;
@@ -2024,13 +2024,13 @@ selectableClass=true;
 
 
 
-[ActorClass] name=Shiftcloak;
+[ActorClass] name=相位斗篷;
 ID=shiftcloak;
 selectableClass=true;
 icon=classIcon_shiftcloak;
 journalID=journal_shiftcloak;
 
-description=A whirling cloak masks every movement and disorients foes.;
+description=一件旋转中的斗篷掩盖了所有的动作,使敌人迷失目标.;
 paletteUI=pGreen;
 --paletteActionR=pGreen;
 --paletteActionG=pOrange;
@@ -2087,17 +2087,17 @@ bodyPartSprite5=shiftcloak_shoulderL;
 [JournalEntry]
 ID=journal_shiftcloak;
 category=actorClass; halfPage=true; rarity=3; rewardMod=-500;
-title=Shiftcloak;
-text=<icon=classIcon_shiftcloak><title=Shiftcloak><brAdj=>Evades, blinds, and disorients foes with amazing speed. Uses a cloak as misdirection and to conceal deadly weaponry.;
+title=相位斗篷;
+text=<icon=classIcon_shiftcloak><title=相位斗篷><brAdj=>以惊人的速度闪避,致盲和迷惑敌人.<n>用斗篷误导敌人,隐藏其中的致命武器.;
 
 
-[ActorClass] name=Bat Handler;
+[ActorClass] name=蝙蝠训练者;
 ID=bathandler;
 selectableClass=true;
 icon=classIcon_bathandler;
 journalID=journal_bathandler;
 
-description=Summons and controls powerful Zoar bats.;
+description=召唤和控制强大的Zoar蝙蝠.;
 paletteUI=pRedbrown;
 --paletteActionR=pGreyblue;
 --paletteActionG=pRed;
@@ -2152,8 +2152,8 @@ bodyPartSprite5=bathandler_shoulder;
 [JournalEntry]
 ID=journal_bathandler;
 category=actorClass; halfPage=true; rarity=2;
-title=Bat Handler;
-text=<icon=classIcon_bathandler><title=Bat Handler><brAdj=>Amasses a surprisingly strong and loyal army by training Zoar Bats. Can send waves of bats sweeping across the battlefield with a single command.;
+title=蝙蝠训练者;
+text=<icon=classIcon_bathandler><title=蝙蝠训练者><brAdj=>训练Zoar蝙蝠聚集了一支强大而忠诚的军队.<n>一个命令便能让一波又一波的蝙蝠横扫战场.;
 
 [ActorClass] name=;
 ID=dummy15;
@@ -2164,13 +2164,13 @@ ID=dummy16;
 selectableClass=true;
 
 
-[ActorClass] name=Gatewarder;
+[ActorClass] name=守门人;
 ID=gatewarder;
 selectableClass=true;
 icon=classIcon_gatewarder;
 journalID=journal_gatewarder;
 
-description=Wields Gate magic to protect allies and disable foes.;
+description=使用门魔法保护盟友并使敌人残废.;
 paletteUI=pPurple;
 --paletteActionR=pPurpleD;
 --paletteActionG=pOrange;
@@ -2223,18 +2223,18 @@ bodyPartSprite5=gatewarder_shoulderL;
 [JournalEntry]
 ID=journal_gatewarder;
 category=actorClass; halfPage=true; rarity=2;
-title=Gatewarder;
-text=<icon=classIcon_gatewarder><title=Gatewarder><brAdj=>Turns Gate magic into an even more profound art. Though they excel at protecting allies, don't underestimate their offensive power.;
+title=守门人;
+text=<icon=classIcon_gatewarder><title=守门人><brAdj=>把门魔法变成了一项更深奥的艺术.<n>虽然他们擅长保护盟友,<n>但不要低估他们的进攻能力.;
 
 
 
-[ActorClass] name=Gatekeeper;
+[ActorClass] name=看门人;
 ID=gatekeeper;
 selectableClass=true;
 icon=classIcon_gatekeeper;
 journalID=journal_gatekeeper;
 
-description=User of ancient and powerful Gate magic.;
+description=使用古老而强大的门魔法.;
 paletteUI=pPurple;
 --paletteActionR=pPurpleD;
 --paletteActionG=pOrange;
@@ -2293,18 +2293,18 @@ bodyPartSprite5=gatekeeper_shoulderL;
 [JournalEntry]
 ID=journal_gatekeeper;
 category=actorClass; halfPage=true; rarity=2;
-title=Gatekeeper;
-text=<icon=classIcon_gatekeeper><title=Gatekeeper><brAdj=>With their tremendous power of will, creates Gates that transport material and energy from one point to the other.;
+title=看门人;
+text=<icon=classIcon_gatekeeper><title=看门人><brAdj=>凭借他们强大的意志力,创造门,<n>将物质和能量在空间中传输.;
 
 
 
-[ActorClass] name=Warpblade;
+[ActorClass] name=时空之刃;
 ID=warpblade;
 selectableClass=true;
 icon=classIcon_warpblade;
 journalID=journal_warpblade;
 
-description=Combines Gate magic & martial prowess.;
+description=结合门魔法与武技.;
 paletteUI=pPurple;
 --paletteActionR=pPurple3;
 --paletteActionG=pOrange;
@@ -2361,6 +2361,6 @@ bodyPartSprite5=warpblade_shoulderL;
 [JournalEntry]
 ID=journal_warpblade;
 category=actorClass; halfPage=true; rarity=2;
-title=Warpblade;
-text=<icon=classIcon_warpblade><title=Warpblade><brAdj=>Using Gate magic affords the Warpblade unparalleled reach and power when it comes to martial arts.;
+title=时空之刃;
+text=<icon=classIcon_warpblade><title=时空之刃><brAdj=>当涉及到武技时,<n>门魔法使时空之刃获得<n>无与伦比的范围和力量.;
 

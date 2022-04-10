@@ -1,11 +1,11 @@
 
 [Action] ID=Un_wither; 
-	name=Wither;
+	name=枯萎;
 	icon=icon_Un_wither;
 	mpCost=10 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=15 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
-	tooltip=Deal <thinnerIcon=skill_Ruin><math=d:ruinDmgDisplay(5)> damage and Disable a target for up to <icon=time><math=20 + d:ruinDurMax(1) + 10 * c:rank>.;
-	rankUpTooltip=Each rank increases duration by <icon=time>10.;
+	tooltip=造成<thinnerIcon=skill_Ruin><math=d:ruinDmgDisplay(5)>伤害且施加目标'残废'持续<icon=time><math=20 + d:ruinDurMax(1) + 10 * c:rank>.;
+	rankUpTooltip=每级+<icon=time>10持续时间.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ruin_small>;
 	
 	XPCost=250;
@@ -72,11 +72,11 @@
 	
 
 [Action] ID=Un_soulburn; 
-	name=Soulburn;
+	name=灵魂燃烧;
 	icon=icon_Un_soulburn;
 	mpCost=3 * d:mpCostMult + d:mpCostMod;
-	tooltip=Inflict <math=d:ruinDmgDisplay(15)><icon=MP> MP damage in a small area.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=小范围内造成<math=d:ruinDmgDisplay(15)><icon=MP> MP伤害.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ruin_small>;
 	
 	XPCost=120;
@@ -116,12 +116,12 @@
 	
 
 [Action] ID=Un_decay; 
-	name=Decay;
+	name=腐朽;
 	icon=icon_Un_decay;
 	mpCost=8 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=12 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
-	tooltip=Inflict 'Decay' on an area, causing <thinnerIcon=skill_Ruin><math=d:ruinDmgDisplay(10)> damage on the targets' turn unless they receive healing before then.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=对目标区域所有人施加'腐朽',<n>当其回合时受到<thinnerIcon=skill_Ruin><math=d:ruinDmgDisplay(10)>伤害除非之前被治疗过.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ruin_small>;
 	
 	XPCost=250;
@@ -167,12 +167,12 @@
 	
 
 [Action] ID=Un_shroud; 
-	name=Shroud;
+	name=遮蔽;
 	icon=icon_Un_shroud;
 	mpCost=6 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=9 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
-	tooltip=Blind <textIf= and Poison =c:rank-1> creatures in a small area for up to <icon=time><math=d:ruinDurMax(3)+60>.;
-	rankUpTooltip=With a 2nd rank the shroud also inflicts Poison.;
+	tooltip=对范围内目标施加'失明'<textIf=和中毒=c:rank-1>持续<icon=time><math=d:ruinDurMax(3)+60>.;
+	rankUpTooltip=2级时额外造成中毒.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ruin_small>;
 	
 	XPCost=150;
@@ -230,11 +230,11 @@
 	
 
 [Action] ID=Un_ruinTouch; 
-	name=Ruin Touch;
+	name=毁灭之触;
 	icon=icon_Un_ruinTouch;
 	mpCost=4 * d:mpCostMult + d:mpCostMod;
-	tooltip=Deal <thinnerIcon=skill_Ruin><math=d:ruinDmgDisplay(6)> damage, and +30% extra damage for each negative status effect on the target. Also inflicts Itchy for up to <icon=time><math=20 + d:ruinDurMax(2) + 20 * c:rank>.;
-	rankUpTooltip=Each rank increases duration by <icon=time>20.;
+	tooltip=造成 <thinnerIcon=skill_Ruin><math=d:ruinDmgDisplay(6)>伤害,目标每个负面状态额外+30%伤害.<n>同时施加'瘙痒'持续<icon=time><math=20 + d:ruinDurMax(2) + 20 * c:rank>.;
+	rankUpTooltip=每级+<icon=time>20持续时间.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ruin_small>;
 	
 	XPCost=100;
@@ -288,11 +288,11 @@
 	
 
 [Action] ID=Un_drain; 
-	name=Drain;
+	name=枯竭;
 	icon=icon_Un_drain;
 	mpCost=4 * d:mpCostMult + d:mpCostMod;
-	tooltip=Deal <thinnerIcon=skill_Ruin><math=c:MagAtk + c:rank + c:skill_Ruin> damage to an adjacent enemy and heal<n=><icon=HP>HP & <icon=MP>MP for the same amount.;
-	rankUpTooltip=Each rank adds +1 damage and healing.;
+	tooltip=对附近敌人造成<thinnerIcon=skill_Ruin><math=c:MagAtk + c:rank + c:skill_Ruin>伤害同时恢复伤害值<n=><icon=HP>HP & <icon=MP>MP.;
+	rankUpTooltip=每级+1伤害.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ruin_small>;
 	AIRatingBias=-5;
 	
@@ -365,11 +365,11 @@
 	
 	
 [Action] ID=Un_bonemeld; 
-	name=Bonemeld;
+	name=融骨之术;
 	icon=icon_Un_bonemeld;
 	mpCost=6 * d:mpCostMult + d:mpCostMod;
-	tooltip=When cast on bone, creates sturdy walls. When cast on undead, deals major damage.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=当在骨头上施放时,会形成坚固的墙壁.<n>当对亡灵施放时,造成极大伤害.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ruin_small>;
 	
 	XPCost=190;

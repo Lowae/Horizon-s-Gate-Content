@@ -1,12 +1,12 @@
 
 [Action] ID=Sto_blastShot; 
-	name=Blast Shot;
+	name=疾风射击;
 	icon=icon_Sto_blastShot;
 	mpCost=8 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=12 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
 	
-	tooltip=Fire a delayed blast that deals 120% damage or more.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=发动一次延迟的爆炸造成120以上伤害.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipIcons=<icon=noMelee>;
 	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=ranged_small><icon=skill_Wind_small>;
 	
@@ -58,13 +58,13 @@
 
 
 [Action] ID=Sto_multiblast; 
-	name=Multiblast;
+	name=多重疾风射击;
 	icon=icon_Sto_multiblast;
 	mpCost=15 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=15 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP ;
 	
-	tooltip=Fire <math=c:rank+2> large blasts that deal 120% damage or more.;
-	rankUpTooltip=Each rank adds +1 target.;
+	tooltip=发动<math=c:rank+2>大爆炸造成120%以上伤害.;
+	rankUpTooltip=每级+1目标.;
 	tooltipIcons=<icon=noMelee>;
 	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=ranged_small><icon=skill_Wind_small>;
 	
@@ -123,12 +123,12 @@
 	
 
 [Action] ID=Sto_scatterburst; 
-	name=Scatterburst;
+	name=爆裂散射;
 	icon=icon_Sto_scatterburst;
 	mpCost=4 * d:mpCostMult + d:mpCostMod;
 	
-	tooltip=Fire a shot that bursts into smaller projectiles, dealing<n=><math=25 + c:rank * 5>% damage in a huge area.;
-	rankUpTooltip=Each rank increases damage by 5%.;
+	tooltip=发动一次射击,爆裂成更小的投射物,<n>大范围内造成<n=><math=25 + c:rank * 5>%伤害.;
+	rankUpTooltip=每级+5%伤害.;
 	tooltipIcons=<icon=noMelee>;
 	tooltipTopRight=<icon=PhysAtk_small><icon=ranged_small>;
 	
@@ -184,10 +184,10 @@
 	
 	
 [Action] ID=Sto_splitShot; 
-	name=Split Shot;
+	name=分射射击;
 	icon=icon_Sto_splitShot;
-	tooltip=Shoot a target for half damage. Two extra shots split off diagonally, each dealing 70% damage.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=射击目标造成50%伤害且产生<n>额外的子弹沿对角线分散,<n>每个造成70%伤害.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipIcons=<icon=noMelee>;
 	tooltipTopRight=<icon=PhysAtk_small><icon=ranged_small>;
 	mpCost=6 * d:mpCostMult + d:mpCostMod;
@@ -253,13 +253,13 @@
 
 
 [Action] ID=Sto_disruptionShot; 
-	name=Disrupt Shot;
+	name=扰乱射击;
 	icon=icon_Sto_disruptionShot;
-	tooltip=Deal +30% extra damage per negative status effect on the target, then dispel status effects and interrupt casting.;
+	tooltip=目标每一个负面效果额外+30%伤害,<n>驱散状态效果且打断施法.;
 	tooltipIcons=<icon=noMelee>;	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=ranged_small><icon=skill_Wind_small>;
 	mpCost=6 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=7 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
-	rankUpTooltip=Each rank adds +1 range.;
+	rankUpTooltip=每级+1攻击距离.;
 	
 	XPCost=300;
 	XPCost=600;

@@ -1,11 +1,11 @@
 
 	
 [Action] ID=Ber_frenzy; 
-	name=Frenzy;
+	name=狂暴;
 	icon=icon_Ber_frenzy;
 	mpCost=3 * d:mpCostMult + d:mpCostMod;
-	tooltip=Attack <math=c:rank+1> separate targets for 80% damage.;
-	rankUpTooltip=Each rank increases number of targets by 1.;
+	tooltip=攻击<math=c:rank+1>个目标造成80%伤害.;
+	rankUpTooltip=每级+1目标.;
 	tooltipIcons=<icon=noRanged>;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	
@@ -39,11 +39,11 @@
 	 
 	
 [Action] ID=Ber_scream; 
-	name=Scream;
+	name=尖啸;
 	icon=icon_Ber_scream;
 	mpCost=4 * d:mpCostMult + d:mpCostMod;
-	tooltip=Demoralize nearby enemies for <icon=time><math=61 + c:MagAtk*3> and boost your own morale. Works best against enemies looking directly at you.;
-	rankUpTooltip=Each rank increases area of effect.;
+	tooltip=降低附近的敌人'士气'持续<icon=time><math=61 + c:MagAtk*3><n>并提升自己的'士气'.<n>最适合对抗直视你的敌人.;
+	rankUpTooltip=每级增加影响范围.;
 	tooltipTopRight=<icon=MagAtk_small>;
 	
 	XPCost=130;
@@ -102,11 +102,11 @@
 	
 
 [Action] ID=Ber_terrorize; 
-	name=Terrorize;
+	name=恐吓;
 	icon=icon_Ber_terrorize;
 	mpCost=2 * d:mpCostMult + d:mpCostMod;
-	tooltip=Glare into the target's eyes to severely demoralize for <icon=time><math=91 + c:MagAtk*3>, cancel their spellcasting, and delay their next turn by <icon=time><math=5>.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=瞪着对方的眼睛降低对方'士气'持续<icon=time><math=91 + c:MagAtk*3>,<n>取消对方施法,推迟对方行动时间<icon=time><math=5>.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=MagAtk_small>;
 	
 	XPCost=180;
@@ -166,10 +166,10 @@
 	 cloneFrom=oneTile;
 	
 [Action] ID=Ber_rage; 
-	name=Rage;
+	name=狂怒;
 	icon=icon_Ber_rage;
-	tooltip=Cure negative statuses and gain +<adjX=-1><math=5+c:rank><adjX=-4><icon=PhysAtk> and -3<icon=PhysDef><icon=MagDef> for <icon=time>99. Can't be used again for <icon=time>99.;
-	rankUpTooltip=Each rank adds +1 <icon=PhysAtk>.;
+	tooltip=清除负面状态且获得+<adjX=-1><math=5+c:rank><adjX=-4><icon=PhysAtk>和-3<icon=PhysDef><icon=MagDef>持续<icon=time>99.<n><icon=time>99内无法再次使用.;
+	rankUpTooltip每级+1<icon=PhysAtk>.;
 	tooltipTopRight=;
 	
 	harmful=false;
@@ -234,10 +234,10 @@
 	
 	
 [Action] ID=Ber_scatter; 
-	name=Scatter;
+	name=挥扬;
 	icon=icon_Ber_scatter;
-	tooltip=Step forward and strike a mighty blow that deals +30% damage and pushes all nearby enemies.;
-	rankUpTooltip=Each rank increases maximum distance moved by +1.;
+	tooltip=向前迈步,发动一个强大的打击.<n>造成+30%伤害推开附近所有敌人.;
+	rankUpTooltip=每级+1移动距离.;
 	tooltipIcons=<icon=noRanged>;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	

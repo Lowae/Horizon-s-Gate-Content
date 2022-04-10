@@ -1,10 +1,10 @@
 
 
 [Action] ID=iK_oilEdge; 
-	name=Oil Edge;
+	name=油刃;
 	icon=icon_iK_oilEdge;
-	tooltip=Deal half damage with your weapon and coat the enemy in Oil for <icon=time><math=50 + 30 * c:rank>.;
-	rankUpTooltip=Each rank increases duration by <icon=time>30.;
+	tooltip=使用武器造成50%伤害且施加'油腻'状态持续<icon=time><math=50 + 30 * c:rank>.;
+	rankUpTooltip=每级+<icon=time>30持续时间.;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	
 	XPCost=180;
@@ -56,10 +56,10 @@
 
 
 [Action] ID=iK_flareEdge; 
-	name=Flare Edge;
+	name=闪光刃;
 	icon=icon_iK_flareEdge;
-	tooltip=Deal half damage with your weapon and Blind nearby enemies with a flash of light - but only for <icon=time><math=30>.;
-	rankUpTooltip=Each rank increases area of effect.;
+	tooltip=使用武器造成50%伤害,并用一道闪光使敌人'失明' - 但只持续<icon=time><math=30>.;
+	rankUpTooltip=每级增加影响范围.;
 	tooltipIcons=<icon=noRanged>;
 	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=melee_small>;
 	
@@ -118,9 +118,9 @@
 	maxRangeBonus=c:rank;
 	
 [Action] ID=iK_wrathStrike; 
-	name=Wrath Strike;
+	name=愤怒一击;
 	icon=icon_iK_wrathStrike;
-	tooltip=Weapon attack that consumes Burn status on you or the target to deal +75% fire damage.;
+	tooltip=使用武器攻击,造成+75%火焰伤害,<n>消除你或者目标的'燃烧'状态.;
 	rankUpTooltip=;
 	tooltipIcons=<icon=noRanged>;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
@@ -190,11 +190,11 @@
 	
 
 [Action] ID=iK_pyre; 
-	name=Pyre;
+	name=火葬;
 	icon=icon_iK_pyre;
 	mpCost=10 * d:mpCostMult + d:mpCostMod;
-	tooltip=Burn yourself for <icon=time><math=100> with a giant explosion that scorches everything around you for <thinnerIcon=skill_Fire><math=d:fireDmgDisplay(8)> damage.;
-	rankUpTooltip=Each rank increases area of effect.;
+	tooltip=用巨大的爆炸'燃烧'自己持续<icon=time><math=100>,<n>烧焦周围任何事物造成<thinnerIcon=skill_Fire><math=d:fireDmgDisplay(8)>伤害.;
+	rankUpTooltip=每级增加影响范围.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small>;
 	
 	XPCost=250;
@@ -249,14 +249,14 @@
 	
 
 [Action] ID=iK_phoenix; 
-	name=Phoenix;
+	name=涅槃;
 	icon=icon_iK_phoenix;
 	
 	mpCost=8 * d:mpCostMult + d:mpCostMod;
 	chargeTime=12;
 	
-	tooltip=Call down a fiery explosion that revives one ally and does <thinnerIcon=skill_Fire><math=d:fireDmgDisplay(6)> damage to adjacent creatures.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=召唤一次火焰爆破复活一名队友<n>且对附近生物造成<thinnerIcon=skill_Fire><math=d:fireDmgDisplay(6)>伤害.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small><icon=skill_Life_small>;
 	
 	special=requiresCasting;
@@ -340,11 +340,11 @@
 	
 
 [Action] ID=iK_ignisOrb; 
-	name=Ignis Orb;
+	name=火球;
 	icon=icon_iK_ignisOrb;
 	mpCost=8 * d:mpCostMult + d:mpCostMod;
-	tooltip=A flaming orb strikes <math=2+c:rank> spots near eachother, damaging targets or leaving behind a pool of flames.;
-	rankUpTooltip=Each rank increases number of targets by 1.;
+	tooltip=召唤火球击中<math=2+c:rank>格相邻位置,<n>对目标造成伤害或留下火海.;
+	rankUpTooltip=每级+1目标.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small>;
 	
 	XPCost=150;
@@ -416,10 +416,10 @@
 	
 
 [Action] ID=iK_burningWave; 
-	name=Burning Wave;
+	name=燃烧波;
 	icon=icon_iK_burningWave;
-	tooltip=Create a crashing wave of fire with a swing of your weapon. Deals 50% damage and leaves a trail of fire behind.;
-	rankUpTooltip=Each rank adds +1 range.;
+	tooltip=挥动你的武器制造一股猛烈的火焰冲击波.<n>造成50%伤害并留下火焰痕迹.;
+	rankUpTooltip=每级+1攻击距离.;
 	tooltipIcons=<icon=noRanged>;
 	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=melee_small><icon=skill_Fire_small>;
 	mpCost=8 * d:mpCostMult + d:mpCostMod;

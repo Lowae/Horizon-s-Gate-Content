@@ -516,8 +516,8 @@ title=Street Light;
 text=<itemBig=streetlight1><title=Street Light><brAdj=>These public lights are maintained by dutiful lamplighters who come round every evening to ignite them. Although in some high-end cities, magical street lights are used instead, which require no such maintenance.;
 
 
-[ItemType]  name=Lantern;
-description=Simple, durable light. Equip in your hand to light the way.; itemCategory=hazard;
+[ItemType]  name=灯笼;
+description=简单耐用的照明工具.装备到手上照亮道路.; itemCategory=hazard;
 journalID=journal_lamp;
 ID=lamp; sprite=10; element=fire; action=lamp_action;
  volume=10; value=5;
@@ -530,8 +530,8 @@ ID=lamp; element=water; element=wind; newID=lamp_off;
 [ItemReaction] 
 ID=lamp; element=explode;  newID=X; fx=dust_glass;
 
-[ItemType]  name=Lantern;
-description=Simple, durable light. Use to kindle.;
+[ItemType]  name=灯笼;
+description=简单耐用的照明工具.用来照明.;
 journalID=journal_lamp; itemCategory=hazard;
 ID=lamp_off; sprite=11;
 combineWith=glowshroomPiece; toMake=lamp_blue_off; consumeOnCombine=true;
