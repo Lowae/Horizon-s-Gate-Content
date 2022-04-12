@@ -1,5 +1,5 @@
 
-[ItemType]  name=Furnace;
+[ItemType]  name=火炉;
 itemCategory=mech;
 ID=furnace; sprite=625; 
 journalID=journal_furnace;
@@ -11,7 +11,7 @@ blockLoE=true; blockWalking=true; blockJumping=true;
 pR=zoneStone; pB=pBlack;
 [ItemReaction] 
 ID=furnace; element=fire; element=nighttime; newID=furnace_lit;
-[ItemType]  name=Furnace;
+[ItemType]  name=火炉;
 itemCategory=mech;
 ID=furnace2; sprite=627; 
 journalID=journal_furnace;
@@ -26,10 +26,10 @@ ID=furnace2; element=fire; element=nighttime; newID=furnace2_lit;
 [JournalEntry]
 ID=journal_furnace;
 category=item; halfPage=true;
-title=Furnace;
-text=<itemBig=furnace2><title=Furnace><brAdj=>A vital appliance for heating, food, & craftwork. Once lit, you can break equipment into base components by dragging them into the fire.;
+title=火炉;
+text=<itemBig=furnace2><title=火炉><brAdj=>用于加热、食品和工艺品的重要设备.<n>一旦点燃,你可以把装备拖进火里,拆成基本部件;
 
-[ItemType]  name=Furnace (Lit);
+[ItemType]  name=火炉 (燃烧的);
 itemCategory=mech;
 ID=furnace_lit; sprite=625; 
 journalID=journal_furnace;
@@ -44,7 +44,7 @@ ID=furnace_lit; element=water; newID=furnace;
 [ItemLight] 
 ID=furnace_lit; red=1; blue=0.5; green=0.9; alpha=0.9; size=1.0; flicker=0.04; texture=krypton;
 
-[ItemType]  name=Furnace (Lit);
+[ItemType]  name=火炉 (燃烧的);
 itemCategory=mech;
 ID=furnace2_lit; sprite=627; 
 journalID=journal_furnace;
@@ -59,7 +59,7 @@ ID=furnace2_lit; element=water; newID=furnace2;
 [ItemLight] 
 ID=furnace2_lit; red=1; blue=0.5; green=0.9; alpha=0.9; size=1.0; flicker=0.04; texture=krypton;
 
-[ItemType]  name=Furnace;
+[ItemType]  name=火炉;
 itemCategory=mech;
 ID=furnace3; sprite=631; 
 journalID=journal_furnace;
@@ -72,7 +72,7 @@ pR=zoneStoneDark; pB=pBlack;
 [ItemReaction] 
 ID=furnace3; element=fire; element=nighttime; newID=furnace3_lit;
 
-[ItemType]  name=Furnace (Lit);
+[ItemType]  name=火炉 (燃烧的);
 itemCategory=mech;
 ID=furnace3_lit; sprite=631; 
 journalID=journal_furnace;
@@ -88,7 +88,7 @@ ID=furnace3_lit; element=water; newID=furnace3;
 ID=furnace3_lit; red=1; blue=0.5; green=0.9; alpha=0.9; size=1.0; flicker=0.04; texture=krypton;
 
 
-[ItemType]  name=Furnace;
+[ItemType]  name=火炉;
 itemCategory=mech;
 ID=furnace_everlit1; sprite=615; 
 description=Can be used to melt down weapons and armor.;
@@ -102,7 +102,7 @@ pR=zoneStone; pB=pAsh;
 [ItemLight] 
 ID=furnace_everlit1; red=1; blue=0.5; green=0.9; alpha=0.6; size=0.8; flicker=0.04; texture=krypton;
 
-[ItemType]  name=Furnace;
+[ItemType]  name=火炉;
 itemCategory=mech;
 ID=furnace_everlit2; sprite=617; 
 description=Can be used to melt down weapons and armor.;
@@ -115,7 +115,7 @@ pR=zoneStone; pB=pAsh;
 [ItemLight] 
 ID=furnace_everlit2; red=1; blue=0.5; green=0.9; alpha=0.7; size=0.8; flicker=0.04; texture=krypton;
 
-[ItemType]  name=Furnace;
+[ItemType]  name=火炉;
 itemCategory=mech;
 ID=furnace_everlit2_small; sprite=649; 
 combineID=furnace_lit;
@@ -271,10 +271,10 @@ ID=mechanism2Passer; element=mechanical2; action=mechanism;
 
 
 
-[ItemType]  name=Pressure Plate;
+[ItemType]  name=压力板;
  itemCategory=mech;
  journalID=journal_pressPlate;
-description=Responds to weight placed upon it.; 
+description=对所放置物体的重量作出反应.; 
 weight=0;
 special=canAssignSpecialTC; special=reactsToPressure;  special=cannotBePickedUp;
 ID=pressPlateUp; sprite=18;
@@ -282,10 +282,10 @@ pR=zoneStoneLight;
 [ItemReaction] 
 ID=pressPlateUp; element=pressurePlateDown; newID=pressPlateDown; action=mechanism; fx=unlock;
 
-[ItemType]  name=Pressure Plate;
+[ItemType]  name=压力板;
  itemCategory=mech;
  journalID=journal_pressPlate;
-description=Responds to weight placed upon it.; 
+description=对所放置物体的重量作出反应.; 
 weight=0;
 special=canAssignSpecialTC; special=reactsToPressure;  special=cannotBePickedUp;
 ID=pressPlateDown; sprite=19;
@@ -294,10 +294,10 @@ pR=zoneStoneLight;
 ID=pressPlateDown; element=pressurePlateUp; newID=pressPlateUp; action=mechanism; fx=unlock;
 
 
-[ItemType]  name=Pressure Plate;
+[ItemType]  name=压力板;
 itemCategory=mech;
  journalID=journal_pressPlate;
-description=Responds to weight placed upon it, but only once.; 
+description=对所放置物体的重量作出反应,但只作用一次.; 
 weight=0;
 special=canAssignSpecialTC; special=reactsToPressure;  special=cannotBePickedUp;
 ID=pressPlateUp1x; sprite=18;
@@ -306,19 +306,19 @@ pR=zoneStoneLight;
 ID=pressPlateUp1x; element=pressurePlateDown; element=pressureMoveAcross;
  newID=pressPlateDown1x; action=mechanism; fx=unlock;
 
-[ItemType]  name=Pressure Plate;
+[ItemType]  name=压力板;
 itemCategory=mech;
  journalID=journal_pressPlate;
-description=Responds to weight placed upon it, but only once.; 
+description=对所放置物体的重量作出反应,但只作用一次.; 
 weight=0;
 special=canAssignSpecialTC; special=reactsToPressure; special=cannotBePickedUp;
 ID=pressPlateDown1x; sprite=19;
 pR=zoneStoneLight;
 
-[ItemType]  name=Pressure Plate;
+[ItemType]  name=压力板;
  itemCategory=mech;
  journalID=journal_pressPlate;
-description=Responds to weight placed upon it.; 
+description=对所放置物体的重量作出反应.; 
 weight=0;
 special=canAssignSpecialTC; special=reactsToPressure;  special=cannotBePickedUp;
 ID=pressPlateUp_organic; sprite=1870;
@@ -326,10 +326,10 @@ pR=zoneDirt;
 [ItemReaction] 
 ID=pressPlateUp_organic; element=pressurePlateDown; newID=pressPlateDown_organic; action=mechanism; fx=unlock;
 
-[ItemType]  name=Pressure Plate;
+[ItemType]  name=压力板;
  itemCategory=mech;
  journalID=journal_pressPlate;
-description=Responds to weight placed upon it.; 
+description=对所放置物体的重量作出反应.; 
 weight=0;
 special=canAssignSpecialTC; special=reactsToPressure;  special=cannotBePickedUp;
 ID=pressPlateDown_organic; sprite=1871;
@@ -337,10 +337,10 @@ pR=zoneDirt;
 [ItemReaction] 
 ID=pressPlateDown_organic; element=pressurePlateUp; newID=pressPlateUp_organic; action=mechanism; fx=unlock;
 
-[ItemType]  name=Pressure Plate;
+[ItemType]  name=压力板;
  itemCategory=mech;
  journalID=journal_pressPlate;
-description=Responds to weight placed upon it.; 
+description=对所放置物体的重量作出反应.; 
 weight=0;
 special=canAssignSpecialTC; special=reactsToPressure;  special=cannotBePickedUp;
 ID=pressPlateUp_organic_1x; sprite=1870;
@@ -348,10 +348,10 @@ pR=zoneDirt;
 [ItemReaction] 
 ID=pressPlateUp_organic_1x; element=pressurePlateDown; newID=pressPlateDown_organic_1x; action=mechanism; fx=unlock;
 
-[ItemType]  name=Pressure Plate;
+[ItemType]  name=压力板;
  itemCategory=mech;
  journalID=journal_pressPlate;
-description=Responds to weight placed upon it.; 
+description=对所放置物体的重量作出反应.; 
 weight=0;
 special=canAssignSpecialTC; special=reactsToPressure;  special=cannotBePickedUp;
 ID=pressPlateDown_organic_1x; sprite=1871;
@@ -361,14 +361,14 @@ ID=pressPlateDown_organic_1x; element=mechanical; newID=pressPlateUp_organic_1x;
 
 
 
-[ItemType]  name=Pressure Plate;
+[ItemType]  name=压力板;
 ID=pressPlateUp_marble;
 cloneFrom= pressPlateUp; sprite=1294;
 special=dontCloneReactions;
 [ItemReaction] 
 ID=pressPlateUp_marble; element=pressurePlateDown; newID=pressPlateDown_marble; action=mechanism; fx=unlock;
 
-[ItemType]  name=Pressure Plate;
+[ItemType]  name=压力板;
 ID=pressPlateDown_marble;
 cloneFrom= pressPlateDown; sprite=1295;
 special=dontCloneReactions;
@@ -376,14 +376,14 @@ special=dontCloneReactions;
 ID=pressPlateDown_marble; element=pressurePlateUp; newID=pressPlateUp_marble;  fx=unlock;
 
 
-[ItemType]  name=Pressure Plate;
+[ItemType]  name=压力板;
 ID=pressPlateUp_marble_1x;
 cloneFrom= pressPlateUp; sprite=1294;
 special=dontCloneReactions;
 [ItemReaction] 
 ID=pressPlateUp_marble_1x; element=pressurePlateDown; newID=pressPlateDown_marble_1x; action=mechanism; fx=unlock;
 
-[ItemType]  name=Pressure Plate;
+[ItemType]  name=压力板;
 ID=pressPlateDown_marble_1x;
 cloneFrom= pressPlateDown; sprite=1295;
 special=dontCloneReactions;
@@ -392,12 +392,12 @@ special=dontCloneReactions;
 [JournalEntry]
 ID=journal_pressPlate;
 category=item; halfPage=true; rarity=1;
-title=Pressure Plate;
-text=<itemBig=pressPlateUp><title=Pressure Plate><brAdj=>Pressure plates react to being stepped on, naturally, and activate some device nearby. If a pressure plate is hard to see, but deliberately placed in your way, then you might not like what happens when you step on it.;
+title=压力板;
+text=<itemBig=pressPlateUp><title=压力板><brAdj=>踩到压力板会自然地产生反应,<n>并激活附近的一些设备.<n>如果一个压力板很难看到,<n>但故意放置在你的路上,<n>那么你可能不会喜欢当你踩到它时发生的事情;
 
-[ItemType]  name=Switch;
+[ItemType]  name=开关;
 itemCategory=mech;
-description=Use to flip.; 
+description=按下使用.; 
 journalID=journal_switch;
 weight=0;
 special=canAssignSpecialTC; special=canHangOnWalls; special=cannotBePickedUp;
@@ -406,9 +406,9 @@ ID=wallSwitchUp; sprite=48;
 [ItemReaction] 
 ID=wallSwitchUp; element=use; newID=wallSwitchDown; action=mechanism; fx=sfx_slam;
 
-[ItemType]  name=Switch;
+[ItemType]  name=开关;
 itemCategory=mech;
-description=Use to flip.;
+description=按下使用.;
 journalID=journal_switch;
 weight=0;
 special=canAssignSpecialTC; special=canHangOnWalls; special=cannotBePickedUp;
@@ -417,9 +417,9 @@ ID=wallSwitchDown; sprite=49;
 [ItemReaction] 
 ID=wallSwitchDown; element=use; newID=wallSwitchUp; action=mechanism; fx=sfx_slam;
 
-[ItemType]  name=Switch;
+[ItemType]  name=开关;
 itemCategory=mech;
-description=Use to flip.; 
+description=按下使用.; 
 journalID=journal_switch;
 weight=0;
 special=canAssignSpecialTC; special=canHangOnWalls; special=cannotBePickedUp;
@@ -428,9 +428,9 @@ ID=floorSwitchUp; sprite=79;
 [ItemReaction] 
 ID=floorSwitchUp; element=use; newID=floorSwitchDown; action=mechanism; fx=chk;
 
-[ItemType]  name=Switch;
+[ItemType]  name=开关;
 itemCategory=mech;
-description=Use to flip.;
+description=按下使用.;
 journalID=journal_switch;
 weight=0;
 special=canAssignSpecialTC; special=canHangOnWalls; special=cannotBePickedUp;
@@ -439,9 +439,9 @@ ID=floorSwitchDown; sprite=80;
 [ItemReaction] 
 ID=floorSwitchDown; element=use; newID=floorSwitchUp; action=mechanism; fx=chk;
 
-[ItemType]  name=Button;
+[ItemType]  name=按钮;
 itemCategory=mech;
-description=Use to press.; 
+description=按下使用.; 
 weight=0;
 special=canAssignSpecialTC; special=canHangOnWalls; special=cannotBePickedUp;
 ID=buttonUp; sprite=77;
@@ -449,9 +449,9 @@ pR=zoneStone;
 [ItemReaction] 
 ID=buttonUp; element=use; newID=buttonDown; action=mechanism; fx=chk;
 
-[ItemType]  name=Button;
+[ItemType]  name=按钮;
 itemCategory=mech;
-description=Use to press.; 
+description=按下使用.; 
 weight=0;
 special=canAssignSpecialTC; special=canHangOnWalls; special=cannotBePickedUp;
 ID=buttonDown; sprite=78;
@@ -459,9 +459,9 @@ pR=zoneStone;
 [ItemReaction] 
 ID=buttonDown; element=mechanical2; newID=buttonUp; fx=chk;
 
-[ItemType]  name=Button;
+[ItemType]  name=按钮;
 itemCategory=mech;
-description=Use to press.; 
+description=按下使用.; 
 weight=0;
 special=canAssignSpecialTC; special=canHangOnWalls; special=cannotBePickedUp;
 ID=buttonUp2; sprite=77;
@@ -469,9 +469,9 @@ pR=zoneMisc8;
 [ItemReaction] 
 ID=buttonUp2; element=use; newID=buttonDown2; action=mechanism; fx=chk;
 
-[ItemType]  name=Button;
+[ItemType]  name=按钮;
 itemCategory=mech;
-description=Use to press.; 
+description=按下使用.; 
 weight=0;
 special=canAssignSpecialTC; special=canHangOnWalls; special=cannotBePickedUp;
 ID=buttonDown2; sprite=78;
@@ -480,7 +480,7 @@ pR=zoneMisc8;
 ID=buttonDown2; element=mechanical2; newID=buttonUp2; fx=chk;
 
 
-[ItemType]  name=Button;
+[ItemType]  name=按钮;
 ID=button_repeatable; sprite=156;
 itemCategory=mech;
 journalID=journal_switch;
@@ -492,10 +492,10 @@ pB=zoneStone;
 [ItemReaction] 
 ID=button_repeatable; element=use; element=physical; element=ranged; action=mechanism; fx=chk;
 
-[ItemType]  name=Reset Button;
+[ItemType]  name=重置按钮;
 ID=button_repeatable_reset; sprite=157;
 itemCategory=mech;
-description=Click to press.; 
+description=点击按下.; 
 weight=0;
 special=canAssignSpecialTC; special=canHangOnWalls; special=cannotBePickedUp; special=oneClickToUse;
 pR=pR;
@@ -503,7 +503,7 @@ pB=zoneStone;
 [ItemReaction] 
 ID=button_repeatable_reset; element=use; element=physical; element=ranged; action=mechanism2; fx=chk;
 
-[ItemType]  name=Handheld Button;
+[ItemType]  name=手持按钮;
 ID=button_handheld; sprite=769; spriteWhenHeld=769;
 itemCategory=mech;
 texture=items_misc;
@@ -513,10 +513,10 @@ weight=0;
 special=canAssignSpecialTC; special=oneClickToUse;
 pR=pR; pB=p2;
 
-[ItemType]  name=Lever;
+[ItemType]  name=控制杆;
 ID=switchOn; sprite=16;
 itemCategory=mech;
-description=Use to flip.; 
+description=轻掷使用.; 
 journalID=journal_switch;
 weight=0;
 special=canAssignSpecialTC; special=cannotBePickedUp; special=canHangOnWalls;
@@ -525,10 +525,10 @@ element=elec;
 [ItemReaction] 
 ID=switchOn; element=0; element=10; element=physical; newID=switchOff; action=mechanism; fx=click;
 
-[ItemType]  name=Lever;
+[ItemType]  name=控制杆;
 ID=switchOff; sprite=17;
 itemCategory=mech;
-description=Use to flip.;
+description=轻掷使用.;
 journalID=journal_switch;
 weight=0;
 special=canAssignSpecialTC; special=cannotBePickedUp; special=canHangOnWalls;
@@ -539,10 +539,10 @@ ID=switchOff; element=0; element=10; element=physical; newID=switchOn; action=me
 [JournalEntry]
 ID=journal_switch;
 category=item; halfPage=true; rarity=1;
-title=Switches & Levers;
-text=<itemBig=wallSwitchUp><itemBig=switchOn><itemBig=button_repeatable><title=Switches & Levers><brAdj=>Mechanical, electrical, and magical devices all need some form of input. Hence, switches and levers. There's no way to be sure what'll happen when you use one.;
+title=开关&控制杆;
+text=<itemBig=wallSwitchUp><itemBig=switchOn><itemBig=button_repeatable><title=开关&控制杆><brAdj=>机械、电子和魔法设备都需要某种形式的输入.<n>因此出现了开关和杠杆.<n>没有办法确定当你使用它的时候会发生什么;
 
-[ItemType]  name=Broken Lever;
+[ItemType]  name=损坏的控制杆;
 itemCategory=mech;
 weight=0;
 special=canAssignSpecialTC; special=cannotBePickedUp; special=canHangOnWalls;
@@ -551,17 +551,17 @@ ID=switch_broken; sprite=20;
 combineWith=switch_piece; toMake=switchOff; consumeOnCombine=true; 
 combineWith=repairTool; toMake=switchOff; consumeOnCombine=true; combineSound=unlock;
 
-[ItemType]  name=Lever Handle;
+[ItemType]  name=手柄;
 itemCategory=mech;
-description=A lever handle. Must be a broken lever somewhere nearby...;
+description=一个手柄。附近一定有个坏掉的控制杆...;
 weight=0;
 special=playerPickup;
 ID=switch_piece; sprite=21;
 
-[ItemType]  name=Lever;
+[ItemType]  name=控制杆;
 ID=switchOn2; sprite=52;
 itemCategory=mech;
-description=Use to flip.; 
+description=轻掷使用.; 
 journalID=journal_switch;
 weight=0;
 special=canAssignSpecialTC; special=cannotBePickedUp; special=canHangOnWalls;
@@ -570,10 +570,10 @@ element=elec;
 [ItemReaction] 
 ID=switchOn2; element=0; element=10; element=physical; newID=switchOff2; action=mechanism; fx=click;
 
-[ItemType]  name=Lever;
+[ItemType]  name=控制杆;
 ID=switchOff2; sprite=53;
 itemCategory=mech;
-description=Use to flip.;
+description=轻掷使用.;
 journalID=journal_switch;
 weight=0;
 special=canAssignSpecialTC; special=cannotBePickedUp; special=canHangOnWalls;
@@ -582,10 +582,10 @@ element=elec;
 [ItemReaction] 
 ID=switchOff2; element=0; element=10; element=physical; newID=switchOn2; action=mechanism; fx=click;
 
-[ItemType]  name=Gate Lever;
+[ItemType]  name=门控制杆;
 ID=switchGateOpen; sprite=154;
 itemCategory=mech;
-description=Use to flip.; 
+description=轻掷使用.; 
 journalID=journal_switchGate;
 weight=0;
 special=canAssignSpecialTC; special=cannotBePickedUp; special=canHangOnWalls;
@@ -600,10 +600,10 @@ ID=switchGateOpen; element=use; element=ranged; element=physical; newID=switchGa
 [ItemReaction] 
 ID=switchGateOpen; element=openGates; newID=switchGateClose;
 
-[ItemType]  name=Gate Lever;
+[ItemType]  name=门控制杆;
 ID=switchGateClose; sprite=155;
 itemCategory=mech;
-description=Use to flip.;
+description=轻掷使用.;
 journalID=journal_switchGate;
 weight=0;
 special=canAssignSpecialTC; special=cannotBePickedUp; special=canHangOnWalls;
@@ -621,10 +621,10 @@ ID=switchGateClose; element=closeGates; newID=switchGateOpen;
 [JournalEntry]
 ID=journal_switchGate;
 category=item; halfPage=true; rarity=1;
-title=Gate Switch;
-text=<itemBig=switchGateOpen><title=Gate Switch><brAdj=>The size and odd design of this lever reveals its importance. By pulling it, all the sealed doors in this sector of the palace are toggled - closed ones open, and open ones close.;
+title=门开关;
+text=<itemBig=switchGateOpen><title=门开关><brAdj=>这个控制杆大小和奇怪的设计揭示了它的重要性.<n>通过拉动它,宫殿这部分的所有密封的门都被打开.<n>关闭的门打开,打开的门关闭。;
 
-[ItemType]  name=Target;
+[ItemType]  name=标靶;
 itemCategory=mech;
 ID=bullseye; sprite=116;
 journalID=journal_bullseye;
@@ -641,7 +641,7 @@ ID=bullseye; element=dart; newID=bullseye_shot; fx=click;
 [ItemReaction] 
 ID=bullseye; element=ranged; action=mechanism; fx=click;
 
-[ItemType]  name=Target (Dart);
+[ItemType]  name=标靶 (有飞镖的);
 itemCategory=mech;
 ID=bullseye_shot; sprite=148;
 journalID=journal_bullseye;
@@ -653,10 +653,10 @@ ID=bullseye_shot; element=use; action=drop_dart; newID=bullseye; fx=click;
 [JournalEntry]
 ID=journal_bullseye;
 category=item; halfPage=true; rarity=1;
-title=Target;
-text=<itemBig=bullseye><title=Target><brAdj=>Used for practice and competition of archery, dart throwing, and the like. Commonly found as an idle diversion in taverns.;
+title=标靶;
+text=<itemBig=bullseye><title=标靶><brAdj=>用于射箭、投掷飞镖等运动的练习和比赛.<n>通常是酒馆里的消遣.;
 
-[ItemType]  name=Railway Corner;
+[ItemType]  name=铁轨的转角;
 itemCategory=mech;
 ID=railCorner; sprite=504; 
 journalID=journal_railway;
@@ -664,7 +664,7 @@ special=cannotBePickedUp; special=canHangOnWalls; special=elementUsableForRestri
 weight=0; element=railway;
 pR=zoneWood; pB=zoneStoneLight;
 
-[ItemType]  name=Railway;
+[ItemType]  name=铁轨;
 itemCategory=mech;
 ID=railway; sprite=505; 
 journalID=journal_railway;
@@ -674,7 +674,7 @@ weight=0; element=railway;
 pR=zoneWood; pB=zoneStoneLight;
 
 
-[ItemType]  name=Pushable Rail;
+[ItemType]  name=可推动的铁轨;
 itemCategory=mech;
 ID=railwayPushable; sprite=508; 
 journalID=journal_railway;
@@ -685,11 +685,11 @@ pR=zoneWood; pB=zoneStoneLight;
 [JournalEntry]
 ID=journal_railway;
 category=item; halfPage=true; rarity=1;
-title=Railway;
-text=<itemBig=railway><title=Railway><brAdj=>Specially designed rails that allow easy transport of goods & materials. These are often used in mines to move ore and excess rock.;
+title=铁轨;
+text=<itemBig=railway><title=铁轨><brAdj=>特殊设计的轨道,便于货物和材料的运输.<n>通常用在矿山来移动矿石和多余的岩石.;
 
 
-[ItemType]  name=Blocker;
+[ItemType]  name=拦截器;
 itemCategory=mech;
 ID=railwayBlocker; sprite=506; 
 special=cannotBePickedUp; special=canHangOnWalls; 
@@ -701,7 +701,7 @@ ID=railwayBlocker; element=mechanical; newID=railwayBlocker_closed;
 [ItemReaction] 
 ID=railwayBlocker; element=explode; element=slash; element=smash; element=fire; newID=railwayBlocker_closed; fx=dust_wood;
 
-[ItemType]  name=Blocker (Off);
+[ItemType]  name=拦截器 (已关闭);
 itemCategory=mech;
 ID=railwayBlocker_closed; sprite=507; 
 special=noTooltips; special=canAlwaysFitInTile_build;
@@ -710,7 +710,7 @@ pR=zoneWood;
 [ItemReaction] 
 ID=railwayBlocker_closed; element=mechanical; newID=railwayBlocker;
 
-[ItemType]  name=Grate;
+[ItemType]  name=格栅;
 itemCategory=furnishing;
 ID=grate_mech1; sprite=1153; 
 journalID=journal_grate;
@@ -724,10 +724,10 @@ ID=grate_mech1; element=mechanical; element=explode; newID=X;
 [JournalEntry]
 ID=journal_grate;
 category=item; halfPage=true; rarity=0;
-title=Grate;
-text=<itemBig=grate_mech1><title=Grate><brAdj=>Heavy metal mesh used to cover vents and prevent objects from passing through.;
+title=格栅;
+text=<itemBig=grate_mech1><title=格栅><brAdj=>用于盖住通风口和防止物体通过的重金属网.;
 
-[ItemType]  name=Conveyor Belt;
+[ItemType]  name=传送带;
 ID=conveyorBelt_off; sprite=1296; 
 journalID=journal_conveyorBelt;
 itemCategory=mech;
@@ -737,7 +737,7 @@ element=elec;
 [ItemReaction] 
 ID=conveyorBelt_off; element=mechanical; newID=conveyorBelt; action=mechanismArea_rotBased1;
 
-[ItemType]  name=Conveyor Belt;
+[ItemType]  name=传送带;
 ID=conveyorBelt; sprite=1296; 
 journalID=journal_conveyorBelt;
 itemCategory=mech;
@@ -754,10 +754,10 @@ ID=conveyorBelt; element=mechanical; newID=conveyorBelt_off; action=mechanismAre
 [JournalEntry]
 ID=journal_conveyorBelt;
 category=item; halfPage=true; rarity=2;
-title=Conveyor Belt;
-text=<itemBig=conveyorBelt><title=Conveyor Belt><brAdj=>High-tech factories often feature trigger-powered belts like these to move items along the assembly line.;
+title=传送带;
+text=<itemBig=conveyorBelt><title=传送带><brAdj=>高科技工厂通常配备这样的触发器驱动皮带,<n>沿着装配线移动产品.;
 
-[ItemType]  name=Wall (Stone, Movable);
+[ItemType]  name=墙 (Stone, Movable);
 itemCategory=mech;
 ID=moveableWall1; sprite=123; 
 special=canAssignSpecialTC; special=cannotBePickedUp; special=noTooltip; special=canBeInsideWalls;
@@ -767,7 +767,7 @@ pR=zoneStoneDark; pG=zoneStone;
 [ItemReaction] 
 ID=moveableWall1; element=mechanical; action=moveSelf;
 
-[ItemType]  name=Wall (Stone, Movable, End);
+[ItemType]  name=墙 (Stone, Movable, End);
 itemCategory=mech;
 ID=moveableWall2; sprite=124; 
 special=canAssignSpecialTC; special=cannotBePickedUp; special=noTooltip; special=canBeInsideWalls;
@@ -779,7 +779,7 @@ ID=moveableWall2; element=mechanical; action=moveSelf;
 
 
 
-[ItemType]  name=Portcullis;
+[ItemType]  name=吊闸;
 itemCategory=mech;
 journalID=journal_portcullis;
   ID=portcullis_closed; sprite=40;
@@ -791,7 +791,7 @@ texture=items_building;
 [ItemReaction] 
 ID=portcullis_closed; element=16; newID=portcullis_open; fx=chkSparks;
 
-[ItemType]  name=Open Portcullis;
+[ItemType]  name=打开的吊闸;
 itemCategory=mech;
 journalID=journal_portcullis;
   ID=portcullis_open; sprite=41; 
@@ -804,11 +804,11 @@ ID=portcullis_open; element=16; newID=portcullis_closed; fx=chkSparks;
 [JournalEntry]
 ID=journal_portcullis;
 category=item; halfPage=true;
-title=Portcullis;
-text=<itemBig=portcullis_closed><title=Portcullis><brAdj=>A great grate gate. There's no way to break the gate, so you'll just have to find the switch or lever that controls it.;
+title=吊闸;
+text=<itemBig=portcullis_closed><title=吊闸><brAdj=>一个巨大的栅门.<n>没有办法打破大门,<n>所以你必须找到控制它的开关或杠杆。;
 
 
-[ItemType]  name=Wood Door;
+[ItemType]  name=木门;
 itemCategory=mech;
   ID=door_closed_wood_shoddy; sprite=8; 
 texture=items_building;
@@ -820,7 +820,7 @@ ID=door_closed_wood_shoddy; element=10; element=16; newID=door_open; fx=unlock;
 [ItemReaction] 
 ID=door_closed_wood_shoddy; element=explode; element=fire; newID=fire;
 
-[ItemType]  name=Open Wood Door;
+[ItemType]  name=打开的木门;
 itemCategory=mech;
   ID=door_open_wood_shoddy; sprite=9; 
 texture=items_building;
@@ -832,7 +832,7 @@ ID=door_open_wood_shoddy; element=10; element=16; newID=door_closed; fx=unlock;
 [ItemReaction] 
 ID=door_open_wood_shoddy; element=explode; element=fire; newID=fire;
 
-[ItemType]  name=Locked Wood Door;
+[ItemType]  name=上锁的木门;
 itemCategory=mech;
   ID=door_locked_wood_shoddy; sprite=74; 
 texture=items_building;
@@ -843,7 +843,7 @@ texture=items_building;
 [ItemReaction] 
 ID=door_locked_wood_shoddy; element=explode; newID=X;
 
-[ItemType]  name=Wood Door;
+[ItemType]  name=木门;
 itemCategory=mech;
   ID=door_closed_wood; sprite=566; 
 texture=items_building;
@@ -854,7 +854,7 @@ texture=items_building;
 [ItemReaction] 
 ID=door_closed_wood; element=use; element=mechanical; newID=door_open_wood; fx=unlock;
 
-[ItemType]  name=Open Wood Door;
+[ItemType]  name=打开的木门;
 itemCategory=mech;
   ID=door_open_wood; sprite=567; 
 texture=items_building;
@@ -866,7 +866,7 @@ special=cannotActInPeacefulZones;
 ID=door_open_wood; element=use; element=mechanical; newID=door_closed_wood; fx=unlock;
 
 
-[ItemType]  name=Big Wood Door;
+[ItemType]  name=大木门;
 itemCategory=mech;
   ID=door_closed_wood_big_arch; sprite=1423; weight=500; 
 texture=items_building;
@@ -877,7 +877,7 @@ texture=items_building;
 [ItemReaction] 
 ID=door_closed_wood_big_arch; element=use; element=mechanical; newID=door_open_wood_big_arch; fx=unlock;
 
-[ItemType]  name=Open Big Wood Door;
+[ItemType]  name=打开的大木门;
 itemCategory=mech;
   ID=door_open_wood_big_arch; sprite=1424; weight=500; 
 texture=items_building;
@@ -888,7 +888,7 @@ special=cannotActInPeacefulZones;
 [ItemReaction] 
 ID=door_open_wood_big_arch; element=use; element=mechanical; newID=door_closed_wood_big_arch; fx=unlock;
 
-[ItemType]  name=Big Wood Door;
+[ItemType]  name=大木门;
 itemCategory=mech;
   ID=door_closed_wood_big_L; sprite=1425; weight=500;
 texture=items_building; 
@@ -900,7 +900,7 @@ texture=items_building;
 ID=door_closed_wood_big_L; element=use; element=mechanical; newID=door_open_wood_big_L; fx=unlock;
 
 
-[ItemType]  name=Open Big Wood Door;
+[ItemType]  name=打开的大木门;
 itemCategory=mech;
   ID=door_open_wood_big_L; sprite=1426; weight=500; 
 texture=items_building;
@@ -913,7 +913,7 @@ ID=door_open_wood_big_L; element=use; element=mechanical; newID=door_closed_wood
 
 
 
-[ItemType]  name=Stone Door;
+[ItemType]  name=石门;
 itemCategory=mech;
   ID=door_closed_stone; sprite=598; 
 texture=items_building;
@@ -924,7 +924,7 @@ texture=items_building;
 [ItemReaction] 
 ID=door_closed_stone;  element=use; element=mechanical; newID=door_open_stone; fx=unlock;
 
-[ItemType]  name=Open Stone Door;
+[ItemType]  name=打开的石门;
 itemCategory=mech;
   ID=door_open_stone; sprite=599; 
 texture=items_building;
@@ -936,7 +936,7 @@ special=cannotActInPeacefulZones;
 ID=door_open_stone; element=use; element=mechanical; newID=door_closed_stone; fx=unlock;
 
 
-[ItemType]  name=Stone Door;
+[ItemType]  name=石门;
 ID=door_closed_stone_LoS;
 cloneFrom=door_closed_stone; 
 special=dontCloneReactions;
@@ -945,7 +945,7 @@ pR=zoneStone;
 [ItemReaction]
 ID=door_closed_stone_LoS;  element=use; element=mechanical; newID=door_open_stone_LoS; fx=unlock;
 
-[ItemType]  name=Open Stone Door;
+[ItemType]  name=打开的石门;
 ID=door_open_stone_LoS;
 cloneFrom=door_open_stone; 
 special=dontCloneReactions;
@@ -956,7 +956,7 @@ pR=zoneStone;
 ID=door_open_stone_LoS; element=use; element=mechanical; newID=door_closed_stone_LoS; fx=unlock;
 
 
-[ItemType]  name=Big Stone Door;
+[ItemType]  name=大石门;
 itemCategory=mech;
   ID=door_closed_stone_big_L; sprite=569;
 texture=items_building;
@@ -970,7 +970,7 @@ depthMod=1050;
 ID=door_closed_stone_big_L; element=use; element=mechanical; newID=door_open_stone_big_L; fx=sfx_slam;
 	
 
-[ItemType]  name=Open Big Stone Door;
+[ItemType]  name=打开的大石门;
 itemCategory=mech;
   ID=door_open_stone_big_L; sprite=571;
 texture=items_building;
@@ -982,7 +982,7 @@ special=cannotActInPeacefulZones;
 [ItemReaction] 
 ID=door_open_stone_big_L; element=use; element=mechanical; newID=door_closed_stone_big_L; fx=sfx_slam;
 	
-[ItemType]  name=Stone Wall;
+[ItemType]  name=石墙;
 itemCategory=mech;
   ID=door_closed_stone_big_seal; sprite=575; 
 texture=items_building;
@@ -995,7 +995,7 @@ depthMod=1050;
 [ItemReaction] 
 ID=door_closed_stone_big_seal; element=mechanical; newID=X; fx=sfx_slam;
 
-[ItemType]  name=Sealed Door;
+[ItemType]  name=密封的门;
 itemCategory=mech;
   ID=door_closed_stone_big_seal_magic; sprite=511; 
 texture=items_building;
@@ -1011,23 +1011,23 @@ ID=door_closed_stone_big_seal_magic; element=mechanical; element=explode; newID=
 [JournalEntry]
 ID=journal_magicSealDoor;
 category=artifact; halfPage=true; rarity=3; rewardMod=-500;
-title=Sealed Door;
-text=<itemBig=door_closed_stone_big_seal_magic><title=Sealed Door><brAdj=>This large stone gate is sealed tight, and has no visible handle or other opening mechanism. It looks ancient, and is adorned with small grooves, indents, and gems. The markings are relatively simplistic, making it difficult to discern who or what created it. It would take high explosives to breach this door.;
+title=密封的门;
+text=<itemBig=door_closed_stone_big_seal_magic><title=密封的门><brAdj=>这扇巨大的石门密封严密,<n>没有可见的把手或其他开启机关.<n>看起来很古老,装饰着小凹槽、凹痕和宝石.<n>这些标记过分简化,很难辨别是谁或什么创造了它.<n>要用烈性炸药才能打开这扇门;
 
 
-[ItemType]  name=Locked Stone;
+[ItemType]  name=上锁的石头;
 itemCategory=mech;
   ID=locked_stone; sprite=537; weight=500; 
   special=big; special=cannotBePickedUp;
   blockLoE=true; blockWalking=true; blockJumping=true;
 	combineWith=key_silver; toMake=X; combineSound=click;
-[ItemType]  name=Locked Stone;
+[ItemType]  name=上锁的石头e;
 itemCategory=mech;
   ID=locked_stone2; sprite=538; weight=500; 
   special=big; special=cannotBePickedUp;
   blockLoE=true; blockWalking=true; blockJumping=true;
 	combineWith=key_silver; toMake=X; combineSound=click;
-[ItemType]  name=Locked Stone Door;
+[ItemType]  name=上锁的石门;
 itemCategory=mech;
   ID=door_locked_stone; sprite=600; 
 texture=items_building;
@@ -1040,7 +1040,7 @@ texture=items_building;
 	combineWith=lockpick; toMake=door_open_stone; consumeOnCombine=true;
 	
 
-[ItemType]  name=Open Door;
+[ItemType]  name=打开的门;
 itemCategory=mech;
 ID=doorway_open; sprite=631; 
 texture=items_building;
@@ -1052,7 +1052,7 @@ special=canAlwaysFitInTileWhenSpawned;
 [ItemReaction] 
 ID=doorway_open; element=use; element=mechanical; newID=doorway_closed; fx=unlock;
 
-[ItemType]  name=Closed Door;
+[ItemType]  name=关闭的门;
 itemCategory=mech;
 ID=doorway_closed; sprite=632; 
 texture=items_building;
@@ -1065,7 +1065,7 @@ ID=doorway_closed; element=use; element=mechanical; newID=doorway_open; fx=unloc
 [ItemReaction]
 ID=doorway_closed; element=explode; newID=doorway_open;
 
-[ItemType]  name=Locked Door;
+[ItemType]  name=上锁的门;
 itemCategory=mech;
 ID=doorway_locked; sprite=664; 
 texture=items_building;
@@ -1080,7 +1080,7 @@ combineWith=lockpick; toMake=doorway_open; consumeOnCombine=true;
 [ItemReaction]
 ID=doorway_locked; element=cutsc_destroy; newID=doorway;
 
-[ItemType]  name=Doorway;
+[ItemType]  name=门道;
 itemCategory=mech;
 ID=doorway; sprite=695; 
 texture=items_building;
@@ -1090,7 +1090,7 @@ special=inheritTerrainPalettes; special=overrideMostCollisions;
 special=cannotActInPeacefulZones; 
 special=canAlwaysFitInTile_build; special=canAlwaysFitInTileWhenSpawned;
 
-[ItemType]  name=Doorway;
+[ItemType]  name=门道;
 ID=doorway_wideL; sprite=633; 
 cloneFrom=doorway;
 [ItemType]  name=Doorway;
@@ -1098,7 +1098,7 @@ ID=doorway_wideR; sprite=634;
 cloneFrom=doorway;
 ----
 
-[ItemType]  name=Open Door;
+[ItemType]  name=打开的门;
 itemCategory=mech;
 ID=doorway_open_staticP; sprite=631; 
 texture=items_building;
@@ -1112,7 +1112,7 @@ pB=zoneWood;
 [ItemReaction] 
 ID=doorway_open_staticP; element=use; element=mechanical; newID=doorway_closed_staticP; fx=unlock;
 
-[ItemType]  name=Closed Door;
+[ItemType]  name=关闭的门;
 itemCategory=mech;
 ID=doorway_closed_staticP; sprite=632; 
 texture=items_building;
@@ -1127,7 +1127,7 @@ ID=doorway_closed_staticP; element=use; element=mechanical; newID=doorway_open_s
 [ItemReaction]
 ID=doorway_closed_staticP; element=explode; newID=doorway_open_staticP;
 
-[ItemType]  name=Locked Door;
+[ItemType]  name=上锁的门;
 itemCategory=mech;
 ID=doorway_locked_staticP; sprite=664; 
 texture=items_building;
@@ -1143,7 +1143,7 @@ pR=zoneStoneDark;
 pB=zoneWood;
 pG=pSilver;
 
-[ItemType]  name=Doorway;
+[ItemType]  name=门道;
 itemCategory=mech;
 ID=doorway_staticP; sprite=695; 
 texture=items_building;
@@ -1154,13 +1154,13 @@ special=cannotActInPeacefulZones;
 pR=zoneStoneDark;
 pB=zoneWood; 
 
-[ItemType]  name=Doorway;
+[ItemType]  name=门道;
 ID=doorway_misc; sprite=695; 
 cloneFrom=doorway_staticP;
 special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
 
 
-[ItemType]  name=Open Door;
+[ItemType]  name=打开的门;
 itemCategory=mech;
 ID=doorway_open_misc; sprite=631; 
 texture=items_building;
@@ -1174,7 +1174,7 @@ special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
 [ItemReaction] 
 ID=doorway_open_misc; element=use; element=mechanical; newID=doorway_closed_misc; fx=unlock;
 
-[ItemType]  name=Closed Door;
+[ItemType]  name=关闭的门;
 itemCategory=mech;
 ID=doorway_closed_misc; sprite=632; 
 texture=items_building;
@@ -1189,7 +1189,7 @@ ID=doorway_closed_misc; element=use; element=mechanical; newID=doorway_open_misc
 [ItemReaction]
 ID=doorway_closed_misc; element=explode; newID=doorway_open_misc;
 
-[ItemType]  name=Locked Door;
+[ItemType]  name=上锁的门;
 itemCategory=mech;
 ID=doorway_locked_misc; sprite=664; 
 texture=items_building;
@@ -1204,7 +1204,7 @@ pB=pYellow5;
 special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
 
 
-[ItemType]  name=Doorway;
+[ItemType]  name=门道;
 itemCategory=mech;
 ID=doorway_misc_fake; sprite=695;
 --this doorway cannot be entered 
@@ -1231,7 +1231,7 @@ weight=9000; volume=9999999;
 pR=zoneStone;
 pB=zoneStoneDark; 
 
-[ItemType]  name=Doorway;
+[ItemType]  name=门道;
 itemCategory=mech;
 ID=doorway_square_staticP; sprite=697; 
 texture=items_building;
@@ -1245,7 +1245,7 @@ pR=zoneStone;
 pB=zoneStoneDark; 
 
 
-[ItemType]  name=Open Door;
+[ItemType]  name=打开的门;
 itemCategory=mech;
 ID=doorway_square_open_staticP; sprite=701; 
 texture=items_building;
@@ -1261,7 +1261,7 @@ pG=zoneWood;
 [ItemReaction] 
 ID=doorway_square_open_staticP; element=use; element=mechanical; newID=doorway_square_closed_staticP; fx=unlock;
 
-[ItemType]  name=Closed Door;
+[ItemType]  name=关闭的门;
 itemCategory=mech;
 ID=doorway_square_closed_staticP; sprite=699; 
 texture=items_building;
@@ -1279,7 +1279,7 @@ ID=doorway_square_closed_staticP; element=use; element=mechanical; newID=doorway
 [ItemReaction]
 ID=doorway_square_closed_staticP; element=explode; newID=doorway;
 
-[ItemType]  name=Locked Door;
+[ItemType]  name=上锁的门;
 itemCategory=mech;
 ID=doorway_square_locked_staticP; sprite=731; 
 texture=items_building;
@@ -1295,7 +1295,7 @@ pG=zoneWood;
 
 ----
 	
-[ItemType]  name=Overhead Door;
+[ItemType]  name=升降门;
 itemCategory=mech;
 ID=overheadDoor; sprite=1368; pR=zoneStoneDark;
 special=cannotBePickedUp; special=canHangOnWalls; 
@@ -1303,7 +1303,7 @@ special=canBeInsideWalls;
 	blockWalking=true; blockJumping=true;
 [ItemReaction] 
 ID=overheadDoor; element=mechanical; newID=overheadDoor_open;
-[ItemType]  name=Overhead Door;
+[ItemType]  name=升降门;
 itemCategory=mech;
 ID=overheadDoor_open; sprite=0; pR=zoneStoneDark;
 special=cannotBePickedUp; special=canHangOnWalls; 
@@ -1311,7 +1311,7 @@ special=canBeInsideWalls;
 [ItemReaction] 
 ID=overheadDoor_open; element=mechanical; newID=overheadDoor; action=relocate;
 	
-[ItemType]  name=Hall Door;
+[ItemType]  name=礼堂的门;
 itemCategory=mech;
 ID=overheadDoor2; sprite=1368; pR=zoneStoneDark;
 special=cannotBePickedUp; special=canHangOnWalls; 
@@ -1319,7 +1319,7 @@ special=canBeInsideWalls;
 	blockWalking=true; blockJumping=true; blockLoS=true;
 [ItemReaction] 
 ID=overheadDoor2; element=mechanical; newID=overheadDoor2_open; fx=sidewardLines_slam;
-[ItemType]  name=Hall Door;
+[ItemType]  name=礼堂的门;
 itemCategory=mech;
 ID=overheadDoor2_open; sprite=0; pR=zoneStoneDark;
 special=cannotBePickedUp; special=canHangOnWalls; 
@@ -1327,7 +1327,7 @@ special=canBeInsideWalls;
 [ItemReaction] 
 ID=overheadDoor2_open; element=mechanical; newID=overheadDoor2; fx=sidewardLines_slam; action=forceRelocate;
 	
-[ItemType]  name=Seal;
+[ItemType]  name=密封;
 itemCategory=mech;
 ID=stair_cover; sprite=124; 
 texture=items_building;
@@ -1339,12 +1339,12 @@ ID=stair_cover; element=mechanical; newID=X; fx=sfx_slam;
 [JournalEntry]
 ID=item_stair_cover;
 category=item; halfPage=true;
-title=Seal;
-text=<itemBig=stair_cover><title=Seal><brAdj=>This mechanical blocker is no doubt sealing away a passage, staircase, or something similar. Sometimes there's a method to open it nearby... and sometimes not.;
+title=密封;
+text=<itemBig=stair_cover><title=密封><brAdj=>这种机械堵塞器无疑是<n>用来封闭通道、楼梯或类似的东西.<n>有时会有一个方法在附近打开它...有时不是.;
 
-[ItemType]  name=Chest (Sealed);
+[ItemType]  name=箱子 (密封的);
 ID=chest_stone1_sealed; sprite=747; itemCategory=mech; pR=zoneStone;
-description=A hefty, durable chest. It's shut tight.;
+description=结实耐用的箱子.被紧封着.;
 journalID=journal_chest;
 weight=3000; volume=100; 
 special=container; special=big; special=container4x4; special=containerMetal;
@@ -1355,17 +1355,17 @@ ID=chest_stone1_sealed; element=mechanical; newID=chest_stone1_unsealed;
 [ItemReaction] 
 ID=chest_stone1_sealed; element=explode; newID=chest_stone1_sealed_damaged;
 fx=unlock;
-[ItemType]  name=Chest;
+[ItemType]  name=箱子;
 ID=chest_stone1_unsealed; sprite=748; itemCategory=mech; pR=zoneStone;
-description=A hefty, durable chest.;
+description=结实耐用的箱子.;
 journalID=journal_chest;
 weight=3000; volume=100; 
 special=container; special=big; special=container4x4; special=containerMetal;
 blockWalking=true; blockJumping=true;
 
-[ItemType]  name=Chest (Damaged);
+[ItemType]  name=箱子 (受损的);
 ID=chest_stone1_sealed_damaged; sprite=780; itemCategory=mech; pR=zoneStone;
-description=A sealed chest, majorly damaged.;
+description=一个密封的箱,被损坏了.;
 journalID=journal_chest;
 weight=3000; volume=100; 
 special=container; special=big; special=container4x4; special=containerMetal;
@@ -1375,7 +1375,7 @@ blockWalking=true; blockJumping=true;
 ID=chest_stone1_sealed_damaged; element=mechanical; element=explode; newID=chest_stone1_unsealed;
 
 	
-[ItemType]  name=Sealed Door;
+[ItemType]  name=密封的门;
 itemCategory=mech;
 ID=lockdown_open; sprite=540; 
 texture=items_building;
@@ -1391,7 +1391,7 @@ pR=zoneStone;
 ID=lockdown_open; element=explode; element=mech; newID=lockdown_closed; fx=sealDoorClose; action=forceRelocate;
 
 
-[ItemType]  name=Sealed Door;
+[ItemType]  name=密封的门;
 itemCategory=mech;
 ID=lockdown_closed; sprite=539; 
 texture=items_building;
@@ -1406,7 +1406,7 @@ ID=lockdown_closed; element=explode;
 element=mech; newID=lockdown_open; fx=sealDoorOpen;
 
 
-[ItemType]  name=Sealed Door;
+[ItemType]  name=密封的门;
 ID=lockdown_open_alt; 
 cloneFrom=lockdown_open;
 special=cannotActInPeacefulZones;
@@ -1416,7 +1416,7 @@ pR=zoneStoneDark;
 ID=lockdown_open_alt; element=explode; element=mech; newID=lockdown_closed_alt; fx=sealDoorClose_dark; action=forceRelocate;
 
 
-[ItemType]  name=Sealed Door;
+[ItemType]  name=密封的门;
 ID=lockdown_closed_alt; 
 cloneFrom=lockdown_closed;
 special=dontCloneReactions;
@@ -1429,10 +1429,10 @@ element=mech; newID=lockdown_open_alt; fx=sealDoorOpen_dark;
 [JournalEntry]
 ID=journal_lockdown;
 category=item; halfPage=true; rarity=1;
-title=Seal;
-text=<itemBig=lockdown_closed><title=Seal><brAdj=>A panel of thick stone blocks passage. It is nearly unbreakable, but there must be a hidden mechanism that controls it.;
+title=密封;
+text=<itemBig=lockdown_closed><title=Seal><brAdj=>用厚石块板阻塞的通道.<n>它几乎是牢不可破的,<n>但肯定有一个隐藏的机制来控制它.;
 	
-[ItemType]  name=Rungs;
+[ItemType]  name=横梯;
 itemCategory=mech;
 ID=rungs_both; sprite=1541; 
 journalID=journal_rung;
@@ -1440,7 +1440,7 @@ special=canHangOnWalls; special=big; special=overrideTerrainCollisions; special=
   special=fullTileHitbox;
 pR=pGrey2;
 
-[ItemType]  name=Rungs;
+[ItemType]  name=横梯;
 itemCategory=mech;
 ID=rungs_top; sprite=1542; 
 journalID=journal_rung;
@@ -1450,14 +1450,14 @@ special=canHangOnWalls; special=big; special=overrideTerrainCollisions; special=
 pR=pGrey2; combineSound=step;
 	combineWith=rung; toMake=rungs_both; consumeOnCombine=true; 
 
-[ItemType]  name=Rungs;
+[ItemType]  name=横梯;
 itemCategory=mech;
 ID=rungs_btm; sprite=1543; 
 journalID=journal_rung;
 cloneFrom=rungs_top; combineSound=step;
 	combineWith=rung; toMake=rungs_both; consumeOnCombine=true; 
 
-[ItemType]  name=Rungs (Missing);
+[ItemType]  name=横梯 (不见的);
 itemCategory=mech;
 ID=rungs_none; sprite=1544;
 journalID=journal_rung;
@@ -1466,7 +1466,7 @@ special=canHangOnWalls; special=big; special=cannotBePickedUp;
 pR=pGrey2; combineSound=step;
 	combineWith=rung; toMake=rungs_top; consumeOnCombine=true; 
 
-[ItemType]  name=Rung;
+[ItemType]  name=横梯;
 itemCategory=mech;
 ID=rung; sprite=1545; weight=1; volume=3; value=3; stackable=true;
 description=A bent metal bar.;
@@ -1475,16 +1475,16 @@ pR=pGrey2;
 [JournalEntry]
 ID=journal_rung;
 category=item; halfPage=true; rarity=0;
-title=Rung;
-text=<itemBig=rung><title=Rung><brAdj=>When inserted into properly arranged holes in a wall, bent metal bars (rungs) can form a simple ladder.;
+title=横梯;
+text=<itemBig=rung><title=横梯><brAdj=>将横梯插入墙壁上适当的孔中，可以形成一个简单的梯子.;
 	
-[ItemType]  name=Key;
+[ItemType]  name=钥匙;
   ID=key; sprite=75; weight=0; volume=0;
-[ItemType]  name=Silver Key;
+[ItemType]  name=银钥匙;
   ID=key_silver; sprite=536; weight=0; volume=0;
 
 
-[ItemType]  name=Bridge;
+[ItemType]  name=桥;
 itemCategory=mech;
 ID=drawbridge; sprite=580; 
 special=canBeInsideWalls; special=overrideTerrainCollisions; special=cannotBePickedUp; special=canAssignSpecialTC; special=ignoreHeight;
@@ -1493,18 +1493,18 @@ pR=zoneWood;
 [ItemReaction] 
 ID=drawbridge; element=mechanical; action=moveSelf;
 
-[ItemType]  name=Planks;
+[ItemType]  name=木板;
 ID=bridge_float1; sprite=1392; 
 itemCategory=mech;
 special=canBeInsideWalls; special=overrideTerrainCollisions; special=cannotBePickedUp; special=ignoreHeight;
 special=canFloatOnWater;
 pR=zoneWood;
 
-[ItemType]  name=Planks;
+[ItemType]  name=木板;
 ID=bridge_float2; sprite=1393; 
 cloneFrom=bridge_float1;
 
-[ItemType]  name=Moving Floor;
+[ItemType]  name=移动地板;
 itemCategory=mech;
 ID=movingFloor; sprite=63; 
 special=canBeInsideWalls; special=overrideTerrainCollisions; special=cannotBePickedUp; special=canAssignSpecialTC; special=canFloatOnWater; special=noTooltip;
@@ -1517,7 +1517,7 @@ pR=zoneStoneLight;
 [ItemReaction] 
 ID=movingFloor; element=mechanical; action=moveSelf;
 
-[ItemType]  name=Moving Floor;
+[ItemType]  name=移动地板;
 itemCategory=mech;
 ID=movingFloor2; sprite=127; 
 special=canBeInsideWalls; special=overrideTerrainCollisions; special=cannotBePickedUp; special=canAssignSpecialTC; special=canFloatOnWater; special=noTooltip;
@@ -1529,7 +1529,7 @@ pR=zoneStoneLight;
 [ItemReaction] 
 ID=movingFloor2; element=mechanical; action=moveSelf;
 
-[ItemType]  name=Moving Floor;
+[ItemType]  name=移动地板;
 ID=movingFloor3; sprite=95; 
 itemCategory=mech;
 special=canBeInsideWalls; special=overrideTerrainCollisions; special=cannotBePickedUp; special=canAssignSpecialTC; special=canFloatOnWater; special=noTooltip;
@@ -1540,7 +1540,7 @@ pR=zoneStoneLight;
 [ItemReaction] 
 ID=movingFloor3; element=mechanical; action=moveSelf;
 
-[ItemType]  name=Stone;
+[ItemType]  name=石块;
 ID=stoneBlock; sprite=12; 
 itemCategory=mech;
 special=pushable; special=big; special=canAssignSpecialTC; 
@@ -1557,10 +1557,10 @@ ID=stoneBlock; element=explode; newID=X; fx=dust_stone; action=pushBlock_destroy
 [JournalEntry]
 ID=item_stoneBlock;
 category=item; halfPage=true;
-title=Stone;
-text=<itemBig=stoneBlock><title=Stone><brAdj=>This solid stone is very heavy, but not so heavy that you can't give it a good push to move it.;
+title=石头;
+text=<itemBig=stoneBlock><title=石头><brAdj=>这块坚硬的石头很重,<n>但又不至于重到你推不动它.;
 
-[ItemType]  name=Cracked Stone;
+[ItemType]  name=有裂纹的石块;
 ID=stoneBlock_cracked; sprite=44; 
 itemCategory=mech;
 special=pushable; special=big; special=canAssignSpecialTC; 
@@ -1580,12 +1580,12 @@ ID=stoneBlock_cracked; element=blockDestroyed; fx=dust_stone; newID=X;
 [JournalEntry]
 ID=item_stoneBlock_cracked;
 category=item; halfPage=true;
-title=Cracked Stone;
-text=<itemBig=stoneBlock_cracked><title=Cracked Stone><brAdj=>You can push this stone around, but it looks pretty fragile. You might as well break it with a hammer.;
+title=有裂纹的石头;
+text=<itemBig=stoneBlock_cracked><title=有裂纹的石头><brAdj=>你可以把这块石头推来推去,<n>但它看起来很脆弱.<n>你还不如用锤子敲碎它.;
 
 ---
 
-[ItemType]  name=Pedestal;
+[ItemType]  name=基座;
 ID=mechNotch_pedestal; sprite=1624; 
 itemCategory=mech;
 special=noTooltips;
@@ -1594,7 +1594,7 @@ pR = zoneStone;
 blockWalking=true;
 blockJumping=true;
 
-[ItemType]  name=Mechanism;
+[ItemType]  name=机械装置;
 ID=mechNotch_power; sprite=1625; 
 journalID=journal_mechNotch;
 itemCategory=mech;
@@ -1611,7 +1611,7 @@ ID=mechNotch_power; element=explode; element=blockDestroyed; newID=X;
 [ItemLight] 
 ID=mechNotch_power; red=0.7; blue=1; green=0.6; alpha=0.8; size=0.22; flicker=0.02;
 	
-[ItemType]  name=Mechanism;
+[ItemType]  name=机械装置;
 ID=mechNotch1; sprite=1627; 
 journalID=journal_mechNotch;
 itemCategory=mech;
@@ -1635,7 +1635,7 @@ ID=mechNotch1; element=explode; element=blockDestroyed; newID=X;
 [ItemLight] 
 ID=mechNotch1; red=0.4; blue=0.4; green=1; alpha=0.8; size=0.15; flicker=0.01;
  
-[ItemType]  name=Mechanism;
+[ItemType]  name=机械装置;
 ID=mechNotch_connector_off; sprite=1626; 
 journalID=journal_mechNotch;
 itemCategory=mech;
@@ -1652,7 +1652,7 @@ ID=mechNotch_connector_off; element=matched; newID=mechNotch_connector_on; actio
 [ItemReaction] 
 ID=mechNotch_connector_off; element=explode; element=blockDestroyed; newID=X;
  
-[ItemType]  name=Mechanism;
+[ItemType]  name=机械装置;
 ID=mechNotch_connector_on; sprite=1626; 
 journalID=journal_mechNotch;
 itemCategory=mech;
@@ -1674,7 +1674,7 @@ ID=mechNotch_connector_on; element=explode; element=blockDestroyed; newID=X;
 [ItemLight] 
 ID=mechNotch_connector_on; red=0.7; blue=1; green=0.6; alpha=0.8; size=0.1; flicker=0.02;
 
-[ItemType]  name=Mechanism;
+[ItemType]  name=机械装置;
 ID=mechNotch_connector_poweringDown;
 cloneFrom=mechNotch_connector_on;
 itemCategory=mech;
@@ -1692,7 +1692,7 @@ ID=mechNotch_connector_poweringDown; red=0.7; blue=1; green=0.6; alpha=0.6; size
 
 
  
-[ItemType]  name=Mechanism;
+[ItemType]  name=机械装置;
 ID=mechNotch_explode; sprite=1628; 
 cloneFrom=mechNotch1;
 special=dontCloneReactions;
@@ -1706,7 +1706,7 @@ ID=mechNotch_explode; element=timerUp; action=mech_mechNotch_trigger;
 [ItemLight] 
 ID=mechNotch_explode; red=1; blue=0.1; green=0.1; alpha=0.8; size=0.1; flicker=0.05;
  
-[ItemType]  name=Mechanism;
+[ItemType]  name=机械装置;
 ID=mechNotch_off; 
 journalID=journal_mechNotch;
 sprite=1627; 
@@ -1730,10 +1730,10 @@ ID=mechNotch_off; element=explode; element=blockDestroyed; newID=X;
 [JournalEntry]
 ID=journal_mechNotch;
 category=item; halfPage=true;
-title=Mechanism;
-text=<itemBig=mechNotch_power><title=Mechanism><brAdj=>These stones have strange mechanical devices carved into them. They seem to interface with eachother in some way... Perhaps their respective symbols betray their use?;
+title=机械装置;
+text=<itemBig=mechNotch_power><title=机械装置><brAdj=>这些石头上雕刻着奇怪的机械装置.<n>他们似乎以某种方式相互接触.<n>也许他们各自的符号都有用处?;
  
-[ItemType]  name=Wire;
+[ItemType]  name=导线;
 ID=wire; sprite=1328; weight=0; itemCategory=mech;
 special=cannotBePickedUp; special=canHangOnWalls;
 special=noTooltip; special=canFloatOnWater;
@@ -1742,11 +1742,11 @@ element=elec;
 [ItemReaction] 
 ID=wire; element=tileReacted; newID=X;
 
-[ItemType]  name=Wire;
+[ItemType]  name=导线;
 ID=wire_long; sprite=1329;
 cloneFrom=wire;
 
-[ItemType]  name=Power Node;
+[ItemType]  name=能量结点;
 ID=powerNode_off; sprite=1330; weight=1; itemCategory=mech;
 journalID=journal_powerNode;
 special=cannotBePickedUp; special=canHangOnWalls; special=canAssignSpecialTC; blockWalking=true;
@@ -1758,7 +1758,7 @@ action=mechanism; fx=horizSpark_many_magicHum;
 [ItemReaction] 
 ID=powerNode_off; element=destroy; newID=powerNode_broken;
 
-[ItemType]  name=Power Node (Activated);
+[ItemType]  name=能量结点 (激活的);
 ID=powerNode_on; sprite=1331; weight=1; itemCategory=mech;
 journalID=journal_powerNode;
 special=cannotBePickedUp; special=canHangOnWalls; special=canAssignSpecialTC; blockWalking=true;
@@ -1773,7 +1773,7 @@ ID=powerNode_on; element=destroy; newID=powerNode_broken;
 ID=powerNode_on; red=0.6; blue=1; green=0.8; alpha=0.2; size=0.12; flicker=0.01;
 
 
-[ItemType]  name=Power Node;
+[ItemType]  name=能量结点;
 ID=powerNode_dirt_off; sprite=1332; weight=1; itemCategory=mech;
 journalID=journal_powerNode;
 special=cannotBePickedUp; special=canHangOnWalls; special=canAssignSpecialTC; blockWalking=true;
@@ -1793,7 +1793,7 @@ action=mechanism; fx=horizSpark_many_magicHum;
 [ItemReaction] 
 ID=powerNode_dirt_on; element=destroy; newID=powerNode_broken;
 
-[ItemType]  name=Power Node (Broken);
+[ItemType]  name=能量结点 (破碎的);
 ID=powerNode_broken; sprite=1301;
 journalID=journal_powerNode; special=dontCloneReactions;
 cloneFrom=powerNode_on; blockWalking=false;
@@ -1801,10 +1801,10 @@ pR=zoneStone; pB=pB;
 [JournalEntry]
 ID=journal_powerNode;
 category=item; halfPage=true; rarity=1;
-title=Power Node;
-text=<itemBig=powerNode_on><title=Power Node><brAdj=>This sphere of Volskarn and wiring serves as the input for essence-powered devices. Raw energy or lightning are both sufficient to power it.;
+title=能量结点;
+text=<itemBig=powerNode_on><title=能量结点><brAdj=>这个Volskarn的球体和电线作为本质能量设备的输入.<n>原始能量或闪电都足以为它提供能量.;
 
-[ItemType]  name=Capsule;
+[ItemType]  name=太空舱;
 itemCategory=mech;
 ID=capsule_mech; sprite=1287; weight=900; volume=300;
 journalID=journal_capsule_mech;
@@ -1816,7 +1816,7 @@ special=container; special=container2x3; special=containerMetal;
 [ItemReaction] 
 ID=capsule_mech; element=use; newID=capsule_mech_open; fx=RockDrag;
 
-[ItemType]  name=Capsule;
+[ItemType]  name=太空舱;
 itemCategory=mech;
 ID=capsule_mech_open; sprite=1288; weight=900; volume=300;
 journalID=journal_capsule_mech;
@@ -1830,10 +1830,10 @@ ID=capsule_mech_open; element=closeContainer; newID=capsule_mech; fx=RockDrag;
 [JournalEntry]
 ID=journal_capsule_mech;
 category=item; halfPage=true; rarity=2;
-title=Capsule;
-text=<itemBig=capsule_mech><title=Capsule><brAdj=>The detached cockpit of a giant war machine. In its current state it is functionally useless.;
+title=太空舱;
+text=<itemBig=capsule_mech><title=太空舱><brAdj=>巨型战争机器的分离座舱.<n>在当前状态下,它是无用的.;
 
-[ItemType]  name=Broken Capsule;
+[ItemType]  name=破碎的太空舱;
 itemCategory=mech;
 journalID=journal_broken_mech;
 ID=capsule_mech_buried; sprite=1289; weight=900; volume=300;
@@ -1846,7 +1846,7 @@ pR=zoneStone; pB=pIce; pG=zoneDirt;
 [ItemReaction]
 ID=capsule_mech_buried; element=mechanical; newID=capsule_mech_open; fx=fx_shake;
 
-[ItemType]  name=Broken Capsule;
+[ItemType]  name=破碎的太空舱;
 itemCategory=mech;
 journalID=journal_broken_mech;
 ID=capsule_mech_buried2; sprite=1321; weight=900; volume=300;
@@ -1859,7 +1859,7 @@ pR=zoneStone; pB=pIce; pG=zoneDirt;
 [ItemReaction]
 ID=capsule_mech_buried2; element=mechanical; newID=capsule_mech; fx=fx_shake;
 
-[ItemType]  name=Broken Hand;
+[ItemType]  name=破碎的手;
 itemCategory=mech;
 journalID=journal_broken_mech;
 ID=mech_hand_broken; sprite=1322; weight=900; volume=300;
@@ -1869,7 +1869,7 @@ special=itemsIgnoreBlockWalking;
 blockWalking=true; blockJumping=true;
 pR=zoneStone; pB=zoneStoneDark; pG=zoneDirt;
 
-[ItemType]  name=Broken Hand;
+[ItemType]  name=破碎的手;
 itemCategory=mech;
 journalID=journal_broken_mech;
 ID=mech_hand_broken_closed; sprite=1290; weight=900; volume=300;
@@ -1885,7 +1885,7 @@ ID=mech_hand_broken_closed; element=elec; fx=horizSpark_many; action=unbury;
 ID=mech_hand_broken_closed; element=dig; newID=mech_hand_broken;
 
 
-[ItemType]  name=Broken Cannon;
+[ItemType]  name=破碎的大炮;
 itemCategory=mech;
 journalID=journal_broken_mech;
 ID=mech_cannon_broken; sprite=1323; weight=900; volume=300;
@@ -1895,10 +1895,10 @@ pR=zoneStone; pB=zoneStoneDark; pG=zoneDirt;
 [JournalEntry]
 ID=journal_broken_mech;
 category=item; halfPage=true; rarity=2;
-title=Broken Machine;
-text=<itemBig=capsule_mech_buried2><itemBig=mech_hand_broken><title=Broken Machine><brAdj=>The smashed and worthless remains of a war machine. Only the most powerful and wealthy armies can afford to build even one of these.;
+title=破碎的机器;
+text=<itemBig=capsule_mech_buried2><itemBig=mech_hand_broken><title=破碎的机器><brAdj=>一架残破的、毫无价值的战争机器.<n>只有最强大和最富有的军队才能建造这样的武器.;
 
-[ItemType]  name=Pole;
+[ItemType]  name=杆;
 itemCategory=mech;
 ID=pole_up; sprite=1744; 
 special=cannotBePickedUp; special=canHangOnWalls; 
@@ -1912,7 +1912,7 @@ pG=zoneStoneDark;
 ID=pole_up; element=mechanical; newID=pole_down; fx=chk;
 [ItemReaction]
 ID=pole_up; element=noMoveTaken; action=forceRelocate;
-[ItemType]  name=Pole;
+[ItemType]  name=杆;
 itemCategory=mech;
 ID=pole_down; sprite=1808; 
 special=cannotBePickedUp; special=canHangOnWalls;
@@ -1923,7 +1923,7 @@ pG=zoneStoneDark;
 [ItemReaction]
 ID=pole_down; element=mechanical; newID=pole_up; action=forceRelocate; fx=chk;
 
-[ItemType]  name=Protrusion;
+[ItemType]  name=隆起物;
 itemCategory=mech;
 ID=pole_organic_up; sprite=1873; 
 special=cannotBePickedUp; special=canHangOnWalls; special=canAlwaysFitInTile;
@@ -1936,7 +1936,7 @@ ID=pole_organic_up; element=mechanical; newID=pole_organic_down; fx=WetSquish;
 [ItemReaction]
 ID=pole_organic_up; element=noMoveTaken; action=forceRelocate; fx=WetSquish;
 
-[ItemType]  name=Bump;
+[ItemType]  name=凸块;
 itemCategory=mech;
 ID=pole_organic_down; sprite=1872; 
 special=cannotBePickedUp; special=canHangOnWalls;
@@ -1947,7 +1947,7 @@ pR=zoneDirt;
 ID=pole_organic_down; element=mechanical; newID=pole_organic_up; action=forceRelocate; fx=WetSquish;
 
 
-[ItemType]  name=Salvager;
+[ItemType]  name=打捞船;
 itemCategory=mech;
 ID=machine_extractor_on; sprite=1272; weight=900; volume=300;
 journalID=journal_salvager;
@@ -1968,7 +1968,7 @@ ID=machine_extractor_on; element=physical; element=explode; element=fire; elemen
 [ItemReaction]
 ID=machine_extractor_on; element=timerUp; action=somethingHappened_action;
  
-[ItemType]  name=Salvager;
+[ItemType]  name=打捞船;
 itemCategory=mech;
 ID=machine_extractor; sprite=1272; weight=900; volume=300;
 journalID=journal_salvager;
@@ -1980,7 +1980,7 @@ element=elec;
 [ItemReaction]
 ID=machine_extractor; element=mech; newID=machine_extractor_on; fx=sfx_slam; action=somethingHappened_action;
 
-[ItemType]  name=Broken Salvager;
+[ItemType]  name=破碎的打捞船;
 itemCategory=mech;
 ID=machine_extractor_broken; sprite=1272; weight=900; volume=300;
 journalID=journal_salvager;
@@ -1994,17 +1994,17 @@ ID=machine_extractor_broken; element=repair; newID=machine_extractor;
 [JournalEntry]
 ID=journal_salvager;
 category=item; halfPage=true; rarity=2;
-title=Salvager;
-text=<itemBig=machine_extractor><title=Salvager><brAdj=>This booming machine powers the salvage station and extracts valuable materials from the sea. Despite appearances, it's quite fragile - a single stray blow could knock it out. Something about its cacophonous noise drives beasts and Cleever to attack it.;
+title=打捞船;
+text=<itemBig=machine_extractor><title=打捞船><brAdj=>这台轰隆轰隆的机器为打捞站提供动力,<n>并从海洋中提取有价值的物质.<n>尽管外表如此，但它相当脆弱--<n>一击就能将其击倒.<n>它那刺耳的噪音驱使野兽和Cleever攻击它;
 
 
-[ItemType]  name=Pipe;
+[ItemType]  name=管道;
 ID=machine_pipe; sprite=1339; weight=900; volume=300;
 itemCategory=mech;
 special=cannotBePickedUp; 
 pR=p1;
 
-[ItemType]  name=Aerstone Stabilizer;
+[ItemType]  name=Aerstone 稳定器;
 itemCategory=hide;
 journalID=journal_stabilizer;
 ID=stabilizer_on; sprite=1304; weight=900; volume=300;
@@ -2022,10 +2022,10 @@ ID=stabilizer_on; element=use; action=drop_Aerstone; newID=stabilizer;
 [JournalEntry]
 ID=journal_stabilizer;
 category=item; halfPage=true; rarity=2;
-title=Aerstone Stabilizer;
-text=<itemBig=stabilizer_on><title=Aerstone Stabilizer><brAdj=>Noisy machine that pumps energy into Aerstone, causing it to provide lift. This particular model is extremely efficient.;
+title=Aerstone 稳定器;
+text=<itemBig=stabilizer_on><title=Aerstone 稳定器><brAdj=>=汲取能量注入Aerstone的嘈杂机器,<n>使其提供升力.<n>这种运作模式非常有效.;
 
-[ItemType]  name=Stabilizer;
+[ItemType]  name=稳定器;
 itemCategory=hide;
 ID=stabilizer; sprite=1292; weight=900; volume=300;
 journalID=journal_stabilizer;
@@ -2035,7 +2035,7 @@ pR=pGreyD; pB=pYellow5;
 depthMod=1050;
 element=elec;
 
-[ItemType]  name=Stabilizer;
+[ItemType]  name=稳定器;
 itemCategory=hide;
 ID=stabilizer2; sprite=1325; weight=900; volume=300;
 journalID=journal_stabilizer;
@@ -2046,7 +2046,7 @@ element=elec;
 [ItemType]  name=Stabilizer;
 ID=stabilizer3; sprite=1293; cloneFrom=stabilizer2;
 
-[ItemType]  name=Aerstone Stabilizer;
+[ItemType]  name=Aerstone 稳定器;
 itemCategory=hide;
 ID=stabilizer_poor; sprite=1240; weight=900; volume=300;
 journalID=journal_stabilizer_poor;
@@ -2062,7 +2062,7 @@ ID=stabilizer_poor; red=0.8; blue=0.6; green=0.8; alpha=0.75; size=0.3; flicker=
 [ItemReaction] 
 ID=stabilizer_poor; element=mechanical; newID=stabilizer_poor_off;
 
-[ItemType]  name=Aerstone Stabilizer;
+[ItemType]  name=Aerstone 稳定器;
 itemCategory=hide;
 ID=stabilizer_poor_off; sprite=1240; weight=900; volume=300;
 journalID=journal_stabilizer_poor;
@@ -2077,10 +2077,10 @@ element=elec;
 [JournalEntry]
 ID=journal_stabilizer_poor;
 category=item; halfPage=true; rarity=2;
-title=Aerstone Stabilizer;
-text=<itemBig=stabilizer_poor><title=Aerstone Stabilizer><brAdj=>Essentially the 'mast' of a large airship. Careful modulation allows the airship to ascend and descend. Unfortunately, the Aerstone is stuck & won't budge.;
+title=Aerstone 稳定器;
+text=<itemBig=stabilizer_poor><title=Aerstone 稳定器><brAdj=>基本上就是大型飞艇的'桅杆'.<n>仔细的调整可以使飞艇上升和下降.<n>不幸的是,Aerstone卡住了,无法移动.;
 
-[ItemType]  name=Capsule;
+[ItemType]  name=容器;
 ID=capsule_tube1; sprite=912; weight=900; volume=300;
 itemCategory=mech; texture=items_misc;
 journalID=journal_capsule_tube1;
@@ -2089,7 +2089,7 @@ blockWalking=true; blockJumping=true; blockLoE=true;
 depthMod=1050;
 pR=zoneStone; pG=zoneMisc4;
 
-[ItemType]  name=Capsule (Ruluorn);
+[ItemType]  name=容器 (Ruluorn);
 ID=capsule_tube1_ruluorn1; sprite=914; 
 journalID=journal_ruluorn; 
 cloneFrom=capsule_tube1;
@@ -2098,10 +2098,10 @@ special=animated2Slow; special=cannotTarget;
 [JournalEntry]
 ID=journal_capsule_tube1;
 category=item; halfPage=true; rarity=2;
-title=Capsule;
-text=<itemBig=capsule_tube1><title=Capsule><brAdj=>Sturdy capsule for the containment of dangerous specimens. The inside of the base is lined with essence-suppressors to keep the captive from using magic.;
+title=容器;
+text=<itemBig=capsule_tube1><title=容器><brAdj=>坚固的容器,用于密封危险的标本.<n>内部布满了本质抑制器,以防止俘虏使用魔法;
 
-[ItemType]  name=Capsule;
+[ItemType]  name=容器;
 ID=capsule_tube2; sprite=1008; weight=900; volume=300;
 itemCategory=mech; texture=items_misc;
 journalID=journal_capsule_tube1;
@@ -2111,7 +2111,7 @@ blockWalking=true; blockJumping=true; blockLoE=true;
 depthMod=1050;
 pR=zoneStone; pG=zoneMisc4;
 
-[ItemType]  name=Capsule (Ruluorn);
+[ItemType]  name=容器 (Ruluorn);
 ID=capsule_tube2_ruluorn1; sprite=1010; weight=900; volume=300;
 itemCategory=mech; texture=items_misc;
 journalID=journal_ruluorn;
@@ -2123,7 +2123,7 @@ pR=zoneStone; pG=zoneMisc4; pB=zoneMisc5;
 [ItemReaction] 
 ID=capsule_tube2_ruluorn1; element=somethingHappened; newID=capsule_tube2_ruluorn1_cracked; fx=dust_glass;
 
-[ItemType]  name=Capsule (Ruluorn);
+[ItemType]  name=容器 (Ruluorn);
 ID=capsule_tube2_ruluorn1_top; sprite=1010; weight=900; volume=300;
 itemCategory=mech; texture=items_misc;
 journalID=journal_ruluorn;
@@ -2134,7 +2134,7 @@ pR=zoneStone; pG=zoneMisc4; pB=zoneMisc5;
 [ItemReaction] 
 ID=capsule_tube2_ruluorn1_top; element=somethingHappened; newID=capsule_tube2_ruluorn1_top_cracked; fx=dust_glass;
 
-[ItemType]  name=Capsule (Ruluorn);
+[ItemType]  name=容器 (Ruluorn);
 ID=capsule_tube2_ruluorn1_mid; sprite=1074; weight=900; volume=300;
 itemCategory=mech; texture=items_misc;
 journalID=journal_ruluorn;
@@ -2145,7 +2145,7 @@ pR=zoneStone; pG=zoneMisc4; pB=zoneMisc5;
 [ItemReaction] 
 ID=capsule_tube2_ruluorn1_mid; element=somethingHappened; newID=capsule_tube2_ruluorn1_mid_cracked; fx=dust_glass;
 
-[ItemType]  name=Capsule (Ruluorn);
+[ItemType]  name=容器 (Ruluorn);
 ID=capsule_tube2_ruluorn1_btm; sprite=1106; weight=900; volume=300;
 itemCategory=mech; texture=items_misc;
 journalID=journal_ruluorn;
@@ -2157,7 +2157,7 @@ pR=zoneStone; pG=zoneMisc4; pB=zoneMisc5;
 [ItemReaction] 
 ID=capsule_tube2_ruluorn1_btm; element=somethingHappened; newID=capsule_tube2_ruluorn1_btm_cracked; fx=dust_glass;
 
-[ItemType]  name=Capsule (Ruluorn);
+[ItemType]  name=容器 (Ruluorn);
 ID=capsule_tube2_ruluorn1_btm2; sprite=1138; weight=900; volume=300;
 itemCategory=mech; texture=items_misc;
 journalID=journal_ruluorn;
@@ -2169,23 +2169,23 @@ pR=zoneStone; pG=zoneMisc4; pB=zoneMisc5;
 [ItemReaction] 
 ID=capsule_tube2_ruluorn1_btm2; element=somethingHappened; newID=capsule_tube2_ruluorn1_btm2_cracked; fx=dust_glass;
 
-[ItemType]  name=Capsule (Ruluorn);
+[ItemType]  name=容器 (Ruluorn);
 ID=capsule_tube2_ruluorn1_cracked; sprite=1170;
 cloneFrom=capsule_tube2_ruluorn1;
-[ItemType]  name=Capsule (Ruluorn);
+[ItemType]  name=容器 (Ruluorn);
 ID=capsule_tube2_ruluorn1_top_cracked; sprite=1170; 
 cloneFrom=capsule_tube2_ruluorn1_top;
-[ItemType]  name=Capsule (Ruluorn);
+[ItemType]  name=容器 (Ruluorn);
 ID=capsule_tube2_ruluorn1_mid_cracked; sprite=1234; 
 cloneFrom=capsule_tube2_ruluorn1_mid;
-[ItemType]  name=Capsule (Ruluorn);
+[ItemType]  name=容器 (Ruluorn);
 ID=capsule_tube2_ruluorn1_btm_cracked; sprite=1266; 
 cloneFrom=capsule_tube2_ruluorn1_btm;
-[ItemType]  name=Capsule (Ruluorn);
+[ItemType]  name=容器 (Ruluorn);
 ID=capsule_tube2_ruluorn1_btm2_cracked; sprite=1298; 
 cloneFrom=capsule_tube2_ruluorn1_btm2;
 
-[ItemType]  name=Pipe;
+[ItemType]  name=管道;
 ID=capsule_tube_thin1; sprite=816; weight=900; volume=300;
 itemCategory=mech; texture=items_misc;
 journalID=;
@@ -2194,12 +2194,12 @@ blockWalking=true; blockJumping=true; blockLoE=true;
 depthMod=1050;
 pR=zoneStone; pG=zoneMisc4;
 
-[ItemType]  name=Pipe;
+[ItemType]  name=管道;
 ID=capsule_tube_thin2; 
 cloneFrom=capsule_tube_thin1;
 special=animated;
 
-[ItemType]  name=Pushable Staircase;
+[ItemType]  name=可推动的楼梯;
 description=Portable steps that can be pushed by 'use'-ing them.;
 ID=stepladder_pushable1; sprite=784;  itemCategory=mech;
 texture=items_misc;
@@ -2215,12 +2215,12 @@ pR=zoneStoneDark;
 [JournalEntry]
 ID=item_stepladder_pushable1;
 category=item; halfPage=true; rarity=0;
-title=Pushable Staircase;
-text=<itemBig=stepladder_pushable1><title=Pushable Staircase><brAdj=>These portable steps are meant for reaching high places. You can push them around by standing off to the side and then 'use'-ing them.;
+title=可推动的楼梯;
+text=<itemBig=stepladder_pushable1><title=可推动的楼梯><brAdj=>这些轻便的台阶是用来爬到高处的.<n>你可以把它们推到一边,然后'使用'它们;
 
 
 
-[ItemType]  name=Damaged Autocycle;
+[ItemType]  name=受损的摩托车;
 itemCategory=mech;
 ID=autocycle_damaged; sprite=1308; weight=900; volume=300;
 special=cannotBePickedUp; special=huge; 
@@ -2235,22 +2235,22 @@ ID=autocycle_damaged; element=itemCombined; newID=X; action=spawn_autocycle;
 [JournalEntry]
 ID=item_autocycle_damaged;
 category=item; halfPage=true; rarity=3;
-title=Damaged Autocycle;
-text=<itemBig=autocycle_damaged><title=Damaged Autocycle><brAdj=>This complex machine is actually in decent shape. It only seems to be missing a wheel... surely there's an extra wheel out there?;
+title=受损的摩托车;
+text=<itemBig=autocycle_damaged><title=受损的摩托车><brAdj=>这台复杂的机器实际上外观挺像样的.<n>它似乎只是少了一个轮子...有多余的轮子吗?;
 
-[ItemType]  name=<color=Gold>Autocycle Wheel;
+[ItemType]  name=<color=Gold>摩托车轮胎;
 itemCategory=mech;
 ID=autocycle_wheel; sprite=1310; weight=1; volume=3;
-description=A strange wheel that seems to be in good shape.;
+description=一个奇怪的轮子,看起来形状正常.;
 pR=pHuman2;
 pG=p4;
 [JournalEntry]
 ID=item_autocycle_wheel;
 category=item; halfPage=true; rarity=2;
-title=Autocycle Wheel;
-text=<itemBig=autocycle_wheel><title=Autocycle Wheel><brAdj=>High quality tire specifically sized for an Autocycle. Surely there's one out there missing a wheel?;
+title=摩托车轮胎;
+text=<itemBig=autocycle_wheel><title=摩托车轮胎><brAdj=>专为摩托车设计的高质量轮胎.<n>肯定有辆车少了个轮子吧?;
 
-[ItemType]  name=Storm Cannon;
+[ItemType]  name=风暴大炮;
 ID=stormcannon1; sprite=929;  
 itemCategory=mech; texture=items_misc;
 special=big; special=sprite2xHeight;
@@ -2268,7 +2268,7 @@ cloneFrom=stormcannon1;
 ID=stormcannon2; element=explode; newID=stormcannon2_broken;
 
 
-[ItemType]  name=Broken Storm Cannon;
+[ItemType]  name=损坏的风暴大炮;
 ID=stormcannon1_broken; sprite=935;  
 itemCategory=mech; texture=items_misc;
 special=big; special=sprite2xHeight;
@@ -2276,11 +2276,11 @@ special=canHangOnWalls; special=cannotBePickedUp;
 pR=p2; pB=pGreyD; pG=pGold;
 depthMod=1050; weight=5000;
 blockWalking=true; blockJumping=true;
-[ItemType]  name=Broken Storm Cannon;
+[ItemType]  name=损坏的风暴大炮;
 ID=stormcannon2_broken; sprite=936;
 cloneFrom=stormcannon1_broken;
 
-[ItemType]  name=Storm Cannon;
+[ItemType]  name=风暴大炮;
 ID=stormcannon1_side1; sprite=937;  
 itemCategory=mech; texture=items_misc;
 special=big; special=sprite2xHeight;
@@ -2288,17 +2288,17 @@ special=canHangOnWalls; special=cannotBePickedUp; special=canFloatOnWater;
 pR=p2; pB=pGreyD; pG=pGold; weight=5000;
 blockWalking=true; blockJumping=true;
 
-[ItemType]  name=Burlap Pile;
+[ItemType]  name=麻布堆;
 ID=stormcannon1b; sprite=931;
 itemCategory=mech; texture=items_misc;
 special=sprite2xHeight; special=canHangOnWalls; special=cannotBePickedUp;
 depthMod=1051;
 pR=p43;
-[ItemType]  name=Burlap Pile;
+[ItemType]  name=麻布堆;
 ID=stormcannon2b; sprite=932;
 cloneFrom=stormcannon1b;
 
-[ItemType]  name=Airship;
+[ItemType]  name=飞艇;
 itemCategory=mech;
 journalID=journal_airship;
   ID=airship1; sprite=1566; weight=5000; 
@@ -2307,7 +2307,7 @@ journalID=journal_airship;
 	pR=p2; pB=pGreyD; pG=p1;
 	depthMod=1051;
 	blockWalking=true; blockJumping=true;
-[ItemType]  name=Airship;
+[ItemType]  name=飞艇;
 itemCategory=mech;
 journalID=journal_airship;
   ID=airship1_on; sprite=1566; weight=5000;
@@ -2316,7 +2316,7 @@ journalID=journal_airship;
 	pR=p2; pB=pGreyD; pG=p1;
 	depthMod=1050;
 	spawnFX=largePingRepeat_up;
-[ItemType]  name=Airship;
+[ItemType]  name=飞艇;
 itemCategory=mech;
 journalID=journal_airship;
   ID=airship2; sprite=1630; weight=5000; 
@@ -2324,14 +2324,14 @@ journalID=journal_airship;
   special=canHangOnWalls; special=cannotBePickedUp;
 	pR=p2; pB=pGreyD; pG=p1;
 	depthMod=10;
-[ItemType]  name=Airship;
+[ItemType]  name=飞艇;
 itemCategory=mech;
 journalID=journal_airship;
   ID=airship_mid; sprite=1662; weight=5000; 
   special=big; special=sprite2xWidth;
   special=canHangOnWalls; special=cannotBePickedUp;
 	pR=p2; pB=pGreyD; pG=p1;
-[ItemType]  name=Airship;
+[ItemType]  name=飞艇;
 itemCategory=mech;
 journalID=journal_airship;
   ID=airship3; sprite=1694; weight=5000; 
@@ -2340,7 +2340,7 @@ journalID=journal_airship;
 	pR=p2; pB=pGreyD; pG=p1;
 	blockWalking=true; blockJumping=true;
 	depthMod=10;
-[ItemType]  name=Airship;
+[ItemType]  name=飞艇;
 itemCategory=mech;
 journalID=journal_airship;
   ID=airship4; sprite=1758;
@@ -2349,10 +2349,10 @@ journalID=journal_airship;
 [JournalEntry]
 ID=journal_airship;
 category=item; halfPage=true; rarity=2;
-title=Airship;
-text=<itemBig=airship1><title=Airship><brAdj=>This metal-plated boat appears to be a homemade airship, complete with engine full of force triggers. It looks functional, if a bit weathered.;
+title=飞艇;
+text=<itemBig=airship1><title=飞艇><brAdj=>这艘镀金的船看起来像是一艘自制的飞艇,<n>配有强力触发器的引擎.<n>看起来还能用,只是有点风化了。;
 
-[ItemType]  name=Aerstone Slot;
+[ItemType]  name=Aerstone 槽;
 itemCategory=mech;
   ID=airship_aerstone_holder; sprite=1724; weight=5000; 
   special=big;
@@ -2367,8 +2367,8 @@ ID=airship_aerstone_holder; element=itemCombined; action=aerstoneInstalled;
 [JournalEntry]
 ID=item_airship_aerstone_holder;
 category=item; halfPage=true;
-title=Aerstone Slot;
-text=<itemBig=airship_aerstone_holder><title=Aerstone Slot><brAdj=>A protrusion designed to house Aerstone. Once fitted, it pumps energy into the Aerstone, which then generates lift.;
+title=Aerstone 槽;
+text=<itemBig=airship_aerstone_holder><title=Aerstone 槽><brAdj=>为容纳Aerstone而设计的槽.一旦安装上,<n>会将能量注入Aerstone,然后产生升力.;
 
 [ItemType]  name=Aerstone;
 itemCategory=mech;
@@ -2392,9 +2392,9 @@ itemCategory=mech;
 ID=item_airship_aerstone_small;
 category=item; halfPage=true; rarity=2;
 title=Aerstone;
-text=<itemBig=airship_aerstone_small><title=Aerstone><brAdj=>Highly efficient device holding a small chunk of Aerstone. Often studded into the sides of large airships to keep them from tipping.;
+text=<itemBig=airship_aerstone_small><title=Aerstone><brAdj=>高效率的装置,可以容纳一小块Aerstone.<n>通常镶嵌在大型飞艇的两侧,以防止它们倾斜.;
 
-[ItemType]  name=Thruster;
+[ItemType]  name=推进器;
 itemCategory=mech;
 ID=thruster_off; sprite=1785; weight=900; volume=300;
 journalID=journal_thruster;
@@ -2405,7 +2405,7 @@ blockWalking=true; blockJumping=true;
 pR=p2;
 pG=pBW;
 
-[ItemType]  name=Thruster;
+[ItemType]  name=推进器;
 itemCategory=mech;
 ID=thruster_on; sprite=1786; weight=900; volume=300;
 journalID=journal_thruster;
@@ -2421,43 +2421,43 @@ ID=thruster_on; element=mechanical; newID=thruster_off;
 [JournalEntry]
 ID=journal_thruster;
 category=item; halfPage=true; rarity=2;
-title=Thruster;
-text=<itemBig=thruster_on><title=Thruster><brAdj=>A series of Force triggers line the inside of this device, which move the ship laterally when activated.;
+title=推进器;
+text=<itemBig=thruster_on><title=推进器><brAdj=>在这个装置的内部有一系列的强力的起动装置,<n>当被激活时,能使飞船横向移动.;
 
-[ItemType]  name=Trash (Chunks);
+[ItemType]  name=废弃物 (块);
 itemCategory=mech;
 ID=trash_chunks; sprite=1347; stackable=true;
 special=quantityChangesSprite_upTo3; special=cannotBePickedUp;
 special=alwaysBelowOtherItems; special=noTooltip;
 pR=zoneDirt; pB=zoneStone; pG=zoneStone;
 
-[ItemType]  name=Trash;
+[ItemType]  name=废弃物;
 ID=trash2; sprite=1350; 
 itemCategory=mech; special=cannotBePickedUp;
 special=alwaysBelowOtherItems; special=noTooltip;
 pR=zoneDirt; pB=zoneStone; pG=zoneStone;
 
-[ItemType]  name=Trash (Rods);
+[ItemType]  name=废弃物 (棒);
 itemCategory=mech;
 ID=trash_rods; sprite=1351; stackable=true;
 special=quantityChangesSprite_upTo5; special=cannotBePickedUp;
 special=alwaysBelowOtherItems; special=noTooltip;
 pR=zoneDirt; pB=zoneStone; pG=zoneStone;
 
-[ItemType]  name=Trash (Pipes);
+[ItemType]  name=废弃物 (管道);
 itemCategory=mech;
 ID=trash_pipes; sprite=1313; stackable=true;
 special=quantityChangesSprite_upTo3; special=cannotBePickedUp;
 special=alwaysBelowOtherItems; special=noTooltip;
 pR=zoneDirt; pB=zoneStone; pG=zoneStone;
 
-[ItemType]  name=Trash (Smooth);
+[ItemType]  name=废弃物 (光滑的);
 itemCategory=mech;
 ID=trash_smooth; sprite=1356; stackable=true;
 special=quantityChangesSprite_upTo2; special=cannotBePickedUp;
 special=alwaysBelowOtherItems; special=noTooltip;
 pR=zoneDirt; pB=zoneStone; pG=zoneStone;
-[ItemType]  name=Trash (Sword);
+[ItemType]  name=废弃物 (剑);
 itemCategory=mech;
 ID=trash_sword; sprite=1281; stackable=true;
 special=quantityChangesSprite_upTo3; special=cannotBePickedUp;
@@ -2465,43 +2465,43 @@ special=alwaysBelowOtherItems; special=noTooltip;
 pR=zoneDirt; pB=zoneStone; pG=zoneStone;
 
 
-[ItemType]  name=Pipes;
+[ItemType]  name=管道;
 itemCategory=mech;
 ID=trash_pipes1; sprite=1316; special=cannotBePickedUp;
 special=canHangOnWalls; 
 pR=zoneDirt; pB=zoneStone; pG=zoneStone;
-[ItemType]  name=Pipes;
+[ItemType]  name=管道;
 itemCategory=mech;
 ID=trash_pipes2; sprite=1317; special=cannotBePickedUp;
 special=canHangOnWalls; 
 pR=zoneDirt; pB=zoneStone; pG=zoneStone;
-[ItemType]  name=Pipes;
+[ItemType]  name=管道;
 itemCategory=mech;
 ID=trash_pipes3; sprite=1318; special=cannotBePickedUp;
 special=canHangOnWalls; 
 pR=zoneDirt; pB=zoneStone; pG=zoneStone;
-[ItemType]  name=Pipes;
+[ItemType]  name=管道;
 itemCategory=mech;
 ID=trash_pipes4; sprite=1286;
 special=canHangOnWalls; special=cannotBePickedUp;
 pR=zoneDirt; pB=zoneStone; pG=zoneStone;
 
 
-[ItemType]  name=Grate;
+[ItemType]  name=格栅;
 itemCategory=mech;
 ID=grate; sprite=1364; 
 special=cannotBePickedUp; special=canHangOnWalls; 
 special=alwaysBelowOtherItems;
 pR=zoneStoneLight; pB=zoneStoneLight; pG=zoneStoneLight;
 
-[ItemType]  name=Grate;
+[ItemType]  name=格栅;
 itemCategory=mech;
 ID=grate2; sprite=1364; 
 special=cannotBePickedUp; special=canHangOnWalls; 
 special=alwaysBelowOtherItems;
 pR=zoneStoneDark; pB=zoneStoneDark; pG=zoneStoneDark;
 
-[ItemType]  name=Manhole Cover;
+[ItemType]  name=井盖;
 itemCategory=mech;
 ID=manhole_cover; sprite=1365; 
 special=cannotBePickedUp; special=canHangOnWalls; 
@@ -2512,10 +2512,10 @@ ID=manhole_cover; element=mechanical; newID=manhole;
 [JournalEntry]
 ID=item_manhole_cover;
 category=item; halfPage=true;
-title=Manhole Cover;
-text=<itemBig=manhole_cover><title=Manhole Cover><brAdj=>A manhole sealed tight by a thick lid. It's practically impenetrable.;
+title=井盖;
+text=<itemBig=manhole_cover><title=井盖><brAdj=>用厚盖子密封的井.几乎是不可进入的.;
 
-[ItemType]  name=Manhole;
+[ItemType]  name=井;
 itemCategory=mech;
 ID=manhole; sprite=1366; 
 journalID=journal_manhole;
@@ -2529,10 +2529,10 @@ ID=manhole; element=mech; newID=manhole_cover;
 [JournalEntry]
 ID=journal_manhole;
 category=item; halfPage=true;
-title=Manhole;
-text=<itemBig=manhole><title=Manhole><brAdj=>A man-sized hole, naturally. Usually includes a ladder or stairs for easy access. Most are for emergency or maintenance use.;
+title=井;
+text=<itemBig=manhole><title=井><brAdj=>一个人大小的洞.<n>通常用一个梯子或楼梯方便进入.<>大多数用于紧急情况或维修;
 
-[ItemType]  name=Manhole;
+[ItemType]  name=井;
 ID=manhole_recentlyUsed; cloneFrom=manhole;
 special=dontCloneReactions; special=timer; special=hideTimer;
 timer=13;
@@ -2542,7 +2542,7 @@ ID=manhole_recentlyUsed; element=timerUp; newID=manhole;
 ID=manhole_recentlyUsed; element=pressurePlateDown; newID=manhole_recentlyUsed;
 
 
-[ItemType]  name=Vol Cannon;
+[ItemType]  name=Vol 大炮;
 itemCategory=mech;
 ID=cannon_off; sprite=1753; weight=900; volume=300;
 journalID=journal_volcannon;
@@ -2554,7 +2554,7 @@ element=elec;
 [ItemReaction]
 ID=cannon_off; element=focus; element=elec; newID=cannon_on;
 
-[ItemType]  name=Vol Cannon;
+[ItemType]  name=Vol 大炮;
 itemCategory=mech;
 ID=cannon_on; sprite=1754; weight=900; volume=300;
 journalID=journal_volcannon;
@@ -2570,11 +2570,11 @@ ID=cannon_on; element=timerUp; newID=cannon_off; action=cannonShoot;
 ID=journal_volcannon;
 category=item; halfPage=true; rarity=3;
 title=Vol Cannon;
-text=<itemBig=cannon_on><title=Vol Cannon><brAdj=>Military device that fires a blast of energy when the Volskarn within is charged. Designed for shelling fortified positions.;
+text=<itemBig=cannon_on><title=Vol Cannon><brAdj=>一种军事设备,当内部的Volskarn被充电时,<n>会产生能量爆炸.专为炮击要塞而设计的.;
 
 
 
-[ItemType]  name=Sword Slot;
+[ItemType]  name=剑槽;
 itemCategory=mech;
 ID=mech_sword_slot; sprite=1284;
 special=cannotBePickedUp; special=alwaysBelowOtherItems; 
@@ -2591,7 +2591,7 @@ pR=pIron; pB=pIronHilt; pG=zoneDirt;
 [ItemReaction]
 ID=mech_sword_slot; element=itemCombine; action=mechanism; fx=unlock;
 
-[ItemType]  name=Sword Slot;
+[ItemType]  name=剑槽;
 itemCategory=mech;
 ID=mech_sword_slot_withSword; sprite=1285;
 special=cannotBePickedUp; special=alwaysBelowOtherItems; 
