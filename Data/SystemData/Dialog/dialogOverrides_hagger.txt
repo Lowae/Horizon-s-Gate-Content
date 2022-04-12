@@ -12,22 +12,22 @@
 animations=sly;
 animations=;
 animations=sly;
-statements=Oy!<p=> Gotcher attention, eh?;
-statements='M still lookin' for work.<p=> Remember?;
-statements='M an easy $10, that wi' $1 a day after.<p=> Whaddaya say?;
-[DialogOption] text=Hire ($10);
+statements=噢!<p=>被注意到了, eh?;
+statements=我还在找工作.<p=>有印象吗?;
+statements=预付$10,然后每天$1.<p=> 怎么样?;
+[DialogOption] text=雇佣 ($10);
 formulaReq=m:money - 9;
 nodeToConnectTo=crew_hire_hagger1_buy;
-[DialogOption] text=Hire ($10);
+[DialogOption] text=雇佣 ($10);
 formulaReq=10 - m:money;
 nodeToConnectTo=crew_hire_hagger1_cantAfford;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=crew_hire_hagger1_buy;
 animations=sly;
-statements=Arrite!<p=> Tha's the best purchase you'll ever make, mate.;
+statements=棒!<p=>这会是你最划算的一笔交易,伙计.;
 specialEffect=subtract10gp;
 specialEffect=fx,sfx_positiveNote2;
 specialEffect=addTalkerToParty,true;
@@ -35,7 +35,7 @@ specialEffect=tHired;
 
 [DialogNode] ID=crew_hire_hagger1_cantAfford;
 animations=sigh;
-statements=Yer playin' me.<p=> Nowt a bit of coin on ya!;
+statements=你玩弄我.<p=>你身上没有一分钱!;
 nextNodeID=crew_hire_hagger1_dontHire;
 ---
 
@@ -54,23 +54,23 @@ nextNodeID=overridden;
 animations=;
 animations=sly;
 animations=handoutPose;
-statements=Oy!<p=> Belay there mate!;
-statements='M lookin' for work.<p=> I see y'jus' fit yerself with a nice new ship!;
-statements=Wager you'll need new blood to handle that!<p=> An' I'm jus' the thing for it!;
+statements=噢!<p=>看这儿伙计!;
+statements=我在找工作.<p=>我看见你买了一艘新船!;
+statements=我打赌你需要新鲜血液来处理很多事情!<p=>我就是合适的人选!;
 nextNodeID=hagger_talk1b;
 
 
 [DialogNode] ID=hagger_talk1b;
 animations=sly;
-statements='M an easy $10, that wi' $1 a day after.<p=> Whaddaya say?;
+statements=只需要预付$10,然后每天$1.<p=>怎么样?;
 
-[DialogOption] text=Hire ($10);
+[DialogOption] text=雇佣 ($10);
 formulaReq=m:money - 9;
 nodeToConnectTo=crew_hire_hagger1_buy2a;
-[DialogOption] text=Hire ($10);
+[DialogOption] text=雇佣 ($10);
 formulaReq=10 - m:money;
 nodeToConnectTo=crew_hire_hagger1_cantAfford_firstTry;
-[DialogOption] text=No thanks.;
+[DialogOption] text=不用,谢谢.;
 animation=sigh;
 nodeToConnectTo=crew_hire_hagger1_dontHire;
 bottomOption=true;
@@ -83,17 +83,17 @@ fReq=party:reeve - g:D_hagger_talk1_reeve_interrupt1;
 speakerOverride=reeve;
 animations=sly;
 animations=meh;
-statements=We do need more crew, Commodore.<p=> Sounds good to me.;
-statements=Of course, if you don't like the look of this guy, we can always hire crew from the cafe...;
+statements=我们需要更多的船员,船长.<p=>听起来不错.;
+statements=当然,如果你不喜欢这家伙的长相,我们也能一直从咖啡官里雇佣船员...;
 nextNodeID=overridden;
 
 [DialogNode] ID=crew_hire_hagger1_buy2a;
 animations=;
 animations=sly;
 animations=happy;
-statements=Arrite!<p=> Tha's the best purchase you'll ever make, mate.;
-statements=Now we're pals, why not let's head to the cafe?;
-statements=Drink to th' start of a new voyage!;
+statements=棒!<p=>这会是你最划算的一笔交易,伙计.;
+statements=现在我们是朋友了,为什么不去趟咖啡馆呢?;
+statements=为新航程的开始干杯!;
 specialEffect=subtract10gp;
 specialEffect=addTalkerToParty,true;
 specialEffect=fx,sfx_positiveNote2;
@@ -105,25 +105,25 @@ nextNodeID_fReq=party:reeve;
 [DialogNode] ID=crew_hire_hagger1_buy2b;
 speakerOverride=reeve;
 animations=meh;
-statements=If this is just an excuse to get a cheap drink out of us...;
+statements=如果这只是个为了便宜酒钱的借口...;
 nextNodeID=crew_hire_hagger1_buy2c;
 
 [DialogNode] ID=crew_hire_hagger1_buy2c;
 speakerOverride=hagger;
 animations=sly;
 animations=happy;
-statements=Never!<p=1.2> Hagger's promises're good as gold!;
-statements=An m'suggestions as good as silver!<p=1.5> But th' call is yours,<p=> 'Commodore'!;
+statements=不会的!<p=1.2>Hagger一诺千金!;
+statements=我的建议也如银子一般好!<p=1.5>但是决定权在你,<p=> '船长'!;
 
 
 [DialogNode] ID=crew_hire_hagger1_cantAfford_firstTry;
 animations=scared;
-statements=Yer playin' me.<p=> Nowt a bit of coin on ya!;
+statements=你玩弄我.<p=>你没有一分钱!;
 nextNodeID=crew_hire_hagger1_dontHire;
 
 [DialogNode] ID=crew_hire_hagger1_dontHire;
 animations=sigh;
-statements=Shame, shame.<p=> Well, I'll be 'round if things change!;
+statements=羞愧, 羞愧.<p=> 好吧, 有钱了我再来!;
 nextNodeID=crew_hire_hagger1_dontHire2;
 
 [DialogNode] ID=crew_hire_hagger1_dontHire2;

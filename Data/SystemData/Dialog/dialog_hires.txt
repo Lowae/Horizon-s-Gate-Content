@@ -4,20 +4,20 @@
 
 [DialogNode] ID=crew_hire;
 animations=;
-statements=Need a crew member? Only $10 upfront and $1 a day after.;
-[DialogOption] text=Hire ($10);
+statements=需要船员吗?只需要预付$10,然后每天$1.;
+[DialogOption] text=雇佣 ($10);
 formulaReq=m:money - 9;
 nodeToConnectTo=crew_hire_buy;
-[DialogOption] text=Hire ($10);
+[DialogOption] text=雇佣 ($10);
 formulaReq=10 - m:money;
 nodeToConnectTo=crew_hire_cantAfford;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=crew_hire_buy;
 animations=happy;
-statements=<rand=Alright!/Great!/Deal./> <rand=You won't regret it!/You've made the right choice.>;
+statements=<rand=好!/太棒了!/交易./> <rand=你不会后悔的!/你做了正确的选择.>;
 specialEffect=subtract10gp;
 specialEffect=fx,sfx_positiveNote2;
 specialEffect=addTalkerToParty;
@@ -25,32 +25,32 @@ specialEffect=tHired;
 
 [DialogNode] ID=crew_hire_cantAfford;
 animations=angry;
-statements=You don't have the money! <rand=Come back when you've got something to offer./Forget it./Nevermind.>;
+statements=你没有钱! <rand=等你可以负担得起的时候再回来./忘了吧./没关系.>;
 
 ---REHIRE
 
 [DialogNode] ID=crew_rehire;
 animations=;
-statements=(Hire <actorName=> for $10 upfront and $1 per day?);
-[DialogOption] text=Hire ($10);
+statements=(雇佣<actorName=>预付$10然后每天$1?);
+[DialogOption] text=雇佣 ($10);
 formulaReq=m:money - 9;
 nodeToConnectTo=crew_rehire_buy;
-[DialogOption] text=Hire ($10);
+[DialogOption] text=雇佣 ($10);
 formulaReq=10 - m:money;
 nodeToConnectTo=crew_rehire_cantAfford;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=crew_rehire_buy;
-statements=(<actorName=> joins your party.);
+statements=(<actorName=>加入了你的队伍.);
 specialEffect=subtract10gp;
 specialEffect=fx,sfx_positiveNote2;
 specialEffect=addTalkerToParty;
 specialEffect=tHired;
 
 [DialogNode] ID=crew_rehire_cantAfford;
-statements=(You don't have enough money.);
+statements=(你没有足够的钱.);
 
 
 
@@ -64,22 +64,22 @@ statements=(You don't have enough money.);
 animations=angry;
 animations=meh;
 animations=;
-statements='Ey. You.;
-statements=You need a new crewman? I'm lookin' for work.;
-statements=$10 once, then $1 a day after. Seem fair?;
-[DialogOption] text=Hire ($10);
+statements='嗨.你.;
+statements=你需要新船员吗?我正在找工作.;
+statements=一次$10,然后每天$1.看起来应该合理?;
+[DialogOption] text=雇佣 ($10);
 formulaReq=m:money - 9;
 nodeToConnectTo=crew_hire2_buy;
-[DialogOption] text=Hire ($10);
+[DialogOption] text=雇佣 ($10);
 formulaReq=10 - m:money;
 nodeToConnectTo=crew_hire2_cantAfford;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=crew_hire2_buy;
 animations=meh;
-statements=<pmf=Good man./Good lass.> <rand=I'm with ya./Let's get to it.>;
+statements=<pmf=你是个好人./你是个好人.> <rand=我跟着你./让我们走吧.>;
 specialEffect=subtract10gp;
 specialEffect=fx,sfx_positiveNote2;
 specialEffect=addTalkerToParty;
@@ -87,7 +87,7 @@ specialEffect=tHired;
 
 [DialogNode] ID=crew_hire2_cantAfford;
 animations=sigh;
-statements=You don't have enough. Maybe y'should pay more attention to your wallet, heh.;
+statements=你没有足够的钱.可能你需要多注意下你的钱包, heh.;
 
 ---
 
@@ -96,20 +96,20 @@ statements=You don't have enough. Maybe y'should pay more attention to your wall
 animations=sigh;
 animations=meh;
 statements=<speed=0.35>...;
-statements=<speed=0.5>...$10. ...and $1 per day. ...no less.;
-[DialogOption] text=Hire ($10);
+statements=<speed=0.5>...$10. ...然后每天$1. ...不能再少了.;
+[DialogOption] text=雇佣 ($10);
 formulaReq=m:money - 9;
 nodeToConnectTo=crew_hire3_buy;
-[DialogOption] text=Hire ($10);
+[DialogOption] text=雇佣 ($10);
 formulaReq=10 - m:money;
 nodeToConnectTo=crew_hire3_cantAfford;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=crew_hire3_buy;
 animations=meh;
-statements=<rand=Good./...alright.> <rand=.../>;
+statements=<rand=好./...好.> <rand=.../>;
 specialEffect=subtract10gp;
 specialEffect=fx,sfx_positiveNote2;
 specialEffect=addTalkerToParty;
@@ -117,7 +117,7 @@ specialEffect=tHired;
 
 [DialogNode] ID=crew_hire3_cantAfford;
 animations=angry;
-statements=...I said no less.;
+statements=...我说不能再少了.;
 
 ---
 

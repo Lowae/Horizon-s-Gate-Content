@@ -1,6 +1,6 @@
 
-[ItemType]  name=Gloam Shroom;
-description=Mushrooms that light up around movement.; 
+[ItemType]  name=黄昏蘑菇;
+description=在周围移动时会发光的蘑菇.; 
 journalID=journal_gloamShroom;
 ID=glowshroomOff; sprite=22; pR=pGreyD;
 weight=0; itemCategory=plant;
@@ -11,8 +11,8 @@ ID=glowshroomOff; element=slash; element=fire; element=explode; element=tileReac
 [ItemReaction] 
 ID=glowshroomOff; element=physical; element=wind; element=use; element=pressureMove; newID=glowshroomOn; fx=shroomdust_activate;
 
-[ItemType]  name=Gloam Shroom;
-description=Mushrooms that light up around movement.; 
+[ItemType]  name=黄昏蘑菇;
+description=在周围移动时会发光的蘑菇.; 
 journalID=journal_gloamShroom;
 ID=glowshroomOn; sprite=22; pR=pShroom_glow; spawnFX=shroomdust;
 weight=0; itemCategory=plant; 
@@ -25,8 +25,8 @@ ID=glowshroomOn; element=wither; newID=glowshroomOff;
 [ItemLight] 
 ID=glowshroomOn; red=0.7; blue=1; green=0.6; alpha=0.6; size=0.7; flicker=0.01;
 
-[ItemType]  name=Gloam Shroom;
-description=Mushrooms that light up around movement.; 
+[ItemType]  name=黄昏蘑菇;
+description=在周围移动时会发光的蘑菇.; 
 journalID=journal_gloamShroom;
 ID=glowshroomOff2; sprite=23; pR=pGreyD; 
 weight=0; itemCategory=plant;
@@ -37,8 +37,8 @@ ID=glowshroomOff2; element=slash; element=fire; element=explode; element=tileRea
 [ItemReaction] 
 ID=glowshroomOff2; element=physical; element=wind; element=use; element=pressureMove; newID=glowshroomOn2; fx=shroomdust_activate;
 
-[ItemType]  name=Gloam Shroom;
-description=Mushrooms that light up around movement.; 
+[ItemType]  name=黄昏蘑菇;
+description=在周围移动时会发光的蘑菇.; 
 journalID=journal_gloamShroom;
 weight=0; itemCategory=plant; pR=pShroom_glow; spawnFX=shroomdust;
 special=cannotBePickedUp; special=canHangOnWalls; special=emitParticleEvery100Frames;
@@ -52,8 +52,8 @@ ID=glowshroomOn2; element=wither; newID=glowshroomOff2;
 ID=glowshroomOn2; red=0.7; blue=1; green=0.6; alpha=0.6; size=0.7; flicker=0.01;
 
 
-[ItemType]  name=Gloam Shroom Chunk;
-description=Mushroom that lights up around movement.; 
+[ItemType]  name=黄昏蘑菇块;
+description=在周围移动时会发光的蘑菇.; 
 journalID=journal_gloamShroom;
 ID=glowshroomPiece; sprite=26; pR=pShroom_glow;
 weight=0; volume=1; stackable=true; itemCategory=plant;
@@ -66,12 +66,12 @@ ID=glowshroomPiece; red=0.7; blue=1; green=0.6; alpha=0.6; size=0.7; flicker=0.0
 [JournalEntry]
 ID=journal_gloamShroom;
 category=item; halfPage=true; rarity=2;
-title=Gloam Shroom;
-text=<itemBig=glowshroomPiece><title=Gloam Shroom><brAdj=>These odd fungi spread in caves and other dark places. Though inedible, they're useful to travellers - when shaken, they glow with blue light.;
+title=黄昏蘑菇;
+text=<itemBig=glowshroomPiece><title=Gloam Shroom><brAdj=>这些奇怪的真菌在洞穴和其他黑暗的地方传播.<n>尽管不能食用,但对旅行者来说很有用<n> - 摇晃时,它们会发出蓝光.;
 
-[ItemType]  name=Murk Spore;
+[ItemType]  name=黑暗孢子;
 ID=murkspore1; sprite=1176; itemCategory=plant; 
-description=Toxic fungus that grows rapidly in darkness.;
+description=在黑暗中快速生长的有毒真菌.;
 journalID=journal_murkspore;
 weight=0; pR=pGreyDG; pB=pPurpleD;
 special=cannotBePickedUp; special=big; special=timer; 
@@ -89,9 +89,9 @@ ID=murkspore1; element=mechanical2; newID=X; fx=smog;
 ID=murkspore1; element=slash; element=fire; element=elec; newID=X; 
 
 
-[ItemType]  name=Murk Spore;
+[ItemType]  name=黑暗孢子;
 ID=murkspore2; sprite=1177; itemCategory=plant; 
-description=Toxic fungus that grows rapidly in darkness.;
+description=在黑暗中快速生长的有毒真菌.;
 journalID=journal_murkspore;
 weight=0; pR=pGreyDG; pB=pPurpleD;
 special=cannotBePickedUp; special=big; special=timer; 
@@ -107,9 +107,9 @@ ID=murkspore2; element=mechanical; newID=murkspore3; action=spreadMurkspore; fx=
 ID=murkspore2; element=mechanical2; newID=murkspore1; fx=smog;
 
 
-[ItemType]  name=Murk Spore;
+[ItemType]  name=黑暗孢子;
 ID=murkspore3; sprite=1144; itemCategory=plant; 
-description=Toxic fungus that grows rapidly in darkness.;
+description=在黑暗中快速生长的有毒真菌.;
 journalID=journal_murkspore;
 weight=0; pR=pGreyDG; pB=pPurpleD;
 special=cannotBePickedUp; special=big; special=timer; 
@@ -125,9 +125,9 @@ ID=murkspore3; element=mechanical; action=spreadMurkspore;
 ID=murkspore3; element=mechanical2; newID=murkspore2; fx=smog;
 
 
-[ItemType]  name=Murk Spore Clog;
+[ItemType]  name=厚密的黑暗孢子;
 ID=murkspore_clog; sprite=1208; itemCategory=plant; 
-description=Murk Spore so thick it is inert to light & dark.;
+description=黑暗孢子如此之厚,对光和黑暗都是惰性的.;
 journalID=journal_murkspore;
 weight=0; pR=pGreyDG; pB=pPurpleD;
 special=cannotBePickedUp; special=big;
@@ -136,9 +136,9 @@ blockWalking=true;
 [ItemReaction] 
 ID=murkspore_clog; element=physical; element=explode; element=fire; newID=murkspore3; fx=smog;
 
-[ItemType]  name=Murk Spore;
+[ItemType]  name=黑暗孢子;
 ID=murkspore_water; sprite=1210; itemCategory=plant; 
-description=Toxic fungus that grows rapidly in darkness.;
+description=在黑暗中快速生长的有毒真菌.;
 journalID=journal_murkspore;
 weight=0; pR=pGreyDG; pB=pPurpleD;
 special=cannotBePickedUp; special=big; special=timer; 
@@ -154,11 +154,11 @@ ID=murkspore_water; element=mechanical; action=spreadMurkspore;
 [JournalEntry]
 ID=journal_murkspore;
 category=item; halfPage=true; rarity=2;
-title=Murk Spore;
-text=<itemBig=murkspore3><title=Murk Spore><brAdj=>Poison mushrooms that ruined many ecosystems. They grow rapidly in darkness, and can even spread underwater! Only bright light withers them.;
+title=黑暗孢子;
+text=<itemBig=murkspore3><title=Murk Spore><brAdj=>有毒蘑菇破坏了许多生态系统.<n>它们在黑暗中生长迅速,甚至可以在水下蔓延!<n>只有强光才能使它们枯萎.;
 
-[ItemType]  name=<color=OrangeRed>Cave Flower;
-description=Rare, bright red mushroom delicacy. Eating it grants a <color=OrangeRed>permanent<color=White> +1<icon=HP>.;
+[ItemType]  name=<color=OrangeRed>洞穴之花;
+description=少见的美味的鲜红色蘑菇.食用后<color=OrangeRed>permanent<color=White> +1<icon=HP>.;
 ID=caveFlower; sprite=26; pR=pR; 
 weight=0; volume=1; value=2200; itemCategory=plant; 
 special=consumeOnUse; action=eat_HP_Up1;
@@ -166,10 +166,10 @@ special=canHangOnWalls;
 [JournalEntry]
 ID=item_caveFlower;
 category=item; halfPage=true; rarity=2;
-title=Cave Flower;
-text=<itemBig=caveFlower><title=Cave Flower><brAdj=>Named for their bright, appealing color. Unlike most brightly colored mushrooms, these are highly nutritious.;
+title=洞穴之花;
+text=<itemBig=caveFlower><title=Cave Flower><brAdj=>因其明亮诱人的颜色而得名.<n>与大多数颜色鲜艳的蘑菇不同,<n>这些蘑菇营养丰富.;
 
-[ItemType]  name=Aldleaf Plant;
+[ItemType]  name=Aldleaf植物;
 ID=aldleafPlant; sprite=521; 
 journalID=journal_aldleaf;
 weight=0; volume=1; itemCategory=plant;
@@ -186,7 +186,7 @@ ID=aldleafPlant; element=growth; newID=aldleafBush; fx=leafdust;
 [ItemReaction] 
 ID=aldleafPlant; element=wither; newID=aldleafPlant_wither;
 
-[ItemType]  name=Aldleaf Plant (Withered);
+[ItemType]  name=Aldleaf植物(枯萎的);
 ID=aldleafPlant_wither; sprite=490; 
 journalID=journal_aldleaf;
 weight=0; volume=1; itemCategory=plant;
@@ -199,7 +199,7 @@ ID=aldleafPlant_wither; element=fire; newID=X; fx=leafdust;
 [ItemReaction] 
 ID=aldleafPlant_wither; element=growth; newID=aldleafPlant; fx=leafdust;
 
-[ItemType]  name=Aldleaf Bush;
+[ItemType]  name=Aldleaf灌木;
 ID=aldleafBush; sprite=522; 
 journalID=journal_aldleaf;
 weight=1; itemCategory=plant;
@@ -216,7 +216,7 @@ ID=aldleafBush; element=fire; newID=fire; fx=leafdust;
 [ItemReaction] 
 ID=aldleafBush; element=wither; newID=aldleafBush_wither;
 
-[ItemType]  name=Aldleaf Bush (Withered);
+[ItemType]  name=Aldleaf灌木(枯萎的);
 ID=aldleafBush_wither; sprite=522; 
 journalID=journal_aldleaf;
 weight=1; itemCategory=plant;
@@ -232,7 +232,7 @@ ID=aldleafBush_wither; element=fire; newID=fire; fx=leafdust;
 ID=aldleafBush_wither; element=growth; newID=aldleafBush;
 
 [ItemType]  name=Aldleaf;
-description=Broad leaf that is useful as makeshift cloth. Fairly durable.;
+description=宽大的叶子,可用作临时的布料.非常耐用.;
 journalID=journal_aldleaf;
 ID=aldleaf; sprite=489; stackable=true; itemCategory=plant;
 pR=p57; pB=pGreen2;
@@ -245,14 +245,14 @@ weight=0; value=8;
 ID=journal_aldleaf;
 category=item; halfPage=true; rarity=1;
 title=Aldleaf;
-text=<itemBig=aldleaf><title=Aldleaf><brAdj=>Known for the broadness of its blade, Aldleaf is surprisingly sturdy, and is commonly used as clothing in primitive societies.;
+text=<itemBig=aldleaf><title=Aldleaf><brAdj=>以其宽大的叶子而闻名,<n>Aldleaf非常的结实,<n>在原始社会常被做成衣服.;
 
-[ItemType]  name=Aldleaf Bush;
+[ItemType]  name=Aldleaf灌木;
 ID=aldleafBush_flat; sprite=522; 
 cloneFrom=aldleafBush;
 blockWalking=false; blockJumping=false;
 
-[ItemType]  name=Bush;
+[ItemType]  name=灌木;
 ID=bush_huge1; sprite=1104; 
 journalID=journal_bush;
 weight=1; itemCategory=plant;
@@ -267,7 +267,7 @@ ID=bush_huge1; element=slash; element=fire; element=ruin; newID=bush2; fx=leafdu
 [ItemReaction] 
 ID=bush_huge1; element=wither; newID=X; fx=leafdust;
   
-[ItemType]  name=Bush;
+[ItemType]  name=灌木;
 ID=bush_big1; sprite=1106; 
 journalID=journal_bush;
 weight=1; itemCategory=plant;
@@ -283,7 +283,7 @@ ID=bush_big1; element=slash; element=fire; element=ruin; newID=bush2; fx=leafdus
 ID=bush_big1; element=wither; newID=X; fx=leafdust;
   
  
-[ItemType]  name=Bush;
+[ItemType]  name=灌木;
 ID=bush1; sprite=1138; 
 journalID=journal_bush;
 weight=1; itemCategory=plant;
@@ -296,7 +296,7 @@ ID=bush1; element=slash; element=fire; element=ruin; newID=bush2; fx=leafdust;
 [ItemReaction] 
 ID=bush1; element=wither; newID=X; fx=leafdust;
 
-[ItemType]  name=Bush;
+[ItemType]  name=灌木;
 ID=bush2; sprite=1139; 
 journalID=journal_bush;
 weight=1; itemCategory=plant;
@@ -309,11 +309,11 @@ ID=bush2; element=slash; element=fire; element=ruin; element=wither; newID=X; fx
 [JournalEntry]
 ID=journal_bush;
 category=item; halfPage=true;
-title=Bush;
-text=<itemBig=bush1><title=Bush><brAdj=>Although it has not been categorized, this particular species of bush appears both inoffensive and unremarkable. Cut it down if it obstructs your path.;
+title=灌木;
+text=<itemBig=bush1><title=灌木><brAdj=>虽然它还没有被分类,<n>这种特殊种类的灌木似乎既无害也不引人注目.<n>如果它挡住了你的去路,就把它砍了.;
 
 
-[ItemType]  name=Flowers;
+[ItemType]  name=花;
 ID=bush_flowers1; sprite=1135; 
 weight=1; itemCategory=plant;
 pR=zoneGrass; pB=pYellow; pG=pPurpleD;
@@ -327,7 +327,7 @@ newID=bush2; fx=grassdust_rustle;
 [ItemReaction] 
 ID=bush_flowers1; element=fire; element=explode; newID=fire_small; fx=grassdust_rustle;
   
-[ItemType]  name=Tall Grass;
+[ItemType]  name=高草丛;
 ID=grass_tall1; sprite=1108; 
 journalID=journal_grass_tall;
 weight=1; itemCategory=plant;
@@ -360,7 +360,7 @@ newID=fire; fx=grassdust;
 ID=grass_tall1; element=ruin; element=wither;
 newID=grass_tall_wither; fx=grassdust;
 
-[ItemType]  name=Grass;
+[ItemType]  name=草从;
 ID=grass_mid1; sprite=1109; 
 journalID=journal_grass_tall;
 weight=1; itemCategory=plant;
@@ -391,7 +391,7 @@ newID=X; fx=grassdust;
 ID=grass_mid1; element=ruin; element=wither;
 newID=grass_tall_wither; fx=grassdust;
   
-[ItemType]  name=Tall Grass (Flat);
+[ItemType]  name=高草丛(平坦的);
 ID=grass_tall_flat; sprite=1142; 
 weight=1; itemCategory=plant;
 pR=zoneGrass;
@@ -408,7 +408,7 @@ newID=X; fx=grassdust;
 ID=grass_tall_flat; element=ruin; element=wither;
 newID=grass_tall_wither; fx=grassdust;
 
-[ItemType]  name=Tall Grass (Withered);
+[ItemType]  name=高草丛(枯萎的);
 ID=grass_tall_wither; sprite=1142; 
 weight=1; itemCategory=plant;
 pR=pWitherPlant;
@@ -423,12 +423,12 @@ newID=X; fx=grassdust;
 [JournalEntry]
 ID=journal_grass_tall;
 category=item; halfPage=true;
-title=Tall Grass;
-text=<itemBig=grass_mid1><title=Tall Grass><brAdj=>This tall grass doesn't obstruct movement, but it does obstruct your vision. Creatures that lurk within it gain +20% <icon=PhysEva> that is unaffected by flanking.;
+title=高草丛;
+text=<itemBig=grass_mid1><title=高草丛><brAdj=>高草丛不会妨碍你的行动,但它会妨碍你的视线.<n>潜伏其中的生物+20%<icon=PhysEva>,被夹击时除外.;
 
 
 
-[ItemType]  name=Lattice Weed Sprouts;
+[ItemType]  name=晶格状杂草芽;
   ID=latticeWeed_sprout; sprite=481;  itemCategory=plant;
   weight=0; volume=10000;
   pR=overworld1; pG=pOrange;
@@ -439,7 +439,7 @@ ID=latticeWeed_sprout; element=newDay; element=growth; newID=latticeWeed; fx=lea
 [ItemReaction] 
 ID=latticeWeed_sprout; element=fire; element=explode; newID=X;
 
-[ItemType]  name=Lattice Weed;
+[ItemType]  name=晶格状杂草;
   ID=latticeWeed; sprite=482;  itemCategory=plant;
   weight=0; volume=10000;
   pR=overworld1; pG=pOrange;
@@ -457,10 +457,10 @@ ID=latticeWeed; element=newDay; action=growLatticeSeeds;
 [JournalEntry]
 ID=item_latticeWeed;
 category=item; halfPage=true; rarity=1;
-title=Lattice Weed;
-text=<itemBig=latticeWeed><title=Lattice Weed><brAdj=>Mesh-like vines that clamber up any surface they find. Reviled by landowners for being pernicious and durable, but invaluable to intrepid climbers.;
+title=晶格状杂草;
+text=<itemBig=latticeWeed><title=晶格状杂草><brAdj=>网状藤蔓攀爬在任何他们触达的表面.<n>被土地所有者痛斥是害草,<n>但对勇敢的登山者来说却是无价的.;
 
-[ItemType]  name=Lattice Seeds;
+[ItemType]  name=晶格状杂草种子;
   ID=latticeSeeds; sprite=483;  itemCategory=plant;
   spriteWhenHeld=0;
   description=Small, bristly seeds.;
@@ -476,11 +476,11 @@ ID=latticeSeeds; element=growth; newID=latticeWeed;
 [JournalEntry]
 ID=item_latticeSeeds;
 category=item; halfPage=true; rarity=1;
-title=Lattice Seeds;
-text=<itemBig=latticeSeeds><title=Lattice Seeds><brAdj=>Bristly seeds that catch easily on clothing and fur. Just a few of these pods can grow into a mess of vines that covers an entire wall. You can place them yourself, but only on natural surfaces.;
+title=晶格状杂草种子;
+text=<itemBig=latticeSeeds><title=晶格状杂草种子><brAdj=>刚毛状的种子很容易附着在衣服和毛皮上.<n>仅仅几个豆荚就能长成一堆藤蔓,覆盖整面墙.<n>你可以自己种植,但只能种在土面上.;
  
 
-[ItemType]  name=Hanging Vines;
+[ItemType]  name=悬挂中的葡萄藤;
   ID=vines_hanging; sprite=1200; itemCategory=plant;
   weight=0; volume=10000; stackable=true;
   pR=zoneGrass;
@@ -492,7 +492,7 @@ defaultQuantity_rand=4;
 [ItemReaction] 
 ID=vines_hanging; element=fire; element=slash; element=wither; newID=X; fx=leafdust;
   
-[ItemType]  name=Cliff Vines;
+[ItemType]  name=悬崖葡萄藤;
 ID=vines_cliff; sprite=344; itemCategory=plant;
 weight=0; volume=10000; stackable=true;
 pR=zoneGrass; pG=pFadeDarker;
@@ -503,7 +503,7 @@ element=life;
 [ItemReaction] 
 ID=vines_cliff; element=fire; element=slash; element=wither; newID=X; fx=leafdust;
   
-[ItemType]  name=Cliff Vines;
+[ItemType]  name=悬崖葡萄藤;
 ID=vines_cliff_wide; sprite=376; itemCategory=plant;
 weight=0; volume=10000; stackable=true;
 pR=zoneGrass;  pG=pFadeDarker;
@@ -514,7 +514,7 @@ element=life;
 ID=vines_cliff_wide; element=fire; element=slash; element=wither; newID=X; fx=leafdust;
   
  
-[ItemType]  name=Cliff Vines;
+[ItemType]  name=悬崖葡萄藤;
 ID=vines_cliff_long_top; sprite=350; itemCategory=plant;
 weight=0; volume=10000; stackable=true;
 pR=zoneGrass; pG=pFadeDarker;
@@ -524,7 +524,7 @@ element=life;
 [ItemReaction] 
 ID=vines_cliff_long_top; element=fire; element=slash; element=wither; newID=X; fx=leafdust;
  
-[ItemType]  name=Cliff Vines;
+[ItemType]  name=悬崖葡萄藤;
 ID=vines_cliff_long_mid; sprite=382; itemCategory=plant;
 weight=0; volume=10000; stackable=true;
 pR=zoneGrass; pG=pFadeDarker;
@@ -534,7 +534,7 @@ element=life;
 [ItemReaction] 
 ID=vines_cliff_long_mid; element=fire; element=slash; element=wither; newID=X; fx=leafdust;
 
-[ItemType]  name=Cliff Vines;
+[ItemType]  name=悬崖葡萄藤;
 ID=vines_cliff_long_btm; sprite=414; itemCategory=plant;
 weight=0; volume=10000; stackable=true;
 pR=zoneGrass; pG=pFadeDarker;
@@ -545,7 +545,7 @@ element=life;
 ID=vines_cliff_long_btm; element=fire; element=slash; element=wither; newID=X; fx=leafdust;
  
  
-[ItemType]  name=Sapling;
+[ItemType]  name=树苗;
 ID=sapling_unplanted; sprite=556; 
 journalID=journal_sapling;
 weight=50; itemCategory=plant;
@@ -557,7 +557,7 @@ ID=sapling_unplanted; element=bury; newID=sapling_planted;
 [ItemReaction] 
 ID=sapling_unplanted; element=growth; newID=tree_small; fx=leafdust;
   
-[ItemType]  name=Sapling;
+[ItemType]  name=树苗;
 ID=sapling_planted; sprite=557; 
 journalID=journal_sapling;
 weight=500; itemCategory=plant;
@@ -572,10 +572,10 @@ ID=sapling_planted; element=growth; element=timerUp; newID=tree_small; fx=leafdu
 [JournalEntry]
 ID=journal_sapling;
 category=item; halfPage=true;
-title=Sapling;
-text=<itemBig=sapling_unplanted><title=Sapling><brAdj=>A young tree, small enough to be dug up or replanted. It's only a matter of time until it grows into a proper tree.;
+title=树苗;
+text=<itemBig=sapling_unplanted><title=树苗><brAdj=>一颗小树,小到可以挖出来重新种植.<n>它长成一棵合适的树只是时间问题.;
 
-[ItemType]  name=Small Tree;
+[ItemType]  name=小树;
 ID=tree_small; sprite=523; 
 journalID=journal_tree;
 weight=500; itemCategory=plant;
@@ -590,7 +590,7 @@ ID=tree_small; element=heavySlash; element=explode; newID=debris; fx=break_tree;
 [ItemReaction] 
 ID=tree_small; element=growth; newID=tree;
 
-[ItemType]  name=Damaged Tree;
+[ItemType]  name=受损的树;
 ID=tree_burnt; sprite=491;
 journalID=journal_tree;
 weight=500; itemCategory=plant;
@@ -602,7 +602,7 @@ ID=tree_burnt; element=growth; newID=tree_small;
 [ItemReaction] 
 ID=tree_burnt; element=heavySlash; element=explode; newID=debris; fx=break_tree;
 
-[ItemType]  name=Tree;
+[ItemType]  name=树;
 ID=tree_med; sprite=492; 
 journalID=journal_tree;
 weight=500; itemCategory=plant;
@@ -616,7 +616,7 @@ ID=tree_med; element=fire; element=explode; newID=tree_burnt; fx=burnMany; spawn
 [ItemReaction] 
 ID=tree_med; element=heavySlash; newID=tree_stump; fx=break_tree;
 
-[ItemType]  name=Tree;
+[ItemType]  name=树;
 ID=tree; sprite=493; 
 journalID=journal_tree;
 weight=500; itemCategory=plant;
@@ -633,7 +633,7 @@ spawnItem=woodPlank;
 [ItemReaction] 
 ID=tree; element=growth; newID=tree_big;
 
-[ItemType]  name=Tree;
+[ItemType]  name=树;
 ID=tree_big; sprite=494; 
 journalID=journal_tree;
 weight=500; itemCategory=plant;
@@ -649,7 +649,7 @@ ID=tree_big; element=heavySlash; newID=tree_stump; fx=break_tree;
 spawnItem=woodPlank; spawnItem=woodPlank;
 
 
-[ItemType]  name=Small Leafy Tree;
+[ItemType]  name=小多叶树;
 ID=tree_small_leafy; sprite=427; 
 pR=zoneWoodDark; pG=zoneGrassDark;
  special=sprite2xHeight;
@@ -658,16 +658,16 @@ cloneFrom=tree_small;
 ID=tree_med_leafy; sprite=428; 
 pR=zoneWoodDark; pG=zoneGrassDark;
 cloneFrom=tree_med;
-[ItemType]  name=Leafy Tree;
+[ItemType]  name=多叶树;
 ID=tree_leafy; sprite=429; 
 pR=zoneWoodDark; pG=zoneGrassDark;
 cloneFrom=tree;
-[ItemType]  name=Leafy Tree;
+[ItemType]  name=多叶树;
 ID=tree_big_leafy; sprite=430;
 pR=zoneWoodDark; pG=zoneGrassDark;
 cloneFrom=tree_big;
 
-[ItemType]  name=Tree Stump;
+[ItemType]  name=树桩;
 ID=tree_stump; sprite=528; 
 journalID=journal_tree;
 weight=500; itemCategory=plant;
@@ -685,10 +685,10 @@ ID=tree_stump; element=growth; newID=tree_small;
 [JournalEntry]
 ID=journal_tree;
 category=item; halfPage=true;
-title=Tree;
-text=<itemBig=tree><title=Tree><brAdj=>Trees are plants of thick wood and many branches. Their wood can be harvested with an axe.;
+title=树;
+text=<itemBig=tree><title=树><brAdj=>树木是由大量的木头和许多树枝组成的植物.<n>他们的木头可以用斧头收获.;
 
-[ItemType]  name=Spiny Tree;
+[ItemType]  name=多刺树;
 ID=tree2_base; sprite=592; 
 weight=500; itemCategory=plant;
 journalID=journal_spinytree;
@@ -697,7 +697,7 @@ special=big; special=cannotBePickedUp; special=canHangOnWalls;
 blockLoE=true; blockWalking=true; blockJumping=true;
 depthMod=1050;
   element=life;
-[ItemType]  name=Spiny Tree;
+[ItemType]  name=多刺树;
 ID=tree2_mid; sprite=560; 
 weight=500; itemCategory=plant;
 journalID=journal_spinytree;
@@ -705,25 +705,25 @@ pR=zoneGrass;
 special=cannotBePickedUp; special=canHangOnWalls;
 depthMod=2050;
   element=life;
-[ItemType]  name=Spiny Tree;
+[ItemType]  name=多刺树;
 ID=tree2_mid2; sprite=593; 
 cloneFrom=tree2_mid;
-[ItemType]  name=Spiny Tree;
+[ItemType]  name=多刺树;
 ID=tree2_mid3; sprite=561; 
 cloneFrom=tree2_mid;
-[ItemType]  name=Spiny Tree;
+[ItemType]  name=多刺树;
 ID=tree2_top; sprite=562; 
 cloneFrom=tree2_mid;
-[ItemType]  name=Spiny Tree;
+[ItemType]  name=多刺树;
 ID=tree2_top2; sprite=594; 
 cloneFrom=tree2_mid;
 [JournalEntry]
 ID=journal_spinytree;
 category=item; halfPage=true; rarity=2;
 title=Lycophora;
-text=<itemBig=tree2_top><title=Lycophora><brAdj=>Ancient species of tree with short microphyll leaves. Too sturdy to cut down without specialized tools and a lot of time.;
+text=<itemBig=tree2_top><title=Lycophora><brAdj=>长者小型叶的树的古老物种.<n>如果没有专用工具和大量的时间,很难砍到.;
 
-[ItemType]  name=Leafy Tree;
+[ItemType]  name=多叶树;
 ID=tree3_base; sprite=1212; 
 weight=500; itemCategory=plant;
 journalID=journal_leafytree;
@@ -733,7 +733,7 @@ special=canBeInsideWalls; special=canAlwaysFitInTile;
 blockLoE=true; blockWalking=true; blockJumping=true;
 depthMod=1050;
   element=life;
-[ItemType]  name=Leafy Tree;
+[ItemType]  name=多叶树;
 ID=tree3_lower; sprite=1180; 
 weight=500; itemCategory=plant;
 journalID=journal_leafytree;
@@ -742,22 +742,22 @@ special=cannotBePickedUp; special=canHangOnWalls; special=sprite2xWidth;
 special=canBeInsideWalls; special=canAlwaysFitInTile; special=ignoreHeight;
 depthMod=3050;
   element=life;
-[ItemType]  name=Leafy Tree;
+[ItemType]  name=多叶树;
 ID=tree3_mid; sprite=1148;
 cloneFrom=tree3_lower;
-[ItemType]  name=Leafy Tree;
+[ItemType]  name=多叶树;
 ID=tree3_top; sprite=1116;
 cloneFrom=tree3_lower;
 [JournalEntry]
 ID=journal_leafytree;
 category=item; halfPage=true; rarity=1;
-title=Leafy Tree;
-text=<itemBig=tree3_top><title=Leafy Tree><brAdj=>Bushy, common trees that grow thick and dense in many forests. Slender and tall, but surprisingly durable.;
+title=多叶树;
+text=<itemBig=tree3_top><title=多叶树><brAdj=>在许多森林中很常见的生长茂盛的浓密灌木.<n>纤细和高大,但惊人的耐用.;
 
 
 
 
-[ItemType]  name=Small Tree;
+[ItemType]  name=小树;
 ID=tree_small_alt; sprite=523; 
 journalID=journal_tree;
 weight=500; itemCategory=plant;
@@ -772,7 +772,7 @@ ID=tree_small_alt; element=heavySlash; element=explode; newID=debris; fx=break_t
 [ItemReaction] 
 ID=tree_small_alt; element=growth; newID=tree_alt;
 
-[ItemType]  name=Damaged Tree;
+[ItemType]  name=受损的树;
 ID=tree_burnt_alt; sprite=491;
 journalID=journal_tree;
 weight=500; itemCategory=plant;
@@ -784,7 +784,7 @@ ID=tree_burnt_alt; element=growth; newID=tree_small_alt;
 [ItemReaction] 
 ID=tree_burnt_alt; element=heavySlash; element=explode; newID=debris; fx=break_tree;
 
-[ItemType]  name=Tree;
+[ItemType]  name=树;
 ID=tree_med_alt; sprite=492; 
 journalID=journal_tree;
 weight=500; itemCategory=plant;
@@ -798,7 +798,7 @@ ID=tree_med_alt; element=fire; element=explode; newID=tree_burnt_alt; fx=burnMan
 [ItemReaction] 
 ID=tree_med_alt; element=heavySlash; newID=tree_stump_alt; fx=break_tree;
 
-[ItemType]  name=Tree;
+[ItemType]  name=树;
 ID=tree_alt; sprite=493; 
 journalID=journal_tree;
 weight=500; itemCategory=plant;
@@ -815,7 +815,7 @@ spawnItem=woodPlank;
 [ItemReaction] 
 ID=tree_alt; element=growth; newID=tree_big_alt;
 
-[ItemType]  name=Tree;
+[ItemType]  name=树;
 ID=tree_big_alt; sprite=494; 
 journalID=journal_tree;
 weight=500; itemCategory=plant;
@@ -830,7 +830,7 @@ ID=tree_big_alt; element=fire; element=explode; newID=tree_burnt_alt; fx=burnMan
 ID=tree_big_alt; element=heavySlash; newID=tree_stump_alt; fx=break_tree;
 spawnItem=woodPlank; spawnItem=woodPlank;
 
-[ItemType]  name=Tree Stump;
+[ItemType]  name=树桩;
 ID=tree_stump_alt; sprite=528; 
 journalID=journal_tree;
 weight=500; itemCategory=plant;
@@ -847,7 +847,7 @@ ID=tree_stump_alt; element=growth; newID=tree_small_alt;
 
 
 
-[ItemType]  name=Dandelion;
+[ItemType]  name=蒲公英;
 ID=dandelion_puff; sprite=181; 
 weight=500; itemCategory=plant;
 special=randomFlipWhenPlaced; special=cannotBePickedUp;
@@ -856,7 +856,7 @@ pR=pR;
 [ItemReaction] 
 ID=dandelion_puff; element=fire; element=kindle; newID=fire; fx=DramaticNyeaow;
 
-[ItemType]  name=Guln Tree;
+[ItemType]  name=Guln树;
 ID=tree_guln1; sprite=336; 
 journalID=journal_tree_guln;
 weight=500; itemCategory=plant;
@@ -875,7 +875,7 @@ ID=tree_guln1; element=explode; newID=tree_guln_stump1;
 
   
   
-[ItemType]  name=Guln Tree;
+[ItemType]  name=Guln树;
 ID=tree_guln2; sprite=338;
 cloneFrom=tree_guln1;
 [ItemType]  name=Guln Tree;
@@ -885,7 +885,7 @@ cloneFrom=tree_guln1;
 ID=tree_guln4; sprite=342;
 cloneFrom=tree_guln1;
 
-[ItemType]  name=Guln Stump;
+[ItemType]  name=Guln树桩;
 ID=tree_guln_stump1; sprite=304; 
 journalID=journal_tree_guln;
 weight=500; itemCategory=plant;
@@ -898,11 +898,11 @@ blockWalking=true;
 [JournalEntry]
 ID=journal_tree_guln;
 category=item; halfPage=true; rarity=2;
-title=Guln Tree;
-text=<itemBig=tree_guln1><title=Guln Tree><brAdj=>The Guln tree is covered in puffy, static-charged leaves. Though inflammable, they react explosively to electricity. The explosion acts as a deterrent to incursion, as well as catapulting their seeds great distances.;
+title=Guln树;
+text=<itemBig=tree_guln1><title=Guln树><brAdj=>Guln树覆盖着蓬松的、带静电的叶子.<n>们虽然易燃,但对电有爆炸性反应.<n>这种爆炸一方面起到了威慑入侵的作用,<n>另一方面也将它们的种子弹射到很远的地方.;
 
 
-[ItemType]  name=Huge Tree;
+[ItemType]  name=巨大的树;
 ID=tree_huge_mid; sprite=2209;
  pR=zoneWood; pG=zoneGrassDark;
 weight=0; itemCategory=plant; special=sprite2xHeight; special=sprite2xWidth;
@@ -911,7 +911,7 @@ special=noTooltips;
 depthMod=2000;
 blockWalking=true; blockJumping=true;
 
-[ItemType]  name=Huge Tree;
+[ItemType]  name=巨大的树;
 ID=tree_huge_mid2; sprite=2241;
  pR=zoneWood; pG=zoneGrassDark;
 weight=0; itemCategory=plant; special=sprite2xWidth;
@@ -920,7 +920,7 @@ special=noTooltips;
 depthMod=2000;
 blockWalking=true; blockJumping=true;
 
-[ItemType]  name=Huge Tree;
+[ItemType]  name=巨大的树;
 ID=tree_huge_bot; sprite=2243;
  pR=zoneWood; pG=zoneGrassDark;
 weight=0; itemCategory=plant; special=sprite2xWidth;
@@ -929,7 +929,7 @@ special=noTooltips;
 depthMod=1000;
 blockWalking=true; blockJumping=true;
 
-[ItemType]  name=Treetop;
+[ItemType]  name=树顶;
 ID=tree_huge_br1; sprite=2211;
  pR=zoneWood; pG=zoneGrassDark;
 weight=0; itemCategory=plant; 
@@ -937,7 +937,7 @@ special=canHangOnWalls; special=cannotBePickedUp;
 special=noTooltips; special=canFloatOnWater;
 special=canAlwaysFitInTile; special=ignoreHeight; special=ignoreBeingRaised;
 depthMod=3250;
-[ItemType]  name=Treetop;
+[ItemType]  name=树顶;
 ID=tree_huge_br2; sprite=2179;
 cloneFrom=tree_huge_br1;
 [ItemType]  name=Treetop;
@@ -965,23 +965,23 @@ cloneFrom=tree_huge_br1;
 ID=tree_huge_br10; sprite=2184;
 cloneFrom=tree_huge_br1;
 
-[ItemType]  name=Treetop Shadow;
+[ItemType]  name=树顶的影子;
 ID=tree_huge_br_shadow1; sprite=2192; 
 special=transparent; special=cannotBePickedUp;
 special=canHangOnWalls; special=canFloatOnWater; special=noTooltip;
 special=canBeInsideWalls; special=ignoreHeight; special=ignoreBeingRaised;
 depthMod=2050;
-[ItemType]  name=Treetop Shadow;
+[ItemType]  name=树顶的影子;
 ID=tree_huge_br_shadow0; sprite=90; 
 cloneFrom=tree_huge_br_shadow1;
-[ItemType]  name=Treetop Shadow;
+[ItemType]  name=树顶的影子;
 ID=tree_huge_br_shadow2; sprite=2193; 
 cloneFrom=tree_huge_br_shadow1;
-[ItemType]  name=Treetop Shadow;
+[ItemType]  name=树顶的影子;
 ID=tree_huge_br_shadow3; sprite=2194; 
 cloneFrom=tree_huge_br_shadow1;
 
-[ItemType]  name=Grass;
+[ItemType]  name=草;
   ID=grass_alt1; sprite=449; 
   special=noTooltip; special=cannotBePickedUp; 
   itemCategory=plant;
@@ -994,7 +994,7 @@ special=alwaysBelowOtherItems;
 ID=grass_alt1; element=tileReacted; element=slash; element=fire; element=explode; element=wither; element=dig; newID=X;
 
 
-[ItemType]  name=Flower;
+[ItemType]  name=花;
   ID=flower1; sprite=464; 
   special=cannotBePickedUp; 
   special=animatedPauseOnFrame1and3;
@@ -1005,11 +1005,11 @@ special=canHangOnWalls; special=canAlwaysFitInTile;
   element=life;
 [ItemReaction] 
 ID=flower1; element=slash; element=fire; element=explode; element=wither; element=dig; newID=X;
-[ItemType]  name=Flower;
+[ItemType]  name=花;
   ID=flower2; sprite=468; 
   cloneFrom=flower1;
   
-[ItemType]  name=Flowers;
+[ItemType]  name=花;
   ID=flowers1; sprite=472; 
   special=cannotBePickedUp;
   special=animatedPauseOnFrame1and3;
@@ -1020,17 +1020,17 @@ special=canHangOnWalls; special=canAlwaysFitInTile;
   element=life;
 [ItemReaction] 
 ID=flowers1; element=slash; element=fire; element=explode; element=wither; element=dig; newID=X;
-[ItemType]  name=Flower;
+[ItemType]  name=花;
   ID=flowers2; sprite=476; 
   cloneFrom=flower1;
 [JournalEntry]
 ID=journal_flowers;
 category=item; halfPage=true; rarity=1;
-title=Flowers;
-text=<itemBig=flowers1><title=Flowers><brAdj=>How delightful! These little flowers are just innocuous, everyday plantlife. Their bright colors attract bugs that will spread their pollen.;
+title=花;
+text=<itemBig=flowers1><title=花><brAdj=>多么令人愉快的!<n>这些小花是无害的日常植物.<n>它们鲜艳的颜色会吸引昆虫来传播花粉.;
 
 
-[ItemType]  name=Flowers;
+[ItemType]  name=花;
   ID=flowers_still1; sprite=446; 
   special=cannotBePickedUp;
   journalID=journal_flowers;
@@ -1040,12 +1040,12 @@ special=canHangOnWalls; special=canAlwaysFitInTile;
   element=life;
 [ItemReaction] 
 ID=flowers_still1; element=slash; element=fire; element=explode; element=wither; element=dig; newID=X;
-[ItemType]  name=Flower;
+[ItemType]  name=花;
   ID=flowers_still2; sprite=447; 
   cloneFrom=flowers_still1;
   
 
-[ItemType]  name=Small Plant;
+[ItemType]  name=小植物;
   ID=plant_small1; sprite=529; weight=500; 
   special=noTooltip;
   itemCategory=plant;
@@ -1055,7 +1055,7 @@ ID=flowers_still1; element=slash; element=fire; element=explode; element=wither;
 ID=plant_small1; element=slash; element=fire; element=explode; element=wither; element=dig; newID=X;
 
 
-[ItemType]  name=Small Plant;
+[ItemType]  name=小植物;
   ID=plant_small2; sprite=530; weight=500; 
  special=noTooltip;
   itemCategory=plant;
@@ -1064,14 +1064,14 @@ ID=plant_small1; element=slash; element=fire; element=explode; element=wither; e
 [ItemReaction] 
 ID=plant_small2; element=slash; element=fire; element=explode; element=wither; element=dig; newID=X;
 
-[ItemType]  name=Small Plant;
+[ItemType]  name=小植物;
   ID=plant_small3; sprite=497; 
   cloneFrom=plant_small1;
 
 ---
 
 
-[ItemType]  name=Grass Edge;
+[ItemType]  name=草丛边;
   ID=grass_edge1; sprite=433; 
   special=noTooltip; special=cannotBePickedUp;
   itemCategory=plant;
@@ -1079,11 +1079,11 @@ special=canHangOnWalls; special=canAlwaysFitInTile;
 	pG=zoneGrass; pR=zoneDirt;
 [ItemReaction] 
 ID=grass_edge1; element=slash; element=fire; element=explode; element=wither; newID=X;
-[ItemType]  name=Grass Edge;
+[ItemType]  name=草丛边;
   ID=grass_edge2; sprite=434; 
   cloneFrom=grass_edge1;
 
-[ItemType]  name=Lily Bud;
+[ItemType]  name=百合花蕾;
 ID=lily_bud1; sprite=1110; 
 pR=pPink; pB=pBluegreen;
 journalID=journal_lily_bud;
@@ -1094,7 +1094,7 @@ special=anim_bobUpAndDown_slow;
 [ItemReaction]
 ID=lily_bud1; element=growth; newID=lily_blossom1;
 
-[ItemType]  name=Lily Blossom;
+[ItemType]  name=开花的百合;
 ID=lily_blossom1; sprite=1111; 
 pR=pPink; pB=pBluegreen;
 journalID=journal_lily_bud;
@@ -1111,15 +1111,15 @@ ID=lily_blossom1; element=ruin; newID=lily_bud1;
 [JournalEntry]
 ID=journal_lily_bud;
 category=item; halfPage=true; rarity=1;
-title=Lily Bud;
-text=<itemBig=lily_bud1>  <itemBig=lily_blossom1><title=Lily Bud><brAdj=>This friendly-looking flower is found in a variety of watery biomes. Eventually it grows into a broad Lily Blossom, sturdy and buoyant.;
+title=百合花蕾;
+text=<itemBig=lily_bud1>  <itemBig=lily_blossom1><title=百合花蕾><brAdj=>这种看起来很不错的花<n>存在于各种各样的水生物群落中.<n>最后,它长成了一朵宽阔的百合花,结实而轻盈。;
 
 
 
 
 
 
-[ItemType]  name=Vine Fungus;
+[ItemType]  name=藤蔓真菌;
 ID=vineFungus; sprite=485; 
 weight=300; itemCategory=plant;
  journalID=journal_vine_fungus;
@@ -1136,7 +1136,7 @@ ID=vineFungus; element=fire; element=explode; newID=fire; action=explode_fungus;
 [ItemLight] 
 ID=vineFungus; red=0.3; blue=0.5; green=0.7; alpha=0.4; size=0.5; flicker=0.02; texture=krypton;
 
-[ItemType]  name=Vine Fungus;
+[ItemType]  name=藤蔓真菌;
 ID=vineFungus2; sprite=516; 
 weight=300; itemCategory=plant;
  journalID=journal_vine_fungus;
@@ -1154,7 +1154,7 @@ ID=vineFungus2; element=fire; element=explode; newID=fire; action=explode_fungus
 ID=vineFungus2; red=0.3; blue=0.5; green=0.7; alpha=0.4; size=0.5; flicker=0.02; texture=krypton;
 
 
-[ItemType]  name=Vine?;
+[ItemType]  name=藤蔓?;
 ID=vineF; sprite=549; 
  journalID=journal_vine_fungus;
  special=cannotBePickedUp;  itemCategory=plant;
@@ -1166,7 +1166,7 @@ ID=vineF; element=slash; newID=X;
 [ItemReaction] 
 ID=vineF; element=fire; newID=fire_fast; 
 
-[ItemType]  name=Vine Buds;
+[ItemType]  name=藤蔓芽;
 ID=vineBuds; sprite=550; 
  journalID=journal_vine_fungus;
  special=cannotBePickedUp;  itemCategory=plant; special=canHangOnWalls;
@@ -1180,7 +1180,7 @@ ID=vineBuds; element=fire; newID=fire_fast;
 [ItemLight] 
 ID=vineBuds; red=0.3; blue=0.5; green=0.7; alpha=0.3; size=0.3; flicker=0.02;
 
-[ItemType]  name=Vine?;
+[ItemType]  name=藤蔓?;
 ID=vineF2; sprite=518; 
  journalID=journal_vine_fungus;
  special=cannotBePickedUp;  itemCategory=plant;
@@ -1193,7 +1193,7 @@ ID=vineF2; element=slash; newID=X;
 [ItemReaction] 
 ID=vineF2; element=fire; newID=fire_fast;
 
-[ItemType]  name=Vine Buds;
+[ItemType]  name=藤蔓芽;
 ID=vineBuds2; sprite=519; 
  journalID=journal_vine_fungus;
 special=cannotBePickedUp;  itemCategory=plant;
@@ -1208,7 +1208,7 @@ ID=vineBuds2; element=fire; newID=fire_fast;
 [ItemLight] 
 ID=vineBuds2; red=0.3; blue=0.5; green=0.7; alpha=0.3; size=0.3; flicker=0.02;
 
-[ItemType]  name=Vine Buds;
+[ItemType]  name=藤蔓芽;
 ID=vineBuds3; sprite=520; 
  journalID=journal_vine_fungus;
 special=cannotBePickedUp;  itemCategory=plant;
@@ -1224,7 +1224,7 @@ ID=vineBuds3; element=fire; newID=fire_fast;
 ID=vineBuds3; red=0.3; blue=0.5; green=0.7; alpha=0.3; size=0.3; flicker=0.02;
 
 
-[ItemType]  name=Vine Fungus Chunk;
+[ItemType]  name=藤蔓菌块;
  itemCategory=plant;
  journalID=journal_vine_fungus;
 description=A hefty slice of vine fungus.;
@@ -1241,10 +1241,10 @@ ID=vineFungusChunk; red=0.3; blue=0.5; green=0.7; alpha=0.4; size=0.8; flicker=0
 [JournalEntry]
 ID=journal_vine_fungus;
 category=item; halfPage=true; rarity=2;
-title=Vine Fungus;
-text=<itemBig=vineFungus><title=Vine Fungus><brAdj=>Musty, fuzzy fungus that spreads through vines. Inedible, and for good reason - it's highly flammable and explodes when exposed to flame.;
+title=藤蔓真菌;
+text=<itemBig=vineFungus><title=Vine Fungus><brAdj=>通过藤蔓传播的发霉的、毛茸茸的真菌.<n>不可食用的原因是 - 它高度易燃,<n>接触火焰时会爆炸.;
 
-[ItemType]  name=Vines?;
+[ItemType]  name=藤蔓?;
  itemCategory=plant;
  journalID=journal_vine_fungus;
 description=Greenish, dusty vine.;
@@ -1253,7 +1253,7 @@ weight=0; stackable=true;
 [ItemReaction] 
 ID=vineFungusVine; element=fire; newID=fire; 
 
-[ItemType]  name=Reeds;
+[ItemType]  name=芦苇;
 ID=plant_reed1; sprite=1179; itemCategory=plant; 
 journalID=journal_reed;
 special=cannotBePickedUp; special=canFloatOnWater;
@@ -1267,8 +1267,8 @@ ID=plant_reed2; sprite=1211; cloneFrom=plant_reed1;
 [JournalEntry]
 ID=journal_reed;
 category=item; halfPage=true;
-title=Reeds;
-text=<itemBig=plant_reed1><title=Reeds><brAdj=>Thin grass-like plants commonly found in wetlands. Some kinds of reeds are used for thatching roofs. These particular reeds are useless.;
+title=芦苇;
+text=<itemBig=plant_reed1><title=芦苇><brAdj=>湿地中常见的草状植物.<n>有些芦苇是用来盖屋顶的,<n>而这些特殊的芦苇是没什么用的.;
 
 [ItemType]  name=Hill Mold;
 ID=vines_hillMold1; sprite=1113; itemCategory=plant;
@@ -1406,7 +1406,7 @@ pR=pGrey9; pB=pGrey9;
 
 
 
-[ItemType]  name=Vine;
+[ItemType]  name=藤蔓;
 ID=vine_branch1; sprite=1173; itemCategory=plant; 
 special=cannotBePickedUp; special=canHangOnWalls;
 special=ignoreHeight; special=canAlwaysFitInTile;
@@ -1416,23 +1416,23 @@ blockWalking=false; blockJumping=false;
 ID=vine_branch1; element=ruin; element=wither; element=fire; 
 element=slash; newID=X;
 
-[ItemType]  name=Vine;
+[ItemType]  name=藤蔓;
 ID=vine_branch2; sprite=1172;
 cloneFrom=vine_branch1;
-[ItemType]  name=Vine;
+[ItemType]  name=藤蔓;
 ID=vine_branch3; sprite=1205;
 cloneFrom=vine_branch1;
-[ItemType]  name=Vine;
+[ItemType]  name=藤蔓;
 ID=vine_branch4; sprite=1204;
 cloneFrom=vine_branch1;
-[ItemType]  name=Vine;
+[ItemType]  name=藤蔓;
 ID=vine_branch5; sprite=1203;
 cloneFrom=vine_branch1;
-[ItemType]  name=Vine;
+[ItemType]  name=藤蔓;
 ID=vine_branch6; sprite=1171;
 cloneFrom=vine_branch1;
 
-[ItemType]  name=Vine;
+[ItemType]  name=藤蔓;
 ID=random_vine; sprite=1173; itemCategory=plant; 
 special=canHangOnWalls;
 special=replaceWith_toMake_list;
@@ -1460,7 +1460,7 @@ ID=rutroot1; element=fire; newID=fire; fx=burn;
 [ItemReaction] 
 ID=rutroot1; element=heavySlash; element=explode; element=ruin; newID=X; fx=dust_wood;
 
-[ItemType]  name=Rutroot Tree;
+[ItemType]  name=Rutroot树;
 ID=tree_rutroot; sprite=1175; itemCategory=plant; 
 journalID=journal_rutroot;
 pR=p43; pB=p43;
@@ -1477,7 +1477,7 @@ ID=tree_rutroot; element=heavySlash; element=shatter; element=explode; element=r
 ID=journal_rutroot;
 category=item; halfPage=true; rarity=1;
 title=Rutroot;
-text=<itemBig=tree_rutroot><title=Rutroot><brAdj=>Named for its exceedingly wide and long roots. Bears no fruit or leaves, and only grows to a very modest height. The roots can make moving around in combat difficult, but are also quite flammable.;
+text=<itemBig=tree_rutroot><title=Rutroot><brAdj=>因其根又宽又长而得名.<n>不结果实,也不长叶子,长得很矮.<n>树根在战斗中很难移动,但也相当易燃.;
 
 [ItemType]  name=Rutroot;
 ID=rutroot2; sprite=1239; itemCategory=plant; 
@@ -1492,9 +1492,9 @@ ID=rutroot2; element=growth; newID=rutroot1;
 ID=rutroot2; element=heavySlash; element=explode; element=ruin; newID=X; fx=dust_wood;
 
 
-[ItemType]  name=Slugvine;
+[ItemType]  name=鼻涕虫藤蔓;
 ID=slugwort1; sprite=1234; itemCategory=plant; 
-description=Slick, slimy vine that emits toxic debris when jostled.;
+description=光滑的黏糊糊的藤蔓，被碰到时会释放出有毒的碎屑.;
 journalID=journal_slugvine;
 special=cannotBePickedUp; special=canFloatOnWater;
 special=canHangOnWalls; special=canReactIndefinitely;
@@ -1507,7 +1507,7 @@ ID=slugwort1; element=heavySlash; element=wither; newID=slugwort_broken1; fx=bre
 [ItemReaction] 
 ID=slugwort1; element=fire; newID=fire;
 
-[ItemType]  name=Slugvine Shreds;
+[ItemType]  name=鼻涕虫碎片;
 ID=slugwort_broken1; sprite=1238; itemCategory=plant; 
 description=Harmless bits of slugvine.;
 journalID=journal_slugvine;
@@ -1515,23 +1515,23 @@ special=cannotBePickedUp; special=canFloatOnWater;
 special=canHangOnWalls;
 pR=p53;
 
-[ItemType]  name=Slugvine;
+[ItemType]  name=鼻涕虫藤蔓;
 ID=slugwort2; sprite=1235; 
 cloneFrom=slugwort1;
-[ItemType]  name=Slugvine;
+[ItemType]  name=鼻涕虫藤蔓;
 ID=slugwort3; sprite=1236; 
 cloneFrom=slugwort1;
-[ItemType]  name=Slugvine;
+[ItemType]  name=鼻涕虫藤蔓;
 ID=slugwort4; sprite=1237; 
 cloneFrom=slugwort1;
 [JournalEntry]
 ID=journal_slugvine;
 category=item; halfPage=true; rarity=2;
-title=Slugvine;
-text=<itemBig=slugwort1>  <itemBig=slugwort3<title=Slugvine><brAdj=>Thick, slimy vines that stretch out from the underbrush. Their itchy toxic coating sprays onto nearby creatures whenever the vine is shaken.;
+title=鼻涕虫藤蔓;
+text=<itemBig=slugwort1>  <itemBig=slugwort3<title=鼻涕虫藤蔓><brAdj=>从灌木丛中伸出的粘稠的藤蔓.<n>每当被摇动时,它们的令人发痒的有毒涂层<n>就会喷到附近的生物身上.;
 
 
-[ItemType]  name=Light Bloom;
+[ItemType]  name=发光的花;
 ID=blossom_light; sprite=1182; itemCategory=plant; 
 pR=pTeal; pB=pPurple; pG=pBW;
 special=big; special=cannotBePickedUp; special=sprite2xHeight;
@@ -1542,9 +1542,9 @@ depthMod=1050;
 ID=blossom_light; element=vines_wither; newID=X;
   
 
-[ItemType]  name=Light Pollen;
+[ItemType]  name=发光花粉;
 ID=blossom_light_pollen; sprite=1150; itemCategory=plant; 
-description=Sparkling bits of fluff. Can be tossed to cover a target in light, reducing its evasion.;
+description=闪闪发光的绒毛.可以投掷来照亮目标,减少它的闪避.;
 value=140; stackable=true;
 pG=pBW; special=consumeOnUse;
 special=convertIntoCashAtEnd;
@@ -1557,12 +1557,12 @@ ID=blossom_light_pollen; red=0.8; blue=1; green=0.9; alpha=0.4; size=0.4; flicke
 [JournalEntry]
 ID=item_blossom_light_pollen;
 category=item; halfPage=true; rarity=2;
-title=Light Pollen;
-text=<itemBig=blossom_light_pollen><title=Light Pollen><brAdj=>Glowing pollen that sprouts from the sprawling vines. Whatever they are thrown on sparkles endlessly. Sells for a modest price as a curiosity.;
+title=发光花粉;
+text=<itemBig=blossom_light_pollen><title=发光花粉><brAdj=>在蔓延的藤蔓上发芽的发光花粉.<n>无论它们被扔在什么地方,<n>都会不断地闪耀着光芒.<n>作为一件珍品，售价适中.;
 
   
-[ItemType]  name=Sweet Fruit;
-description=A sickly-sweet smelling fruit.;
+[ItemType]  name=甜水果;
+description=一种带有气味的很甜的水果.;
 ID=sleep_fruit; sprite=1964; itemCategory=plant; 
 journalID=journal_sleep_fruit;
 weight=1; volume=1; value=2; action=eat_sleep;
@@ -1573,11 +1573,11 @@ pG=zoneWood;
 [JournalEntry]
 ID=journal_sleep_fruit;
 category=item; halfPage=true; rarity=2;
-title=Sweet Fruit;
-text=<itemBig=sleep_fruit><title=Sweet Fruit><brAdj=>Plump fruit with a rather intoxicating smell. Puts you to sleep right away, leaving you feeling empty when you awaken.;
+title=甜水果;
+text=<itemBig=sleep_fruit><title=甜水果><brAdj=>饱满的水果,带有醉人的气味.<n>能让你马上入睡,但醒来时会感觉空虚.;
 
-[ItemType]  name=Sweet Fruit;
-description=A sickly-sweet smelling fruit.;
+[ItemType]  name=甜水果;
+description=一种带有气味的很甜的水果.;
 ID=sleep_fruit_hanging; sprite=1964; itemCategory=plant; 
 journalID=journal_sleep_fruit;
 special=cannotBePickedUp; special=canHangOnWalls;
@@ -1588,12 +1588,12 @@ pG=zoneWood;
 [JournalEntry]
 ID=journal_sopor_tree;
 category=item; halfPage=true; rarity=4; rewardMod=500;
-title=Sopor Tree;
-text=<itemBig=sleep_fruit_hanging><title=Sopor Tree><brAdj=>This vast tree constantly sprouts tempting, sweet fruit. It sustains itself by draining essence from creatures that gorge themselves on its fruit.;
+title=昏睡之树;
+text=<itemBig=sleep_fruit_hanging><title=昏睡之树><brAdj=>这棵巨大的树不断地结出诱人且甜美的果实.<n>它从那些以果实为食的生物吸取精华来维持生命.;
 
 
 
-[ItemType]  name=Random Pod;
+[ItemType]  name=随机豆荚;
 ID=pod_rand; sprite=1189; itemCategory=plant;
 value=2;
 pR=pWhite;
@@ -1606,7 +1606,7 @@ toMake=pod_small1;
 toMake=pod_small2;
 
 
-[ItemType]  name=Burst Pod;
+[ItemType]  name=爆炸豆荚;
 ID=pod_burst; sprite=1189; 
 journalID=journal_pod_burst;
 special=big; special=animated; special=cannotBePickedUp;
@@ -1625,10 +1625,10 @@ ID=pod_burst; element=ruin; newID=pod_sickly;
 [JournalEntry]
 ID=journal_pod_burst;
 category=item; halfPage=true; rarity=1;
-title=Burst Pod;
-text=<itemBig=pod_burst><title=Burst Pod><brAdj=>Bizarre plant topped by an air-filled orb. Physical contact causes it to burst, blasting air and seeds outward.;
+title=爆炸豆荚;
+text=<itemBig=pod_burst><title=爆炸豆荚><brAdj=>顶部有一个充气球体的奇异植物.<n>物理接触会导致爆炸,将空气和种子向外吹散.;
 
-[ItemType]  name=Sickly Pod;
+[ItemType]  name=有毒豆荚;
 ID=pod_sickly; sprite=1193; 
 special=big; special=animated; special=cannotBePickedUp;
 special=randomFlipWhenPlaced; special=fullTileHitbox;
@@ -1646,10 +1646,10 @@ ID=pod_sickly; element=life; newID=pod_burst;
 [JournalEntry]
 ID=item_pod_sickly;
 category=item; halfPage=true; rarity=1;
-title=Sickly Pod;
-text=<itemBig=pod_sickly><title=Sickly Pod><brAdj=>An ill-fated Burst Pod full of fetid, poisonous air. Standing close to one of these when it pops would be a big mistake.;
+title=有毒豆荚;
+text=<itemBig=pod_sickly><title=Sickly Pod><brAdj=>一个充满恶臭有毒空气的爆炸豆荚.<n>当它爆炸的时候,站它旁边是一个大错误.;
 
-[ItemType]  name=Blast Pod;
+[ItemType]  name=爆裂豆荚;
 ID=pod_blast; sprite=1221; 
 special=big; special=animated; special=cannotBePickedUp;
 special=randomFlipWhenPlaced; special=fullTileHitbox;
@@ -1667,8 +1667,8 @@ ID=pod_blast; element=ruin; newID=pod_sickly;
 [JournalEntry]
 ID=item_pod_blast;
 category=item; halfPage=true; rarity=1;
-title=Blast Pod;
-text=<itemBig=pod_blast><title=Blast Pod><brAdj=>A Burst Pod that has almost completely matured. It is buzzing with seeds and will burst at the slightest provocation. When it ruptures, the seeds fly everywhere, pelting nearby creatures and causing itchy skin.;
+title=爆裂豆荚;
+text=<itemBig=pod_blast><title=爆裂豆荚><brAdj=>爆裂豆荚几乎完全成熟的时候,<n>种子会嗡嗡作响,轻微的挑动就会导致爆炸.<n>当它破裂时,种子到处飞,<n>附着附近的生物,引起皮肤发痒.;
 
 [ItemType]  name=Podling;
 ID=pod_small1; sprite=1197; special=cannotBePickedUp;
@@ -1698,7 +1698,7 @@ ID=pod_base; element=fire; element=smash; element=slash; newID=X;
 ID=pod_base; element=growth; newID=pod_small2;
 
   
-[ItemType]  name=Plants;
+[ItemType]  name=植物;
 ID=loot_plants; sprite=2288;
 value=500;
 pR=pBlue;
@@ -1729,28 +1729,28 @@ ID=plant_base_h; sprite=2320;
 weight=0; volume=1; value=50;
 special=sellForFullValue;
 
-[ItemType]  name=Shrubstalk;
+[ItemType]  name=灌木茎;
 ID=plant1; sprite=2288; 
-description=Bush-like plant with a tall stalk.;
+description=长有高茎的灌木状植物.;
 journalID=journal_plant1;
 cloneFrom=plant_base;
 [ItemReaction] 
 ID=plant1; element=use; element=dig; newID=plant1h; fx=grassdust_rustle;
-[ItemType]  name=Shrubstalk;
+[ItemType]  name=灌木茎;
 ID=plant1h; sprite=2320; 
-description=Bush with a tall stalk.;
+description=长有高茎的灌木.;
 journalID=journal_plant1;
 cloneFrom=plant_base_h;
 [JournalEntry]
 ID=journal_plant1;
 category=artifact; halfPage=true; rarity=3; rewardMod=-250;
-title=Shrubstalk;
-text=<itemBig=plant1><title=Shrubstalk><brAdj=>This giant stalk is entrenched in leafy greens. Walking sticks made from hardened shrubstalk were once a fashionable high-society item in the Riverlands due to the plant's rarity.;
+title=灌木茎;
+text=<itemBig=plant1><title=灌木茎><brAdj=>这种巨大的茎盘踞在绿叶中.<n>由于这种植物的稀有,用坚硬的灌木茎制成的手杖<n>曾经是河岸地带上流社会的一种时尚物品.;
 
 
 [ItemType]  name=Striped Mane;
 ID=plant2; sprite=2289; 
-description=Bright orange and yellow flower.;
+description=鲜艳的橙色和黄色相间的花.;
 journalID=journal_plant2;
 cloneFrom=plant_base;
 [ItemReaction] 
@@ -1766,12 +1766,12 @@ cloneFrom=plant_base_h;
 ID=journal_plant2;
 category=artifact; halfPage=true; rarity=3; rewardMod=-400;
 title=Striped Mane;
-text=<itemBig=plant2><title=Striped Mane><brAdj=>Flower known for its unusual orange and yellow petals. Some grind up the petals to use in homemade remedies or exotic dishes.;
+text=<itemBig=plant2><title=Striped Mane><brAdj=>鲜艳的橙色和黄色的花.<n>一些人将花瓣磨碎,用于自制偏方或异国菜肴.;
 
 
 [ItemType]  name=Cone Pitcher;
 ID=plant3; sprite=2290; 
-description=Cone-shaped flower.;
+description=锥形的花.;
 journalID=journal_plant3;
 cloneFrom=plant_base;
 [ItemReaction] 
@@ -1786,12 +1786,12 @@ cloneFrom=plant_base_h;
 ID=journal_plant3;
 category=artifact; halfPage=true; rarity=3; rewardMod=-300;
 title=Cone Pitcher;
-text=<itemBig=plant3><title=Cone Pitcher><brAdj=>Distinctive purple flower with very elongated cone-shaped petals. The pitcher catches and retains water, allowing it to survive during periods of long drought.;
+text=<itemBig=plant3><title=Cone Pitcher><brAdj=>独特的紫色花朵，花瓣细长，呈锥形.The pitcher能够捕捉并保持水分，使其能够在长期干旱中生存;
 
 
 [ItemType]  name=Stinging Molbry;
 ID=plant4; sprite=2291; 
-description=Prickly plant. Careful!;
+description=多刺的植物,小心!;
 journalID=journal_plant4;
 cloneFrom=plant_base;
 [ItemReaction] 
@@ -1806,30 +1806,30 @@ cloneFrom=plant_base_h;
 ID=journal_plant4;
 category=artifact; halfPage=true; rarity=3; rewardMod=-100;
 title=Stinging Molbry;
-text=<itemBig=plant4><title=Stinging Molbry><brAdj=>Strange plant with purple spines that secrete toxins. The toxins are often harvested as an ingredient in medicinal (and even some recreational) drugs.;
+text=<itemBig=plant4><title=Stinging Molbry><brAdj=>一种奇怪的植物,长着能分泌毒素的紫色刺.<n>这些毒素通常作为药用<n>(甚至一些娱乐用的)药物的成分;
 
-[ItemType]  name=Pearl Pod;
+[ItemType]  name=珍珠豆荚;
 ID=plant5; sprite=2292; 
-description=Unusual pod.;
+description=罕见的豆荚.;
 journalID=journal_plant5;
 cloneFrom=plant_base;
 [ItemReaction] 
 ID=plant5; element=use; element=dig; newID=plant5h; fx=grassdust_rustle;
-[ItemType]  name=Pearl Pod;
+[ItemType]  name=珍珠豆荚;
 ID=plant5h; sprite=2324; 
-description=Unusual pod.;
+description=罕见的豆荚.;
 journalID=journal_plant5;
 value=90;
 cloneFrom=plant_base_h;
 [JournalEntry]
 ID=journal_plant5;
 category=artifact; halfPage=true; rarity=3; rewardMod=-200;
-title=Pearl Pod;
-text=<itemBig=plant5><title=Pearl Pod><brAdj=>Tall sprout filled with pearly legumes. Considered a delicacy, though some find the pearls to be rather dry and tasteless.;
+title=珍珠豆荚;
+text=<itemBig=plant5><title=珍珠豆荚><brAdj=>长着珍珠般的豆荚的高芽.<n>被认为是一种美味的佳肴,<n>尽管有些人发现珍珠相当干燥和无味;
 
-[ItemType]  name=Sickleleaf;
+[ItemType]  name=镰状叶;
 ID=plant6; sprite=2293; 
-description=Plant with a broad, drooping leaf.;
+description=一种宽的、下垂的叶子的植物.;
 journalID=journal_plant6;
 cloneFrom=plant_base;
 [ItemReaction] 
@@ -1843,19 +1843,19 @@ cloneFrom=plant_base_h;
 [JournalEntry]
 ID=journal_plant6;
 category=artifact; halfPage=true; rarity=3; rewardMod=-200;
-title=Sickleleaf;
-text=<itemBig=plant6><title=Sickleleaf><brAdj=>Named not only for its unique shape, but also for the surprisingly sharp edge on its crinkled leaves. Its edge wards off large herbivores, but does nothing to protect it from hungry insects.;
+title=镰状叶;
+text=<itemBig=plant6><title=镰状叶><brAdj=>命名不仅是因为它独特的形状,<n>还因为它褶皱的叶子上令人惊讶的锋利边缘.<n>它的边缘能抵挡大型食草动物,<n>但不能保护它不受饥饿昆虫的伤害.;
 
 [ItemType]  name=Mawmunk;
 ID=plant7; sprite=2294; 
-description=A rotten-smelling flower.;
+description=一种散发臭味的花.;
 journalID=journal_plant7;
 cloneFrom=plant_base;
 [ItemReaction] 
 ID=plant7; element=use; element=dig; newID=plant7h; fx=grassdust_rustle;
 [ItemType]  name=Mawmunk;
 ID=plant7h; sprite=2326; 
-description=A rotten-smelling flower.;
+description=一种散发臭味的花.;
 journalID=journal_plant7;
 value=80;
 cloneFrom=plant_base_h;
@@ -1863,56 +1863,56 @@ cloneFrom=plant_base_h;
 ID=journal_plant7;
 category=artifact; halfPage=true; rarity=3; rewardMod=-100;
 title=Mawmunk;
-text=<itemBig=plant7><title=Mawmunk><brAdj=>A violet flower with soft petals that resemble fangs. It can grow quite large, and smells quite unpleasant. The leaves are used in certain exotic teas to add a contrary flavor.;
+text=<itemBig=plant7><title=Mawmunk><brAdj=>一种紫罗兰属的花,花瓣柔软,像尖牙.<n>可以长得很大,而且闻起来很难闻.<n>叶子被用于某些异国的茶叶中,以增加相反的风味;
 
-[ItemType]  name=Coilpea;
+[ItemType]  name=豇豆;
 ID=plant8; sprite=2295; 
-description=Oddly shaped pea plant.;
+description=奇怪形状的豌豆.;
 journalID=journal_plant8;
 cloneFrom=plant_base;
 [ItemReaction] 
 ID=plant8; element=use; element=dig; newID=plant8h; fx=grassdust_rustle;
-[ItemType]  name=Coilpea;
+[ItemType]  name=豇豆;
 ID=plant8h; sprite=2327; 
-description=Oddly shaped pea plant.;
+description=奇怪形状的豌豆.;
 journalID=journal_plant8;
 value=90;
 cloneFrom=plant_base_h;
 [JournalEntry]
 ID=journal_plant8;
 category=artifact; halfPage=true; rarity=3; rewardMod=-300;
-title=Coilpea;
-text=<itemBig=plant8><title=Coilpea><brAdj=>A spiral sprout with a pea pod atop it. Healthy and nutritious whether cooked or eaten raw. Survives well in hot and cold climates.;
+title=豇豆;
+text=<itemBig=plant8><title=豇豆><brAdj=>带有螺旋状的芽,上面有一个豌豆荚。<n>无论是煮熟还是生吃都是很健康又营养的.在炎热和寒冷的气候中都能很好地生存.;
 
-[ItemType]  name=Rock Yam;
+[ItemType]  name=岩石山药;
 ID=plant9; sprite=2296; 
-description=Tough, rocky fruit sprout.;
+description=坚硬的果实.;
 journalID=journal_plant9;
 cloneFrom=plant_base;
 [ItemReaction] 
 ID=plant9; element=use; element=dig; newID=plant9h; fx=grassdust_rustle;
-[ItemType]  name=Rock Yam;
+[ItemType]  name=岩石山药;
 ID=plant9h; sprite=2328; 
-description=Tough, rocky fruit sprout.;
+description=坚硬的果实.;
 journalID=journal_plant9;
 value=50;
 cloneFrom=plant_base_h;
 [JournalEntry]
 ID=journal_plant9;
 category=artifact; halfPage=true; rarity=3; rewardMod=-350;
-title=Rock Yam;
-text=<itemBig=plant9><title=Rock Yam><brAdj=>Hardy fruit with a tough exterior and a juicy, citrus interior. Unopened, it can stay ripe for months, making it good food for travelers.;
+title=岩石山药;
+text=<itemBig=plant9><title=岩石山药><brAdj=>耐寒的水果,外表坚硬,内部多汁,柑橘类<n>.如果不开封,它可以几个月保持是成熟的,<n>是旅行者的好食物.;
 
 [ItemType]  name=Novide;
 ID=plant10; sprite=2297; 
-description=Vines sprouting from bulbous nodes.;
+description=从球茎状节点发芽的藤蔓.;
 journalID=journal_plant10;
 cloneFrom=plant_base;
 [ItemReaction] 
 ID=plant10; element=use; element=dig; newID=plant10h; fx=grassdust_rustle;
 [ItemType]  name=Novide;
 ID=plant10h; sprite=2329; 
-description=Vines sprouting from bulbous nodes.;
+description=从球茎状节点发芽的藤蔓.;
 journalID=journal_plant10;
 value=80;
 cloneFrom=plant_base_h;
@@ -1920,18 +1920,18 @@ cloneFrom=plant_base_h;
 ID=journal_plant10;
 category=artifact; halfPage=true; rarity=3; rewardMod=-50;
 title=Novide;
-text=<itemBig=plant10><title=Novide><brAdj=>A network of vines connected by nodes. Notorious for spreading endlessly and choking out undergrowth and small trees. Primitive societies often used Novide to weave ropes, or cut them into makeshift nets for catching prey.;
+text=<itemBig=plant10><title=Novide><brAdj=>由藤蔓节点连成的网.<n>因不断地蔓延和扼杀灌木丛和小树而臭名昭著.原始社会经常使用Novide来编织绳子,<n>或者把绳子切成临时的网来捕捉猎物;
 
 [ItemType]  name=Thint;
 ID=plant11; sprite=2298; 
-description=A thin, fragile sprout.;
+description=瘦弱的芽.;
 journalID=journal_plant11;
 cloneFrom=plant_base;
 [ItemReaction] 
 ID=plant11; element=physical; element=magic; element=use; element=dig; newID=plant11b; fx=break_tree;
 [ItemType]  name=Broken Thint;
 ID=plant11b; sprite=2330; 
-description=A thin, fragile sprout.;
+description=瘦弱的芽.;
 journalID=journal_plant11;
 value=10;
 cloneFrom=plant_base;
@@ -1939,18 +1939,18 @@ cloneFrom=plant_base;
 ID=journal_plant11;
 category=artifact; halfPage=true; rarity=5; rewardMod=-1500;
 title=Thint;
-text=<itemBig=plant11><title=Thint><brAdj=>The most fragile plant known, it easily snaps in half just from the wind. It was thought to be extinct. Although living Thint is an amazing find, the plant is completely useless for any practical purpose.;
+text=<itemBig=plant11><title=Thint><brAdj=>T作为已知最脆弱的植物,它很容易被风折断成两半.<n>人们认为它已经灭绝了.<n>虽然还存活的Thint是一个惊人的发现,<n>但这种植物完全没有任何实际用途;
 
 [ItemType]  name=Frung;
 ID=plant12; sprite=2299; 
-description=Small sapling with fuzzy leaves.;
+description=有绒毛叶子的小树苗.;
 journalID=journal_plant12;
 cloneFrom=plant_base;
 [ItemReaction] 
 ID=plant12; element=use; element=dig; newID=plant12h; fx=grassdust_rustle;
 [ItemType]  name=Frung;
 ID=plant12h; sprite=2331; 
-description=Small sapling with fuzzy leaves.;
+description=有绒毛叶子的小树苗.;
 journalID=journal_plant12;
 value=90;
 cloneFrom=plant_base_h;
@@ -1958,4 +1958,4 @@ cloneFrom=plant_base_h;
 ID=journal_plant12;
 category=artifact; halfPage=true; rarity=3; rewardMod=-50;
 title=Frung;
-text=<itemBig=plant12><title=Frung><brAdj=>A strange fuzzy-leafed sapling. It rarely grows higher than 6 feet. It is theorized that Frung lives off ambient essence rather than sunlight.;
+text=<itemBig=plant12><title=Frung><brAdj=>一棵奇怪的毛茸茸的树苗。它很少长到6英尺以上。从理论上讲，Frung是靠周围的本质能量而不是阳光生存的.;
