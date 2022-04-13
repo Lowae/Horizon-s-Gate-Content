@@ -1,5 +1,5 @@
 
-[ItemType]  name=Column;
+[ItemType]  name=柱状物;
 ID=column; sprite=576;  itemCategory=natural;
 journalID=journal_column;
 weight=300;
@@ -11,9 +11,9 @@ ID=column; element=heavySmash; element=explode; element=burrow; newID=debris; fx
 [JournalEntry]
 ID=journal_column;
 category=item; halfPage=true;
-title=Column;
-text=<itemBig=column><title=Column><brAdj=>Whether it is a natural formation or was once part of a structure you can't be sure. If it obstructs your path, bash it with a hammer!;
-[ItemType]  name=Stalagmite;
+title=柱状物;
+text=<itemBig=column><title=柱状物><brAdj=>你无法确定它是自然形成的<n>还是曾经是某个建筑的一部分.<n>如果它挡住了你的去路,就用锤子砸它!;
+[ItemType]  name=石笋;
 ID=stalag; sprite=577;  itemCategory=natural;
 journalID=journal_stalag;
 weight=300;
@@ -24,7 +24,7 @@ pR=zoneDirt;
 ID=stalag; element=heavySmash; element=explode; element=burrow; newID=debris; fx=dust_dirtDark;
 
 
-[ItemType]  name=Stalagmites; 
+[ItemType]  name=石笋; 
 itemCategory=natural;
 ID=stalags; sprite=578; 
 journalID=journal_stalag;
@@ -37,17 +37,17 @@ ID=stalags; element=smash; element=explode; element=burrow; newID=debris; fx=dus
 [JournalEntry]
 ID=journal_stalag;
 category=item; halfPage=true;
-title=Stalagmite;
-text=<itemBig=stalags><title=Stalagmite><brAdj=>Natural rock formations caused by erosion. Not to be confused with stalacTites, which form at the Top of a cave.;
+title=石笋;
+text=<itemBig=stalags><title=石笋><brAdj=>侵蚀形成的天然岩层.<n>不要与洞穴顶部形成的钟乳石混淆.;
 
-[ItemType]  name=Debris;
+[ItemType]  name=残骸;
 ID=debris; sprite=579; itemCategory=natural; 
 special=inheritTerrainPalettes; special=cannotBePickedUp; special=alwaysBelowOtherItems;
 pR=zoneDirt;
 [ItemReaction] 
 ID=debris; element=dig; newID=X;
 
-[ItemType]  name=Debris;
+[ItemType]  name=残骸;
 ID=debris_secret; sprite=579; itemCategory=natural; 
 special=inheritTerrainPalettes; special=cannotBePickedUp; 
 special=alwaysBelowOtherItems;
@@ -55,7 +55,7 @@ special=preventTileReactions;
 [ItemReaction] 
 ID=debris_secret; element=dig; newID=staircase_hole; fx=sfx_secretFound;
 
-[ItemType]  name=Staircase;
+[ItemType]  name=楼梯;
 ID=staircase_hole; sprite=611; itemCategory=natural; 
 journalID=item_staircase;
 special=inheritTerrainPalettes; special=cannotBePickedUp; 
@@ -90,7 +90,7 @@ pR=zoneStone; pB=zoneStone;
 ID=journal_rubble;
 category=item; halfPage=true;
 title=碎石;
-text=<itemBig=rubble><title=Rubble><brAdj=>Rocky rubble. It's not a big deal, but it does slow you down in combat, and you can't push objects across it.;
+text=<itemBig=rubble><title=Rubble><brAdj=>碎石头.这并不是什么大问题,<n>但它会在战斗中降低了你的速度,<n>而且你不能推动物体穿过它.;
 [ItemType]  name=碎石;
 ID=rubble_coral; sprite=1975;  itemCategory=natural;
 special=cannotBePickedUp; 
@@ -99,7 +99,7 @@ special=preventTileReactions; special=randomFlipWhenPlaced;
 pR=zoneDirtDark; pB=zoneDirt;
 
 
-[ItemType]  name=Coral;
+[ItemType]  name=珊瑚;
 ID=reef_coral1; sprite=1977;  itemCategory=natural;
 journalID=journal_corals;
 special=cannotBePickedUp; 
@@ -107,38 +107,38 @@ special=moveCostOverride_2;
 special=preventTileReactions; special=randomFlipWhenPlaced;
 special=canFloatOnWater;
 pR=pYellow; pB=zoneDirt;
-[ItemType]  name=Coral;
+[ItemType]  name=珊瑚;
 ID=reef_coral2; sprite=1978;  
 cloneFrom=reef_coral1;
 pR=pMagenta;
-[ItemType]  name=Coral;
+[ItemType]  name=珊瑚;
 ID=reef_coral3; sprite=1979;  
 cloneFrom=reef_coral1;
 pR=pRed;
-[ItemType]  name=Coral;
+[ItemType]  name=珊瑚;
 ID=reef_coral4; sprite=1980;  
 cloneFrom=reef_coral1;
 pR=pPink;
-[ItemType]  name=Coral;
+[ItemType]  name=珊瑚;
 ID=reef_coral5; sprite=1981;  
 cloneFrom=reef_coral1;
 pR=pGreen;
-[ItemType]  name=Coral;
+[ItemType]  name=珊瑚;
 ID=reef_coral6; sprite=1982;  
 cloneFrom=reef_coral1;
 pR=pOrange;
-[ItemType]  name=Coral;
+[ItemType]  name=珊瑚;
 ID=reef_coral7; sprite=1983;  
 cloneFrom=reef_coral1;
 pR=pOrange;
 [JournalEntry]
 ID=journal_corals;
 category=item; halfPage=true; rarity=1;
-title=Corals;
-text=<itemBig=reef_coral1><itemBig=reef_coral4><title=Corals><brAdj=>Corals are living invertebrates, many of which require light to grow. As such, coral flourishes in shallow, clear waters. Most are neither harmful nor useful, but there are always exceptions.;
+title=珊瑚;
+text=<itemBig=reef_coral1><itemBig=reef_coral4><title=珊瑚><brAdj=>珊瑚是活着的无脊椎动物,很多都需要光来生长.<n>因此,珊瑚在清澈的浅水中很是繁盛.<n>大多数都是无害的,但总有例外.;
 
 
-[ItemType]  name=Goldcoral;
+[ItemType]  name=金珊瑚;
 ID=coral_gold; sprite=2008; itemCategory=natural;
 stackable=true;
 weight=0; volume=0; value=150;
@@ -148,30 +148,30 @@ description=Valuable coral often used in jewelry.;
 [JournalEntry]
 ID=item_coral_gold;
 category=item; halfPage=true; rarity=2;
-title=Goldcoral;
-text=<itemBig=coral_gold><title=Goldcoral><brAdj=>Precious coral that is even more valuable than its namesake. It serves no particular use, but its durability and color make it an attractive option for jewelry.;
+title=金珊瑚;
+text=<itemBig=coral_gold><title=金珊瑚><brAdj=>比同名珊瑚更有价值的珍贵珊瑚.<n>它没有特别的用途,但它的耐用性和颜色<n>使它成为珠宝首饰的诱人选择。;
 
-[ItemType]  name=Sea Plant;
+[ItemType]  name=海洋植物;
 ID=reef_plant1; sprite=2000;  
 itemCategory=natural;
 special=cannotBePickedUp; special=noTooltips; special=randomFlipWhenPlaced;
 pR=pMagenta;
 pB=pOrange;
-[ItemType]  name=Sea Plant;
+[ItemType]  name=海洋植物;
 ID=reef_plant2; sprite=2001;  
 cloneFrom=reef_plant1;
-[ItemType]  name=Sea Plant;
+[ItemType]  name=海洋植物;
 ID=reef_plant3; sprite=2002;  
 cloneFrom=reef_plant1;
 
-[ItemType]  name=Sinkhole;
+[ItemType]  name=深坑;
 ID=sinkhole; sprite=609;  itemCategory=natural;
 weight=300;
 journalID=journal_sinkhole;
 special=huge; special=inheritTerrainPalettes; special=cannotBePickedUp;
 	 special=moveCostOverride_2; special=alwaysBelowOtherItems;
 pR=zoneDirt;
-[ItemType]  name=Sinkhole;
+[ItemType]  name=深坑;
 ID=sinkhole_large; sprite=610;  itemCategory=natural;
 weight=300;
 journalID=journal_sinkhole;
@@ -182,10 +182,10 @@ pR=zoneDirt;
 [JournalEntry]
 ID=journal_sinkhole;
 category=item; halfPage=true; rarity=1;
-title=Sinkhole;
-text=<itemBig=sinkhole_large><title=Sinkhole><brAdj=>A deep, round pit that is too small for you. These are usually created by burrowing creatures, so don't put your face too close!;
+title=深坑;
+text=<itemBig=sinkhole_large><title=深坑><brAdj=>一个又深又圆的坑,对你来说太小了.<n>这些通常是由穴居生物创造的,<n>所以不要把你的脸靠得太近!
 
-[ItemType]  name=Sinkhole;
+[ItemType]  name=深坑;
 ID=sinkhole_below; sprite=609;  itemCategory=natural;
 weight=300;
 journalID=journal_sinkhole;
@@ -193,11 +193,11 @@ special=big; special=cannotBePickedUp;
 special=alwaysBelowOtherItems; special=moveCostOverride_2;
 depthMod=-2000;
 pR=zoneWater;
-[ItemType]  name=Sinkhole;
+[ItemType]  name=深坑;
 ID=sinkhole_large_below; sprite=610;
 cloneFrom=sinkhole_below;
 
-[ItemType]  name=Pushable Boulder;
+[ItemType]  name=可推动的巨石;
 ID=boulder; sprite=56; 
 journalID=journal_pushable_boulder;
 special=pushable; special=big;
@@ -208,10 +208,10 @@ pR=zoneDirt;
 [JournalEntry]
 ID=journal_pushable_boulder;
 category=item; halfPage=true;
-title=Pushable Boulder;
-text=<itemBig=boulder><title=Pushable Boulder><brAdj=>This large rock slides around when you push into it. It can't go past rubble, though.;
+title=可推动的巨石;
+text=<itemBig=boulder><title=可推动的巨石><brAdj=>当你把这块大石头推动时,<n>它就会四处滑动.<n>但它还是不能穿过碎石.;
 
-[ItemType]  name=Boulder;
+[ItemType]  name=巨石;
 ID=boulder2; sprite=55; 
 journalID=journal_boulder;
 special=big;
@@ -221,7 +221,7 @@ pR=zoneDirt;
 [ItemReaction] 
 ID=boulder2; element=explode; newID=rubble; fx=dust_dirtDark;
 
-[ItemType]  name=Boulder;
+[ItemType]  name=巨石;
 ID=boulder3; sprite=87; 
 journalID=journal_boulder;
 special=big;
@@ -233,8 +233,8 @@ ID=boulder3; element=explode; newID=X; fx=dust_dirtDark;
 [JournalEntry]
 ID=journal_boulder;
 category=item; halfPage=true;
-title=Boulder;
-text=<itemBig=boulder3><title=Boulder><brAdj=>Hefty hunk of rock that can't be moved by any method. The only way to get past is with high explosives - nothing less will do.;
+title=巨石;
+text=<itemBig=boulder3><title=巨石><brAdj=>用任何方法都无法移动的巨大石块.<n>唯一能通过的方法就是<n>使用烈性炸药-除此之外别无它法.;
 
 
 [ItemType]  name=Cliff Rock;
@@ -247,14 +247,14 @@ pR=zoneDirtDark;
 [ItemReaction] 
 ID=cliff_rock; element=tileReacted; newID=X;
 
-[ItemType]  name=Cliff Rock;
+[ItemType]  name=峭壁上的岩石;
 ID=cliff_rock2; sprite=1186; 
 cloneFrom=cliff_rock;
-[ItemType]  name=Cliff Rock;
+[ItemType]  name=峭壁上的岩石;
 ID=cliff_rock3; sprite=1185; 
 cloneFrom=cliff_rock;
 
-[ItemType]  name=Iron Ore;
+[ItemType]  name=铁矿石;
 ID=ore_iron; sprite=27; 
 special=huge; special=canHangOnWalls; special=cannotEverBePushed;
 weight=200; itemCategory=natural;
@@ -266,10 +266,10 @@ ID=ore_iron; element=use; element=explode; element=pickaxe; element=melee;
 [JournalEntry]
 ID=item_ore_iron;
 category=item; halfPage=true; rarity=1;
-title=Iron Ore;
-text=<itemBig=ore_iron><title=Iron Ore><brAdj=>Naturally occurring formation of iron ore. You could easily free some valuable iron from these minerals.;
+title=铁矿石;
+text=<itemBig=ore_iron><title=铁矿石><brAdj=>自然形成的铁矿石.<n>你可以很容易地提炼出一些有价值的铁.;
 
-[ItemType]  name=Mythril Ore;
+[ItemType]  name=秘银矿石;
 ID=ore_mythril; sprite=27; 
 special=huge; special=canHangOnWalls;  special=cannotEverBePushed;
 weight=200; itemCategory=natural;
@@ -280,8 +280,8 @@ ID=ore_mythril; element=use; element=explode; element=pickaxe; element=melee; ne
 [JournalEntry]
 ID=item_ore_mythril;
 category=item; halfPage=true; rarity=1;
-title=Mythril Ore;
-text=<itemBig=ore_mythril><title=Mythril Ore><brAdj=>A rare sight -- ore of mythril, the finest known metal. This is what every prospector wishes to see.;
+title=秘银矿石;
+text=<itemBig=ore_mythril><title=Mythril Ore><brAdj=>罕见的发现,神秘的银矿石,<n>已知最好的金属.<n>这是每个探矿者都希望看到的.;
 
 [ItemType]  name=Volskarn;
 ID=ore_volskarn; sprite=851; 
@@ -297,9 +297,9 @@ ID=ore_volskarn; element=use; element=explode; element=pickaxe; element=melee; n
 ID=item_ore_volskarn;
 category=item; halfPage=true; rarity=1;
 title=Volskarn;
-text=<itemBig=ore_volskarn><title=Volskarn><brAdj=>A modest amount of Volskarn pokes out from these rocks. Harvesting it is simple, and highly recommended.;
+text=<itemBig=ore_volskarn><title=Volskarn><brAdj=>少量的Volskarn从这些岩石中突出来.<n>收获它很简单,强烈推荐.;
 
-[ItemType]  name=Corpryst;
+[ItemType]  name=晶体矿;
 ID=crystals1; sprite=846; 
 journalID=item_corpryst;
 special=huge; special=canHangOnWalls; special=sprite2xWidth; special=sprite2xHeight;
@@ -309,7 +309,7 @@ pR=pCorpryst;
 [ItemReaction] 
 ID=crystals1; element=explode; element=pickaxe; newID=corpryst; fx=sfx_breakRock;
 
-[ItemType]  name=Corpryst;
+[ItemType]  name=晶体矿;
 ID=crystals2; sprite=848; 
 journalID=item_corpryst;
 special=huge; special=canHangOnWalls; special=sprite2xWidth; special=sprite2xHeight;
@@ -319,27 +319,27 @@ pR=pCorpryst;
 [ItemReaction] 
 ID=crystals2; element=explode; element=pickaxe; newID=corpryst;
 
-[ItemType]  name=Rock;
+[ItemType]  name=岩石;
 ID=rock; sprite=54; 
 weight=1; volume=200; itemCategory=natural;
 pR=pDirt;
 blockWalking=true;
 blockJumping=true;
 
-[ItemType]  name=Rocks;
+[ItemType]  name=碎石;
 ID=pebbles1; sprite=582;  itemCategory=natural;
 special=cannotBePickedUp; special=inheritTerrainPalettes; special=noTooltip;
 pR=zoneStoneLight;
 [ItemReaction] 
 ID=pebbles1; element=tileReacted; newID=X;
-[ItemType]  name=Rocks;
+[ItemType]  name=碎石;
 ID=pebbles2; sprite=583;  itemCategory=natural;
 special=cannotBePickedUp; special=inheritTerrainPalettes; special=noTooltip;
 pR=zoneStoneLight;
 [ItemReaction] 
 ID=pebbles2; element=tileReacted; newID=X;
 
-[ItemType]  name=Rocks;
+[ItemType]  name=碎石;
 ID=rocks1; sprite=384;  itemCategory=natural; stackable=true;
 special=cannotBePickedUp; special=inheritTerrainPalettes; special=noTooltip;
 special=quantityChangesSprite;
@@ -347,33 +347,33 @@ pR=zDirt;
 [ItemReaction] 
 ID=rocks1; element=tileReacted; newID=X;
 
-[ItemType]  name=Rocks;
+[ItemType]  name=碎石;
 ID=rocks2; sprite=384;  itemCategory=natural; stackable=true;
 special=cannotBePickedUp; special=noTooltip; special=quantityChangesSprite;
 pR=zoneStone;
 [ItemReaction] 
 ID=rocks2; element=tileReacted; newID=X;
 
-[ItemType]  name=Debris;
+[ItemType]  name=碎片;
 ID=debris_small1; sprite=584;  itemCategory=natural;
 special=cannotBePickedUp; special=inheritTerrainPalettes; special=noTooltip;
 pR=zoneStone;
 [ItemReaction] 
 ID=debris_small1; element=tileReacted; newID=X;
-[ItemType]  name=Debris;
+[ItemType]  name=碎片;
 ID=debris_small2; sprite=585;  itemCategory=natural;
 special=cannotBePickedUp; special=inheritTerrainPalettes; special=noTooltip;
 pR=zoneStone;
 [ItemReaction] 
 ID=debris_small2; element=tileReacted; newID=X;
-[ItemType]  name=Debris;
+[ItemType]  name=碎片;
 ID=debris_small3; sprite=586;  itemCategory=natural;
 special=cannotBePickedUp; special=inheritTerrainPalettes; special=noTooltip;
 pR=zoneStone;
 [ItemReaction] 
 ID=debris_small3; element=tileReacted; newID=X;
 
-[ItemType]  name=Ice;
+[ItemType]  name=冰;
 ID=ice_rocks; sprite=416;  itemCategory=natural;
 special=cannotBePickedUp; special=canHangOnWalls; 
 blockWalking=true; 
@@ -381,7 +381,7 @@ pR=pIce;
 [ItemReaction] 
 ID=ice_rocks; element=fire; element=heat; newID=puddle; fx=vaporCloud; spawnItem=puddle;
 
-[ItemType]  name=Ice;
+[ItemType]  name=冰;
 ID=ice_rocks_wallbase; 
 cloneFrom=ice_rocks;
 special=canHangOnWalls; special=adjustSpriteYUp16; 
@@ -389,19 +389,19 @@ blockWalking=false; special=dontCloneReactions;
 [ItemReaction] 
 ID=ice_rocks_wallbase; element=fire; element=heat; newID=X; fx=vaporCloud;
 
-[ItemType]  name=Ironice;
+[ItemType]  name=寒冰铁;
 ID=ironice_rocks; sprite=416;  itemCategory=natural;
 special=cannotBePickedUp; special=canHangOnWalls; 
 blockWalking=true; 
 pR=pIronice;
 
-[ItemType]  name=Ironice;
+[ItemType]  name=寒冰铁;
 ID=ironice_rocks_wallbase; 
 cloneFrom=ironice_rocks;
 special=canHangOnWalls; special=adjustSpriteYUp16; 
 blockWalking=false; 
 
-[ItemType]  name=Blisters;
+[ItemType]  name=浮泡;
 ID=blisters1; sprite=1840;  itemCategory=natural;
 special=cannotBePickedUp; 
 special=noTooltip;
@@ -409,22 +409,22 @@ special=alwaysBelowOtherItems;
 pG=pOrange_light;
 [ItemReaction] 
 ID=blisters1; element=tileReacted; newID=X;
-[ItemType]  name=Blisters;
+[ItemType]  name=浮泡;
 ID=blisters2; sprite=1841;
 cloneFrom=blisters1;
-[ItemType]  name=Blisters;
+[ItemType]  name=浮泡;
 ID=blisters3; sprite=2126;
 pR=zoneDirt;
 cloneFrom=blisters1;
-[ItemType]  name=Blisters;
+[ItemType]  name=浮泡;
 ID=blisters4; sprite=2127;
 pR=zoneDirt;
 cloneFrom=blisters1;
-[ItemType]  name=Blisters;
+[ItemType]  name=浮泡;
 ID=blisters5; sprite=2128;
 pR=zoneDirt;
 cloneFrom=blisters1;
-[ItemType]  name=Blisters;
+[ItemType]  name=浮泡;
 ID=blisters6; sprite=2129;
 pR=zoneDirt;
 cloneFrom=blisters1;
@@ -470,7 +470,7 @@ ID=footholdsSmall; element=tileReacted; newID=X;
 [ItemReaction] 
 ID=footholdsSmall; element=destroy; newID=X; fx=fall_foothold;
 
-[ItemType]  name=Item Stash (Med);
+[ItemType]  name=物品藏匿处 (医用的);
 ID=stash_dirt_loot2; sprite=558; itemCategory=natural;
 journalID=journal_stash_dirt_loot;
 pR=zoneDirt; pB=zoneGrass; pG=zoneGrass;
@@ -497,48 +497,48 @@ ID=stash_dirt_loot5; element=dig; element=use; element=melee; newID=stash_dug; s
 [JournalEntry]
 ID=journal_stash_dirt_loot;
 category=item; halfPage=true;
-title=Item Stash;
-text=<itemBig=stash_dirt_loot2><title=Item Stash><brAdj=>This patch of dirt protrudes suspiciously. Looks like something interesting might be buried shallow enough that you can get at it with just your hands... 'Use' it to find out!;
+title=物品藏匿处;
+text=<itemBig=stash_dirt_loot2><title=物品藏匿处><brAdj=>这块泥土可疑地突出来.<n>看起来有趣的东西可能埋得很浅,<n>你用手就能摸到...<n>'使用'来找到出!;
 
-[ItemType]  name=Item Stash ($);
+[ItemType]  name=物品藏匿处 ($);
 ID=stash_dirt_loot_gp;
 cloneFrom=stash_dirt_loot2; special=dontCloneReactions;
 [ItemReaction] 
 ID=stash_dirt_loot_gp; element=dig; element=use; element=melee; newID=stash_dug; spawnItem=loot_gp_much; fx=dust_dirt;
 
-[ItemType]  name=Hidden Item Stash (Nice);
+[ItemType]  name=隐藏的物品藏匿处 (不错的);
 ID=stash_dirt_loot3_h;
 spawnFX=;
 cloneFrom=stash_dirt_loot3;
 [ItemReaction] 
 ID=stash_dirt_loot3_h; element=dig; element=use; element=melee; newID=stash_dug; spawnItem=loot3; fx=dust_dirt;
-[ItemType]  name=Hidden Item Stash (Good);
+[ItemType]  name=隐藏的物品藏匿处 (好的);
 ID=stash_dirt_loot4_h;
 spawnFX=;
 cloneFrom=stash_dirt_loot4; 
 [ItemReaction] 
 ID=stash_dirt_loot4_h; element=dig; element=use; element=melee; newID=stash_dug; spawnItem=loot4; fx=dust_dirt;
-[ItemType]  name=Hidden Item Stash (Great);
+[ItemType]  name=隐藏的物品藏匿处 (很棒的);
 ID=stash_dirt_loot5_h;
 spawnFX=;
 cloneFrom=stash_dirt_loot5;
 [ItemReaction] 
 ID=stash_dirt_loot5_h; element=dig; element=use; element=melee; newID=stash_dug; spawnItem=loot5; fx=dust_dirt;
 
-[ItemType]  name=Hidden Item Stash ($);
+[ItemType]  name=隐藏的物品藏匿处 ($);
 ID=stash_dirt_loot_gp_h;
 spawnFX=;
 cloneFrom=stash_dirt_loot_gp;
 [ItemReaction] 
 ID=stash_dirt_loot_gp_h; element=dig; element=use; element=melee; newID=stash_dug; spawnItem=loot_gp_much; fx=dust_dirt;
 
-[ItemType]  name=Empty Stash;
+[ItemType]  name=空的藏匿处;
 ID=stash_dug; sprite=559; 
 weight=500; itemCategory=natural;
 pR=zoneDirt; pB=zoneGrass; pG=zoneGrass;
 special=cannotBePickedUp; special=noTooltip;
 
-[ItemType]  name=Anemone;
+[ItemType]  name=海葵;
 ID=plant_anemone_med; sprite=1968; 
 pR=pPink; pG=pBlueD; pB=pRed;
 journalID=journal_plant_anemone;
@@ -554,7 +554,7 @@ element=pressureMoveAcross; action=moveSelf; fx=TinyStep;
 ID=plant_anemone_med; element=slash; element=heavySmash;
 element=fire; element=explode; element=ruin; newID=X; fx=WetSquish;
 
-[ItemType]  name=Anemone;
+[ItemType]  name=海葵;
 ID=plant_anemone_small1; sprite=1972; 
 pR=pPink; pG=pBlueD; pB=pRed;
   element=life;
@@ -570,18 +570,18 @@ element=pressureMoveAcross; action=moveSelf; fx=TinyStep;
 ID=plant_anemone_small1; element=slash; element=heavySmash;
 element=fire; element=explode; element=ruin; newID=X; fx=WetSquish;
 
-[ItemType]  name=Anemone;
+[ItemType]  name=海葵;
 ID=plant_anemone_small2; sprite=1973; 
 cloneFrom=plant_anemone_small1;
 
-[ItemType]  name=Anemone;
+[ItemType]  name=海葵;
 ID=plant_anemone_small3; sprite=1974; 
 cloneFrom=plant_anemone_small1;
 [JournalEntry]
 ID=journal_plant_anemone;
 category=item; halfPage=true; rarity=1;
-title=Sea Anemone;
-text=<itemBig=plant_anemone_med><title=Sea Anemone><brAdj=>Strange polyps that root themselves to the rocky ground. They live long, grow slowly, and just generally don't do a whole lot.;
+title=海葵;
+text=<itemBig=plant_anemone_med><title=海葵><brAdj=>奇怪的珊瑚虫扎根在岩石地面上.<n>它们寿命很长,生长缓慢,<n>而且通常做不了很多事情.;
 
 [ItemType]  name=?;
 ID=fish_spot1; sprite=2032; 
@@ -629,7 +629,7 @@ cloneFrom=thing_submerged1;
 ID=thing_submerged3; sprite=2006; 
 cloneFrom=thing_submerged1;
 
-[ItemType]  name=Oddule Corpse;
+[ItemType]  name=Oddule尸体;
 ID=body_oddule; sprite=1825; 
 journalID=journal_oddule;
 weight=1; itemCategory=natural;
@@ -639,7 +639,7 @@ blockWalking=true; blockJumping=true;
 special=cannotBePickedUp; special=randomFlipWhenPlaced;
 depthMod=10;
 
-[ItemType]  name=Oddule Corpse;
+[ItemType]  name=Oddule尸体;
 ID=body_oddule_water; sprite=1826; 
 journalID=journal_oddule;
 weight=1000; itemCategory=natural;
@@ -653,7 +653,7 @@ special=itemsOnSameTileAreRaised;
 special=actorsOnSameTileAreRaised;
 
 
-[ItemType]  name=Tooth?;
+[ItemType]  name=牙齿?;
   ID=tooth_big1; sprite=1899; weight=500; 
   itemCategory=natural;
   journalID=journal_tooth;
@@ -665,7 +665,7 @@ special=actorsOnSameTileAreRaised;
 [ItemReaction] 
 ID=tooth_big1; element=explode; element=heavySmash; newID=tooth_small1;
 
-[ItemType]  name=Tooth?;
+[ItemType]  name=牙齿?;
   ID=tooth_big2; sprite=1900; weight=500; 
   itemCategory=natural;
   journalID=journal_tooth;
@@ -677,7 +677,7 @@ ID=tooth_big1; element=explode; element=heavySmash; newID=tooth_small1;
 [ItemReaction] 
 ID=tooth_big2; element=explode; element=heavySmash; newID=tooth_small1;
 
-[ItemType]  name=Tooth?;
+[ItemType]  name=牙齿?;
   ID=tooth_small1; sprite=1901; weight=500; 
   itemCategory=natural;
   journalID=journal_tooth;
@@ -687,7 +687,7 @@ ID=tooth_big2; element=explode; element=heavySmash; newID=tooth_small1;
 	pR=pGrey2;
   element=life;
   
-[ItemType]  name=Tooth?;
+[ItemType]  name=牙齿?;
   ID=tooth_small2; sprite=1902; weight=500; 
   itemCategory=natural;
   journalID=journal_tooth;
@@ -700,20 +700,20 @@ ID=tooth_big2; element=explode; element=heavySmash; newID=tooth_small1;
 [JournalEntry]
 ID=journal_tooth;
 category=item; halfPage=true; rarity=1;
-title=Tooth?;
-text=<itemBig=tooth_big1><title=Tooth?><brAdj=>A tough, toothy protrusion. This must belong to some very large beast. Not much you can do with it.;
+title=牙齿?;
+text=<itemBig=tooth_big1><title=牙齿?><brAdj=>牙齿状的突出物.<n>这一定是某种很大的野兽的.<n>你用它做不了什么.;
   
 
 
 
 
-[ItemType]  name=Cave;
+[ItemType]  name=洞穴;
 ID=caveDark; sprite=512;  itemCategory=natural;
 special=canHangOnWalls; special=big; special=cannotBePickedUp;
 special=overrideTerrainCollisions; special=inheritTerrainPalettes; special=preventTileReactions; special=noTooltips;
 blockJumping=true;
 
-[ItemType]  name=Bright Cave;
+[ItemType]  name=明亮的洞穴;
 ID=caveBright; sprite=513;  itemCategory=natural;
 special=canHangOnWalls; special=big; special=cannotBePickedUp; special=inheritTerrainPalettes; special=noTooltips;
 special=overrideTerrainCollisions; special=preventTileReactions;
@@ -721,13 +721,13 @@ blockJumping=true;
 [ItemLight] 
 ID=caveBright; red=1; blue=0.8; green=1.0; alpha=1; size=0.7; flicker=0; texture=lightmaskCone;
 
-[ItemType]  name=Cave;
+[ItemType]  name=洞穴;
 ID=caveDark_wide; sprite=573;  itemCategory=natural;
 special=canHangOnWalls; special=big; special=cannotBePickedUp;
 special=overrideTerrainCollisions; special=inheritTerrainPalettes; special=preventTileReactions; special=noTooltips; special=sprite2xWidth;
 blockJumping=true;
 
-[ItemType]  name=Bright Cave;
+[ItemType]  name=明亮的洞穴;
 ID=caveBright_wide; sprite=605;  itemCategory=natural;
 special=canHangOnWalls; special=big; special=cannotBePickedUp; special=inheritTerrainPalettes; special=noTooltips; special=sprite2xWidth;
 special=overrideTerrainCollisions; special=preventTileReactions; 
@@ -735,7 +735,7 @@ blockJumping=true;
 [ItemLight]
 ID=caveBright_wide; red=1; blue=0.8; green=1.0; alpha=1; size=1.2; flicker=0; texture=lightmaskCone; X=0; Y=0.2;
 
-[ItemType]  name=Bombable Cave;
+[ItemType]  name=可攻击的洞穴;
 ID=bombableCave; sprite=734;  itemCategory=natural;
 pR=pB;
 special=canHangOnWalls; special=big; special=cannotBePickedUp;
@@ -779,7 +779,7 @@ pG=pPurple;
 ID=thingy_organic4; cloneFrom=thingy_organic1;
 pG=pGreen;
 
-[ItemType]  name=Web;
+[ItemType]  name=网;
 ID=web1; sprite=1219; itemCategory=natural; 
 journalID=journal_web;
 special=cannotBePickedUp; special=canFloatOnWater;
@@ -789,12 +789,12 @@ special=randomFlipWhenPlaced;
  pR=pGhost;
 [ItemReaction] 
 ID=web1; element=fire; element=slash; element=explode; newID=X; fx=hitDustQuiet;
-[ItemType]  name=Web;
+[ItemType]  name=网;
 ID=web2; sprite=1220; cloneFrom=web1;
-[ItemType]  name=Web;
+[ItemType]  name=网;
 ID=web3; sprite=1218; cloneFrom=web1;
 
-[ItemType]  name=Web Sac;
+[ItemType]  name=网状囊;
 ID=web_sac1_med; sprite=1217; itemCategory=natural;
 journalID=journal_web_sac;
 pR=pGrey;
@@ -804,7 +804,7 @@ special=randomFlipWhenPlaced;
 ID=web_sac1_med; element=slash; element=smash; element=use; newID=web3; spawnItem=loot2; spawnItem=loot_bone_junk;
 fx=hitDust;
 
-[ItemType]  name=Web Sac;
+[ItemType]  name=网状囊;
 ID=web_sac1_good; sprite=1217; 
 cloneFrom=web_sac1_med;
 [ItemReaction] 
@@ -814,17 +814,17 @@ fx=hitDust;
 [JournalEntry]
 ID=journal_web_sac;
 category=item; halfPage=true; rarity=1;
-title=Web Sac;
-text=<itemBig=web_sac1_med><title=Web Sac><brAdj=>Spiders wrap prey in webs to better feed on them. Spides, lacking intellect, also often wrap objects they don't understand in their web, out of curiosity and caution.;
+title=网状囊;
+text=<itemBig=web_sac1_med><title=网状囊><brAdj=>蜘蛛把猎物结在网里,以便更好地捕食它们.<n>缺乏智慧的蜘蛛,出于好奇和谨慎,<n>也经常把它们不了解的东西包在自己的网里.;
 
 [JournalEntry]
 ID=journal_web;
 category=item; halfPage=true; rarity=1;
-title=Web;
-text=<itemBig=web1><itemBig=web2><title=Web><brAdj=>Spides and their ilk prefer actively hunting more than laying webs, but they are capable of both.;
+title=网;
+text=<itemBig=web1><itemBig=web2><title=网><brAdj=>蜘蛛和它们的同类更喜欢主动捕食而不是织网,<n>但它们两者都能做到.;
 
 
-[ItemType]  name=Crack;
+[ItemType]  name=裂纹;
 ID=crack;  itemCategory=natural;
 sprite=726; stackable=true;
  special=inheritTerrainPalettes; special=cannotBePickedUp;
@@ -839,25 +839,25 @@ sprite=730; stackable=true;
 [ItemReaction] 
 ID=cracks; element=tileReacted; newID=X;
 
-[ItemType]  name=Water;
+[ItemType]  name=水;
 ID=cliff_water;  itemCategory=natural;
 sprite=964;
  pB=zoneWater; special=cannotBePickedUp; special=alwaysBelowOtherItems;
  special=canHangOnWalls; special=noTooltip; special=animated;
-[ItemType]  name=Water;
+[ItemType]  name=水;
 ID=cliff_water2;  itemCategory=natural;
 sprite=968; cloneFrom=cliff_water;
-[ItemType]  name=Water;
+[ItemType]  name=水;
 ID=cliff_water3;  itemCategory=natural;
 sprite=972; cloneFrom=cliff_water;
-[ItemType]  name=Water;
+[ItemType]  name=水;
 ID=cliff_water4;  itemCategory=natural;
 sprite=932; cloneFrom=cliff_water;
-[ItemType]  name=Water;
+[ItemType]  name=水;
 ID=cliff_water5;  itemCategory=natural;
 sprite=936; cloneFrom=cliff_water; pR=zoneWater;
 
-[ItemType]  name=Dirt;
+[ItemType]  name=泥土;
 ID=dirt_sandy1;  itemCategory=natural; 
 sprite=272; stackable=true;
  special=cannotBePickedUp;
@@ -866,7 +866,7 @@ special=ignoreBeingRaised;
  pR=zoneDirt;
 [ItemReaction] 
 ID=dirt_sandy1; element=tileReacted; newID=X;
-[ItemType]  name=Dirt;
+[ItemType]  name=泥土;
 ID=dirt_sandy2;  itemCategory=natural; 
 sprite=274; stackable=true;
  special=cannotBePickedUp;
@@ -876,53 +876,53 @@ special=ignoreBeingRaised;
 [ItemReaction] 
 ID=dirt_sandy2; element=tileReacted; newID=X;
 
-[ItemType]  name=Solid Filth;
+[ItemType]  name=固体污物;
 ID=filth_solid;  itemCategory=natural; 
 sprite=753; stackable=true;
 special=cannotBePickedUp; special=canBeInsideWalls; special=noTooltip; special=canFloatOnWater;
 special=quantityChangesSprite_upTo5; pR=zoneDirt;
 [ItemReaction] 
 ID=filth_solid; element=tileReacted; element=water; newID=X;
-[ItemType]  name=Stain;
+[ItemType]  name=污渍;
 ID=stain;  itemCategory=natural; 
 sprite=721; stackable=true;
  special=transparent; special=cannotBePickedUp;
  special=canBeInsideWalls; special=noTooltip; special=quantityChangesSprite_upTo5;
 [ItemReaction] 
 ID=stain; element=tileReacted; element=water; newID=X;
-[ItemType]  name=Filth;
+[ItemType]  name=污物;
 ID=filth;  sprite=753;
 cloneFrom=stain;
 
 
-[ItemType]  name=Stain;
+[ItemType]  name=污渍;
 ID=stain_faint;  itemCategory=natural; 
 sprite=721; stackable=true;
  special=verytransparent; special=cannotBePickedUp;
  special=canBeInsideWalls; special=noTooltip; special=quantityChangesSprite_upTo5;
 [ItemReaction] 
 ID=stain_faint; element=tileReacted; element=water;  newID=X;
-[ItemType]  name=Filth;
+[ItemType]  name=污物;
 ID=filth_faint;  sprite=753;
 cloneFrom=stain_faint;
 
-[ItemType]  name=Stain;
+[ItemType]  name=污渍;
 ID=stain_superfaint;  itemCategory=natural; 
 sprite=721; stackable=true;
  special=supertransparent; special=cannotBePickedUp;
  special=canBeInsideWalls; special=noTooltip; special=quantityChangesSprite_upTo5;
 [ItemReaction] 
 ID=stain_superfaint; element=tileReacted; element=water;  newID=X;
-[ItemType]  name=Filth;
+[ItemType]  name=污物;
 ID=filth_superfaint;  sprite=753;
 cloneFrom=stain_superfaint;
 
-[ItemType]  name=Scorch Marks;
+[ItemType]  name=烧焦痕迹;
 ID=scorchMarks; itemCategory=natural;
  sprite=1049; special=cannotBePickedUp; special=canHangOnWalls; special=alwaysBelowOtherItems;
  stackable=true; pR=pGreyD2;
  
-[ItemType]  name=Bug;
+[ItemType]  name=昆虫;
 ID=bug_small; sprite=1248; pR=zoneStoneDark;
 journalID=journal_bugs;
 weight=0; itemCategory=natural;
@@ -931,7 +931,7 @@ special=canHangOnWalls; special=reactsToPressure; special=cannotBePickedUp;
 [ItemReaction] 
 ID=bug_small; element=physical; element=magic; element=pressureMove; newID=X; fx=scatter_bug;
 
-[ItemType]  name=Bugs (5);
+[ItemType]  name=昆虫 (5);
 ID=bugs5_small; sprite=1252; pR=zoneStoneDark;
 journalID=journal_bugs;
 weight=0; itemCategory=natural;
@@ -941,7 +941,7 @@ special=canHangOnWalls; special=reactsToPressure; special=cannotBePickedUp;
 ID=bugs5_small; element=physical; element=magic; element=pressureMove; newID=X; fx=scatter_bugs5;
 
 
-[ItemType]  name=Bugs (12);
+[ItemType]  name=昆虫 (12);
 ID=bugs12_small; sprite=1256; pR=zoneStoneDark;
 journalID=journal_bugs;
 weight=0; itemCategory=natural;
@@ -950,7 +950,7 @@ special=canHangOnWalls; special=reactsToPressure; special=cannotBePickedUp;
 [ItemReaction] 
 ID=bugs12_small; element=physical; element=magic; element=pressureMove; newID=X; fx=scatter_bugs12;
 
-[ItemType]  name=Bugs (Mass);
+[ItemType]  name=昆虫 (大量的);
 ID=bugsMass_small; sprite=1260; pR=zoneStoneDark;
 journalID=journal_bugs;
 weight=0; itemCategory=natural;
@@ -963,10 +963,10 @@ ID=bugsMass_small; element=physical; element=magic; element=pressureMove; newID=
 [JournalEntry]
 ID=journal_bugs;
 category=item; halfPage=true; rarity=1;
-title=Bugs;
-text=<itemBig=bugs12_small><title=Bugs><brAdj=>Are they beetles? Or roaches? They're too elusive and small to get a good look! ...at least they're harmless. Don't worry about it.;
+title=昆虫;
+text=<itemBig=bugs12_small><title=昆虫><brAdj=>他们是甲虫吗?还是蟑螂?<n>它们又小又难以捉摸,看不清楚!...<n>至少它们是无害的.别担心.;
 
-[ItemType]  name=Jefri;
+[ItemType]  name=杰弗里;
 ID=jeffery1; sprite=348;
 texture=items_misc;
 journalID=journal_jeffery;
@@ -978,22 +978,22 @@ ID=jeffery1;
 element=physical; element=magic;
 element=pressureMove; newID=X; fx=jeffery_run;
 
-[ItemType]  name=Jefri;
+[ItemType]  name=杰弗里;
 ID=jeffery2; sprite=380;
 cloneFrom=jeffery1;
 
-[ItemType]  name=Jefri;
+[ItemType]  name=杰弗里;
 ID=jeffery3; sprite=412;
 cloneFrom=jeffery1;
 
 [JournalEntry]
 ID=journal_jeffery;
 category=creature; halfPage=true; rarity=2;
-title=Jefri;
-text=<itemBig=jeffery1><title=Jefri><brAdj=>Small mammals that seek and hunt smaller rodents. They are known for their curiosity and cleverness. Certain rare breeds of Jefri hunt larger prey in packs, but this kind appears harmless.;
+title=杰弗里;
+text=<itemBig=jeffery1><title=杰弗里><brAdj=>寻找和捕猎小型啮齿动物的小型哺乳动物.<n>他们以好奇和聪明而闻名.<n>某些稀有品种的杰弗瑞会成群捕食大型猎物,<n>但这种品种似乎是无害的。.;
 
 
-[ItemType]  name=Rodent;
+[ItemType]  name=啮齿动物;
 ID=rat1_runL; sprite=316;
 weight=0; itemCategory=natural;
 journalID=journal_rodent;
@@ -1007,7 +1007,7 @@ ID=rat1_runL;
 element=physical; element=magic; element=combatStart;
 element=pressureMove; newID=X; fx=rodent_runL;
 
-[ItemType]  name=Rodent;
+[ItemType]  name=啮齿动物;
 ID=rat1_runR; sprite=316;
 cloneFrom=rat1_runL;
 special=dontCloneReactions;
@@ -1019,10 +1019,10 @@ element=pressureMove; newID=X; fx=rodent_runR;
 [JournalEntry]
 ID=journal_rodent;
 category=creature; halfPage=true; rarity=1;
-title=Rodent;
-text=<itemBig=rat1_runL><title=Rodent><brAdj=>Vermin that wander dark and unkempt areas. Though they may be unsanitary, they pose no threat to you and will flee if approached.;
+title=啮齿动物;
+text=<itemBig=rat1_runL><title=啮齿动物><brAdj=>在黑暗和凌乱的地方游荡的害虫.<n>虽然它们可能不卫生,<n>但它们不会对你构成威胁.<n>如果你接近它们,它们会逃跑.;
 
-[ItemType]  name=Crab;
+[ItemType]  name=螃蟹;
 ID=crab1_runL; sprite=284;
 weight=0; itemCategory=natural;
 journalID=journal_crab;
@@ -1037,7 +1037,7 @@ ID=crab1_runL;
 element=physical; element=magic; element=combatStart;
 element=pressureMove; newID=X; fx=crab_runL;
 
-[ItemType]  name=Crab;
+[ItemType]  name=螃蟹;
 ID=crab1_runR; sprite=284;
 cloneFrom=crab1_runL;
 special=dontCloneReactions;
@@ -1048,11 +1048,11 @@ element=pressureMove; newID=X; fx=crab_runR;
 [JournalEntry]
 ID=journal_crab;
 category=creature; halfPage=true; rarity=1;
-title=Crab;
-text=<itemBig=crab1_runL><title=Crab><brAdj=>This little crustacean buddy means you no harm. Frankly, it lacks the intellect to have any sort of intentions. It will no doubt skitter away soon to search for food.;
+title=螃蟹;
+text=<itemBig=crab1_runL><title=螃蟹><brAdj=>这只小甲壳纲动物不会伤害你.<n>老实说,它缺乏智力,没有任何目的.<n>毫无疑问,它很快就会离开去寻找食物.;
 
 
-[ItemType]  name=Bubble;
+[ItemType]  name=气泡;
 ID=bubble_small; sprite=1859; pR=zoneDirt;
 journalID=;
 weight=0; itemCategory=natural;
@@ -1061,7 +1061,7 @@ special=canHangOnWalls; special=cannotBePickedUp;
 [ItemReaction] 
 ID=bubble_small; element=smash; element=dig; element=explode; newID=X; fx=WetSquish;
 
-[ItemType]  name=Bubble;
+[ItemType]  name=气泡;
 ID=bubble_big; sprite=1827; pR=zoneDirt;
 pG=zoneDirt;
 weight=0; itemCategory=natural;
@@ -1074,10 +1074,10 @@ ID=bubble_big; element=use; element=physical; element=explode; newID=X; fx=dust_
 [JournalEntry]
 ID=item_bubble_big;
 category=item; halfPage=true; rarity=1;
-title=Bubble;
-text=<itemBig=bubble_big><title=Bubble><brAdj=>These odd bubbles form inside Alvora on a regular basis. Disgusting, but no more than a mild inconvenience at most.;
+title=气泡;
+text=<itemBig=bubble_big><title=气泡><brAdj=>这些奇怪的气泡会定期在Alvora内部形成.<n>很恶心,但最多不过是轻微的不适.;
 
-[ItemType]  name=Bubble (Acid);
+[ItemType]  name=气泡 (酸性的);
 ID=bubble_big_acid; sprite=1827; 
 pR=zoneDirt;
 pG=pGreen;
@@ -1093,10 +1093,10 @@ ID=bubble_big_acid; element=use; element=physical; element=explode; newID=X; act
 [JournalEntry]
 ID=item_bubble_big_acid;
 category=item; halfPage=true; rarity=1;
-title=Bubble (Acid);
-text=<itemBig=bubble_big_acid><title=Bubble (Acid)><brAdj=>Where you have bubbles, and you also have acid, you may occasionally find bubbles full of acid. It seems to be under pressure - tap it and acid sprays out a fair distance!;
+title=气泡 (酸性的);
+text=<itemBig=bubble_big_acid><title=气泡 (酸性的)><brAdj=>有气泡的地方,也有酸性物质,<n>你可能偶尔会发现充满酸液的气泡.<n>它似乎处于压力之下--轻拍它,<n>酸液就会喷出相当远的距离!;
 
-[ItemType]  name=Blockage;
+[ItemType]  name=阻塞物;
 ID=blockage_closed; sprite=1842; pR=zoneDirt;
 journalID=journal_blockage_closed;
 weight=0; itemCategory=natural;
@@ -1104,7 +1104,7 @@ special=canHangOnWalls; special=cannotBePickedUp;
 blockWalking=true; blockJumping=true;
 [ItemReaction] 
 ID=blockage_closed; element=smash; element=slash; element=explode; newID=X; fx=dust_bubble;
-[ItemType]  name=Blockage;
+[ItemType]  name=阻塞物;
 ID=blockage_closed2; sprite=1843; pR=zoneDirt;
 journalID=journal_blockage_closed;
 weight=0; itemCategory=natural;
@@ -1116,11 +1116,11 @@ ID=blockage_closed2; element=use; element=smash; element=slash; element=explode;
 [JournalEntry]
 ID=journal_blockage_closed;
 category=item; halfPage=true; rarity=1;
-title=Blockage;
-text=<itemBig=blockage_closed><title=Blockage><brAdj=>Stringy obstructions that hang down and block passage. Easily cleared with a bit of force.;
+title=阻塞物;
+text=<itemBig=blockage_closed><title=阻塞物><brAdj=>绳子状的障碍物,悬挂下来并阻塞通道.<n>只要用力就能轻易清除..;
 
 
-[ItemType]  name=Bubble?;
+[ItemType]  name=气泡?;
 ID=bubble_big_item; sprite=1831; pR=zoneDirt;
 journalID=journal_bubble_big_item;
 weight=0; itemCategory=natural;
@@ -1131,7 +1131,7 @@ blockWalking=true;
 [ItemReaction] 
 ID=bubble_big_item; element=use; element=physical; element=explode; newID=X; fx=dust_bubble; spawnItem=loot0;
 
-[ItemType]  name=Bubble?;
+[ItemType]  name=气泡?;
 ID=bubble_bigger_item; sprite=1835; pR=zoneDirt;
 journalID=journal_bubble_big_item;
 weight=0; itemCategory=natural;
@@ -1146,10 +1146,10 @@ action=spawn_gangle_chance2;
 [JournalEntry]
 ID=journal_bubble_big_item;
 category=item; halfPage=true; rarity=1;
-title=Bubble (Item);
-text=<itemBig=bubble_big_item><title=Bubble (Item)><brAdj=>This bubble has formed over an object of some sort. The item inside is obscured, but a quick pop and that will no longer be an issue.;
+title=气泡 (有物品的);
+text=<itemBig=bubble_big_item><title=气泡 (有物品的)><brAdj=>这个气泡是在某种物体上形成的.<n>里面的物品是被遮挡了,<n>但随着砰的一声,这不再是个问题了.;
 
-[ItemType]  name=Bubble?;
+[ItemType]  name=气泡?;
 ID=bubble_huge_item; sprite=1839; pR=zoneDirt;
 journalID=journal_bubble_huge_item;
 weight=0; itemCategory=natural; special=inheritTerrainPalettes;
@@ -1158,7 +1158,7 @@ blockWalking=true; blockJumping=true;
 [ItemReaction] 
 ID=bubble_huge_item; element=melee; element=explode; newID=X; fx=dust_bubble; spawnItem=loot3; action=spawn_gangle_chance15;
 
-[ItemType]  name=Bubble?;
+[ItemType]  name=气泡?;
 ID=bubble_huge_item_safe; sprite=1839; pR=zoneDirt;
 journalID=journal_bubble_huge_item;
 weight=0; itemCategory=natural; special=inheritTerrainPalettes;
@@ -1167,7 +1167,7 @@ blockWalking=true; blockJumping=true;
 [ItemReaction] 
 ID=bubble_huge_item_safe; element=melee; element=explode; newID=X; fx=dust_bubble; spawnItem=loot3;
 
-[ItemType]  name=Bubble?;
+[ItemType]  name=气泡?;
 ID=bubble_huge_item_good_safe; sprite=1839; pR=zoneDirt;
 journalID=journal_bubble_huge_item;
 weight=0; itemCategory=natural; special=inheritTerrainPalettes;
@@ -1175,7 +1175,7 @@ special=canHangOnWalls; special=cannotBePickedUp;
 blockWalking=true; blockJumping=true;
 [ItemReaction] 
 ID=bubble_huge_item_good_safe; element=melee; element=explode; newID=X; fx=dust_bubble; spawnItem=loot4;
-[ItemType]  name=Bubble?;
+[ItemType]  name=气泡?;
 ID=bubble_huge_item_great_safe; sprite=1839; pR=zoneDirt;
 journalID=journal_bubble_huge_item;
 weight=0; itemCategory=natural; special=inheritTerrainPalettes;
@@ -1184,7 +1184,7 @@ blockWalking=true; blockJumping=true;
 [ItemReaction] 
 ID=bubble_huge_item_great_safe; element=melee; element=explode; newID=X; fx=dust_bubble; spawnItem=loot5;
 
-[ItemType]  name=Bubble?;
+[ItemType]  name=气泡?;
 ID=bubble_huge_craftkit_safe; sprite=1839; pR=zoneDirt;
 journalID=journal_bubble_huge_item;
 weight=0; itemCategory=natural; special=inheritTerrainPalettes;
@@ -1193,7 +1193,7 @@ blockWalking=true; blockJumping=true;
 [ItemReaction] 
 ID=bubble_huge_craftkit_safe; element=melee; element=explode; newID=X; fx=dust_bubble; spawnItem=loot_craft_kit;
 
-[ItemType]  name=Bubble?;
+[ItemType]  name=气泡?;
 ID=bubble_huge_gp_safe; sprite=1839; pR=zoneDirt;
 journalID=journal_bubble_huge_item;
 weight=0; itemCategory=natural; special=inheritTerrainPalettes;
@@ -1205,11 +1205,11 @@ ID=bubble_huge_gp_safe; element=melee; element=explode; newID=X; fx=dust_bubble;
 [JournalEntry]
 ID=journal_bubble_huge_item;
 category=item; halfPage=true; rarity=1;
-title=Huge Bubble (Item);
-text=<itemBig=bubble_huge_item_safe><title=Huge Bubble (Item)><brAdj=>What was once a bubble forming over an object has now hardened. A blow from most any melee weapon should do the trick. Supposedly, certain parasites can get stuck in bubbles like these.;
+title=大气泡 (有物品的);
+text=<itemBig=bubble_huge_item_safe><title=大气泡 (有物品的)><brAdj=>曾经在物体上形成的气泡现在已经硬化了.<n>任何近战武器的攻击都能达到目的.<n>据说,某些寄生虫会被困在这样的泡泡里.;
 
 
-[ItemType]  name=Pushable Blob;
+[ItemType]  name=可推动的一团物体;
 ID=blob_pushable; sprite=1793; 
 journalID=journal_blob_pushable;
 special=pushable; special=big; special=slideWhenPushed; special=animated;
@@ -1227,7 +1227,7 @@ ID=blob_pushable; element=burstSpread1; action=blob1_bursting;
 [ItemReaction] 
 ID=blob_pushable; element=burst1; element=explode; fx=dust_bubble_dark; newID=X;
 
-[ItemType]  name=Pushable Blob;
+[ItemType]  name=可推动的团子;
 ID=blob_pushable2; sprite=1793; 
 cloneFrom=blob_pushable;
 special=dontCloneReactions;
@@ -1242,10 +1242,10 @@ ID=blob_pushable2; element=burst2; element=explode; fx=dust_bubble; newID=X;
 [JournalEntry]
 ID=journal_blob_pushable;
 category=item; halfPage=true; rarity=1;
-title=Pushable Blob;
-text=<itemBig=blob_pushable><title=Pushable Blob><brAdj=>This bouncing jelly seems to cohere to itself far better than it should. By giving it a push, it slides onward until it hits something. Oddly, when it collides with another blob just like it, it bursts!;
+title=可推动的团子;
+text=<itemBig=blob_pushable><title=可推动的团子><brAdj=>这个弹跳的果冻似乎比正常的粘合得紧密得多.<n>给它一个推力,它就会向前滑动,直到碰到什么东西.<n>奇怪的是,当它与另一个类似的物体碰撞时,它会爆炸!;
 
-[ItemType]  name=Volatile Blob;
+[ItemType]  name=挥发性的团子;
 ID=blob_pushable_explode; sprite=1793; 
 cloneFrom=blob_pushable;
 special=dontCloneReactions;
@@ -1262,10 +1262,10 @@ ID=blob_pushable_explode; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.2; flick
 [JournalEntry]
 ID=item_blob_pushable_explode;
 category=item; halfPage=true; rarity=1;
-title=Volatile Blob;
-text=<itemBig=blob_pushable_explode><title=Volatile Blob><brAdj=>Flashes brightly and emits a faint acrid smell. Still slides and collides like a 'normal' blob, but you should stand back if it's going to burst!;
+title=挥发性的团子;
+text=<itemBig=blob_pushable_explode><title=挥发性的团子><brAdj=>闪光并散发出淡淡的辛辣气味.<n>仍然能'正常的'滑动和碰撞,<n>但如果它要破裂,你应该退后!;
 
-[ItemType]  name=Pushable Blob (?);
+[ItemType]  name=可推动的团子 (?);
 ID=blob_pushable_item; sprite=1797; 
 special=pushable; special=big; special=slideWhenPushed; special=animated;
 special=canReactIndefinitely; special=canReactWhileMoving;
@@ -1285,12 +1285,12 @@ spawnItem=loot3;
 [JournalEntry]
 ID=item_blob_pushable_item;
 category=item; halfPage=true; rarity=1;
-title=Pushable Blob (Item);
-text=<itemBig=blob_pushable_item><title=Pushable Blob (Item)><brAdj=>There's something in there! Trying to pop it is useless - it just slips away under force. If you want at whatever's inside, you'll have to find a matching blob, and get it to collide with this.;
+title=可推动的团子 (有物品的);
+text=<itemBig=blob_pushable_item><title=可推动的团子 (有物品的)><brAdj=>里面有什么东西!<n>试图把它弄破是没有用的--<n>它在外力的作用下只会溜走.<n>如果你想知道里面是什么,<n>你要找到一个匹配的团子,互相发生碰撞;
 
 
 
-[ItemType]  name=Rotworm Nest;
+[ItemType]  name=腐虫巢穴;
 ID=nest_worm; sprite=1268; 
 special=big; special=cannotBePickedUp;
 special=randomFlipWhenPlaced; special=emitParticleEvery100Frames;
@@ -1307,8 +1307,8 @@ spawnItem=loot4; spawnItem=loot_bone_junk; spawnItem=loot2; spawnItem=loot_bone_
 [JournalEntry]
 ID=item_nest_worm;
 category=item; halfPage=true; rarity=2;
-title=Rotworm Nest;
-text=<itemBig=nest_worm><title=Rotworm Nest><brAdj=>Rotworms don't actually build their nest, but instead live inside fungus that sprouts up in decaying bodies. They feed on the body and the fungus alike.<n=><n=>Some poor soul must have died under this thing. Perhaps some equipment still remains intact within?;
+title=腐虫巢穴;
+text=<itemBig=nest_worm><title=腐虫巢穴><brAdj=>Rotworms腐虫实际上并不筑巢,<n>而是生活在腐烂的尸体中发芽的真菌里.<n>它们以尸体和真菌为食.<n>一定有可怜的人死于这些东西.<n>也许里面还有一些装备完好无损?;
 
 [ItemType]  name=Rotshroom;
 ID=nest_worm_small1; sprite=1269; 
@@ -1351,7 +1351,7 @@ special=canHangOnWalls; special=cannotBePickedUp;
 ID=organic_hole_slow; element=dig; element=explode; newID=X; fx=WetSquish;
 
 
-[ItemType]  name=Shell;
+[ItemType]  name=壳;
 ID=turtle_shell1; sprite=1906; 
 journalID=journal_turtle;
 pR=pTeal2; pB=pFadeDark;
@@ -1361,27 +1361,27 @@ special=canFloatOnWater; special=anim_bobUpAndDown_slow;
 special=overrideTerrainCollisions; 
 special=itemsOnSameTileAreRaised; special=actorsOnSameTileAreRaised;
 
-[ItemType]  name=Shell;
+[ItemType]  name=壳;
 ID=turtle_shell2; sprite=1907; 
 cloneFrom=turtle_shell1;
-[ItemType]  name=Shell;
+[ItemType]  name=壳;
 ID=turtle_shell3; sprite=1908; 
 cloneFrom=turtle_shell1;
-[ItemType]  name=Shell;
+[ItemType]  name=壳;
 ID=turtle_shell4; sprite=1909; 
 cloneFrom=turtle_shell1;
-[ItemType]  name=Shell;
+[ItemType]  name=壳;
 ID=turtle_shell_edge; sprite=1904; 
 cloneFrom=turtle_shell1; 
 special=elementUsableForRestrictedAoEs;
 element=water;
-[ItemType]  name=Shell;
+[ItemType]  name=壳;
 ID=turtle_shell_edge2; sprite=1905; 
 cloneFrom=turtle_shell1;
 special=elementUsableForRestrictedAoEs;
 element=water;
 
-[ItemType]  name=Shell;
+[ItemType]  name=壳;
 ID=turtle_shell; sprite=1910; 
 journalID=journal_turtle;
 weight=1000; itemCategory=natural;
@@ -1397,7 +1397,7 @@ special=itemsOnSameTileAreRaised; special=actorsOnSameTileAreRaised;
 
 
 
-[ItemType]  name=Crystal;
+[ItemType]  name=水晶;
 ID=turtle_crystal; sprite=1912; pR=pTeal_light;
 journalID=journal_turtle_tentacle;
 weight=0; itemCategory=natural; special=sprite2xHeight;
@@ -1409,7 +1409,7 @@ pR=pBlue;
 ID=turtle_crystal; element=melee; element=explode; newID=X; fx=dust_glass; spawnItem=gem_big2; action=somethingHappened_action;
 
 
-[ItemType]  name=Slimy Tendrils;
+[ItemType]  name=黏滑的卷须;
 ID=graven_climbable; sprite=1879; pR=p68; 
 weight=0; itemCategory=natural; 
 special=canHangOnWalls; special=big; special=overrideTerrainCollisions; special=overrideMostCollisions; 
@@ -1417,7 +1417,7 @@ special=cannotBePickedUp; special=moveCostOverride_2; special=climbAnim;
 [ItemReaction]
 ID=graven_climbable; element=tileReacted; newID=X;
 
-[ItemType]  name=Bone Sprout;
+[ItemType]  name=骨芽;
 ID=sprout_bone; sprite=2206; 
 journalID=journal_sprout_bone;
 weight=0; itemCategory=natural;
@@ -1427,10 +1427,10 @@ ID=sprout_bone; element=slash; element=smash; newID=sprout_bone_damaged; fx=dust
 [JournalEntry]
 ID=journal_sprout_bone;
 category=item; halfPage=true; rarity=4; rewardMod=0;
-title=Bone Sprout;
-text=<itemBig=sprout_bone><title=Bone Sprout><brAdj=>Bizarre tendril of bone interspersed with strange, purple veins that extend deep into the ground like roots. It reacts to no stimuli, and damaging the veins only results in indistinct purple mush. Whether this is a plant, a creature, or a living thing at all is unclear.;
+title=骨芽;
+text=<itemBig=sprout_bone><title=Bone Sprout><brAdj=>奇形怪状的骨质卷须物奇怪的散落的,<n>紫色的脉络,像根一样深入地下.<n>它对任何刺激都没有反应,<n>破坏脉络只会产生不明的紫色黏糊物.<n>这究竟是一种植物、一种动物<n>还是其他的生命体暂时还不清楚;
 
-[ItemType]  name=Crushed Bone Sprout;
+[ItemType]  name=破碎的骨芽;
 ID=sprout_bone_damaged; sprite=2207; 
 journalID=journal_sprout_bone;
 weight=0; itemCategory=natural;
@@ -1545,7 +1545,7 @@ cloneFrom=cliffEdge1_NW;
 
 
 
-[ItemType]  name=Waterfall;
+[ItemType]  name=瀑布;
 ID=waterfall1; sprite=2040; 
 journalID=;
 itemCategory=natural;
@@ -1648,7 +1648,7 @@ special=noTooltip; special=cannotBePickedUp; special=canHangOnWalls; special=can
 weight = 1000; element=earth;
 pR=zoneDirt;
 
-[ItemType]  name=Shell;
+[ItemType]  name=壳;
 ID=shell_slope1; sprite=609; 
 journalID=journal_shell_giant;
 texture=items_misc; itemCategory=natural;
@@ -1662,7 +1662,7 @@ ID=shell_slope2; sprite=610;
 cloneFrom=shell_slope1;
 
 
-[ItemType]  name=Shell;
+[ItemType]  name=壳;
 ID=shell_giant1; sprite=611; 
 journalID=journal_shell_giant;
 texture=items_misc; itemCategory=natural;
@@ -1673,17 +1673,17 @@ pR=p29;
 blockWalking=true; blockJumping=true;
 depthMod=1050;
 
-[ItemType]  name=Shell;
+[ItemType]  name=壳;
 ID=shell_giant2; sprite=612; 
 cloneFrom=shell_giant1;
-[ItemType]  name=Shell;
+[ItemType]  name=壳;
 ID=shell_giant3; sprite=613; 
 cloneFrom=shell_giant1;
-[ItemType]  name=Shell;
+[ItemType]  name=壳;
 ID=shell_giant4; sprite=614; 
 cloneFrom=shell_giant1;
 
-[ItemType]  name=Shell;
+[ItemType]  name=壳;
 ID=shell_giant_top1; sprite=615; 
 journalID=journal_shell_giant;
 texture=items_misc; itemCategory=natural;
@@ -1698,7 +1698,7 @@ cloneFrom=shell_giant_top1;
 
 
 
-[ItemType]  name=Shell;
+[ItemType]  name=壳;
 ID=shell_giant_bottom1; sprite=707; 
 journalID=journal_shell_giant;
 texture=items_misc; itemCategory=natural;
@@ -1706,39 +1706,39 @@ special=noTooltip; special=cannotBePickedUp; special=canHangOnWalls; special=can
 special=quantityIncreasesPaletteRZoneMisc; stackable=true;
 weight = 9000;
 pR=p29;
-[ItemType]  name=Shell;
+[ItemType]  name=壳;
 ID=shell_giant_bottom2; sprite=708; 
 cloneFrom=shell_giant_bottom1;
-[ItemType]  name=Shell;
+[ItemType]  name=壳;
 ID=shell_giant_bottom3; sprite=709; 
 cloneFrom=shell_giant_bottom1;
-[ItemType]  name=Shell;
+[ItemType]  name=壳;
 ID=shell_giant_bottom4; sprite=710; 
 cloneFrom=shell_giant_bottom1;
 
 
-[ItemType]  name=Shell;
+[ItemType]  name=壳;
 ID=shell_giant_below1; sprite=611; 
 depthMod=0;
 pR=p28;
 cloneFrom=shell_giant1;
-[ItemType]  name=Shell;
+[ItemType]  name=壳;
 ID=shell_giant_below2; sprite=612; 
 cloneFrom=shell_giant_below1;
-[ItemType]  name=Shell;
+[ItemType]  name=壳;
 ID=shell_giant_below3; sprite=613; 
 cloneFrom=shell_giant_below1;
-[ItemType]  name=Shell;
+[ItemType]  name=壳;
 ID=shell_giant_below4; sprite=614; 
 cloneFrom=shell_giant_below1;
 
-[ItemType]  name=Shell;
+[ItemType]  name=壳;
 ID=shell_giant_top_below1; sprite=615; 
 depthMod=0;
 pR=p28;
 cloneFrom=shell_giant_top1;
 
-[ItemType]  name=Shell;
+[ItemType]  name=壳;
 ID=shell_giant_top_below2; sprite=616; 
 depthMod=0;
 cloneFrom=shell_giant_top_below1;
@@ -1746,8 +1746,8 @@ cloneFrom=shell_giant_top_below1;
 [JournalEntry]
 ID=journal_shell_giant;
 category=item; halfPage=true; rarity=3; rewardMod=-500;
-title=Giant Shell;
-text=<icon=j_giantShell><title=Giant Shell><brAdj=>         These humongous shells are taken from some unknown deep sea creature and used to assemble the Cleever's Shellships. They're quite hardy, yet surprisingly buoyant.;
+title=巨大的壳;
+text=<icon=j_giantShell><title=巨大的壳><brAdj=>这些巨大的壳取自一些未知的深海生物.<n>用来组装'机灵的贝壳船'.<n>它们相当的坚固,<n>而且浮力也令人惊讶的强;
 
 
 

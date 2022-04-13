@@ -169,7 +169,7 @@ category=item; halfPage=true; rarity=2;
 title=洞穴之花;
 text=<itemBig=caveFlower><title=Cave Flower><brAdj=>因其明亮诱人的颜色而得名.<n>与大多数颜色鲜艳的蘑菇不同,<n>这些蘑菇营养丰富.;
 
-[ItemType]  name=Aldleaf植物;
+[ItemType]  name=阿尔德叶植物;
 ID=aldleafPlant; sprite=521; 
 journalID=journal_aldleaf;
 weight=0; volume=1; itemCategory=plant;
@@ -186,7 +186,7 @@ ID=aldleafPlant; element=growth; newID=aldleafBush; fx=leafdust;
 [ItemReaction] 
 ID=aldleafPlant; element=wither; newID=aldleafPlant_wither;
 
-[ItemType]  name=Aldleaf植物(枯萎的);
+[ItemType]  name=阿尔德叶植物(枯萎的);
 ID=aldleafPlant_wither; sprite=490; 
 journalID=journal_aldleaf;
 weight=0; volume=1; itemCategory=plant;
@@ -199,7 +199,7 @@ ID=aldleafPlant_wither; element=fire; newID=X; fx=leafdust;
 [ItemReaction] 
 ID=aldleafPlant_wither; element=growth; newID=aldleafPlant; fx=leafdust;
 
-[ItemType]  name=Aldleaf灌木;
+[ItemType]  name=阿尔德叶灌木;
 ID=aldleafBush; sprite=522; 
 journalID=journal_aldleaf;
 weight=1; itemCategory=plant;
@@ -216,7 +216,7 @@ ID=aldleafBush; element=fire; newID=fire; fx=leafdust;
 [ItemReaction] 
 ID=aldleafBush; element=wither; newID=aldleafBush_wither;
 
-[ItemType]  name=Aldleaf灌木(枯萎的);
+[ItemType]  name=阿尔德叶灌木(枯萎的);
 ID=aldleafBush_wither; sprite=522; 
 journalID=journal_aldleaf;
 weight=1; itemCategory=plant;
@@ -231,7 +231,7 @@ ID=aldleafBush_wither; element=fire; newID=fire; fx=leafdust;
 [ItemReaction] 
 ID=aldleafBush_wither; element=growth; newID=aldleafBush;
 
-[ItemType]  name=Aldleaf;
+[ItemType]  name=阿尔德叶;
 description=宽大的叶子,可用作临时的布料.非常耐用.;
 journalID=journal_aldleaf;
 ID=aldleaf; sprite=489; stackable=true; itemCategory=plant;
@@ -244,10 +244,10 @@ weight=0; value=8;
 [JournalEntry]
 ID=journal_aldleaf;
 category=item; halfPage=true; rarity=1;
-title=Aldleaf;
-text=<itemBig=aldleaf><title=Aldleaf><brAdj=>以其宽大的叶子而闻名,<n>Aldleaf非常的结实,<n>在原始社会常被做成衣服.;
+title=阿尔德叶;
+text=<itemBig=aldleaf><title=阿尔德叶><brAdj=>以其宽大的叶子而闻名,<n>Aldleaf非常的结实,<n>在原始社会常被做成衣服.;
 
-[ItemType]  name=Aldleaf灌木;
+[ItemType]  name=阿尔德叶灌木;
 ID=aldleafBush_flat; sprite=522; 
 cloneFrom=aldleafBush;
 blockWalking=false; blockJumping=false;

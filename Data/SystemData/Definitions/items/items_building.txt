@@ -592,7 +592,7 @@ pR=zoneStone;
 
 
 
-[ItemType]  name=Bridge;
+[ItemType]  name=桥;
 itemCategory=building;
 ID=bridge; sprite=547;
 texture=items_building;
@@ -601,7 +601,7 @@ texture=items_building;
 [ItemReaction] 
 ID=bridge; element=fire; element=explode; newID=bridge_breaking;
 
-[ItemType]  name=Bridge (Damaged);
+[ItemType]  name=桥 (受损的);
 itemCategory=building;
 ID=bridge_breaking; sprite=552;
 texture=items_building;
@@ -612,7 +612,7 @@ weight=0;
 [ItemReaction] 
 ID=bridge_breaking; element=fire; element=explode; newID=bridge_gone;
  
-[ItemType]  name=Wrecked Bridge;
+[ItemType]  name=毁坏的桥;
 itemCategory=building;
 ID=bridge_gone; sprite=548;
 texture=items_building;
@@ -625,10 +625,10 @@ texture=items_building;
 [JournalEntry]
 ID=item_bridge_gone;
 category=item; halfPage=true;
-title=Wrecked Bridge;
-text=<itemBig=bridge_gone><title=Wrecked Bridge><brAdj=>These ropes once belonged to a bridge, but now the wood planks are missing. Perhaps it can still be repaired?;
+title=毁坏的桥;
+text=<itemBig=bridge_gone><title=毁坏的桥><brAdj=>这些绳梯曾经属于一座桥,<n>但现在木板不见了.也许还能修好?;
  
-[ItemType]  name=Makeshift Bridge;
+[ItemType]  name=临时搭建的桥;
 itemCategory=building;
 ID=bridge_makeshift; sprite=553;
 texture=items_building;
@@ -676,7 +676,7 @@ ID=wood_pegs2; sprite=583;
 cloneFrom=wood_pegs;
  
 
-[ItemType]  name=Staircase;
+[ItemType]  name=楼梯;
 itemCategory=building;
 ID=staircase; sprite=125; 
 texture=items_building;
@@ -688,14 +688,14 @@ special=alwaysBelowOtherItems;
 [JournalEntry]
 ID=item_staircase;
 category=item; halfPage=true;
-title=Staircase;
-text=<itemBig=staircase><title=Staircase><brAdj=>Instead of studying it, why not find out where it goes, hmm? In this particular instance, it's the destination that matters more than the journey.;
-[ItemType]  name=Staircase;
+title=楼梯;
+text=<itemBig=staircase><title=楼梯><brAdj=>与其研究它,不如找出它的去向,嗯哼?<n>在这个特定的例子中,目的地比过程更重要.;
+[ItemType]  name=楼梯;
 ID=staircase_up; sprite=126;
 journalID=item_staircase;
 cloneFrom=staircase;
  
-[ItemType]  name=Staircase;
+[ItemType]  name=楼梯;
 itemCategory=building;
 ID=staircase_zStone; sprite=125; 
 texture=items_building;
@@ -704,7 +704,7 @@ pR=zoneStone;
 special=canBeInsideWalls; special=overrideTerrainCollisions; special=cannotBePickedUp;
 special=cannotEverBePushed; special=preventTileReactions;
 special=alwaysBelowOtherItems;
-[ItemType]  name=Staircase;
+[ItemType]  name=楼梯;
 ID=staircase_up_zStone; sprite=126;
 journalID=item_staircase;
 cloneFrom=staircase_zStone;
@@ -901,7 +901,7 @@ blockLoE=true; blockWalking=true; blockJumping=true;
 pR=zoneStone;
 depthMod=1050;
 
-[ItemType]  name=Chimney;
+[ItemType]  name=烟囱;
 ID=chimney; sprite=1750; 
 texture=items_building;
 itemCategory=building;
@@ -914,24 +914,24 @@ journalID=;
 pR=zoneStoneDark;
 depthMod=3060;
 
-[ItemType]  name=Chimney;
+[ItemType]  name=烟囱;
 ID=chimney2; sprite=1751; 
 cloneFrom=chimney;
-[ItemType]  name=Chimney;
+[ItemType]  name=烟囱;
 ID=chimney3; sprite=1749; 
 cloneFrom=chimney;
-[ItemType]  name=Chimney;
+[ItemType]  name=烟囱;
 ID=chimney_misc1; sprite=1750; 
 cloneFrom=chimney;
 special=quantityIncreasesPaletteRZoneMisc; pR=zoneMisc1; stackable=true;
-[ItemType]  name=Chimney;
+[ItemType]  name=烟囱;
 ID=chimney_misc2; sprite=1751; 
 cloneFrom=chimney_misc1;
-[ItemType]  name=Chimney;
+[ItemType]  name=烟囱;
 ID=chimney_misc3; sprite=1749; 
 cloneFrom=chimney_misc1;
 
-[ItemType]  name=Chimney Smoke;
+[ItemType]  name=烟囱烟雾;
 ID=smoke_emitter_chimney; sprite=1750; 
 texture=items_building;
 itemCategory=building;
@@ -942,7 +942,7 @@ spawnFX=chimneyPuff;
 weight=800;
 pR=pR;
 depthMod=4000;
-[ItemType]  name=Chimney Smoke (1 Tile Up);
+[ItemType]  name=烟囱烟雾 (1 Tile Up);
 ID=smoke_emitter_chimney_1TileUp; sprite=1750; 
 texture=items_building;
 itemCategory=building;
@@ -958,8 +958,8 @@ depthMod=4000;
 [JournalEntry]
 ID=journal_chimney;
 category=item; halfPage=true; rarity=0;
-title=Chimney;
-text=<itemBig=chimney><title=Chimney><brAdj=>Inflammable pipe to deliver smoke exhaust outside. Frequently caked with soot from the burnt sea coal or wood. Maintenance can require thorough cleaning, which was once done by young chimney sweeps. Due to the health risks, special force magic tools have largely replaced chimney sweeps.;
+title=烟囱;
+text=<itemBig=chimney><title=烟囱><brAdj=>用于向室外排烟的易燃管道.<n>烧过的大量的煤和木头经常在上面的结块.<n>保养可能需要彻底的清洁,<n>而这曾经是由年轻的烟囱清洁工做的,<n>由于健康风险,特殊的强力魔法工具<n>已经在很大程度上取代了扫烟囱的人.;
 
 
 [ItemType]  name=Window;
@@ -1079,7 +1079,7 @@ pR=zoneDirtDark;
 ID=doorway_square_dark; element=somethingHappened; element=mech; newID=doorway_square_bright; fx=doorway_square_open;
 
 
-[ItemType]  name=Spire;
+[ItemType]  name=尖塔;
 ID=spire_cath_btm; sprite=1784; 
 texture=items_building;
 itemCategory=building;
@@ -1090,7 +1090,7 @@ weight=800;
 pR=zoneStoneDark;
 depthMod=3160;
 
-[ItemType]  name=Spire;
+[ItemType]  name=尖塔;
 ID=spire_cath_btm_lessDepth; sprite=1784; 
 texture=items_building;
 itemCategory=building;
@@ -1101,7 +1101,7 @@ weight=800;
 pR=zoneStoneDark;
 depthMod=1050;
 
-[ItemType]  name=Spire;
+[ItemType]  name=尖塔;
 ID=spire_cath_top; sprite=1720; 
 texture=items_building;
 itemCategory=building;
@@ -1112,7 +1112,7 @@ weight=800;
 pR=zoneStoneDark;
 depthMod=2050;
 
-[ItemType]  name=Spire (Chain);
+[ItemType]  name=尖塔 (链式的);
 ID=spire_cath_btm2; sprite=1784; 
 texture=items_building;
 itemCategory=building;
@@ -1125,7 +1125,7 @@ pR=zoneStoneDark;
 pG=pGrey2;
 depthMod=10;
 
-[ItemType]  name=Spire;
+[ItemType]  name=尖塔;
 ID=spire_cath_btm_noChain_noJ; sprite=1815; 
 texture=items_building;
 itemCategory=building;
@@ -1137,7 +1137,7 @@ pG=pGrey2;
 blockWalking=true; blockJumping=true; blockLoE=true;
 depthMod=1050;
 
-[ItemType]  name=Spire;
+[ItemType]  name=尖塔;
 ID=spire_cath_top_noJ; sprite=1720; 
 texture=items_building;
 itemCategory=building;
@@ -1147,7 +1147,7 @@ weight=800;
 pR=zoneStone;
 depthMod=3160;
 
-[ItemType]  name=Spire;
+[ItemType]  name=尖塔;
 ID=spire_cath_btm_noJ; sprite=1784; 
 texture=items_building;
 itemCategory=building;
@@ -1157,7 +1157,7 @@ weight=800;
 pR=zoneStone;
 depthMod=3160;
 
-[ItemType]  name=Stone;
+[ItemType]  name=石柱;
 ID=stone_pole_noJ; sprite=1814; 
 texture=items_building;
 itemCategory=building;
@@ -1169,7 +1169,7 @@ pG=pGrey2;
 blockWalking=true; blockJumping=true; blockLoE=true;
 depthMod=1050;
 
-[ItemType]  name=Stone;
+[ItemType]  name=石柱;
 ID=stone_pole2_noJ; sprite=1813; 
 texture=items_building;
 itemCategory=building;
@@ -1181,22 +1181,22 @@ pG=pGrey2;
 blockWalking=true; blockJumping=true; blockLoE=true;
 depthMod=1050;
 
-[ItemType]  name=Rock Path;
+[ItemType]  name=石板路;
 ID=rock_path1; sprite=1392; 
 journalID=;
 texture=items_building;
 weight=0; itemCategory=building;
 pR=zoneStone; pB=pFadeDark;
 special=cannotBePickedUp;
-[ItemType]  name=Rock Path;
+[ItemType]  name=石板路;
 ID=rock_path2; sprite=1393; 
 cloneFrom=rock_path1;
-[ItemType]  name=Rock Path;
+[ItemType]  name=石板路;
 ID=rock_path3; sprite=1394; 
 cloneFrom=rock_path1;
 
 
-[ItemType]  name=Well;
+[ItemType]  name=井;
 ID=well1; sprite=1592;
 journalID=journal_well;
 itemCategory=building;
@@ -1207,7 +1207,7 @@ pR=zoneStone; pB=zoneWood;
 special=big;
 blockWalking=true; blockJumping=true;
 
-[ItemType]  name=Well;
+[ItemType]  name=井;
 ID=well2; sprite=1561;
 cloneFrom=well1;
 special=sprite2xHeight;
@@ -1216,8 +1216,8 @@ depthMod=1050;
 [JournalEntry]
 ID=journal_well;
 category=item; halfPage=true; rarity=0;
-title=Well;
-text=<itemBig=well1><title=Well><brAdj=>This deep brick-lined well provides water to nearby inhabitants. It serves its purpose pretty... good.;
+title=井;
+text=<itemBig=well1><title=井><brAdj=>这口砖砌的深水井为附近的居民提供水源.<n>它很好地满足了它的目的...不错.;
 
 [ItemType]  name=Glass Window;
 itemCategory=building;
@@ -2298,7 +2298,7 @@ ID=sign_hanging2; sprite=192;
 cloneFrom=sign_hanging1;
 pR=zoneWood;
 pB=pBlue2;
-[ItemType]  name=Harbor;
+[ItemType]  name=港口;
 ID=sign_icon_anchor; sprite=194;
 itemCategory=building;
 texture=items_building;
@@ -2309,10 +2309,10 @@ special=canHangOnWalls; special=fullTileHitbox; special=showOnMinimap;
 [JournalEntry]
 ID=item_sign_icon_anchor;
 category=item; halfPage=true; rarity=0;
-title=Harbor;
-text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_anchor><title=Harbor><brAdj=>Though 'harbor' is a general term encompassing many functions, this particular building is where you can store or retrieve your ships for later use. There is no charge for this service, but the ships must not have any crew on them when stored.;
+title=港口;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_anchor><title=港口><brAdj=>虽然'港口'是一个包含许多功能的通用术语,<n>但这个特定的建筑是你储存或回收船只供以后使用的地方.<n>这项服务是免费的,<n>但船舶必须没有任何船员在上面.;
 
-[ItemType]  name=Equipment;
+[ItemType]  name=装备;
 ID=sign_icon_sword; sprite=195; pR=pGold;
 journalID=journal_eqpt_items;
 cloneFrom=sign_icon_anchor;
@@ -2320,118 +2320,118 @@ cloneFrom=sign_icon_anchor;
 [JournalEntry]
 ID=journal_eqpt_items;
 category=item; halfPage=true; rarity=0;
-title=Equipment / Items;
-text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_bag><title=Equipment / Items><brAdj=>When you need any sort of weapons, armor, or even consumable goods, check out the equipment and item stores. Each port has its own unique selection, which may expand with the port's wealth level.;
+title=装备/道具;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_bag><title=装备/道具><brAdj=>当你需要任何类型的武器,盔甲,甚至消耗品时,<n>检查一下装备和道具商店.<n>每个港口都有自己独特的物品,<n>这些物品可能会随着港口的财富水平而增多.;
 
 
-[ItemType]  name=Market;
+[ItemType]  name=市场;
 ID=sign_icon_balance; sprite=196; pR=pGold;
 cloneFrom=sign_icon_anchor;
 
 [JournalEntry]
 ID=item_sign_icon_balance;
 category=item; halfPage=true; rarity=0;
-title=Market;
-text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_balance><title=Market><brAdj=>The Market sells Food, trade goods, and all ship-related equipment (such as cannons, boarding gear, and other upgrades). Food is limitless, but trade goods are restocked at a regular rate determined by the port's wealth.;
+title=市场;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_balance><title=市场><brAdj=>市场销售食品、贸易商品和所有与<n>船舶相关的设备(如大炮、船舶设备和其他升级).<n>食物是无限供应的,但贸易货物会定期补充,<n>这取决于港口的财富水平.;
 
-[ItemType]  name=Guild;
+[ItemType]  name=公会;
 ID=sign_icon_letter; sprite=197; pR=pGold;
 cloneFrom=sign_icon_anchor;
 
 [JournalEntry]
 ID=item_sign_icon_letter;
 category=item; halfPage=true; rarity=0;
-title=Guild;
-text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_letter><title=Guild><brAdj=>The Guild is an international organization that handles tasks both local and global. Various jobs are always available, which award gold and fame upon completion.;
+title=公会;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_letter><title=公会><brAdj=>公会是一个国际组织,处理本地和全球的任务.<n>各种各样的工作随时都有,<n>一旦完成就会有金钱和名誉.;
 
-[ItemType]  name=Temple;
+[ItemType]  name=神殿;
 ID=sign_icon_star; sprite=198; pR=pGold;
 cloneFrom=sign_icon_anchor;
 
 [JournalEntry]
 ID=item_sign_icon_star;
 category=item; halfPage=true; rarity=0;
-title=Temple;
-text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_star><title=Temple><brAdj=>Temples vary greatly from port to port, but the one constant is their desire for your donations. Donating increases your favor with whatever nation is allied with the port.;
+title=神殿;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_star><title=神殿><brAdj=>寺庙每个港口的差异很大,<n>但唯一不变的是他们对你的捐赠的愿望.<n>无论哪个国家与港口结盟,<n>捐赠都会增加这个国家对你的好感.;
 
 
-[ItemType]  name=Smithy;
+[ItemType]  name=铁匠;
 ID=sign_icon_anvil; sprite=199; pR=pGold;
 cloneFrom=sign_icon_anchor;
 
 [JournalEntry]
 ID=item_sign_icon_anvil;
 category=item; halfPage=true; rarity=0;
-title=Smithy;
-text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_anvil><title=Smithy><brAdj=>In addition to usually selling weapons and armor, the anvil and forge of a Smithy are open for public use. Place equipment on the anvil to augment it, or put it into the forge to recover its base components.;
+title=铁匠;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_anvil><title=铁匠><brAdj=>除了通常出售武器和盔甲外,铁砧和锻炉也对公众开放.<n>将装备放置在铁砧上以增加其强度,<n>或将其放入锻炉中以复原为基础部件.;
 
-[ItemType]  name=Items;
+[ItemType]  name=道具;
 ID=sign_icon_bag; sprite=200; pR=pGold;
 journalID=journal_eqpt_items;
 cloneFrom=sign_icon_anchor;
-[ItemType]  name=Cartographer;
+[ItemType]  name=制图师;
 ID=sign_icon_compass; sprite=201; pR=pGold;
 cloneFrom=sign_icon_anchor;
-[ItemType]  name=Cartographer;
+[ItemType]  name=制图师;
 ID=sign_icon_compass_outline; sprite=233; pR=pGold;
 cloneFrom=sign_icon_anchor;
 
 [JournalEntry]
 ID=item_sign_icon_compass;
 category=item; halfPage=true; rarity=0;
-title=Cartographer;
-text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_compass><title=Cartographer><brAdj=>Cartographers compete jealously for the best, most accurate map - meaning they'll pay good money to reliable sailors that can bring them new info. It's also a good way to make a name as an explorer!;
+title=制图师;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_compass><title=制图师><brAdj=>制图师们尽力的争夺着完成最好、最精确的地图<n>--这意味着他们会付给可靠的水手很多钱,<n>因为他们可以给他们带来新的信息.<n>这也是一个让探险家出名的好方法!;
 
-[ItemType]  name=Shipwright;
+[ItemType]  name=船匠;
 ID=sign_icon_boat; sprite=202; pR=pGold;
 cloneFrom=sign_icon_anchor;
 
 [JournalEntry]
 ID=item_sign_icon_boat;
 category=item; halfPage=true; rarity=0;
-title=Shipwright;
-text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_boat><title=Shipwright><brAdj=>Every port has a shipwright that can provide repairs to your fleet. Each port has different ships available to buy, however, and may unlock more new ships based on the port's wealth level.;
+title=船匠;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_boat><title=船匠><brAdj=>每个港口都有一名船匠,可以为你的舰队提供修整.<n>每个港口都有不同的船只可供购买,<n>还根据港口的财富水平解锁更多的新船只.;
 
-[ItemType]  name=Researcher;
+[ItemType]  name=研究员;
 ID=sign_icon_eyeglass; sprite=203; pR=pGold;
 cloneFrom=sign_icon_anchor;
-[ItemType]  name=Researcher;
+[ItemType]  name=研究员;
 ID=sign_icon_eyeglass_outline; sprite=235; pR=pGold;
 cloneFrom=sign_icon_anchor;
 
 [JournalEntry]
 ID=item_sign_icon_eyeglass;
 category=item; halfPage=true; rarity=0;
-title=Researcher;
-text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_eyeglass><title=Researcher><brAdj=>Eral is filled with mysterious, unexplained things. Researchers work to learn more about them, and will pay you for any information you can bring. This is where explorers go to make a living.;
+title=研究员;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_eyeglass><title=研究员><brAdj=>Eral充满了神秘莫测的事物.<n>研究员会努力了解更多关于它们的信息,<n>并且会为你所能提供的任何信息付费.<n>这是探险家们赖以生存的地方.;
 
-[ItemType]  name=Cafe;
+[ItemType]  name=咖啡馆;
 ID=sign_icon_cup; sprite=204; pR=pGold;
 cloneFrom=sign_icon_anchor;
 
 [JournalEntry]
 ID=item_sign_icon_cup;
 category=item; halfPage=true; rarity=0;
-title=Cafe;
-text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_cup><title=Cafe><brAdj=>The home of hardened sailors. Buy the local specialty to increase morale, gossip for information, or hire new crew here.;
+title=咖啡馆;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_cup><title=咖啡馆><brAdj=>久经沙场的水手的家.<n>购买当地特产来提高士气,<n>八卦消息,<n>或者在这里雇佣新船员.;
 
-[ItemType]  name=Trainer;
+[ItemType]  name=训练师;
 ID=sign_icon_book; sprite=205; pR=pGold;
 cloneFrom=sign_icon_anchor;
-[ItemType]  name=Trainer;
+[ItemType]  name=训练师;
 ID=sign_icon_book_done; sprite=237; pR=pGold;
 cloneFrom=sign_icon_anchor;
-[ItemType]  name=Trainer;
+[ItemType]  name=训练师;
 ID=sign_icon_book_done_done; sprite=269; pR=pGold;
 cloneFrom=sign_icon_anchor;
 
-[ItemType]  name=Trainer;
+[ItemType]  name=训练师;
 ID=sign_icon_2book; sprite=236; pR=pGold;
 cloneFrom=sign_icon_anchor;
-[ItemType]  name=Trainer;
+[ItemType]  name=训练师;
 ID=sign_icon_2book_done; sprite=236; pR=pGold;
 cloneFrom=sign_icon_anchor;
-[ItemType]  name=Trainer;
+[ItemType]  name=训练师;
 ID=sign_icon_2book_done_done; sprite=268; pR=pGold;
 cloneFrom=sign_icon_anchor;
 
@@ -2439,74 +2439,74 @@ cloneFrom=sign_icon_anchor;
 [JournalEntry]
 ID=item_sign_icon_book;
 category=item; halfPage=true; rarity=0;
-title=Trainer;
-text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_book><title=Trainer><brAdj=>Most classes cannot be used without the specialized knowledge of a Trainer. Pay the trainer a one-time fee, and all current and future crew will be able to access that class (assuming they meet the other requirements as well).;
+title=训练师;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_book><title=训练师><brAdj=>没有训练师的专业知识,大多数职业都不能使用.<n>向训练师支付一次性费用,<n>所有当前和未来的船员<n>都可以学习该职业(假设他们也满足其他要求).;
 
-[ItemType]  name=Dojo;
+[ItemType]  name=道场;
 ID=sign_icon_muscle; sprite=206; pR=pGold;
 cloneFrom=sign_icon_anchor;
-[ItemType]  name=Dojo;
+[ItemType]  name=道场;
 ID=sign_icon_muscle_done; sprite=238; pR=pGold;
 cloneFrom=sign_icon_anchor;
-[ItemType]  name=Dojo;
+[ItemType]  name=道场;
 ID=sign_icon_muscle_done_done; sprite=270; pR=pGold;
 cloneFrom=sign_icon_anchor;
 
 [JournalEntry]
 ID=item_sign_icon_muscle;
 category=item; halfPage=true; rarity=0;
-title=Dojo;
-text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_muscle><title=Dojo><brAdj=>Each weapon has devoted followers around the globe. Visit a dojo to test your skills aqainst these followers. If you succeed, you acquire a small reward and gain access to special training with that weapon type.;
+title=道场;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_muscle><title=道场><brAdj=>每种武器在全球都有忠实的追随者.<n>访问道场对抗这些追随者来测试你的技能.<n>如果你成功了,你将获得一个小奖励<n>并解锁这种武器类型的特殊训练.;
 
-[ItemType]  name=Arena;
+[ItemType]  name=竞技场;
 ID=sign_icon_axe; sprite=207; pR=pGold;
 cloneFrom=sign_icon_anchor;
 
 [JournalEntry]
 ID=item_sign_icon_axe;
 category=item; halfPage=true; rarity=0;
-title=Arena;
-text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_axe><title=Arena><brAdj=>Fighting arena for devoted warriors. Pit yourself against tough opponents for gold and glory!;
+title=竞技场;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_axe><title=竞技场><brAdj=>为忠诚的勇士而战的竞技场.<n>为了金钱和荣誉,<n>你要与强硬的对手竞争!;
 
-[ItemType]  name=Information;
+[ItemType]  name=情报;
 ID=sign_icon_eye; sprite=208; pR=pGold;
 cloneFrom=sign_icon_anchor;
 
 [JournalEntry]
 ID=item_sign_icon_eye;
 category=item; halfPage=true; rarity=0;
-title=Information;
-text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_eye><title=Information><brAdj=>When seeking hidden knowledge, this is the place to go. You can request investigations on ports, fleets, and many other things.;
+title=情报;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_eye><title=情报><brAdj=>当寻求隐藏的知识时,这是你要去的地方.<n>你可以要求调查调查港口、舰队和许多其他事情.;
 
-[ItemType]  name=Home;
+[ItemType]  name=家;
 ID=sign_icon_home; sprite=209; pR=pGold;
 cloneFrom=sign_icon_anchor;
 
 [JournalEntry]
 ID=item_sign_icon_home;
 category=item; halfPage=true; rarity=0;
-title=Home;
-text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_home><title=Home><brAdj=>It's your house! Manage the appearance, name, and theme of your port here. Stash anything you want here and make yourself comfortable!;
+title=家;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_home><title=家><brAdj=>这是你的房子!<n>在这里管理港口的外貌、名称和主题.<n>把你想要的东西存在这里,让自己舒适!;
 
-[ItemType]  name=Museum;
+[ItemType]  name=博物馆;
 ID=sign_icon_museum; sprite=210; pR=pGold;
 cloneFrom=sign_icon_anchor;
 
 [JournalEntry]
 ID=item_sign_icon_museum;
 category=item; halfPage=true; rarity=0;
-title=Museum;
-text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_museum><title=Museum><brAdj=>A fine place to display all your most valuable discoveries! Place rare items on the tables to increase its daily income.;
+title=博物馆;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_museum><title=博物馆><brAdj=>一个展示你所有最有价值的发现的好地方!<n>在桌子上放一些稀有的物品<n>来增加你的日常收入.;
 
-[ItemType]  name=Training Ground;
+[ItemType]  name=训练场地;
 ID=sign_icon_training; sprite=206; pR=pGold;
 cloneFrom=sign_icon_anchor;
 
 [JournalEntry]
 ID=item_sign_icon_training;
 category=item; halfPage=true; rarity=0;
-title=Training Ground;
-text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_training><title=Training Ground><brAdj=>This facility increases everyone's daily XP gain when manned.;
+title=训练场地;
+text=<itemBig=sign_wall1><adjX=-18><itemBig=sign_icon_training><title=Training Ground><brAdj=>当有人操作时,<n>这个设备每天都会增加每个人的XP.;
 
 
 [ItemType]  name=Cyber Wall;
