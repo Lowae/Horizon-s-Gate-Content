@@ -301,7 +301,7 @@ special=slopeRot; special=blockJumpingRot;
 blockWalking=true; blockJumping=false;
 pR=pWhite;
 
-[ItemType]  name=Torch Fire;
+[ItemType]  name=炬火;
 itemCategory=hazard;
 ID=flame; sprite=1120; special=animated; special=canHangOnWalls; special=cannotBePickedUp;
  weight=0;
@@ -311,7 +311,7 @@ ID=flame; red=1; blue=0.5; green=0.9; alpha=0.9; size=1.0; flicker=0.04; texture
 [ItemReaction] 
 ID=flame; element=water; element=wind; element=explode; newID=X;
 
-[ItemType]  name=Blue Flame;
+[ItemType]  name=蓝色火焰;
 itemCategory=hazard;
   ID=flame_blue; sprite=1120; special=animated; special=canHangOnWalls; special=cannotBePickedUp;
   weight=0; pR=pB;
@@ -321,10 +321,10 @@ ID=flame_blue; red=0.7; blue=1; green=0.7; alpha=0.9; size=0.8; flicker=0.04; te
 [JournalEntry]
 ID=item_flame_blue;
 category=item; halfPage=true; rarity=1;
-title=Blue Flame;
-text=<itemBig=flame_blue><title=Blue Flame><brAdj=>A small sconce houses this odd flame. It generates surprisingly little light, heat, and smoke, yet burns for a long time.;
+title=蓝色火焰;
+text=<itemBig=flame_blue><title=蓝色火焰><brAdj=>一个小壁柜里放着这种奇怪的火焰的火把.<n>它产生的光、热和烟少得惊人,却能燃烧很长时间.;
 
-[ItemType]  name=Lightglobe;
+[ItemType]  name=光球;
 itemCategory=hazard;
 ID=lightSphere; sprite=1152; special=animated; special=canHangOnWalls; special=cannotBePickedUp; pR=pYellow;
  weight=0;
@@ -333,10 +333,10 @@ ID=lightSphere; red=0.8; blue=0.5; green=0.9; alpha=0.6; size=1; flicker=0.05; t
 [JournalEntry]
 ID=item_lightSphere;
 category=item; halfPage=true; rarity=1;
-title=Light;
-text=<itemBig=lightSphere><title=Light><brAdj=>Wall-mounted light. Because one of the components is volskarn, these lights are very expensive.;
+title=灯;
+text=<itemBig=lightSphere><title=灯><brAdj=>安装在墙上的灯.<n>因为其中一个组件是沃尔斯卡恩,<n>所以这些灯非常昂贵.;
 
-[ItemType]  name=Brazier;
+[ItemType]  name=火盆;
 ID=brazier; sprite=1156; 
 journalID=journal_brazier;
 itemCategory=hazard;
@@ -355,7 +355,7 @@ ID=brazier; element=explode; newID=brazierSpilled; fx=smokeCloud;
 [ItemReaction] 
 ID=brazier; element=melee; element=itemPushed; newID=brazierSpilled; action=spillBrazier; fx=smokeCloud;
 
-[ItemType]  name=Brazier (Unlit);
+[ItemType]  name=火盆 (未点燃的);
 ID=brazierUnlit; sprite=1160; 
 journalID=journal_brazier;
 itemCategory=hazard;
@@ -369,7 +369,7 @@ ID=brazierUnlit; element=fire; newID=brazier;
 [ItemReaction] 
 ID=brazierUnlit; element=melee; element=itemPushed; newID=brazierSpilled; fx=sfx_breakRock;
 
-[ItemType]  name=Blue Brazier;
+[ItemType]  name=蓝色火盆;
 ID=brazierBlue; sprite=1156; 
 itemCategory=hazard;
 journalID=journal_brazier;
@@ -384,7 +384,7 @@ ID=brazierBlue; red=0.5; blue=1; green=0.6; alpha=1.0; size=0.4; flicker=0.02;
 [ItemLight] 
 ID=brazierBlue; size=0.8; flicker=0.02; palette=pBW;
 
-[ItemType]  name=Green Brazier;
+[ItemType]  name=绿色火盆;
 ID=brazierGreen; sprite=1156; 
 itemCategory=hazard;
 journalID=journal_brazier;
@@ -400,7 +400,7 @@ ID=brazierGreen; red=1; blue=1; green=1; alpha=1.0; size=1.0; flicker=0.02;
 ID=brazierGreen; red=1; blue=1; green=1; alpha=1.0; size=1.0; flicker=0.02; palette=pG;
 
 
-[ItemType]  name=Brazier (Spilled);
+[ItemType]  name=火盆 (倾倒的);
 ID=brazierSpilled; sprite=1161; 
 journalID=journal_brazier;
 itemCategory=hazard;
@@ -414,10 +414,10 @@ ID=brazierSpilled; element=use; newID=brazierUnlit; fx=sfx_breakRock;
 [JournalEntry]
 ID=journal_brazier;
 category=item; halfPage=true;
-title=Brazier;
-text=<itemBig=brazier><title=Brazier><brAdj=>A bowl of flames to provide warmth and light. Best used in wide open areas, to reduce the risk of poisoning from the fumes. Melee attacks knock them over, so be careful.;
+title=火盆;
+text=<itemBig=brazier><title=火盆><brAdj=>一盆火焰提供温暖和光明.<n>最好在开阔的地方使用,以减少烟雾中毒的风险.<n>近战攻击会打翻,所以要小心.;
 
-[ItemType]  name=Gloam Stand;
+[ItemType]  name=黄昏台;
 ID=brazier_glowshroom; sprite=1125; 
 itemCategory=hazard;
 journalID=journal_brazier_glowshroom;
@@ -431,7 +431,7 @@ ID=brazier_glowshroom; red=0.6; blue=1; green=0.5; alpha=1.0; size=1.0; flicker=
 ID=brazier_glowshroom; element=physical; newID=brazier_glowshroom_cracked; fx=sfx_breakRock;
 	
 
-[ItemType]  name=Gloam Stand (Damaged);
+[ItemType]  name=黄昏台 (受损的);
 ID=brazier_glowshroom_cracked; sprite=1126; 
 itemCategory=hazard;
 journalID=journal_brazier_glowshroom;
@@ -447,10 +447,10 @@ ID=brazier_glowshroom_cracked; element=physical; newID=brazier_glowshroom_shatte
 [JournalEntry]
 ID=journal_brazier_glowshroom;
 category=item; halfPage=true; rarity=1;
-title=Gloam Stand;
-text=<itemBig=brazier_glowshroom><title=Gloam Stand><brAdj=>A glass sphere filled with Gloam Shroom dust. Useful for lighting places where fire and smoke would be impractical. It looks fragile.;
+title=黄昏台;
+text=<itemBig=brazier_glowshroom><title=Gloam Stand><brAdj=>一个玻璃球,里面装满了黄昏蘑菇的遗骸.<n>在没有火和烟的地方很有用.它看起来很脆弱.;
 
-[ItemType]  name=Shattered Stand;
+[ItemType]  name=破碎的台;
 ID=brazier_glowshroom_shattered; sprite=1127; 
 itemCategory=hazard;
 special=big;
@@ -458,7 +458,7 @@ weight=200; volume=300;
 	blockLoS=false; blockLoE=false; blockWalking=true; blockJumping=true;
 	pR = pShroom_glow; pB=pGrey2; pG=pFadeDarker;
 	
-[ItemType]  name=Gloam Seal;
+[ItemType]  name=发光容器;
 ID=brazier_glowshroom_seal; sprite=1128; 
 itemCategory=hazard;
 special=big;
@@ -473,11 +473,11 @@ ID=brazier_glowshroom_seal; red=0.6; blue=1; green=0.5; alpha=1.0; size=1.1; fli
 [JournalEntry]
 ID=item_brazier_glowshroom_seal;
 category=item; halfPage=true; rarity=1;
-title=Gloam Post;
-text=<itemBig=brazier_glowshroom_seal><title=Gloam Post><brAdj=>Luminous Gloam dust is sealed within this durable casing. It was clearly very important to whoever installed this that the area be kept illuminated.;
+title=发光容器;
+text=<itemBig=brazier_glowshroom_seal><title=发光容器><brAdj=>发光黄昏蘑菇遗骸密封在这个耐用的外壳内.<n>很明显,对于安装这个装置的人来说,<n>保持这个区域的照明是非常重要的.;
   
 
-[ItemType]  name=Street Light;
+[ItemType]  name=路灯;
 ID=streetlight1; sprite=11;
 texture=items_building;
 description=Lantern mounted on a post.; itemCategory=hazard;
@@ -494,7 +494,7 @@ ID=streetlight1;
 element=wind; element=water; element=ice; element=daytime;
 newID=streetlight_off1;
  
-[ItemType]  name=Street Light;
+[ItemType]  name=路灯;
 ID=streetlight_off1; sprite=14;
 texture=items_building;
 description=Lantern mounted on a post.; itemCategory=hazard;
@@ -512,8 +512,8 @@ newID=streetlight1;
 [JournalEntry]
 ID=journal_streetlight;
 category=item; halfPage=true; rarity=0;
-title=Street Light;
-text=<itemBig=streetlight1><title=Street Light><brAdj=>These public lights are maintained by dutiful lamplighters who come round every evening to ignite them. Although in some high-end cities, magical street lights are used instead, which require no such maintenance.;
+title=路灯;
+text=<itemBig=streetlight1><title=路灯><brAdj=>这些公共灯是由尽职的点灯人维护的,<n>他们每天晚上都来点燃它们.<n>虽然在一些高端城市,使用的是魔法路灯,<n>不需要这样的维护.;
 
 
 [ItemType]  name=灯笼;
@@ -544,12 +544,12 @@ ID=lamp_off; element=explode;  newID=X; fx=dust_glass;
 [JournalEntry]
 ID=journal_lamp;
 category=item; halfPage=true;
-title=Lantern;
-text=<itemBig=lamp><title=Lantern><brAdj=>A simple light fueled by oil & sealed in glass and metal. It doesn't look like it's going to run out of fuel anytime soon.;
+title=灯笼;
+text=<itemBig=lamp><title=灯笼><brAdj=>一种简单的灯,以油为燃料,密封在玻璃和金属中.<n>它看起来不会很快耗尽燃料.;
 
-[ItemType]  name=Blue Lantern;
+[ItemType]  name=蓝色灯笼;
 ID=lamp_blue; sprite=10; itemCategory=hazard;
-description=Glows with a bright blue light.;
+description=散发着明亮的蓝光.;
 pR=pBlue; element=fire; action=lamp_action;
  volume=10; value=15;
 special=canUseWithoutConsumingAction;
@@ -560,9 +560,9 @@ ID=lamp_blue; element=water; element=wind; newID=lamp_blue_off;
 [ItemReaction] 
 ID=lamp_blue; element=explode;  newID=X; fx=dust_glass;
 
-[ItemType]  name=Blue Lantern;
+[ItemType]  name=蓝色灯笼;
 ID=lamp_blue_off; sprite=11; itemCategory=hazard;
-description=Glows with a bright blue light. Use to kindle.;
+description=散发着明亮的蓝光.点燃使用.;
 pR=pBlue;
   element=fire;
    volume=5; value=15;
@@ -574,12 +574,12 @@ ID=lamp_blue_off; element=explode;  newID=X; fx=dust_glass;
 [JournalEntry]
 ID=item_lamp_blue;
 category=item; halfPage=true; rarity=2;
-title=Blue Lantern;
-text=<itemBig=lamp_blue><title=Blue Lantern><brAdj=>This traditional lantern has been augmented and improved by adding Gloam dust. Quite effective!;
+title=蓝色灯笼;
+text=<itemBig=lamp_blue><title=蓝色灯笼><brAdj=>这种传统的灯笼被增加了黄昏蘑菇遗骸.非常有效!;
 
 
-[ItemType]  name=Lantern;
-description=Simple wall-mounted lamp.; itemCategory=hazard;
+[ItemType]  name=灯笼;
+description=简单耐用的照明工具.; itemCategory=hazard;
 journalID=journal_lamp;
 ID=lamp_wall; sprite=1132; element=fire;
 pR=pWood;
@@ -592,8 +592,8 @@ ID=lamp_wall; element=water; element=wind; element=daytime;
  newID=lamp_wall_off;
 [ItemLight]
  ID=lamp_wall; red=1; blue=0.6; green=0.9; alpha=1; size=1.0; flicker=0.01; texture=krypton;
-[ItemType]  name=Lantern;
-description=Simple wall-mounted lamp.; itemCategory=hazard;
+[ItemType]  name=灯笼;
+description=简单耐用的照明工具.; itemCategory=hazard;
 journalID=journal_lamp;
 ID=lamp_wall_off; sprite=1132;
 pR=pWood;
@@ -604,7 +604,7 @@ pG=pGreyD2;
 ID=lamp_wall_off; element=fire; element=elec; element=nighttime;
  newID=lamp_wall;
  
-[ItemType]  name=Mounted Lantern;
+[ItemType]  name=壁挂式灯笼;
 ID=lantern_mounted1; sprite=1163;
 texture=items_building; itemCategory=hazard;
 journalID=; element=fire; journalID=journal_lamp;
@@ -627,7 +627,7 @@ element=smash; element=slash; newID=fire; fx=dust_glass;
 ID=lantern_mounted1; 
 element=ice; newID=X; fx=dust_glass;
 
-[ItemType]  name=Mounted Lantern;
+[ItemType]  name=壁挂式灯笼;
 ID=lantern_mounted1_off; sprite=1167;
 texture=items_building; itemCategory=hazard;
 journalID=journal_lamp;
@@ -643,9 +643,9 @@ ID=lantern_mounted1_off;
 element=physical; element=explode; element=fire; element=elec; 
 element=smash; element=slash; newID=X;
 
-[ItemType]  name=Gloam Dust Bottle;
+[ItemType]  name=黄昏尘埃瓶;
   ID=gloamdustBottle; sprite=1124; itemCategory=hazard;
-  description=Bottle of powdered Gloam Shroom.;
+  description=一瓶黄昏蘑菇粉.;
   pR=pShroom_glow;
   weight=0; value=9;
 [ItemLight] 
@@ -656,14 +656,14 @@ ID=gloamdustBottle; element=smash; newID=X; fx=dust_glass;
 [JournalEntry]
 ID=item_gloamdustBottle;
 category=item; halfPage=true; rarity=1;
-title=Gloam Dust Bottle;
-text=<itemBig=gloamdustBottle><title=Gloam Dust Bottle><brAdj=>Glass bottle containing dust from bioluminescent Gloam Shrooms. These long-lasting light sources don't rely on kindling to function.;
+title=黄昏尘埃瓶;
+text=<itemBig=gloamdustBottle><title=黄昏尘埃瓶><brAdj=>玻璃瓶里装的是发光的黄昏蘑菇的灰尘.<n>这些持久的光源不依靠引火来工作.;
 
 
-[ItemType]  name=Campfire;
+[ItemType]  name=篝火;
 ID=campfire_everlit; sprite=1162; 
 itemCategory=hazard;
-description=A cozy campfire.;
+description=一个温暖的篝火.;
 journalID=journal_campfire;
 special=animated; special=huge; special=sprite2xWidth; 
 special=cannotBePickedUp;
@@ -679,10 +679,10 @@ ID=campfire_everlit; red=1; blue=0.5; green=0.8; alpha=0.95; size=0.9; flicker=0
 ID=campfire_everlit; element=water; element=ice; element=wind; element=physical; newID=campfire_unlit; fx=smokeCloud;
 
 
-[ItemType]  name=Campfire;
+[ItemType]  name=篝火;
 ID=campfire_unlit; sprite=1130; 
 itemCategory=hazard;
-description=An unlit campfire.;
+description=未点燃的篝火.;
 journalID=journal_campfire;
 special=huge; special=sprite2xWidth; special=cannotBePickedUp;
 weight=200; volume=1000;
@@ -697,10 +697,10 @@ ID=campfire_unlit; red=1; blue=0.5; green=0.8; alpha=0.45; size=0.1; flicker=0.0
 [ItemReaction] 
 ID=campfire_unlit; element=fire; element=elec; newID=campfire_lit;
 
-[ItemType]  name=Campfire;
+[ItemType]  name=一个舒适的篝火;
 ID=campfire_lit; sprite=1162; 
 itemCategory=hazard;
-description=A cozy campfire.;
+description=一个舒适的篝火.;
 journalID=journal_campfire;
 special=animated; special=huge; special=sprite2xWidth; 
 special=cannotBePickedUp; special=timer;
@@ -723,12 +723,12 @@ ID=campfire_lit; element=timerUp; newID=campfire_unlit; fx=smokeCloud;
 [JournalEntry]
 ID=journal_campfire;
 category=item; halfPage=true;
-title=Campfire;
-text=<itemBig=campfire_lit><title=Campfire><brAdj=>This circle of stones represents a place of safety. Symbolically, at least. Not physically.;
+title=一个舒适的篝火;
+text=<itemBig=campfire_lit><title=一个舒适的篝火><brAdj=>这圈石头代表着一个安全的地方.<n>至少,象征性地.而非生理上的.;
 
 
 
-[ItemType]  name=Oil;
+[ItemType]  name=油;
 ID=blackOil1; itemCategory=hazard;
 journalID=journal_blackOil;
  sprite=1017; special=cannotBePickedUp;  special=transparent; special=canHangOnWalls; special=alwaysBelowOtherItems;
@@ -736,7 +736,7 @@ journalID=journal_blackOil;
 [ItemReaction] 
 ID=blackOil1; element=fire; action=spreadFire; newID=fire; fx=DramaticNyeaow;
 
-[ItemType]  name=Oil;
+[ItemType]  name=油;
 ID=blackOil2; itemCategory=hazard;
 journalID=journal_blackOil;
  sprite=1018; special=cannotBePickedUp;  special=transparent; special=canHangOnWalls; special=alwaysBelowOtherItems;
@@ -746,12 +746,12 @@ ID=blackOil2; element=fire; action=spreadFire; newID=fire; fx=DramaticNyeaow;
 [JournalEntry]
 ID=journal_blackOil;
 category=item; halfPage=true;
-title=Oil;
-text=<itemBig=blackOil1><title=Oil><brAdj=>At a glance it looks like ordinary filth, but it's actually oil. Now that it's on the ground it can't be salvaged, but it's still a fire hazard.;
+title=油;
+text=<itemBig=blackOil1><title=油><brAdj=>乍一看,它就像普通的污物,但实际上它是石油.<n>现在它已经撒在地上了,无法挽救,<n>但它仍然是一个火灾隐患.;
 
-[ItemType]  name=Mechanist Trap;
+[ItemType]  name=机械师陷阱;
 ID=rogueTrap; sprite=118;  itemCategory=hazard;
-description=Damages and immobilizes.;
+description=造成伤害且'定身'.;
 special=big; special=reactsToPressure; special=cannotBePickedUp; special=timer;
 timer=300;
 weight=0;
@@ -768,7 +768,7 @@ ID=rogueTrap; element=explode; element=timerUp; newID=X;
 [ItemReaction] 
 ID=rogueTrap; element=leavingZone; newID=X;
 
-[ItemType]  name=Ice Block;
+[ItemType]  name=冰块;
   ID=iceBlock; sprite=1016; weight=200;  itemCategory=hazard;
   special=transparent; special=big;
   special=pushable; special=timer; special=slideWhenPushed;
@@ -785,10 +785,10 @@ ID=iceBlock; element=leavingZone; newID=X;
 [JournalEntry]
 ID=item_iceBlock;
 category=item; halfPage=true;
-title=Ice Block;
-text=<itemBig=iceBlock><title=Ice Block><brAdj=>A man-sized cube of ice! It's very durable, but can be pushed. You can speed up the melting process with a hammer or some fire.;
+title=冰块;
+text=<itemBig=iceBlock><title=冰块><brAdj=>人大小般的冰块!它非常坚固,但可以推.<n>你可以用锤子或火来加速融化过程.;
 
-[ItemType]  name=Ice Block;
+[ItemType]  name=冰块;
   ID=iceBlock_eternal; sprite=1016; weight=200;  itemCategory=hazard;
   special=transparent; special=big;
   special=pushable; special=slideWhenPushed;
@@ -800,9 +800,9 @@ ID=iceBlock_eternal; element=fire; element=heat; newID=puddle; spawnItem=puddle;
 [ItemReaction] 
 ID=iceBlock_eternal; element=explode; element=heavySmash; newID=puddle; fx=dust_glass; spawnItem=puddle; 
 
-[ItemType]  name=Beer;
+[ItemType]  name=啤酒;
 ID=puddle_beer; sprite=890; spriteWhenHeld=0; stackable=true; itemCategory=hazard;
-description=What a waste.;
+description=太浪费了.;
 special=cannotBePickedUp;  special=transparent;
 special=quantityChangesSprite_upTo6;
 special=canHangOnWalls;
@@ -820,13 +820,13 @@ ID=puddle_beer; element=newDay; newID=X;
 [JournalEntry]
 ID=item_puddle_beer;
 category=item; halfPage=true;
-title=Beer Puddle;
-text=<itemBig=puddle_beer><title=Beer Puddle><brAdj=>What a waste! Someone spilled beer all over the ground. Next time they should use a mug or a bottle on the keg instead.;
+title=啤酒水坑;
+text=<itemBig=puddle_beer><title=啤酒水坑><brAdj=>真是浪费!有人把啤酒洒了一地.<n>下次,他们应该用一个马克杯或一个瓶子来盛.;
 
-[ItemType]  name=Puddle;
+[ItemType]  name=水坑;
 ID=puddle; sprite=890; stackable=true; itemCategory=hazard;
 journalID=journal_puddle;
-description=Puddle of water. Can conduct electricity.;
+description=水坑。可以导电.;
 special=cannotBePickedUp; 
 special=quantityChangesSprite_upTo6;
 special=elementUsableForRestrictedAoEs;
@@ -844,9 +844,9 @@ ID=puddle; element=lightning; action=spreadElec;
 [ItemReaction]
 ID=puddle; element=newDay; newID=X;
 
-[ItemType]  name=Puddle;
+[ItemType]  name=水坑;
 ID=puddle_zone; sprite=890; stackable=true; itemCategory=hazard;
-description=Puddle of water. Can conduct electricity.;
+description=水坑。可以导电.;
 journalID=journal_puddle;
 special=cannotBePickedUp; special=quantityChangesSprite_upTo6;
 special=elementUsableForRestrictedAoEs;
@@ -864,13 +864,13 @@ ID=puddle_zone; element=lightning; action=spreadElec;
 [JournalEntry]
 ID=journal_puddle;
 category=item; halfPage=true;
-title=Puddle;
-text=<itemBig=puddle><title=Puddle><brAdj=>Somebody spilled some water here. In combat, electrical attacks will course through puddles, damaging everyone standing in them.;
+title=水坑;
+text=<itemBig=puddle><title=水坑><brAdj=>有人把水洒在这儿了.在战斗中,水坑能够扩散电属性攻击，<n>伤害站在水坑里的每个人.;
 
 
-[ItemType]  name=Static Field;
+[ItemType]  name=静电区域;
 ID=hazard_lightning; sprite=1104; 
-description=Lightning may strike here soon- try to stay away.;
+description=闪电可能很快就会来袭，尽量躲开.;
 itemCategory=hazard;
 texture=items_overworld;
 journalID=journal_static_field;
@@ -894,9 +894,9 @@ ID=hazard_lightning; element=timerUp; action=hazard_lightning_act; newID=X;
 [ItemLight] 
 ID=hazard_lightning; texture=lightmask; red=0.85; blue=1; green=0.85; alpha=1; size=0.3; flicker=0.1;
 
-[ItemType]  name=Static Zone;
+[ItemType]  name=静电区域;
 ID=hazard_lightning_perma; sprite=1104; 
-description=Long-lasting static. Don't touch!;
+description=持久的静电区域。别碰!;
 journalID=journal_static_field;
 itemCategory=hazard;
 texture=items_overworld;
@@ -918,13 +918,13 @@ ID=hazard_lightning_perma; texture=lightmask; red=0.85; blue=1; green=0.85; alph
 [JournalEntry]
 ID=journal_static_field;
 category=item; halfPage=true;
-title=Static Field;
-text=<itemBig=hazard_lightning><title=Static Field><brAdj=>Dangerous zone of electricity that threatens to shock anything that touches it. Cannot be jumped over.;
+title=静电区域;
+text=<itemBig=hazard_lightning><title=静电区域><brAdj=>充满电流的危险区域,<n>有触电的危险.无法跳越过.;
 
 
-[ItemType]  name=Ice;
+[ItemType]  name=冰;
 ID=puddleFrozen; sprite=954; stackable=true; itemCategory=hazard;
-description=Slippery and hinders movement.;
+description=滑且妨碍移动.;
 special=cannotBePickedUp;  special=semitransparent; special=moveCostOverride_2;
 special=quantityChangesSprite_upTo6;
 special=elementUsableForRestrictedAoEs;
@@ -935,9 +935,9 @@ element=ice;
 ID=puddleFrozen; element=fire; element=heat; newID=puddle; spawnItem=puddle;
 
 
-[ItemType]  name=Ice Platform;
+[ItemType]  name=冰平台;
 ID=ice_platform; sprite=958; itemCategory=hazard;
-description=Floating chunk of ice.;
+description=漂浮的大块冰.;
 special=cannotBePickedUp; special=moveCostOverride_2;
 special=elementUsableForRestrictedAoEs; special=overrideTerrainCollisions;
 special=canFloatOnWater; special=canHangOnWalls;
@@ -950,7 +950,7 @@ ID=ice_platform; element=leavingZone; newID=X;
 
 
 
-[ItemType]  name=Barrier;
+[ItemType]  name=屏障;
   ID=barrier_item; sprite=1012; weight=0;  itemCategory=hazard;
   special=animated; special=cannotBePickedUp; special=transparent; special=timer; special=canHangOnWalls;
   blockLoE=true; blockLoS=true; blockWalking=true; blockJumping=true;
@@ -966,11 +966,11 @@ ID=barrier_item; element=leavingZone; newID=X;
 [JournalEntry]
 ID=item_barrier_item;
 category=item; halfPage=true; rarity=2;
-title=Barrier;
-text=<itemBig=barrier_item><title=Barrier><brAdj=>Force and Preservation magic form this barrier. Application of Ruin magic, dispelling magic, or an explosion breaks it easily. It weakens over time, and can also be brought down with physical attacks.;
+title=屏障;
+text=<itemBig=barrier_item><title=屏障><brAdj=>力量和保护魔法形成了这个屏障.<n>使用毁灭魔法、驱散魔法或爆炸很容易破坏.<n>会随着时间推移而减弱,也会被物理攻击击破.;
 
 
-[ItemType]  name=Weak Barrier;
+[ItemType]  name=微弱屏障;
   ID=barrier_item_weak; sprite=1044; weight=0;  itemCategory=hazard;
   special=animated; special=cannotBePickedUp; special=transparent; special=timer; special=canHangOnWalls;
   blockLoE=true; blockLoS=true; blockWalking=true; blockJumping=true;
@@ -983,7 +983,7 @@ ID=barrier_item_weak; element=explode; element=physical; element=ruin; element=d
 [ItemReaction] 
 ID=barrier_item_weak; element=leavingZone; newID=X;
 
-[ItemType]  name=Strong Barrier;
+[ItemType]  name=强力屏障;
   ID=barrier_strong; sprite=980; weight=0;  itemCategory=hazard;
   special=animated; special=cannotBePickedUp; special=transparent; special=canHangOnWalls;
   blockLoE=true; blockWalking=true; blockJumping=true;
@@ -994,11 +994,11 @@ ID=barrier_strong; element=explode; element=destroy; newID=X; fx=castingFast; ai
 [JournalEntry]
 ID=item_barrier_strong;
 category=item; halfPage=true; rarity=2;
-title=Strong Barrier;
-text=<itemBig=barrier_strong><title=Strong Barrier><brAdj=>A super-strong magic barrier that resists dispelling, and can only be brought down by severe explosive force.;
+title=强力屏障;
+text=<itemBig=barrier_strong><title=强力屏障><brAdj=>一个超级强大的魔法屏障,可以抵抗驱散,<n>并且只能被严重的爆炸力击破。;
 
 
-[ItemType]  name=Healing Flowers;
+[ItemType]  name=治愈花朵;
 ID=flowers_healing1; sprite=440; 
 journalID=journal_flowers_healing1;
 special=cannotBePickedUp;
@@ -1017,11 +1017,11 @@ ID=flowers_healing1; element=endTurn; action=heal10Damage;
 [JournalEntry]
 ID=journal_flowers_healing1;
 category=item; halfPage=true; rarity=2;
-title=Healing Flowers;
-text=<itemBig=flowers_healing1><title=Healing Flowers><brAdj=>Strange flowers overflowing with Preservation magic. Ending your turn on them heals 9 damage. Many have attempted to transplant flowers of this kind, but it almost always ends with them withering.;
+title=治愈花朵;
+text=<itemBig=flowers_healing1><title=治愈花朵><brAdj=>散发着保护魔法的奇异花朵.<n>站在他们身上结束回合时治疗9 HP.<n>许多人试图移植这种花,<n>但几乎总是以枯萎而告终.;
 
 
-[ItemType]  name=Withered Flowers;
+[ItemType]  name=枯萎的花朵;
 ID=flowers_healing1_dead; sprite=408; 
 journalID=journal_flowers;
 special=cannotBePickedUp;
@@ -1030,7 +1030,7 @@ special=canHangOnWalls; special=canAlwaysFitInTile;
 [ItemReaction] 
 ID=flowers_healing1_dead; element=growth; newID=flowers_healing1;
   
-[ItemType]  name=Spikes;
+[ItemType]  name=尖刺;
   ID=rubble_spikes; sprite=612; 
   itemCategory=hazard;
 	special=cannotBePickedUp; special=randomFlipWhenPlaced;
@@ -1045,11 +1045,11 @@ ID=rubble_spikes; element=physical; element=smash; element=heavySmash; newID=rub
 [JournalEntry]
 ID=item_rubble_spikes;
 category=item; halfPage=true; rarity=0;
-title=Spikes;
-text=<itemBig=rubble_spikes><title=Spikes><brAdj=>Don't walk here if you can help it! These spiky rocks deal 9 damage to the first thing to touch them, then they break into normal rubble.;
+title=钉刺;
+text=<itemBig=rubble_spikes><title=钉刺><brAdj=>如果可以的话,就别在这儿走!<n>这些尖锐岩石会对接触它们的物体造成伤害,<n>然后它们就会变成普通的碎石。;
 
 
-[ItemType]  name=Teeth Spikes;
+[ItemType]  name=齿状尖刺;
   ID=tooth_spikes; sprite=1903; 
   itemCategory=hazard;
 	special=cannotBePickedUp; special=randomFlipWhenPlaced;
@@ -1065,10 +1065,10 @@ newID=tooth_spikes_dull;
 [JournalEntry]
 ID=item_tooth_spikes;
 category=item; halfPage=true; rarity=1;
-title=Spikes;
-text=<itemBig=tooth_spikes><title=Teeth Spikes><brAdj=>Watch your step! Walking on these would be extremely painful - we're talking 9 damage painful. However, keep in mind that they could be equally as painful for your enemies.;
+title=尖刺;
+text=<itemBig=tooth_spikes><title=齿状尖刺><brAdj=>小心台阶!<n>在上面行走会非常疼痛--会受到9点伤害.<n>然而要记住,对你的敌人来说同样能造成伤害。;
 
-[ItemType]  name=Teeth;
+[ItemType]  name=牙齿;
   ID=tooth_spikes_dull; sprite=1932;
   itemCategory=hazard;
   journalID=item_tooth_spikes;
@@ -1077,7 +1077,7 @@ text=<itemBig=tooth_spikes><title=Teeth Spikes><brAdj=>Watch your step! Walking 
 	pR=pGrey2; pB=zoneDirt;
   element=life;
 
-[ItemType]  name=Giant Claw;
+[ItemType]  name=巨大的爪;
 ID=clawBlocker2x; sprite=1091;
 itemCategory=hazard; texture=items_misc;
 special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed; 
@@ -1087,7 +1087,7 @@ blockLoE=true; blockLoS=true; blockWalking=true; blockJumping=true;
 special=sprite2xWidth; special=sprite2xHeight;
 pR=p74;
 
-[ItemType]  name=Giant Claw;
+[ItemType]  name=巨大的爪;
 ID=clawBlocker4x; sprite=1089;
 itemCategory=hazard; texture=items_misc;
 special=cannotBePickedUp; special=canHangOnWalls; special=cannotEverBePushed; 
@@ -1097,7 +1097,7 @@ blockLoE=true; blockLoS=true; blockWalking=true; blockJumping=true;
 special=sprite2xWidth; special=sprite4xHeight; special=adjustSpriteY16;
 pR=p74;
 
-[ItemType]  name=Brambles;
+[ItemType]  name=荆棘;
 ID=brambles; sprite=1206; itemCategory=hazard; 
 special=cannotBePickedUp; special=canHangOnWalls;
 special=canFloatOnWater; special=reactsToPressure;
@@ -1115,10 +1115,10 @@ ID=brambles; element=slash; element=pressureMoveAcross; element=pressurePlateDow
 [JournalEntry]
 ID=item_brambles;
 category=item; halfPage=true; rarity=1;
-title=Brambles;
-text=<itemBig=brambles><title=Brambles><brAdj=>Prickly shrub. Its exceedingly sharp thorns can cause real injury if you wade into them, and they leave you feeling painfully itchy afterward.;
+title=荆棘;
+text=<itemBig=brambles><title=荆棘><brAdj=>多刺的灌木.<n>如果你试图进去,它极其锋利的刺会造成伤害,<n>之后会让你感到疼痛和发痒.;
 
-[ItemType]  name=Broken Brambles;
+[ItemType]  name=破碎的荆棘;
 ID=brambles_broken; sprite=1238; itemCategory=hazard; 
 special=cannotBePickedUp; special=canHangOnWalls;
 special=canFloatOnWater; special=noTooltips;
@@ -1133,7 +1133,7 @@ ID=brambles_broken; element=growth; newID=brambles;
 
 
 
-[ItemType]  name=Bone Spines;
+[ItemType]  name=骨棘;
 ID=bone_spikes; sprite=689; itemCategory=hazard;
   pR=pBone;
   blockWalking=true;
@@ -1147,10 +1147,10 @@ element=explode; element=ruin; element=dispel;
 [JournalEntry]
 ID=item_bone_spikes;
 category=item; halfPage=true; rarity=1;
-title=Bone Spikes;
-text=<itemBig=bone_spikes><title=Bone Spikes><brAdj=>A short barrier of bone. Prevents walking, but can be easily hopped over. It's the best a Ruin user can do without proper materials.;
+title=骨棘;
+text=<itemBig=bone_spikes><title=骨棘><brAdj=>骨制的障碍物.防止通过,但可以很容易跳过.<n>这是毁灭者在没有合适材料<n>情况下能做的最好的东西.;
 
-[ItemType]  name=Bone Spines;
+[ItemType]  name=骨棘;
 ID=bone_spikes_strong; sprite=689; itemCategory=hazard;
 journalID=item_bone_spikes;
   pR=pBoneDark;
@@ -1161,7 +1161,7 @@ journalID=item_bone_spikes;
 ID=bone_spikes_strong; element=smash;
 element=explode; element=ruin; element=dispel; newID=X; fx=dust_bone;
  
-[ItemType]  name=Bone Wall;
+[ItemType]  name=骨墙;
 ID=bone_wall_weak; sprite=688; itemCategory=hazard;
 journalID=journal_bone_wall;
   pR=pBone;
@@ -1173,7 +1173,7 @@ journalID=journal_bone_wall;
 ID=bone_wall_weak; element=explode; element=ruin; element=dispel;
  element=timerUp; newID=bone_dust; fx=dust_bone; aiRatingMod = 3;
  
-[ItemType]  name=Bone Wall;
+[ItemType]  name=骨墙;
 ID=bone_wall_strong; sprite=688; itemCategory=hazard;
 journalID=journal_bone_wall;
   pR=pBoneDark;
@@ -1185,10 +1185,10 @@ ID=bone_wall_strong; element=explode; element=ruin; element=dispel; newID=X; fx=
 [JournalEntry]
 ID=journal_bone_wall;
 category=item; halfPage=true; rarity=1;
-title=Bone Wall;
-text=<itemBig=bone_wall_strong><itemBig=bone_wall_weak><title=Bone Wall><brAdj=>Wall formed from bone material, shaped by a Ruin mage. Darker colored ones are more durable, and last indefinitely.;
+title=骨墙;
+text=<itemBig=bone_wall_strong><itemBig=bone_wall_weak><title=骨墙><brAdj=>骨制的墙,由毁灭法师塑形.<n>深色的更耐用,而且可以无限期地使用。;
 
-[ItemType]  name=Miasma;
+[ItemType]  name=瘴气;
   ID=miasma; sprite=1019; weight=0; itemCategory=hazard;
   special=cannotBePickedUp; special=timer;
   timer=6;
@@ -1231,7 +1231,7 @@ ID=spearTrap_wall; element=mechanical; action=spearTrap_wall_act;
 ID=spearTrap_wall_flip; element=mechanical; action=spearTrap_wall_flip_act;
   
   
-[ItemType]  name=Goop;
+[ItemType]  name=黏稠物;
   ID=goop_pool; sprite=1004; weight=0;  itemCategory=hazard;
   special=big; special=animated; special=cannotBePickedUp; special=timer; special=reactsToPressure; special=moveCostOverride_2; 
   stackable=true;
@@ -1249,10 +1249,10 @@ ID=goop_pool; element=leavingZone; newID=X;
 [JournalEntry]
 ID=item_goop_pool;
 category=item; halfPage=true; rarity=1;
-title=Goop;
-text=<itemBig=goop_pool><title=Goop><brAdj=>Sticky pool that gets all over you when you step on it. If you walk through some, you'll have a hard time moving afterwards!;
+title=黏稠物;
+text=<itemBig=goop_pool><title=黏稠物><brAdj=>你一踩上去,黏糊糊的粘液就会溅你一身.<n>如果你走过一些,你就很难移动了!;
   
-[ItemType]  name=Acid;
+[ItemType]  name=酸液;
   ID=acid_pool; sprite=1004; weight=0;  itemCategory=hazard;
   special=big; special=animated; special=cannotBePickedUp; special=timer; special=reactsToPressure; special=moveCostOverride_2; 
   stackable=true;
@@ -1269,10 +1269,10 @@ ID=acid_pool; element=leavingZone; newID=X;
 [JournalEntry]
 ID=item_acid_pool;
 category=item; halfPage=true; rarity=1;
-title=Acid;
-text=<itemBig=acid_pool><title=Acid><brAdj=>Corrosive liquid that causes great harm on contact. Generally recommended procedure is: avoid, evade, bypass, or push your enemies in it and laugh (laughing optional).;
+title=酸液;
+text=<itemBig=acid_pool><title=酸液><brAdj=>腐蚀性液体，接触后危害极大。<n>一般建议的步骤是:避开、回避、绕过<n>或把你的敌人推进去，然后大笑(可选项)。;
 
-[ItemType]  name=Trap;
+[ItemType]  name=陷阱;
 ID=mantrap; sprite=118;  itemCategory=hazard;
 special=reactsToPressure; special=cannotBePickedUp;
 weight=0;
@@ -1282,7 +1282,7 @@ ID=mantrap; element=physical; element=explode;
 element=fire; element=ice; element=wind; element=elec; element=earth; 
 element=pressureMoveAcross; element=pressurePlateDown; newID=X; action=rogueTrap_cut; fx=terrain;
 
-[ItemType]  name=Piston;
+[ItemType]  name=活塞;
 ID=piston_push3; sprite=59;  itemCategory=hazard;
 special=timer; special=huge; special=sprite2xHeight;
 special=cannotBePickedUp;
@@ -1297,7 +1297,7 @@ ID=piston_push3; element=timerUp; action=piston_action; newID=piston_push3_exten
 ID=piston_push3; element=mechanical; newID=piston_push3_extended_off;
 
 
-[ItemType]  name=Piston;
+[ItemType]  name=活塞;
 ID=piston_push3_extended; sprite=60;  itemCategory=hazard;
 special=timer; special=huge; special=sprite2xHeight; special=canAlwaysFitInTile;
 special=cannotBePickedUp;
@@ -1311,7 +1311,7 @@ ID=piston_push3_extended; element=timerUp; newID=piston_push3; fx=TinyStep;
 [ItemReaction] 
 ID=piston_push3_extended; element=mechanical; newID=piston_push3_extended_off;
 
-[ItemType]  name=Piston;
+[ItemType]  name=活塞;
 ID=piston_push3_extended_off; sprite=60;  itemCategory=hazard;
 special=huge; special=sprite2xHeight; special=canAlwaysFitInTile;
 special=cannotBePickedUp;
@@ -1322,7 +1322,7 @@ depthMod=50;
 [ItemReaction] 
 ID=piston_push3_extended_off; element=mechanical; newID=piston_push3;
 
-[ItemType]  name=Piston;
+[ItemType]  name=活塞;
 ID=piston_push3_up; sprite=1302;
 special=cannotBePickedUp;
 blockWalking=true; blockJumping=true; special=dontCloneReactions;
@@ -1333,7 +1333,7 @@ ID=piston_push3_up; element=timerUp; action=piston_action; newID=piston_push3_ex
 ID=piston_push3_up; element=mechanical; newID=piston_push3_extended_off_up;
 
 
-[ItemType]  name=Piston;
+[ItemType]  name=活塞;
 ID=piston_push3_extended_up; sprite=1303;
 blockWalking=true; blockJumping=true; special=cannotBePickedUp;
 cloneFrom=piston_push3_extended;  special=dontCloneReactions;
@@ -1342,7 +1342,7 @@ ID=piston_push3_extended_up; element=timerUp; newID=piston_push3_up; fx=TinyStep
 [ItemReaction] 
 ID=piston_push3_extended_up; element=mechanical; newID=piston_push3_extended_off_up;
 
-[ItemType]  name=Piston;
+[ItemType]  name=活塞;
 ID=piston_push3_extended_off_up; sprite=1303;
 blockWalking=true; blockJumping=true; special=cannotBePickedUp;
 cloneFrom=piston_push3_extended_off;  special=dontCloneReactions;
@@ -1351,7 +1351,7 @@ ID=piston_push3_extended_off_up; element=mechanical; newID=piston_push3_up;
 
 
 
-[ItemType]  name=Force Turret;
+[ItemType]  name=强力炮塔;
 ID=turret_omni_wind; sprite=1336; 
 special=big; special=cannotBePickedUp;
 weight=200; itemCategory=hazard;
@@ -1363,7 +1363,7 @@ pB=pGrey;
 [ItemReaction] 
 ID=turret_omni_wind; element=mechanical; element=elec; action=turret_omni_wind_action;
 
-[ItemType]  name=Force Turret;
+[ItemType]  name=强力炮塔;
 ID=turret_wind; sprite=1337; 
 journalID=journal_force_turret;
 special=big; special=cannotBePickedUp;
@@ -1376,7 +1376,7 @@ pB=pGrey;
 ID=turret_wind; element=mechanical; element=elec; action=turret_wind_action;
 
 
-[ItemType]  name=Movable Force Turret;
+[ItemType]  name=可移动的强力炮塔;
 ID=turret_omni_wind_movable; sprite=1338; 
 description=When activated, shoots blasts of wind that damage and push.;
 itemCategory=hazard;
@@ -1393,10 +1393,10 @@ ID=turret_omni_wind_movable; element=mechanical; element=elec; element=focus; ac
 [JournalEntry]
 ID=journal_force_turret;
 category=item; halfPage=true; rarity=2;
-title=Force Turret;
-text=<itemBig=turret_omni_wind_movable><title=Force Turret><brAdj=>Powerful turret equipped with many wind triggers. It sends howling wind a great distance, dealing 10 damage and pushing 1 tile. It can be powered on by electrifying it or hooking it up to a switch of some sort. After firing, it must take <icon=time>1 to recharge.;
+title=强力炮塔;
+text=<itemBig=turret_omni_wind_movable><title=强力炮塔><brAdj=>强力炮塔配备了许多风触发物.<n>它可以发出呼啸的风到很远的地方,<n>造成10点伤害并推动1个格.<n>它可以通过通电或连接到某种开关来供电.<n>在射击后，它必须花<icon=time>1的时间来充能。;
 
-[ItemType]  name=Movable Force Turret;
+[ItemType]  name=可移动的强力炮塔;
 ID=turret_omni_wind_movable_off; sprite=1338; 
 description=When activated, shoots blasts of wind that damage and push.;
 itemCategory=hazard;
@@ -1424,7 +1424,7 @@ ID=arrow_timer; element=timerUp; action=skyArrow;
 [ItemReaction]
 ID=arrow_timer; element=mechanical; newID=mounted_xbow_off;
   
-[ItemType]  name=Hot Coals;
+[ItemType]  name=炽热的煤炭;
   ID=coals_hot1; sprite=640; weight=0;  itemCategory=hazard;
   journalID=journal_coals_hot1;
   description=Don't touch!!;
@@ -1443,9 +1443,9 @@ ID=coals_hot1; red=0.9; blue=0.4; green=0.4; alpha=0.4; size=0.4; flicker=0.02;
 [JournalEntry]
 ID=journal_coals_hot1;
 category=item; halfPage=true; rarity=0;
-title=Hot Coals;
-text=<itemBig=coals_hot1><title=Hot Coals><brAdj=>These burning coals will scorch your feet for 10 fire damage if you walk through them. Doing so extinguishes them, however.;
-[ItemType]  name=Coals;
+title=炽热的煤炭;
+text=<itemBig=coals_hot1><title=炽热的煤炭><brAdj=>如果你路过他们,<n>这些燃烧的煤炭会对你的脚造成10点火属性伤害.<n>不过，这样会将它们熄灭。;
+[ItemType]  name=煤炭;
   ID=coals_cool1; sprite=641; weight=0;  itemCategory=hazard;
   description=;
   texture=items_building;
@@ -1455,9 +1455,9 @@ text=<itemBig=coals_hot1><title=Hot Coals><brAdj=>These burning coals will scorc
 [ItemReaction] 
 ID=coals_cool1; element=fire; newID=coals_hot1; 
   
-[ItemType]  name=Fire;
+[ItemType]  name=火;
   ID=fire; sprite=996; weight=0;  itemCategory=hazard;
-  description=Stay back, it's on fire!;
+  description=退后，着火了!;
   journalID=journal_fire;
   special=animated; special=cannotBePickedUp; special=canHangOnWalls; special=timer; special=reactsToPressure; special=big; special=set0RotWhenPlaced;
   special=moveCostOverride_2;
@@ -1481,22 +1481,22 @@ ID=fire; element=pressurePlateDown; action=fireDamage_noBurn; newID=X;
 [ItemReaction] 
 ID=fire; element=kindle; newID=fire; 
 
-[ItemType]  name=Fire;
+[ItemType]  name=火;
   ID=fire_fast;
   cloneFrom=fire;
   timer=3;
   
-[ItemType]  name=Fire;
+[ItemType]  name=火;
   ID=fire_long; 
   cloneFrom=fire;
   timer=60;
   
-[ItemType]  name=Fire;
+[ItemType]  name=火;
   ID=fire_long_depthMod; 
   cloneFrom=fire;
   timer=60;
   depthMod=1050;
-[ItemType]  name=Fire;
+[ItemType]  name=火;
   ID=fire_eternal; sprite=996; weight=0;  itemCategory=hazard;
   journalID=journal_fire;
   special=animated; special=cannotBePickedUp; special=canHangOnWalls; special=set0RotWhenPlaced;
@@ -1505,7 +1505,7 @@ ID=fire; element=kindle; newID=fire;
 [ItemLight] 
 ID=fire_eternal; red=1; blue=0.3; green=0.3; alpha=0.6; size=1.6; flicker=0.12; texture=lightmask;
   
-[ItemType]  name=Fire;
+[ItemType]  name=火;
   ID=fire_small; sprite=1000; weight=0;  itemCategory=hazard;
   description=Stay back, it's on fire!;
   journalID=journal_fire;
@@ -1534,11 +1534,11 @@ ID=fire_small; element=kindle; newID=fire;
 [JournalEntry]
 ID=journal_fire;
 category=item; halfPage=true;
-title=Fire;
-text=<itemBig=fire><title=Fire!><brAdj=>Fire is a chemical reaction that releases heat & light. Fire starts when combustible material is exposed to enough oxygen and heat. Fire created under a target deals minor damage. Walking into pre-existing fire also inflicts Burn.;
+title=火;
+text=<itemBig=fire><title=火!><brAdj=>燃烧是一种释放热和光的化学反应.<n>当可燃材料暴露在足够的氧气和热量下时,<n>就会发生着火.在目标脚下燃烧会造成轻微伤害.<n>走进火焰会造成烧伤.;
 
 
-[ItemType]  name=Fire Whirl;
+[ItemType]  name=火龙卷;
 ID=fireWhirl; sprite=988; itemCategory=hazard;
 journalID=journal_fireWhirl; 
 special=animated; special=cannotBePickedUp; special=timer; special=sprite2xHeight;
@@ -1556,7 +1556,7 @@ ID=fireWhirl; element=timerUp; action=fireWhirlDamage; newID=fireWhirl1;
 ID=fireWhirl; element=leavingZone; newID=X;
 
 
-[ItemType]  name=Fire Whirl;
+[ItemType]  name=火龙卷;
 ID=fireWhirl1; sprite=988; itemCategory=hazard;
 journalID=journal_fireWhirl;
 special=animated; special=cannotBePickedUp; special=timer; special=sprite2xHeight;
@@ -1576,7 +1576,7 @@ ID=fireWhirl1; element=leavingZone; newID=X;
 ID=fireWhirl1; element=spawnFireWhirl; newID=fireWhirl;
 
 
-[ItemType]  name=Fire Whirl;
+[ItemType]  name=火龙卷;
 ID=fireWhirl2; sprite=988; itemCategory=hazard;
 journalID=journal_fireWhirl;
 special=animated; special=cannotBePickedUp; special=timer; special=sprite2xHeight;
@@ -1595,7 +1595,7 @@ ID=fireWhirl2; element=leavingZone; newID=X;
 [ItemReaction] 
 ID=fireWhirl2; element=spawnFireWhirl; newID=fireWhirl;
 
-[ItemType]  name=Fire Whirl;
+[ItemType]  name=火龙卷;
 ID=fireWhirl3; sprite=988; itemCategory=hazard;
 journalID=journal_fireWhirl;
 special=animated; special=cannotBePickedUp; special=timer; special=sprite2xHeight;
@@ -1617,19 +1617,19 @@ ID=fireWhirl3; element=spawnFireWhirl; newID=fireWhirl;
 [JournalEntry]
 ID=journal_fireWhirl;
 category=item; halfPage=true; rarity=1;
-title=Fire Whirl;
-text=<itemBig=fireWhirl><title=Fire Whirl><brAdj=>Flame caught in a vortex of wind. They can occur naturally from wildfires or lightning strikes. Also referred to as a fire tornado or fire devil.;
+title=火龙卷;
+text=<itemBig=fireWhirl><title=火龙卷><brAdj=>火焰在风的旋涡中燃烧.<n>它们可以由野火或雷击自然发生.<n>也被称为火旋风或火魔鬼.;
 
 
 
 
-[ItemType]  name=Glow;
+[ItemType]  name=辉光;
   ID=glow_circle; sprite=1008; weight=0; itemCategory=hazard;
   special=animated; special=cannotBePickedUp;
 [ItemLight] 
 ID=glow_circle; red=0.5; blue=1; green=0.5; alpha=0.6; size=0.4; flicker=0.05;
 
-[ItemType]  name=Gate;
+[ItemType]  name=门;
   ID=gate_item; sprite=1028; weight=0;  itemCategory=hazard;
   description=;
   journalID=journal_gate;
@@ -1641,7 +1641,7 @@ ID=glow_circle; red=0.5; blue=1; green=0.5; alpha=0.6; size=0.4; flicker=0.05;
 [ItemLight] 
 ID=gate_item; red=1; blue=1; green=0; alpha=0.6; size=0.3; flicker=0.12;
 
-[ItemType]  name=Gate;
+[ItemType]  name=门;
   ID=gate_item_noCollision;
   journalID=journal_gate;
   cloneFrom=gate_item;
@@ -1650,24 +1650,24 @@ ID=gate_item; red=1; blue=1; green=0; alpha=0.6; size=0.3; flicker=0.12;
 [JournalEntry]
 ID=journal_gate;
 category=item; halfPage=true;  rarity=3; rewardMod=-100;
-title=Gate;
-text=<itemBig=gate_item><title=Gate><brAdj=>A magical Gate that teleports anything that enters it. It seems stable enough... but who knows where it will lead?;
+title=门;
+text=<itemBig=gate_item><title=门><brAdj=>一扇能传送任何进入它的东西的魔法之门.<n>它似乎很稳定...但谁知道它会通向何方?;
 
 
 
-[ItemType]  name=Blood;
+[ItemType]  name=血;
 ID=blood_pool; sprite=916; stackable=true; itemCategory=hazard;
 journalID=journal_blood;
 special=cannotBePickedUp;  special=transparent; special=canHangOnWalls;
 special=quantityChangesSprite_upTo5;
 
-[ItemType]  name=Blood;
+[ItemType]  name=血;
 ID=blood_seeping; sprite=948; stackable=true; itemCategory=hazard;
 journalID=journal_blood;
 special=cannotBePickedUp;  special=transparent; special=canHangOnWalls;
 special=quantityChangesSprite_upTo5;
 
-[ItemType]  name=Blood;
+[ItemType]  name=血;
 ID=blood_trail; sprite=943; stackable=true; itemCategory=hazard;
 journalID=journal_blood;
 special=cannotBePickedUp;  special=transparent; special=canHangOnWalls;
@@ -1675,11 +1675,11 @@ special=quantityChangesSprite_upTo4;
 [JournalEntry]
 ID=journal_blood;
 category=item; halfPage=true;
-title=Blood;
-text=<itemBig=blood_trail><itemBig=blood_pool><title=Blood><brAdj=>Vital bodily fluid that moves nutrients & air across the body. Blood is best kept inside a living thing, not splashed on the floor like this.;
+title=血;
+text=<itemBig=blood_trail><itemBig=blood_pool><title=血><brAdj=>在体内输送营养和空气的重要体液.<n>血最好保存在活人体内,<n>而不是像这样溅在地板上。;
 
 
-[ItemType]  name=Plasma;
+[ItemType]  name=等离子体;
   ID=plasma_bomb; sprite=1032; weight=330;  itemCategory=hazard;
   description=Unstable energy moments away from exploding.;
   special=animated; special=canHangOnWalls; special=big; special=timer;
@@ -1697,8 +1697,8 @@ ID=plasma_bomb; element=ice; element=water; element=ruin; element=dispel; newID=
 [JournalEntry]
 ID=journal_plasma_bomb;
 category=item; halfPage=true;
-title=Plasma;
-text=<itemBig=plasma_bomb><title=Plasma><brAdj=>This swirling mass of energy is moments away from exploding, causing 20 damage in a cross pattern and burning anything unfortunate enough stand too close.;
+title=等离子体;
+text=<itemBig=plasma_bomb><title=等离子体><brAdj=>这些旋转的能量离子体爆炸只有几分钟的时间,对十字范围内造成20伤害<n>离得太近的东西都会被烧成灰烬.;
 
 
 [ItemType]  name=Current;
@@ -1755,7 +1755,7 @@ pB=pIce;
 ID=waterCurrent_frozen_below; element=fire; element=heat; newID=waterCurrent_below;
 
 
-[ItemType]  name=<color=Red>Vein;
+[ItemType]  name=<color=Red>藤蔓;
   ID=vein_atkL; sprite=2147; weight=330;  itemCategory=hazard;
   description=;
   special=canHangOnWalls; special=big; special=timer;
@@ -1773,7 +1773,7 @@ ID=vein_atkL; element=physical; element=explode;
 element=fire; element=ice; element=elec; element=wind; element=ruin;
 newID=X; fx=dust_bubble_dark;
 
-[ItemType]  name=<color=Red>Vein;
+[ItemType]  name=<color=Red>藤蔓;
   ID=vein_atkR;  sprite=2148;
   cloneFrom=vein_atkL;
   special=dontCloneReactions;
@@ -1786,7 +1786,7 @@ newID=X; fx=dust_bubble_dark;
 
 
 
-[ItemType]  name=<color=Red>Vein;
+[ItemType]  name=<color=Red>藤蔓;
   ID=vein_atk_slam; sprite=2149; weight=330;  itemCategory=hazard;
   description=;
   special=canHangOnWalls; special=big; special=timer;
@@ -1803,7 +1803,7 @@ element=fire; element=ice; element=elec; element=wind; element=ruin;
 newID=X; fx=dust_bubble_dark;
 
 
-[ItemType]  name=<color=Red>Vine;
+[ItemType]  name=<color=Red>藤蔓;
 ID=vine_atkL; sprite=2147; weight=330;  itemCategory=hazard;
 journalID=journal_vine_atk;
 special=canHangOnWalls; special=big; special=timer;
@@ -1821,7 +1821,7 @@ ID=vine_atkL; element=physical; element=explode;
 element=fire; element=ice; element=elec; element=ruin;
 newID=vine_atkL_delayed; fx=dust_bubble_dark;
 
-[ItemType]  name=<color=Red>Vine;
+[ItemType]  name=<color=Red>藤蔓;
 ID=vine_atkR;  sprite=2148;
 cloneFrom=vine_atkL;
 special=dontCloneReactions;
@@ -1833,7 +1833,7 @@ element=fire; element=ice; element=elec; element=ruin;
 newID=vine_atkR_delayed; fx=dust_bubble_dark;
 
 
-[ItemType]  name=<color=Red>Vine;
+[ItemType]  name=<color=Red>藤蔓;
 ID=vine_atkL_delayed; sprite=2147; weight=330;  itemCategory=hazard;
 journalID=journal_vine_atk;
 special=canHangOnWalls; special=big; special=timer;
@@ -1844,7 +1844,7 @@ pR=pGrey3;
 [ItemReaction]
 ID=vine_atkL_delayed; element=timerUp; newID=vine_atkL;
 
-[ItemType]  name=<color=Red>Vine;
+[ItemType]  name=<color=Red>藤蔓;
 ID=vine_atkR_delayed;  sprite=2148;
 cloneFrom=vine_atkL_delayed;
 special=dontCloneReactions;
@@ -1853,11 +1853,11 @@ ID=vine_atkR_delayed; element=timerUp; newID=vine_atkR;
 [JournalEntry]
 ID=journal_vine_atk;
 category=item; halfPage=true; rarity=1;
-title=Vine (Hazard);
-text=<itemBig=vine_atkL><title=Vine><brAdj=>Massive vine that protrudes from the walls. Wriggles unnaturally while dormant, then lashes out wildly. Try not to be anywhere nearby when that happens! It's not clear whether this is just how the plant acts, or if some being somewhere is controlling it. Damaging it delays its attack briefly.;
+title=藤蔓 (有危险的);
+text=<itemBig=vine_atkL><title=藤蔓><brAdj=>墙上伸出的巨大藤蔓.在休眠时不自然地扭动,<n>然后疯狂地猛击.当这种情况发生时,尽量不要靠近!目前尚未清楚这是否只是植物的行为方式,<n>或者是否有什么东西在控制它.<n>破坏它可以暂时推迟它的攻击.;
 
 
-[ItemType]  name=Vine Generator;
+[ItemType]  name=藤蔓生成器;
 ID=vine_atk_generatorL; sprite=2147; weight=330;  itemCategory=hazard;
 special=canHangOnWalls; special=timer; special=canFloatOnWater;
 special=canBeInsideWalls; special=canAlwaysFitInTile;
@@ -1874,7 +1874,7 @@ special=dontCloneReactions;
 [ItemReaction]
 ID=vine_atk_generatorR; element=timerUp; spawnItem=vine_atkR; fx=vine_spawnR;
 
-[ItemType] name=Stone Mushroom;
+[ItemType] name=石蘑菇;
 ID=myconid_stone; 
 itemCategory=hazard;
 description=Statue of a large mushroom.;
@@ -1888,8 +1888,8 @@ ID=myconid_stone; element=mechanical; action=moveSelf;
 [JournalEntry]
 ID=item_myconid_stone;
 category=item; halfPage=true; rarity=2;
-title=Stone Mushroom;
-text=<itemBig=myconid_stone><title=Stone Mushroom><brAdj=>An extremely intricate statue of a mushroom. It's incredibly lifelike and astoundingly durable - even a hammer can't dent it.;
+title=石蘑菇;
+text=<itemBig=myconid_stone><title=石蘑菇><brAdj=>一个极其复杂的蘑菇雕像.<n>它栩栩如生,非常坚固,连锤子都敲不出痕迹.;
 
 
 [ItemType] name=Ruluorn Queen;
@@ -2082,11 +2082,11 @@ ID=mechanist_turret6; element=leavingZone; newID=X;
 [JournalEntry]
 ID=journal_mechanist_turret;
 category=item; halfPage=true; rarity=1;
-title=Portable Turret;
-text=<itemBig=mechanist_turret1><title=Portable Turret><brAdj=>A mechanist creation that fires repeatedly. 'Use' it or shock it to rotate it.;
+title=便携式炮塔;
+text=<itemBig=mechanist_turret1><title=便携式炮塔><brAdj=>一种机械师创造的反复开火的东西.<n>'使用'它或冲击它旋转.;
  
  
-[ItemType]  name=Remote Flare;
+[ItemType]  name=遥控火焰弹;
 description=;
 ID=remote_flare; sprite=1689; special=animated; special=timer;
 itemCategory=hazard; weight=200;
@@ -2105,7 +2105,7 @@ ID=remote_flare; element=leavingZone; newID=X;
 [ItemLight]
 ID=remote_flare; red=0.8; blue=0; green=0; alpha=0.3; size=0.1; flicker=0.02;
 
-[ItemType]  name=Remote Pulse;
+[ItemType]  name=遥控脉冲弹;
 description=;
 ID=remote_pulse; sprite=1689; special=animated; special=timer;
 itemCategory=hazard; weight=200;
@@ -2126,7 +2126,7 @@ ID=remote_pulse; element=leavingZone; newID=X;
 [ItemLight]
 ID=remote_pulse; red=0.8; blue=0.8; green=0.8; alpha=0.3; size=0.1; flicker=0.02;
 
-[ItemType]  name=Remote Frost;
+[ItemType]  name=遥控冰霜弹;
 description=;
 ID=remote_frost; sprite=1689; special=animated; special=timer;
 itemCategory=hazard; weight=200;
@@ -2145,7 +2145,7 @@ fx=remote_item_exploding;
 ID=remote_frost; element=leavingZone; newID=X;
 [ItemLight]
 ID=remote_frost; red=0; blue=0.8; green=0; alpha=0.3; size=0.1; flicker=0.02;
-[ItemType]  name=Remote Heal;
+[ItemType]  name=遥控生命弹;
 description=;
 ID=remote_heal; sprite=1689; special=animated; special=timer;
 itemCategory=hazard; weight=200;
@@ -2164,7 +2164,7 @@ fx=remote_item_exploding;
 ID=remote_heal; element=leavingZone; newID=X;
 [ItemLight]
 ID=remote_heal; red=0.8; blue=0; green=0.5; alpha=0.3; size=0.1; flicker=0.02;
-[ItemType]  name=Portable Wall;
+[ItemType]  name=便携式墙;
   ID=mechanist_wall; sprite=1658; weight=200; volume=200; 
   itemCategory=hazard;
   special=cannotBePickedUp; special=transparent; special=timer;
@@ -2182,7 +2182,7 @@ ID=mechanist_wall; element=explode; element=smash; element=dispel;
 [ItemReaction] 
 ID=mechanist_wall; element=leavingZone; newID=X;
 
-[ItemType]  name=Portable Wall;
+[ItemType]  name=便携式墙;
   ID=mechanist_wall_off; sprite=1657; weight=200; volume=200; 
   itemCategory=hazard;
   special=cannotBePickedUp; special=transparent; special=timer;
@@ -2200,7 +2200,7 @@ ID=mechanist_wall_off; element=explode; element=smash; element=dispel;
 ID=mechanist_wall_off; element=leavingZone; newID=X;
 
 
-[ItemType]  name=Conveyor Belt;
+[ItemType]  name=传送带;
 ID=mechanist_conveyorBelt; sprite=1913; 
 itemCategory=hazard;
 weight=300; stackable=true;
@@ -2213,8 +2213,8 @@ pR=p1; pB=p2; pG=p3;
 [ItemReaction]
 ID=mechanist_conveyorBelt; element=timerUp; action=conveyorBelt_action; quantityMod=-1;
 
-[ItemType]  name=Medkit;
-description=Medical kit. Heals whoever ends their turn on it.;
+[ItemType]  name=医疗包;
+description=医疗设备.结束回合时治疗目标.;
 ID=medkit; sprite=1821;
 itemCategory=hazard; weight=200;
 timer=300; stackable=true;

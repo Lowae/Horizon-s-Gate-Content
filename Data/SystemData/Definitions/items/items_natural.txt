@@ -283,7 +283,7 @@ category=item; halfPage=true; rarity=1;
 title=秘银矿石;
 text=<itemBig=ore_mythril><title=Mythril Ore><brAdj=>罕见的发现,神秘的银矿石,<n>已知最好的金属.<n>这是每个探矿者都希望看到的.;
 
-[ItemType]  name=Volskarn;
+[ItemType]  name=沃尔斯卡恩;
 ID=ore_volskarn; sprite=851; 
 special=huge; special=canHangOnWalls;  special=cannotEverBePushed;
 weight=200; itemCategory=natural;
@@ -296,8 +296,8 @@ ID=ore_volskarn; element=use; element=explode; element=pickaxe; element=melee; n
 [JournalEntry]
 ID=item_ore_volskarn;
 category=item; halfPage=true; rarity=1;
-title=Volskarn;
-text=<itemBig=ore_volskarn><title=Volskarn><brAdj=>少量的Volskarn从这些岩石中突出来.<n>收获它很简单,强烈推荐.;
+title=沃尔斯卡恩;
+text=<itemBig=ore_volskarn><title=沃尔斯卡恩><brAdj=>少量的沃尔斯卡恩从这些岩石中突出来.<n>收获它很简单,强烈推荐.;
 
 [ItemType]  name=晶体矿;
 ID=crystals1; sprite=846; 
@@ -389,13 +389,13 @@ blockWalking=false; special=dontCloneReactions;
 [ItemReaction] 
 ID=ice_rocks_wallbase; element=fire; element=heat; newID=X; fx=vaporCloud;
 
-[ItemType]  name=寒冰铁;
+[ItemType]  name=寒铁冰;
 ID=ironice_rocks; sprite=416;  itemCategory=natural;
 special=cannotBePickedUp; special=canHangOnWalls; 
 blockWalking=true; 
 pR=pIronice;
 
-[ItemType]  name=寒冰铁;
+[ItemType]  name=寒铁冰;
 ID=ironice_rocks_wallbase; 
 cloneFrom=ironice_rocks;
 special=canHangOnWalls; special=adjustSpriteYUp16; 
@@ -966,7 +966,7 @@ category=item; halfPage=true; rarity=1;
 title=昆虫;
 text=<itemBig=bugs12_small><title=昆虫><brAdj=>他们是甲虫吗?还是蟑螂?<n>它们又小又难以捉摸,看不清楚!...<n>至少它们是无害的.别担心.;
 
-[ItemType]  name=杰弗里;
+[ItemType]  name=杰夫里;
 ID=jeffery1; sprite=348;
 texture=items_misc;
 journalID=journal_jeffery;
@@ -978,19 +978,19 @@ ID=jeffery1;
 element=physical; element=magic;
 element=pressureMove; newID=X; fx=jeffery_run;
 
-[ItemType]  name=杰弗里;
+[ItemType]  name=杰夫里;
 ID=jeffery2; sprite=380;
 cloneFrom=jeffery1;
 
-[ItemType]  name=杰弗里;
+[ItemType]  name=杰夫里;
 ID=jeffery3; sprite=412;
 cloneFrom=jeffery1;
 
 [JournalEntry]
 ID=journal_jeffery;
 category=creature; halfPage=true; rarity=2;
-title=杰弗里;
-text=<itemBig=jeffery1><title=杰弗里><brAdj=>寻找和捕猎小型啮齿动物的小型哺乳动物.<n>他们以好奇和聪明而闻名.<n>某些稀有品种的杰弗瑞会成群捕食大型猎物,<n>但这种品种似乎是无害的。.;
+title=杰夫里;
+text=<itemBig=jeffery1><title=杰夫里><brAdj=>寻找和捕猎小型啮齿动物的小型哺乳动物.<n>他们以好奇和聪明而闻名.<n>某些稀有品种的杰夫里会成群捕食大型猎物,<n>但这种品种似乎是无害的.;
 
 
 [ItemType]  name=啮齿动物;

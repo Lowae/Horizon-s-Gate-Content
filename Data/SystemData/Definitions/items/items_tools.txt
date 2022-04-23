@@ -6,17 +6,17 @@ special=cannotBePickedUp; special=invisible;
 special=canHangOnWalls; special=canAlwaysFitInTile;
 special=showOnMinimap;
 
-[ItemType]  name=Magnifying Glass;
+[ItemType]  name=放大镜;
 ID=studyTool; itemCategory=tool;
-description=Reveals elemental weaknesses.;
+description=揭示了元素弱点.;
  sprite=119; spriteWhenHeld=151;
  action=studyTool_action;
   volume=1; value=50;
 [JournalEntry]
 ID=item_studyTool;
 category=item; halfPage=true; rarity=1;
-title=Magnifying Glass;
-text=<itemBig=studyTool><title=Magnifying Glass><brAdj=>This deceptively simple tool can reveal knowledge to you. It replicates the Scholar's 'Elementary' ability, although it takes a turn to use.;
+title=放大镜;
+text=<itemBig=studyTool><title=放大镜><brAdj=>这个看似简单的工具可以向你揭示知识.<n>它复制了学者的'初级的'能力,<n>尽管需要使用需要花费1回合.;
 [ItemType]  name=维修工具;
 ID=repairTool;  itemCategory=tool;
 description=修理损坏装备的工具.拖到对应物品上使用.; stackable=true;
@@ -27,22 +27,22 @@ description=修理损坏装备的工具.拖到对应物品上使用.; stackable=
 [JournalEntry]
 ID=item_repairTool;
 category=item; halfPage=true;
-title=Repair Tools;
-text=<itemBig=repairTool><title=Repair Tools><brAdj=>All-purpose tool set for fixing broken weapons and armor. It has a limited number of uses, but it's usually worth it.;
-[ItemType]  name=Lockpick;
+title=维修工具;
+text=<itemBig=repairTool><title=维修工具><brAdj=>万能工具集,用于修复损坏的武器和盔甲.<n>它的用途有限,但通常是有用的.;
+[ItemType]  name=撬锁工具;
 ID=lockpick;  itemCategory=tool;
-description=Open a lock by dragging this onto it. Breaks after use.; stackable=true;
+description=通过拖到目标来打开锁。用后损坏.; stackable=true;
  sprite=120; spriteWhenHeld=0;
  special=quantityChangesSprite_upTo2;
   volume=1; value=20;
 [JournalEntry]
 ID=item_lockpick;
 category=item; halfPage=true;
-title=Lockpick;
-text=<itemBig=lockpick><title=Lockpick><brAdj=>Small pins and picks for opening any traditional lock. Regrettably, they're quite fragile, and one breaks on each lock.;
+title=撬锁工具;
+text=<itemBig=lockpick><title=撬锁工具><brAdj=>可以打开任何传统锁的针和凿.<n>遗憾的是,它们很脆弱,开一把锁坏一个.;
 
-[ItemType]  name=Shovel;
-description=A simple shovel used for digging.;
+[ItemType]  name=铲子;
+description=一把用于挖掘的简单铲子.;
 ID=shovel; sprite=114; spriteWhenHeld=146; itemCategory=tool;
 weight=1; volume=10; value=2;
 pR=pSteel; pG=pSteelHilt;
@@ -52,11 +52,11 @@ special=defaultStack_2; special=defaultStack_x2; special=defaultStack_x10;
 [JournalEntry]
 ID=item_shovel;
 category=item; halfPage=true;
-title=Shovel;
-text=<itemBig=shovel><title=Shovel><brAdj=>Metal on a stick in a shape ideal for moving dirt. Use it in the right place and you might find treasure!;
+title=铲子;
+text=<itemBig=shovel><title=铲子><brAdj=>形状非常适合移动污垢的金属棒.<n>在正确的地方使用它,你可能会找到宝藏!;
 
-[ItemType]  name=Silver Shovel;
-description=Shovel of amazing quality and durability.;
+[ItemType]  name=银铲子;
+description=惊人的质量和耐用性的铲子.;
 ID=shovel_silver; sprite=114; spriteWhenHeld=146; itemCategory=tool;
 weight=1; volume=10; value=1500;
 pR=pMythril; pG=pMythrilHilt;
@@ -64,12 +64,12 @@ pR=pMythril; pG=pMythrilHilt;
 [JournalEntry]
 ID=item_shovel_silver;
 category=item; halfPage=true; rarity=2;
-title=Silver Shovel;
-text=<itemBig=shovel_silver><title=Silver Shovel><brAdj=>Despite the name, its primary component is mythril. Only a truly peaceful community would craft mythril into shovels rather than swords.;
+title=银铲子;
+text=<itemBig=shovel_silver><title=银铲子><brAdj=>尽管名字如此,但它的主要成分是秘银.<n>只有真正和平的社会才会用秘银制造成铲子而不是剑.;
  
-[ItemType]  name=Pickaxe;
+[ItemType]  name=鹤嘴锄;
 ID=pickaxe; sprite=117; itemCategory=tool;
-description=A tool used to break apart cavern walls.;
+description=用来拆开洞壁的工具.;
 weight=1; volume=10; value=2;
 pR=pSteel; pG=pSteelHilt;
 special=stackCannotBeSplit; special=consumeOnUse;
@@ -78,14 +78,14 @@ special=defaultStack_2; special=defaultStack_x10;
 [JournalEntry]
 ID=item_pickaxe;
 category=item; halfPage=true;
-title=Pickaxe;
-text=<itemBig=pickaxe><title=Pickaxe><brAdj=>A spike for prying & breaking rock with a counter weight on the other side. Mostly used for mining and clearing stone.;
+title=鹤嘴锄;
+text=<itemBig=pickaxe><title=鹤嘴锄><brAdj=>用于撬碎岩石的尖状物,另一侧有一个平衡物.<n>主要用于采矿和清除岩石.;
 
 
-[ItemType]  name=Guide Chrysolit;
+[ItemType]  name=定位虫蛹;
 ID=guide_chrysolit; sprite=108; itemCategory=tool; 
 texture=items_weapons;
-description=Docile arthropod that glows differently based on position.<n=><adjX=18><overworldPos=>;
+description=温顺的节肢动物,不同的位置发出不同的光.<n=><adjX=18><overworldPos=>;
 weight=1; volume=1; value=700;
 pR=p5; pB=pAsh;
 special=cannotBeSheathed;
@@ -94,12 +94,12 @@ special=cannotBeSheathed;
 [JournalEntry]
 ID=item_guide_chrysolit;
 category=equipment; halfPage=true; rarity=2;
-title=Guide Chrysolit;
-text=<itemBig=guide_chrysolit><title=Guide Chrysolit><brAdj=>This pupating creature glows brighter or redder based on latitudinal and longitudinal distance from its mate, which is currently being kept where the Equator and Prime Meridian meet. By analyzing the glow, one can determine their global position, making these a great boon for sailors.;
+title=定位虫蛹;
+text=<itemBig=guide_chrysolit><title=定位虫蛹><brAdj=>这只正在化蛹的生物,根据它与配偶之间的经纬度距离,<n>发出的光会更亮或更红.目前，这只蝴蝶正处于<n>赤道和本初子午线交汇的位置.通过分析发出的光<n>人们可以确定在全球所处的位置,<n>这对水手来说是一个巨大的福音.;
 
 
 
-[ItemType]  name=精石;
+[ItemType]  name=精华石;
 description=一种小而易碎的晶体.可以提升使用者的技能.;
 ID=xpGem; sprite=45; action=xpGem_awardXP; itemCategory=1; special=consumeOnUse; stackable=true;
 pR=pTeal;
@@ -107,33 +107,33 @@ pR=pTeal;
 [JournalEntry]
 ID=item_xpGem;
 category=item; halfPage=true; rarity=2;
-title=Essence Stone;
-text=<itemBig=xpGem><title=Essence Stone><brAdj=>This odd blue material has a high concentration of essence. When you crush it in your hands, you feel enlightened (and a bit lightheaded).;
+title=精华石;
+text=<itemBig=xpGem><title=精华石><brAdj=>这种奇怪的蓝色物质含有高浓度的精华.<n>当你用手捏碎它的时候,<n>你会觉得豁然开朗(还有点头昏眼花).;
 
-[ItemType]  name=Essence Gem;
-description=Brittle, slightly impure crystal that improves the skills of the user (with diminishing returns).;
+[ItemType]  name=精华宝石;
+description=稍微不纯的易碎的水晶,<n>可以提高用户的技能(收益递减).;
 ID=xpGemMed; sprite=110; action=xpGemMed_awardXP; itemCategory=1; special=consumeOnUse; stackable=true;
 pR=pTeal; pB=pBLite_slow;
  volume=1; value=2000;
 [JournalEntry]
 ID=item_xpGemMed;
 category=item; halfPage=true; rarity=2;
-title=Essence Gem;
-text=<itemBig=xpGemMed><title=Essence Gem><brAdj=>A hefty chunk of concentrated essence. When you crush it in your hands (which is no small feat at this size) it brings a sense of enlightenment. Unfortunately, due to minor impurities, it is less potent when used repeatedly by the same person.;
+title=精华宝石;
+text=<itemBig=xpGemMed><title=精华宝石><brAdj=>一大块浓缩的精华.当你用手捏碎它的时候<n>(这对你来说算是一个不小的壮举),<n>它会给你带来一种启蒙的感觉.<n>不幸的是,由于含有少量杂质,当同一个人<n>反复使用时,它的效力就会降低.;
 
-[ItemType]  name=Essence Gem;
-description=Large chunk of brittle crystal that can improve the skills of the user.;
+[ItemType]  name=精华宝石;
+description=大块的脆性晶体,可以提高用户的技能.;
 ID=xpGemMed2; sprite=109; action=xpGemMed_pure_awardXP; itemCategory=1; special=consumeOnUse; stackable=true;
 pR=pTeal;
  volume=1; value=2000;
 [JournalEntry]
 ID=item_xpGemMed2;
 category=item; halfPage=true; rarity=2;
-title=Essence Gem (Pure);
-text=<itemBig=xpGemMed2><title=Essence (Pure)><brAdj=>A hefty chunk of concentrated essence. When you crush it in your hands (which is no small feat at this size) it brings a sense of enlightenment.;
+title=精华宝石 (纯净的);
+text=<itemBig=xpGemMed2><title=精华宝石 (纯净的)><brAdj=>一大块浓缩的精华.当你用手捏碎它的时候<n>(这对你来说是一个不小的壮举),<n>它会给你带来一种启蒙的感觉.;
 
-[ItemType]  name=<color=SkyBlue>Essence Crystal;
-description=A huge crystal. It can improve the skills of the user.;
+[ItemType]  name=<color=SkyBlue>精华水晶;
+description=一个巨大的水晶.它可以提高用户的技能.;
 ID=xpGemBig; sprite=47; action=xpGemBig_awardXP; itemCategory=1; special=consumeOnUse; stackable=true;
 pR=pTeal;
  volume=1; value=5000;
@@ -142,18 +142,18 @@ ID=xpGemBig; red=0.4; blue=1; green=0.4; alpha=0.7; size=0.3; flicker=0.01;
 [JournalEntry]
 ID=item_xpGemBig;
 category=item; halfPage=true; rarity=4;
-title=Essence Crystal;
-text=<itemBig=xpGemBig><title=Essence Crystal><brAdj=>Massive crystal filled with essence. To crush and absorb it would empower you greatly.;
+title=精华水晶;
+text=<itemBig=xpGemBig><title=精华水晶><brAdj=>巨大的水晶充满了精华.<n>粉碎和吸收它会给你极大的力量.;
 
-[ItemType]  name=<color=Gold>Ability Crest;
-description=When used, grants an extra ability slot permanently.<n>(Maximum 2 per person.);
+[ItemType]  name=<color=Gold>能力勋章;
+description=使用时,永久增加一个额外能力槽(每人最多2个).;
 ID=abilityCrest; sprite=897; action=abilityCrest_act; itemCategory=1; special=consumeOnUse; stackable=true;
  volume=1; value=2000;
 [JournalEntry]
 ID=item_abilityCrest;
 category=item; halfPage=true; rarity=4;
-title=Ability Crest;
-text=<itemBig=abilityCrest><title=Ability Crest><brAdj=>These silver medals were once awarded by the now-defunct city-state of Iail. One of Iail's few peaceful contributions was to present these to international persons of high esteem as a gesture of goodwill.<n=>  Awarding an Ability Crest grants an extra class slot (maximum of 4), allowing you to use one of that class' abilities.;
+title=能力勋章;
+text=<itemBig=abilityCrest><title=能力勋章><brAdj=>这些银质奖章曾由现已不存在的城邦Iail颁发.<n>Iail为数不多的和平贡献之一就是将这些礼物<n>赠送给国际上备受尊敬的人士,以示善意.<n>能力勋章可以获得一个额外的职业插槽(最多4个),<n>允许你使用该职业的能力.;
 
 [ItemType]  name=<color=Gold>Action Tablet Base;
 ID=actionTablet;
@@ -181,8 +181,8 @@ text=<itemBig=tablet_Gla_smash><title=Ability Tablet><brAdj=>Stone tablet with i
 
 
 
-[ItemType]  name=Essence Dust;
-description=Sparkling dust that heightens the senses.;
+[ItemType]  name=精华粉尘;
+description=闪闪发光的灰尘，增强感官.;
 ID=xpDust; sprite=46;
  volume=1; value=1; special=cannotBePickedUp; special=canHangOnWalls; special=big; special=fullTileHitbox;
 pR=pTeal;
@@ -191,50 +191,50 @@ ID=xpDust; element=92; newID=X; fx=castingFast; action=dust_awardXP;
 [JournalEntry]
 ID=item_xpDust;
 category=item; halfPage=true; rarity=1;
-title=Essence Dust;
-text=<itemBig=xpDust><title=Essence Dust><brAdj=>Strange blue particles that smell of chalk. Being near some of it seems to widen your awareness in an uncanny, but not entirely unpleasant, manner.;
+title=精华粉尘;
+text=<itemBig=xpDust><title=精华粉尘><brAdj=>奇怪的蓝色颗粒,闻起来像滑石粉.<n>使用它会以一种不可思议但并非<n>完全不愉快的方式拓宽你的意识.;
 
-[ItemType]  name=Revive Dust;
-description=Bag of gold dust that revives KO'd allies.;
+[ItemType]  name=复活粉尘;
+description=复活被KO的盟友的金粉尘袋.;
 ID=reviveDust; sprite=13; action=reviveDust_action; itemCategory=1; special=consumeOnUse; stackable=true; pR=pGrey;
 value=20;
 [JournalEntry]
 ID=item_reviveDust;
 category=item; halfPage=true; rarity=1;
-title=Revive Dust;
-text=<itemBig=reviveDust><title=Revive Dust><brAdj=>An expensive mix of powdered Preservation trigger and Volskarn. When inhaled it provides a surge of life energy.;
+title=复活粉尘;
+text=<itemBig=reviveDust><title=复活粉尘><brAdj=>一种昂贵的粉末混合了保护型触发物和沃尔斯卡恩.<n>当吸入时,它提供了一种生命能量的激增.;
 
-[ItemType]  name=Red Spices;
-description=Ground-up peppers and herbs to add flavor. Usable as a weapon in a pinch.;
+[ItemType]  name=红色香料;
+description=磨碎的辣椒和香草增加味道.<n>紧急情况下可用作武器.;
 ID=itchPowder; sprite=15; value=10;
 action=itchDust_action; itemCategory=1; special=consumeOnUse; stackable=true;
 pR=pR;
 [JournalEntry]
 ID=item_itchPowder;
 category=item; halfPage=true;
-title=Red Spices;
-text=<itemBig=itchPowder><title=Red Spices><brAdj=>Extremely potent spices that make most curries look weak. Since you lack culinary skills, their only use is to salt your enemies' eyes and skin.;
+title=红色香料;
+text=<itemBig=itchPowder><title=红色香料><brAdj=>非常强效的香料,让大多数咖喱尝起来很淡.<n>因为你没有烹饪技能,<n>它们的唯一用途是盐你的敌人的眼睛和皮肤.;
 
-[ItemType]  name=Blind Dust;
-description=A bag of special sand that blinds a target.;
+[ItemType]  name=失明粉尘;
+description=一袋特殊的沙子可以致盲目标.;
 ID=blindDust; sprite=13; action=blindDust_action; itemCategory=1; special=consumeOnUse; stackable=true;
 pR=pCBlack;
 [JournalEntry]
 ID=item_blindDust;
 category=item; halfPage=true;
-title=Blind Dust;
-text=<itemBig=blindDust><title=Blind Dust><brAdj=>Musty, thick grit fills this pouch. Keep away from your eyes!;
+title=失明粉尘;
+text=<itemBig=blindDust><title=失明粉尘><brAdj=>发霉的厚砂砾充满了这个袋子.<n>让它离你的眼睛远点!;
 
 
-[ItemType]  name=Toxic Powder;
-description=A bag of poisonous dust.;
+[ItemType]  name=剧毒粉尘;
+description=一袋有毒的粉末.;
 ID=poisonDust; sprite=14; action=poisonDust_action; itemCategory=1; special=consumeOnUse; stackable=true;
 pR=pPurple;
 [JournalEntry]
 ID=item_poisonDust;
 category=item; halfPage=true;
-title=Toxic Powder;
-text=<itemBig=poisonDust><title=Toxic Powder><brAdj=>When Bone Dust is applied to Slugvine, this vile powder is the result. It has no practical purpose other than to sicken your enemies.;
+title=剧毒粉尘;
+text=<itemBig=poisonDust><title=剧毒粉尘><brAdj=>当骨粉被用于蛞蝓时,这种肮脏的粉末就是结果.<n>除了让你的敌人生病,没有任何实际目的.;
 
 
 [ItemType]  name=飞镖;
@@ -253,12 +253,12 @@ combineWith=glowshroomPiece; toMake=dart_glow; consumeOnCombine=true;
 [JournalEntry]
 ID=item_dart;
 category=item; halfPage=true;
-title=Dart;
-text=<itemBig=dart><title=Dart><brAdj=>Lightweight handheld projectile that deals minimal damage. They can be improved by rubbing poisons or powders on them.;
+title=飞镖;
+text=<itemBig=dart><title=飞镖><brAdj=>轻便的手持投射物,造成最小的伤害.<n>可以用毒药或粉末在其上摩擦来增强.;
 
  
-[ItemType]  name=Poison Dart;
-description=Dart laced with poison.; itemCategory=1;
+[ItemType]  name=剧毒飞镖;
+description=带有毒药的飞镖.; itemCategory=1;
 ID=dart_poison; sprite=98; spriteWhenHeld=130;
 weight=0; volume=1; value=15; stackable=true;
 special=consumeOnUse;
@@ -267,11 +267,11 @@ pR=pPurple; pB=pWood;
 [JournalEntry]
 ID=item_dart_poison;
 category=item; halfPage=true;
-title=Poison Dart;
-text=<itemBig=dart_poison><title=Poison Dart><brAdj=>A classic tool of assassination. These darts may be too big to go undetected, but they still get the job done.;
+title=毒飞镖;
+text=<itemBig=dart_poison><title=毒飞镖><brAdj=>一个经典的暗杀工具.这飞镖可能太大了,<n>不可能不被发现,但它们仍然能完成任务.;
  
-[ItemType]  name=Itchy Dart;
-description=Dart covered in itch-inducing powder.;
+[ItemType]  name=瘙痒飞镖;
+description=飞镖上覆盖着致痒的粉末。;
 ID=dart_itchy; sprite=98; spriteWhenHeld=130; itemCategory=1;
 weight=0; volume=1; value=12; stackable=true;
 special=consumeOnUse;
@@ -280,10 +280,10 @@ pR=pCRed; pB=pWoodDark;
 [JournalEntry]
 ID=item_dart_itchy;
 category=item; halfPage=true;
-title=Itchy Dart;
-text=<itemBig=dart_itchy><title=Itchy Dart><brAdj=>A normal dart coated in stuff that aggravates the skin. Useful as emergency weapon, even if they are a bit unorthodox.;
+title=瘙痒飞镖;
+text=<itemBig=dart_itchy><title=瘙痒飞镖><brAdj=>一种普通的飞镖,涂上了使皮肤恶化的物质.<n>可以作为紧急武器使用,即使它们有点不正统.;
 
-[ItemType]  name=Sleep Dart;
+[ItemType]  name=昏睡飞镖;
 description=Dart coated in sleep-inducing juice.; itemCategory=1;
 ID=dart_sleep; sprite=98; spriteWhenHeld=130;
 weight=0; volume=1; value=50; stackable=true;
@@ -293,11 +293,11 @@ pR=pMagenta; pB=pBlue;
 [JournalEntry]
 ID=item_dart_sleep;
 category=item; halfPage=true;
-title=Sleep Dart;
-text=<itemBig=dart_sleep><title=Sleep Dart><brAdj=>Makeshift weapon that briefly incapacitates an enemy. A sleeping target cannot evade any attacks.;
+title=昏睡飞镖;
+text=<itemBig=dart_sleep><title=昏睡飞镖><brAdj=>暂时使敌人瘫痪的临时武器.熟睡的目标不能躲避任何攻击.;
 
-[ItemType]  name=Glow Dart;
-description=Dart covered in gloam dust.;
+[ItemType]  name=发光飞镖;
+description=布满了黄昏蘑菇粉的飞镖.;
 ID=dart_glow; sprite=98; spriteWhenHeld=130; itemCategory=1;
 weight=0; volume=1; value=12; stackable=true;
 special=consumeOnUse;
@@ -308,12 +308,12 @@ ID=dart_glow; red=0.7; blue=1; green=0.6; alpha=0.6; size=0.4; flicker=0.01; tex
 [JournalEntry]
 ID=item_dart_glow;
 category=item; halfPage=true;
-title=Glow Dart;
-text=<itemBig=dart_glow><title=Glow Dart><brAdj=>Sparkling Gloam Shroom dust coats this dart, making it a great tool for marking an enemy. The bright glow reduces the target's <icon=PhysEva><icon=MagEva> by 30%.;
+title=发光飞镖;
+text=<itemBig=dart_glow><title=发光飞镖><brAdj=>闪闪发光的黄昏蘑菇粉覆盖整个飞镖,<n>使它成为不错的标记敌人的工具.明亮的光会减少目标的<icon=PhysEva><icon=MagEva>30%.;
 
  
-[ItemType]  name=Life Needle;
-description=Dart covered in life-giving powder.; itemCategory=1;
+[ItemType]  name=生命注射针;
+description=飞镖上沾满了生命之粉.; itemCategory=1;
 ID=dart_life; sprite=98; spriteWhenHeld=130;
 weight=0; volume=1; value=25; stackable=true;
 special=consumeOnUse;
@@ -322,75 +322,75 @@ pR=pGrey; pB=pBone;
 [JournalEntry]
 ID=item_dart_life;
 category=item; halfPage=true; rarity=1;
-title=Life Needle;
-text=<itemBig=dart_life><title=Life Needle><brAdj=>The least popular method of first aid on the battlefield. Leaves the revived ally with less health than normal methods.;
+title=生命注射针;
+text=<itemBig=dart_life><title=生命注射针><brAdj=>这是战场上最不受欢迎的急救方法.<n>对刚复活的盟友治疗生命值减少.;
 
-[ItemType]  name=Sack;
+[ItemType]  name=袋子;
 ID=sack; sprite=736;  itemCategory=tool;
-description=Simple cloth container.;
+description=简单的布容器.;
 volume=90; pR=pYellow5; pB=pRed2;
 special=container; special=container4x4;
-[ItemType]  name=Bag;
+[ItemType]  name=提包;
 ID=sack2; sprite=736;   itemCategory=tool;
-description=Simple cloth container.;
+description=简单的布容器.;
 volume=90; pR=pOrange;  pB=pTeal;
 special=container; special=container4x4;
-[ItemType]  name=Bindle;
+[ItemType]  name=包裹;
 ID=sack3; sprite=736;  itemCategory=tool;
-description=Simple cloth container.;
+description=简单的布容器.;
 volume=90; pR=pRed2;  pB=pGreyD;
 special=container; special=container4x4;
 
-[ItemType]  name=Huge Bag;
+[ItemType]  name=大提包;
 ID=sack_fine; sprite=704;  itemCategory=tool;
-description=Spacious bag. Can fit most lesser bags inside it.;
+description=宽敞的袋子.能装下大部分较小的袋子.;
 volume=91; pR=pGrey; pB=pRed;
 special=container; special=container5x5;
 
-[ItemType]  name=Satchel;
+[ItemType]  name=挎包;
 ID=satchel; sprite=737;  itemCategory=tool;
-description=Leather container with a strap and buckle.;
+description=有皮带和扣的皮革容器.;
 volume=90; pR=pYellow5; pB=pYellow5;
 special=container; special=container4x4;
-[ItemType]  name=Purse;
+[ItemType]  name=钱包;
 ID=satchel2; sprite=737;  itemCategory=tool;
-description=Leather container with a strap and buckle.;
+description=有皮带和扣的皮革容器.;
 volume=90; pR=pPurple; pB=pGrey2;
 special=container; special=container4x4;
-[ItemType]  name=Shoulder Bag;
+[ItemType]  name=肩包;
 ID=satchel3; sprite=737;  itemCategory=tool;
-description=Leather container with a strap and buckle.;
+description=有皮带和扣的皮革容器.;
 volume=90; pR=pGreyD2; pB=pYellow;
 special=container; special=container4x4;
-[ItemType]  name=Huge Satchel;
+[ItemType]  name=大挎包;
 ID=satchel_fine; sprite=705;  itemCategory=tool;
-description=Roomy satchel. Can fit most lesser bags inside it.;
+description=宽敞的挎包.它可以装下大多数较小的袋子.;
 volume=91; pR=pGrey1; pB=pOrange;
 special=container; special=container5x5;
 
-[ItemType]  name=Pouch;
+[ItemType]  name=荷包;
 ID=pouch; sprite=738; itemCategory=tool;
-description=Bag that can only fit smaller objects.;
+description=只能装小物件的袋子.;
 volume=16; pR=pDirt; pB=pYellow;
 special=container;
 
-[ItemType]  name=Game Chip Bag;
+[ItemType]  name=游戏芯片包;
 ID=gamechip_sack1; sprite=704;  itemCategory=tool;
-description=Draws random chips.;
+description=抽出随机的芯片.;
 volume=91; pR=pRedD2; pB=pGold;
 special=container; special=container5x5; 
 special=container_drawRandomItem; special=oneClickToUse;
 
-[ItemType]  name=Game Chip Bag;
+[ItemType]  name=游戏芯片包;
 ID=gamechip_sack2; sprite=704;  itemCategory=tool;
-description=Draws random chips.;
+description=抽出随机的芯片.;
 volume=91; pR=pBlueD; pB=pGold;
 special=container; special=container5x5;
 special=container_drawRandomItem; special=oneClickToUse;
 
-[ItemType]  name=Wood Weaponry;
+[ItemType]  name=木制武器包;
 ID=weaponPack_wood; sprite=769; itemCategory=tool;
-description=Click to view wood equipment.;
+description=点击查看木制装备.;
 journalID=journal_weaponPack;
 volume=98;
 pR=pDirt; pB=pWood; pG=pWoodDark;
@@ -402,9 +402,9 @@ special=container; special=container4x4;
  special=defaultContainsWoodEquipment;
 special=disappearFromCorpse;
 
-[ItemType]  name=Iron Weaponry;
+[ItemType]  name=铁制武器包;
 ID=weaponPack; sprite=769; itemCategory=tool;
-description=Click to view iron equipment.;
+description=点击查看铁制装备.;
 journalID=journal_weaponPack;
 volume=98;
 pR=pOrange; pB=pIron; pG=pIronHilt;
@@ -416,9 +416,9 @@ special=container; special=container4x4;
  special=defaultContainsIronEquipment;
 special=disappearFromCorpse;
 
-[ItemType]  name=Steel Weaponry;
+[ItemType]  name=钢制武器包;
 ID=weaponPack_steel; sprite=769; itemCategory=tool;
-description=Click to view steel equipment.;
+description=点击查看钢制装备.;
 journalID=journal_weaponPack;
 volume=98;
 pR=pWood; pB=pSteel; pG=pGrey2;
@@ -430,9 +430,9 @@ special=container; special=container4x4;
  special=defaultContainsSteelEquipment;
 special=disappearFromCorpse;
 
-[ItemType]  name=Mythril Weaponry;
+[ItemType]  name=秘银武器包;
 ID=weaponPack_fine; sprite=769; itemCategory=tool;
-description=Click to view mythril equipment.;
+description=点击查看秘银装备.;
 journalID=journal_weaponPack;
 volume=98;
 pR=pGrey2; pB=pMythril; pG=pMythrilHilt;
@@ -447,12 +447,12 @@ special=disappearFromCorpse;
 [JournalEntry]
 ID=journal_weaponPack;
 category=item; halfPage=true; rarity=0;
-title=Cafe;
-text=<itemBig=weaponPack><itemBig=weaponPack_steel><title=Weaponry><brAdj=>This hefty bag of weapons has been bundled by a vendor for you to peruse. It never runs out of stock, so open it up and buy whatever interests you!;
+title=武器包;
+text=<itemBig=weaponPack><itemBig=weaponPack_steel><title=武器包><brAdj=>这个沉重的武器袋是一个小贩捆起来供你考察的.<n>它永远不会缺货,所以打开它,<n>买任何你感兴趣的东西!;
 
-[ItemType]  name=Basic Equipment;
+[ItemType]  name=基础用具;
 ID=toolPack; sprite=707; itemCategory=tool;
-description=Click to view basic equipment.;
+description=点击查看基础用具.;
 journalID=journal_toolPack;
 volume=98;
 pR=pYellow5; pB=pIron; pG=pWoodDark;
@@ -467,33 +467,33 @@ special=disappearFromCorpse;
 [JournalEntry]
 ID=journal_toolPack;
 category=item; halfPage=true; rarity=0;
-title=Cafe;
-text=<itemBig=toolPack><title=Basic Equipment><brAdj=>These bags are full of basic tools, ready for purchase. It never runs out of stock, so dive in and buy whatever interests you!;
+title=基础用具;
+text=<itemBig=toolPack><title=基础用具><brAdj=>这些袋子里装满了基本的工具,随时可以购买.<n>它永远不会缺货,所以伸进来,<n>买任何你感兴趣的东西!;
 
-[ItemType]  name=Small Box;
-description=A small wooden container.; itemCategory=tool;
+[ItemType]  name=小盒子;
+description=一个木制的小容器.; itemCategory=tool;
 ID=box_small; sprite=770;
 volume=90;
 pR=pWoodDark; pB=pGold;
 special=container; special=containerWood;
 
-[ItemType]  name=Large Box;
-description=A chest small enough to be carried. Can fit other bags inside.; itemCategory=tool;
+[ItemType]  name=大盒子;
+description=小到可以抬的箱子.里面能放其他的袋子.; itemCategory=tool;
 ID=box_large; sprite=772;
 volume=98;
 pR=pWood;
 special=container; special=containerWood; special=container5x5;
 
-[ItemType]  name=Box;
-description=A wooden container.; itemCategory=tool;
+[ItemType]  name=盒子;
+description=一个木制容器.; itemCategory=tool;
 ID=box_med; sprite=774;
 volume=90;
 pR=pWood;
 special=container; special=containerWood; special=container4x4;
 
 
-[ItemType]  name=Megabomb;
-description=Very dangerous explosive. Light & toss it, then move far away.;
+[ItemType]  name=巨型炸弹;
+description=非常危险的炸药.轻抛它,然后跑远点.;
 ID=bomb; sprite=142; itemCategory=1; special=consumeOnUse; stackable=true;
 action=bombThrow;
  volume=5; value=350;
@@ -504,11 +504,11 @@ ID=bomb; element=explode; newID=X; action=bombExplosion;
 [JournalEntry]
 ID=item_bomb;
 category=item; halfPage=true; rarity=1;
-title=Megabomb;
-text=<itemBig=bomb><title=Megabomb><brAdj=>Awkward to use, and must be lit then deliberately placed- but when it explodes it does massive damage! Can also break certain extra-durable obstacles.;
+title=巨型炸弹;
+text=<itemBig=bomb><title=巨型炸弹><brAdj=>使用很不方便,必须先点燃然后放置<n>--但当它爆炸时会造成巨大的伤害!也可以打破某些特别坚固的障碍物.;
 
-[ItemType]  name=Megabomb (Lit);
-description=This thing is lit!! Use it to extinguish it, or get away as soon as possible.; itemCategory=1;
+[ItemType]  name=巨型炸弹 (已点燃的);
+description=这东西点着了!!要么扑灭它要么赶紧跑!.; itemCategory=1;
 ID=bombLit; sprite=142; special=animated; special=timer;
 timer=25;
 special=convertIntoCashAtEnd;
@@ -521,11 +521,11 @@ ID=bombLit; element=explode; element=timerUp; newID=X; action=bombExplosion;
 [JournalEntry]
 ID=item_bombLit;
 category=item; halfPage=true; rarity=1;
-title=Megabomb (Lit!);
-text=<itemBig=bombLit><title=Megabomb (Lit!)><brAdj=>What are you doing staring at lit explosives?!? Get away, this is dangerous!!;
+title=巨型炸弹(已点燃的);
+text=<itemBig=bombLit><title=巨型炸弹(已点燃的!)><brAdj=>你盯着点燃的炸药干什么?!?走开,这太危险了!!;
 
-[ItemType]  name=Minibomb;
-description=Compact handheld explosive. Lob it and hope for the best.;
+[ItemType]  name=微型炸弹;
+description=小型的手持炸药.把它扔出去,然后抱着最好的希望.;
 ID=minibomb; sprite=141; itemCategory=1; special=consumeOnUse; stackable=true;
 action=minibomb_throw;
  volume=2; value=80; pR=pLaser; pB=pIron;
@@ -534,11 +534,11 @@ ID=minibomb; element=explode; element=fire; newID=fire; action=minibomb_throw;
 [JournalEntry]
 ID=item_minibomb;
 category=item; halfPage=true; rarity=1;
-title=Minibomb;
-text=<itemBig=minibomb><title=Minibomb><brAdj=>Military explosive designed for easy use- just throw at the enemy and enjoy the show. Weaker and more volatile than other explosives. Can't break larger obstacles.;
+title=微型炸弹;
+text=<itemBig=minibomb><title=微型炸弹><brAdj=>军用炸药的设计易于使用<n>--只要扔向敌人然后欣赏表演.<n>比其他炸药更弱,更容易爆炸.<n>不能突破更大的障碍物.;
 
-[ItemType]  name=Krask Gut;
-description=Volatile internals of the Krask. Spews oil when thrown.;
+[ItemType]  name=卡拉斯的内脏;
+description=卡拉斯的易挥发的内脏.被抛出时喷出石油..;
 ID=kraskbomb; sprite=141; itemCategory=1; special=consumeOnUse; stackable=true;
 special=convertIntoCashAtEnd;
 action=kraskbomb_throw;
@@ -547,21 +547,21 @@ action=kraskbomb_throw;
 [JournalEntry]
 ID=item_kraskbomb;
 category=item; halfPage=true; rarity=2;
-title=Krask Gut;
-text=<itemBig=kraskbomb><title=Krask Gut><brAdj=>The Krask's internals are foreign and indiscernable to modern scientists. However, their use as a source of flammable fuel - and as an improvised weapon - was immediately noted.;
+title=卡拉斯的内脏;
+text=<itemBig=kraskbomb><title=卡拉斯的内脏><brAdj=>卡拉斯的内部构造对现代科学家来说是陌生的.<n>然而,它们被用作可燃燃料的来源--和临时武器--很快就注意到.;
  
-[ItemType]  name=Lifeshard;
-description=Brittle rock full of healing powder.;
+[ItemType]  name=治愈碎片;
+description=充满了治疗粉末的易碎的岩石.;
 ID=lifeshard; sprite=140; itemCategory=1; special=consumeOnUse; stackable=true;
 action=lifeshard_throw;
  volume=2; value=60; pR=pGold; 
 [JournalEntry]
 ID=item_lifeshard;
 category=item; halfPage=true; rarity=1;
-title=Lifeshard;
-text=<itemBig=lifeshard><title=Lifeshard><brAdj=>A clever solution for those not magically inclined. The golden dust in this fragile stone billows out on impact, healing a small area.;
+title=治愈碎片;
+text=<itemBig=lifeshard><title=治愈碎片><brAdj=>对于那些没有魔法天赋的人来说,<n>这是一个聪明的解决方案.在这个脆弱的石头中,<n>金色的尘埃在冲击下翻涌而出,治愈一小块区域.;
 
-[ItemType]  name=Wood Debris;
+[ItemType]  name=木头碎片;
 ID=debris_wood; sprite=587; spriteWhenHeld=0; 
 journalID=journal_debris_wood;
 weight=2; volume=99; value=0;
@@ -569,7 +569,7 @@ pR=pWood;
 [ItemReaction] 
 ID=debris_wood; element=fire; newID=fire_small;
 
-[ItemType]  name=Wood Debris;
+[ItemType]  name=木头碎片;
 ID=debris_wood_dark; sprite=587; spriteWhenHeld=0; 
 journalID=journal_debris_wood;
 weight=2; volume=99; value=0;
@@ -579,10 +579,10 @@ ID=debris_wood_dark; element=fire; newID=fire_small;
 [JournalEntry]
 ID=journal_debris_wood;
 category=item; halfPage=true;
-title=Wood Debris;
-text=<itemBig=debris_wood><title=Wood Debris><brAdj=>Wood chips, splinters, sawdust. To carry it around would be impractical. It is, however, flammable, so watch your fire attacks around it.;
+title=木头碎片;
+text=<itemBig=debris_wood><title=木头碎片><brAdj=>木片,木屑,锯屑.带着它到处走是不现实的.<n>而且它是易燃的,所以小心它周围的火.;
 
-[ItemType]  name=Pillow;
+[ItemType]  name=枕头;
 ID=pillow; sprite=639; spriteWhenHeld=0; value=10;
 pB=pGrey;
 	combineWith=oilCan; toMake=oilyRag; consumeOnCombine=true;
@@ -594,8 +594,8 @@ pB=pGreen;
 	combineWith=shears; toMake=bandage; consumeOnCombine=false;
 	combineWith=craft_armor; toMake=cloak; consumeOnCombine=false;
 
-[ItemType]  name=Rope;
-description=This large bundle of rope is the essential tool of an explorer.; itemCategory=tool;
+[ItemType]  name=绳子;
+description=这一大捆绳子是探险家必备的工具.; itemCategory=tool;
 ID=ropePile; sprite=1505; spriteWhenHeld=0; 
 weight=8; volume=20; value=8;
 pG=pYellow5;
@@ -604,11 +604,11 @@ ID=ropePile; element=fire; newID=fire;
 [JournalEntry]
 ID=item_ropePile;
 category=item; halfPage=true;
-title=Rope;
-text=<itemBig=ropePile><title=Rope><brAdj=>Strands of plant fiber twisted together. It holds your weight just fine, but can be cut by sharp weapons. To use rope properly you'll need a Piton.;
+title=绳子;
+text=<itemBig=ropePile><title=绳子><brAdj=>缠绕在一起的植物纤维.它能承受你的重量,<n>但会被锋利的武器割断.<n>要正确使用绳子,你需要一个岩钉.;
 
-[ItemType]  name=Piton;
-description=When placed on the ground and combined with rope, you can climb down cliffs!; itemCategory=tool;
+[ItemType]  name=岩钉;
+description=当放在地面上,结合绳索,<n>你可以爬下悬崖!; itemCategory=tool;
 journalID=journal_piton;
 ID=piton; sprite=1506; 
 weight=1; volume=1; value=18;
@@ -617,8 +617,8 @@ combineWith=ropePile; toMake=piton_rope; consumeOnCombine=true;
 [ItemReaction] 
 ID=piton; element=itemCombine; action=spreadRope;
 
-[ItemType]  name=Piton (Rope);
-description=Use or cut it to remove the rope.;
+[ItemType]  name=岩钉 (套绳的);
+description=使用或切断它来移除绳子.;
 journalID=journal_piton; itemCategory=tool;
 ID=piton_rope; sprite=1507; 
 weight=10; volume=10;
@@ -632,10 +632,10 @@ action=removeRope; spawnItem=ropePile;
 [JournalEntry]
 ID=journal_piton;
 category=item; halfPage=true;
-title=Piton;
-text=<itemBig=piton><title=Piton><brAdj=>Sturdy metal spike. Place it near a cliff, then put rope on it. When you're done, use it to detach it - but make sure no one's on the rope when you do.;
+title=岩钉;
+text=<itemBig=piton><title=岩钉><brAdj=>坚固的金属钉.把它放在悬崖边,然后放上绳子.<n>当你完成后,用它来分离它--<n>但要确保当你这样做的时候没有人挂在绳子上.;
 
-[ItemType]  name=Rope;
+[ItemType]  name=绳子;
 ID=rope_extended; sprite=1508; spriteWhenHeld=0;  itemCategory=tool;
 special=cannotBePickedUp; special=big; special=canHangOnWalls; 
 special=overrideTerrainCollisions; special=overrideMostCollisions;
@@ -660,10 +660,10 @@ ID=oilCan; element=fire; element=explode; newID=fire;
 [JournalEntry]
 ID=item_oilCan;
 category=item; halfPage=true;
-title=Oil Can;
-text=<itemBig=oilCan><title=Oil Can><brAdj=>A can of fuel. If you have something you want made flammable, dip it in here. Keep away from open flames.;
+title=油桶;
+text=<itemBig=oilCan><title=油桶><brAdj=>一罐燃料.如果你想把东西做成可燃的,<n>就在这里蘸一下.远离明火.;
 
-[ItemType]  name=Oily Rag;
+[ItemType]  name=油布;
 description=Rag soaked in flammable oil.; itemCategory=1;
 ID=oilyRag; sprite=1922; stackable=true;
 weight=0; volume=1;
@@ -672,8 +672,8 @@ ID=oilyRag; element=fire; newID=fire_small;
 [JournalEntry]
 ID=item_oilyRag;
 category=item; halfPage=true;
-title=Oily Rag;
-text=<itemBig=oilyRag><title=Oily Rag><brAdj=>A filthy, oily, flammable rag - the final ingredient of a Firebomb. Otherwise, it's completely useless.;
+title=油布;
+text=<itemBig=oilyRag><title=油布><brAdj=>一种肮脏、油腻、易燃的破布,<n>是火焰炸弹的最后一种成分,它是完全无用的.;
 
 [ItemType]  name=瓶子;
 description=一个空的玻璃瓶.; itemCategory=1;
@@ -686,8 +686,8 @@ ID=bottle; element=smash; element=explode; newID=X; fx=dust_glassGreen;
 [JournalEntry]
 ID=item_bottle;
 category=item; halfPage=true;
-title=Bottle;
-text=<itemBig=bottle><title=Bottle><brAdj=>A versatile glass bottle. Can contain all kinds of fluids. Just drag it onto what you want to fill it with.;
+title=瓶子;
+text=<itemBig=bottle><title=瓶子><brAdj=>多功能玻璃瓶.可容纳各种液体.<n>把它拖到你想要填充的地方.;
 
 [ItemType]  name=啤酒;
 description=一瓶啤酒.适度饮用可以恢复体力.;
@@ -700,7 +700,7 @@ ID=bottle_beer; element=smash; element=explode; newID=X; spawnItem=puddle_beer; 
 [ItemReaction] 
 ID=bottle_beer; element=actionUsed; newID=bottle;
 
-[ItemType]  name=Bottle of Oil;
+[ItemType]  name=一瓶油;
 description=A bottle of flammable oil.; itemCategory=1;
 weight=1; volume=3; value=7;
 ID=bottle_oil; sprite=1955; stackable=true;
@@ -713,11 +713,11 @@ ID=bottle_oil; element=fire; newID=fire; fx=dust_glassGreen; action=burning;
 [JournalEntry]
 ID=item_bottle_oil;
 category=item; halfPage=true;
-title=Bottle of Oil;
-text=<itemBig=bottle_oil><title=Bottle of Oil><brAdj=>Bottle filled with fuel. Could be used as an improvised weapon to douse an enemy in oil, slowing them and making them susceptible to fire.;
+title=一瓶油;
+text=<itemBig=bottle_oil><title=一瓶油><brAdj=>瓶子装满了燃料.可以作为一种临时武器,<n>用石油浇敌人,减缓他们的速度,<n>使他们容易受到攻击.;
 
-[ItemType]  name=Firebomb;
-description=An improvised incendiary that can be hurled to coat an area in fire.;
+[ItemType]  name=燃烧弹;
+description=一种临时的燃烧弹,可投掷以使某一地区着火.;
 ID=firebomb; sprite=1956; stackable=true;
 weight=1; volume=3; value=25;
 itemCategory=1; special=consumeOnUse; action=firebomb_action;
@@ -728,11 +728,11 @@ ID=firebomb; element=fire; newID=fire; fx=dust_glassGreen; action=burning;
 [JournalEntry]
 ID=item_firebomb;
 category=item; halfPage=true; rarity=1;
-title=Firebomb;
-text=<itemBig=firebomb><title=Firebomb><brAdj=>Fuel in a breakable bottle with a flammable rag as a fuse. Because it is easy to produce, it is popular with rioters and rebels.;
+title=燃烧弹;
+text=<itemBig=firebomb><title=燃烧弹><brAdj=>燃料放在易碎的瓶子里,用易燃的破布作导火线.<n>因为它很容易制作,所以很受暴乱者和反叛者的欢迎.;
 
-[ItemType]  name=<color=SkyBlue>Moss Malt;
-description=A potent brew made from cultivated moss. Drinking it grants a  <color=SkyBlue>permanent<color=White> +1<icon=MP>.;
+[ItemType]  name=<color=SkyBlue>苔藓麦芽酒;
+description=一种用栽培的苔藓酿造的强效啤酒。喝了可以<color=SkyBlue>永久性<color=White> +1<icon=MP>.;
 weight=1; volume=3; value=2000; action=eat_MP_Up1;
 ID=mossMalt; sprite=1925; itemCategory=1;
 [ItemReaction] 
@@ -740,23 +740,23 @@ ID=mossMalt; element=actionUsed; newID=bottle;
 [JournalEntry]
 ID=item_mossMalt;
 category=item; halfPage=true; rarity=2;
-title=Moss Malt;
-text=<itemBig=mossMalt><title=Moss Malt><brAdj=>A delicacy created from condensed ghost moss. The brewing process takes 2+ years. The musty flavor and odor takes getting used to.;
+title=苔藓麦芽酒;
+text=<itemBig=mossMalt><title=苔藓麦芽酒><brAdj=>由鬼苔浓缩而成的美味佳肴.<n>酿造过程需要2年以上的时间,<n>霉味和气味需要慢慢适应.;
 
 
-[ItemType]  name=<color=OrangeRed>Volcano Bakemeat;
-description=A spicy meat delicacy. Eating it grants a  <color=OrangeRed>permanent<color=White> +2<icon=HP>.;
+[ItemType]  name=<color=OrangeRed>火山肉饼;
+description=一种辛辣的肉类佳肴.吃了它<color=OrangeRed>永久性<color=White> +2<icon=HP>.;
 weight=3; volume=5; value=4000; action=eat_HP_Up2;
 ID=volcano_bakemeat; sprite=1963; special=consumeOnUse;
  itemCategory=1;
 [JournalEntry]
 ID=item_volcano_bakemeat;
 category=item; halfPage=true; rarity=2;
-title=Volcano Bakemeat;
-text=<itemBig=volcano_bakemeat><title=Volcano Bakemeat><brAdj=>Exotic meat doused in spicy sauces. Eating it is a delicious ordeal that makes you feel hardier for surviving it.;
+title=火山肉饼;
+text=<itemBig=volcano_bakemeat><title=火山肉饼><brAdj=>浇上辣酱的异国风味的肉.<n>吃它是一种美味的折磨,但会让你更坚强.;
 
-[ItemType]  name=<color=LightGreen>Ectozoon;
-description=Translucent grub known as an exotic dish. Eating it grants a <color=LightGreen>permanent<color=White> +1 <icon=PhysEva>.;
+[ItemType]  name=<color=LightGreen>体外寄生虫;
+description=半透明的幼虫被称为异域美食.食用后<color=LightGreen>永久性<color=White> +1 <icon=PhysEva>.;
 weight=0; volume=1; value=2000; action=eat_PEva_Up1;
 pR=pFade;
 ID=ghost_grub; sprite=1961; special=consumeOnUse;
@@ -764,11 +764,11 @@ special=canHangOnWalls; itemCategory=1;
 [JournalEntry]
 ID=item_ghost_grub;
 category=item; halfPage=true; rarity=2;
-title=Ectozoon;
-text=<itemBig=ghost_grub><title=Ectozoon><brAdj=>This bugger is highly valued as a tasty treat. It's a bit insubstantial, but the oddly salty taste leaves you feeling energized.;
+title=体外寄生虫;
+text=<itemBig=ghost_grub><title=体外寄生虫><brAdj=>这家伙是很有价值的美味佳肴.<n>虽然这有点异想天开,<n>但这种奇怪的咸味会让你感觉精力充沛.;
 
-[ItemType]  name=<color=SkyBlue>Sea Lancetfish;
-description=Thin, lizard-like fish. Eating it grants a  <color=SkyBlue>permanent<color=White> +1 <icon=MagEva>.;
+[ItemType]  name=<color=SkyBlue>柳叶鱼;
+description=很薄而且像蜥蜴的鱼.食用后<color=SkyBlue>永久性<color=White> +1 <icon=MagEva>.;
 weight=0; volume=1; value=2000; action=eat_MEva_Up1;
 pR=pTeal; pB=pTeal;
 ID=fish_mag; sprite=1959; special=consumeOnUse;
@@ -776,11 +776,11 @@ ID=fish_mag; sprite=1959; special=consumeOnUse;
 [JournalEntry]
 ID=item_fish_mag;
 category=item; halfPage=true; rarity=2;
-title=Sea Lancetfish;
-text=<itemBig=fish_mag><title=Sea Lancetfish><brAdj=>Normally only found in deep waters, the Sea Lancetfish is a coveted catch. Despite its appearance, the meat is sweet, tender, and a bit tangy.;
+title=柳叶鱼;
+text=<itemBig=fish_mag><title=柳叶鱼><brAdj=>通常只在深海中发现,<n>海洋柳叶鱼是一个令人垂涎的捕获物.<n>不管它的外表,它的肉是甜的嫩的,有点刺鼻.;
 
-[ItemType]  name=Flopfish;
-description=Large, meaty fish. Sells for a modest amount.;
+[ItemType]  name=摔鱼;
+description=大又多肉的鱼.售价适中.;
 weight=0; volume=1; value=80;
 pR=pRedD;
 ID=fish_flop; sprite=1960; stackable=true;
@@ -789,34 +789,34 @@ special=convertIntoCashAtEnd; special=sellForFullValue;
 [JournalEntry]
 ID=item_fish_flop;
 category=item; halfPage=true; rarity=1;
-title=Flopfish;
-text=<itemBig=fish_flop><title=Flopfish><brAdj=>Named for its tendency to escape unwary fishermen by flopping off the deck. A good, lucrative catch, but nothing to write home about.;
+title=摔鱼;
+text=<itemBig=fish_flop><title=摔鱼><brAdj=>因为它会从甲板上摔下来,以躲避粗心的渔民而得名.<n>这是一个很好的赚钱的机会,但没什么好吹嘘的.;
 
-[ItemType]  name=Mug;
+[ItemType]  name=杯子;
 ID=mug; sprite=1926; value=3; itemCategory=1;
 	combineWith=keg; toMake=mug_beer; combineSound=sfx_droplet;
-[ItemType]  name=Mug of Beer;
+[ItemType]  name=大杯啤酒;
 ID=mug_beer; sprite=1927; value=6; action=drink_beer;
 journalID=journal_beer; itemCategory=1;
 special=convertIntoCashAtEnd;
-description=Beer in a mug.;
+description=装满啤酒的杯子.;
 [ItemReaction] 
 ID=mug_beer; element=actionUsed; newID=mug;
-[ItemType]  name=Goblet;
+[ItemType]  name=高脚杯;
 ID=goblet; sprite=1930; value=3; itemCategory=1;
 	combineWith=keg; toMake=goblet_beer; combineSound=sfx_droplet;
-[ItemType]  name=Goblet of Beer;
+[ItemType]  name=装满啤酒的高脚杯;
 ID=goblet_beer; sprite=1931; value=6; action=drink_beer;
 journalID=journal_beer; itemCategory=1;
 special=convertIntoCashAtEnd;
-description=Beer in a cup.;
+description=杯中的啤酒.;
 [ItemReaction] 
 ID=goblet_beer; element=actionUsed; newID=goblet;
 [JournalEntry]
 ID=journal_beer;
 category=item; halfPage=true;
-title=Beer;
-text=<itemBig=mug_beer><title=Beer><brAdj=>Popular alcoholic beverage. Found in some form in most cultures. Restores energy and improves morale (provided you drink in moderation).;
+title=啤酒;
+text=<itemBig=mug_beer><title=啤酒><brAdj=>受欢迎的酒精饮料.<n>以某种形式存在于大多数文化中.<n>恢复能量,提高士气(前提是你适量饮酒);
 
 [ItemType]  name=大剪刀;
 ID=shears; sprite=1537; 
@@ -825,8 +825,8 @@ description=基本的剪刀.通常用来把布切成绷带.;
 [JournalEntry]
 ID=item_shears;
 category=item; halfPage=true;
-title=Shears;
-text=<itemBig=shears><title=Shears><brAdj=>Primitive scissors made of two blades connected by a strip of springy metal. On the plus side, they're equally effective for left-handed users.;
+title=大剪刀;
+text=<itemBig=shears><title=大剪刀><brAdj=>一种原始的剪刀,<n>由两片有弹性的金属条连接而成.<n>好的一面是,对左撇子用户同样有用.;
 
 [ItemType]  name=绷带;
 ID=bandage; sprite=1538; 
@@ -843,19 +843,19 @@ category=item; halfPage=true;
 title=绷带;
 text=<itemBig=bandage><title=绷带><brAdj=>切成条状的布包裹伤口以减少血液流动. 一个学会'Medic'的侦察员更擅长使用这些.;
 	
-[ItemType]  name=Splint;
+[ItemType]  name=夹板;
 ID=splint; sprite=1539; 
 stackable=true;
 weight=0; volume=1; value=12;
 pR=pGrey;
 pB=pWood;
-description=Heals & cures damaged limbs (immobilize, disable, stun).;
+description=治疗受伤的肢体(定身,残废,眩晕).;
 action=splint_action; itemCategory=consumable; special=consumeOnUse;
 [JournalEntry]
 ID=item_splint;
 category=item; halfPage=true;
-title=Splint;
-text=<itemBig=splint><title=Splint><brAdj=>Cloth wrapped around wood holds the injured limb in place, providing support and preventing further injury.;
+title=夹板;
+text=<itemBig=splint><title=夹板><brAdj=>包裹木头的布用于将受伤的肢体固定在适当的位置,<n>提供支撑并防止进一步的受伤.;
 
 [ItemType]  name=木板;
 ID=woodPlank; sprite=624; stackable=true;
@@ -873,10 +873,10 @@ description=几乎可以用于任何用途的木板.;
 [JournalEntry]
 ID=item_woodPlank;
 category=item; halfPage=true;
-title=Wood Plank;
-text=<itemBig=woodPlank><title=Wood Plank><brAdj=>Yep, it's wood. Try using it for anything! Repair bridges, craft splints, or make certain kinds of weapons.;
+title=木板;
+text=<itemBig=woodPlank><title=木板><brAdj=>是的,这是木头.试着用它做任何事情!<n>修理桥梁,制作夹板或制作特定种类的武器.;
 
-[ItemType]  name=Iron Chunk;
+[ItemType]  name=铁块;
 ID=iron_chunk; sprite=834; pR=pIron; stackable=true;
 weight=5; value=25; itemCategory=1;
 special=canAlwaysFitInTileWhenSpawned;
@@ -896,15 +896,15 @@ combineWith=craft_knuckle; toMake=knuckle_iron;
 combineWith=craft_rapier; toMake=rapier_iron; 
 combineWith=craft_greatsword; toMake=greatsword_iron; 
 combineWith=craft_armor; toMake=armor_iron; 
-description=Most basic metal available for making equipment.; 
+description=可用于制造装备最基本的金属。; 
 [JournalEntry]
 ID=item_iron_chunk;
 category=item; halfPage=true; rarity=1;
-title=Iron Chunk;
-text=<itemBig=iron_chunk><title=Iron Chunk><brAdj=>Iron, the ubiquitous metal, mainstay of basic crafting. Combine it with a crafting kit to create weapons and armor.;
+title=铁块;
+text=<itemBig=iron_chunk><title=铁块><brAdj=>铁,普遍存在的金属,基本工艺的主要支柱.<n>将它与一个制作套件组合来制作武器和盔甲.;
 
 
-[ItemType]  name=Steel Bar;
+[ItemType]  name=钢块;
 ID=steel_bar; sprite=833; pR=pSteel;
 stackable=true; itemCategory=1;
 weight=5; value=125;
@@ -924,14 +924,14 @@ combineWith=craft_knuckle; toMake=knuckle_steel;
 combineWith=craft_rapier; toMake=rapier_steel; 
 combineWith=craft_greatsword; toMake=greatsword_steel; 
 combineWith=craft_armor; toMake=armor_steel; 
-description=Reliable and useful for creating all kinds of equipment.; 
+description=能够可靠和有用的创造各种装备.; 
 [JournalEntry]
 ID=item_steel_bar;
 category=item; halfPage=true; rarity=1;
-title=Steel Bar;
-text=<itemBig=steel_bar><title=Steel Bar><brAdj=>Iron alloy that was smelted and refined in a lengthy process until it became steel. Perfect for creating weapons and armor.;
+title=钢块;
+text=<itemBig=steel_bar><title=钢块><brAdj=>铁合金经过漫长的过程熔炼和提炼,直到变成钢.<n>创造武器和盔甲完美的原料.;
 
-[ItemType]  name=Mythril Chunk;
+[ItemType]  name=秘银块;
 ID=mythril_chunk; sprite=834; pR=pMythril; stackable=true;
 weight=5; value=900;  itemCategory=1;
 special=canAlwaysFitInTileWhenSpawned;
@@ -951,14 +951,14 @@ combineWith=craft_knuckle; toMake=knuckle_mythril;
 combineWith=craft_rapier; toMake=rapier_mythril; 
 combineWith=craft_greatsword; toMake=greatsword_mythril; 
 combineWith=craft_armor; toMake=armor_mythril; 
-description=Valuable metal that can make great equipment.;
+description=有价值的金属，可以制造强大的装备.;
 [JournalEntry]
 ID=item_mythril_chunk;
 category=item; halfPage=true; rarity=2;
-title=Mythril Chunk;
-text=<itemBig=mythril_chunk><title=Mythril Chunk><brAdj=>Mythril is a metal of supreme quality, harder and lighter than steel. Unfortunately it's often prohibitively expensive to work in.;
+title=秘银块;
+text=<itemBig=mythril_chunk><title=秘银块><brAdj=>秘银是一种高质量的金属,比钢铁更硬更轻.<n>不幸的是,加工的成本往往高得让人望而却步.;
 
-[ItemType]  name=Chunk of Laser;
+[ItemType]  name=镭射块;
 ID=laser_chunk; sprite=835; 
 stackable=true; itemCategory=1;
 weight=3; value=2500;
@@ -979,21 +979,21 @@ combineWith=craft_knuckle; toMake=knuckle_laser;
 combineWith=craft_rapier; toMake=rapier_laser; 
 combineWith=craft_greatsword; toMake=greatsword_laser; 
 combineWith=craft_armor; toMake=armor_laser; 
-description=Inexplicable chunk of light.;
+description=无法解释的光块.;
 [ItemLight]
 ID=laser_chunk; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.2; flicker=0.03;
 [JournalEntry]
 ID=item_laser_chunk;
 category=item; halfPage=true; rarity=3; rewardMod=200;
-title=Chunk of Laser;
-text=<itemBig=laser_chunk><title=Chunk of Laser><brAdj=>Don't touch with your bare hands or stare at it. It defies scientific explanation... all the better to make weapons with!;
+title=镭射块;
+text=<itemBig=laser_chunk><title=镭射块><brAdj=>不要赤手地触摸或盯着它看.<n>这是在挑衅科学...用来做武器就更好了!;
 
-[ItemType]  name=Ironice;
+[ItemType]  name=寒铁冰;
 ID=ironice_chunk; sprite=836;
 stackable=true; itemCategory=1;
 weight=15; value=4000;
 pR=pIronice;
-description=Unnatural ice that stays frigid & strong at any temperature.;
+description=非自然的冰,<n>在任何温度下都保持寒冷和坚固.;
 --requiredForCombining=anvil;
 combineSound=sfx_hitMetal;
 combineWith=craft_sword; toMake=sword_ironice; 
@@ -1013,10 +1013,10 @@ combineWith=craft_armor; toMake=armor_ironice;
 [JournalEntry]
 ID=item_ironice_chunk;
 category=item; halfPage=true; rarity=3; rewardMod=200;
-title=Ironice;
-text=<itemBig=ironice_chunk><title=Ironice><brAdj=>Though icy in appearance, it's solid and long-lasting. Structures built of Ironice remain standing to this day, even in warm climes. This chunk is especially pure & refined, and can create fantastic weaponry.;
+title=寒铁冰;
+text=<itemBig=ironice_chunk><title=寒铁冰><brAdj=>虽然表面冰冷,但坚固耐用.时至今日,即使在温暖的<n>气候中,用寒铁冰建造的建筑依然屹立不倒.<n>这块是特别纯净和精炼的,可以创造奇妙的武器.;
 
-[ItemType]  name=Whistle Stone;
+[ItemType]  name=吹口哨的石头;
 ID=whistle_chunk; sprite=837;
 stackable=true; itemCategory=1;
 weight=5; value=1800;
@@ -1037,17 +1037,17 @@ combineWith=craft_knuckle; toMake=knuckle_wind;
 combineWith=craft_rapier; toMake=rapier_wind; 
 combineWith=craft_greatsword; toMake=greatsword_wind; 
 combineWith=craft_armor; toMake=armor_wind; 
-description=Smooth, beautiful stone punctured with holes.;
+description=光滑、美丽的石头，上面有洞.;
 [JournalEntry]
 ID=item_whistle_chunk;
 category=item; halfPage=true; rarity=3; rewardMod=100;
-title=Whistle Stone;
-text=<itemBig=whistle_chunk><title=Whistle Stone><brAdj=>Smooth & silky stone with hollows that whistle in the wind. And yet it's quite sturdy- suitable for crafting.;
+title=吹口哨的石头;
+text=<itemBig=whistle_chunk><title=吹口哨的石头><brAdj=>光滑的丝般的石头,镂空的,在风中吹口哨.<n>而且它很坚固,适合手工.;
 
-[ItemType]  name=Shock Parts;
+[ItemType]  name=电气零件;
 ID=shock_chunk; sprite=838;
 stackable=true; itemCategory=1;
-description=Strange mechanical parts that hum with electricity.;
+description=奇怪的机械部件能发出电流的嗡嗡声.;
 weight=4; value=1250;
 pR=pShockWeapon; pB=pShockWeaponHilt;
 --requiredForCombining=anvil; 
@@ -1069,11 +1069,11 @@ combineWith=craft_armor; toMake=armor_elec;
 [JournalEntry]
 ID=item_shock_chunk;
 category=item; halfPage=true; rarity=3; rewardMod=-700;
-title=Shock Parts;
-text=<itemBig=shock_chunk><title=Shock Parts><brAdj=>These complex machine parts are embedded with shards of lightning trigger stones. Could turn them into devastating weapons with the right kit...;
+title=电气零件;
+text=<itemBig=shock_chunk><title=电气零件><brAdj=>这些复杂的机器部件嵌入了闪电触发物的碎片.<n>只要有合适的设备,就能把它们变成毁灭性的武器...;
 
 
-[ItemType]  name=Spidesilk;
+[ItemType]  name=蜘蛛丝;
 ID=silk_spide; sprite=1463;
 stackable=true; itemCategory=1;
 weight=0; value=30;
@@ -1081,13 +1081,13 @@ pR=pGrey;
 special=quantityChangesSprite_upTo2;
 combineWith=craft_whip; toMake=whip_silk; 
 combineWith=craft_armor; toMake=armor_silk; 
-description=Thick, sticky silk of an arachnid.;
+description=蜘蛛纲动物的厚而粘的丝.;
 [JournalEntry]
 ID=item_silk_spide;
 category=item; halfPage=true; rarity=2;
-title=Spidesilk;
-text=<itemBig=silk_spide><title=Spidesilk><brAdj=>Though they prefer hunting, Spides can produce sturdy silk. Enterprising humanoids often take their webbing to make clothing or whips.;
-[ItemType]  name=Spidest Fang;
+title=蜘蛛丝;
+text=<itemBig=silk_spide><title=蜘蛛丝><brAdj=>尽管它们更喜欢狩猎,蜘蛛还是能吐出结实的蛛丝.<n>有胆量的人经常拿他们的蛛网做衣服或鞭子.;
+[ItemType]  name=蜘蛛王的尖牙;
 ID=fang_spidest; sprite=871;
 stackable=true; itemCategory=1;
 weight=0; volume=0; value=150;
@@ -1109,10 +1109,10 @@ combineWith=craft_bow; toMake=bow_fang;
 combineWith=craft_xbow; toMake=xbow_fang; 
 combineWith=craft_shield; toMake=shield_fang; 
 combineWith=craft_armor; toMake=armor_fang; 
-description=Vicious & toxic mandible of the Spidest.
+description=蜘蛛王凶残的有毒的下颌骨.
 <font=thickIcons><color=Black>
-<n=><icon=invIcon_sword> +Poison Attack
-<n=><icon=invIcon_armor> +50% Poison Resist;
+<n=><icon=invIcon_sword> 攻击附加中毒
+<n=><icon=invIcon_armor> +50%中毒抵抗;
 [ItemReactionInWeapon] 
 ID=fang_spidest; element=weaponBuff; action=PoisonFangInWeapon;
 [ItemReactionInArmor]  
@@ -1120,19 +1120,19 @@ ID=fang_spidest; actorValues=poison; damageMultiplier=0.5;
 [JournalEntry]
 ID=item_fang_spidest;
 category=item; halfPage=true; rarity=2;
-title=Spidest Fang;
-text=<itemBig=fang_spidest><title=Spidest Fang><brAdj=>Few live to see one of these up close. With a little ingenuity, this poisonous fang could be made into a potent weapon.;
+title=蜘蛛王的尖牙;
+text=<itemBig=fang_spidest><title=蜘蛛王的尖牙><brAdj=>很少有人能活着近距离看到这些.<n>只要稍微动动脑筋,<n>这种毒牙就能变成一种强有力的武器.;
 
-[ItemType]  name=Itchy Barbs;
+[ItemType]  name=瘙痒倒刺;
 ID=barb_itchy; sprite=874;
 stackable=true; itemCategory=1;
 weight=0; volume=0; value=150;
 pR=p22; 
 pB=p22; 
 
-description=Irritating barbs from a Netchal.<font=thickIcons><color=Black>
-<n=><icon=invIcon_sword> +Itchy Attack
-<n=><icon=invIcon_armor> +50% Itchy Resist;
+description=来自奈查尔的刺激性的倒刺.<font=thickIcons><color=Black>
+<n=><icon=invIcon_sword> 攻击附加瘙痒
+<n=><icon=invIcon_armor> +50%瘙痒抵抗;
 [ItemReactionInWeapon] 
 ID=barb_itchy; element=weaponBuff; action=ItchyBarbInWeapon;
 [ItemReactionInArmor]  
@@ -1140,10 +1140,10 @@ ID=barb_itchy; actorValues=itchy; damageMultiplier=0.5;
 [JournalEntry]
 ID=item_barb_itchy;
 category=item; halfPage=true; rarity=1;
-title=Itchy Barbs;
-text=<itemBig=barb_itchy><title=Itchy Barbs><brAdj=>These sharp spikes are harvested from Netchal and coated in aggravating toxin. With a little tinkering, they can make very effective augments for equipment.;
+title=瘙痒倒刺;
+text=<itemBig=barb_itchy><title=瘙痒倒刺><brAdj=>这些尖刺是从奈查尔身上提取的覆盖着剧毒物质.<n>只要稍加修补,它们就能为装备附加强力效果.;
 
-[ItemType]  name=Corpryst;
+[ItemType]  name=晶体矿;
 ID=corpryst; sprite=850;
 stackable=true; itemCategory=1;
 weight=0; value=750;
@@ -1162,14 +1162,14 @@ combineWith=craft_knuckle; toMake=knuckle_corpryst;
 combineWith=craft_rapier; toMake=rapier_corpryst; 
 combineWith=craft_greatsword; toMake=greatsword_corpryst; 
 combineWith=craft_armor; toMake=armor_corpryst;
-description=Slick, chunky stone from Graven.;
+description=来自克莱文的光滑厚实的石头.;
 [JournalEntry]
 ID=item_corpryst;
 category=item; halfPage=true; rarity=3; rewardMod=-100;
-title=Corpryst;
-text=<itemBig=corpryst><title=Corpryst><brAdj=>Valuable Graven mineral. It makes strong (but heavy) equipment. Diecast embedded with Corpryst are considered a higher social class.;
+title=晶体矿;
+text=<itemBig=corpryst><title=晶体矿><brAdj=>有价值的克莱文矿物.它能让装备更为结实(但更重).<n>嵌入晶体矿的铸模被认为是社会高级阶层.;
 
-[ItemType]  name=Rock Coral;
+[ItemType]  name=岩石珊瑚;
 ID=coral; sprite=1976;
 stackable=true; itemCategory=1;
 weight=0; value=120;
@@ -1189,23 +1189,23 @@ combineWith=craft_knuckle; toMake=knuckle_coral;
 combineWith=craft_rapier; toMake=rapier_coral; 
 combineWith=craft_greatsword; toMake=greatsword_coral; 
 combineWith=craft_armor; toMake=armor_coral; 
-description=Smooth but pointy coral of surprising durability.;
+description=光滑而尖锐的珊瑚具有惊人的耐久性.;
 
 [JournalEntry]
 ID=item_coral;
 category=item; halfPage=true; rarity=3; rewardMod=-200;
-title=Rock Coral;
-text=<itemBig=coral><title=Rock Coral><brAdj=>Precious coral with especially sharp edges. Young Rock Coral is actually quite soft, and only hardens after approximately 3 years of aging. Weaponry made with it constantly condensates, and can splash foes with water.;
+title=岩石珊瑚;
+text=<itemBig=coral><title=岩石珊瑚><brAdj=>有特别锋利边缘的珍贵珊瑚.年轻的珊瑚实际上很软,<n>只有在大约3年后老化后才会变硬.<n>用它制造的武器会不断冷凝周围,可以向敌人泼水.;
 
-[ItemType]  name=Goop Gland;
+[ItemType]  name=黏液腺体;
 ID=goop_gland; sprite=872;
 stackable=true; itemCategory=1;
 weight=0; volume=0; value=160;
 pR=pGreen; 
-description=Slimy organ that generates immobilizing goop.
+description=黏糊糊的器官，产生能够定身他人的黏液.
 <font=thickIcons><color=Black>
-<n=><icon=invIcon_sword> +Slow Attack
-<n=><icon=invIcon_armor> +50% Immob Resist;
+<n=><icon=invIcon_sword> 攻击附加缓速
+<n=><icon=invIcon_armor> +50%定身抵抗;
 [ItemReactionInWeapon] 
 ID=goop_gland; element=weaponBuff; action=GoopGlandInWeapon;
 [ItemReactionInArmor]  
@@ -1214,15 +1214,15 @@ ID=goop_gland; actorValues=immob; damageMultiplier=0.5;
 [JournalEntry]
 ID=item_goop_gland;
 category=item; halfPage=true; rarity=2;
-title=Goop Gland;
-text=<itemBig=goop_gland><title=Goop Gland><brAdj=>Sogboggers carry glands within them that generate the copious immobilizing goop they spew. It doesn't take a genius to see the possible combat applications of such a fluid.;
+title=黏液腺体;
+text=<itemBig=goop_gland><title=黏液腺体><brAdj=>索格伯格体内带有腺体,<n>这些腺体可以产生大量的黏糊糊的东西.<n>很容易就能看出这种液体在战斗中的应用.;
 
-[ItemType]  name=Shellworm Plate;
+[ItemType]  name=壳虫鳞甲;
 ID=shellworm_plate; sprite=873;
 stackable=true; itemCategory=1;
 weight=0; volume=0; value=950;
 pR=pPurpleD; 
-description=Unbreakable plate of the Shellworm.
+description=坚不可摧的壳虫鳞甲;
 <font=thickIcons><color=Black>
 <n=><icon=invIcon_sword> +5<icon=PhysEva>
 <n=><icon=invIcon_armor> +5<icon=PhysEva>;
@@ -1238,16 +1238,16 @@ ID=shellworm_plate; actorValue=PhysEva; magnitude=5; duration=-1;
 [JournalEntry]
 ID=item_shellworm_plate;
 category=item; halfPage=true; rarity=3; rewardMod=-50;
-title=Shellworm Plate;
-text=<itemBig=shellworm_plate><title=Shellworm Plate><brAdj=>Nearly indestructible, the plate of the Shellworm looks at first to be ideal material for crafting weaponry. Unfortunately they are completely unmalleable, so only shields and armor can be made from them.;
+title=壳虫鳞甲;
+text=<itemBig=shellworm_plate><title=壳虫鳞甲><brAdj=>几乎是坚不可摧的,<n>壳虫鳞甲看起来是制造武器的理想材料.<n>不幸的是,它们是完全不可塑化的,<n>所以只能用它们制作盾牌和盔甲.;
 
-[ItemType]  name=Volskarn;
+[ItemType]  name=沃尔斯卡恩;
 ID=volskarn_chunk; sprite=839;
 stackable=true; itemCategory=1;
 weight=0; volume=0; value=800;
 pR=pVolskarn; 
 special=canAlwaysFitInTileWhenSpawned;
-description=Essence-absorbing shard, often used to power magical equipment.
+description=吸收精华的碎片,常用于魔法型装备.
 <font=thickIcons><color=Black>
 <n=><icon=invIcon_sword> +1<icon=MagDef>
 <n=><icon=invIcon_armor> +1<icon=MagDef>;
@@ -1275,14 +1275,14 @@ ID=volskarn_chunk; actorValue=MagDef; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_volskarn_chunk;
 category=item; halfPage=true; rarity=2;
-title=Volskarn;
-text=<itemBig=volskarn_chunk><title=Volskarn><brAdj=>The discovery of Volskarn revolutionized industry, transportation, and war. It can absorb essence like a battery, which can then be directed into triggers. Almost all magical equipment has some amount of Volskarn in it.;
+title=沃尔斯卡恩;
+text=<itemBig=volskarn_chunk><title=沃尔斯卡恩><brAdj=>沃斯卡恩的发现彻底改变了工业、交通和战争.<n>它可以像电池一样吸收精华,然后可被直接触发.<n>几乎所有的魔法装备都有一定数量的沃尔斯卡恩.;
 
-[ItemType]  name=Aerstone;
+[ItemType]  name=埃尔石;
 ID=aerstone; sprite=840; spriteWhenHeld=0; special=animateEvery100Frames;
 itemCategory=1;
 weight=0; volume=0; value=5000;
-description=Valuable stone that rises when charged with essence.<font=thickIcons><color=Black>
+description=充满精华的珍贵宝石.<font=thickIcons><color=Black>
 <n=><icon=invIcon_sword> +1<icon=jumpDistance>
 <n=><icon=invIcon_armor> +1<icon=jumpDistance>;
 [ItemLight] 
@@ -1295,11 +1295,11 @@ ID=aerstone; actorValue=jumpDistance; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_aerstone;
 category=item; halfPage=true; rarity=4; rewardMod=-200;
-title=Aerstone;
-text=<itemBig=aerstone><title=Aerstone><brAdj=>Incredibly valuable substance that, when charged with essence, provides upward force. Often used to create airships.;
+title=埃尔石;
+text=<itemBig=aerstone><title=埃尔石><brAdj=>极具价值的物质,充入精华后,<n>会提供浮力.通常用来制造飞艇.;
 
-[ItemType]  name=Mystical Stepladder;
-description=A collapsible stepladder that can be placed on water.;
+[ItemType]  name=神秘的活梯;
+description=可以放在水上的可折叠的活梯.;
 ID=stepladder_magic; sprite=514;  itemCategory=tool;
 special=big; special=overrideTerrainCollisions;
 special=canFloatOnWater;
@@ -1308,12 +1308,12 @@ special=ignoreHeight;
 [JournalEntry]
 ID=item_stepladder_magic;
 category=item; halfPage=true; rarity=4; rewardMod=-300;
-title=Mystical Stepladder;
-text=<itemBig=stepladder_magic><title=Mystical Stepladder><brAdj=>The finest stepladder you've ever laid eyes on. It is completely buoyant and can balance on water. Who made it and how is unknown.;
+title=神秘的活梯;
+text=<itemBig=stepladder_magic><title=神秘的活梯><brAdj=>你见过的最好的梯子.它具有浮力,<n>可以在水中保持平衡.到底谁制造了它,<n>又是如何制造的,我们不得而知.;
 
-[ItemType]  name=Ruluorn Bezoar;
+[ItemType]  name=鲁洛恩胃石;
 ID=bezoar_ruluorn; sprite=2049; itemCategory=tool;
-description=Magic stone that can be ' <color=Gold>used<color=> ' in port to Gate to other ports.<textIfFinal==gTimeSinceMoreThanOrNeverAssigned:bezoar_gated:100> Currently recharging (<math=gTimeSince:bezoar_gated>/100).;
+description=魔法石,可以'<color=Gold>使用<color=>'在港口到门到其他港口.<textIfFinal==gTimeSinceMoreThanOrNeverAssigned:bezoar_gated:100>当前充能(<math=gTimeSince:bezoar_gated>/100).;
 special=animated;
 pR=p37;
 pB=pFadeAnim;
@@ -1321,12 +1321,12 @@ action=bezoar_ruluorn_act;
 [JournalEntry]
 ID=item_bezoar_ruluorn;
 category=artifact; halfPage=true; rarity=5;
-title=Ruluorn Bezoar;
-text=<itemBig=bezoar_ruluorn><title=Ruluorn Bezoar><brAdj=>Indigestible mass formed in the gut of a Ruluorn, possibly due to cruel experimentation. Somehow contains much of the Ruluorn's magical ability, as if it were an extremely powerful Gate trigger. Each week, it charges enough energy to allow you to Gate your entire fleet from one port to another.;
+title=鲁洛恩胃石;
+text=<itemBig=bezoar_ruluorn><title=鲁洛恩胃石><brAdj=>在鲁洛恩的肠道中形成的难以消化的物质,<n>可能是由于残酷的实验.不知怎么的,<n>它包含了许多鲁洛恩的魔法能力,<n>就像一个非常强大的门触发物.每个星期,<n>它能产生足够的能量让你从一个港口到另一个港口.;
 
 
-[ItemType]  name=Sandbags;
-description=Hefty weights that can be repositioned but not walked over.;
+[ItemType]  name=沙袋;
+description=可以重新放置但不能被踩的重物.;
 ID=sandbag_movable; sprite=865; itemCategory=tool;
 journalID=journal_sandbag;
 texture=items_misc;
@@ -1337,8 +1337,8 @@ volume = 9999;
 [ItemReaction] 
 ID=sandbag_movable; element=melee; element=explode; 
 newID=sandbag_movable_dmg1; fx=hitDust; aiRatingMod = 1; aiRatingModForHostilesOnly = true;
-[ItemType]  name=Torn Sandbags;
-description=Damaged weights that can be repositioned but not walked over.;
+[ItemType]  name=破裂沙袋;
+description=可以重新放置但不能被踩的损坏的重物.;
 ID=sandbag_movable_dmg1; sprite=866;
 cloneFrom=sandbag_movable; special=dontCloneReactions;
 [ItemReaction] 
@@ -1346,8 +1346,8 @@ ID=sandbag_movable_dmg1; element=melee; element=explode;
 newID=sandbag_movable_dmg2; fx=hitDust; aiRatingMod = 1; aiRatingModForHostilesOnly = true;
 [ItemReaction] 
 ID=sandbag_movable_dmg1; element=newDay; newID=sandbag_movable;
-[ItemType]  name=Shredded Sandbags;
-description=Deflated sandbags that slow movement a bit.;
+[ItemType]  name=碎沙袋;
+description=放气的沙袋会减慢你的移动.;
 ID=sandbag_movable_dmg2; sprite=867; 
 journalID=journal_sandbag;
 texture=items_misc;
@@ -1360,12 +1360,12 @@ ID=sandbag_movable_dmg2; element=newDay; newID=sandbag_movable;
 [JournalEntry]
 ID=journal_sandbag;
 category=item; halfPage=true; rarity=0;
-title=Sandbags;
-text=<itemBig=sandbag_movable><title=Sandbags><brAdj=>Hefty burlap sacks filled with sand, commonly used as fortification - often against humanoid attackers or floods. You can move these around to build your own defenses, but remember that they can be jumped over, and a few attacks will shred them to a mere pile.;
+title=沙袋;
+text=<itemBig=sandbag_movable><title=沙袋><brAdj=>装满沙子的粗麻袋,通常用作防御工事<n>--抵抗类人动物的攻击或洪水.<n>你可以移动它们来建立自己的防御,<n>但要记住它们可以被跳跃过,<n>几次攻击就会把它们撕碎成一堆.;
 
 
-[ItemType]  name=Food;
-description=Each unit of Food feeds one crew member for one day.; itemCategory=tool;
+[ItemType]  name=食物;
+description=每份食物供一名船员一天食用.; itemCategory=tool;
 ID=food; sprite=66; value=3;
 volume=999; special=cargo; special=foodPrice;
 pR=pR;
@@ -1375,160 +1375,160 @@ stackable=true;
 [JournalEntry]
 ID=item_food;
 category=item; halfPage=true; rarity=0;
-title=Food;
-text=<itemBig=food><title=Food><brAdj=>Rations and water enough to feed one man for a day. If your crew has no Food by the day's end, crew morale will suffer greatly. Thankfully you can buy Food at any port.;
+title=食物;
+text=<itemBig=food><title=食物><brAdj=>足够一个人一天的口粮.<n>如果你的船员在一天结束前没有食物,<n>船员的士气将受到极大的打击.<n>幸运的是,你可以在任何港口买到食物.;
 
-[ItemType]  name=Deluxe Rations;
-description=Special rations that feed the entire crew for 1 day. Only used when crew would otherwise starve.; itemCategory=tool;
+[ItemType]  name=豪华口粮;
+description=为全体船员提供一天食物的特殊口粮.<n>只在船员将要饿死的时候才使用.; itemCategory=tool;
 ID=foodDX; sprite=105; value=400;
 volume=999; special=cargo;
 stackable=true;
 [JournalEntry]
 ID=item_foodDX;
 category=item; halfPage=true; rarity=1;
-title=Deluxe Rations;
-text=<itemBig=foodDX><title=Deluxe Rations><brAdj=>These perfectly packaged rations are of the finest make and never deteriorate. If you spend a day without enough food, instead of starving and losing morale, your crew will instead dig into this. It can feed a crew of any size.<n>(You'd think a small crew could stretch these rations across a few days, but the delicacies within are too good not to finish off.);
+title=豪华口粮;
+text=<itemBig=foodDX><title=豪华口粮><brAdj=>这些包装完美的口粮是最好的永远不会变质的.<n>如果你一天没有足够的食物,你的船员不会挨饿,<n>也不会士气低落,而是会深入寻找这个.<n>它可以喂饱任何规模的船员(你可以认为一个小<b>船员可以用这个口粮撑几天,但里面的东<n>西太美味了,不能不吃完).;
 
-[ItemType]  name=Bullion;
+[ItemType]  name=黄金;
 ID=cargo_gold; sprite=72;
 journalID=journal_tradeGoods;
-description=22-karat gold in bar form.; itemCategory=tool;
+description=22克拉金条.; itemCategory=tool;
 volume=999; special=cargo; special=tradeGood;
 value=120;
 stackable=true;
 
-[ItemType]  name=Perfumes;
+[ItemType]  name=香水;
 ID=cargo_perfume; sprite=73;
 journalID=journal_tradeGoods;
-description=Fine oils and fragrances.; itemCategory=tool;
+description=上等油和香料.; itemCategory=tool;
 volume=999; special=cargo; special=tradeGood;
 value=50;
 stackable=true;
 
-[ItemType]  name=Glass Beads;
+[ItemType]  name=玻璃珠;
 ID=cargo_beads; sprite=74;
 journalID=journal_tradeGoods;
-description=Glass trinkets and baubles.; itemCategory=tool;
+description=玻璃小饰品.; itemCategory=tool;
 volume=999; special=cargo; special=tradeGood;
 value=5;
 stackable=true;
 
-[ItemType]  name=Silk;
+[ItemType]  name=丝绸;
 ID=cargo_silk; sprite=71;
 journalID=journal_tradeGoods;
-description=Cocoon fiber woven into cloth.; itemCategory=tool;
+description=蚕茧纤维织成布.; itemCategory=tool;
 volume=999; special=cargo; special=tradeGood;
 value=36;
 stackable=true;
 
-[ItemType]  name=Seacoal;
+[ItemType]  name=海煤;
 ID=cargo_coal; sprite=70;
 journalID=journal_tradeGoods;
-description=Highly combustible rock.; itemCategory=tool;
+description=高度易燃的煤石.; itemCategory=tool;
 volume=999; special=cargo; special=tradeGood;
 value=24;
 stackable=true;
 
 
-[ItemType]  name=Gemstones;
+[ItemType]  name=宝石;
 ID=cargo_gemstone; sprite=69;
 journalID=journal_tradeGoods;
-description=Semi-precious gems & jewels.; itemCategory=tool;
+description=一半宝石和一半珠宝.; itemCategory=tool;
 volume=999; special=cargo; special=tradeGood;
 value=90;
 stackable=true;
 
-[ItemType]  name=Spices;
+[ItemType]  name=调味料;
 ID=cargo_spice; sprite=68;
 journalID=journal_tradeGoods;
-description=Culinary herbs and additives.; itemCategory=tool;
+description=烹饪中草药和添加剂.; itemCategory=tool;
 volume=999; special=cargo; special=tradeGood;
 value=44;
 stackable=true;
 
-[ItemType]  name=Grain;
+[ItemType]  name=谷粒;
 ID=cargo_grain; sprite=67;
 journalID=journal_tradeGoods;
-description=Hard, dry seed.; itemCategory=tool;
+description=硬的,干种子.; itemCategory=tool;
 volume=999; special=cargo; special=tradeGood;
 value=12;
 stackable=true;
 
-[ItemType]  name=Furs;
+[ItemType]  name=皮革;
 ID=cargo_furs; sprite=99;
 journalID=journal_tradeGoods;
-description=Animal pelts and hides.; itemCategory=tool;
+description=动物毛皮.; itemCategory=tool;
 volume=999; special=cargo; special=tradeGood;
 value=28;
 stackable=true;
 
-[ItemType]  name=Carapace;
+[ItemType]  name=甲壳;
 ID=cargo_carapace; sprite=100;
 journalID=journal_tradeGoods;
-description=Durable arthropod chitin.; itemCategory=tool;
+description=坚固的节肢动物壳质.; itemCategory=tool;
 volume=999; special=cargo; special=tradeGood;
 value=33;
 stackable=true;
 
-[ItemType]  name=Tools;
+[ItemType]  name=工具;
 ID=cargo_tools; sprite=101;
 journalID=journal_tradeGoods;
-description=Various well-crafted devices.; itemCategory=tool;
+description=各种精心制作的设备.; itemCategory=tool;
 volume=999; special=cargo; special=tradeGood;
 value=20;
 stackable=true;
 
-[ItemType]  name=Grubhusk;
+[ItemType]  name=幼虫皮;
 ID=cargo_grub; sprite=102;
 journalID=journal_tradeGoods;
-description=Rubbery skins of giant larvae.; itemCategory=tool;
+description=巨大幼虫的像橡胶一样的皮.; itemCategory=tool;
 volume=999; special=cargo; special=tradeGood;
 value=18;
 stackable=true;
 
-[ItemType]  name=Dyes;
+[ItemType]  name=染料;
 ID=cargo_dye; sprite=103;
 journalID=journal_tradeGoods;
-description=Powdered natural pigments.; itemCategory=tool;
+description=天然色素粉.; itemCategory=tool;
 volume=999; special=cargo; special=tradeGood;
 value=27;
 stackable=true;
 
-[ItemType]  name=Pearls;
+[ItemType]  name=珍珠;
 ID=cargo_pearls; sprite=106;
 journalID=journal_tradeGoods;
-description=Glistening stones of great value.; itemCategory=tool;
+description=闪闪发光、价值连城的宝石.; itemCategory=tool;
 volume=999; special=cargo; special=tradeGood;
 value=96;
 stackable=true;
-[ItemType]  name=Ray Oil;
+[ItemType]  name=鳐鱼油;
 ID=cargo_oil; sprite=104;
 journalID=journal_cargo_oil;
-description=Valuable oils collected from Megarays.; itemCategory=tool;
+description=从巨大鳐鱼收集的有价值的油.; itemCategory=tool;
 volume=999; special=cargo; special=tradeGood;
 value=22;
 stackable=true;
 [JournalEntry]
 ID=journal_cargo_oil;
 category=item; halfPage=true; rarity=1;
-title=Ray Oil;
-text=<itemBig=cargo_oil><title=Ray Oil><brAdj=>Once flensed and boiled, the fat from Megarays becomes useful and valuable Ray Oil. Some sailors make an occupation of harvesting Ray Oil, which can then be used as fuel, lubricant, or illumination.;
+title=鳐鱼油;
+text=<itemBig=cargo_oil><title=鹞鱼油><brAdj=>一旦剥皮和煮沸,巨大鳐鱼的脂肪便成了有用和宝贵的鳐鱼油.<n>有些水手以收获鳐鱼油为生,这些油可以用作<n>燃料、润滑剂或照明.;
 
-[ItemType]  name=Lost Cargo;
-description=Special cargo salvaged from a wreck. To be returned to the Guild.; itemCategory=tool;
+[ItemType]  name=丢失货物;
+description=从残骸中打捞出的特殊货物.需要被送回公会; itemCategory=tool;
 ID=cargo_lost; sprite=65;
 volume=999; special=cargo;
 pR=pWood; value=0;
 [JournalEntry]
 ID=item_cargo_lost;
 category=item; halfPage=true; rarity=0;
-title=Lost Cargo;
-text=<itemBig=cargo_lost><title=Lost Cargo><brAdj=>Cargo that has specifically been requested by the Guild. It has no use to you, so you may as well return it in exchange for payment.;
+title=丢失货物;
+text=<itemBig=cargo_lost><title=丢失货物><brAdj=>公会特别要求的货物.它对你没有用处,<n>所以你不妨把它找回来换取付款.;
 
 
 
-[ItemType]  name=Cargo;
-description=Generic nondescript cargo.; itemCategory=tool;
+[ItemType]  name=货物;
+description=一般的普通货物.; itemCategory=tool;
 ID=cargo1; sprite=65;
 volume=999; special=cargo;
 pR=pWood; value=10;
@@ -1536,130 +1536,130 @@ stackable=true;
 [JournalEntry]
 ID=journal_tradeGoods;
 category=item; halfPage=true; rarity=0;
-title=Trade Goods;
-text=<itemBig=cargo_perfume> <itemBig=cargo_pearls> <itemBig=cargo_furs><adjX=-12><title=Trade Goods><brAdj=>These special goods change value based on where you sell them. Each type comes from certain ports, and their value increases the further you get from those ports.<n>You're practically guaranteed to turn a profit as long as you sell somewhere besides the port of origin!;
+title=贸易货物;
+text=<itemBig=cargo_perfume> <itemBig=cargo_pearls> <itemBig=cargo_furs><adjX=-12><title=贸易货物><brAdj=>这些特殊商品的价值取决于你卖它们的地方.<n>每种类型都来自特定的港口,并且它们的价值会随<n>着你从购买所在港口的距离而增加.<n>只要你在原产地港口之外的其他地方销售,<n>你就几乎可以保证盈利!;
 
 
-[ItemType]  name=Lost Documents;
-description=Old documents that can be exchanged for favor with Jasce, Seartial, or Rumane.;
+[ItemType]  name=丢失文件;
+description=可以与Jasce, Seartial,或者 Rumane 交易的旧文件.;
 ID=lost_docs; sprite=2028; value=0; stackable=true; itemCategory=tool;
 pR=pGrey;
 [JournalEntry]
 ID=item_lost_docs;
 category=item; halfPage=true; rarity=1;
-title=Lost Documents;
-text=<itemBig=lost_docs><title=Lost Documents><brAdj=>Old, incomprehensibly bureaucratic documents. Not inherently valuable, but Jasce, Seartial, or Rumane would love to get their hands on the historical details inside.;
+title=丢失文件;
+text=<itemBig=lost_docs><title=丢失文件><brAdj=>陈旧的,难以理解的官僚文件.<n>虽然没有内在的价值但是 Jasce, Seartial, <n>或 Rumane 很愿意接触到里面的历史细节.;
 
 
 ----
 
-[ItemType]  name=Sword Crafting Kit;
+[ItemType]  name=剑制作工具;
 ID=craft_sword; sprite=803; 
 weight=0; volume=1; value=150; itemCategory=tool;
-description=Combine this with raw material to create a sword.;
+description=将其与原材料结合起来,就能制造出一把剑.;
 journalID=journal_craft_item;
 pR=pBlue; pB=pWoodDark; pG=pIron;
 special=setGlobalVarWhenConverted;
-[ItemType]  name=Dagger Crafting Kit;
+[ItemType]  name=匕首制作工具;
 ID=craft_dagger; sprite=804; 
 weight=0; volume=1; value=150; itemCategory=tool;
-description=Combine this with raw material to create a dagger.;
+description=把它和原料结合起来,就能制造出一把匕首.;
 journalID=journal_craft_item;
 pR=pBlue; pB=pWoodDark; pG=pIron;
 special=setGlobalVarWhenConverted;
-[ItemType]  name=Hammer Crafting Kit;
+[ItemType]  name=锤制作工具;
 ID=craft_hammer; sprite=805;  itemCategory=tool;
 weight=0; volume=1; value=150;
-description=Combine this with raw material to create a hammer.;
+description=把它和原料结合起来,就能制造出一把锤子.;
 journalID=journal_craft_item;
 pR=pBlue; pB=pWoodDark; pG=pIron;
 special=setGlobalVarWhenConverted;
-[ItemType]  name=Axe Crafting Kit;
+[ItemType]  name=斧制作工具;
 ID=craft_axe; sprite=806; 
 weight=0; volume=1; value=150; itemCategory=tool;
-description=Combine this with raw material to create an axe.;
+description=把它和原料结合起来,就能制造出一把斧子.;
 journalID=journal_craft_item;
 pR=pBlue; pB=pWoodDark; pG=pIron;
 special=setGlobalVarWhenConverted;
-[ItemType]  name=Shield Crafting Kit;
+[ItemType]  name=盾制作工具;
 ID=craft_shield; sprite=807; 
 weight=0; volume=1; value=150; itemCategory=tool;
-description=Combine this with raw material to create a shield.;
+description=把它和原料结合起来,就能制造出一面盾牌.;
 journalID=journal_craft_item;
 pR=pBlue; pB=pWoodDark; pG=pIron;
 special=setGlobalVarWhenConverted;
-[ItemType]  name=Flail Crafting Kit;
+[ItemType]  name=连枷制作工具;
 ID=craft_flail; sprite=808; 
 weight=0; volume=1; value=150; itemCategory=tool;
-description=Combine this with raw material to create a flail.;
+description=把它和原料结合起来,就能制造出一把连枷.;
 journalID=journal_craft_item;
 pR=pBlue; pB=pWoodDark; pG=pIron;
 special=setGlobalVarWhenConverted;
-[ItemType]  name=Whip Crafting Kit;
+[ItemType]  name=鞭制作工具;
 ID=craft_whip; sprite=809; 
 weight=0; volume=1; value=150; itemCategory=tool;
-description=Combine this with raw material to create a whip.;
+description=把它和原料结合起来,就能制造出一根鞭子.;
 journalID=journal_craft_item;
 pR=pBlue; pB=pWoodDark; pG=pIron;
 special=setGlobalVarWhenConverted;
-[ItemType]  name=Bow Crafting Kit;
+[ItemType]  name=弓制作工具;
 ID=craft_bow; sprite=810; 
 weight=0; volume=1; value=150; itemCategory=tool;
-description=Combine this with raw material to create a bow.;
+description=把它和原料结合起来,就能制造出一把弓.;
 journalID=journal_craft_item;
 pR=pBlue; pB=pWoodDark; pG=pIron;
 special=setGlobalVarWhenConverted;
-[ItemType]  name=Crossbow Crafting Kit;
+[ItemType]  name=弩制作工具;
 ID=craft_xbow; sprite=811; 
 weight=0; volume=1; value=150; itemCategory=tool;
-description=Combine this with raw material to create a crossbow.;
+description=把它和原料结合起来,就能制造出一把弩.;
 journalID=journal_craft_item;
 pR=pBlue; pB=pWoodDark; pG=pIron;
 special=setGlobalVarWhenConverted;
-[ItemType]  name=Spear Crafting Kit;
+[ItemType]  name=矛制作工具;
 ID=craft_spear; sprite=812; 
 weight=0; volume=1; value=150; itemCategory=tool;
-description=Combine this with raw material to create a spear.;
+description=把它和原料结合起来,就能制造出一把矛.;
 journalID=journal_craft_item;
 pR=pBlue; pB=pWoodDark; pG=pIron;
 special=setGlobalVarWhenConverted;
-[ItemType]  name=Knuckle Crafting Kit;
+[ItemType]  name=指虎制作工具;
 ID=craft_knuckle; sprite=813; 
 weight=0; volume=1; value=150; itemCategory=tool;
-description=Combine this with raw material to create knuckles.;
+description=把它和原料结合起来,就能制造出一个指虎.;
 journalID=journal_craft_item;
 pR=pBlue; pB=pWoodDark; pG=pIron;
 special=setGlobalVarWhenConverted;
-[ItemType]  name=Rapier Crafting Kit;
+[ItemType]  name=细剑制作工具;
 ID=craft_rapier; sprite=814; 
 weight=0; volume=1; value=150; itemCategory=tool;
-description=Combine this with raw material to create a rapier.;
+description=把它和原料结合起来,就能制造出一把细剑.;
 journalID=journal_craft_item;
 pR=pBlue; pB=pWoodDark; pG=pIron;
 special=setGlobalVarWhenConverted;
-[ItemType]  name=Greatsword Crafting Kit;
+[ItemType]  name=巨剑制作工具;
 ID=craft_greatsword; sprite=815; 
 weight=0; volume=1; value=150; itemCategory=tool;
-description=Combine this with raw material to create a greatsword.;
+description=把它和原料结合起来,就能制造出一把巨剑.;
 journalID=journal_craft_item;
 pR=pBlue; pB=pWoodDark; pG=pIron;
 special=setGlobalVarWhenConverted;
-[ItemType]  name=Armor Crafting Kit;
+[ItemType]  name=盔甲制作工具;
 ID=craft_armor; sprite=816; 
 weight=0; volume=1; value=150; itemCategory=tool;
-description=Combine this with raw material to create armor.;
+description=将这些材料与原材料结合起来就可以制造盔甲.;
 journalID=journal_craft_item;
 pR=pBlue; pB=pWoodDark; pG=pIron;
 special=setGlobalVarWhenConverted;
 [JournalEntry]
 ID=journal_craft_item;
 category=item; halfPage=true; rarity=1;
-title=Crafting Kit;
-text=<itemBig=craft_sword><itemBig=craft_armor><title=Crafting Kit><brAdj=>Combine it with raw material, such as  <item=iron_chunk>iron, and you'll have a new item! The kit itself is reusable.;
+title=制作工具;
+text=<itemBig=craft_sword><itemBig=craft_armor><title=制作工具><brAdj=>把它和原材料结合起来,比如<item=iron_chunk>铁,<n>你就会有一个新物品!<n>工具箱本身是可重复使用的.;
 
 
 
-[ItemType]  name=Tool Rack;
+[ItemType]  name=工具架;
 ID=tools1; sprite=1936;
 itemCategory=tool;
 journalID=journal_tools;
@@ -1667,22 +1667,22 @@ special=cannotBePickedUp; special=canHangOnWalls;
 pR=zoneWood; pB=zoneStoneDark; 
 [ItemReaction] 
 ID=tools1; element=explode; newID=X;
-[ItemType]  name=Tool Rack;
+[ItemType]  name=工具架;
 ID=tools2; sprite=1937;
 cloneFrom=tools1;
-[ItemType]  name=Rack;
+[ItemType]  name=支架;
 ID=tools3; sprite=1938;
 journalID=; special=itemsIgnoreBlockWalking; special=noPlayerPlacedItems;
 cloneFrom=tools1;
 [JournalEntry]
 ID=journal_tools;
 category=item; halfPage=true;
-title=Tools;
-text=<itemBig=tools1><title=Tools><brAdj=>Fine tools made for precision work. They're much too puny to be useful on the go, so don't worry about them.;
+title=工具;
+text=<itemBig=tools1><title=工具><brAdj=>为精密工作而制造的工具.<n>它们太小了,无法在路上使用,<n>所以不要担心它们.;
 
-[ItemType]  name=Anvil;
+[ItemType]  name=铁砧;
 ID=anvil; sprite=619; pB=pGreyD;
-description=Used to forge weapons and armor.; 
+description=用来锻造武器和盔甲.; 
 itemCategory=tool;
 weight=500; depthMod=1050;
 special=big; special=itemsIgnoreBlockWalking; special=itemsOnSameTileAreRaised; special=sprite2xWidth; 
@@ -1692,10 +1692,10 @@ pB=pGreyD2;
 [JournalEntry]
 ID=item_anvil;
 category=item; halfPage=true; rarity=1;
-title=Anvil;
-text=<itemBig=anvil><title=Anvil><brAdj=>Iron anvil with a steel face. This hunk of metal is what all proper blacksmithing is done on. Place a weapon or armor on top, then put trigger stones or materials inside to augment your equipment!;
+title=铁砧;
+text=<itemBig=anvil><title=铁砧><brAdj=>有一面钢面板的铁砧.<n>这大块金属是所有真正的铁匠都要做的.<n>在顶部放置武器或盔甲,然后在里面放置<n>触发物或材料来增强你的装备!;
 
-[ItemType]  name=Keg;
+[ItemType]  name=酒桶;
 itemCategory=tool;
 ID=keg; sprite=1639;
 weight=200; volume=100;
@@ -1710,11 +1710,11 @@ ID=keg; element=explode; element=heavySlash; element=smash; newID=X; fx=dust_woo
 [JournalEntry]
 ID=item_keg;
 category=item; halfPage=true; rarity=1;
-title=Keg;
-text=<itemBig=keg><title=Keg><brAdj=>Favorite container of the hedonist and the socialite. When you turn the spigot, alcohol comes out!;
+title=酒桶;
+text=<itemBig=keg><title=酒桶><brAdj=>享乐主义者和社会名流最喜欢的容器.<n>你一拧水龙头,酒精就出来了!;
 
-[ItemType]  name=Saw;
-description=Severs wood with even, straight cuts.;
+[ItemType]  name=锯子;
+description=用均匀的直角切口切木头.;
 weight=1; volume=10; value=0; itemCategory=tool;
 ID=saw; sprite=149;
 pR=pGrey2;
@@ -1722,8 +1722,8 @@ pB=pWood;
 [JournalEntry]
 ID=item_saw;
 category=item; halfPage=true;
-title=Saw;
-text=<itemBig=saw><title=Saw><brAdj=>Blade with a serrated toothed edge. Allows for precision removal of wood.;
+title=锯子;
+text=<itemBig=saw><title=锯子><brAdj=>刀刃有锯齿状的齿状边缘.<n>允许准确的切割木材.;
 
 
 

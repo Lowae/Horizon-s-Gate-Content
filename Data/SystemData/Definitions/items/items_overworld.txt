@@ -1,5 +1,5 @@
 
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_houses1; sprite=1153; 
 texture=items_overworld; itemCategory=overworld;
 journalID=journal_location;
@@ -8,65 +8,65 @@ special=autoAssignSpecialTC;
 special=cannotBePickedUp; special=canHangOnWalls; special=canFloatOnWater;
 pR=zoneGrass;
 pG=zoneWood;
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_houses2; sprite=1154;
 cloneFrom=port_houses1;
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_houses3; sprite=1155;
 cloneFrom=port_houses1;
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_houses4; sprite=1156;
 cloneFrom=port_houses1;
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_houses5; sprite=1157;
 cloneFrom=port_houses1;
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_houses6; sprite=1158;
 cloneFrom=port_houses1;
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_houses7; sprite=1159;
 cloneFrom=port_houses1;
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_houses8; sprite=1160;
 cloneFrom=port_houses1;
 
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_houses1B; sprite=1153;
 special=alwaysBelowOtherItems;
 special=adjustSpriteYUp16;
 special=rollingPin_drawLower;
 special=rollingPin_drawY3Lower;
 cloneFrom=port_houses1;
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_houses2B; sprite=1154;
 cloneFrom=port_houses1B;
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_houses3B; sprite=1155;
 cloneFrom=port_houses1B;
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_houses4B; sprite=1156;
 cloneFrom=port_houses1B;
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_houses5B; sprite=1157;
 cloneFrom=port_houses1B;
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_houses6B; sprite=1158;
 cloneFrom=port_houses1B;
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_houses7B; sprite=1159;
 cloneFrom=port_houses1B;
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_houses8B; sprite=1160;
 cloneFrom=port_houses1B;
 
 [JournalEntry]
 ID=journal_location;
 category=item; halfPage=true; rarity=0;
-title=Location;
-text=<itemBig=port_castle1><title=Location><brAdj=>All sorts of special locations dot the globe - typically marked by houses, castles, caverns, or other suspicious features. They will automatically be discovered as you sail near. Ports can be discovered from a great distance, but other locations can only be discovered within 8 tiles.;
+title=位置;
+text=<itemBig=port_castle1><title=位置><brAdj=>地球上遍布着各种各样的特殊地点--通常以<n>房屋、城堡、洞穴或其他可疑特征为标志.<n>当你驶近时，它们会自动被发现.<n>港口可以从很远的地方被发现,<n>但其他地点只能在8格内被发现.;
 
 
-[ItemType]  name=Cave;
+[ItemType]  name=洞穴;
 ID=port_cave1; sprite=1219;
 cloneFrom=port_houses1;
 depthMod=50;
@@ -74,7 +74,7 @@ pR=overworld1;
 pB=pGreyD2;
 pG=pG;
 
-[ItemType]  name=Grove;
+[ItemType]  name=树林;
 ID=port_grove1; sprite=1220;
 journalID=journal_grove;
 cloneFrom=port_houses1;
@@ -82,7 +82,7 @@ special=grove;
 depthMod=50;
 pR=pR;
 pG=pG;
-[ItemType]  name=Grove;
+[ItemType]  name=树林;
 ID=port_grove1_guaranteed; sprite=1220;
 journalID=journal_grove;
 cloneFrom=port_houses1;
@@ -94,10 +94,10 @@ pG=pG;
 [JournalEntry]
 ID=journal_grove;
 category=item; halfPage=true; rarity=1;
-title=Grove;
-text=<itemBig=port_grove1><title=Grove><brAdj=>A beautiful forested location filled with life. Each grove is guaranteed to have some sort of rare find to add to your journal. However, not all the life within is friendly, so tread with care.;
+title=树林;
+text=<itemBig=port_grove1><title=树林><brAdj=>一个美丽的森林地带充满了生命.<n>每一片树林都保证有一些稀有的发现添加到你的日记中.<n>然而，并不是所有的内在生命都是友好的,<n>所以要小心对待。;
 
-[ItemType]  name=Monster Den;
+[ItemType]  name=怪物巢穴;
 ID=port_den1; sprite=1217;
 cloneFrom=port_houses1;
 special=monsterden;
@@ -106,13 +106,13 @@ pR=overworld1;
 pB=pGreyD2;
 pG=pG;
 
-[ItemType]  name=Cave;
+[ItemType]  name=洞穴;
 ID=port_cave2; sprite=1161;
 cloneFrom=port_houses1;
 depthMod=1100;
 special=rollingPin_dontApplyDepthMod;
 pR=pR; pB=pB; pG=pG;
-[ItemType]  name=Sealed Cave;
+[ItemType]  name=封闭的洞穴;
 ID=port_cave2_sealed; sprite=1173;
 cloneFrom=port_houses1;
 depthMod=1100;
@@ -122,7 +122,7 @@ blockWalking=true;
 [ItemReaction] 
 ID=port_cave2_sealed; element=somethingHappened; newID=port_cave2;
 
-[ItemType]  name=Cave;
+[ItemType]  name=洞穴;
 ID=port_cave3; sprite=1176;
 cloneFrom=port_houses1;
 depthMod=1100;
@@ -132,7 +132,7 @@ special=adjustSpriteYUp16;
 special=rollingPin_drawLower;
 special=rollingPin_drawY3Lower;
 
-[ItemType]  name=Sealed Cave;
+[ItemType]  name=封闭的洞穴;
 ID=port_cave3_sealed; sprite=1174;
 cloneFrom=port_houses1;
 depthMod=1100;
@@ -145,14 +145,14 @@ blockWalking=true;
 [ItemReaction] 
 ID=port_cave3_sealed; element=somethingHappened; newID=port_cave3;
 
-[ItemType]  name=Cave;
+[ItemType]  name=洞穴;
 ID=port_cave4; sprite=1177;
 cloneFrom=port_houses1;
 depthMod=1100;
 special=rollingPin_dontApplyDepthMod;
 pR=pR; pB=pB; pG=pG;
 
-[ItemType]  name=Sealed Cave;
+[ItemType]  name=封闭的洞穴;
 ID=port_cave4_sealed; sprite=1175;
 cloneFrom=port_houses1;
 depthMod=1100;
@@ -187,7 +187,7 @@ pR=overworld1;
 pB=overworld2;
 pG=pG;
 
-[ItemType]  name=Station;
+[ItemType]  name=基地;
 ID=location_station; sprite=1223;
 journalID=item_location_stations;
 cloneFrom=port_houses1;
@@ -199,10 +199,10 @@ blockWalking=true;
 [JournalEntry]
 ID=item_location_stations;
 category=item; halfPage=true; rarity=1;
-title=Station;
-text=<itemBig=location_station><title=Station><brAdj=>A large floating platform put to varying uses. Some are military in nature, while others are used for long-term salvaging. You'll have to board this one to know its use.;
+title=基地;
+text=<itemBig=location_station><title=Station><brAdj=>可作各种用途的大型浮动平台.<n>一些是军事性质的,而另一些是用于长期的打捞.<n>你得登上这个才能知道它的用途.;
 
-[ItemType]  name=Shipwreck;
+[ItemType]  name=遇难船;
 ID=location_shipwreck; sprite=1224;
 journalID=journal_shipwreck;
 cloneFrom=port_houses1;
@@ -215,10 +215,10 @@ special=container; special=containerWood;
 [JournalEntry]
 ID=journal_shipwreck;
 category=item; halfPage=true; rarity=1;
-title=Shipwreck;
-text=<itemBig=location_shipwreck><title=Shipwreck><brAdj=>This ruined ship was lost to weather or combat. Now it can only be salvaged for loot. Double-click it to examine the contents.;
+title=遇难船;
+text=<itemBig=location_shipwreck><title=遇难船><brAdj=>这艘失事的船是由于天气或战斗而沉没的.<n>现在,它只能被回收作为战利品.<n>双击它以检查内容.;
 
-[ItemType]  name=Lost Shipwreck;
+[ItemType]  name=迷失的遇难船;
 ID=location_shipwreck2; sprite=1224;
 journalID=journal_shipwreck;
 cloneFrom=port_houses1;
@@ -230,47 +230,47 @@ special=container; special=containerWood;
 special=lakeMarker;
 
 
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_bighouses1; sprite=1162;
 cloneFrom=port_houses1;
 pR=pR; pB=pB; pG=pG;
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_bighouses2; sprite=1163;
 cloneFrom=port_houses1;
 pR=pR; pB=pB; pG=pG;
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_bighouses3; sprite=1164;
 cloneFrom=port_houses1;
 pR=pR; pB=pB; pG=pG;
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_bighouses4; sprite=1165;
 cloneFrom=port_houses1;
 pR=pR; pB=pB; pG=pG;
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_bighouses4a; sprite=1166;
 cloneFrom=port_houses1;
 pR=pR; pB=pB; pG=pG;
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_bighouses5; sprite=1167;
 cloneFrom=port_houses1;
 pR=pR; pB=pB; pG=pG;
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_bighouses6; sprite=1168;
 cloneFrom=port_houses1;
 pR=pR; pB=pB; pG=pG;
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_bighouses7; sprite=1169;
 cloneFrom=port_houses1;
 pR=pR; pB=pB; pG=pG;
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_bighouses8; sprite=1170;
 cloneFrom=port_houses1;
 pR=pR; pB=pB; pG=pG;
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_bighouses9; sprite=1171;
 cloneFrom=port_houses1;
 pR=pR; pB=pB; pG=pG;
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_bighouses10; sprite=1172;
 cloneFrom=port_houses1;
 pR=pR; pB=pB; pG=pG;
@@ -278,68 +278,68 @@ pR=pR; pB=pB; pG=pG;
 
 
 
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_bighouses1B; sprite=1162;
 cloneFrom=port_houses1B;
 pR=pR; pB=pB; pG=pG;
 
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_bighouses2B; sprite=1163;
 cloneFrom=port_houses1B;
 pR=pR; pB=pB; pG=pG;
 
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_bighouses3B; sprite=1164;
 cloneFrom=port_houses1B;
 pR=pR; pB=pB; pG=pG;
 
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_bighouses4B; sprite=1165;
 cloneFrom=port_houses1B;
 pR=pR; pB=pB; pG=pG;
 
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_bighouses5B; sprite=1166;
 cloneFrom=port_houses1B;
 pR=pR; pB=pB; pG=pG;
 
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_bighouses6B; sprite=1167;
 cloneFrom=port_houses1B;
 pR=pR; pB=pB; pG=pG;
 
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_bighouses7B; sprite=1168;
 cloneFrom=port_houses1B;
 pR=pR; pB=pB; pG=pG;
 
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_bighouses8B; sprite=1169;
 cloneFrom=port_houses1B;
 pR=pR; pB=pB; pG=pG;
 
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_bighouses9B; sprite=1170;
 cloneFrom=port_houses1B;
 pR=pR; pB=pB; pG=pG;
 
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_bighouses10B; sprite=1171;
 cloneFrom=port_houses1B;
 pR=pR; pB=pB; pG=pG;
-[ItemType]  name=Building;
+[ItemType]  name=建筑;
 ID=port_bighouses11B; sprite=1172;
 cloneFrom=port_houses1B;
 pR=pR; pB=pB; pG=pG;
 
-[ItemType]  name=Castle;
+[ItemType]  name=城堡;
 ID=port_castle1; sprite=1221;
 texture=items_overworld;
 special=rollingPin_drawSplit;
 cloneFrom=port_houses1;
 pR=pR; pB=pB; pG=pG;
 
-[ItemType]  name=Castle;
+[ItemType]  name=城堡;
 ID=port_castle2; sprite=1222;
 texture=items_overworld;
 special=rollingPin_drawSplit;
@@ -353,7 +353,7 @@ special=rollingPin_drawSplit;
 special=cannotBePickedUp; special=canHangOnWalls; special=canFloatOnWater;
 pR=pR; pB=pB; pG=pG;
 
-[ItemType]  name=Wreckage;
+[ItemType]  name=残骸;
 ID=port_castle_wreckage1; sprite=1227;
 texture=items_overworld; itemCategory=overworld;
 special=rollingPin_drawSplit;
@@ -361,13 +361,13 @@ pR=pR; pB=pB; pG=pG;
 cloneFrom=port_houses1;
 
 
-[ItemType]  name=Location;
+[ItemType]  name=地点;
 ID=port_houses_invis; sprite=1154;
 cloneFrom=port_houses1;
 special=invisible;
 pR=pR; pB=pB; pG=pG;
 
-[ItemType]  name=Equator;
+[ItemType]  name=赤道;
 ID=equator1; sprite=1281; 
 texture=items_overworld;
 weight=0; itemCategory=overworld;
@@ -376,13 +376,13 @@ special=canFloatOnWater; special=canAlwaysFitInTile;
 special=rollingPin_drawFlat; special=rollingPin_squishOnHorizon;
 special=ignoreHeight;
 pR = pGhost;
-[ItemType]  name=Prime Meridian;
+[ItemType]  name=本初子午线;
 ID=prime_meridian1; sprite=1282; 
 cloneFrom=equator1;
 
 
 
-[ItemType]  name=Rocks;
+[ItemType]  name=礁石;
 ID=outdoor_rocks1; sprite=161; 
 texture=items_overworld;
 journalID=;
@@ -397,17 +397,17 @@ special=rollingPin_drawSplit;
 blockWalking=true;
   
 
-[ItemType]  name=Rocks;
+[ItemType]  name=礁石;
 ID=outdoor_rocks2; sprite=162; 
 cloneFrom=outdoor_rocks1; 
-[ItemType]  name=Rocks;
+[ItemType]  name=礁石;
 ID=outdoor_rocks3; sprite=163; 
 cloneFrom=outdoor_rocks1; special=sprite2xWidth;
-[ItemType]  name=Rocks;
+[ItemType]  name=礁石;
 ID=outdoor_rocks4; sprite=165; 
 cloneFrom=outdoor_rocks1; special=sprite2xWidth;
 
-[ItemType]  name=Rocks;
+[ItemType]  name=礁石;
 ID=outdoor_rocks_behind1; sprite=161; 
 texture=items_overworld;
 journalID=;
@@ -420,15 +420,15 @@ special=adjustSpriteYUp16; special=adjustSpriteY2;
 special=rollingPin_drawLower;
 special=rollingPin_drawSplit;
 
-[ItemType]  name=Rocks;
+[ItemType]  name=礁石;
 ID=outdoor_rocks_behind2; sprite=162; 
 cloneFrom=outdoor_rocks_behind1;
 
-[ItemType]  name=Rocks;
+[ItemType]  name=礁石;
 ID=outdoor_rocks_behind3; sprite=163; 
 cloneFrom=outdoor_rocks_behind1; special=sprite2xWidth;
 
-[ItemType]  name=Rocks;
+[ItemType]  name=礁石;
 ID=outdoor_rocks_behind4; sprite=165; 
 cloneFrom=outdoor_rocks_behind1; special=sprite2xWidth;
   
@@ -450,10 +450,10 @@ ID=outdoor_blockade1; element=somethingHappened; fx=waterSplash; newID=X;
 ID=journal_outdoor_blockade;
 category=item; halfPage=true; rarity=1;
 title=Blockade;
-text=<itemBig=outdoor_blockade1><title=Blockade><brAdj=>A unfortunate rockslide has blocked this river - you can't pass unless you approach it from the correct side, at which point you may clear it permanently.;
+text=<itemBig=outdoor_blockade1><title=Blockade><brAdj=>不幸的是，一次岩崩堵塞了这条河<n>--除非你从正确的方向靠近，否则你无法通过这条河,<n>而在正确的方向上,你可能会永久地清除这条河.;
 
   
-[ItemType]  name=Mountains;
+[ItemType]  name=山脉;
 ID=outdoor_hills_brown1; sprite=177; 
 texture=items_overworld;
 journalID=;
@@ -464,7 +464,7 @@ pG=zoneWood;
 special=cannotBePickedUp; special=noTooltip;
 special=inheritTerrainPaletteR;
   
-[ItemType]  name=Mountains;
+[ItemType]  name=山脉;
 ID=outdoor_hills_brown_behind1; sprite=178; 
 texture=items_overworld;
 journalID=;
@@ -477,7 +477,7 @@ special=inheritTerrainPaletteR;
 special=rollingPin_drawLower;
 special=alwaysBelowOtherItems;
   
-[ItemType]  name=Hills;
+[ItemType]  name=山丘;
 ID=outdoor_hills1; sprite=225; 
 texture=items_overworld;
 journalID=;
@@ -486,7 +486,7 @@ special=cannotBePickedUp; special=noTooltip;
 special=canFloatOnWater; special=inheritTerrainPaletteR;
 blockWalking=true;
 pR=pG;
-[ItemType]  name=Hills;
+[ItemType]  name=山丘;
 ID=outdoor_hills_behind1; sprite=225; 
 cloneFrom=outdoor_hills1;
 special=adjustSpriteYUp16; special=adjustSpriteY2;
@@ -496,14 +496,14 @@ pR=pB;
 
 
   
-[ItemType]  name=Hills;
+[ItemType]  name=山丘;
 ID=outdoor_hillsY1; sprite=289; 
 texture=items_overworld;
 journalID=;
 weight=1; itemCategory=overworld;
 special=cannotBePickedUp; special=noTooltip;
 pR=pR; pB=pB; pG=pG;
-[ItemType]  name=Hills;
+[ItemType]  name=山丘;
 ID=outdoor_hillsY_behind1; sprite=289; 
 texture=items_overworld;
 journalID=;
@@ -515,14 +515,14 @@ special=rollingPin_drawLower;
 pR=pR; pB=pB; pG=pG;
 
 
-[ItemType]  name=Hills;
+[ItemType]  name=山丘;
 ID=outdoor_hillsY2; sprite=290; 
 cloneFrom=outdoor_hillsY1; special=sprite2xWidth;
-[ItemType]  name=Hills;
+[ItemType]  name=山丘;
 ID=outdoor_hillsY_behind2; sprite=290; 
 cloneFrom=outdoor_hillsY_behind1; special=sprite2xWidth;
 
-[ItemType]  name=Mountains;
+[ItemType]  name=山脉;
 ID=outdoor_mtns1; sprite=240; 
 texture=items_overworld;
 journalID=;
@@ -531,7 +531,7 @@ weight=1; itemCategory=overworld;
 special=cannotBePickedUp; special=noTooltip;
 special=inheritTerrainPalettes;
   
-[ItemType]  name=Mountains;
+[ItemType]  name=山脉;
 ID=outdoor_mtns_behind1; sprite=240; 
 texture=items_overworld;
 journalID=;
@@ -543,14 +543,14 @@ special=rollingPin_drawLower;
 special=alwaysBelowOtherItems;
 special=adjustSpriteYUp16; special=adjustSpriteY2;
 
-[ItemType]  name=Mountains;
+[ItemType]  name=山脉;
 ID=outdoor_mtns2; sprite=241; 
 cloneFrom=outdoor_mtns1;
-[ItemType]  name=Mountains;
+[ItemType]  name=山脉;
 ID=outdoor_mtns_behind2; sprite=241; 
 cloneFrom=outdoor_mtns_behind1;
 
-[ItemType]  name=Mountain Wyvern;
+[ItemType]  name=山脉双足飞龙;
 ID=outdoor_mtns1_wyvern1; sprite=242; 
 texture=items_overworld; special=animatedPauseOnFrame1and3;
 journalID=journal_outdoor_mtns1_wyvern1;
@@ -562,8 +562,8 @@ pR=overworld1; pG=p46; pB=pYellow6;
 [JournalEntry]
 ID=journal_outdoor_mtns1_wyvern1;
 category=creature; halfPage=true; rarity=4;
-title=Mountain Wyvern;
-text=<itemBig=outdoor_mtns1_wyvern1><title=Mountain Wyvern><brAdj=>These great winged reptilian beasts roost atop mountains and hunt large herbivores. They dislike prey that can fight back, and as such usually leave humanoids alone. They hibernate extensively multiple times per year.;
+title=山脉双足飞龙;
+text=<itemBig=outdoor_mtns1_wyvern1><title=山脉双足飞龙><brAdj=>这些巨大的有翼爬行动物栖息在山上,<n>捕食大型食草动物.<n>它们不喜欢有反击能力的猎物,<n>因此通常不会理睬类人动物.<n>它们一年要冬眠好几次。;
 
 
 ---MTN RANGE
@@ -746,7 +746,7 @@ cloneFrom=outdoor_mtn_rangeL1;
 
 ---MTN RANGE #2
 
-[ItemType]  name=Cragrook;
+[ItemType]  name=克拉鲁克;
 ID=outdoor_mtn_rangeL_base_cr; sprite=1569; 
 texture=items_overworld;
 journalID=journal_cragrook;
@@ -763,7 +763,7 @@ pB=p33;
 ID=outdoor_mtn_rangeL_base2_cr; sprite=1578; 
 cloneFrom=outdoor_mtn_rangeL_base_cr;
 
-[ItemType]  name=Cragrook;
+[ItemType]  name=克拉鲁克;
 ID=outdoor_mtn_rangeL1_cr; sprite=1570; 
 texture=items_overworld;
 journalID=journal_cragrook;
@@ -922,8 +922,8 @@ cloneFrom=outdoor_mtn_rangeL1_cr;
 [JournalEntry]
 ID=journal_cragrook;
 category=item; halfPage=true; rarity=1;
-title=Cragrook;
-text=<itemBig=outdoor_mtn_rangeL_base_cr><title=Cragrook><brAdj=>What appears to be a mountain range is actually Cragrook - a hardy tree-like root that grows to massive sizes. Cragrook can grow so large that entire ecosystems exist on and within it. Its valuable fruit only grows at the peak, to be eaten and spread by birds and other avian creatures.;
+title=克拉鲁克;
+text=<itemBig=outdoor_mtn_rangeL_base_cr><title=克拉鲁克><brAdj=>看起来像山脉的东西实际上是一种耐寒的树根.<n>克拉鲁克可以生长至包容整个生态系统.<n>它宝贵的果实只生长在峰顶,<n>供鸟类和其他鸟类食用和传播.;
 
 [ItemType]  name=Rooksbane;
 ID=outdoor_mtn_mushroom1; sprite=1584; 
@@ -953,7 +953,7 @@ pR=pYellow5; pG=pFadeDarker;
 ID=journal_rooksbane;
 category=item; halfPage=true; rarity=1;
 title=Rooksbane;
-text=<itemBig=outdoor_mtn_mushroom1><title=Rooksbane><brAdj=>Normally a small fungus, Rooksbane can grow into massive mushroom shelves on Cragrook. Despite the dramatic name, the Cragrook actually benefits - Rooksbane feeds scavengers which often live and die on the Cragrook, whose bodies supply it with nutrients.;
+text=<itemBig=outdoor_mtn_mushroom1><title=Rooksbane><brAdj=>鲁克祸根通常是一种小型真菌,<N>但它可以在克拉鲁克上长成巨大的蘑菇架子.<N>尽管它有个引人注目的名字,<N>但它实际上是有好处的--鲁克祸根以食腐动物为食,<N>食腐动物经常在克拉鲁克生活和死亡,<n>它们的身体为克拉鲁克提供营养.;
 
 ---MTN RANGE ALT
 
@@ -1198,7 +1198,7 @@ cloneFrom=outdoor_plateau1;
 special=rollingPin_drawFlat; special=rollingPin_scaleHalf;
 depthMod=0;
   
-[ItemType]  name=Sea Flower;
+[ItemType]  name=海花;
 ID=sea_flower1; sprite=545; 
 texture=items_overworld;
 journalID=journal_sea_flower;
@@ -1210,17 +1210,17 @@ blockWalking=true; blockJumping=true;
 [ItemReaction]
 ID=sea_flower1; element=physical; newID=X; fx=grassdust;
 
-[ItemType]  name=Sea Flower;
+[ItemType]  name=海花;
 ID=sea_flower2; sprite=546; 
 cloneFrom=sea_flower1;
-[ItemType]  name=Sea Flower;
+[ItemType]  name=海花;
 ID=sea_flower3; sprite=547; 
 cloneFrom=sea_flower1;
 [JournalEntry]
 ID=journal_sea_flower;
 category=item; halfPage=true; rarity=0;
-title=Sea Flower;
-text=<itemBig=sea_flower1><title=Sea Flower><brAdj=>Bright saltwater flower with a stem that reaches into the depths. These tend to grow to great sizes all across Eral.;
+title=海花;
+text=<itemBig=sea_flower1><title=海花><brAdj=>明亮的咸水花,它的茎可以伸到深处.<n>这些会在Eral各处生长到很大的规模.;
 [ItemType]  name=Underwater Object;
 ID=underwater_object1; sprite=609; 
 texture=items_overworld;
@@ -1286,7 +1286,7 @@ cloneFrom=underwater_object5;
 ID=underwater_object6_procgen;
 cloneFrom=underwater_object6; 
 
-[ItemType]  name=Farmland;
+[ItemType]  name=农田;
 ID=farmland1; sprite=481; 
 texture=items_overworld; special=rollingPin_drawFlat;
 journalID=journal_farmland;
@@ -1294,15 +1294,15 @@ weight=0; itemCategory=overworld;
 special=cannotBePickedUp; special=noTooltip;
 special=canFloatOnWater; special=canAlwaysFitInTile;
 
-[ItemType]  name=Farmland;
+[ItemType]  name=农田;
 ID=farmland2; sprite=482; 
 cloneFrom=farmland1;
 
 [JournalEntry]
 ID=journal_farmland;
 category=item; halfPage=true; rarity=0;
-title=Farmland;
-text=<itemBig=farmland1><title=Farmland><brAdj=>Land set aside for use in the growing and harvesting of plants and animals. Though it is a humble job, farm work is the backbone of civilization. Some farms turn to mechanization to increase efficiency, while others use Growth Triggers to speed things along. Too much magic can spoil both flavor and nutrition, however.;
+title=农田;
+text=<itemBig=farmland1><title=农田><brAdj=>为种植和收获动植物而留出的土地.<n>农活虽然卑微,却是文明的支柱.<n>一些农场转向机械化以提高效率,<n>而另一些农场则使用生长触发物来加速生产.<n>然而太多的魔法会破坏味道和营养.;
 
 [ItemType]  name=Bones;
 ID=overworld_bones1; sprite=1409; 
@@ -1444,7 +1444,7 @@ cloneFrom=overworld_wall1b;
 
 
 
-[ItemType]  name=Hill Mold;
+[ItemType]  name=山丘霉菌;
 ID=overworld_hillMold1; sprite=965; 
 texture=items_overworld;
 journalID=journal_hillMold;
@@ -1503,8 +1503,8 @@ special=quantityChangesSprite_upTo2; stackable=true;
 [JournalEntry]
 ID=journal_hillMold;
 category=item; halfPage=true; rarity=1;
-title=Hill Mold;
-text=<itemBig=overworld_hillMold_clump1><title=Hill Mold><brAdj=>A strange ooze that grows and infests into hill-sized mounds of mold. When left alone, it can cover cities. Weaponry has no effect until it is weakened with fire - and even then it spews toxin once burnt. Squads of battlemages are often enlisted to scorch and hack the vile stuff back.;
+title=山丘霉菌;
+text=<itemBig=overworld_hillMold_clump1><title=山丘霉菌><brAdj=>这是一种奇怪的淤泥,会生长并感染成小山大小<n>的霉菌堆.当不受干扰时，它可以覆盖城市.<n>直到它被火削弱之前武器攻击没有效果<n>--即使这样，它在燃烧时会喷出毒素.<n>战斗法师常被征召来焚烧和攻击那些邪恶的东西.;
 
 [ItemType]  name=Tree;
 ID=outdoor_trees1; sprite=33; 
@@ -1605,7 +1605,7 @@ ID=outdoor_mtn_rangeM18_0Depth; sprite=915;
 depthMod=0;
 cloneFrom=outdoor_mtn_rangeL1;
 
-[ItemType]  name=Great Wyrm;
+[ItemType]  name=巨龙;
 ID=greatwyrm1; sprite=1478; 
 texture=items_overworld;
 journalID=journal_g_wyrm;
@@ -1615,7 +1615,7 @@ special=canFloatOnWater; special=canAlwaysFitInTile;
 pR=p65;
 pB=overworld1;
 
-[ItemType]  name=Great Wyrm;
+[ItemType]  name=巨龙;
 ID=greatwyrm2; sprite=1473; 
 texture=items_overworld;
 journalID=journal_g_wyrm;
@@ -1624,7 +1624,7 @@ special=cannotBePickedUp; special=fullTileHitbox;
 special=canFloatOnWater; special=canAlwaysFitInTile; special=animatedSlow;
 pR=p65;
 
-[ItemType]  name=Great Wyrm;
+[ItemType]  name=巨龙;
 ID=greatwyrm3; sprite=1477; 
 texture=items_overworld;
 journalID=journal_g_wyrm;
@@ -1634,17 +1634,17 @@ special=canFloatOnWater; special=canAlwaysFitInTile;
 pR=p65;
 pB=pBlue;
 
-[ItemType]  name=Great Wyrm;
+[ItemType]  name=巨龙;
 ID=greatwyrm1b;
 cloneFrom=greatwyrm1;
 special=alwaysBelowOtherItems; special=adjustSpriteYUp16;
 special=rollingPin_drawLower; special=rollingPin_drawY3Lower;
-[ItemType]  name=Great Wyrm;
+[ItemType]  name=巨龙;
 ID=greatwyrm2b;
 cloneFrom=greatwyrm2;
 special=alwaysBelowOtherItems; special=adjustSpriteYUp16;
 special=rollingPin_drawLower; special=rollingPin_drawY3Lower;
-[ItemType]  name=Great Wyrm;
+[ItemType]  name=巨龙;
 ID=greatwyrm3b;
 cloneFrom=greatwyrm3;
 special=alwaysBelowOtherItems; special=adjustSpriteYUp16;
@@ -1652,8 +1652,8 @@ special=rollingPin_drawLower; special=rollingPin_drawY3Lower;
 [JournalEntry]
 ID=journal_g_wyrm;
 category=creature; halfPage=true; rarity=3; rewardMod=-100;
-title=Great Wyrm;
-text=<itemBig=greatwyrm1b><itemBig=greatwyrm2b><itemBig=greatwyrm3b><title=Great Wyrm><brAdj=>Great Wyrms grow to over a mile long and subsist on minerals & essence found in dirt. Young Great Wyrms can be violent and aggressive. Thankfully, as they grow, they become less active and mobile, slowly moving over the land like glaciers. They leave the earth richer than they found it, but disaster occurs if they wander into a city.;
+title=巨龙;
+text=<itemBig=greatwyrm1b><itemBig=greatwyrm2b><itemBig=greatwyrm3b><title=巨龙><brAdj=>巨龙可以长到一英里长,以泥土中的矿物质和精华为生.<n>年轻的巨龙可能是暴力和好斗的.<n>值得庆幸的是,随着它们的生长,它们变得<n>不那么活跃和好动,会像冰川一样缓慢地在陆地上移动.<n>他们留下的土地比他们发现的更肥沃,<n>但如果他们游荡到一个城市,灾难就会降临.;
   
 [ItemType]  name=SampleTile;
 ID=sampleTile1; sprite=673; 
@@ -1753,7 +1753,7 @@ special=lakeMarker;
 
 
 
-[ItemType]  name=Gale;
+[ItemType]  name=狂风;
 ID=overworld_hazard_gale; sprite=1089; 
 itemCategory=overworld;
 texture=items_overworld;
@@ -1774,10 +1774,10 @@ ID=overworld_hazard_gale; element=wind; newID=X;
 [JournalEntry]
 ID=journal_gale;
 category=item; halfPage=true; rarity=0;
-title=Gale;
-text=<itemBig=overworld_hazard_gale><title=Gale><brAdj=>An obstructing column of wind fills this area. It won't harm you, but sailing through it is slow going.;
+title=狂风;
+text=<itemBig=overworld_hazard_gale><title=狂风><brAdj=>一股阻挡的风柱充满了这个地区.<n>它不会对你造成伤害,<n>但穿过它是一件很缓慢的事情.;
 
-[ItemType]  name=Gust;
+[ItemType]  name=阵风;
 ID=overworld_hazard_gust; sprite=1093; 
 itemCategory=overworld;
 texture=items_overworld;
@@ -1814,11 +1814,11 @@ ID=overworld_hazard_perma_gust; element=pressureMoveAcross; action=gust_action; 
 [JournalEntry]
 ID=journal_gust;
 category=item; halfPage=true; rarity=0;
-title=Gust;
-text=<itemBig=overworld_hazard_gust><title=Gust><brAdj=>The winds here are strong, and in your favor. Sail through it to get a big speed boost!;
+title=阵风;
+text=<itemBig=overworld_hazard_gust><title=阵风><brAdj=>这里风很大,对你很有利.<n>航行时经过速度会巨大提升!;
 
 
-[ItemType]  name=Loot;
+[ItemType]  name=战利品;
 ID=overworld_loot1; sprite=1097; 
 itemCategory=overworld;
 texture=items_overworld;
@@ -1838,11 +1838,11 @@ ID=overworld_loot1; element=wind; newID=X;
 [JournalEntry]
 ID=journal_overworld_loot1;
 category=item; halfPage=true; rarity=0;
-title=Loot;
-text=<itemBig=overworld_loot1><title=Loot><brAdj=>Looks like someone lost some cargo along the way, and now it's just floating along waiting to be picked up! Sail into it to grab some coin.;
+title=战利品;
+text=<itemBig=overworld_loot1><title=战利品><brAdj=>看起来有人在路上丢了一些货物,<n>现在就漂在水上等着被人捡起来!<n>驶向它去拿些硬币.;
 
 
-[ItemType]  name=Launch Buoy;
+[ItemType]  name=出海浮标;
 ID=overworld_hazard_launchB_off; sprite=1098; 
 description=Buoy that can be placed on the overworld. Gives a boost when sailed through.;
 itemCategory=overworld;
@@ -1861,7 +1861,7 @@ timer=45;
 [ItemReaction] 
 ID=overworld_hazard_launchB_off; element=timerUp; newID=overworld_hazard_launchB;
 
-[ItemType]  name=Launch Buoy (Charged);
+[ItemType]  name=出海浮标 (已充能的);
 ID=overworld_hazard_launchB; sprite=1099; 
 description=Buoy that can be placed on the overworld. Gives a boost when sailed through.;
 itemCategory=overworld;
@@ -1880,7 +1880,7 @@ pB=pFadeAnim;
 [ItemReaction] 
 ID=overworld_hazard_launchB; element=pressureMoveAcross; element=use; action=gust_action; newID=overworld_hazard_launchB_off;
 
-[ItemType]  name=Launch Buoy (Charged);
+[ItemType]  name=出海浮标 (已充能的);
 ID=overworld_hazard_launchB_red;
 special=dontCloneReactions;
 cloneFrom=overworld_hazard_launchB;
@@ -1888,7 +1888,7 @@ pR=pRed4;
 [ItemReaction] 
 ID=overworld_hazard_launchB_red; element=pressureMoveAcross; action=gust_action; newID=overworld_hazard_launchB_off_red;
 
-[ItemType]  name=Launch Buoy;
+[ItemType]  name=出海浮标;
 ID=overworld_hazard_launchB_off_red;
 special=cannotBePickedUp;
 special=dontCloneReactions;
@@ -1900,13 +1900,13 @@ ID=overworld_hazard_launchB_off_red; element=timerUp; newID=overworld_hazard_lau
 [JournalEntry]
 ID=journal_launchB;
 category=item; halfPage=true; rarity=1;
-title=Launch Buoy;
-text=<itemBig=overworld_hazard_launchB><title=Launch Buoy><brAdj=>These special buoys will buoy your sails with a magical wind when you pass through them. While exceedingly expensive, they are sometimes placed on common trade routes, free for all to use. It's a technological marvel!;
+title=出海浮标;
+text=<itemBig=overworld_hazard_launchB><title=出海浮标><brAdj=>当你航行经过这些特殊的浮标时,<n>它们会用一股神奇的风使你的船帆浮起来.<n>虽然非常昂贵,但它们有时被放置在共同的贸易路线上,<n>供所有人免费使用.这是一个技术奇迹!;
 
 
-[ItemType]  name=Flag;
+[ItemType]  name=旗帜;
 ID=overworld_marker1; sprite=1296; 
-description=Flag that can be placed on the overworld.;
+description=可以放置在世界上的旗帜.;
 itemCategory=overworld;
 texture=items_overworld;
 value=10;

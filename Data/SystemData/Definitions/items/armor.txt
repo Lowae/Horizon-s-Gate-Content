@@ -1,4 +1,4 @@
-[ItemType]  name=Trigger Band Loot;
+[ItemType]  name=触发戒指战利品;
 ID=loot_trigger_band; sprite=779;
 value=150;
 pR=pR; itemCategory=armor; 
@@ -11,7 +11,7 @@ toMake=band_life;
 toMake=band_ruin;
 
 
-[ItemType]  name=Weak Accessory Loot;
+[ItemType]  name=较差的配件战利品;
 ID=loot_accessory1; sprite=232; itemCategory=armor; 
 value=10;
 pR=pGreyD2;
@@ -20,7 +20,7 @@ toMake=cloak;
 toMake=hood;
 toMake=cloak_hood;
 
-[ItemType]  name=Mediocre Accessory Loot;
+[ItemType]  name=一般的配件战利品;
 ID=loot_accessory2; sprite=232; itemCategory=armor; 
 value=30;
 pR=pGreyD;
@@ -30,7 +30,7 @@ toMake=hood_fine;
 toMake=cloak_hood_fine;
 toMake=loot_accessory3;
 
-[ItemType]  name=Nice Accessory Loot;
+[ItemType]  name=不错的配件战利品;
 ID=loot_accessory3; sprite=232; itemCategory=armor; 
 value=50;
 pR=pGrey2; 
@@ -44,7 +44,7 @@ toMake=gloves_volskarn;
 toMake=focus_stone;
 toMake=loot_accessory4;
 
-[ItemType]  name=Good Accessory Loot;
+[ItemType]  name=较好的配件战利品;
 ID=loot_accessory4; sprite=232; itemCategory=armor; 
 value=90;
 pR=pTeal; 
@@ -58,7 +58,7 @@ toMake=belt_dart;
 toMake=loot_accessory5;
 
 
-[ItemType]  name=Great Accessory Loot;
+[ItemType]  name=很棒的配件战利品;
 ID=loot_accessory5; sprite=232; itemCategory=armor; 
 value=150;
 pR=pBlue; 
@@ -73,7 +73,7 @@ toMake=cloak_war;
 toMake=necklace_lifebead;
 toMake=loot_accessory6;
 
-[ItemType]  name=Amazing Accessory Loot;
+[ItemType]  name=令人惊讶的配件战利品;
 ID=loot_accessory6; sprite=232; itemCategory=armor; 
 value=250;
 pR=pGold; 
@@ -165,8 +165,8 @@ ID=armor_bone; element=bonemeld; newID=armor_bonemeld; fx=dust_bone;
 [JournalEntry]
 ID=item_armor_bone;
 category=equipment; halfPage=true; rarity=1;
-title=Bone Cuirass;
-text=<itemBig=armor_bone><title=Bone Cuirass><brAdj=>Effective, macabre armor. It's a bit too barbaric for anyone to want to buy it from you, but it's still serviceable protection.;
+title=骨制胸甲;
+text=<itemBig=armor_bone><title=骨制胸甲><brAdj=>有用的骷髅制盔甲.如果有人想从你这里买,<n>这有点太野蛮了,不过它仍然是有效的防御手段.;
 
 
 [ItemType]  name=融合骨制盔甲;
@@ -183,12 +183,12 @@ ID=armor_bonemeld; actorValue=skill_Ruin; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_armor_bonemeld;
 category=equipment; halfPage=true; rarity=2;
-title=Bonemeld Armor;
-text=<itemBig=armor_bonemeld><title=Bonemeld Armor><brAdj=>Ruin magic has shaped this armor & layered the bone for extra protection. In a civilized place you might be condemned for owning this.;
+title=融合骨制盔甲;
+text=<itemBig=armor_bonemeld><title=融合骨制盔甲><brAdj=>毁灭魔法塑造了这副盔甲,带有分层的骨骼<n>能提供额外的保护.在一个文明区域,<n>你可能会因为拥有它而备受谴责.;
 
 
-[ItemType]  name=神秘的链甲;
-description=神秘链衫，帮助佩戴者抵抗魔法效果.;
+[ItemType]  name=神秘链衫;
+description=神秘的链衫,帮助佩戴者抵抗魔法效果.;
 ID=armor_purp; sprite=193; itemCategory=3;
 weight=8; volume=10; value=2400;
 pR=pPurple;
@@ -201,10 +201,10 @@ ID=armor_purp; actorValue=MagEva; magnitude=10; duration=-1;
 [JournalEntry]
 ID=item_armor_purp;
 category=equipment; halfPage=true; rarity=3;
-title=Mystic Maille;
-text=<itemBig=armor_purp><title=Mystic Maille><brAdj=>This otherwise unremarkable chain shirt shines with a pale light. Through unknown means, it repels magic.;
+title=神秘链衫;
+text=<itemBig=armor_purp><title=神秘链衫><brAdj=>这件平常的链衫发出苍白的光了.<n>以某种未知的方式排斥魔法.;
 
-[ItemType]  name=铁铠甲;
+[ItemType]  name=铁锁子甲;
 description=提供最基本保护的金属盔甲.;
 ID=armor_iron; sprite=193; itemCategory=3;
 weight=6; volume=15; value=25;
@@ -218,8 +218,8 @@ ID=armor_iron; actorValue=PhysDef; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_armor_iron;
 category=equipment; halfPage=true;
-title=Iron Mail;
-text=<itemBig=armor_iron><title=Iron Mail><brAdj=>Hundreds of iron rings comprise this mail shirt. It wards off cuts and stabs, but does little to lessen the impact of the blow.;
+title=铁锁子甲;
+text=<itemBig=armor_iron><title=铁锁子甲><brAdj=>数百个铁环组成了这件锁子甲.<n>它可以防止割伤和刺伤,<n>但对打击作用甚微.;
 
 [ItemType]  name=钢锁子甲;
 description=提供良好保护的金属盔甲.;
@@ -237,11 +237,11 @@ ID=armor_steel; actorValue=MagDef; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_armor_steel;
 category=equipment; halfPage=true;
-title=Steel Hauberk;
-text=<itemBig=armor_steel><title=Steel Hauberk><brAdj=>Fine mail of steel that grants significant protection. It would take exceptional strength and sharpness to pierce it.;
+title=钢锁子甲;
+text=<itemBig=armor_steel><title=钢锁子甲><brAdj=>精良的钢甲提供了有力的保护.<n>要刺穿它需要非凡且尖锐的力量.;
 
-[ItemType]  name=Mythril Vest;
-description=Chain shirt of fine mythril.;
+[ItemType]  name=秘银背心;
+description=质量高的秘银链衫.;
 ID=armor_mythril; sprite=199; itemCategory=3;
 weight=8; volume=13; value=900;
 pR=pMythril;
@@ -256,11 +256,11 @@ ID=armor_mythril; actorValue=MagDef; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_armor_mythril;
 category=equipment; halfPage=true; rarity=1;
-title=Mythril Vest;
-text=<itemBig=armor_mythril><title=Mythril Vest><brAdj=>The lightest and strongest armor money can buy. Only worn by elite soldiers of the wealthiest groups.;
+title=秘银背心;
+text=<itemBig=armor_mythril><title=秘银背心><brAdj=>用钱能买到的最轻最坚固的盔甲.<n>只有最富有群体的精英士兵才会穿.;
 
-[ItemType]  name=Reactor Plate;
-description=Platemail specially built to deflect magical energy.;
+[ItemType]  name=反应堆板甲;
+description=用来转移魔法能量的板甲.;
 ID=armor_laser; sprite=200; itemCategory=3;
 weight=10; volume=15; value=2500;
 pR=pLaser;
@@ -278,11 +278,11 @@ ID=armor_laser; actorValue=PhysEva; magnitude=-3; duration=-1;
 [JournalEntry]
 ID=item_armor_laser;
 category=equipment; halfPage=true; rarity=1;
-title=Reactor Plate;
-text=<itemBig=armor_laser><title=Reactor Plate><brAdj=>This armor is inlaid with raw laser, which appears to repel harmful magic. It's uncomfortably warm, though.;
+title=反应堆板甲;
+text=<itemBig=armor_laser><title=反应堆板甲><brAdj=>此盔甲内嵌未加工的镭射物质,<n>可以抵抗有害魔法.不过暖和得让人不舒服.;
 
-[ItemType]  name=Electric Armor;
-description=Dangerous-looking armor that augments the user's electrical prowess.;
+[ItemType]  name=电动护甲;
+description=看起来很危险的盔甲,<n>可以增强使用者的闪电属性能力.;
 ID=armor_elec; sprite=201; itemCategory=3;
 weight=10; volume=15; value=1250;
 pR=pShockWeaponHilt;
@@ -300,11 +300,11 @@ ID=armor_elec; actorValue=PhysEva; magnitude=-5; duration=-1;
 [JournalEntry]
 ID=item_armor_elec;
 category=equipment; halfPage=true; rarity=1;
-title=Electric Armor;
-text=<itemBig=armor_elec><title=Electric Armor><brAdj=>Ingenuity can be risky- but never more risky than wearing this sparking piece of plate. The raw electrical power might still be worth it.;
+title=电动护甲;
+text=<itemBig=armor_elec><title=电动护甲><brAdj=>创造是有风险的,<n>但没有比戴着这个闪闪发光的装甲更冒险的了.<n>它带有原始的电力,可能值得去这么做.;
 
-[ItemType]  name=Fang Armor;
-description=Jagged armor that grants immunity to Poison.;
+[ItemType]  name=毒牙护甲;
+description=赋予中毒免疫的锯齿盔甲。;
 ID=armor_fang; sprite=201; itemCategory=3;
 weight=9; volume=15; value=150;
 pR=pFangWeaponHilt;
@@ -324,13 +324,13 @@ ID=armor_fang; actorValues=poison; damageMultiplier=0;
 [JournalEntry]
 ID=item_armor_fang;
 category=equipment; halfPage=true; rarity=1;
-title=Fang Armor;
-text=<itemBig=armor_fang><title=Fang Armor><brAdj=>This ramshackle piece of protective gear is bulky and awkward, but at least it cannot be penetrated by poison.;
+title=毒牙护甲;
+text=<itemBig=armor_fang><title=毒牙护甲><brAdj=>这个摇摇欲坠的防护装备略显笨拙,<n>但至少它不会被毒药穿透.;
 
 
 
-[ItemType]  name=Ironice Plate;
-description=Heavy armor made from Ironice. Uncomfortable, but effective.;
+[ItemType]  name=寒铁冰板甲;
+description=由寒铁冰制成的重型盔甲.不舒服,但有效.;
 ID=armor_ironice; sprite=202; itemCategory=3;
 weight=10; volume=15; value=4000;
 pR=pIronice;
@@ -347,11 +347,11 @@ ID=armor_ironice; actorValue=PhysEva; magnitude=-10; duration=-1;
 [JournalEntry]
 ID=item_armor_ironice;
 category=equipment; halfPage=true; rarity=1;
-title=Ironice Plate;
-text=<itemBig=armor_ironice><title=Ironice Plate><brAdj=>It's near impossible to pierce- which is good, because it's also near impossible to dodge while wearing it. The cold doesn't help.;
+title=寒铁冰板甲;
+text=<itemBig=armor_ironice><title=寒铁冰板甲><brAdj=>它几乎不可能被穿透--这很好,<n>因为当你穿着它的时候,<n>你也几乎不可能闪避攻击.冰霜也无济于事.;
 
-[ItemType]  name=Wind Mail;
-description=Armor that seems to deflect blows.;
+[ItemType]  name=风甲
+description=能偏转疾风的护甲.;
 ID=armor_wind; sprite=203; itemCategory=3;
 weight=8; volume=15; value=1800;
 pR=pWhistle;
@@ -368,11 +368,11 @@ ID=armor_wind; actorValue=PhysEva; magnitude=8; duration=-1;
 [JournalEntry]
 ID=item_armor_wind;
 category=equipment; halfPage=true; rarity=1;
-title=Wind Mail;
-text=<itemBig=armor_wind><title=Wind Mail><brAdj=>In addition to being light, it seems to have an almost magical ability to turn away attacks. Perhaps it's the wind you hear whistling through it...?;
+title=能偏转疾风的护甲;
+text=<itemBig=armor_wind><title=能偏转疾风的护甲><brAdj=>除了很轻之外,它似乎还有一种近乎<n>神奇的能力来抵御攻击.也许你听到<n>的是风吹过的声音...?;
 
-[ItemType]  name=Corpryst Armor;
-description=Bulky armor of Corpryst stone.;
+[ItemType]  name=晶石盔甲;
+description=厚重的晶体石盔甲.;
 ID=armor_corpryst; sprite=224; itemCategory=3;
 weight=10; volume=15; value=750;
 pR=pCorpryst;
@@ -389,11 +389,11 @@ ID=armor_corpryst; actorValue=PhysEva; magnitude=-10; duration=-1;
 [JournalEntry]
 ID=item_armor_corpryst;
 category=equipment; halfPage=true; rarity=2;
-title=Corpryst Armor;
-text=<itemBig=armor_corpryst><title=Corpryst Armor><brAdj=>Chunky plates of Corpryst that provide solid protection. Usually worn by Diecast from the strange realm of Graven.;
+title=晶石盔甲;
+text=<itemBig=armor_corpryst><title=晶石盔甲><brAdj=>厚实的晶体石板提供了坚实的保护.<n>通常是来自 Graven 王国的 Diecast 穿的.;
 
-[ItemType]  name=Coral Armor;
-description=Armor made from chunks of rock coral.;
+[ItemType]  name=珊瑚护甲;
+description=由大块岩石珊瑚制成的盔甲.;
 ID=armor_coral; sprite=204; itemCategory=3;
 weight=6; volume=15; value=120;
 pR=pCoral; pB=pCoralHilt;
@@ -408,11 +408,11 @@ ID=armor_coral; actorValue=PhysEva; magnitude=-4; duration=-1;
 [JournalEntry]
 ID=item_armor_coral;
 category=equipment; halfPage=true; rarity=1;
-title=Coral Armor;
-text=<itemBig=armor_coral><title=Coral Armor><brAdj=>Chunks of rock coral placed strategically make for a suprisingly strong defense. Favored armor of Crub, for good reason.;
+title=珊瑚护甲;
+text=<itemBig=armor_coral><title=珊瑚护甲><brAdj=>战略性地放置大块岩石珊瑚形成了<n>惊人的强大防御.来自克拉布的好盔甲,<n>理由很充分.;
 
-[ItemType]  name=Volskarn Mail;
-description=Metal armor with Volskarn. Easy to augment.;
+[ItemType]  name=沃尔斯卡恩铠甲;
+description=带有沃尔斯卡恩的金属盔甲.不费力的强化.;
 ID=armor_volskarn; sprite=193; itemCategory=3;
 weight=6; volume=15; value=800;
 pR=pVolskarn;
@@ -429,11 +429,11 @@ ID=armor_volskarn; actorValue=MagDef; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_armor_volskarn;
 category=equipment; halfPage=true; rarity=1;
-title=Volskarn Mail;
-text=<itemBig=armor_volskarn><title=Volskarn Mail><brAdj=>In addition to absorbing some of the magic coming your way, Volskarn armor can house more augment materials. When properly augmented, it performs better than normally superior armors.;
+title=沃尔斯卡恩铠甲;
+text=<itemBig=armor_volskarn><title=沃尔斯卡恩铠甲><brAdj=>除了以你的方式来吸收一些魔法,<n>沃尔斯卡恩铠甲可以容纳更多的增强材料.<n>当适当增强时,它的表现比一般的高级装甲更好.;
 
-[ItemType]  name=Shellworm Plate;
-description=Nearly impenetrable, but extremely heavy armor.;
+[ItemType]  name=壳虫鳞甲;
+description=几乎不可穿透,但极其沉重的装甲.;
 ID=armor_shellworm; sprite=194; itemCategory=3;
 weight=12; volume=15; value=950;
 pR=pPurpleD;
@@ -449,11 +449,11 @@ ID=armor_shellworm; actorValue=moveDistance; magnitude=-1; duration=-1;
 [JournalEntry]
 ID=item_armor_shellworm;
 category=equipment; halfPage=true; rarity=1;
-title=Shellworm Plate;
-text=<itemBig=armor_shellworm><title=Shellworm Plate><brAdj=>Created from the husk of a Shellworm, this armor is amazingly strong but widely disregarded for its clunkiness. The plate it is made from is completely inflexible and weighs the wearer down significantly.;
+title=壳虫鳞甲;
+text=<itemBig=armor_shellworm><title=壳虫鳞甲><brAdj=>这种盔甲由一种壳虫的外壳制成,非常坚固,<n>但却因其笨重而被广泛忽略.它的材质相当不灵活,<n>使穿戴者的负重大大增加.;
 
-[ItemType]  name=Aerstone Plate;
-description=Thick armor crafted from material lighter than air.;
+[ItemType]  name=埃尔石盔甲;
+description=用比空气还轻的材料制成的厚盔甲.;
 ID=armor_aer; sprite=224; itemCategory=3;
 weight=0; volume=15; value=900;
 pR=pBW;
@@ -466,12 +466,12 @@ ID=armor_aer; actorValue=jumpDistance; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_armor_aer;
 category=equipment; halfPage=true; rarity=1;
-title=Aerstone Plate;
-text=<itemBig=armor_aer><title=Aerstone Plate><brAdj=>It's rare that material as valuable as Aerstone is turned to such mundane purposes as armor, but when it is, it's exceedingly effective.;
+title=埃尔石盔甲;
+text=<itemBig=armor_aer><title=埃尔石盔甲><brAdj=>像埃尔石这样珍贵的材料被用来做盔甲是很罕见的,<n>但当它被用来做盔甲时,是非常强大的.;
 
 
-[ItemType]  name=Robe of the Elements;
-description=Bulky robe with trigger stones woven within.;
+[ItemType]  name=元素之袍;
+description=厚重的长袍,里面编织着触发石.;
 ID=armor_robe_element; sprite=205; itemCategory=3;
 weight=4; volume=15; value=2500;
 pR=p68; pB=p81; special=enhanceSlots_1;
@@ -486,12 +486,12 @@ ID=armor_robe_element; actorValue=skill_Wind; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_armor_robe_element;
 category=equipment; halfPage=true; rarity=2;
-title=Robe of the Elements;
-text=<itemBig=armor_robe_element><title=Robe of the Elements><brAdj=>Thick robe often awarded to Elementalist teachers. The sleeves are lined with trigger stones, each ready to be used by the wearer, and each padded in such a way as to not interfere with eachother. Unfortunately this bulk prevents use with proper armor, and makes it less augmentable than usual.;
+title=元素之袍;
+text=<itemBig=armor_robe_element><title=元素之袍><brAdj=>厚袍子常被授予元素使教师.袖子里衬有触发石,<n>每个都可使用,且都有衬垫,互不干扰.<n>不幸的是,这个体积阻止了使用适当的防御,可扩展性也不如平常.;
 
 
-[ItemType]  name=Aldleaf Clothes;
-description=Makeshift clothes fashioned from wide, sturdy leaves stitched together.;
+[ItemType]  name=阿尔德叶衣服;
+description=用粗而结实的树叶缝在一起做成的临时衣服.;
 ID=armor_leaf; sprite=195; itemCategory=3;
 weight=4; volume=3; value=8;
 pR=p57;
@@ -501,10 +501,10 @@ ID=armor_leaf; actorValue=PhysEva; magnitude=6; duration=-1;
 [JournalEntry]
 ID=item_armor_leaf;
 category=equipment; halfPage=true; rarity=1;
-title=Aldleaf Clothes;
-text=<itemBig=armor_leaf><title=Aldleaf Clothes><brAdj=>Aldleaf may be sturdy for a plant, but it's not sturdy for armor. Still, this is better than nothing.;
-[ItemType]  name=Spidesilk Shirt;
-description=Cloth coated in webbing for added protection.;
+title=阿尔德叶衣服;
+text=<itemBig=armor_leaf><title=阿尔德叶衣服><brAdj=>对植物来说,阿尔德叶也许是坚固的,但对盔甲<n>来说就不够了,不过总比什么都没有强.;
+[ItemType]  name=蛛丝衬衫;
+description=覆盖着网以增加保护的衣服.;
 ID=armor_silk; sprite=196; itemCategory=3;
 journalID=item_silk_spide;
 weight=4; volume=3; value=30;
@@ -517,7 +517,7 @@ combineWith=furnace_everlit2; toMake=silk_spide;
 [ItemEffect]  
 ID=armor_silk; actorValue=PhysEva; magnitude=18; duration=-1;
 
-[ItemType]  name=Spellward Necklace;
+[ItemType]  name=魔法保护项链;
 description=能抵挡外来能量的项链.; 
 weight=0; volume=1; value=180;
 itemCategory=4;
@@ -527,11 +527,11 @@ ID=necklace_spellward; actorValue=MagDef; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_necklace_spellward;
 category=equipment; halfPage=true; rarity=1;
-title=Spellward Necklace;
-text=<itemBig=necklace_spellward><title=Spellward Necklace><brAdj=>Magic energy is directed outward, providing minor protection. This is standard wear for Seartial's magic abuse investigators.;
+title=魔法保护项链;
+text=<itemBig=necklace_spellward><title=魔法保护项链><brAdj=>魔法能量向外传播,提供轻微的保护.<n>这是 Seartial 魔法滥用调查员的标准着装.;
 
-[ItemType]  name=Spellcatcher Amulet;
-description=Necklace that draws incoming energy inward and absorbs it.; 
+[ItemType]  name=魔法捕手护身符;
+description=吸收能量的项链.; 
 weight=0; volume=1; value=850;
 itemCategory=4;
 ID=necklace_spellcatcher; sprite=161; pR=pSilver; pB=pGold;
@@ -540,12 +540,12 @@ ID=necklace_spellcatcher; actorValue=MagDef; magnitude=2; duration=-1;
 [JournalEntry]
 ID=item_necklace_spellcatcher;
 category=equipment; halfPage=true; rarity=2;
-title=Spellcatcher Amulet;
-text=<itemBig=necklace_spellcatcher><title=Spellcatcher Amulet><brAdj=>Directs magic inward to its core, where it is harmlessly absorbed. Council members often wear these to protect against mage-assassins.;
+title=魔法捕手护身符;
+text=<itemBig=necklace_spellcatcher><title=魔法捕手护身符><brAdj=>将魔法引导到它的核心,在那里它被无害地吸收.<n>议会成员经常戴着这个来抵御法师型刺客.;
 
-[ItemType]  name=Admiral's Locket;
+[ItemType]  name=海军上将的吊坠盒;
 ID=necklace_admiral_locket; sprite=161; pR=pGold; pB=p81;
-description=Magic locket once owned by the High Admiral of Dominio.; 
+description=曾经属于多米尼奥高级海军上将的魔法挂坠.; 
 weight=0; volume=1; value=850;
 itemCategory=4;
 [ItemEffect]
@@ -555,12 +555,12 @@ ID=necklace_admiral_locket; actorValue=actTime; magnitude=-1; duration=-1;
 [JournalEntry]
 ID=item_necklace_admiral_locket;
 category=equipment; halfPage=true; rarity=3; rewardMod=-300;
-title=Admiral's Locket;
-text=<itemBig=necklace_admiral_locket><title=Admiral's Locket><brAdj=>Picture locket that holds a small painting, which is now bloodstained beyond all recognition. Absorbs magic as capably as any Spellcatcher Amulet.;
+title=海军上将的吊坠盒;
+text=<itemBig=necklace_admiral_locket><title=海军上将的吊坠盒><brAdj=>挂坠盒里有一幅小画,现在血迹斑斑,面目全非.<n>吸收魔法的能力与任何魔法捕手护身符一样.;
 
-[ItemType]  name=Hood;
+[ItemType]  name=头巾;
 ID=hood; sprite=235;
-description=A basic cloth head covering.; 
+description=一种基本的布头巾.; 
 weight=0; volume=1; value=8;
 itemCategory=4; 
 pR=pGreen3;
@@ -570,12 +570,12 @@ ID=hood; actorValue=PhysEva; magnitude=3; duration=-1;
 [JournalEntry]
 ID=item_hood;
 category=equipment; halfPage=true;
-title=Hood;
-text=<itemBig=hood><title=Hood><brAdj=>Some hoods may be worn for fashion or religious purposes, but this ragged hood is surely only for protection from the weather.;
+title=头巾;
+text=<itemBig=hood><title=头巾><brAdj=>有些兜帽可能是为了时尚或宗教目的而戴,<n>但这种破旧的兜帽肯定只是为了抵御天气.;
 
-[ItemType]  name=Fine Hood;
+[ItemType]  name=舒适的头巾;
 ID=hood_fine; sprite=235;
-description=A comfy cloth head covering.; 
+description=一个舒适的布头罩.; 
 weight=0; volume=1; value=15;
 itemCategory=4; 
 pR=p8;
@@ -585,12 +585,12 @@ ID=hood_fine; actorValue=PhysEva; magnitude=5; duration=-1;
 [JournalEntry]
 ID=item_hood_fine;
 category=equipment; halfPage=true;
-title=Fine Hood;
-text=<itemBig=hood_fine><title=Fine Hood><brAdj=>This comfortable hood likely belonged to a traveling merchant, or some other well-to-do wanderer.;
+title=舒适的头巾;
+text=<itemBig=hood_fine><title=舒适的头巾><brAdj=>这个舒适的兜帽可能属于一个旅行的商人<n>或其他富裕的流浪者.;
 
-[ItemType]  name=Blood Shawl;
+[ItemType]  name=血披肩;
 ID=hood_blood; sprite=235;
-description=Shawl soaked in magic-repelling blood.; 
+description=浸透了驱魔的鲜血披肩.; 
 journalID=journal_hood_blood;
 weight=0; volume=1; value=800;
 itemCategory=4; 
@@ -602,13 +602,13 @@ ID=hood_blood; actorValue=MagEva; magnitude=12; duration=-1;
 [JournalEntry]
 ID=journal_hood_blood;
 category=equipment; halfPage=true; rarity=3; rewardMod = -600;
-title=Blood Mantle;
-text=<itemBig=hood_blood><itemBig=cloak_blood><title=Blood Mantle><brAdj=>The blood of the Koverra beast has odd, magic-repelling properties. Hunting one is a monumental feat, but by doing so items like this are made.;
+title=血披肩;
+text=<itemBig=hood_blood><itemBig=cloak_blood><title=血披肩><brAdj=>科弗拉兽的血具有奇特的、驱除魔法的特性.<n>猎杀一只是一项有纪念意义的壮举,<n>除了可以制造出这样的物品.;
 
-[ItemType]  name=Blood Cloak;
+[ItemType]  name=血斗篷;
 ID=cloak_blood; sprite=229;
 journalID=journal_hood_blood;
-description=Cloak soaked in magic-repelling blood.; 
+description=浸透了驱魔的血斗篷.; 
 weight=0; volume=3; value=800;
 itemCategory=4; 
 pR=pCRed;
@@ -618,9 +618,9 @@ ID=cloak_blood; actorValue=PhysEva; magnitude=4; duration=-1;
 [ItemEffect]
 ID=cloak_blood; actorValue=MagEva; magnitude=12; duration=-1;
 
-[ItemType]  name=Blood Mantle;
+[ItemType]  name=血液连帽斗篷;
 ID=cloak_hood_blood; sprite=236;
-description=Cloak & hood soaked in magic-repelling blood.; 
+description=浸泡在驱魔血液的连帽斗篷.; 
 journalID=journal_hood_blood;
 weight=0; volume=3; value=1600;
 itemCategory=4; 
@@ -644,8 +644,8 @@ ID=cloak; actorValue=PhysEva; magnitude=6; duration=-1;
 [JournalEntry]
 ID=item_cloak;
 category=equipment; halfPage=true;
-title=Cloak;
-text=<itemBig=cloak><title=Cloak><brAdj=>Cloth draped over the shoulders, made from the wool of an ur-camelid. This cloak lacks a hood, but is still serviceable.;
+title=斗篷;
+text=<itemBig=cloak><title=斗篷><brAdj=>披在肩上的布,由骆驼毛织成,<n>这件斗篷没有兜帽,但仍然可以使用.;
 
 [ItemType]  name=连帽斗篷;
 ID=cloak_hood; sprite=236;
@@ -659,8 +659,8 @@ ID=cloak_hood; actorValue=PhysEva; magnitude=9; duration=-1;
 [JournalEntry]
 ID=item_cloak_hood;
 category=equipment; halfPage=true;
-title=Hooded Cloak;
-text=<itemBig=cloak_hood><title=Hooded Cloak><brAdj=>A cam-wool cloak & hood. Poor quality, but beggars can't be choosers (and you've seen many a beggar wearing cloth just like this).;
+title=连帽斗篷;
+text=<itemBig=cloak_hood><title=连帽斗篷><brAdj=>一件羊毛连帽斗篷,质量很差,但乞丐不能<n>挑肥拣瘦(你见过很多乞丐穿着这样的衣服).;
 
 [ItemType]  name=精致的斗篷;
 ID=cloak_fine; sprite=229;
@@ -675,8 +675,8 @@ ID=cloak_fine; actorValue=PhysEva; magnitude=8; duration=-1;
 [JournalEntry]
 ID=item_cloak_fine;
 category=equipment; halfPage=true;
-title=Fine Cloak;
-text=<itemBig=cloak_fine><title=Fine Cloak><brAdj=>A fine cam-wool cloak inlaid with comfortable linen. Cozy, yet does not restrict your movement.;
+title=精致的斗篷;
+text=<itemBig=cloak_fine><title=精致的斗篷><brAdj=>镶有舒适亚麻布的精美的驼绒斗篷.<n>舒适且不束缚你的行动.;
 
 
 [ItemType]  name=精致的连帽斗篷;
@@ -691,12 +691,12 @@ ID=cloak_hood_fine; actorValue=PhysEva; magnitude=13; duration=-1;
 [JournalEntry]
 ID=item_cloak_hood_fine;
 category=equipment; halfPage=true;
-title=Fine Hooded Cloak;
-text=<itemBig=cloak_hood_fine><title=Fine Hooded Cloak><brAdj=>A cloak & hood befitting someone of high station. It serves well in both fashion and function.;
+title=精致的连帽斗篷;
+text=<itemBig=cloak_hood_fine><title=精致的连帽斗篷><brAdj=>适合身居高位的人的连帽斗篷.<n>它在时尚和功能上都很好.;
 
-[ItemType]  name=Dark Mantle;
+[ItemType]  name=黑暗披肩;
 ID=cloak_dark; sprite=230;
-description=Cape that obscures the wearer.; 
+description=能遮住佩戴者的披肩.; 
 weight=0; volume=3; value=760;
 itemCategory=4; 
 pR=pPurpleD;
@@ -708,12 +708,12 @@ ID=cloak_dark; actorValue=MagEva; magnitude=5; duration=-1;
 [JournalEntry]
 ID=item_cloak_dark;
 category=equipment; halfPage=true; rarity=2;
-title=Dark Mantle;
-text=<itemBig=cloak_dark><title=Dark Mantle><brAdj=>Sinister-looking, but still a very practical piece of clothing. The material and design is foreign.;
+title=黑暗披肩;
+text=<itemBig=cloak_dark><title=黑暗披肩><brAdj=>看起来很邪恶,但还是一件很实用的衣服.<n>材料和设计都是来自异国.;
 
-[ItemType]  name=Aer Mantle;
+[ItemType]  name=埃尔披肩;
 ID=cloak_aer; sprite=237;
-description=Silverweave cloak with aerstone-infused clasp.; 
+description=用银编织的披肩,嵌有埃尔石的扣子.; 
 weight=0; volume=3; value=2500;
 itemCategory=4; 
 pR=p8;
@@ -726,14 +726,14 @@ ID=cloak_aer; actorValue=jumpDistance; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_cloak_aer;
 category=equipment; halfPage=true; rarity=2;
-title=Aer Mantle;
-text=<itemBig=cloak_aer><title=Aer Mantle><brAdj=>A rarity beloved by scouts and hunters, this cloak provides excellent protection (thanks to its hardy silverweave) while also improving mobility (thanks to its golden Aerstone clasp). ;
+title=埃尔披肩;
+text=<itemBig=cloak_aer><title=埃尔披肩><brAdj=>这款稀有的斗篷深受侦察员和猎人的喜爱,<n>它提供了极好的保护(因为它坚硬的银织),<n>同时也提高了机动性(因为它的埃尔石扣子). ;
 
 
 
-[ItemType]  name=Ash Cape;
+[ItemType]  name=灰烬披肩;
 ID=cloak_ash; sprite=231;
-description=Flame-retardant covering that grants 40% fire resist.; 
+description=覆盖着阻燃物,具有40%的火焰抵抗.; 
 weight=1; volume=3; value=200;
 itemCategory=4; 
 pR=pGreyD2;
@@ -744,8 +744,8 @@ ID=cloak_ash; element=fire; damageMultiplier=0.6;
 [JournalEntry]
 ID=item_cloak_ash;
 category=equipment; halfPage=true; rarity=2;
-title=Ash Cape;
-text=<itemBig=cloak_ash><title=Ash Cape><brAdj=>Chemically treated cloth that resists fire. These are slightly infamous for being worn by soldiers or brigands using scorched earth tactics.;
+title=灰烬披肩;
+text=<itemBig=cloak_ash><title=灰烬披肩><brAdj=>经化学处理的防火布.因为士兵或土匪穿着它<n>而使用焦土战术,这些衣服有点臭名昭著.;
 
 [ItemType]  name=战争斗篷;
 ID=cloak_war; sprite=233;
@@ -761,12 +761,12 @@ ID=cloak_war; actorValue=PhysEva; magnitude=7; duration=-1;
 [JournalEntry]
 ID=item_cloak_war;
 category=equipment; halfPage=true; rarity=2;
-title=War Cloak;
-text=<itemBig=cloak_war><title=War Cloak><brAdj=>The thickest possible fabric with metal plates overlaid. Often worn by Seartial's Great Wardens in dire circumstances.;
+title=战争斗篷;
+text=<itemBig=cloak_war><title=战争斗篷><brAdj=>用最厚的织物覆盖金属板.<n>通常由 Seartial 的护佑者在极糟的情况下穿戴.;
 
-[ItemType]  name=Grounding Cape;
+[ItemType]  name=绝缘披肩;
 ID=cloak_grounding; sprite=233;
-description=Rubbery cloth with metal lining that grants 40% electric resist.; 
+description=橡胶布与金属里面衬,授予40%的闪电抵抗.; 
 weight=1; volume=4; value=200;
 itemCategory=4;
 pR=pShockWeaponHilt;
@@ -778,12 +778,12 @@ ID=cloak_grounding; element=lightning; damageMultiplier=0.6;
 [JournalEntry]
 ID=item_cloak_grounding;
 category=equipment; halfPage=true; rarity=1;
-title=Grounding Cape;
-text=<itemBig=cloak_grounding><title=Grounding Cape><brAdj=>The rubbery 'cloth' is synthetic, and produced at great expense. It only grants partial protection, so it's not surprising these are rare.;
+title=绝缘披肩;
+text=<itemBig=cloak_grounding><title=绝缘披肩><brAdj=>这种橡胶'布'是合成的,生产成本很高.<n>它只提供了部分保护,所以罕见也就不足为奇了.;
 
-[ItemType]  name=Winter Coat;
+[ItemType]  name=冬衣;
 ID=coat_winter; sprite=232;
-description=Thick, well-made coat that grants 40% ice resist.; 
+description=厚的、制作精良的外套,提供40%寒冰抵抗.; 
 weight=1; volume=4; value=200;
 itemCategory=4;
 pR=p46;
@@ -795,12 +795,12 @@ ID=coat_winter; element=ice; damageMultiplier=0.6;
 [JournalEntry]
 ID=item_coat_winter;
 category=equipment; halfPage=true; rarity=1;
-title=Winter Coat;
-text=<itemBig=coat_winter><title=Winter Coat><brAdj=>Although made of mundane materials, it provides almost magical levels of protection against the cold. Such craftsmanship is necessary to survive the highest peaks of Rumane.;
+title=冬衣;
+text=<itemBig=coat_winter><title=冬衣><brAdj=>虽然它的材料很普通,但却能神奇地抵御寒冷.<n>要想在鲁马尼的最高峰生存下来,<n>这种技艺是必不可少的.;
 
-[ItemType]  name=Firestorm Cloak;
+[ItemType]  name=火焰风暴斗篷;
 ID=cloak_firestorm; sprite=234;
-description=Cloak coated in sparkling fire triggers.; 
+description=裹有火焰触发器的斗篷.; 
 weight=1; volume=3; value=5500;
 itemCategory=4;
 pR=pRed3;
@@ -819,12 +819,12 @@ ID=cloak_firestorm; element=moveAbilUsed; action=cloak_firestorm_act_onMoveAbil;
 [JournalEntry]
 ID=item_cloak_firestorm;
 category=equipment; halfPage=true; rarity=4; rewardMod=250;
-title=Firestorm Cloak;
-text=<itemBig=cloak_firestorm><title=Firestorm Cloak><brAdj=>An amazingly well-crafted cloak that leaves behind flames whenever the wearer uses a movement ability. Can also be used to make the fire triggers all burst in quick succession, propelling the user forward in a fiery blaze.;
+title=火焰风暴斗篷;
+text=<itemBig=cloak_firestorm><title=火焰风暴斗篷><brAdj=>一件制作精良的斗篷,每当穿戴者使用移动技能时,<n>就会留下火焰.也可以使用自带火焰触发物<n>快速产生爆炸,推动使用者在熊熊烈焰中前进.;
 
-[ItemType]  name=Bullgrig Mantle;
+[ItemType]  name=布尔格里戈披风;
 ID=cloak_bullgrig; sprite=234;
-description=Scaly cloak that grants immunity to Poison.; 
+description=免疫中毒的鳞片披风.; 
 weight=1; volume=3; value=950;
 itemCategory=4;
 pR=pBuralk;
@@ -838,12 +838,12 @@ ID=cloak_bullgrig; actorValues=poison; damageMultiplier=0;
 [JournalEntry]
 ID=item_cloak_bullgrig;
 category=equipment; halfPage=true; rarity=2;
-title=Bullgrig Mantle;
-text=<itemBig=cloak_bullgrig><title=Bullgrig Mantle><brAdj=>Hide of the grotesque Bullgrig, complete with emptied venom sacs. It provides solid protection and is impervious to poison.;
+title=布尔格里戈披风;
+text=<itemBig=cloak_bullgrig><title=布尔格里戈披风><brAdj=>掩盖在布尔格里戈之下,是完整的空毒液囊.<n>它提供了坚实的保护-免疫中毒.;
 
-[ItemType]  name=Torsk Cape;
+[ItemType]  name=托斯克壳斗篷;
 ID=cloak_turtle; sprite=238;
-description=Cloak protected by Amnitorsk scutes. Reduces damage from back attacks by 20%.; 
+description=由阿尼托斯克龟壳保护的斗篷.背面攻击伤害减少20%.; 
 weight=3; volume=5; value=2400;
 itemCategory=4;
 pR=pTeal2;
@@ -857,12 +857,12 @@ ID=cloak_turtle; actorValue=backDefense; magnitude=20; duration=-1;
 [JournalEntry]
 ID=item_cloak_turtle;
 category=equipment; halfPage=true; rarity=2;
-title=Torsk Cape;
-text=<itemBig=cloak_turtle><title=Torsk Cape><brAdj=>This meticulously crafted garb has many shards of Amnitorsk shell arranged in a pleasing concentric pattern. While not as impenetrable as live Amnitorsk, it still provides substantial protection from back attacks.;
+title=托斯克壳斗篷;
+text=<itemBig=cloak_turtle><title=托斯克壳斗篷><brAdj=>这件精心制作的衣服上有许多阿尼托斯克壳碎片,<n>以令人赏心悦目的同心图案排列.虽然不像<n>阿尼托斯克那样坚不可摧,但它仍然提供了<n>对背面攻击的牢固保护.;
 
-[ItemType]  name=Kingly Furs;
+[ItemType]  name=国王毛皮斗篷;
 ID=cloak_kingfur; sprite=239;
-description=Regal and fierce-looking mantle of furs. Makes positive morale last 20% longer.; 
+description=帝王般凶狠的毛皮斗篷.使士气高昂持续时间延长20%.; 
 weight=3; volume=5; value=5750;
 itemCategory=4;
 pR=p60;
@@ -877,12 +877,12 @@ ID=cloak_kingfur; actorValues=morale; healMultiplier=1.2;
 [JournalEntry]
 ID=item_cloak_kingfur;
 category=equipment; halfPage=true; rarity=2;
-title=Kingly Furs;
-text=<itemBig=cloak_kingfur><title=Kingly Furs><brAdj=>Created by the humble people of Fivili, this cloak represents the culmination of many generations' worth of skill and perseverance. None of its constituent furs have any special properties, but just wearing it inspires you to fight with beastly ferocity.;
+title=国王毛皮斗篷;
+text=<itemBig=cloak_kingfur><title=国王毛皮斗篷><brAdj=>这款斗篷由谦逊的菲维利人民制作,代表了<n>许多代人的技艺和毅力的价值终点.它的所有<n>毛皮都没有什么特殊的属性,但只要穿上它,<n>就会激发你野兽般的凶猛意志.;
 
 
-[ItemType]  name=Warding Sash;
-description=Magic garment that Wards its wearer at the start of combat.;
+[ItemType]  name=守护腰带;
+description=在战斗开始时保护穿戴者的魔法服装.;
 ID=cloak_ward; sprite=226; itemCategory=4;
 weight=1; volume=2; value=8600;
 pR=pGold;
@@ -893,8 +893,8 @@ ID=cloak_ward; element=combatStart; action=cloak_ward_action;
 [JournalEntry]
 ID=item_cloak_ward;
 category=equipment; halfPage=true; rarity=4; rewardMod=500;
-title=Warding Sash;
-text=<itemBig=cloak_ward><title=Warding Sash><brAdj=>This miraculous sash of mythril weave is lined with triggers that activate to instantly ward the user - albeit only once per battle.;
+title=守护腰带;
+text=<itemBig=cloak_ward><title=守护腰带><brAdj=>这条神奇的秘银腰带上布满了触发器,<n>可以瞬间激活并保护使用者<n>--尽管每次战斗只能触发一次.;
 
 
 [ItemType]  name=大衣;
@@ -910,8 +910,8 @@ ID=overcoat; actorValues=wet; damageMultiplier=0;
 [JournalEntry]
 ID=item_overcoat;
 category=equipment; halfPage=true;
-title=Overcoat;
-text=<itemBig=overcoat><title=Overcoat><brAdj=>With enough cloth, even the strongest downpour can be ignored. It even has a fold out hood on the back!;
+title=大衣;
+text=<itemBig=overcoat><title=大衣><brAdj=>有了足够的布料,再大的雨也可以忽略不计.<n>甚至在后面还有一个折叠的兜帽!!;
 
 [ItemType]  name=围巾;
 ID=scarf; sprite=165;
@@ -926,13 +926,13 @@ ID=scarf; actorValues=chilled; damageMultiplier=0;
 [JournalEntry]
 ID=item_scarf;
 category=equipment; halfPage=true;
-title=Scarf;
-text=<itemBig=scarf><title=Scarf><brAdj=>This neck-wrap is made for cold weather, and is quite toasty. Thankfully it's just the right length for you.;
+title=围巾;
+text=<itemBig=scarf><title=围巾><brAdj=>这件围巾是为寒冷的天气做的,很暖和.<n>谢天谢地,长度正好适合你.;
 
 
-[ItemType]  name=Trailing Wind;
+[ItemType]  name=风之轨迹;
 ID=scarf_wind; sprite=165;
-description=Wind trigger-lined scarf that amplifies Wind skill, but makes you easier to push around.; 
+description=带有风触发内衬的围巾,增强风系能力,<n>但会让你更容易被推来推去.; 
 weight=0; volume=2; value=880;
 itemCategory=4; 
 pR=pBlue;
@@ -946,8 +946,8 @@ ID=scarf_wind; actorValues=push; actorValues=pushAt; damageMultiplier=2;
 [JournalEntry]
 ID=item_scarf_wind;
 category=equipment; halfPage=true; rarity=2;
-title=Trailing Wind;
-text=<itemBig=scarf_wind><title=Trailing Wind><brAdj=>Where these scarves are produced is unknown. According to myth, they arrive on the wind to choose their new owner. Their propensity for blowing away at the slightest breeze is probably the origin of this idea.;
+title=风之轨迹;
+text=<itemBig=scarf_wind><title=风之轨迹><brAdj=>这些围巾是在哪里生产的尚不清楚.根据传说,<n>它们乘着风来选择新主人.他们很容易<n>被微风吹走,而这可能是这个想法的起源.;
 
 [ItemType]  name=护目镜;
 ID=goggles; sprite=171;
@@ -961,12 +961,12 @@ ID=goggles; actorValues=blind; damageMultiplier=0;
 [JournalEntry]
 ID=item_goggles;
 category=equipment; halfPage=true;
-title=Goggles;
-text=<itemBig=goggles><title=Goggles><brAdj=>A leather strap, a metal rim, and a lens makes up a single goggle. This pair is perfect for reckless engineers & mages.;
+title=护目镜;
+text=<itemBig=goggles><title=护目镜><brAdj=>一根皮带，一个镜框和一镜头组成了一副眼镜.<n>这对眼镜是工程师和法师鲁莽的完美结合.;
 
-[ItemType]  name=Crystal Goggles;
+[ItemType]  name=水晶眼镜;
 ID=goggles_crystal; sprite=139;
-description=Goggles with a single ironice lens. Prevents Blind and increases accuracy by 8%.; 
+description=只有一面寒铁冰镜片的护目镜.免疫失明,增加8%的命中.; 
 weight=0; volume=1; value=5750;
 itemCategory=4; action=studyTool_action;
 pR=pGold; pB=pIce; pG=pIronice;
@@ -979,12 +979,12 @@ ID=goggles_crystal; actorValues=blind; damageMultiplier=0;
 [JournalEntry]
 ID=item_goggles_crystal;
 category=equipment; halfPage=true; rarity=3; rewardMod=100;
-title=Crystal Goggles;
-text=<itemBig=goggles_crystal><title=Crystal Goggles><brAdj=>One of the lenses is made of highly refined Ironice. It even has dials that allow you to focus and magnify, and it can be 'used' like a Magnifying Glass to replicate the Scholar's 'Elementary' ability.;
+title=水晶眼镜;
+text=<itemBig=goggles_crystal><title=水晶眼镜><brAdj=>其中一个镜头是由非常精致的寒铁冰制成的.<n>它甚至有刻度盘,可以让你聚焦和放大,它可以<n>像放大镜一样'使用'来复制学者的'基础'能力.;
  
-[ItemType]  name=Thorn Bracelet;
+[ItemType]  name=荆棘手镯;
 ID=band_thorn; sprite=169;
-description=Uncomfortable armlet keeps you from being put to Sleep.; 
+description=不舒服的手镯让你无法入睡.; 
 weight=0; volume=1; value=20;
 itemCategory=4; 
 pR=pGreyD2;
@@ -995,8 +995,8 @@ ID=band_thorn; actorValues=sleep; damageMultiplier=0;
 [JournalEntry]
 ID=item_band_thorn;
 category=equipment; halfPage=true; rarity=1;
-title=Thorn Bracelet;
-text=<itemBig=band_thorn><title=Thorn Bracelet><brAdj=>It's unclear what the original purpose of this armlet was. Either by accident or by design, it pinches you awake if you fall asleep.;
+title=荆棘手镯;
+text=<itemBig=band_thorn><title=荆棘手镯><brAdj=>目前还不清楚这只手镯最初的用途.<n>不管是有意还是无意,<n>它会在你睡着的时候把你扎醒.;
 
 [ItemType]  name=铁制手套;
 ID=gauntlets; sprite=172;
@@ -1009,12 +1009,12 @@ ID=gauntlets; actorValue=PhysAtk; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_gauntlets;
 category=equipment; halfPage=true; rarity=1;
-title=Gauntlets;
-text=<itemBig=gauntlets><title=Gauntlets><brAdj=>Protecting the hands is very important in close combat. With these steel gauntlets, you can attack with full force and not have to worry.;
+title=铁制手套;
+text=<itemBig=gauntlets><title=铁制手套><brAdj=>在近战中保护双手是非常重要的.有了这个<n>铁护手,你可以全力攻击,不用担心.;
 
-[ItemType]  name=Volskarn Gauntlets;
+[ItemType]  name=沃尔斯卡恩铁护手;
 ID=gauntlets_volskarn; sprite=174;
-description=Gauntlets with a volskarn core.; 
+description=带有沃尔斯卡恩核心的护手.; 
 weight=2; volume=3; value=1750;
 itemCategory=4; 
 pR=pIron;
@@ -1026,12 +1026,12 @@ ID=gauntlets_volskarn; actorValue=MagAtk; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_gauntlets_volskarn;
 category=equipment; halfPage=true; rarity=2;
-title=Volskarn Gauntlets;
-text=<itemBig=gauntlets_volskarn><title=Volskarn Gauntlets><brAdj=>The Volskarn helps the wearer store and direct essence as needed. Only a master craftsman could have created these.;
+title=沃尔斯卡恩铁护手;
+text=<itemBig=gauntlets_volskarn><title=沃尔斯卡恩铁护手><brAdj=>沃尔斯卡恩可以帮助佩戴者根据需要储存和引导精华.<n>只有技艺高超的工匠才能创造出.;
 
-[ItemType]  name=Volskarn Gloves;
+[ItemType]  name=沃尔斯卡恩手套;
 ID=gloves_volskarn; sprite=174;
-description=Leather gloves studded with Volskarn.; 
+description=镶满沃尔斯卡恩的皮手套.; 
 weight=1; volume=2; value=275;
 itemCategory=4; 
 pR=pUnarmored;
@@ -1041,8 +1041,8 @@ ID=gloves_volskarn; actorValue=MagAtk; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_gloves_volskarn;
 category=equipment; halfPage=true; rarity=1;
-title=Volskarn Gloves;
-text=<itemBig=gloves_volskarn><title=Volskarn Gloves><brAdj=>Though they offer no protection, the Volskarn in these gloves helps the wearer store and direct essence with little effort.;
+title=沃尔斯卡恩手套;
+text=<itemBig=gloves_volskarn><title=沃尔斯卡恩手套><brAdj=>虽然它们不能提供保护,但这些手套中的沃尔斯卡恩<n>可以帮助佩戴者毫不费力地储存和引导精华.;
 
 [ItemType]  name=强力铁手套;
 ID=gauntlets_power; sprite=174;
@@ -1058,11 +1058,11 @@ ID=gauntlets_power; actorValue=PhysEva; magnitude=-5; duration=-1;
 [JournalEntry]
 ID=item_gauntlets_power;
 category=equipment; halfPage=true; rarity=2;
-title=Power Gauntlets;
-text=<itemBig=gauntlets_power><title=Power Gauntlets><brAdj=>Imbues your swings with extra force, thanks to the wind triggers wired in. Regrettably, such power leaves you open to being attacked in return.;
+title=强力铁手套;
+text=<itemBig=gauntlets_power><title=强力铁手套><brAdj=>接入了风触发器,能给你的攻击灌注额外的力量.<n>遗憾的是,这种力量会让你受到反噬..;
 
-[ItemType]  name=Whetstone Pendant;
-description=Easy-access whetstone to keep your blades sharp.; 
+[ItemType]  name=磨刀石吊坠;
+description=容易获得的磨刀石,使您的武器锋利.; 
 weight=0; volume=1; value=120;
 itemCategory=4;
 ID=necklace_whetstone; sprite=177; pR=p48; pB=pGreyD2;
@@ -1077,11 +1077,11 @@ ID=necklace_whetstone; actorValue=skill_Spear; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_necklace_whetstone;
 category=equipment; halfPage=true; rarity=1;
-title=Whetstone Pendant;
-text=<itemBig=necklace_whetstone><title=Whetstone Pendant><brAdj=>A simple sharpening stone dangling from a string. Having a constant reminder to keep your tools sharp does wonders for blade maintenance.;
+title=磨刀石吊坠;
+text=<itemBig=necklace_whetstone><title=磨刀石吊坠><brAdj=>一个简单的磨石挂在绳子上.<n>时刻提醒你保持你的武器锋利.;
 
-[ItemType]  name=Golden Scabbard;
-description=Shining resizable sheath that preserves any blade.; 
+[ItemType]  name=金色刀鞘;
+description=闪闪发光的可调整大小的鞘,<n>保存任何锋刃武器.; 
 weight=0; volume=1; value=8000;
 itemCategory=4;
 ID=acc_goldscabbard; sprite=209; pR=p9; pB=pBlue2;
@@ -1096,12 +1096,12 @@ ID=acc_goldscabbard; actorValue=skill_Spear; magnitude=2; duration=-1;
 [JournalEntry]
 ID=item_acc_goldscabbard;
 category=equipment; halfPage=true; rarity=3;
-title=Golden Scabbard;
-text=<itemBig=acc_goldscabbard><title=Golden Scabbard><brAdj=>This masterpiece scabbard can be refit as needed, even to cover the edges of axes or spears. In doing so it keeps blades in perfect condition.;
+title=金色刀鞘;
+text=<itemBig=acc_goldscabbard><title=金色刀鞘><brAdj=>这个伟大的杰作--剑鞘可以根据需要重新改装,<n>甚至可以覆盖斧头或矛的边缘.<n>可以使刃片保持完美状态.;
 
 
-[ItemType]  name=Rough Handwraps;
-description=Hand padding to help you give and take hard blows.; 
+[ItemType]  name=粗糙的缠手绷带;
+description=护手垫,帮助你施加或承受沉重的打击.; 
 weight=0; volume=1; value=120;
 itemCategory=4;
 ID=gloves_handwrap; sprite=178; pR=pGrey;
@@ -1116,11 +1116,11 @@ ID=gloves_handwrap; actorValue=skill_Shield; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_gloves_handwrap;
 category=equipment; halfPage=true; rarity=1;
-title=Rough Handwraps;
-text=<itemBig=gloves_handwrap><title=Rough Handwraps><brAdj=>Simple padding that aids in taking or dealing harsh impacts. Rough, yet comfortable enough not to impede dexterity.;
+title=粗糙的缠手绷带;
+text=<itemBig=gloves_handwrap><title=粗糙的缠手绷带><brAdj=>简单的填充物,帮助承受或造成凶猛的冲击.<n>粗糙,但足够舒适,不会妨碍行动.;
 
-[ItemType]  name=Silver Mitts;
-description=Fine fingerless gloves lined with mythril that lend power to blunt weapons.; 
+[ItemType]  name=银手套;
+description=精致的无指手套内衬秘银,可以钝化武器.; 
 weight=0; volume=1; value=8000;
 itemCategory=4;
 ID=gloves_silver; sprite=210; pR=p56; pB=pSilver;
@@ -1135,8 +1135,8 @@ ID=gloves_silver; actorValue=skill_Shield; magnitude=2; duration=-1;
 [JournalEntry]
 ID=item_gloves_silver;
 category=equipment; halfPage=true; rarity=3;
-title=Silver Mitts;
-text=<itemBig=gloves_silver><title=Silver Mitt><brAdj=>Cleanly-designed gloves that handily absorb impacts and look stylish while doing it. The mythril lining lets you give attacks your all without worrying about your hands' safety.;
+title=银手套;
+text=<itemBig=gloves_silver><title=银手套><brAdj=>设计简约的手套,很容易地承受冲击,而且使<n>的时候看起来很时尚.秘银的内衬可以让你<n>全力攻击而不用担心手部的安全.;
 
 [ItemType]  name=护腕;
 ID=bracers_archer; sprite=173;
@@ -1149,8 +1149,8 @@ ID=bracers_archer; actorValue=skill_Bow; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_bracers_archer;
 category=equipment; halfPage=true; rarity=1;
-title=Bracers;
-text=<itemBig=bracers_archer><title=Bracers><brAdj=>Bracers protect an archer's inner forearm from a stray bowstring or fletching. They also keep loose sleeves from catching.;
+title=护腕;
+text=<itemBig=bracers_archer><title=护腕><brAdj=>护腕能够保护弓箭手的内前臂免受游离的弓弦<n>或箭矢的冲击.它们还能防止袖子松垮.;
 
 [ItemType]  name=望远镜;
 ID=scope; sprite=1514;
@@ -1164,12 +1164,12 @@ ID=scope; actorValue=skill_Aim; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_scope;
 category=equipment; halfPage=true; rarity=1;
-title=Scope;
-text=<itemBig=scope><title=Scope><brAdj=>A curious device made by a master atilliator. Helps line up targets. When equipped, it increases your skill with projectiles. However, it is useless for bows.;
+title=望远镜;
+text=<itemBig=scope><title=望远镜><brAdj=>这是一种奇妙的装置,由一位大师制作.<n>能帮助定位目标.当装备它时,它可以提高<n>你的投射技能.但是,这对弓来说是没有用的.;
 
-[ItemType]  name=Vambraces;
+[ItemType]  name=臂甲;
 ID=bracers_metal; sprite=173;
-description=Metal bracers to protect the arms.; 
+description=金属护腕保护手臂.; 
 weight=2; volume=3; value=100;
 itemCategory=4; 
 pR=pIron;
@@ -1178,12 +1178,12 @@ ID=bracers_metal; actorValue=PhysDef; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_bracers_metal;
 category=equipment; halfPage=true; rarity=1;
-title=Vambraces;
-text=<itemBig=bracers_metal><title=Vambraces><brAdj=>Vambraces are a standard part of full plate armor. They offer much-needed protection to the forearms.;
+title=臂甲;
+text=<itemBig=bracers_metal><title=臂甲><brAdj=>臂甲是全身装甲的标准组成部分.<n>为前臂提供了必须的保护.;
 
-[ItemType]  name=Volbraces;
+[ItemType]  name=沃尔斯卡恩臂甲;
 ID=bracers_vol; sprite=176;
-description=Vambraces with embedded volskarn.; 
+description=嵌有沃尔斯卡恩的臂甲.; 
 weight=2; volume=3; value=1750;
 itemCategory=4; 
 pR=pIron;
@@ -1195,11 +1195,11 @@ ID=bracers_vol; actorValue=MagDef; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_bracers_vol;
 category=equipment; halfPage=true; rarity=1;
-title=Volbraces;
-text=<itemBig=bracers_vol><title=Volbraces><brAdj=>These fine vambraces have been lined with Volskarn, allowing them to absorb incoming magic while also protecting against physical attacks.;
+title=沃尔斯卡恩臂甲;
+text=<itemBig=bracers_vol><title=沃尔斯卡恩臂甲><brAdj=>这些精致的臂甲内衬有沃尔斯卡恩,能吸收即将到来的魔法,同时保护它们免受物理攻击.;
 
 
-[ItemType]  name=Heavy Vambraces;
+[ItemType]  name=重臂甲;
 ID=bracers_heavy; sprite=208;
 description=Weighty arm bands that sacrifice speed for defense.; 
 weight=14; volume=3; value=250;
@@ -1212,13 +1212,13 @@ ID=bracers_heavy; actorValue=actTime; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_bracers_heavy;
 category=equipment; halfPage=true; rarity=1;
-title=Heavy Vambraces;
-text=<itemBig=bracers_heavy><title=Heavy Vambraces><brAdj=>Vambraces taken to the extreme, occasionally worn by palace guards or riot control. When your only task is to stand between your attacker and what you would protect, reaction time becomes less important.;
+title=重臂甲;
+text=<itemBig=bracers_heavy><title=重臂甲><brAdj=>走极端的臂甲,宫殿守卫或防暴人员偶尔会穿.<n>当您的唯一任务是站在攻击者和您要保护的<n>对象之间时,反应时间就变得不那么重要了.;
 
 
-[ItemType]  name=Hip Flask;
+[ItemType]  name=酒壶;
 ID=hipFlask; sprite=1515;
-description=Liquid courage. Use to improve morale - and while worn, bad morale lasts half as long.; 
+description=液体的勇气.用于提高士气--使用时,且'士气低落'持续时间减半.; 
 weight=0; volume=1; value=20;
 itemCategory=4; 
 pR=pIron;
@@ -1228,12 +1228,12 @@ ID=hipFlask; actorValues=morale; damageMultiplier=0.5;
 [JournalEntry]
 ID=item_hipFlask;
 category=equipment; halfPage=true;
-title=Hip Flask;
-text=<itemBig=hipFlask><title=Hip Flask><brAdj=>A discreet container for alcoholic beverages. Some become dependent on it. When worn, it provides comfort in bad circumstances - and you can drink from it for a small morale boost.;
+title=酒壶;
+text=<itemBig=hipFlask><title=酒壶><brAdj=>装酒精饮料的容器.有些人变得依赖它.<n>当佩戴时,它在恶劣的环境中提供了舒适感<n>--你还可以喝下它来提升士气.;
 
-[ItemType]  name=Pocketwatch;
+[ItemType]  name=怀表;
 ID=acc_pocketwatch; sprite=179;
-description=A fine timepiece.<n=>Grants +30% <icon=time> if you end your turn without acting.<n=><adjX=18><getHourMinTime=>; 
+description=一个精致的钟表.<n=>当你回合结束前未行动获得+30%<icon=time>.<n=><adjX=18><getHourMinTime=>; 
 weight=0; volume=1; value=300;
 special=dontWarnForUseInContainer;
 itemCategory=4; 
@@ -1245,12 +1245,12 @@ ID=acc_pocketwatch; element=noActionTaken; action=acc_pocketwatch_react;
 [JournalEntry]
 ID=item_acc_pocketwatch;
 category=equipment; halfPage=true;
-title=Pocketwatch;
-text=<itemBig=acc_pocketwatch><title=Pocketwatch><brAdj=>A fascinating device that keeps time with a complex set of tiny gears. It's accurate to the minute! Wearing it makes you feel like you'll never be late again.;
+title=怀表;
+text=<itemBig=acc_pocketwatch><title=怀表><brAdj=>一种通过一组复杂小齿轮来计时的迷人装置.<n>精确到分钟!戴上它会让你感觉再也不会迟到了.;
 
-[ItemType]  name=Dart Bandolier;
+[ItemType]  name=飞镖弹药带;
 ID=belt_dart; sprite=180;
-description=Belt full of infinite weak darts.; 
+description=有着无限的小飞镖.; 
 weight=0; volume=1; value=2000;
 itemCategory=4; 
 pR=p50;
@@ -1262,12 +1262,12 @@ ID=belt_dart; actorValue=PhysEva; magnitude=6; duration=-1;
 [JournalEntry]
 ID=item_belt_dart;
 category=equipment; halfPage=true; rarity=2;
-title=Dart Bandolier;
-text=<itemBig=belt_dart><title=Dart Bandolier><brAdj=>An uncountable multitude of darts bristle from this belt. You can never run out, so throw them with abandon! They only deal 90% as much damage as the real deal, however.;
+title=飞镖弹药带;
+text=<itemBig=belt_dart><title=飞镖弹药带><brAdj=>无数的飞镖从腰带上冒出来.你永远也跑不出去,<n>所以尽情地扔吧!但是只会造成90%的伤害.;
 
-[ItemType]  name=Power Belt;
+[ItemType]  name=力量腰带;
 ID=belt_power; sprite=181;
-description=Cool belt.; 
+description=很酷的腰带.; 
 weight=0; volume=1; value=2000;
 itemCategory=4; 
 pR=p56;
@@ -1277,8 +1277,8 @@ ID=belt_power; actorValue=PhysAtk; magnitude=2; duration=-1;
 [JournalEntry]
 ID=item_belt_power;
 category=equipment; halfPage=true; rarity=2;
-title=Power Belt;
-text=<itemBig=belt_power><title=Power Belt><brAdj=>This belt glows with unnatural power. (Unnatural because it is a belt, not unnatural as in supernatural or anything.);
+title=力量腰带;
+text=<itemBig=belt_power><title=力量腰带><brAdj=>这条腰带散发着不自然的能量.<n>(不自然是因为它只是一根腰带,<n>而不是像超自然或其他东西那样不自然.);
 
 [ItemType]  name=眼罩;
 ID=blindfold; sprite=1513;
@@ -1293,12 +1293,12 @@ ID=blindfold; actorValues=blind; damageMultiplier=0; healMultiplier=0;
 [JournalEntry]
 ID=item_blindfold;
 category=equipment; halfPage=true;
-title=Blindfold;
-text=<itemBig=blindfold><title=Blindfold><brAdj=>Cloth wrapped around the eyes to disable the wearer's sight. Symbolically intriguing, but functionally useless.;
+title=眼罩;
+text=<itemBig=blindfold><title=眼罩><brAdj=>包裹在眼睛周围使佩戴者失明的布<n>象征意义上有趣,但功能上无用.;
 
-[ItemType]  name=Gag;
+[ItemType]  name=封口布;
 ID=gag; sprite=1513;
-description=Thick cloth used to stuff in the mouth, preventing speech.; 
+description=用来塞在嘴里的厚布，防止说话.; 
 weight=0; volume=1; value=1;
 itemCategory=4; 
 pR=pGreyD2;
@@ -1309,12 +1309,12 @@ ID=gag; actorValues=silence; damageMultiplier=0; healMultiplier=0;
 [JournalEntry]
 ID=item_gag;
 category=equipment; halfPage=true;
-title=Gag;
-text=<itemBig=gag><title=Gag><brAdj=>Cloth covering the wearer's mouth to prevent any speech. Not the most useful piece of gear.;
+title=封口布;
+text=<itemBig=gag><title=封口布><brAdj=>堵住穿戴者的嘴以防止讲话的布,<n>这不是有用的装备.;
 
 [ItemType]  name=融雪戒指;
 ID=ring_thaw; sprite=163;
-description=在极冷的环境下会升温.佩戴时, 冰冻持续时间和效果减半.; 
+description=在极冷的环境下会升温.佩戴时,冰冻持续时间和效果减半.; 
 weight=0; volume=1; value=50;
 itemCategory=4; 
 pR=pRed;
@@ -1325,12 +1325,12 @@ ID=ring_thaw; actorValues=chilled; actorValues=frozen; damageMultiplier=0.5;
 [JournalEntry]
 ID=item_ring_thaw;
 category=equipment; halfPage=true; rarity=1;
-title=Thaw Ring;
-text=<itemBig=ring_thaw><title=Thaw Ring><brAdj=>Originally crafted by a Rumanian engineer as a joke for her husband, who complained bitterly about the cold. It was soon discovered to be actually quite practical in cold climes.;
+title=融雪戒指;
+text=<itemBig=ring_thaw><title=融雪戒指><brAdj=>最初是一位鲁马尼工程师为她丈夫开的玩笑,<n>她丈夫抱怨天气很冷.人们很快就发现它在<n>寒冷的气候中非常实用.;
 
 [ItemType]  name=锐利戒指;
 ID=ring_sharp; sprite=164;
-description=边缘锋利的戒指. Halves duration of Immobilize.; 
+description=边缘锋利的戒指.定身时间减半.; 
 weight=0; volume=1; value=50;
 itemCategory=4; 
 pR=pIron;
@@ -1341,8 +1341,8 @@ ID=ring_sharp; actorValues=immob; damageMultiplier=0.5;
 [JournalEntry]
 ID=item_ring_sharp;
 category=equipment; halfPage=true; rarity=1;
-title=Sharp Ring;
-text=<itemBig=ring_sharp><title=Sharp Ring><brAdj=>Ring for those who need a rope-cutter wherever they go. Also makes an effective escape tool when tied up.;
+title=锐利戒指;
+text=<itemBig=ring_sharp><title=锐利戒指><brAdj=>戒指给那些无论走到哪里都需要剪绳器的人.<n>在被绑的时候也是一个有效的逃脱工具.;
 
 [ItemType]  name=嗜血戒指;
 ID=ring_blood; sprite=163;
@@ -1358,8 +1358,8 @@ actorValues=HP; action=ring_blood_act;
 [JournalEntry]
 ID=item_ring_blood;
 category=equipment; halfPage=true; rarity=3; rewardMod=-200;
-title=Bloodring;
-text=<itemBig=ring_blood><title=Bloodring><brAdj=>Ring devised by the berserker Larav, an unstoppable warrior who healed his wounds using essence from his own blood. Larav fought tirelessly to protect Lask from Maskheads, falling only when one of the fiends chopped off his finger. This ring and its duplicates are now more often used by necromancers who are all too willing to fuel it with the blood of others.;
+title=嗜血戒指;
+text=<itemBig=ring_blood><title=嗜血戒指><brAdj=>这枚戒指是狂暴战士拉夫设计的,他是一名<n>势不可挡的战士,用自己血液中的精华治愈了<n>自己的伤口.拉夫不知疲倦地战斗,保护拉斯克不受<n>面具头的伤害,直到一个恶魔砍掉了他的手指,<n>他才倒下.这枚戒指和它的复制品现在经常被<n>死灵法师使用,他们非常愿意用别人的血<n>来为它补充能量;
 
 [ItemType]  name=病毒护符;
 ID=necklace_viral;
@@ -1380,12 +1380,12 @@ ID=necklace_viral; element=physical; element=magic;
 [JournalEntry]
 ID=item_necklace_viral;
 category=equipment; halfPage=true; rarity=3; rewardMod=250;
-title=Viral Necklace;
-text=<itemBig=necklace_viral><title=Viral Necklace><brAdj=>This cruel device was once gifted to a hated noble's sickly daughter. The sickness soon spread to the noble's family, nearly killing them before the necklace's sinister purpose was noticed.;
+title=病毒护符;
+text=<itemBig=necklace_viral><title=病毒护符><brAdj=>这个残忍的装置曾经送给被制造者憎恨的贵族家族里<n>多病的女儿.疾病很快蔓延到贵族的家庭,直到<n>几乎杀死他们,项链的邪恶目的被注意到.;
  
-[ItemType]  name=Lifebead Necklace;
+[ItemType]  name=生命念珠项链;
 ID=necklace_lifebead;
-description=Necklace of many small Life triggers that amplifies healing received by 25%.; 
+description=有许多生命触发器的小项链,增加25%的治疗效果.; 
 weight=0; volume=1; value=700;
 itemCategory=4; sprite=162; pR=pGold; pB=pYellow;
 [ItemEffect]  
@@ -1396,13 +1396,13 @@ ID=necklace_lifebead; actorValues=HP; healMultiplier=1.25;
 [JournalEntry]
 ID=item_necklace_lifebead;
 category=equipment; halfPage=true; rarity=2;
-title=Lifebead Necklace;
-text=<itemBig=necklace_lifebead><title=Lifebead Necklace><brAdj=>Necklace created to speed up recovery of the severely injured. Initially designed for sick patients, its potency in combat made it popular with traveling warrior-sages.;
+title=生命念珠项链;
+text=<itemBig=necklace_lifebead><title=生命念珠项链><brAdj=>项链被制作用于加快重伤的恢复.它最初是为<n>病人设计的,而在战斗中的效果使它在旅行的<n>战士或贤者中很受欢迎.;
 
 
-[ItemType]  name=Fire Band;
+[ItemType]  name=火焰手镯;
 ID=band_fire; sprite=167;
-description=Bracelet with a fire trigger embedded, for easier casting.; 
+description=嵌有火焰触发器的手镯,<n>更容易施放火焰魔法.; 
 weight=0; volume=1; value=350;
 itemCategory=4; 
 pR=pSilver;
@@ -1412,12 +1412,12 @@ ID=band_fire; actorValue=skill_Fire; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_band_fire;
 category=equipment; halfPage=true; rarity=1;
-title=Fire Band;
-text=<itemBig=band_fire><title=Fire Band><brAdj=>Keeping a fire trigger close at hand makes pyromancy that much easier. These are invaluable to certain cold-blooded races.;
+title=火焰手镯;
+text=<itemBig=band_fire><title=火焰手镯><brAdj=>把触发器放在手边会让火焰魔法变得更容易.<n>这些对某些冷血种族来说是无价的.;
 
-[ItemType]  name=Ice Band;
+[ItemType]  name=冰霜手镯;
 ID=band_ice; sprite=167;
-description=Bracelet with an ice trigger embedded, for easier casting.; 
+description=嵌有冰霜触发器的手镯,<n>更容易施放冰霜魔法.; 
 weight=0; volume=1; value=350;
 itemCategory=4; 
 pR=pIce;
@@ -1427,12 +1427,12 @@ ID=band_ice; actorValue=skill_Ice; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_band_ice;
 category=equipment; halfPage=true; rarity=1;
-title=Ice Band;
-text=<itemBig=band_ice><title=Ice Band><brAdj=>Enhances cold magic. Prized by those living in tropical and desert climates. Most of them are crafted by the Ironice architects of Rumane.;
+title=冰霜手镯;
+text=<itemBig=band_ice><title=冰霜手镯><brAdj=>增强冰霜魔法.被生活在热带和沙漠气候的人所珍视.<n>它们大多是由鲁马尼人采用寒铁冰制作的.;
 
-[ItemType]  name=Lightning Band;
+[ItemType]  name=闪电手镯;
 ID=band_elec; sprite=167;
-description=Band with a lightning trigger embedded, for easier casting.; 
+description=嵌有闪电触发器的手镯,<n>更容易施放闪电魔法.; 
 weight=0; volume=1; value=350;
 itemCategory=4; 
 pR=pSilver;
@@ -1442,12 +1442,12 @@ ID=band_elec; actorValue=skill_Elec; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_band_elec;
 category=equipment; halfPage=true; rarity=1;
-title=Lightning Band;
-text=<itemBig=band_elec><title=Lightning Band><brAdj=>Powers up lightning magic. These are exceptionally popular among battlemages, who favor lightning for its strength and precision.;
+title=闪电手镯;
+text=<itemBig=band_elec><title=闪电手镯><brAdj=>增强闪电魔法.在战斗法师中特别受欢迎,<n>他们钟爱闪电的力量和精准.;
 
-[ItemType]  name=Wind Band;
+[ItemType]  name=疾风手镯;
 ID=band_wind; sprite=167;
-description=Armband with a force trigger embedded, for easier casting.; 
+description=嵌有疾风触发器的手镯,<n>更容易施放疾风魔法.; 
 weight=0; volume=1; value=350;
 itemCategory=4; 
 pR=pSilver;
@@ -1457,12 +1457,12 @@ ID=band_wind; actorValue=skill_Wind; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_band_wind;
 category=equipment; halfPage=true; rarity=1;
-title=Wind Band;
-text=<itemBig=band_wind><title=Wind Band><brAdj=>Makes wind magic a breeze! The envy of laborers everywhere. Wind magic helps any time heavy objects are involved.;
+title=疾风手镯;
+text=<itemBig=band_wind><title=疾风手镯><brAdj=>使施放疾风魔法轻而易举!是劳动者羡慕的东西.<n>风魔法在任何涉及重物的时候都有帮助.;
 
-[ItemType]  name=Life Band;
+[ItemType]  name=生命手镯;
 ID=band_life; sprite=167;
-description=Bracelet with a life trigger embedded, for easier casting.; 
+description=嵌有生命触发器的手镯,<n>更容易施放生命魔法.; 
 weight=0; volume=1; value=350;
 itemCategory=4; 
 pR=pGold;
@@ -1472,12 +1472,12 @@ ID=band_life; actorValue=skill_Life; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_band_life;
 category=equipment; halfPage=true; rarity=1;
-title=Life Band;
-text=<itemBig=band_life><title=Life Band><brAdj=>Aids Preservation magic. Every wealthy healer has one of these. Despite being almost universally beneficial, they are heavily regulated.;
+title=生命手镯;
+text=<itemBig=band_life><title=生命手镯><brAdj=>增强保护魔法.每个有钱的治疗师都有一个.<n>尽管人人都能从中受益,但是却受到严格监管.;
 
-[ItemType]  name=Ruin Band;
+[ItemType]  name=毁灭手镯;
 ID=band_ruin; sprite=167;
-description=Bracelet with a ruin trigger embedded, for easier casting.; 
+description=嵌有毁灭触发器的手镯,<n>更容易施放毁灭魔法.; 
 weight=0; volume=1; value=350;
 itemCategory=4; 
 pR=pSilver;
@@ -1487,13 +1487,13 @@ ID=band_ruin; actorValue=skill_Ruin; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_band_ruin;
 category=equipment; halfPage=true; rarity=1;
-title=Ruin Band;
-text=<itemBig=band_ruin><title=Ruin Band><brAdj=>Enhances Ruin magic. In certain cities, these are illegal due to their association with necromancy. Best to keep it out of sight.;
+title=毁灭手镯;
+text=<itemBig=band_ruin><title=毁灭手镯><brAdj=>增强毁灭魔法.在某些城市,这是非法的,<n>因为它们与死灵法师有关.最好把它藏起来.;
 
 
-[ItemType]  name=Blitz Band;
+[ItemType]  name=闪击手镯;
 ID=band_fire_elec; sprite=168;
-description=Band pulsing with fire and lightning.; 
+description=脉动着火焰和闪电的手镯.; 
 weight=0; volume=1; value=650;
 itemCategory=4; 
 pR=pGold;
@@ -1505,12 +1505,12 @@ ID=band_fire_elec; actorValue=skill_Elec; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_band_fire_elec;
 category=equipment; halfPage=true; rarity=2;
-title=Blitz Band;
-text=<itemBig=band_fire_elec><title=Blitz Band><brAdj=>Powerful bracelet used by elite battlemages. Many warmongers have grown rich smuggling these across national borders.;
+title=闪击手镯;
+text=<itemBig=band_fire_elec><title=闪击手镯><brAdj=>精英战斗法师所使用的强大手镯.<n>许多战争贩子通过跨境走私这些来发家致富.;
 
-[ItemType]  name=Aqueous Band;
+[ItemType]  name=若水手镯;
 ID=band_ice_wind; sprite=168;
-description=Band emanating icy wind.; 
+description=散发着冰冷的风的手镯.; 
 weight=0; volume=1; value=650;
 itemCategory=4; 
 pR=pSilver;
@@ -1522,12 +1522,12 @@ ID=band_ice_wind; actorValue=skill_Wind; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_band_ice_wind;
 category=equipment; halfPage=true; rarity=2;
-title=Aqueous Band;
-text=<itemBig=band_ice_wind><title=Aqueous Band><brAdj=>Bracelet of wealthy sailors. Most can be found on the arms of naval officers and merchants hailing from Island Fortress Dominio.;
+title=若水手镯;
+text=<itemBig=band_ice_wind><title=若水手镯><brAdj=>富有水手所有的手镯.大多数可以从多米尼奥的<n>要塞岛屿区域的海军军官和商人的武器中发现.;
 
-[ItemType]  name=Infinity Band;
+[ItemType]  name=无限手镯;
 ID=band_life_ruin; sprite=168;
-description=Band with power of life and death.; 
+description=生与死.; 
 weight=0; volume=1; value=750;
 itemCategory=4; 
 pR=pGold;
@@ -1539,12 +1539,12 @@ ID=band_life_ruin; actorValue=skill_Ruin; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_band_life_ruin;
 category=equipment; halfPage=true; rarity=2;
-title=Infinity Band;
-text=<itemBig=band_life_ruin><title=Infinity Band><brAdj=>No one knows the source of these amazingly well-crafted bands. Possessing one is often illegal, because of how well they serve necromancers.;
+title=无限手镯;
+text=<itemBig=band_life_ruin><title=无限手镯><brAdj=>没有人知道这些制作精良的手镯的来源.<n>拥有一个通常是非法的,因为他们很适合亡灵巫师.;
 
-[ItemType]  name=Aer Band;
+[ItemType]  name=埃尔手镯;
 ID=band_aer; sprite=168;
-description=Rare band that improves jumping ability.; 
+description=能够提高跳跃能力的稀有手镯.; 
 weight=0; volume=1; value=1250;
 itemCategory=4; 
 pR=pBW;
@@ -1554,14 +1554,14 @@ ID=band_aer; actorValue=jumpDistance; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_band_aer;
 category=equipment; halfPage=true; rarity=3; rewardMod=100;
-title=Aer Band;
-text=<itemBig=band_aer><title=Aer Band><brAdj=>Contains traces of Aerstone to increase jump distance. The Aerstone is melded with the metal and cannot be extracted.;
+title=埃尔手镯;
+text=<itemBig=band_aer><title=埃尔手镯><brAdj=>含有埃尔石,增加跳跃距离.埃尔石已经和金属融合了,无法再次提取.;
 
 
 
 
-[ItemType]  name=Void Veil;
-description=Gossamer cloak that greatly reduces duration of most status effects.;
+[ItemType]  name=虚无斗篷;
+description=薄纱斗篷,极大减少<n>大多数状态效果的持续时间.;
 ID=cloak_veil; sprite=231; itemCategory=4;
 weight=1; volume=2; value=29000;
 pR=pWhite;
@@ -1572,13 +1572,13 @@ ID=cloak_veil; actorValue=moveDistance; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_cloak_veil;
 category=equipment; halfPage=true; rarity=5; rewardMod=500;
-title=Void Veil;
-text=<itemBig=cloak_veil><title=Void Veil><brAdj=>Cloak of purest white. It has an otherworldly quality to it- it must have been acquired from another realm.;
+title=虚无斗篷;
+text=<itemBig=cloak_veil><title=虚无斗篷><brAdj=>雪白的斗篷.它有一种超凡脱俗的品质<n>--它一定是从另一个疆域获得的.;
  
 
 
-[ItemType]  name=Volpryst Armor;
-description=Flawlessly crafted armor of Corpryst & Volskarn.;
+[ItemType]  name=沃尔斯卡恩晶体护甲;
+description=由晶体和沃尔斯卡恩完美制作的盔甲.;
 ID=armor_volpryst; sprite=202; itemCategory=3;
 weight=10; volume=15; value=9900;
 pR=p82;
@@ -1591,12 +1591,12 @@ ID=armor_volpryst; actorValue=MagAtk; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_armor_volpryst;
 category=equipment; halfPage=true; rarity=3;
-title=Volpryst Armor;
-text=<itemBig=armor_volpryst><title=Volpryst Armor><brAdj=>Chunky Corpryst armor combined with Volskarn, masterfully crafted to increase defense and magic prowess at the same time.;
+title=沃尔斯卡恩晶体护甲;
+text=<itemBig=armor_volpryst><title=沃尔斯卡恩晶体护甲><brAdj=>厚重的晶体盔甲与沃尔斯卡恩相结合,巧妙地制作,<n>同时增加防御和魔法攻击.;
 
 
-[ItemType]  name=God Band;
-description=Unfairly good bracelet.;
+[ItemType]  name=上帝手镯;
+description=完美的有点不公平的手镯.;
 ID=god_band; sprite=169; itemCategory=4;
 weight=10; volume=15; value=39999;
 pR=pBW;
@@ -1609,8 +1609,8 @@ ID=god_band; actorValue=PhysAtk; magnitude=8; duration=-1;
 [ItemEffect]
 ID=god_band; actorValue=MagAtk; magnitude=8; duration=-1;
 
-[ItemType]  name=Speed Suit;
-description=Crazy good armor.;
+[ItemType]  name=迅捷盔甲;
+description=品质夸张的盔甲.;
 ID=armor_speedSuit; sprite=198; itemCategory=3;
 weight=10; volume=15; value=92500;
 pR=pGreyD;

@@ -1802,7 +1802,7 @@ pR=zoneStone; pB=pB;
 ID=journal_powerNode;
 category=item; halfPage=true; rarity=1;
 title=能量结点;
-text=<itemBig=powerNode_on><title=能量结点><brAdj=>这个Volskarn的球体和电线作为本质能量设备的输入.<n>原始能量或闪电都足以为它提供能量.;
+text=<itemBig=powerNode_on><title=能量结点><brAdj=>这个沃尔斯卡恩的球体和电线作为本质能量设备的输入.<n>原始能量或闪电都足以为它提供能量.;
 
 [ItemType]  name=太空舱;
 itemCategory=mech;
@@ -2004,7 +2004,7 @@ itemCategory=mech;
 special=cannotBePickedUp; 
 pR=p1;
 
-[ItemType]  name=Aerstone 稳定器;
+[ItemType]  name=埃尔石稳定器;
 itemCategory=hide;
 journalID=journal_stabilizer;
 ID=stabilizer_on; sprite=1304; weight=900; volume=300;
@@ -2022,8 +2022,8 @@ ID=stabilizer_on; element=use; action=drop_Aerstone; newID=stabilizer;
 [JournalEntry]
 ID=journal_stabilizer;
 category=item; halfPage=true; rarity=2;
-title=Aerstone 稳定器;
-text=<itemBig=stabilizer_on><title=Aerstone 稳定器><brAdj=>=汲取能量注入Aerstone的嘈杂机器,<n>使其提供升力.<n>这种运作模式非常有效.;
+title=埃尔石稳定器;
+text=<itemBig=stabilizer_on><title=埃尔石稳定器><brAdj=>=汲取能量注入埃尔石的嘈杂机器,<n>使其提供升力.<n>这种运作模式非常有效.;
 
 [ItemType]  name=稳定器;
 itemCategory=hide;
@@ -2046,7 +2046,7 @@ element=elec;
 [ItemType]  name=Stabilizer;
 ID=stabilizer3; sprite=1293; cloneFrom=stabilizer2;
 
-[ItemType]  name=Aerstone 稳定器;
+[ItemType]  name=埃尔石稳定器;
 itemCategory=hide;
 ID=stabilizer_poor; sprite=1240; weight=900; volume=300;
 journalID=journal_stabilizer_poor;
@@ -2062,7 +2062,7 @@ ID=stabilizer_poor; red=0.8; blue=0.6; green=0.8; alpha=0.75; size=0.3; flicker=
 [ItemReaction] 
 ID=stabilizer_poor; element=mechanical; newID=stabilizer_poor_off;
 
-[ItemType]  name=Aerstone 稳定器;
+[ItemType]  name=埃尔石稳定器;
 itemCategory=hide;
 ID=stabilizer_poor_off; sprite=1240; weight=900; volume=300;
 journalID=journal_stabilizer_poor;
@@ -2077,8 +2077,8 @@ element=elec;
 [JournalEntry]
 ID=journal_stabilizer_poor;
 category=item; halfPage=true; rarity=2;
-title=Aerstone 稳定器;
-text=<itemBig=stabilizer_poor><title=Aerstone 稳定器><brAdj=>基本上就是大型飞艇的'桅杆'.<n>仔细的调整可以使飞艇上升和下降.<n>不幸的是,Aerstone卡住了,无法移动.;
+title=埃尔石稳定器;
+text=<itemBig=stabilizer_poor><title=埃尔石稳定器><brAdj=>基本上就是大型飞艇的'桅杆'.<n>仔细的调整可以使飞艇上升和下降.<n>不幸的是,埃尔石卡住了,无法移动.;
 
 [ItemType]  name=容器;
 ID=capsule_tube1; sprite=912; weight=900; volume=300;
@@ -2352,7 +2352,7 @@ category=item; halfPage=true; rarity=2;
 title=飞艇;
 text=<itemBig=airship1><title=飞艇><brAdj=>这艘镀金的船看起来像是一艘自制的飞艇,<n>配有强力触发器的引擎.<n>看起来还能用,只是有点风化了。;
 
-[ItemType]  name=Aerstone 槽;
+[ItemType]  name=埃尔石槽;
 itemCategory=mech;
   ID=airship_aerstone_holder; sprite=1724; weight=5000; 
   special=big;
@@ -2367,10 +2367,10 @@ ID=airship_aerstone_holder; element=itemCombined; action=aerstoneInstalled;
 [JournalEntry]
 ID=item_airship_aerstone_holder;
 category=item; halfPage=true;
-title=Aerstone 槽;
-text=<itemBig=airship_aerstone_holder><title=Aerstone 槽><brAdj=>为容纳Aerstone而设计的槽.一旦安装上,<n>会将能量注入Aerstone,然后产生升力.;
+title=埃尔石槽;
+text=<itemBig=airship_aerstone_holder><title=埃尔石槽><brAdj=>为容纳埃尔石而设计的槽.一旦安装上,<n>会将能量注入埃尔石,然后产生升力.;
 
-[ItemType]  name=Aerstone;
+[ItemType]  name=埃尔石;
 itemCategory=mech;
   ID=airship_aerstone; sprite=1725; weight=5000; 
   special=big;
@@ -2381,7 +2381,7 @@ itemCategory=mech;
 [ItemLight] 
 ID=airship_aerstone; red=0.8; blue=0.6; green=0.8; alpha=0.45; size=0.1; flicker=0.1;
 
-[ItemType]  name=Aerstone;
+[ItemType]  name=埃尔石;
 itemCategory=mech;
   ID=airship_aerstone_small; sprite=1693; weight=500; 
   special=big;
@@ -2391,8 +2391,8 @@ itemCategory=mech;
 [JournalEntry]
 ID=item_airship_aerstone_small;
 category=item; halfPage=true; rarity=2;
-title=Aerstone;
-text=<itemBig=airship_aerstone_small><title=Aerstone><brAdj=>高效率的装置,可以容纳一小块Aerstone.<n>通常镶嵌在大型飞艇的两侧,以防止它们倾斜.;
+title=埃尔石;
+text=<itemBig=airship_aerstone_small><title=埃尔石><brAdj=>高效率的装置,可以容纳一小块埃尔石.<n>通常镶嵌在大型飞艇的两侧,以防止它们倾斜.;
 
 [ItemType]  name=推进器;
 itemCategory=mech;
@@ -2570,7 +2570,7 @@ ID=cannon_on; element=timerUp; newID=cannon_off; action=cannonShoot;
 ID=journal_volcannon;
 category=item; halfPage=true; rarity=3;
 title=Vol Cannon;
-text=<itemBig=cannon_on><title=Vol Cannon><brAdj=>一种军事设备,当内部的Volskarn被充电时,<n>会产生能量爆炸.专为炮击要塞而设计的.;
+text=<itemBig=cannon_on><title=Vol Cannon><brAdj=>一种军事设备,当内部的沃尔斯卡恩被充电时,<n>会产生能量爆炸.专为炮击要塞而设计的.;
 
 
 
