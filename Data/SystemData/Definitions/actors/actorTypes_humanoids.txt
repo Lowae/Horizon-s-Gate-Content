@@ -363,8 +363,8 @@ text=<icon=j_human><title=Human><brAdj=>This familiar creature is one of the mos
 
 
 [ActorType] ID=scurio; 
-name=Scurio;
-description=Scuri are bipedals with a mixture of feline, vulpine, and musteline features. They act slightly faster than humans.<br=> -2 <icon=time> Time to Act;
+name=斯库瑞;
+description=斯库瑞是两足动物,兼有猫科、狐狸和鼬类的特征.<n>它们的行动比人类略快.<br=>待机时间-2 <icon=time>;
 journalID=journal_scurio;
 playerUsable= true;
 canSpawnWithClass = true;
@@ -634,12 +634,12 @@ actorValue=moveDistance; magnitude=1; duration=-1;
 [JournalEntry]
 ID=journal_scurio;
 category=creature; halfPage=true; rarity=1;
-title=Scurio;
-text=<icon=j_scurio><title=Scurio><brAdj=>Scuri are fur-covered bipedals with a mixture of feline, vulpine, & musteline features. They are one of the more common races, and are generally thought to be down-to-earth & simple. In reality their dispositions vary as widely as any human's.<br=>  -2 <icon=time> Time to Act;
+title=斯库瑞;
+text=<icon=j_scurio><title=斯库瑞><brAdj=>斯库瑞是一种毛皮覆盖的两足动物,具有猫科、狐狸<n>和鼬鼠科动物的混合特征.他们是比较常见的种族之一,<n>通常被认为是脚踏实地和简单的.事实上,他们的Mn<性情和人一样变化很大.<br=> 待机时间 -2 <icon=time>;
 
 [ActorType] ID=rasmen;
-name=Rasmen;
-description=Faceless humanoids that 'see' by sensing the essence around them. They wear masks to better integrate into society.<br=> Immune to Blind & Silence<n=> +12% <icon=PhysEva>Dodge when flanked;
+name=拉斯曼;
+description=无脸类人种族,通过感知周围的本质来'看'.<n>他们戴面具是为了更好地融入社会.<br=> 免疫失明和沉默<n=> 对侧面攻击+12%<icon=PhysEva>闪避;
 journalID=journal_rasmen;
 playerUsable= true;
 canSpawnWithClass = true;
@@ -880,8 +880,8 @@ actorValues=blind; actorValues=silence; damageMultiplier=0;
 [JournalEntry]
 ID=journal_rasmen;
 category=creature; halfPage=true; rarity=1;
-title=Rasmen;
-text=<icon=j_rasmen><title=Rasmen><brAdj=>A common but strange creature. They lack eyes, and instead see by 'feeling' the essence around them. To better integrate into society, they wear masks with intricate carved faces and practice certain human behaviors, such as facing the person they speak to.<br=>  Immune to Blindness & Silence<n=>  +12% <icon=PhysEva>Dodge when flanked;
+title=拉斯曼;
+text=<icon=j_rasmen><title=拉斯曼><brAdj=>一种普通但奇怪的生物.他们没有眼睛,而是通过<n>'感觉'来观察周围的事物.为了更好地融入社会,<n>他们戴着雕刻复杂面孔的面具,练习某些人类行为,<n>比如正对他们说话的人.<br=>  免疫失明和沉默<n=>  对侧面攻击+12% <icon=PhysEva>闪避;
 
 [ActorType] ID=fareem;
 name=Fareem;

@@ -1,10 +1,10 @@
 
 [Action] ID=Bat_summonZoar; 
-	name=召唤Zoar;
+	name=召唤佐尔;
 	icon=icon_Bat_summonZoar;
 	mpCost=10 * d:mpCostMult + d:mpCostMod;
-	tooltip=召唤一只Zoar蝙蝠在你身边战斗<n>持续<icon=time>100.<n>在<icon=time><math=35 - 5*c:rank>开始第一次行动.;
-	rankUpTooltip=每级加快Zoar蝙蝠行动时间5<icon=time>.;
+	tooltip=召唤一只佐尔蝙蝠在你身边战斗<n>持续<icon=time>100.<n>在<icon=time><math=35 - 5*c:rank>开始第一次行动.;
+	rankUpTooltip=每级加快佐尔蝙蝠行动时间5<icon=time>.;
 	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=skill_Wind_small>;
 	harmful=false;
 	
@@ -186,7 +186,7 @@
 	name=Z-狂潮;
 	icon=icon_Bat_zTorrent;
 	mpCost=6 * d:mpCostMult + d:mpCostMod;
-	tooltip=召唤源源不断的Zoar吸血蝙蝠<n>在方形区域内造成<math=c:PhysAtk * 0.5 + c:MagAtk * 0.5 + c:skill_Wind * 0.5><thinnerIcon=HP>伤害<n>且施加-1<icon=moveDistance>持续<icon=time>50.;
+	tooltip=召唤源源不断的佐尔吸血蝙蝠<n>在方形区域内造成<math=c:PhysAtk * 0.5 + c:MagAtk * 0.5 + c:skill_Wind * 0.5><thinnerIcon=HP>伤害<n>且施加-1<icon=moveDistance>持续<icon=time>50.;
 	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=skill_Wind_small>;
 	
@@ -268,7 +268,7 @@
 	name=飞行;
 	icon=icon_Bat_flight;
 	harmful=false;
-	tooltip=命令一个Zoar蝙蝠带你移动一段距离.;
+	tooltip=命令一个佐尔蝙蝠带你移动一段距离.;
 	tooltipTopRight=;
 	
 	mpCost=1 * d:mpCostMult + d:mpCostMod;
@@ -307,12 +307,12 @@
 	
 
 [Action] ID=Bat_zoarnado; 
-	name=Zoar巢群;
+	name=佐尔巢群;
 	icon=icon_Bat_zoarnado;
 	mpCost=13 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=18 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
 	
-	tooltip=派遣一个Zoar群体摧毁一小片区域,<n>造成<math=10 + c:PhysAtk * 1.5 + c:MagAtk * 1.5 + c:skill_Wind * 1.5><thinnerIcon=HP>以上伤害.;
+	tooltip=派遣一个佐尔群体摧毁一小片区域,<n>造成<math=10 + c:PhysAtk * 1.5 + c:MagAtk * 1.5 + c:skill_Wind * 1.5><thinnerIcon=HP>以上伤害.;
 	rankUpTooltip=每级+1攻击距离.;
 	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=skill_Wind_small>;
 	

@@ -221,13 +221,13 @@ ID=figure_shadow5; sprite=1029;
 cloneFrom=figure_shadow1;
 
 
-[ItemType]  name=Junk Box;
-description=Box of old stuff.;
+[ItemType]  name=垃圾盒;
+description=一盒旧东西.;
 ID=box_junk; sprite=776; special=priorityContainer;
 volume=98;
 pR=pWood;
 special=container; special=containerWood; special=container5x5;
-[ItemType]  name=Vendor Inventory;
+[ItemType]  name=摊贩库存;
 description=Box of stuff.;
 ID=box_vendor; sprite=776; special=priorityContainer;
 volume=99;
@@ -235,8 +235,8 @@ volume=99;
  special=cannotBePickedUp;
 pR=pWoodDark;
 special=container; special=containerWood; special=container5x5;
-[ItemType]  name=Bag of Stuff;
-description=Bag of restockable goods. Click to open.;
+[ItemType]  name=袋子里的东西;
+description=可再储存货物的袋子。点击打开.;
 ID=bag_stuff; sprite=779; 
 volume=98;
 pR=pOrange; pB=pGreyD;
@@ -246,9 +246,9 @@ special=container; special=infiniteStockContainer;
  special=oneClickToUse;
 special=disappearFromCorpse;
 
-[ItemType]  name=Usually Nothing;
+[ItemType]  name=通常没什么;
 ID=loot_none; sprite=779;
-description=Place on the ground to reveal the item.;
+description=放在地上来展示物品.;
 value=2;
 pR=pBlack;
 special=replaceWith_toMake_list;
@@ -269,9 +269,9 @@ toMake=;
 toMake=gp;
 toMake=loot0;
 
-[ItemType]  name=Trashy Loot;
+[ItemType]  name=没用的战利品;
 ID=loot0; sprite=779;
-description=Place on the ground to reveal the item.;
+description=放在地上来展示物品.;
 value=3;
 pR=pGreyD2; pB=pBlack;
 special=replaceWith_toMake_list;
@@ -289,9 +289,9 @@ toMake=loot_bone_junk;
 toMake=loot_wood;
 toMake=loot1;
 
-[ItemType]  name=Weak Loot;
+[ItemType]  name=较差的战利品;
 ID=loot1; sprite=779;
-description=Place on the ground to reveal the item.;
+description=放在地上来展示物品.;
 value=10;
 pR=pGreyD2; pB=pGreyD;
 special=replaceWith_toMake_list;
@@ -324,9 +324,9 @@ toMake=trigger_dud;
 toMake=loot2;
 
 
-[ItemType]  name=Mediocre Loot;
+[ItemType]  name=一般的战利品;
 ID=loot2; sprite=779;
-description=Place on the ground to reveal the item.;
+description=放在地上来展示物品.;
 value=30;
 pR=pGreyD;
 special=replaceWith_toMake_list;
@@ -342,9 +342,9 @@ toMake=loot_iron;
 toMake=loot3;
 
 
-[ItemType]  name=Nice Loot;
+[ItemType]  name=不错的战利品;
 ID=loot3; sprite=779;
-description=Place on the ground to reveal the item.;
+description=放在地上来展示物品.;
 value=50;
 pR=pGrey2;
 special=replaceWith_toMake_list;
@@ -356,9 +356,9 @@ toMake=loot_steel;
 toMake=loot4;
 
 
-[ItemType]  name=Good Loot;
+[ItemType]  name=较好的战利品;
 ID=loot4; sprite=779;
-description=Place on the ground to reveal the item.;
+description=放在地上来展示物品.;
 value=90;
 pR=pTeal;
 special=replaceWith_toMake_list;
@@ -373,9 +373,9 @@ toMake=loot_craft_kit;
 toMake=loot5;
 
 
-[ItemType]  name=Great Loot;
+[ItemType]  name=很棒的战利品;
 ID=loot5; sprite=779;
-description=Place on the ground to reveal the item.;
+description=放在地上来展示物品.;
 value=150;
 pR=pBlue;
 special=replaceWith_toMake_list;
@@ -389,9 +389,9 @@ toMake=loot_trigger_band;
 toMake=loot_mythril;
 toMake=loot6;
 
-[ItemType]  name=Amazing Loot;
+[ItemType]  name=令人惊讶的战利品;
 ID=loot6; sprite=779;
-description=Place on the ground to reveal the item.;
+description=放在地上来展示物品.;
 value=250;
 pR=pGold; pB=pWhite;
 special=replaceWith_toMake_list;
@@ -400,9 +400,9 @@ toMake=loot_accessory6;
 toMake=loot_elec;
 toMake=loot_wind;
 
-[ItemType]  name=Consumables Loot;
+[ItemType]  name=消耗品战利品;
 ID=loot_consumable1; sprite=142;
-description=Place on the ground to reveal the item.;
+description=放在地上来展示物品.;
 value=35;
 pR=pGold; pB=pWhite;
 special=replaceWith_toMake_list;
@@ -411,9 +411,9 @@ toMake=bomb;
 toMake=firebomb;
 toMake=lifeshard;
 
-[ItemType]  name=General Loot;
+[ItemType]  name=普通道具战利品;
 ID=loot_general1; sprite=851;
-description=Place on the ground to reveal the item.;
+description=放在地上来展示物品.;
 value=300;
 pR=pGold; pB=pWhite;
 special=replaceWith_toMake_list;
@@ -435,7 +435,7 @@ toMake=loot_trigger;
 toMake=focus_stone;
 
 
-[ItemType]  name=Possible Quest Items;
+[ItemType]  name=一般的任务战利品;
 ID=loot_quest; sprite=780;
 value=0;
 pR=pGold; pB=pWhite;
@@ -455,7 +455,7 @@ toMake=coral;
 toMake=goop_gland;
 toMake=shellworm_plate;
 
-[ItemType]  name=Royal Quest Items;
+[ItemType]  name=皇家任务战利品;
 ID=loot_royal_quest; sprite=780;
 value=0;
 pR=pGold; pB=pG;
@@ -472,7 +472,7 @@ toMake=lifeshard;
 toMake=studyTool;
 toMake=minibomb;
 
-[ItemType]  name=Royal Quest Items (Hard);
+[ItemType]  name=皇家任务战利品 (困难的);
 ID=loot_royal_quest_hard; sprite=780;
 value=0;
 pR=pGold; pB=pB;
@@ -494,7 +494,7 @@ toMake=trigger_wind;
 toMake=trigger_life;
 toMake=trigger_ruin;
 
-[ItemType]  name=Salvage Loot 1;
+[ItemType]  name=打捞战利品 1;
 ID=loot_salvage1; sprite=780;
 value=0;
 pR=pVolskarn; pB=pMythril;
@@ -543,7 +543,7 @@ toMake=gem_small2;
 toMake=gem_small2;
 toMake=gem_small2;
 
-[ItemType]  name=Salvage Loot 2;
+[ItemType]  name=打捞战利品 2;
 ID=loot_salvage2; sprite=780;
 value=0;
 pR=pVolskarn; pB=pMythril;
@@ -598,7 +598,7 @@ toMake=loot_trigger_special;
 toMake=gem_big1;
 toMake=whistle_chunk;
 
-[ItemType]  name=Salvage Loot 3;
+[ItemType]  name=打捞战利品 3;
 ID=loot_salvage3; sprite=780;
 value=0;
 pR=pVolskarn; pB=pMythril;
@@ -623,7 +623,7 @@ toMake=actionTablet_random;
 toMake=actionTablet_random;
 toMake=actionTablet_random;
 
-[ItemType]  name=Chain;
+[ItemType]  name=链条;
 ID=chain_extended; sprite=1508;
 special=cannotBePickedUp; special=big; special=canHangOnWalls;
 special=overrideTerrainCollisions; special=overrideMostCollisions;
@@ -636,7 +636,7 @@ ID=chain_extended; element=removeChain; newID=X;
 
 
 
-[ItemType]  name=Post Wrapped in Chains;
+[ItemType]  name=铁链包裹的桩;
 ID=post_chain_wrapped; sprite=1509;
 weight=200;
 special=big; special=cannotBePickedUp; special=canHangOnWalls;
@@ -648,7 +648,7 @@ pG=pFadeDark;
 [ItemReaction]
 ID=post_chain_wrapped; element=use; action=spreadChain; newID=post_chain_unwrapped;
 
-[ItemType]  name=Post;
+[ItemType]  name=桩;
 ID=post_chain_unwrapped; sprite=930;
 texture=items_building;
 weight=200;
@@ -664,7 +664,7 @@ description=简单的盘子.;
 ID=item_plate;
 category=item; halfPage=true; rarity=0;
 title=盘子;
-text=<itemBig=plate><title=盘子><brAdj=>一种宽的用来盛食物的盘子.全世界都在使用<n>(有些Rasmen更喜欢用小垫子)).;
+text=<itemBig=plate><title=盘子><brAdj=>一种宽的用来盛食物的盘子.全世界都在使用<n>(有些拉斯曼更喜欢用小垫子)).;
 [ItemType]  name=叉子;
 ID=fork; sprite=1935; spriteWhenHeld=0; value=3;
 description=一个常见的餐具.;
@@ -713,10 +713,10 @@ ID=boat_model1; sprite=1985;
 weight=1; volume=1; value=50;
 pB=pOrange;
 pG=pWood;
-[ItemType]  name=Model Boat;
+[ItemType]  name=模型船;
 ID=boat_model2; sprite=1986;
 cloneFrom=boat_model1;
-[ItemType]  name=Model Boat;
+[ItemType]  name=模型船;
 ID=boat_model3; sprite=1987;
 cloneFrom=boat_model1;
 [JournalEntry]
@@ -752,7 +752,7 @@ special=inheritTerrainPalettes; special=cannotBePickedUp;
 
 
 
-[ItemType]  name=Random Bone;
+[ItemType]  name=随机骨头战利品;
 ID=loot_bone_junk; sprite=672;
 value=0;
 pR=pGreyD2;
@@ -772,7 +772,7 @@ toMake=tusk;
 toMake=bone_spine;
 toMake=bone_dust;
 
-[ItemType]  name=Skull;
+[ItemType]  name=头骨;
 ID=skull; sprite=672;
 journalID=journal_bone;
   element=ruin;
@@ -794,7 +794,7 @@ combineWith=craft_armor; toMake=armor_bone;
 ID=skull; element=explode; element=heavySmash; newID=bone_dust; fx=dust_bone;
 [ItemReaction] 
 ID=skull; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
-[ItemType]  name=Skull (Damaged);
+[ItemType]  name=头骨 (受损的);
 ID=skull2; sprite=686; 
 journalID=journal_bone;
   element=ruin;
@@ -816,7 +816,7 @@ combineWith=craft_armor; toMake=armor_bone;
 ID=skull2; element=explode; element=heavySmash; newID=bone_dust; fx=dust_bone;
 [ItemReaction] 
 ID=skull2; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
-[ItemType]  name=Bones;
+[ItemType]  name=骨头;
 ID=bones1; sprite=673; 
 journalID=journal_bone;
   element=ruin;
@@ -838,7 +838,7 @@ combineWith=craft_armor; toMake=armor_bone;
 ID=bones1; element=explode; element=heavySmash; newID=bone_dust; fx=dust_bone;
 [ItemReaction] 
 ID=bones1; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
-[ItemType]  name=Ribs;
+[ItemType]  name=肋骨;
 ID=ribs1; sprite=674; 
 journalID=journal_bone;
 weight=1; volume=5;
@@ -861,7 +861,7 @@ combineWith=craft_armor; toMake=armor_bone;
 ID=ribs1; element=explode; element=heavySmash; newID=bone_dust; fx=dust_bone;
 [ItemReaction] 
 ID=ribs1; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
-[ItemType]  name=Animal Skull;
+[ItemType]  name=动物头骨;
 ID=skull_elephant1; sprite=675; 
 journalID=journal_bone;
   element=ruin;
@@ -883,7 +883,7 @@ combineWith=craft_armor; toMake=armor_bone;
 ID=skull_elephant1; element=explode; element=heavySmash; newID=bone_dust; fx=dust_bone;
 [ItemReaction] 
 ID=skull_elephant1; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
-[ItemType]  name=Animal Skull;
+[ItemType]  name=动物头骨;
 ID=skull_elephant2; sprite=676; 
 journalID=journal_bone;
   element=ruin;
@@ -905,7 +905,7 @@ combineWith=craft_armor; toMake=armor_bone;
 ID=skull_elephant2; element=explode; element=heavySmash; newID=bone_dust; fx=dust_bone;
 [ItemReaction] 
 ID=skull_elephant2; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
-[ItemType]  name=Bone;
+[ItemType]  name=骨头;
 ID=bone; sprite=677; 
 journalID=journal_bone;
   element=ruin;
@@ -927,7 +927,7 @@ combineWith=craft_armor; toMake=armor_bone;
 ID=bone; element=explode; element=heavySmash; newID=bone_dust; fx=dust_bone;
 [ItemReaction] 
 ID=bone; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
-[ItemType]  name=Skull;
+[ItemType]  name=头骨;
 ID=skull_dog1; sprite=678; 
 journalID=journal_bone;
   element=ruin;
@@ -949,7 +949,7 @@ combineWith=craft_armor; toMake=armor_bone;
 ID=skull_dog1; element=explode; element=heavySmash; newID=bone_dust; fx=dust_bone;
 [ItemReaction] 
 ID=skull_dog1; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
-[ItemType]  name=Skull;
+[ItemType]  name=头骨;
 ID=skull_dog2; sprite=679; 
 journalID=journal_bone;
   element=ruin;
@@ -971,7 +971,7 @@ combineWith=craft_armor; toMake=armor_bone;
 ID=skull_dog2; element=explode; element=heavySmash; newID=bone_dust; fx=dust_bone;
 [ItemReaction] 
 ID=skull_dog2; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
-[ItemType]  name=Bones;
+[ItemType]  name=骨头;
 ID=bones2; sprite=680; 
   element=ruin;
 journalID=journal_bone;
@@ -993,14 +993,14 @@ combineWith=craft_armor; toMake=armor_bone;
 ID=bones2; element=explode; element=heavySmash; newID=bone_dust; fx=dust_bone;
 [ItemReaction] 
 ID=bones2; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
-[ItemType]  name=Bone Pile;
+[ItemType]  name=骨堆;
 ID=bonePile; sprite=57; special=canHangOnWalls; special=cannotBePickedUp;
 pR=pBone;
 journalID=journal_bone;
   element=ruin;
 [ItemReaction] 
 ID=bonePile; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
-[ItemType]  name=Bone Pile;
+[ItemType]  name=骨堆;
 ID=bonePileDark; sprite=57; special=canHangOnWalls; special=cannotBePickedUp;
 journalID=journal_bone;
 pR=pBoneDark;
@@ -1008,7 +1008,7 @@ pR=pBoneDark;
 [ItemReaction] 
 ID=bonePileDark; element=bonemeld; newID=bone_wall_strong; fx=dust_bone;
 
-[ItemType]  name=Tusk;
+[ItemType]  name=长牙;
 ID=tusk; sprite=681; 
 journalID=journal_bone;
 weight=1; volume=2;
@@ -1017,7 +1017,7 @@ weight=1; volume=2;
 ID=tusk; element=explode; element=heavySmash; newID=bone_dust; fx=dust_bone;
 [ItemReaction] 
 ID=tusk; element=bonemeld; newID=bone_wall_weak; fx=dust_bone;
-[ItemType]  name=Ribcage;
+[ItemType]  name=胸腔;
 ID=ribs2; sprite=682;
 weight=1; volume=5; 
 journalID=journal_bone;
@@ -1133,94 +1133,94 @@ title=潦草笔记;
 text=<itemBig=note_necroBloodQ><title=潦草笔记><brAdj=>便条上写着, <n=>    "Ekrast,你的充满好奇心的来自<n>Jascian的朋友促使我升级了安全系统.<n=>   如果你需要我, 回想一下关于我交易的最基本的内容.<n>然后你会明白的.<n=>    -V";
 
 
-[ItemType]  name=Book;
+[ItemType]  name=书;
 description=Book;
 ID=book1; sprite=868; 
 pR=pRedCloth;
 pB=pGrey;
 
 
-[ItemType]  name=Notes: Void, pt. I;
-description=Some of Ekrast's notes. <color=Gold>'Look'<color=White> at it to read it.;
+[ItemType]  name=笔记: 虚空, pt. I;
+description=Ekrast的一些笔记.<color=Gold>'Look'<color=White> 来阅读.;
 ID=book_research_v1; sprite=867; value=10;
 pR=pGrey;
 pB=pBlackCloth;
 [JournalEntry]
 ID=item_book_research_v1;
 category=artifact; halfPage=true; rarity=1;
-title=Notes: Void, pt. I;
-text=<itemBig=book_research_v1><title=Notes: Void, pt. I><brAdj=>"Essence is sapped by the Void, yet our realm exists surrounded by it. What prevents the Void from sapping life from Limroft?<n=>    Popular theory is the cloudy atmosphere, but tests w/ water vapor show it has no protective effect- at least in smaller quantities.<n=>    Current theory- gravity-like effect, dependent on mass.";
+title=笔记: 虚空, pt. I;
+text=<itemBig=book_research_v1><title=笔记: 虚空, pt. I><brAdj=>"精华被虚空所侵蚀,但我们的世界却被虚空所包围.<n>是什么阻止了虚空从Limroft吸取生命?<n=>    流行的理论是多云的大气层,但对水蒸气<n>的测试表明它没有保护作用--至少在少量来说.<n=>    目前的理论--类似引力的效应,取决于质量.";
 
 
-[ItemType]  name=Nature of the Void;
-description=A short treatise regarding the Void. <color=Gold>'Look'<color=White> at it to read it.;
+[ItemType]  name=虚空的本质;
+description=一篇关于虚空的简短论文.<color=Gold>'Look'<color=White>来阅读.;
 ID=book_void1; sprite=868; value=30;
 pR=pGreyblue2;
 pB=pGrey;
 [JournalEntry]
 ID=item_book_void1;
 category=artifact; halfPage=true; rarity=1;
-title=Nature of the Void;
-text=<itemBig=book_void1><title=Nature of the Void><brAdj=>"Above the skies of Eral, Limroft, and Graven, is the Void: an endless expanse of pure white light. Movement of thick clouds obscuring this light brings us day and night. But what is the true nature of the Void?<n=>    Little is known, except that direct exposure saps Essence from living beings. Many unfortunate experiments have proven this...";
+title=虚空的本质;
+text=<itemBig=book_void1><title=虚空的本质><brAdj=>"在general, Limroft和Graven的天空之上,<n>是虚空:一片无尽的宽阔的白光.浓厚的云层的移动<n>遮蔽了光线,给我们带来了白天和黑夜.<n>但是虚空的真正本质是什么?<n=>    人们所知甚少,只知道直接接触会使生物<n>的'精华'枯竭.许多不幸的实验已经证明了这一点...";
 
-[ItemType]  name=Necromancy Revealed;
-description=An examination of the basics of Necromancy. <color=Gold>'Look'<color=White> at it to read it.;
+[ItemType]  name=死灵法术揭秘;
+description=对死灵法术基础知识的考察.<color=Gold>'Look'<color=White>来阅读.;
 ID=book_necro1; sprite=868; value=30;
 pR=pBlackCloth;
 pB=pGrey;
 [JournalEntry]
 ID=item_book_necro1;
 category=artifact; halfPage=true; rarity=2;
-title=Necromancy Rev'd;
-text=<itemBig=book_necro1><title=Necromancy Revealed><brAdj=>"Though necromancy is rightfully condemned, we should not shy away from understanding its workings:<n=>    Necromancy is the use of Ruin magic on a newly-dead corpse to harness its essence. Essence normally dissipates within 2 weeks - but with necromancy, essence can be restrained indefinitely.";
+title=死灵法术揭秘;
+text=<itemBig=book_necro1><title=死灵法术揭秘><brAdj=>"虽然死灵法术被谴责是正确的,<n>但我们不应该去回避了解它的工作原理:<n=>    死灵法术是对刚死的尸体使用毁灭魔法来利用其精华.<n>精华通常在2周内消散--但是<n>使用死灵法术,可以被永久的约束.";
 
-[ItemType]  name=Magic Essentials, vol. I;
-description=An examination of the basics of magic. <color=Gold>'Look'<color=White> at it to read it.;
+[ItemType]  name=魔法的实质, vol. I;
+description=对魔术基础知识的考察.<n><color=Gold>'Look'<color=White>来阅读.;
 ID=book_magic1; sprite=869; value=30;
 pR=pPurpleD;
 pB=pYellow;
 [JournalEntry]
 ID=item_book_magic1;
 category=artifact; halfPage=true; rarity=1;
-title=Magic Essentials I;
-text=<itemBig=book_magic1><title=Magic Essentials, vol. I><brAdj=>"...in reality, magic is not a thing, or substance, but is instead an action, or a conversion. Three substances- matter, energy, and essence- make up the world: magic is using strength of mind to convert essence into energy.<n=>    Though creating matter is infeasible, there are tricks a clever mage can employ- such as causing condensation by changing temperature.";
+title=魔法的实质 I;
+text=<itemBig=book_magic1><title=魔法的实质, vol. I><brAdj=>"...在现实中,魔法不是一种东西或物质,而是一种行为,<n>或者说是转换.三种物质--物质、能量和本质<n>--构成了世界:魔法是用意识的力量将本质转化为能量.<n=>    虽然创造物质是不可能的,但聪明的法师<n>可以使用一些技巧--比如通过改变温度来引起冷凝.";
 
-[ItemType]  name=Magic Essentials, vol. II;
-description=An examination of the basics of magic. <color=Gold>'Look'<color=White> at it to read it.;
+[ItemType]  name=魔法的实质, vol. II;
+description=对魔术基础知识的考察. <color=Gold>'Look'<color=White>来阅读.;
 ID=book_magic2; sprite=869; value=30;
 pR=pPurpleD;
 pB=pYellow;
 [JournalEntry]
 ID=item_book_magic2;
 category=artifact; halfPage=false; rarity=1;
-title=Magic Essentials II;
-text=<itemBig=book_magic2><title=Magic Essentials, vol. II><brAdj=>"Magic manifests in 6 elements
-<n=><icon=skill_Fire>Fire - generate heat.<n=><icon=skill_Ice>Ice - reduce/remove heat.<n=><icon=skill_Elec>Lightning - electricity<n=><icon=skill_Wind>Wind (Force) - movement<n=><icon=skill_Life>Life (Preservation) -  restore original state<n=><icon=skill_Ruin>Ruin* - degrade state<n=>          *Ruin is viewed as a perversion in some circles. Its inclusion is for completeness, not to endorse or condemn any religious views.";
+title=魔法的实质 II;
+text=<itemBig=book_magic2><title=魔法的实质, vol. II><brAdj=>"魔法有6种元素
+<n=><icon=skill_Fire>火焰 - 产生热量.<n=><icon=skill_Ice>冰霜 - 降低/移除热量.<n=><icon=skill_Elec>闪电 - 电流<n=><icon=skill_Wind>疾风 (风力) - 移动<n=><icon=skill_Life>生命 (保护) -  恢复至原始状态<n=><icon=skill_Ruin>毁灭* - 削弱状态<n=>          *在某些圈内,毁灭魔法<n>被视为一种堕落.它的加入是为了完整,<n>而不是支持或谴责任何宗教观点.";
 
-[ItemType]  name=<color=Gold>Jasce's Crest;
-description=An engraved crest of Voidrock.;
+[ItemType]  name=<color=Gold>雅斯的徽章;
+description=一块刻有纹章的虚空岩石.;
 ID=voidrockCrest_jasce; sprite=898;
  volume=1; value=19999;
 [JournalEntry]
 ID=item_voidrockCrest_jasce;
 category=artifact; halfPage=true; rarity=4; rewardMod=-200;
-title=Jasce's Crest;
-text=<itemBig=voidrockCrest_jasce><title=Jasce's Crest><brAdj=>Jasce's self-proclaimed proof of divinity. His symbol is engraved in what is supposedly Voidrock, an impossibly hard substance that cannot be carved by any mortal means. The appearance matches Voidrock, but no scholar has been allowed to verify it.;
+title=雅斯的徽章;
+text=<itemBig=voidrockCrest_jasce><title=雅斯的徽章><brAdj=>雅斯自封为神的证明.他的象征被雕刻在所谓的<n>虚空岩石上,这是一种难以置信的坚硬物质,<n>任何凡人的手段都无法雕刻.外形与虚空岩石<n>相符,但没有学者被允许证实.;
 
 
 
-[ItemType]  name=Escape Gem;
+[ItemType]  name=逃脱宝石;
 ID=gem_escape; sprite=875; value=100;
 volume=98;
-description=When carried, teleports you home safely when you are about to bleed out.;
+description=携带时,当你即将大出血时,<n>将你安全地传送回家.;
 pR=pPurple;
 
-[ItemType]  name=Small Gem;
+[ItemType]  name=小宝石;
 ID=gem_small1; sprite=876; value=200;
 journalID=journal_gems;
 description=Small, valuable gem.; stackable=true;
 special=convertIntoCashAtEnd; special=sellForFullValue;
-[ItemType]  name=Big Gem;
+[ItemType]  name=大宝石;
 ID=gem_small2; sprite=844; value=400;
 journalID=journal_gems;
 description=A valuable gem.; stackable=true;
@@ -1244,7 +1244,7 @@ category=item; halfPage=true; rarity=2;
 title=宝石;
 text=<itemBig=gem_small2><itemBig=gem_big1><title=宝石><brAdj=>自古以来,人们就对宝石垂涎欲滴.<n>不管功能如何,它们的稀缺性和<n>闪亮的外观赋予了它们内在的价值.;
 
-[ItemType]  name=Crafting Kit Loot;
+[ItemType]  name=制作工具战利品;
 ID=loot_craft_kit; sprite=802;
 value=150;
 pR=pGreyD2;
@@ -1265,7 +1265,7 @@ toMake=craft_rapier;
 toMake=craft_greatsword;
 toMake=craft_armor;
 
-[ItemType]  name=Class Mask Loot;
+[ItemType]  name=面具类战利品;
 ID=loot_mask; sprite=1056;
 value=250;
 pR=pGreyD2;
@@ -1284,7 +1284,7 @@ toMake=mask_warpblade;
 
 toMake=loot_mask_weak;
 
-[ItemType]  name='Weak' Class Mask Loot;
+[ItemType]  name='较差的'面具类战利品;
 ID=loot_mask_weak; sprite=1056;
 value=140;
 pR=pBlue;
@@ -1325,90 +1325,90 @@ cloneFrom=mask_blank;
 ID=mask_rogue; sprite=1060;  spriteWhenHeld=1060;
 description=灵巧盗贼的面具.;
 cloneFrom=mask_blank;
-[ItemType]  name=Keen Eye Mask;
+[ItemType]  name=锐利之眼面具;
 ID=mask_sharpshooter; sprite=1061;  spriteWhenHeld=1061;
-description=Mask of the Sharpshooter.;
+description=神射手的面具.;
 cloneFrom=mask_blank;
-[ItemType]  name=Raging Mask;
+[ItemType]  name=狂怒面具;
 ID=mask_brawler; sprite=1058; spriteWhenHeld=1058;
-description=Mask of the ferocious Brawler.;
+description=凶猛的拳手面具.;
 cloneFrom=mask_blank;
-[ItemType]  name=Stoic Mask;
+[ItemType]  name=坚韧面具;
 ID=mask_guardian; sprite=1069;  spriteWhenHeld=1069;
-description=Mask of the noble Guardian.;
+description=高贵的守卫者面具.;
 cloneFrom=mask_blank;
-[ItemType]  name=Dual Mask;
+[ItemType]  name=双重面具;
 ID=mask_balancer; sprite=1070; spriteWhenHeld=1070;
-description=Mask of the Balancer.;
+description=平衡者的面具.;
 cloneFrom=mask_blank;
-[ItemType]  name=Powerful Mask;
+[ItemType]  name=强效面具;
 ID=mask_sorcerer; sprite=1071; spriteWhenHeld=1071;
-description=Mask of the mighty Sorcerer.;
+description=强大的魔法师的面具.;
 cloneFrom=mask_blank;
-[ItemType]  name=Thoughtful Mask;
+[ItemType]  name=沉思面具;
 ID=mask_sage; sprite=1072; spriteWhenHeld=1072;
-description=Mask of the pensive Sage.;
+description=沉思的贤者的面具.;
 cloneFrom=mask_blank;
-[ItemType]  name=Half-Mask;
+[ItemType]  name=半-面具;
 ID=mask_mechanist; sprite=1073; spriteWhenHeld=1073;
-description=Mask of the genius Mechanist.;
+description=天才机械师的面具.;
 cloneFrom=mask_blank;
-[ItemType]  name=Shining Dragon Mask;
+[ItemType]  name=银龙面具;
 ID=mask_blade; sprite=1074; spriteWhenHeld=1074;
-description=Mask of the Blade.;
+description=剑圣的面具.;
 cloneFrom=mask_blank;
-[ItemType]  name=Rusty Dragon Mask;
+[ItemType]  name=锈龙面具;
 ID=mask_breaker; sprite=1075; spriteWhenHeld=1075;
-description=Mask of the Breaker.;
+description=粉碎者的面具.;
 cloneFrom=mask_blank;
-[ItemType]  name=Magic Sword Mask;
+[ItemType]  name=魔法剑面具;
 ID=mask_enchanter; sprite=1076; spriteWhenHeld=1076;
-description=Mask of the Enchanter.;
+description=附魔师的面具.;
 cloneFrom=mask_blank;
-[ItemType]  name=Magic Eye Mask;
+[ItemType]  name=魔法之眼面具;
 ID=mask_spellslinger; sprite=1077; spriteWhenHeld=1077;
-description=Mask of the Spell Archon.;
+description=符文执政官的面具.;
 cloneFrom=mask_blank;
-[ItemType]  name=Phantom Mask;
+[ItemType]  name=鬼怪面具;
 ID=mask_unmaker; sprite=1067; spriteWhenHeld=1067;
-description=Mask of the dark Unmaker.;
+description=黑暗毁灭者的面具.;
 cloneFrom=mask_blank;
-[ItemType]  name=Sly Mask;
+[ItemType]  name=狡猾面具;
 ID=mask_gatekeeper; sprite=1078; spriteWhenHeld=1078;
-description=Mask of the ancient Gatekeeper.;
+description=古老的看门人的面具.;
 cloneFrom=mask_blank;
-[ItemType]  name=Hollow Mask;
+[ItemType]  name=空洞面具;
 ID=mask_shiftcloak; sprite=1065; spriteWhenHeld=1065;
-description=Mask of the elusive Shiftcloak.;
+description=神出鬼没的相位斗篷面具.;
 cloneFrom=mask_blank;
-[ItemType]  name=Crazed Mask;
+[ItemType]  name=疯狂面具;
 ID=mask_berserker; sprite=1068; spriteWhenHeld=1068;
-description=Mask of the reckless Berserker.;
+description=鲁莽的狂战士面具.;
 cloneFrom=mask_blank;
-[ItemType]  name=Eager Mask;
+[ItemType]  name=渴望面具;
 ID=mask_defiler; sprite=1062; spriteWhenHeld=1062;
-description=Mask of the evil Defiler.;
+description=邪恶亵渎者的面具.;
 cloneFrom=mask_blank;
-[ItemType]  name=Zoar Mask;
+[ItemType]  name=佐尔面具;
 ID=mask_bathandler; sprite=1079; spriteWhenHeld=1079;
-description=Mask of the resourceful and caring Bathandler.;
+description=足智多谋的体贴的蝙蝠训练者面具.;
 cloneFrom=mask_blank;
 
-[ItemType]  name=Burning Mask;
+[ItemType]  name=燃烧面具;
 ID=mask_ignisKnight; sprite=1080; spriteWhenHeld=1080; 
-description=Mask of the scorched Ignis Knight.;
+description=烧焦的火焰骑士面具.;
 cloneFrom=mask_blank;
 
-[ItemType]  name=Striped Mask;
+[ItemType]  name=条纹面具;
 ID=mask_warpblade; sprite=1081; spriteWhenHeld=1081;
-description=Mask of the stern Warpblade.;
+description=时空之刃的面具.;
 cloneFrom=mask_blank;
 
 [JournalEntry]
 ID=journal_mask;
 category=item; halfPage=false; rarity=2;
-title=Mask;
-text=<itemBig=mask_warrior><itemBig=mask_scholar><itemBig=mask_scout><title=Mask><brAdj=>Rasmen are sometimes feared and distrusted for their alien appearance, and non-Rasmen have immense difficulty telling them apart. Their solution was to carve and wear masks such as these. Since Rasmen see by 'feeling' essence, wearing a mask does not inhibit their senses.<n=><n=>These masks, though of solid craftsmanship, often display bizarre and uncanny faces. It figures that a faceless species would have no inherent sense of normal facial structure.;
+title=面具;
+text=<itemBig=mask_warrior><itemBig=mask_scholar><itemBig=mask_scout><title=面具><brAdj=>拉斯曼人有时会因为他们像外星人的外貌而让人害怕<n>和不信任,而且非拉斯曼人也很难区分他们.因此,<n>他们的解决办法是雕刻并戴上这样的面具.因为<n>拉斯曼是通过'感觉'本质来视物,所以戴上面具<n>并不会抑制他们的感官.这些面具,虽然工艺坚固,<n>却经常展示出奇异而诡异的面孔.可能原因是<n>一个没有脸的物种不会对正常的面部结构有内在的感觉.;
 
 
 
@@ -1423,7 +1423,7 @@ pG=pG;
 ID=exitArrow1; element=use; action=use;
 
 
-[ItemType]  name=Important Page;
+[ItemType]  name=重要文章;
 ID=useNote; sprite=2025;
 special=cannotBePickedUp; special=canHangOnWalls;
 special=fullTileHitbox; special=oneClickToUse;
@@ -1431,16 +1431,16 @@ special=noTooltips;
 pR=pYellow; 
 [ItemReaction] 
 ID=useNote; element=use; action=use;
-[ItemType]  name=Press <keybind=showTooltip> to see more info!;
+[ItemType]  name=按下<keybind=showTooltip>来显示更多信息!;
 ID=infoNote1; sprite=2024;
-description=Yes, exactly like that!;
+description=是的,就像那样!;
 special=cannotBePickedUp; special=canHangOnWalls;
 pR=pGreyD; 
 
 
 
 
-[ItemType]  name=Gate Device;
+[ItemType]  name=门装置;
 ID=gateDevice; sprite=2049;
 special=canHangOnWalls; special=animated;
 special=noTooltips;
@@ -1452,13 +1452,13 @@ depthMod=1050;
 [JournalEntry]
 ID=item_gateDevice;
 category=artifact; halfPage=true; rarity=3; rewardMod=-200;
-title=Gate Device;
-text=<itemBig=gateDevice><title=Gate Device><brAdj=>An exceedingly high-quality Gate trigger device that allows remote monitoring and teleportation. It only works on willing participants bearing the proper equipment, however, and it requires special training & maintenance to use.;
+title=门装置;
+text=<itemBig=gateDevice><title=门装置><brAdj=>一个高质量的门触发装置,可以远程监视和传送.<n>然而,它只适用于自愿携带适当设备的参与者,<n>并且需要特殊的培训和维护才能使用.;
 
 
 
 
-[ItemType]  name=Wood Loot; itemCategory=thing; 
+[ItemType]  name=木制装备战利品; itemCategory=thing; 
 ID=loot_wood; sprite=105;
 texture=items_weapons;
 value=5;
@@ -1472,7 +1472,7 @@ toMake=xbow_wood;
 toMake=shield_wood;
 toMake=spear_wood;
 
-[ItemType]  name=Bone Loot;
+[ItemType]  name=骨制装备战利品;
 ID=loot_bone; sprite=105; itemCategory=thing; 
 texture=items_weapons;
 value=5;
@@ -1492,7 +1492,7 @@ toMake=knuckle_bone;
 toMake=armor_bone;
 
 
-[ItemType]  name=Iron Loot;
+[ItemType]  name=铁制装备战利品;
 ID=loot_iron; sprite=105; itemCategory=thing; 
 texture=items_weapons;
 value=25;
@@ -1513,7 +1513,7 @@ toMake=knuckle_iron;
 toMake=spear_iron;
 toMake=armor_iron;
 
-[ItemType]  name=Steel Loot;
+[ItemType]  name=钢制装备战利品;
 ID=loot_steel; sprite=105; itemCategory=thing;
 texture=items_weapons;
 value=50;
@@ -1535,7 +1535,7 @@ toMake=spear_steel;
 toMake=armor_steel;
 
 
-[ItemType]  name=Mythril Loot;
+[ItemType]  name=秘银装备战利品;
 ID=loot_mythril; sprite=105; itemCategory=thing; 
 texture=items_weapons;
 value=200;
@@ -1555,7 +1555,7 @@ toMake=whip_mythril;
 toMake=knuckle_mythril;
 toMake=spear_mythril;
 toMake=armor_mythril;
-[ItemType]  name=Corpryst Loot;
+[ItemType]  name=晶体装备战利品;
 ID=loot_corpryst; sprite=105; itemCategory=thing; 
 texture=items_weapons;
 value=200;
@@ -1573,7 +1573,7 @@ toMake=whip_corpryst;
 toMake=knuckle_corpryst;
 toMake=spear_corpryst;
 toMake=armor_corpryst;
-[ItemType]  name=Coral Loot;
+[ItemType]  name=珊瑚装备战利品;
 ID=loot_coral; sprite=105; itemCategory=thing; 
 texture=items_weapons;
 value=45;
@@ -1595,7 +1595,7 @@ toMake=spear_coral;
 toMake=armor_coral;
 
 
-[ItemType]  name=Electric Loot;
+[ItemType]  name=电系装备战利品;
 ID=loot_elec; sprite=105; itemCategory=thing; 
 texture=items_weapons;
 value=350;
@@ -1616,7 +1616,7 @@ toMake=knuckle_elec;
 toMake=spear_elec;
 toMake=armor_elec;
 
-[ItemType]  name=Wind Loot;
+[ItemType]  name=风系装备战利品;
 ID=loot_wind; sprite=105; itemCategory=thing; 
 texture=items_weapons;
 value=400;
@@ -1637,7 +1637,7 @@ toMake=knuckle_wind;
 toMake=spear_wind;
 toMake=armor_wind;
 
-[ItemType]  name=Laser Loot;
+[ItemType]  name=镭射装备战利品;
 ID=loot_laser; sprite=105; itemCategory=thing; 
 texture=items_weapons;
 value=600;
@@ -1658,7 +1658,7 @@ toMake=knuckle_laser;
 toMake=spear_laser;
 toMake=armor_laser;
 
-[ItemType]  name=Ironice Loot;
+[ItemType]  name=寒铁冰装备战利品;
 ID=loot_ironice; sprite=105; itemCategory=thing; 
 texture=items_weapons;
 value=800;
@@ -1679,7 +1679,7 @@ toMake=knuckle_ironice;
 toMake=spear_ironice;
 toMake=armor_ironice;
 
-[ItemType]  name=Volskarn Loot;
+[ItemType]  name=沃尔斯卡恩装备战利品;
 ID=loot_volskarn; sprite=105; itemCategory=thing; 
 texture=items_weapons;
 value=150;
@@ -1701,7 +1701,7 @@ toMake=spear_volskarn;
 toMake=armor_volskarn;
 
 
-[ItemType]  name=All Equipment;
+[ItemType]  name=所有装备战利品;
 ID=loot_equip_all; sprite=105; itemCategory=thing; 
 texture=items_weapons;
 value=700;
@@ -1715,7 +1715,7 @@ toMake=loot_laser;
 toMake=loot_volskarn;
 toMake=loot_equip_rare1;
 
-[ItemType]  name=Rare Equipment;
+[ItemType]  name=稀有装备战利品;
 ID=loot_equip_rare1; sprite=105; itemCategory=thing; 
 texture=items_weapons;
 value=600;
@@ -1736,7 +1736,7 @@ toMake=loot_ironice;
 toMake=loot_equip_rare2;
 toMake=loot_armor_rare2;
 
-[ItemType]  name=Rare Equipment;
+[ItemType]  name=稀有装备战利品;
 ID=loot_equip_rare2; sprite=105; itemCategory=thing; 
 texture=items_weapons;
 value=800;
@@ -1749,7 +1749,7 @@ toMake=sword_volskarver;
 toMake=rifle_scout;
 toMake=loot_armor_rare2;
  
-[ItemType]  name=Trigger Stone Loot;
+[ItemType]  name=触发石战利品;
 texture=items_weapons;
 ID=loot_trigger; sprite=110;
 value=90;
@@ -1763,7 +1763,7 @@ toMake=trigger_life;
 toMake=trigger_ruin;
 toMake=trigger_water;
 toMake=loot_trigger_status;
-[ItemType]  name=Special Trigger Stone Loot;
+[ItemType]  name=特殊触发石战利品;
 texture=items_weapons;
 ID=loot_trigger_special; sprite=109;
 value=150;
@@ -1774,7 +1774,7 @@ toMake=trigger_elec_cage;
 toMake=trigger_life_light;
 toMake=trigger_ice_light;
 toMake=trigger_wind_light;
-[ItemType]  name=Status Trigger Stone Loot;
+[ItemType]  name=状态触发石战利品;
 texture=items_weapons;
 ID=loot_trigger_status; sprite=107;
 value=150;
@@ -1784,7 +1784,7 @@ toMake=trigger_stun;
 toMake=trigger_push;
 toMake=trigger_growth;
 
-[ItemType]  name=Grove Shrine Pedestal Items;
+[ItemType]  name=树林神祠基座道具战利品;
 ID=loot_grove_shrine; sprite=868; itemCategory=thing; 
 value=200;
 special=replaceWith_toMake_list;
@@ -1795,7 +1795,7 @@ toMake=actionTablet_random;
 
 
 
-[ItemType]  name=Fossils;
+[ItemType]  name=化石;
 ID=loot_fossils; sprite=2224;
 value=500;
 pR=pBlue;
@@ -1821,10 +1821,10 @@ toMake=fossil16;
 toMake=fossil17;
 
 
-[ItemType]  name=Fossil;
+[ItemType]  name=化石;
 ID=fossil1; sprite=2224; 
 weight=0; volume=1; value=0;
-description=An ancient fossil. 'Look' at it to research it.;
+description=一个古老的化石.使用'Look'来调查.;
 special=sellForFullValue;
 pR=pDirt;
 spawnFX=lootRemaining;
@@ -1832,116 +1832,116 @@ spawnFX=lootRemaining;
 [JournalEntry]
 ID=item_fossil1;
 category=artifact; halfPage=true; rarity=3; rewardMod=250;
-title=Perfect Bone;
-text=<itemBig=fossil1><title=Perfect Bone><brAdj=>A bone, possibly a Humerus, that is in astonishingly good condition despite belonging to an ancient human.;
+title=完美的骨头;
+text=<itemBig=fossil1><title=完美的骨头><brAdj=>一根可能是肱骨的骨头,尽管属于古人类,<n>却保存得惊人地完好.;
 
 
-[ItemType]  name=Fossil;
+[ItemType]  name=化石;
 ID=fossil2; sprite=2225; 
 cloneFrom=fossil1;
 [JournalEntry]
 ID=item_fossil2;
 category=artifact; halfPage=true; rarity=3; rewardMod=400;
-title=Giant's Hand;
-text=<itemBig=fossil2><title=Giant's Hand><brAdj=>Fossil of a lower arm and hand of abnormal size. No known species match its size, though some postulate that it belonged to a Wilderi with gigantism.;
+title=巨大的手;
+text=<itemBig=fossil2><title=巨大的手><brAdj=>异常大小的前臂和手的化石.没有一种已知的物种<n>能与它的体型相匹配,尽管有些人认为它<n>属于一种具有巨人症的野生动物.;
 
-[ItemType]  name=Fossil;
+[ItemType]  name=化石;
 ID=fossil3; sprite=2226; 
 cloneFrom=fossil1;
 [JournalEntry]
 ID=item_fossil3;
 category=artifact; halfPage=true; rarity=3; rewardMod=-300;
-title=Sea Arthropod;
-text=<itemBig=fossil3><title=Sea Arthropod><brAdj=>Some sort of ocean-dwelling arthropod. The fossil is heavily damaged, to the point that the species can't be discerned.;
+title=海洋节肢动物;
+text=<itemBig=fossil3><title=海洋节肢动物><brAdj=>某种海洋节肢动物.化石被严重损坏,<n>以至于无法辨别物种.;
 
-[ItemType]  name=Fossil;
+[ItemType]  name=化石;
 ID=fossil4; sprite=2227; 
 special=sprite2xHeight;
 cloneFrom=fossil1;
 [JournalEntry]
 ID=item_fossil4;
 category=artifact; halfPage=true; rarity=4; rewardMod=-250;
-title=Tallsquid;
-text=<itemBig=fossil4><title=Tall Squid><brAdj=>The "Interminable Squid". These tentacles have been cut off- live tallsquids limbs can grow over 3 meters per year. The maximum possible length of their tentacles is unknown.;
+title=高大的鱿鱼;
+text=<itemBig=fossil4><title=高大的鱿鱼><brAdj=>'无止尽的鱿鱼'.这些触手已经被切断了<n>--活的高大鱿鱼的四肢每年可以长3米多.<n>它们触角的最大长度未知.;
 
 
 
-[ItemType]  name=Fossil;
+[ItemType]  name=化石;
 ID=fossil5; sprite=2256; 
 cloneFrom=fossil1;
 [JournalEntry]
 ID=item_fossil5;
 category=artifact; halfPage=true; rarity=3;
-title=Many-fin Scaleworm;
-text=<itemBig=fossil5><title=Many-fin Scale Worm><brAdj=>A serpent-like creature with a strong jaw. Known for its powerful fins that allow it to lunge at prey from a great distance.;
-[ItemType]  name=Fossil;
+title=多鳍蠕虫;
+text=<itemBig=fossil5><title=多鳍蠕虫><brAdj=>有强壮颚的似蛇的生物以其强大的鳍而闻名,<n>这使它能够从很远的地方扑向猎物.;
+[ItemType]  name=化石;
 ID=fossil6; sprite=2257; 
 cloneFrom=fossil1;
 [JournalEntry]
 ID=item_fossil6;
 category=artifact; halfPage=true; rarity=3; rewardMod=-100;
-title=Jumbo Prawn;
-text=<itemBig=fossil6><title=Jumbo Prawn><brAdj=>A prawn of exceptional size, well-preserved, though its much of its antennae and limbs are missing.;
-[ItemType]  name=Fossil;
+title=巨型大虾;
+text=<itemBig=fossil6><title=巨型大虾><brAdj=>一种特别大的虾,保存完好,<n>尽管它的大部分触角和四肢都缺失了.;
+[ItemType]  name=化石;
 ID=fossil7; sprite=2258; 
 cloneFrom=fossil1;
 [JournalEntry]
 ID=item_fossil7;
 category=artifact; halfPage=true; rarity=3; rewardMod=-150;
-title=Gelfish;
-text=<itemBig=fossil7><title=Gelfish><brAdj=>Deep sea fish with low-density gelatinous flesh. This allows it to float without expending energy.;
+title=凝胶鱼;
+text=<itemBig=fossil7><title=凝胶鱼><brAdj=>深海鱼,肉密度低,呈胶状.<n>这使得它可以在不消耗能量的情况下漂浮.;
 
-[ItemType]  name=Fossil;
+[ItemType]  name=化石;
 ID=fossil8; sprite=2228; 
 cloneFrom=fossil1;
 [JournalEntry]
 ID=item_fossil8;
 category=artifact; halfPage=true; rarity=3; rewardMod=-50;
-title=Scurio Skull;
-text=<itemBig=fossil8><title=Scurio Skull><brAdj=>Skull of a 200-year old Scurio missing half a jawbone. There's also a puncture on the back of the skull that may have been the real cause of death.;
-[ItemType]  name=Fossil;
+title=斯库瑞的头骨;
+text=<itemBig=fossil8><title=斯库瑞的头骨><brAdj=>一个200岁的斯库瑞的头骨缺失了半块下颚骨.<n>头骨后面有一个穿孔,这可能是真正的死因.;
+[ItemType]  name=化石;
 ID=fossil9; sprite=2229; 
 cloneFrom=fossil1;
 [JournalEntry]
 ID=item_fossil9;
 category=artifact; halfPage=true; rarity=3; rewardMod=-50;
-title=Rasmen Skull;
-text=<itemBig=fossil9><title=Rasmen Skull><brAdj=>Smooth skull of a long-dead Rasmen. As expected, there are no eyesockets or nostrils - only small holes on each cheek for the Rasmen's mouths.;
+title=拉斯曼的头骨;
+text=<itemBig=fossil9><title=拉斯曼的头骨><brAdj=>已故拉斯曼的光滑头骨.不出所料,它没有眼窝或鼻孔,<n>只有两边脸颊上的小洞,是拉斯曼的嘴巴.;
 
-[ItemType]  name=Fossil;
+[ItemType]  name=化石;
 ID=fossil10; sprite=2260; 
 cloneFrom=fossil1;
 [JournalEntry]
 ID=item_fossil10;
 category=artifact; halfPage=true; rarity=3; rewardMod=100;
-title=Velk Skull;
-text=<itemBig=fossil10><title=Velk Skull><brAdj=>Slightly damaged skull of a large, docile herbivore known as a Velk. Their docile nature has led them to near extinction.;
-[ItemType]  name=Fossil;
+title=维克头骨;
+text=<itemBig=fossil10><title=维克头骨><brAdj=>一种被称为维克的大型温顺食草动物的轻微损伤的头骨.<n>它们温顺的本性使它们濒临灭绝.;
+[ItemType]  name=化石;
 ID=fossil11; sprite=2261; 
 cloneFrom=fossil1;
 [JournalEntry]
 ID=item_fossil11;
 category=artifact; halfPage=true; rarity=3; rewardMod=150;
-title=Giant Dewclaw;
-text=<itemBig=fossil11><title=Giant Dewclaw><brAdj=>Ancillary claw from an unknown, but extremely large, mammal. Because this dewclaw has grown quite long instead of being worn down by use, it seems likely to be vestigial.;
+title=巨大的上爪;
+text=<itemBig=fossil11><title=巨大的上爪><brAdj=>来自一种未知但极其巨大的哺乳动物的副爪.<n>因为这上爪长得相当长,不像是被使用磨损的,<n>所以它看起来很可能是退化的.;
 
-[ItemType]  name=Fossil;
+[ItemType]  name=化石;
 ID=fossil12; sprite=2230; 
 cloneFrom=fossil1;
 [JournalEntry]
 ID=item_fossil12;
 category=artifact; halfPage=true; rarity=4; rewardMod=0;
-title=Multispide;
-text=<itemBig=fossil12><title=Multispide><brAdj=>Fossilized Spide, but with far too many legs. This rare and bizarre specimen should puzzle experts quite a bit.;
+title=多腿蜘蛛;
+text=<itemBig=fossil12><title=多腿蜘蛛><brAdj=>蜘蛛化石,但腿太多了.<n>这个罕见奇异的标本应该会让专家们感到困惑.;
 
-[ItemType]  name=Fossil;
+[ItemType]  name=化石;
 ID=fossil13; sprite=2231; 
 cloneFrom=fossil1;
 [JournalEntry]
 ID=item_fossil13;
 category=artifact; halfPage=true; rarity=3; rewardMod=-150;
-title=Fine Fang;
-text=<itemBig=fossil13><title=Fine Fang><brAdj=>A lone canine, well-preserved. Perhaps it broke off in a fight, or it could be all that remains of an ancient spear.;
+title=完好的尖牙;
+text=<itemBig=fossil13><title=Fine Fang><brAdj=>一只孤单的尖牙,保存完好.也许是在一场战斗<n>中折断的,也可能是古代矛的残骸.;
 
 [ItemType]  name=化石;
 ID=fossil14; sprite=2263; 
@@ -1952,33 +1952,33 @@ category=artifact; halfPage=true; rarity=3; rewardMod=150;
 title=科弗拉之尾;
 text=<itemBig=fossil14><title=科弗拉之尾><brAdj=>科弗拉兽锋利的钩状尾巴.<n>科佛拉用巨大的力量摆动尾巴来刺穿猎物的皮.;
 
-[ItemType]  name=Fossil;
+[ItemType]  name=化石;
 ID=fossil15; sprite=2262; 
 cloneFrom=fossil1;
 [JournalEntry]
 ID=item_fossil15;
 category=artifact; halfPage=true; rarity=3; rewardMod=0;
-title=Bent Bone;
-text=<itemBig=fossil15><title=Bent Bone><brAdj=>Seemingly part of a humanoid forearm, bent to the extreme. Something strange and traumatic must have occured to the owner.;
+title=弯曲的骨头;
+text=<itemBig=fossil15><title=Bent Bone><brAdj=>看起来像是人类前臂的一部分,弯曲得很厉害.<n>它的主人一定是发生了什么奇怪而痛苦的事.;
 
-[ItemType]  name=Fossil;
+[ItemType]  name=化石;
 ID=fossil16; sprite=2264; 
 cloneFrom=fossil1;
 [JournalEntry]
 ID=item_fossil16;
 category=artifact; halfPage=true; rarity=4; rewardMod=100;
-title=Burmbler;
-text=<itemBig=fossil16><title=Burmbler><brAdj=>This small mushroom-like being hasn't been seen in ages. It supposedly photosynthesized like a plant, but could run away from threats on its two legs.;
+title=布姆波尔;
+text=<itemBig=fossil16><title=布姆波尔><brAdj=>这种蘑菇状的小生物已经很久没出现了.<n>据推测,它们像植物一样进行光合作用,<n>还可以用两条腿逃离威胁.;
 
 
-[ItemType]  name=Fossil;
+[ItemType]  name=化石;
 ID=fossil17; sprite=2232; 
 cloneFrom=fossil1;
 [JournalEntry]
 ID=item_fossil17;
 category=artifact; halfPage=true; rarity=3; rewardMod=150;
-title=Rock Crammel;
-text=<itemBig=fossil17><title=Rock Crammel><brAdj=>This bulky bug spends most of its life underground, feeding off worms and roots. The fossil is a rare look at a full-grown specimen.;
+title=岩石蠕虫;
+text=<itemBig=fossil17><title=岩石蠕虫><brAdj=>这种体型庞大的虫子大部分时间都在地下生活,<n>以蠕虫和树根为食.这化石是罕见的成年标本.;
 
 ---------FOOD
 
@@ -1988,31 +1988,31 @@ special=cannotBePickedUp; special=adjustSpriteYUp8;
 value=4; power=5;
 description=Don't use this. It's for cloning to food.;
 
-[ItemType]  name=Simple Bread;
+[ItemType]  name=简单的面包;
 ID=food_basic1; sprite=2379; 
 cloneFrom=food_base;
 value=6; power=5;
-description=Decently tasty bread.; 
+description=体面的美味面包.; 
 [ItemEffect]  
 ID=food_basic1; actorValue=PhysEva; magnitude=2; duration=6;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
-[ItemType]  name=Crisp Baguette;
+[ItemType]  name=酥脆的法式长棍面包;
 ID=food_bread1; sprite=2380; 
 cloneFrom=food_base;
 value=4; power=5;
-description=Fresh toasty long bread.; 
+description=新鲜的长面包.; 
 [ItemEffect]  
 ID=food_bread1; actorValue=PhysEva; magnitude=3; duration=7;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
 
 
-[ItemType]  name=Gloam Truffle;
+[ItemType]  name=黄昏松露;
 ID=food_mushroom1; sprite=2412; 
 cloneFrom=food_base;
 value=20; power=13;
-description=Rare, edible subspecies of Gloam Shroom.; 
+description=稀有的可食用的黄昏蘑菇亚种.; 
 [ItemEffect]  
 ID=food_mushroom1; actorValue=glowing; magnitude=1; duration=2;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
@@ -2020,113 +2020,113 @@ durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificA
 ID=food_mushroom1; actorValue=MagEva; magnitude=10; duration=12;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
-[ItemType]  name=Sea Flower Souffle;
+[ItemType]  name=海花蛋奶酥;
 ID=food_souffle1; sprite=2411; 
 cloneFrom=food_base;
 value=17; power=9;
-description=Fluffy baked egg & salted sea flower petals.; 
+description=松软的烤蛋和咸海花花瓣.; 
 [ItemEffect]
 ID=food_souffle1; actorValue=upwind; magnitude=1; duration=5;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
-[ItemType]  name=Golden Bisque;
+[ItemType]  name=金色浓汤;
 ID=food_soup1; sprite=2381; 
 cloneFrom=food_base;
 value=11; power=8;
-description=Thick, creamy shellfish soup.; 
+description=浓稠的奶油贝类汤.; 
 [ItemEffect]
 ID=food_soup1; actorValue=PhysDef; magnitude=1; duration=6;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
-[ItemType]  name=Pickled Skinkeyes;
+[ItemType]  name=盐渍蜥蜴皮;
 ID=food_jar1; sprite=2383; 
 cloneFrom=food_base;
 value=13; power=7;
-description=Crunchy & salty lizard lookers.; 
+description=又脆又咸.; 
 [ItemEffect]
 ID=food_jar1; actorValue=skill_Elec; magnitude=1; duration=9;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
 
-[ItemType]  name=Naga Pepper;
+[ItemType]  name=娜迦胡椒;
 ID=food_pepper1; sprite=2384; 
 cloneFrom=food_base;
 value=11; power=6;
-description=Painfully hot pepper served alone as a challenge.; 
+description=只会令人痛苦的辣椒是一种挑战。; 
 [ItemEffect]
 ID=food_pepper1; actorValue=skill_Fire; magnitude=1; duration=9;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
-[ItemType]  name=Rimeberries;
+[ItemType]  name=雾凇浆果;
 ID=food_berry1; sprite=2386; 
 cloneFrom=food_base;
 value=11; power=7;
-description=Berries served frozen & draped in a light dressing.; 
+description=浆果被冷冻并铺上薄敷料.; 
 [ItemEffect]
 ID=food_berry1; actorValue=skill_Ice; magnitude=1; duration=9;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
-[ItemType]  name=Mistral Vapor;
+[ItemType]  name=西北风;
 ID=food_vapor1; sprite=2385; 
 cloneFrom=food_base;
 value=13; power=6;
-description=Supposedly the bottled breath of a wind demon. Minty.; 
+description=据说装着风魔的瓶子.薄荷味的.; 
 [ItemEffect]
 ID=food_vapor1; actorValue=skill_Wind; magnitude=1; duration=9;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
 
-[ItemType]  name=Sage Starfish;
+[ItemType]  name=灰绿色海星;
 ID=food_starfish1; sprite=2391; 
 cloneFrom=food_base;
 value=13; power=7;
-description=Sea star roasted in herbs and garlic.; 
+description=用香草和大蒜烤海星.; 
 [ItemEffect]
 ID=food_starfish1; actorValue=skill_Life; magnitude=1; duration=9;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
 
-[ItemType]  name=Ruecumber;
+[ItemType]  name=酸黄瓜;
 ID=food_cucumber1; sprite=2382; 
 cloneFrom=food_base;
 value=11; power=7;
-description=Extremely sour pickle with a strong aftertaste.; 
+description=极酸的腌菜,回味浓烈.; 
 [ItemEffect]  
 ID=food_cucumber1; actorValue=skill_Ruin; magnitude=1; duration=9;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
-[ItemType]  name=Bronze Draught;
+[ItemType]  name=古铜色啤酒;
 ID=food_beer1; sprite=2387; 
 cloneFrom=food_base;
 value=6; power=12;
-description=Strong alcohol named for its metallic appearance.; 
+description=因其金属外观而得名的烈酒.; 
 [ItemEffect]
 ID=food_beer1; actorValue=moveDistance; magnitude=-1; duration=3;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
-[ItemType]  name=Hoppy Lager;
+[ItemType]  name=啤酒花;
 ID=food_beer2; sprite=2418; 
 cloneFrom=food_base;
 value=10; power=8;
-description=Lager that is more foam than beer.; 
+description=比啤酒更多泡沫的贮藏啤酒.; 
 [ItemEffect]
 ID=food_beer2; actorValue=jumpDistance; magnitude=1; duration=6;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
-[ItemType]  name=Fin Fillet;
+[ItemType]  name=鱼鳍肉片;
 ID=food_meat1; sprite=2413; 
 cloneFrom=food_base;
 value=16; power=7;
-description=Thin, delicate fins of a giant elasmocrinoid.; 
+description=薄的纤细的鱼鳍片.; 
 [ItemEffect]
 ID=food_meat1; actorValue=downwind; magnitude=1; duration=3;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
-[ItemType]  name=Beaf;
+[ItemType]  name=牛肉;
 ID=food_meat2; sprite=2414; 
 cloneFrom=food_base;
 value=4; power=3;
-description=Canned meat of unknown origin.; 
+description=来源不明的罐头肉.; 
 [ItemEffect]  
 ID=food_meat2; actorValue=PhysAtk; magnitude=1; duration=6;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
@@ -2135,40 +2135,40 @@ ID=food_meat2; actorValue=MagDef; magnitude=-1; duration=6;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
 
-[ItemType]  name=Deep Wine;
+[ItemType]  name=深酒;
 ID=food_beer3; sprite=2420; 
 cloneFrom=food_base;
 value=22; power=12;
-description=Aged red wine with an odd chalky aftertaste.; 
+description=陈年的红葡萄酒,有一种奇怪的石灰味.; 
 [ItemEffect]
 ID=food_beer3; actorValue=MagAtk; magnitude=1; duration=8;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
 
-[ItemType]  name=Reed Perch;
+[ItemType]  name=芦苇鲈鱼;
 ID=food_meat3; sprite=2421; 
 cloneFrom=food_base;
 value=8; power=7;
-description=Freshwater fish that hides among reeds.; 
+description=隐藏在芦苇中的淡水鱼.; 
 [ItemEffect]
 ID=food_meat3; actorValue=skill_Shield; magnitude=1; duration=8;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
-[ItemType]  name=Rock Yam;
+[ItemType]  name=岩石山芋;
 ID=food_fruit1; sprite=2427; 
 cloneFrom=food_base;
 value=8; power=8;
-description=Tough exterior, juicy citrus interior.; 
+description=坚硬的外表,多汁的内部.; 
 [ItemEffect]
 ID=food_fruit1; actorValue=PhysEva; magnitude=3; duration=9;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
 
-[ItemType]  name=An Entire Onion;
+[ItemType]  name=一个完整的洋葱;
 ID=food_onion1; sprite=2415; 
 cloneFrom=food_base;
 value=5; power=1;
-description=A common onion. Utensils are not allowed.; 
+description=一个常见的洋葱.餐具是不允许的.; 
 [ItemEffect]  
 ID=food_onion1; actorValue=itchy; magnitude=1; duration=1;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
@@ -2177,41 +2177,41 @@ ID=food_onion1; actorValue=PhysAtk; magnitude=1; duration=5;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
 
-[ItemType]  name=Rutroot Surprise;
+[ItemType]  name=吃惊的根;
 ID=food_root1; sprite=2389; 
 cloneFrom=food_base;
 value=14; power=10;
-description=Chewy, tough root with meat, cheese, & gravy inside.; 
+description=有嚼劲,里面有肉,奶酪和肉汁.; 
 [ItemEffect]
 ID=food_root1; actorValue=PhysDef; magnitude=1; duration=7;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
 
-[ItemType]  name=Blueshine;
+[ItemType]  name=蓝光;
 ID=food_beer4; sprite=2395;
 cloneFrom=food_base;
 value=8; power=7;
-description=Distilled spirits with a pinch of sea salt.; 
+description=蒸馏酒加一小撮海盐.; 
 [ItemEffect]
 ID=food_beer4; actorValue=MagDef; magnitude=1; duration=7;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
 
-[ItemType]  name=Tower Tankard;
+[ItemType]  name=大啤酒杯;
 ID=food_beer5; sprite=2394; 
 cloneFrom=food_base;
 value=16; power=11;
-description=Hard cider poured to the brim.; 
+description=强行盛满苹果酒.; 
 [ItemEffect]
 ID=food_beer5; actorValue=MagDef; magnitude=1; duration=6;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
 
-[ItemType]  name=Citrind Jam;
+[ItemType]  name=柑橘果酱;
 ID=food_jam1; sprite=2398; 
 cloneFrom=food_base;
 value=9; power=7;
-description=Zesty mix of citrus & pepper skins.; 
+description=柑橘和胡椒皮的混合风味.; 
 [ItemEffect]
 ID=food_jam1; actorValue=PhysEva; magnitude=2; duration=7;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
@@ -2220,21 +2220,21 @@ ID=food_jam1; actorValue=MagEva; magnitude=5; duration=7;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
 
-[ItemType]  name=Blood Durian;
+[ItemType]  name=血榴莲;
 ID=food_durian1; sprite=2424; 
 cloneFrom=food_base;
 value=33; power=2;
-description=Wretched fruit that singes the heart.; 
+description=像烧焦的心脏一样的<n>令人感到不适的水果.; 
 [ItemEffect]
 ID=food_durian1; actorValue=moveDistance; magnitude=1; duration=7;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
 
-[ItemType]  name=Pepper Blossom;
+[ItemType]  name=辣椒花;
 ID=food_pepper2; sprite=2392; 
 cloneFrom=food_base;
 value=9; power=7;
-description=Spicy-sweet peppers that grow in trios.; 
+description=又甜又辣的三种辣椒.; 
 [ItemEffect]
 ID=food_pepper2; actorValue=PhysEva; magnitude=3; duration=9;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
@@ -2242,11 +2242,11 @@ durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificA
 ID=food_pepper2; actorValue=MagEva; magnitude=3; duration=9;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
-[ItemType]  name=Grand Bean;
+[ItemType]  name=巨大的豆;
 ID=food_bean1; sprite=2388; 
 cloneFrom=food_base;
 value=20; power=9;
-description=Gigantic bean that can sate any appetite.; 
+description=能满足任何胃口的巨大豆子.; 
 [ItemEffect]
 ID=food_bean1; actorValue=PhysDef; magnitude=1; duration=7;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
@@ -2255,21 +2255,21 @@ ID=food_bean1; actorValue=MagDef; magnitude=1; duration=7;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
 
-[ItemType]  name=Cheesebarley Pie;
+[ItemType]  name=奶酪大麦饼;
 ID=food_pie1; sprite=2430; 
 cloneFrom=food_base;
 value=15; power=9;
-description=Thick pie that manages to be both savory and sweet.; 
+description=又香又甜的厚派.; 
 [ItemEffect]
 ID=food_pie1; actorValue=MagEva; magnitude=8; duration=7;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
 
-[ItemType]  name=Osso Cakes;
+[ItemType]  name=奥苏蛋糕;
 ID=food_cake1; sprite=2425; 
 cloneFrom=food_base;
 value=12; power=6;
-description=Chalky, airy biscuits, lightly honeyed.; 
+description=松软的饼干,有少许蜂蜜.; 
 [ItemEffect]
 ID=food_cake1; actorValue=skill_Bow; magnitude=1; duration=6;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
@@ -2278,39 +2278,39 @@ ID=food_cake1; actorValue=skill_Aim; magnitude=1; duration=6;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
 
-[ItemType]  name=Flom Cake;
+[ItemType]  name=富勒姆蛋糕;
 ID=food_cake2; sprite=2429; 
 cloneFrom=food_base;
 value=7; power=6;
-description=Fluffy & sticky cake topped with bitter crumbs.; 
+description=松软粘稠的蛋糕,上面撒上苦味的面包屑.; 
 [ItemEffect]
 ID=food_cake2; actorValue=MagEva; magnitude=2; duration=12;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
-[ItemType]  name=Creamcake Pie;
+[ItemType]  name=奶油蛋糕派;
 ID=food_pie2; sprite=2428; 
 cloneFrom=food_base;
 value=6; power=7;
-description=Dense sugary pie made from a secret family recipe.; 
+description=由家庭秘方制成的密糖派.; 
 [ItemEffect]
 ID=food_pie2; actorValue=MagDef; magnitude=1; duration=4;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
 
-[ItemType]  name=Gojer Flank;
+[ItemType]  name=戈杰尔的胁腹;
 ID=food_meat4; sprite=2419; 
 cloneFrom=food_base;
 value=8; power=8;
-description=Seasoned steak cooked to perfection.;
+description=调味牛排烹饪得恰到好处.;
 [ItemEffect]
 ID=food_meat4; actorValue=PhysEva; magnitude=3; duration=7;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
-[ItemType]  name=Stir Kebab;
+[ItemType]  name=搅拌烤肉串;
 ID=food_meat5; sprite=2390; 
 cloneFrom=food_base;
 value=11; power=8;
-description=Bits of Gojer meat, each with a unique dressing.; 
+description=戈杰尔肉块,每一块都有独特的调味料.; 
 [ItemEffect]
 ID=food_meat5; actorValue=PhysEva; magnitude=4; duration=7;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
@@ -2318,11 +2318,11 @@ durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificA
 ID=food_meat5; actorValue=MagEva; magnitude=4; duration=7;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
-[ItemType]  name=Silk Pepper;
+[ItemType]  name=丝绸辣椒;
 ID=food_pepper3; sprite=2399; 
 cloneFrom=food_base;
 value=13; power=9;
-description=Slick pepper filled with vibrant sauces & meats.; 
+description=滑溜的胡椒用来做酱汁和肉.; 
 [ItemEffect]
 ID=food_pepper3; actorValue=PhysEva; magnitude=3; duration=5;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
@@ -2330,11 +2330,11 @@ durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificA
 ID=food_pepper3; actorValue=MagDef; magnitude=1; duration=5;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
-[ItemType]  name=Rigor Oil;
+[ItemType]  name=里戈尔油;
 ID=food_drink1; sprite=2396; 
 cloneFrom=food_base;
 value=14; power=3;
-description=Unpleasant, slimy drink that heightens senses.; 
+description=令人不快的,黏糊糊的饮料,增强感官.; 
 [ItemEffect]
 ID=food_drink1; actorValue=PhysEva; magnitude=12; duration=8;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
@@ -2342,7 +2342,7 @@ durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificA
 ID=food_drink1; actorValue=MagEva; magnitude=3; duration=8;
 durationIsWorldtimeDays=true; showNoDescription=true; canBeRemovedByNonspecificAVEffectRemoval=false;
 
-[ItemType]  name=Empty Spot;
+[ItemType]  name=空地;
 ID=build_empty; sprite=321; 
 texture=items_building;
 special=cannotBePickedUp; special=canHangOnWalls;
@@ -2384,12 +2384,12 @@ consumeOnCombine=true;
 [JournalEntry]
 ID=item_build_empty;
 category=item; halfPage=true; rarity=0; 
-title=Empty Spot;
-text=<itemBig=build_empty><title=Empty Spot><brAdj=>This blank space looks like the ideal place to build a building. What do you think?;
+title=空地;
+text=<itemBig=build_empty><title=空地><brAdj=>这片空地看起来是建造建筑的理想场所.<n>你觉得呢;
 
-[ItemType]  name=Future Cafe;
+[ItemType]  name=施工中的咖啡馆;
 ID=build_cafe; sprite=322; 
-description=A building in progress.<n>'Use' to  <color=Red>CANCEL<color=> this construction.;
+description=正在施工的建筑.<n>'使用'来<color=Red>取消<color=>取消建造.;
 texture=items_building;
 special=cannotBePickedUp; special=canHangOnWalls; stackable=true;
 pR=zoneDirt;
@@ -2400,7 +2400,7 @@ ID=build_cafe; element=use; newID=build_empty; spawnItem=deed_cafe; quantitySetT
 [ItemReaction] 
 ID=build_cafe; element=newDay; action=build_cafe_act; quantityMod=1;
 
-[ItemType]  name=Future Shipwright;
+[ItemType]  name=施工中的船匠;
 ID=build_shipwright; sprite=322; 
 cloneFrom=build_cafe;
 special=dontCloneReactions;
@@ -2409,7 +2409,7 @@ ID=build_shipwright; element=use; newID=build_empty; spawnItem=deed_shipwright; 
 [ItemReaction] 
 ID=build_shipwright; element=newDay; action=build_shipwright_act; quantityMod=1;
 
-[ItemType]  name=Future Item Store;
+[ItemType]  name=施工中的道具商店;
 ID=build_items; sprite=322; 
 cloneFrom=build_cafe;
 special=dontCloneReactions;
@@ -2418,7 +2418,7 @@ ID=build_items; element=use; newID=build_empty; spawnItem=deed_items; quantitySe
 [ItemReaction] 
 ID=build_items; element=newDay; action=build_items_act; quantityMod=1;
 
-[ItemType]  name=Future Guild;
+[ItemType]  name=施工中的公会;
 ID=build_guild; sprite=322; 
 cloneFrom=build_cafe;
 special=dontCloneReactions;
@@ -2427,7 +2427,7 @@ ID=build_guild; element=use; newID=build_empty; spawnItem=deed_guild; quantitySe
 [ItemReaction] 
 ID=build_guild; element=newDay; action=build_guild_act; quantityMod=1;
 
-[ItemType]  name=Future Smithy;
+[ItemType]  name=施工中的铁匠铺;
 ID=build_smithy; sprite=322; 
 cloneFrom=build_cafe;
 special=dontCloneReactions;
@@ -2436,7 +2436,7 @@ ID=build_smithy; element=use; newID=build_empty; spawnItem=deed_smithy; quantity
 [ItemReaction] 
 ID=build_smithy; element=newDay; action=build_smithy_act; quantityMod=1;
 
-[ItemType]  name=Future Researcher;
+[ItemType]  name=施工中的调查员;
 ID=build_researcher; sprite=322; 
 cloneFrom=build_cafe;
 special=dontCloneReactions;
@@ -2445,7 +2445,7 @@ ID=build_researcher; element=use; newID=build_empty; spawnItem=deed_researcher; 
 [ItemReaction] 
 ID=build_researcher; element=newDay; action=build_researcher_act; quantityMod=1;
 
-[ItemType]  name=Future Cartographer;
+[ItemType]  name=施工中的制图师;
 ID=build_cartographer; sprite=322; 
 cloneFrom=build_cafe;
 special=dontCloneReactions;
@@ -2454,7 +2454,7 @@ ID=build_cartographer; element=use; newID=build_empty; spawnItem=deed_cartograph
 [ItemReaction] 
 ID=build_cartographer; element=newDay; action=build_cartographer_act; quantityMod=1;
 
-[ItemType]  name=Future Harbor;
+[ItemType]  name=施工中的港口;
 ID=build_harbor; sprite=322; 
 cloneFrom=build_cafe;
 special=dontCloneReactions;
@@ -2463,7 +2463,7 @@ ID=build_harbor; element=use; newID=build_empty; spawnItem=deed_harbor; quantity
 [ItemReaction] 
 ID=build_harbor; element=newDay; action=build_harbor_act; quantityMod=1;
 
-[ItemType]  name=Future Home;
+[ItemType]  name=施工中的住宅;
 ID=build_home; sprite=322; 
 cloneFrom=build_cafe;
 special=dontCloneReactions;
@@ -2473,7 +2473,7 @@ ID=build_home; element=use; newID=build_empty; spawnItem=deed_home; quantitySetT
 ID=build_home; element=newDay; action=build_home_act; quantityMod=1;
 
 
-[ItemType]  name=Future Museum;
+[ItemType]  name=施工中的博物馆;
 ID=build_museum; sprite=322; 
 cloneFrom=build_cafe;
 special=dontCloneReactions;
@@ -2482,7 +2482,7 @@ ID=build_museum; element=use; newID=build_empty; spawnItem=deed_museum; quantity
 [ItemReaction] 
 ID=build_museum; element=newDay; action=build_museum_act; quantityMod=1;
 
-[ItemType]  name=Future Training Ground;
+[ItemType]  name=施工中的训练场地;
 ID=build_training; sprite=322; 
 cloneFrom=build_cafe;
 special=dontCloneReactions;
@@ -2494,56 +2494,56 @@ ID=build_training; element=newDay; action=build_training_act; quantityMod=1;
 
 --
 
-[ItemType]  name=Harbor Deed;
+[ItemType]  name=港口地契;
 ID=deed_harbor; sprite=323; 
 texture=items_building; volume=99999;
 journalID=journal_deed;
 pR=pGold;
 pB=pOrange2;
 
-[ItemType]  name=Cafe Deed;
+[ItemType]  name=咖啡馆地契;
 ID=deed_cafe; sprite=327; 
 cloneFrom=deed_harbor;
 
-[ItemType]  name=Shipwright Deed;
+[ItemType]  name=船匠地契;
 ID=deed_shipwright; sprite=324; 
 cloneFrom=deed_harbor;
 
-[ItemType]  name=Item Store Deed;
+[ItemType]  name=道具商店地契;
 ID=deed_items; sprite=328; 
 cloneFrom=deed_harbor;
 
-[ItemType]  name=Smithy Deed;
+[ItemType]  name=铁匠铺地契;
 ID=deed_smithy; sprite=326; 
 cloneFrom=deed_harbor;
 
-[ItemType]  name=Guild Deed;
+[ItemType]  name=公会地契;
 ID=deed_guild; sprite=325; 
 cloneFrom=deed_harbor;
 
-[ItemType]  name=Researcher Deed;
+[ItemType]  name=研究员地契;
 ID=deed_researcher; sprite=329; 
 cloneFrom=deed_harbor;
 itemCategory=hidden;
 
-[ItemType]  name=Cartographer Deed;
+[ItemType]  name=制图师地契;
 ID=deed_cartographer; sprite=330; 
 cloneFrom=deed_harbor;
 itemCategory=hidden;
 
-[ItemType]  name=Home Deed;
+[ItemType]  name=住宅地契;
 ID=deed_home; sprite=331; 
 cloneFrom=deed_harbor;
 
-[ItemType]  name=Museum Deed;
+[ItemType]  name=博物馆地契;
 ID=deed_museum; sprite=332; 
 cloneFrom=deed_harbor;
 
-[ItemType]  name=Training Ground Deed;
+[ItemType]  name=训练场地地契;
 ID=deed_training; sprite=333; 
 cloneFrom=deed_harbor;
 [JournalEntry]
 ID=journal_deed;
 category=item; halfPage=true; rarity=1; 
-title=Deed;
-text=<itemBig=deed_home><title=Deed><brAdj=>Document that provides proof of land ownership. Place it on an Empty Spot to begin construction! Usually takes 7 days. You can cancel construction midway, but once the building is done, it's there forever.;
+title=地契;
+text=<itemBig=deed_home><title=地契><brAdj=>证明土地所有权的文件.把它放在一个空地开始建设!<n>通常需要7天.你可以中途取消建设,<n>但一旦建成,它就永远在那里了.;
