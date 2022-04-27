@@ -99,7 +99,7 @@ text=<itemBig=guide_chrysolit><title=定位虫蛹><brAdj=>这只正在化蛹的�
 
 
 
-[ItemType]  name=精华石;
+[ItemType]  name=本源石;
 description=一种小而易碎的晶体.可以提升使用者的技能.;
 ID=xpGem; sprite=45; action=xpGem_awardXP; itemCategory=1; special=consumeOnUse; stackable=true;
 pR=pTeal;
@@ -107,10 +107,10 @@ pR=pTeal;
 [JournalEntry]
 ID=item_xpGem;
 category=item; halfPage=true; rarity=2;
-title=精华石;
-text=<itemBig=xpGem><title=精华石><brAdj=>这种奇怪的蓝色物质含有高浓度的精华.<n>当你用手捏碎它的时候,<n>你会觉得豁然开朗(还有点头昏眼花).;
+title=本源石;
+text=<itemBig=xpGem><title=本源石><brAdj=>这种奇怪的蓝色物质含有高浓度的本源.<n>当你用手捏碎它的时候,<n>你会觉得豁然开朗(还有点头昏眼花).;
 
-[ItemType]  name=精华宝石;
+[ItemType]  name=本源宝石;
 description=稍微不纯的易碎的水晶,<n>可以提高用户的技能(收益递减).;
 ID=xpGemMed; sprite=110; action=xpGemMed_awardXP; itemCategory=1; special=consumeOnUse; stackable=true;
 pR=pTeal; pB=pBLite_slow;
@@ -118,10 +118,10 @@ pR=pTeal; pB=pBLite_slow;
 [JournalEntry]
 ID=item_xpGemMed;
 category=item; halfPage=true; rarity=2;
-title=精华宝石;
-text=<itemBig=xpGemMed><title=精华宝石><brAdj=>一大块浓缩的精华.当你用手捏碎它的时候<n>(这对你来说算是一个不小的壮举),<n>它会给你带来一种启蒙的感觉.<n>不幸的是,由于含有少量杂质,当同一个人<n>反复使用时,它的效力就会降低.;
+title=本源宝石;
+text=<itemBig=xpGemMed><title=本源宝石><brAdj=>一大块浓缩的本源.当你用手捏碎它的时候<n>(这对你来说算是一个不小的壮举),<n>它会给你带来一种启蒙的感觉.<n>不幸的是,由于含有少量杂质,当同一个人<n>反复使用时,它的效力就会降低.;
 
-[ItemType]  name=精华宝石;
+[ItemType]  name=本源宝石;
 description=大块的脆性晶体,可以提高用户的技能.;
 ID=xpGemMed2; sprite=109; action=xpGemMed_pure_awardXP; itemCategory=1; special=consumeOnUse; stackable=true;
 pR=pTeal;
@@ -129,10 +129,10 @@ pR=pTeal;
 [JournalEntry]
 ID=item_xpGemMed2;
 category=item; halfPage=true; rarity=2;
-title=精华宝石 (纯净的);
-text=<itemBig=xpGemMed2><title=精华宝石 (纯净的)><brAdj=>一大块浓缩的精华.当你用手捏碎它的时候<n>(这对你来说是一个不小的壮举),<n>它会给你带来一种启蒙的感觉.;
+title=本源宝石 (纯净的);
+text=<itemBig=xpGemMed2><title=本源宝石 (纯净的)><brAdj=>一大块浓缩的本源.当你用手捏碎它的时候<n>(这对你来说是一个不小的壮举),<n>它会给你带来一种启蒙的感觉.;
 
-[ItemType]  name=<color=SkyBlue>精华水晶;
+[ItemType]  name=<color=SkyBlue>本源水晶;
 description=一个巨大的水晶.它可以提高用户的技能.;
 ID=xpGemBig; sprite=47; action=xpGemBig_awardXP; itemCategory=1; special=consumeOnUse; stackable=true;
 pR=pTeal;
@@ -142,8 +142,8 @@ ID=xpGemBig; red=0.4; blue=1; green=0.4; alpha=0.7; size=0.3; flicker=0.01;
 [JournalEntry]
 ID=item_xpGemBig;
 category=item; halfPage=true; rarity=4;
-title=精华水晶;
-text=<itemBig=xpGemBig><title=精华水晶><brAdj=>巨大的水晶充满了精华.<n>粉碎和吸收它会给你极大的力量.;
+title=本源水晶;
+text=<itemBig=xpGemBig><title=本源水晶><brAdj=>巨大的水晶充满了本源.<n>粉碎和吸收它会给你极大的力量.;
 
 [ItemType]  name=<color=Gold>能力勋章;
 description=使用时,永久增加一个额外能力槽(每人最多2个).;
@@ -181,7 +181,7 @@ text=<itemBig=tablet_Gla_smash><title=技能石碑><brAdj=>刻着复杂难懂的
 
 
 
-[ItemType]  name=精华粉尘;
+[ItemType]  name=本源粉尘;
 description=闪闪发光的灰尘，增强感官.;
 ID=xpDust; sprite=46;
  volume=1; value=1; special=cannotBePickedUp; special=canHangOnWalls; special=big; special=fullTileHitbox;
@@ -191,8 +191,8 @@ ID=xpDust; element=92; newID=X; fx=castingFast; action=dust_awardXP;
 [JournalEntry]
 ID=item_xpDust;
 category=item; halfPage=true; rarity=1;
-title=精华粉尘;
-text=<itemBig=xpDust><title=精华粉尘><brAdj=>奇怪的蓝色颗粒,闻起来像滑石粉.<n>使用它会以一种不可思议但并非<n>完全不愉快的方式拓宽你的意识.;
+title=本源粉尘;
+text=<itemBig=xpDust><title=本源粉尘><brAdj=>奇怪的蓝色颗粒,闻起来像滑石粉.<n>使用它会以一种不可思议但并非<n>完全不愉快的方式拓宽你的意识.;
 
 [ItemType]  name=复活粉尘;
 description=复活被KO的盟友的金粉尘袋.;
@@ -537,8 +537,8 @@ category=item; halfPage=true; rarity=1;
 title=微型炸弹;
 text=<itemBig=minibomb><title=微型炸弹><brAdj=>军用炸药的设计易于使用<n>--只要扔向敌人然后欣赏表演.<n>比其他炸药更弱,更容易爆炸.<n>不能突破更大的障碍物.;
 
-[ItemType]  name=卡拉斯的内脏;
-description=卡拉斯的易挥发的内脏.被抛出时喷出石油..;
+[ItemType]  name=克拉斯克的内脏;
+description=克拉斯克的易挥发的内脏.被抛出时喷出石油..;
 ID=kraskbomb; sprite=141; itemCategory=1; special=consumeOnUse; stackable=true;
 special=convertIntoCashAtEnd;
 action=kraskbomb_throw;
@@ -547,8 +547,8 @@ action=kraskbomb_throw;
 [JournalEntry]
 ID=item_kraskbomb;
 category=item; halfPage=true; rarity=2;
-title=卡拉斯的内脏;
-text=<itemBig=kraskbomb><title=卡拉斯的内脏><brAdj=>卡拉斯的内部构造对现代科学家来说是陌生的.<n>然而,它们被用作可燃燃料的来源--和临时武器--很快就注意到.;
+title=克拉斯克的内脏;
+text=<itemBig=kraskbomb><title=克拉斯克的内脏><brAdj=>克拉斯克的内部构造对现代科学家来说是陌生的.<n>然而,它们被用作可燃燃料的来源--和临时武器--很快就注意到.;
  
 [ItemType]  name=治愈碎片;
 description=充满了治疗粉末的易碎的岩石.;
@@ -1130,7 +1130,7 @@ weight=0; volume=0; value=150;
 pR=p22; 
 pB=p22; 
 
-description=来自奈查尔的刺激性的倒刺.<font=thickIcons><color=Black>
+description=来自内查尔的刺激性的倒刺.<font=thickIcons><color=Black>
 <n=><icon=invIcon_sword> 攻击附加瘙痒
 <n=><icon=invIcon_armor> +50%瘙痒抵抗;
 [ItemReactionInWeapon] 
@@ -1141,7 +1141,7 @@ ID=barb_itchy; actorValues=itchy; damageMultiplier=0.5;
 ID=item_barb_itchy;
 category=item; halfPage=true; rarity=1;
 title=瘙痒倒刺;
-text=<itemBig=barb_itchy><title=瘙痒倒刺><brAdj=>这些尖刺是从奈查尔身上提取的覆盖着剧毒物质.<n>只要稍加修补,它们就能为装备附加强力效果.;
+text=<itemBig=barb_itchy><title=瘙痒倒刺><brAdj=>这些尖刺是从内查尔身上提取的覆盖着剧毒物质.<n>只要稍加修补,它们就能为装备附加强力效果.;
 
 [ItemType]  name=晶体矿;
 ID=corpryst; sprite=850;
@@ -1247,7 +1247,7 @@ stackable=true; itemCategory=1;
 weight=0; volume=0; value=800;
 pR=pVolskarn; 
 special=canAlwaysFitInTileWhenSpawned;
-description=吸收精华的碎片,常用于魔法型装备.
+description=吸收本源的碎片,常用于魔法型装备.
 <font=thickIcons><color=Black>
 <n=><icon=invIcon_sword> +1<icon=MagDef>
 <n=><icon=invIcon_armor> +1<icon=MagDef>;
@@ -1276,13 +1276,13 @@ ID=volskarn_chunk; actorValue=MagDef; magnitude=1; duration=-1;
 ID=item_volskarn_chunk;
 category=item; halfPage=true; rarity=2;
 title=沃尔斯卡恩;
-text=<itemBig=volskarn_chunk><title=沃尔斯卡恩><brAdj=>沃斯卡恩的发现彻底改变了工业、交通和战争.<n>它可以像电池一样吸收精华,然后可被直接触发.<n>几乎所有的魔法装备都有一定数量的沃尔斯卡恩.;
+text=<itemBig=volskarn_chunk><title=沃尔斯卡恩><brAdj=>沃斯卡恩的发现彻底改变了工业、交通和战争.<n>它可以像电池一样吸收本源,然后可被直接触发.<n>几乎所有的魔法装备都有一定数量的沃尔斯卡恩.;
 
 [ItemType]  name=埃尔石;
 ID=aerstone; sprite=840; spriteWhenHeld=0; special=animateEvery100Frames;
 itemCategory=1;
 weight=0; volume=0; value=5000;
-description=充满精华的珍贵宝石.<font=thickIcons><color=Black>
+description=充满本源的珍贵宝石.<font=thickIcons><color=Black>
 <n=><icon=invIcon_sword> +1<icon=jumpDistance>
 <n=><icon=invIcon_armor> +1<icon=jumpDistance>;
 [ItemLight] 
@@ -1296,7 +1296,7 @@ ID=aerstone; actorValue=jumpDistance; magnitude=1; duration=-1;
 ID=item_aerstone;
 category=item; halfPage=true; rarity=4; rewardMod=-200;
 title=埃尔石;
-text=<itemBig=aerstone><title=埃尔石><brAdj=>极具价值的物质,充入精华后,<n>会提供浮力.通常用来制造飞艇.;
+text=<itemBig=aerstone><title=埃尔石><brAdj=>极具价值的物质,充入本源后,<n>会提供浮力.通常用来制造飞艇.;
 
 [ItemType]  name=神秘的活梯;
 description=可以放在水上的可折叠的活梯.;

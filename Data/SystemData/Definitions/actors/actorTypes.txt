@@ -1,6 +1,6 @@
 
 [ActorType] ID=spide;
-name=Spide;
+name=蜘蛛;
 journalID=journal_spide;
 bodyStructure=single_glowFace;
 movementSpeed = 8;
@@ -286,11 +286,11 @@ maxRange=4;
 [JournalEntry]
 ID=journal_spide;
 category=creature; halfPage=true; rarity=1;
-title=Spide;
-text=<actorBig=spide><title=Spide><brAdj=>Spides are dangerous knee-high hunter-arachnids. Though capable of generating silk, they prefer to leap at foes, often as a group. They're known as a pest the world over, and can thrive in most any climate. Most often they pose a threat to unattended livestock.;
+title=蜘蛛;
+text=<actorBig=spide><title=蜘蛛><brAdj=>蜘蛛是一种危险的及膝高的蛛形纲动物捕猎者.<n>虽然它们能产丝,但它们更喜欢成群结队地扑向敌人.<n>它们被认为是世界上的害虫,可以在任何气候下<n>繁衍.它们往往对无人看管的牲畜构成威胁.;
 
 [ActorType] ID=spider;
-name=Spider;
+name=巨型蜘蛛;
 journalID=journal_spider;
 bodyStructure=single_glowFace;
 movementSpeed = 8;
@@ -385,11 +385,11 @@ ID=spider; actorValues=drowning; action=drown;
 [JournalEntry]
 ID=journal_spider;
 category=creature; halfPage=true; rarity=2;
-title=Spider;
-text=<actorBig=spider><title=Spider><brAdj=>Spiders are the larger, more vicious brethren of Spides. They are quick and have a strong venomous bite. Spider infestations take some serious force to eradicate, and have been responsible for many abandoned buildings.<n=> In natural settings Spiders often burrow into shallow holes and jump out at unsuspecting creatures.;
+title=巨型蜘蛛;
+text=<actorBig=spider><title=巨型蜘蛛><brAdj=>巨型蜘蛛是蜘蛛中体型更大、更邪恶的同类.<n>它动作迅速,有凶猛的毒牙.蜘蛛的侵扰需要很大<n>的力量来根除,并且是许多建筑被废弃的罪魁祸首.<n>在自然环境中,蜘蛛经常钻到浅洞里,然后在<n>毫无防备的生物面前跳出来.;
 
 [ActorType] ID=spider_web;
-name=Web Spider;
+name=网络蜘蛛;
 journalID=journal_spider;
 bodyStructure=single_glowFace;
 movementSpeed = 6;
@@ -477,7 +477,7 @@ ID=av_spider_web1;
 actorValue=PhysDef; magnitude=2; duration=-1;
 
 [ActorType] ID=spidest;
-name=Spidest;
+name=蜘蛛王;
 journalID=journal_spidest;
 bodyStructure=spidest;
 movementSpeed = 8;
@@ -632,7 +632,7 @@ text=<icon=j_spidest><title=蜘蛛王><brAdj=>      这些房子大小的怪物�
 
 
 [ActorType] ID=pill;
-name=Pillpok;
+name=药丸波克;
 journalID=journal_pill;
 bodyStructure=single;
 movementSpeed = 6;
@@ -711,12 +711,12 @@ ID=pill; actorValues=drowning; action=drown;
 [JournalEntry]
 ID=journal_pill;
 category=creature; halfPage=true; rarity=1;
-title=Pillpok;
-text=<actorBig=pill><title=Pillpok><brAdj=>These giant pillbug-like creatures are extremely slow, but can cover large distances with their rolling attack. This species of parasite was unknown prior to its discovery in Alvora.;
+title=药丸波克;
+text=<actorBig=pill><title=药丸波克><brAdj=>这些巨大的药丸虫一样的生物速度极其缓慢,<n>但它们的滚动攻击可以覆盖很远的距离.<n>这种寄生虫在阿尔沃拉被发现之前是未知的.;
 
 
 [ActorType] ID=hexapede;
-name=Hexapede;
+name=六足怪;
 journalID=journal_hexapede;
 bodyStructure=single;
 movementSpeed = 8;
@@ -799,12 +799,12 @@ ID=hexapede; actorValues=drowning; action=drown;
 [JournalEntry]
 ID=journal_hexapede;
 category=creature; halfPage=true; rarity=2;
-title=Hexapede;
-text=<actorBig=hexapede><title=Hexapede><brAdj=>Six-legged arthropod with a nasty disposition. It bites reflexively at anything that touches it. Hexapedes aren't often this large, but this one has grown fat on meat.;
+title=六足怪;
+text=<actorBig=hexapede><title=六足怪><brAdj=>性情凶恶的六足节肢动物.它条件反射地<n>撕咬任何接触它的东西.六足目动物通常<n>没有这么大,但这只吃了肉就长胖了.;
 
 
 [ActorType] ID=hexapede_bomb;
-name=Hexabomb;
+name=爆炸六足怪;
 journalID=journal_hexapede_bomb;
 bodyStructure=single;
 movementSpeed = 8;
@@ -891,11 +891,11 @@ ID=hexapede_bomb; red=1; blue=0.5; green=0.5; alpha=0.4; size=0.26; flicker=0.02
 [JournalEntry]
 ID=journal_hexapede_bomb;
 category=creature; halfPage=true; rarity=3; rewardMod=-300;
-title=Hexabomb;
-text=<actorBig=hexapede_bomb><title=Hexabomb><brAdj=>This Hexapede has ingested something volatile, which bubbles and flashes beneath its carapace. As with normal Hexapedes, avoid standing close. And perhaps think twice before striking with fire.;
+title=爆炸六足怪;
+text=<actorBig=hexapede_bomb><title=爆炸六足怪><brAdj=>这只六足怪吞下了一种挥发性物质,在它的甲壳下不断冒泡和闪烁.与正常的六足怪一样,避免站得太近.而且在用火焰攻击之前要三思.;
 
 [ActorType] ID=netchal;
-name=Netchal;
+name=内查尔;
 journalID=journal_netchal;
 bodyStructure=single;
 movementSpeed = 8;
@@ -1042,10 +1042,10 @@ maxRange=4;
 [JournalEntry]
 ID=journal_netchal;
 category=creature; halfPage=true; rarity=2;
-title=Netchal;
-text=<actorBig=netchal><title=Netchal><brAdj=>Fuzzy insects that attack with cruel itchy barbs. These temperamental bugs use eachother as stepping stones, even in combat. By standing in a tall tower, they can fire their barbs great distances. They cover for eachother when taking damage, but their tactics tend to fall apart when push comes to shove.;
+title=内查尔;
+text=<actorBig=netchal><title=内查尔><brAdj=>毛茸茸的昆虫类动物,使用能引起痛苦瘙痒的<n>倒钩攻击.这些性情多变的的小虫把彼此当作<n>垫脚石,即使是在战斗中.通过站在更高处,<n>它们可以将倒刺发射到很远的地方.当他们受到<n>伤害时,会互相掩护,但他们的战术往往会在<n>紧要关头分崩离析.;
 [ActorType] ID=netchal2;
-name=Double Netchal;
+name=双重内查尔;
 journalID=journal_netchal;
 bodyStructure=single;
 movementSpeed = 4;
@@ -1137,7 +1137,7 @@ maxRange=4;
 
 
 [ActorType] ID=netchal3;
-name=Triple Netchal;
+name=三重内查尔;
 journalID=journal_netchal;
 bodyStructure=single;
 movementSpeed = 4;
@@ -1229,7 +1229,7 @@ maxRange=4;
 
 
 [ActorType] ID=pillburrow;
-name=Burrow;
+name=地洞;
 journalID=journal_pillburrow;
 bodyStructure=single;
 movementSpeed = 0;
@@ -1337,11 +1337,11 @@ occupyAll=true;
 [JournalEntry]
 ID=journal_pillburrow;
 category=creature; halfPage=true; rarity=1;
-title=Burrow;
-text=<actorBig=pillburrow><title=Burrow><brAdj=>           This fleshy mound stirs in an unsettling manner. It seems likely to be home to some sort of parasite, although there may also be some hidden loot within.;
+title=地洞;
+text=<actorBig=pillburrow><title=地洞><brAdj=>           这个肉质的土堆令人不安.它似乎是某种<n>寄生虫的家,但也可能有一些隐藏的战利品.;
 
 [ActorType] ID=gemhide;
-name=Gemhide;
+name=水晶皮;
 journalID=journal_gemhide;
 bodyStructure=single;
 movementSpeed = 7;
@@ -1473,12 +1473,12 @@ ID=gemhide; red=0.05; blue=0.3; green=0.15; alpha=0.14; size=0.24; flicker=0;
 [JournalEntry]
 ID=journal_gemhide;
 category=creature; halfPage=true; rarity=3; rewardMod=100;
-title=Gemhide;
-text=<actorBig=gemhide><title=Gemhide><brAdj=>Diminutive creatures with a thick crystalline hide. Naturally, this hide is quite valuable, and they are often hunted for it. They might have been hunted to extinction if not for their inborn magical ability to become invisible and escape combat.;
+title=水晶皮;
+text=<actorBig=gemhide><title=水晶皮><brAdj=>长着厚厚的水晶般表皮的小生物.很显然,<n>这种兽皮很有价值,经常遭到猎杀.如果不是<n>因为他们天生的隐形和逃避战斗的魔法能力,<n>他们可能已经被猎杀到灭绝.;
 
 
 [ActorType] ID=gangle;
-name=Gangle;
+name=刚格尔;
 journalID=journal_gangle;
 bodyStructure=single;
 movementSpeed = 9;
@@ -1607,8 +1607,8 @@ ID=gangle; actorValues=drowning; action=drown;
 [JournalEntry]
 ID=journal_gangle;
 category=creature; halfPage=true; rarity=2;
-title=Gangle;
-text=<actorBig=gangle><title=Gangle><brAdj=>Wriggling parasite that burrows into flesh and feeds off the essence and blood within. Their acid spittle helps them create a suitable burrow as well as aiding digestion. Named for its gangly, thrashing legs that convulse long after death.;
+title=刚格尔;
+text=<actorBig=gangle><title=刚格尔><brAdj=>蠕动的寄生虫,钻到肉里以里面的本源和血液为食.<n>它们的酸性唾液能帮助它们创造一个合适的洞穴,<n>同时帮助其消化.因其瘦长、跳动的腿而得名,<n>这些腿在死后很长时间还会抽搐.;
 
 [ActorType] ID=reacher;
 name=Reacher;
@@ -1717,7 +1717,7 @@ ID=reacher;
 actorValues=drowning; damageMultiplier=0; healMultiplier=0;
 
 [ActorType] ID=serpent_sand;
-name=Gharial Wren;
+name=加里亚尔 雷恩;
 journalID=journal_serpent_sand;
 bodyStructure=single;
 movementSpeed = 5;
@@ -1849,12 +1849,12 @@ ID=serpent_sand; actorValues=drowning; action=drown;
 [JournalEntry]
 ID=journal_serpent_sand;
 category=creature; halfPage=true; rarity=2;
-title=Gharial Wren;
-text=<actorBig=serpent_sand><title=Gharial Wren><brAdj=>         Huge serpentine creatures that dig at an amazing speed. They spread their frill just beneath the surface to sense vibrations of approaching prey. They are usually found near watering holes, but some are clever enough to wait at other appealing spots, such as by the corpses of fellow adventurers.;
+title=加里亚尔 雷恩;
+text=<actorBig=serpent_sand><title=加里亚尔 雷恩><brAdj=>         巨大的蛇形生物以惊人的<n>速度挖掘.它们把它们的褶边延伸到水面下,<n>以感知接近中猎物的振动.它们通常在水坑<n>附近被发现,但有些足够聪明会在其他吸引人<n>的地方等待,比如冒险家同伴的尸体旁.;
 
 
 [ActorType] ID=serpent_water;
-name=Gharial Wren;
+name=加里亚尔 雷恩;
 journalID=journal_serpent_water;
 bodyStructure=single;
 movementSpeed = 7;
@@ -1948,11 +1948,11 @@ actorValues=drowning; damageMultiplier=0; healMultiplier=0;
 [JournalEntry]
 ID=journal_serpent_water;
 category=creature; halfPage=true; rarity=2;
-title=Gharial Wren (W);
-text=<actorBig=serpent_water><title=Gharial Wren><brAdj=>         Cousin of the landborne Gharial Wrens, these serpents have adapted their frill to swim gracefully through water. Their inherent skill with fire allows them to stay warm even in freezing water, and grants them the ability to propel fireballs from their mouth.;
+title=加里亚尔 雷恩 (W);
+text=<actorBig=serpent_water><title=加里亚尔 雷恩><brAdj=>         这些蛇是陆生加里亚尔 雷恩的表亲,它们<n>调整了自己的褶边,可以优雅地在水中游泳.<n>它们与生俱来的火焰技能使它们即使在冰冷的<n>水中也能保持体温,而且还能从嘴里喷出火球.;
 
 [ActorType] ID=reylock;
-name=Reylock;
+name=雷诺克;
 journalID=journal_reylock;
 bodyStructure=single_glowFace;
 movementSpeed = 4;
@@ -2039,7 +2039,7 @@ title=雷诺克;
 text=<actorBig=reylock><title=雷诺克><brAdj=>            半水生动物,<n>用它们能够发光的诱饵模仿普通猎物的眼睛.<n>在这种情况下,<n>它们似乎模仿了人类的眼睛.<n>他们真正的嘴和眼睛在背面.<n>潜伏在黑暗的地方,通过发出耀眼的光来迷惑猎物..;
 
 [ActorType] ID=mantle;
-name=Mantle;
+name=麦特尔;
 journalID=journal_mantle;
 bodyStructure=single;
 movementSpeed = 4;
@@ -2127,12 +2127,12 @@ occupyAll=true;
 [JournalEntry]
 ID=journal_mantle;
 category=creature; halfPage=true; rarity=3; rewardMod=-100;
-title=Mantle;
-text=<actorBig=mantle><title=Mantle><brAdj=>          These strange creatures' bodies' are an indistinct mass of cloth-like webbing. Lacking a mouth, Mantles instead subsist on essence, which they drain from prey by wrapping it in their cloakish body. Mantles are skilled magic users, though their intellect is questionable.;
+title=麦特尔;
+text=<actorBig=mantle><title=麦特尔><brAdj=>          这些奇怪的生物'身体'<n>是一团模糊不清的布状织网.由于没有嘴,<n>麦特尔只能靠本源维生,它们将猎物包裹在<n>斗篷状的身体里,吸干猎物的本源.麦特尔是<n>熟练的魔法使用者.尽管他们的智力值得怀疑.;
 
 
 [ActorType] ID=bweaver;
-name=Bloodweaver;
+name=血液纺织者;
 journalID=journal_bweaver;
 bodyStructure=single;
 movementSpeed = 7;
@@ -2225,8 +2225,8 @@ coneAngle=180;
 [JournalEntry]
 ID=journal_bweaver;
 category=creature; halfPage=true; rarity=4;
-title=Bloodweaver;
-text=<actorBig=bweaver><title=Bloodweaver><brAdj=>          Massive insect beasts with feathered wings, a sharp horn, and a deadly venomous stinger. Vicious and cunning, they swarm unsuspecting prey, then fly the corpse back to their hive. The hive is a towering structure built from fallen trees, branches, and brambles. Only their preference for warm climes keeps them from being a worldwide threat.;
+title=血液纺织者;
+text=<actorBig=bweaver><title=血液纺织者><brAdj=>          巨大的昆虫,有着羽毛翅膀,<n>锋利的角和致命的毒刺.它们恶毒又狡猾,<n>聚集在毫无戒心的猎物周围,然后把尸体带回<n>蜂巢.它们的蜂巢是由倒下的树、树枝和<n>荆棘建造而成的高耸结构.它们对温暖气候<n>的偏爱才使它们不会成为全球性的威胁.;
 
 [ActorType] ID=oddule1;
 name=Oddule;
@@ -2319,7 +2319,7 @@ airborne=true;
 occupyAll=true;
 
 [ActorType] ID=oddule2;
-name=Oddule;
+name=奥杜勒;
 journalID=journal_oddule;
 bodyStructure=single;
 movementSpeed = 5;
@@ -2499,12 +2499,12 @@ occupyAll=true;
 [JournalEntry]
 ID=journal_oddule;
 category=creature; halfPage=true; rarity=4;
-title=Oddule;
-text=<actorBig=oddule2><title=Oddule><brAdj=>         Grotesque protrusions that are normally docile. It is unclear whether these are part of this giant beast's innards, or some sort of parasite. To compensate for their immobility, they can spew pellets a long distance. When defeated, they topple over backwards, leaving behind a heavy corpse that may obstruct passage.;
+title=奥杜勒;
+text=<actorBig=oddule2><title=奥杜勒><brAdj=>         通常是温顺的畸形突起生物,<n>目前还不清楚这些是这巨兽内脏的一部分,<n>还是某种寄生虫.为了抵消它们的无法移动的<n>天生事实,它们可以把喷吐球状物到很远的<n>地方.当它被打败时,会向后倒下,留下一具<n>沉重的尸体,可能会阻碍通行.;
 
 
 [ActorType] ID=botfly;
-name=Botfly;
+name=马蝇;
 journalID=journal_botfly;
 bodyStructure=bird;
 movementSpeed = 8;
@@ -2598,11 +2598,11 @@ element=ruin; damageMultiplier=0.6; healMultiplier=1;
 [JournalEntry]
 ID=journal_botfly;
 category=creature; halfPage=true; rarity=1;
-title=Botfly;
-text=<actorBig=botfly><title=Botfly><brAdj=>Botflies are everpresent, especially around corpses, but this one is especially large. Normal botflies are merely a nuisance, but become stronger and bolder from gorging on a fresh supply. Their prickly setae irritates nearby enemies, and their bite is venomous.;
+title=马蝇;
+text=<actorBig=botfly><title=马蝇><brAdj=>马蝇无处不在,尤其是在尸体周围,但这只<n>特别大.正常的马蝇只是一种讨厌的东西,<n>但它们会因为狼吞虎咽地吃新鲜的食物而变得<n>更强壮.它们多刺的刚毛会刺激附近的敌人,<n>它们的蜇是有毒液的.;
 
 [ActorType] ID=bitfly;
-name=Bitfly;
+name=小马蝇;
 journalID=journal_bitfly;
 bodyStructure=bird_small;
 movementSpeed = 8;
@@ -2702,11 +2702,11 @@ element=ruin; damageMultiplier=0.6; healMultiplier=1;
 [JournalEntry]
 ID=journal_bitfly;
 category=creature; halfPage=true; rarity=1;
-title=Bitfly;
-text=<actorBig=bitfly><title=Bitfly><brAdj=>Bitflies are a colloquialism for small Botflies. These disgusting scavengers flock to corpses at any chance, but can be dangerous to the living if they feel cornered. Though their attacks are weak physically, their setae and venomous bite can kill.;
+title=小马蝇;
+text=<actorBig=bitfly><title=小马蝇><brAdj=>小马蝇是体型小的马蝇的俗称.这些恶心的<n>食腐动物一有机会就会涌向尸体,但如果它们<n>感到走投无路,就会对活人构成危险.<n>虽然它们的物理上的攻击很弱,但它们的<n>刚毛和有毒的叮咬可以杀死其他生物.;
 
 [ActorType] ID=angelfly;
-name=Angelfly;
+name=天使苍蝇;
 journalID=journal_angelfly;
 bodyStructure=bird_stingers;
 movementSpeed = 8;
@@ -2984,7 +2984,7 @@ text=<actorBig=bat_zoar><title=佐尔蝙蝠><brAdj=>有蹼翼的大型飞行哺�
 
 
 [ActorType] ID=krask;
-name=Krask;
+name=克拉斯克;
 journalID=journal_krask;
 bodyStructure=bird;
 movementSpeed = 6;
@@ -3065,11 +3065,11 @@ ID=krask; actorValues=drowning; action=drown;
 [JournalEntry]
 ID=journal_krask;
 category=creature; halfPage=true; rarity=2;
-title=Krask;
-text=<actorBig=krask><title=Krask><brAdj=>Krask are agile insectoids with a light, hollow shell. They have a tendency to swarm, and prefer to hunt in groups. This often leads to friendly fire due to their frenzied fighting style. They have even been known to hunt alongside other creatures - at least for as long as the other creatures will tolerate it.;
+title=克拉斯克;
+text=<actorBig=krask><title=克拉斯克><brAdj=>克拉斯克是一种敏捷的昆虫动物,有着轻盈的<n>中空外壳.它们喜欢成群猎食.但由于友军<n>疯狂的战斗风格,常常导致误伤.它们甚至会<n>与其他生物一起捕猎--至少在其他生物<n>能够容忍的时候.;
 
 [ActorType] ID=beetle_fire;
-name=Heatle;
+name=火焰甲虫;
 journalID=journal_beetle_fire;
 bodyStructure=single;
 movementSpeed = 8;
@@ -3145,7 +3145,7 @@ ID=beetle_fire;
 element=ice; element=water; damageMultiplier=1.0; newID=beetle_fire_mud;
 
 [ActorType] ID=beetle_fire_explode;
-name=Bomb Heatle;
+name=爆炸火焰甲虫;
 journalID=journal_beetle_fire;
 bodyStructure=single;
 movementSpeed = 8;
@@ -3321,13 +3321,13 @@ actorValue=MagDef; magnitude=2; duration=-1;
 [JournalEntry]
 ID=journal_beetle_fire;
 category=creature; halfPage=true; rarity=2;
-title=Heatle;
-text=<actorBig=beetle_fire><title=Heatle><brAdj=>        Oversized beetles with long, thin horns that can generate sparks. Their body is full of flammable gas that allows them to spew flame from their sparking horns. This gas also makes them extremely dangerous when struck by fire. Make sure to keep your distance or douse their flames.;
+title=火焰甲虫;
+text=<actorBig=beetle_fire><title=火焰甲虫><brAdj=>        巨大的甲虫,长着细长的角,能产生火花.它们的身体充满了可燃气体,这使得它们能够从它们的角中喷出火焰.这种气体也使它们在着火时极其危险.确保与他们保持距离或者扑灭他们的火焰.;
 
 
 
 [ActorType] ID=beetle_fire_huge;
-name=King Heatle;
+name=火焰甲虫国王;
 journalID=journal_beetle_fire_huge;
 bodyStructure=single;
 movementSpeed = 4;
@@ -3404,7 +3404,7 @@ ID=beetle_fire_huge;
 element=ice; element=water; damageMultiplier=1.0; newID=beetle_fire_huge_mud;
 
 [ActorType] ID=beetle_fire_huge_explode;
-name=King Heatle;
+name=火焰甲虫国王;
 journalID=journal_beetle_fire_huge;
 bodyStructure=single;
 movementSpeed = 4;
@@ -3488,7 +3488,7 @@ element=incapped; action=beetle_fire_huge_death_act;
 ID=beetle_fire_huge_explode; red=1; blue=0.5; green=0.5; alpha=0.5; size=0.32; flicker=0.02; Y=0; 
 
 [ActorType] ID=beetle_fire_huge_mud;
-name=King Heatle;
+name=火焰甲虫国王;
 journalID=journal_beetle_fire_huge;
 bodyStructure=single;
 movementSpeed = 4;
@@ -3573,12 +3573,12 @@ actorValue=MagDef; magnitude=2; duration=-1;
 [JournalEntry]
 ID=journal_beetle_fire_huge;
 category=creature; halfPage=true; rarity=4; rewardMod=-500;
-title=King Heatle;
-text=<actorBig=beetle_fire_huge><title=King Heatle><brAdj=>          Massive Heatle that has seen kingdoms rise and fall. Aggressive and foul-tempered, it spouts flame at anything that so much as irritates it. Many have tried to slay it, but they were burnt to cinders before they could take a second swing. Great care must be taken not to ignite it - if it explodes, nothing in the same room will survive.;
+title=火焰甲虫国王;
+text=<actorBig=beetle_fire_huge><title=火焰甲虫国王><brAdj=>          巨大的火焰甲虫,<n>见证了王国的兴衰.它好斗,脾气暴躁,<n>对任何激怒它的东西都能喷火.许多人试图<n>杀死它,但他们还没来得及挥动武器就被<n>烧成了灰烬.必须非常小心,不要点燃它<n> --如果它爆炸了,同一房间里的任何东西<n>都不会幸存;
 
 
 [ActorType] ID=urzibel;
-name=Urzibel;
+name=乌尔兹贝尔;
 journalID=journal_urzibel;
 bodyStructure=single;
 movementSpeed = 6;
@@ -3666,12 +3666,12 @@ ID=urzibel; actorValues=drowning; action=drown;
 [JournalEntry]
 ID=journal_urzibel;
 category=creature; halfPage=true; rarity=1;
-title=Urzibel;
-text=<actorBig=urzibel><title=Urzibel><brAdj=>        Ferocious beasts that are extremely territorial. They are feared for their amazing jumping ability that lets them put immense power into a single attack.<n=> Their striking red and white fur is very fashionable in some circles. Hunters are advised to keep close so the Urzibel doesn't have room to leap.;
+title=乌尔兹贝尔;
+text=<actorBig=urzibel><title=乌尔兹贝尔><brAdj=>        凶猛的野兽,非常有领地意识.<n>他们令人畏惧的是惊人的跳跃能力,能使他们<n>在一次攻击中投入巨大的力量.它们醒目的<n>红白相间的皮毛在某些圈子里非常流行.<n>猎人被建议与它保持近距离,<n>这样乌尔兹贝尔就没有跳跃的空间.;
 
 
 [ActorType] ID=anzibel;
-name=Anzibel;
+name=安兹贝尔;
 journalID=journal_anzibel;
 bodyStructure=single;
 movementSpeed = 6;
@@ -3755,12 +3755,12 @@ ID=anzibel; actorValues=drowning; action=drown;
 [JournalEntry]
 ID=journal_anzibel;
 category=creature; halfPage=true; rarity=2;
-title=Anzibel;
-text=<actorBig=anzibel><title=Anzibel><brAdj=>        Beasts born with an affinity for Preservation magic. Their howls ward allies and their touch can cure afflictions. Anzibel are highly valued members of the pack and only rarely participate in hunting, instead focusing on protecting territory. They can't pounce like their Urzibel cousins, but their claws and fangs are still deadly.;
+title=安兹贝尔;
+text=<actorBig=anzibel><title=安兹贝尔><brAdj=>        天生对保护魔法有亲和力的野兽.<n>它们的嚎叫可以保护盟友,它们的触摸可以<n>治愈痛苦.安兹贝尔是兽群中很有价值的成员,<n>很少参与狩猎,而是专注于保护领地.<n>它们不能像兄弟乌尔兹贝尔那样猛扑,<n>但它的爪子和尖牙仍然是致命的.;
 
 
 [ActorType] ID=icewolf;
-name=Snaevar;
+name=斯纳瓦尔;
 journalID=journal_icewolf;
 bodyStructure=single;
 movementSpeed = 8;
@@ -3852,12 +3852,12 @@ ID=icewolf; actorValues=chilled; actorValues=frozen; damageMultiplier=0; healMul
 [JournalEntry]
 ID=journal_icewolf;
 category=creature; halfPage=true; rarity=3;
-title=Snaevar;
-text=<actorBig=icewolf><title=Snaevar><brAdj=>        Pure-white wolves that relentlessly hunt down prey as a pack. Their mastery of ice magic is to be feared - Snaevar can create deadly magical projections in their image to fight. Some even speculate that all Snaevar are projections created by some greater power.;
+title=斯纳瓦尔;
+text=<actorBig=icewolf><title=斯纳瓦尔><brAdj=>        它们是一群毫不留情地追捕<n>猎物的纯净白狼.他们对冰系魔法的精通<n>令人恐惧--斯纳瓦尔可以根据他们的形象<n>制造致命的魔法投影来战斗.有些人甚至推测<n>所有的斯纳瓦尔都是一些更强大的力量创造的投影.;
 
 
 [ActorType] ID=spinedog;
-name=Sprax;
+name=斯普拉斯;
 journalID=journal_spinedog;
 bodyStructure=single;
 movementSpeed = 6;
@@ -3932,13 +3932,13 @@ randomNames=serpent_sand;
 [JournalEntry]
 ID=journal_spinedog;
 category=creature; halfPage=true; rarity=2;
-title=Sprax;
-text=<actorBig=spinedog><title=Sprax><brAdj=>        This canine's fur bristles with harsh spines. The spines on its tail can even shoot out to shred a large area. It uses these spine attacks both to hunt prey and to defend itself. Sprax usually hunt in pairs rather than packs, and are intensely loyal to their hunting partner.;
+title=斯普拉斯;
+text=<actorBig=spinedog><title=斯普拉斯><brAdj=>        这只狗的毛上布满了粗糙的刺.<n>它尾巴上的刺甚至可以伸出来撕裂大片区域.<n>它利用这些刺攻击来捕食和保护自己.<n>斯普拉斯通常成对猎食,而不是成群猎食,<n>它们对猎食伙伴非常忠诚.;
 
 
 
 [ActorType] ID=loper;
-name=Bone Loper;
+name=食骨踏步者;
 journalID=journal_loper;
 bodyStructure=single;
 movementSpeed = 6;
@@ -4083,11 +4083,11 @@ actorValue=skill_Ruin; magnitude=2; duration=-1;
 [JournalEntry]
 ID=journal_loper;
 category=creature; halfPage=true; rarity=3; rewardMod=-200;
-title=Bone Loper;
-text=<actorBig=loper><title=Bone Loper><brAdj=>        Large salamander-like creature with hoarding tendencies. It uses its bone hoard as sustenance, armor, and even projectiles. So long as it remains close to its hoard, its defenses are strong and sturdy - though bashing weapons can permanently break some of its bone armor.;
+title=食骨踏步者;
+text=<actorBig=loper><title=食骨踏步者><brAdj=>        喜欢囤积的大型蝾螈状生物.<n>它把骨头当作食物,盔甲,甚至是投射物.<n>只要它仍然离它的窖藏很近,它的防御就会<n>强大而坚固--尽管钝器可以永久地打碎<n>它的一些骨甲.;
 
 [ActorType] ID=windsalamander;
-name=Aelomander;
+name=长腿蝾螈;
 journalID=journal_windsalamander;
 bodyStructure=single;
 movementSpeed = 6;
@@ -4171,11 +4171,11 @@ element=transform; newID=windsalamander_inflated;
 [JournalEntry]
 ID=journal_windsalamander;
 category=creature; halfPage=true; rarity=3; rewardMod=-100;
-title=Aelomander;
-text=<actorBig=windsalamander><title=Aelomander><brAdj=>        These unusual salamanders have only 2 limbs and hobble along slowly. Instead of brute strength, they rely on their remarkable control over wind magic to hunt. Protective magic surrounds them as they inhale, and devastating blasts of wind are released when they exhale.;
+title=长腿蝾螈;
+text=<actorBig=windsalamander><title=长腿蝾螈><brAdj=>        这种不寻常的蝾螈只有两条腿,<n>蹒跚而行.它们不依靠蛮力,而是依靠对风的<n>神奇控制力来狩猎.当他们吸气时,保护魔法<n>围绕着他们,当他们呼气时,<n>毁灭性的风会释放出来.;
 
 [ActorType] ID=windsalamander_inflated;
-name=Aelomander;
+name=长腿蝾螈;
 journalID=journal_windsalamander;
 bodyStructure=single;
 movementSpeed = 6;
@@ -4278,7 +4278,7 @@ ID=windsalamander_inflated;
 element=wind;
  damageMultiplier=1.3; healMultiplier=1;
 [ActorType] ID=bigrobo;
-name=War Mech;
+name=战争机器;
 journalID=journal_bigrobo;
 bodyStructure=single_bg_high;
 movementSpeed = 5;
@@ -4464,12 +4464,12 @@ occupyAll=true;
 [JournalEntry]
 ID=journal_bigrobo;
 category=creature; halfPage=true; rarity=6; rewardMod=2500;
-title=War Mech;
-text=<icon=j_mech><title=War Mech><brAdj=>        Fully functional copy of an ancient mech design from the Gate War. Armed with cannons, homing blasts, and a plasma beam core, this mech is capable of holding its own against any battalion. Mercifully, the tank treads haven't been added yet.;
+title=战争机器;
+text=<icon=j_mech><title=战争机器><brAdj=>        完全仿造了门之战争中一个古老的机械设计.装备有大炮,追踪导弹和等离子束核心,这种机甲能够自己对付任何营.幸运的是,还没有配置坦克的履带.;
 
 [ActorType] ID=bigrobo_wreck;
 cloneFrom=bigrobo;
-name=Auto Mech;
+name=自动机器;
 journalID=journal_bigrobo;
 disappearOnDeath=true;
 
@@ -4491,7 +4491,7 @@ ruinModeSupportAbility=pureMind;
 
 [ActorType] ID=bigrobo_wreck2;
 cloneFrom=bigrobo_wreck;
-name=Auto Mech;
+name=自动机器;
 journalID=journal_bigrobo;
 disappearOnDeath=true;
 
@@ -4528,7 +4528,7 @@ ID=bigrobo_wreck2;
 cloneFrom=oneTile;
 
 [ActorType] ID=dragonhead;
-name=Dragon;
+name=龙;
 journalID=journal_dragonhead;
 bodyStructure=single;
 movementSpeed = 5;
@@ -4717,8 +4717,8 @@ actorValue=moveDistance; magnitude=1; duration=-1;
 [JournalEntry]
 ID=journal_dragonhead;
 category=creature; halfPage=true; rarity=5; rewardMod=500;
-title=Demon Drake;
-text=<iconBig=j_dragonhead><title=Demon Drake><brAdj=>        Serpent that usually stays in deep waters, named for its demonic-looking visage. Many ships have been lost to their fiery breath and energy attacks - even cannons can rarely bring such beasts down. To meet one in close quarters is surely a death sentence.;
+title=恶魔德雷克;
+text=<iconBig=j_dragonhead><title=恶魔德雷克><brAdj=>        通常居住在深水中的蛇,<n>因其恶魔般的容貌而得名.许多船只在它们<n>猛烈的呼吸和能量攻击中丧生--即使是大炮<n>也很难打倒这些野兽.如果你在近距离见到它,<n>那你肯定是被判了死刑.;
 
 
 [ActorType] ID=cattle;
@@ -4853,7 +4853,7 @@ title=戈杰尔;
 text=<actorBig=cattle><title=戈杰尔><brAdj=>        戈杰尔是大型、温顺的食草动物,<n>是许多社会农业的支柱.它们的肉和皮被用于制作<n>各种菜肴和衣服.虽然他们通常都很友好,很安静,<n>但如果被激怒了,他们可能会很危险.不要激怒<n>整个牛群.否则你会被踩死的!!;
 
 [ActorType] ID=splitworms;
-name=Splitworms;
+name=分裂蠕虫;
 journalID=journal_splitworms;
 bodyStructure=single;
 movementSpeed = 3;
@@ -4950,12 +4950,12 @@ ID=splitworms; actorValues=drowning; action=drown;
 [JournalEntry]
 ID=journal_splitworms;
 category=creature; halfPage=true; rarity=1;
-title=Splitworms;
-text=<actorBig=splitworms><title=Splitworms><brAdj=>Biting worms that regenerate at extremely high rates. Any physical attack causes Splitworms to double. They will often attack creatures much larger than them in the hopes of being split, letting them overcome their prey with numbers.<n=>Splitworms are best dealt with in a surgical fashion, with magic or from a distance.;
+title=分裂蠕虫;
+text=<actorBig=splitworms><title=分裂蠕虫><brAdj=>能以极高的速度再生的咬虫.任何物理攻击<n>都会导致分裂蠕虫加倍.它们经常攻击比自己<n>大得多的生物,希望被分裂,以让它们用数量<n>战胜猎物.对付分裂蠕虫最好的方法是<n>外科手术式的用魔法或从远处消灭.;
 
 
 [ActorType] ID=splitworms_magic;
-name=Splitworms;
+name=魔法分裂蠕虫;
 journalID=journal_splitworms_magic;
 bodyStructure=single;
 movementSpeed = 3;
@@ -5050,12 +5050,12 @@ ID=splitworms_magic; red=1; blue=0.5; green=0.5; alpha=0.4; size=0.22; flicker=0
 [JournalEntry]
 ID=journal_splitworms_magic;
 category=creature; halfPage=true; rarity=3;
-title=Magic Splitworms;
-text=<actorBig=splitworms_magic><title=Magic Splitworms><brAdj=>The only thing worse than Splitworms, are Splitworms that have adapted to being struck by magic. Any attack will cause them to double, making head on encounters unwise. If you must fight, attack them with strong blows or not at all.;
+title=魔法分裂蠕虫;
+text=<actorBig=splitworms_magic><title=魔法分裂蠕虫><brAdj=>唯一比分裂蠕虫本身更糟糕的是,已经适应了<n>被魔法击中的分裂蠕虫.任何攻击都会使他们<n>数量翻倍,与他们遭遇战是不明智.<n>如果你一定要打,那就猛烈地打击他们,<n>否则就不要战斗.;
 
 
 [ActorType] ID=rotworms;
-name=Rotworms;
+name=腐烂蠕虫;
 journalID=journal_rotworms;
 bodyStructure=single;
 movementSpeed = 3;
@@ -5150,11 +5150,11 @@ ID=rotworms; actorValues=drowning; action=drown;
 [JournalEntry]
 ID=journal_rotworms;
 category=creature; halfPage=true; rarity=1;
-title=Rotworms;
-text=<actorBig=rotworms><title=Rotworms><brAdj=>Where bodies are found, rotworms are sure to follow. They make their home within fungus, then feed on the body. Despite being scavengers, rotworms become highly aggressive when disturbed, to the point of attacking anything and everything within reach. When extremely hungry, they may attempt to hunt their own prey, or even cannibalize.;
+title=腐烂蠕虫;
+text=<actorBig=rotworms><title=腐烂蠕虫><brAdj=>发现尸体的地方,肯定会有腐烂蠕虫.<n>它们在真菌中安家,然后以真菌为食.<n>尽管是食腐动物,但当被打扰时,腐烂蠕虫会<n>变得非常具有攻击性,甚至会攻击任何靠近的<n>东西.当极度饥饿时,它们可能会试图捕食<n>自己的猎物,甚至同类相食物.;
 
 [ActorType] ID=groach;
-name=Groach;
+name=饿鬼;
 journalID=journal_groach;
 bodyStructure=single;
 movementSpeed = 4;
@@ -5244,12 +5244,12 @@ ID=groach; actorValues=drowning; action=drown;
 [JournalEntry]
 ID=journal_groach;
 category=creature; halfPage=true; rarity=2;
-title=Groach;
-text=<actorBig=groach><title=Groach><brAdj=>This unusual creature hails from the realm of Graven. There they are often domesticated and kept as pets or guard animals. <n=>Groaches are docile, unless their voracious hunger goes unfed. They are known to devour almost anything- it's said a Groach can survive for weeks just chomping on the Graven soil.;
+title=饿鬼;
+text=<actorBig=groach><title=饿鬼><brAdj=>这种不寻常的生物来自克莱文王国.在那里,<n>它们经常被驯养作为宠物或看守动物.饿鬼是<n>温顺的,除非它们贪婪的饥饿没有被喂饱.<n>众所周知,它们几乎会吞噬任何东西--据说,<n>它可以在克莱文存活数周仅仅依靠咀嚼土壤.;
 
 
 [ActorType] ID=sogbogger;
-name=Sogbogger;
+name=索格伯格;
 journalID=journal_sogbogger;
 bodyStructure=single;
 movementSpeed = 4;
@@ -5447,11 +5447,11 @@ ID=sogbogger_grass; actorValues=drowning; action=drown;
 [JournalEntry]
 ID=journal_sogbogger;
 category=creature; halfPage=true; rarity=1;
-title=Sogbogger;
-text=<actorBig=sogbogger><title=Sogbogger><brAdj=>Plague of travelers, the Sogbogger hides in areas of high traffic, gurgles out its immobilizing fluid, then waits for unsuspecting prey.<n=>Sogbogger skin can adapt to new environments within a day by slowly changing colors and sometimes even texture. Few areas are truly safe, but the Sogbogger deals poorly with cold, so they are rarely found in higher altitudes.;
+title=索格伯格;
+text=<actorBig=sogbogger><title=索格伯格><brAdj=>旅行者的祸害,索格伯格藏在交通繁忙的地区,<n>汩汩流出它的固定液体,然后等待毫无防备的<n>猎物.它的皮肤可以在一天内通过慢慢<n>改变颜色,有时甚至是材质来适应新环境.<n>很少有地方是真正安全的,但索博格不适应<n>寒冷,所以它们很少出现在高海拔地区.;
 
 [ActorType] ID=antiair;
-name=Anti Air Mk. I;
+name=防空机器 Mk. I;
 journalID=journal_antiair;
 bodyStructure=single;
 movementSpeed = 6;
@@ -5587,11 +5587,11 @@ ID=antiair; actorValues=drowning; action=drown;
 [JournalEntry]
 ID=journal_antiair;
 category=creature; halfPage=true; rarity=3; rewardMod=-650;
-title=Anti Air;
-text=<actor=antiair><title=Anti Air><brAdj=>Military-grade machine designed as automated defenses against airship incursion. The machine has no AI component, instead relying on raw chemical reactions to drive its behavior. For example, its sensors react to large, distant presences of essence with a devastating hail of energy.;
+title=防空机器;
+text=<actor=antiair><title=防空机器><brAdj=>军用级别的机器被设计成自动防御飞艇侵入.<n>这台机器没有人工智能组件,而是依靠原始的<n>化学反应来驱动其行为.例如,它的传感器<n>能对巨大又遥远的本源物质能作出反应,<n>产生毁灭性的能量冰雹.;
 
 [ActorType] ID=antiair2;
-name=Anti Air Mk. II;
+name=防空机器 Mk. II;
 journalID=journal_antiair;
 bodyStructure=single;
 movementSpeed = 6;
@@ -5718,7 +5718,7 @@ ID=antiair2; actorValues=drowning; action=drown;
 
 
 [ActorType] ID=ruluorn;
-name=Ruluorn;
+name=鲁洛恩;
 bodyStructure=wyrm;
 movementSpeed = 7.8;
 unarmedPower = 5;
@@ -5833,11 +5833,11 @@ actorValues=drowning; damageMultiplier=0; healMultiplier=0;
 [JournalEntry]
 ID=journal_ruluorn;
 category=creature; halfPage=true; rarity=5;
-title=Ruluorn;
-text=<actorBig=ruluorn><title=Ruluorn><brAdj=>         Huge centipede-like creatures from the realm of Graven. Ruluorn are incapable of human speech, but are quite intelligent. They are innately talented with Gate magic, to the point that it is ingrained in their very being. When a Ruluorn wishes to be evasive or fit in a very small space, they use Gate magic to compact themselves into a single segment.;
+title=鲁洛恩;
+text=<actorBig=ruluorn><title=鲁洛恩><brAdj=>      来自克莱文王国的巨型蜈蚣状生物.<n>鲁洛恩不会人类语言,但很聪明.他们天生就有<n>门魔法的天赋,这一点在他们的存在中根深蒂固.<n>当鲁洛恩想要逃避或适应一个非常小的空间,<n>他们会使用门魔法把自己压缩成单个片段.;
 
 [ActorType] ID=ruluorn_demon;
-name=Demon;
+name=恶魔鲁洛恩;
 bodyStructure=wyrm8;
 movementSpeed = 10;
 unarmedPower = 5;
@@ -5991,12 +5991,12 @@ actorValues=drowning; damageMultiplier=0; healMultiplier=0;
 [JournalEntry]
 ID=journal_ruluorn_demon;
 category=creature; halfPage=true; rarity=6;
-title=Ruluorn Demon;
-text=<actorBig=ruluorn_demon><title=Ruluorn Demon><brAdj=>         Tortured Ruluorn that endured many heinous experiments at the Admiral's hands. Frayed internals extend from its many wounds. Its only wish is death for all of Eral.;
+title=恶魔鲁洛恩;
+text=<actorBig=ruluorn_demon><title=恶魔鲁洛恩><brAdj=>         饱受折磨的鲁洛恩在海军上将<n>手下忍受了许多令人发指的实验.它的许多伤口<n>延伸到受损德内脏.它唯一的愿望就是<n>整个埃拉尔地区的覆灭.;
 
 
 [ActorType] ID=shellworm;
-name=Shellworm;
+name=壳虫;
 journalID=journal_shellworm;
 bodyStructure=worm5_shell;
 distBetweenTailParts=0.5;
@@ -6107,12 +6107,12 @@ actorValues=drowning; damageMultiplier=0; healMultiplier=0;
 [JournalEntry]
 ID=journal_shellworm;
 category=creature; halfPage=true; rarity=3;
-title=Shellworm;
-text=<actorBig=shellworm><title=Shellworm><brAdj=>         This monstrous sea worm usually stays in the depths and feeds off small fish. With its ice magic, it can freeze part of a school, then pry the remains out using its tendrils. Its plates are practically indestructible.;
+title=壳虫;
+text=<actorBig=shellworm><title=壳虫><brAdj=>       这种巨大的海虫通常呆在深海,<n>以小鱼为食.凭借它的冰魔法,它可以冻结<n>部分鱼群,然后用它的卷须把遗体撬出来.<n>它的鳞片几乎是坚不可摧的.;
 
 
 [ActorType] ID=small_wyrm_red;
-name=Entrailer;
+name=内脏吞噬者;
 journalID=journal_small_wyrm_red;
 bodyStructure=wyrm_3seg;
 distBetweenTailParts=0.1875;
@@ -6222,7 +6222,7 @@ text=<actorBig=small_wyrm_red><title=内脏吞噬者><brAdj=>这些恶毒的寄�
 
 
 [ActorType] ID=small_wyrm_blue;
-name=Entrailer;
+name=内脏吞噬者;
 journalID=journal_small_wyrm_red;
 bodyStructure=wyrm_3seg;
 distBetweenTailParts=0.1875;
@@ -6447,11 +6447,11 @@ actorValues=drowning; damageMultiplier=0; healMultiplier=0;
 [JournalEntry]
 ID=journal_underwater_monster;
 category=creature; halfPage=true; rarity=4; rewardMod=750;
-title=Underwater Beast;
-text=<actor=underwater_monster><title=???><brAdj=>This unknown creature has never been categorized, named, or even fully seen by human eyes. Most of its bulk is obscured by water, and it is too wily to be captured. Occasionally its long, grasping tongues reach out above the water. It is said that its mere gaze can paralyze.;
+title=水中猛兽;
+text=<actor=underwater_monster><title=???><brAdj=>这种未知的生物从未被分类或命名,甚至从未<n>被人类完全看到.它的大部分身体都被水遮住了,<n>而且它太狡猾了,很难被捕捉到.有时它的<n>长舌头会伸出水面.据说它的凝视能使人瘫痪.;
 
 [ActorType] ID=eye_graven;
-name=Graven Eye;
+name=克莱文之眼;
 journalID=journal_eye_graven;
 bodyStructure=single;
 movementSpeed = 1;
@@ -6583,11 +6583,11 @@ damageMultiplier=1.5; healMultiplier=1;
 [JournalEntry]
 ID=journal_eye_graven;
 category=creature; halfPage=true; rarity=4; rewardMod=500;
-title=Graven Eye;
-text=<actor=eye_graven><title=Graven Eye><brAdj=>Much of the landscape of Graven is actually organic. Whether all Graven Eyes are part of the same 'creature' is unknown. They seem to act independently, and often, aggressively.<n=>They have no physical prowess, but their magic ability rivals skilled sorcerers.;
+title=克莱文之眼;
+text=<actor=eye_graven><title=克莱文之眼><brAdj=>克莱文的大部分景观实际上是有机物的.<n>是否所有的克莱文之眼都是同一个'生物'的<n>一部分还不得而知.他们似乎独立行动,<n>而且常常又侵略性的.他们没有强大的物理力量,<n>但他们的魔法能力可以与熟练的巫师相媲美.;
 
 [ActorType] ID=turtle; 
-name=Turtle;
+name=海龟;
 journalID=journal_turtle;
 description=;
 defaultSprite=;
@@ -6727,7 +6727,7 @@ title=阿尼托斯克龟;
 text=<actorBig=sm_torsk><title=阿尼托斯克龟><brAdj=>这些庞大的爬行动物的状态从完全平静的<n>--到可以作为平台来使用--再到凶恶的,<n>完全取决于它们的饥饿程度.<n>壳和软骨质卷须都是不受攻击的.<n>它们的触须可以传播电流,来电击潜在的食物.<n>在陆地上战斗时,会喷射水来更好地发动电击.;
 
 [ActorType] ID=turtle_tentacle;
-name=Tentacle;
+name=巨大的阿尼托斯克;
 journalID=journal_turtle_tentacle;
 bodyStructure=single;
 movementSpeed = 5;
@@ -7136,7 +7136,7 @@ text=<actorBig=cycle><title=摩托车><brAdj=>复杂，昂贵的设备包含数�
 
 
 [ActorType] ID=ekrast_boss;
-name=Ekrast;
+name=伊卡斯特;
 bodyStructure=humanTall;
 humanoid = true;
 fearless=true;
@@ -7557,7 +7557,7 @@ armorPalette= p86;
 randomNames=Gate Caster;
 
 [ActorType] ID=actor_turret_mobile;
-name=Mobile Turret;
+name=移动炮塔;
 journalID=journal_actor_turret;
 bodyStructure=single;
 movementSpeed = 4;
@@ -7678,7 +7678,7 @@ ID=actor_turret_mobile; actorValues=drowning; action=drown;
 
 
 [ActorType] ID=corespawner1;
-name=Core;
+name=核心;
 journalID=journal_corespawner1;
 bodyStructure=single;
 movementSpeed = 4;
@@ -7792,12 +7792,12 @@ actorValues=drowning; damageMultiplier=0; healMultiplier=0;
 [JournalEntry]
 ID=journal_corespawner1;
 category=creature; halfPage=true;
-title=Core?;
-text=<icon=actor_corespawner1_preview><title=Core?><brAdj=>       This large growth appears to be one of Alvora's internal organs. It pulsates and bubbles, but is completely immobile. Some strange shape stirs within it. Be careful if you choose to engage - it may be a long fight.;
+title=核心?;
+text=<icon=actor_corespawner1_preview><title=核心?><brAdj=>       这个巨大的肿瘤状物体似乎是阿尔沃拉的一个内脏器官.它有脉搏且发出气泡般的声音,但完全不动.一些奇怪的影像在里面搅动.如果你选择参战,要小心--这可能是一场恶战.;
 
 
 [ActorType] ID=corespawner2;
-name=Core;
+name=核心;
 journalID=journal_corespawner1;
 bodyStructure=single;
 movementSpeed = 4;
@@ -7898,7 +7898,7 @@ ID=corespawner2;
 actorValues=drowning; damageMultiplier=0; healMultiplier=0;
 
 [ActorType] ID=heart_segment;
-name=Veins;
+name=血管;
 journalID=;
 bodyStructure=single;
 movementSpeed = 4;
@@ -7997,7 +7997,7 @@ ID=heart_segment;
 actorValues=drowning; damageMultiplier=0; healMultiplier=0;
 
 [ActorType] ID=heart;
-name=Heart;
+name=心脏;
 journalID=journal_heart;
 bodyStructure=single_bg;
 movementSpeed = 4;
@@ -8093,8 +8093,8 @@ actorValue=actTime; magnitude=-2; duration=-1;
 [JournalEntry]
 ID=journal_heart;
 category=creature; halfPage=true;
-title=Alvora;
-text=<icon=actor_heart_preview><title=Alvora><brAdj=>         Alvora's 'heart'. Unlike a normal heart, this does not pump blood, but instead keeps Alvora aloft. It is very much alive and cognizant of the threats around it. When struck, it reacts by extending further away from the pain. Strike down its supporting veins and then deliver the final blow!;
+title=阿尔沃拉;
+text=<icon=actor_heart_preview><title=阿尔沃拉><brAdj=>         阿尔沃拉的'心脏'.<n>与正常的心脏不同,它不输送血,<n>而是让阿尔沃拉保持在高空.它非常有生命力,<n>并能意识到周围存在的威胁.当被击中时,<n>它的反应是远离疼痛.砍断它的血管,<n>给它最后一击!;
 
 [ActorTypeReaction]
 ID=heart;
@@ -8128,7 +8128,7 @@ actorValues=drowning; damageMultiplier=0; healMultiplier=0;
 
 
 [ActorType] ID=pill_larva;
-name=Pillpok;
+name=药丸幼虫;
 journalID=journal_pill;
 bodyStructure=single;
 movementSpeed = 6;
@@ -8211,7 +8211,7 @@ element=pillImmune; damageMultiplier=0; healMultiplier=0;
 ID=pill_larva; actorValues=drowning; action=drown;
 
 [ActorType] ID=gusgen;
-name=Gusgen;
+name=古斯根;
 journalID=journal_gusgen;
 bodyStructure=single;
 movementSpeed = 0;
@@ -8313,8 +8313,8 @@ maxRange=0;
 [JournalEntry]
 ID=journal_gusgen;
 category=creature; halfPage=true; rarity=2;
-title=Gusgen;
-text=<actorBig=gusgen><title=Gusgen><brAdj=>         Strange, foamy fungus that frequently grows in cracks and gaps. Its resilience is legendary - when attacked, it can burst out soporific spores while rapidly healing itself. Some specimens have even adapted to be nearly immune to certain types of damage. A concerted, quick team attack is necessary to dispose of it.;
+title=古斯根;
+text=<actorBig=gusgen><title=古斯根><brAdj=>        奇怪的泡沫真菌不断在<n>裂缝和缺口中生长着.它的恢复力是传奇的<n>--当受到攻击时,它可以爆发出催眠的孢子,<n>同时迅速愈合自己.一些标本甚至适应了对<n>某些类型的伤害几乎完全免疫.要解决它,<n>一个协调的,反应快速的团队攻击是很必要的.;
 
 
 [ActorType] ID=testspide;

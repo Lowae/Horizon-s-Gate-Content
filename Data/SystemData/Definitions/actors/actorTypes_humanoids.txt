@@ -1,6 +1,6 @@
 [ActorType] ID=human; 
-name=Human;
-description=Humans may not be as common or powerful as other races, but they are sturdy, adaptable, and persistent. <br=> +10% Experience gained;
+name=人类;
+description=类可能不像其他种族那样普遍或强大,<n>但他们坚强、适应能力强、执着. <br=> +10%获得经验;
 journalID=journal_human;
 playerUsable= true;
 canSpawnWithClass = true;
@@ -356,15 +356,15 @@ actorValues=XP; actorValues=XP_ignoreTired; healMultiplier=1.1;
 [JournalEntry]
 ID=journal_human;
 category=creature; halfPage=true; rarity=0;
-title=Human;
-text=<icon=j_human><title=Human><brAdj=>This familiar creature is one of the most diverse species in Eral. Humans are adaptable, durable, and persistent. They can be found in most areas, though in small numbers.<n=> Attitudes toward humans vary, but more often than not humans integrate easily into society.<br=>  +10% XP (and +10% * as a result);
+title=人类;
+text=<icon=j_human><title=人类><brAdj=>这种常见的生物是埃拉尔最多样化的物种之一.<n>人类适应性强,坚韧的和不懈的.虽然数量很少,<n>但在大多数地区都能找到他们.人们对人类的态度<n>各不相同,但往往人类很容易融入社会.<br=>  +10%获得经验 (获得总经验 +10% * );
 
 
 
 
 [ActorType] ID=scurio; 
 name=斯库瑞;
-description=斯库瑞是两足动物,兼有猫科、狐狸和鼬类的特征.<n>它们的行动比人类略快.<br=>待机时间-2 <icon=time>;
+description=斯库瑞是两足动物,兼有猫科、狐狸和鼬类的特征.<n>它们的行动比人类略快.<br=>-2 <icon=time>行动所需时间;
 journalID=journal_scurio;
 playerUsable= true;
 canSpawnWithClass = true;
@@ -635,11 +635,11 @@ actorValue=moveDistance; magnitude=1; duration=-1;
 ID=journal_scurio;
 category=creature; halfPage=true; rarity=1;
 title=斯库瑞;
-text=<icon=j_scurio><title=斯库瑞><brAdj=>斯库瑞是一种毛皮覆盖的两足动物,具有猫科、狐狸<n>和鼬鼠科动物的混合特征.他们是比较常见的种族之一,<n>通常被认为是脚踏实地和简单的.事实上,他们的Mn<性情和人一样变化很大.<br=> 待机时间 -2 <icon=time>;
+text=<icon=j_scurio><title=斯库瑞><brAdj=>斯库瑞是一种毛皮覆盖的两足动物,具有猫科、狐狸<n>和鼬鼠科动物的混合特征.他们是比较常见的种族之一,<n>通常被认为是脚踏实地和简单的.事实上,他们的Mn<性情和人一样变化很大.<br=> -2 <icon=time>行动所需时间;
 
 [ActorType] ID=rasmen;
 name=拉斯曼;
-description=无脸类人种族,通过感知周围的本质来'看'.<n>他们戴面具是为了更好地融入社会.<br=> 免疫失明和沉默<n=> 对侧面攻击+12%<icon=PhysEva>闪避;
+description=无脸类人种族,通过感知周围的本源来'看'.<n>他们戴面具是为了更好地融入社会.<br=> 免疫失明和沉默<n=> 对侧面攻击+12%<icon=PhysEva>闪避;
 journalID=journal_rasmen;
 playerUsable= true;
 canSpawnWithClass = true;
@@ -884,8 +884,8 @@ title=拉斯曼;
 text=<icon=j_rasmen><title=拉斯曼><brAdj=>一种普通但奇怪的生物.他们没有眼睛,而是通过<n>'感觉'来观察周围的事物.为了更好地融入社会,<n>他们戴着雕刻复杂面孔的面具,练习某些人类行为,<n>比如正对他们说话的人.<br=>  免疫失明和沉默<n=>  对侧面攻击+12% <icon=PhysEva>闪避;
 
 [ActorType] ID=fareem;
-name=Fareem;
-description=Fareem are known for their powerful and agile serpentine tail. The rest of their body is covered in feathery plumage.<br=> +1 <icon=moveDistance> Move, +1 <icon=time> Time to Act;
+name=法瑞姆;
+description=法瑞姆以其有力而敏捷的蛇尾巴而闻名.<n>它们身体的其他部分覆盖着羽毛.<br=> +1 <icon=moveDistance>移动距离, +1 <icon=time> 行动所需时间;
 journalID=journal_fareem;
 playerUsable= true;
 canSpawnWithClass = true;
@@ -1089,12 +1089,12 @@ actorValue=MagAtk; magnitude=1; duration=-1;
 [JournalEntry]
 ID=journal_fareem;
 category=creature; halfPage=true; rarity=1;
-title=Fareem;
-text=<icon=j_fareem><title=Fareem><brAdj=>Feathery serpentine beings. From the waist up, their structure resembles a human's, but their lower body is a large, powerful snake tail. Fareem are incredibly agile and flexible, but are slow to act. They are hairless and instead have bright feathery plumage.<br=>  +1 <icon=moveDistance> Move, +1 <icon=time> Time to Act;
+title=法瑞姆;
+text=<icon=j_fareem><title=法瑞姆><brAdj=>有羽毛的蛇.腰部以上,它们的结构类似于人类,<n>但它们的下半身是一条巨大而有力的蛇尾巴.<n>法瑞姆非常敏捷灵活,但行动迟缓.<n>它们是无毛的但有明亮的羽毛.<br=>  +1 <icon=moveDistance> 移动距离, +1 <icon=time> 行动所需时间;
 
 [ActorType] ID=aphest;
-name=Aphest;
-description=Tall horned bipedals covered in pale downy fur. Powerful and mobile, but slow to act.<br=> +1 <icon=PhysAtk><icon=MagAtk> Attack<n=> +2 <icon=moveDistance> Move in straight lines<n=> +2 <icon=time> Time to Act;
+name=阿弗斯特;
+description=长角的高大两足动物,覆盖着淡色绒毛.<n>强大而灵活,但行动缓慢.<br=> +1 <icon=PhysAtk><icon=MagAtk> 攻击<n=> +2 <icon=moveDistance> 直线移动距离<n=> +2 <icon=time> 行动所需时间;
 journalID=journal_aphest;
 bodyStructure=humanTall_longArms2;
 humanoid = true;
@@ -1315,13 +1315,13 @@ actorValue=actTime; magnitude=-1; duration=-1;
 [JournalEntry]
 ID=journal_aphest;
 category=creature; halfPage=true; rarity=1;
-title=Aphest;
-text=<icon=j_aphest><title=Aphest><brAdj=>Tall horned bipedals covered in pale downy fur. Aphest horns vary widely in shape and size. Their digitgrade legs end in powerful tridactyl talons, allowing them to run at great speeds. They have a very imposing physical presence, and are known for being both soft-spoken and quick to anger.<br=>  +2 <icon=moveDistance> Move in straight lines, +2 <icon=time> Time to Act<n=>  +1 <icon=PhysAtk><icon=MagAtk> Attack;
+title=阿弗斯特;
+text=<icon=j_aphest><title=阿弗斯特><brAdj=>长角的高大两足动物,覆盖着淡色绒毛.阿弗斯特<n>的角的形状和大小差异很大.它们的趾行类的腿末端<n>有强大的三趾爪,使它们能够高速奔跑.他们有<n>一个非常令人印象深刻特征,声音轻柔和容易发怒.<br=>  +2 <icon=moveDistance> 直线移动距离, +2 <icon=time> 行动所需时间<n=>  +1 <icon=PhysAtk><icon=MagAtk> 攻击;
 
 
 [ActorType] ID=falpa; 
-name=Falpa;
-description=Falpa have a broad, flat head with many eyes. Their mastery over magic helps them survive in cold waters.<br=> +10 <icon=MP> Max MP;
+name=法尔帕;
+description=法尔帕的头又宽又平,有许多眼睛.他们对魔法的<n>掌握能帮助他们在冰冷的水中生存.<br=> +10 <icon=MP>最大MP;
 journalID=journal_falpa;
 playerUsable= true;
 canSpawnWithClass = true;
@@ -1487,11 +1487,11 @@ actorValue=TrueMPMax; magnitude=10; duration=-1;
 [JournalEntry]
 ID=journal_falpa;
 category=creature; halfPage=true; rarity=1;
-title=Falpa;
-text=<icon=j_falpa><title=Falpa><brAdj=>Semi-aquatic beings with great magical talent that originate from Dominio. They have been spotted further and further afield, some even migrating to landlocked countries. The typical Falpa is ambitious and adventurous. Their odd facial structure makes many distrust them.<br=>  +10 <icon=MP> Max MP;
+title=法尔帕;
+text=<icon=j_falpa><title=法尔帕><brAdj=>半水生生物有着源自多米尼奥的伟大魔法天赋.<n>它们在越来越远的地方被发现,有些甚至迁徙到<n>内陆国家.典型的法尔帕人是雄心勃勃的,喜欢冒险.<n>他们古怪的面部结构使许多人不信任他们.<br=>  +10 <icon=MP>最大MP;
 
 [ActorType] ID=maskhead;
-name=Maskhead;
+name=面具头;
 journalID=journal_maskhead;
 bodyStructure=humanGlowFace;
 fearless = true;
@@ -1633,11 +1633,11 @@ ID=maskhead; texture=lightmaskLine; red=1; blue=1; green=0.7; alpha=0.2; size=0.
 [JournalEntry]
 ID=journal_maskhead;
 category=creature; halfPage=true; rarity=2;
-title=Maskhead;
-text=<icon=j_maskhead><title=Maskhead><brAdj=>Maskheads are hulking humanoids with waxy purple skin & a discolored wood-like mask with a broad eyehole. They are supposedly sapient, though they are universally hostile and do not speak. Despite this they are cunning fighters. Maskheads raid settlements often, though they have yet to attempt any kind of conquest.;
+title=面具头;
+text=<icon=j_maskhead><title=面具头><brAdj=>面具头是笨重的类人种族,有着光滑如蜡般的<n>紫色皮肤和一个有着巨大眼窝的褪色面具.他们<n>被认为是聪明的,即使他们普遍怀有敌意且不说话.<n>尽管如此,他们也是狡猾的战士.面具头经常袭击<n>定居点,尽管他们还没有尝试过任何形式的征服.;
 
 [ActorType] ID=maskhulk;
-name=Maskhulk;
+name=庞大的面具头;
 journalID=journal_maskhulk;
 bodyStructure=humanTall_longArms1GlowFace;
 fearless = true;
@@ -1726,12 +1726,12 @@ ID=maskhulk; texture=lightmaskLine; red=1; blue=1; green=0.7; alpha=0.2; size=0.
 [JournalEntry]
 ID=journal_maskhulk;
 category=creature; halfPage=true; rarity=3;
-title=Maskhulk;
-text=<icon=j_maskhulk><title=Maskhulk><brAdj=>Rarely, reports of extraordinarily large and powerful Maskheads have reached civilization. With two (sometimes more!) heads, a stature matching the tallest Wilderi, and the strength to match, Maskhulks are a fearsome enemy.;
+title=庞大的面具头;
+text=<icon=j_maskhulk><title=庞大的面具头><brAdj=>罕有的是,关于体型庞大、力量凶猛的面具头的报道<n>已经传到了文明世界.有着两个(有时候更多!)头,<n>体型和力量与最高的Wilderi相当,<n>是可怕的敌人.;
 
 
 [ActorType] ID=jarf; 
-name=Jarf;
+name=贾弗;
 journalID=journal_jarf;
 bodyStructure=human;
 canSpawnWithClass = true;
@@ -1962,12 +1962,12 @@ actorValue=actTime; magnitude=-3; duration=-1;
 [JournalEntry]
 ID=journal_jarf;
 category=creature; halfPage=true; rarity=2;
-title=Jarf;
-text=<icon=j_jarf><title=Jarf><brAdj=>Jarf are diminutive grey-furred humanoids with a vicious overbite. Jarf are often impulsive and reckless, and have a fondness for pranks and simple things (like meat). Though as intelligent as any other species, Jarf tribes have a reputation for being barbaric or even feral.;
+title=贾弗;
+text=<icon=j_jarf><title=贾弗><brAdj=>贾弗是身材矮小,长着灰色皮毛的类人动物,<n>有着恶毒的覆咬.贾弗常常冲动鲁莽,喜欢恶作剧<n>和简单原始的东西(比如肉).尽管和其他物种<n>一样聪明,贾弗部落却以原始的甚至野蛮而闻名.;
 
 [ActorType] ID=buralk;
-name=Buralk;
-description=Insectoid bipedals with a stout beetle-y torso and a thick exterior carapace.<br=> +1 <icon=PhysDef><icon=MagDef> Defenses;
+name=布拉尔克;
+description=昆虫类两足动物,躯干粗壮如甲虫,外甲壳厚.<br=> +1 <icon=PhysDef><icon=MagDef>防御;
 journalID=journal_buralk;
 bodyStructure=human;
 canSpawnWithClass = true;
@@ -2204,12 +2204,12 @@ actorValue=MagDef; magnitude=1; duration=-1;
 [JournalEntry]
 ID=journal_buralk;
 category=creature; halfPage=true; rarity=0;
-title=Buralk;
-text=<icon=j_buralk><title=Buralk><brAdj=>Insectoid bipedals with a stout beetle-y torso and thick exterior. Buralk are unable to speak most languages due to lacking vocal cords, though they can understand them perfectly well. This in combination with their short stature and insect resemblance means they are often discriminated against.<br=>  +1 <icon=PhysDef><icon=MagDef> Defenses;
+title=布拉尔克;
+text=<icon=j_buralk><title=布拉尔克><brAdj=>昆虫类两足动物,躯干粗壮如甲虫,外表粗壮.<n>布拉尔克人由于没有声带而不能说大多数语言,<n>尽管他们完全可以理解这些语言.再加上它们矮小<n>的身材和昆虫的外形,这意味着它们经常会受到歧视.<br=>  +1 <icon=PhysDef><icon=MagDef>防御;
 
 
 [ActorType] ID=myconid;
-name=Myconid;
+name=蘑菇人;
 journalID=journal_myconid;
 bodyStructure=humanSmall;
 canSpawnWithClass = true;
@@ -2537,12 +2537,12 @@ element=earth; damageMultiplier=0.5;
 [JournalEntry]
 ID=journal_myconid;
 category=creature; halfPage=true; rarity=4; rewardMod=250;
-title=Myconid;
-text=<icon=j_myconid><title=Myconid><brAdj=>This bizzare species is largely unknown. Their appearance is that of a large fungus, though they seem entirely sapient and mobile. When threatened, their bodies harden into a nearly unbreakable stone form. Because of this ability they build few structures and live in a nomadic tribal society.;
+title=蘑菇人;
+text=<icon=j_myconid><title=蘑菇人><brAdj=>这种奇怪的物种在很大程度上是未知的.它们的<n>外观是一个大型真菌,尽管它们看起来完全是有<n>智力的和行动自如的.当受到威胁时,它们的身体<n>就会硬化成几乎坚不可摧的石头形态.由于这种<n>能力,他们很少建造建筑,生活在游牧部落社会.;
 
 [ActorType] ID=ferren; 
-name=Ferren;
-description=Tall, lithe humanoids with thin fur and a flowing mane. Known for being fastidious and intellectual.<br=> +3 <icon=MagDef> Magic Defense<n=> +15% <icon=MagEva> Magic Evasion;
+name=费伦;
+description=高大,柔软的类人动物,有着稀疏的毛发,<n>飘逸的头发.以爱挑剔和充满智慧而闻名.<br=> +3 <icon=MagDef> 魔法防御<n=> +15% <icon=MagEva> 魔法闪避;
 journalID=journal_ferren;
 bodyStructure=humanMed;
 humanoid = true;
@@ -2633,12 +2633,12 @@ actorValue=MagEva; magnitude=15; duration=-1;
 [JournalEntry]
 ID=journal_ferren;
 category=creature; halfPage=true; rarity=1;
-title=Ferren;
-text=<icon=j_ferren><title=Ferren><brAdj=>Ferren are tall, lithe humanoids with thin fur and a flowing, luxurious mane. Despite having a vaguely bestial body structure, their nails and teeth are not very sharp. Ferren are known for being fastidious and intellectual. In some barbaric societies, they have been poached for their fur.<br=>  +3 <icon=MagDef> Magic Defense, +15% <icon=MagEva> Magic Evasion;
+title=费伦;
+text=<icon=j_ferren><title=费伦><brAdj=>费伦是一种高大,柔软的类人动物,皮毛薄,<n>鬃毛飘逸且奢华.尽管它们的身体结构有点像野兽,<n>但指甲和牙齿都不是很锋利.费伦以爱挑剔和充满<n>智慧著称.在一些野蛮社会,人们为了获取皮毛<n>而偷猎它们.<br=>  +3 <icon=MagDef> 魔法防御, +15% <icon=MagEva> 魔法闪避;
 
 [ActorType] ID=spinylizard; 
-name=Zyla;
-description=Lizard-like humanoid whose arms and shoulders bristle with toxic spines. <br=> Poison melee attackers<n=> 10% Resist vs. ranged attacks;
+name=齐拉;
+description=类似蜥蜴的人形动物,<n>手臂和肩膀上布满了有毒的刺. <br=> 近战攻击附加中毒<n=> 10% 几率抵抗远程攻击;
 journalID=journal_spinylizard;
 canSpawnWithClass = true;
 randomSkinPaletteOnSpawn = true;
@@ -2818,12 +2818,12 @@ element=ranged; damageMultiplier=0.9;
 [JournalEntry]
 ID=journal_spinylizard;
 category=creature; halfPage=true; rarity=2;
-title=Zyla;
-text=<icon=j_zila><title=Zyla><brAdj=>Their shoulders and arms are covered in venomous spines that bristle when the Zyla tenses. In crowded cities, Zyla are often mandated to wear bulky protective gear to keep bystanders safe from accidental poisoning.<br=>  Poison melee attackers for <icon=time>40, 10% resist vs. ranged attacks;
+title=齐拉;
+text=<icon=j_zila><title=齐拉><brAdj=>它们的肩膀和手臂覆盖着有毒的刺,当齐拉<n>神经绷紧时,这些刺就会竖起来.在拥挤的城市里,<n>齐拉经常被要求穿戴笨重的防护装备,<n>以防止旁人意外中毒.<br=>  近战攻击附加中毒,持续<icon=time>40, 10% 几率抵抗远程攻击;
 
 [ActorType] ID=wilderi; 
-name=Wilderi;
-description=The dominant race of Limroft. Wilderi are tall, strong, and have jutting horns on their back.<br=> +1 <icon=PhysAtk><icon=MagAtk> Attack<n=> 35% Resist vs. back attacks;
+name=怀尔德;
+description=Limroft的占主导地位的种族,<n>怀尔德i高大强壮,背上有突出的.<br=> +1 <icon=PhysAtk><icon=MagAtk>攻击<n=> 35% 几率抵抗背后攻击;
 journalID=journal_wilderi;
 playerUsable= true;
 canSpawnWithClass = true;
@@ -3060,11 +3060,11 @@ actorValue=backDefense; magnitude=35; duration=-1;
 [JournalEntry]
 ID=journal_wilderi;
 category=creature; halfPage=true; rarity=2;
-title=Wilderi;
-text=<icon=j_wilderi><title=Wilderi><brAdj=>The dominant species of Limroft. Wilderi possess great strength and have protective horns covering their back, so it is no wonder they flourish even in Eral. As they age, their horns continue to grow, sometimes impeding them. In extreme cases the horns must be broken off.<br=>  +1 <icon=PhysAtk><icon=MagAtk> Attack, 35% resist vs. back attacks;
+title=怀尔德;
+text=<icon=j_wilderi><title=Wilderi><brAdj=>Limroft占主导地位的种族.<n>怀尔德拥有强大的力量和覆盖他们的整个背部<n>用于保护他们的角,所以这也难怪他们在Eral<n>也繁荣兴旺.随着年龄的增长,它们的角继续生长,<n>有时会阻碍它们.在极端情况下,角必须被折断.<br=>  +1 <icon=PhysAtk><icon=MagAtk> 攻击, 35% 几率抵抗背后攻击;
 
 [ActorType] ID=vineman; 
-name=Vine;
+name=藤蔓人;
 description=;
 journalID=journal_vineman;
 canSpawnWithClass = true;
@@ -3269,11 +3269,11 @@ element=vines_wither; newID=vineman_wither;
 [JournalEntry]
 ID=journal_vineman;
 category=creature; halfPage=true; rarity=4; rewardMod=-500;
-title=Vineman;
-text=<icon=j_vineman><title=Vineman><brAdj=>This man-shaped bundle of vines stands completely still until some percieved threat approaches, at which point it and all its allies react simultaneously. Oddly, it has no special weakness to Fire or Ruin. Very strange it should be found in such a small group, isolated from others of its kind - perhaps they got lost somehow?;
+title=藤蔓人;
+text=<icon=j_vineman><title=藤蔓人><brAdj=>这个人形的藤蔓会一动不动地站着,直到某个<n>感知到的威胁逼近,这时它和它的盟友会同时<n>做出反应.奇怪的是,它对火或毁灭没有特别<n>的弱点.真奇怪,居然能在这么小的群体里发现它,<n>而且也和其他同类分开--也许它们迷路了?;
 
 [ActorType] ID=vineman_wither; 
-name=Vine;
+name=藤蔓人;
 description=;
 journalID=journal_vineman_wither;
 canSpawnWithClass = true;
@@ -3382,11 +3382,11 @@ actorValue=moveDistance; magnitude=-1; duration=-1;
 [JournalEntry]
 ID=journal_vineman_wither;
 category=creature; halfPage=true; rarity=2;
-title=Vineman (Withered);
-text=<icon=j_vineman_wither><title=Vineman (Withered)><brAdj=>Now that its seed has been withered, the vinemen are slower and more fragile, and easily crumble when set ablaze. They are also seem less perceptive - or less aggressive? - and will only engage if you get very close to them.;
+title=藤蔓人(枯萎的);
+text=<icon=j_vineman_wither><title=藤蔓人(枯萎的)><brAdj=>现在它的种子已经枯萎了,藤蔓人变得更加迟钝<n>和脆弱,在着火时很容易瓦解.他们似乎也没有<n>那么敏锐--或者没有那么咄咄逼人?<n>-只有当你非常接近他们时才会开战.;
 
 [ActorType] ID=plantbugman; 
-name=Rakthol;
+name=拉克索尔;
 description=;
 journalID=journal_plantbugman;
 canSpawnWithClass = false;
@@ -3508,11 +3508,11 @@ actorValue=moveDistance; magnitude=1; duration=-1;
 [JournalEntry]
 ID=journal_plantbugman;
 category=creature; halfPage=true; rarity=3; rewardMod=-300;
-title=Rakthol;
-text=<portraitBig=plantbugman><title=Rakthol><brAdj=>Shambling plant-insect hybrids brought to life by a complex mix of Ruin and Preservation magic. Undead arthropod limbs are wrapped in writhing vines, both controlled by unseen forces. Itch-inducing pollen coats this particular Rakthol.;
+title=拉克索尔;
+text=<portraitBig=plantbugman><title=拉克索尔><brAdj=>呆滞的植物和昆虫的杂交物,在复杂的毁灭和<n>保护魔法的结合下获得了生命.不死的节肢动物<n>四肢被缠绕在扭动的藤蔓中,它们都被看不见的<n>力量控制着.引起瘙痒的花粉覆盖在这种独特的<n>拉克索尔身上.;
 
 [ActorType] ID=plantbugman_mantis; 
-name=Mantis Rakthol;
+name=螳螂拉克索尔;
 description=;
 journalID=journal_plantbugman_mantis;
 canSpawnWithClass = true;
@@ -3627,11 +3627,11 @@ element=life; element=antiUndead; damageMultiplier=1.3; healMultiplier=1;
 [JournalEntry]
 ID=journal_plantbugman_mantis;
 category=creature; halfPage=true; rarity=3; rewardMod=-150;
-title=Mantis Rakthol;
-text=<portraitBig=plantbugman_mantis><title=Mantis Rakthol><brAdj=>A reanimated Cave Mantis corpse makes up the majority of this Rakthol. It can still wield its vicious thoracic appendages with great force - and oddly, with even more skill than it had when alive.;
+title=螳螂拉克索尔;
+text=<portraitBig=plantbugman_mantis><title=螳螂拉克索尔><brAdj=>复活的洞穴螳螂尸体构成了这个拉克索尔的主要部分.<n>它仍然能以巨大的力量挥动它恶毒的胸部附肢<n> - 奇怪的是,甚至比它活着的时候更有技巧.;
 
 [ActorType] ID=plantbugman_flower; 
-name=Flower Rakthol;
+name=花朵拉克索尔;
 description=;
 journalID=journal_plantbugman_flower;
 canSpawnWithClass = true;
@@ -3734,11 +3734,11 @@ element=life; element=antiUndead; damageMultiplier=1.5; healMultiplier=1;
 [JournalEntry]
 ID=journal_plantbugman_flower;
 category=creature; halfPage=true; rarity=3; rewardMod=-150;
-title=Flower Rakthol;
-text=<portraitBig=plantbugman_flower><title=Flower Rakthol><brAdj=>These sprouted bug remains surge with magical energy. Undead cannot normally use magic - perhaps the unusual flower attached to it is responsible for this uncanny abilty.;
+title=花朵拉克索尔;
+text=<portraitBig=plantbugman_flower><title=花朵拉克索尔><brAdj=>这些发芽的虫子尸体充满了神奇的能量.<n>不死生物通常不能使用魔法--也许是附着在它<n>上面的不寻常的花造成了这种不可思议的能力.;
 
 [ActorType] ID=plantbugman_fern; 
-name=Fern Rakthol;
+name=蕨类拉克索尔;
 description=;
 journalID=journal_plantbugman_fern;
 canSpawnWithClass = true;
@@ -3848,11 +3848,11 @@ element=incapped; action=dropBrambles;
 [JournalEntry]
 ID=journal_plantbugman_fern;
 category=creature; halfPage=true; rarity=3; rewardMod=-150;
-title=Fern Rakthol;
-text=<portraitBig=plantbugman_fern><title=Fern Rakthol><brAdj=>Thick foliage covers this insect-plant abomination. Unlike most shambling undead, this beast moves with alarming swiftness and skill. When destroyed, it crumples into a pile of treacherous brambles.;
+title=蕨类拉克索尔;
+text=<portraitBig=plantbugman_fern><title=蕨类拉克索尔><brAdj=>厚厚的叶子覆盖着这种令人厌恶的昆虫-植物.<n>与大多数步履蹒跚的不死生物不同,这只野兽以<n>惊人的速度和技巧移动.一旦被摧毁,<n>它就会变成一堆危险的荆棘.;
 
 [ActorType] ID=plantbugman_pod; 
-name=Pod Rakthol;
+name=豆荚拉克索尔;
 description=;
 journalID=journal_plantbugman_pod;
 canSpawnWithClass = true;
@@ -3958,13 +3958,13 @@ element=incapped; action=podman_burst_action;
 [JournalEntry]
 ID=journal_plantbugman_pod;
 category=creature; halfPage=true; rarity=3; rewardMod=-300;
-title=Pod Rakthol;
-text=<portraitBig=plantbugman_pod><title=Pod Rakthol><brAdj=>Mobile burst pod dragged along by thick vines and undead insect limbs. It is as fragile and dangerous as any normal burst pod.;
+title=豆荚拉克索尔;
+text=<portraitBig=plantbugman_pod><title=豆荚拉克索尔><brAdj=>可移动的爆炸豆荚拖着厚厚的藤蔓和不死的<n>昆虫的四肢.它和普通的爆炸豆荚一样脆弱和危险.;
 
 
 [ActorType] ID=crub;
 name=克拉布;
-description=克拉布是一种短小的甲壳类类人动物,外表坚硬.<br=> +2 <icon=PhysDef>物理防御<n=>免疫瘙痒和潮湿<n=> 30%闪电抵抗;
+description=克拉布是一种短小的甲壳类类人动物,外表坚硬.<br=> +2 <icon=PhysDef>物理防御<n=>免疫瘙痒和潮湿<n=> 30% 受到额外电系伤害;
 journalID=journal_crub;
 bodyStructure=humanShort;
 canSpawnWithClass = true;
@@ -4216,13 +4216,13 @@ element=elec; damageMultiplier=1.3; healMultiplier=1;
 [JournalEntry]
 ID=journal_crub;
 category=creature; halfPage=true; rarity=2;
-title=Crub;
-text=<icon=j_crub><title=Crub><brAdj=>Crustaceans that form small hunter-gatherer societies around reefs and beaches. While some Crub groups are peaceful, many of them raid nearby settlements or passing ships. If a Crub loses a limb, it can regenerate within 1-2 years. This may be why Crub are so bold in combat.<br=>  Immune to Itchy & Wet<n=>  +2 <icon=PhysDef>Defense, 30% Weakness vs. Elec;
+title=克拉布;
+text=<icon=j_crub><title=克拉布><brAdj=>在珊瑚礁和海滩周围形成的小型狩猎-采集<n>社会性甲壳类动物.虽然一些克拉布组织是<n>和平的,但他们中的许多人袭击了附近的定居点<n>或路过的船只.如果克拉布失去了肢体,可以<n>在1-2年内再生.这也许就是克拉布在<n>战斗中如此敢于冒险的原因.<br=>  免疫瘙痒和潮湿<n=>  +2 <icon=PhysDef>物理防御, 30% 受到额外电系伤害;
 
 
 [ActorType] ID=cleever;
-name=Cleever;
-description=Remorseless man-like arthropods.;
+name=克里沃;
+description=冷酷的像人的一样的节肢动物.;
 journalID=journal_cleever;
 bodyStructure=humanTall_longArms2;
 canSpawnWithClass = true;
@@ -4375,13 +4375,13 @@ actorValue=actTime; magnitude=-2; duration=-1;
 [JournalEntry]
 ID=journal_cleever;
 category=creature; halfPage=true; rarity=2;
-title=Cleever;
-text=<icon=j_cleever><title=Cleever><brAdj=>Gangly, headless humanoids with crustacean shells. Their bodies are punctuated by long, spiny growths. Cleever raiders emerge from the depths on their shellships to attack passing fleets. No peaceful contact or successful communication has ever been recorded. If they have a culture, it is a brutal one: Cleever fight using weapons crafted from the shells & spines of their brethren.;
+title=克里沃;
+text=<icon=j_cleever><title=克里沃><brAdj=>瘦长的、没有头的、长着甲壳的类人动物.<n>它们的身体不间断的长有多刺的东西.<n>克里沃掠袭者从深海中浮现,攻击经过的舰队.<n>没有和平的接触或成功的交流被记录下来.<n>如果他们有一种文化,那就是野蛮文化:克里沃<n>战斗中使用的武器是用他们同胞的壳和脊骨制作的.;
 
 
 [ActorType] ID=diecast; 
-name=Diecast;
-description=Diecast are odd, half-stone beings that hail from the realm of Graven.<br=> +8 <icon=HP> Max HP<n=> 30% Weakness vs. Ice;
+name=戴卡斯特;
+description=戴卡斯特是来自克莱文王国的奇怪的半岩石生物.<br=> +8 <icon=HP>最大HP<n=> 30%受到额外电系伤害;
 journalID=journal_diecast;
 canSpawnWithClass = true;
 randomSkinPaletteOnSpawn = true;
@@ -4543,11 +4543,11 @@ element=ice; damageMultiplier=1.3; healMultiplier=1;
 [JournalEntry]
 ID=journal_diecast;
 category=creature; halfPage=true; rarity=3; rewardMod=100;
-title=Diecast;
-text=<icon=j_diecast><title=Diecast><brAdj=>Diecast are humanoids native to Graven. The process is not fully understood, but when they are 'born' they are melded with minerals & organic matter. Diecast are separated into social castes based on their composite materials- the lowest caste is common Graven rock, or 'junkstone'.<br=>  +8 <icon=HP> Max HP, 30% Weakness vs. Ice;
+title=戴卡斯特;
+text=<icon=j_diecast><title=戴卡斯特><brAdj=>戴卡斯特是来自克莱文的类人生物.具体尚不<n>完全清楚,但当它们'出生'时,它们与矿物质<n>和有机物融为一体.根据合成材料,戴卡斯特<n>被分成不同的社会等级-最低等级的是<n>普通的雕刻石,或'垃圾石头'.<br=>  +8 <icon=HP>最大HP, 30% 额外受到电系伤害;
 
 [ActorType] ID=automaton; 
-name=Automaton;
+name=机器人;
 journalID=journal_automaton;
 playerUsable= false;
 canSpawnWithClass = true;
@@ -4735,11 +4735,11 @@ ID=automaton; texture=lightmaskLine; red=1; blue=1; green=0.7; alpha=0.2; size=0
 [JournalEntry]
 ID=journal_automaton;
 category=creature; halfPage=true; rarity=4;
-title=Automaton;
-text=<icon=j_automaton><title=Automaton><brAdj=>Extremely complex volskarn devices make up these rolling machines. They possess no actual AI, instead reacting to nearby essence with pre-programmed movements driven by a network of force triggers. Automatons are rarely used in proper military engagements due to extremely high component costs. Their attacks have massive power, but are mercifully quite inaccurate.;
+title=机器人;
+text=<icon=j_automaton><title=机器人><brAdj=>这些轰响的机器是由极其复杂的沃尔斯卡恩设备构成.<n>它们不具有真正的人工智能,而是通过网状<n>强力触发器驱动的预编程动作对附近的本源<n>做出反应.由于部件成本极高,机器人很少在<n>合适的军事行动中使用.它们的攻击威力巨大,<n>但幸运的是,它们的攻击并不精准.;
 
 [ActorType] ID=zombie; 
-name=Undead;
+name=不死族;
 journalID=journal_undead;
 bodyStructure=humanGlowFace;
 humanoid = true;
@@ -4855,12 +4855,12 @@ damageMultiplier=0; healMultiplier=0;
 [JournalEntry]
 ID=journal_undead;
 category=creature; halfPage=true; rarity=3;
-title=Undead;
-text=<icon=j_undead><title=Undead><brAdj=>One's essence slowly dissipates after death. However, with Ruin magic, this essence can be trapped & harnessed to create Undead. The undead are supernally strong and durable, feeling no pain. To commit necromancy is a grave sin in almost every society. Most necromancers are outcasts... or warlords, seeking to use the undead as shock troops.;
+title=不死族;
+text=<icon=j_undead><title=不死族><brAdj=>人死后,其本源会慢慢消散.然而,有了毁灭魔法,<n>本源可以被捕获和利用来创造不死生物.<n>不死族拥有超强的力量和持久力,不会感到痛苦.<n>在几乎所有的社会中,死灵法术都是一种严重的罪恶.<n>大多数死灵法师都是放逐者...<n>或是军阀,他们想利用不死族作为震慑部队.;
 
 
 [ActorType] ID=seekerZombie; 
-name=Undead;
+name=不死族;
 journalID=journal_undead;
 bodyStructure=humanGlowFace;
 humanoid = true;
@@ -5228,7 +5228,7 @@ text=<icon=j_aspect_minion><title=Aspect><brAdj=>                       <font=ru
 
 
 [ActorType] ID=jasce; 
-name=Jasce;
+name=雅斯;
 journalID=journal_jasce;
 playerUsable= false;
 canSeeStatsTravelMode=false;
@@ -5293,8 +5293,8 @@ dialog_speechFont=scuri;
 [JournalEntry]
 ID=journal_jasce;
 category=creature; halfPage=true; rarity=4;
-title=God-king Jasce;
-text=<icon=j_jasce><title=God-king Jasce><brAdj=>Jasce, self-proclaimed God of All Realms. He most commonly takes the appearance of a Scurio with black, white, or golden fur. 50 years ago he appeared in Dralir with a throng of supporters and declared his divinity. His bloody revolution crushed Dralir, which he took over and renamed after himself. Since then he has led with a firm hand, and his followers grow by the day.;
+title=神王雅斯;
+text=<icon=j_jasce><title=神王雅斯><brAdj=>雅斯,自称万界之神.他最常以黑色、白色或<n>金色毛发的斯库瑞的外观出现.50年前,<n>他带着一大群支持者出现在德拉利尔并宣称了<n>他的神性.他的血腥革命摧毁了德拉利尔,<n>接管并以自己的名字重新命名.从此在他以强硬<n>的手段领导下,他的追随者与日俱增.;
 
 
 
