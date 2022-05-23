@@ -37,10 +37,10 @@ statements=Info automatically fills in here from showFleetInfo;
 nextNodeID=dialog_fleet;
 
 [DialogNode] ID=dialog_fleet_attack;
-statements=Are you sure you want to attack?<color=DarkRed><textIf= You will be fighting two fleets at once.=m:numFactionAlliesWithin(2)-1>;
-[DialogOption] text=<color=DarkRed>Yes;
+statements=你确定要发起攻击吗?<color=DarkRed><textIf= 你将同时与两支舰队作战.=m:numFactionAlliesWithin(2)-1>;
+[DialogOption] text=<color=DarkRed>是的;
 nodeToConnectTo=playerEnterFleetBattle;
-[DialogOption] text=No;
+[DialogOption] text=不;
 newLineOfOptions=true;
 escOption=true;
 nodeToConnectTo=;
@@ -56,7 +56,7 @@ nodeToConnectTo=dialog_fleet_chat_gossip;
 [DialogOption] text=(Trade);
 newLineOfOptions=true;
 nodeToConnectTo=dialog_fleet_chat_trade;
-[DialogOption] text=Done;
+[DialogOption] text=完成;
 nodeToConnectTo=dialog_fleet;
 escOption=true;
 bottomOption=true;
@@ -64,7 +64,7 @@ bottomOption=true;
 
 [DialogNode] ID=dialog_fleet_chat_refuse;
 animations=angry;
-statements=We have nothing to say to the likes of you!;
+statements=我们对你这种人无话可说!;
 specialEffect=talkToCommodore;
 nextNodeID=dialog_fleet;
 
@@ -130,24 +130,24 @@ nextNodeID=;
 
 [DialogNode] ID=dialog_lootFleet;
 animations=;
-statements=Here's all the cargo we could salvage.;
+statements=下面是我们能打捞的所有货物.;
 specialEffect=setDialogWindowSizeY, 100;
 specialEffect=lootFleet_afterCombat;
 specialEffect=closeFleetWindow;
 nextNodeID=;
-[DialogOption] text=Done!<textIfFinal==1-m:gamepad> (<keybind=endTurn>);
+[DialogOption] text=完成!<textIfFinal==1-m:gamepad> (<keybind=endTurn>);
 nodeToConnectTo=dialog_lootFleet_confirm;
-[DialogOption] text=Back;
+[DialogOption] text=返回;
 newLineOfOptions=true;
 nodeToConnectTo=dialog_captureShips;
 
 [DialogNode] ID=dialog_lootFleet_confirm;
 animations=;
-statements=Are you sure you're done?;
+statements=确定结束?;
 specialEffect=setDialogWindowSizeY;
-[DialogOption] text=Yes!;
+[DialogOption] text=是的!;
 nodeToConnectTo=dialog_enemyCommodoreQuip;
-[DialogOption] text=Back;
+[DialogOption] text=返回;
 newLineOfOptions=true;
 nodeToConnectTo=dialog_captureShips;
 
