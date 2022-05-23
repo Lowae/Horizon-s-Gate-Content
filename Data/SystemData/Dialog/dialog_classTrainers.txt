@@ -6,12 +6,12 @@ animations=angry;
 animations=sigh;
 animations=happy;
 animations=angry;
-statements=A new face, eh?<p=> Come here, let me get a look at you.;
+statements=新面孔，嗯?<p=>来我这儿，让我看看你.;
 statements=<speed=0.35>Hmmmmmm hmm.;
-statements=Ha! There's hardly a scratch on ya!<p=> That's how I can tell you're a rookie.;
-statements=If you want to change that, you're at the right place.;
+statements=哈!身上一点伤痕都没有!<p=>所有我知道你是个新手.;
+statements=如果你想改变这一点，来我这里就对了.;
 specialEffect=incDefaultNode;
-[DialogOption] text=Unlock <iconBig=classIcon_berserker> Berserker;
+[DialogOption] text=解锁 <iconBig=classIcon_berserker> 狂战士;
 formulaReq=;
 nodeToConnectTo=class_berserker_ask;
 [DialogOption] text=Goodbye;
@@ -22,11 +22,11 @@ bottomOption=true;
 
 [DialogNode] ID=class_berserker1;
 animations=angry;
-statements=Change your mind, ay?;
-[DialogOption] text=Unlock <iconBig=classIcon_berserker> Berserker;
+statements=要改变想法吗?;
+[DialogOption] text=解锁 <iconBig=classIcon_berserker> 狂战士;
 formulaReq=;
 nodeToConnectTo=class_berserker_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -35,12 +35,12 @@ bottomOption=true;
 [DialogNode] ID=class_berserker_ask;
 animations=;
 animations=angry;
-statements=So you want to learn how to really fight, eh?;
-statements=To train you an' yours, it'll be $150 upfront.<p=> I don't do discounts.;
-[DialogOption] text=Yes ($150);
+statements=所以你想学如何真正的战斗?;
+statements=训练你和你的队友,需要预付$150.<p=>我不打折的.;
+[DialogOption] text=好 ($150);
 formulaReq=m:money - 149;
 nodeToConnectTo=class_berserker_train;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 newLineOfOptions=true;
 
@@ -48,8 +48,8 @@ newLineOfOptions=true;
 [DialogNode] ID=class_berserker_train;
 animations=;
 animations=angry;
-statements=Good choice.<p=> You'll live longer that way.;
-statements=Now come here and hold your fists up.<p=> Thumbs out, remember...;
+statements=不错的决定.<p=>这样能让你存活的更久.;
+statements=现在过来，举起你的拳头.<p=>拇指向外,记得...;
 nextNodeID=class_berserker_unlock;
 
 [DialogNode] ID=class_berserker_unlock;
@@ -66,8 +66,8 @@ nextNodeID=;
 [DialogNode] ID=class_berserker2;
 animations=;
 animations=angry;
-statements=<rand=I've done all I can for ya./No point in dawdling around here./You already know how to fight like a real man.>;
-statements=<rand=Go put those fists to good use!/So get going already an' make it happen!/Now get out there and take it to 'em!>;
+statements=<rand=我已经为你做了我能做的了./没有必要在这儿闲逛./你已经知道怎么像个真正的男人一样战斗了.>;
+statements=<rand=好好利用你的拳头!/所以开始行动吧!/好好把学到的东西利用起来!>;
 
 
 
@@ -76,12 +76,12 @@ statements=<rand=Go put those fists to good use!/So get going already an' make i
 
 [DialogNode] ID=class_guardian0;
 animations=;
-statements=Well met, knowledge-seeker.;
-statements=I can teach you and your crew in the ways of the Guardian,<p=> if you wish.;
-[DialogOption] text=Unlock <iconBig=classIcon_guardian> Guardian;
+statements=欢迎，知识的寻觅者.;
+statements=我可以教你和你的船员守卫者之道,<p=>如果你想的话.;
+[DialogOption] text=解锁 <iconBig=classIcon_guardian> 守卫者;
 formulaReq=;
 nodeToConnectTo=class_guardian_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -90,12 +90,12 @@ bottomOption=true;
 [DialogNode] ID=class_guardian_ask;
 animations=;
 animations=;
-statements=I can begin the training for only $150.;
-statements=If there's something you truly wish to protect,<p=> this price will be nothing to you.;
-[DialogOption] text=Yes ($150);
+statements=只要$150就可以开始训练.;
+statements=如果你真的想要保护什么,<p=>这点钱不算什么.;
+[DialogOption] text=好 ($150);
 formulaReq=m:money - 149;
 nodeToConnectTo=class_guardian_train;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 newLineOfOptions=true;
 
@@ -103,8 +103,8 @@ newLineOfOptions=true;
 [DialogNode] ID=class_guardian_train;
 animations=;
 animations=sigh;
-statements=Wisdom.;
-statements=Come.<p=> Let us work on your stance, first...;
+statements=明智的.;
+statements=来这儿.<p=>让我们先练习一下你的站位...;
 nextNodeID=class_guardian_unlock;
 
 [DialogNode] ID=class_guardian_unlock;
@@ -120,7 +120,7 @@ nextNodeID=;
 
 [DialogNode] ID=class_guardian1;
 animations=;
-statements=You have learned everything I have to teach.;
+statements=你已经学会了我能教的了.;
 
 
 
@@ -129,11 +129,11 @@ statements=You have learned everything I have to teach.;
 
 [DialogNode] ID=class_unmaker0;
 animations=;
-statements=Have you come here to be an Unmaker?;
-[DialogOption] text=Unlock <iconBig=classIcon_unmaker> Unmaker;
+statements=你来这里是为了成为毁灭者吗?;
+[DialogOption] text=解锁 <iconBig=classIcon_unmaker> 毁灭者;
 formulaReq=;
 nodeToConnectTo=class_unmaker_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -143,13 +143,13 @@ bottomOption=true;
 animations=stern;
 animations=sly;
 animations=;
-statements=First, dispel all your previous notions about Ruin magic.<p=> Any force can be used for good or ill.;
-statements=If you wish to wield this power over others then you've come to the wrong place.;
-statements=If you understand this, I can train you.<p=> $150 up front.;
-[DialogOption] text=Yes ($150);
+statements=首先，去掉你之前所有关于毁灭魔法的观念.<p=>任何力量都可以用于善或恶.;
+statements=如果你想把这种力量用在别人身上，那你就来错地方了。;
+statements=如果你明白这一点，我可以训练你.<p=> 预付$150.;
+[DialogOption] text=好 ($150);
 formulaReq=m:money - 149;
 nodeToConnectTo=class_unmaker_train;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 newLineOfOptions=true;
 
@@ -158,9 +158,9 @@ newLineOfOptions=true;
 animations=;
 animations=sigh;
 animations=;
-statements=Good.;
-statements=Whenever you use this magic, I want you to remember that all life is precious.;
-statements=Keep this in your mind at all times.<p=> Now, let's begin...;
+statements=不错.;
+statements=每当你使用这个魔法的时候，我希望你记住，所有的生命都是珍贵的.;
+statements=在任何时候都要把它记在脑子里.<p=>现在,让我们开始吧...;
 nextNodeID=class_unmaker_unlock;
 
 [DialogNode] ID=class_unmaker_unlock;
@@ -176,7 +176,7 @@ nextNodeID=;
 
 [DialogNode] ID=class_unmaker1;
 animations=;
-statements=Always remember that life is precious.;
+statements=永远记住，生命是宝贵的.;
 
 
 
@@ -186,12 +186,12 @@ statements=Always remember that life is precious.;
 
 [DialogNode] ID=class_warden0;
 animations=;
-statements=Hm?<p=> Lo there.;
-statements=What brings you to the home of this old ex-Warden?;
-[DialogOption] text=Unlock <iconBig=classIcon_warden> Warden;
+statements=Hm?<p=>看这里.;
+statements=什么风把你吹到这个老护佑者这儿来了?;
+[DialogOption] text=解锁 <iconBig=classIcon_warden> 护佑者;
 formulaReq=;
 nodeToConnectTo=class_warden_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -203,15 +203,15 @@ animations=;
 animations=sly;
 animations=stern;
 animations=;
-statements=Mmm.<p=> You know there are academies for this sort of thing.;
-statements=I haven't taught,<p=> myself,<p=> in a number of years.;
-statements=Well, I suppose you aren't the type to do things the <speed=0.4>slow,<p=> <speed=0.5>drawn-out,<p=> <speed=0.6>difficult,<p=> <speed=0.7>expensive,<p=> <speed=0.8>snobby, <speed=0.9>painful, <speed=1>obnoxious <speed=1>sort of way.;
-statements=Not that I'm bitter or anything...<p=> nobody could be bitter about being fired for nothing after 20 years of hard work...<p=> not at all...;
-statements=Mmm.<p=> Tell you what.<p=> Just to stick it to those crustbag professors at the academy, I'll teach you cheap and easy.<p=> Only $150 for the whole course.;
-[DialogOption] text=Yes ($150);
+statements=Mmm.<p=> 你知道有专业教学这个职业的学院.;
+statements=我已经很多年没在那教学了.;
+statements=好吧，我想你不是那种做事<speed=0.4>拖拉,<p=> <speed=0.5>且冗余,<p=> <speed=0.6>畏难,<p=> <speed=0.7>且付出的代价高昂,<p=> <speed=0.8>势利, <speed=0.9>又惧怕疼痛, <speed=1>粗鲁 <speed=1>的人.;
+statements=不是因为我心怀怨恨什么的...<p=>没有人不会为此感到痛苦，特别是在辛勤工作20年后无缘无故被解雇...<p=>什么都没有...;
+statements=Mmm.<p=>告诉你什么.<p=>仅仅是为了对付学院里那些讨厌的教授,我要简单而廉价地教你们.<p=>整个课程只要$150.;
+[DialogOption] text=好 ($150);
 formulaReq=m:money - 149;
 nodeToConnectTo=class_warden_train;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 newLineOfOptions=true;
 
@@ -219,8 +219,8 @@ newLineOfOptions=true;
 [DialogNode] ID=class_warden_train;
 animations=stern;
 animations=sly;
-statements=Mmm.<p=> I hope your ears are open because I'm not stopping for you to take notes.;
-statements=Now listen up.<p=> Project your essence forward, but not forcefully...;
+statements=Mmm.<p=>我希望你们听清楚了，因为我不会停下来让你们做笔记.;
+statements=现在听好了.<p=>将你的本源转移，但是不要太过用力...;
 nextNodeID=class_warden_unlock;
 
 [DialogNode] ID=class_warden_unlock;
@@ -238,9 +238,9 @@ nextNodeID=;
 animations=sly;
 animations=happy;
 animations=;
-statements=Lo again.<p=> Did you forget something?<p=> Wanted a refresher?;
-statements=Too bad!<p=> I've forgotten most of it too.;
-statements=You'll just have to teach yourself.<p=> Good luck kid.;
+statements=<p=>忘了什么东西吗?<p=>需要重新复习下吗?;
+statements=<p=>不过我也忘了大部分内容了.;
+statements=你只能自学了.<p=>祝你好运，孩子.;
 
 
 
@@ -248,11 +248,11 @@ statements=You'll just have to teach yourself.<p=> Good luck kid.;
 
 [DialogNode] ID=class_tactician0;
 animations=;
-statements=...are you here to learn the art of war?;
-[DialogOption] text=Unlock <iconBig=classIcon_tactician> Tactician;
+statements=...你是来学习战争的艺术的吗?;
+[DialogOption] text=解锁 <iconBig=classIcon_tactician> 战术师;
 formulaReq=;
 nodeToConnectTo=class_tactician_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -261,12 +261,12 @@ bottomOption=true;
 [DialogNode] ID=class_tactician_ask;
 animations=;
 animations=sigh;
-statements=I can train you for $350.;
-statements=No cheaper - this is how I make a living.<p=> Not all of us can be Jasce's chosen...;
-[DialogOption] text=Yes ($350);
+statements=我可以训练你，费用是$350.;
+statements=不能再便宜了-这是我的谋生之道.<p=>不是所有人都能被Jasce选中...;
+[DialogOption] text=好 ($350);
 formulaReq=m:money - 349;
 nodeToConnectTo=class_tactician_train;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 newLineOfOptions=true;
 
@@ -274,8 +274,8 @@ newLineOfOptions=true;
 [DialogNode] ID=class_tactician_train;
 animations=;
 animations=;
-statements=Let's begin, then.;
-statements=Tell me about your crew, and I'll tell you the best way to manage them.;
+statements=那么，让我们开始吧.;
+statements=告诉我关于你的船员的信息，然后我会告诉你管理他们的最佳方法.;
 nextNodeID=class_tactician_unlock;
 
 [DialogNode] ID=class_tactician_unlock;
@@ -292,8 +292,8 @@ nextNodeID=;
 [DialogNode] ID=class_tactician1;
 animations=;
 animations=sigh;
-statements=Only so much can be taught.;
-statements=Some things, you have to learn on your own.;
+statements=能教的只有这么多了.;
+statements=有些事，你必须靠自己学会.;
 
 
 
@@ -302,10 +302,10 @@ statements=Some things, you have to learn on your own.;
 [DialogNode] ID=class_breaker0;
 animations=angry;
 statements=Nnh?<p=> Whad yer aft?;
-[DialogOption] text=Unlock <iconBig=classIcon_breaker> Breaker;
+[DialogOption] text=解锁 <iconBig=classIcon_breaker> 粉碎者;
 formulaReq=;
 nodeToConnectTo=class_breaker_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -316,10 +316,10 @@ animations=stern;
 animations=;
 statements=Keh!<p=> An't fer nothin', whelp!;
 statements=Hmm, see's $150. Na jab awt for nothin'.;
-[DialogOption] text=Yes ($150);
+[DialogOption] text=好 ($150);
 formulaReq=m:money - 149;
 nodeToConnectTo=class_breaker_train;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 newLineOfOptions=true;
 
@@ -357,9 +357,9 @@ statements=G'on, git!;
 [DialogNode] ID=class_blade0;
 animations=;
 animations=sly;
-statements=Oh.<p=> Hi.;
-statements=Meat's sold at the cafe.;
-[DialogOption] text=Unlock <iconBig=classIcon_blade> Blade;
+statements=Oh.<p=> 嗨.;
+statements=这家咖啡馆会出售肉类食品.;
+[DialogOption] text=解锁 <iconBig=classIcon_blade> 剑圣;
 formulaReq=;
 nodeToConnectTo=class_blade_ask;
 [DialogOption] text=Goodbye;
@@ -373,12 +373,12 @@ animations=;
 animations=sly;
 animations=;
 statements=Ah...<p=> I see.;
-statements=I might not look like much at the moment... but I can still teach you a thing or two.;
-statements=I can't just step away from my work for nothing, though.<p=> How about $150?;
-[DialogOption] text=Yes ($150);
+statements=虽然我现在可能看起来不太像... 但我还是可以教你一两招.;
+statements=不过我不可能白白离开我的工作.<p=>$150怎么样?;
+[DialogOption] text=好 ($150);
 formulaReq=m:money - 149;
 nodeToConnectTo=class_blade_train;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 newLineOfOptions=true;
 
@@ -386,8 +386,8 @@ newLineOfOptions=true;
 [DialogNode] ID=class_blade_train;
 animations=sigh;
 animations=sly;
-statements=Very good.<p=> Let me just finish with this cut real quick.;
-statements=Actually, come here.<p=> Take a good look at the way I'm holding the blade, here...<p=> see how the force of my arm is in line with the edge...?;
+statements=非常好.<p=>让我先快速地切割完.;
+statements=来这儿.<p=>仔细看看我拿刀的方式，这里...<p=>看看我手臂的力量是如何与刀刃对齐的...?;
 nextNodeID=class_blade_unlock;
 
 [DialogNode] ID=class_blade_unlock;
@@ -404,8 +404,8 @@ nextNodeID=;
 [DialogNode] ID=class_blade1;
 animations=;
 animations=;
-statements=Hey again.;
-statements=Thanks for letting me relive my past a little.<p=> I hope you put that knowledge to good use.;
+statements=又见面了.;
+statements=谢谢你让我重温一下过去.<p=>我希望你能好好利用这些知识.;
 
 
 --------ELEMENTALIST
@@ -414,14 +414,14 @@ statements=Thanks for letting me relive my past a little.<p=> I hope you put tha
 animations=happy;
 animations=handsupPose;
 animations=;
-statements=Hey hey!;
-statements=Welcome to my shrine of Water!<p=> I am Flow, patron and crafter of the elements!;
-statements=What brings you to this humble shrine?;
+statements=嗨嗨!;
+statements=欢迎来到我的水之神殿!<p=>我是传播元素力量的工匠和代言人!;
+statements=是什么风把你吹来了?;
 specialEffect=incDefaultNode;
-[DialogOption] text=Unlock <iconBig=classIcon_elementalist> Elementalist;
+[DialogOption] text=解锁 <iconBig=classIcon_elementalist> 元素使;
 formulaReq=;
 nodeToConnectTo=class_elementalist_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -430,12 +430,12 @@ bottomOption=true;
 [DialogNode] ID=class_elementalist1;
 animations=happy;
 animations=sly;
-statements=Welcome, welcome!;
-statements=Did you want something, or are you just here to soak in the atmosphere??;
-[DialogOption] text=Unlock <iconBig=classIcon_elementalist> Elementalist;
+statements=欢迎。欢迎!;
+statements=你需要什么，还是说只是享受这里的气氛??;
+[DialogOption] text=解锁 <iconBig=classIcon_elementalist> 元素使;
 formulaReq=;
 nodeToConnectTo=class_elementalist_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -446,13 +446,13 @@ animations=;
 animations=sigh;
 animations=;
 statements=<speed=0.5>Mmmmmmmmmmmmm.<p=> Heh heh.<p=> Heh.;
-statements=I will gladly pass on the arts.<p=> I was trained in the Cathedral of Elements myself, after all!;
-statements=They don't offer that training right now!<p=1.5> That means my teaching is the best you'll get, haha!;
-statements=How about $250?<p=> Sounds right?;
-[DialogOption] text=Yes ($250);
+statements=我很乐意把艺术传承下去.<p=>毕竟，我也是在元素大教堂接受训练的!;
+statements=他们现在不提供这种训练了!<p=1.5>这意味着我的教学是你能获得的最好的,哈哈!;
+statements=$250怎么样?;
+[DialogOption] text=好 ($250);
 formulaReq=m:money - 249;
 nodeToConnectTo=class_elementalist_train;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 newLineOfOptions=true;
 
@@ -461,9 +461,9 @@ newLineOfOptions=true;
 animations=happy;
 animations=handsupPose;
 animations=;
-statements=Ahh, that will buy so many water barrels...;
-statements=Ahem!<p=> ...prepare yourself student!<p=> You are now a vessel unto which I will pour my knowledge and skill!;
-statements=I'll get to the other elements of course, but first we start with water...<p=> now, concentrate, and listen...;
+statements=Ahh,那可以买很多桶水...;
+statements=Ahem!<p=> ...做好准备!<p=>你现在就是一个容器，我会向你倾注我的知识与技能!;
+statements=课程里我会讲到其他元素，但是首先我们从水元素开始...<p=>现在，集中注意力，听好了...;
 nextNodeID=class_elementalist_unlock;
 
 [DialogNode] ID=class_elementalist_unlock;
@@ -480,8 +480,8 @@ nextNodeID=;
 [DialogNode] ID=class_elementalist2;
 animations=handsupPose;
 animations=;
-statements=Welcome back, student!<p=> Water fill you this day!;
-statements=I have no further teaching, but you may bask in this shrine as long as you like.;
+statements=欢迎回来,我的学生!<p=>今天你身上仿佛充满了水元素!;
+statements=我没有进一步的教导了，但是你可以在这神殿里尽情享受.;
 
 
 
@@ -490,12 +490,12 @@ statements=I have no further teaching, but you may bask in this shrine as long a
 [DialogNode] ID=class_minstrel0;
 animations=happy;
 animations=;
-statements=Welcome to the Banner Flagon!;
-statements=Do you have a song request?;
-[DialogOption] text=Unlock <iconBig=classIcon_minstrel> Minstrel;
+statements=欢迎来到 Banner Flagon!;
+statements=想学习歌唱吗?;
+[DialogOption] text=解锁 <iconBig=classIcon_minstrel> 吟游诗人;
 formulaReq=;
 nodeToConnectTo=class_minstrel_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -505,13 +505,13 @@ bottomOption=true;
 animations=happy;
 animations=;
 animations=sly;
-statements=O-ho!<p=> An aspiring performer!;
-statements=I'd be more than glad to instruct you.<p=> Ah, but...;
-statements=Dear Risia would have my head if I didn't pull in something for the Flagon.<p=2> Maybe you could spare $250 for the lessons?;
-[DialogOption] text=Yes ($250);
+statements=O-ho!<p=>一个有抱负的演出者!;
+statements=我很乐意指导你.<p=>不过...;
+statements=亲爱的瑞莎，如果我不给'Flagon'加点东西的话，会要我命的.<p=2>也许你可以花$250来上课?;
+[DialogOption] text=好 ($250);
 formulaReq=m:money - 249;
 nodeToConnectTo=class_minstrel_train;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 newLineOfOptions=true;
 
@@ -522,11 +522,11 @@ animations=;
 animations=sly;
 animations=sigh;
 animations=;
-statements=Great!;
-statements=There's so much to teach, I'm not sure where to start...!;
-statements=Let's do some voice exercises first.<p=> Wouldn't want to strain yourself!;
+statements=太棒了!;
+statements=要教的东西太多了，我不知道从哪开始...!;
+statements=让我们先做一些发音练习.<p=>我可不想让你太劳累了!;
 statements=<speed=0.7>Do<p=> Re<p=> Mi<p=> Fa<p=> Sol<p=> La<p=> Ti<p=><speed=0.3> Dooooo!;
-statements=Now you try it!<p=> Do, Re, Mi...!;
+statements=现在你来试下吧!<p=> Do, Re, Mi...!;
 nextNodeID=class_minstrel_unlock;
 
 [DialogNode] ID=class_minstrel_unlock;
@@ -542,8 +542,8 @@ nextNodeID=;
 [DialogNode] ID=class_minstrel1;
 animations=;
 animations=happy;
-statements=Welcome to the Banner Flagon!;
-statements=Hey <pname=>!<p=> Have those lessons I gave you come in handy yet?;
+statements=欢迎来到Banner Flagon!;
+statements=嗨 <pname=>!<p=> 我给你上的那些课有派上用场吗?;
 
 
 
@@ -555,12 +555,12 @@ statements=Hey <pname=>!<p=> Have those lessons I gave you come in handy yet?;
 [DialogNode] ID=class_bombardier0;
 animations=angry;
 animations=stern;
-statements=What you want?;
-statements=This is a dangerous task, so don't distract me!;
-[DialogOption] text=Unlock <iconBig=classIcon_bombardier> Bombardier;
+statements=你想要什么?;
+statements=这是一个危险的任务，所以别让我分心!;
+[DialogOption] text=解锁 <iconBig=classIcon_bombardier> 投弹手;
 formulaReq=;
 nodeToConnectTo=class_bombardier_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -569,12 +569,12 @@ bottomOption=true;
 [DialogNode] ID=class_bombardier_ask;
 animations=sly;
 animations=;
-statements=Hmph!<p=> At least someone still appreciates my genius!;
-statements=I'll teach ya so long as y' fund my next project!<p=> I need $150 to cram this thing fulla Fire Triggers!;
-[DialogOption] text=Yes ($150);
+statements=Hmph!<p=>至少还有人能欣赏我的天赋!;
+statements=只要你能资助我的下一个项目，我就可以教你!<p=>我需要$150来把这东西塞满火焰触发器!;
+[DialogOption] text=好 ($150);
 formulaReq=m:money - 149;
 nodeToConnectTo=class_bombardier_train;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 newLineOfOptions=true;
 
@@ -582,8 +582,8 @@ newLineOfOptions=true;
 [DialogNode] ID=class_bombardier_train;
 animations=angry;
 animations=sly;
-statements=Excellent!!;
-statements=Quick, grab those goggles and gloves off the shelf.<p=> I'll show you how make a proper bomb!;
+statements=太好了!!;
+statements=快，把架子上的护目镜和手套拿下来.<p=>我来教你怎么制造一个真正的炸弹!;
 nextNodeID=class_bombardier_unlock;
 
 [DialogNode] ID=class_bombardier_unlock;
@@ -610,11 +610,11 @@ statements=Pass me that <rand=wrench/doohickey/scalpel/fire trigger/thingy/knife
 
 [DialogNode] ID=class_swashbuckler0;
 animations=sly;
-statements=Ay?<p=> Looking for something?;
-[DialogOption] text=Unlock <iconBig=classIcon_swashbuckler> Swashbuckler;
+statements=Ay?<p=>在找什么吗?;
+[DialogOption] text=解锁 <iconBig=classIcon_swashbuckler> 游荡者;
 formulaReq=;
 nodeToConnectTo=class_swashbuckler_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -624,16 +624,16 @@ bottomOption=true;
 animations=;
 animations=sigh;
 animations=;
-statements=Ah, a student?<p=> Been a while...;
-statements=Tell ya what -<p=2> I could use any sort of entertainment in this dull place.<p=> I feel like I'm completely disconnected from the world here...;
-statements=Tell me about your travels, and I'll teach you free of charge.;
-[DialogOption] text=Yes (Need 200<iconBig=fame_explore>);
+statements=Ah,新学生?<p=>等等...;
+statements=告诉你吧 -<p=2>在这个无聊的地方，我需要任何其他的活动.<p=>在这里让我我感觉自己与世界完全隔绝了...;
+statements=告诉我你旅行方面的事情，我可以免费教你.;
+[DialogOption] text=好 (需要 200<iconBig=fame_explore>);
 formulaReq=g:fame_explore - 199;
 nodeToConnectTo=class_swashbuckler_train;
-[DialogOption] text=<color=SlateGray>(Need 200<iconBig=fame_explore>);
+[DialogOption] text=<color=SlateGray>(需要 200<iconBig=fame_explore>);
 formulaReq=200 - g:fame_explore;
 nodeToConnectTo=;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 newLineOfOptions=true;
 
@@ -641,8 +641,8 @@ newLineOfOptions=true;
 [DialogNode] ID=class_swashbuckler_train;
 animations=happy;
 animations=;
-statements=Great!<p=>;
-statements=You first!<p=> And skip the boring details - start with the most interesting part!;
+statements=太棒了!<p=>;
+statements=你是第一个!<p=>让我们跳过这些无聊的细节 - 从最有趣的部分开始吧!;
 nextNodeID=class_swashbuckler_unlock;
 
 [DialogNode] ID=class_swashbuckler_unlock;
@@ -657,8 +657,8 @@ nextNodeID=;
 [DialogNode] ID=class_swashbuckler1;
 animations=;
 animations=sly;
-statements=Ay, how's life on the seas?;
-statements=Are you here to tell me more tales of danger and intrigue?;
+statements=Ay,海上生活怎么样?;
+statements=是来告诉我更多神秘又危险的故事的吗?;
 
 
 
@@ -668,11 +668,11 @@ statements=Are you here to tell me more tales of danger and intrigue?;
 
 [DialogNode] ID=class_stormshot0;
 animations=angry;
-statements=What do you want?;
-[DialogOption] text=Unlock <iconBig=classIcon_stormshot> Stormshot;
+statements=你想要什么?;
+[DialogOption] text=解锁 <iconBig=classIcon_stormshot> 疾风射手;
 formulaReq=;
 nodeToConnectTo=class_stormshot_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=自己;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -681,15 +681,15 @@ bottomOption=true;
 [DialogNode] ID=class_stormshot_ask;
 animations=stern;
 animations=;
-statements=Hmph.<p=2> Training is free, but I don't train novices.;
-statements=Unless you've seen some real combat already, I've got no interest.;
-[DialogOption] text=Yes (Need 100<iconBig=fame_combat>);
+statements=Hmph.<p=2>训练时免费的，但是我从不训练新手.;
+statements=除非你见识过真正的战士，不然我没兴趣.;
+[DialogOption] text=好 (需要 100<iconBig=fame_combat>);
 formulaReq=g:fame_combat - 99;
 nodeToConnectTo=class_stormshot_train;
-[DialogOption] text=<color=SlateGray>(Need 100<iconBig=fame_combat>);
+[DialogOption] text=<color=SlateGray>(需要 100<iconBig=fame_combat>);
 formulaReq=100 - g:fame_combat;
 nodeToConnectTo=;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 newLineOfOptions=true;
 
@@ -697,8 +697,8 @@ newLineOfOptions=true;
 [DialogNode] ID=class_stormshot_train;
 animations=sly;
 animations=;
-statements=So you already know a thing or two, eh?;
-statements=Good.<p=> Then I can skip the basics.<p=2> Let's get out onto the range and see what you can do.;
+statements=所以，你已略知一二, eh?;
+statements=不错.<p=>然后我可以跳过基础部分.<p=2> 我们去靶场来看看你的实力吧.;
 nextNodeID=class_stormshot_unlock;
 
 [DialogNode] ID=class_stormshot_unlock;
@@ -713,8 +713,8 @@ nextNodeID=;
 [DialogNode] ID=class_stormshot1;
 animations=sly;
 animations=stern;
-statements=You're still here?;
-statements=If you want to improve, then go fight.<p=> Practice has its limits.;
+statements=你还在这里?;
+statements=如果你想要进步，那就去战斗吧.<p=>练习是有限的，要用于实践.;
 
 
 
@@ -723,23 +723,23 @@ statements=If you want to improve, then go fight.<p=> Practice has its limits.;
 [DialogNode] ID=class_shiftcloak0;
 animations=sly;
 animations=;
-statements=Well done - you've found me!;
-statements=Those keen eyes will serve you well.;
+statements=干得好 - 你找到我了!;
+statements=你那双名敏锐的眼镜会很有用处.;
 specialEffect=incDefaultNode;
-[DialogOption] text=Unlock <iconBig=classIcon_shiftcloak> Shiftcloak;
+[DialogOption] text=解锁 <iconBig=classIcon_shiftcloak> 相位斗篷;
 formulaReq=;
 nodeToConnectTo=class_shiftcloak_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=class_shiftcloak1;
 animations=;
-statements=What brings you back to me, seeker?;
-[DialogOption] text=Unlock <iconBig=classIcon_shiftcloak> Shiftcloak;
+statements=什么风把你吹来了，探索家?;
+[DialogOption] text=解锁 <iconBig=classIcon_shiftcloak> 相位斗篷;
 formulaReq=;
 nodeToConnectTo=class_shiftcloak_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -749,13 +749,13 @@ bottomOption=true;
 animations=stern;
 animations=sly;
 animations=;
-statements=I thought you'd ask me such!;
-statements=Your keen senses can detect mastery from a mile away.;
-statements=However, I have my own purposes.<p=> I require $350 for them.;
-[DialogOption] text=Yes ($350);
+statements=我就知道你会这样问我!;
+statements=你敏锐的感官可以掌控1英里内的任何动作.;
+statements=然而, 我有自己的打算.<p=> 我需要$350来教你.;
+[DialogOption] text=好 ($350);
 formulaReq=m:money - 349;
 nodeToConnectTo=class_shiftcloak_train;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 newLineOfOptions=true;
 
@@ -763,8 +763,8 @@ newLineOfOptions=true;
 [DialogNode] ID=class_shiftcloak_train;
 animations=;
 animations=sly;
-statements=Right!<p=> You clearly are serious about this.;
-statements=In that case, try to follow my movements<p=2> - if you can perceive them!;
+statements=好!<p=>你显然不是开玩笑的.;
+statements=试着跟着我的动作<p=2> - 如果你能感知到!;
 nextNodeID=class_shiftcloak_unlock;
 
 [DialogNode] ID=class_shiftcloak_unlock;
@@ -781,8 +781,8 @@ nextNodeID=;
 [DialogNode] ID=class_shiftcloak2;
 animations=sly;
 animations=;
-statements=By the way, do me a favor...;
-statements=Keep quiet about my training.<p=> There's a reason I am where I am.;
+statements=对了，帮我个忙...;
+statements=关于我的训练你要保持缄默.<p=> 我在这里是有原因的.;
 
 
 
@@ -794,27 +794,27 @@ animations=;
 animations=sigh;
 animations=;
 animations=stern;
-statements=<speed=0.8>Hello there.;
-statements=<speed=0.8>Please don't touch the plants...<p=> they're quite fragile.;
-statements=<speed=0.8>Fantlin used to be quite the garden, you know... but no more.<p=> No one knows quite why<p=> - it's been very interesting research.;
-statements=<speed=0.8>Oh, I've been rambling...<p=> what did you need?;
+statements=<speed=0.8>你好，在这儿.;
+statements=<speed=0.8>请不要随意触碰这些植物...<p=>他们非常的脆弱.;
+statements=<speed=0.8>你知道的，Fantlin 曾经是一座美丽的花园...但了解的仅此而已<p=>没人知道具体的原因<p=> - 所以这是一项非常有趣的研究.;
+statements=<speed=0.8>噢,我跑题了...<p=>你需要什么?;
 specialEffect=incDefaultNode;
-[DialogOption] text=Unlock <iconBig=classIcon_balance> Balancer;
+[DialogOption] text=解锁 <iconBig=classIcon_balance> 平衡者;
 formulaReq=;
 nodeToConnectTo=class_balancer_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=class_balancer1;
 animations=;
 animations=happy;
-statements=<speed=0.8>Hello again.;
-statements=<speed=0.8>Come to admire the flowers?<p=> Ha ha.;
-[DialogOption] text=Unlock <iconBig=classIcon_balance> Balancer;
+statements=<speed=0.8>你好.;
+statements=<speed=0.8>来赏花吧?<p=>哈哈.;
+[DialogOption] text=解锁 <iconBig=classIcon_balance> 平衡者;
 formulaReq=;
 nodeToConnectTo=class_balancer_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -824,13 +824,13 @@ bottomOption=true;
 animations=happy;
 animations=stern;
 animations=sigh;
-statements=<speed=0.8>Ah, so good to meet another in search of scholarly pursuits!;
-statements=<speed=0.8>The more Balancers there are, the more likely we are to figure out the conundrum of Fantlin's ecosystem.;
-statements=<speed=0.8>I will gladly teach you.<p=> However, I could certainly use some compensation<p=> - how about $250?;
-[DialogOption] text=Yes ($250);
+statements=<speed=0.8>遇见另一位追求学术的人真好!;
+statements=<speed=0.8>平衡者越多,我们就越有可能解决 Fantlin 的生态系统的难题.;
+statements=<speed=0.8>我很乐意教你.<p=>然而，我需要一点回报<p=> - $250怎么样?;
+[DialogOption] text=好 ($250);
 formulaReq=m:money - 249;
 nodeToConnectTo=class_balancer_train;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 newLineOfOptions=true;
 
@@ -838,8 +838,8 @@ newLineOfOptions=true;
 [DialogNode] ID=class_balancer_train;
 animations=sigh;
 animations=happy;
-statements=<speed=0.8>Thank you.<p=> I will try to keep my lessons concise and practical.;
-statements=<speed=0.8>Let's begin right away, shall we?<p=> First, a detailed history of Balancer magic...;
+statements=<speed=0.8>谢谢你.<p=>我会尽力让我的课程简明且实用.;
+statements=<speed=0.8>我们马上开始，好吗?<p=>首先, 平衡者魔法的详细历史...;
 nextNodeID=class_balancer_unlock;
 
 [DialogNode] ID=class_balancer_unlock;
@@ -856,8 +856,8 @@ nextNodeID=;
 [DialogNode] ID=class_balancer2;
 animations=sigh;
 animations=happy;
-statements=<speed=0.8>I cannot claim to have made much progress in my research, lately...;
-statements=<speed=0.8>But, such is to be expected!<p=> You cannot grow a tree in a day, they say.;
+statements=<speed=0.8>我无法宣称说我最近在研究方面取得了多大的进展...;
+statements=<speed=0.8>不过，这是预期内的!<p=>谚语说，树木不可能在一天之内长大.;
 
 [DialogNodeOverride] ID=class_balancer2_growthport22;
 dialogNodeID_toOverride=class_balancer2;
@@ -870,13 +870,13 @@ animations=sigh;
 animations=;
 animations=happy;
 animations=;
-statements=I see you tried a little magic on my garden!;
-statements=Thank you for your earnest attempts.<p> Growth certainly is a miraculous bit of magic, isn't it?;
-statements=<speed=0.8>Alas, plants grown solely with Growth tend to lack vitality, and soon wither away...;
-statements=Fruit grown with it are quite bitter, and hardly nutritious...;
-statements=<speed=0.9>Still, a moderate application can increase output greatly without much harming the end result!;
-statements=<speed=0.8>I've been experimenting thoroughly with it in my own tests...;
-statements=<speed=0.8>Oh, I'm just prattling on now...<p> well,<p> take care,<p> stop by anytime.;
+statements=看来你对我的花园施了点魔法!;
+statements=谢谢你的努力.<p>'生长'某种程度上来说是一种神奇的魔法,不是吗?;
+statements=<speed=0.8>哎，但是采用'生长'所成长的植物往往缺乏生命力，很快就会枯萎...;
+statements=使用过'生长'的水果往往很苦，而且几乎没有任何营养...;
+statements=<speed=0.9>不过，适当的使用可以在不过于损害结果的情况下大大增加产量!;
+statements=<speed=0.8>在我的测试中，我进行了充分的实验...;
+statements=<speed=0.8>噢，我只是在自言自语...<p>好吧,<p>保重,<p>随时来访.;
 
 
 --------ENCHANTER
@@ -885,14 +885,14 @@ statements=<speed=0.8>Oh, I'm just prattling on now...<p> well,<p> take care,<p>
 animations=sigh;
 animations=stern;
 animations=sigh;
-statements=Ugh...<p=> this is so dreadfully tedious.;
-statements=I would rather be doing<p=> lit-<p=3>rally<p=2> anything else right now.<p=> If it wasn't an assignment from Father, I would just quit.;
-statements=Go on then.<p=> Give me the next batch of fruit or <n=>what<p=3>-damned-<p=3>ever.;
+statements=Ugh...<p=> 实在太无聊了.;
+statements=我想现在干点其他事情.<p=>要不是神父指派给我的，我早就辞职了.;
+statements=那么继续.<p=>给我下一批水果或者<n=>其他<p=3>-该死的-<p=3>东西.;
 specialEffect=incDefaultNode;
-[DialogOption] text=Unlock <iconBig=classIcon_enchanter> Enchanter;
+[DialogOption] text=解锁 <iconBig=classIcon_enchanter> 附魔师;
 formulaReq=;
 nodeToConnectTo=class_enchanter_ask0;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -900,11 +900,11 @@ bottomOption=true;
 
 [DialogNode] ID=class_enchanter1;
 animations=sigh;
-statements=What is it now?<p=> Anything to break the tedium...;
-[DialogOption] text=Unlock <iconBig=classIcon_enchanter> Enchanter;
+statements=现在是什么情况?<p=>我需要打破目前的无聊状态...;
+[DialogOption] text=解锁 <iconBig=classIcon_enchanter> 附魔师;
 formulaReq=;
 nodeToConnectTo=class_enchanter_ask1;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -917,17 +917,17 @@ animations=sigh;
 animations=stern;
 animations=sigh;
 statements=Uh?<p=> You aren't one of the...?<p=> Oh!;
-statements=Well then!<p=> Training, you say?<p=> You mean, a chance to put my skills to actual use??;
-statements=It would be a deligh-<p=3> well, I mean-<p=> I suppose I could.;
-statements=Oh, but,<p=> I could get in trouble if I taught someone who,<p=> ah,<p=> shouldn't know such things...;
-statements=You know,<p=> for lack of a better term, someone who isn't ah,<p=> im-<p=3>port-<p=3>ant enough...<p=> you know.;
-[DialogOption] text=Yes (Need 100<iconBig=fame_trade>);
+statements=Well then!<p=>你是说训练?<p=>意思是让我有机会施展我的才能??;
+statements=那真令人高兴-<p=3> 好吧, 我是说-<p=>我想我可以.;
+statements=噢，但是,<p=>如果我开始教学可能某人会给我带来一些麻烦,<p=> 哈,<p=>他也不可能知道这件事的...;
+statements=你懂的,<p=>我找不到更好的词了,<p=>就是一个对我们影响不大的人...你知道的.;
+[DialogOption] text=解锁 (需要 100<iconBig=fame_trade>);
 formulaReq=g:fame_trade - 99;
 nodeToConnectTo=class_enchanter_train;
-[DialogOption] text=<color=SlateGray>(Need 100<iconBig=fame_trade>);
+[DialogOption] text=<color=SlateGray>(需要 100<iconBig=fame_trade>);
 formulaReq=100 - g:fame_trade;
 nodeToConnectTo=;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 newLineOfOptions=true;
 
@@ -937,17 +937,17 @@ animations=happy;
 animations=sigh;
 animations=stern;
 animations=sigh;
-statements=Training, you say?<p=> A chance to put my skills to actual use?;
-statements=It would be a deligh-<p=3> well, I mean-<p=> I suppose I could.;
-statements=Oh, but,<p=> I could get in trouble if I taught someone who,<p=> ah,<p=> shouldn't know such things...;
-statements=You know,<p=> for lack of a better term, someone who isn't ah,<p=> im-<p=3>port-<p=3>ant enough...<p=1.5> you know.;
-[DialogOption] text=Yes (Need 100<iconBig=fame_trade>);
+statements=你是说训练?<p=>让我有机会施展我的才能?;
+statements=那真令人高兴-<p=3> 好吧, 我是说-<p=>我想我可以.;
+statements=噢，但是,<p=>如果我开始教学可能某人会给我带来一些麻烦,<p=> 哈,<p=>他也不可能知道这件事的...;
+statements=你懂的,<p=>我找不到更好的词了,<p=>就是一个对我们影响不大的人...你知道的.;
+[DialogOption] text=好 (需要 100<iconBig=fame_trade>);
 formulaReq=g:fame_trade - 99;
 nodeToConnectTo=class_enchanter_train;
-[DialogOption] text=<color=SlateGray>(Need 100<iconBig=fame_trade>);
+[DialogOption] text=<color=SlateGray>(需要 100<iconBig=fame_trade>);
 formulaReq=100 - g:fame_trade;
 nodeToConnectTo=;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 newLineOfOptions=true;
 
@@ -956,9 +956,9 @@ newLineOfOptions=true;
 animations=happy;
 animations=sigh;
 animations=;
-statements=Fan-<p=3>tastic!<p=> Let us start straight-away!;
-statements=Oh, do me a favor...<p=> don't mention this to my father at any point, would you?<p=> Or anyone else, actually.;
-statements=Now, take hold of this dart.<p=> Notice its shape and its essence...;
+statements=很好!<p=>让我们马上开始吧!;
+statements=噢,帮我个忙...<p=>任何时候都不要把这件事告诉我父亲或者是其他人，好吗?;
+statements=现在，抓住这个飞镖.<p=>注意它的形状和本源...;
 nextNodeID=class_enchanter_unlock;
 
 [DialogNode] ID=class_enchanter_unlock;
@@ -973,7 +973,7 @@ nextNodeID=;
 
 [DialogNode] ID=class_enchanter2;
 animations=happy;
-statements=<rand=Are you as bored here as I am?/Fancy a game of darts?>;
+statements=<rand=你跟我一样感觉很无聊吗?/想象一些飞镖游戏?>;
 
 
 
@@ -983,22 +983,22 @@ statements=<rand=Are you as bored here as I am?/Fancy a game of darts?>;
 animations=stern;
 animations=angry;
 statements=...;
-statements=Get out.;
+statements=出去.;
 specialEffect=incDefaultNode;
-[DialogOption] text=Unlock <iconBig=classIcon_ignisKnight> Ignis Knight;
+[DialogOption] text=解锁 <iconBig=classIcon_ignisKnight> 火焰骑士;
 formulaReq=;
 nodeToConnectTo=class_ignisKnight_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=class_ignisKnight1;
 animations=angry;
-statements=What is it now?;
-[DialogOption] text=Unlock <iconBig=classIcon_ignisKnight> Ignis Knight;
+statements=你想要干什么?;
+[DialogOption] text=解锁 <iconBig=classIcon_ignisKnight> 火焰骑士;
 formulaReq=;
 nodeToConnectTo=class_ignisKnight_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -1008,14 +1008,14 @@ bottomOption=true;
 animations=angry;
 animations=stern;
 animations=angry;
-statements=That...<p=> that life is behind me.;
-statements=<speed=0.7>Hmph...<p=> but...;
+statements=那个...<p=>那种生活对我来说已经是过去式了.;
+statements=<speed=0.7>Hmph...<p=> 但是...;
 statements=$500.;
 specialEffect=facingRot270;
-[DialogOption] text=Yes ($500);
+[DialogOption] text=好 ($500);
 formulaReq=m:money - 499;
 nodeToConnectTo=class_ignisKnight_train;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 newLineOfOptions=true;
 
@@ -1024,9 +1024,9 @@ newLineOfOptions=true;
 animations=angry;
 animations=stern;
 animations=angry;
-statements=Keh!<p=> I thought that would be expensive enough to stop you.;
-statements=Fine, fine...<p=> I'll teach you.<p=> That'll make good drink money.;
-statements=Let's go outside, and far enough no one can see us.;
+statements=Keh!<p=>我以为收费过高就能阻止你.;
+statements=好吧, 好吧...<p=>我会教你.<p=>那能赚不少酒钱.;
+statements=我们去远点，去没人能看见的地方.;
 nextNodeID=class_ignisKnight_unlock;
 
 [DialogNode] ID=class_ignisKnight_unlock;
@@ -1043,8 +1043,8 @@ nextNodeID=;
 [DialogNode] ID=class_ignisKnight2;
 animations=angry;
 animations=stern;
-statements=Tell no one about your training.;
-statements=The Ignis Knights may come looking.;
+statements=不要告诉别人有关你的训练.;
+statements=火焰骑士可能会回来.;
 
 
 --------BAT HANDLER
@@ -1052,23 +1052,23 @@ statements=The Ignis Knights may come looking.;
 [DialogNode] ID=class_batHandler0;
 animations=happy;
 animations=;
-statements=Oh!<p=> Polly!<p=> Zoary!<p=> We have visitors!;
-statements=Hello there!<p=> Can I help you?;
+statements=Oh!<p=> Polly!<p=> Zoary!<p=> 我们有个拜访者了!;
+statements=你好，在这儿!<p=>我能帮你什么吗?;
 specialEffect=incDefaultNode;
-[DialogOption] text=Unlock <iconBig=classIcon_bathandler> Bat Handler;
+[DialogOption] text=解锁 <iconBig=classIcon_bathandler> 蝙蝠训练者;
 formulaReq=;
 nodeToConnectTo=class_batHandler_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=class_batHandler1;
 animations=happy;
-statements=Don't mind Zoary, he's being a fussbudget today.;
-[DialogOption] text=Unlock <iconBig=classIcon_bathandler> Bat Handler;
+statements=不要介意 Zoary,它今天太大惊小怪了.;
+[DialogOption] text=解锁 <iconBig=classIcon_bathandler> 蝙蝠训练者;
 formulaReq=;
 nodeToConnectTo=class_batHandler_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -1078,13 +1078,13 @@ bottomOption=true;
 animations=happy;
 animations=handsupPose;
 animations=sad;
-statements=Oooh!<p=> You want to be a Bat Handler?;
-statements=I can teach you anything you want to know about them!;
-statements=But it's expensive to take care of Zoar...<p=> It'll cost at least $500 to do!;
-[DialogOption] text=Yes ($500);
+statements=Oooh!<p=> 你想成为一名蝙蝠训练者吗?;
+statements=我可以教你任何你想知道的关于它们的事情!;
+statements=但是，照料佐尔蝙蝠很费钱...<p=> 至少需要花费$500!;
+[DialogOption] text=好 ($500);
 formulaReq=m:money - 499;
 nodeToConnectTo=class_batHandler_train;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 newLineOfOptions=true;
 
@@ -1093,9 +1093,9 @@ newLineOfOptions=true;
 animations=happy;
 animations=;
 animations=handsupPose;
-statements=Yay, great!!;
-statements=Here Zoary!<p=> Be good for our new friend, ok?;
-statements=Time to show off your tricks!<p=> Backflip Zoary!<p=> Backflip!!;
+statements=Yay, 棒!!;
+statements=来这里，Zoary!<p=>在我们的新朋友面前表现好点, 好吗?;
+statements=是时候来炫耀你的技能了!<p=> 后空翻 Zoary!<p=> 后空翻!!;
 nextNodeID=class_batHandler_unlock;
 
 [DialogNode] ID=class_batHandler_unlock;
@@ -1112,7 +1112,7 @@ nextNodeID=;
 [DialogNode] ID=class_batHandler2;
 animations=;
 animations=happy;
-statements=Treat your Zoar bats with love and care, okay?;
+statements=用爱和关怀照料你的佐尔蝙蝠, 好吗?;
 
 
 [DialogNode] ID=zoar1;
@@ -1127,22 +1127,22 @@ statements=Rrr-!!;
 
 [DialogNode] ID=class_ravager0;
 animations=angry;
-statements=What I can do ye for stranger?;
+statements=我能为你做什么，陌生人?;
 specialEffect=incDefaultNode;
-[DialogOption] text=Unlock <iconBig=classIcon_ravager> Ravager;
+[DialogOption] text=解锁 <iconBig=classIcon_ravager> 破坏者;
 formulaReq=;
 nodeToConnectTo=class_ravager_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=class_ravager1;
 animations=sly;
-statements=Back agin aye?;
-[DialogOption] text=Unlock <iconBig=classIcon_ravager> Ravager;
+statements=又来了啊?;
+[DialogOption] text=解锁 <iconBig=classIcon_ravager> 破坏者;
 formulaReq=;
 nodeToConnectTo=class_ravager_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -1151,12 +1151,12 @@ bottomOption=true;
 [DialogNode] ID=class_ravager_ask;
 animations=happy;
 animations=sly;
-statements=Gahah!<p> So ye want to know real power, ay?;
-statements=Power don't come cheap...<p> slip me $500 an' I'll teach ye.;
-[DialogOption] text=Yes ($500);
+statements=Gahah!<p>所以你想了解真正的力量, ay?;
+statements=力量可不廉价...<p> 塞给我$500然后我会教你.;
+[DialogOption] text=好 ($500);
 formulaReq=m:money - 499;
 nodeToConnectTo=class_ravager_train;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 newLineOfOptions=true;
 
@@ -1164,8 +1164,8 @@ newLineOfOptions=true;
 [DialogNode] ID=class_ravager_train;
 animations=happy;
 animations=sly;
-statements=Gahahah!<p> Great!!;
-statements=Grab yer weapons and let's go.<p> Time's a wastin'!;
+statements=Gahahah!<p> 棒!!;
+statements=拿上武器，我们走.<p>不要浪费时间!;
 nextNodeID=class_ravager_unlock;
 
 [DialogNode] ID=class_ravager_unlock;
@@ -1182,8 +1182,8 @@ nextNodeID=;
 [DialogNode] ID=class_ravager2;
 animations=angry;
 animations=happy;
-statements=Put yer trainin' to good use in the arena, arrite?;
-statements=I'll be rootin for ya.;
+statements=在竞技场里好好实践你的训练, 好吗?;
+statements=我会支持你的.;
 
 
 
@@ -1193,22 +1193,22 @@ statements=I'll be rootin for ya.;
 [DialogNode] ID=class_spellslinger0;
 animations=;
 statements=They call me Quickdraw Munsend.;
-statements=You need something?;
+statements=你需要什么吗?;
 specialEffect=incDefaultNode;
-[DialogOption] text=Unlock <iconBig=classIcon_spellslinger> Spell Archon;
+[DialogOption] text=解锁 <iconBig=classIcon_spellslinger> 符文执政官;
 formulaReq=;
 nodeToConnectTo=class_spellslinger_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=class_spellslinger1;
 animations=;
 statements=Quickdraw Munsend, at your service.;
-[DialogOption] text=Unlock <iconBig=classIcon_spellslinger> Spell Archon;
+[DialogOption] text=解锁 <iconBig=classIcon_spellslinger> 符文执政官;
 formulaReq=;
 nodeToConnectTo=class_spellslinger_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -1218,13 +1218,13 @@ bottomOption=true;
 animations=;
 animations=sly;
 animations=;
-statements=I teach something deeper than mere shooting.;
-statements=This is about imbuing your weapons with your spirit.;
-statements=If that sounds good to you, just lay $500 on the table and we'll start.;
-[DialogOption] text=Yes ($500);
+statements=我教的可不仅仅式射击.;
+statements=而是要把你的精神注入到你的武器.;
+statements=如果你觉得不错，可以在桌子上放$500，然后我们就开始.;
+[DialogOption] text=好 ($500);
 formulaReq=m:money - 499;
 nodeToConnectTo=class_spellslinger_train;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 newLineOfOptions=true;
 
@@ -1233,9 +1233,9 @@ newLineOfOptions=true;
 animations=;
 animations=meh;
 animations=;
-statements=Good call.;
-statements=Let's see if your spirit is up to the task.;
-statements=Stand in front of the target, and take a shot.;
+statements=不错.;
+statements=让我来看看你的精神能否胜任这项任务.;
+statements=站在靶子面前，然后射击.;
 nextNodeID=class_spellslinger_unlock;
 
 [DialogNode] ID=class_spellslinger_unlock;
@@ -1251,7 +1251,7 @@ nextNodeID=;
 
 [DialogNode] ID=class_spellslinger2;
 animations=;
-statements=Your spirit is more important than any weapon you wield.;
+statements=你的精神比任务武器都更为重要.;
 
 
 
@@ -1261,20 +1261,20 @@ statements=Your spirit is more important than any weapon you wield.;
 animations=read_book_tall2;
 statements=...;
 specialEffect=incDefaultNode;
-[DialogOption] text=Unlock <iconBig=classIcon_defiler> Defiler;
+[DialogOption] text=解锁 <iconBig=classIcon_defiler> 亵渎者;
 formulaReq=;
 nodeToConnectTo=class_defiler_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=class_defiler1;
 animations=read_book_tall2;
 statements=...;
-[DialogOption] text=Unlock <iconBig=classIcon_defiler> Defiler;
+[DialogOption] text=解锁 <iconBig=classIcon_defiler> 亵渎者;
 formulaReq=;
 nodeToConnectTo=class_defiler_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -1286,13 +1286,13 @@ animations=sigh;
 animations=idle;
 animations=meh;
 statements=Hmm.;
-statements=<speed=0.7>Imagine you were in the middle of a great book,<p=2> and were interrupted...;
-statements=Your time is valuable, and so is mine.;
-statements=So you can imagine what I'm going to ask for...;
-[DialogOption] text=Yes ($400);
+statements=<speed=0.7>想象一下，你正在读一本不错的书,<p=2>然后突然被打断了...;
+statements=你的时间很宝贵，我的也是.;
+statements=所以你知道我想要什么...;
+[DialogOption] text=好 ($400);
 formulaReq=m:money - 399;
 nodeToConnectTo=class_defiler_train;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 newLineOfOptions=true;
 
@@ -1303,11 +1303,11 @@ animations=sly;
 animations=sigh;
 animations=idle;
 animations=angry;
-statements=Alright then.;
-statements=Imagine...<p> your opponent.;
-statements=Not as an opponent.<p> Imagine yourself as them.;
-statements=Feel their essence...<p> just like yours.;
-statements=Now command it as you would your own...!;
+statements=好，那继续.;
+statements=想象一下...<p>你的对手.;
+statements=不仅仅是个对手.<p>把自己想象成他们.;
+statements=感受其本源...<p>就像感受自己的本源一样.;
+statements=现在就像支配自己一样支配它...!;
 nextNodeID=class_defiler_unlock;
 
 [DialogNode] ID=class_defiler_unlock;
@@ -1323,7 +1323,7 @@ nextNodeID=;
 
 [DialogNode] ID=class_defiler2;
 animations=read_book_tall2;
-statements=Learn to empathize with your opponents...<p> only then can you control them.;
+statements=学会与对手产生共鸣...<p>这样你才可以控制他们.;
 
 
 
@@ -1336,21 +1336,21 @@ statements=Learn to empathize with your opponents...<p> only then can you contro
 [DialogNode] ID=class_gatekeeper0;
 animations=;
 animations=;
-statements=Welcome to the Gatekeeper's Guild.;
-statements=Can I help you?;
-[DialogOption] text=Unlock <iconBig=classIcon_gatekeeper> Gatekeeper;
+statements=欢迎来到看门人协会.;
+statements=我能帮你什么吗?;
+[DialogOption] text=解锁 <iconBig=classIcon_gatekeeper> 看门人;
 formulaReq=1 - g:D_class_gatekeeper_ask;
 nodeToConnectTo=class_gatekeeper_ask;
-[DialogOption] text=Unlock <iconBig=classIcon_gatekeeper> Gatekeeper;
+[DialogOption] text=解锁 <iconBig=classIcon_gatekeeper> 看门人;
 formulaReq=gTimeSinceMoreThan:D_class_gatekeeper_ask:4320 + gIsLessThan:favor_seartial:0 - 1;
 nodeToConnectTo=class_gatekeeper_train2_lowFavor;
-[DialogOption] text=Unlock <iconBig=classIcon_gatekeeper> Gatekeeper;
+[DialogOption] text=解锁 <iconBig=classIcon_gatekeeper> 看门人;
 formulaReq=gTimeSinceMoreThan:D_class_gatekeeper_ask:4320 - gIsLessThan:favor_seartial:0;
 nodeToConnectTo=class_gatekeeper_train2;
-[DialogOption] text=Unlock <iconBig=classIcon_gatekeeper> Gatekeeper;
+[DialogOption] text=解锁 <iconBig=classIcon_gatekeeper> 看门人;
 formulaReq=g:D_class_gatekeeper_ask + gTimeSinceLessThanOrEqual:D_class_gatekeeper_ask:4320 - 1;
 nodeToConnectTo=class_gatekeeper_notyet;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -1364,23 +1364,23 @@ animations=;
 animations=happy;
 animations=;
 animations=;
-statements=You are interested in Gatekeeper certification and training?;
-statements=Very good.<p> I'll begin filing the paperwork and start the process.;
-statements=Simply fill these out...;
-statements=<speed=0.7>And...<p> there!;
-statements=Very good, very good.;
-statements=The approval process should finish in about 9 months, after which you can complete your training!;
-[DialogOption] text=Can't I recieve training now?;
+statements=看来你对看门人的资质证明和培训有兴趣?;
+statements=非常好.<p>我去准备文件，然后开始办理手续.;
+statements=只需简单的填写这些表格...;
+statements=<speed=0.7>还有...<p> 这儿!;
+statements=非常好, 非常好.;
+statements=审批流程会在9个月之后完成，之后你就可以完成训练了!;
+[DialogOption] text=我现在不能接受训练吗?;
 animation=sly;
 nodeToConnectTo=class_gatekeeper_ask_wait1a;
-[DialogOption] text=I have to wait that long!?;
+[DialogOption] text=我必须要等这么久!?;
 animation=angry;
 nodeToConnectTo=class_gatekeeper_ask_wait1b;
 newLineOfOptions=true;
 
 [DialogNode] ID=class_gatekeeper_ask_wait1a;
 animations=sigh;
-statements=No, I'm afraid not.;
+statements=不，这恐怕不行.;
 nextNodeID=class_gatekeeper_ask_wait1b;
 
 [DialogNode] ID=class_gatekeeper_ask_wait1b;
@@ -1389,21 +1389,21 @@ animations=sigh;
 animations=stern;
 animations=happy;
 animations=;
-statements=The approval process is absolutely vital.<p> It's in the public's best interest for us to track these things, you know.;
-statements=Various checks have to be made, registries updated, documents processed, you know.;
-statements=...however...<p> if you absolutely cannot wait...;
-statements=You can accelerate the approval by paying additional processing fees.;
-statements=$5000 should cover it.;
+statements=审批流程式至关重要的，你也知道.<p>我们记录这些流程对于公众来说是很有利的.;
+statements=需要做各种检查，更新注册信息，处理各类文件，你知道的.;
+statements=...然而...<p>如果你实在不想等待...;
+statements=你可以通过支付额外的处理费用来加快审批流程.;
+statements=$5000 应该就够了.;
 
-[DialogOption] text=That's an absurd fee!;
+[DialogOption] text=那是一笔夸张的费用!;
 animation=angry;
 nodeToConnectTo=class_gatekeeper_ask_wait1c;
-[DialogOption] text=Fine... here's your $5000.;
+[DialogOption] text=好吧... 给你 $5000.;
 animation=stern;
 formulaReq=m:money - 4999;
 nodeToConnectTo=class_gatekeeper_unlock_expensive;
 newLineOfOptions=true;
-[DialogOption] text=Never mind.;
+[DialogOption] text=没事.;
 animation=meh;
 nodeToConnectTo=;
 newLineOfOptions=true;
@@ -1413,15 +1413,15 @@ newLineOfOptions=true;
 animations=happy;
 animations=;
 animations=sly;
-statements=Well, you get what you pay for!;
-statements=To accelerate your approval we would have to pay a variety of experts, accountants, and notaries for their timely work.; 
-statements=It's actually quite a reasonable cost, you know.;
-[DialogOption] text=Fine... here's your $5000.;
+statements=一分钱一分货!;
+statements=为了加快你的审批进程，我们不得不支付各种专家，会计师和司法人员一笔费用来保证他们及时处理.; 
+statements=这实际上是一笔相当合理的开销，你知道的.;
+[DialogOption] text=好吧... 给你 $5000.;
 animation=stern;
 formulaReq=m:money - 4999;
 nodeToConnectTo=class_gatekeeper_train;
 newLineOfOptions=true;
-[DialogOption] text=Never mind.;
+[DialogOption] text=没事.;
 animation=meh;
 nodeToConnectTo=;
 newLineOfOptions=true;
@@ -1430,12 +1430,12 @@ newLineOfOptions=true;
 
 [DialogNode] ID=class_gatekeeper_notyet;
 animations=happy;
-statements=The approval is still in progress I'm afraid!;
-statements=I'm sure it'll be done any day now!;
-[DialogOption] text=Can't I recieve training now?;
+statements=恐怕审批还在进行中!;
+statements=我相信马上就可以完成了!;
+[DialogOption] text=我现在不能接受训练吗?;
 animation=sly;
 nodeToConnectTo=class_gatekeeper_ask_wait1a;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 animation=;
 nodeToConnectTo=;
 newLineOfOptions=true;
@@ -1448,8 +1448,8 @@ newLineOfOptions=true;
 [DialogNode] ID=class_gatekeeper_train;
 animations=happy;
 animations=;
-statements=Very good!;
-statements=Take a seat.<p> A licensed Gatekeeper should be with you shortly to train you!;
+statements=非常好!;
+statements=坐下休息会吧.<p>有相应执照的看门人很快就会来培训你!;
 nextNodeID=class_gatekeeper_unlock;
 
 [DialogNode] ID=class_gatekeeper_unlock_expensive;
@@ -1473,8 +1473,8 @@ nextNodeID=;
 [DialogNode] ID=class_gatekeeper_train2;
 animations=happy;
 animations=;
-statements=Good news!<p> You've been approved!;
-statements=Take a seat.<p> A licensed Gatekeeper should be with you shortly to train you!;
+statements=好消息!<p>审批通过了!;
+statements=坐下休息会吧.<p>有相应执照的看门人很快就会来培训你!;
 nextNodeID=class_gatekeeper_unlock;
 
 [DialogNode] ID=class_gatekeeper_train2_lowFavor;
@@ -1482,10 +1482,10 @@ animations=happy;
 animations=sly;
 animations=happy;
 animations=;
-statements=Good news!<p> You've been approved!;
-statements=Uh, I think...<p> some of these documents say something about you causing some sort of trouble...?;
-statements=Oh well -<p> I'll get it sorted out,<p> I'm sure!;
-statements=Take a seat.<p> A licensed Gatekeeper should be with you shortly to train you!;
+statements=好消息!<p>审批通过了!;
+statements=额, 我想想...<p>有些文件说你惹了什么麻烦...?;
+statements=噢，好吧 -<p>我会帮你解决的,<p>我保证!;
+statements=坐下休息会吧.<p>有相应执照的看门人很快就会来培训你!;
 nextNodeID=class_gatekeeper_unlock;
 
 [DialogNode] ID=class_gatekeeper_unlock2;
@@ -1500,8 +1500,8 @@ nextNodeID=;
 [DialogNode] ID=class_gatekeeper1;
 animations=;
 animations=happy;
-statements=Welcome to the Gatekeeper's Guild, <pname>!;
-statements=I hope our services have been satisfactory!;
+statements=欢迎来到看门人协会, <pname>!;
+statements=希望我们的服务令你满意!;
 
 
 
@@ -1511,23 +1511,23 @@ statements=I hope our services have been satisfactory!;
 [DialogNode] ID=class_warpblade0;
 animations=meh;
 animations=;
-statements=The fact that you're here means you're ready for my training.;
-statements=Do you wish to be a Warpblade?;
+statements=你能来就说明你准备好接受我的训练了.;
+statements=你想成为一名时空之刃吗?;
 specialEffect=incDefaultNode;
-[DialogOption] text=Unlock <iconBig=classIcon_warpblade> Warpblade;
+[DialogOption] text=解锁 <iconBig=classIcon_warpblade> 时空之刃;
 formulaReq=;
 nodeToConnectTo=class_warpblade_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=自己;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=class_warpblade1;
 animations=;
-statements=I'm ready when you are.;
-[DialogOption] text=Unlock <iconBig=classIcon_warpblade> Warpblade;
+statements=你来的时候我就准备好了.;
+[DialogOption] text=解锁 <iconBig=classIcon_warpblade> 时空之刃;
 formulaReq=;
 nodeToConnectTo=class_warpblade_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -1537,13 +1537,13 @@ bottomOption=true;
 animations=sly;
 animations=;
 animations=happy;
-statements=It's not free, of course.;
-statements=Being a mysterious mentor in an isolated part of the world has its drawbacks. I still have bills to pay.;
-statements=How about $500?;
-[DialogOption] text=Yes ($500);
+statements=当然，这不是免费的.;
+statements=在一个与世隔绝的地方做一名神秘的导致固然会有它的弊端，我有账单要付.;
+statements=$500 怎么样?;
+[DialogOption] text=好 ($500);
 formulaReq=m:money - 499;
 nodeToConnectTo=class_warpblade_train;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 newLineOfOptions=true;
 
@@ -1552,9 +1552,9 @@ newLineOfOptions=true;
 animations=sly;
 animations=handupPose;
 animations=chargePose;
-statements=Alright!<p> This is going to be rigorous.;
-statements=You must hone both your body and mind to be a Warpblade!;
-statements=Now, to start!<p> 100 jumping jacks - but you must teleport between each one!;
+statements=没问题!<p>这项训练是很严格的.;
+statements=你必须要磨练你的整个身心，才能成为一名时空之刃!;
+statements=现在，开始吧!<p>100次弹跳训练 - 不过，你只能通过瞬移完成!;
 nextNodeID=class_warpblade_unlock;
 
 [DialogNode] ID=class_warpblade_unlock;
@@ -1570,7 +1570,7 @@ nextNodeID=;
 
 [DialogNode] ID=class_warpblade2;
 animations=chargePose;
-statements=Don't forget to exercise your mind and body at every opportunity!;
+statements=不要忘了利用一切机会磨练你的身体与心灵!;
 
 
 
@@ -1579,24 +1579,24 @@ statements=Don't forget to exercise your mind and body at every opportunity!;
 animations=happy;
 animations=chargePose;
 animations=happy;
-statements=Welcome, visitors!;
-statements=I am Everslay!<p> Yes, the legendary Krakenslayer!!;
-statements=But don't be intimidated<p> - you are welcome here.;
+statements=欢迎, 来访者!;
+statements=我是 Everslay!<p>没错，传说中的海妖杀手!!;
+statements=不要害怕<p> - 这里很欢迎你.;
 specialEffect=incDefaultNode;
-[DialogOption] text=Unlock <iconBig=classIcon_krakenslayer> Krakenslayer;
+[DialogOption] text=解锁 <iconBig=classIcon_krakenslayer> 海妖杀手;
 formulaReq=;
 nodeToConnectTo=class_krakenslayer_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=class_krakenslayer1;
 animations=happy;
-statements=What brings you back to my abode?;
-[DialogOption] text=Unlock <iconBig=classIcon_krakenslayer> Krakenslayer;
+statements=什么风把你吹到我家来了啊?;
+[DialogOption] text=解锁 <iconBig=classIcon_krakenslayer> 海妖杀手;
 formulaReq=;
 nodeToConnectTo=class_krakenslayer_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -1607,14 +1607,14 @@ animations=sly;
 animations=scared;
 animations=;
 animations=chargePose;
-statements=<finalTextIf=So, tales of my prowess has reached even other Crub waters!!=mainPlayerIsActorType:crub>So, tales of my prowess has reached even the realm of the dry ones!!;
-statements=...no?;
-statements=W-well,<p> regardless,<p> I will train you!;
-statements=For $500,<p> you may witness my skill!;
-[DialogOption] text=Yes ($500);
+statements=<finalTextIf=所以，我的英勇事迹传到了其他克拉布水域!!=mainPlayerIsActorType:crub>我的英勇事迹甚至传到了干旱地区!!;
+statements=...没有吗?;
+statements=好吧,<p>不管这些,<p>我来训练你!;
+statements=只需要 $500,<p>你就能见识到我的技艺!;
+[DialogOption] text=好 ($500);
 formulaReq=m:money - 499;
 nodeToConnectTo=class_krakenslayer_train;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 newLineOfOptions=true;
 
@@ -1623,9 +1623,9 @@ newLineOfOptions=true;
 animations=sly;
 animations=stern;
 animations=chargePose;
-statements=<finalTextIf=Though you fear electricity, you do not hesitate. You must be truly brave!=mainPlayerIsActorType:crub>I hear that electricity does not sting the dry ones as it does us Crub!;
-statements=<finalTextIf=You had better stay brave - because you are going to feel the lightning!!=mainPlayerIsActorType:crub>This is good news for you!<p> Because you are going to feel the lightning!!;
-statements=Withstand this training, and you too can master it!!!;
+statements=<finalTextIf=虽然你害怕电流，但你不会犹豫。你一定很勇敢!=mainPlayerIsActorType:crub>我听说电流不会像刺激我们克拉布一样刺激那些干燥的生物!;
+statements=<finalTextIf=你最好保持你的勇气 - 因为你马上就会感受到闪电的力量!!=mainPlayerIsActorType:crub>这对你来说是个好消息!<p>因为你将感受到闪电的力量!!;
+statements=经受住这种训练，之后你也能掌握它!!!;
 nextNodeID=class_krakenslayer_unlock;
 
 [DialogNode] ID=class_krakenslayer_unlock;
@@ -1642,29 +1642,29 @@ nextNodeID=;
 
 [DialogNode] ID=class_krakenslayer2;
 animations=chargePose;
-statements=Now go, and spread the legend of Everslay!;
+statements=去吧，去传播 Everslay 的传奇事迹!;
 
 
 ---gatewarder
 
 [DialogNode] ID=class_gatewarder0;
 animations=;
-statements=Welcome.<p> What brings you to Bellrique?;
+statements=欢迎.<p>什么风把你吹来 Bellrique?;
 specialEffect=incDefaultNode;
-[DialogOption] text=Unlock <iconBig=classIcon_gatewarder> Gatewarder;
+[DialogOption] text=解锁 <iconBig=classIcon_gatewarder> 守门人;
 formulaReq=;
 nodeToConnectTo=class_gatewarder_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=class_gatewarder1;
 animations=;
 statements=Hello again.;
-[DialogOption] text=Unlock <iconBig=classIcon_gatewarder> Gatewarder;
+[DialogOption] text=解锁 <iconBig=classIcon_gatewarder> 守门人;
 formulaReq=;
 nodeToConnectTo=class_gatewarder_ask;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -1674,13 +1674,13 @@ bottomOption=true;
 animations=;
 animations=happy;
 animations=;
-statements=This is a rare skill that you ask for.;
-statements=Were we in the heart of Seartial, it would be illegal for me to teach you!;
-statements=But the Gatekeepers have no influence here.<p> I will teach you for only $500.;
-[DialogOption] text=Yes ($500);
+statements=这是你寻求的罕见的技能.;
+statements=在西提尔的中心, 我教你是非法的!;
+statements=但是看门人影响不到这里.<p>我会教你，只需要支付 $500.;
+[DialogOption] text=好 ($500);
 formulaReq=m:money - 499;
 nodeToConnectTo=class_gatewarder_train;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 newLineOfOptions=true;
 
@@ -1689,9 +1689,9 @@ newLineOfOptions=true;
 animations=;
 animations=sigh;
 animations=;
-statements=Fantastic.;
-statements=Gate magic is capable of more than you can imagine.;
-statements=All it takes is an open mind and some creativity.<p> Allow me to demonstrate...;
+statements=好极了.;
+statements=门魔法的威力超乎你的想象.;
+statements=它所需要的仅是一个开放的思想和一些创造力.<p>请允许我演示一下...;
 nextNodeID=class_gatewarder_unlock;
 
 [DialogNode] ID=class_gatewarder_unlock;
@@ -1707,7 +1707,7 @@ nextNodeID=;
 
 [DialogNode] ID=class_gatewarder2;
 animations=happy;
-statements=Enjoy your stay in Bellrique.;
+statements=祝你在 Bellrique 过的愉快.;
 
 
 

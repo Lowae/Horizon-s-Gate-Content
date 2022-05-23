@@ -6,19 +6,19 @@
 
 [DialogNode] ID=pastor;
 animations=;
-statements=How can I help you?;
-[DialogOption] text=Donate;
+statements=我能帮你什么吗?;
+[DialogOption] text=捐赠;
 formulaReq=m:money;
 nodeToConnectTo=pastor_donate;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=pastor_donate;
 animations=;
 animations=sigh;
-statements=Charity is good for your Essence.; 
-statements=How much would you like to donate?;
+statements=慈善能够增强你的本源.; 
+statements=你想要捐赠多少?;
 [DialogOption] text=$10;
 formulaReq=m:money - 9;
 nodeToConnectTo=pastor_donate10;
@@ -36,27 +36,27 @@ nodeToConnectTo=pastor_donate1000;
 [DialogOption] text=$5000;
 formulaReq=m:money - 4999;
 nodeToConnectTo=pastor_donate5000;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=pastor_donate10;
 animations=sigh;
-statements=Your kindness is appreciated.;
+statements=感谢你的善意.;
 specialEffect=subtract10gp;
 specialEffect=donate,10;
 nextNodeID=;
 
 [DialogNode] ID=pastor_donate100;
 animations=;
-statements=Very generous of you. Thank you very much.;
+statements=你真慷慨，非常感谢.;
 specialEffect=subtract100gp;
 specialEffect=donate,100;
 nextNodeID=;
 
 [DialogNode] ID=pastor_donate500;
 animations=sigh;
-statements=Ah, thank you! I humbly accept your kind contribtion.;
+statements=噢，谢谢你!我谦恭的接受你的好意.;
 specialEffect=subtract500gp;
 specialEffect=donate,500;
 nextNodeID=;
@@ -64,8 +64,8 @@ nextNodeID=;
 [DialogNode] ID=pastor_donate1000;
 animations=happy;
 animations=;
-statements=Ah, a true servant of the faith!;
-statements=May your rewards in the next realm be great.;
+statements=啊，真是信仰的忠实仆人!;
+statements=愿你在下一个领域获得丰厚的回报.;
 specialEffect=subtract1000gp;
 specialEffect=donate,1000;
 nextNodeID=;
@@ -73,8 +73,8 @@ nextNodeID=;
 [DialogNode] ID=pastor_donate5000;
 animations=scared;
 animations=happy;
-statements=Such generosity...! I feel deeply honored to accept this on behalf of our congregation.;
-statements=A saint such as yourself is welcome here any time.;
+statements=太慷慨了...!我很荣幸我能代表我们宗教的公众接受这份礼物.;
+statements=像你这样的圣徒随时欢迎.;
 specialEffect=subtract5000gp;
 specialEffect=donate,5000;
 nextNodeID=;
@@ -89,7 +89,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=loc:port1;
 animations=;
-statements=Welcome to the Cult of St. Ensu.<p> What can I do for you?;
+statements=欢迎来到St. Ensu 宗教.<p> 我能为你做什么?;
 
 [DialogNodeOverride] ID=pastor_port6;
 dialogNodeID_toOverride=pastor;
@@ -97,7 +97,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=loc:port6;
 animations=sigh;
-statements=Until the Cathedral of Elements is rebuilt, please avail yourself of our services here.;
+statements=在元素大教堂重建之前，请使用我们这里的服务.;
 
 
 [DialogNodeOverride] ID=pastor_port8;
@@ -106,7 +106,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=loc:port8;
 animations=sly;
-statements=Flame in yer heart an' wind atcher back.;
+statements=火焰在你心中，风在你身后.;
 
 [DialogNodeOverride] ID=pastor_port11;
 dialogNodeID_toOverride=pastor;
@@ -114,7 +114,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=loc:port11;
 animations=happy;
-statements=Welcome to the Holiest Temple!<p> Praise Jasce!;
+statements=欢迎来到神圣教堂!<p> 赞美雅斯!;
 
 
 [DialogNodeOverride] ID=pastor_port25;
@@ -123,7 +123,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=loc:port25;
 animations=;
-statements=Take your time and pray.<p> Jasce hears.;
+statements=慢慢祈祷吧.<p>雅斯会听到的.;
 
 
 

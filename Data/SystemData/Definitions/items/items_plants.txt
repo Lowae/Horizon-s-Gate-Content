@@ -1270,7 +1270,7 @@ category=item; halfPage=true;
 title=芦苇;
 text=<itemBig=plant_reed1><title=芦苇><brAdj=>湿地中常见的草状植物.<n>有些芦苇是用来盖屋顶的,<n>而这些特殊的芦苇是没什么用的.;
 
-[ItemType]  name=Hill Mold;
+[ItemType]  name=山丘霉菌;
 ID=vines_hillMold1; sprite=1113; itemCategory=plant;
 pG=pYellow;
 journalID=journal_hillMold;
@@ -1289,7 +1289,7 @@ cloneFrom=vines_hillMold1; special=dontCloneReactions;
 ID=vines_hillMold4; sprite=1112; 
 cloneFrom=vines_hillMold1; special=dontCloneReactions;
 
-[ItemType]  name=Hill Mold;
+[ItemType]  name=山丘霉菌;
 ID=vines_hillMold_wall1; sprite=1241; itemCategory=plant;
 pG=pYellow;
 journalID=journal_hillMold;
@@ -1318,7 +1318,7 @@ cloneFrom=vines_hillMold_wall1; special=dontCloneReactions;
 ID=vines_hillMold_wall3; element=fire; element=ruin; newID=vines_hillMold_wall_rot3;
 [ItemReaction] 
 ID=vines_hillMold_wall2; element=cutsc_destroy; applyElement=removeShadow; newID=X; fx=fall_vines_hillMold_wall2;
-[ItemType]  name=Hill Mold;
+[ItemType]  name=山丘霉菌;
 ID=vines_hillMold_wall4; sprite=1244; itemCategory=plant;
 pG=pYellow;
 journalID=journal_hillMold;
@@ -1335,7 +1335,7 @@ ID=vines_hillMold_wall4; element=cutsc_destroy; applyElement=removeShadow; newID
 
 --
 
-[ItemType]  name=Hill Mold Rot;
+[ItemType]  name=山丘霉菌腐烂物;
 ID=vines_hillMold_wall_rot1; sprite=1241; itemCategory=plant;
 pG=pGrey9;
 journalID=journal_hillMold;
@@ -1375,7 +1375,7 @@ ID=vines_hillMold_wall_rot3; element=timerUp; action=miasmaCloud;
 [ItemReaction] 
 ID=vines_hillMold_wall_rot3; element=slash; element=heavySmash; element=explode; 
 action=miasmaCloud; applyElement=removeShadow; newID=vines_hillMold_wall_broken_rot; fx=dust_wood;
-[ItemType]  name=Hill Mold Rot;
+[ItemType]  name=山丘霉菌腐烂物;
 ID=vines_hillMold_wall_rot4; sprite=1244; itemCategory=plant;
 pG=pGrey9;
 journalID=journal_hillMold;
@@ -1395,7 +1395,7 @@ ID=vines_hillMold_wall_rot4; element=timerUp; action=miasmaCloud;
 ID=vines_hillMold_wall_rot4; element=slash; element=smash; element=heavySmash; element=explode; 
 action=miasmaCloud; applyElement=removeShadow; newID=vines_hillMold_wall_broken_rot; fx=dust_wood;
 
-[ItemType]  name=Broken Hill Mold Rot;
+[ItemType]  name=损坏的山丘霉菌腐烂物;
 ID=vines_hillMold_wall_broken_rot; sprite=1238; itemCategory=plant; 
 journalID=journal_hillMold;
 special=cannotBePickedUp; special=canHangOnWalls;

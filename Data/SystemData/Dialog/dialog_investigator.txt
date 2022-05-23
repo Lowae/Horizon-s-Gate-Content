@@ -4,21 +4,21 @@ animations=;
 animations=stern;
 animations=sly;
 animations=;
-statements=You're looking for something, are you?;
-statements=I can help you find what you're looking for...<p> if you can pay.;
-statements=Otherwise I can only help you find the door.;
-statements=Name's Loritus.<p> Private eye and ex-Gunmage.;
-statements=Now that that's out of the way...;
+statements=你在找什么东西，是吗?;
+statements=我可以帮你找到你想要的...<p>如果你支付报酬的话.;
+statements=否则我只能帮你找到那扇门.;
+statements=我的名字叫 Loritus.<p>私家侦探和前-枪法师.;
+statements=不过都已经是过去的事情了...;
 specialEffect=setDefaultNode,investigator;
 nextNodeID=investigator;
 
 
 [DialogNode] ID=investigator;
 animations=sly;
-statements=<rand=What're you after?/What have you got for me?>;
-[DialogOption] text=Locations;
+statements=<rand=你想要什么?/你给我带来了什么?>;
+[DialogOption] text=地点;
 nodeToConnectTo=investigator_locs;
-[DialogOption] text=Other;
+[DialogOption] text=其他;
 newLineOfOptions=true;
 nodeToConnectTo=investigator_other;
 [DialogOption] text=Repeat info;
@@ -33,7 +33,7 @@ nodeToConnectTo=investigator_repeat_balzar;
 newLineOfOptions=true;
 formulaReq=talker:covlan + gIsString:investigatorAnswer_covlan - 1;
 nodeToConnectTo=investigator_repeat_covlan;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -49,30 +49,30 @@ nextNodeID=investigator_stillbusy;
 
 [DialogNode] ID=investigator_stillbusy;
 animations=stern;
-statements=I'm still looking into what you asked for.<p> Come back later.;
+statements=我还在调查你的需求.<p>稍后再来.;
 
 
 [DialogNode] ID=investigator_locs;
 animations=;
-statements=Something about locations?;
-[DialogOption] text=Nearest unknown location;
+statements=一些关于地点的事情?;
+[DialogOption] text=最近的未知地点;
 nodeToConnectTo=investigator_nearestloc;
-[DialogOption] text=Upcoming trade demands;
+[DialogOption] text=即将到来的贸易需求;
 newLineOfOptions=true;
 nodeToConnectTo=investigator_tradespecial;
-[DialogOption] text=Port investment unlocks;
+[DialogOption] text=港口投资解锁;
 newLineOfOptions=true;
 nodeToConnectTo=investigator_investunlocks;
-[DialogOption] text=Back;
+[DialogOption] text=返回;
 nodeToConnectTo=investigator;
 bottomOption=true;
 
 [DialogNode] ID=investigator_other;
 animations=;
-statements=Something else?;
-[DialogOption] text=Fleet positions;
+statements=一些其他的东西?;
+[DialogOption] text=舰队位置;
 nodeToConnectTo=investigator_fleetpos;
-[DialogOption] text=Missed enemy info;
+[DialogOption] text=错失的敌人信息;
 newLineOfOptions=true;
 nodeToConnectTo=investigator_slainenemy;
 [DialogOption] text=Back;
@@ -82,7 +82,7 @@ bottomOption=true;
 
 [DialogNode] ID=investigator_cant_afford;
 animations=stern;
-statements=No money, no info.<p=2> The door is that way.;
+statements=没有前就没有更多的信息.<p=2>门在那边.;
 nextNodeID=;
 
 
@@ -98,20 +98,20 @@ nextNodeID=;
 
 [DialogNode] ID=investigator_nearestloc;
 animations=stern;
-statements=You want the <color=DarkRed>Latitude<color=> and <color=DarkRed>Longitude<color=> of the nearest undiscovered location?<textIf= Remember, I don't do monster dens.=gIs:questType:clearden>;
-[DialogOption] text=Yes ($500);
+statements=你想知道最近的未知地点的<color=DarkRed>纬度<color=>和<color=DarkRed>经度<color=>吗?<textIf=不过要记得，我不会记录怪物巢穴.=gIs:questType:clearden>;
+[DialogOption] text=是的 ($500);
 formulaReq=m:money(500);
 nodeToConnectTo=investigator_nearestloc_yes;
-[DialogOption] text=<color=SlateGray>Can't afford ($500);
+[DialogOption] text=<color=SlateGray>负担不起 ($500);
 formulaReq=1 - m:money(500);
 nodeToConnectTo=investigator_cant_afford;
-[DialogOption] text=Back;
+[DialogOption] text=返回;
 nodeToConnectTo=investigator_locs;
 bottomOption=true;
 
 [DialogNode] ID=investigator_nearestloc_yes;
 animations=;
-statements=I'm on it.<p> Come back in a week for your answer.;
+statements=我会努力帮你寻找的.<p>一周后再来获得你的答案.;
 specialEffect=subtractgp,500;
 specialEffect=setDefaultNode,investigator_busy;
 specialEffect=investigator_nearestLoc;
@@ -121,20 +121,20 @@ specialEffect=setGlobalVarWithTalkerID,task_,1;
 
 [DialogNode] ID=investigator_tradespecial;
 animations=sly;
-statements=Trade, eh?<p> I can find out what next month's big demand is going to be for and where.;
-[DialogOption] text=Yes ($200);
+statements=贸易，嗯?<p>我可以找出下个月的大需求是什么，而且在哪里.;
+[DialogOption] text=好 ($200);
 formulaReq=m:money(200);
 nodeToConnectTo=investigator_tradespecial_yes;
-[DialogOption] text=<color=SlateGray>Can't afford ($200);
+[DialogOption] text=<color=SlateGray>负担不起 ($200);
 formulaReq=1 - m:money(300);
 nodeToConnectTo=investigator_cant_afford;
-[DialogOption] text=Back;
+[DialogOption] text=返回;
 nodeToConnectTo=investigator_locs;
 bottomOption=true;
 
 [DialogNode] ID=investigator_tradespecial_yes;
 animations=;
-statements=Got it.<p> Come back in a week and I'll have it for you.;
+statements=明白了.<p>一周后回来，我会提供给你.;
 specialEffect=subtractgp,200;
 specialEffect=setDefaultNode,investigator_busy;
 specialEffect=investigator_tradespecial;
@@ -144,23 +144,23 @@ specialEffect=setGlobalVarWithTalkerID,task_,1;
 
 [DialogNode] ID=investigator_slainenemy;
 animations=;
-statements=You want me to find journal research you missed from an enemy you defeated?;
-[DialogOption] text=Yes ($500);
+statements=你想让我从你打败的敌人身上找到你错过的日志研究?;
+[DialogOption] text=是的 ($500);
 nodeToConnectTo=investigator_slainenemy_yes;
 formulaReq=m:money(500) + m:killsWithoutKnownJournals - 1;
-[DialogOption] text=Yes ($500);
+[DialogOption] text=是的 ($500);
 nodeToConnectTo=investigator_slainenemy_cant;
 formulaReq=m:money(500) - m:killsWithoutKnownJournals;
-[DialogOption] text=<color=SlateGray>Can't afford ($500);
+[DialogOption] text=<color=SlateGray>负担不起 ($500);
 formulaReq=1 - m:money(500);
 nodeToConnectTo=investigator_cant_afford;
-[DialogOption] text=Back;
+[DialogOption] text=返回;
 nodeToConnectTo=investigator_other;
 bottomOption=true;
 
 [DialogNode] ID=investigator_slainenemy_yes;
 animations=sigh;
-statements=Alright.<p> Give me a week and I'll have it ready.;
+statements=好.<p>给我一周，我会准备好的.;
 specialEffect=subtractgp,500;
 specialEffect=setDefaultNode,investigator_busy;
 specialEffect=investigator_slainenemy;
@@ -168,47 +168,47 @@ specialEffect=setGlobalVarWithTalkerID,task_,1;
 
 [DialogNode] ID=investigator_slainenemy_cant;
 animations=sly;
-statements=Actually...<p> you've been quite thorough.<p> There's nothing you fought that you didn't examine.;
+statements=实际上...<p>你已经很仔细了.<p>已经没有什么是你没检查过的了.;
 
 
 --FLEET POSITIONS
 
 [DialogNode] ID=investigator_fleetpos;
 animations=sly;
-statements=I can get you the exact whereabouts of a nation's fleets.<p> You'll see them on your map for 30 days.;
-[DialogOption] text=Seartial ($300);
+statements=我可以给你一个国家舰队的确切位置.<p>在30天内你可以在地图上看到他们.;
+[DialogOption] text=西提尔 ($300);
 formulaReq=m:money(300);
 specialEffect=investigator_fleetpos,seartial;
 nodeToConnectTo=investigator_fleetpos_yes;
-[DialogOption] text=Jasce ($300);
+[DialogOption] text=雅斯 ($300);
 formulaReq=m:money(300);
 specialEffect=investigator_fleetpos,jasce;
 nodeToConnectTo=investigator_fleetpos_yes;
-[DialogOption] text=Rumane ($300);
+[DialogOption] text=罗马尼亚 ($300);
 formulaReq=m:money(300);
 newLineOfOptions=true;
 specialEffect=investigator_fleetpos,rumane;
 nodeToConnectTo=investigator_fleetpos_yes;
-[DialogOption] text=Dominio ($300);
+[DialogOption] text=多米尼奥 ($300);
 formulaReq=m:money(300);
 specialEffect=investigator_fleetpos,dominio;
 nodeToConnectTo=investigator_fleetpos_yes;
-[DialogOption] text=Pirates ($300);
+[DialogOption] text=海盗 ($300);
 formulaReq=m:money(300);
 newLineOfOptions=true;
 specialEffect=investigator_fleetpos,pirate;
 nodeToConnectTo=investigator_fleetpos_yes;
-[DialogOption] text=<color=SlateGray>Can't afford ($300);
+[DialogOption] text=<color=SlateGray>负担不起 ($300);
 formulaReq=1 - m:money(300);
 nodeToConnectTo=investigator_cant_afford;
-[DialogOption] text=Back;
+[DialogOption] text=返回;
 nodeToConnectTo=investigator_other;
 bottomOption=true;
 
 
 [DialogNode] ID=investigator_fleetpos_yes;
 animations=sigh;
-statements=I'm on it.<p> Come back in a week for the details.;
+statements=我正在调查.<p>一周后再过来了解详情.;
 specialEffect=subtractgp,300;
 specialEffect=setDefaultNode,investigator_busy;
 specialEffect=setGlobalVarWithTalkerID,task_,1;
@@ -218,49 +218,49 @@ specialEffect=setGlobalVarWithTalkerID,task_,1;
 
 [DialogNode] ID=investigator_investunlocks;
 animations=;
-statements=I can find out what items or ships can be found at a specific port by investing.<p> Sound good?;
-[DialogOption] text=Yes ($500);
+statements=我可以通过投资找到在特定港口里出售的物品或船只.<p>听起来怎么样.?;
+[DialogOption] text=好 ($500);
 formulaReq=m:money(500);
 nodeToConnectTo=investigator_investunlocks_yes;
-[DialogOption] text=<color=SlateGray>Can't afford ($500);
+[DialogOption] text=<color=SlateGray>负担不起 ($500);
 formulaReq=1 - m:money(500);
 nodeToConnectTo=investigator_cant_afford;
-[DialogOption] text=Back;
+[DialogOption] text=返回;
 nodeToConnectTo=investigator_locs;
 bottomOption=true;
 
 
 [DialogNode] ID=investigator_investunlocks_yes;
 animations=;
-statements=Alright. Where's the port that you've got your eye on?;
+statements=好.你看中的港口是在哪?;
 specialEffect=setPCDialogWindowSizeY;
-[DialogOption] text=Northwest;
+[DialogOption] text=西北方向;
 specialEffect=investigator_setupportselect,-1,-1,investigator_investunlocks_portselect;
 nodeToConnectTo=investigator_investunlocks_portselect;
-[DialogOption] text=Northeast;
+[DialogOption] text=东北方向;
 specialEffect=investigator_setupportselect,1,-1,investigator_investunlocks_portselect;
 nodeToConnectTo=investigator_investunlocks_portselect;
-[DialogOption] text=Southwest;
+[DialogOption] text=西南方向;
 newLineOfOptions=true;
 specialEffect=investigator_setupportselect,-1,1,investigator_investunlocks_portselect;
 nodeToConnectTo=investigator_investunlocks_portselect;
-[DialogOption] text=Southeast;
+[DialogOption] text=东南方向;
 specialEffect=investigator_setupportselect,1,1,investigator_investunlocks_portselect;
 nodeToConnectTo=investigator_investunlocks_portselect;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 bottomOption=true;
 
 
 [DialogNode] ID=investigator_investunlocks_portselect;
 animations=;
-statements=And which of these ports is it?;
+statements=是哪个港口?;
 
 
 
 [DialogNode] ID=investigator_investunlocks_portselected;
 animations=;
-statements=On it. Give me a week and you'll have your info.;
+statements=噢，好.给我一周的时间，然后你就能得到你想要的信息.;
 specialEffect=subtractgp,500;
 specialEffect=setDefaultNode,investigator_busy;
 specialEffect=setGlobalVarWithTalkerID,task_,1;
@@ -271,7 +271,7 @@ specialEffect=setGlobalVarWithTalkerID,task_,1;
 
 [DialogNode] ID=investigator_done_loritus;
 animations=happy;
-statements=The investigation was a success!;
+statements=调查很成功!;
 specialEffect=fx,sfx_questComplete_small;
 specialEffect=setDefaultNode,investigator;
 specialEffect=task_gvar,investigatorTask_loritus;
@@ -285,7 +285,7 @@ specialEffect=setDialogWindowSizeYAuto,@0.01;
 
 [DialogNode] ID=investigator_repeat_loritus;
 animations=stern;
-statements=You want to hear last investigation's result again?;
+statements=你想再听一遍上次调查的结果吗?;
 nextNodeID=investigator_repeat_loritus2;
 
 [DialogNode] ID=investigator_repeat_loritus2;
@@ -309,7 +309,7 @@ animations=happy;
 animations=;
 animations=stern;
 animations=happy;
-statements=Well hello,<p> fellow!;
+statements=你好,<p>伙伴!;
 statements=What brings you to Balzar's little office?;
 statements=Ah, I recognize that look<p> - maybe you're a bit lost?<p=2> Looking for help,<p> perhaps some information?;
 statements=I may be a military man,<p> but my true passion is in helping others.;
@@ -356,7 +356,7 @@ dialogNodeID_toOverride=investigator_cant_afford;
 fReq=talker:balzar;
 overrideSpecialEffects=false;
 animations=happy;
-statements=Well, that is a shame, isn't it?<p> I certainly wish I could do more to help...;
+statements=好吧，真可惜，不是吗?<p>我当然希望我能帮上更多的忙...;
 
 
 
@@ -415,7 +415,7 @@ dialogNodeID_toOverride=investigator_cant_afford;
 fReq=talker:covlan;
 overrideSpecialEffects=false;
 animations=sigh;
-statements=Go sell some research to Rubinn and then come back 'n' talk to me.;
+statements=去把研究成果卖给 Rubinn ，有钱了再回来跟我谈吧.;
 
 
 
