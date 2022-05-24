@@ -1,6 +1,6 @@
 [DialogNode] ID=port8_guy1a;
 animations=;
-statements=Life...!<p> Life...!;
+statements=生命...!<p> 生命...!;
 nextNodeID=;
 specialEffect=facingRotPrev;
 
@@ -12,65 +12,65 @@ specialEffect=facingRotPrev;
 
 [DialogNode] ID=port8_guy3a;
 animations=;
-statements=Talk to Roni.<p> I'm just the bookkeeper.;
+statements=去和 Roni 说.<p>我只是个记账员.;
 nextNodeID=;
 
 [DialogNode] ID=port8_guy4a;
 animations=;
-statements=我已经航海20年了, and nothin' beats shore leave at Runewald!;
+statements=我已经航海20年了,在 Runewald 没有什么比上岸更好的了!;
 nextNodeID=;
 
 [DialogNode] ID=port8_guy5a;
 animations=;
-statements=Uhh, which way is it to the <rand=cafe/temple/trainer/harbor/shipwright/guild>, again?;
+statements=额,去 <rand=咖啡馆/神殿/训练师/港口/船匠/公会> 怎么走?;
 nextNodeID=;
 
 [DialogNode] ID=port8_guy6a;
 animations=happy;
 animations=;
-statements=Hey, tough guy.<p> Word to the wise.;
-statements=Got any spare trigger stones, use the anvil to put 'em in your weapons.<p> Y'won't regret it.;
+statements=嘿，硬汉.<p>我有个给聪明人的忠告.;
+statements=如果你有多余的触发石，可以用铁砧把他们嵌入到你的武器里.<p>你不会后悔的.;
 nextNodeID=;
 
 [DialogNode] ID=port8_guy7a;
 animations=angry;
 animations=stern;
 animations=;
-statements=It boils my blood!;
-statements=This so-called elementalist temple still has a shrine to Ruin!<p> In this day and age!;
-statements=Bah!<p> I expected better in the capital of Rumane!;
+statements=它让我感到很气愤!;
+statements=这个所谓的元素神殿还有一个毁灭神殿!<p>再如今的时代依然存在!;
+statements=呸!<p>我还以为在罗马尼亚的首都会好一点!;
 nextNodeID=;
 
 [DialogNode] ID=port8_guy8a;
 animations=stern;
-statements=Don't trouble me, please.<p> I'm just paying my respects.;
+statements=请不要烦我.<p>我只是在表达我的敬意.;
 nextNodeID=;
 specialEffect=facingRotPrev;
 
 [DialogNode] ID=port8_guy9a;
 animations=sly;
-statements=I should get on the King's good side...<p> then I could buy Food here for cheap!;
+statements=我应该站在国王那边的...<p>那样我就可以在这里买到便宜的食物!;
 nextNodeID=;
 
 [DialogNode] ID=port8_guy10a;
 animations=happy;
-statements=You can see the whole city from up here!;
+statements=从这里你可以看到整个城市!;
 nextNodeID=;
 
 [DialogNode] ID=port8_guy11a;
 animations=;
 animations=sigh;
 animations=;
-statements=You here to help Rubinn with his research?;
-statements=Go on in.<p> He'll pay ya well.;
-statements=Me?<p>  I'm his assistant.<p>  I'm on break.;
+statements=你是来帮助 Rubinn 完成研究的吗?;
+statements=进去吧.<p>他会给你不错的报酬的.;
+statements=至于我?<p>我是他的助理.<p>我现在正在休息.;
 nextNodeID=;
 
 [DialogNode] ID=port8_guy12a;
 animations=;
 animations=;
-statements=U-urhgh...;
-statements=I drank way, way too much...;
+statements=呃呃...;
+statements=我喝的...太多了...;
 nextNodeID=;
 specialEffect=facingRotPrev;
 
@@ -88,7 +88,7 @@ nextNodeID=;
 
 [DialogNode] ID=port8_guard1a;
 animations=sigh;
-statements=The palace is ahead, right up these stairs.;
+statements=王宫就在前面，从楼梯上去.;
 nextNodeID=;
 
 [DialogNodeOverride] ID=maxRank_port8_guard1a;
@@ -96,11 +96,11 @@ dialogNodeID_toOverride=port8_guard1a;
 fReq=gIs:playerFaction:rumane + gIs:playerRank:9 - 1;
 completeOverride=true; overrideSpecialEffects=true;
 animations=;
-statements=On the way to the palace again, <pnamefull=>?;
+statements=又要去王宫了吗, <pnamefull=>?;
 
 [DialogNode] ID=port8_guard2a;
 animations=sly;
-statements=You wouldn't believe how many hooligans try to jump these fences and mess with the garden.;
+statements=你不会相信有多少小流氓想要试图跳过这些栅栏来搞乱花园.;
 nextNodeID=;
 
 [DialogNodeOverride] ID=maxRank_port8_guard2a;
@@ -108,11 +108,11 @@ dialogNodeID_toOverride=port8_guard2a;
 fReq=gIs:playerFaction:rumane + gIs:playerRank:9 - 1;
 completeOverride=true; overrideSpecialEffects=true;
 animations=;
-statements=Good to see you, <prank=>.;
+statements=很高兴见到你, <prank=>.;
 
 [DialogNode] ID=port8_guard3a;
 animations=;
-statements=You're welcome to enter and speak with the Viceroy.;
+statements=欢迎你前来与总督说话.;
 nextNodeID=;
 
 [DialogNodeOverride] ID=maxRank_port8_guard3a;
@@ -120,11 +120,11 @@ dialogNodeID_toOverride=port8_guard3a;
 fReq=gIs:playerFaction:rumane + gIs:playerRank:9 - 1;
 completeOverride=true; overrideSpecialEffects=true;
 animations=sigh;
-statements=Let me know if there's aught I can do for you, <prank=>.;
+statements=有什么需要我帮忙的尽管说, <prank=>.;
 
 [DialogNode] ID=port8_guard4a;
 animations=;
-statements=You're clear to enter.;
+statements=你可以进去了.;
 nextNodeID=;
 
 [DialogNodeOverride] ID=maxRank_port8_guard4a;
@@ -132,14 +132,14 @@ dialogNodeID_toOverride=port8_guard4a;
 fReq=gIs:playerFaction:rumane + gIs:playerRank:9 - 1;
 completeOverride=true; overrideSpecialEffects=true;
 animations=scared;
-statements=You think a guard could become a <prank=> too, someday?;
+statements=你觉得会有一天警卫也能成为 <prank=> 吗?;
 
 --when you enter the garden
 [DialogNode] ID=guardman_garden_yell;
 animations=angry;
 animations=stern;
-statements=Hey!<p> Get out of there!;
-statements=I'm not paid enough for this...;
+statements=嘿!<p>离开这里!;
+statements=我的薪水还不够让你这样做...;
 nextNodeID=;
 
 [DialogNodeOverride] ID=maxRank_guardman_garden_yell;
@@ -150,19 +150,19 @@ animations=angry;
 animations=scared;
 animations=happy;
 statements=Hey!!;
-statements=O-<p>oh, it's you,<p> <pnamefull=>...;
-statements=Uh...<p> enjoy the garden!;
+statements=O-<p>噢, 是你,<p> <pnamefull=>...;
+statements=Uh...<p> 好好享受整个花园吧!;
 
 [DialogNode] ID=guardman_garden_yell2;
 animations=stern;
 animations=sigh;
-statements=Leave the garden alone,<p> already!<textIf= Uh, if you could, please.=gIs:playerFaction:rumane + gIs:playerRank:9 - 1>;
-statements=I'm really not paid enough for this...;
+statements=马上悄悄的离开花园!<textIf= 额，如果可以的话.=gIs:playerFaction:rumane + gIs:playerRank:9 - 1>;
+statements=我的薪水真不够让你这样干...;
 nextNodeID=;
 
 [DialogNode] ID=port8_royal1_guard1a;
 animations=;
-statements=The Viceroy is ready to speak with you.;
+statements=总督准备和你谈了.;
 nextNodeID=;
 
 [DialogNodeOverride] ID=maxRank_port8_royal1_guard1a;
@@ -170,11 +170,11 @@ dialogNodeID_toOverride=port8_royal1_guard1a;
 fReq=gIs:playerFaction:rumane + gIs:playerRank:9 - 1;
 completeOverride=true; overrideSpecialEffects=true;
 animations=;
-statements=The Viceroy is eager to meet with you, <pnamefull=>.;
+statements=总督很想见你, <pnamefull=>.;
 
 [DialogNode] ID=port8_royal1_guard2a;
 animations=;
-statements=Be respectful when speaking to the Viceroy.;
+statements=和总督说话时记得保持尊重.;
 nextNodeID=;
 
 [DialogNodeOverride] ID=maxRank_port8_royal1_guard2a;
@@ -182,6 +182,6 @@ dialogNodeID_toOverride=port8_royal1_guard2a;
 fReq=gIs:playerFaction:rumane + gIs:playerRank:9 - 1;
 completeOverride=true; overrideSpecialEffects=true;
 animations=happy;
-statements=At your service, <pnamefull=>.;
+statements=为您服务, <pnamefull=>.;
 
 

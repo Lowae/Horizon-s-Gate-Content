@@ -124,7 +124,7 @@ statements=Trivial compared to a direct request from the Council.<p=> You should
 nextNodeID=;
 [DialogOption] text=Cancel job;
 nodeToConnectTo=royal_questgiver_jobs_cancel;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -140,7 +140,7 @@ statements=<p=> ...unless you're saying you can't complete it?;
 nextNodeID=;
 [DialogOption] text=Cancel job;
 nodeToConnectTo=royal_questgiver_jobs_cancel_royal;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -298,7 +298,7 @@ nodeToConnectTo=royal_questgiver_jobs_cancel_confirm;
 [DialogOption] text=<color=SlateGray>(Can't afford...);
 formulaReq=20-m:money;
 nodeToConnectTo=royal_questgiver_jobs_cancel_cantAfford;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -323,7 +323,7 @@ animations=sly;
 statements=Truly? The Council will be most disappointed to hear of this.;
 [DialogOption] text=Cancel (-5 Favor);
 nodeToConnectTo=royal_questgiver_jobs_cancel_confirm_royal;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -406,7 +406,7 @@ nodeToConnectTo=royal_questgiver_defect_confirm;
 [DialogOption] text=<color=SlateGray>Can't afford ($<math=g:playerRank * g:playerRank * 1000><adjX=-6>);
 formulaReq=g:playerRank * g:playerRank * 1000 - m:money;
 nodeToConnectTo=royal_questgiver_defect_cantAfford;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -425,7 +425,7 @@ statements=You'll have to earn your way into Seartial's favor like anyone else.;
 [DialogOption] text=Pledge loyalty ($<math=g:playerRank * g:playerRank * 1000><adjX=-6>);
 formulaReq=m:money + 1 - g:playerRank * g:playerRank * 1000;
 nodeToConnectTo=royal_questgiver_defect_confirm2;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -501,7 +501,7 @@ statements=Only those who are explicity summoned to meet with Jasce may enter!;
 
 [DialogNode] ID=viceroy_royal_questgiver_offlimits;
 animations=angry;
-statements=Hold on, there!<p=> I'm sorry, but the king is not taking visitors!;
+statements=等等，停下!<p=>我很抱歉，因为国王目前不接待访客!;
 
 --pledge version which sets goal for  royal quest
 [DialogNode] ID=royal_questgiver_showFactionWindow_pledge;
@@ -929,7 +929,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:viceroy;
 animations=;
-statements=Well met, <pnamefull=>.<p=> <finalTextIf=Is there anything I can help you with?=gIs:playerRank:9 + gIsTalkerFaction:playerFaction - 1>What brings you to the Great Hall?;
+statements=你好, <pnamefull=>.<p=> <finalTextIf=有什么我能帮忙的吗?=gIs:playerRank:9 + gIsTalkerFaction:playerFaction - 1>什么风把你吹到 Great Hall 来了?;
 
 [DialogNodeOverride] ID=viceroy_royal_questgiver_jobs;
 dialogNodeID_toOverride=royal_questgiver_jobs;
@@ -1100,9 +1100,9 @@ fReq=talker:viceroy;
 animations=sly;
 animations=sigh;
 animations=;
-statements=I see.<p=> That is an unusual request, but not an impossible one.;
-statements=We can accept even those from opposing nations under certain conditions.;
-statements=In the past it would be much more difficult...<p=> but in these times, a proper donation is enough.<textIf= Because of your rank, I must ask for a larger sum.=g:playerRank - 1>;
+statements=我明白了.<p=>这是一个不寻常的要求，但是也并非不可能.;
+statements=在一定情况下，我们甚至可以接受敌对国家的人.;
+statements=在过去，这要困难得多...<p=>但是现在，适当的捐赠就够了.<textIf=由于你的地位，我必须要求更高的金额.=g:playerRank - 1>;
 
 [DialogNodeOverride] ID=viceroy_royal_questgiver_defect_confirm;
 dialogNodeID_toOverride=royal_questgiver_defect_confirm;
@@ -1164,9 +1164,9 @@ fReq=talker:viceroy;
 animations=sigh;
 animations=;
 animations=happy;
-statements=Rumane - sometimes called the clanlands - is led by our wise King Revarr.;
-statements=Once wracked by clan disputes, now Rumane is one of the great world powers, thanks to His Majesty's efforts.;
-statements=We welcome new citizens of all creeds and origins.;
+statements=罗马尼亚 - 有时被称为 clanlands - 由我们英明的国王 Revarr 领导.;
+statements=由于国王陛下的努力，一度饱受部族纷争之苦的罗马尼亚如今已成为世界强国之一.;
+statements=我们欢迎各种信仰和出身的新公民.;
 nextNodeID=royal_questgiver_info;
 
 
