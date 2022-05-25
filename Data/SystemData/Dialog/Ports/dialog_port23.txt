@@ -2,7 +2,7 @@
 [DialogNode] ID=port23_guy1a;
 animations=;
 animations=happy;
-statements=我口很渴!;
+statements=I worked up a powerful thirst!;
 statements=I don' wanna track mud inside, so Saul just sends the drinks out here t'me.;
 nextNodeID=;
 
@@ -10,29 +10,29 @@ nextNodeID=;
 [DialogNode] ID=port23_guy2a;
 animations=sly;
 animations=sigh;
-statements=如果你在深水区中航行，你应该给你的船员配备一门加农炮!;
-statements=不过多买一件同样的东西是没有意义的.<p>一次只能使用一个;
+statements=If you're sailing in deep water, you owe it to your crew to buy a cannon!;
+statements=No sense buying more than one of the same kind, though.<p> You can only use one at a time.;
 nextNodeID=;
 
 [DialogNode] ID=port23_guy3a;
 animations=sly;
 animations=sigh;
-statements=这是一个矿业为主的小镇...<p>不要吓到了.;
-statements=食物还是不错的，公会的工资也没变.;
+statements=This here's a mining town...<p> but don't let that scare ya.;
+statements=Food's still good, and guild work pays jus' the same.;
 nextNodeID=;
 
 [DialogNode] ID=port23_guy4a;
 animations=sly;
 animations=sigh;
 animations=sly;
-statements=等等...<p>你看起来像个粗人.;
-statements=无冒犯的意思.<p>我是说你可能很擅长战斗.;
-statements=我们需要你这样的人.<p>有兴趣吗?;
+statements=Hold on...<p> you look like a rough sort.;
+statements=No 'fense.<p> I mean you could hold your own in a fight.;
+statements=We got a use for someone like you.<p> Interested?;
 
-[DialogOption] text=可能吧.多告诉我点信息.;
+[DialogOption] text=Maybe. Tell me more.;
 animation=;
 nodeToConnectTo=port23_guy4b;
-[DialogOption] text=不，谢谢.;
+[DialogOption] text=No thanks.;
 animation=sigh;
 newLineOfOptions=true;
 nodeToConnectTo=;
@@ -41,19 +41,19 @@ nodeToConnectTo=;
 animations=sigh;
 animations=;
 animations=sly;
-statements=新建的隧道遇到了一些野兽.<p>损失了一名优秀的矿工.;
-statements=我没看清到底有多少个，但肯定不止一只.;
-statements=清理这个地方，我可以为此支付$500作为报酬.;
+statements=Newest tunnel ran into some beasties.<p> Lost a good miner.;
+statements=Didn't get a good look at 'em but there's more than one.;
+statements=Clear the place out an' I reckon there's $500 in it for you.;
 
-[DialogOption] text=我会帮你.;
+[DialogOption] text=I'll do it.;
 animation=sly;
 formulaReq=m:partySize(5);
 nodeToConnectTo=port23_guy4c;
-[DialogOption] text=我会帮你.;
+[DialogOption] text=I'll do it.;
 animation=sly;
 formulaReq=1 - m:partySize(5);
 nodeToConnectTo=port23_guy4c_cant;
-[DialogOption] text=不，谢谢.;
+[DialogOption] text=No thanks.;
 animation=sigh;
 newLineOfOptions=true;
 nodeToConnectTo=;
@@ -61,8 +61,8 @@ nodeToConnectTo=;
 [DialogNode] ID=port23_guy4c;
 animations=happy;
 animations=;
-statements=那太棒了.<p>我为你打开这扇门.;
-statements=注意安全，好吗?;
+statements=That's great.<p> I'll unlock the door for ya.;
+statements=Stay safe now, y'hear?;
 nextNodeID=;
 specialEffect=setDefaultNode,port23_guy5a;
 specialEffect=action,mechanismArea;
@@ -71,24 +71,24 @@ specialEffect=action,mechanismArea;
 animations=sigh;
 animations=;
 animations=sigh;
-statements=等等.<p>我知道我已经出价了...;
-statements=你需要至少有5个人我才能给你开门.;
-statements=不然让你这么一小群人进去我可不会放心.;
+statements=Hol' on now.<p> I know I offered, but...;
+statements=Show me y'got at least 5 people to go in and I'll open 'er up.;
+statements=Just wouldn't rest easy with me lettin' ya go in with such a small group.;
 nextNodeID=;
 
 
 [DialogNode] ID=port23_guy5a;
 animations=sly;
-statements=怎么样了?<p>有收获吗?;
+statements=How's it goin'?<p> Any luck?;
 
-[DialogOption] text=我清理了隧道.;
+[DialogOption] text=I cleared the tunnel.;
 animation=;
 formulaReq=g:clearedMinesPort23;
 nodeToConnectTo=port23_guy5b;
-[DialogOption] text=还没有.;
+[DialogOption] text=Not yet.;
 newLineOfOptions=true;
 nodeToConnectTo=;
-[DialogOption] text=再见;
+[DialogOption] text=Goodbye;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -96,14 +96,14 @@ bottomOption=true;
 animations=happy;
 animations=;
 animations=sigh;
-statements=干得好!;
-statements=我说我会付$500...<p>但是它可能并不只是一只野兽.;
+statements=Great work!;
+statements=I said I'd pay $500...<p> but I can tell it weren't just a beastie.;
 nextNodeID=port23_guy5c;
 
 [DialogNode] ID=port23_guy5c;
 animations=happy;
-statements=拿上这$550.;
-statements=祝你好运.;
+statements=Take this $550.;
+statements=And best of luck to ya.;
 specialEffect=addgp,550;
 specialEffect=setDefaultNode,port23_guy6a;
 specialEffect=fx,sfx_questComplete;
@@ -112,8 +112,8 @@ specialEffect=modFame,combat,10;
 [DialogNode] ID=port23_guy6a;
 animations=sigh;
 animations=;
-statements=多亏了你，一切都正常了.;
-statements=终于送了口气.;
+statements=Business as usual now thanks to you.;
+statements=Take it easy.;
 
 
 

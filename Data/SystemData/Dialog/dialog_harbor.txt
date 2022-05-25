@@ -4,37 +4,37 @@
 
 [DialogNode] ID=harbor;
 animations=;
-statements=<randSetID=喂/'Ey> 这儿<rand=/ 小伙子/ 水手>.<p=> 需要存船吗?;
+statements=<randSetID=Ahoy/'Ey> there<rand=/ fella/ sailor>.<p=> Need to store a ship?;
 specialEffect=setDialogWindowSizeY,0;
 specialEffect=setPCDialogWindowSizeY,0;
-[DialogOption] text=停泊;
+[DialogOption] text=Moor;
 formulaReq=m:fleetSize(1);
 nodeToConnectTo=harbor_moor;
-[DialogOption] text=<color=SlateGray>停泊;
+[DialogOption] text=<color=SlateGray>Moor;
 formulaReq=2-m:fleetSize;
 nodeToConnectTo=harbor_moor_noships;
-[DialogOption] text=再见;
+[DialogOption] text=Goodbye;
 nodeToConnectTo=;
 bottomOption=true;
 
 --'error'/mistake dialogs
 [DialogNode] ID=harbor_moor_noships;
 animations=sigh;
-statements=你只有一艘船,伙计!<p=>等你有多了的船再来吧.;
+statements=You've only got one ship, mate!<p=> Come back when you've got extra.;
 nextNodeID=;
 [DialogNode] ID=harbor_moor_tooMuchCrew;
 animations=sigh;
-statements=那艘船上还有人，伙计!<p=>先安排妥当了再来.;
+statements=There's still crew on that ship, mate!<p=> Sort that out first and then come back to me.;
 nextNodeID=;
 [DialogNode] ID=harbor_moor_noroom;
 animations=sigh;
-statements=抱歉,好像已经满了.<p=>你得先取一艘船出来才行.;
+statements=Ach, sorry, looks like we're full up.<p=> Ye'll have to take one out of storage first.;
 nextNodeID=;
 
 ---buttons are out of order so they show up in alternating columns.
 [DialogNode] ID=harbor_moor;
 animations=;
-statements=这里最多能存下你的9艘船，你要存哪一艘?;
+statements=We can fit up to 9 of your ships here. Which one would ye like to stow?;
 specialEffect=setPCDialogWindowSizeY,260;
 --#0
 [DialogOption] text=<actorBigPFleet=0><partyBoatName=0>;
@@ -110,7 +110,7 @@ newLineOfOptions=true;
 formulaReq=m:fleetSize(4) + m:bCrewNum(4) - 1;
 nodeToConnectTo=harbor_moor_tooMuchCrew;
 
-[DialogOption] text=没事;
+[DialogOption] text=Nevermind;
 nodeToConnectTo=harbor;
 escOption=true;
 bottomOption=true;
@@ -121,11 +121,11 @@ bottomOption=true;
 --0
 [DialogNode] ID=harbor_moor_b0;
 animations=;
-statements=要把<actorBigPFleet=0><partyBoatName=0>存这里吗? 你随时可以取回.;
+statements=Want to keep <actorBigPFleet=0><partyBoatName=0> here? Y'can retrieve it anytime.;
 specialEffect=setPCDialogWindowSizeY,0;
-[DialogOption] text=好;
+[DialogOption] text=Yes;
 nodeToConnectTo=harbor_moor_yes_b0;
-[DialogOption] text=没事;
+[DialogOption] text=Nevermind;
 nodeToConnectTo=; escOption=true;
 bottomOption=true;
 
@@ -137,11 +137,11 @@ specialEffect=removeFromFleet_slot,0;
 --1
 [DialogNode] ID=harbor_moor_b1;
 animations=;
-statements=要把<actorBigPFleet=1><partyBoatName=1>存这里吗? 你随时可以取回.;
+statements=Want to keep <actorBigPFleet=1><partyBoatName=1> here? Y'can retrieve it anytime.;
 specialEffect=setPCDialogWindowSizeY,0;
-[DialogOption] text=好;
+[DialogOption] text=Yes;
 nodeToConnectTo=harbor_moor_yes_b1;
-[DialogOption] text=没事;
+[DialogOption] text=Nevermind;
 nodeToConnectTo=; escOption=true;
 bottomOption=true;
 
@@ -153,11 +153,11 @@ specialEffect=removeFromFleet_slot,1;
 --2
 [DialogNode] ID=harbor_moor_b2;
 animations=;
-statements=要把<actorBigPFleet=2><partyBoatName=2>存这里吗? 你随时可以取回.;
+statements=Want to keep <actorBigPFleet=2><partyBoatName=2> here? Y'can retrieve it anytime.;
 specialEffect=setPCDialogWindowSizeY,0;
-[DialogOption] text=好;
+[DialogOption] text=Yes;
 nodeToConnectTo=harbor_moor_yes_b2;
-[DialogOption] text=没事;
+[DialogOption] text=Nevermind;
 nodeToConnectTo=; escOption=true;
 bottomOption=true;
 
@@ -169,11 +169,11 @@ specialEffect=removeFromFleet_slot,2;
 --3
 [DialogNode] ID=harbor_moor_b3;
 animations=;
-statements=要把<actorBigPFleet=3><partyBoatName=3>存这里吗? 你随时可以取回.;
+statements=Want to keep <actorBigPFleet=3><partyBoatName=3> here? Y'can retrieve it anytime.;
 specialEffect=setPCDialogWindowSizeY,0;
-[DialogOption] text=好;
+[DialogOption] text=Yes;
 nodeToConnectTo=harbor_moor_yes_b3;
-[DialogOption] text=没事;
+[DialogOption] text=Nevermind;
 nodeToConnectTo=; escOption=true;
 bottomOption=true;
 
@@ -186,11 +186,11 @@ specialEffect=removeFromFleet_slot,3;
 --4
 [DialogNode] ID=harbor_moor_b4;
 animations=;
-statements=要把<actorBigPFleet=4><partyBoatName=4>存这里吗? 你随时可以取回.;
+statements=Want to keep <actorBigPFleet=4><partyBoatName=4> here? Y'can retrieve it anytime.;
 specialEffect=setPCDialogWindowSizeY,0;
-[DialogOption] text=好;
+[DialogOption] text=Yes;
 nodeToConnectTo=harbor_moor_yes_b4;
-[DialogOption] text=没事;
+[DialogOption] text=Nevermind;
 nodeToConnectTo=; escOption=true;
 bottomOption=true;
 
@@ -203,11 +203,11 @@ specialEffect=removeFromFleet_slot,4;
 --5
 [DialogNode] ID=harbor_moor_b5;
 animations=;
-statements=要把<actorBigPFleet=5><partyBoatName=5>存这里吗? 你随时可以取回.;
+statements=Want to keep <actorBigPFleet=5><partyBoatName=5> here? Y'can retrieve it anytime.;
 specialEffect=setPCDialogWindowSizeY,0;
-[DialogOption] text=好;
+[DialogOption] text=Yes;
 nodeToConnectTo=harbor_moor_yes_b5;
-[DialogOption] text=没事;
+[DialogOption] text=Nevermind;
 nodeToConnectTo=; escOption=true;
 bottomOption=true;
 
@@ -220,11 +220,11 @@ specialEffect=removeFromFleet_slot,5;
 --6
 [DialogNode] ID=harbor_moor_b6;
 animations=;
-statements=要把<actorBigPFleet=6><partyBoatName=6>存这里吗? 你随时可以取回.;
+statements=Want to keep <actorBigPFleet=6><partyBoatName=6> here? Y'can retrieve it anytime.;
 specialEffect=setPCDialogWindowSizeY,0;
-[DialogOption] text=好;
+[DialogOption] text=Yes;
 nodeToConnectTo=harbor_moor_yes_b6;
-[DialogOption] text=没事;
+[DialogOption] text=Nevermind;
 nodeToConnectTo=; escOption=true;
 bottomOption=true;
 
@@ -237,11 +237,11 @@ specialEffect=removeFromFleet_slot,6;
 --7
 [DialogNode] ID=harbor_moor_b7;
 animations=;
-statements=要把<actorBigPFleet=7><partyBoatName=7>存这里吗? 你随时可以取回.;
+statements=Want to keep <actorBigPFleet=7><partyBoatName=7> here? Y'can retrieve it anytime.;
 specialEffect=setPCDialogWindowSizeY,0;
-[DialogOption] text=好;
+[DialogOption] text=Yes;
 nodeToConnectTo=harbor_moor_yes_b7;
-[DialogOption] text=没事;
+[DialogOption] text=Nevermind;
 nodeToConnectTo=; escOption=true;
 bottomOption=true;
 
@@ -254,11 +254,11 @@ specialEffect=removeFromFleet_slot,7;
 --8
 [DialogNode] ID=harbor_moor_b8;
 animations=;
-statements=要把<actorBigPFleet=8><partyBoatName=8>存这里吗? 你随时可以取回.;
+statements=Want to keep <actorBigPFleet=8><partyBoatName=8> here? Y'can retrieve it anytime.;
 specialEffect=setPCDialogWindowSizeY,0;
-[DialogOption] text=好;
+[DialogOption] text=Yes;
 nodeToConnectTo=harbor_moor_yes_b8;
-[DialogOption] text=没事;
+[DialogOption] text=Nevermind;
 nodeToConnectTo=; escOption=true;
 bottomOption=true;
 
@@ -275,30 +275,30 @@ specialEffect=removeFromFleet_slot,8;
 
 [DialogNode] ID=boat_unmoor;
 animations=;
-statements=(把<actorName=>取出来?);
+statements=(Take <actorName=> out of storage?);
 specialEffect=gotoNodeIf,boat_unmoor_ghost,m:overworld;
-[DialogOption] text=服役;
+[DialogOption] text=Commission;
 formulaReq=9 - m:fleetSize;
 nodeToConnectTo=boat_unmoor_yes;
-[DialogOption] text=<color=SlateGray>服役;
+[DialogOption] text=<color=SlateGray>Commission;
 formulaReq=m:fleetSize - 8;
 nodeToConnectTo=boat_unmoor_cantFit;
-[DialogOption] text=没事;
+[DialogOption] text=Nevermind;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=boat_unmoor_yes;
-statements=(<actorName=>已经添加到你的舰队.);
+statements=(<actorName=> was added to your fleet.);
 specialEffect=addToFleet;
 
 [DialogNode] ID=boat_unmoor_cantFit;
-statements=(你的舰队最多9艘船.);
+statements=(You can only have 9 ships in your fleet.);
 
 
 [DialogNode] ID=boat_unmoor_ghost;
 animations=;
-statements=你的旧船的幻影, <actorName=>, 出现在你面前.;
-statements=然后幻象消失了，只留下一种不安的感觉.;
+statements=A vision of your old ship, <actorName=>, appears before you.;
+statements=Then the apparition fades, leaving only an uneasy feeling.;
 nextNodeID=boat_unmoor_ghost2;
 
 [DialogNode] ID=boat_unmoor_ghost2;

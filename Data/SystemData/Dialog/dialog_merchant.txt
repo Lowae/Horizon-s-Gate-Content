@@ -309,21 +309,21 @@ nextNodeID=merchant_invest_about;
 ------MERCHANT (ITEMS)
 [DialogNode] ID=merchant_items;
 animations=;
-statements=<randSetID=你需要的我都有./买点和卖点什么?/看看我精选的商品吧.>;
+statements=<randSetID=I got all the gear you need right here./Buying or selling?/Check out my fine selection of items.>;
 
-[DialogOption] text=交易;
+[DialogOption] text=Trade;
 nodeToConnectTo=merchant_items_buy;
-[DialogOption] text=再见;
+[DialogOption] text=Goodbye;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=merchant_items_buy;
 animations=;
-statements=看一看.;
+statements=Take a look.;
 specialEffect=enterBuyMode_locationItems;
 specialEffect=setNPCDialogWindowSizeY,120;
 specialEffect=setPCDialogWindowSizeY,68;
-[DialogOption] text=再见<textIfFinal==1-m:gamepad> (<keybind=endTurn>);
+[DialogOption] text=Goodbye<textIfFinal==1-m:gamepad> (<keybind=endTurn>);
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -331,21 +331,21 @@ bottomOption=true;
 ------MERCHANT (ITEMS)
 [DialogNode] ID=merchant_inv;
 animations=;
-statements=<randSetID=你需要的我都有./和卖点什么?/看看我精选的商品吧.>;
+statements=<randSetID=I got all the gear you need right here./Buying or selling?/Check out my fine selection of items.>;
 
-[DialogOption] text=交易;
+[DialogOption] text=Trade;
 nodeToConnectTo=merchant_inv_buy;
-[DialogOption] text=再见;
+[DialogOption] text=Goodbye;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=merchant_inv_buy;
 animations=;
-statements=看一看.;
+statements=Take a look.;
 specialEffect=enterBuyMode;
 specialEffect=setNPCDialogWindowSizeY,120;
 specialEffect=setPCDialogWindowSizeY,68;
-[DialogOption] text=再见<textIfFinal==1-m:gamepad> (<keybind=endTurn>);
+[DialogOption] text=Goodbye<textIfFinal==1-m:gamepad> (<keybind=endTurn>);
 nodeToConnectTo=;
 bottomOption=true;
 

@@ -103,13 +103,13 @@ statements=Come back whenever.<p> I'd hate for you to forget how to hold a hamme
 [DialogNode] ID=port7_dojo1;
 animations=chargePose;
 animations=handupPose;
-statements=欢迎, <textIf=esteemed =gIsMoreThan:fame_combat:499><textIf=旅行者,=gIsLessThan:fame_combat:200><textIf=战士,=gIsMoreThan:fame_combat:199>欢迎来到飞石拳道场!!!;
+statements=Welcome, <textIf=esteemed =gIsMoreThan:fame_combat:499><textIf=traveler,=gIsLessThan:fame_combat:200><textIf=warrior,=gIsMoreThan:fame_combat:199> to the Dojo of the Flying Rock Fist!!!;
 statements=Do you come to test your strength against us?;
 
-[DialogOption] text=战斗;
+[DialogOption] text=Fight;
 formulaReq=1-g:port7_dojo1;
 nodeToConnectTo=port7_dojo1_test;
-[DialogOption] text=再见;
+[DialogOption] text=Goodbye;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -117,8 +117,8 @@ bottomOption=true;
 [DialogNode] ID=port7_dojo1_test;
 animations=;
 animations=handsupPose;
-statements=非常好!我为你的勇气喝彩.;
-statements=进入飞石拳圣所，然后开始战斗吧!!;
+statements=Very well! I applaud your courage.;
+statements=Enter the Flying Rock Fist sanctum and be prepared for combat from the first moment!!;
 specialEffect=action,mechanismArea;
 specialEffect=incDefaultNode;
 

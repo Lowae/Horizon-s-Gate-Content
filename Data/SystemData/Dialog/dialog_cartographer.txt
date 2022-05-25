@@ -4,26 +4,26 @@
 
 [DialogNode] ID=cartographer;
 animations=;
-statements=<finalTextIf=你就是那个著名的探险家!你的制图工作做得很好!不过我真希望你为我工作...=g:mapCompleted><textIf=欢迎，有什么新的消息吗?=gIsTalker:cartographerContractID><textIf=你好.你想为制图师工作吗?=1-gIsTalker:cartographerContractID>;
-[DialogOption] text=合同;
+statements=<finalTextIf=You're that famous explorer! Well done on your cartography work! Although I do wish you had worked for me instead...=g:mapCompleted><textIf=Welcome. Anything new to report?=gIsTalker:cartographerContractID><textIf=Well met. Are you looking to work for a cartographer?=1-gIsTalker:cartographerContractID>;
+[DialogOption] text=Contract;
 --rebuke if you already have a contract with another cartographer
 formulaReq=gIsString:cartographerContractID - gIsTalker:cartographerContractID;
 nodeToConnectTo=cartographer_contract_withAnother;
-[DialogOption] text=合同;
+[DialogOption] text=Contract;
 --form a new contract
 formulaReq=1 - gIsString:cartographerContractID;
 nodeToConnectTo=cartographer_contract;
-[DialogOption] text=报告;
+[DialogOption] text=Report;
 --can only report if you have a contract and haven't completed world map
 formulaReq=gIsTalker:cartographerContractID - gIs1:mapPercentPaid;
 nodeToConnectTo=cartographer_report;
 specialEffect=cartographer_report,cartographer_report;
-[DialogOption] text=终止;
+[DialogOption] text=Terminate;
 --end contract
 newLineOfOptions=true;
 formulaReq=gIsTalker:cartographerContractID;
 nodeToConnectTo=cartographer_contract_terminate;
-[DialogOption] text=再见;
+[DialogOption] text=Goodbye;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -39,22 +39,22 @@ animations=;
 animations=sly;
 animations=sigh;
 animations=;
-statements=所以你愿意为我制图吗?;
-statements=如果我们签个合同，你每多探索一片地区我就会给你一笔费用.;
-statements=不过，要记住你的制图只能与我分享.;
-statements=如果你改变主意，你可以终止合同(会收取少量费用)，但即使这样，你也不能与其他制图师分享任何卖给我的东西.;
-statements=听起来怎么样?;
+statements=So you'd like to do cartography for me?;
+statements=If we form a contract, I'll pay you whenever you fill out more of your map.;
+statements=Remember, your mapwork is only to be shared with me.;
+statements=You can terminate the contract if you change your mind (for a small fee), but even then, you cannot share anything sold to me with other cartographers.;
+statements=Does this sound agreeable?;
 
-[DialogOption] text=好;
+[DialogOption] text=Yes;
 nodeToConnectTo=cartographer_contract_yes;
-[DialogOption] text=不;
+[DialogOption] text=No;
 nodeToConnectTo=cartographer_contract_no;
 
 [DialogNode] ID=cartographer_contract_yes;
 animations=happy;
 animations=;
-statements=太好了！我很期待和你一起工作.;
-statements=你可以随时来报告你的进展.;
+statements=Excellent! I look forward to working with you.;
+statements=Stop by any time to report on your progress.;
 specialEffect=setGlobalVarToTalkerID,cartographerContractID;
 specialEffect=setGlobalVarToLocID,cartographerContractLoc;
 specialEffect=fx,sfx_positiveNote2;
@@ -63,14 +63,14 @@ nextNodeID=;
 
 [DialogNode] ID=cartographer_contract_no;
 animations=;
-statements=好吧，如果你改变注意了就回来找我吧.;
+statements=Alright, then. Come back if you change your mind.;
 nextNodeID=;
 
 [DialogNode] ID=cartographer_contract_withAnother;
 animations=angry;
 animations=sigh;
-statements=你已经和其他制图师签订了合同！;
-statements=如果你真的想为我工作，就先解除其他的合同吧.;
+statements=You already have a contract with another cartographer!;
+statements=Go terminate your contract with them first if you really want to work for me.;
 nextNodeID=;
 
 --TERMINATE CONTRACT
@@ -78,16 +78,16 @@ nextNodeID=;
 [DialogNode] ID=cartographer_contract_terminate;
 animations=sigh;
 animations=;
-statements=所以...你不想再为我工作了?;
-statements=我理解.<p=3>然后根据我的协议，你必须一次性支付$300才能释放合同.;
+statements=So... you no longer wish to work for me?;
+statements=I understand.<p=3> Of course, per our agreement, you'll have to pay a one-time fee of $300 to be released.;
 nextNodeID=;
-[DialogOption] text=离开;
+[DialogOption] text=Nevermind;
 nodeToConnectTo=cartographer_contract_terminate_no;
-[DialogOption] text=支付 ($300);
+[DialogOption] text=Pay ($300);
 newLineOfOptions=true;
 formulaReq=m:money - 299;
 nodeToConnectTo=cartographer_contract_terminate_yes;
-[DialogOption] text=<color=SlateGray>(支付不起...);
+[DialogOption] text=<color=SlateGray>(Can't afford...);
 newLineOfOptions=true;
 formulaReq=300 - m:money;
 nodeToConnectTo=cartographer_contract_terminate_no;
@@ -97,19 +97,19 @@ animations=;
 specialEffect=subtract300gp;
 specialEffect=setGlobalVarTo0,cartographerContractID;
 specialEffect=setGlobalVarTo0,cartographerContractLoc;
-statements=好吧。我接受这$300...;
-statements=和你共事很愉快，祝你好运.;
+statements=Alright. I'll take that $300, then...;
+statements=It's been a pleasure working with you. Best of luck.;
 nextNodeID=;
 
 [DialogNode] ID=cartographer_contract_terminate_no;
 animations=sigh;
-statements=好吧，我就当你没提过这事.;
+statements=Well then. I'll just forget you mentioned it.;
 nextNodeID=;
 
 --
 
 [DialogNode] ID=cartographer_completed;
 animations=happy;
-statements=欢迎!<p>最近怎么样，朋友?<p>在我这不用太拘束!;
+statements=Welcome!<p> How are you, friend?<p> Make yourself at home!;
 nextNodeID=;
 

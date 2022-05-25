@@ -4,71 +4,71 @@
 
 [DialogNode] ID=questgiver;
 animations=;
-statements=想要和公会做任何生意吗?;
+statements=Any business with the guild?;
 
 
-[DialogOption] text=任务完成!;
+[DialogOption] text=Job Complete!;
 --generic turning a quest in to the questgiver
 formulaReq=g:questCompleted + gIsTalker:questGiver - 1 - gIs:questType,clearden;
 nodeToConnectTo=questgiver_job_complete;
 
-[DialogOption] text=清理完成!;
+[DialogOption] text=Den cleared!;
 --cleared monster den and at original questGiver
 formulaReq=gIs:questType,clearden + g:questCompleted + gIsTalker:questGiver - 2;
 nodeToConnectTo=questgiver_job_complete_clearden;
 
-[DialogOption] text=运送信件;
+[DialogOption] text=Deliver letter;
 --if you're delivering letter and this is the right location for it
 formulaReq=gIs:questType,letter + gIsLocID:questGoal - 1 - g:questRoyal * 999999;
 newLineOfOptions=true;
 nodeToConnectTo=questgiver_job_complete_letter;
 
-[DialogOption] text=运输货物;
+[DialogOption] text=Deliver cargo;
 --if you have enough cargo and you're back at the original questGiver
 formulaReq=gIs:questType,cargo + gIsTalker:questGiver + cargoItem_g:questGoal:10 - 2 - g:questRoyal * 999999;
 newLineOfOptions=true;
 nodeToConnectTo=questgiver_job_complete_cargo;
 
-[DialogOption] text=运送货物?;
+[DialogOption] text=Deliver cargo?;
 --if you DON'T have enough cargo
 formulaReq=gIs:questType,cargo + gIsTalker:questGiver + cargoItem_g:questGoal:1 - cargoItem_g:questGoal:10*100 - 2 - g:questRoyal * 999999;
 newLineOfOptions=true;
 nodeToConnectTo=questgiver_job_not_enough_cargo;
 
-[DialogOption] text=击败敌人!;
+[DialogOption] text=Defeated enemy!;
 --if you beat the fleet and at any questgiver
 formulaReq=gIs:questType,defeat * 100000 + g_gID:fleetsDefeated_:questGoal - g:questStartNum - 100000 - g:questRoyal * 999999;
 newLineOfOptions=true;
 nodeToConnectTo=questgiver_job_complete_defeat;
-[DialogOption] text=击杀怪物!;
+[DialogOption] text=Monster slain!;
 --if you slay a monster and at any questgiver
 formulaReq=gIs:questType,slay * 100000 + kills_g:questGoal - g:questStartNum - 100000 - g:questRoyal * 999999;
 newLineOfOptions=true;
 nodeToConnectTo=questgiver_job_complete_slay;
 
-[DialogOption] text=运送丢失货物;
+[DialogOption] text=Deliver lost cargo;
 --if you have the lost cargo and you're back at the original questGiver
 formulaReq=gIs:questType,salvage + gIsTalker:questGiver + cargoItem:cargo_lost:1 - 2 - g:questRoyal * 999999;
 newLineOfOptions=true;
 nodeToConnectTo=questgiver_job_salvage;
 
-[DialogOption] text=任务;
+[DialogOption] text=Jobs;
 formulaReq=gIs0:questCompleted - gIsString:questType;
 newLineOfOptions=true;
 specialEffect=jobDialogOptions,questgiver_jobs;
 nodeToConnectTo=questgiver_jobs;
 --busy with uncompleted quest
-[DialogOption] text=任务;
+[DialogOption] text=Jobs;
 newLineOfOptions=true;
 formulaReq=gIs0:questCompleted + gIsString:questType - 1;
 nodeToConnectTo=questgiver_jobs_already_busy;
 --busy with completed, but not turned in, royal quest
-[DialogOption] text=任务;
+[DialogOption] text=Jobs;
 newLineOfOptions=true;
 formulaReq=gIs1:questCompleted + gIsString:questType + g:questRoyal - 2;
 nodeToConnectTo=questgiver_jobs_already_busy;
 
-[DialogOption] text=再见;
+[DialogOption] text=Goodbye;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -77,37 +77,37 @@ bottomOption=true;
 [DialogNode] ID=questgiver_jobs_already_busy;
 animations=sigh;
 animations=;
-statements=你不是已经有一份你应该做的任务了吗?;
-statements='<g=questLog>',是这个吗?;
+statements=Don't you already have a job you should be doing?;
+statements='<g=questLog>', wasn't it?;
 nextNodeID=;
-[DialogOption] text=取消任务;
+[DialogOption] text=Cancel job;
 formulaReq=1 - g:questRoyal;
 nodeToConnectTo=questgiver_jobs_cancel;
-[DialogOption] text=取消任务;
+[DialogOption] text=Cancel job;
 formulaReq=g:questRoyal;
 nodeToConnectTo=questgiver_jobs_cant_cancel;
-[DialogOption] text=没事;
+[DialogOption] text=Nevermind;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=questgiver_job_not_enough_cargo;
 animations=sigh;
-statements=对不起，需要的东西还不够.我们需要10个这样的东西,但是你只有<math=cargoItem_g:questGoal><adjX=-4>个.;
+statements=Sorry, but you're a bit short. We need 10 of them, but you only have <math=cargoItem_g:questGoal><adjX=-4>.;
 nextNodeID=;
 
 ---
 
 [DialogNode] ID=questgiver_jobs;
 animations=;
-statements=以下是我们目前有的.;
+statements=Here's what we have available.;
 
 
 --JOB COMPLETE
 
 [DialogNode] ID=questgiver_job_complete;
 animations=;
-statements=<g=questLog>? 好,我看看.;
-statements=做的好.这是你的报酬 - $<math=g:questReward><adjX=-6>.;
+statements=<g=questLog>? Ah, I see.;
+statements=Well done. Here's your pay - $<math=g:questReward><adjX=-6>.;
 specialEffect=fx,sfx_questComplete;
 specialEffect=giveGlobalVarGP,questReward;
 specialEffect=modFame,trade,10;
@@ -115,8 +115,8 @@ nextNodeID=questgiver_job_complete2;
 
 [DialogNode] ID=questgiver_job_complete_letter;
 animations=;
-statements=<g=questLog>? 好，我看看.;
-statements=做的好.这是你的报酬 - $<math=g:questReward><adjX=-6>.;
+statements=<g=questLog>? Ah, I see.;
+statements=Well done. Here's your pay - $<math=g:questReward><adjX=-6>.;
 specialEffect=fx,sfx_questComplete;
 specialEffect=giveGlobalVarGP,questReward;
 specialEffect=modFame,trade,10;
@@ -125,8 +125,8 @@ nextNodeID=questgiver_job_complete2;
 
 [DialogNode] ID=questgiver_job_complete_cargo;
 animations=;
-statements=<g=questLog>, 这个?;
-statements=干的不错.这是你运送任务的报酬，总计$<math=g:questReward><adjX=-6>.;
+statements=<g=questLog>, eh?;
+statements=Good job. Here's the $<math=g:questReward><adjX=-6> reward for the delivery.;
 specialEffect=fx,sfx_questComplete;
 specialEffect=giveGlobalVarGP,questReward;
 specialEffect=removeCargo_g,questGoal,10;
@@ -136,8 +136,8 @@ nextNodeID=questgiver_job_complete2;
 
 [DialogNode] ID=questgiver_job_salvage;
 animations=;
-statements=你找到了丢失货物?<p>太好了!;
-statements=干得非常不错!<p> 这是你的奖赏，共计$<math=g:questReward><adjX=-6>.;
+statements=You found the lost cargo?<p> Excellent!;
+statements=Very well done!<p> Here's your $<math=g:questReward><adjX=-6> reward.;
 specialEffect=fx,sfx_questComplete;
 specialEffect=giveGlobalVarGP,questReward;
 specialEffect=removeCargo,cargo_lost,99;
@@ -148,8 +148,8 @@ nextNodeID=questgiver_job_complete2;
 
 [DialogNode] ID=questgiver_job_complete_defeat;
 animations=;
-statements=<g=questLog>, 这个?;
-statements=非常令人钦佩! 这是你为海洋安全做出贡献的报酬，共计$<math=g:questReward><adjX=-6>.;
+statements=<g=questLog>, eh?;
+statements=Very impressive! Here's your $<math=g:questReward><adjX=-6> reward for making the seas safer.;
 specialEffect=fx,sfx_questComplete;
 specialEffect=giveGlobalVarGP,questReward;
 specialEffect=modFame,trade,5;
@@ -160,7 +160,7 @@ nextNodeID=questgiver_job_complete2;
 [DialogNode] ID=questgiver_job_complete_slay;
 animations=;
 statements=<g=questLog>?;
-statements=这可不是个小壮举!这是你为海洋安全做出贡献的报酬，共计$<math=g:questReward><adjX=-6>.;
+statements=That's no small feat! Here's your $<math=g:questReward><adjX=-6> reward for making the seas safer.;
 specialEffect=fx,sfx_questComplete;
 specialEffect=giveGlobalVarGP,questReward;
 specialEffect=modFame,trade,5;
@@ -171,8 +171,8 @@ nextNodeID=questgiver_job_complete2;
 
 [DialogNode] ID=questgiver_job_complete_clearden;
 animations=;
-statements=<g=questLog>? 非常好.;
-statements=干得不错.这是你的报酬 - $<math=g:questReward><adjX=-6>!;
+statements=<g=questLog>? Very good.;
+statements=Well done. Here's your pay - $<math=g:questReward><adjX=-6>!;
 specialEffect=fx,sfx_questComplete;
 specialEffect=giveGlobalVarGP,questReward;
 specialEffect=modFame,trade,5;
@@ -182,11 +182,11 @@ nextNodeID=questgiver_job_complete2;
 
 
 [DialogNode] ID=questgiver_job_complete2;
-statements=公会由衷的感谢你的努力工作.;
+statements=The guild thanks you for your hard work.;
 specialEffect=cleanUpQuest;
 specialEffect=refreshLocQuests;
 
-[DialogOption] text=任务;
+[DialogOption] text=Jobs;
 formulaReq=g:questCompleted - gIsTalker:questGiver;
 newLineOfOptions=true;
 nodeToConnectTo=questgiver_jobs_already_busy;
@@ -196,28 +196,28 @@ nodeToConnectTo=questgiver_jobs_already_busy;
 [DialogNode] ID=questgiver_jobs_cancel;
 animations=sigh;
 animations=;
-statements=你确定吗?;
-statements=如果你确定你不能完成这个任务，你可以取消... 但是在你接受新任务之前你需要支付$20的费用.;
-[DialogOption] text=取消 ($20);
+statements=Are you sure?;
+statements=If you're certain you can't do the job, you can cancel... but you'll be required to pay a $20 fee before you can take on new jobs.;
+[DialogOption] text=Cancel ($20);
 formulaReq=m:money - 19;
 nodeToConnectTo=questgiver_jobs_cancel_confirm;
 [DialogOption] text=<color=SlateGray>(Can't afford...);
 formulaReq=20-m:money;
 nodeToConnectTo=questgiver;
-[DialogOption] text=没事;
+[DialogOption] text=Nevermind;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=questgiver_jobs_cant_cancel;
 animations=scared;
 animations=sigh;
-statements=等等，现在!<p=>这个任务太重要了.<p=>你不能取消它!;
-statements=如果你真想放弃，你就得自己去处理.;
+statements=Hold on, now!<p=> That job is way too important.<p=> I can't cancel it!;
+statements=If you really want to give up on it, you'll have to take it up with them yourself.;
 nextNodeID=;
 
 [DialogNode] ID=questgiver_jobs_cancel_confirm;
 animations=sigh;
-statements=理解.我会提交必要的文件.;
+statements=Understood. I'll file the necessary paperwork.;
 specialEffect=subtract20gp;
 specialEffect=cancelQuest;
 specialEffect=removeCargo,cargo_lost,99;
@@ -234,7 +234,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=gIsString:royalQuestType + gIs:playerFaction,seartial - 1 - g:questRoyal * 100 - gTimeSinceLessThan:questComplete_r:20 * 1000;
 animations=;
-statements=<pnamefull=> - the <color=DarkRed>西提尔的议会<color=>想要见你.;
+statements=<pnamefull=> - the <color=DarkRed>Council of Seartial<color=> wants to meet with you.;
 specialEffect=setGlobalVar,royalSummons,1;
 
 [DialogNodeOverride] ID=questgiver_royal_summons_jasce;
@@ -243,7 +243,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=gIsString:royalQuestType + gIs:playerFaction,jasce - 1 - g:questRoyal * 100 - gTimeSinceLessThan:questComplete_r:20 * 1000;
 animations=;
-statements=<pnamefull=> - 你知道<color=DarkRed>雅斯<color=>想要见你吗?;
+statements=<pnamefull=> - did you know <color=DarkRed>Jasce<color=> wants to meet with you?;
 specialEffect=setGlobalVar,royalSummons,1;
 
 [DialogNodeOverride] ID=questgiver_royal_summons_rumane;
@@ -252,7 +252,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=gIsString:royalQuestType + gIs:playerFaction,rumane - 1 - g:questRoyal * 100 - gTimeSinceLessThan:questComplete_r:20 * 1000;
 animations=;
-statements=<pnamefull=>, 你知道<color=DarkRed>罗马尼亚的国王<color=>正在找你吗?;
+statements=<pnamefull=>, did you know the <color=DarkRed>King of Rumane<color=> is looking for you?;
 specialEffect=setGlobalVar,royalSummons,1;
 
 
