@@ -3,27 +3,27 @@
 
 [DialogNode] ID=researcher;
 animations=idle;
-statements=<textIf=你好，你给我带来新东西了吗?=gIsTalker:researcherContractID><textIf=有什么发现就都告诉我吧，我会给你支付报酬.=1-gIsTalker:researcherContractID>;
+statements=<textIf=Hello. Have you brought me anything new?=gIsTalker:researcherContractID><textIf=Bring any discoveries you find to me, and I'll pay you well for them.=1-gIsTalker:researcherContractID>;
 
-[DialogOption] text=合同;
+[DialogOption] text=Contract;
 --rebuke if you already have a contract with another researcher
 formulaReq=gIsString:researcherContractID - gIsTalker:researcherContractID;
 nodeToConnectTo=researcher_contract_withAnother;
-[DialogOption] text=合同;
+[DialogOption] text=Contract;
 --form a new contract
 formulaReq=1 - gIsString:researcherContractID;
 nodeToConnectTo=researcher_contract;
-[DialogOption] text=报告;
+[DialogOption] text=Report;
 --can only report if you have a contract
 formulaReq=gIsTalker:researcherContractID;
 nodeToConnectTo=researcher_report;
 specialEffect=research_report,researcher_report;
-[DialogOption] text=终止合同;
+[DialogOption] text=Terminate;
 --end contract
 newLineOfOptions=true;
 formulaReq=gIsTalker:researcherContractID;
 nodeToConnectTo=researcher_contract_terminate;
-[DialogOption] text=再见;
+[DialogOption] text=Goodbye;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -43,22 +43,22 @@ specialEffect=completeJournalGoal,@0.8,* 'LOOK' and sell the info to a researche
 animations=;
 animations=;
 animations=;
-statements=让我来解释一下我们之间的合同是什么.;
-statements=你在外面的世界，使用 'Look' 来观察生物, 物品, 化石- 或者任何东西.这些都会为你的日志添加条目.;
-statements=你没给我带来新的日志条目我都会给你支付报酬，我愿意花钱买稀有的发现.;
-statements=当然，每条日志只能出售一次...而且也不要带给其他的研究员.当你和我签订合同后，你只能出售给我.;
-statements=听起来怎么样?我们可以签订合同了吗?;
+statements=Let me explain what a contract between us entails.;
+statements=You go out into the world and 'Look' at creatures, items, fossils- anything. This adds an entry to your journal.;
+statements=I'll pay you for each entry you bring me. And I'll pay more for rarer finds.;
+statements=Of course, you can only sell each journal entry once... no bringing it to other researchers. And while you're under contract, you only sell to me.;
+statements=How does that sound? Shall we form a contract?;
 
-[DialogOption] text=好;
+[DialogOption] text=Yes;
 nodeToConnectTo=researcher_contract_yes;
-[DialogOption] text=不;
+[DialogOption] text=No;
 nodeToConnectTo=researcher_contract_no;
 
 [DialogNode] ID=researcher_contract_yes;
 animations=sigh;
 animations=;
-statements=非常好!就当我们的合同这样定下来了.;
-statements=可以随时把你的发现告诉我.;
+statements=Very good! Consider our agreement finalized.;
+statements=Bring me your discoveries any time.;
 specialEffect=setGlobalVarToTalkerID,researcherContractID;
 specialEffect=setGlobalVarToLocID,researcherContractLoc;
 specialEffect=fx,sfx_positiveNote2;
@@ -67,14 +67,14 @@ nextNodeID=;
 
 [DialogNode] ID=researcher_contract_no;
 animations=;
-statements=好吧，如果你重新考虑了，我还是在这里.;
+statements=Fair enough. I'll be here if you reconsider.;
 nextNodeID=;
 
 [DialogNode] ID=researcher_contract_withAnother;
 animations=sigh;
 animations=;
-statements=抱歉，你好像已经和另一位研究员签订了合同.;
-statements=需要先和他们解除合同，然后再回来.;
+statements=I'm sorry, but you already have a contract with another researcher.;
+statements=Terminate your contract with them first, then come back here.;
 nextNodeID=;
 
 

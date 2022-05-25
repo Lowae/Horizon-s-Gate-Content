@@ -371,18 +371,18 @@ animations=sigh;
 animations=;
 animations=happy;
 animations=;
-statements=你是来帮助 Rubinn 完成研究的吗?;
-statements=进去吧.<p>他会给你不错的报酬的.;
-statements=至于我?<p>我是他的助理.<p>我现在正在休息.;
-statements=<speed=0.5>除非...<p> <speed=1>除非你是想买些信息而不是卖.;
-statements=那你找对人了.<p>我可能了解你想知道的一切.;
+statements=You here to help Rubinn with his research?;
+statements=Go on in.<p> He'll pay ya well.;
+statements=Me?<p>  I'm his assistant.<p>  I'm on break.;
+statements=<speed=0.5>Unless...<p> <speed=1>unless you're lookin' to BUY information rather than sell.;
+statements=Then you're in the right place.<p> I hear just about anything you might wanna know.;
 specialEffect=setDefaultNode,investigator;
 nextNodeID=investigator;
 
 [DialogNode] ID=investigator_done_covlan;
 animations=happy;
 animations=;
-statements=嘿，正是时候.<p>我你想要的信息我都有了.;
+statements=Hey, good timing.<p> I got all the info you wanted.;
 statements=<speed=0.8><g=investigatorAnswer_covlan>;
 specialEffect=fx,sfx_questComplete_small;
 specialEffect=setDefaultNode,investigator;
@@ -391,7 +391,7 @@ specialEffect=task_gvar,investigatorTask_covlan;
 [DialogNode] ID=investigator_repeat_covlan;
 animations=sigh;
 animations=;
-statements=你想再听我说一遍吗?;
+statements=You wanna hear what I said again?;
 statements=<speed=0.8><g=investigatorAnswer_covlan>;
 
 
@@ -401,14 +401,14 @@ dialogNodeID_toOverride=investigator;
 fReq=talker:covlan;
 overrideSpecialEffects=false;
 animations=;
-statements=所以...<p>你想了解什么?;
+statements=So...<p> what're you after?;
 
 [DialogNodeOverride] ID=investigator_stillbusy_covlan;
 dialogNodeID_toOverride=investigator_stillbusy;
 fReq=talker:covlan;
 overrideSpecialEffects=false;
 animations=sigh;
-statements=没什么能提供给你的，耐心点.;
+statements=Nothin' for you yet. Be patient.;
 
 [DialogNodeOverride] ID=investigator_cant_afford_covlan;
 dialogNodeID_toOverride=investigator_cant_afford;
