@@ -614,12 +614,12 @@ statements=The Shining Void dojo is always here for you.;
 
 [DialogNode] ID=port29_dojo1;
 animations=angry;
-statements=This is the Axe Lords' dojo. You want to fight us, <textIf=warrior?=gIsMoreThan:fame_combat:199><textIf=whelp?=gIsLessThan:fame_combat:200>;
+statements=这里是斧王道场。你想和我们战斗吗, <textIf=战士?=gIsMoreThan:fame_combat:199><textIf=小狗?=gIsLessThan:fame_combat:200>;
 
-[DialogOption] text=Fight;
+[DialogOption] text=战斗;
 formulaReq=1-g:port29_dojo1;
 nodeToConnectTo=port29_dojo1_test;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -627,8 +627,8 @@ bottomOption=true;
 [DialogNode] ID=port29_dojo1_test;
 animations=stern;
 animations=;
-statements=Hreh.<p> Go on in then!!;
-statements=Down those stairs...<p> and then you'll meet the Axe Lords.;
+statements=哈哈.<p>进去吧!!;
+statements=从楼梯下去...<p>然后你就会见到斧王.;
 specialEffect=action,mechanismArea;
 specialEffect=incDefaultNode;
 

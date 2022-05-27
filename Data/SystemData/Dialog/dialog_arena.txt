@@ -3,8 +3,8 @@
 
 [DialogNode] ID=arena;
 animations=;
-statements=<textIf=Welcome to the arena! Interested in fighting?=gTimeSinceMoreThanOrNeverAssigned:arenaEntrant2:100><textIf=Come back soon!=gTimeSinceLessThanOrEqual:arenaEntrant2:100>;
-[DialogOption] text=Explain the rules;
+statements=<textIf=欢迎来到竞技场!对战斗感兴趣吗?=gTimeSinceMoreThanOrNeverAssigned:arenaEntrant2:100><textIf=很快就回来!=gTimeSinceLessThanOrEqual:arenaEntrant2:100>;
+[DialogOption] text=规则说明;
 nodeToConnectTo=arena_rules1a;
 formulaReq=1-g:D_arena_won4_firstVictory;
 [DialogOption] text=Explain elite arena;
@@ -42,12 +42,12 @@ animations=sly;
 animations=;
 animations=happy;
 animations=;
-statements=Certainly!<p> It's a series of four fights<p> - but with a twist!;
-statements=You enter two combatants as a team.<p> They go up against another pair of fighters.;
-statements=If you win, you go on to the next round <p>- AND one of the fighters you just defeated joins you!;
-statements=Your team of three fights another trio -<p> again, adding a new member if you win!;
-statements=If you win the four-on-four fight, you make it to the FINAL five-on-five brawl!;
-statements=Win that, and you'll recieve the grand prize!<p> You also earn hefty sums of gold for each individual victory, so don't worry if you don't make it to the end.;
+statements=行!<p>一共有四场比赛<p> - but with a twist!;
+statements=两名参战者组成一个队伍.<p>他们要面对另一对参战者.;
+statements=如果你赢了，你将进入下一轮 <p>- 而且，你打败的队伍其中一名参战者可以加入你的队伍!;
+statements=你的三人组队伍会与另一队三人组战斗 -<p>如果你赢了，再增加一位新成员!;
+statements=如果你继续赢了四对四的比赛，你就能进入最终的五对五的比赛!;
+statements=赢了它，你就能获得最终大奖!<p>你每次胜利都可以获得大量的金币,所以如果你没能坚持到最后也不用担心.;
 nextNodeID=arena;
 
 --JOIN
@@ -71,7 +71,7 @@ nextNodeID=;
 
 [DialogNode] ID=arena_join1;
 animations=;
-statements=Who would like to enter?;
+statements=谁愿意参加?;
 specialEffect=healparty;
 [DialogOption] text=<portraitBig=0><partyActorName=0>;
 specialEffect=setGlobalVarToPartyActorNum,arenaEntrant1,0;
@@ -96,7 +96,7 @@ newLineOfOptions=true;
 specialEffect=setGlobalVarToPartyActorNum,arenaEntrant1,4;
 formulaReq=m:partySize-4;
 nodeToConnectTo=arena_join2;
-[DialogOption] text=Nobody;
+[DialogOption] text=没人;
 nodeToConnectTo=;
 escOption=true;
 bottomOption=true;
@@ -104,7 +104,7 @@ bottomOption=true;
 
 [DialogNode] ID=arena_join2;
 animations=;
-statements=And who is your second entrant?;
+statements=第二位参赛者是谁?;
 [DialogOption] text=<portraitBig=0><partyActorName=0>;
 specialEffect=setGlobalVarToPartyActorNum,arenaEntrant2,0;
 formulaReq=m:partySize-1 - gIs:arenaEntrant1:0*99;
@@ -129,7 +129,7 @@ newLineOfOptions=true;
 specialEffect=setGlobalVarToPartyActorNum,arenaEntrant2,4;
 formulaReq=m:partySize-4 - gIs:arenaEntrant1:4*99;
 nodeToConnectTo=arena_join3;
-[DialogOption] text=Back;
+[DialogOption] text=返回;
 nodeToConnectTo=arena_join1;
 escOption=true;
 bottomOption=true;
@@ -138,7 +138,7 @@ bottomOption=true;
 
 [DialogNode] ID=arena_join3;
 animations=happy;
-statements=Excellent!<p> Let's head directly to the arena!!;
+statements=太棒了!<p>让我们直接前往竞技场吧!!;
 nextNodeID=arena_join4;
 
 [DialogNode] ID=arena_join4;

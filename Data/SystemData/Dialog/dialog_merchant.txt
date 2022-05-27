@@ -382,8 +382,8 @@ overrideSpecialEffects=false;
 fReq=gIsLocID:tradeSpecial_locID;
 animations=sly;
 animations=happy;
-statements=Hey, got any <color=DarkRed><itemBig_global=tradeSpecial_goodsID> <itemName_global=tradeSpecial_goodsID><color=>?;
-statements=I'll pay you <color=DarkRed>double<color=> the <color=DarkRed>first time<color=> you sell 'em here!;
+statements=嘿，手里有<color=DarkRed><itemBig_global=tradeSpecial_goodsID> <itemName_global=tradeSpecial_goodsID><color=>吗?;
+statements=我会支付你<color=DarkRed>双倍<color=>的价格当你在这儿<color=DarkRed>第一次<color=>出售!;
 
 
 
@@ -395,7 +395,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=gIsString:royalQuestType + gIs:playerFaction,seartial + gIsLocFaction:playerFaction - 2 - g:questRoyal * 100 - gTimeSinceLessThan:questComplete_r:20 * 1000;
 animations=;
-statements=Welcome, <pnamefull=>. I hear the <color=DarkRed>Council<color=> is looking for you.;
+statements=欢迎, <pnamefull=>.我听说<color=DarkRed>议会<color=>正在找你.;
 specialEffect=setGlobalVar,royalSummons,1;
 
 [DialogNodeOverride] ID=merchant_royal_summons_jasce;

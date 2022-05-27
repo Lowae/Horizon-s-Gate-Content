@@ -1,8 +1,8 @@
 [DialogNode] ID=bandit1a;
 animations=sly;
 animations=scared;
-statements=Hold on, who's this?;
-statements=Looks like fellow explorers!<p> How grand!;
+statements=等等，这是谁?;
+statements=看起来像探险者同伴!<p>欢迎!;
 nextNodeID=bandit1a_reeve;
 nextNodeID_fReq=party:reeve;
 nextNodeID=bandit1b;
@@ -10,21 +10,21 @@ nextNodeID=bandit1b;
 [DialogNode] ID=bandit1a_reeve;
 animations=sly;
 speakerOverride=reeve;
-statements=Careful,<p> <pname>...<p> I have a bad feeling about these guys.;
+statements=小心点,<p> <pname>...<p> 我对这些人有种不好的预感.;
 nextNodeID=bandit1b;
 
 [DialogNode] ID=bandit1b;
 speakerOverride=galf;
 animations=happy;
 animations=sigh;
-statements=I suppose we're not the only ones to discover this nice grove!;
+statements=我想我们不是唯一发现这片美丽树林的人!;
 specialEffect=setDefaultNode,;
-statements=Yes, indeed...;
+statements=是的，的确...;
 
-[DialogOption] text=Nice to meet you!;
+[DialogOption] text=很高兴见到你!;
 animation=happy;
 nodeToConnectTo=bandit1c;
-[DialogOption] text=And you are?;
+[DialogOption] text=你是?;
 animation=sly;
 newLineOfOptions=true;
 nodeToConnectTo=bandit1c;
@@ -37,9 +37,9 @@ nodeToConnectTo=bandit1c;
 animations=sly;
 animations=stern;
 animations=sly;
-statements=<speed=0.7>Yes,<p> we aren't the only ones to discover it,<p> now,<p> are we...?;
-statements=Wouldn't that be nice for us if we WERE the only ones to discover it!;
-statements=Hehe!<p> He he he...;
+statements=<speed=0.7>没错,<p>现在我们不是唯一发现的人了,<p>现在,<p>我们...?;
+statements=如果我们是唯一发现它的人，岂不是更好!;
+statements=哈哈...;
 nextNodeID=enemyInitiateCombat;
 
 
