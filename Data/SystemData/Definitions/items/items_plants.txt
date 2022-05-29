@@ -875,17 +875,17 @@ ID=tree_guln1; element=explode; newID=tree_guln_stump1;
 
   
   
-[ItemType]  name=Guln树;
+[ItemType]  name=古尔恩树;
 ID=tree_guln2; sprite=338;
 cloneFrom=tree_guln1;
-[ItemType]  name=Guln Tree;
+[ItemType]  name=古尔恩树;
 ID=tree_guln3; sprite=340;
 cloneFrom=tree_guln1;
-[ItemType]  name=Guln Tree;
+[ItemType]  name=古尔恩树;
 ID=tree_guln4; sprite=342;
 cloneFrom=tree_guln1;
 
-[ItemType]  name=Guln树桩;
+[ItemType]  name=古尔恩树桩;
 ID=tree_guln_stump1; sprite=304; 
 journalID=journal_tree_guln;
 weight=500; itemCategory=plant;
@@ -898,8 +898,8 @@ blockWalking=true;
 [JournalEntry]
 ID=journal_tree_guln;
 category=item; halfPage=true; rarity=2;
-title=Guln树;
-text=<itemBig=tree_guln1><title=Guln树><brAdj=>Guln树覆盖着蓬松的、带静电的叶子.<n>们虽然易燃,但对电有爆炸性反应.<n>这种爆炸一方面起到了威慑入侵的作用,<n>另一方面也将它们的种子弹射到很远的地方.;
+title=古尔恩树;
+text=<itemBig=tree_guln1><title=古尔恩树><brAdj=>Guln树覆盖着蓬松的、带静电的叶子.<n>们虽然易燃,但对电有爆炸性反应.<n>这种爆炸一方面起到了威慑入侵的作用,<n>另一方面也将它们的种子弹射到很远的地方.;
 
 
 [ItemType]  name=巨大的树;
@@ -1446,7 +1446,7 @@ toMake=vine_branch6;
 
 
 
-[ItemType]  name=Rutroot;
+[ItemType]  name=车辙根;
 ID=rutroot1; sprite=1174; itemCategory=plant; 
 journalID=journal_rutroot;
 special=cannotBePickedUp;
@@ -1460,7 +1460,7 @@ ID=rutroot1; element=fire; newID=fire; fx=burn;
 [ItemReaction] 
 ID=rutroot1; element=heavySlash; element=explode; element=ruin; newID=X; fx=dust_wood;
 
-[ItemType]  name=Rutroot树;
+[ItemType]  name=车辙根树;
 ID=tree_rutroot; sprite=1175; itemCategory=plant; 
 journalID=journal_rutroot;
 pR=p43; pB=p43;
@@ -1476,10 +1476,10 @@ ID=tree_rutroot; element=heavySlash; element=shatter; element=explode; element=r
 [JournalEntry]
 ID=journal_rutroot;
 category=item; halfPage=true; rarity=1;
-title=Rutroot;
-text=<itemBig=tree_rutroot><title=Rutroot><brAdj=>因其根又宽又长而得名.<n>不结果实,也不长叶子,长得很矮.<n>树根在战斗中很难移动,但也相当易燃.;
+title=车辙根树;
+text=<itemBig=tree_rutroot><title=车辙根树><brAdj=>因其根又宽又长而得名.<n>不结果实,也不长叶子,长得很矮.<n>树根在战斗中很难移动,但也相当易燃.;
 
-[ItemType]  name=Rutroot;
+[ItemType]  name=车辙根;
 ID=rutroot2; sprite=1239; itemCategory=plant; 
 journalID=journal_rutroot;
 special=cannotBePickedUp; special=canFloatOnWater; special=canBeInsideWalls;
@@ -1647,7 +1647,7 @@ ID=pod_sickly; element=life; newID=pod_burst;
 ID=item_pod_sickly;
 category=item; halfPage=true; rarity=1;
 title=有毒豆荚;
-text=<itemBig=pod_sickly><title=Sickly Pod><brAdj=>一个充满恶臭有毒空气的爆炸豆荚.<n>当它爆炸的时候,站它旁边是一个大错误.;
+text=<itemBig=pod_sickly><title=有毒豆荚><brAdj=>一个充满恶臭有毒空气的爆炸豆荚.<n>当它爆炸的时候,站它旁边是一个大错误.;
 
 [ItemType]  name=爆裂豆荚;
 ID=pod_blast; sprite=1221; 
@@ -1682,7 +1682,7 @@ ID=pod_small1; element=fire; element=smash; element=slash; newID=X;
 [ItemReaction] 
 ID=pod_small1; element=growth; newID=pod_burst;
 
-[ItemType]  name=Podlings;
+[ItemType]  name=豆荚;
 ID=pod_small2; sprite=1198; 
 cloneFrom=pod_small1;
 

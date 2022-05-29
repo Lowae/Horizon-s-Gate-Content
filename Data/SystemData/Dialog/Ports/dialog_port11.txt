@@ -1,29 +1,29 @@
 [DialogNode] ID=port11_guy1a;
 animations=scared;
-statements=I knew they called Jascias the 'City of Gold'...<p> but this is something else!;
+statements=我知道他们称 Jascias 是'黄金之城'...<p>但是这是另一回事!;
 nextNodeID=;
 
 [DialogNode] ID=port11_guy2a;
 animations=;
 animations=sly;
 animations=happy;
-statements=Enjoying the garden?;
-statements=It wasn't easy to...<p> I mean, it's been my pleasure to tend it!;
-statements=Take your time and enjoy it!<textIf= As long as you don't mess with it this time!=g:D_port11_guy2b_pay>;
+statements=喜欢花园吗?;
+statements=这并不容易...<p>我是说, 照料它是我的荣幸!;
+statements=好好享受这里吧!<textIf=只要这次你别搞砸了!=g:D_port11_guy2b_pay>;
 nextNodeID=;
 
 [DialogNode] ID=port11_guy2b;
 animations=angry;
 animations=stern;
-statements=How dare you despoil Jasce' garden<textIf=, again!=g:D_port11_guy2b_pay>!;
-statements=You'll pay for that!;
+statements=你怎么敢掠夺雅斯的花园<textIf=,还是第二次!=g:D_port11_guy2b_pay>!;
+statements=你会为此付出代价的!;
 nextNodeID=port11_guy2b_rank;
 nextNodeID_fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
 nextNodeID=port11_guy2b_pay;
 
 [DialogNode] ID=port11_guy2b_pay;
 animations=sly;
-statements=The fine is $30, to be exact!;
+statements=准确来说，罚款是$30!;
 specialEffect=subtract30gp;
 nextNodeID=;
 
@@ -31,99 +31,99 @@ nextNodeID=;
 animations=scared;
 animations=happy;
 animations=sad;
-statements=Er...<p> i-is...<p> what I would say...<p=2> to whoever did this!;
-statements=Of course <pfullname=> would never cause any problem!<p> To be sure!;
+statements=呃...<p> 那是...<p>我要说的是...<p=2>不管是谁干的!;
+statements=当然，<pfullname=> 不会造成任何问题!<p>我可以肯定!;
 
 [DialogNode] ID=port11_guy3a;
 animations=;
 animations=;
-statements=I don't have anything to sell...<p> I just work here.;
-statements=The forge is free for visitors to use, though.;
+statements=我没有什么东西要卖...<p>我仅仅在这儿工作.;
+statements=不过，这个铁匠铺是免费提供给游客使用的.;
 nextNodeID=;
 
 [DialogNode] ID=port11_guy4a;
 animations=sigh;
-statements=Jasce is truly great and merciful...!;
+statements=雅斯真的很伟大，很仁慈...!;
 nextNodeID=;
 specialEffect=facingRotPrev;
 
 [DialogNode] ID=port11_guy5a;
 animations=;
 animations=;
-statements=Welcome to Jascias!;
-statements=The temple is straight ahead to the pavilion, then to the right!;
+statements=欢迎来到 Jascias!;
+statements=神殿在前面直走到看台，然后在右边!;
 nextNodeID=;
 
 [DialogNode] ID=port11_guy6a;
 animations=;
-statements=I know the sermon has ended, but I still have prayers left to say.;
+statements=我知道布道已经结束了，但是我还有祷告要说.;
 nextNodeID=;
 
 [DialogNode] ID=port11_guy7a;
 animations=;
-statements=This is quite a selection...!;
+statements=这好难选啊...!;
 nextNodeID=;
 
 [DialogNode] ID=port11_guy8a;
 animations=stern;
-statements=You know we can't afford it!<p> That's why we're making this trip in the first place!;
+statements=你知道我们负担不起!<p>这就是我们这次旅行的初衷!;
 nextNodeID=;
 specialEffect=facingRotPrev;
 
 [DialogNode] ID=port11_guy9a;
 animations=angry;
-statements=But their Deep Wine is to die for!<p> Who knows if we ever get another chance to try it?;
+statements=但他们的深酒太好喝了!<p>谁知道我们还能不能有机会再试一次?;
 nextNodeID=;
 specialEffect=facingRotPrev;
 
 [DialogNode] ID=port11_guy10a;
 animations=scared;
 animations=meh;
-statements=This machine is amazing!<p> It's so intricate...;
-statements=Is it really safe to have out here?;
+statements=这机器太令人惊叹了!<p>同样也太复杂了...;
+statements=这里真的安全吗?;
 nextNodeID=;
 specialEffect=facingRotPrev;
 
 [DialogNode] ID=port11_guy11a;
 animations=;
 animations=happy;
-statements=Pearls are a great buy!;
-statements=Even my little Caravel can carry a fortune's worth!;
+statements=珍珠很值得购买!;
+statements=就连我的小卡拉维尔帆船也能携带一大笔财富!;
 nextNodeID=;
 
 [DialogNode] ID=port11_guy12a;
 animations=sly;
 animations=stern;
 animations=;
-statements=What?<p=2> Surprised to see an Unmaker in a civilized place?;
-statements=Jascias is above the petty superstitions of the elementalists.;
-statements=Ruin magic is capable of things besides violence, you know.;
+statements=什么?<p=2> 在一个文明的地方看到毁灭者很惊讶吗?;
+statements=Jascias 超越了元素主义者的不重要的迷信.;
+statements=毁灭魔法除了暴力还能做其他事，你也知道.;
 nextNodeID=;
 
 --buralk
 
 [DialogNode] ID=port11_b1a;
 animations=meh;
-statements=<speed=0.35>...not supposed to...;
+statements=<speed=0.35>...不应该...;
 nextNodeID=;
 
 
 [DialogNode] ID=port11_b2a;
 animations=scared;
-statements=<speed=0.4>...y-you're in the wrong place.;
+statements=<speed=0.4>...你-你来错地方了.;
 nextNodeID=;
 
 
 [DialogNode] ID=port11_b3a;
 animations=sigh;
-statements=<speed=0.2>...nothing...;
+statements=<speed=0.2>...没事...;
 nextNodeID=;
 
 --guards
 
 [DialogNode] ID=port11_guard1a;
 animations=;
-statements=Do not touch the Antiair machines.;
+statements=不要碰这些防空机器.;
 nextNodeID=;
 
 [DialogNodeOverride] ID=maxRank_port11_guard1a;
@@ -131,11 +131,11 @@ dialogNodeID_toOverride=port11_guard1a;
 fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
 completeOverride=true; overrideSpecialEffects=true;
 animations=stern;
-statements=Hail <pnamefull=>!;
+statements=嗨 <pnamefull=>!;
 
 [DialogNode] ID=port11_guard2a;
 animations=;
-statements=Jasce's temple is to the right.;
+statements=雅斯神殿在右边.;
 nextNodeID=;
 
 [DialogNodeOverride] ID=maxRank_port11_guard2a;
@@ -143,11 +143,11 @@ dialogNodeID_toOverride=port11_guard2a;
 fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
 completeOverride=true; overrideSpecialEffects=true;
 animations=stern;
-statements=All in order here, <pnamefull=>!;
+statements=一切就绪, <pnamefull=>!;
 
 [DialogNode] ID=port11_guard3a;
 animations=sigh;
-statements=If you have words for the Auspex, you may enter.;
+statements=如果你有话对 Auspex 说, 请进吧.;
 nextNodeID=;
 
 [DialogNodeOverride] ID=maxRank_port11_guard3a;
@@ -155,11 +155,11 @@ dialogNodeID_toOverride=port11_guard3a;
 fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
 completeOverride=true; overrideSpecialEffects=true;
 animations=happy;
-statements=Good day, <pnamefull=>!;
+statements=日安, <pnamefull=>!;
 
 [DialogNode] ID=port11_guard4a;
 animations=;
-statements=The palace is open to visitors.;
+statements=这座宫殿对游客开放.;
 nextNodeID=;
 
 [DialogNodeOverride] ID=maxRank_port11_guard4a;
@@ -167,11 +167,11 @@ dialogNodeID_toOverride=port11_guard4a;
 fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
 completeOverride=true; overrideSpecialEffects=true;
 animations=stern;
-statements=Jasce' will be done, <pnamefull=>!;
+statements=雅斯会搞定的, <pnamefull=>!;
 
 [DialogNode] ID=port11_guard5a;
 animations=;
-statements=Carry on.;
+statements=继续.;
 nextNodeID=;
 
 [DialogNodeOverride] ID=maxRank_port11_guard5a;
@@ -179,11 +179,11 @@ dialogNodeID_toOverride=port11_guard5a;
 fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
 completeOverride=true; overrideSpecialEffects=true;
 animations=;
-statements=A good <dayname=> to you, <pnamefull=>!;
+statements=祝你 <dayname=> 愉快, <pnamefull=>!;
 
 [DialogNode] ID=port11_guard6a;
 animations=;
-statements=This is just a guard house...<p=1.5> not a tourist spot.;
+statements=这只是个警卫室...<p=1.5>不是景点.;
 nextNodeID=;
 
 [DialogNodeOverride] ID=maxRank_port11_guard6a;
@@ -192,12 +192,12 @@ fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
 completeOverride=true; overrideSpecialEffects=true;
 animations=scared;
 animations=happy;
-statements=Oh, <pnamefull=>!<p> Visiting the guard house?;
-statements=Uh...<p> would you like a tour?;
+statements=噢, <pnamefull=>!<p> 参观警卫室吗?;
+statements=呃...<p>你想参观下吗?;
 
 [DialogNode] ID=port11_guard7a;
 animations=sly;
-statements=Did you need something?;
+statements=你需要什么吗?;
 nextNodeID=;
 
 [DialogNodeOverride] ID=maxRank_port11_guard7a;
@@ -205,13 +205,13 @@ dialogNodeID_toOverride=port11_guard7a;
 fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
 completeOverride=true; overrideSpecialEffects=true;
 animations=sigh;
-statements=Anything you need, <pnamefull=>.;
+statements=任何你需要的, <pnamefull=>.;
 
 [DialogNode] ID=port11_guard8a;
 animations=;
 animations=stern;
-statements=No need to worry for your safety.;
-statements=We take security seriously here.;
+statements=不用担心你的安全.;
+statements=我们这里很重视这个.;
 nextNodeID=;
 
 [DialogNodeOverride] ID=maxRank_port11_guard8a;
@@ -219,11 +219,11 @@ dialogNodeID_toOverride=port11_guard8a;
 fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
 completeOverride=true; overrideSpecialEffects=true;
 animations=stern;
-statements=All is secure, <pnamefull=>!;
+statements=都是安全的, <pnamefull=>!;
 
 [DialogNode] ID=port11_royal1_guard1a;
 animations=;
-statements=The Auspex is down the hall.;
+statements=Auspex 在走廊尽头.;
 nextNodeID=;
 
 [DialogNodeOverride] ID=maxRank_port11_royal1_guard1a;
@@ -231,11 +231,11 @@ dialogNodeID_toOverride=port11_royal1_guard1a;
 fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
 completeOverride=true; overrideSpecialEffects=true;
 animations=;
-statements=The Auspex will meet with you anytime you're ready, <pnamefull=>!;
+statements=Auspex 会随时与您见面, <pnamefull=>!;
 
 [DialogNode] ID=port11_royal1_guard2a;
 animations=;
-statements=Touch nothing.;
+statements=不要碰任何东西.;
 nextNodeID=;
 
 [DialogNodeOverride] ID=maxRank_port11_royal1_guard2a;
@@ -243,11 +243,11 @@ dialogNodeID_toOverride=port11_royal1_guard2a;
 fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
 completeOverride=true; overrideSpecialEffects=true;
 animations=stern;
-statements=Jasce' will be done, <prank=>.;
+statements=雅斯会搞定的, <prank=>.;
 
 [DialogNode] ID=port11_royal1_guard3a;
 animations=;
-statements=Mind that you are in His Holiness' home.;
+statements=请注意，你这是在教皇陛下的家中.;
 nextNodeID=;
 
 [DialogNodeOverride] ID=maxRank_port11_royal1_guard3a;
@@ -255,11 +255,11 @@ dialogNodeID_toOverride=port11_royal1_guard3a;
 fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
 completeOverride=true; overrideSpecialEffects=true;
 animations=scared;
-statements=I-<p>I have nothing to report, <pnamefull=>!;
+statements=我-<p>我没有什么能报告的, <pnamefull=>!;
 
 [DialogNode] ID=port11_royal1_guard4a;
 animations=;
-statements=Direct your business to the Auspex.;
+statements=业务相关的事情找 Auspex.;
 nextNodeID=;
 
 [DialogNodeOverride] ID=maxRank_port11_royal1_guard4a;
@@ -267,7 +267,7 @@ dialogNodeID_toOverride=port11_royal1_guard4a;
 fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
 completeOverride=true; overrideSpecialEffects=true;
 animations=happy;
-statements=<pnamefull=>,<p> good to see you.;
+statements=<pnamefull=>,<p> 很高兴见到你.;
 
 
 

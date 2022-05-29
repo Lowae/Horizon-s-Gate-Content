@@ -2,68 +2,68 @@
 
 [DialogNode] ID=enterPort_hated;
 animations=;
-statements=<locName=> is an enemy port.<p=2> If we want to get in, we'll have to do it the hard way.;
-[DialogOption] text=Bribe ($<xAdj=-3><math=m:locWealth*-m:favorWithLoc*0.01><xAdj=-6>);
+statements=<locName=>是一个敌对港口.<p=2>如果我们想要进去，那必须采用比较困难的方式.;
+[DialogOption] text=贿赂 ($<xAdj=-3><math=m:locWealth*-m:favorWithLoc*0.01><xAdj=-6>);
 formulaReq=m:money - m:locWealth*-m:favorWithLoc*0.01 + 1;
 nodeToConnectTo=enterPort_hated_bribe;
-[DialogOption] text=<color=SlateGray>Bribe ($<xAdj=-3><math=m:locWealth*-m:favorWithLoc*0.01><xAdj=-6>);
+[DialogOption] text=<color=SlateGray>贿赂 ($<xAdj=-3><math=m:locWealth*-m:favorWithLoc*0.01><xAdj=-6>);
 formulaReq=m:locWealth*-m:favorWithLoc*0.01 - m:money;
 nodeToConnectTo=enterPort_hated_bribe_noMoney;
-[DialogOption] text=Intimidate (Requires<math=m:locWealth*0.75><xAdj=-8><iconBig=icon_crew>);
+[DialogOption] text=胁迫 (Requires<math=m:locWealth*0.75><xAdj=-8><iconBig=icon_crew>);
 formulaReq=m:pCrewNum - m:locWealth*0.75 + 1;
 newLineOfOptions=true;
 nodeToConnectTo=enterPort_hated_intimidate;
-[DialogOption] text=<color=SlateGray>Intimidate (Requires<math=m:locWealth*0.75><xAdj=-8><iconBig=icon_crew>);
+[DialogOption] text=<color=SlateGray>胁迫 (Requires<math=m:locWealth*0.75><xAdj=-8><iconBig=icon_crew>);
 formulaReq=m:locWealth*0.75 - m:pCrewNum;
 newLineOfOptions=true;
 nodeToConnectTo=enterPort_hated_intimidate_notEnoughCrew;
-[DialogOption] text=Sneak in (-3% Morale);
+[DialogOption] text=潜入 (-3% Morale);
 formulaReq=1-m:isItDaytime;
 newLineOfOptions=true;
 nodeToConnectTo=enterPort_hated_sneak;
-[DialogOption] text=<color=SlateGray>Sneak in (Only at night, -3% Morale);
+[DialogOption] text=<color=SlateGray>潜入 (Only at night, -3% Morale);
 formulaReq=m:isItDaytime;
 newLineOfOptions=true;
 nodeToConnectTo=enterPort_hated_sneak_notNight;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 bottomOption=true;
 
 ---
 [DialogNode] ID=enterPort_hated_bribe;
 animations=;
-statements=Alright, let's head in.;
+statements=好了，我们进去吧.;
 specialEffect=subtractgp,m:locWealth*-m:favorWithLoc*0.01;
 nextNodeID=enterPort_enter;
 
 [DialogNode] ID=enterPort_hated_bribe_noMoney;
 animations=sad;
-statements=We can't afford that, Commodore.;
+statements=我们没有钱不够，船长.;
 nextNodeID=enterPort_hated;
 
 ---
 
 [DialogNode] ID=enterPort_hated_intimidate;
 animations=angry;
-statements=Right. I'll assemble the crew and we'll head in.;
+statements=好，我去召集船员然后进去吧.;
 nextNodeID=enterPort_enter;
 
 
 [DialogNode] ID=enterPort_hated_intimidate_notEnoughCrew;
 animations=sigh;
-statements=Sorry, Commodore. We don't have enough crew to pull that off.;
+statements=抱歉，船长，我们人手不够.;
 nextNodeID=enterPort_hated;
 ---
 
 [DialogNode] ID=enterPort_hated_sneak;
 animations=sigh;
-statements=It's not pleasant, but we'll get in. Let's go.;
+statements=虽然这种方式不太方便，当我们会进去的，走吧.;
 specialEffect=crewMorale,-3;
 nextNodeID=enterPort_enter;
 
 [DialogNode] ID=enterPort_hated_sneak_notNight;
 animations=;
-statements=We have to wait until nightfall or we'll be detected.;
+statements=我们必须等到天黑，不然会被发现的.;
 nextNodeID=enterPort_hated;
 
 

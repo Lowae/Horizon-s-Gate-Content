@@ -5,16 +5,16 @@
 
 [DialogNode] ID=royal1;
 animations=;
-statements=Welcome <pnamefull=>.<p=> What brings you before the Council?;
+statements=欢迎 <pnamefull=>.<p=>找议会有什么事吗?;
 
-[DialogOption] text=Nation Status;
+[DialogOption] text=国家状况;
 nodeToConnectTo=royal_status1;
-[DialogOption] text=Request Boon;
+[DialogOption] text=请求奖赏;
 newLineOfOptions=true;
 nodeToConnectTo=royal_boon1;
 
 
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=royal_done1;
 bottomOption=true;
 
@@ -22,16 +22,16 @@ bottomOption=true;
 
 [DialogNode] ID=royal1_return;
 animations=;
-statements=Will there be anything else, <pnamefull=>?;
+statements=还有别的吗, <pnamefull=>?;
 
-[DialogOption] text=Nation Status;
+[DialogOption] text=国家状况;
 nodeToConnectTo=royal_status1;
-[DialogOption] text=Request Boon;
+[DialogOption] text=请求奖赏;
 newLineOfOptions=true;
 nodeToConnectTo=royal_boon1;
 
 
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=royal_done1;
 bottomOption=true;
 
@@ -39,31 +39,31 @@ bottomOption=true;
 
 [DialogNode] ID=royal_boon1;
 animations=stern;
-statements=And what assistance would you have from the Council?;
+statements=你想从议会这里得到什么帮助?;
 
 --CAN
-[DialogOption] text=Gold;
+[DialogOption] text=金钱;
 nodeToConnectTo=royal_boon_gold1;
-[DialogOption] text=Ship;
+[DialogOption] text=船只;
 newLineOfOptions=true;
 formulaReq=1-m:fleetSize(8);
 nodeToConnectTo=royal_boon_ship1;
-[DialogOption] text=Escort;
+[DialogOption] text=护航舰队;
 newLineOfOptions=true;
 formulaReq=1-gTimeSinceLessThan:playerEscort:721;
 nodeToConnectTo=royal_boon_escort1;
-[DialogOption] text=Dismiss Escort;
+[DialogOption] text=解雇护航舰队;
 newLineOfOptions=true;
 formulaReq=gTimeSinceLessThan:playerEscort:721;
 nodeToConnectTo=royal_boon_escort_dismiss1;
 
 --CANT
-[DialogOption] text=<color=SlateGray>Ship;
+[DialogOption] text=<color=SlateGray>船只;
 newLineOfOptions=true;
 formulaReq=m:fleetSize(8);
 nodeToConnectTo=royal_boon_ship_full;
 
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=royal1_return;
 escOption=true;
 bottomOption=true;
@@ -73,35 +73,35 @@ bottomOption=true;
 
 [DialogNode] ID=royal_boon_gold1;
 animations=;
-statements=I see.<p=> And how much do you require, <pname=>?;
+statements=我明白了.<p=>你需要多少, <pname=>?;
 
 --CAN
-[DialogOption] text=$1500 (-5 Favor);
+[DialogOption] text=$1500 (-5 好感度);
 formulaReq=m:playerFavor - 4;
 nodeToConnectTo=royal_boon_gold_1500;
-[DialogOption] text=$5000 (-10 Favor);
+[DialogOption] text=$5000 (-10 好感度);
 newLineOfOptions=true;
 formulaReq=m:playerFavor - 9;
 nodeToConnectTo=royal_boon_gold_5000;
-[DialogOption] text=$15000 (-25 Favor);
+[DialogOption] text=$15000 (-25 好感度);
 newLineOfOptions=true;
 formulaReq=m:playerFavor - 24;
 nodeToConnectTo=royal_boon_gold_15000;
 
 --CANT
-[DialogOption] text=<color=SlateGray>$1500 (-5 Favor);
+[DialogOption] text=<color=SlateGray>$1500 (-5 好感度);
 formulaReq=m:playerFavorBelow(5);
 nodeToConnectTo=royal_boon_cant;
-[DialogOption] text=<color=SlateGray>$5000 (-10 Favor);
+[DialogOption] text=<color=SlateGray>$5000 (-10 好感度);
 newLineOfOptions=true;
 formulaReq=m:playerFavorBelow(10);
 nodeToConnectTo=royal_boon_cant;
-[DialogOption] text=<color=SlateGray>$15000 (-25 Favor);
+[DialogOption] text=<color=SlateGray>$15000 (-25 好感度);
 newLineOfOptions=true;
 formulaReq=m:playerFavorBelow(25);
 nodeToConnectTo=royal_boon_cant;
 
-[DialogOption] text=Back;
+[DialogOption] text=返回;
 nodeToConnectTo=royal_boon1;
 bottomOption=true;
 
@@ -112,23 +112,23 @@ bottomOption=true;
 [DialogNode] ID=royal_boon_gold_1500;
 animations=sigh;
 animations=;
-statements=I believe we can make that sort of allowance for you, <pname=>.;
-statements=Consider this <cmd=money=1500>$1500 an award for your good performance thus far.;
+statements=我相信我们可以给你这样的津贴, <pname=>.;
+statements=就当这<cmd=money=1500>$1500 作为你目前为止出色表现的奖赏吧.;
 specialEffect=modPlayerFactionFavor,-5;
 
 
 [DialogNode] ID=royal_boon_gold_5000;
 animations=;
 animations=sigh;
-statements=The Council is agreeable to your request, <pname=>.;
-statements=Use this <cmd=money=5000>$5000 to prove your value to Seartial even further.;
+statements=议会同意你的要求, <pname=>.;
+statements=用这 <cmd=money=5000>$5000 来进一步证明你对西提尔的价值.;
 specialEffect=modPlayerFactionFavor,-10;
 
 [DialogNode] ID=royal_boon_gold_15000;
 animations=sigh;
 animations=;
-statements=A hefty sum,<p=> but your services thus far have been well worth it, <pname=>.;
-statements=Take this <cmd=money=15000>$15000 and continue your good work.;
+statements=一笔巨额,<p=>但是你的付出是值得的, <pname=>.;
+statements=拿着这<cmd=money=15000>$15000然后继续好好工作吧.;
 specialEffect=modPlayerFactionFavor,-25;
 
 
@@ -136,13 +136,13 @@ specialEffect=modPlayerFactionFavor,-25;
 
 [DialogNode] ID=royal_boon_ship1;
 animations=sly;
-statements=Oh?<p=> What ship were you considering?;
+statements=噢?<p=>你考虑哪一艘船?;
 
 --#1
-[DialogOption] text=Towership (-20 Favor);
+[DialogOption] text=塔式战舰 (-20 好感度);
 formulaReq=m:playerFavor - 19;
 nodeToConnectTo=royal_boon_ship_tier1;
-[DialogOption] text=<color=SlateGray>Towership (-20 Favor);
+[DialogOption] text=<color=SlateGray>塔式战舰 (-20 好感度);
 formulaReq=m:playerFavorBelow(20);
 nodeToConnectTo=royal_boon_cant;
 [DialogOption] text=<iconBig=ui_questionmark>;
@@ -150,11 +150,11 @@ includeSymbol=false;
 nodeToConnectTo=view_towership;
 
 --#2
-[DialogOption] text=Ironclad (-50 Favor);
+[DialogOption] text=装甲舰 (-50 好感度);
 newLineOfOptions=true;
 formulaReq=m:playerFavor - 49;
 nodeToConnectTo=royal_boon_ship_tier2;
-[DialogOption] text=<color=SlateGray>Ironclad (-50 Favor);
+[DialogOption] text=<color=SlateGray>装甲舰 (-50 好感度);
 newLineOfOptions=true;
 formulaReq=m:playerFavorBelow(50);
 nodeToConnectTo=royal_boon_cant;
@@ -162,7 +162,7 @@ nodeToConnectTo=royal_boon_cant;
 includeSymbol=false;
 nodeToConnectTo=view_ironclad;
 
-[DialogOption] text=Back;
+[DialogOption] text=返回;
 nodeToConnectTo=royal_boon1;
 bottomOption=true;
 
@@ -170,34 +170,34 @@ bottomOption=true;
 
 [DialogNode] ID=royal_boon_ship_tier1;
 animations=sigh;
-statements=This type of ship will no doubt serve you as well as it has our navy.;
+statements=这种类型的船无疑会像为我们的海军一样为你服务.;
 specialEffect=modPlayerFactionFavor,-20;
 nextNodeID=royal_boon_ship_tier1_give;
 
 [DialogNode] ID=royal_boon_ship_tier1_give;
 animations=;
-statements=The Council expects great things from you, <pname=>.;
+statements=议会对你寄予厚望, <pname=>.;
 specialEffect=giveShip,towership;
 specialEffect=renameShip;
 
-[DialogOption] text=Done;
+[DialogOption] text=完成;
 specialEffect=openFleetWindow_delay;
 specialEffect=closeCharEdit;
 nodeToConnectTo=;
 
 [DialogNode] ID=royal_boon_ship_tier2;
 animations=sigh;
-statements=The Ironclad is the result of Seartial's greatest minds coming together.<p=> This pinnacle of technology is not granted lightly.;
+statements=装甲舰是西提尔最伟大的思想汇聚而成的作品.<p=>这项技术的巅峰不是能轻易获得的.;
 specialEffect=modPlayerFactionFavor,-50;
 nextNodeID=royal_boon_ship_tier2_give;
 
 [DialogNode] ID=royal_boon_ship_tier2_give;
 animations=;
-statements=Use this ship to the best of your ability, <pname=>.;
+statements=尽你所能的使用这艘船吧, <pname=>.;
 specialEffect=giveShip,ironclad;
 specialEffect=renameShip;
 
-[DialogOption] text=Done;
+[DialogOption] text=完成;
 specialEffect=openFleetWindow_delay;
 specialEffect=closeCharEdit;
 nodeToConnectTo=;
@@ -208,8 +208,8 @@ nodeToConnectTo=;
 [DialogNode] ID=royal_boon_ship_full;
 animations=stern;
 animations=sly;
-statements=Your fleet is already at its limit, <pname=>.;
-statements=If you have a lesser ship to replace, then discard that one first.;
+statements=你的舰队已经满了, <pname=>.;
+statements=如果你有一艘较小的船可以替代，那么可以先丢弃它.;
 nextNodeID=royal1_return;
 
 
@@ -218,35 +218,35 @@ nextNodeID=royal1_return;
 
 [DialogNode] ID=royal_boon_escort1;
 animations=;
-statements=We can assign ships to aid you in naval combat for the next 30 days.<p=> How much protection do you need?;
+statements=在接下来的30天内，我们可以派出舰队协助你进行海战.<p=>你需要多少艘舰队?;
 
 --CAN
-[DialogOption] text=1 Ship (-5 Favor);
+[DialogOption] text=1 艘 (-5 好感度);
 formulaReq=m:playerFavor - 4;
 nodeToConnectTo=royal_boon_escort_1ship;
-[DialogOption] text=2 Ships (-15 Favor);
+[DialogOption] text=2 艘 (-15 好感度);
 newLineOfOptions=true;
 formulaReq=m:playerFavor - 14;
 nodeToConnectTo=royal_boon_escort_2ship;
-[DialogOption] text=3 Ships (-25 Favor);
+[DialogOption] text=3 艘 (-25 好感度);
 newLineOfOptions=true;
 formulaReq=m:playerFavor - 24;
 nodeToConnectTo=royal_boon_escort_3ship;
 
 --CANT
-[DialogOption] text=<color=SlateGray>1 Ship (-5 Favor);
+[DialogOption] text=<color=SlateGray>1 艘 (-5 好感度);
 formulaReq=m:playerFavorBelow(5);
 nodeToConnectTo=royal_boon_cant;
-[DialogOption] text=<color=SlateGray>2 Ships (-15 Favor);
+[DialogOption] text=<color=SlateGray>2 艘 (-15 好感度);
 newLineOfOptions=true;
 formulaReq=m:playerFavorBelow(15);
 nodeToConnectTo=royal_boon_cant;
-[DialogOption] text=<color=SlateGray>3 Ships (-25 Favor);
+[DialogOption] text=<color=SlateGray>3 艘 (-25 好感度);
 newLineOfOptions=true;
 formulaReq=m:playerFavorBelow(25);
 nodeToConnectTo=royal_boon_cant;
 
-[DialogOption] text=Back;
+[DialogOption] text=返回;
 nodeToConnectTo=royal_boon1;
 bottomOption=true;
 
@@ -254,7 +254,7 @@ bottomOption=true;
 
 [DialogNode] ID=royal_boon_escort_1ship;
 animations=sigh;
-statements=Very good.<p> For the next 30 days, one of our ships will accompany you in combat.;
+statements=非常好.<p>在接下来的30天内，我们的一艘船会协助你作战.;
 specialEffect=modPlayerFactionFavor,-5;
 specialEffect=setGlobalVar,playerEscort,seartial_escort1;
 specialEffect=fx,sfx_goodConfirm_fast;
@@ -262,7 +262,7 @@ nextNodeID=royal1_return;
 
 [DialogNode] ID=royal_boon_escort_2ship;
 animations=sigh;
-statements=Very good.<p> For the next 30 days, two of our ships will accompany you in combat.;
+statements=非常好.<p>在接下来的30天内，我们的两艘船会协助你作战.;
 specialEffect=modPlayerFactionFavor,-15;
 specialEffect=setGlobalVar,playerEscort,seartial_escort2;
 specialEffect=fx,sfx_goodConfirm_fast;
@@ -270,7 +270,7 @@ nextNodeID=royal1_return;
 
 [DialogNode] ID=royal_boon_escort_3ship;
 animations=sigh;
-statements=Very good.<p> For the next 30 days, three of our ships will accompany you in combat.;
+statements=非常好.<p>在接下来的30天内，我们的三艘船会协助你作战.;
 specialEffect=modPlayerFactionFavor,-25;
 specialEffect=setGlobalVar,playerEscort,seartial_escort3;
 specialEffect=fx,sfx_goodConfirm_fast;
@@ -279,16 +279,16 @@ nextNodeID=royal1_return;
 
 [DialogNode] ID=royal_boon_escort_dismiss1;
 animations=sly;
-statements=You wish to dismiss your current escort?;
-[DialogOption] text=Yes;
+statements=你想解雇你现在的护卫舰队吗?;
+[DialogOption] text=是的;
 nodeToConnectTo=royal_boon_escort_dismiss1_confirm;
-[DialogOption] text=No;
+[DialogOption] text=不;
 newLineOfOptions=true;
 nodeToConnectTo=royal1_return;
 
 [DialogNode] ID=royal_boon_escort_dismiss1_confirm;
 animations=sigh;
-statements=So be it then.;
+statements=那就这样吧.;
 specialEffect=fx,sfx_goodConfirm_fast;
 specialEffect=clearGlobalVar,playerEscort;
 nextNodeID=royal1_return;
@@ -298,8 +298,8 @@ nextNodeID=royal1_return;
 [DialogNode] ID=royal_boon_cant;
 animations=sigh;
 animations=sly;
-statements=Hmm...<p=2> I'm sorry, <pname=>, but your performance as late does not merit such.;
-statements=If you had better results, perhaps, but for now you must make do with what you have.;
+statements=Hmm...<p=2> 抱歉, <pname=>, 你的表现还不够.;
+statements=如果你有更好的表现了，不过目前你只能将就你的选择.;
 nextNodeID=royal1_return;
 
 
@@ -307,7 +307,7 @@ nextNodeID=royal1_return;
 
 [DialogNode] ID=royal_done1;
 animations=sigh;
-statements=Very well then <pname=>.<p=> Continue your work.;
+statements=很好，然后 <pname=>.<p=> 继续你的工作吧.;
 nextNodeID=royal_done2;
 
 [DialogNode] ID=royal_done2;
@@ -322,10 +322,10 @@ animations=sigh;
 animations=;
 animations=sigh;
 animations=;
-statements=Good of you to take interest in our national affairs,<p=> <pfullname=>.;
-statements=Currently Seartial holds <color=DarkRed><math=factionPorts:seartial>ports<color=> worldwide.<p=> The total wealth level of those ports is <color=DarkRed><math=factionWealth:seartial><adjX=-6><color=>.;
-statements=We have <color=DarkRed><math=factionMFleets:seartial>merchant fleets<color=> making continued investments to expand our influence,<p=> with <color=DarkRed><math=factionBFleets:seartial>battle fleets<color=> protecting them.;
-statements=And, regarding yourself, <pname=>...<p=><finalTextIf= the Council, and myself, view your work in the highest regard. Thank you again for your assistance.=gIs:playerRank:9><finalTextIf= we will have a task for you soon, so keep an eye out.=m:nextRoyalFameReqMet><finalTextIf= keep up the good work. Speak to the Admin about our task for you.=g:questRoyal + g:royalSummons> we shall likely have another task for you once you reach <color=DarkRed><math=m:nextRoyalFameReq>fame<color=>.;
+statements=很高兴你对我们国家的事务感兴趣,<p=> <pfullname=>.;
+statements=目前，西提尔在全世界拥有<color=DarkRed><math=factionPorts:seartial>个港口<color=>.<p=> 这些港口的总财富水平是<color=DarkRed><math=factionWealth:seartial><adjX=-6><color=>.;
+statements=我们拥有<color=DarkRed><math=factionMFleets:seartial>艘商船队<color=>来持续投资以扩大我们的影响力,<p=>还有 <color=DarkRed><math=factionBFleets:seartial>艘作战舰队<color=>来保护他们.;
+statements=然后，关于你自己, <pname=>...<p=><finalTextIf= 议会和我本人都对你的工作给与最高的评价，再次感谢你的协助.=gIs:playerRank:9><finalTextIf= 我们很快就会有任务给你，请密切关注.=m:nextRoyalFameReqMet><finalTextIf= 请再接再厉，我已经把任务告诉管理员了.=g:questRoyal + g:royalSummons>我们会给你另一个任务，当你达到<color=DarkRed><math=m:nextRoyalFameReq>名望<color=>时.;
 nextNodeID=royal1_return;
 
 
@@ -359,17 +359,17 @@ animations=sigh;
 animations=happy;
 animations=sly;
 animations=;
-statements=<speed=0.5><pfullname=> -<p=2> word of your deeds has reached the Council.;
-statements=Today is a glorious day for Seartial!<p> With <math=factionPorts:seartial>ports allied to us, the threat to our people from Jasce and Rumane is truly no more.;
-statements=<pfullname=>, thanks to your efforts,<p> we can now maintain<p> - and share with you -<p> <color=DarkRed>information on the movements of all enemy fleets.;
-statements=Additionally, though it is hardly sufficient for your incredible performance,<p> <pname=>...;
+statements=<speed=0.5><pfullname=> -<p=2> 你的事迹已经传达到议会了.;
+statements=今天，是西提尔光辉的一天!<p>共有<math=factionPorts:seartial>港口与我们结盟,雅斯与罗马尼亚对我们人们的威胁已经不复存在了.;
+statements=<pfullname=>,感谢你的努力,<p>我们现在可以与你分享 -<p> <color=DarkRed>所有敌人舰队的动向.;
+statements=此外，这还是能不够匹配上你令人难以置信的表现,<p> <pname=>...;
 nextNodeID=royal_domination2;
 
 [DialogNode] ID=royal_domination2;
 animations=happy;
 animations=sigh;
-statements=The Council has unanimously chosen to dedicate <itemBig_low=xpGemBig> <itemBig_low=abilityCrest> and $50,000 to you!;
-statements=Please make use of these boons as you see fit!;
+statements=议会一致决定贡献 <itemBig_low=xpGemBig> <itemBig_low=abilityCrest>和$50,000 给你!;
+statements=请根据你的需要好好利用这些奖赏!;
 specialEffect=giveItem,xpGemBig,1;
 specialEffect=giveItem,abilityCrest,1;
 specialEffect=modPlayerFactionFavor,10;
@@ -393,7 +393,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:king;
 animations=sigh;
-statements=Welcome, <pfullname=>.<p=> How can We help you?;
+statements=欢迎, <pfullname=>.<p=>我们能为你做些什么?;
 
 [DialogNodeOverride] ID=rumane_royal1_return;
 dialogNodeID_toOverride=royal1_return;
@@ -401,7 +401,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:king;
 animations=;
-statements=Is there anything more, <pname=>?;
+statements=还有其他的吗, <pname=>?;
 
 [DialogNodeOverride] ID=rumane_royal_boon1;
 dialogNodeID_toOverride=royal_boon1;
@@ -409,7 +409,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:king;
 animations=;
-statements=Tell me how We could best aid you, <pname=>.;
+statements=告诉我我们怎样才能更好的帮助你, <pname=>.;
 
 [DialogNodeOverride] ID=rumane_royal_boon_cant;
 dialogNodeID_toOverride=royal_boon_cant;
@@ -418,8 +418,8 @@ overrideSpecialEffects=false;
 fReq=talker:king;
 animations=stern;
 animations=sly;
-statements=Hmph.<p=> Regrettably, <pname=>, We cannot give you that.;
-statements=Your rewards must befit your service.<p=> You may ask again when you have better served your King.;
+statements=Hmph.<p=>很遗憾, <pname=>,我们暂时还不能给你.;
+statements=你的奖赏必须与你的付出想匹配.<p=>等你更好的为国王服务的时候再来问吧.;
 
 
 [DialogNodeOverride] ID=rumane_royal_done1;
@@ -428,7 +428,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:king;
 animations=;
-statements=Carry on, <pfullname=>.;
+statements=继续下去, <pfullname=>.;
 
 [DialogNodeOverride] ID=rumane_royal_status1;
 dialogNodeID_toOverride=royal_status1;
@@ -439,10 +439,10 @@ animations=;
 animations=sigh;
 animations=;
 animations=;
-statements=We'll give you a short summary,<p=> <pname=>.;
-statements=Our kingdom holds <color=DarkRed><math=factionPorts:rumane>ports<color=> worldwide.<p=> The total wealth level of those ports is <color=DarkRed><math=factionWealth:rumane><adjX=-6><color=>.;
-statements=We have <color=DarkRed><math=factionMFleets:rumane>merchant fleets<color=> making investments,<p=> and <color=DarkRed><math=factionBFleets:rumane>battle fleets<color=> protecting them.;
-statements=As for you, <pname=>...<p=><finalTextIf= We thank you again for your tremendous service. If there is aught We can do for you, just ask.=gIs:playerRank:9><finalTextIf= We will have a task for you soon. Stay aware.=m:nextRoyalFameReqMet><finalTextIf= I believe I gave the Viceroy a task for you. Make sure you speak to him about it.=g:questRoyal + g:royalSummons> when you reach <color=DarkRed><math=m:nextRoyalFameReq>fame<color=>, We should have another task for you.;
+statements=我们会给你个简短的总结,<p=> <pname=>.;
+statements=我们王国在全世界拥有 <color=DarkRed><math=factionPorts:rumane>个港口<color=>.<p=>这些港口的总财富水平是 <color=DarkRed><math=factionWealth:rumane><adjX=-6><color=>.;
+statements=我们有<color=DarkRed><math=factionMFleets:rumane>支商船队<color=>来进行投资活动,<p=>还有 <color=DarkRed><math=factionBFleets:rumane>战斗舰队<color=>来保护他们.;
+statements=关于你, <pname=>...<p=><finalTextIf= 我们再次感谢你的大力服务.如果我们能为你做些什么，请尽管开口.=gIs:playerRank:9><finalTextIf= 我们很快就会有任务给你，随时注意.=m:nextRoyalFameReqMet><finalTextIf= 我把任务交给总督让他传达给你了，你一定要和他谈谈这事.=g:questRoyal + g:royalSummons>当你的达到<color=DarkRed><math=m:nextRoyalFameReq>名望<color=>的时候, 我们会给你另一个任务.;
 
 
 
@@ -455,7 +455,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:king;
 animations=sly;
-statements=Coin from the treasury?<p=> How much would suit you?;
+statements=需要国库的金币吗?<p=>多少钱适合你?;
 
 
 [DialogNodeOverride] ID=rumane_royal_boon_gold_1500;
@@ -465,8 +465,8 @@ overrideSpecialEffects=false;
 fReq=talker:king;
 animations=sigh;
 animations=;
-statements=Very good.<p=>You have earned that much, at least.;
-statements=We gladly give you this <cmd=money=1500>$1500.<p=> Use it wisely.;
+statements=非常好.<p=>至少你已经挣了那么多了.;
+statements=我们很乐意给与你<cmd=money=1500>$1500.<p=>明智的使用它.;
 
 
 [DialogNodeOverride] ID=rumane_royal_boon_gold_5000;
@@ -476,8 +476,8 @@ overrideSpecialEffects=false;
 fReq=talker:king;
 animations=;
 animations=sigh;
-statements=This We will grant you, <pname=>.;
-statements=Use this <cmd=money=5000>$5000 in service of Rumane.;
+statements=这一点我们一定会给你, <pname=>.;
+statements=用这些<cmd=money=5000>$5000 好好服务罗马尼亚吧.;
 
 [DialogNodeOverride] ID=rumane_royal_boon_gold_15000;
 dialogNodeID_toOverride=royal_boon_gold_15000;
@@ -486,8 +486,8 @@ overrideSpecialEffects=false;
 fReq=talker:king;
 animations=sigh;
 animations=happy;
-statements=Hmmm...<p=> I suppose you have earned that, haven't you?;
-statements=Take this <cmd=money=15000>$15000 and keep up the good work,<p=> <pname=>.<p=> Your King is counting on you.;
+statements=Hmmm...<p=>我想这是你应得的，不是吗?;
+statements=拿上这些<cmd=money=15000>$15000然后再接再厉,<p=> <pname=>.<p=>你的国王还指望着你.;
 
 
 -------SHIP BOON
@@ -498,13 +498,13 @@ completeOverride=true;
 overrideSpecialEffects=true;
 fReq=talker:king;
 animations=sly;
-statements=What sort of ship are you after?;
+statements=你想要什么样的船?;
 
 --#1
-[DialogOption] text=Ice Reaver (-20 Favor);
+[DialogOption] text=掠冰者 (-20 好感度);
 formulaReq=m:playerFavor - 19;
 nodeToConnectTo=royal_boon_ship_tier1;
-[DialogOption] text=<color=SlateGray>Ice Reaver (-20 Favor);
+[DialogOption] text=<color=SlateGray>掠冰者 (-20 好感度);
 formulaReq=m:playerFavorBelow(20);
 nodeToConnectTo=royal_boon_cant;
 [DialogOption] text=<iconBig=ui_questionmark>;
@@ -512,11 +512,11 @@ includeSymbol=false;
 nodeToConnectTo=view_icereaver;
 
 --#2
-[DialogOption] text=Glacier (-50 Favor);
+[DialogOption] text=冰川 (-50 好感度);
 newLineOfOptions=true;
 formulaReq=m:playerFavor - 49;
 nodeToConnectTo=royal_boon_ship_tier2;
-[DialogOption] text=<color=SlateGray>Glacier (-50 Favor);
+[DialogOption] text=<color=SlateGray>冰川 (-50 好感度);
 newLineOfOptions=true;
 formulaReq=m:playerFavorBelow(50);
 nodeToConnectTo=royal_boon_cant;
@@ -524,7 +524,7 @@ nodeToConnectTo=royal_boon_cant;
 includeSymbol=false;
 nodeToConnectTo=view_glacier;
 
-[DialogOption] text=Back;
+[DialogOption] text=返回;
 nodeToConnectTo=royal_boon1;
 bottomOption=true;
 
@@ -535,7 +535,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:king;
 animations=;
-statements=This Ice Reaver should well complement any fleet.;
+statements=这艘掠冰者可以很好的服务任何舰队.;
 
 [DialogNodeOverride] ID=rumane_royal_boon_ship_tier2;
 dialogNodeID_toOverride=royal_boon_ship_tier2;
@@ -543,7 +543,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:king;
 animations=;
-statements=The indestructible Glacier will outlast any assault.;
+statements=坚不可摧的冰川能从任何袭击中存活.;
 --
 
 
@@ -553,7 +553,7 @@ completeOverride=false;
 overrideSpecialEffects=true;
 fReq=talker:king;
 animations=;
-statements=We expect great things from you, <pname=>.;
+statements=我们对你寄予厚望, <pname=>.;
 specialEffect=giveShip,icereaver;
 specialEffect=renameShip;
 
@@ -565,7 +565,7 @@ completeOverride=false;
 overrideSpecialEffects=true;
 fReq=talker:king;
 animations=;
-statements=Use this ship to bring glory to Rumane, <pname=>.;
+statements=用这艘船为罗马尼亚带来荣耀吧, <pname=>.;
 specialEffect=giveShip,glacier;
 specialEffect=renameShip;
 
@@ -577,7 +577,7 @@ completeOverride=false;
 overrideSpecialEffects=true;
 fReq=talker:king;
 animations=sigh;
-statements=Very well then.<p> For the next 30 days, one of our ships will accompany you in combat.;
+statements=非常好.<p>在接下来的30天内，我们的一艘船会协助你作战.;
 specialEffect=modPlayerFactionFavor,-5;
 specialEffect=setGlobalVar,playerEscort,rumane_escort1;
 specialEffect=fx,sfx_goodConfirm_fast;
@@ -588,7 +588,7 @@ completeOverride=false;
 overrideSpecialEffects=true;
 fReq=talker:king;
 animations=sigh;
-statements=Very well then.<p> For the next 30 days, one of our ships will accompany you in combat.;
+statements=非常好.<p>在接下来的30天内，我们的两艘船会协助你作战.;
 specialEffect=modPlayerFactionFavor,-15;
 specialEffect=setGlobalVar,playerEscort,rumane_escort2;
 specialEffect=fx,sfx_goodConfirm_fast;
@@ -599,7 +599,7 @@ completeOverride=false;
 overrideSpecialEffects=true;
 fReq=talker:king;
 animations=sigh;
-statements=Very well then.<p> For the next 30 days, one of our ships will accompany you in combat.;
+statements=非常好.<p>在接下来的30天内，我们的三艘船会协助你作战.;
 specialEffect=modPlayerFactionFavor,-25;
 specialEffect=setGlobalVar,playerEscort,rumane_escort3;
 specialEffect=fx,sfx_goodConfirm_fast;
@@ -616,17 +616,17 @@ animations=stern;
 animations=happy;
 animations=;
 animations=happy;
-statements=<speed=0.5><pfullname=> -<p=2> word of your deeds has reached Us.;
-statements=All of Rumane is truly in your debt!<p> With <math=factionPorts:rumane>allied ports, the Clanlands now has nothing to fear from Jasce or Seartial!;
-statements=<pfullname=>, with what you have accomplished,<p> We can now track and share with you the <color=DarkRed>position of all enemy fleets.;
-statements=I...<p=1.6> We<p=1.6> would also like to present you these small gifts,<p> <pname=>.;
+statements=<speed=0.5><pfullname=> -<p=2> 你的事迹已经传到我们的耳中.;
+statements=整个罗马尼亚都欠你人情!<p>有<math=factionPorts:rumane>个结盟的港口, the Clanlands 现在已经不再惧怕雅斯或者西提尔了!;
+statements=<pfullname=>,以你所取得的成就,<p>我们现在可以追踪并与你分享<color=DarkRed>所有敌人舰队的位置.;
+statements=我...<p=1.6> 我们<p=1.6>还想送你份小礼物,<p> <pname=>.;
 nextNodeID=rumane_royal_domination2;
 
 [DialogNode] ID=rumane_royal_domination2;
 animations=sigh;
 animations=happy;
-statements=Although it hardly seems enough, please take <itemBig_low=xpGemBig> <itemBig_low=abilityCrest>  and $50,000 from our coffers!;
-statements=Enjoy those boons,<p> and rest easy,<p> knowing you have done right by Rumane.;
+statements=虽然看起来还不够多，但请从我们的国库中拿去<itemBig_low=xpGemBig> <itemBig_low=abilityCrest>和$50,000!;
+statements=希望这些奖励能让你满意,<p>你为罗马尼亚做了正确的事.;
 specialEffect=giveItem,xpGemBig,1;
 specialEffect=giveItem,abilityCrest,1;
 specialEffect=modPlayerFactionFavor,10;
@@ -663,7 +663,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:jasce;
 animations=;
-statements=<speed=0.8>Speak, <prank=>.;
+statements=<speed=0.8>说, <prank=>.;
 
 [DialogNodeOverride] ID=jasce_royal1_return;
 dialogNodeID_toOverride=royal1_return;
@@ -671,7 +671,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:jasce;
 animations=;
-statements=What else, then?;
+statements=那么，还有什么呢?;
 
 
 [DialogNodeOverride] ID=jasce_royal_boon1;
@@ -680,7 +680,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:jasce;
 animations=;
-statements=What do you require?;
+statements=你需要什么?;
 
 [DialogNodeOverride] ID=jasce_royal_boon_cant;
 dialogNodeID_toOverride=royal_boon_cant;
@@ -689,8 +689,8 @@ overrideSpecialEffects=false;
 fReq=talker:jasce;
 animations=stern;
 animations=;
-statements=No, I think not.;
-statements=Demonstrate your devotion first,<p=> and then you will be rewarded.;
+statements=不，我认为不行.;
+statements=首先表现出你的忠诚,<p=>然后你就会得到奖赏.;
 
 
 [DialogNodeOverride] ID=jasce_royal_done1;
@@ -699,7 +699,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:jasce;
 animations=;
-statements=Go.;
+statements=去吧.;
 
 
 [DialogNodeOverride] ID=jasce_royal_status1;
@@ -711,10 +711,10 @@ animations=;
 animations=sigh;
 animations=;
 animations=;
-statements=Listen well,<p=> <prank=>.;
-statements=Currently <color=DarkRed><math=factionPorts:jasce>ports<color=> are held by believers.<p=> The total wealth level of these ports is <color=DarkRed><math=factionWealth:jasce><adjX=-6><color=>.;
-statements=<color=DarkRed><math=factionMFleets:jasce>merchant fleets<color=> sail abroad,<p=> and <color=DarkRed><math=factionBFleets:jasce>battle fleets<color=> with them.;
-statements=As for you, <prank=>.<p=2><finalTextIf= You have served and continue to serve well. Your soul may rest easy knowing you have earned your God's favor.=gIs:playerRank:9><finalTextIf= My next command will be delivered to you soon - be ready.=m:nextRoyalFameReqMet><finalTextIf= Speak to the Auspex about your task.=g:questRoyal + g:royalSummons> Reach <color=DarkRed><math=m:nextRoyalFameReq>fame<color=>, and you will be fit to serve.;
+statements=听好了,<p=> <prank=>.;
+statements=目前有<color=DarkRed><math=factionPorts:jasce>个港口<color=>由信徒带领.<p=>这些港口的总财富水平是<color=DarkRed><math=factionWealth:jasce><adjX=-6><color=>.;
+statements=<color=DarkRed><math=factionMFleets:jasce>支商船队<color=>出海航行,<p=>还有<color=DarkRed><math=factionBFleets:jasce>支作战舰队<color=>跟随他们.;
+statements=关于你, <prank=>.<p=2><finalTextIf= 你已经也将继续出色的履行了职责。你已经赢得了上帝的青睐，你的灵魂可以休息会了.=gIs:playerRank:9><finalTextIf=我的下一个命令很快就会传达给你 - 准备好.=m:nextRoyalFameReqMet><finalTextIf= 和 Auspex 谈论你的任务.=g:questRoyal + g:royalSummons>到达<color=DarkRed><math=m:nextRoyalFameReq>名望<color=>,然后你就可以服务了.;
 
 -------GOLD BOON
 
@@ -725,7 +725,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:jasce;
 animations=;
-statements=How much?;
+statements=多少?;
 
 [DialogNodeOverride] ID=jasce_royal_boon_gold_1500;
 dialogNodeID_toOverride=royal_boon_gold_1500;
@@ -734,8 +734,8 @@ overrideSpecialEffects=false;
 fReq=talker:jasce;
 animations=;
 animations=;
-statements=An adequate reward for your faith.;
-statements=Take the <cmd=money=1500>$1500,<p=> and use it as you wish.;
+statements=这是对你信仰的充分奖赏.;
+statements=拿上这<cmd=money=1500>$1500,<p=>随你怎么使用.;
 
 
 [DialogNodeOverride] ID=jasce_royal_boon_gold_5000;
@@ -745,8 +745,8 @@ overrideSpecialEffects=false;
 fReq=talker:jasce;
 animations=;
 animations=;
-statements=For each coin I give you in life,<p=> you have earned tenfold in heaven.;
-statements=Take <cmd=money=5000>$5000,<p=> and spend it to further my kingdom.;
+statements=在你生命中我给你的每一枚硬币,<p=>你都能在来世获得十倍.;
+statements=拿上这<cmd=money=5000>$5000,<p=>来发展我的王国.;
 
 [DialogNodeOverride] ID=jasce_royal_boon_gold_15000;
 dialogNodeID_toOverride=royal_boon_gold_15000;
@@ -755,8 +755,8 @@ overrideSpecialEffects=false;
 fReq=talker:jasce;
 animations=;
 animations=;
-statements=Your faithfulness has not gone unnoticed.;
-statements=Use this <cmd=money=15000>$15000 to enact my will.;
+statements=你的忠诚没有被忽视.;
+statements=使用这<cmd=money=15000>$15000来实现我的意志.;
 
 
 
@@ -768,13 +768,13 @@ completeOverride=true;
 overrideSpecialEffects=true;
 fReq=talker:jasce;
 animations=;
-statements=Which ship?;
+statements=那艘船?;
 
 --#1
-[DialogOption] text=Corvair (-20 Favor);
+[DialogOption] text=科威尔桨帆船 (-20 好感度);
 formulaReq=m:playerFavor - 19;
 nodeToConnectTo=royal_boon_ship_tier1;
-[DialogOption] text=<color=SlateGray>Corvair (-20 Favor);
+[DialogOption] text=<color=SlateGray>科威尔桨帆船 (-20 好感度);
 formulaReq=m:playerFavorBelow(20);
 nodeToConnectTo=royal_boon_cant;
 [DialogOption] text=<iconBig=ui_questionmark>;
@@ -783,11 +783,11 @@ nodeToConnectTo=view_corvair;
 
 
 --#2
-[DialogOption] text=Blackwing Galeass (-50 Favor);
+[DialogOption] text=黑翼军舰 (-50 好感度);
 newLineOfOptions=true;
 formulaReq=m:playerFavor - 49;
 nodeToConnectTo=royal_boon_ship_tier2;
-[DialogOption] text=<color=SlateGray>Blackwing Galeass (-50 Favor);
+[DialogOption] text=<color=SlateGray>黑翼军舰 (-50 好感度);
 newLineOfOptions=true;
 formulaReq=m:playerFavorBelow(50);
 nodeToConnectTo=royal_boon_cant;
@@ -795,7 +795,7 @@ nodeToConnectTo=royal_boon_cant;
 includeSymbol=false;
 nodeToConnectTo=view_bwing_galleass;
 
-[DialogOption] text=Back;
+[DialogOption] text=返回;
 nodeToConnectTo=royal_boon1;
 bottomOption=true;
 
@@ -806,7 +806,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:jasce;
 animations=;
-statements=The Corvair is our fastest ship, fit for any purpose.;
+statements=科威尔桨帆船是我们最快的船，适合任何用途.;
 
 [DialogNodeOverride] ID=jasce_royal_boon_ship_tier2;
 dialogNodeID_toOverride=royal_boon_ship_tier2;
@@ -814,7 +814,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:jasce;
 animations=;
-statements=Behold the mightiest ship on the seas, the Blackwing Galleass!;
+statements=见识下海上最强大的船吧，黑翼军舰!;
 --
 
 [DialogNodeOverride] ID=jasce_royal_boon_ship_tier1_give;
@@ -823,7 +823,7 @@ completeOverride=false;
 overrideSpecialEffects=true;
 fReq=talker:jasce;
 animations=;
-statements=Use this ship well and you will be rewarded even further.;
+statements=好好使用这些船，你会得到更多的奖励.;
 specialEffect=giveShip,corvair;
 specialEffect=renameShip;
 
@@ -833,7 +833,7 @@ completeOverride=false;
 overrideSpecialEffects=true;
 fReq=talker:jasce;
 animations=;
-statements=Now your fleet is truly fit to enact my will.;
+statements=现在你的舰队已经可以真的执行我的意志了.;
 specialEffect=giveShip,bwing_galleass;
 specialEffect=renameShip;
 
@@ -845,7 +845,7 @@ completeOverride=false;
 overrideSpecialEffects=true;
 fReq=talker:jasce;
 animations=sigh;
-statements=So be it. For the next 30 days, one of my ships will accompany you in combat.;
+statements=就这么定了.在接下来的30天内，我们的一艘船会协助你作战.;
 specialEffect=modPlayerFactionFavor,-5;
 specialEffect=setGlobalVar,playerEscort,jasce_escort1;
 specialEffect=fx,sfx_goodConfirm_fast;
@@ -857,7 +857,7 @@ completeOverride=false;
 overrideSpecialEffects=true;
 fReq=talker:jasce;
 animations=sigh;
-statements=So be it. For the next 30 days, two of my ships will accompany you in combat.;
+statements=就这么定了.在接下来的30天内，我们的两艘船会协助你作战.;
 specialEffect=modPlayerFactionFavor,-15;
 specialEffect=setGlobalVar,playerEscort,jasce_escort2;
 specialEffect=fx,sfx_goodConfirm_fast;
@@ -869,7 +869,7 @@ completeOverride=false;
 overrideSpecialEffects=true;
 fReq=talker:jasce;
 animations=sigh;
-statements=So be it. For the next 30 days, three of my ships will accompany you in combat.;
+statements=就这么定了.在接下来的30天内，我们的三艘船会协助你作战.;
 specialEffect=modPlayerFactionFavor,-25;
 specialEffect=setGlobalVar,playerEscort,jasce_escort3;
 specialEffect=fx,sfx_goodConfirm_fast;
@@ -885,17 +885,17 @@ animations=;
 animations=handupPose;
 animations=;
 animations=handsupPose;
-statements=<speed=0.5><pfullname=>.<p> You have fully met the destiny I set for you.;
-statements=By your doing, believers hold <math=factionPorts:jasce>ports -<p> and with it, untold souls have been saved!;
-statements=<pfullname=>,<p> I now entrust you with <color=DarkRed>knowledge of the position of every enemy fleet.;
-statements=Know,<p> <pfullname=>,<p> that your rewards in the afterlife shall be great!;
+statements=<speed=0.5><pfullname=>.<p>你已经完成满足了我为你设定的天命.;
+statements=通过你的努力, 信徒们拥有<math=factionPorts:jasce>个港口 -<p>有了它,无数的灵魂得到了拯救!;
+statements=<pfullname=>,<p>我现在可以交付给你<color=DarkRed>所有的敌人舰队位置.;
+statements=<pfullname=>,<p>你在天国的回报将会是巨大的!;
 nextNodeID=jasce_royal_domination2;
 
 [DialogNode] ID=jasce_royal_domination2;
 animations=;
 animations=;
-statements=Your material rewards shall be <itemBig_low=xpGemBig> <itemBig_low=abilityCrest><p>  and $50,000 from my treasury.;
-statements=Go, <pfullname=>, with My favor.;
+statements=你的物质奖赏有<itemBig_low=xpGemBig> <itemBig_low=abilityCrest><p>和$50,000.;
+statements=去吧, <pfullname=>,带着我的支持.;
 specialEffect=giveItem,xpGemBig,1;
 specialEffect=giveItem,abilityCrest,1;
 specialEffect=modPlayerFactionFavor,10;

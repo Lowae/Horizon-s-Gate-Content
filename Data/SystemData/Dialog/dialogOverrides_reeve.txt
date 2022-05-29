@@ -406,8 +406,8 @@ specialEffect=delayDialog,2;
 specialEffect=noSpeechFXLookOrAnim;
 animations=sly;
 animations=happy;
-statements=Jascias, eh?<p> Haven't been here often.;
-statements=I wonder if we'll get to meet Jasce himself?<p> Even as Vice Admiral I never got to see him!;
+statements=Jascias, 嗯?<p>我不常来.;
+statements=我想知道我们你不能见到雅斯本人?<p>即使我是中将，也没机会见到他!;
 nextNodeID=reeve_port11_dialog1b;
 nextNodeID_fReq=party:hagger;
 nextNodeID=;
@@ -416,8 +416,8 @@ nextNodeID=;
 speakerOverride=hagger;
 animations=happy;
 animations=sly;
-statements=Forget Jasce, I want t'see th' cafe!;
-statements=This dry air 'as me parched!<p> How 'bout it, <pname=>?;
+statements=别管雅斯了，我想去咖啡馆!;
+statements=这干燥的空气让我口渴了!<p>你觉得呢, <pname=>?;
 nextNodeID=;
 
 
@@ -489,9 +489,9 @@ specialEffect=noSpeechFXLookOrAnim;
 animations=scared;
 animations=;
 animations=stern;
-statements=Oh, I've heard about this place.;
-statements=Seartial's Council set it up as a way to research the Shredded Land from safety.;
-statements=I think they just wanted an excuse to keep an eye on Jasce in this area...<p> but that's just me.;
+statements=噢，我听说过这个地方.;
+statements=西提尔的议会的它，来用于以一种安全的方式来研究 Shredded Land.;
+statements=我想他们仅仅是找个借口在这片区域监视雅斯...<p>但，这只是我的观点.;
 
 
 --port22
@@ -505,29 +505,29 @@ specialEffect=noSpeechFXLookOrAnim;
 animations=meh;
 animations=;
 animations=stern;
-statements=Ugh.<p> What a gloomy place.;
+statements=额.<p>好阴沉的地方.;
 nextNodeID=reeve_port22_dialog1b;
 
 [DialogNode] ID=reeve_port22_dialog1b;
 speakerOverride=hagger;
 animations=sly;
-statements=Ain't no way to talk t'my hometown, Reeve!;
+statements=这可不是形容我家乡说的话, Reeve!;
 nextNodeID=reeve_port22_dialog1c;
 
 [DialogNode] ID=reeve_port22_dialog1c;
 speakerOverride=reeve;
 animations=scared;
 animations=meh;
-statements=THIS place?<p=2> But, it's so...;
-statements=Actually, that explains a lot about you.;
+statements=这个地方?<p=2>但是，它实在是...;
+statements=事实上，这解释了你的很多事.;
 nextNodeID=reeve_port22_dialog1d;
 
 [DialogNode] ID=reeve_port22_dialog1d;
 speakerOverride=hagger;
 animations=happy;
 animations=sly;
-statements=Hah!<p> Fantlin used t'be greener 'n green back in th' day!;
-statements=Still a soft spot for 't.<p> Jes' wish they still served that fine mead!;
+statements=哈哈!<p> Fantlin 以前是一片绿色!;
+statements=我还是很喜欢它.<p>但愿这里还能提供上好的蜂蜜酒!;
 nextNodeID=;
 
 
@@ -725,9 +725,9 @@ specialEffect=noSpeechFXLookOrAnim;
 animations=sigh;
 animations=meh;
 animations=;
-statements=<speed=0.7>What a vast field...;
-statements=There must be something here...<p> but it might take a while to find it.;
-statements=Well, if we keep track using our map,<p> should be easy enough to comb the area.;
+statements=<speed=0.7>多么广阔的田野...;
+statements=这儿一定有什么...<p>但是要找到它可能需要点时间.;
+statements=好吧，如果我们用地图追踪,<p>应该很容易搜查这片区域.;
 
 [DialogNodeOverride] ID=reeve_beach4_dialog1a;
 dialogNodeID_toOverride=enterLoc; priority=9;
@@ -753,9 +753,9 @@ specialEffect=noSpeechFXLookOrAnim;
 animations=;
 animations=sly;
 animations=sigh;
-statements=This is supposed to be a farm, right?;
-statements=Shouldn't it be a little less...<p> quiet?;
-statements=<speed=0.8>...I'd be on guard, Commodore.;
+statements=这里应该是的农场的, 对吧?;
+statements=是不是有点太...<p>安静了?;
+statements=<speed=0.8>...我会提高警惕,船长.;
 
 [DialogNodeOverride] ID=reeve_tower1_dialog1a;
 dialogNodeID_toOverride=enterLoc; priority=9;
@@ -810,8 +810,8 @@ specialEffect=delayDialog,0.8;
 specialEffect=noSpeechFXLookOrAnim;
 animations=scared;
 animations=;
-statements=Commodore, we're <color=DarkRed>out of <iconBig=food>Food!<color=>;
-statements=We should get more as soon as possible.;
+statements=船长, 我们<color=DarkRed>耗尽<iconBig=food>食物了!<color=>;
+statements=我们应该尽可能的获取到更多的食物.;
 
 --lots of discoveries
 
@@ -1690,9 +1690,9 @@ specialEffect=noSpeechFXLookOrAnim;
 animations=happy;
 animations=sly;
 animations=happy;
-statements=Ah, I haven't had a fresh Rock Yam in ages!;
-statements=Stale ones, I've had plenty of.<p=> Navy used to love packaging these things in every meal.;
-statements=They stay good for ages, but nothing beats a really fresh one!;
+statements=啊，我好久没吃到新鲜的山药了!;
+statements=不新鲜的我倒是有很多.<p=>海军以前喜欢打包这些东西.;
+statements=他们可以保存很长时间，但也比不上真正新鲜的!;
 nextNodeID=endCafeTalk;
 
 --port3 (Hoppy Lager)
@@ -1739,8 +1739,8 @@ specialEffect=delayDialog,3;
 specialEffect=noSpeechFXLookOrAnim;
 animations=sly;
 animations=happy;
-statements=This is a pretty bleak place...<p> but they know how to cook a fish.;
-statements=In fact, this is so good I bet it'd taste just fine raw.;
+statements=这是一个相当荒凉的地方...<p>但是他们知道如果烹饪鱼.;
+statements=实际上，我打赌生的的话味道会更好吃.;
 nextNodeID=reeve_cafe_party_dialog_port4_1b;
 nextNodeID_fReq=party:hagger;
 nextNodeID=reeve_cafe_party_dialog_port4_1d;
@@ -1750,14 +1750,14 @@ nextNodeID=reeve_cafe_party_dialog_port4_1d;
 speakerOverride=hagger;
 animations=meh;
 animations=sly;
-statements=Raw?<p> Just straigh' up, an entire fish?;
-statements=That a Falpa thing,<p> or a Reeve thing?;
+statements=生的?<p>就面前这样的，一整条鱼?;
+statements=那是法尔帕人会干的事,<p>或者是 Reeve 你自己会干的事?;
 nextNodeID=reeve_cafe_party_dialog_port4_1c;
 
 [DialogNode] ID=reeve_cafe_party_dialog_port4_1c;
 speakerOverride=reeve;
 animations=happy;
-statements=A little of both,<p> probably.;
+statements=两者都有一点,<p>可能是.;
 nextNodeID=endCafeTalk;
 
 [DialogNode] ID=reeve_cafe_party_dialog_port4_1d;
@@ -1828,9 +1828,9 @@ specialEffect=noSpeechFXLookOrAnim;
 animations=happy;
 animations=sly;
 animations=happy;
-statements=Ahh,<p=> this cafe is just like I remember!;
-statements=I last ate here nearly a decade ago, and they haven't changed a thing.<p=> Same old rug, even.;
-statements=The drinks are definitely better now, though!;
+statements=啊哈,<p=>这家咖啡馆和我印象中的一样!;
+statements=我上次在这里吃饭已经将近过去十年了，他们一点也没有改变.<p=>甚至还是同样的老旧的地毯.;
+statements=不过，现在的酒肯定更好喝了!;
 nextNodeID=reeve_cafe_party_dialog_port6_1b;
 nextNodeID_fReq=party:hagger;
 nextNodeID=endCafeTalk;
@@ -1838,7 +1838,7 @@ nextNodeID=endCafeTalk;
 [DialogNode] ID=reeve_cafe_party_dialog_port6_1b;
 animations=meh;
 speakerOverride=hagger;
-statements=Not hardly!<p=> Used t'be half the price back then!;
+statements=完全没有!<p=>以前的价格还是现在的一半!;
 nextNodeID=endCafeTalk;
 
 
@@ -1855,10 +1855,10 @@ animations=sly;
 animations=scared;
 animations=meh;
 animations=sly;
-statements=Let's see if this is like last time...;
+statements=让我们看看这是否像上次那样...;
 statements=Pfggf...!;
-statements=Ugh.<p=> Yeah...<p=> yeah it is.<p=> Rumanians love the heavy stuff.;
-statements=For me, this stuff sits like lead in my stomach.<p=> Bleh.;
+statements=Ugh.<p=> 是的...<p=>就是这样.<p=>罗马尼亚人喜欢这种重口味的.;
+statements=对我来说，这东西在我胃里就像铅一样.<p=> 恶心.;
 nextNodeID=reeve_cafe_party_dialog_port8_1b;
 nextNodeID_fReq=party:hagger;
 nextNodeID=endCafeTalk;
@@ -1866,7 +1866,7 @@ nextNodeID=endCafeTalk;
 [DialogNode] ID=reeve_cafe_party_dialog_port8_1b;
 speakerOverride=hagger;
 animations=happy;
-statements=Then hand yer glass ov'r to me and let i' sit in MY stomach!<p=> Gyaha!;
+statements=那你把你的杯子给我吧，让它到我胃里来!<p=> 哈哈!;
 nextNodeID=endCafeTalk;
 
 --port10 (Beaf)
@@ -1882,10 +1882,10 @@ animations=scared;
 animations=meh;
 animations=meh;
 animations=scared;
-statements=Wow.<p=> They just serve it straight from the tin...?;
-statements=Ugh...<p=> what a depressing place.;
-statements=<speed=0.7>... *munch*;
-statements=Is it just me, or is it not that bad...?;
+statements=哇.<p=> 他们直接从罐头里拿出来...?;
+statements=呃...<p=>多么萧条的地方.;
+statements=<speed=0.7>... *用力咀嚼*;
+statements=只有我这么想吗, 还是说没那么糟...?;
 nextNodeID=reeve_cafe_party_dialog_port10_1b;
 nextNodeID_fReq=party:hagger;
 nextNodeID=reeve_cafe_party_dialog_port10_1c;
@@ -1893,13 +1893,13 @@ nextNodeID=reeve_cafe_party_dialog_port10_1c;
 [DialogNode] ID=reeve_cafe_party_dialog_port10_1b;
 animations=meh;
 speakerOverride=hagger;
-statements='S definit'ly just you.;
+statements=肯定只有你.;
 nextNodeID=reeve_cafe_party_dialog_port10_1c;
 
 [DialogNode] ID=reeve_cafe_party_dialog_port10_1c;
 speakerOverride=reeve;
 animations=happy;
-statements=Then again,<p> I'll eat any kind of meat,<p> pretty much.;
+statements=不过话说回来,<p>我几乎什么肉都能吃.;
 nextNodeID=endCafeTalk;
 
 --port12 (Ruecumber)
@@ -2099,8 +2099,8 @@ specialEffect=delayDialog,3;
 specialEffect=noSpeechFXLookOrAnim;
 animations=scared;
 animations=happy;
-statements=Ooh, this is the good stuff.;
-statements=Commodore, you ever want me in a good mood,<p> just serve up some meat.;
+statements=噢, 这是个好东西啊.;
+statements=船长, 你曾想让我有个好心情,<p>现在仅仅给我上点肉就行了.;
 nextNodeID=reeve_cafe_party_dialog_port18_1b;
 nextNodeID_fReq=party:hagger;
 nextNodeID=reeve_cafe_party_dialog_port18_1c;
@@ -2109,16 +2109,16 @@ nextNodeID=reeve_cafe_party_dialog_port18_1c;
 speakerOverride=hagger;
 animations=sly;
 animations=stern;
-statements=Hah!<p> Tha's wha...;
-statements=Heh.<p> Ne'r mind.;
+statements=哈哈!<p>这就是...;
+statements=哈.<p>别介意.;
 nextNodeID=reeve_cafe_party_dialog_port18_1c;
 
 [DialogNode] ID=reeve_cafe_party_dialog_port18_1c;
 speakerOverride=reeve;
 animations=scared;
 animations=happy;
-statements=And this seasoning...!;
-statements=Well, honestly I don't care about the seasoning.<p> I just love a good side of steak!;
+statements=这个佐料...!;
+statements=好吧,老实说我不在乎佐料.<p>我只是喜欢牛排的肋部!;
 nextNodeID=endCafeTalk;
 
 --port21 (Gloam Truffle)
@@ -2192,7 +2192,7 @@ speakerOverride=reeve;
 specialEffect=delayDialog,3;
 specialEffect=noSpeechFXLookOrAnim;
 animations=scared;
-statements=Ooh, fancy!;
+statements=噢，我喜欢!;
 nextNodeID=reeve_cafe_party_dialog_port29_1b;
 nextNodeID_fReq=party:hagger;
 nextNodeID=reeve_cafe_party_dialog_port29_1c;
@@ -2201,15 +2201,15 @@ nextNodeID=reeve_cafe_party_dialog_port29_1c;
 [DialogNode] ID=reeve_cafe_party_dialog_port29_1b;
 speakerOverride=hagger;
 animations=sly;
-statements=In wha' world is a kebab fancy?;
+statements=会有烤肉串构成的世界吗?;
 nextNodeID=reeve_cafe_party_dialog_port29_1c;
 
 [DialogNode] ID=reeve_cafe_party_dialog_port29_1c;
 speakerOverride=reeve;
 animations=sly;
 animations=happy;
-statements=There's like 5 kinds of sauces on here!;
-statements=Commodore, I'll trade you for the ones with the red sauce!<p> Those are the best kind!;
+statements=这个烤肉串居然还有5种酱料!;
+statements=船长，我要和你换那个有红色酱料的，那是我觉得最好吃的!;
 nextNodeID=endCafeTalk;
 
 --port30 (Rigor Oil)

@@ -1327,7 +1327,7 @@ special=canBeInsideWalls;
 [ItemReaction] 
 ID=overheadDoor2_open; element=mechanical; newID=overheadDoor2; fx=sidewardLines_slam; action=forceRelocate;
 	
-[ItemType]  name=密封;
+[ItemType]  name=密封装置;
 itemCategory=mech;
 ID=stair_cover; sprite=124; 
 texture=items_building;
@@ -1339,8 +1339,8 @@ ID=stair_cover; element=mechanical; newID=X; fx=sfx_slam;
 [JournalEntry]
 ID=item_stair_cover;
 category=item; halfPage=true;
-title=密封;
-text=<itemBig=stair_cover><title=密封><brAdj=>这种机械堵塞器无疑是<n>用来封闭通道、楼梯或类似的东西.<n>有时会有一个方法在附近打开它...有时不是.;
+title=密封装置;
+text=<itemBig=stair_cover><title=密封装置><brAdj=>这种机械堵塞器无疑是<n>用来封闭通道、楼梯或类似的东西.<n>有时会有一个方法在附近打开它...有时不是.;
 
 [ItemType]  name=箱子 (密封的);
 ID=chest_stone1_sealed; sprite=747; itemCategory=mech; pR=zoneStone;
@@ -1429,8 +1429,8 @@ element=mech; newID=lockdown_open_alt; fx=sealDoorOpen_dark;
 [JournalEntry]
 ID=journal_lockdown;
 category=item; halfPage=true; rarity=1;
-title=密封;
-text=<itemBig=lockdown_closed><title=Seal><brAdj=>用厚石块板阻塞的通道.<n>它几乎是牢不可破的,<n>但肯定有一个隐藏的机制来控制它.;
+title=密封装置;
+text=<itemBig=lockdown_closed><title=密封装置><brAdj=>用厚石块板阻塞的通道.<n>它几乎是牢不可破的,<n>但肯定有一个隐藏的机制来控制它.;
 	
 [ItemType]  name=横梯;
 itemCategory=mech;

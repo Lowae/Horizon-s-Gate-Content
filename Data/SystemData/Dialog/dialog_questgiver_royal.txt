@@ -14,84 +14,84 @@ nodeToConnectTo=royal_questgiver_meeting_cant;
 formulaReq=gIsTalkerFaction:playerFaction + gIsMoreThan:playerRank:3 - 1 - g:gIsString:royalQuestType - g:royalSummons;
 nodeToConnectTo=royal_questgiver_meeting_can;
 
-[DialogOption] text=Summons;
+[DialogOption] text=召见;
 formulaReq=gIsString:royalQuestType + gIsTalkerFaction:playerFaction + g:royalSummons - 2 - gIsString:questLog * 1000;
 specialEffect=royalJobDialogOptions,royal_questgiver_jobs;
 newLineOfOptions=true;
 nodeToConnectTo=royal_questgiver_jobs;
-[DialogOption] text=Summons;
+[DialogOption] text=召见;
 formulaReq=gIsString:questType - g:questRoyal + g:royalSummons + gIsTalkerFaction:playerFaction  - 2;
 newLineOfOptions=true;
 nodeToConnectTo=royal_questgiver_jobs_already_busy;
 
 
-[DialogOption] text=Document delivered;
+[DialogOption] text=文件递送;
 --generic turning a quest in to the questgiver
 formulaReq=gIs:questType,letter + g:questCompleted + gIsTalker:questGiver - 2;
 newLineOfOptions=true;
 nodeToConnectTo=royal_questgiver_job_complete_letter;
 
-[DialogOption] text=Deliver document;
+[DialogOption] text=交付文件;
 --if you're delivering letter and this is the right location for it
 formulaReq=gIs:questType,letter + gIsTalkerFaction:questGoal - 1;
 newLineOfOptions=true;
 nodeToConnectTo=royal_questgiver_job_letter;
 
 
-[DialogOption] text=Deliver cargo;
+[DialogOption] text=交付货物;
 --if you have enough cargo and you're back at the original questGiver
 formulaReq=gIs:questType,cargo + gIsTalker:questGiver + cargoItem_g:questGoal:10 - 2;
 newLineOfOptions=true;
 nodeToConnectTo=royal_questgiver_job_complete_cargo;
 
-[DialogOption] text=Deliver cargo?;
+[DialogOption] text=交付货物?;
 --if you DON'T have enough cargo
 formulaReq=gIs:questType,cargo + gIsTalker:questGiver + cargoItem_g:questGoal:1 - cargoItem_g:questGoal:10*100 - 2;
 newLineOfOptions=true;
 nodeToConnectTo=royal_questgiver_job_not_enough_cargo;
 
-[DialogOption] text=Deliver item;
+[DialogOption] text=交付道具;
 --if you have the item and you're back at the original questGiver
 formulaReq=gIs:questType,item + gIsTalker:questGiver + partyItem_g:questGoal:1 - 2;
 newLineOfOptions=true;
 nodeToConnectTo=royal_questgiver_job_complete_item;
 
-[DialogOption] text=Defeated enemy!;
+[DialogOption] text=已击败敌人!;
 --if you beat the fleet
 formulaReq=gIs:questType,defeat * 100000 + g_gID:fleetsDefeated_:questGoal - g:questStartNum - 200000 + gIsTalker:questGiver * 100000;
 newLineOfOptions=true;
 nodeToConnectTo=royal_questgiver_job_complete_defeat;
-[DialogOption] text=Defeated battle fleet!;
+[DialogOption] text=已击败作战舰队!;
 --if you beat the battle fleet
 formulaReq=gIs:questType,defeatbattle * 100000 + g_gID:battlefleetsDefeated_:questGoal - g:questStartNum - 200000 + gIsTalker:questGiver * 100000;
 newLineOfOptions=true;
 nodeToConnectTo=royal_questgiver_job_complete_defeatbattle;
-[DialogOption] text=Defeated elite fleet!;
+[DialogOption] text=已击败精英舰队!;
 --if you beat the elite fleet
 formulaReq=gIs:questType,defeatelite * 100000 + g_gID:elitefleetsDefeated_:questGoal - g:questStartNum - 200000 + gIsTalker:questGiver * 100000;
 newLineOfOptions=true;
 nodeToConnectTo=royal_questgiver_job_complete_defeatelite;
 
-[DialogOption] text=Alliances made!;
+[DialogOption] text=结盟!;
 --if you made enough alliances and you're back at the original questGiver
 formulaReq=gIs:questType,alliance * 100000 + gIsTalker:questGiver * 100000 + 1 + g:alliancesMade - g:questGoal - g:questStartNum - 200000;
 newLineOfOptions=true;
 nodeToConnectTo=royal_questgiver_job_complete_ally;
-[DialogOption] text=Grove discovered!;
+[DialogOption] text=已发现树林!;
 --if you discovered the grove and you're back at the original questGiver
 formulaReq=gIs:questType,grove + gIsTalker:questGiver + gLocDiscovered:questGoal - 2;
 newLineOfOptions=true;
 nodeToConnectTo=royal_questgiver_job_complete_grove;
-[DialogOption] text=Current mission;
+[DialogOption] text=当前任务;
 formulaReq=gIsTalkerFaction:playerFaction + gIsString:questType + g:questRoyal - 2;
 newLineOfOptions=true;
 nodeToConnectTo=royal_questgiver_jobs_already_busy_royal;
 
-[DialogOption] text=Give Lost Documents;
+[DialogOption] text=交付丢失文件;
 formulaReq=partyItem:lost_docs;
 newLineOfOptions=true;
 nodeToConnectTo=royal_questgiver_give_lost_documents;
-[DialogOption] text=Defect;
+[DialogOption] text=叛变;
 formulaReq=gIsString:playerFaction - gIsTalkerFaction:playerFaction - m:playerFavorWithTargetBelow(0);
 newLineOfOptions=true;
 nodeToConnectTo=royal_questgiver_defect;
@@ -109,7 +109,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:admin + m:playerFavorWithTargetBelowNeg(40) - 1;
 animations=angry;
-statements=<pname=>.<p=> Be advised you are an enemy of the state.<p=> Linger here and I'll have you imprisoned personally.;
+statements=<pname=>.<p=>请注意，你是国家的敌人.<p=>再在这里逗留我会亲自把你关进监狱.;
 
 
 ----ALREADY BUSY
@@ -118,11 +118,11 @@ statements=<pname=>.<p=> Be advised you are an enemy of the state.<p=> Linger he
 animations=sly;
 animations=;
 animations=stern;
-statements=Your service is requested, but you're in the middle of a prior job, it seems...;
-statements='<g=questLog>', apparently.;
-statements=Trivial compared to a direct request from the Council.<p=> You should cancel it immediately.;
+statements=我们需要你的服务，但你手上目前好像还有其他的工作...;
+statements='<g=questLog>', 据说是这个.;
+statements=与议会的直接请求相比，这是个无足轻重的任务.<p=>你应该立即取消这个任务.;
 nextNodeID=;
-[DialogOption] text=Cancel job;
+[DialogOption] text=取消任务;
 nodeToConnectTo=royal_questgiver_jobs_cancel;
 [DialogOption] text=没事;
 nodeToConnectTo=;
@@ -133,12 +133,12 @@ animations=;
 animations=sigh;
 animations=;
 animations=sly;
-statements=The Council has given you this task:;
+statements=议会给了你这个任务:;
 statements='<g=questLog>'.;
-statements=Hurry up and perform the mission given you.;
-statements=<p=> ...unless you're saying you can't complete it?;
+statements=快点完成交给你的任务吧.;
+statements=<p=> ...除非你说你无法完成它?;
 nextNodeID=;
-[DialogOption] text=Cancel job;
+[DialogOption] text=取消任务;
 nodeToConnectTo=royal_questgiver_jobs_cancel_royal;
 [DialogOption] text=没事;
 nodeToConnectTo=;
@@ -148,7 +148,7 @@ bottomOption=true;
 
 [DialogNode] ID=royal_questgiver_job_not_enough_cargo;
 animations=stern;
-statements=<pname=>...<p=> You failed to bring enough. The Council requested 10, but you only have <math=cargoItem_g:questGoal><adjX=-4>.;
+statements=<pname=>...<p=>你没有带狗足够的货物.议会要求10个, 但你只有 <math=cargoItem_g:questGoal><adjX=-4>个.;
 nextNodeID=;
 
 --CAN'T MEET
@@ -160,7 +160,7 @@ nextNodeID=;
 
 [DialogNode] ID=royal_questgiver_meeting_can;
 animations=;
-statements=Certainly, <prank=>.<p=> Go on in.;
+statements=当然, <prank=>.<p=>进去吧.;
 nextNodeID=;
 
 
@@ -168,8 +168,8 @@ nextNodeID=;
 [DialogNode] ID=royal_questgiver_job_letter;
 animations=;
 animations=sigh;
-statements=An important document? Ah, I see...<p=> I'll take it from here.;
-statements=<textIf=Thank you. =11 + m:playerFavorWithTarget><p=>Return to your master<textIf= and give them my regards=41 + m:playerFavorWithTarget>.;
+statements=一份重要文件? 啊，我明白了...<p=>接下来交给我吧.;
+statements=<textIf=谢谢你. =11 + m:playerFavorWithTarget><p=>回去你雇主那吧<textIf=顺便代我向他们问好=41 + m:playerFavorWithTarget>.;
 specialEffect=fx,sfx_questComplete;
 specialEffect=setGlobalVar,questGoal,;
 specialEffect=setGlobalVar,questCompleted,1;
@@ -178,8 +178,8 @@ nextNodeID=;
 
 [DialogNode] ID=royal_questgiver_jobs;
 animations=;
-statements=Ah, <pname=>. The Council has indeed summoned you.;
-statements=The Council has this task for you to perform.;
+statements=啊, <pname=>.议会确实召见了你.;
+statements=议会有个任务需要你来完成.;
 
 
 --JOB COMPLETE
@@ -194,7 +194,7 @@ nextNodeID=royal_questgiver_job_complete2;
 
 [DialogNode] ID=royal_questgiver_job_complete_letter;
 animations=;
-statements=<g=questLog>... good.;
+statements=<g=questLog>... 不错.;
 specialEffect=fx,sfx_questComplete;
 specialEffect=modFame,trade,5;
 specialEffect=modGlobalVar,questComplete_r_letter,1;
@@ -203,7 +203,7 @@ nextNodeID=royal_questgiver_job_complete2;
 
 [DialogNode] ID=royal_questgiver_job_complete_cargo;
 animations=;
-statements=<g=questLog>? The cargo all seems to be accounted for...;
+statements=<g=questLog>? 这些货物看起来数量能对上...;
 specialEffect=fx,sfx_questComplete;
 specialEffect=removeCargo_g,questGoal,10;
 specialEffect=modFame,trade,10;
@@ -212,7 +212,7 @@ nextNodeID=royal_questgiver_job_complete2;
 
 [DialogNode] ID=royal_questgiver_job_complete_item;
 animations=;
-statements=<g=questLog>... this looks like the item in question.;
+statements=<g=questLog>...这个看起来是我们需要的东西.;
 specialEffect=fx,sfx_questComplete;
 specialEffect=removeItem_g,questGoal,1;
 specialEffect=modFame,trade,1;
@@ -222,7 +222,7 @@ nextNodeID=royal_questgiver_job_complete2;
 
 [DialogNode] ID=royal_questgiver_job_complete_ally;
 animations=;
-statements=<g=questLog> -<p=2> a difficult feat, to be sure.;
+statements=<g=questLog> -<p=2>无疑是一个艰难取得的壮举.;
 specialEffect=fx,sfx_questComplete;
 specialEffect=modFame,trade,10;
 specialEffect=modGlobalVar,questComplete_r_alliance,1;
@@ -230,7 +230,7 @@ nextNodeID=royal_questgiver_job_complete2;
 
 [DialogNode] ID=royal_questgiver_job_complete_defeat;
 animations=;
-statements=<g=questLog>. I have heard you were successful in this.;
+statements=<g=questLog>. 我听说你成功了.;
 specialEffect=fx,sfx_questComplete;
 specialEffect=modFame,combat,10;
 specialEffect=modGlobalVar,questComplete_r_defeat,1;
@@ -238,7 +238,7 @@ nextNodeID=royal_questgiver_job_complete2;
 
 [DialogNode] ID=royal_questgiver_job_complete_defeatbattle;
 animations=;
-statements=<g=questLog>...<p> excellent.;
+statements=<g=questLog>...<p> 太棒了.;
 specialEffect=fx,sfx_questComplete;
 specialEffect=modFame,combat,20;
 specialEffect=modGlobalVar,questComplete_r_defeat,1;
@@ -246,7 +246,7 @@ nextNodeID=royal_questgiver_job_complete2;
 
 [DialogNode] ID=royal_questgiver_job_complete_defeatelite;
 animations=;
-statements=<g=questLog>? Fantastic!;
+statements=<g=questLog>? 了不起!;
 specialEffect=fx,sfx_questComplete;
 specialEffect=modFame,combat,50;
 specialEffect=modGlobalVar,questComplete_r_defeat,1;
@@ -256,7 +256,7 @@ nextNodeID=royal_questgiver_job_complete2;
 
 [DialogNode] ID=royal_questgiver_job_complete_grove;
 animations=;
-statements=<g=questLog>?<p=> So you did find it.;
+statements=<g=questLog>?<p=>这么说你找到了.;
 specialEffect=fx,sfx_questComplete;
 specialEffect=removeItem_g,questGoal,1;
 specialEffect=modFame,trade,1;
@@ -270,9 +270,9 @@ nextNodeID=royal_questgiver_job_complete2;
 animations=sigh;
 animations=;
 animations=;
-statements=Well done.<p=> You've provided a valuable service to your country.;
-statements=In exchange for your service, I am authorized to grant you the rank of<speed=0.5><cmd=fx=longGoodAuraSound> <color=Blue><prank=><color=>!;
-statements=Continue to make a name for yourself, and we will surely call on you again.;
+statements=干得好.<p=> 你为你的国家提供了宝贵的贡献.;
+statements=作为你服役的回报, 我有权授予你为 <speed=0.5><cmd=fx=longGoodAuraSound> <color=Blue><prank=><color=>!;
+statements=继续扬名立万吧，我们一定还会召见你的.;
 specialEffect=modTalkerFavor,3;
 specialEffect=modGlobalVar,playerRank,1;
 specialEffect=refreshRoyalQuests;
@@ -291,11 +291,11 @@ nextNodeID=royal_questgiver_showFactionWindow_jobDone;
 
 [DialogNode] ID=royal_questgiver_jobs_cancel;
 animations=;
-statements=A wise choice.<p=> Give me the $20 necessary and I will send the guild cancellation fee for you.;
-[DialogOption] text=Cancel ($20);
+statements=明智的选择.<p=>给我必要的费用$20，我会给你交给公会当作取消费.;
+[DialogOption] text=取消 ($20);
 formulaReq=m:money - 19;
 nodeToConnectTo=royal_questgiver_jobs_cancel_confirm;
-[DialogOption] text=<color=SlateGray>(Can't afford...);
+[DialogOption] text=<color=SlateGray>(负担不起...);
 formulaReq=20-m:money;
 nodeToConnectTo=royal_questgiver_jobs_cancel_cantAfford;
 [DialogOption] text=没事;
@@ -305,13 +305,13 @@ bottomOption=true;
 [DialogNode] ID=royal_questgiver_jobs_cancel_cantAfford;
 animations=scared;
 animations=angry;
-statements=Are you joking?<p=2> You can't afford the-!?;
-statements=...Tch!<p> Come back when you're ready to be serious!;
+statements=你在开玩笑吗?<p=2>你没有足够的钱来支付-!?;
+statements=...Tch!<p>当你认真准备好了再回来!;
 
 
 [DialogNode] ID=royal_questgiver_jobs_cancel_confirm;
 animations=sigh;
-statements=Good.<p> Now, where were we...;
+statements=不错.<p>现在，我们说到哪了...;
 specialEffect=subtract20gp;
 specialEffect=cancelQuest;
 nextNodeID=royal_questgiver;
@@ -320,8 +320,8 @@ nextNodeID=royal_questgiver;
 
 [DialogNode] ID=royal_questgiver_jobs_cancel_royal;
 animations=sly;
-statements=Truly? The Council will be most disappointed to hear of this.;
-[DialogOption] text=Cancel (-5 Favor);
+statements=真的吗? 议会听到这个消息将会非常失望.;
+[DialogOption] text=取消 (-5 好感度);
 nodeToConnectTo=royal_questgiver_jobs_cancel_confirm_royal;
 [DialogOption] text=没事;
 nodeToConnectTo=;
@@ -332,8 +332,8 @@ bottomOption=true;
 [DialogNode] ID=royal_questgiver_jobs_cancel_confirm_royal;
 animations=sigh;
 animations=stern;
-statements=Fine.<p=> I shall inform them not to entrust such tasks to you in the future.;
-statements=Go on then.<p=> You are freed of your obligation.;
+statements=好吧.<p=>我将通知他们今后不要把这种任务委托给你.;
+statements=然后你继续吧.<p=>这儿没什么其他事了.;
 specialEffect=modTalkerFavor,-5;
 specialEffect=cancelQuest;
 nextNodeID=;
@@ -397,10 +397,10 @@ nextNodeID=royal_questgiver_showFactionWindow_pledge;
 animations=sly;
 animations=;
 animations=stern;
-statements=Hm?<p=> You wish to change your loyalties?;
-statements=I can't say I blame you...<p=> however, understand that we cannot implicitly trust you.;
-statements=You must back your intentions with actions.<textIf= As a ranked member of a foreign nation, this will be very expensive for you.=g:playerRank-1>;
-[DialogOption] text=Pledge loyalty ($<math=g:playerRank * g:playerRank * 1000><adjX=-6>);
+statements=Hm?<p=>你想要改变你的归属国家吗?;
+statements=我不能责怪你...<p=>但你要明白，我们不能完全信任你.;
+statements=你必须要用行动来支持你的想法.<textIf=作为一个外国的有地位成员，这代价将是非常昂贵的.=g:playerRank-1>;
+[DialogOption] text=承诺忠诚 ($<math=g:playerRank * g:playerRank * 1000><adjX=-6>);
 formulaReq=m:money + 1 - g:playerRank * g:playerRank * 1000;
 nodeToConnectTo=royal_questgiver_defect_confirm;
 [DialogOption] text=<color=SlateGray>Can't afford ($<math=g:playerRank * g:playerRank * 1000><adjX=-6>);
@@ -419,10 +419,10 @@ statements=Understandable.<p=> It is a high price for a big decision.;
 animations=sigh;
 animations=;
 animations=;
-statements=Let me make sure you understand the repercussions and have no regrets.;
-statements=First, your previous faction will hate you.<textIf= Second, you will lose your rank entirely.=g:playerRank - 1>;
-statements=You'll have to earn your way into Seartial's favor like anyone else.;
-[DialogOption] text=Pledge loyalty ($<math=g:playerRank * g:playerRank * 1000><adjX=-6>);
+statements=我需要先确认你明白会有什么样的后果，不会后悔.;
+statements=首先，你之前的阵营会憎恨你.<textIf= 其实，你会完全失去之前的王室地位.=g:playerRank - 1>;
+statements=你得像其他人一样重新赢得西提尔的好感度.;
+[DialogOption] text=宣誓效力 ($<math=g:playerRank * g:playerRank * 1000><adjX=-6>);
 formulaReq=m:money + 1 - g:playerRank * g:playerRank * 1000;
 nodeToConnectTo=royal_questgiver_defect_confirm2;
 [DialogOption] text=没事;
@@ -433,9 +433,9 @@ bottomOption=true;
 [DialogNode] ID=royal_questgiver_defect_confirm2;
 animations=;
 animations=sigh;
-statements=Alright.<p=> We formally accept your gesture of good faith.;
-statements=Just fill out this paperwork...;
-statements=And, there we go!;
+statements=好.<p=> 我们正式接受你的真挚姿态.;
+statements=只要填好这些文件...;
+statements=然后就好了!;
 specialEffect=subtractgp,g:playerRank * g:playerRank * 1000;
 specialEffect=modPlayerFactionFavor,-150;
 nextNodeID=royal_questgiver_defect_confirm2a;
@@ -452,7 +452,7 @@ nextNodeID=royal_questgiver_defect_confirm3;
 
 
 [DialogNode] ID=royal_questgiver_defect_confirm3;
-statements=<pname=>, you are officially a <color=Blue><prank=><color=> of Seartial!;
+statements=<pname=>, 你正式成为西提尔的一名 <color=Blue><prank=><color=>!;
 specialEffect=fx,longGoodAuraSound;
 specialEffect=cancelRoyalQuest;
 --clear all royal quest variables
@@ -476,15 +476,15 @@ nextNodeID=royal_questgiver_showFactionWindow_pledge;
 animations=stern;
 animations=;
 animations=;
-statements=Well...<p=> it is wise not to accept a quest you are not ready for.;
-statements=However, this is the task chosen for you, and it will not change.<p=> Don't think that by waiting around you can get out of it.;
-statements=Come back when you are prepared to undertake it.;
+statements=好吧...<p=>不去接受你尚未准备好的任务是明智的.;
+statements=然而，这是为你选择的任务，它不会改变.<p=>别以为拖着就能脱身.;
+statements=等你准备好了再回来.;
 
 [DialogNode] ID=royal_questgiver_give_lost_documents;
 animations=happy;
 animations=sigh;
-statements=Ah, excellent find, <pname=>.<p> I shall add these documents to the archives.;
-statements=<talkerFaction=> thanks you for your service.;
+statements=啊，不错的发现, <pname=>.<p> 我将把这些文件列入档案.;
+statements=<talkerFaction=> 谢谢你的效劳.;
 specialEffect=modTalkerFactionFavor,2;
 specialEffect=removeItemFromParty,lost_docs,1;
 
@@ -496,8 +496,8 @@ statements=打扰一下!<p=>只有预约过才能进去议会大厅!;
 [DialogNode] ID=auspex_royal_questgiver_offlimits;
 animations=angry;
 animations=stern;
-statements=Hold it!<p=> Audiences with Jasce are not given so lightly!;
-statements=Only those who are explicity summoned to meet with Jasce may enter!;
+statements=等等!<p=>和雅斯见面可没这么容易!;
+statements=只有那些雅斯明确要见的人才可以进去!;
 
 [DialogNode] ID=viceroy_royal_questgiver_offlimits;
 animations=angry;
@@ -611,8 +611,8 @@ overrideSpecialEffects=true;
 fReq=talker:admin + gIs:playerRank:3 - 1;
 animations=;
 animations=;
-statements=Now that you have proven yourself reliable, <pfullname=>, the Council will set aside time to meet with you.;
-statements=If you desire an audience, follow the north passage.<p=> And of course, be on your best behaviour!;
+statements=现在，你已经证明你是可靠的, <pfullname=>,议会将抽出时间与你会面.;
+statements=如果你想觐见，请沿着北面过道走.<p=>还有就是，记得表现出最好的一面!;
 
 [DialogNodeOverride] ID=royal_questgiver_newRank_endConvo_rank9;
 dialogNodeID_toOverride=royal_questgiver_newRank_endConvo;
@@ -621,17 +621,17 @@ overrideSpecialEffects=true;
 fReq=talker:admin + gIs:playerRank:9 - 1;
 animations=sly;
 animations=happy;
-statements=Quite incredible, <pfullname=> - you have attained the highest rank possible!;
-statements=Your service has been most invaluable, and beyond all expectations.;
+statements=难以置信, <pfullname=> - 你已经达到了最高级别的地位!;
+statements=你的效劳是非常宝贵的，超出了所有人的期望.;
 nextNodeID=royal_questgiver_newRank_gift_rank9;
 
 [DialogNode] ID=royal_questgiver_newRank_gift_rank9;
 animations=;
 animations=sly;
 animations=happy;
-statements=It is my honor to grant you this <itemBig_low=xpGemBig><color=DarkRed> Essence Crystal<color=> to commemorate this occasion.;
-statements=From here on, we will share our closest intel with you<p> - our fleets will be marked on your map at all times.;
-statements=In addition, your contributions will be <color=DarkRed>valued twice over<color=> from here on.<p> Continue to serve and Seartial will treat you well, <p> <pfullname>!;
+statements=我很荣幸授予你这颗 <itemBig_low=xpGemBig><color=DarkRed>本源晶石<color=>来纪念这一刻.;
+statements=从现在开始，我们和你分享一些机密的情报<p> - 我们的舰队将会在你的地图上标记出来.;
+statements=此外, 从现在开始，你的捐赠将会得到<color=DarkRed>双倍的价值<color=>.<p> 继续效劳吧，西提尔同样也会回馈你, <p> <pfullname>!;
 specialEffect=giveItem,xpGemBig,1;
 specialEffect=modPlayerFactionFavor,3;
 specialEffect=setGlobalVar,tracking_seartial,1;
@@ -645,7 +645,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:auspex + m:playerFavorWithTargetBelowNeg(40) - 1;
 animations=angry;
-statements=<pname=>... how dare you show your face here.<p=> For what reason have you come?;
+statements=<pname=>... 你怎么敢在这里露面.<p=>你来这是为了什么?;
 
 
 [DialogNodeOverride] ID=auspex_royal_questgiver;
@@ -654,7 +654,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:auspex;
 animations=;
-statements=Ah, <pfullname=>.<p=> <finalTextIf=How can we serve Jasce today?=gIs:playerRank:9 + gIsTalkerFaction:playerFaction - 1>What brings you before Jasce?;
+statements=啊, <pfullname=>.<p=> <finalTextIf=我们今天要怎么为雅斯服务?=gIs:playerRank:9 + gIsTalkerFaction:playerFaction - 1>来雅斯面前有什么事吗?;
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_jobs;
 dialogNodeID_toOverride=royal_questgiver_jobs;
@@ -663,8 +663,8 @@ overrideSpecialEffects=false;
 fReq=talker:auspex;
 animations=;
 animations=;
-statements=Jasce has called you to serve.;
-statements=Perform this task in His name.;
+statements=雅斯需要你的效劳.;
+statements=以他的名义来执行这个任务.;
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_job_not_enough_cargo;
 dialogNodeID_toOverride=royal_questgiver_job_not_enough_cargo;
@@ -672,7 +672,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:auspex;
 animations=stern;
-statements=This is not enough.<p=> Jasce requires 10, but you only brought <math=cargoItem_g:questGoal><adjX=-4>.;
+statements=这还不够.<p=>雅斯需要10个，但是你只带来了<math=cargoItem_g:questGoal><adjX=-4>个.;
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_meeting_cant;
 dialogNodeID_toOverride=royal_questgiver_meeting_cant;
@@ -680,7 +680,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:auspex;
 animations=sigh;
-statements=Jasce has no reason to meet with you at this time.;
+statements=雅斯现在没理由见你.;
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_jobs_already_busy;
 dialogNodeID_toOverride=royal_questgiver_jobs_already_busy;
@@ -690,9 +690,9 @@ fReq=talker:auspex;
 animations=stern;
 animations=sly;
 animations=angry;
-statements=Your service is required, but you have a prior obligation that must be dismissed.;
+statements=我们需要你的效力，你母亲有一项任务需要被取消.;
 statements='<g=questLog>'.;
-statements=Either complete this immediately or cancel it.;
+statements=要么立即完成，要么取消.;
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_jobs_already_busy_royal;
 dialogNodeID_toOverride=royal_questgiver_jobs_already_busy_royal;
@@ -703,10 +703,10 @@ animations=stern;
 animations=;
 animations=;
 animations=angry;
-statements=Jasce has already spoken-;
+statements=雅斯已经说过了-;
 statements='<g=questLog>'.;
-statements=Do this and be rewarded.;
-statements=<p=>...or fail and suffer the consequences.;
+statements=完成它并得到奖励.;
+statements=<p=>...或者失败然后承担后果.;
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_jobs_cancel_royal;
 dialogNodeID_toOverride=royal_questgiver_jobs_cancel_royal;
@@ -714,7 +714,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:auspex;
 animations=sly;
-statements=Consider this decision carefully.;
+statements=仔细考虑这个决定.;
 
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_jobs_cancel_confirm_royal;
@@ -724,8 +724,8 @@ overrideSpecialEffects=false;
 fReq=talker:auspex;
 animations=sly;
 animations=stern;
-statements=Hmph.<p=> I will apprise Jasce of your failure.;
-statements=Perhaps in the future you will redeem yourself.<p=> Until then...;
+statements=Hmph.<p=>我会告诉雅斯你失败了.;
+statements=也许在将来你会救赎自己.<p=>在那之前...;
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_give_lost_documents;
 dialogNodeID_toOverride=royal_questgiver_give_lost_documents;
@@ -734,8 +734,8 @@ overrideSpecialEffects=false;
 fReq=talker:auspex;
 animations=sigh;
 animations=happy;
-statements=Very good, <pname=>.<p> These sorts of records are of value to Jasce.;
-statements=Continue in this manner and you will surely be rewarded.;
+statements=非常好, <pname=>.<p>这些记录对雅斯很有用.;
+statements=继续保持，你一定会得到回报.;
 
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_pledge;
@@ -746,9 +746,9 @@ fReq=talker:auspex;
 animations=happy;
 animations=;
 animations=happy;
-statements=Ah, another of the faithful!<p=> So you wish to serve Jasce?;
-statements=You may become an honorary citizen, and if you serve well, gain rewards both material and spiritual.;
-statements=Only a donation of $100 stands between you and serving the true God.;
+statements=啊, 又一位信徒!<p=>所以你想为雅斯效力吗?;
+statements=你可能会成为一名荣誉公民，如果你努力效力，你会获得物质和精神上的双重奖励.;
+statements=只要捐赠$100，你就可以信奉真神.;
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_pledge_confirm;
 dialogNodeID_toOverride=royal_questgiver_pledge_confirm;
@@ -756,8 +756,8 @@ completeOverride=false;
 fReq=talker:auspex;
 animations=happy;
 animations=;
-statements=Very good!;
-statements=I will personally see the paperwork done.;
+statements=非常好!;
+statements=我会亲自处理这些文件.;
 specialEffect=subtract100gp;
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_pledge_confirm2;
@@ -766,7 +766,7 @@ completeOverride=false;
 overrideSpecialEffects=true;
 fReq=talker:auspex;
 animations=;
-statements=<pname=>, I hereby pronounce you a <color=Blue><prank=><color=> of Jasce!;
+statements=<pname=>, 我正是宣布你成为雅斯的一名 <color=Blue><prank=><color=>!;
 specialEffect=fx,longGoodAuraSound;
 specialEffect=setGlobalVar,playerFaction,jasce;
 specialEffect=setGlobalVar,playerRank,1;
@@ -778,8 +778,8 @@ overrideSpecialEffects=true;
 fReq=talker:auspex + gIs:playerRank:3 - 1;
 animations=;
 animations=happy;
-statements=With this accomplishment, <pfullname=>, Jasce has deemed you worthy of an audience.;
-statements=Jasce' chambers are to the north.<p=> Go, and bask in our Lord's presence!;
+statements=有了这一项成就, <pfullname=>, 雅斯认为你值得会面.;
+statements=雅斯的内庭在北面.<p=>去吧，沐浴于我主的光辉之下吧!;
 
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_newRank_endConvo_rank9;
@@ -789,8 +789,8 @@ overrideSpecialEffects=true;
 fReq=talker:auspex + gIs:playerRank:9 - 1;
 animations=happy;
 animations=;
-statements=I did not think I would see such faith from you, <pfullname=> -<p> and I am ecstatic to be proven wrong!;
-statements=You have reached the highest rank possible!<p> Very impressive, to say the least!;
+statements=我没想到能在你身上看到这样的信仰, <pfullname=> -<p> 很高兴我的想法被证明是错误的!;
+statements=你已经达到了最高的地位等级!<p>至少可以说是非常的引人瞩目了!;
 nextNodeID=auspex_royal_questgiver_newRank_gift_rank9;
 
 [DialogNode] ID=auspex_royal_questgiver_newRank_gift_rank9;
@@ -799,11 +799,11 @@ animations=sigh;
 animations=sly;
 animations=happy;
 animations=handsupPose;
-statements=Your rewards shall surely be great in the afterlife!;
-statements=In the meantime, Jasce would grant you this:<p=1.5> a powerful <itemBig_low=xpGemBig><color=DarkRed> Essence Crystal<color=>!;
-statements=From here on, I will share our closest intel with you<p> - Jasce' fleets will be marked on your map at all times.;
-statements=And because you have acquired such results, your work shall merit <color=DarkRed>twice the rewards<color=> from here on!;
-statements=Praise Jasce!;
+statements=你在来世的回报一定无比巨大!;
+statements=与此同时，雅斯会授予你:<p=1.5>一颗强效的<itemBig_low=xpGemBig><color=DarkRed>本源晶石<color=>!;
+statements=从现在开始，我们将会与你分享我们机密的情报<p> - 雅斯的舰队将会在你的地图上标记出来.;
+statements=因为你所取得的成果, 从现在起，你的工作将会得到<color=DarkRed>双倍的奖励<color=>!;
+statements=赞美雅斯!;
 specialEffect=giveItem,xpGemBig,1;
 specialEffect=modPlayerFactionFavor,3;
 specialEffect=setGlobalVar,tracking_jasce,1;
@@ -819,8 +819,8 @@ overrideSpecialEffects=false;
 fReq=talker:auspex;
 animations=sigh;
 animations=;
-statements=That is a shame.<p=> Unfortunately, the donation is required to express your sincerity.;
-statements=Do not worry.<p=> Surely you will earn your way in due time.;
+statements=那很遗憾.<p=>不幸的是，捐赠是你表示诚意所必须的一部分.;
+statements=不用担心.<p=>你一定能以自己的方式挣取到.;
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_jobs_cancel_cantAfford;
 dialogNodeID_toOverride=royal_questgiver_jobs_cancel_cantAfford;
@@ -829,7 +829,7 @@ overrideSpecialEffects=false;
 fReq=talker:auspex;
 animations=stern;
 animations=angry;
-statements=<pname=>.<p=2> Consider this a sign to re-examine yourself and your service to Jasce.;
+statements=<pname=>.<p=2>把这当作一个征兆，重新审视你自己以及你对雅斯的服务.;
 statements=Go.;
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_defect;
@@ -840,9 +840,9 @@ fReq=talker:auspex;
 animations=sly;
 animations=;
 animations=stern;
-statements=Interesting...<p=> so you wish to side with the one true God after all?;
-statements=Jasce is merciful.<p=> He forgives those that make amends with a pure heart.;
-statements=If your intentions are true, you must prove it.<textIf= Doubly so, in accordance with your rank.=g:playerRank - 1>;
+statements=有趣...<p=>所以你还是想站在唯一的真神这一边?;
+statements=雅斯是仁慈的.<p=>他会宽恕那些用纯洁的心去赎罪的人.;
+statements=如果你的想法是真的，那你必须证明给我看.<textIf=根据你的地位等级，会加倍.=g:playerRank - 1>;
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_defect_confirm;
 dialogNodeID_toOverride=royal_questgiver_defect_confirm;
@@ -852,9 +852,9 @@ fReq=talker:auspex;
 animations=stern;
 animations=;
 animations=sigh;
-statements=Let me first make sure you understand the magnitude of this decision.;
-statements=Your previous master will loathe you.<textIf= Your rank will be gone.=g:playerRank - 1> There's no turning back after this.;
-statements=Still, it is a small price to pay compared to the rewards...<p=> will you pay it?;
+statements=首先让我确定你明白你这个决定的重要性.;
+statements=你之前的国家将会厌恶你.<textIf=你将会丢失你的王室地位.=g:playerRank - 1>而且这之后就没有回头路了.;
+statements=尽管如此，与你能所获得的回报相比，这是一个很小的代价...<p=>你愿意支付这个费用吗?;
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_defect_confirm2;
 dialogNodeID_toOverride=royal_questgiver_defect_confirm2;
@@ -863,8 +863,8 @@ overrideSpecialEffects=false;
 fReq=talker:auspex;
 animations=sigh;
 animations=;
-statements=Very good.<p=> Jasce will surely accept your repentance.;
-statements=See to it that this feeling of penitence remains in your heart, and serve your God-king well.;
+statements=非常好.<p=>雅斯一定会接受你的悔改.;
+statements=务必要让这种悔过的感觉留在心里，好好为神王效力.;
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_defect_confirm2a;
 dialogNodeID_toOverride=royal_questgiver_defect_confirm2a;
@@ -885,7 +885,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:auspex;
 animations=;
-statements=<pname=>, you are now a true <color=Blue><prank=><color=> of Jasce!;
+statements=<pname=>, 你现在是雅斯一名真正的 <color=Blue><prank=><color=>!;
 
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_defect_cantAfford;
@@ -894,7 +894,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:auspex;
 animations=stern;
-statements=Hmph.<p=> Return when you can back up your words with action.;
+statements=Hmph.<p=> 当你能用实际行动证明你的话的时候再回来.;
 
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_info_nation;
@@ -905,9 +905,9 @@ fReq=talker:auspex;
 animations=happy;
 animations=;
 animations=stern;
-statements=Jasce is the home of the one true God-king.;
-statements=Followers of Jasce are greatly rewarded - in this life and the next.;
-statements=However, Jasce is merciful even to the ignorant. Non-believers may live in Jasce as well.;
+statements=雅斯是唯一真正的神王的起源.;
+statements=雅斯的追随者无论在今生或是来世都得到了极大的回报.;
+statements=然而，雅斯对无知的人也是仁慈的，非信徒也可以居住在雅斯.;
 nextNodeID=royal_questgiver_info;
 
 
@@ -920,7 +920,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:viceroy + m:playerFavorWithTargetBelowNeg(40) - 1;
 animations=angry;
-statements=<pname=>...<p=> enemy of Rumane.<p=> If you have business here, get to it before I have you thrown out.;
+statements=<pname=>...<p=>罗马尼亚的敌人.<p=>如果你想在这里做生意，那就在我把你扔出去之前赶紧的.;
 
 
 [DialogNodeOverride] ID=viceroy_royal_questgiver;
@@ -937,7 +937,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:viceroy;
 animations=;
-statements=Indeed, the King does have a task for you.;
+statements=的确，国王有任务要交给你.;
 
 [DialogNodeOverride] ID=viceroy_royal_questgiver_job_not_enough_cargo;
 dialogNodeID_toOverride=royal_questgiver_job_not_enough_cargo;
@@ -945,7 +945,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:viceroy;
 animations=stern;
-statements=Your contribution is lacking.<p=> His Majesty needs 10, not <math=cargoItem_g:questGoal><adjX=-4>.;
+statements=你贡献的太少了.<p=>君王需要的是10个，而不是 <math=cargoItem_g:questGoal><adjX=-4>个.;
 
 [DialogNodeOverride] ID=viceroy_royal_questgiver_meeting_cant;
 dialogNodeID_toOverride=royal_questgiver_meeting_cant;
@@ -962,8 +962,8 @@ overrideSpecialEffects=false;
 fReq=talker:viceroy;
 animations=sigh;
 animations=;
-statements='<g=questLog>'... this is your current task, is it not?;
-statements=You should resign from this in order to serve the King.;
+statements='<g=questLog>'... 这个是你当前的任务，是吗?;
+statements=为了为完成国王的请求你应该先取消当前的任务.;
 
 [DialogNodeOverride] ID=viceroy_royal_questgiver_jobs_already_busy_royal;
 dialogNodeID_toOverride=royal_questgiver_jobs_already_busy_royal;
@@ -972,8 +972,8 @@ overrideSpecialEffects=false;
 fReq=talker:viceroy;
 animations=;
 animations=sigh;
-statements=Your mission is '<g=questLog>'.;
-statements=Are you not able to complete this?;
+statements=你的任务是 '<g=questLog>'.;
+statements=你无法完成这项任务吗?;
 
 [DialogNodeOverride] ID=viceroy_royal_questgiver_jobs_cancel_royal;
 dialogNodeID_toOverride=royal_questgiver_jobs_cancel_royal;
@@ -981,7 +981,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:viceroy;
 animations=stern;
-statements=It would reflect very poorly upon you to give up, but if you must...;
+statements=如果你放弃了，那就太不光彩了，但是你必须的话...;
 
 
 [DialogNodeOverride] ID=viceroy_royal_questgiver_jobs_cancel_confirm_royal;
@@ -991,8 +991,8 @@ overrideSpecialEffects=false;
 fReq=talker:viceroy;
 animations=sigh;
 animations=;
-statements=That is most unfortunate.;
-statements=I only hope you prove yourself more capable in the future.;
+statements=这真是不幸.;
+statements=我只希望你将来能证明自己更具有能力.;
 
 [DialogNodeOverride] ID=viceroy_royal_questgiver_give_lost_documents;
 dialogNodeID_toOverride=royal_questgiver_give_lost_documents;
@@ -1013,9 +1013,9 @@ fReq=talker:viceroy;
 animations=;
 animations=sigh;
 animations=;
-statements=Another migrant to the Clanlands?;
-statements=Your like is welcome here.<p=> The King has need of skilled sailors such as yourself.;
-statements=If you contribute $100, I can officially welcome you to Rumane as a honorary citizen.;
+statements=又一位移民来到 Clanlands 了?;
+statements=这里很欢迎你.<p=>国王需要像你这般熟练的水手.;
+statements=如果你捐赠 $100, 我可以正式的欢迎你以荣誉公民的身份来到罗马尼亚.;
 
 [DialogNodeOverride] ID=viceroy_royal_questgiver_pledge_confirm;
 dialogNodeID_toOverride=royal_questgiver_pledge_confirm;
@@ -1023,8 +1023,8 @@ completeOverride=false;
 fReq=talker:viceroy;
 animations=;
 animations=;
-statements=I'm glad to hear it.;
-statements=Your contribution will be used well, and your presence welcomed.;
+statements=很高兴听到你这么说.;
+statements=你的捐赠会大有用处，欢迎您的到来.;
 specialEffect=subtract100gp;
 
 [DialogNodeOverride] ID=viceroy_royal_questgiver_pledge_confirm2;
@@ -1033,7 +1033,7 @@ completeOverride=false;
 overrideSpecialEffects=true;
 fReq=talker:viceroy;
 animations=happy;
-statements=<pname=>, you are now a <color=Blue><prank=><color=> of Rumane!;
+statements=<pname=>, 你现在已经是罗马尼亚的 <color=Blue><prank=><color=>了!;
 specialEffect=fx,longGoodAuraSound;
 specialEffect=setGlobalVar,playerFaction,rumane;
 specialEffect=setGlobalVar,playerRank,1;
@@ -1045,8 +1045,8 @@ overrideSpecialEffects=true;
 fReq=talker:viceroy + gIs:playerRank:3 - 1;
 animations=;
 animations=happy;
-statements=As a result of your endeavors, <pfullname=>, the King wishes to meet with you.;
-statements=The throne room lies north of here.<p=> Don't keep His Majesty waiting!;
+statements=因为你的努力, <pfullname=>, 国王想会见你.;
+statements=正殿在这里的北边.<p=>别让陛下等太久了!;
 
 
 [DialogNodeOverride] ID=viceroy_royal_questgiver_newRank_endConvo_rank9;
@@ -1056,17 +1056,17 @@ overrideSpecialEffects=true;
 fReq=talker:viceroy + gIs:playerRank:9 - 1;
 animations=happy;
 animations=sigh;
-statements=I never thought I'd see the day, <pfullname=> - but you have attained the highest rank possible!;
-statements=Allow me to personally thank you on behalf of King and country for your service!;
+statements=我从没想过我能看到这一天, <pfullname=> - 但你已经达到了最高级别的身份地位!;
+statements=请允许我代表国王和国家感谢你的效力!;
 nextNodeID=viceroy_royal_questgiver_newRank_gift_rank9;
 
 [DialogNode] ID=viceroy_royal_questgiver_newRank_gift_rank9;
 animations=sly;
 animations=;
 animations=happy;
-statements=Please, take this <itemBig_low=xpGemBig><color=DarkRed> Essence Crystal<color=> as a memento!<p> It is a valuable item, fitting your valuable service.;
-statements=From here on, I will share our closest intel with you<p> - our fleets will be marked on your map at all times.;
-statements=And I can guarantee your work will recieve <color=DarkRed>twice the recognition<color=> from now on!<p> Thank you, <pfullname>!;
+statements=请接受这些<itemBig_low=xpGemBig><color=DarkRed>本源晶石<color=>来作为一个纪念品!<p>这是一件珍贵的物品，契合你的宝贵的付出.;
+statements=从现在开始，我们将会与你分享我们机密的情报<p> - 我们的舰队将会在你的地图上标记出来.;
+statements=我可以保证，从现在起，你的工作将会得到<color=DarkRed>双倍的表彰<color=>!<p> 谢谢你, <pfullname>!;
 specialEffect=giveItem,xpGemBig,1;
 specialEffect=modPlayerFactionFavor,3;
 specialEffect=setGlobalVar,tracking_rumane,1;
@@ -1080,7 +1080,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:viceroy;
 animations=sigh;
-statements=Ah, I see.<p=> Perhaps another time, then.;
+statements=啊，我明白了.<p=>那下次吧.;
 
 [DialogNodeOverride] ID=viceroy_royal_questgiver_jobs_cancel_cantAfford;
 dialogNodeID_toOverride=royal_questgiver_jobs_cancel_cantAfford;
@@ -1089,8 +1089,8 @@ overrideSpecialEffects=false;
 fReq=talker:viceroy;
 animations=stern;
 animations=;
-statements=If you cannot pay this yourself, you are in no position to serve His Majesty.;
-statements=Raise the necessary funds and come back then.;
+statements=如果你自己付不起这笔钱，你就没有资格为陛下效力了.;
+statements=筹集必要的资金后再来吧.;
 
 [DialogNodeOverride] ID=viceroy_royal_questgiver_defect;
 dialogNodeID_toOverride=royal_questgiver_defect;
@@ -1112,10 +1112,10 @@ fReq=talker:viceroy;
 animations=;
 animations=sigh;
 animations=;
-statements=Your eagerness is appreciated,<p=> but let me make sure you understand the results.;
-statements=Your previous faction will become a bitter enemy.;
-statements=<textIf= You will have no royal rank.=g:playerRank - 1> You join us as any other citizen would, with no special treatment.;
-statements=Does that sound agreeable?;
+statements=对于你的热情我很感激,<p=>但是我需要先确保你能理解这后果.;
+statements=你以前的派系将成为一个死敌.;
+statements=<textIf=你将会丢失你的王室地位.=g:playerRank - 1>你将会和其他加入我们的公民一样，没有任何区别对待.;
+statements=听起来能接受吗?;
 
 [DialogNodeOverride] ID=viceroy_royal_questgiver_defect_confirm2;
 dialogNodeID_toOverride=royal_questgiver_defect_confirm2;
@@ -1123,7 +1123,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:viceroy;
 animations=;
-statements=Alright.<p=> You've made your passion clear.;
+statements=好.<p=>你已经表达了你的热情.;
 
 [DialogNodeOverride] ID=viceroy_royal_questgiver_defect_confirm2a;
 dialogNodeID_toOverride=royal_questgiver_defect_confirm2a;
@@ -1144,7 +1144,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:viceroy;
 animations=sigh;
-statements=<pname=>, it is my pleasure to pronounce you a <color=Blue><prank=><color=> of Rumane!;
+statements=<pname=>,我很荣幸宣布你成为罗马尼亚的一名 <color=Blue><prank=><color=>!;
 
 
 
@@ -1154,7 +1154,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:viceroy;
 animations=sigh;
-statements=I'm afraid we cannot make an exception for you.<p=> Return when you have the proper funds.;
+statements=恐怕我们不能为你破例.<p=>等你有了足够的资金再回来吧.;
 
 [DialogNodeOverride] ID=viceroy_royal_questgiver_info_nation;
 dialogNodeID_toOverride=royal_questgiver_info_nation;

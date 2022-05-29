@@ -2,21 +2,21 @@
 animations=;
 animations=sigh;
 animations=chargePose;
-statements=It's a shame...<p> truly a shame...!;
-statements=Dolor is having hard times as it is, and now the southern channel is blocked by Hill Mold!;
-statements=Seartial is being so slow about clearing it!!;
+statements=可惜...<p>真可惜啊...!;
+statements=Dolor 现在的处境很艰难, 因为南部河道被山丘霉菌阻塞住了!;
+statements=西提尔清理的太慢了!!;
 
 
-[DialogOption] text=I could clear it for you.;
+[DialogOption] text=我可以帮你清理.;
 animation=sly;
 formulaReq=1 - g:mold1cleared;
 nodeToConnectTo=port10_guy1b;
-[DialogOption] text=I already cleared it.;
+[DialogOption] text=我已经清理了.;
 animation=sly;
 formulaReq=g:mold1cleared;
 newLineOfOptions=true;
 nodeToConnectTo=port10_guy2b;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -26,12 +26,12 @@ animations=;
 animations=chargePose;
 animations=sigh;
 animations=;
-statements=T-<p>truly?<p> I would be much indebted if you would!;
-statements=There are often dangerous parasites...<p> but I'm sure you can handle it!;
-statements=You must approach the blockage from the southern side,<p> and then destroy the part that extends over the river!;
-statements=To destroy it you must <color=DarkRed>burn<color=> and then <color=DarkRed>chop<color=> it!;
-statements=It's persistent stuff, and won't go any other way...;
-statements=Good luck!;
+statements=真-<p>真的?<p> 如果你愿意，我不胜感激!;
+statements=那儿通常会有危险的寄生生物...<p>但我相信你能处理的!;
+statements=你必须从南边靠近阻塞物,<p>然后摧毁延伸到河上的部分!;
+statements=想要摧毁它，你必须要先<color=DarkRed>烧毁<color=>然后再<color=DarkRed>砍<color=>了它!;
+statements=这是一种宿存的东西，目前没有其他办法;
+statements=祝你好运!;
 specialEffect=setDefaultNode,port10_guy2a;
 nextNodeID=;
 
@@ -40,19 +40,19 @@ nextNodeID=;
 [DialogNode] ID=port10_guy2a;
 animations=chargePose;
 animations=sigh;
-statements=I haven't forgotten your promise!;
-statements=Please <color=DarkRed>burn<color=> and <color=DarkRed>break<color=> that Hill Mold...!;
+statements=我没有忘记你的承诺!;
+statements=请 <color=DarkRed>烧毁<color=>然后再<color=DarkRed>砍<color=>了那些山丘霉菌...!;
 
-[DialogOption] text=I'm still working on it.;
+[DialogOption] text=我还在努力.;
 animation=sigh;
 formulaReq=1 - g:mold1cleared;
 nodeToConnectTo=;
-[DialogOption] text=I cleared it!;
+[DialogOption] text=我已经清理了!;
 animation=;
 formulaReq=g:mold1cleared;
 newLineOfOptions=true;
 nodeToConnectTo=port10_guy2b;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -60,8 +60,8 @@ bottomOption=true;
 [DialogNode] ID=port10_guy2b;
 animations=chargePose;
 animations=happy;
-statements=Y-<p>you have?!;
-statements=Thank Ensu!<p> And thank you!;
+statements=你-<p>你完成了?!;
+statements=感谢上帝!<p>还有，谢谢你!;
 nextNodeID=port10_guy2c;
 
 [DialogNode] ID=port10_guy2c;
@@ -69,10 +69,10 @@ animations=handsupPose;
 animations=chargePose;
 animations=sigh;
 animations=happy;
-statements=Please take this $500 as payment!;
-statements=No, no, take it!<p> It's the least I can do!;
-statements=<speed=0.9>I-<p>it's actually the most I can do, too...<p> the blockage hit my business hard...!;
-statements=But thank you again!<p> I'll remember your kindness!;
+statements=请收下这$500作为报酬!;
+statements=不，不，拿上吧!<p>这是我起码能做的!;
+statements=<speed=0.9>其实-<p>其实这也是我尽最大努力能做的了...<p>河道被堵严重影响了我的生意...!;
+statements=但是，再次谢谢你!<p>我会记住你的善行的!;
 specialEffect=addgp,500;
 specialEffect=setDefaultNode,port10_guy3a;
 specialEffect=fx,sfx_questComplete;
@@ -82,8 +82,8 @@ specialEffect=modFame,combat,10;
 [DialogNode] ID=port10_guy3a;
 animations=happy;
 animations=;
-statements=Thank you again!;
-statements=Having the trade routes open means a lot for me!;
+statements=再次感谢你!;
+statements=重新打开贸易路线让我来说意义重大!;
 
 
 

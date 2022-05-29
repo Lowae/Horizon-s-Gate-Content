@@ -310,12 +310,12 @@ animations=;
 animations=stern;
 animations=happy;
 statements=你好,<p>伙伴!;
-statements=What brings you to Balzar's little office?;
-statements=Ah, I recognize that look<p> - maybe you're a bit lost?<p=2> Looking for help,<p> perhaps some information?;
-statements=I may be a military man,<p> but my true passion is in helping others.;
-statements=<speed=0.7>So if you need to know anything...;
-statements=<speed=0.3>...and I mean anything...;
-statements=...then please, ask away!;
+statements=来 Balzar 的小办公室有什么事吗?;
+statements=啊，我认识这样的表情<p> - 也许你迷路了?<p=2> 要寻求帮助,<p>或是一些信息吗?;
+statements=我虽是一名军人,<p>但是我真正热爱的是帮助他人.;
+statements=<speed=0.7>所以，如果你想知道什么...;
+statements=<speed=0.3>...我意思是任何事...;
+statements=...那就请问吧!;
 specialEffect=setDefaultNode,investigator;
 nextNodeID=investigator;
 
@@ -323,7 +323,7 @@ nextNodeID=investigator;
 animations=happy;
 animations=sly;
 animations=;
-statements=Good news, friend!<p> I found what you wanted!;
+statements=好消息, 朋友!<p> 我找到你想要的了!;
 statements=<speed=0.8><g=investigatorAnswer_balzar>;
 specialEffect=fx,sfx_questComplete_small;
 specialEffect=setDefaultNode,investigator;
@@ -332,7 +332,7 @@ specialEffect=task_gvar,investigatorTask_balzar;
 [DialogNode] ID=investigator_repeat_balzar;
 animations=happy;
 animations=;
-statements=Want to hear what I found again?;
+statements=想再听我说一遍吗?;
 statements=<speed=0.8><g=investigatorAnswer_balzar>;
 
 
@@ -342,14 +342,14 @@ dialogNodeID_toOverride=investigator;
 fReq=talker:balzar;
 overrideSpecialEffects=false;
 animations=happy;
-statements=What can I do for you, friend?;
+statements=我能为你做什么，朋友?;
 
 [DialogNodeOverride] ID=investigator_stillbusy_balzar;
 dialogNodeID_toOverride=investigator_stillbusy;
 fReq=talker:balzar;
 overrideSpecialEffects=false;
 animations=happy;
-statements=I haven't got anything for you yet, friend.<p> Come by later.;
+statements=我还没有可以提供给你的信息。朋友，过会再来吧.;
 
 [DialogNodeOverride] ID=investigator_cant_afford_balzar;
 dialogNodeID_toOverride=investigator_cant_afford;
