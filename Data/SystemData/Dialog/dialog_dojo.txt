@@ -136,9 +136,9 @@ specialEffect=gotoIf,port7_dojo2_won,g:port7_dojo1;
 animations=handsupPose;
 animations=sigh;
 animations=;
-statements=Ah, you have succeeded! Well fought indeed. The Flying Rock Fist Dojo recognizes your achievement!!;
-statements=Your prize is our great trophy downstairs. Use it well!;
-statements=Feel free to avail yourself of our training anytime.;
+statements=啊，你成功了!确实打得不错.飞石拳道场认可你了!!;
+statements=你的奖品就在楼下，好好使用它!;
+statements=随时找我们来训练.;
 specialEffect=incDefaultNode;
 specialEffect=modGlobalVar,fame_combat,30;
 nextNodeID=;
@@ -147,11 +147,11 @@ nextNodeID=;
 
 [DialogNode] ID=port7_dojo3;
 animations=;
-statements=Welcome back, <pname=>. Do you seek guidance in the ways of the Flying Rock Fist?;
-[DialogOption] text=Punch Skill<adjX=3><iconBig=skill_Fist> Training;
+statements=欢迎回来, <pname=>.你在向飞石拳寻求指引吗?;
+[DialogOption] text=拳 技能<adjX=3><iconBig=skill_Fist> 训练;
 formulaReq=1-g:skill_Fist_bonus;
 nodeToConnectTo=port7_dojo3_train;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -159,16 +159,16 @@ bottomOption=true;
 animations=;
 animations=handsupPose;
 animations=sigh;
-statements=Wise indeed! We can teach you this profound knowledge.;
-statements=Should you learn it, all of your crew - current and future - will possess the power of +1<adjX=1><iconBig=skill_Fist>Punch Skill!!;
-statements=All this for the mere price of $10,000.;
-[DialogOption] text=Yes ($10,000);
+statements=很明智的决定!我们可以教你这些高深的知识.;
+statements=你和你的所有船员都能学习 - 当前或是未来的 - 都会拥有 +1<adjX=1><iconBig=skill_Fist>拳技能!!;
+statements=所有的这一切价格仅为 $10,000.;
+[DialogOption] text=好 ($10,000);
 formulaReq=m:money - 9999;
 nodeToConnectTo=port7_dojo3_train_yes;
-[DialogOption] text=<color=SlateGray>Can't afford it...;
+[DialogOption] text=<color=SlateGray>负担不起...;
 formulaReq=10000 - m:money;
 nodeToConnectTo=previous;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -178,8 +178,8 @@ animations=chargePose;
 animations=handsupPose;
 dialogFX=;
 dialogFX=tallExplode_rand;
-statements=Then so be it!;
-statements=<color=Red>I bestow upon you the wisdom of the Flying Rock Fist!!;
+statements=那就这样吧!;
+statements=<color=Red>我将赐予你飞石拳的智慧!!;
 nextNodeID=port7_dojo3_train_yes2;
 
 [DialogNode] ID=port7_dojo3_train_yes2;
@@ -198,8 +198,8 @@ nextNodeID=;
 [DialogNode] ID=port7_dojo4;
 animations=sigh;
 animations=handupPose;
-statements=<pname=>, Master of the Flying Rock Fist. Welcome.;
-statements=Would that I could do anything further for you. <p=3>Go now, and show your skills unto the world!;
+statements=<pname=>, 飞石拳的大师，欢迎.;
+statements=希望我能为你做更多的事. <p=3>去吧，向全世界展示你的技能!;
 
 ---
 
@@ -208,13 +208,13 @@ statements=Would that I could do anything further for you. <p=3>Go now, and show
 [DialogNode] ID=port12_dojo1;
 animations=sly;
 animations=;
-statements='Ey.<p=2> <textIf=Fella=gIsLessThan:fame_combat:200><textIf=Tough guy=gIsMoreThan:fame_combat:199> like you, I bet you're lookin' for a challenge.;
-statements=Welcome to the Grey Gash Dojo.<p=> You interested?;
+statements=嗨.<p=2> 像你这样的<textIf=伙计=gIsLessThan:fame_combat:200><textIf=硬汉=gIsMoreThan:fame_combat:199>, 我打赌你在寻找挑战.;
+statements=欢迎来到灰色伤口道场.<p=>有兴趣吗?;
 
-[DialogOption] text=Fight;
+[DialogOption] text=战斗;
 formulaReq=1-g:port12_dojo1;
 nodeToConnectTo=port12_dojo1_test;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -222,8 +222,8 @@ bottomOption=true;
 [DialogNode] ID=port12_dojo1_test;
 animations=stern;
 animations=angry;
-statements=Good fella.<p=> G'on in.;
-statements=Be ready for a fight the moment you go down those stairs.<p=> Give it your best shot.;
+statements=好伙计.<p=>进去吧.;
+statements=从你走下楼梯的那一刻起，你就要做好战斗的准备.<p=>尽力最大的努力.;
 specialEffect=action,mechanismArea;
 specialEffect=incDefaultNode;
 
@@ -233,15 +233,15 @@ specialEffect=incDefaultNode;
 [DialogNode] ID=port12_dojo2;
 animations=sly;
 animations=;
-statements=Ready whenever you are.;
-statements=Once you go down those stairs, it's go time.;
+statements=随时准备好.;
+statements=你一走下楼梯，就是时候了.;
 specialEffect=gotoIf,port12_dojo2_won,g:port12_dojo1;
 
 [DialogNode] ID=port12_dojo2_won;
 animations=sly;
 animations=happy;
-statements=You really gave it to 'em down there.<p=> Well done.;
-statements=Help yourself to the chest in there.<p=> You deserve it.;
+statements=你真的教了他们很多东西.<p=>干得好.;
+statements=箱子里的东西请随便拿.<p=>这是你应得的.;
 specialEffect=incDefaultNode;
 specialEffect=modGlobalVar,fame_combat,30;
 nextNodeID=;
@@ -310,13 +310,13 @@ statements=Keep your blades sharp.;
 [DialogNode] ID=port15_dojo1;
 animations=sigh;
 animations=;
-statements=<textIf=Good to see an accomplished fighter. =gIsMoreThan:fame_combat:499><textIf=Welcome...=gIsLessThan:fame_combat:200><textIf=Welcome, warrior.=gIsMoreThan:fame_combat:199><p=2> This is the Sanctum of Spears.;
-statements=Would you test your skills against us?;
+statements=<textIf=很高兴看到一位有所成就的斗士. =gIsMoreThan:fame_combat:499><textIf=Welcome...=gIsLessThan:fame_combat:200><textIf=欢迎，战士.=gIsMoreThan:fame_combat:199><p=2> 这是矛之圣所.;
+statements=你愿意和我们比试下你的技艺吗?;
 
-[DialogOption] text=Fight;
+[DialogOption] text=战斗;
 formulaReq=1-g:port15_dojo1;
 nodeToConnectTo=port15_dojo1_test;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -324,8 +324,8 @@ bottomOption=true;
 [DialogNode] ID=port15_dojo1_test;
 animations=;
 animations=angry;
-statements=I'll open the path for you, then.;
-statements=Once you step inside, you'll face the gauntlet.<p=> Prepare carefully.;
+statements=那我给你开路.;
+statements=一旦你走进去，你就会面临挑战.<p=>请认真准备.;
 specialEffect=action,mechanismArea;
 specialEffect=incDefaultNode;
 
@@ -334,14 +334,14 @@ specialEffect=incDefaultNode;
 
 [DialogNode] ID=port15_dojo2;
 animations=;
-statements=<textIf=Face your fear and enter the Sanctum. =gIsMoreThan:fame_combat:499><textIf=Prudence is wise. There's no shame in waiting until you're stronger.=gIsLessThan:fame_combat:200><textIf=It will be a challenge for you, but I believe you can make it through the gauntlet.=gIsMoreThan:fame_combat:199>;
+statements=<textIf=直面恐惧，进入圣所. =gIsMoreThan:fame_combat:499><textIf=谨慎是明智的，等自己更强大一点也不丢人.=gIsLessThan:fame_combat:200><textIf=这对你来说可能是个挑战，但我相信你能度过难关.=gIsMoreThan:fame_combat:199>;
 specialEffect=gotoIf,port15_dojo2_won,g:port15_dojo1;
 
 [DialogNode] ID=port15_dojo2_won;
 animations=happy;
 animations=;
-statements=Expertly done.;
-statements=Take the spear from the Sanctum as your prize.<p=2> You're always welcome here to train.;
+statements=干的不错.;
+statements=把圣所的矛作为你的战利品吧.<p=2>随时欢迎你来这里训练.;
 specialEffect=incDefaultNode;
 specialEffect=modGlobalVar,fame_combat,30;
 nextNodeID=;
@@ -350,26 +350,26 @@ nextNodeID=;
 
 [DialogNode] ID=port15_dojo3;
 animations=;
-statements=Welcome back to the Sanctum of Spears, <pname=>.;
-[DialogOption] text=Spear Skill<adjX=3><iconBig=skill_Spear> Training;
+statements=欢迎回到矛之圣所, <pname=>.;
+[DialogOption] text=矛技能<adjX=3><iconBig=skill_Spear> 训练;
 formulaReq=1-g:skill_Spear_bonus;
 nodeToConnectTo=port15_dojo3_train;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=port15_dojo3_train;
 animations=;
 animations=;
-statements=I can show you the Sanctum's truths if you are ready.<p> It will grant +1<adjX=1><iconBig=skill_Spear>Spear Skill to every crew member you currently have and will have.;
-statements=However, I have to charge you $10,000 for this privilege.;
-[DialogOption] text=Yes ($10,000);
+statements=如果你准备好了，我可以给你展示圣所的真理.<p>它能让你的每位船员或是以后雇佣的都能获得 +1<adjX=1><iconBig=skill_Spear>矛技能.;
+statements=然而，我需要收取你$10,000才能让你享受这项特权.;
+[DialogOption] text=好 ($10,000);
 formulaReq=m:money - 9999;
 nodeToConnectTo=port15_dojo3_train_yes;
-[DialogOption] text=<color=SlateGray>Can't afford it...;
+[DialogOption] text=<color=SlateGray>负担不起...;
 formulaReq=10000 - m:money;
 nodeToConnectTo=previous;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -377,8 +377,8 @@ bottomOption=true;
 [DialogNode] ID=port15_dojo3_train_yes;
 animations=happy;
 animations=;
-statements=Let us go into the Sanctum then,<p> <pname=>,<p> and train!;
-statements=I will teach you everything I know.;
+statements=让我们进去圣所,<p> <pname=>,<p>然后训练吧!;
+statements=我会教你任何我知道的知识.;
 nextNodeID=port15_dojo3_train_yes2;
 
 [DialogNode] ID=port15_dojo3_train_yes2;
@@ -397,8 +397,8 @@ nextNodeID=;
 [DialogNode] ID=port15_dojo4;
 animations=;
 animations=;
-statements=How goes it, <pname=>?;
-statements=You're welcome at the Sanctum of Spears anytime.;
+statements=情况如何, <pname=>?;
+statements=随时欢迎你来矛之圣所.;
 
 ---
 
@@ -408,13 +408,13 @@ statements=You're welcome at the Sanctum of Spears anytime.;
 [DialogNode] ID=port20_dojo1;
 animations=sly;
 animations=chargePose;
-statements=Oi, a <textIf=big-time =gIsMoreThan:fame_combat:499><textIf=lil' =gIsLessThan:fame_combat:200>fighter showin' 'is face at the Whirlwind Dojo?;
-statements=We specialize in whips 'n' flails here.<p> You want a piece of the action?;
+statements=噢, 一位<textIf=big-time =gIsMoreThan:fame_combat:499><textIf=lil' =gIsLessThan:fame_combat:200>在旋风道场露面的战斗者?;
+statements=我们这里专制作鞭子和链枷.<p>你想要参与吗?;
 
-[DialogOption] text=Fight;
+[DialogOption] text=战斗;
 formulaReq=1-g:port20_dojo1;
 nodeToConnectTo=port20_dojo1_test;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -422,8 +422,8 @@ bottomOption=true;
 [DialogNode] ID=port20_dojo1_test;
 animations=sly;
 animations=angry;
-statements=Yeahh,<p> that's the stuff.;
-statements=Don't get scared now.<p> Go on in and see what you can do.;
+statements=对,<p>就是这样.;
+statements=现在，不要害怕.<p>进去看看你能做什么.;
 specialEffect=action,mechanismArea;
 specialEffect=incDefaultNode;
 
@@ -442,10 +442,10 @@ animations=handsupPose;
 animations=stern;
 animations=sly;
 animations=sigh;
-statements=Yeahhh,<p> I knew you were somethin' else!;
-statements=Take the loot downstairs -<p> it's yours.;
-statements=Y'know how to open it, don't ya?<p> Heh heh.<p> Take a real keen look 'round!;
-statements=An' if you want some real training, just say the word.;
+statements=是啊,<p>我就知道你不一样!;
+statements=拿上楼梯下的战利品 - 它是你的了.;
+statements=你应该知道怎么打开吧?<p>哈哈哈.<p>仔细看看周围!;
+statements=如果你想要一些真正的训练，只要说一声就行.;
 specialEffect=incDefaultNode;
 specialEffect=modGlobalVar,fame_combat,30;
 nextNodeID=;
@@ -512,13 +512,13 @@ statements=You've proven yerself.<p> Keep keepin' on.;
 [DialogNode] ID=port21_dojo1;
 animations=sigh;
 animations=;
-statements=This is the Shining Void dojo -<p> home of Eral's best swordsmen.;
-statements=<textIf=You look like you might survive, but... =gIsMoreThan:fame_combat:499>Are you sure you want to face them?;
+statements=这里是闪耀虚空道场 -<p>埃拉尔最强剑士之乡.;
+statements=<textIf=你看起来能存活下了... =gIsMoreThan:fame_combat:499>你确定你要面对他们吗?;
 
-[DialogOption] text=Fight;
+[DialogOption] text=战斗;
 formulaReq=1-g:port21_dojo1;
 nodeToConnectTo=port21_dojo1_test;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -526,8 +526,8 @@ bottomOption=true;
 [DialogNode] ID=port21_dojo1_test;
 animations=meh;
 animations=;
-statements=Varley has been looking for a challenge lately...<p> try not to disappoint him too badly.;
-statements=Go down those stairs to begin the fight.;
+statements=Varley 最近一直在寻找挑战...<p>尽量不要让他太失望.;
+statements=下楼然后开始战斗吧.;
 specialEffect=action,mechanismArea;
 specialEffect=incDefaultNode;
 

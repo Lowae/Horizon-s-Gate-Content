@@ -2,44 +2,44 @@
 [DialogNode] ID=port25_guy1a;
 animations=sly;
 animations=;
-statements=What?;
-statements=I'm on break.;
+statements=什么?;
+statements=我正在休息.;
 nextNodeID=;
 
 [DialogNode] ID=port25_guy2a;
 animations=;
-statements=I'm here to perfect my archery...<p> and I'm not leaving until I do.;
+statements=我来这里是为了完善我的箭术...<p>直到我满意前我不会离开的.;
 nextNodeID=;
 
 [DialogNode] ID=port25_guy2b;
 animations=happy;
-statements=Nice shot!;
+statements=不错的射击!;
 nextNodeID=;
 
 [DialogNode] ID=port25_guy3a;
 animations=sigh;
-statements=Praise Jasce, brother.;
+statements=赞美雅斯，兄弟.;
 nextNodeID=;
 specialEffect=facingRotPrev;
 
 [DialogNode] ID=port25_guy3b;
 animations=happy;
-statements=Praise, brother!;
+statements=赞美，兄弟!;
 nextNodeID=;
 specialEffect=facingRotPrev;
 
 [DialogNode] ID=port25_guy4a;
 animations=;
 animations=;
-statements=I'm just waiting for my buddy to finish up.;
-statements=We've got a bigger temple in the Wall, but he likes this little one out here.;
+statements=我在等我的朋友出来.;
+statements=城墙里有个更大的神殿，但他喜欢外面这个小的.;
 nextNodeID=;
 
 [DialogNode] ID=port25_guy5a;
 animations=;
 animations=;
-statements=Welcome to the Wall.;
-statements=Sorry, no entry.;
+statements=欢迎来到城墙.;
+statements=抱歉，不准入内.;
 nextNodeID=;
 
 
@@ -49,12 +49,12 @@ fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
 completeOverride=true; overrideSpecialEffects=true;
 animations=scared;
 animations=angry;
-statements=Oh!<p> <pnamefull=>!;
-statements=Jasce' will be done!;
+statements=噢!<p> <pnamefull=>!;
+statements=雅斯会搞定的!;
 
 [DialogNode] ID=port25_guy6a;
 animations=sigh;
-statements=No entry, fella.;
+statements=不准入内，伙计.;
 nextNodeID=;
 
 [DialogNodeOverride] ID=maxRank_port25_guy6a;
@@ -64,9 +64,9 @@ completeOverride=true; overrideSpecialEffects=true;
 animations=;
 animations=angry;
 animations=;
-statements=Well met, <prank=>!;
-statements=None have been allowed entry except in accordance with direct orders, <pnamefull=>!;
-statements=All goes well here!;
+statements=你好, <prank=>!;
+statements=除非有直接命令，否则不准任何人进入, <pnamefull=>!;
+statements=这里一切顺利!;
 
 
 

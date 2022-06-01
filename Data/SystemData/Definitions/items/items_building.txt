@@ -766,7 +766,7 @@ cloneFrom=pedestal;
 
 
 
-[ItemType]  name=Pillar;
+[ItemType]  name=支柱;
 itemCategory=building;
 ID=pillar_base1; sprite=1809; 
 texture=items_building;
@@ -774,7 +774,7 @@ special=cannotBePickedUp; special=canHangOnWalls;
 weight=800;
 pR=zoneStone;
 
-[ItemType]  name=Pillar;
+[ItemType]  name=支柱;
 itemCategory=building;
 ID=pillar_mid1; sprite=1745; 
 texture=items_building;
@@ -787,7 +787,7 @@ depthMod=1050;
 [ItemReaction] 
 ID=pillar_mid1; element=explode; newID=pillar_mid1_broken;
 
-[ItemType]  name=Pillar (Broken);
+[ItemType]  name=支柱 (损坏的);
 itemCategory=building;
 ID=pillar_mid1_broken; sprite=1746; 
 texture=items_building;
@@ -797,7 +797,7 @@ weight=800;
 pR=zoneStone;
 depthMod=1050;
 
-[ItemType]  name=Pillar;
+[ItemType]  name=支柱;
 itemCategory=building;
 ID=pillar_top1; sprite=1713; 
 texture=items_building;
@@ -807,11 +807,11 @@ pR=zoneStone;
 depthMod=2050;
 
 
-[ItemType]  name=Pillar;
+[ItemType]  name=支柱;
 ID=pillar_base2; sprite=1811; 
 cloneFrom=pillar_base1;
 pR=zoneStoneDark;
-[ItemType]  name=Pillar;
+[ItemType]  name=支柱;
 ID=pillar_mid2; sprite=1747; 
 texture=items_building;
 itemCategory=building;
@@ -823,22 +823,22 @@ pR=zoneStoneDark;
 depthMod=1050;
 [ItemReaction] 
 ID=pillar_mid2; element=explode; newID=pillar_mid2_broken;
-[ItemType]  name=Pillar;
+[ItemType]  name=支柱;
 ID=pillar_top2; sprite=1715; 
 cloneFrom=pillar_top1;
 pR=zoneStoneDark;
 
-[ItemType]  name=Pillar (Broken);
+[ItemType]  name=支柱 (损坏的);
 ID=pillar_mid2_broken; sprite=1748; 
 cloneFrom=pillar_mid1_broken;
 pR=zoneStoneDark;
 
 
-[ItemType]  name=Pillar;
+[ItemType]  name=支柱;
 ID=pillar_base3; sprite=1811; 
 cloneFrom=pillar_base1;
 pR=zoneStone;
-[ItemType]  name=Pillar;
+[ItemType]  name=支柱;
 ID=pillar_mid3; sprite=1747; 
 texture=items_building;
 itemCategory=building;
@@ -850,12 +850,12 @@ pR=zoneStone;
 depthMod=1050;
 [ItemReaction] 
 ID=pillar_mid3; element=explode; newID=pillar_mid3_broken;
-[ItemType]  name=Pillar;
+[ItemType]  name=支柱;
 ID=pillar_top3; sprite=1715; 
 cloneFrom=pillar_top1;
 pR=zoneStone;
 
-[ItemType]  name=Pillar (Broken);
+[ItemType]  name=支柱 (损坏的);
 ID=pillar_mid3_broken; sprite=1748; 
 cloneFrom=pillar_mid1_broken;
 pR=zoneStone;
@@ -879,7 +879,7 @@ special=sprite2xHeight; special=canBeInsideWalls;
 special=noTooltips; special=alwaysBelowOtherItems;
 pR=zoneDirt; special=inheritTerrainPaletteR;
 
-[ItemType]  name=Pillar;
+[ItemType]  name=支柱;
 itemCategory=building;
 ID=pillar_circle1; sprite=1787; 
 texture=items_building;
@@ -890,7 +890,7 @@ blockLoE=true; blockWalking=true; blockJumping=true;
 pR=zoneDirt; special=inheritTerrainPaletteR;
 depthMod=1050;
 
-[ItemType]  name=Pillar;
+[ItemType]  name=支柱;
 itemCategory=building;
 ID=pillar_circle2; sprite=1788; 
 texture=items_building;
@@ -1392,7 +1392,7 @@ ID=cathedral_wall_sides_topL; sprite=1389;
 cloneFrom=cathedral_wall_sides;
 
 
-[ItemType]  name=Wall Catacomb;
+[ItemType]  name=地下墓穴墙壁;
 itemCategory=building;
 ID=catacomb; sprite=691; 
 texture=items_building;

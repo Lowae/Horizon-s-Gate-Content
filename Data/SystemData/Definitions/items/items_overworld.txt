@@ -1338,7 +1338,7 @@ cloneFrom=overworld_bones1;
 ID=overworld_bones9; sprite=1417; 
 cloneFrom=overworld_bones1;
 
-[ItemType]  name=Towerwall;
+[ItemType]  name=塔墙;
 ID=overworld_wall1; sprite=1025; 
 texture=items_overworld;
 special=rollingPin_drawSplit;
@@ -1387,11 +1387,11 @@ ID=overworld_wall13; sprite=1037;
 cloneFrom=overworld_wall1;
 special=location; special=canAssignSpecialTC;
 special=autoAssignSpecialTC;
-[ItemType]  name=Towerwall;
+[ItemType]  name=塔墙;
 ID=overworld_wall14; sprite=1038; 
 cloneFrom=overworld_wall1;
 
-[ItemType] name=Wall;
+[ItemType] name=墙;
 ID=overworld_wall1b;
 cloneFrom=overworld_wall1;
 pR=p1;
@@ -1844,7 +1844,7 @@ text=<itemBig=overworld_loot1><title=战利品><brAdj=>看起来有人在路上�
 
 [ItemType]  name=出海浮标;
 ID=overworld_hazard_launchB_off; sprite=1098; 
-description=Buoy that can be placed on the overworld. Gives a boost when sailed through.;
+description=可以放置在世界上的浮标，当航行通过时获得额外的速度.;
 itemCategory=overworld;
 texture=items_overworld;
 value=8000;
@@ -1863,7 +1863,7 @@ ID=overworld_hazard_launchB_off; element=timerUp; newID=overworld_hazard_launchB
 
 [ItemType]  name=出海浮标 (已充能的);
 ID=overworld_hazard_launchB; sprite=1099; 
-description=Buoy that can be placed on the overworld. Gives a boost when sailed through.;
+description=可以放置在世界上的浮标，当航行通过时获得额外的速度.;
 itemCategory=overworld;
 texture=items_overworld;
 journalID=journal_launchB;

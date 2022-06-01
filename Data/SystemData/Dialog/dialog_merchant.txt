@@ -352,9 +352,9 @@ bottomOption=true;
 ------MERCHANT (SECRET SHOP)
 [DialogNode] ID=merchant_secret;
 animations=sly;
-statements=<randSetID=You've done well to come here...! Take a peek at my wares!/Welcome...! These are deals you won't find anywhere else!/The location's not great, but these items are worth it!>;
+statements=<randSetID=能找到这里来，干得不错...! 看看我的商品吧!/欢迎...! 你在其他任何都找不到这样的交易!/地点不是很好，但这些东西值得购买!>;
 
-[DialogOption] text=Trade;
+[DialogOption] text=交易;
 nodeToConnectTo=merchant_secret_buy;
 [DialogOption] text=Goodbye;
 nodeToConnectTo=;
@@ -362,11 +362,11 @@ bottomOption=true;
 
 [DialogNode] ID=merchant_secret_buy;
 animations=;
-statements=Take a look!;
+statements=看一看!;
 specialEffect=enterBuyMode_locationItems;
 specialEffect=setNPCDialogWindowSizeY,120;
 specialEffect=setPCDialogWindowSizeY,68;
-[DialogOption] text=Goodbye<textIfFinal==1-m:gamepad> (<keybind=endTurn>);
+[DialogOption] text=再见<textIfFinal==1-m:gamepad> (<keybind=endTurn>);
 nodeToConnectTo=;
 bottomOption=true;
 

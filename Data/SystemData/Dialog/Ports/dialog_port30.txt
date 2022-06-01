@@ -1,14 +1,14 @@
 
 [DialogNode] ID=port30_guy1a;
 animations=happy;
-statements=Welcome, <textIf2=Crub!=non-Crub!=mainPlayerIsActorType:crub><p> We are Crub!;
+statements=欢迎, <textIf2=克拉布!=非克拉布人!=mainPlayerIsActorType:crub><p>我们是克拉布!;
 nextNodeID=;
 
 [DialogNode] ID=port30_guy2a;
 animations=;
 animations=angry;
 animations=meh;
-statements=Crubtown is friendly, but not all crub are friendly.;
-statements=<finalTextIf=Are you friendly?=mainPlayerIsActorType:crub>So don't judge us if you meet a mean Crub.;
-statements=<finalTextIf=You seem friendly enough... I guess.=mainPlayerIsActorType:crub>And I won't judge you...<p> I guess.;
+statements=克拉布小镇是友好的，但是不是所有的都是.;
+statements=<finalTextIf=你是朋友吗?=mainPlayerIsActorType:crub>不要以你遇到的刻薄的克拉布来判断我们.;
+statements=<finalTextIf=你看起来很友好... I guess.=mainPlayerIsActorType:crub>我不会随意评判你...<p>我猜.;
 nextNodeID=;

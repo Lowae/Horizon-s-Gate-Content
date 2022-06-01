@@ -99,9 +99,9 @@ speakerOverride=reeve;
 animations=stern;
 animations=chargePose;
 animations=sly;
-statements=Here we are...<p> back at this blasted door.;
-statements=I can only imagine what sort of sprawling criminal lair lies behind it!!;
-statements=The question is...<p> how to open it?;
+statements=我们到了...<p>回到了这扇该死的门这里.;
+statements=我能想象这背后是一个怎样的犯罪窝点!!;
+statements=但是问题是...<p>怎么打开它?;
 
 
 [DialogNodeOverride] ID=reeve_doorEndOpen1a;
@@ -111,9 +111,9 @@ speakerOverride=reeve;
 animations=scared;
 animations=sly;
 animations=chargePose;
-statements=It's open...!;
-statements=Well done, <pname=>!;
-statements=Let's go!<p> To put an end to the Admiral's wrongdoing!;
+statements=门开了...!;
+statements=干得好, <pname=>!;
+statements=我们走吧!<p>去结束上将的恶行!;
 nextNodeID=reeve_doorEndOpen1b;
 
 [DialogNode] ID=reeve_doorEndOpen1b;
@@ -128,14 +128,14 @@ speakerOverride=reeve;
 animations=scared;
 animations=chargePose;
 animations=handsupPose;
-statements=<speed=0.5>What...<p> it's just...;
-statements=What is this, their supply closet??<p> There's nothing here!;
-statements=They betrayed us for this?!;
+statements=<speed=0.5>什么...<p>这只是...;
+statements=这是什么，他们的储藏室吗??<p>这儿什么都没有!;
+statements=他们就为此背叛了我们?!;
 
-[DialogOption] text=Calm down, Reeve!;
+[DialogOption] text=冷静点, Reeve!;
 animation=angry;
 nodeToConnectTo=reeve_walkInBeach0e1b;
-[DialogOption] text=Relax. There must be something here.;
+[DialogOption] text=放松点，这儿一定有什么.;
 newLineOfOptions=true;
 animation=sigh;
 nodeToConnectTo=reeve_walkInBeach0e1b;
@@ -144,9 +144,9 @@ nodeToConnectTo=reeve_walkInBeach0e1b;
 animations=scared;
 animations=sigh;
 animations=;
-statements=<speed=0.5>Y-<p>you're right...<p> Sorry.;
-statements=I'm going to stay calm.<p> I won't make the same mistakes again.;
-statements=Let's look around.;
+statements=<speed=0.5>你-<p>你说的对...<p>抱歉.;
+statements=我正在保持冷静.<p>我不会再犯同样的错误了.;
+statements=让我们四处看看.;
 
 [DialogNodeOverride] ID=reeve_openGGate1a;
 dialogNodeID_toOverride=openGGate;
@@ -155,14 +155,14 @@ speakerOverride=reeve;
 animations=scared;
 animations=;
 animations=angry;
-statements=<speed=0.5>Woah...<p> a Gate...!;
-statements=And a huge one, at that!<p> We could sail an entire fleet in there!;
-statements=This could be a trap...<p> Who knows what they have waiting on the other side...?;
+statements=<speed=0.5>哇...<p>一扇门...!;
+statements=而是是非常大的门!<p>我们可以把整个舰队开进去!;
+statements=不过这可能是个陷阱...<p>谁知道他们在另一边等着什么...?;
 
-[DialogOption] text=We'll have to go through anyway.;
+[DialogOption] text=我们无论如何都得过去.;
 animation=sigh;
 nodeToConnectTo=reeve_openGGate1b;
-[DialogOption] text=Let's prepare a bit first.;
+[DialogOption] text=让我们先准备一下.;
 newLineOfOptions=true;
 animation=;
 nodeToConnectTo=reeve_openGGate1b;
@@ -170,8 +170,8 @@ nodeToConnectTo=reeve_openGGate1b;
 [DialogNode] ID=reeve_openGGate1b;
 animations=stern;
 animations=;
-statements=...right!;
-statements=I'm ready whenever you are, Commodore.;
+statements=...好!;
+statements=我随时待命,船长.;
 
 [DialogNodeOverride] ID=reeve_enterCoveG1a;
 dialogNodeID_toOverride=enterCoveG;
@@ -180,14 +180,14 @@ speakerOverride=reeve;
 animations=sly;
 animations=;
 animations=scared;
-statements=Where are we...?;
-statements=<speed=0.7>Hold on...<p> is this...<p> Graven?;
-statements=Are we in an entirely different realm??;
+statements=我们在哪...?;
+statements=<speed=0.7>等等...<p>这是...<p>克莱文?;
+statements=我们是在世界的另一个领域了吗??;
 
-[DialogOption] text=What is Graven?;
+[DialogOption] text=克莱文是什么?;
 animation=;
 nodeToConnectTo=reeve_enterCoveG1b;
-[DialogOption] text=Looks like it.;
+[DialogOption] text=看起来是的.;
 animation=sigh;
 newLineOfOptions=true;
 nodeToConnectTo=reeve_enterCoveG1c;
@@ -197,19 +197,19 @@ animations=;
 animations=sly;
 animations=meh;
 animations=sly;
-statements=Graven is one of the three realms, along with Eral and Limroft.;
-statements=You can only get from one to the other using Gates.;
-statements=<speed=0.8>And, well...<p> I haven't heard many good things about Graven...<p> mostly only heard about the gigantic monsters and living soil...;
-statements=What in the world could the Admiral want here?;
+statements=克莱文是世界的三大领域之一，还有埃拉尔和林罗夫特.;
+statements=你只能通过门从一处到另一处领域.;
+statements=<speed=0.8>而且，额...<p>我没有听到关于克莱文的很多好话...<p>大部分听说的只有庞大的怪物和有生命的土壤...;
+statements=上将到底想在这里干什么?;
 nextNodeID=reeve_enterCoveG1d;
 
 [DialogNode] ID=reeve_enterCoveG1c;
 animations=scared;
 animations=meh;
 animations=sly;
-statements=If this is really Graven...;
-statements=Well...<p> I haven't heard many good things about Graven.<p> Mostly only heard about the gigantic monsters and living soil...;
-statements=What in the world could the Admiral want here?;
+statements=如果这儿真的是克莱文...;
+statements=额...<p>我没有听到关于克莱文的很多好话.<p>大部分听说的只有庞大的怪物和有生命的土壤...;
+statements=上将到底想在这里干什么?;
 nextNodeID=reeve_enterCoveG1d;
 
 --redundant addJournalGoal in case you didn't bring Reeve into the dungeon with you earlier
@@ -222,7 +222,7 @@ dialogNodeID_toOverride=FDEntrance;
 fReq=party:reeve - g1:D_reeve_FDEntrance1a - g1:D_reeve_FD_lastChanceWarning;
 speakerOverride=reeve;
 animations=;
-statements=Commodore, look!;
+statements=船长,看!;
 nextNodeID=reeve_FDEntrance1b;
 
 [DialogNode] ID=reeve_FDEntrance1b;
@@ -230,16 +230,16 @@ animations=scared;
 animations=angry;
 animations=sigh;
 animations=stern;
-statements=Dominian soldiers!;
-statements=And that construction looks like Dominian work...<p> this place must be what the Admiral is hiding!;
-statements=We've got to get in and look around.;
-statements=I bet we can make short work of those soldiers, before they can even call for help.;
+statements=多米尼奥的士兵!;
+statements=那个建筑看起来像是多米尼奥的杰作...<p>这儿肯定是上将躲藏的地方!;
+statements=我们必须得进去看看.;
+statements=我打赌我们能在那些士兵呼救之前干掉他们.;
 specialEffect=cameraAtPoint,2,0;
 
-[DialogOption] text=Sounds like a plan.;
+[DialogOption] text=听起来像个计划.;
 animation=sigh;
 nodeToConnectTo=reeve_FDEntrance1d;
-[DialogOption] text=Isn't that a bit reckless?;
+[DialogOption] text=这是不是有点鲁莽?;
 animation=sly;
 newLineOfOptions=true;
 nodeToConnectTo=reeve_FDEntrance1c;
@@ -249,17 +249,17 @@ animations=meh;
 animations=sly;
 animations=;
 animations=sigh;
-statements=Look, those guards are barely paying attention.;
-statements=I bet they haven't had a single intruder since they started here.;
-statements=I believe we can do it, Commodore.;
-statements=Ah, but...<p> don't forget.;
+statements=看，那些警卫都没怎么集中注意力.;
+statements=我敢说他们从一开始就没遇见过一个入侵者.;
+statements=我相信我们可以得，船长.;
+statements=啊,不过...<p>别忘了.;
 nextNodeID=reeve_FDEntrance1d;
 
 [DialogNode] ID=reeve_FDEntrance1d;
 animations=;
 animations=sigh;
-statements=This might be our last chance to do anything else we need to do.;
-statements=Once we go in there, we're not coming out until it's over...!;
+statements=这可能是我们能做其他事情得最后机会了.;
+statements=一旦我们进去，在整个事情结束前我们没办法再出来...!;
 
 --warning if you don't have reeve in the landing party
 [DialogNodeOverride] ID=reeve_FD_lastChanceWarning;
@@ -273,10 +273,10 @@ animations=scared;
 animations=meh;
 animations=;
 animations=sigh;
-statements=Commodore, wait!;
-statements=Before you go in,<p> I wanted to warn you...;
-statements=This might be your last chance to do anything else you need to do.;
-statements=Once you go in there, you're not coming out until it's over...!;
+statements=船长, 等等!;
+statements=在你进去之前,<p>我需要提醒一下你...;
+statements=这可能是你能做其他事情得最后机会了.;
+statements=一旦你进去，在整个事情结束前是没办法再出来的...!;
 
 [DialogNodeOverride] ID=reeve_FDWEntrance1a;
 dialogNodeID_toOverride=FDWEntrance;
@@ -431,8 +431,8 @@ specialEffect=delayDialog,2;
 specialEffect=noSpeechFXLookOrAnim;
 animations=happy;
 animations=sly;
-statements=This is a cute little cave town.;
-statements=I don't think they get a lot of visitors...<p> so we can't expect much in the way of goods or ships.;
+statements=这是一个可爱的洞穴小镇.;
+statements=我不认为这里会有很多游客...<p>所以在货物和船只方面我们不能期望太多.;
 nextNodeID=reeve_port13_dialog1b;
 nextNodeID_fReq=party:hagger;
 nextNodeID=;
@@ -440,7 +440,7 @@ nextNodeID=;
 [DialogNode] ID=reeve_port13_dialog1b;
 speakerOverride=hagger;
 animations=happy;
-statements=They've a cafe.<p> Who's needin' aught else?;
+statements=他们有一家咖啡馆.<p>谁还需要别的?;
 nextNodeID=;
 
 
@@ -455,8 +455,8 @@ specialEffect=delayDialog,2;
 specialEffect=noSpeechFXLookOrAnim;
 animations=happy;
 animations=scared;
-statements=What a nice little forest port!;
-statements=This is my first visit to the Riverlands...<p> I heard they have ships made of trees here!;
+statements=多么漂亮的小森林港口啊!;
+statements=这是我第一次来河岸地带...<p>我听说有树做的船!;
 nextNodeID=reeve_port14_dialog1b;
 nextNodeID_fReq=party:hagger;
 nextNodeID=reeve_port14_dialog1c;
@@ -464,7 +464,7 @@ nextNodeID=reeve_port14_dialog1c;
 [DialogNode] ID=reeve_port14_dialog1b;
 speakerOverride=hagger;
 animations=sly;
-statements=What a novelty, eh?;
+statements=多么新奇啊，嗯?;
 nextNodeID=reeve_port14_dialog1c;
 
 
@@ -472,8 +472,8 @@ nextNodeID=reeve_port14_dialog1c;
 speakerOverride=reeve;
 animations=meh;
 animations=angry;
-statements=Er, well, I guess most ships are made of trees.<p> I mean like still-alive trees!;
-statements=It's more impressive than it sounds, alright??;
+statements=呃，我想大部分的船都是树做的.<p>我意思是像活着的树!;
+statements=这比听说了更加令人印象深刻，对吧??;
 nextNodeID=;
 
 
@@ -560,9 +560,9 @@ specialEffect=noSpeechFXLookOrAnim;
 animations=happy;
 animations=stern;
 animations=;
-statements=Never thought I'd visit Towerwall personally, but here we are!;
-statements=This is Jasce's main defense against the Maskheads and monsters from the Shredded Land.;
-statements=I heard part of the wall was breached by some sort of 'Gate' attack...<p> but it looks like the main fortress is holding steady.;
+statements=从没想过我会亲自来参观塔墙,但我们来了!;
+statements=这是雅斯为了对抗面具头人以及来自 Shredded Land 怪物的主要防御手段.;
+statements=我听说有一部分墙被某种'门'魔法攻破了...<p>但主要堡垒看起来还是保持稳定.;
 
 
 
@@ -577,9 +577,9 @@ specialEffect=noSpeechFXLookOrAnim;
 animations=sly;
 animations=meh;
 animations=happy;
-statements=Gonhaldr...<p> it's been a while.;
-statements=Not that I missed it.<p> It always stinks of smoke here.;
-statements=Still, they're good allies of Dominio.<p> And their craftsmanship is unbeatable!;
+statements=Gonhaldr...<p>有一段时间了.;
+statements=不是我想念它.<p>它这儿总是有一股烟味.;
+statements=不过他们还是多米尼奥的好盟友.<p>他们的工艺是无与伦比的!;
 
 
 --port29
@@ -609,9 +609,9 @@ specialEffect=noSpeechFXLookOrAnim;
 animations=scared;
 animations=;
 animations=sly;
-statements=<speed=0.8>Crub...<p=2> town?;
-statements=<speed=0.3>Uhhhhh...;
-statements=I,<p> uh,<p> hope they don't recognize me...<p> I've fought a few Crub raids in my day...!;
+statements=<speed=0.8>克拉布...<p=2>小镇?;
+statements=<speed=0.3>呃...;
+statements=我,<p>呃,<p>希望他们不认识我...<p>我以前参与过和克拉布的战斗...!;
 nextNodeID=reeve_port30_dialog1b;
 nextNodeID_fReq=party:hagger;
 nextNodeID=;
@@ -619,7 +619,7 @@ nextNodeID=;
 [DialogNode] ID=reeve_port30_dialog1b;
 speakerOverride=hagger;
 animations=happy;
-statements=Jes' don't make a hubbub in th' Crub hub and they won't know ya,<p> bub!;
+statements=只要你不在克拉布中心闹腾，他们就不会知道你了!;
 nextNodeID=reeve_port30_dialog1c;
 
 [DialogNode] ID=reeve_port30_dialog1c;
@@ -659,9 +659,9 @@ specialEffect=noSpeechFXLookOrAnim;
 animations=sly;
 animations=;
 animations=happy;
-statements=This must be that international trade passage they closed down a few years ago...;
-statements=Looks like there's an official notice here.<p> It says:<color=DarkRed><p> "CLOSED BY ROYAL ORDER OF JASCE, RUMANE, AND SEARTIAL. ALL ENTRY FORBIDDEN.";
-statements=That's a first.<p> I don't think I've ever seen those three nations agree on anything before!;
+statements=这一定是几年前他们关闭的国际贸易通道...;
+statements=看来这里有个官方公告.<p>上面写着:<color=DarkRed><p> "由雅斯、罗马尼亚和西提尔的皇家命令关闭，禁止进入";
+statements=这是第一次.<p>我想我之前从未见过这三个国家在任何事情上达成一致!;
 nextNodeID=reeve_cragrook1_dialog1b;
 nextNodeID_fReq=party:hagger;
 nextNodeID=;
@@ -670,8 +670,8 @@ nextNodeID=;
 speakerOverride=hagger;
 animations=sly;
 animations=stern;
-statements=Now, why'd they close a big money-maker li' this place?;
-statements=Som'thin's fishy here, Commodore, no mistake.;
+statements=他们为什么关闭这个能做大生意的地方?;
+statements=船长，这里肯定有什么问题.;
 nextNodeID=;
 
 
@@ -700,8 +700,8 @@ animations=scared;
 animations=sigh;
 animations=stern;
 statements=<color=DarkBlue>Brr-!;
-statements=S-<p>so cold...<p> going to be r-<p>rough fighting here.;
-statements=W-well, no sense waiting... l-let's go...!;
+statements=好-<p>好冷...<p>这里肯定会有一场激-<p>激烈的战斗.;
+statements=好-好吧,别等了... 走-走吧...!;
 
 [DialogNodeOverride] ID=reeve_cave4_dialog1a;
 dialogNodeID_toOverride=enterLoc; priority=9;
@@ -739,9 +739,9 @@ specialEffect=noSpeechFXLookOrAnim;
 animations=stern;
 animations=meh;
 animations=sigh;
-statements=Ah...<p> these must be the ruins of the old capital.;
-statements=<speed=0.9>Gonhaldr had it the worst during the Gate War...<p> completely razed to the ground.;
-statements=Nothing for us here,<p> Commodore,<p> unless you want to sift through the ashes.;
+statements=啊...<p>这些一定是旧都的遗迹.;
+statements=<speed=0.9>Gonhaldr 在门之战有过很糟糕的经历...<p>完全被夷为平地.;
+statements=这儿什么都没有,<p> 船长,<p>除非你想从灰烬里筛选出什么.;
 
 [DialogNodeOverride] ID=reeve_farm1_dialog1a;
 dialogNodeID_toOverride=enterLoc; priority=9;
@@ -823,8 +823,8 @@ specialEffect=delayDialog,0.8;
 specialEffect=noSpeechFXLookOrAnim;
 animations=sly;
 animations=happy;
-statements=Say, Commodore, we've made a lot of amazing discoveries lately.;
-statements=We should go report them to a researcher!<p> We'll make a fortune!;
+statements=船长，我们最近有很多惊人的发现.;
+statements=我们应该向研究员报告这些!<p>能大赚一笔!;
 
 --get rid of sailboat dialog
 [DialogNodeOverride] ID=reeve_enterOverworld_dialog3a;
@@ -1672,10 +1672,10 @@ animations=sad;
 animations=meh;
 animations=happy;
 animations=sly;
-statements=Just bread, huh?<p=> No...<p=> toppings or anything...?;
-statements=<speed=0.6>*crunch* *munch*;
-statements=Oh!<p=> That's actually really good!;
-statements=Could still use a bit of meat on top, but I'll take it.;
+statements=只是块面包, 嗯?<p=>没有...<p=>任何配料吗...?;
+statements=<speed=0.6>*嘎吱嘎吱* *咀嚼*;
+statements=噢!<p=>这真的很不错!;
+statements=上面还可以加点肉.;
 nextNodeID=endCafeTalk;
 
 --port2 (Rock Yam)
@@ -1778,42 +1778,42 @@ specialEffect=delayDialog,3;
 specialEffect=noSpeechFXLookOrAnim;
 animations=sly;
 animations=happy;
-statements=Say...<p> this isn't bad!;
-statements=Who knew a bunch of pirates would be able to cook?;
+statements=看起来...<p>不算太差!;
+statements=谁能想到一群海盗还会做饭?;
 nextNodeID=reeve_cafe_party_dialog_port5_1b;
 
 [DialogNode] ID=reeve_cafe_party_dialog_port5_1b;
 speakerOverride=hagger;
 animations=angry;
 animations=stern;
-statements=<speed=0.5>Shhhh!!;
+statements=<speed=0.5>哈哈哈哈!!;
 statements=<color=DarkSlateGray>Reeve!<p> Ixnay on th' P-word!;
 nextNodeID=reeve_cafe_party_dialog_port5_1c;
 
 [DialogNode] ID=reeve_cafe_party_dialog_port5_1c;
 speakerOverride=reeve;
 animations=scared;
-statements=What?<p> <color=DarkSlateGray>I thought basically everyone knew this port was...?;
+statements=什么?<p> <color=DarkSlateGray>我以为基本上所有人都知道我这个港口是干嘛的...?;
 nextNodeID=reeve_cafe_party_dialog_port5_1d;
 
 [DialogNode] ID=reeve_cafe_party_dialog_port5_1d;
 speakerOverride=hagger;
 animations=stern;
-statements=<color=DarkSlateGray>'S one thing t'know, an' another t' blab it in th'middle of th' cafe!;
+statements=<color=DarkSlateGray>知道是一回事，在咖啡馆里说出来又是另一回事!;
 nextNodeID=reeve_cafe_party_dialog_port5_1e;
 
 [DialogNode] ID=reeve_cafe_party_dialog_port5_1e;
 speakerOverride=reeve;
 animations=meh;
 animations=happy;
-statements=R-<p>right...<p> well...;
-statements=The food's still very good,<p> y'know,<p><speed=0.25> considering...;
+statements=也是<p>...<p>好吧...;
+statements=考虑到食物还不错,<p>你知道的...;
 nextNodeID=reeve_cafe_party_dialog_port5_1f;
 
 [DialogNode] ID=reeve_cafe_party_dialog_port5_1f;
 speakerOverride=hagger;
 animations=happy;
-statements=Y'got that right!;
+statements=你明白了!;
 nextNodeID=endCafeTalk;
 
 --port6 (Blueshine)
@@ -1916,9 +1916,9 @@ animations=happy;
 animations=sly;
 animations=happy;
 statements=<speed=0.3>Hmm...!;
-statements=You know,<p> from the name,<p> I was expecting something much worse!;
-statements=This is...<p=1.4> well, it's not bad.<p> Not sure how to describe it...;
-statements=It's...<p=1.4> zesty, in a way!;
+statements=你知道的,<p>从名字上来看,<p>我以为会有更糟的事!;
+statements=这个...<p=1.4>好吧, 还不差.<p>我也不知道怎么去形容...;
+statements=感觉...<p=1.4>很刺激,某种程度上来说!;
 nextNodeID=reeve_cafe_party_dialog_port12_1b;
 nextNodeID_fReq=party:hagger;
 nextNodeID=endCafeTalk;
@@ -1926,45 +1926,45 @@ nextNodeID=endCafeTalk;
 [DialogNode] ID=reeve_cafe_party_dialog_port12_1b;
 speakerOverride=hagger;
 animations=sly;
-statements=I dinna if I'd call it zest.;
+statements=我不知道这算不算刺激.;
 nextNodeID=reeve_cafe_party_dialog_port12_1c;
 
 [DialogNode] ID=reeve_cafe_party_dialog_port12_1c;
 speakerOverride=reeve;
 animations=stern;
-statements=Well, maybe...<p> it's zest-ish...;
+statements=好吧...<p>也许是比较像...;
 nextNodeID=reeve_cafe_party_dialog_port12_1d;
 
 [DialogNode] ID=reeve_cafe_party_dialog_port12_1d;
 speakerOverride=hagger;
 animations=happy;
-statements=Zest-esque?;
+statements=像刺激性食物?;
 nextNodeID=reeve_cafe_party_dialog_port12_1e;
 
 [DialogNode] ID=reeve_cafe_party_dialog_port12_1e;
 speakerOverride=reeve;
 animations=scared;
 animations=happy;
-statements=Yes, exactly!;
-statements=You know,<p> Hagger,<p> you're a man of few words,<p> but you know just the right ones.;
+statements=是的!;
+statements=你知道的,<p> Hagger,<p>你是个沉默寡言的人,<p>但你应该知道说什么.;
 nextNodeID=reeve_cafe_party_dialog_port12_1f;
 
 [DialogNode] ID=reeve_cafe_party_dialog_port12_1f;
 speakerOverride=hagger;
 animations=meh;
-statements=Th'flames yer on about?<p> I talk constan'ly!;
+statements=你在瞎说什么?<p>我经常在说话!;
 nextNodeID=reeve_cafe_party_dialog_port12_1g;
 
 [DialogNode] ID=reeve_cafe_party_dialog_port12_1g;
 speakerOverride=reeve;
 animations=sly;
-statements=Yes, but very few of the things you say are actually words.;
+statements=是的，但我是说你说话的文字很少是真的.;
 nextNodeID=reeve_cafe_party_dialog_port12_1h;
 
 [DialogNode] ID=reeve_cafe_party_dialog_port12_1h;
 speakerOverride=hagger;
 animations=happy;
-statements=Hah!<p=1.5> Y'got me there!;
+statements=哈哈!<p=1.5>你让我明白了!;
 nextNodeID=endCafeTalk;
 
 
@@ -1978,7 +1978,7 @@ speakerOverride=reeve;
 specialEffect=delayDialog,3;
 specialEffect=noSpeechFXLookOrAnim;
 animations=happy;
-statements=Mm, skinkeyes!<p> Haven't had these since I was a kid.;
+statements=Mm, 蜥蜴皮!<p>我从小时候后就再没吃过这个了.;
 nextNodeID=reeve_cafe_party_dialog_port13_1b;
 nextNodeID_fReq=party:hagger;
 nextNodeID=reeve_cafe_party_dialog_port13_1c;
@@ -1986,13 +1986,13 @@ nextNodeID=reeve_cafe_party_dialog_port13_1c;
 [DialogNode] ID=reeve_cafe_party_dialog_port13_1b;
 speakerOverride=hagger;
 animations=meh;
-statements=Wha' is this and why did we buy it.;
+statements=这是什么，我们为什么要买它.;
 nextNodeID=reeve_cafe_party_dialog_port13_1c;
 
 [DialogNode] ID=reeve_cafe_party_dialog_port13_1c;
 speakerOverride=reeve;
 animations=happy;
-statements=Don't look at me like that.<p> Try it!<p> It's good!;
+statements=别那样看着我.<p>试一试!<p>很不错的!;
 nextNodeID=reeve_cafe_party_dialog_port13_1d;
 nextNodeID_fReq=party:hagger;
 nextNodeID=endCafeTalk;
@@ -2001,8 +2001,8 @@ nextNodeID=endCafeTalk;
 speakerOverride=hagger;
 animations=sly;
 animations=stern;
-statements=Some times I regret bein' a sailor.;
-statements=Never thought tha'd happen in a cafe.;
+statements=有时候我后悔成为水手.;
+statements=从没想过这种事会发生在咖啡馆.;
 nextNodeID=endCafeTalk;
 
 
@@ -2018,9 +2018,9 @@ specialEffect=noSpeechFXLookOrAnim;
 animations=scared;
 animations=sad;
 animations=stern;
-statements=Oh!<p=2> <color=DarkBlue>C-<p>c-<p>cold!;
-statements=Sh-<p>shouldn'ta had a,<p> a whole h-<p>handful...;
-statements=I-<p>isn't the weather cold enough already, w-<p>without the food being cold, too!?;
+statements=噢!<p=2> <color=DarkBlue>冷-<p>冷-<p>太冷了!;
+statements=需要帮我一下...;
+statements=天气还不够冷吗,连食物也这么冷!?;
 nextNodeID=endCafeTalk;
 
 
@@ -2079,12 +2079,12 @@ animations=stern;
 animations=meh;
 animations=scared;
 animations=stern;
-statements=Ohhh no.<p> I'm already gagging just from the smell...;
-statements=Don't laugh.<p> If I'm eating this,<p> you are too,<p> Commodore.;
-statements=Well, bottoms up...!;
+statements=噢，不.<p>我闻着味道就感觉要吐了...;
+statements=不要笑.<p>如果我要吃这个,<p>你也要,<p>船长.;
+statements=好吧，干杯...!;
 statements=...;
-statements=Ugkh!<p> I-<p>it's like eating coffee solidified...<p=2> my heart's racing...!;
-statements=W-well,<p> just a little more probably wouldn't be<p> fatal...;
+statements=Ugkh!<p> 就-<p>就像在吃凝固的咖啡...<p=2>我要窒息了...!;
+statements=好-好吧,<p>再多一点可能就不会<p>致命了...;
 nextNodeID=endCafeTalk;
 
 
@@ -2132,36 +2132,36 @@ specialEffect=delayDialog,3;
 specialEffect=noSpeechFXLookOrAnim;
 animations=happy;
 animations=sly;
-statements=Mmm, that is tasty!;
-statements=Uh...<p> Hold on...<p> Hagger,<p> why are you,<p> uh,<p> glowing...?;
+statements=Mmm, 真美味!;
+statements=呃...<p>等等...<p> Hagger,<p>为什么你,<p> 呃,<p>在发光...?;
 nextNodeID=reeve_cafe_party_dialog_port21_1b;
 
 [DialogNode] ID=reeve_cafe_party_dialog_port21_1b;
 speakerOverride=hagger;
 animations=happy;
-statements=Y'are too, ya blind fish!;
+statements=你也是，你这条盲鱼!;
 nextNodeID=reeve_cafe_party_dialog_port21_1c;
 
 [DialogNode] ID=reeve_cafe_party_dialog_port21_1c;
 speakerOverride=reeve;
 animations=scared;
 animations=angry;
-statements=I-<p=2> I am!;
-statements=Why am I glowing?;
+statements=我-<p=2>也是吗!;
+statements=为什么我在发光?;
 nextNodeID=reeve_cafe_party_dialog_port21_1d;
 
 [DialogNode] ID=reeve_cafe_party_dialog_port21_1d;
 speakerOverride=hagger;
 animations=sly;
-statements=Relax.<p> 'S'th' truffles, mate.<p> Small side effect.;
+statements=放松点.<p>是这个松露, 伙计.<p>一点点副作用.;
 nextNodeID=reeve_cafe_party_dialog_port21_1e;
 
 [DialogNode] ID=reeve_cafe_party_dialog_port21_1e;
 speakerOverride=reeve;
 animations=meh;
 animations=sad;
-statements=I don't like it.;
-statements=Why can't delicious things just be delicious,<p> and not have weird side effects...?;
+statements=我不喜欢它.;
+statements=为什么美味的东西就不能仅仅是美味的,<p>就不能没有奇怪的副作用吗...?;
 nextNodeID=endCafeTalk;
 
 --port27 (Naga Pepper)
@@ -2176,9 +2176,9 @@ specialEffect=noSpeechFXLookOrAnim;
 animations=meh;
 animations=stern;
 animations=happy;
-statements=Just like Gonhaldr, to serve something fiery and smokey and tell you to like it.;
-statements=I think I'll have this...<p> little piece of it here...<p> and you can have the rest, Commodore.;
-statements=What, you don't want two?<p> You bought 'em, didn't you?;
+statements=像 Gonhaldr 的这种地方，上一道辣的烟熏的食物，告诉你喜欢它,.;
+statements=我想我要这个...<p> 这里的一小块...<p>剩下的归你了，船长.;
+statements=什么，你不想要两个吗?<p>不过这是你买的，不是吗?;
 nextNodeID=endCafeTalk;
 
 
@@ -2223,8 +2223,8 @@ specialEffect=delayDialog,3;
 specialEffect=noSpeechFXLookOrAnim;
 animations=meh;
 animations=stern;
-statements=I know Crub must have their own tastes, but...<p> this is a bit much.;
-statements=Are we really expected to drink this whole thing?;
+statements=我知道克拉布肯定有自己独特的口味...<p>但是这个是不是有点多了.;
+statements=我们真的要把这些喝光吗?;
 nextNodeID=reeve_cafe_party_dialog_port30_1b;
 nextNodeID_fReq=party:hagger;
 nextNodeID=endCafeTalk;
@@ -2234,15 +2234,15 @@ speakerOverride=hagger;
 animations=stern;
 animations=sly;
 animations=meh;
-statements='Sfer the effects, Reeve,<p> not fer the joy 'f it.;
-statements=Y'know, like vodka.;
-statements=Here,<p> pass 't over if y'ain't gonna finish it.;
+statements=是为了它的效果, Reeve,<p>而不是为了欢乐.;
+statements=你知道的，比如伏特加.;
+statements=来,<p>如果你喝不完就递给我吧.;
 nextNodeID=reeve_cafe_party_dialog_port30_1c;
 
 [DialogNode] ID=reeve_cafe_party_dialog_port30_1c;
 speakerOverride=reeve;
 animations=meh;
-statements=No, I'll finish it.<p> Just give me another<speed=0.7>...<p> couple hours...;
+statements=不，我会喝完了.<p>只需要给我<speed=0.7>...<p>几个小时...;
 nextNodeID=endCafeTalk;
 
 --port30 (Grand Bean)
@@ -2256,8 +2256,8 @@ specialEffect=delayDialog,3;
 specialEffect=noSpeechFXLookOrAnim;
 animations=scared;
 animations=stern;
-statements=Woah.<p> Is this for real?<p> It's huge!;
-statements=I feel full just looking at it...;
+statements=哇哦.<p>这是真的吗?<p>它太大了!;
+statements=看着它我就饱了...;
 nextNodeID=reeve_cafe_party_dialog_port31_1b;
 nextNodeID_fReq=party:hagger;
 nextNodeID=endCafeTalk;
@@ -2265,7 +2265,7 @@ nextNodeID=endCafeTalk;
 [DialogNode] ID=reeve_cafe_party_dialog_port31_1b;
 speakerOverride=hagger;
 animations=happy;
-statements=I feel hungry lookin' at 't!<p> Les' dig in!;
+statements=我看着它就饿了!<p>我们快动手吧!;
 nextNodeID=endCafeTalk;
 
 
@@ -2279,8 +2279,8 @@ specialEffect=delayDialog,3;
 specialEffect=noSpeechFXLookOrAnim;
 animations=;
 animations=sly;
-statements=Hmm.<p=1.5> Is this really what you'd call pie?;
-statements=Looks more like cake to me...<p> or is it possible to be both?;
+statements=Hmm.<p=1.5>这真的是你所谓的派吗?;
+statements=我看更像是蛋糕...<p>或者两者都是?;
 nextNodeID=reeve_cafe_party_dialog_port32_1b;
 
 [DialogNode] ID=reeve_cafe_party_dialog_port32_1b;
@@ -2288,23 +2288,23 @@ speakerOverride=hagger;
 animations=stern;
 animations=sly;
 animations=happy;
-statements=Don't y'start with that!<p=1.5> Tha's a road y'don't wanna go down.;
-statements=One time I argued with me mates fer five hours -<p=1.5> cake or pie, cake or pie?;
-statements=Ended with two broken ribs an' a black eye!;
+statements=别再想找个了!<p=1.5>这会没完没了的.;
+statements=有一次我和我的同伴争论了5个小时 -<p=1.5>蛋糕还是派，蛋糕还是派?;
+statements=最后断了两根肋骨，眼睛被打青了!;
 nextNodeID=reeve_cafe_party_dialog_port32_1c;
 
 [DialogNode] ID=reeve_cafe_party_dialog_port32_1c;
 speakerOverride=reeve;
 animations=meh;
 animations=sly;
-statements=<speed=0.7>Yeesh.;
-statements=What did you all decide it was?;
+statements=<speed=0.7>好吧.;
+statements=你们最终决定它是什么?;
 nextNodeID=reeve_cafe_party_dialog_port32_1d;
 
 [DialogNode] ID=reeve_cafe_party_dialog_port32_1d;
 speakerOverride=hagger;
 animations=sigh;
-statements=We decided it was a torte.;
+statements=我们决定它是奶油蛋糕.;
 nextNodeID=endCafeTalk;
 
 
