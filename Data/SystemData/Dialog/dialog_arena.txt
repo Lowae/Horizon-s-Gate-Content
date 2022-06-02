@@ -154,49 +154,49 @@ specialEffect=travel_point,zArena1,0,True;
 [DialogNode] ID=arena_won1;
 speakerOverride=arenaAdmin;
 animations=happy;
-statements=You won your first fight!;
+statements=你赢了第一场比赛!;
 nextNodeID=arena_won1a;
 
 [DialogNode] ID=arena_won1a;
 speakerOverride=arenaAdmin;
 animations=sly;
 animations=;
-statements=You've earned $150 for your victory!;
-statements=Now, choose which fighter from the other team to add to yours!;
+statements=获得了$150!;
+statements=现在可以从对方队伍选择一名战士加入你的队伍!;
 specialEffect=gp,150;
 
 [DialogNode] ID=arena_won2;
 speakerOverride=arenaAdmin;
 animations=scared;
-statements=You've won again!!;
+statements=你又赢了!!;
 nextNodeID=arena_won2a;
 
 [DialogNode] ID=arena_won2a;
 speakerOverride=arenaAdmin;
 animations=happy;
 animations=angry;
-statements=Fantastic!<p> You've earned an additional $200 for this conquest!;
-statements=Now, choose someone from the other team to fight with you!;
+statements=太棒了!<p>通过这次的胜利你获得了$200!;
+statements=现在可以从对方队伍选择一名战士加入你的队伍!;
 specialEffect=gp,200;
 
 [DialogNode] ID=arena_won3;
 speakerOverride=arenaAdmin;
 animations=happy;
-statements=Three victories in a row!!<p> You're on a roll!;
+statements=三连胜!!<p>你运气真好!;
 nextNodeID=arena_won3a;
 
 [DialogNode] ID=arena_won3a;
 speakerOverride=arenaAdmin;
 animations=sly;
 animations=;
-statements=You've earned $300 more!<p> One more victory and you'll attain the GRAND PRIZE!;
-statements=Now, choose a fighter from the other team!;
+statements=你有赚了$300!<p>再赢一次你就能获得大奖!;
+statements=现在可以从对方队伍选择一名战士加入你的队伍!;
 specialEffect=gp,300;
 
 [DialogNode] ID=arena_won4;
 speakerOverride=arenaAdmin;
 animations=happy;
-statements=Congratulations!!<p> You were victorious in every fight!!;
+statements=祝贺你!!<p>你在每一场战斗都是胜利者!!;
 nextNodeID=arena_won4_firstVictory;
 nextNodeID_fReq=1 - g:D_arena_won4_firstVictory;
 nextNodeID=arena_won4a;
@@ -207,7 +207,7 @@ animations=sly;
 animations=happy;
 animations=sly;
 animations=angry;
-statements=You've earned the GRAND PRIZE!;
+statements=你赢得了大奖!;
 statements=And to commemorate your FIRST victory in the arena, you get the special ELITE prize<p=1.5> - ;
 statements=The coveted <itemBig_low=abilityCrest>  Ability Crest!;
 statements=And you get access to our special ELITE arena from here on...!;
@@ -239,16 +239,16 @@ specialEffect=tNextArena;
 
 [DialogNode] ID=arena_hire1;
 animations=;
-statements=(Add <actorName=> to your group?);
-[DialogOption] text=Yes;
+statements=(添加 <actorName=> 到你的队伍?);
+[DialogOption] text=是;
 nodeToConnectTo=arena_hire_yes;
-[DialogOption] text=No;
+[DialogOption] text=不;
 nodeToConnectTo=;
 
 
 [DialogNode] ID=arena_hire_yes;
 animations=handupPose;
-statements=<actorName=> joins you!;
+statements=<actorName=> 加入了你!;
 specialEffect=fx,sfx_goodConfirm_fast;
 nextNodeID=arena_hire_yes2;
 

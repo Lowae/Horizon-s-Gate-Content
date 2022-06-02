@@ -3,14 +3,14 @@
 [DialogNode] ID=scene_ship1a;
 speakerOverride=barr;
 animations=handupPose;
-statements=The storm is really picking up, Commodore!;
+statements=暴风雨来了, 船长!;
 animations=stern;
-statements=This is looking bad!;
+statements=看起来十分猛烈!;
 
-[DialogOption] text=All hands on deck!!;
+[DialogOption] text=全体船员甲板上就位!!;
 animation=angry;
 nodeToConnectTo=scene_ship1c;
-[DialogOption] text=Reeve, take command for me!;
+[DialogOption] text=Reeve, 帮我指挥一下!;
 animation=scared;
 newLineOfOptions=true;
 nodeToConnectTo=scene_ship1b;
@@ -25,8 +25,8 @@ nodeToConnectTo=scene_ship12b;
 speakerOverride=reeve_strong;
 animations=;
 animations=angry;
-statements=Stay calm, Commodore!<p=> You can handle this!;
-statements=All hands on deck!<p=> Brace yourselves, this is going to be a rough one!;
+statements=保持冷静, 船长!<p=>你可以处理的!;
+statements=全体船员就位!<p=>做好准备，这将是一场恶战!;
 nextNodeID=scene_ship1c;
 
 [DialogNode] ID=scene_ship1c;
@@ -38,16 +38,16 @@ nodeToConnectTo=;
 [DialogNode] ID=scene_ship2a;
 speakerOverride=vang;
 animations=angry;
-statements=Hey, watch it!;
+statements=嘿，看着点!;
 
-[DialogOption] text=Sorry!;
+[DialogOption] text=抱歉!;
 animation=;
 nodeToConnectTo=scene_ship2b;
-[DialogOption] text=YOU watch it!;
+[DialogOption] text=你挡道了!;
 animation=stern;
 nodeToConnectTo=scene_ship2b;
 newLineOfOptions=true;
-[DialogOption] text=Stay on task, sailor!;
+[DialogOption] text=继续你的工作，水手!;
 animation=angry;
 nodeToConnectTo=scene_ship2b;
 newLineOfOptions=true;
@@ -67,11 +67,11 @@ nodeToConnectTo=;
 [DialogNode] ID=scene_ship2d;
 speakerOverride=barr;
 animations=sigh;
-statements=This storm came out of nowhere...<p=> it's more intense than any I've seen!;
-[DialogOption] text=We'll weather it. Stay focused.;
+statements=这场风暴不知道从哪来的...<p=>是我见过最猛烈的!;
+[DialogOption] text=我们会撑过去的，保持注意力集中.;
 animation=angry;
 nodeToConnectTo=scene_ship2e;
-[DialogOption] text=What are our chances?;
+[DialogOption] text=我们的胜算大吗?;
 animation=;
 nodeToConnectTo=scene_ship2f;
 newLineOfOptions=true;
@@ -79,13 +79,13 @@ newLineOfOptions=true;
 [DialogNode] ID=scene_ship2e;
 speakerOverride=barr;
 animations=;
-statements=As you say, Commodore.;
+statements=如你所言, 船长.;
 nextNodeID=scene_ship2g;
 
 [DialogNode] ID=scene_ship2f;
 speakerOverride=barr;
 animations=angry;
-statements=We might make it through...<p=> but I can't say for certain.;
+statements=我们也许能挺过去...<p=>但是我没办法保证.;
 nextNodeID=scene_ship2g;
 
 [DialogNode] ID=scene_ship2g;
@@ -97,19 +97,19 @@ nodeToConnectTo=;
 [DialogNode] ID=scene_ship3a;
 speakerOverride=;
 animations=;
-statements=Fire!<p=> There's a fire belowdecks!;
+statements=着火了!<p=>甲板下面着火了!;
 nextNodeID=scene_ship3b;
 
 [DialogNode] ID=scene_ship3b;
 speakerOverride=reeve_strong;
 animations=angry;
-statements=I'm on it!<p=> Vang, Mirra, with me!;
+statements=我去看看!<p=> Vang, Mirra, 跟着我!;
 nextNodeID=scene_ship3c;
 
 [DialogNode] ID=scene_ship3c;
 speakerOverride=vang;
 animations=scared;
-statements=Y-yes ma'am!;
+statements=是-是的，长官!;
 nextNodeID=scene_ship3d;
 
 [DialogNode] ID=scene_ship3d;
@@ -121,7 +121,7 @@ nodeToConnectTo=;
 [DialogNode] ID=scene_ship4a;
 speakerOverride=barr;
 animations=handupPose;
-statements=Commodore, look!<p=> I-is that...?!;
+statements=船长, 看那儿!<p=>那-那是什么...?!;
 specialEffect=facingRot270;
 nextNodeID=scene_ship4b;
 
@@ -134,7 +134,7 @@ nodeToConnectTo=;
 [DialogNode] ID=scene_ship4c;
 speakerOverride=barr;
 animations=angry;
-statements=Pirates!<p=> At a time like this!?;
+statements=海盗!<p=>在这个时候!?;
 nextNodeID=scene_ship4d;
 
 [DialogNode] ID=scene_ship4d;
@@ -147,31 +147,31 @@ nodeToConnectTo=;
 speakerOverride=lagan;
 animations=handupPose;
 animations=handoutPose;
-statements=Hahaha...!<p=> Enjoying the storm, Dominio dogs?;
-statements=Courtesy of Lagan - yours truly!;
+statements=哈哈哈...!<p=>享受这场暴风雨吧,多米尼奥(Dominio)的走狗们?;
+statements=这是 Lagan - 真诚的好意!;
 nextNodeID=scene_ship5a2;
 
 
 [DialogNode] ID=scene_ship5a2;
 animations=sigh;
-statements=I was supposed to have the Stormcutter blast you all to bits,<p=> but I'd hate to waste all that fine cargo...;
+statements=我应该让风暴切割号把你们撕成碎片的,<p=>但是我可不想浪费这么多的好货...;
 specialEffect=moveY1;
 nextNodeID=scene_ship5a3;
 
 [DialogNode] ID=scene_ship5a3;
 animations=idle;
-statements=Why don't you all just lay down and let's do this the easy way?;
+statements=为什么你们就不乖乖躺下投降，用最简单的方法来解决呢?;
 specialEffect=facingRot180;
 
 
-[DialogOption] text=Never! We won't surrender to pirates!;
+[DialogOption] text=想得美!我们从不会向海盗投降!;
 animation=angry;
 nodeToConnectTo=scene_ship5b;
-[DialogOption] text=You were 'supposed to'? Did someone hire you?;
+[DialogOption] text=你说你'应该'?是有人雇佣你吗?;
 animation=sly;
 nodeToConnectTo=scene_ship5c;
 newLineOfOptions=true;
-[DialogOption] text=Call off the storm, then we'll negotiate!;
+[DialogOption] text=先让风暴消散，然后我们再谈判!;
 animation=stern;
 nodeToConnectTo=scene_ship5d;
 newLineOfOptions=true;
@@ -179,23 +179,23 @@ newLineOfOptions=true;
 
 [DialogNode] ID=scene_ship5b;
 animations=swing;
-statements=As expected!<p=> Hard way it is, then!;
+statements=果然不出所料!<p=>那就用强硬的方式吧!;
 specialEffect=facingRot90;
 nextNodeID=scene_ship5e;
 
 [DialogNode] ID=scene_ship5c;
 animations=chargePose;
 animations=swing;
-statements=You're asking me questions?<p=> Really?;
-statements=I don't think you understand the position you're in...<p=> so let me demonstrate!;
+statements=你在向我提问?<p=>认真的?;
+statements=我认为你还不清楚你现在的处境...<p=>所以，那就让我来演示一下!;
 specialEffect=facingRot90;
 nextNodeID=scene_ship5e;
 
 [DialogNode] ID=scene_ship5d;
 animations=chargePose;
 animations=handupPose;
-statements=I don't think so.<p=> There's nothing to negotiate!<p=> Just lay down and die!;
-statements=...did I say 'and'?<p=> I meant 'lay down or die'.<speed=0.5> ...hm.<p=><speed=1> Oh well!;
+statements=我可不这么认为.<p=>没有谈判的余地!<p=>投降然后去死吧!;
+statements=...我说了'然后去死'吗?<p=>不对，我意思是要么投降要么去死.<speed=0.5> ...额.<p=><speed=1>噢，好吧!;
 specialEffect=facingRot90;
 nextNodeID=scene_ship5e;
 
@@ -216,8 +216,8 @@ specialEffect=tScene9;
 --combat ensues
 
 [DialogNode] ID=scene_ship7a;
-statements=Tch...!<p=> This is taking far too long.;
-statements=Once the captain goes down, the rest will follow!;
+statements=Tch...!<p=>花的时间太久了.;
+statements=一旦船长倒下了，其他人也不远了!;
 specialEffect=facingRot90;
 nextNodeID=scene_ship7b;
 
@@ -230,28 +230,28 @@ specialEffect=tScene10;
 [DialogNode] ID=scene_ship8a;
 animations=crouchPose_back2;
 animations=crouchHandOutPose_back2;
-statements=<speed=0.8>Oh...<p=> er...;
-statements=Hey...<p=> l-let's not do anything rash, now...!;
+statements=<speed=0.8>噢...<p=>呃...;
+statements=嘿...<p=>现在别太冲动...!;
 
-[DialogOption] text=Order your men to surrender!;
+[DialogOption] text=命令你的人投降!;
 animation=handoutAngryPose;
 nodeToConnectTo=scene_ship8b;
-[DialogOption] text=This the 'hard way' you were talking about?;
+[DialogOption] text=这就是你说的'强硬的方式'?;
 animation=handoutSlyPose;
 formulaReq=g:D_scene_ship5b;
 nodeToConnectTo=scene_ship8b;
 newLineOfOptions=true;
-[DialogOption] text=Willing to answer questions now?;
+[DialogOption] text=现在愿意回答问题了吗?;
 animation=handoutSlyPose;
 formulaReq=g:D_scene_ship5c;
 nodeToConnectTo=scene_ship8b;
 newLineOfOptions=true;
-[DialogOption] text=Ready to negotiate?;
+[DialogOption] text=准备好谈论了?;
 animation=handoutSlyPose;
 formulaReq=g:D_scene_ship5d;
 nodeToConnectTo=scene_ship8b;
 newLineOfOptions=true;
-[DialogOption] text=Just lay down and die...!;
+[DialogOption] text=投降然后去死吧...!;
 animation=handoutSternPose;
 formulaReq=g:D_scene_ship5d;
 nodeToConnectTo=scene_ship8c;
@@ -259,12 +259,12 @@ newLineOfOptions=true;
 
 [DialogNode] ID=scene_ship8b;
 animations=crouchPose_back2;
-statements=<speed=0.8>Y-yes, <p=>I,<p=> uh...;
+statements=<speed=0.8>好-好, <p=>我,<p=>呃...;
 nextNodeID=scene_ship8d;
 
 [DialogNode] ID=scene_ship8c;
 animations=crouchPose_back2;
-statements=<speed=0.8>N-no,<p=> please...!;
+statements=<speed=0.8>不-不,<p=>别这样...!;
 nextNodeID=scene_ship8d;
 
 [DialogNode] ID=scene_ship8d;
@@ -281,13 +281,13 @@ specialEffect=tScene12;
 
 [DialogNode] ID=scene_ship10a;
 animations=angry;
-statements=Vang's here and ready to fight!!;
+statements=Vang 来了，准备好参战了!!;
 specialEffect=facingRot270;
 nextNodeID=scene_ship10b;
 
 [DialogNode] ID=scene_ship10b;
 animations=chargePose;
-statements=Who wants some?!;
+statements=谁想和我打?!;
 specialEffect=facingRot0;
 specialEffect=setPrevFacingRot,0;
 nextNodeID=scene_ship10c;
@@ -298,7 +298,7 @@ specialEffect=tScene13;
 
 [DialogNode] ID=scene_ship11a;
 animations=angry;
-statements=Hahaha!<p=> Later, fools!;
+statements=哈哈哈!<p=>已经晚了, 傻瓜!;
 specialEffect=facingRot180;
 nextNodeID=scene_ship11b;
 
@@ -307,21 +307,21 @@ specialEffect=tScene14;
 
 [DialogNode] ID=scene_ship12a;
 animations=meh;
-statements=...they're running away?;
+statements=...他们逃跑了?;
 specialEffect=facingRot0;
 nextNodeID=scene_ship12a2;
 
 [DialogNode] ID=scene_ship12a2;
 animations=angry;
 animations=handoutPose;
-statements=<speed=0.5>...huh?<p=><speed=1> You fell over again??;
-statements=Get up already!<p=> You let 'em get away!;
+statements=<speed=0.5>...嗯?<p=><speed=1>你怎么又摔倒了??;
+statements=快起来!<p=>你让他们跑了!;
 specialEffect=facingRot180;
 
-[DialogOption] text=Vang, you son of a...;
+[DialogOption] text=Vang, 你个...;
 animation=stern;
 nodeToConnectTo=scene_ship12b;
-[DialogOption] text=Everyone, after them!;
+[DialogOption] text=所有人，追上他们!;
 animation=chargePose;
 nodeToConnectTo=scene_ship12b;
 newLineOfOptions=true;
