@@ -1,32 +1,32 @@
 
 [DialogNode] ID=dialog_fleet;
 animations=;
-statements=<color=DarkRed><portraitBigCommodore=><commodoreName=><color=> commands a <fleetdesc=>.<n=><textIf=An allied fleet is nearby.=m:numFactionAlliesWithin(2)-1>;
+statements=<color=DarkRed><portraitBigCommodore=><commodoreName=><color=>指挥着一支<fleetdesc=>.<n=><textIf=一支盟友舰队就在附近.=m:numFactionAlliesWithin(2)-1>;
 specialEffect=talkToFlagship;
 specialEffect=setDialogWindowSizeY;
 specialEffect=resetPCDialogWindowSizeY;
 nextNodeID=;
-[DialogOption] text=(Inspect);
+[DialogOption] text=(检查);
 nodeToConnectTo=dialog_fleet_inspect;
 specialEffect=showFleetInfo,dialog_fleet_inspect;
-[DialogOption] text=(Chat);
+[DialogOption] text=(聊天);
 newLineOfOptions=true;
 formulaReq=3-m:distanceFleet - m:tHostile * 100;
 nodeToConnectTo=dialog_fleet_chat;
-[DialogOption] text=<color=DarkRed>(Attack!);
+[DialogOption] text=<color=DarkRed>(攻击!);
 newLineOfOptions=true;
 formulaReq=3-m:distanceFleet;
 nodeToConnectTo=dialog_fleet_attack;
-[DialogOption] text=<color=SlateGray>(Not close enough to attack);
+[DialogOption] text=<color=SlateGray>(距离太远，无法攻击);
 newLineOfOptions=true;
 formulaReq=m:distanceFleet-2;
 nodeToConnectTo=dialog_fleet;
-[DialogOption] text=(Other Fleet);
+[DialogOption] text=(其他舰队);
 newLineOfOptions=true;
 formulaReq=m:numNPCsAt-1;
 nodeToConnectTo=dialog_fleet;
 specialEffect=talkToOtherActor;
-[DialogOption] text=Done;
+[DialogOption] text=完成;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -75,14 +75,14 @@ nextNodeID=dialog_fleet_chat;
 
 
 [DialogNode] ID=dialog_fleet_chat_trade;
-statements=Here's what we can spare...<p=> I'm <color=DarkRed>charging you extra<color=> though!;
+statements=这些是我们多余的...<p=>不过我要收取<color=DarkRed>额外的费用<color=>!;
 specialEffect=talkToFlagship;
 specialEffect=enterBuyMode_fleet;
 specialEffect=setBuyPriceMult,1.5;
 specialEffect=setNPCDialogWindowSizeY,120;
 specialEffect=setPCDialogWindowSizeY,68;
 
-[DialogOption] text=Done<textIfFinal==1-m:gamepad> (<keybind=endTurn>);
+[DialogOption] text=完成<textIfFinal==1-m:gamepad> (<keybind=endTurn>);
 nodeToConnectTo=dialog_fleet_chat;
 bottomOption=true;
 
@@ -201,14 +201,14 @@ bottomOption=true;
 
 [DialogNode] ID=dialog_fleet_submerged_attacking;
 animations=;
-statements=Sea monsters rapidly approach your fleet!<textIf= A second group of sea monsters joins them!=m:numFactionAlliesWithin(2)-1><textIf= They seem hesitant to attack your powerful fleet.=m:playerStrongerThanFleet>;
-[DialogOption] text=<color=DarkRed>(Fight!);
+statements=海怪迅速的接近了你的舰队!<textIf=第二群海怪加入了它们!=m:numFactionAlliesWithin(2)-1><textIf=它们似乎对攻击你强大的舰队犹豫了.=m:playerStrongerThanFleet>;
+[DialogOption] text=<color=DarkRed>(战斗!);
 nodeToConnectTo=enterFleetBattle;
-[DialogOption] text=Distract with 10<iconBig=food>;
+[DialogOption] text=用10份<iconBig=food>分散注意力;
 formulaReq=cargoItem:food - 9 - m:playerStrongerThanFleet*9999;
 newLineOfOptions=true;
 nodeToConnectTo=dialog_fleet_submerged_giveFood;
-[DialogOption] text=Ignore;
+[DialogOption] text=忽视;
 formulaReq=m:playerStrongerThanFleet;
 newLineOfOptions=true;
 nodeToConnectTo=dialog_fleet_submerged_ignore;
@@ -217,7 +217,7 @@ nodeToConnectTo=dialog_fleet_submerged_ignore;
 
 [DialogNode] ID=dialog_fleet_submerged_giveFood;
 animations=;
-statements=You dump the food overboard.<p=> They ravenously devour it, allowing you an easy escape.;
+statements=你把食物倒进了船外.<p=>它们贪婪的吃掉了，让你轻松逃脱.;
 nextNodeID=dialog_fleet_submerged_giveFood2;
 
 [DialogNode] ID=dialog_fleet_submerged_giveFood2;

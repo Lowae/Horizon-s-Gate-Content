@@ -15,7 +15,7 @@ nextNodeID=;
 [DialogNode] ID=port11_guy2b;
 animations=angry;
 animations=stern;
-statements=你怎么敢掠夺雅斯的花园<textIf=,还是第二次!=g:D_port11_guy2b_pay>!;
+statements=你怎么敢掠夺贾斯的花园<textIf=,还是第二次!=g:D_port11_guy2b_pay>!;
 statements=你会为此付出代价的!;
 nextNodeID=port11_guy2b_rank;
 nextNodeID_fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
@@ -43,7 +43,7 @@ nextNodeID=;
 
 [DialogNode] ID=port11_guy4a;
 animations=sigh;
-statements=雅斯真的很伟大，很仁慈...!;
+statements=贾斯真的很伟大，很仁慈...!;
 nextNodeID=;
 specialEffect=facingRotPrev;
 
@@ -135,7 +135,7 @@ statements=嗨 <pnamefull=>!;
 
 [DialogNode] ID=port11_guard2a;
 animations=;
-statements=雅斯神殿在右边.;
+statements=贾斯神殿在右边.;
 nextNodeID=;
 
 [DialogNodeOverride] ID=maxRank_port11_guard2a;
@@ -167,7 +167,7 @@ dialogNodeID_toOverride=port11_guard4a;
 fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
 completeOverride=true; overrideSpecialEffects=true;
 animations=stern;
-statements=雅斯会搞定的, <pnamefull=>!;
+statements=贾斯会搞定的, <pnamefull=>!;
 
 [DialogNode] ID=port11_guard5a;
 animations=;
@@ -243,7 +243,7 @@ dialogNodeID_toOverride=port11_royal1_guard2a;
 fReq=gIs:playerFaction:jasce + gIs:playerRank:9 - 1;
 completeOverride=true; overrideSpecialEffects=true;
 animations=stern;
-statements=雅斯会搞定的, <prank=>.;
+statements=贾斯会搞定的, <prank=>.;
 
 [DialogNode] ID=port11_royal1_guard3a;
 animations=;

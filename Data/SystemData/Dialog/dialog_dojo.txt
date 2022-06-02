@@ -3,13 +3,13 @@
 [DialogNode] ID=port6_dojo1;
 animations=sly;
 animations=meh;
-statements=Ah, looks like another keen-eyed <textIf=sailor=gIsLessThan:fame_combat:200><textIf=warrior=gIsMoreThan:fame_combat:199> has found their way to our dojo.;
-statements=This is the Dark Hammer dojo.<p> You here to try your luck?;
+statements=啊，看来又有一个眼尖的<textIf=水手=gIsLessThan:fame_combat:200><textIf=战士=gIsMoreThan:fame_combat:199>找到了我们道场.;
+statements=这是黑暗之锤道场.<p>你是来试试运气吗?;
 
-[DialogOption] text=Fight;
+[DialogOption] text=战斗;
 formulaReq=1-g:port6_dojo1;
 nodeToConnectTo=port6_dojo1_test;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -17,8 +17,8 @@ bottomOption=true;
 [DialogNode] ID=port6_dojo1_test;
 animations=sigh;
 animations=angry;
-statements=Good.<p> Go on down, and you'll fight our best.;
-statements=Give it your all.;
+statements=不错.<p>下去吧，准备好拼尽全力.;
+statements=全力以赴.;
 specialEffect=action,mechanismArea;
 specialEffect=incDefaultNode;
 
@@ -28,15 +28,15 @@ specialEffect=incDefaultNode;
 [DialogNode] ID=port6_dojo2;
 animations=sigh;
 animations=sly;
-statements=Any time you're ready, you can challenge the Dark Hammer dojo.;
-statements=Just go down those stairs and take your best shot.;
+statements=只要你准备好了，你就可以来挑战黑暗之锤道场.;
+statements=只需要下楼，然后尽力最大的努力.;
 specialEffect=gotoIf,port6_dojo2_won,g:port6_dojo1;
 
 [DialogNode] ID=port6_dojo2_won;
 animations=scared;
 animations=sly;
-statements=I'm impressed!<p> Haven't seen a fight like that in ages.;
-statements=Take the rewards downstairs, and feel free to train with us. You'll be welcome anytime.;
+statements=你给了留下了很深刻的印象!<p>很久没见过这样的战斗了.;
+statements=拿着楼下的奖励吧，随时和我们一起训练，随时欢迎你.;
 specialEffect=incDefaultNode;
 specialEffect=modGlobalVar,fame_combat,30;
 nextNodeID=;
@@ -45,11 +45,11 @@ nextNodeID=;
 
 [DialogNode] ID=port6_dojo3;
 animations=;
-statements=Hey there <pname=>.<p> Are you here to train?;
-[DialogOption] text=Hammer Skill<adjX=3><iconBig=skill_Hammer> Training;
+statements=嘿，这里 <pname=>.<p> 你是来训练的吗?;
+[DialogOption] text=锤技能<adjX=3><iconBig=skill_Hammer>训练;
 formulaReq=1-g:skill_Hammer_bonus;
 nodeToConnectTo=port6_dojo3_train;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -57,16 +57,16 @@ bottomOption=true;
 animations=sly;
 animations=sigh;
 animations=;
-statements=Training isn't cheap, but it's well worth it.;
-statements=All of your crew - current and future - will gain +1<adjX=1><iconBig=skill_Hammer>Hammer Skill.;
-statements=But, it'll cost you $10,000.;
-[DialogOption] text=Yes ($10,000);
+statements=训练并不便宜，但很值得.;
+statements=你的所有船员-现在或将来的都能获得+1<adjX=1><iconBig=skill_Hammer>锤技能.;
+statements=但是，需要花费你$10,000.;
+[DialogOption] text=好 ($10,000);
 formulaReq=m:money - 9999;
 nodeToConnectTo=port6_dojo3_train_yes;
-[DialogOption] text=<color=SlateGray>Can't afford it...;
+[DialogOption] text=<color=SlateGray>负担不起...;
 formulaReq=10000 - m:money;
 nodeToConnectTo=previous;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -74,8 +74,8 @@ bottomOption=true;
 [DialogNode] ID=port6_dojo3_train_yes;
 animations=angry;
 animations=sly;
-statements=Right on.;
-statements=Let's go.<p> We've got training to do.;
+statements=好极了.;
+statements=我们走吧.<p>我们还要接受训练.;
 nextNodeID=port6_dojo3_train_yes2;
 
 [DialogNode] ID=port6_dojo3_train_yes2;
@@ -94,8 +94,8 @@ nextNodeID=;
 [DialogNode] ID=port6_dojo4;
 animations=sly;
 animations=happy;
-statements=Hey <pname=>.<p> How's our training working for you?;
-statements=Come back whenever.<p> I'd hate for you to forget how to hold a hammer.;
+statements=嘿 <pname=>.<p>我们的训练对你有帮助吗?;
+statements=随时回来.<p>我可不想让你忘了怎么拿锤子.;
 
 
 --------------PORT7
@@ -251,27 +251,27 @@ nextNodeID=;
 [DialogNode] ID=port12_dojo3;
 animations=;
 animations=sly;
-statements='Ey, <pname=>.;
-statements=Want to learn from the Grey Gash Dojo?<p=> You've earned the right.;
-[DialogOption] text=Dagger Skill<adjX=3><iconBig=skill_Dagger> Training;
+statements=嗨, <pname=>.;
+statements=想在灰色伤口道场里学习吗?<p=>这是你应得的权利.;
+[DialogOption] text=匕首技能<adjX=3><iconBig=skill_Dagger>训练;
 formulaReq=1-g:skill_Dagger_bonus;
 nodeToConnectTo=port12_dojo3_train;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=port12_dojo3_train;
 animations=sly;
 animations=sigh;
-statements=If you're up for it, all your crew, and any future crew you hire, will have +1<adjX=1><iconBig=skill_Dagger>Dagger Skill.;
-statements=Of course, these are precious secrets...<p=> so it'll cost you $10,000.;
-[DialogOption] text=Yes ($10,000);
+statements=如果你准备好了，你的所有船员及未来雇佣的船员都将获得+1<adjX=1><iconBig=skill_Dagger>匕首技能.;
+statements=当然，这些都是珍贵的秘密...<p=>所有，需要花费你$10,000.;
+[DialogOption] text=好 ($10,000);
 formulaReq=m:money - 9999;
 nodeToConnectTo=port12_dojo3_train_yes;
-[DialogOption] text=<color=SlateGray>Can't afford it...;
+[DialogOption] text=<color=SlateGray>负担不起...;
 formulaReq=10000 - m:money;
 nodeToConnectTo=previous;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -279,8 +279,8 @@ bottomOption=true;
 [DialogNode] ID=port12_dojo3_train_yes;
 animations=sly;
 animations=angry;
-statements=Good!<p=> Could use the new blood.;
-statements=Get ready for a workout<p=> - you'll be a master by the time we're through...!;
+statements=很好!<p=>可以用来制造新伤口.;
+statements=准备好锻炼吧<p=> -等我们完成的时候你就能成为一名大师了...!;
 nextNodeID=port12_dojo3_train_yes2;
 
 [DialogNode] ID=port12_dojo3_train_yes2;
@@ -299,8 +299,8 @@ nextNodeID=;
 [DialogNode] ID=port12_dojo4;
 animations=stern;
 animations=;
-statements='Ey <pname=>.<p=2> Welcome back to the dojo.;
-statements=Keep your blades sharp.;
+statements=嗨 <pname=>.<p=2> 欢迎回到道场.;
+statements=保持你的刀片锋利.;
 
 ---
 
@@ -433,8 +433,8 @@ specialEffect=incDefaultNode;
 [DialogNode] ID=port20_dojo2;
 animations=sly;
 animations=chargePose;
-statements=Oi, you still putterin' around?;
-statements=Fight or leave already.;
+statements=喂，你怎么还在闲逛?;
+statements=要么战斗，要么离开.;
 specialEffect=gotoIf,port20_dojo2_won,g:port20_dojo1;
 
 [DialogNode] ID=port20_dojo2_won;
@@ -454,26 +454,26 @@ nextNodeID=;
 
 [DialogNode] ID=port20_dojo3;
 animations=sly;
-statements=Oi, <pname=>. Here to train?;
-[DialogOption] text=Flail Skill<adjX=3><iconBig=skill_Flail> Training;
+statements=嗨, <pname=>.来这里训练吗?;
+[DialogOption] text=链枷技能<adjX=3><iconBig=skill_Flail>训练;
 formulaReq=1-g:skill_Flail_bonus;
 nodeToConnectTo=port20_dojo3_train;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=port20_dojo3_train;
 animations=;
 animations=sly;
-statements=Train with us, an' all your crew -<p> even future crew -<p> will get +1<adjX=1><iconBig=skill_Flail>Flail Skill.;
-statements=It'll cost $10,000.<p> You got what it takes?;
-[DialogOption] text=Yes ($10,000);
+statements=和我们一起训练，你的所有船员 -<p> 甚至将来的船员 -<p>都能获得+1<adjX=1><iconBig=skill_Flail>链枷技能.;
+statements=需要花费 $10,000.<p> 你有这个能力吗?;
+[DialogOption] text=是 ($10,000);
 formulaReq=m:money - 9999;
 nodeToConnectTo=port20_dojo3_train_yes;
-[DialogOption] text=<color=SlateGray>Can't afford it...;
+[DialogOption] text=<color=SlateGray>负担不起...;
 formulaReq=10000 - m:money;
 nodeToConnectTo=previous;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -481,8 +481,8 @@ bottomOption=true;
 [DialogNode] ID=port20_dojo3_train_yes;
 animations=sly;
 animations=chargePose;
-statements=Yeahhh, that's the stuff.;
-statements=Let's get crackin'!;
+statements=好，就是这样.;
+statements=让我们开始吧!;
 nextNodeID=port20_dojo3_train_yes2;
 
 [DialogNode] ID=port20_dojo3_train_yes2;
@@ -501,8 +501,8 @@ nextNodeID=;
 [DialogNode] ID=port20_dojo4;
 animations=;
 animations=sly;
-statements=<pname=>.<p> Proud to have ya.;
-statements=You've proven yerself.<p> Keep keepin' on.;
+statements=<pname=>.<p>为你骄傲.;
+statements=你已经证明了你自己.<p>继续保持.;
 
 ---
 
@@ -537,17 +537,17 @@ specialEffect=incDefaultNode;
 [DialogNode] ID=port21_dojo2;
 animations=;
 animations=sly;
-statements=Welcome to the Shining Void dojo.;
-statements=The lower floor is open to you.<p> Don't go in until you're ready.;
+statements=欢迎来到闪光虚空道场.;
+statements=下一层已对你开放.<p>准备好了再进去.;
 specialEffect=gotoIf,port21_dojo2_won,g:port21_dojo1;
 
 [DialogNode] ID=port21_dojo2_won;
 animations=scared;
 animations=happy;
 animations=;
-statements=Wow...<p> you beat Varley!;
-statements=That's incredible...<p> Take the Omnipode downstairs.<p> You deserve it!;
-statements=I hope you train with us.<p> We'd be honored to hone your skills.;
+statements=哇...<p> 你打败了 Varley!;
+statements=这真的难以置信...<p>拿着楼下的全能大剑.<p>你应得的!;
+statements=我希望你能和我们一起训练.<p>很荣幸我能磨练你的技能.;
 specialEffect=incDefaultNode;
 specialEffect=modGlobalVar,fame_combat,50;
 nextNodeID=;
@@ -556,26 +556,26 @@ nextNodeID=;
 
 [DialogNode] ID=port21_dojo3;
 animations=sigh;
-statements=Please make use of our training, <pname=>.<p> We'd be glad for you to join us.;
-[DialogOption] text=Sword Skill<adjX=3><iconBig=skill_Sword> Training;
+statements=请使用我们的训练, <pname=>.<p>我们很高兴你能加入我们.;
+[DialogOption] text=剑技能<adjX=3><iconBig=skill_Sword>训练;
 formulaReq=1-g:skill_Sword_bonus;
 nodeToConnectTo=port21_dojo3_train;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=port21_dojo3_train;
 animations=;
 animations=sigh;
-statements=By training with us, all your crew, current and future, will gain a permanent +1<adjX=1><iconBig=skill_Sword>Sword Skill.;
-statements=This is serious training, however.<p> It will cost you $10,000.;
-[DialogOption] text=Yes ($10,000);
+statements=通过我们的训练，你现在和未来的所有船员都能获得永久性的+1<adjX=1><iconBig=skill_Sword>剑技能.;
+statements=不过这是一种严格的训练.<p>需要花费你$10,000.;
+[DialogOption] text=好 ($10,000);
 formulaReq=m:money - 9999;
 nodeToConnectTo=port21_dojo3_train_yes;
 [DialogOption] text=<color=SlateGray>Can't afford it...;
 formulaReq=10000 - m:money;
 nodeToConnectTo=previous;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -583,8 +583,8 @@ bottomOption=true;
 [DialogNode] ID=port21_dojo3_train_yes;
 animations=happy;
 animations=chargePose;
-statements=Ah, excellent!;
-statements=Let's begin, shall we?;
+statements=啊，太棒了!;
+statements=让我们开始吧?;
 nextNodeID=port21_dojo3_train_yes2;
 
 [DialogNode] ID=port21_dojo3_train_yes2;
@@ -603,8 +603,8 @@ nextNodeID=;
 [DialogNode] ID=port21_dojo4;
 animations=happy;
 animations=sigh;
-statements=Good to see you, <pname=>.;
-statements=The Shining Void dojo is always here for you.;
+statements=很高兴见到你, <pname=>.;
+statements=闪光虚空道场永远欢迎你.;
 
 ---
 
@@ -638,17 +638,17 @@ specialEffect=incDefaultNode;
 [DialogNode] ID=port29_dojo2;
 animations=sly;
 animations=stern;
-statements=Not ready to fight?<p> I don't blame you.;
-statements=Go downstairs -<p> or don't.<p> I don't care.;
+statements=还没准备好战斗?<p>我不会责怪你.;
+statements=下楼 -<p>或是离开.<p>我都不是很关心.;
 specialEffect=gotoIf,port29_dojo2_won,g:port29_dojo1;
 
 [DialogNode] ID=port29_dojo2_won;
 animations=stern;
 animations=sly;
 animations=stern;
-statements=Hrf.<p> You got something, I'll give you that.;
-statements=Grab your reward from downstairs.<p> It's tradition.;
-statements=Let me know if you want to really know how to use an axe.;
+statements=Hrf.<p>我敢说，你还是很有本事的.;
+statements=拿着楼下的奖励.<p>这是传统.;
+statements=如果你真的想知道如何使用斧头，请告诉我.;
 specialEffect=incDefaultNode;
 specialEffect=modGlobalVar,fame_combat,30;
 nextNodeID=;
@@ -657,26 +657,26 @@ nextNodeID=;
 
 [DialogNode] ID=port29_dojo3;
 animations=sly;
-statements=You've proven you can survive our training.<p> Want in on this?;
-[DialogOption] text=Axe Skill<adjX=3><iconBig=skill_Axe> Training;
+statements=你已经证明了你能经受住我们的训练.<p>想加入吗?;
+[DialogOption] text=斧技能<adjX=3><iconBig=skill_Axe>训练;
 formulaReq=1-g:skill_Axe_bonus;
 nodeToConnectTo=port29_dojo3_train;
-[DialogOption] text=Goodbye;
+[DialogOption] text=再见;
 nodeToConnectTo=;
 bottomOption=true;
 
 [DialogNode] ID=port29_dojo3_train;
 animations=;
 animations=stern;
-statements=Take our training, and your current crew and any new crew gets +1<adjX=1><iconBig=skill_Axe>Axe Skill.;
-statements=Hrmph.<p> But it costs $10,000.<p> No exceptions.;
-[DialogOption] text=Yes ($10,000);
+statements=接受我们的训练，你现在的船员和任何新船员都能获得+1<adjX=1><iconBig=skill_Axe>斧技能.;
+statements=Hrmph.<p> 但是这需要花费$10,000.<p>没有例外.;
+[DialogOption] text=好 ($10,000);
 formulaReq=m:money - 9999;
 nodeToConnectTo=port29_dojo3_train_yes;
-[DialogOption] text=<color=SlateGray>Can't afford it...;
+[DialogOption] text=<color=SlateGray>负担不起...;
 formulaReq=10000 - m:money;
 nodeToConnectTo=previous;
-[DialogOption] text=Nevermind;
+[DialogOption] text=没事;
 nodeToConnectTo=;
 bottomOption=true;
 
@@ -684,8 +684,8 @@ bottomOption=true;
 [DialogNode] ID=port29_dojo3_train_yes;
 animations=angry;
 animations=sly;
-statements=Alright.<p> Shut your trap and listen to me.;
-statements=Right now, you know nothing.<p> When I'm done, you'll be an Axe Lord.;
+statements=好.<p>闭上你的嘴，听我说.;
+statements=现在，你只是新人.<p>当我们完成了，你就是斧王了.;
 nextNodeID=port29_dojo3_train_yes2;
 
 [DialogNode] ID=port29_dojo3_train_yes2;
@@ -706,8 +706,8 @@ animations=;
 animations=sly;
 animations=stern;
 statements=<pname=>.;
-statements=Got something to axe me?<p> Heheh.;
-statements=Nothin' for you here.<p> Get along.;
+statements=有什么可以砍我的吗?<p>哈哈哈.;
+statements=这儿已经没有你想要的了.<p>走吧.;
 
 ---
 

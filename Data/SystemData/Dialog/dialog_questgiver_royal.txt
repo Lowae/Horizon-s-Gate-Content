@@ -344,7 +344,7 @@ nextNodeID=;
 animations=sly;
 animations=happy;
 animations=;
-statements=噢?<p=2> <pname=>, 你想为西提尔联盟效力?;
+statements=噢?<p=2> <pname=>, 你想为西提尔(Seartial)联盟效力?;
 statements=非常好!<p=>我们欢迎所有声誉良好的人.;
 statements=我们将收取$100以示诚意 - 之后，无论怎么样，你都将被视为是西提尔的公民.;
 
@@ -496,8 +496,8 @@ statements=打扰一下!<p=>只有预约过才能进去议会大厅!;
 [DialogNode] ID=auspex_royal_questgiver_offlimits;
 animations=angry;
 animations=stern;
-statements=等等!<p=>和雅斯见面可没这么容易!;
-statements=只有那些雅斯明确要见的人才可以进去!;
+statements=等等!<p=>和贾斯(Jasce)见面可没这么容易!;
+statements=只有那些贾斯明确要见的人才可以进去!;
 
 [DialogNode] ID=viceroy_royal_questgiver_offlimits;
 animations=angry;
@@ -654,7 +654,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:auspex;
 animations=;
-statements=啊, <pfullname=>.<p=> <finalTextIf=我们今天要怎么为雅斯服务?=gIs:playerRank:9 + gIsTalkerFaction:playerFaction - 1>来雅斯面前有什么事吗?;
+statements=啊, <pfullname=>.<p=> <finalTextIf=我们今天要怎么为贾斯服务?=gIs:playerRank:9 + gIsTalkerFaction:playerFaction - 1>来贾斯面前有什么事吗?;
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_jobs;
 dialogNodeID_toOverride=royal_questgiver_jobs;
@@ -663,7 +663,7 @@ overrideSpecialEffects=false;
 fReq=talker:auspex;
 animations=;
 animations=;
-statements=雅斯需要你的效劳.;
+statements=贾斯需要你的效劳.;
 statements=以他的名义来执行这个任务.;
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_job_not_enough_cargo;
@@ -672,7 +672,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:auspex;
 animations=stern;
-statements=这还不够.<p=>雅斯需要10个，但是你只带来了<math=cargoItem_g:questGoal><adjX=-4>个.;
+statements=这还不够.<p=>贾斯需要10个，但是你只带来了<math=cargoItem_g:questGoal><adjX=-4>个.;
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_meeting_cant;
 dialogNodeID_toOverride=royal_questgiver_meeting_cant;
@@ -680,7 +680,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:auspex;
 animations=sigh;
-statements=雅斯现在没理由见你.;
+statements=贾斯现在没理由见你.;
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_jobs_already_busy;
 dialogNodeID_toOverride=royal_questgiver_jobs_already_busy;
@@ -703,7 +703,7 @@ animations=stern;
 animations=;
 animations=;
 animations=angry;
-statements=雅斯已经说过了-;
+statements=贾斯已经说过了-;
 statements='<g=questLog>'.;
 statements=完成它并得到奖励.;
 statements=<p=>...或者失败然后承担后果.;
@@ -724,7 +724,7 @@ overrideSpecialEffects=false;
 fReq=talker:auspex;
 animations=sly;
 animations=stern;
-statements=Hmph.<p=>我会告诉雅斯你失败了.;
+statements=Hmph.<p=>我会告诉贾斯你失败了.;
 statements=也许在将来你会救赎自己.<p=>在那之前...;
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_give_lost_documents;
@@ -734,7 +734,7 @@ overrideSpecialEffects=false;
 fReq=talker:auspex;
 animations=sigh;
 animations=happy;
-statements=非常好, <pname=>.<p>这些记录对雅斯很有用.;
+statements=非常好, <pname=>.<p>这些记录对贾斯很有用.;
 statements=继续保持，你一定会得到回报.;
 
 
@@ -746,7 +746,7 @@ fReq=talker:auspex;
 animations=happy;
 animations=;
 animations=happy;
-statements=啊, 又一位信徒!<p=>所以你想为雅斯效力吗?;
+statements=啊, 又一位信徒!<p=>所以你想为贾斯效力吗?;
 statements=你可能会成为一名荣誉公民，如果你努力效力，你会获得物质和精神上的双重奖励.;
 statements=只要捐赠$100，你就可以信奉真神.;
 
@@ -766,7 +766,7 @@ completeOverride=false;
 overrideSpecialEffects=true;
 fReq=talker:auspex;
 animations=;
-statements=<pname=>, 我正是宣布你成为雅斯的一名 <color=Blue><prank=><color=>!;
+statements=<pname=>, 我正是宣布你成为贾斯的一名 <color=Blue><prank=><color=>!;
 specialEffect=fx,longGoodAuraSound;
 specialEffect=setGlobalVar,playerFaction,jasce;
 specialEffect=setGlobalVar,playerRank,1;
@@ -778,8 +778,8 @@ overrideSpecialEffects=true;
 fReq=talker:auspex + gIs:playerRank:3 - 1;
 animations=;
 animations=happy;
-statements=有了这一项成就, <pfullname=>, 雅斯认为你值得会面.;
-statements=雅斯的内庭在北面.<p=>去吧，沐浴于我主的光辉之下吧!;
+statements=有了这一项成就, <pfullname=>, 贾斯认为你值得会面.;
+statements=贾斯的内庭在北面.<p=>去吧，沐浴于我主的光辉之下吧!;
 
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_newRank_endConvo_rank9;
@@ -800,10 +800,10 @@ animations=sly;
 animations=happy;
 animations=handsupPose;
 statements=你在来世的回报一定无比巨大!;
-statements=与此同时，雅斯会授予你:<p=1.5>一颗强效的<itemBig_low=xpGemBig><color=DarkRed>本源晶石<color=>!;
-statements=从现在开始，我们将会与你分享我们机密的情报<p> - 雅斯的舰队将会在你的地图上标记出来.;
+statements=与此同时，贾斯会授予你:<p=1.5>一颗强效的<itemBig_low=xpGemBig><color=DarkRed>本源晶石<color=>!;
+statements=从现在开始，我们将会与你分享我们机密的情报<p> - 贾斯的舰队将会在你的地图上标记出来.;
 statements=因为你所取得的成果, 从现在起，你的工作将会得到<color=DarkRed>双倍的奖励<color=>!;
-statements=赞美雅斯!;
+statements=赞美贾斯!;
 specialEffect=giveItem,xpGemBig,1;
 specialEffect=modPlayerFactionFavor,3;
 specialEffect=setGlobalVar,tracking_jasce,1;
@@ -829,7 +829,7 @@ overrideSpecialEffects=false;
 fReq=talker:auspex;
 animations=stern;
 animations=angry;
-statements=<pname=>.<p=2>把这当作一个征兆，重新审视你自己以及你对雅斯的服务.;
+statements=<pname=>.<p=2>把这当作一个征兆，重新审视你自己以及你对贾斯的服务.;
 statements=Go.;
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_defect;
@@ -841,7 +841,7 @@ animations=sly;
 animations=;
 animations=stern;
 statements=有趣...<p=>所以你还是想站在唯一的真神这一边?;
-statements=雅斯是仁慈的.<p=>他会宽恕那些用纯洁的心去赎罪的人.;
+statements=贾斯是仁慈的.<p=>他会宽恕那些用纯洁的心去赎罪的人.;
 statements=如果你的想法是真的，那你必须证明给我看.<textIf=根据你的地位等级，会加倍.=g:playerRank - 1>;
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_defect_confirm;
@@ -863,7 +863,7 @@ overrideSpecialEffects=false;
 fReq=talker:auspex;
 animations=sigh;
 animations=;
-statements=非常好.<p=>雅斯一定会接受你的悔改.;
+statements=非常好.<p=>贾斯一定会接受你的悔改.;
 statements=务必要让这种悔过的感觉留在心里，好好为神王效力.;
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_defect_confirm2a;
@@ -885,7 +885,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:auspex;
 animations=;
-statements=<pname=>, 你现在是雅斯一名真正的 <color=Blue><prank=><color=>!;
+statements=<pname=>, 你现在是贾斯一名真正的 <color=Blue><prank=><color=>!;
 
 
 [DialogNodeOverride] ID=auspex_royal_questgiver_defect_cantAfford;
@@ -905,9 +905,9 @@ fReq=talker:auspex;
 animations=happy;
 animations=;
 animations=stern;
-statements=雅斯是唯一真正的神王的起源.;
-statements=雅斯的追随者无论在今生或是来世都得到了极大的回报.;
-statements=然而，雅斯对无知的人也是仁慈的，非信徒也可以居住在雅斯.;
+statements=贾斯是唯一真正的神王的起源.;
+statements=贾斯的追随者无论在今生或是来世都得到了极大的回报.;
+statements=然而，贾斯对无知的人也是仁慈的，非信徒也可以居住在贾斯.;
 nextNodeID=royal_questgiver_info;
 
 
@@ -920,7 +920,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:viceroy + m:playerFavorWithTargetBelowNeg(40) - 1;
 animations=angry;
-statements=<pname=>...<p=>罗马尼亚的敌人.<p=>如果你想在这里做生意，那就在我把你扔出去之前赶紧的.;
+statements=<pname=>...<p=>鲁马尼的敌人.<p=>如果你想在这里做生意，那就在我把你扔出去之前赶紧的.;
 
 
 [DialogNodeOverride] ID=viceroy_royal_questgiver;
@@ -1015,7 +1015,7 @@ animations=sigh;
 animations=;
 statements=又一位移民来到 Clanlands 了?;
 statements=这里很欢迎你.<p=>国王需要像你这般熟练的水手.;
-statements=如果你捐赠 $100, 我可以正式的欢迎你以荣誉公民的身份来到罗马尼亚.;
+statements=如果你捐赠 $100, 我可以正式的欢迎你以荣誉公民的身份来到鲁马尼(Rumane).;
 
 [DialogNodeOverride] ID=viceroy_royal_questgiver_pledge_confirm;
 dialogNodeID_toOverride=royal_questgiver_pledge_confirm;
@@ -1033,7 +1033,7 @@ completeOverride=false;
 overrideSpecialEffects=true;
 fReq=talker:viceroy;
 animations=happy;
-statements=<pname=>, 你现在已经是罗马尼亚的 <color=Blue><prank=><color=>了!;
+statements=<pname=>, 你现在已经是鲁马尼的 <color=Blue><prank=><color=>了!;
 specialEffect=fx,longGoodAuraSound;
 specialEffect=setGlobalVar,playerFaction,rumane;
 specialEffect=setGlobalVar,playerRank,1;
@@ -1144,7 +1144,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=talker:viceroy;
 animations=sigh;
-statements=<pname=>,我很荣幸宣布你成为罗马尼亚的一名 <color=Blue><prank=><color=>!;
+statements=<pname=>,我很荣幸宣布你成为鲁马尼的一名 <color=Blue><prank=><color=>!;
 
 
 
@@ -1164,8 +1164,8 @@ fReq=talker:viceroy;
 animations=sigh;
 animations=;
 animations=happy;
-statements=罗马尼亚 - 有时被称为 clanlands - 由我们英明的国王 Revarr 领导.;
-statements=由于国王陛下的努力，一度饱受部族纷争之苦的罗马尼亚如今已成为世界强国之一.;
+statements=鲁马尼 - 有时被称为 clanlands - 由我们英明的国王 Revarr 领导.;
+statements=由于国王陛下的努力，一度饱受部族纷争之苦的鲁马尼如今已成为世界强国之一.;
 statements=我们欢迎各种信仰和出身的新公民.;
 nextNodeID=royal_questgiver_info;
 

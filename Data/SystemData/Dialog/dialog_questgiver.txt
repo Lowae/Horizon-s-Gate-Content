@@ -243,7 +243,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=gIsString:royalQuestType + gIs:playerFaction,jasce - 1 - g:questRoyal * 100 - gTimeSinceLessThan:questComplete_r:20 * 1000;
 animations=;
-statements=<pnamefull=> - 你知道<color=DarkRed>雅斯<color=>想要见你吗?;
+statements=<pnamefull=> - 你知道<color=DarkRed>贾斯<color=>想要见你吗?;
 specialEffect=setGlobalVar,royalSummons,1;
 
 [DialogNodeOverride] ID=questgiver_royal_summons_rumane;
@@ -252,7 +252,7 @@ completeOverride=false;
 overrideSpecialEffects=false;
 fReq=gIsString:royalQuestType + gIs:playerFaction,rumane - 1 - g:questRoyal * 100 - gTimeSinceLessThan:questComplete_r:20 * 1000;
 animations=;
-statements=<pnamefull=>, 你知道<color=DarkRed>罗马尼亚的国王<color=>正在找你吗?;
+statements=<pnamefull=>, 你知道<color=DarkRed>鲁马尼的国王<color=>正在找你吗?;
 specialEffect=setGlobalVar,royalSummons,1;
 
 
