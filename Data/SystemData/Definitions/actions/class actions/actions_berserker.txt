@@ -303,4 +303,26 @@
 	coneAngle=270;
 	canSelectAllies=false;
 
-	
+--name: Counter Frenzy
+--tooltip: Attack everyone around you for 80% damage when you are hit by a melee weapon
+[SupportAbility]
+ID=counterFrenzy;
+name=狂暴反击;
+cloneFrom=counterFrenzy;
+tooltip=当你被近战武器攻击时反击周围<n>所有人造成80%伤害.<n>(无法与其他近战反击同时使用);
+
+--name: Vicious
+--tooltip: Do bonus damage when attacking an enemy with worse morale than you (ranging from +8% to 32% damage)
+[SupportAbility]
+ID=vicious;
+name=残暴;
+cloneFrom=vicious;
+tooltip=攻击'士气'比你低的敌人时<n>造成额外8%到32%伤害.;
+
+--name: Imposing
+--tooltip: Enemies value attacks against you 50% more than against other targets
+[SupportAbility]
+ID=imposing;
+name=强制;
+cloneFrom=imposing;
+tooltip=敌人以你为目标攻击的概率增加50%.;

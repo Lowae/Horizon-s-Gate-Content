@@ -376,4 +376,34 @@
 	
 	
 
-	
+--name: Firewalker
+--tooltip: Heal <icon=HP> instead of taking damage from walking through fire, acid, or electric water.
+[SupportAbility]
+ID=elementwalker;
+name=元素行者;
+cloneFrom=elementwalker;
+tooltip=当你经过火焰，强酸或带电的水的时候，<n>恢复<icon=HP>而不是受到伤害;
+
+--name: Stone Savant
+--tooltip: Trigger stones and similar weapons have triple their normal range and their effects are 15% stronger
+[SupportAbility]
+ID=stoneSavant;
+name=石头学者;
+cloneFrom=stoneSavant;
+tooltip=触发石和类似的武器将<n>拥有三倍攻击距离且效果增强15%;
+
+--name: Zeal
+--tooltip: At the start of combat. gain +4 to the current day's <icon=skill_Fire> <icon=skill_Ice> <icon=skill_Elec> <icon=skill_Wind> <icon=skill_Life> <icon=skill_Ruin> skill for <icon=time>300.
+[SupportAbility]
+ID=zeal;
+name=热诚;
+cloneFrom=zeal;
+tooltip=战斗开始时，依据当前日期获得+4对应<icon=skill_Fire><icon=skill_Ice><icon=skill_Elec><icon=skill_Wind><icon=skill_Life><icon=skill_Ruin>元素技能等级，持续<icon=time>300.;
+
+--name: Element Master
+--tooltip: At the start of combat, gain a <icon=MagAtk> bonus equal to your lowest <icon=skill_Fire> <icon=skill_Ice> <icon=skill_Elec> <icon=skill_Wind> <icon=skill_Life> <icon=skill_Ruin> skill for <icon=time>300.
+[SupportAbility]
+ID=elementMaster;
+name=元素大师;
+cloneFrom=elementMaster;
+tooltip=战斗开始时，依据你最低的<icon=skill_Fire> <icon=skill_Ice> <icon=skill_Elec> <icon=skill_Wind> <icon=skill_Life> <icon=skill_Ruin> 技能等级获得对应的<icon=MagAtk>，持续<icon=time>300.;

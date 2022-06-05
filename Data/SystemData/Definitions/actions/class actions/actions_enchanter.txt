@@ -647,3 +647,27 @@
 [AvAffecterAoE]
 	ID=En_antipode;
 	cloneFrom=oneTile;
+
+--name: Counter Enchant
+--tooltip: When struck by <icon=skill_Fire> <icon=skill_Ice> <icon=skill_Elec> <icon=skill_Wind> enchant youself with that element.(Can't use with Counter Mirror)
+[SupportAbility]
+ID=counterEnchant;
+name=反击附魔;
+cloneFrom=counterEnchant;
+tooltip=当你被<icon=skill_Fire> <icon=skill_Ice> <icon=skill_Elec> <icon=skill_Wind>魔法击中时获得对应附魔.<n>(无法同时与反击反射生效);
+
+--name: Essence Flow
+--tooltip: When you have exactly 1 <icon=MP>MP, your <icon=MP>MP instantly refills.
+[SupportAbility]
+ID=essenceFlow;
+name=本源涌流;
+cloneFrom=essenceFlow;
+tooltip=当你只剩下1<icon=MP>时，会立即恢复所有<icon=MP>.;
+
+--name: Siphon Enchant
+--tooltip: When enchanted, you gain +2 to the relevant <icon=skill_Fire> <icon=skill_Ice> <icon=skill_Elec> <icon=skill_Wind> skill.
+[SupportAbility]
+ID=siphonEnchant;
+name=附魔虹吸;
+cloneFrom=siphonEnchant;
+tooltip=当你获得附魔时，获得+2对应附魔元素的<icon=skill_Fire> <icon=skill_Ice> <icon=skill_Elec> <icon=skill_Wind>技能等级.;

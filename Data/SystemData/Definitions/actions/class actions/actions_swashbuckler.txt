@@ -350,3 +350,27 @@
 [AvAffecterAoE]
 	ID=Swa_mug;
 	cloneFrom=oneTile;
+
+--name: swiftness
+--tooltip: Reduce <icon=time>Time to Act by 1.
+[SupportAbility]
+ID=swiftness;
+name=迅速;
+cloneFrom=swiftness;
+tooltip=行动等待时间<icon=time> -1;
+
+--name: Man of War
+--tooltip: When you reload or attack with a melee weapon, reload the weapon in your other hand. (Does not trigger from offhand melee attacks)
+[SupportAbility]
+ID=manOfWar;
+name=战争之人;
+cloneFrom=manOfWar;
+tooltip=当你重新装载或使用近战武器攻击时，<n>可用另一只手重新装载武器.<n>(无法由副手近战攻击触发);
+
+--name: Heavy Bandolier
+--tooltip: At the cost of -1 <icon=moveDistance> Move, you can rearrange & equip items freely during combat without using up you acion.
+[SupportAbility]
+ID=heavyBandolier;
+name=重型弹药带;
+cloneFrom=heavyBandolier;
+tooltip=你可以在战斗中布置或装备物品<n>而不消耗你的行动机会，但-1<icon=moveDistance>.;

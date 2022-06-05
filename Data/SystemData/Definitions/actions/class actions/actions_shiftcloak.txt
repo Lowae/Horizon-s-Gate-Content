@@ -383,3 +383,35 @@
 [AvAffecterAoE]
 	ID=Sh_delay;
 	cloneFrom=oneTile;
+
+--name: Melee Momentum
+--tooltip: The further your target is from where you started your turn, the more damage your melee weapons deal (+3% per tile).
+[SupportAbility]
+ID=meleeMomentum;
+name=近战冲击;
+cloneFrom=meleeMomentum;
+tooltip=在你回合开始时,目标离你越远<n>你对其造成的近战武器伤害<n>越高(每格+3%).;
+
+--name: Rolling Reload
+--tooltip: When you use an ability that moves you, reload both equipped weapons.
+[SupportAbility]
+ID=rollingReload;
+name=滚动装载;
+cloneFrom=rollingReload;
+tooltip=当你使用位移技能后重新装载你的武器.;
+
+--name: Distracting Aura
+--tooltip: At the start and end of your turn, adjacent enemies are turned around 90 degress.
+[SupportAbility]
+ID=distractingAura;
+name=分心光环;
+cloneFrom=distractingAura;
+tooltip=在你回合开始及结束时,<n>相邻敌人会被旋转90度.;
+
+--name: Adaptability
+--tooltip: You can change your secondary skillset or passives during combat (doing so uses up your action for that turn).
+[SupportAbility]
+ID=adaptability;
+name=适应能力;
+cloneFrom=adaptability;
+tooltip=你可在战斗中更换你的第二技能组<n>或被动技能.<n>(会消耗你当前回合的行动机会);

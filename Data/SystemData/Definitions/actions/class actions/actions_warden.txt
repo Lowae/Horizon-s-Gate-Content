@@ -289,4 +289,26 @@
 	ID=Wrd_negate;
 	cloneFrom=oneTile;
 	
-	
+--name: Lasting Shelter
+--tooltip: Ward, Guard, Regen, Aegis, Negate and Preserve spells last 50% to you
+[SupportAbility]
+ID=lastingShelter;
+name=持久庇护;
+cloneFrom=lastingShelter;
+tooltip=你身上的'守卫'，'防护'，<n>'生命恢复'，'神盾'，<n>'无效化'，'保护'<n>状态持续时间+50%;
+
+--name: Auto-Aegis
+--tooltip: Gain 'Aegis' at the start of combat for <icon=time>50, protecting you from one negative status effect.
+[SupportAbility]
+ID=autoAegis;
+name=自动神盾;
+cloneFrom=autoAegis;
+tooltip=战斗开始时获得'神盾'持续<icon=time>50，保护你免受一次负面状态;
+
+--name: Enduring Negate
+--tooltip: 'Negate' status is not removed from you if you take 1 + half you <icon=skill_Life> skill or less damage
+[SupportAbility]
+ID=enduringNegate;
+name=持久无效化;
+cloneFrom=enduringNegate;
+tooltip=当你受到1+50%<icon=skill_Life>等级或者更少伤害时，<n>'无效化'不会从你身上移除.;

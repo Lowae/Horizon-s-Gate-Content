@@ -296,3 +296,26 @@
 	airborne=true;
 	arc=true;
 	
+--name: Resistant
+--tooltip: When you take magic damage, your <icon=MagEva> Resistance doubles until your next turn.
+[SupportAbility]
+ID=resistant;
+name=抵抗;
+cloneFrom=resistant;
+tooltip=当你造成魔法伤害时,你的<icon=MagEva>魔法抵抗翻倍持续到你下回合.;
+
+--name: Gate Adept
+--tooltip: Gain +1 range with all Gate spells at the cost of -1 <icon=moveDistance> Move.
+[SupportAbility]
+ID=gateAdept;
+name=门魔法精通;
+cloneFrom=gateAdept;
+tooltip=所有门魔法获得+1距离,但自身-1<icon=moveDistance>.;
+
+--name: Critical G. Shield
+--tooltip: Gain a Gate Shield while in critical condition.
+[SupportAbility]
+ID=criticalGShield;
+name=重伤-门:护盾;
+cloneFrom=criticalGShield;
+tooltip=陷入重伤时获得门: 护盾.;

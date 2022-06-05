@@ -294,3 +294,25 @@
 [AvAffecterAoE]
 	ID=Sai_smellingSalts;
 	cloneFrom=oneTile;
+
+--水手
+--origin: Push anyone who hits you with a melee weapon. Pushes 3 tiles. (Can't use with other melee counters.)
+[SupportAbility]
+ID=counterPush;
+name=反推;
+cloneFrom=counterPush;
+tooltip=任何用近战武器攻击你的人<n>都会被推开3格.<n>(无法与其他近战反击同时使用);
+
+--origin: Wet status lasts half as long on you, and your weapon attacks do 20% more damage to Wet targets
+[SupportAbility]
+ID=saltyDog;
+name=咸狗;
+cloneFrom=saltyDog;
+tooltip='潮湿'在你身上的持续时间减半，<n>且你的武器攻击对'潮湿'<n>目标增加20%伤害;
+
+--origin: Gain +1 <icon=moveDistance> when you start your turn adjacent to water
+[SupportAbility]
+ID=seaLegs;
+name=不晕船;
+cloneFrom=seaLegs;
+tooltip=当你回合开始时，如果周围有水，<n>获得+1<icon=moveDistance>;

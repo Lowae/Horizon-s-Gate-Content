@@ -180,7 +180,7 @@
 	mpCost=8 * d:mpCostMult * d:mpCostMult_onlyWithCT + d:mpCostMod_onlyWithCT + d:mpCostMod;
 	chargeTime=12 * d:chargeTimeMult * d:chargeTimeMult_onlyWithMP + d:chargeTimeMod + d:chargeTimeMod_onlyWithMP;
 	
-	tooltip=烧焦敌人的喉咙造成<thinnerIcon=skill_Fire><math=d:fireDmgDisplay(3)>伤害<n>且施加'沉默'持续<icon=time><math=80 + d:fireDurMax(2) + d:ruinDurMax(2)><finalTextIf=.=2-c:rank>和'烧伤'持续<icon=time><math=20 + d:fireDurMax(2) + d:ruinDurMax(1)>.;
+	tooltip=烧焦敌人的喉咙造成<thinnerIcon=skill_Fire><math=d:fireDmgDisplay(3)>伤害<n>且施加'沉默'持续<icon=time><math=80 + d:fireDurMax(2) + d:ruinDurMax(2)><finalTextIf=.=2-c:rank>和'燃烧'持续<icon=time><math=20 + d:fireDurMax(2) + d:ruinDurMax(1)>.;
 	rankUpTooltip=2级时额外造成烧伤持续<icon=time><math=30>.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Fire_small><icon=skill_Ruin_small>;
 	
@@ -476,3 +476,26 @@
 	cloneFrom=oneTile;
 	
 	
+--name: Sacrifice
+--tooltip: While silenced, gain +6 <icon=PhysAtk>. While Blinded, gain +6 <icon=MagAtk>
+[SupportAbility]
+ID=sacrifice;
+name=牺牲;
+cloneFrom=sacrifice;
+tooltip=被'沉默'时获得+6<icon=PhysAtk>.'失明'时获得+6<icon=MagAtk>;
+
+--name: Soulpierce
+--tooltip: Spells you cast against Itchy targets ingore <icon=MagEva> Resistance.
+[SupportAbility]
+ID=soulpierce;
+name=灵魂穿刺;
+cloneFrom=soulpierce;
+tooltip=对'瘙痒'状态的目标施法魔法时<n>无视对方<icon=MagEva>.;
+
+--name: Absorb Aura
+--tooltip: At the start of your turn, steal 5 <icon=MP>MP from adjacent enemies.
+[SupportAbility]
+ID=absorbAura;
+name=汲取光环;
+cloneFrom=absorbAura;
+tooltip=回合开始时,从邻近敌人吸取5<icon=MP>.;

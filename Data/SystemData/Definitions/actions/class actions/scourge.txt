@@ -307,3 +307,27 @@ ID=whipAndTear; element=weaponBuff; action=whipAndTear_act;
 	ID=Sco_bolas;
 	cloneFrom=oneTile;
 
+--鞭笞者
+--name: Rivalry
+--tooltip: Weapon attacks deal +30% damage to anyone of the same species or that has any of the same classed equipped.
+[SupportAbility]
+ID=rivalry;
+name=竞争;
+cloneFrom=rivalry;
+tooltip=武器攻击对相同物种或装备同职业的目标伤害+30%.;
+
+--name: Whip and Tear
+--tooltip: Whip and flail attacks inflict a stacking -1 <icon=PhysDef> for <icon=time>40.
+[SupportAbility]
+ID=whipAndTear;
+name=撕裂;
+cloneFrom=whipAndTear;
+tooltip=鞭子和链枷攻击造成可叠加的-1<icon=PhysDef>效果，持续<icon=time>40.;
+
+--name: Overeager
+--tooltip: Gain +2 <icon=PhysAtk><icon=MagAtk>, but all abilities that benefit from <icon=PhysAtk><icon=MagAtk> cannot be reuesd for <icon=time>40.
+[SupportAbility]
+ID=overeager;
+name=过分渴望;
+cloneFrom=overeager;
+tooltip=获得+2<icon=PhysAtk><icon=MagAtk>,但所有受<icon=PhysAtk><icon=MagAtk>增益的能力在<icon=time>40无法再次使用.;

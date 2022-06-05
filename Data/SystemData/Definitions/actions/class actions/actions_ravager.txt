@@ -330,3 +330,26 @@
 	ID=Rav_destroy;
 	cloneFrom=oneTile;
 	
+--name: Revel
+--tooltip: Gain a morale boost for <icon=time>70 when an enemy gets KO'd during your turn
+[SupportAbility]
+ID=revel;
+name=狂欢;
+cloneFrom=revel;
+tooltip=在你回合时当敌人被KO时<n>获得'士气增强'持续<icon=time>70.;
+
+--name: Indomitable
+--tooltip: Disable and Immobilize effects last half as long on you.
+[SupportAbility]
+ID=indomitable;
+name=不屈;
+cloneFrom=indomitable;
+tooltip=你身上的'残废','定身'持续时间减半.;
+
+--name: Critical Destroy
+--tooltip: Instantly kill all nearby enemies with 10 <icon=HP>HP or less when hit into critical condition. Range is determind by your skill with Destory
+[SupportAbility]
+ID=criticalDestroy;
+name=重伤毁灭;
+cloneFrom=criticalDestroy;
+tooltip=当你被击中陷入重伤状态时<n>立即杀死附近所有<icon=HP>低于10的敌人.<n>攻击范围取决你的毁灭技能等级.;
