@@ -326,27 +326,3 @@
 [AvAffecterAoE]
 	ID=Bra_suckerPunch; cloneFrom=oneTile;
 	
---拳手
---name: Thousand Fists
---tooltip: If your offhand is a fist weapon, make an extra punch with it for 50% damage when attacking. (Does not apply secondary weapon effects)
-[SupportAbility]
-ID=thousandFists;
-name=千拳;
-cloneFrom=thousandFists;
-tooltip=如果你的双手都是拳武器，<n>当你攻击时会多打一拳造成50%的伤害.<n>(无法再次触发武器效果);
-
---name: Brawl Master
---tooltip: At the start of combat, gain a <icon=PhysEva> bonus equal to 5x you lowest <icon=skill_Fist> <icon=skill_Dagger> skill for <icon=time> 300
-[SupportAbility]
-ID=brawlMaster;
-name=打架大师;
-cloneFrom=brawlMaster;
-tooltip=在战斗开始时，获得5x最低<icon=skill_Fist> <icon=skill_Dagger>技能的<icon=PhysEva>奖励持续<icon=time>300;
-
---name: Iron Hands
---tooltip: Empty handed punches deal 1 + half you <icon=skill_Fist> skill extra damage
-[SupportAbility]
-ID=ironHands;
-name=铁手;
-cloneFrom=ironHands;
-tooltip=空手拳头能造成额外的1+50% <icon=skill_Fist>技能的伤害;

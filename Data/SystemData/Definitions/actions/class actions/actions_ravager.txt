@@ -2,10 +2,10 @@
 
 
 [Action] ID=Rav_ruinshock; 
-	name=毁灭冲击;
+	name=Ruinshock;
 	icon=icon_Rav_doubleEdge;
-	tooltip=全力以赴发动攻击,<n>对自己造成30%伤害对目标造成<math=120 + 10 * c:rank>%以上伤害.;
-	rankUpTooltip=每级+10%对目标造成的伤害.;
+	tooltip=Go all out with an attack, damaging yourself 30% and the opponent <math=120 + 10 * c:rank>% or more.;
+	rankUpTooltip=Each rank increases damage to the opponent by 10%.;
 	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=melee_small><icon=skill_Ruin_small>;
 	mpCost=3 * d:mpCostMult + d:mpCostMod;
 	
@@ -54,10 +54,10 @@
 	cloneFrom=oneTile;
 
 [Action] ID=Rav_quake; 
-	name=地震;
+	name=Quake;
 	icon=icon_Rav_quake;
-	tooltip=震击地面,产生冲击波造成<math=30 + 10 * c:rank>%伤害.;
-	rankUpTooltip=每级+10%伤害.;
+	tooltip=Smash the ground, causing a shockwave that deals <math=30 + 10 * c:rank>% damage.;
+	rankUpTooltip=Each rank increases damage by 10%.;
 	tooltipIcons=<icon=noRanged>;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	
@@ -147,10 +147,10 @@
 	occupyAll=false;
 
 [Action] ID=Rav_smite; 
-	name=重推;
+	name=Smite;
 	icon=icon_Rav_holdLine;
-	tooltip=将多个目标推开<math=c:rank>格且造成75%以上伤害.;
-	rankUpTooltip=每级+1推开距离.;
+	tooltip=Push multiple targets in front of you <math=c:rank> tile(s) and deal 75% damage or more.;
+	rankUpTooltip=Push 1 further with each rank.;
 	tooltipIcons=<icon=noRanged>;
 	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=melee_small><icon=skill_Ruin_small>;
 	mpCost=2 * d:mpCostMult + d:mpCostMod;
@@ -207,10 +207,10 @@
 
 	
 [Action] ID=Rav_despair; 
-	name=绝望;
+	name=Despair;
 	icon=icon_Rav_despair;
 	mpCost=2 * d:mpCostMult + d:mpCostMod;
-	tooltip=自身周围大范围内降低敌人'士气'持续<icon=time><math=d:ruinDurMax(4) + 70>且偷取<math=c:rank+3><adjX=-4><icon=MP>MP.;
+	tooltip=Lower morale of enemies in a large area around yourself for <icon=time><math=d:ruinDurMax(4) + 70> and steal <math=c:rank+3><adjX=-4><icon=MP>MP from them.;
 	rankUpTooltip=Each rank increases <icon=MP>MP stolen by 1.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Ruin_small>;
 	
@@ -285,11 +285,11 @@
 	
 
 [Action] ID=Rav_destroy; 
-	name=毁坏;
+	name=Destroy;
 	icon=icon_Rav_destroy;
 	mpCost=3 * d:mpCostMult + d:mpCostMod;
-	tooltip=杀死一名低于10<icon=HP>HP的敌人.必中.;
-	rankUpTooltip=每级+1攻击距离.;
+	tooltip=Kill an enemy with 10<icon=HP>HP or less. Cannot miss.;
+	rankUpTooltip=Each rank adds +1 range.;
 	tooltipTopRight=;
 	
 	XPCost=150;
@@ -331,26 +331,3 @@
 	ID=Rav_destroy;
 	cloneFrom=oneTile;
 	
---name: Revel
---tooltip: Gain a morale boost for <icon=time>70 when an enemy gets KO'd during your turn
-[SupportAbility]
-ID=revel;
-name=狂欢;
-cloneFrom=revel;
-tooltip=在你回合时当敌人被KO时获得'士气增强'持续<icon=time>70.;
-
---name: Indomitable
---tooltip: Disable and Immobilize effects last half as long on you.
-[SupportAbility]
-ID=indomitable;
-name=不屈;
-cloneFrom=indomitable;
-tooltip=你身上的'残废','定身'持续时间减半.;
-
---name: Critical Destroy
---tooltip: Instantly kill all nearby enemies with 10 <icon=HP>HP or less when hit into critical condition. Range is determind by your skill with Destory
-[SupportAbility]
-ID=criticalDestroy;
-name=重伤毁灭;
-cloneFrom=criticalDestroy;
-tooltip=当你被击中陷入重伤状态时立即杀死附近所有<icon=HP>低于10的敌人.攻击范围取决你的毁灭技能等级.;

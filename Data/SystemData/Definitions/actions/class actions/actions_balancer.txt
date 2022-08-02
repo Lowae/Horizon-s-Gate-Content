@@ -382,35 +382,3 @@
 [AvAffecterAoE]
 	ID=Ba_force;
 	cloneFrom=oneTile;
-
---name: Counter Mirror
---tooltip: Deflect half you <icon=skill_Life> skill damage back on your attacker when hit. (Can't use with any other counters.)
-[SupportAbility]
-ID=lifeMirror;
-name=反击反射;
-cloneFrom=lifeMirror;
-tooltip=被击中反击攻击者造成<icon=skill_Life>50%的伤害.(无法同时与其他反击生效);
-
---name: Geomancy
---tooltip: Draw <icon=skill_Fire> <icon=skill_Ice> <icon=skill_Elec> <icon=skill_Wind> <icon=skill_Life> power from nearby terrain at the start of your turn, boosting the associated elemental skills. Grants +1 <icon=skill_Wind> if no elemental terrain is within 2 tiles.
-[SupportAbility]
-ID=geomancy;
-name=风水;
-cloneFrom=geomancy;
-tooltip=在你回合开始时从附近地形吸收<icon=skill_Fire> <icon=skill_Ice> <icon=skill_Elec> <icon=skill_Wind> <icon=skill_Life>元素力量增强对应元素技能等级,<n>如果周围2格地形内无以上元素则获得+1<icon=skill_Wind>.;
-
---name: Quick Cast
---tooltip: Reduce cast times by 8% of your Time to Act(usually 2 <icon=time>), but abilities with cast time cost 60% <icon=MP> more.
-[SupportAbility]
-ID=quickCast;
-name=快速施法;
-cloneFrom=quickCast;
-tooltip=减少施法时间8%(一般减少2<icon=time>),但<icon=MP>消耗增加60%.;
-
---name: Critical Preserve
---tooltip: Gain 'Preserve' status when hit into critical condition.
-[SupportAbility]
-ID=criticalPreserve;
-name=重伤保护;
-cloneFrom=criticalPreserve;
-tooltip=被击中陷入重伤时获得'保护'状态.;

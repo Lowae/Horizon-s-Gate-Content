@@ -412,27 +412,3 @@
 [AvAffecterAoE]
 	ID=Sch_frost; 
 	cloneFrom=adjacentAndSelf;
-
---name: Teacher
---tooltip: At the start of your turn, adjacent allies heal 3 <icon=MP>
-[SupportAbility]
-ID=teacher;
-name=导师;
-cloneFrom=teacher;
-tooltip=回合开始时，为相邻队友恢复3<icon=MP>.;
-
---name: elementary
---tooltip: When you end your turn, the nearest creature directly in front of you has its current elemental resistances and weaknesses revealed.
-[SupportAbility]
-ID=elementary;
-name=基本性;
-cloneFrom=elementary;
-tooltip=回合结束时，你面前最近的生物<n>显示其当前元素抗性和弱点.;
-
---name: Meditative
---tooltip: When you end your turn without acting, gain +3 <icon=MagDef> until your next turn.
-[SupportAbility]
-ID=meditative;
-name=冥想;
-cloneFrom=meditative;
-tooltip=回合结束时未行动，获得+3<icon=MagDef>直到你下回合.;

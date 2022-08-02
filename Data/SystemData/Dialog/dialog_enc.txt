@@ -1,8 +1,8 @@
 [DialogNode] ID=bandit1a;
 animations=sly;
 animations=scared;
-statements=等等，这是谁?;
-statements=看起来像探险者同伴!<p>欢迎!;
+statements=Hold on, who's this?;
+statements=Looks like fellow explorers!<p> How grand!;
 nextNodeID=bandit1a_reeve;
 nextNodeID_fReq=party:reeve;
 nextNodeID=bandit1b;
@@ -10,21 +10,21 @@ nextNodeID=bandit1b;
 [DialogNode] ID=bandit1a_reeve;
 animations=sly;
 speakerOverride=reeve;
-statements=小心点,<p> <pname>...<p> 我对这些人有种不好的预感.;
+statements=Careful,<p> <pname>...<p> I have a bad feeling about these guys.;
 nextNodeID=bandit1b;
 
 [DialogNode] ID=bandit1b;
 speakerOverride=galf;
 animations=happy;
 animations=sigh;
-statements=我想我们不是唯一发现这片美丽树林的人!;
+statements=I suppose we're not the only ones to discover this nice grove!;
 specialEffect=setDefaultNode,;
-statements=是的，的确...;
+statements=Yes, indeed...;
 
-[DialogOption] text=很高兴见到你!;
+[DialogOption] text=Nice to meet you!;
 animation=happy;
 nodeToConnectTo=bandit1c;
-[DialogOption] text=你是?;
+[DialogOption] text=And you are?;
 animation=sly;
 newLineOfOptions=true;
 nodeToConnectTo=bandit1c;
@@ -37,9 +37,9 @@ nodeToConnectTo=bandit1c;
 animations=sly;
 animations=stern;
 animations=sly;
-statements=<speed=0.7>没错,<p>现在我们不是唯一发现的人了,<p>现在,<p>我们...?;
-statements=如果我们是唯一发现它的人，岂不是更好!;
-statements=哈哈！哈哈哈...;
+statements=<speed=0.7>Yes,<p> we aren't the only ones to discover it,<p> now,<p> are we...?;
+statements=Wouldn't that be nice for us if we WERE the only ones to discover it!;
+statements=Hehe!<p> He he he...;
 nextNodeID=enemyInitiateCombat;
 
 
@@ -134,269 +134,3 @@ nextNodeID=enemyInitiateCombat;
 
 
 -------------------
-
-[DialogNode] ID=ignis_enc1;
-animations=;
-animations=angry;
-animations=;
-statements=Ho, adventurers!;
-statements=Know that this territory and the valuables within are Ignis Knights' domain, per the request of our client.;
-statements=As such, you'd best be off.;
-specialEffect=modNodeIDGlobalVar_1;
-nextNodeID=ignis_enc2;
-
-
-[DialogNode] ID=ignis_enc2;
-speakerOverride=scurio;
-animations=handupPose;
-statements=Cavor, don't forget we're meant to...;
-nextNodeID=ignis_enc3;
-
-[DialogNode] ID=ignis_enc3;
-speakerOverride=falpa;
-animations=sigh;
-animations=;
-animations=angry;
-statements=Right, right, I suppose so. Such are the client's terms.;
-statements=Adventurers!; 
-statements=<speed=0.5><color=Red>Hand over your <iconBig=gp>$ if you want to live.;
-dialogFX=;
-dialogFX=;
-dialogFX=fireEmbers;
-specialEffect=tNoMusic;
-
-[DialogOption] text=No!;
-nodeToConnectTo=ignis_enc4a;
-[DialogOption] text=We haven't got any $, actually.;
-newLineOfOptions=true;
-nodeToConnectTo=ignis_enc4b;
-[DialogOption] text=Oh... here, take our $.;
-newLineOfOptions=true;
-formulaReq=m:money(1) - m:money(8);
-nodeToConnectTo=ignis_enc_littleMoney1;
-[DialogOption] text=Oh... here, take our $.;
-newLineOfOptions=true;
-formulaReq=m:money(8);
-nodeToConnectTo=ignis_enc4c;
-
-[DialogNode] ID=ignis_enc4a;
-animations=;
-statements=Then so be it!<p=2> Face the Ignis Knights' wrath!;
-nextNodeID=enemyInitiateCombat;
-
-[DialogNode] ID=ignis_enc4b;
-animations=;
-statements=Come on now.<p=2> You really think I'd believe that excuse?;
-statements=Have a little self-respect.;
-[DialogOption] text=Well, it was worth a shot.;
-nodeToConnectTo=ignis_enc4a;
-[DialogOption] text=No, honestly, we have no $!;
-newLineOfOptions=true;
-nodeToConnectTo=ignis_enc4d;
-[DialogOption] text=Oh... here, take our $.;
-newLineOfOptions=true;
-formulaReq=m:money(1) - m:money(8);
-nodeToConnectTo=ignis_enc_littleMoney1;
-[DialogOption] text=Oh... here, take our $.;
-newLineOfOptions=true;
-formulaReq=m:money(8);
-nodeToConnectTo=ignis_enc4c;
-
-[DialogNode] ID=ignis_enc4d;
-animations=angry;
-statements=Alright, fine.<p=2> If you're not going to make it simple, I'll just have to take you for all you're worth!;
-nextNodeID=enemyInitiateCombat;
-
-
-
-[DialogNode] ID=ignis_enc4c;
-animations=;
-statements=Ah!<p=1> Good, thank you.<p=2> You've made a very reasonable decision.;
-statements=Now we shall be on our way.<p=3> Best of luck to you and yours.;
-specialEffect=subtractAllgp;
-specialEffect=tTravelMusic;
-nextNodeID=ignis_enc_peace;
-
-[DialogNode] ID=ignis_enc_peace;
-nextNodeID=;
-specialEffect=modNodeIDGlobalVar_1;
-specialEffect=XPrewardPeaceOnly;
-specialEffect=tRemoveIgnis;
-
----------
-
-[DialogNode] ID=ignis_enc_littleMoney1;
-animations=;
-statements=Truly?<p=2> This is all you've got?<p=2> Come on now.;
-statements=Fork it over properly!<p=2> A well-equipped group such as you must have more.;
-[DialogOption] text=No!;
-nodeToConnectTo=ignis_enc4d;
-[DialogOption] text=That's really all we have.;
-newLineOfOptions=true;
-nodeToConnectTo=ignis_enc4d;
-
-------
-
-[DialogNode] ID=ignis_enc1_crit;
-animations=;
-animations=;
-statements=Keh!<p=2> <speed=0.8>W-well...<p=2> well fought!;
-statements=<speed=0.8>You leave me no choice...<p=3> <color=Red>but to <speed=0.22>UNLEASH...<color=White><p=8><speed=1> myself from this terrible situation!<p=2> See ya!;
-nextNodeID=ignis_enc1_flee;
-
-[DialogNode] ID=ignis_enc1_flee;
-nextNodeID=;
-specialEffect=flee;
-
--------------
-
-
-
-[DialogNode] ID=ignis_enc_2nd;
-animations=;
-animations=;
-statements=Hold!<p=3> -oh, it's you again.;
-specialEffect=modNodeIDGlobalVar_1;
-nextNodeID=ignis_enc_2nd_peace1;
-nextNodeID_fReq=g:ignis_enc_peace;
-
-nextNodeID=ignis_enc_2nd_fight1;
-nextNodeID_fReq=g:ignis_enc1;
-
-nextNodeID=ignis_enc_2nd_noTalk1;
-
----
-
-[DialogNode] ID=ignis_enc_2nd_peace1;
-animations=;
-statements=It's good to see you!<p=2> How are you faring?;
-statements=Alvora is certainly an inhospitable place...<p=2> speaking of, I'm afraid I'll have to ask you again to hand over your gold.;
-statements=It's strictly part of our commission.<p=2> Nothing personal.;
-
-[DialogOption] text=Not again!;
-nodeToConnectTo=ignis_enc_2nd_peace_no1;
-[DialogOption] text=We haven't got any $.;
-newLineOfOptions=true;
-nodeToConnectTo=ignis_enc_2nd_peace_noMoney1;
-[DialogOption] text=Fine... here, take our $.;
-newLineOfOptions=true;
-formulaReq=m:money(1) - m:money(8);
-nodeToConnectTo=ignis_enc_2nd_peace_littleMoney;
-[DialogOption] text=Fine... here, take our $.;
-newLineOfOptions=true;
-formulaReq=m:money(8);
-nodeToConnectTo=ignis_enc_2nd_peace_give;
-
------
-
-[DialogNode] ID=ignis_enc_2nd_peace_no1;
-animations=;
-animations=angry;
-animations=sigh;
-statements=Truly?<p=3> And you had made such good decisions up until this point.;
-statements=...;
-statements=Fine.<p=2> Know that you have been spared the Ignis Knights' wrath.;
-statements=Take this.;
-nextNodeID=ignis_enc_2nd_peace_no2;
-
-[DialogNode] ID=ignis_enc_2nd_peace_no2;
-animations=;
-statements=(He hands you a <itemBig=mask_ignisKnight> mask).;
-statements=Perhaps we'll meet again in a better situation.;
-specialEffect=tUnlockFX;
-specialEffect=tGiveIgnisMask;
-nextNodeID=ignis_enc_2nd_leave;
-
-------
-
-[DialogNode] ID=ignis_enc_2nd_peace_noMoney1;
-animations=;
-statements=Ah, that is unfortunate.;
-statements=Here.<p=2> I think you could use this.;
-nextNodeID=ignis_enc_2nd_peace_noMoney2;
-
-[DialogNode] ID=ignis_enc_2nd_peace_noMoney2;
-animations=;
-statements=(He hands you a <itemBig=mask_ignisKnight> mask).;
-statements=Hopefully you'll have more wealth next time we meet, eh?<p=3> Heheh.;
-statements=Farewell, then...!;
-specialEffect=tUnlockFX;
-specialEffect=tGiveIgnisMask;
-nextNodeID=ignis_enc_2nd_leave;
-
-[DialogNode] ID=ignis_enc_2nd_peace_littleMoney1;
-animations=;
-statements=That's all you have?<p=2> This is hardly anything!;
-statements=Forget it. You must having some hard times...<p=3> take this.;
-nextNodeID=ignis_enc_2nd_peace_noMoney2;
-
-----
-
-[DialogNode] ID=ignis_enc_2nd_peace_give;
-animations=;
-statements=Truly you are a wise leader...!;
-statements=Here.<p=2> Take this.;
-nextNodeID=ignis_enc_2nd_peace_no2;
-
-
-----
-[DialogNode] ID=ignis_enc_2nd_leave;
-animations=;
-specialEffect=XPrewardPeaceOnly;
-specialEffect=tRemoveIgnis;
-
-
------
-
-[DialogNode] ID=ignis_enc_2nd_fight1;
-animations=;
-statements=Your strength is admirable!<p=2> However, we won't be outdone this time.;
-statements=<speed=0.7><color=Red>Hand over your <iconBig=gp>$ or face the full wrath of the Ignis Knights...!;
-dialogFX=;
-dialogFX=fireEmbers;
-specialEffect=tNoMusic;
-
-[DialogOption] text=No!;
-nodeToConnectTo=ignis_enc_2nd_fight_no1;
-[DialogOption] text=We haven't got any $.;
-newLineOfOptions=true;
-nodeToConnectTo=ignis_enc_2nd_fight_noMoney1;
-[DialogOption] text=Fine... here, take our $.;
-newLineOfOptions=true;
-formulaReq=m:money(1) - m:money(8);
-nodeToConnectTo=ignis_enc_2nd_peace_littleMoney1;
-[DialogOption] text=Fine... here, take our $.;
-newLineOfOptions=true;
-formulaReq=m:money(8);
-nodeToConnectTo=ignis_enc_2nd_fight_give;
-
-
-[DialogNode] ID=ignis_enc_2nd_fight_no1;
-animations=angry;
-statements=So be it!;
-nextNodeID=enemyInitiateCombat;
-
-
-[DialogNode] ID=ignis_enc_2nd_fight_noMoney1;
-animations=;
-animations=angry;
-statements=I'm not buying it.<p=2> And not for lack of money.;
-statements=You're going to hand over your valuables one way or another...!;
-nextNodeID=enemyInitiateCombat;
-
-
-[DialogNode] ID=ignis_enc_2nd_fight_give;
-animations=;
-statements=Well chosen!<p=2> Very good.;
-statements=Here, take this.;
-nextNodeID=ignis_enc_2nd_peace_no2;
-specialEffect=tTravelMusic;
-
-
-
------------
-
-[DialogNode] ID=ignis_enc_2nd_noTalk1;
-animations=angry;
-statements=Face the wrath of the Ignis Knights!;
-nextNodeID=enemyInitiateCombat;

@@ -408,27 +408,3 @@
 	cloneFrom=adjacentAndSelf;
 	needsLoE=false;
 	needsLoS=false;
-
---name: Absorb Magic
---tooltip: Gain <icon=MP> when damaged by a magical attack equal to half the damage taken.
-[SupportAbility]
-ID=absorbMagic;
-name=魔法吸收;
-cloneFrom=absorbMagic;
-tooltip=当受到魔法攻击时获得受到伤害<n>等量的50%<icon=MP>;
-
---name: Necromancy
---tooltip: Draw <icon=skill_Ruin> power from bones within 2 tiles at the start of your turn.
-[SupportAbility]
-ID=necromancy;
-name=死灵法术;
-cloneFrom=necromancy;
-tooltip=你回合开始时吸收2格内<n>骨头的能量来增强<icon=skill_Ruin>技能等级;
-
---name: Ruin Aura
---tooltip: At the start of your turn, adjacent enemies take <icon=skill_Ruin>5 or more damage.
-[SupportAbility]
-ID=ruinAura;
-name=毁灭光环;
-cloneFrom=ruinAura;
-tooltip=你回合开始时，附近敌人受到5或更多<icon=skill_Ruin>伤害.;

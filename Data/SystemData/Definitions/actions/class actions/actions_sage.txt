@@ -285,28 +285,3 @@
 [AvAffecterAoE]
 	ID=Sa_dispel;
 	cloneFrom=adjacentAndSelf;
-
-
---name: Green Touch
---tooltip: At the start of your turn, adjacent allies heal 3 <icon=HP> or more
-[SupportAbility]
-ID=greenTouch;
-name=绿色之触;
-cloneFrom=greenTouch;
-tooltip=回合开始时，为相邻队友恢复3<icon=HP>或更多.;
-
---name: Pure Mind
---tooltip: Gain immunity to Dispel, and casting connot be interrupted (except by disabling effects such as stun or silence).
-[SupportAbility]
-ID=pureMind;
-name=纯净心灵;
-cloneFrom=pureMind;
-tooltip=对驱散免疫且施法不会被打断<n>(除禁用效果之外如晕眩或沉默等).;
-
---name: Critical Recovery
---tooltip: Heal 15%<icon=HP> when hit into critical condition.
-[SupportAbility]
-ID=criticalRecovery;
-name=重伤恢复;
-cloneFrom=criticalRecovery;
-tooltip=被集中重伤时恢复15%<icon=HP>.;

@@ -160,7 +160,7 @@
 	mpCost=3 * d:mpCostMult + d:mpCostMod;
 	harmful=false;
 	attractAttention=false;
-	tooltip=为相邻的人治疗 <math=11 + c:MagAtk + c:skill_Life><adjX=-4><icon=HP>.<n=><textIf=也能治愈中毒=c:rank-1><textIf=  和燃烧=c:rank-2><textIf= .=c:rank-1>;
+	tooltip=为相邻的人治疗 <math=11 + c:MagAtk + c:skill_Life><adjX=-4><icon=HP>.<n=><textIf=也能治愈中毒=c:rank-1><textIf=  和烧伤=c:rank-2><textIf= .=c:rank-1>;
 	rankUpTooltip=2级后治愈中毒, 3级后治愈烧伤.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Life_small>;
 	
@@ -327,28 +327,3 @@
 	cloneFrom=oneTile;
 	
 	
-
---侦察员
---name: Medic
---tooltip: Increase healing done with bandages, splints, and First Aid by 50%.
-[SupportAbility]
-ID=medic;
-name=医师;
-cloneFrom=medic;
-tooltip=使用绷带、夹板和急救技能增加50%治疗效果.;
-
---name: Quick hands
---tooltip: If you don't act, or you spend your combat action moving items, you next turn comes 20%<icon=time> sonner. (Usually +5<icon=time>).
-[SupportAbility]
-ID=quickHands;
-name=灵活之手;
-cloneFrom=quickHands;
-tooltip=如果你回合内未行动或只是移动物品，你的下回合加快<icon=time>20%. (通常+5<icon=time>);
-
---name: 重伤灵活性
---tooltip: Gain +2 <icon=moveDistance> for <icon=time>35 when hit into critical  condition(25% HP or less).
-[SupportAbility]
-ID=criticalSpeed;
-name=重伤灵活性;
-cloneFrom=criticalSpeed;
-tooltip=获得+2<icon=moveDistance>持续<icon=time>35，当你被击中进入重伤状态(低于25%HP).;

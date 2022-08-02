@@ -324,28 +324,3 @@
 [AvAffecterAoE]
 	ID=Ro_mug;
 	cloneFrom=oneTile;
-
---盗贼
---name: Backstabber
---tooltip: Do 15% more damage when attacking an enemy from behind with a weapon.
-[SupportAbility]
-ID=backstab;
-name=背刺者;
-cloneFrom=backstab;
-tooltip=使用武器从背后攻击敌人增加15%伤害.;
-
---name: Auto-Hide
---tooltip: Become invisible at the start of combat for one turn. While invisible, enemies ignore you and your attacks are twice as accurate.
-[SupportAbility]
-ID=autoHide;
-name=自动隐身;
-cloneFrom=autoHide;
-tooltip=战斗首回合隐身，当隐身时<n>敌人会忽略你且你的攻击获得双倍命中.;
-
---name: 潜行感官
---tooltip: When you press 'Highlight All', you can see the vision range of nearby enemies. You also ignore the accuracy penalty for attacking in darkness.
-[SupportAbility]
-ID=stealthsense;
-name=潜行感官;
-cloneFrom=stealthsense;
-tooltip=当你按下'Highlight All'(高亮所有: Left Alt)键时，可以看到附近敌人<n>视野范围，且无视黑暗中的命中惩罚.;

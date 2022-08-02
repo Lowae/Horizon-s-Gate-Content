@@ -1,8 +1,8 @@
 [Action] ID=Kra_arcLance; 
-	name=电弧长矛;
+	name=Arc Lance;
 	icon=icon_Kra_arcLance;
-	tooltip=使用武器攻击并造成'眩晕'持续<icon=time><math=c:rank>.<n>电弧从目标向对角方向飞出造成<thinnerIcon=skill_Elec><math=d:elecDmgDisplay(4)>伤害.;
-	rankUpTooltip=每级+<icon=time>1眩晕时间.;
+	tooltip=Attack with your weapon and stun for <icon=time><math=c:rank>. Sparks fly off diagonally from the target and deal <thinnerIcon=skill_Elec><math=d:elecDmgDisplay(4)> damage.;
+	rankUpTooltip=Each rank increases Stun duration by <icon=time>1.;
 	tooltipIcons=<icon=noRanged>;
 	tooltipTopRight=<icon=PhysAtk_small><icon=MagAtk_small><icon=melee_small><icon=skill_Elec_small>;
 	mpCost=6 * d:mpCostMult + d:mpCostMod;
@@ -84,10 +84,10 @@
 
 
 [Action] ID=Kra_jumpStrike; 
-	name=跳跃攻击;
+	name=Jump Strike;
 	icon=icon_Kra_jumpStrike;
-	tooltip=跳向目标并造成<n=>+<math=10 + c:rank*5>%伤害.<n>攻击距离根据你的<icon=jumpDistance>跳跃距离.;
-	rankUpTooltip=每级+5%伤害.;
+	tooltip=Leap at the target and deal<n=>+<math=10 + c:rank*5>% damage. Range is increased by your <icon=jumpDistance>Jump.;
+	rankUpTooltip=Each rank increases damage by 5%.;
 	tooltipIcons=<icon=noRanged>;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	mpCost=8 * d:mpCostMult + d:mpCostMod;
@@ -140,10 +140,10 @@
 	
 
 [Action] ID=Kra_impale; 
-	name=刺穿;
+	name=Impale;
 	icon=icon_Kra_impale;
-	tooltip=造成50%伤害且施加-<math=c:rank> <icon=moveDistance><icon=PhysDef>持续1回合.;
-	rankUpTooltip=每级+1<icon=moveDistance><icon=PhysDef>减少.;
+	tooltip=Deal half damage and inflict<n=>-<math=c:rank> <icon=moveDistance><icon=PhysDef> for a turn.;
+	rankUpTooltip=Each rank reduces <icon=moveDistance><icon=PhysDef> by 1 more.;
 	tooltipTopRight=<icon=PhysAtk_small><icon=melee_small>;
 	
 	XPCost=175;
@@ -197,9 +197,9 @@
 	
 
 [Action] ID=Kra_static; 
-	name=静态电流;
+	name=Static;
 	icon=icon_Kra_static;
-	tooltip=使附近充电造成<thinnerIcon=skill_Elec><math=d:elecDmgDisplay(7)>伤害.<n>空格区将充满静态电流<n>造成<thinnerIcon=skill_Elec>8伤害保留<icon=time>60.;
+	tooltip=Electrify nearby targets for <thinnerIcon=skill_Elec><math=d:elecDmgDisplay(7)> damage. Empty tiles are filled with static fields that deal <thinnerIcon=skill_Elec>8 damage and last for <icon=time>60.;
 	rankUpTooltip=;
 	tooltipIcons=;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Elec_small>;
@@ -259,10 +259,10 @@
 	
 	
 [Action] ID=Kra_shockBlast; 
-	name=电压爆破;
+	name=Volt Blast;
 	icon=icon_Kra_shockBlast;
-	tooltip=发射一个电球，会随着移动而变大. 造成最高<thinnerIcon=skill_Elec><math=d:elecDmgDisplay(7)>伤害,随移动距离减少.;
-	rankUpTooltip=每级+1攻击距离.;
+	tooltip=Fire an electric orb that expands as it travels. Deals up to <thinnerIcon=skill_Elec><math=d:elecDmgDisplay(7)> damage, but damage is reduced as it travels.;
+	rankUpTooltip=Each rank adds +1 max range.;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Elec_small>;
 	mpCost=9 * d:mpCostMult + d:mpCostMod;
 	
@@ -325,26 +325,8 @@
 	occupyAll=true;
 	
 	
---name: Brutal Reach
---tooltip: Do 12% more damage with melee weapon attacks against non-adjacent targets.
-[SupportAbility]
-ID=brutalReach;
-name=残酷触达;
-cloneFrom=brutalReach;
-tooltip=使用近战武器攻击非相邻目标时增加12%伤害.;
-
---name: Static Buildup
---tooltip: When pushed, pulled, or you use an ability that moves you, leave behind a Static Field
-[SupportAbility]
-ID=staticBuildup;
-name=静电汇聚;
-cloneFrom=staticBuildup;
-tooltip=当你被推,拉,或使用位移技能时，在身后留下一块静电区域.;
-
---name: Giant Killer
---tooltip: Melee weapon attacks also inflict 3% of the target's Max HP damage
-[SupportAbility]
-ID=giantKiller;
-name=巨人杀手;
-cloneFrom=giantKiller;
-tooltip=近战武器攻击同时造成对方最大<icon=HP>3%的伤害.;
+	
+	
+	
+	
+	

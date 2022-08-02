@@ -284,27 +284,3 @@
 [AvAffecterAoE]
 	ID=Sp_ruinImbue;
 	cloneFrom=oneTile;
-
---name: Imbue Momentum
---tooltip: Your weapon attacks deal extra damage the further the target is from you (+3 per tile).
-[SupportAbility]
-ID=imbueMomentum;
-name=灌注冲击;
-cloneFrom=imbueMomentum;
-tooltip=武器攻击对距离你越远的目标<n>造成额外伤害(每格+3%).;
-
---name: Magic Residue
---tooltip: When you fire a projectile, allies adjacent to the target recover 3<icon=MP>.
-[SupportAbility]
-ID=residue;
-name=魔法残留;
-cloneFrom=residue;
-tooltip=当你使用远程武器攻击时,<n>目标周围相邻的队友恢复3<icon=MP>.;
-
---name: Imbue Augments
---tooltip: Trigger stones within you weapons deal +2 damage and have +10% accuracy.
-[SupportAbility]
-ID=empowerAugment;
-name=灌注强化;
-cloneFrom=empowerAugment;
-tooltip=嵌有触发石的武器额外+2伤害和+10%命中.;

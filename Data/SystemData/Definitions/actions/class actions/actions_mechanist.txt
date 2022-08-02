@@ -486,27 +486,3 @@
 [AvAffecterAoE]
 	ID=rogueTrap_cut;
 	cloneFrom=oneTile;
-
---name: Ability Scanner
---tooltip: Gain +5% Accuracy, You can view enemies' known class abilities in the tooltip by hovering over them.
-[SupportAbility]
-ID=abilityScanner;
-name=技能扫描器;
-cloneFrom=abilityScanner;
-tooltip=获得+5命中,你可以看到敌人的<n>已知的职业技能;
-
---name: Augment Charger
---tooltip: After attacking with a weapon that has a <icon=skill_Fire> <icon=skill_Ice> <icon=skill_Elec> <icon=skill_Wind> augment, enchant yourself with that element for <icon=time>50, Costs 5<icon=MP>, and won't reapply an existing enchantment.
-[SupportAbility]
-ID=augmentCharger;
-name=充能增强;
-cloneFrom=augmentCharger;
-tooltip=当你使用<icon=skill_Fire> <icon=skill_Ice> <icon=skill_Elec> <icon=skill_Wind>元素加强的武器攻击时，消耗5<icon=MP>为自己附魔对应元素持续<icon=time>50,无法再次应用于同一附魔.;
-
---name: Essence Converter
---tooltip: Receive half as much healing, but healing also restores <icon=MP>MP.
-[SupportAbility]
-ID=essenceConverter;
-name=本源转换;
-cloneFrom=essenceConverter;
-tooltip=获得治疗时,同时恢复治疗量一半的<icon=MP>.;

@@ -1,7 +1,7 @@
 
-[ItemType]  name=大砍刀;
+[ItemType]  name=Machete;
 texture=items_weapons;
-description=切割障碍物的简陋刀刃.;
+description=Primitive blade for cutting obstacles.;
 weight=2; volume=3; value=10;
 power=4; volume=5;
 ID=machete; sprite=33; spriteWhenHeld=65; itemCategory=weapon; element=50;
@@ -10,13 +10,13 @@ special=enhanceDoesntAlterPalettes;
 [JournalEntry]
 ID=item_machete;
 category=equipment; halfPage=true;
-title=大砍刀;
-text=<itemBig=machete><title=大砍刀><brAdj=>一种切肉刀状的刀刃,通常用于农业目的,<n>擅长修剪灌木丛,而不是盔甲
+title=Machete;
+text=<itemBig=machete><title=Machete><brAdj=>A cleaver-like blade typically used for agricultural purposes. Excels at cutting undergrowth, not armor.;
  
  
-[ItemType]  name=短柄斧;
+[ItemType]  name=Hatchet;
 texture=items_weapons;
-description=用于木刻的斧子.;
+description=Axe designed for woodcutting.;
 weight=3; volume=5; value=10;
 power=5;
 ID=hatchet; sprite=104; spriteWhenHeld=136; itemCategory=weapon; element=53;
@@ -26,13 +26,13 @@ special=enhanceDoesntAlterPalettes;
 [JournalEntry]
 ID=item_hatchet;
 category=equipment; halfPage=true;
-title=短柄斧;
-text=<itemBig=hatchet><title=短柄斧><brAdj=>简单的用来砍木头的锋利刀片.它用途很多,<n>可以很容易地充当普通刀的任何角色.;
+title=Hatchet;
+text=<itemBig=hatchet><title=Hatchet><brAdj=>A hatchet is a simple sharpened blade for cutting wood. It is very versatile, and easily fills any role that a common knife would.;
 
-[ItemType]  name=扳手;
+[ItemType]  name=Wrench;
 ID=hammer_wrench; pR=pIron;
 texture=items_weapons;
-description=适用于挥击和拆卸机械.;
+description=Fit for clubbing and dismantling machinery.;
 journalID=journal_hammer;
 weight=6; volume=5; value=30;
 power=6;
@@ -42,12 +42,12 @@ sprite=418; spriteWhenHeld=450; itemCategory=weapon; element=hammer;
 [JournalEntry]
 ID=item_hammer_wrench;
 category=equipment; halfPage=true;
-title=扳手;
-text=<itemBig=hammer_wrench><title=扳手><brAdj=>你不是什么工程师,所以它主要是用来<n>拆东西的.它对机器造成双倍伤害.;
+title=Wrench;
+text=<itemBig=hammer_wrench><title=Wrench><brAdj=>You're not much of an engineer, so it's mainly useful for taking things apart. It does double damage against machines.;
 
-[ItemType]  name=弹弓;
+[ItemType]  name=Slingshot;
 texture=items_weapons;
-description=它太弱了,经常被误认为是玩具.;
+description=So weak, it is often mistaken for a toy.;
 ID=slingshot; sprite=97; spriteWhenHeld=129; itemCategory=weapon; element=58;
 weight=1; volume=1; value=2; pR = pR; pB=pInventory;
 power=2;
@@ -55,22 +55,22 @@ power=2;
 [JournalEntry]
 ID=item_slingshot;
 category=equipment; halfPage=true;
-title=弹弓;
-text=<itemBig=slingshot><title=弹弓><brAdj=>一根松紧带连着两个尖头组成了一个弹弓.<n>这个弹弓很弱,但有些也足够打猎用了.;
+title=Slingshot;
+text=<itemBig=slingshot><title=Slingshot><brAdj=>An elastic band attached to two prongs makes up a slingshot. This one is weak, but some better slingshots are good enough to hunt with.;
 
-[ItemType]  name=幸运弹弓;
+[ItemType]  name=Lucky Slingshot;
 texture=items_weapons;
 journalID=item_slingshot;
-description=虽然弹弓很弱,但握起来还是很舒服.;
+description=Weak slingshot that nonetheless feels satisfying to hold.;
 ID=luckshot; sprite=97; spriteWhenHeld=129; itemCategory=weapon; element=58;
 weight=1; volume=1; value=200; pR = pMythril; pB=pYellow5;
 power=3;
  action=slingshotAttack_lucky;
  
 
-[ItemType]  name=亚瑟王的神剑;
+[ItemType]  name=Excalibur;
 texture=items_weapons;
-description=充满强大魔法的剑.;
+description=Sword overflowing with powerful magic.;
 ID=magic_sword; sprite=35; spriteWhenHeld=67; itemCategory=weapon; special=animated; element=50;
 weight=3; volume=5; value=9000;
 power=45;
@@ -78,10 +78,10 @@ power=45;
  special=rotate90WhenSheathed;
  pR=pSilver; pB=pIronHilt; pG=pPurple;
  
-[ItemType]  name=火焰触发石;
+[ItemType]  name=Fire Trigger;
 ID=trigger_fire; sprite=110; itemCategory=weapon; element=fire;
 texture=items_weapons;
-description=能将本源转化为火焰魔法的'触发石'.
+description=Magical 'trigger' stone that converts essence into fire.
 <font=thickIcons><color=Black>
 <n=><icon=invIcon_sword> +Fire Attack
 <n=><icon=invIcon_armor> +1<icon=skill_Fire>;
@@ -100,13 +100,13 @@ ID=trigger_fire; actorValue=skill_Fire; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_trigger_fire;
 category=equipment; halfPage=true; rarity=1;
-title=火焰触发石;
-text=<itemBig=trigger_fire><title=火焰触发石><brAdj=>引导本源穿过它便能产生火焰.<n>在火炉,推进器和战争武器等技术领域,<n>火焰触发石是一个关键部件;
+title=Fire Trigger;
+text=<itemBig=trigger_fire><title=Fire Trigger><brAdj=>Directing oneself through it creates flame. Fire triggers are a key component in tech such as furnaces, propulsion, and weapons of war.;
 
-[ItemType]  name=冰霜触发石;
+[ItemType]  name=Ice Trigger;
 ID=trigger_ice; sprite=110; itemCategory=weapon; element=ice;
 texture=items_weapons;
-description=能将本源转化为冰霜魔法的'触发石'.
+description=Magical 'trigger' stone that converts essence into cold.
 <font=thickIcons><color=Black>
 <n=><icon=invIcon_sword> +Ice Attack
 <n=><icon=invIcon_armor> +1<icon=skill_Ice>;
@@ -126,13 +126,13 @@ ID=trigger_ice; actorValue=skill_Ice; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_trigger_ice;
 category=equipment; halfPage=true; rarity=1;
-title=冰霜触发石;
-text=<itemBig=trigger_ice><title=冰霜触发石><brAdj=>经过你的意识,这种石头可以吸收热量.<n>冰霜触发石在保存食物方面有很高的价值.;
+title=Ice Trigger;
+text=<itemBig=trigger_ice><title=Ice Trigger><brAdj=>With thought and effort, this stone can sap heat. Ice triggers are highly valued for preservation of food.;
 
-[ItemType]  name=闪电触发石;
+[ItemType]  name=Lightning Trigger;
 ID=trigger_elec; sprite=110; itemCategory=weapon; element=lightning;
 texture=items_weapons;
-description=能将本源转化为闪电魔法的'触发石'.
+description=Magical 'trigger' stone that converts essence into electricity.
 <font=thickIcons><color=Black>
 <n=><icon=invIcon_sword> +Elec Attack
 <n=><icon=invIcon_armor> +1<icon=skill_Elec>;
@@ -152,14 +152,14 @@ ID=trigger_elec; actorValue=skill_Elec; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_trigger_elec;
 category=equipment; halfPage=true; rarity=1;
-title=闪电触发石;
-text=<itemBig=trigger_elec><title=闪电触发石><brAdj=>当你集中注意力时,这块石头会火花四溅.<n>闪电触发石只在高度复杂的机械中使用.;
+title=Lightning Trigger;
+text=<itemBig=trigger_elec><title=Lightning Trigger><brAdj=>This stone sparks when you focus on it. Lightning triggers see non-combat use only in highly complex machinery.;
 
 
-[ItemType]  name=疾风触发石;
+[ItemType]  name=Wind Trigger;
 ID=trigger_wind; sprite=110; itemCategory=weapon; element=wind;
 texture=items_weapons;
-description=能将本源转化为风系魔法的'触发石'.
+description=Magical 'trigger' stone that converts essence into force.
 <font=thickIcons><color=Black>
 <n=><icon=invIcon_sword> +Wind Attack
 <n=><icon=invIcon_armor> +1<icon=skill_Wind>;
@@ -179,15 +179,15 @@ ID=trigger_wind; actorValue=skill_Wind; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_trigger_wind;
 category=equipment; halfPage=true; rarity=1;
-title=疾风触发石;
-text=<itemBig=trigger_wind><title=疾风触发石><brAdj=>这块石头能让你用意念投射力量.<n>疾风触发石经常用于建筑或作为机械部件;
+title=Wind Trigger;
+text=<itemBig=trigger_wind><title=Wind Trigger><brAdj=>This stone allows you to project force with your mind. Wind triggers are often used in construction, or as components of machinery.;
 
 
 
-[ItemType]  name=生命触发石;
+[ItemType]  name=Life Trigger;
 ID=trigger_life; sprite=110; itemCategory=weapon; element=life;
 texture=items_weapons;
-description=能将本源转化为生命魔法的'触发石'.
+description=Magical 'trigger' stone that converts essence into restorative magic.
 <font=thickIcons><color=Black>
 <n=><icon=invIcon_sword> +Heal
 <n=><icon=invIcon_armor> +1<icon=skill_Life>;
@@ -207,14 +207,14 @@ ID=trigger_life; actorValue=skill_Life; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_trigger_life;
 category=equipment; halfPage=true; rarity=1;
-title=生命触发石;
-text=<itemBig=trigger_life><title=生命触发石><brAdj=>当某人最近受伤时,他们的本源<n>仍然'记得'他们最初的状态.<n>保护(即生命)魔法恢复了这个形态.;
+title=Life Trigger;
+text=<itemBig=trigger_life><title=Life Trigger><brAdj=>When someone is recently injured, their essence still 'remembers' their original form. Preservation (i.e. Life) magic restores that form.;
 
 
-[ItemType]  name=毁灭触发石;
+[ItemType]  name=Ruin Trigger;
 ID=trigger_ruin; sprite=110; itemCategory=weapon; element=ruin;
 texture=items_weapons;
-description=能将本源转化为毁灭魔法的'触发石'.
+description=Magical 'trigger' stone that converts essence into Ruin magic.
 <font=thickIcons><color=Black>
 <n=><icon=invIcon_sword> +Ruin Attack
 <n=><icon=invIcon_armor> +1<icon=skill_Ruin>;
@@ -234,12 +234,12 @@ ID=trigger_ruin; actorValue=skill_Ruin; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_trigger_ruin;
 category=equipment; halfPage=true; rarity=1;
-title=毁灭触发石;
-text=<itemBig=trigger_ruin><title=毁灭触发石><brAdj=>使用毁灭魔法削弱或控制本源.<n>毁灭魔法常因其在死灵法术中的作用<n>而遭到谴责,尽管它还有其他用途.;
+title=Ruin Trigger;
+text=<itemBig=trigger_ruin><title=Ruin Trigger><brAdj=>Empowers Ruin magic, which degrades or controls essence. Ruin is often reviled for its role in necromancy, even though it has other uses.;
 
-[ItemType]  name=无用的触发石;
+[ItemType]  name=Dud Trigger;
 texture=items_weapons;
-description=这颗触发石制造不当,毫无用处.;
+description=Trigger stone that was improperly created, and is useless.;
 journalID=trigger_stone;
 weight=1; volume=0; value=0;
 pR=pBlack;
@@ -249,20 +249,20 @@ ID=trigger_dud; sprite=110; itemCategory=weapon;
 [JournalEntry]
 ID=item_trigger_dud;
 category=equipment; halfPage=true; rarity=1;
-title=无用的触发石;
-text=<itemBig=trigger_dud><title=无用的触发石><brAdj=>为了让触发石与本源产生反应,它的成分<n>必须经过净化,比例要适当...<n>不像这个是没用的;
+title=Dud Trigger;
+text=<itemBig=trigger_dud><title=Dud Trigger><brAdj=>In order for a trigger stone to react to essence, its components must be purified and properly proportioned... unlike this useless dud.;
 
 
 [JournalEntry]
 ID=trigger_stone;
 category=item; halfPage=true; rarity=1;
-title=触发石;
-text=<itemBig=trigger_fire><itemBig=trigger_ice><title=触发石><brAdj=>'触发石'是将本源转化为能量的物质.<n>使用者可以在精神上引导他们的本源渗入石头,<n>从而产生能量.它们被学徒用作训练工具<n>或被熟练的巫师用作赋权点.每个触发石<n>都是由不同的材料精制而成,对应于一种元素.;
+title=Trigger Stones;
+text=<itemBig=trigger_fire><itemBig=trigger_ice><title=Trigger Stones><brAdj=>'Trigger' stones are substances that convert essence into energy. The user can mentally direct their essence into the stone to create energy.<n=>   They are used as training tools by apprentices or as an empowering focus by skilled wizards. Each trigger stone is refined from different materials, and corresponds to a single element.;
 
 
-[ItemType]  name=火焰灯笼;
+[ItemType]  name=Flamecage;
 texture=items_weapons;
-description=可兼作光源的火焰触发装置.;
+description=Fire trigger device that doubles as a light source.;
 journalID=trigger_stone;
 weight=1; volume=1; value=900;
 power=5; pB=pCopper; spawnFX=fireEmber;
@@ -277,13 +277,13 @@ ID=trigger_fire_cage; actorValue=skill_Fire; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_trigger_fire_cage;
 category=equipment; halfPage=true; rarity=1;
-title=火焰灯笼;
-text=<itemBig=trigger_fire_cage><title=火焰灯笼><brAdj=>一个专为战斗法师设计的装置.<n>它可以毫不费力的提供光,<n>同时也可以赋予火焰魔法.;
+title=Flamecage;
+text=<itemBig=trigger_fire_cage><title=Flamecage><brAdj=>A device designed for combat mages on the Watch. It provides light without any effort from the user, and also empowers fire magic.;
 
 
-[ItemType]  name=闪电灯笼;
+[ItemType]  name=Boltcage;
 texture=items_weapons;
-description=兼作光源的闪电触发装置.;
+description=Lightning trigger device that doubles as a light source.;
 journalID=trigger_stone;
 weight=1; volume=1; value=900;
 power=5;
@@ -299,12 +299,12 @@ ID=trigger_elec_cage; actorValue=skill_Elec; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_trigger_elec_cage;
 category=equipment; halfPage=true; rarity=1;
-title=闪电灯笼;
-text=<itemBig=trigger_elec_cage><title=闪电灯笼><brAdj=>一个专为战斗法师设计的装置.<n>它通常不受欢迎,<n>因为它有在雨夜造成事故的可能.;
+title=Boltcage;
+text=<itemBig=trigger_elec_cage><title=Boltcage><brAdj=>A device designed for combat mages on the Watch. It is generally unpopular due to its propensity for causing mishaps on rainy nights.;
 
-[ItemType]  name=生命虫蛹;
+[ItemType]  name=Life Chrysolit;
 texture=items_weapons;
-description=温顺发光的节肢动物散发着生命魔法.;
+description=Docile glowing arthropod that exudes life magic.;
 ID=trigger_life_light; sprite=108; itemCategory=weapon; 
 weight=1; volume=1; value=900;
 power=5; pR=p1; pB=pGold;
@@ -320,13 +320,13 @@ ID=trigger_life_light; actorValue=skill_Life; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_trigger_life_light;
 category=equipment; halfPage=true; rarity=3;
-title=生命虫蛹;
-text=<itemBig=trigger_life_light><title=生命虫蛹><brAdj=>这种顽强的昆虫很脆弱,几乎没有生命.<n>同时,它发出明亮的光芒,具有强大的魔法光环;
+title=Life Chrysolit;
+text=<itemBig=trigger_life_light><title=Life Chrysolit><brAdj=>This hardy insect is completely limp- practically lifeless. At the same time, it glows brightly and has a powerful magic aura.;
 
 
-[ItemType]  name=折射冰晶;
+[ItemType]  name=Refracting Ice;
 texture=items_weapons;
-description=专为反射和放大光线而雕刻的寒铁冰.;
+description=Ironice specially carved to reflect and amplify light.;
 weight=1; volume=1; value=900;
 power=5;
 pR=pBlue;
@@ -341,12 +341,12 @@ ID=trigger_ice_light; actorValue=skill_Ice; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_trigger_ice_light;
 category=equipment; halfPage=true; rarity=2;
-title=折射冰晶;
-text=<itemBig=trigger_ice_light><title=折射冰晶><brAdj=>寒铁冰不太适合制作柔和的作品,<n>但有人成功制成这种华丽而复杂的水晶.;
+title=Refracting Ice;
+text=<itemBig=trigger_ice_light><title=Refracting Ice><brAdj=>Ironice is rarely suited to delicate creations, but someone managed to craft it into this magnificent and complicated crystal.;
 
-[ItemType]  name=狂风灯笼;
+[ItemType]  name=Gale Lamp;
 texture=items_weapons;
-description=嵌在秘银灯里的疾风触发器.;
+description=Wind triggers embedded in a mythril lamp.;
 weight=1; volume=1; value=900;
 power=5;
 pR=pBlue;
@@ -361,13 +361,13 @@ ID=trigger_wind_light; actorValue=skill_Wind; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_trigger_wind_light;
 category=equipment; halfPage=true; rarity=2;
-title=狂风灯笼;
-text=<itemBig=trigger_wind_light><title=狂风灯笼><brAdj=>包围它的风触发石最初是为了防止风熄灭火焰,<n>但它们的作用就像武器一样.;
+title=Gale Lamp;
+text=<itemBig=trigger_wind_light><title=Gale Lamp><brAdj=>The wind triggers encircling it were originally intended to keep wind from dousing the flame, but they serve just as well as weapons.;
 
-[ItemType]  name=冰冻触发石;
+[ItemType]  name=Chill Trigger;
 ID=trigger_chill; sprite=107; itemCategory=weapon; element=ice; 
 texture=items_weapons;
-description=高级触发石,可以冰冻一名敌人.
+description=Advanced trigger stone that Chills an enemy.
 <font=thickIcons><color=Black>
 <n=><icon=invIcon_sword> +Chill
 <n=><icon=invIcon_armor> +50% Chill Resist;
@@ -385,9 +385,9 @@ ID=trigger_chill; actorValue=skill_Ice; magnitude=1; duration=-1;
 [ItemReactionInArmor]  
 ID=trigger_chill; actorValues=chilled; damageMultiplier=0.5;
 
-[ItemType]  name=晕眩触发石;
+[ItemType]  name=Stun Trigger;
 texture=items_weapons;
-description=高级触发石,可以短暂击晕一名敌人.
+description=Advanced trigger stone that briefly Stuns a target.
 <font=thickIcons><color=Black>
 <n=><icon=invIcon_sword> +Stun
 <n=><icon=invIcon_armor> +50% Stun Resist;
@@ -407,9 +407,9 @@ ID=trigger_stun; actorValue=skill_Elec; magnitude=1; duration=-1;
 ID=trigger_stun; actorValues=stun; damageMultiplier=0.5;
 
 
-[ItemType]  name=推动触发石;
+[ItemType]  name=Push Trigger;
 texture=items_weapons;
-description=高级触发石,可以将目标往后推.
+description=Advanced trigger stone that pushes a target back.
 <font=thickIcons><color=Black>
 <n=><icon=invIcon_sword> +Push
 <n=><icon=invIcon_armor> +50% Push Resist;
@@ -430,9 +430,9 @@ ID=trigger_push; actorValues=push; damageMultiplier=0.5;
 
 
 
-[ItemType]  name=生长触发石;
+[ItemType]  name=Growth Trigger;
 texture=items_weapons;
-description=高级触发石,为目标施加'再生'.
+description=Advanced trigger stone that makes the target regenerate.
 <font=thickIcons><color=Black>
 <n=><icon=invIcon_sword> +Growth
 <n=><icon=invIcon_armor> +50% Growth Duration;
@@ -452,9 +452,9 @@ ID=trigger_growth; actorValue=skill_Life; magnitude=1; duration=-1;
 ID=trigger_growth; actorValues=regen; healMultiplier=1.5;
 
 
-[ItemType]  name=水触发石;
+[ItemType]  name=Water Trigger;
 texture=items_weapons;
-description=特殊的触发石,能够凝聚目标处的水.
+description=Special trigger stone that condensates water at the target.
 <font=thickIcons><color=Black>
 <n=><icon=invIcon_sword> +Wet
 <n=><icon=invIcon_armor> +50% Wet Resist;
@@ -473,22 +473,22 @@ ID=trigger_water; actorValue=skill_Ice; magnitude=1; duration=-1;
 [ItemReactionInArmor]  
 ID=trigger_water; actorValues=wet; damageMultiplier=0.5;
 
-[ItemType]  name=标枪;
+[ItemType]  name=Javelins;
 ID=javelin;
 texture=items_weapons;
 journalID=journal_javelin;
-description=专为投掷而设计的轻型长矛.;
+description=Light spears designed for throwing.;
 pR=pSteel; pB=pWood; 
 weight=0; volume=5; value=125;
 power=4; throwDamageMod=-1;
 sprite=103; spriteWhenHeld=135; itemCategory=weapon; element=javelin;
  action=javelinAttack;
  
-[ItemType]  name=秘银标枪;
+[ItemType]  name=Mythril Javelins;
 ID=javelin_mythril;
 texture=items_weapons;
 journalID=journal_javelin;
-description=秘银制作的闪亮标枪.;
+description=Shining javelins of mythril.;
 pR=pMythril; pB=pMythrilHilt; 
 weight=0; volume=5; value=2500;
 power=5; throwDamageMod=-1;
@@ -498,8 +498,8 @@ sprite=103; spriteWhenHeld=135; itemCategory=weapon; element=javelin;
 [JournalEntry]
 ID=journal_javelin;
 category=equipment; halfPage=true; rarity=1;
-title=标枪;
-text=<itemBig=javelin><title=标枪><brAdj=>理想的投掷长矛,作为狩猎武器使用了几千年.<n>系在上面的皮带提供额外的距离和准确性.;
+title=Javelin;
+text=<itemBig=javelin><title=Javelin><brAdj=>The ideal throwing spear, refined from millennia of use as a hunting weapon. The leather amentum provides extra distance & accuracy.;
 
 [ItemType]  name=Javelin FX;
 ID=thrown_javelin; pR=pSteel; pB=pWood; 
@@ -537,21 +537,21 @@ description=Solely for FX purposes DO NOT USE.; special=alwaysBuried;
 weight=0; volume=5; value=50;
 sprite=137; element=axe_throw;
 
-[ItemType]  name=投掷飞斧;
+[ItemType]  name=Throwing Axes;
 ID=axe_throwing; pR=pSteel; pB=pWood; 
 texture=items_weapons;
-description=轻型的投掷用斧头.;
+description=Lightweight axes for throwing.;
 journalID=journal_axe_throwing;
 weight=0; volume=5; value=125;
 power=5; throwDamageMod=-1;
 sprite=105; spriteWhenHeld=137; itemCategory=weapon; element=axe_throw;
  action=axe_throwing_attack;
  
-[ItemType]  name=秘银投掷飞斧;
+[ItemType]  name=Mythril Throwing Axes;
 ID=mythril_axe_throwing; pR=pMythril; pB=pMythrilHilt; 
 texture=items_weapons;
 journalID=journal_axe_throwing;
-description=轻型的投掷用秘银斧头.;
+description=Mythril axes for throwing.;
 weight=0; volume=5; value=2500;
 power=6; throwDamageMod=-1;
 sprite=105; spriteWhenHeld=137; itemCategory=weapon; element=axe_throw;
@@ -559,13 +559,13 @@ sprite=105; spriteWhenHeld=137; itemCategory=weapon; element=axe_throw;
 [JournalEntry]
 ID=journal_axe_throwing;
 category=equipment; halfPage=true; rarity=1;
-title=投掷飞斧;
-text=<itemBig=axe_throwing><title=投掷飞斧><brAdj=>有窄拱头的斧头.即使斧头没有落在目标上,<n>它巨大的重量和冲击力也会让它变得很危险.;
+title=Throwing Axe;
+text=<itemBig=axe_throwing><title=Throwing Axe><brAdj=>Axe with a narrow arched head. Even if the axe head doesn't land in the target, its significant weight & momentum make it dangerous.;
 
-[ItemType]  name=木剑;
+[ItemType]  name=Wooden Sword;
 texture=items_weapons; 
 ID=sword_wood; pR=pWood; pB=pWoodDark;
-description=粗制滥造的木剑.;
+description=A shoddy sword of wood.;
 journalID=journal_sword;
 weight=1; volume=5; value=5;
 power=4;
@@ -577,10 +577,10 @@ combineWith=furnace2_lit; toMake=woodPlank;
 combineWith=furnace_everlit1; toMake=woodPlank; 
 combineWith=furnace_everlit2; toMake=woodPlank; 
  
-[ItemType]  name=木刀;
+[ItemType]  name=Wooden Shiv;
 texture=items_weapons; 
 ID=dagger_wood; pR=pWood; pB=pWoodDark;
-description=一把临时的匕首.;
+description=An improvised dagger.;
 journalID=journal_dagger;
 weight=1; volume=1; value=5;
 power=3;
@@ -592,10 +592,10 @@ combineWith=furnace2_lit; toMake=woodPlank;
 combineWith=furnace_everlit1; toMake=woodPlank; 
 combineWith=furnace_everlit2; toMake=woodPlank; 
  
-[ItemType]  name=木锤;
+[ItemType]  name=Wooden Mallet;
 texture=items_weapons; 
 ID=hammer_wood; pR=pWood; pB=pWoodDark;
-description=拙劣的武器,但作为工具还是有用的.;
+description=A poor weapon, but still useful as a tool.;
 journalID=journal_hammer;
 weight=4; volume=5; value=5;
 power=5;
@@ -607,10 +607,10 @@ combineWith=furnace2_lit; toMake=woodPlank;
 combineWith=furnace_everlit1; toMake=woodPlank; 
 combineWith=furnace_everlit2; toMake=woodPlank; 
 
-[ItemType]  name=木盾;
+[ItemType]  name=Wooden Shield;
 texture=items_weapons; 
 ID=shield_wood; pR=pWood; pB=pWoodDark;
-description=一面像样的木制圆盾.;
+description=A decent round wooden shield.;
 journalID=journal_shield;
 sprite=106; spriteWhenHeld=138; itemCategory=weapon; element=shield;
 weight=3; volume=5; value=5;
@@ -623,10 +623,10 @@ combineWith=furnace_everlit2; toMake=woodPlank;
 [ItemEffect]  
 ID=shield_wood; actorValue=PhysEva; magnitude=9; duration=-1;
 
-[ItemType]  name=木弓;
+[ItemType]  name=Wood Bow;
 texture=items_weapons; 
 ID=bow_wood; pR=pWood; pB=pWoodDark;
-description=一把简易直弓.需要双手使用.;
+description=A simple straight bow. Requires both hands to use.;
 journalID=journal_bow;
 sprite=182; spriteWhenHeld=214; itemCategory=weapon; element=bow; special=twoHanded;
 weight=1; volume=5; value=5;
@@ -637,10 +637,10 @@ combineWith=furnace2_lit; toMake=woodPlank;
 combineWith=furnace_everlit1; toMake=woodPlank; 
 combineWith=furnace_everlit2; toMake=woodPlank; 
  
-[ItemType]  name=木弩;
+[ItemType]  name=Wood Crossbow;
 texture=items_weapons; 
 ID=xbow_wood; pR=pWood; pB=pWoodDark;
-description=这是一种强大的武器,尽管构造简单.; 
+description=A powerful weapon despite mediocre construction.; 
 journalID=journal_xbow;
 sprite=183; spriteWhenHeld=215; itemCategory=weapon; element=aim;
 weight=2; volume=5; value=5;
@@ -653,10 +653,10 @@ combineWith=furnace_everlit2; toMake=woodPlank;
 [ItemReaction] 
 ID=xbow_wood; element=actionUsed; newID=xbow_wood_unloaded;
 
-[ItemType]  name=木弩(未装载);
+[ItemType]  name=Wood Crossbow (Unloaded);
 texture=items_weapons; 
 ID=xbow_wood_unloaded; pR=pWood; pB=pWoodDark;
-description=这是一种强大的武器,尽管构造简单.需要重新装载.; 
+description=A powerful weapon despite mediocre construction. Needs to be reloaded.; 
 journalID=journal_xbow;
 sprite=184; spriteWhenHeld=216; itemCategory=weapon; 
 weight=2; volume=5; value=5;
@@ -669,10 +669,10 @@ combineWith=furnace_everlit2; toMake=woodPlank;
 [ItemReaction] 
 ID=xbow_wood_unloaded; element=actionUsed; element=reload; newID=xbow_wood;
  
-[ItemType]  name=木矛;
+[ItemType]  name=Wooden Spear;
 texture=items_weapons; 
 ID=spear_wood; pR=pWood; pB=pWood;
-description=一个尖锐木棒.;
+description=A sharpened stick.;
 journalID=journal_spear;
 weight=3; volume=10; value=5;
 power=3;
@@ -686,10 +686,10 @@ combineWith=furnace_everlit1; toMake=woodPlank;
 combineWith=furnace_everlit2; toMake=woodPlank; 
  
  
-[ItemType]  name=骨剑;
+[ItemType]  name=Bone Sword;
 texture=items_weapons; 
 ID=sword_bone; pR=pBone; pB=pBoneDark;
-description=尖锐的骨制剑.;
+description=Sharpened bone blade.;
 journalID=journal_sword;
 weight=2; volume=5; value=0;
 power=5;
@@ -703,10 +703,10 @@ combineWith=furnace_everlit2; toMake=bones1;
 [ItemEffect]
 ID=sword_bone; actorValue=skill_Ruin; magnitude=1; duration=-1;
  
-[ItemType]  name=骨匕首;
+[ItemType]  name=Bone Dirk;
 texture=items_weapons; 
 ID=dagger_bone; pR=pBone; pB=pBoneDark;
-description=有着锋利骨刃的匕首.;
+description=Dagger with a suprisingly sharp bone edge.;
 journalID=journal_dagger;
 weight=2; volume=1; value=0;
 power=4;
@@ -720,10 +720,10 @@ combineWith=furnace_everlit2; toMake=bones1;
 [ItemEffect]
 ID=dagger_bone; actorValue=skill_Ruin; magnitude=1; duration=-1;
  
-[ItemType]  name=骨锤矛;
+[ItemType]  name=Bone Mace;
 texture=items_weapons; 
 ID=hammer_bone; pR=pBone; pB=pBoneDark;
-description=由骨盆处的骨头制成的武器.;
+description=Flanged mace constructed from pelvic bones.;
 journalID=journal_hammer;
 weight=6; volume=5; value=0;
 power=6;
@@ -737,10 +737,10 @@ combineWith=furnace_everlit2; toMake=bones1;
 [ItemEffect]
 ID=hammer_bone; actorValue=skill_Ruin; magnitude=1; duration=-1;
 
-[ItemType]  name=骨斧;
+[ItemType]  name=Bone Hatchet;
 texture=items_weapons; 
 ID=axe_bone; pR=pBone; pB=pBoneDark;
-description=原始,但有效.;
+description=Primitive, but effective.;
 journalID=journal_axe;
 weight=3; volume=5; value=0;
 power=6;
@@ -754,10 +754,10 @@ combineWith=furnace_everlit2; toMake=bones1;
 [ItemEffect]
 ID=axe_bone; actorValue=skill_Ruin; magnitude=1; duration=-1;
  
-[ItemType]  name=骨盾;
+[ItemType]  name=Bone Shield;
 texture=items_weapons; 
 ID=shield_bone; pR=pBone; pB=pBoneDark;
-description=用骨头加固的木盾.;
+description=Wood shield reinforced with bones.;
 journalID=journal_shield;
 sprite=356; spriteWhenHeld=388; itemCategory=weapon; element=shield;
 weight=5; volume=5; value=0;
@@ -772,10 +772,10 @@ ID=shield_bone; actorValue=PhysEva; magnitude=10; duration=-1;
 [ItemEffect]
 ID=shield_bone; actorValue=skill_Ruin; magnitude=1; duration=-1;
 
-[ItemType]  name=骨链枷;
+[ItemType]  name=Bone Flail;
 texture=items_weapons; 
 ID=flail_bone; pR=pBone; pB=pBoneDark;
-description=一种不寻常的由磨尖的骨头构制成的武器.;
+description=An unusual construction of sharpened bones.;
 journalID=journal_flail;
 weight=3; volume=5; value=0;
 power=4;
@@ -788,10 +788,10 @@ combineWith=furnace_everlit2; toMake=bones1;
 [ItemEffect]
 ID=flail_bone; actorValue=skill_Ruin; magnitude=1; duration=-1;
  
-[ItemType]  name=骨鞭;
+[ItemType]  name=Bone Whip;
 texture=items_weapons; 
 ID=whip_bone; pR=pBone; pB=pBoneDark;
-description=骨头尖端的鞭子,不擅长对付护甲.;
+description=Bone-tipped whip. Weak against armor.;
 journalID=journal_whip;
 weight=3; volume=3; value=0;
 power=3;
@@ -804,10 +804,10 @@ combineWith=furnace_everlit2; toMake=bones1;
 [ItemEffect]
 ID=whip_bone; actorValue=skill_Ruin; magnitude=1; duration=-1;
  
-[ItemType]  name=骨弓;
+[ItemType]  name=Bone Bow;
 texture=items_weapons; 
 ID=bow_bone; pR=pBone; pB=pBoneDark;
-description=木骨复合弓.需要双手使用.;
+description=Composite bow of wood & bone. Requires both hands to use.;
 journalID=journal_bow;
 sprite=359; spriteWhenHeld=391; itemCategory=weapon; element=bow; special=twoHanded;
 weight=1; volume=5; value=0;
@@ -820,10 +820,10 @@ combineWith=furnace_everlit2; toMake=bones1;
 [ItemEffect]
 ID=bow_bone; actorValue=skill_Ruin; magnitude=1; duration=-1;
  
-[ItemType]  name=骨弩;
+[ItemType]  name=Bone Crossbow;
 texture=items_weapons; 
 ID=xbow_bone; pR=pBone; pB=pBoneDark;
-description=木骨复合弩.; 
+description=Crossbow of wood and bone.; 
 journalID=journal_xbow;
 sprite=360; spriteWhenHeld=392; itemCategory=weapon; element=aim;
 weight=2; volume=5; value=0;
@@ -838,10 +838,10 @@ ID=xbow_bone; element=actionUsed; newID=xbow_bone_unloaded;
 [ItemEffect]
 ID=xbow_bone; actorValue=skill_Ruin; magnitude=1; duration=-1;
 
-[ItemType]  name=骨弩(未装载);
+[ItemType]  name=Bone Crossbow (Unloaded);
 texture=items_weapons; 
 ID=xbow_bone_unloaded; pR=pBone; pB=pBoneDark;
-description=木骨复合弩--需要重新装载.; 
+description=Crossbow of wood and bone -- needs to be reloaded.; 
 journalID=journal_xbow;
 sprite=361; spriteWhenHeld=393; itemCategory=weapon; 
 weight=2; volume=5; value=0;
@@ -856,10 +856,10 @@ ID=xbow_bone_unloaded; element=actionUsed; element=reload; newID=xbow_bone;
 [ItemEffect]
 ID=xbow_bone_unloaded; actorValue=skill_Ruin; magnitude=1; duration=-1;
  
-[ItemType]  name=骨矛;
+[ItemType]  name=Bone Spear;
 texture=items_weapons; 
 ID=spear_bone; pR=pBone; pB=pBoneDark;
-description=用胫骨尖制成的长矛.;
+description=Spear with a tibia tip.;
 journalID=journal_spear;
 weight=4; volume=10; value=0;
 power=4;
@@ -874,10 +874,10 @@ combineWith=furnace_everlit2; toMake=bones1;
 [ItemEffect]
 ID=spear_bone; actorValue=skill_Ruin; magnitude=1; duration=-1;
  
-[ItemType]  name=骨指虎;
+[ItemType]  name=Bone Knuckle;
 texture=items_weapons; 
 ID=knuckle_bone; pR=pBone; pB=pBoneDark;
-description=用真正的指关节制成的.;
+description=Knuckles made of actual knuckles.;
 journalID=journal_knuckle;
 weight=3; volume=1; value=0;
 power=3;
@@ -894,10 +894,10 @@ ID=knuckle_bone; actorValue=skill_Ruin; magnitude=1; duration=-1;
   
 
  
-[ItemType]  name=铁剑;
+[ItemType]  name=Iron Sword;
 texture=items_weapons; 
 ID=sword_iron; pR=pIron; pB=pIronHilt;
-description=一把双刃剑.;
+description=A double-edged blade.;
 journalID=journal_sword;
 weight=2; volume=5; value=25;
 power=5;
@@ -909,10 +909,10 @@ combineWith=furnace2_lit; toMake=iron_chunk;
 combineWith=furnace_everlit1; toMake=iron_chunk; 
 combineWith=furnace_everlit2; toMake=iron_chunk; 
  
-[ItemType]  name=铁匕首;
+[ItemType]  name=Iron Dagger;
 texture=items_weapons; 
 ID=dagger_iron; pR=pIron; pB=pIronHilt;
-description=用来刺的短刀片,命中率很高.;
+description=A short blade designed for stabbing. Very accurate.;
 journalID=journal_dagger;
 weight=2; volume=1; value=25;
 power=3;
@@ -924,10 +924,10 @@ combineWith=furnace2_lit; toMake=iron_chunk;
 combineWith=furnace_everlit1; toMake=iron_chunk; 
 combineWith=furnace_everlit2; toMake=iron_chunk; 
  
-[ItemType]  name=铁锤;
+[ItemType]  name=Iron Hammer;
 texture=items_weapons; 
 ID=hammer_iron; pR=pIron; pB=pIronHilt;
-description=一种重锤,像所有的锤子一样,<n>适合猛击盔甲,忽视 50%<icon=PhysDef> ,<n>但是攻击容易丢失.;
+description=A weighty hammer suitable for bashing in armor. Like all hammers, misses easily, but ignores 50%<icon=PhysDef>.;
 journalID=journal_hammer;
 weight=6; volume=5; value=25;
 power=6;
@@ -939,10 +939,10 @@ combineWith=furnace2_lit; toMake=iron_chunk;
 combineWith=furnace_everlit1; toMake=iron_chunk; 
 combineWith=furnace_everlit2; toMake=iron_chunk; 
 
-[ItemType]  name=铁斧;
+[ItemType]  name=Iron Axe;
 texture=items_weapons; 
 ID=axe_iron; pR=pIron; pB=pIronHilt;
-description=适合切割敌人或者木头. 伤害较高但是命中率低.;
+description=Fit for carving enemies or wood. Highly damaging but less accurate.;
 journalID=journal_axe;
 weight=3; volume=5; value=25;
 power=6;
@@ -954,10 +954,10 @@ combineWith=furnace2_lit; toMake=iron_chunk;
 combineWith=furnace_everlit1; toMake=iron_chunk; 
 combineWith=furnace_everlit2; toMake=iron_chunk; 
  
-[ItemType]  name=铁盾;
+[ItemType]  name=Iron Shield;
 texture=items_weapons; 
 ID=shield_iron; pR=pIron; pB=pIronHilt;
-description=用铁熔铸的盾牌.;
+description=Heater shield reinforced with iron.;
 journalID=journal_shield;
 sprite=179; spriteWhenHeld=211; itemCategory=weapon; element=shield;
 weight=5; volume=5; value=25;
@@ -970,10 +970,10 @@ combineWith=furnace_everlit2; toMake=iron_chunk;
 [ItemEffect]  
 ID=shield_iron; actorValue=PhysEva; magnitude=12; duration=-1;
 
-[ItemType]  name=铁链枷;
+[ItemType]  name=Iron Flail;
 texture=items_weapons; 
 ID=flail_iron; pR=pIron; pB=pIronHilt;
-description=一种可以从不寻常的角度<n>甚至对角线攻击的武器.;
+description=A weapon designed to attack from unusual angles - even diagonally.;
 journalID=journal_flail;
 weight=3; volume=5; value=25;
 power=4;
@@ -984,10 +984,10 @@ combineWith=furnace2_lit; toMake=iron_chunk;
 combineWith=furnace_everlit1; toMake=iron_chunk; 
 combineWith=furnace_everlit2; toMake=iron_chunk; 
  
-[ItemType]  name=铁鞭;
+[ItemType]  name=Iron Whip;
 texture=items_weapons; 
 ID=whip_iron; pR=pIron; pB=pIronHilt;
-description=铁制尖端的鞭子. <n>对盔甲效果很弱但是攻击范围大.;
+description=Iron-tipped whip. Weak against armor, but longer range.;
 journalID=journal_whip;
 weight=3; volume=3; value=25;
 power=3;
@@ -998,10 +998,10 @@ combineWith=furnace2_lit; toMake=iron_chunk;
 combineWith=furnace_everlit1; toMake=iron_chunk; 
 combineWith=furnace_everlit2; toMake=iron_chunk; 
  
-[ItemType]  name=铁弓;
+[ItemType]  name=Iron Bow;
 texture=items_weapons; 
 ID=bow_iron; pR=pIron; pB=pIronHilt;
-description=制作不错的弓. 需要双手使用;
+description=Well-constructed bow. Requires both hands to use.;
 journalID=journal_bow;
 sprite=182; spriteWhenHeld=214; itemCategory=weapon; element=bow; special=twoHanded;
 weight=1; volume=5; value=25;
@@ -1012,10 +1012,10 @@ combineWith=furnace2_lit; toMake=iron_chunk;
 combineWith=furnace_everlit1; toMake=iron_chunk; 
 combineWith=furnace_everlit2; toMake=iron_chunk; 
  
-[ItemType]  name=铁弩;
+[ItemType]  name=Iron Crossbow;
 texture=items_weapons; 
 ID=xbow_iron; pR=pIron; pB=pIronHilt;
-description=具有拉杆装弹装置的强力弩箭; 
+description=A powerful crossbow with a pull lever reload mechanism.; 
 journalID=journal_xbow;
 sprite=183; spriteWhenHeld=215; itemCategory=weapon; element=aim;
 weight=2; volume=5; value=25;
@@ -1028,10 +1028,10 @@ combineWith=furnace_everlit2; toMake=iron_chunk;
 [ItemReaction] 
 ID=xbow_iron; element=actionUsed; newID=xbow_iron_unloaded;
 
-[ItemType]  name=铁弩(未装载);
+[ItemType]  name=Iron Crossbow (Unloaded);
 texture=items_weapons; 
 ID=xbow_iron_unloaded; pR=pIron; pB=pIronHilt;
-description=强力弩箭 -- 需要重新装载.; 
+description=A powerful crossbow -- needs to be reloaded.; 
 journalID=journal_xbow;
 sprite=184; spriteWhenHeld=216; itemCategory=weapon; 
 weight=2; volume=5; value=25;
@@ -1044,10 +1044,10 @@ combineWith=furnace_everlit2; toMake=iron_chunk;
 [ItemReaction] 
 ID=xbow_iron_unloaded; element=actionUsed; element=reload; newID=xbow_iron;
  
-[ItemType]  name=铁矛;
+[ItemType]  name=Iron Spear;
 texture=items_weapons; 
 ID=spear_iron; pR=pIron; pB=pIronHilt;
-description=有着金属头的矛.;
+description=Spear with socketed metal head.;
 journalID=journal_spear;
 weight=4; volume=10; value=25;
 power=4;
@@ -1060,10 +1060,10 @@ combineWith=furnace2_lit; toMake=iron_chunk;
 combineWith=furnace_everlit1; toMake=iron_chunk; 
 combineWith=furnace_everlit2; toMake=iron_chunk; 
  
-[ItemType]  name=铁指虎;
+[ItemType]  name=Iron Knuckle;
 texture=items_weapons; 
 ID=knuckle_iron; pR=pIron; pB=pIronHilt;
-description=拳头上的金属.;
+description=Metal that covers the fist when punching.;
 journalID=journal_knuckle;
 weight=3; volume=1; value=25;
 power=3;
@@ -1074,10 +1074,10 @@ combineWith=furnace2_lit; toMake=iron_chunk;
 combineWith=furnace_everlit1; toMake=iron_chunk; 
 combineWith=furnace_everlit2; toMake=iron_chunk; 
  
-[ItemType]  name=铁刺剑;
+[ItemType]  name=Iron Rapier;
 texture=items_weapons; 
 ID=rapier_iron; pR=pIron; pB=pIronHilt;
-description=一把轻量刺剑.;
+description=A light thrusting sword.;
 journalID=journal_rapier;
 weight=2; volume=5; value=25;
 power=4;
@@ -1091,10 +1091,10 @@ combineWith=furnace_everlit2; toMake=iron_chunk;
 [ItemEffect]  
 ID=rapier_iron; actorValue=PhysEva; magnitude=3; duration=-1;
  
-[ItemType]  name=铁大剑;
+[ItemType]  name=Iron Greatsword;
 texture=items_weapons; 
 ID=greatsword_iron; pR=pIron; pB=pIronHilt;
-description=与长柄武器相匹配的剑. <n>需要双手才能挥舞.;
+description=Sword made to match any polearm. Requires both hands to wield.;
 journalID=journal_gsword;
 sprite=188; spriteWhenHeld=220; itemCategory=weapon;  special=enhanceSlots_2;
 special=sprite2xWidth; special=twoHanded; element=sword;
@@ -1107,10 +1107,10 @@ combineWith=furnace_everlit1; toMake=iron_chunk;
 combineWith=furnace_everlit2; toMake=iron_chunk; 
  
 
-[ItemType]  name=钢剑;
+[ItemType]  name=Steel Sword;
 texture=items_weapons; 
 ID=sword_steel; pR=pSteel; pB=pSteelHilt;
-description=精良的剑.;
+description=A fine blade.;
 journalID=journal_sword;
 weight=2; volume=5; value=125;
 power=6;
@@ -1124,10 +1124,10 @@ combineWith=furnace_everlit2; toMake=steel_bar;
 [ItemReaction] 
 ID=sword_steel; element=windAnimate; action=sword_summon; newID=X;
  
-[ItemType]  name=钢匕首;
+[ItemType]  name=Steel Dagger;
 texture=items_weapons; 
 ID=dagger_steel; pR=pSteel; pB=pSteelHilt;
-description=坚固的钢制成的匕首.;
+description=A dirk of solid steel.;
 journalID=journal_dagger;
 weight=2; volume=1; value=125;
 power=4;
@@ -1139,10 +1139,10 @@ combineWith=furnace2_lit; toMake=steel_bar;
 combineWith=furnace_everlit1; toMake=steel_bar; 
 combineWith=furnace_everlit2; toMake=steel_bar; 
  
-[ItemType]  name=钢锤;
+[ItemType]  name=Steel Hammer;
 texture=items_weapons; 
 ID=hammer_steel; pR=pSteel; pB=pSteelHilt;
-description=坚固的锤子, 可以无视任何防御;
+description=Compact hammer that can pierce any defense.;
 journalID=journal_hammer;
 weight=6; volume=5; value=125;
 power=7;
@@ -1154,10 +1154,10 @@ combineWith=furnace2_lit; toMake=steel_bar;
 combineWith=furnace_everlit1; toMake=steel_bar; 
 combineWith=furnace_everlit2; toMake=steel_bar; 
 
-[ItemType]  name=钢斧;
+[ItemType]  name=Steel Axe;
 texture=items_weapons; 
 ID=axe_steel; pR=pSteel; pB=pSteelHilt;
-description=精心制作的战斗斧头.;
+description=Well-crafted battle axe.;
 journalID=journal_axe;
 weight=3; volume=5; value=125;
 power=7;
@@ -1169,10 +1169,10 @@ combineWith=furnace2_lit; toMake=steel_bar;
 combineWith=furnace_everlit1; toMake=steel_bar; 
 combineWith=furnace_everlit2; toMake=steel_bar; 
  
-[ItemType]  name=钢盾;
+[ItemType]  name=Steel Shield;
 texture=items_weapons; 
 ID=shield_steel; pR=pSteel; pB=pSteelHilt;
-description=坚固有效的盾牌.;
+description=Sturdy and effective shield.;
 journalID=journal_shield;
 sprite=179; spriteWhenHeld=211; itemCategory=weapon; element=shield;
 weight=5; volume=5; value=125;
@@ -1185,10 +1185,10 @@ combineWith=furnace_everlit2; toMake=steel_bar;
 [ItemEffect]  
 ID=shield_steel; actorValue=PhysEva; magnitude=14; duration=-1;
 
-[ItemType]  name=钢链枷;
+[ItemType]  name=Steel Flail;
 texture=items_weapons; 
 ID=flail_steel; pR=pSteel; pB=pSteelHilt;
-description=铁链上的带刺钢球.;
+description=Spiked steel ball on a chain.;
 journalID=journal_flail;
 weight=3; volume=5; value=125;
 power=5;
@@ -1199,10 +1199,10 @@ combineWith=furnace2_lit; toMake=steel_bar;
 combineWith=furnace_everlit1; toMake=steel_bar; 
 combineWith=furnace_everlit2; toMake=steel_bar; 
  
-[ItemType]  name=钢鞭;
+[ItemType]  name=Steel Whip;
 texture=items_weapons; 
 ID=whip_steel; pR=pSteel; pB=pSteelHilt;
-description=钢制尖端的鞭子, 对盔甲效果一般.;
+description=Steel-tipped whip. Weak against armor.;
 journalID=journal_whip;
 weight=3; volume=3; value=125;
 power=4;
@@ -1213,10 +1213,10 @@ combineWith=furnace2_lit; toMake=steel_bar;
 combineWith=furnace_everlit1; toMake=steel_bar; 
 combineWith=furnace_everlit2; toMake=steel_bar; 
  
-[ItemType]  name=钢弓;
+[ItemType]  name=Steel Bow;
 texture=items_weapons; 
 ID=bow_steel; pR=pSteel; pB=pSteelHilt;
-description=钢制反曲弓. 需求双手使用.;
+description=Recurve bow with steel grip. Requires both hands to use.;
 journalID=journal_bow;
 sprite=182; spriteWhenHeld=214; itemCategory=weapon; element=bow; special=twoHanded;
 weight=1; volume=5; value=125;
@@ -1227,10 +1227,10 @@ combineWith=furnace2_lit; toMake=steel_bar;
 combineWith=furnace_everlit1; toMake=steel_bar; 
 combineWith=furnace_everlit2; toMake=steel_bar; 
  
-[ItemType]  name=钢弩;
+[ItemType]  name=Steel Crossbow;
 texture=items_weapons; 
 ID=xbow_steel; pR=pSteel; pB=pSteelHilt;
-description=弩与钢箭的额外力量.; 
+description=Crossbow with steel prod for extra strength.; 
 journalID=journal_xbow;
 sprite=183; spriteWhenHeld=215; itemCategory=weapon; element=aim;
 weight=2; volume=5; value=125;
@@ -1243,7 +1243,7 @@ combineWith=furnace_everlit2; toMake=steel_bar;
 [ItemReaction] 
 ID=xbow_steel; element=actionUsed; newID=xbow_steel_unloaded;
 
-[ItemType]  name=钢弩(未装载);
+[ItemType]  name=Steel Crossbow (Unloaded);
 texture=items_weapons; 
 ID=xbow_steel_unloaded; pR=pSteel; pB=pSteelHilt;
 description=Crossbow with steel prod for extra strength. Needs to be reloaded.; 
@@ -1259,10 +1259,10 @@ combineWith=furnace_everlit2; toMake=steel_bar;
 [ItemReaction] 
 ID=xbow_steel_unloaded; element=actionUsed; element=reload; newID=xbow_steel;
  
-[ItemType]  name=钢矛;
+[ItemType]  name=Steel Spear;
 texture=items_weapons; 
 ID=spear_steel; pR=pSteel; pB=pSteelHilt;
-description=用极其锋利的矛刺穿敌人.;
+description=Stave with an exceedingly sharp spearhead.;
 journalID=journal_spear;
 weight=4; volume=10; value=125;
 power=5;
@@ -1275,10 +1275,10 @@ combineWith=furnace2_lit; toMake=steel_bar;
 combineWith=furnace_everlit1; toMake=steel_bar; 
 combineWith=furnace_everlit2; toMake=steel_bar; 
  
-[ItemType]  name=钢指虎;
+[ItemType]  name=Steel Knuckle;
 texture=items_weapons; 
 ID=knuckle_steel; pR=pSteel; pB=pSteelHilt;
-description=保护手部和汇集力量.;
+description=Protects hands and focuses force on steel points.;
 journalID=journal_knuckle;
 weight=3; volume=1; value=125;
 power=4;
@@ -1289,10 +1289,10 @@ combineWith=furnace2_lit; toMake=steel_bar;
 combineWith=furnace_everlit1; toMake=steel_bar; 
 combineWith=furnace_everlit2; toMake=steel_bar; 
  
-[ItemType]  name=钢刺剑;
+[ItemType]  name=Steel Rapier;
 texture=items_weapons; 
 ID=rapier_steel; pR=pSteel; pB=pSteelHilt;
-description=为速度和精准而设计.;
+description=Designed primarily with speed and accuracy in mind.;
 journalID=journal_rapier;
 weight=2; volume=5; value=125;
 power=5;
@@ -1306,10 +1306,10 @@ combineWith=furnace_everlit2; toMake=steel_bar;
 [ItemEffect]
 ID=rapier_steel; actorValue=PhysEva; magnitude=3; duration=-1;
  
-[ItemType]  name=钢大剑;
+[ItemType]  name=Steel Greatsword;
 texture=items_weapons; 
 ID=greatsword_steel; pR=pSteel; pB=pSteelHilt;
-description=比大多数人都高也更危险. <n>需要双手才能挥舞.;
+description=Taller and more dangerous than most men. Requires both hands to wield.;
 journalID=journal_gsword;
 sprite=188; spriteWhenHeld=220; itemCategory=weapon;  special=enhanceSlots_2;
 special=sprite2xWidth; special=twoHanded; element=sword;
@@ -1323,10 +1323,10 @@ combineWith=furnace_everlit2; toMake=steel_bar;
  
  
  
-[ItemType]  name=秘银剑;
+[ItemType]  name=Mythril Sword;
 texture=items_weapons; 
 ID=sword_mythril; pR=pMythril; pB=pMythrilHilt;
-description=剑刃比任何钢铁都锋利.;
+description=Blade sharper than any steel.;
 journalID=journal_sword;
 weight=2; volume=5; value=900;
 power=7;
@@ -1338,10 +1338,10 @@ combineWith=furnace2_lit; toMake=mythril_chunk;
 combineWith=furnace_everlit1; toMake=mythril_chunk; 
 combineWith=furnace_everlit2; toMake=mythril_chunk; 
  
-[ItemType]  name=秘银匕首;
+[ItemType]  name=Mythril Dagger;
 texture=items_weapons; 
 ID=dagger_mythril; pR=pMythril; pB=pMythrilHilt;
-description=由最好的金属制成.;
+description=A dirk of the finest metal.;
 journalID=journal_dagger;
 weight=1; volume=1; value=900;
 power=5;
@@ -1353,10 +1353,10 @@ combineWith=furnace2_lit; toMake=mythril_chunk;
 combineWith=furnace_everlit1; toMake=mythril_chunk; 
 combineWith=furnace_everlit2; toMake=mythril_chunk; 
  
-[ItemType]  name=秘银锤;
+[ItemType]  name=Mythril Hammer;
 texture=items_weapons; 
 ID=hammer_mythril; pR=pMythril; pB=pMythrilHilt;
-description=这是一柄轻盈有力的锤子;
+description=Hammer of magnificent lightness and strength.;
 journalID=journal_hammer;
 weight=5; volume=5; value=900;
 power=8;
@@ -1368,10 +1368,10 @@ combineWith=furnace2_lit; toMake=mythril_chunk;
 combineWith=furnace_everlit1; toMake=mythril_chunk; 
 combineWith=furnace_everlit2; toMake=mythril_chunk; 
 
-[ItemType]  name=秘银斧;
+[ItemType]  name=Mythril Axe;
 texture=items_weapons; 
 ID=axe_mythril; pR=pMythril; pB=pMythrilHilt;
-description=卓越的战斗用斧.;
+description=Superior battle axe.;
 journalID=journal_axe;
 weight=3; volume=5; value=900;
 power=8;
@@ -1383,10 +1383,10 @@ combineWith=furnace2_lit; toMake=mythril_chunk;
 combineWith=furnace_everlit1; toMake=mythril_chunk; 
 combineWith=furnace_everlit2; toMake=mythril_chunk; 
  
-[ItemType]  name=秘银盾牌;
+[ItemType]  name=Mythril Shield;
 texture=items_weapons; 
 ID=shield_mythril; pR=pMythril; pB=pMythrilHilt;
-description=接近完美防御的金属盾牌.;
+description=Nigh-impenetrable metal shield.;
 journalID=journal_shield;
 sprite=179; spriteWhenHeld=211; itemCategory=weapon; element=shield;
 weight=4; volume=5; value=900;
@@ -1402,7 +1402,7 @@ ID=shield_mythril; actorValue=PhysEva; magnitude=17; duration=-1;
 [ItemEffect]  
 ID=shield_mythril; actorValue=MagEva; magnitude=2; duration=-1;
 
-[ItemType]  name=秘银链枷;
+[ItemType]  name=Mythril Flail;
 texture=items_weapons; 
 ID=flail_mythril; pR=pMythril; pB=pMythrilHilt;
 description=Spiked mythril on a chain.;
@@ -1417,10 +1417,10 @@ combineWith=furnace2_lit; toMake=mythril_chunk;
 combineWith=furnace_everlit1; toMake=mythril_chunk; 
 combineWith=furnace_everlit2; toMake=mythril_chunk; 
  
-[ItemType]  name=秘银鞭;
+[ItemType]  name=Mythril Whip;
 texture=items_weapons; 
 ID=whip_mythril; pR=pMythril; pB=pMythrilHilt;
-description=秘银尖端的鞭子, 对盔甲效果一般.;
+description=Mythril-tipped whip. Weak against armor.;
 journalID=journal_whip;
 weight=1; volume=3; value=900;
 power=5;
@@ -1432,10 +1432,10 @@ combineWith=furnace2_lit; toMake=mythril_chunk;
 combineWith=furnace_everlit1; toMake=mythril_chunk; 
 combineWith=furnace_everlit2; toMake=mythril_chunk; 
  
-[ItemType]  name=秘银弓;
+[ItemType]  name=Mythril Bow;
 texture=items_weapons; 
 ID=bow_mythril; pR=pMythril; pB=pMythrilHilt;
-description=秘银反曲弓, 需要双手使用.;
+description=Recurve bow with mythril grip. Requires both hands to use.;
 journalID=journal_bow;
 sprite=182; spriteWhenHeld=214; itemCategory=weapon; element=bow; special=twoHanded;
 weight=1; volume=5; value=900;
@@ -1447,10 +1447,10 @@ combineWith=furnace2_lit; toMake=mythril_chunk;
 combineWith=furnace_everlit1; toMake=mythril_chunk; 
 combineWith=furnace_everlit2; toMake=mythril_chunk; 
  
-[ItemType]  name=秘银弩;
+[ItemType]  name=Mythril Crossbow;
 texture=items_weapons; 
 ID=xbow_mythril; pR=pMythril; pB=pMythrilHilt;
-description=闪亮的秘银弩.; 
+description=Crossbow of shining mythril.; 
 journalID=journal_xbow;
 sprite=183; spriteWhenHeld=215; itemCategory=weapon; element=aim;
 weight=1; volume=5; value=900;
@@ -1464,10 +1464,10 @@ combineWith=furnace_everlit2; toMake=mythril_chunk;
 [ItemReaction] 
 ID=xbow_mythril; element=actionUsed; newID=xbow_mythril_unloaded;
 
-[ItemType]  name=秘银弩(未装载);
+[ItemType]  name=Mythril Crossbow (Unloaded);
 texture=items_weapons; 
 ID=xbow_mythril_unloaded; pR=pMythril; pB=pMythrilHilt;
-description=闪亮的秘银弩. 需要重新装载.; 
+description=Crossbow of shining mythril. Needs to be reloaded.; 
 journalID=journal_xbow;
 sprite=184; spriteWhenHeld=216; itemCategory=weapon; 
 weight=1; volume=5; value=900;
@@ -1481,10 +1481,10 @@ combineWith=furnace_everlit2; toMake=mythril_chunk;
 [ItemReaction] 
 ID=xbow_mythril_unloaded; element=actionUsed; element=reload; newID=xbow_mythril;
  
-[ItemType]  name=秘银矛;
+[ItemType]  name=Mythril Spear;
 texture=items_weapons; 
 ID=spear_mythril; pR=pMythril; pB=pMythrilHilt;
-description=能刺穿任何低级金属的矛.;
+description=Spear that can pierce any lesser metal.;
 journalID=journal_spear;
 weight=3; volume=10; value=900;
 power=6;
@@ -1498,10 +1498,10 @@ combineWith=furnace2_lit; toMake=mythril_chunk;
 combineWith=furnace_everlit1; toMake=mythril_chunk; 
 combineWith=furnace_everlit2; toMake=mythril_chunk; 
  
-[ItemType]  name=秘银指虎;
+[ItemType]  name=Mythril Knuckle;
 texture=items_weapons; 
 ID=knuckle_mythril; pR=pMythril; pB=pMythrilHilt;
-description=最好的拳手.;
+description=The finest of fisticuffs.;
 journalID=journal_knuckle;
 weight=2; volume=1; value=900;
 power=5;
@@ -1513,10 +1513,10 @@ combineWith=furnace2_lit; toMake=mythril_chunk;
 combineWith=furnace_everlit1; toMake=mythril_chunk; 
 combineWith=furnace_everlit2; toMake=mythril_chunk; 
  
-[ItemType]  name=秘银刺剑;
+[ItemType]  name=Mythril Rapier;
 texture=items_weapons; 
 ID=rapier_mythril; pR=pMythril; pB=pMythrilHilt;
-description=铁匠能制作的最锋利的刃.;
+description=The finest blade a smith could make.;
 journalID=journal_rapier;
 weight=1; volume=5; value=900;
 power=6;
@@ -1530,10 +1530,10 @@ combineWith=furnace_everlit2; toMake=mythril_chunk;
 [ItemEffect]
 ID=rapier_mythril; actorValue=PhysEva; magnitude=3; duration=-1;
  
-[ItemType]  name=秘银大剑;
+[ItemType]  name=Mythril Greatsword;
 texture=items_weapons; 
 ID=greatsword_mythril; pR=pMythril; pB=pMythrilHilt;
-description=杰出之剑, 需要双手才能挥舞.;
+description=Sword of the elite. Requires both hands to wield.;
 journalID=journal_gsword;
 sprite=188; spriteWhenHeld=220; itemCategory=weapon;  special=enhanceSlots_2;
 special=sprite2xWidth; special=twoHanded; element=sword;
@@ -1548,10 +1548,10 @@ combineWith=furnace_everlit2; toMake=mythril_chunk;
  
  
  
-[ItemType]  name=镭射佩剑;
+[ItemType]  name=Laser Sabre;
 texture=items_weapons; 
 ID=sword_laser; pR=pLaser; pB=pLaserHilt;
-description=散发光芒的能量之剑.;
+description=Glowing blade of energy.;
 journalID=journal_sword;
 weight=1; volume=5; value=2500;
 power=8;
@@ -1565,10 +1565,10 @@ combineWith=furnace_everlit2; toMake=laser_chunk;
 [ItemLight]
 ID=sword_laser; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.2; flicker=0.03;
  
-[ItemType]  name=镭射剃刀;
+[ItemType]  name=Energy Shiv;
 texture=items_weapons; 
 ID=dagger_laser; pR=pLaser; pB=pLaserHilt;
-description=几乎没有重量的刀, 散发热量.;
+description=Almost weightless knife that glows warmly.;
 journalID=journal_dagger;
 weight=1; volume=1; value=2500;
 power=6;
@@ -1582,10 +1582,10 @@ combineWith=furnace_everlit2; toMake=laser_chunk;
 [ItemLight]
 ID=dagger_laser; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.15; flicker=0.03;
  
-[ItemType]  name=镭射锤;
+[ItemType]  name=Ray Hammer;
 texture=items_weapons; 
 ID=hammer_laser; pR=pLaser; pB=pLaserHilt;
-description=剑柄上的固体发光体.;
+description=Chunk of solid light on a haft.;
 journalID=journal_hammer;
 weight=3; volume=5; value=2500;
 power=9;
@@ -1599,10 +1599,10 @@ combineWith=furnace_everlit2; toMake=laser_chunk;
 [ItemLight]
 ID=hammer_laser; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.25; flicker=0.03;
 
-[ItemType]  name=镭射斧;
+[ItemType]  name=Laser Axe;
 texture=items_weapons; 
 ID=axe_laser; pR=pLaser; pB=pLaserHilt;
-description=奇异的弯曲而又尖锐的光.;
+description=Bizzare curved, sharp light.;
 journalID=journal_axe;
 weight=2; volume=5; value=2500;
 power=9;
@@ -1616,10 +1616,10 @@ combineWith=furnace_everlit2; toMake=laser_chunk;
 [ItemLight]
 ID=axe_laser; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.2; flicker=0.03;
  
-[ItemType]  name=镭射盾牌;
+[ItemType]  name=Laser Shield;
 texture=items_weapons; 
 ID=shield_laser; pR=pLaser; pB=pLaserHilt;
-description=覆盖有御魔光芒的盾牌.;
+description=Shield covered in magic-repelling light.;
 journalID=journal_shield;
 sprite=243; spriteWhenHeld=275; itemCategory=weapon; element=shield;
 weight=4; volume=5; value=2500;
@@ -1636,10 +1636,10 @@ ID=shield_laser; actorValue=MagEva; magnitude=10; duration=-1;
 [ItemLight]
 ID=shield_laser; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.25; flicker=0.03;
 
-[ItemType]  name=镭射链枷;
+[ItemType]  name=Laser Flail;
 texture=items_weapons; 
 ID=flail_laser; pR=pLaser; pB=pLaserHilt;
-description=被炽热能量包围的链球.;
+description=Ball and chain wreathed in blazing energy.;
 journalID=journal_flail;
 weight=3; volume=5; value=2500;
 power=7;
@@ -1652,10 +1652,10 @@ combineWith=furnace_everlit2; toMake=laser_chunk;
 [ItemLight]
 ID=flail_laser; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.2; flicker=0.03;
  
-[ItemType]  name=镭射鞭;
+[ItemType]  name=Laser Whip;
 texture=items_weapons; 
 ID=whip_laser; pR=pLaser; pB=pLaserHilt;
-description=尖锐火绳.;
+description=Cord of sharp fire.;
 journalID=journal_whip;
 weight=1; volume=3; value=2500;
 power=6;
@@ -1668,10 +1668,10 @@ combineWith=furnace_everlit2; toMake=laser_chunk;
 [ItemLight]
 ID=whip_laser; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.2; flicker=0.03;
  
-[ItemType]  name=镭射弓;
+[ItemType]  name=Laser Bow;
 texture=items_weapons; 
 ID=bow_laser; pR=pLaser; pB=pLaserHilt;
-description=为每一支箭披上火焰外衣. 需要双手使用.;
+description=Coats each arrow in fire. Requires both hands to use.;
 journalID=journal_bow;
 sprite=246; spriteWhenHeld=278; itemCategory=weapon; element=bow; special=twoHanded;
 weight=1; volume=5; value=2500;
@@ -1684,10 +1684,10 @@ combineWith=furnace_everlit2; toMake=laser_chunk;
 [ItemLight]
 ID=bow_laser; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.1; flicker=0.03;
  
-[ItemType]  name=镭射弩;
+[ItemType]  name=Laser Crossbow;
 texture=items_weapons; 
 ID=xbow_laser; pR=pLaser; pB=pLaserHilt;
-description=用火焰点燃每个弩箭.; 
+description=Ignites each bolt with flame.; 
 journalID=journal_xbow;
 sprite=247; spriteWhenHeld=279; itemCategory=weapon; element=aim;
 weight=2; volume=5; value=2500;
@@ -1702,10 +1702,10 @@ ID=xbow_laser; element=actionUsed; newID=xbow_laser_unloaded;
 [ItemLight]
 ID=xbow_laser; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.2; flicker=0.03;
 
-[ItemType]  name=镭射弩(未装载);
+[ItemType]  name=Laser Crossbow (Unloaded);
 texture=items_weapons; 
 ID=xbow_laser_unloaded; pR=pLaser; pB=pLaserHilt;
-description=用火焰点燃每个弩箭. <n>需要重新装载.; 
+description=Ignites each bolt with flame. Needs to be reloaded.; 
 journalID=journal_xbow;
 sprite=248; spriteWhenHeld=280; itemCategory=weapon; 
 weight=2; volume=5; value=2500;
@@ -1718,10 +1718,10 @@ combineWith=furnace_everlit2; toMake=laser_chunk;
 [ItemReaction] 
 ID=xbow_laser_unloaded; element=actionUsed; element=reload; newID=xbow_laser;
  
-[ItemType]  name=镭射矛;
+[ItemType]  name=Laser Spear;
 texture=items_weapons; 
 ID=spear_laser; pR=pLaser; pB=pLaserHilt;
-description=燃烧的尖端.;
+description=Staff with a burning, sharp tip.;
 journalID=journal_spear;
 weight=3; volume=5; value=2500;
 power=7;
@@ -1736,10 +1736,10 @@ combineWith=furnace_everlit2; toMake=laser_chunk;
 [ItemLight]
 ID=spear_laser; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.2; flicker=0.03;
  
-[ItemType]  name=镭射指虎;
+[ItemType]  name=Laser Knuckle;
 texture=items_weapons; 
 ID=knuckle_laser; pR=pLaser; pB=pLaserHilt;
-description=手部会感觉到不舒服的温度.;
+description=Keeps the hands uncomfortably warm.;
 journalID=journal_knuckle;
 weight=1; volume=1; value=2500;
 power=6;
@@ -1752,10 +1752,10 @@ combineWith=furnace_everlit2; toMake=laser_chunk;
 [ItemLight]
 ID=knuckle_laser; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.15; flicker=0.03;
  
-[ItemType]  name=镭射刺剑;
+[ItemType]  name=Laser Rapier;
 texture=items_weapons; 
 ID=rapier_laser; pR=pLaser; pB=pLaserHilt;
-description=最薄的剑刃.;
+description=The thinnest possible blade.;
 journalID=journal_rapier;
 weight=1; volume=5; value=2500;
 power=7;
@@ -1771,10 +1771,10 @@ ID=rapier_laser; actorValue=PhysEva; magnitude=3; duration=-1;
 [ItemLight]
 ID=rapier_laser; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.2; flicker=0.03;
  
-[ItemType]  name=镭射大剑;
+[ItemType]  name=Laser Greatsword;
 texture=items_weapons; 
 ID=greatsword_laser; pR=pLaser; pB=pLaserHilt;
-description=轻松地穿过敌人的队伍, <n>需要双手使用.;
+description=Cuts through enemy ranks with ease. Requires both hands to wield.;
 journalID=journal_gsword;
 sprite=252; spriteWhenHeld=284; itemCategory=weapon;  special=enhanceSlots_2;
 special=sprite2xWidth; special=twoHanded; element=sword;
@@ -1789,10 +1789,10 @@ combineWith=furnace_everlit2; toMake=laser_chunk;
 ID=greatsword_laser; red=1; blue=0.3; green=0.5; alpha=0.5; size=0.2; flicker=0.03;
 
 
-[ItemType]  name=冻伤;
+[ItemType]  name=Frostbite;
 texture=items_weapons; 
 ID=sword_ironice; pR=pIronice; pB=pIroniceHilt;
-description=用坚硬寒铁的寒铁冰雕刻的剑.;
+description=Sword carved from hard, cold Ironice.;
 journalID=journal_sword;
 weight=4; volume=5; value=4000;
 power=9;
@@ -1804,10 +1804,10 @@ combineWith=furnace2_lit; toMake=ironice_chunk;
 combineWith=furnace_everlit1; toMake=ironice_chunk; 
 combineWith=furnace_everlit2; toMake=ironice_chunk; 
  
-[ItemType]  name=寒颤;
+[ItemType]  name=Shiver;
 texture=items_weapons; 
 ID=dagger_ironice; pR=pIronice; pB=pIroniceHilt;
-description=能留下深深的冻伤伤口的匕首.;
+description=Dagger that leaves deep, frostbitten wounds.;
 journalID=journal_dagger;
 weight=3; volume=1; value=4000;
 power=7;
@@ -1819,10 +1819,10 @@ combineWith=furnace2_lit; toMake=ironice_chunk;
 combineWith=furnace_everlit1; toMake=ironice_chunk; 
 combineWith=furnace_everlit2; toMake=ironice_chunk; 
  
-[ItemType]  name=雪崩;
+[ItemType]  name=Avalanche;
 texture=items_weapons; 
 ID=hammer_ironice; pR=pIronice; pB=pIroniceHilt;
-description=每一次挥舞犹如山崩.;
+description=Hammer whose every swing feels like the rumbling of a mountain.;
 journalID=journal_hammer;
 weight=9; volume=5; value=4000;
 power=10;
@@ -1834,10 +1834,10 @@ combineWith=furnace2_lit; toMake=ironice_chunk;
 combineWith=furnace_everlit1; toMake=ironice_chunk; 
 combineWith=furnace_everlit2; toMake=ironice_chunk; 
 
-[ItemType]  name=白霜;
+[ItemType]  name=Rime;
 texture=items_weapons; 
 ID=axe_ironice; pR=pIronice; pB=pIroniceHilt;
-description=由寒铁冰制作的卓越的斧头.;
+description=Ironice crafted into a wicked axe-like shape.;
 journalID=journal_axe;
 weight=7; volume=5; value=4000;
 power=10;
@@ -1849,10 +1849,10 @@ combineWith=furnace2_lit; toMake=ironice_chunk;
 combineWith=furnace_everlit1; toMake=ironice_chunk; 
 combineWith=furnace_everlit2; toMake=ironice_chunk; 
  
-[ItemType]  name=冰川;
+[ItemType]  name=Glacier;
 texture=items_weapons; 
 ID=shield_ironice; pR=pIronice; pB=pIroniceHilt;
-description=极厚的寒铁冰盾牌.;
+description=Shield of exceedingly thick Ironice.;
 journalID=journal_shield;
 sprite=307; spriteWhenHeld=339; itemCategory=weapon; element=shield;
 weight=10; volume=5; value=4000;
@@ -1867,10 +1867,10 @@ ID=shield_ironice; actorValue=PhysEva; magnitude=23; duration=-1;
 [ItemEffect]  
 ID=shield_ironice; actorValue=MagEva; magnitude=2; duration=-1;
 
-[ItemType]  name=雪花;
+[ItemType]  name=Snowflake;
 texture=items_weapons; 
 ID=flail_ironice; pR=pIronice; pB=pIroniceHilt;
-description=散发着寒意的冰冷链枷.;
+description=Icy flail that exudes cold.;
 journalID=journal_flail;
 sprite=308; spriteWhenHeld=340; itemCategory=weapon; element=flail;
 weight=4; volume=5; value=4000;
@@ -1881,10 +1881,10 @@ combineWith=furnace2_lit; toMake=ironice_chunk;
 combineWith=furnace_everlit1; toMake=ironice_chunk; 
 combineWith=furnace_everlit2; toMake=ironice_chunk; 
  
-[ItemType]  name=风寒;
+[ItemType]  name=Chill Whip;
 texture=items_weapons; 
 ID=whip_ironice; pR=pIronice; pB=pIroniceHilt;
-description=鞭子的每一个动作都带着一股寒气.;
+description=A draft of cold follows this whip's every motion.;
 journalID=journal_whip;
 sprite=309; spriteWhenHeld=341; itemCategory=weapon; element=flail;
 weight=3; volume=3; value=4000;
@@ -1895,10 +1895,10 @@ combineWith=furnace2_lit; toMake=ironice_chunk;
 combineWith=furnace_everlit1; toMake=ironice_chunk; 
 combineWith=furnace_everlit2; toMake=ironice_chunk; 
  
-[ItemType]  name=暴雪;
+[ItemType]  name=Blizzard;
 texture=items_weapons; 
 ID=bow_ironice; pR=pIronice; pB=pIroniceHilt;
-description=比名字更快射出的一阵冰风雪. 需要双手使用.;
+description=Bow that blasts ice faster than its namesake. Requires both hands to use.;
 journalID=journal_bow;
 sprite=310; spriteWhenHeld=342; itemCategory=weapon; element=bow; special=twoHanded;
 weight=2; volume=5; value=4000;
@@ -1909,10 +1909,10 @@ combineWith=furnace2_lit; toMake=ironice_chunk;
 combineWith=furnace_everlit1; toMake=ironice_chunk; 
 combineWith=furnace_everlit2; toMake=ironice_chunk; 
  
-[ItemType]  name=冰雹;
+[ItemType]  name=Hail;
 texture=items_weapons; 
 ID=xbow_ironice; pR=pIronice; pB=pIroniceHilt;
-description=发射极具破坏力的寒铁冰箭.; 
+description=Shoots devastating bolts of Ironice.; 
 journalID=journal_xbow;
 sprite=311; spriteWhenHeld=343; itemCategory=weapon; element=aim;
 weight=3; volume=5; value=4000;
@@ -1925,10 +1925,10 @@ combineWith=furnace_everlit2; toMake=ironice_chunk;
 [ItemReaction] 
 ID=xbow_ironice; element=actionUsed; newID=xbow_ironice_unloaded;
 
-[ItemType]  name=冰雹(未装载);
+[ItemType]  name=Hail (Unloaded);
 texture=items_weapons; 
 ID=xbow_ironice_unloaded; pR=pIronice; pB=pIroniceHilt;
-description=发射极具破坏力的寒铁冰箭. 需要重新装载.; 
+description=Shoots devastating bolts of Ironice. Needs to be reloaded.; 
 journalID=journal_xbow;
 sprite=312; spriteWhenHeld=344; itemCategory=weapon; 
 weight=3; volume=5; value=4000;
@@ -1941,10 +1941,10 @@ combineWith=furnace_everlit2; toMake=ironice_chunk;
 [ItemReaction] 
 ID=xbow_ironice_unloaded; element=actionUsed; element=reload; newID=xbow_ironice;
  
-[ItemType]  name=寒芒;
+[ItemType]  name=Ice Spike;
 texture=items_weapons; 
 ID=spear_ironice; pR=pIronice; pB=pIroniceHilt;
-description=有着宽而尖的寒铁冰尖端的矛.;
+description=Spear with a broad and sharp head of Ironice.;
 journalID=journal_spear;
 weight=5; volume=10; value=4000;
 power=8;
@@ -1957,10 +1957,10 @@ combineWith=furnace2_lit; toMake=ironice_chunk;
 combineWith=furnace_everlit1; toMake=ironice_chunk; 
 combineWith=furnace_everlit2; toMake=ironice_chunk; 
  
-[ItemType]  name=阵雪;
+[ItemType]  name=Flurry;
 texture=items_weapons; 
 ID=knuckle_ironice; pR=pIronice; pB=pIroniceHilt;
-description=用寒冷击打敌人的指虎.;
+description=Knuckles that pummel the enemy with cold.;
 journalID=journal_knuckle;
 weight=4; volume=1; value=4000;
 power=7;
@@ -1971,10 +1971,10 @@ combineWith=furnace2_lit; toMake=ironice_chunk;
 combineWith=furnace_everlit1; toMake=ironice_chunk; 
 combineWith=furnace_everlit2; toMake=ironice_chunk; 
  
-[ItemType]  name=冰锥;
+[ItemType]  name=Icicle;
 texture=items_weapons; 
 ID=rapier_ironice; pR=pIronice; pB=pIroniceHilt;
-description=寒铁冰能做出的最细的剑.;
+description=A rapier as thin as Ironice can possibly make.;
 journalID=journal_rapier;
 weight=3; volume=5; value=4000;
 power=8;
@@ -1988,10 +1988,10 @@ combineWith=furnace_everlit2; toMake=ironice_chunk;
 [ItemEffect]
 ID=rapier_ironice; actorValue=PhysEva; magnitude=3; duration=-1;
  
-[ItemType]  name=积雪;
+[ItemType]  name=Aufeis;
 texture=items_weapons; 
 ID=greatsword_ironice; pR=pIronice; pB=pIroniceHilt;
-description=大剑形态的寒冬之怒. <n>需要双手才能挥舞.;
+description=Winter's wrath in greatsword form. Requires both hands to wield.;
 journalID=journal_gsword;
 sprite=316; spriteWhenHeld=348; itemCategory=weapon;  special=enhanceSlots_2;
 special=sprite2xWidth; special=twoHanded; element=sword;
@@ -2004,10 +2004,10 @@ combineWith=furnace_everlit1; toMake=ironice_chunk;
 combineWith=furnace_everlit2; toMake=ironice_chunk; 
  
  
-[ItemType]  name=歌咏之剑;
+[ItemType]  name=Singing Sword;
 texture=items_weapons; 
 ID=sword_wind; pR=pWhistle; pB=pWhistleHilt;
-description=挥舞时发出诡异的歌声的剑.;
+description=Sword that sings eerily when swung.;
 journalID=journal_sword;
 weight=2; volume=5; value=1800;
 power=8;
@@ -2019,10 +2019,10 @@ combineWith=furnace2_lit; toMake=whistle_chunk;
 combineWith=furnace_everlit1; toMake=whistle_chunk; 
 combineWith=furnace_everlit2; toMake=whistle_chunk; 
  
-[ItemType]  name=调谐之匕;
+[ItemType]  name=Tuning Knife;
 texture=items_weapons; 
 ID=dagger_wind; pR=pWhistle; pB=pWhistleHilt;
-description=击中时, 这把刀静静地嗡嗡作响.;
+description=When struck, this knife hums quietly.;
 journalID=journal_dagger;
 weight=2; volume=1; value=1800;
 power=6;
@@ -2034,10 +2034,10 @@ combineWith=furnace2_lit; toMake=whistle_chunk;
 combineWith=furnace_everlit1; toMake=whistle_chunk; 
 combineWith=furnace_everlit2; toMake=whistle_chunk; 
  
-[ItemType]  name=鸣钟之锤;
+[ItemType]  name=Chime Hammer;
 texture=items_weapons; 
 ID=hammer_wind; pR=pWhistle; pB=pWhistleHilt;
-description=在任何表面都能发出响亮的声响.;
+description=Rings out loudly against any surface.;
 journalID=journal_hammer;
 weight=7; volume=5; value=1800;
 power=9;
@@ -2049,10 +2049,10 @@ combineWith=furnace2_lit; toMake=whistle_chunk;
 combineWith=furnace_everlit1; toMake=whistle_chunk; 
 combineWith=furnace_everlit2; toMake=whistle_chunk; 
 
-[ItemType]  name=啸鸣之斧;
+[ItemType]  name=Howling Axe;
 texture=items_weapons; 
 ID=axe_wind; pR=pWhistle; pB=pWhistleHilt;
-description=有力的强风伴随着这把斧头进入战斗.;
+description=Forceful gusts of wind accompany this axe into battle.;
 journalID=journal_axe;
 weight=3; volume=5; value=1800;
 power=9;
@@ -2064,10 +2064,10 @@ combineWith=furnace2_lit; toMake=whistle_chunk;
 combineWith=furnace_everlit1; toMake=whistle_chunk; 
 combineWith=furnace_everlit2; toMake=whistle_chunk; 
  
-[ItemType]  name=回响之盾;
+[ItemType]  name=Reverb Shield;
 texture=items_weapons; 
 ID=shield_wind; pR=pWhistle; pB=pWhistleHilt;
-description=似乎能通过振动抵御武器攻击.;
+description=Seems to repel weapons with its vibrations.;
 journalID=journal_shield;
 sprite=371; spriteWhenHeld=403; itemCategory=weapon; element=shield;
 weight=5; volume=5; value=1800;
@@ -2080,10 +2080,10 @@ combineWith=furnace_everlit2; toMake=whistle_chunk;
 [ItemEffect]  
 ID=shield_wind; actorValue=PhysEva; magnitude=21; duration=-1;
 
-[ItemType]  name=嚎哭之枷;
+[ItemType]  name=Wailing Flail;
 texture=items_weapons; 
 ID=flail_wind; pR=pWhistle; pB=pWhistleHilt;
-description=当挥舞过头顶时, 犹如头顶的旋风.;
+description=Sounds and feels like a cyclone when swung overhead.;
 journalID=journal_flail;
 weight=3; volume=5; value=1800;
 power=7;
@@ -2094,10 +2094,10 @@ combineWith=furnace2_lit; toMake=whistle_chunk;
 combineWith=furnace_everlit1; toMake=whistle_chunk; 
 combineWith=furnace_everlit2; toMake=whistle_chunk; 
  
-[ItemType]  name=鸣笛之鞭;
+[ItemType]  name=Whistling Whip;
 texture=items_weapons; 
 ID=whip_wind; pR=pWhistle; pB=pWhistleHilt;
-description=每次鞭打都会发出奇怪的哨声.;
+description=Lets out an odd whistle with every lash.;
 journalID=journal_whip;
 weight=3; volume=3; value=1800;
 power=6;
@@ -2108,10 +2108,10 @@ combineWith=furnace2_lit; toMake=whistle_chunk;
 combineWith=furnace_everlit1; toMake=whistle_chunk; 
 combineWith=furnace_everlit2; toMake=whistle_chunk; 
  
-[ItemType]  name=竖琴之弓;
+[ItemType]  name=Harp Longbow;
 texture=items_weapons; 
 ID=bow_wind; pR=pWhistle; pB=pWhistleHilt;
-description=它的弓弦响如指弹音乐. <n>获得额外的攻击距离.需要双手使用.;
+description=The thrum of its bowstring is like music. Grants extra range. Requires both hands to use.;
 journalID=journal_bow;
 sprite=374; spriteWhenHeld=406; itemCategory=weapon; element=bow; special=twoHanded;
 weight=1; volume=5; value=1800;
@@ -2122,10 +2122,10 @@ combineWith=furnace2_lit; toMake=whistle_chunk;
 combineWith=furnace_everlit1; toMake=whistle_chunk; 
 combineWith=furnace_everlit2; toMake=whistle_chunk; 
  
-[ItemType]  name=狂风之弩;
+[ItemType]  name=Gale Crossbow;
 texture=items_weapons; 
 ID=xbow_wind; pR=pWhistle; pB=pWhistleHilt;
-description=每一次射击都由狂风携带.;
+description=Each shot is carried by a powerful wind.;
 journalID=journal_xbow; 
 sprite=375; spriteWhenHeld=407; itemCategory=weapon; element=aim;
 weight=2; volume=5; value=1800;
@@ -2138,10 +2138,10 @@ combineWith=furnace_everlit2; toMake=whistle_chunk;
 [ItemReaction] 
 ID=xbow_wind; element=actionUsed; newID=xbow_wind_unloaded;
 
-[ItemType]  name=狂风之弩(未装载);
+[ItemType]  name=Gale Crossbow (Unloaded);
 texture=items_weapons; 
 ID=xbow_wind_unloaded; pR=pWhistle; pB=pWhistleHilt;
-description=每一次射击都由狂风携带. <n>需要重新装载.; 
+description=Each shot is carried by a powerful wind. Needs to be reloaded.; 
 journalID=journal_xbow;
 sprite=376; spriteWhenHeld=408; itemCategory=weapon; 
 weight=2; volume=5; value=1800;
@@ -2154,10 +2154,10 @@ combineWith=furnace_everlit2; toMake=whistle_chunk;
 [ItemReaction] 
 ID=xbow_wind_unloaded; element=actionUsed; element=reload; newID=xbow_wind;
  
-[ItemType]  name=塞壬之矛;
+[ItemType]  name=Siren Spear;
 texture=items_weapons; 
 ID=spear_wind; pR=pWhistle; pB=pWhistleHilt;
-description=用这支矛突刺, <n>发出一种引人注目的的鸣响.;
+description=Thrusts with this spear let out a dramatic ringing noise.;
 journalID=journal_spear;
 weight=4; volume=10; value=1800;
 power=7;
@@ -2170,10 +2170,10 @@ combineWith=furnace2_lit; toMake=whistle_chunk;
 combineWith=furnace_everlit1; toMake=whistle_chunk; 
 combineWith=furnace_everlit2; toMake=whistle_chunk; 
  
-[ItemType]  name=节拍指虎;
+[ItemType]  name=Beat Knuckle;
 texture=items_weapons; 
 ID=knuckle_wind; pR=pWhistle; pB=pWhistleHilt;
-description=能发出鸣响的指虎.;
+description=Knuckles of whistling stone.;
 journalID=journal_knuckle;
 weight=3; volume=1; value=1800;
 power=6;
@@ -2184,10 +2184,10 @@ combineWith=furnace2_lit; toMake=whistle_chunk;
 combineWith=furnace_everlit1; toMake=whistle_chunk; 
 combineWith=furnace_everlit2; toMake=whistle_chunk; 
  
-[ItemType]  name=颤音刺剑;
+[ItemType]  name=Trill Estoc;
 texture=items_weapons; 
 ID=rapier_wind; pR=pWhistle; pB=pWhistleHilt;
-description=这把剑在空中摆动时会声声低语.;
+description=This rapier whispers as it swings through the air.;
 journalID=journal_rapier;
 weight=2; volume=5; value=1800;
 power=7;
@@ -2201,10 +2201,10 @@ combineWith=furnace_everlit2; toMake=whistle_chunk;
 [ItemEffect]
 ID=rapier_wind; actorValue=PhysEva; magnitude=4; duration=-1;
  
-[ItemType]  name=震颤之大剑;
+[ItemType]  name=Tremor Greatsword;
 texture=items_weapons; 
 ID=greatsword_wind; pR=pWhistle; pB=pWhistleHilt;
-description=这把剑的剑刃比任何风暴都可怕. <n>需要双手才能使用;
+description=The wrong end of this blade is worse than any storm. Requires both hands to use.;
 journalID=journal_gsword;
 sprite=380; spriteWhenHeld=412; itemCategory=weapon;  special=enhanceSlots_2;
 special=sprite2xWidth; special=twoHanded; element=sword;
@@ -2219,10 +2219,10 @@ combineWith=furnace_everlit2; toMake=whistle_chunk;
  
  
 
-[ItemType]  name=泰瑟之剑;
+[ItemType]  name=Taze Blade;
 texture=items_weapons; 
 ID=sword_elec; pR=pShockWeapon; pB=pShockWeaponHilt;
-description=带电的剑.;
+description=Electrically charged sword.;
 journalID=journal_sword;
 weight=2; volume=5; value=1250;
 power=7;
@@ -2234,10 +2234,10 @@ combineWith=furnace2_lit; toMake=shock_chunk;
 combineWith=furnace_everlit1; toMake=shock_chunk; 
 combineWith=furnace_everlit2; toMake=shock_chunk; 
  
-[ItemType]  name=触电匕首;
+[ItemType]  name=Shock Prod;
 texture=items_weapons; 
 ID=dagger_elec; pR=pShockWeapon; pB=pShockWeaponHilt;
-description=带电的匕首.;
+description=Dagger that courses with electricity.;
 journalID=journal_dagger;
 weight=2; volume=1; value=1250;
 power=5;
@@ -2249,10 +2249,10 @@ combineWith=furnace2_lit; toMake=shock_chunk;
 combineWith=furnace_everlit1; toMake=shock_chunk; 
 combineWith=furnace_everlit2; toMake=shock_chunk; 
  
-[ItemType]  name=雷霆之锤;
+[ItemType]  name=Thunder;
 texture=items_weapons; 
 ID=hammer_elec; pR=pShockWeapon; pB=pShockWeaponHilt;
-description=结合了钝器伤害的同时附加电击.;
+description=Hammer that combines blunt trauma with shock.;
 journalID=journal_hammer;
 weight=6; volume=5; value=1250;
 power=8;
@@ -2264,10 +2264,10 @@ combineWith=furnace2_lit; toMake=shock_chunk;
 combineWith=furnace_everlit1; toMake=shock_chunk; 
 combineWith=furnace_everlit2; toMake=shock_chunk; 
 
-[ItemType]  name=伏打之斧;
+[ItemType]  name=Voltaic Axe;
 texture=items_weapons; 
 ID=axe_elec; pR=pShockWeapon; pB=pShockWeaponHilt;
-description=弧形挥舞时能产生电火花的斧子.;
+description=Axe that sparks when swung in an arc.;
 journalID=journal_axe;
 weight=3; volume=5; value=1250;
 power=8;
@@ -2279,10 +2279,10 @@ combineWith=furnace2_lit; toMake=shock_chunk;
 combineWith=furnace_everlit1; toMake=shock_chunk; 
 combineWith=furnace_everlit2; toMake=shock_chunk; 
  
-[ItemType]  name=电镀之盾;
+[ItemType]  name=Electro Shield;
 texture=items_weapons; 
 ID=shield_elec; pR=pShockWeapon; pB=pShockWeaponHilt;
-description=覆盖着导电尖端的盾牌, <n>轻微电击被格挡的攻击者.;
+description=Shield covered in electricity-conducting spikes. Lightly zaps blocked attackers.;
 journalID=journal_shield;
 sprite=435; spriteWhenHeld=467; itemCategory=weapon; element=shield;
 weight=5; volume=5; value=1250;
@@ -2297,10 +2297,10 @@ ID=shield_elec; actorValue=PhysEva; magnitude=18; duration=-1;
 [ItemReaction] 
 ID=shield_elec; element=blocked; action=shieldBlock_elec;
 
-[ItemType]  name=带电链枷;
+[ItemType]  name=Electric Flail;
 texture=items_weapons; 
 ID=flail_elec; pR=pShockWeapon; pB=pShockWeaponHilt;
-description=链条上的闪电.;
+description=Lightning on a chain.;
 journalID=journal_flail;
 weight=3; volume=5; value=1250;
 power=6;
@@ -2311,10 +2311,10 @@ combineWith=furnace2_lit; toMake=shock_chunk;
 combineWith=furnace_everlit1; toMake=shock_chunk; 
 combineWith=furnace_everlit2; toMake=shock_chunk; 
  
-[ItemType]  name=通电导线;
+[ItemType]  name=Live Wire;
 texture=items_weapons; 
 ID=whip_elec; pR=pShockWeapon; pB=pShockWeaponHilt;
-description=雷鸣般的鞭子.;
+description=A whip that cracks like thunder.;
 journalID=journal_whip;
 weight=3; volume=3; value=1250;
 power=5;
@@ -2325,10 +2325,10 @@ combineWith=furnace2_lit; toMake=shock_chunk;
 combineWith=furnace_everlit1; toMake=shock_chunk; 
 combineWith=furnace_everlit2; toMake=shock_chunk; 
  
-[ItemType]  name=颠簸之弓;
+[ItemType]  name=Jolt Bow;
 texture=items_weapons; 
 ID=bow_elec; pR=pShockWeapon; pB=pShockWeaponHilt;
-description=每根箭都使用电充能. <n>需要双手使用.;
+description=Electrifies each arrow. Requires both hands to use.;
 journalID=journal_bow;
 sprite=438; spriteWhenHeld=470; itemCategory=weapon; element=bow; special=twoHanded;
 weight=1; volume=5; value=1250;
@@ -2339,10 +2339,10 @@ combineWith=furnace2_lit; toMake=shock_chunk;
 combineWith=furnace_everlit1; toMake=shock_chunk; 
 combineWith=furnace_everlit2; toMake=shock_chunk; 
  
-[ItemType]  name=霹雳之弩;
+[ItemType]  name=Bolt Crossbow;
 texture=items_weapons; 
 ID=xbow_elec; pR=pShockWeapon; pB=pShockWeaponHilt;
-description=能发射闪电的弩.; 
+description=Crossbow that fires lightning bolts.; 
 journalID=journal_xbow;
 sprite=439; spriteWhenHeld=471; itemCategory=weapon; element=aim;
 weight=2; volume=5; value=1250;
@@ -2355,10 +2355,10 @@ combineWith=furnace_everlit2; toMake=shock_chunk;
 [ItemReaction] 
 ID=xbow_elec; element=actionUsed; newID=xbow_elec_unloaded;
 
-[ItemType]  name=霹雳之弩(未装载);
+[ItemType]  name=Bolt Crossbow (Unloaded);
 texture=items_weapons; 
 ID=xbow_elec_unloaded; pR=pShockWeapon; pB=pShockWeaponHilt;
-description=能发射闪电的弩. 需要重新装载.; 
+description=Crossbow that fires lightning bolts. Needs to be reloaded.; 
 journalID=journal_xbow;
 sprite=440; spriteWhenHeld=472; itemCategory=weapon; 
 weight=2; volume=5; value=1250;
@@ -2371,10 +2371,10 @@ combineWith=furnace_everlit2; toMake=shock_chunk;
 [ItemReaction] 
 ID=xbow_elec_unloaded; element=actionUsed; element=reload; newID=xbow_elec;
  
-[ItemType]  name=火花之矛;
+[ItemType]  name=Spark Bident;
 texture=items_weapons; 
 ID=spear_elec; pR=pShockWeapon; pB=pShockWeaponHilt;
-description=能够远距离放电的双叉矛.;
+description=Two-tined spear to electrify from a distance.;
 journalID=journal_spear;
 weight=4; volume=10; value=1250;
 power=6;
@@ -2387,10 +2387,10 @@ combineWith=furnace2_lit; toMake=shock_chunk;
 combineWith=furnace_everlit1; toMake=shock_chunk; 
 combineWith=furnace_everlit2; toMake=shock_chunk; 
  
-[ItemType]  name=泰瑟指虎;
+[ItemType]  name=Tazer Knuckle;
 texture=items_weapons; 
 ID=knuckle_elec; pR=pShockWeapon; pB=pShockWeaponHilt;
-description=为你的每一次出拳附加惊人的力量.;
+description=Imbues punches with shocking power.;
 journalID=journal_knuckle;
 weight=3; volume=1; value=1250;
 power=5;
@@ -2401,10 +2401,10 @@ combineWith=furnace2_lit; toMake=shock_chunk;
 combineWith=furnace_everlit1; toMake=shock_chunk; 
 combineWith=furnace_everlit2; toMake=shock_chunk; 
  
-[ItemType]  name=电涌刺剑;
+[ItemType]  name=Surge Espada;
 texture=items_weapons; 
 ID=rapier_elec; pR=pShockWeapon; pB=pShockWeaponHilt;
-description=将电流汇聚到尖端的刺剑.;
+description=A rapier that directs electricity to its tip.;
 journalID=journal_rapier;
 weight=2; volume=5; value=1250;
 power=6;
@@ -2418,10 +2418,10 @@ combineWith=furnace_everlit2; toMake=shock_chunk;
 [ItemEffect]
 ID=rapier_elec; actorValue=PhysEva; magnitude=3; duration=-1;
  
-[ItemType]  name=伏特大剑;
+[ItemType]  name=Volt Greatsword;
 texture=items_weapons; 
 ID=greatsword_elec; pR=pShockWeapon; pB=pShockWeaponHilt;
-description=用这把剑击晕整个敌人队伍, <n>需要双手才能挥舞.;
+description=Stun entire groups with this blade. Requires both hands to wield.;
 journalID=journal_gsword;
 sprite=444; spriteWhenHeld=476; itemCategory=weapon;  special=enhanceSlots_2;
 special=sprite2xWidth; special=twoHanded; element=sword;
@@ -2433,10 +2433,10 @@ combineWith=furnace2_lit; toMake=shock_chunk;
 combineWith=furnace_everlit1; toMake=shock_chunk; 
 combineWith=furnace_everlit2; toMake=shock_chunk; 
 
-[ItemType]  name=尖牙之剑;
+[ItemType]  name=Fang Sword;
 texture=items_weapons; 
 ID=sword_fang; pR=pFangWeapon; pB=pFangWeaponHilt;
-description=尖牙和下颚, <n>仍滴着毒药.;
+description=Sharpened fang and mandible, still dripping with poison.;
 journalID=journal_sword;
 weight=2; volume=5; value=150;
 power=6;
@@ -2448,10 +2448,10 @@ combineWith=furnace2_lit; toMake=fang_spidest;
 combineWith=furnace_everlit1; toMake=fang_spidest; 
 combineWith=furnace_everlit2; toMake=fang_spidest; 
  
-[ItemType]  name=尖牙匕首;
+[ItemType]  name=Fang Dagger;
 texture=items_weapons; 
 ID=dagger_fang; pR=pFangWeapon; pB=pFangWeaponHilt;
-description=刀把上有毒牙.;
+description=Toxic fang on a short hilt.;
 journalID=journal_dagger;
 weight=2; volume=1; value=150;
 power=4;
@@ -2463,10 +2463,10 @@ combineWith=furnace2_lit; toMake=fang_spidest;
 combineWith=furnace_everlit1; toMake=fang_spidest; 
 combineWith=furnace_everlit2; toMake=fang_spidest; 
 
-[ItemType]  name=尖牙之斧;
+[ItemType]  name=Fang Axe;
 texture=items_weapons; 
 ID=axe_fang; pR=pFangWeapon; pB=pFangWeaponHilt;
-description=有尖牙的弯斧.;
+description=Curved axe that comes to a pointed fang.;
 journalID=journal_axe;
 weight=3; volume=5; value=150;
 power=7;
@@ -2478,10 +2478,10 @@ combineWith=furnace2_lit; toMake=fang_spidest;
 combineWith=furnace_everlit1; toMake=fang_spidest; 
 combineWith=furnace_everlit2; toMake=fang_spidest; 
  
-[ItemType]  name=尖牙之锤;
+[ItemType]  name=Fang Hammer;
 texture=items_weapons; 
 ID=hammer_fang; pR=pFangWeapon; pB=pFangWeaponHilt;
-description=带毒尖的刺锤.;
+description=Spiny hammer with poison points.;
 journalID=journal_hammer;
 weight=6; volume=5; value=150;
 power=7;
@@ -2494,10 +2494,10 @@ combineWith=furnace_everlit1; toMake=fang_spidest;
 combineWith=furnace_everlit2; toMake=fang_spidest; 
 
  
-[ItemType]  name=尖牙链枷;
+[ItemType]  name=Fang Flail;
 texture=items_weapons; 
 ID=flail_fang; pR=pFangWeapon; pB=pFangWeaponHilt;
-description=带有毒牙的链枷.;
+description=Flail barbed with bits of poisonous fang.;
 journalID=journal_flail;
 weight=3; volume=5; value=150;
 power=5;
@@ -2508,10 +2508,10 @@ combineWith=furnace2_lit; toMake=fang_spidest;
 combineWith=furnace_everlit1; toMake=fang_spidest; 
 combineWith=furnace_everlit2; toMake=fang_spidest; 
  
-[ItemType]  name=尖牙之鞭;
+[ItemType]  name=Fang Whip;
 texture=items_weapons; 
 ID=whip_fang; pR=pFangWeapon; pB=pFangWeaponHilt;
-description=毒液尖端的鞭子.;
+description=Venom-tipped whip.;
 journalID=journal_whip;
 weight=3; volume=3; value=150;
 power=4;
@@ -2522,10 +2522,10 @@ combineWith=furnace2_lit; toMake=fang_spidest;
 combineWith=furnace_everlit1; toMake=fang_spidest; 
 combineWith=furnace_everlit2; toMake=fang_spidest; 
  
-[ItemType]  name=尖牙之矛;
+[ItemType]  name=Fang Spear;
 texture=items_weapons; 
 ID=spear_fang; pR=pFangWeapon; pB=pFangWeaponHilt;
-description=尖端有毒牙的矛.;
+description=Spear topped with a toxic fang.;
 journalID=journal_spear;
 weight=4; volume=10; value=150;
 power=5;
@@ -2538,10 +2538,10 @@ combineWith=furnace2_lit; toMake=fang_spidest;
 combineWith=furnace_everlit1; toMake=fang_spidest; 
 combineWith=furnace_everlit2; toMake=fang_spidest; 
  
-[ItemType]  name=尖牙指虎;
+[ItemType]  name=Fang Knuckle;
 texture=items_weapons; 
 ID=knuckle_fang; pR=pFangWeapon; pB=pFangWeaponHilt;
-description=下颚骨和尖牙的指虎.;
+description=Hand mandibles & fang fists.;
 journalID=journal_knuckle;
 weight=3; volume=1; value=150;
 power=4;
@@ -2552,10 +2552,10 @@ combineWith=furnace2_lit; toMake=fang_spidest;
 combineWith=furnace_everlit1; toMake=fang_spidest; 
 combineWith=furnace_everlit2; toMake=fang_spidest; 
  
-[ItemType]  name=尖牙刺剑;
+[ItemType]  name=Fang Rapier;
 texture=items_weapons; 
 ID=rapier_fang; pR=pFangWeapon; pB=pFangWeaponHilt;
-description=有尖牙的毒刺剑.;
+description=Venomous rapier of a sharpened fang.;
 journalID=journal_rapier;
 weight=2; volume=5; value=150;
 power=5;
@@ -2570,10 +2570,10 @@ combineWith=furnace_everlit2; toMake=fang_spidest;
 ID=rapier_fang; actorValue=PhysEva; magnitude=3; duration=-1;
 
 
-[ItemType]  name=尖牙之大剑;
+[ItemType]  name=Fang Greatsword;
 texture=items_weapons; 
 ID=greatsword_fang; pR=pFangWeapon; pB=pFangWeaponHilt;
-description=带有毒倒刺的大剑.;
+description=Greatsword with poison barbs.;
 journalID=journal_gsword;
 sprite=444; spriteWhenHeld=476; itemCategory=weapon;  special=enhanceSlots_2;
 special=sprite2xWidth; special=twoHanded; element=sword;
@@ -2585,10 +2585,10 @@ combineWith=furnace2_lit; toMake=fang_spidest;
 combineWith=furnace_everlit1; toMake=fang_spidest; 
 combineWith=furnace_everlit2; toMake=fang_spidest; 
  
-[ItemType]  name=尖牙之弓;
+[ItemType]  name=Fang Bow;
 texture=items_weapons; 
 ID=bow_fang; pR=pFangWeapon; pB=pFangWeaponHilt;
-description=有毒的弓和箭. <n>需要双手才能使用;
+description=Toxic-tipped bow & arrows. Requires both hands to use.;
 journalID=journal_bow;
 sprite=438; spriteWhenHeld=470; itemCategory=weapon; element=bow; special=twoHanded;
 weight=1; volume=5; value=150;
@@ -2600,10 +2600,10 @@ combineWith=furnace_everlit1; toMake=fang_spidest;
 combineWith=furnace_everlit2; toMake=fang_spidest; 
 
 
-[ItemType]  name=尖牙之弩;
+[ItemType]  name=Fang Crossbow;
 texture=items_weapons; 
 ID=xbow_fang; pR=pFangWeapon; pB=pFangWeaponHilt;
-description=附加有毒药的弩.; 
+description=Poison-inducing crossbow.; 
 journalID=journal_xbow;
 sprite=439; spriteWhenHeld=471; itemCategory=weapon; element=aim;
 weight=2; volume=5; value=150;
@@ -2616,10 +2616,10 @@ combineWith=furnace_everlit2; toMake=fang_spidest;
 [ItemReaction] 
 ID=xbow_fang; element=actionUsed; newID=xbow_fang_unloaded;
 
-[ItemType]  name=尖牙之弩(未装载);
+[ItemType]  name=Fang Crossbow (Unloaded);
 texture=items_weapons; 
 ID=xbow_fang_unloaded; pR=pFangWeapon; pB=pFangWeaponHilt;
-description=附加有毒药的弩. <n>需要重新装载.; 
+description=Poison-inducing crossbow. Needs to be reloaded.; 
 journalID=journal_xbow;
 sprite=440; spriteWhenHeld=472; itemCategory=weapon; 
 weight=2; volume=5; value=150;
@@ -2632,10 +2632,10 @@ combineWith=furnace_everlit2; toMake=fang_spidest;
 [ItemReaction] 
 ID=xbow_fang_unloaded; element=actionUsed; element=reload; newID=xbow_fang;
  
-[ItemType]  name=尖牙之盾;
+[ItemType]  name=Fang Shield;
 texture=items_weapons; 
 ID=shield_fang; pR=pFangWeapon; pB=pFangWeaponHilt;
-description=伸出有毒刺的盾牌, <n>对攻击者造成轻微中毒.;
+description=Shield with poison spikes jutting out. Lightly poisons blocked attackers.;
 journalID=journal_shield;
 sprite=435; spriteWhenHeld=467; itemCategory=weapon; element=shield;
 weight=5; volume=5; value=150;
@@ -2650,10 +2650,10 @@ ID=shield_fang; actorValue=PhysEva; magnitude=14; duration=-1;
 [ItemReaction] 
 ID=shield_fang; element=blocked; action=shieldBlock_poison;
  
-[ItemType]  name=晶体之剑;
+[ItemType]  name=Corpryst Blade;
 texture=items_weapons; 
 ID=sword_corpryst; pR=pCorpryst; pB=pCorprystHilt;
-description=是奇怪的克莱文材料制成的重剑.;
+description=Heavy sword made of strange Graven material.;
 journalID=journal_sword;
 weight=4; volume=5; value=750;
 power=7;
@@ -2667,10 +2667,10 @@ combineWith=furnace_everlit2; toMake=corpryst;
 [ItemEffect]
 ID=sword_corpryst; actorValue=PhysEva; magnitude=-4; duration=-1;
  
-[ItemType]  name=晶体匕首;
+[ItemType]  name=Corpryst Dagger;
 texture=items_weapons; 
 ID=dagger_corpryst; pR=pCorpryst; pB=pCorprystHilt;
-description=锋利但是难以使用的匕首.;
+description=Dagger that is sharp but awkward to wield.;
 journalID=journal_dagger;
 weight=3; volume=1; value=750;
 power=5;
@@ -2684,10 +2684,10 @@ combineWith=furnace_everlit2; toMake=corpryst;
 [ItemEffect]
 ID=dagger_corpryst; actorValue=PhysEva; magnitude=-4; duration=-1;
  
-[ItemType]  name=晶体之锤;
+[ItemType]  name=Corpryst Hammer;
 texture=items_weapons; 
 ID=hammer_corpryst; pR=pCorpryst; pB=pCorprystHilt;
-description=锤状的晶体板.;
+description=Hammer-shaped slab of Corpryst.;
 journalID=journal_hammer;
 weight=9; volume=5; value=750;
 power=8;
@@ -2701,10 +2701,10 @@ combineWith=furnace_everlit2; toMake=corpryst;
 [ItemEffect]
 ID=hammer_corpryst; actorValue=PhysEva; magnitude=-4; duration=-1;
 
-[ItemType]  name=晶体之斧;
+[ItemType]  name=Corpryst Cleaver;
 texture=items_weapons; 
 ID=axe_corpryst; pR=pCorpryst; pB=pCorprystHilt;
-description=有沉重又危险的晶体矿制成的斧.;
+description=Axe made of heavy, dangerous Corpryst.;
 journalID=journal_axe;
 weight=7; volume=5; value=750;
 power=8;
@@ -2718,10 +2718,10 @@ combineWith=furnace_everlit2; toMake=corpryst;
 [ItemEffect]
 ID=axe_corpryst; actorValue=PhysEva; magnitude=-4; duration=-1;
  
-[ItemType]  name=晶体之盾;
+[ItemType]  name=Corpryst Shield;
 texture=items_weapons; 
 ID=shield_corpryst; pR=pCorpryst; pB=pCorprystHilt;
-description=厚厚的晶体矿保护的盾.;
+description=Thick protective chunk of Corpryst.;
 journalID=journal_shield;
 sprite=307; spriteWhenHeld=339; itemCategory=weapon; element=shield;
 weight=10; volume=5; value=750;
@@ -2734,10 +2734,10 @@ combineWith=furnace_everlit2; toMake=corpryst;
 [ItemEffect]
 ID=shield_corpryst; actorValue=PhysEva; magnitude=16; duration=-1;
 
-[ItemType]  name=晶体链枷;
+[ItemType]  name=Corpryst Flail;
 texture=items_weapons; 
 ID=flail_corpryst; pR=pCorpryst; pB=pCorprystHilt;
-description=附有晶体碎片的链枷.;
+description=Flail of Corpryst shards attached to Graven tendrils.;
 journalID=journal_flail;
 sprite=372; spriteWhenHeld=404; itemCategory=weapon; element=flail;
 weight=4; volume=5; value=750;
@@ -2750,10 +2750,10 @@ combineWith=furnace_everlit2; toMake=corpryst;
 [ItemEffect]
 ID=flail_corpryst; actorValue=PhysEva; magnitude=-4; duration=-1;
  
-[ItemType]  name=晶体之鞭;
+[ItemType]  name=Corpryst Whip;
 texture=items_weapons; 
 ID=whip_corpryst; pR=pCorpryst; pB=pCorprystHilt;
-description=克莱文的卷须与尖锐的晶体倒刺.;
+description=Graven tendril with pointed Corpryst barbs.;
 journalID=journal_whip;
 sprite=422; spriteWhenHeld=454; itemCategory=weapon; element=flail;
 weight=3; volume=3; value=750;
@@ -2766,10 +2766,10 @@ combineWith=furnace_everlit2; toMake=corpryst;
 [ItemEffect]
 ID=whip_corpryst; actorValue=PhysEva; magnitude=-4; duration=-1;
  
-[ItemType]  name=晶体之矛;
+[ItemType]  name=Corpryst Spear;
 texture=items_weapons; 
 ID=spear_corpryst; pR=pCorpryst; pB=pCorprystHilt;
-description=尽管如此, 笨重的长矛仍然有效.;
+description=Bulky spear that is nonetheless effective.;
 journalID=journal_spear;
 weight=5; volume=10; value=750;
 power=6;
@@ -2784,10 +2784,10 @@ combineWith=furnace_everlit2; toMake=corpryst;
 [ItemEffect]
 ID=spear_corpryst; actorValue=PhysEva; magnitude=-4; duration=-1;
  
-[ItemType]  name=晶体拳头;
+[ItemType]  name=Corpryst Fist;
 texture=items_weapons; 
 ID=knuckle_corpryst; pR=pCorpryst; pB=pCorprystHilt;
-description=有力的晶体拳头.;
+description=Hefty fist of Corpryst.;
 journalID=journal_knuckle;
 weight=4; volume=1; value=750;
 power=5;
@@ -2800,10 +2800,10 @@ combineWith=furnace_everlit2; toMake=corpryst;
 [ItemEffect]
 ID=knuckle_corpryst; actorValue=PhysEva; magnitude=-4; duration=-1;
  
-[ItemType]  name=晶体刺剑;
+[ItemType]  name=Corpryst Rapier;
 texture=items_weapons; 
 ID=rapier_corpryst; pR=pCorpryst; pB=pCorprystHilt;
-description=薄的锯齿状晶体.;
+description=Thin, jagged strip of Corpryst.;
 journalID=journal_rapier;
 weight=3; volume=5; value=750;
 power=6;
@@ -2817,10 +2817,10 @@ combineWith=furnace_everlit2; toMake=corpryst;
 [ItemEffect]
 ID=rapier_corpryst; actorValue=PhysEva; magnitude=1; duration=-1;
  
-[ItemType]  name=晶体大剑;
+[ItemType]  name=Corpryst Greatsword;
 texture=items_weapons; 
 ID=greatsword_corpryst; pR=pCorpryst; pB=pCorprystHilt;
-description=巨大的沉重晶体刀片.;
+description=Vast blade of heavy Corpryst.;
 journalID=journal_gsword;
 sprite=316; spriteWhenHeld=348; itemCategory=weapon;  special=enhanceSlots_2;
 special=sprite2xWidth; special=twoHanded; element=sword;
@@ -2836,10 +2836,10 @@ ID=greatsword_corpryst; actorValue=PhysEva; magnitude=-4; duration=-1;
  
  
 
-[ItemType]  name=珊瑚之剑;
+[ItemType]  name=Coral Sword;
 texture=items_weapons; 
 ID=sword_coral; pR=pCoral; pB=pCoralHilt;
-description=由粗糙的珊瑚制成的双刃剑.;
+description=A double-edged blade made of rough coral.;
 journalID=journal_sword;
 weight=2; volume=5; value=120;
 power=6;
@@ -2851,10 +2851,10 @@ combineWith=furnace2_lit; toMake=coral;
 combineWith=furnace_everlit1; toMake=coral; 
 combineWith=furnace_everlit2; toMake=coral; 
  
-[ItemType]  name=珊瑚匕首;
+[ItemType]  name=Coral Dagger;
 texture=items_weapons; 
 ID=dagger_coral; pR=pCoral; pB=pCoralHilt;
-description=坚硬的珊瑚磨尖了.;
+description=Hard coral sharpened to a point.;
 journalID=journal_dagger;
 weight=2; volume=1; value=120;
 power=4;
@@ -2866,10 +2866,10 @@ combineWith=furnace2_lit; toMake=coral;
 combineWith=furnace_everlit1; toMake=coral; 
 combineWith=furnace_everlit2; toMake=coral; 
  
-[ItemType]  name=珊瑚之锤;
+[ItemType]  name=Coral Hammer;
 texture=items_weapons; 
 ID=hammer_coral; pR=pCoral; pB=pCoralHilt;
-description=一大块沉重的珊瑚.;
+description=A weighty chunk of thick coral.;
 journalID=journal_hammer;
 weight=6; volume=5; value=120;
 power=7;
@@ -2881,7 +2881,7 @@ combineWith=furnace2_lit; toMake=coral;
 combineWith=furnace_everlit1; toMake=coral; 
 combineWith=furnace_everlit2; toMake=coral; 
 
-[ItemType]  name=珊瑚之斧;
+[ItemType]  name=Coral Axe;
 texture=items_weapons; 
 ID=axe_coral; pR=pCoral; pB=pCoralHilt;
 description=A wedge of coral sharpened into an axe.;
@@ -2896,10 +2896,10 @@ combineWith=furnace2_lit; toMake=coral;
 combineWith=furnace_everlit1; toMake=coral; 
 combineWith=furnace_everlit2; toMake=coral; 
  
-[ItemType]  name=珊瑚之盾;
+[ItemType]  name=Coral Shield;
 texture=items_weapons; 
 ID=shield_coral; pR=pCoral; pB=pCoralHilt;
-description=一种厚而耐用的珊瑚盾牌.;
+description=A buckler of thick, durable coral.;
 journalID=journal_shield;
 sprite=2308; spriteWhenHeld=2340; itemCategory=weapon; element=shield;
 weight=5; volume=5; value=120;
@@ -2914,10 +2914,10 @@ ID=shield_coral; actorValue=PhysEva; magnitude=12; duration=-1;
 [ItemEffect]
 ID=shield_coral; actorValue=MagEva; magnitude=1; duration=-1;
 
-[ItemType]  name=珊瑚链枷;
+[ItemType]  name=Coral Flail;
 texture=items_weapons; 
 ID=flail_coral; pR=pCoral; pB=pCoralHilt;
-description=链枷上的尖珊瑚.;
+description=Sharp coral on a lengthy chain.;
 journalID=journal_flail;
 weight=3; volume=5; value=120;
 power=5;
@@ -2928,10 +2928,10 @@ combineWith=furnace2_lit; toMake=coral;
 combineWith=furnace_everlit1; toMake=coral; 
 combineWith=furnace_everlit2; toMake=coral; 
  
-[ItemType]  name=珊瑚之鞭;
+[ItemType]  name=Coral Whip;
 texture=items_weapons; 
 ID=whip_coral; pR=pCoral; pB=pCoralHilt;
-description=珊瑚尖端的鞭子,.;
+description=Coral-tipped whip. Peculiar, but effective.;
 journalID=journal_whip;
 weight=3; volume=3; value=120;
 power=4;
@@ -2942,10 +2942,10 @@ combineWith=furnace2_lit; toMake=coral;
 combineWith=furnace_everlit1; toMake=coral; 
 combineWith=furnace_everlit2; toMake=coral; 
  
-[ItemType]  name=珊瑚之弓;
+[ItemType]  name=Coral Bow;
 texture=items_weapons; 
 ID=bow_coral; pR=pCoral; pB=pCoralHilt;
-description=珊瑚握把的弓. 需要双手使用.;
+description=Bow with a coral grip. Requires both hands to use.;
 journalID=journal_bow;
 sprite=2311; spriteWhenHeld=2343; itemCategory=weapon; element=bow; special=twoHanded;
 weight=1; volume=5; value=120;
@@ -2956,10 +2956,10 @@ combineWith=furnace2_lit; toMake=coral;
 combineWith=furnace_everlit1; toMake=coral; 
 combineWith=furnace_everlit2; toMake=coral; 
  
-[ItemType]  name=珊瑚之弩;
+[ItemType]  name=Coral Crossbow;
 texture=items_weapons; 
 ID=xbow_coral; pR=pCoral; pB=pCoralHilt;
-description=珊瑚基座的奇怪的弩.; 
+description=Odd crossbow with a coral base.; 
 journalID=journal_xbow;
 sprite=2312; spriteWhenHeld=2344; itemCategory=weapon; element=aim;
 weight=2; volume=5; value=120;
@@ -2975,7 +2975,7 @@ ID=xbow_coral; element=actionUsed; newID=xbow_coral_unloaded;
 [ItemType]  name=Coral Crossbow (Unloaded);
 texture=items_weapons; 
 ID=xbow_coral_unloaded; pR=pCoral; pB=pCoralHilt;
-description=珊瑚基座的奇怪的弩 -- <n>需要重新装载.; 
+description=Odd crossbow with a coral base -- needs to be reloaded.; 
 journalID=journal_xbow;
 sprite=2313; spriteWhenHeld=2345; itemCategory=weapon; 
 weight=2; volume=5; value=120;
@@ -2988,10 +2988,10 @@ combineWith=furnace_everlit2; toMake=coral;
 [ItemReaction] 
 ID=xbow_coral_unloaded; element=actionUsed; element=reload; newID=xbow_coral;
  
-[ItemType]  name=珊瑚之矛;
+[ItemType]  name=Coral Spear;
 texture=items_weapons; 
 ID=spear_coral; pR=pCoral; pB=pCoralHilt;
-description=有珊瑚尖端的矛.;
+description=Spear with sharpened head of coral.;
 journalID=journal_spear;
 weight=4; volume=10; value=120;
 power=5;
@@ -3004,10 +3004,10 @@ combineWith=furnace2_lit; toMake=coral;
 combineWith=furnace_everlit1; toMake=coral; 
 combineWith=furnace_everlit2; toMake=coral; 
  
-[ItemType]  name=珊瑚指虎;
+[ItemType]  name=Coral Knuckle;
 texture=items_weapons; 
 ID=knuckle_coral; pR=pCoral; pB=pCoralHilt;
-description=尖刺珊瑚指虎.;
+description=Spiky coral fist covering.;
 journalID=journal_knuckle;
 weight=3; volume=1; value=120;
 power=4;
@@ -3018,10 +3018,10 @@ combineWith=furnace2_lit; toMake=coral;
 combineWith=furnace_everlit1; toMake=coral; 
 combineWith=furnace_everlit2; toMake=coral; 
  
-[ItemType]  name=珊瑚刺剑;
+[ItemType]  name=Coral Rapier;
 texture=items_weapons; 
 ID=rapier_coral; pR=pCoral; pB=pCoralHilt;
-description=薄而尖锐的珊瑚剑刃.;
+description=Thin, wickedly pointed blade of coral.;
 journalID=journal_rapier;
 weight=2; volume=5; value=120;
 power=5;
@@ -3035,10 +3035,10 @@ combineWith=furnace_everlit2; toMake=coral;
 [ItemEffect]
 ID=rapier_coral; actorValue=PhysEva; magnitude=3; duration=-1; 
  
-[ItemType]  name=珊瑚大剑;
+[ItemType]  name=Coral Greatsword;
 texture=items_weapons; 
 ID=greatsword_coral; pR=pCoral; pB=pCoralHilt;
-description=用巨大的珊瑚做成的剑. <n>需要双手才能挥舞.;
+description=Sword made of a massive hunk of coral. Requires both hands to wield.;
 journalID=journal_gsword;
 sprite=2317; spriteWhenHeld=2349; itemCategory=weapon;  special=enhanceSlots_2;
 special=sprite2xWidth; special=twoHanded; element=sword;
@@ -3052,10 +3052,10 @@ combineWith=furnace_everlit2; toMake=coral;
  
  
 
-[ItemType]  name=沃尔斯卡恩之剑;
+[ItemType]  name=Volskarn Sword;
 texture=items_weapons; 
 ID=sword_volskarn; pR=pVolskarn; pB=pVolskarnHilt;
-description=嵌有沃尔斯卡恩的剑,可增强的.;
+description=Volskarn-inlaid blade. More augmentable.;
 journalID=journal_sword;
 weight=2; volume=5; value=800;
 power=5;
@@ -3067,10 +3067,10 @@ combineWith=furnace2_lit; toMake=volskarn_chunk;
 combineWith=furnace_everlit1; toMake=volskarn_chunk; 
 combineWith=furnace_everlit2; toMake=volskarn_chunk; 
  
-[ItemType]  name=沃尔斯卡恩匕首;
+[ItemType]  name=Volskarn Dagger;
 texture=items_weapons; 
 ID=dagger_volskarn; pR=pVolskarn; pB=pVolskarnHilt;
-description=短而精确的刀刃上,<n>有沃尔斯卡恩的痕迹.可以额外增强;
+description=Short, accurate blade with traces of Volskarn. Extra augmentable.;
 journalID=journal_dagger;
 weight=2; volume=1; value=800;
 power=3;
@@ -3082,10 +3082,10 @@ combineWith=furnace2_lit; toMake=volskarn_chunk;
 combineWith=furnace_everlit1; toMake=volskarn_chunk; 
 combineWith=furnace_everlit2; toMake=volskarn_chunk; 
  
-[ItemType]  name=沃尔斯卡恩之锤;
+[ItemType]  name=Volskarn Hammer;
 texture=items_weapons; 
 ID=hammer_volskarn; pR=pVolskarn; pB=pVolskarnHilt;
-description=有着沃尔斯卡恩核心的锤子, <n>容易增强.;
+description=Hammer with Volskarn center. Easy to augment.;
 journalID=journal_hammer;
 weight=6; volume=5; value=800;
 power=6;
@@ -3097,10 +3097,10 @@ combineWith=furnace2_lit; toMake=volskarn_chunk;
 combineWith=furnace_everlit1; toMake=volskarn_chunk; 
 combineWith=furnace_everlit2; toMake=volskarn_chunk; 
 
-[ItemType]  name=沃尔斯卡恩之斧;
+[ItemType]  name=Volskarn Axe;
 texture=items_weapons; 
 ID=axe_volskarn; pR=pVolskarn; pB=pVolskarnHilt;
-description=镶嵌沃尔斯卡恩的斧子, 可增强的.;
+description=Axe inlaid with Volskarn. More augmentable.;
 journalID=journal_axe;
 weight=3; volume=5; value=800;
 power=6;
@@ -3112,10 +3112,10 @@ combineWith=furnace2_lit; toMake=volskarn_chunk;
 combineWith=furnace_everlit1; toMake=volskarn_chunk; 
 combineWith=furnace_everlit2; toMake=volskarn_chunk; 
  
-[ItemType]  name=沃尔斯卡恩之盾;
+[ItemType]  name=Volskarn Shield;
 texture=items_weapons; 
 ID=shield_volskarn; pR=pVolskarn; pB=pVolskarnHilt;
-description=用沃尔斯卡恩加固的盾牌.<n>容易增强.;
+description=Heater shield reinforced with Volskarn. Easy to augment.;
 journalID=journal_shield;
 sprite=2372; spriteWhenHeld=2404; itemCategory=weapon; element=shield;
 weight=5; volume=5; value=800;
@@ -3131,10 +3131,10 @@ ID=shield_volskarn; actorValue=PhysEva; magnitude=12; duration=-1;
 [ItemEffect]
 ID=shield_volskarn; actorValue=MagEva; magnitude=2; duration=-1;
 
-[ItemType]  name=沃尔斯卡恩链枷;
+[ItemType]  name=Volskarn Flail;
 texture=items_weapons; 
 ID=flail_volskarn; pR=pVolskarn; pB=pVolskarnHilt;
-description=有着沃尔斯卡恩钉刺的链枷.<n>容易增强.;
+description=Flail with spikes of Volskarn. Easily augmentable.;
 journalID=journal_flail;
 weight=3; volume=5; value=800;
 power=4;
@@ -3146,10 +3146,10 @@ combineWith=furnace2_lit; toMake=volskarn_chunk;
 combineWith=furnace_everlit1; toMake=volskarn_chunk; 
 combineWith=furnace_everlit2; toMake=volskarn_chunk; 
  
-[ItemType]  name=沃尔斯卡恩之鞭;
+[ItemType]  name=Volskarn Whip;
 texture=items_weapons; 
 ID=whip_volskarn; pR=pVolskarn; pB=pVolskarnHilt;
-description=与沃尔斯卡恩缠绕的鞭子.<n>可额外增强.;
+description=Whip entwined with Volskarn. Extra augmentable.;
 journalID=journal_whip;
 weight=3; volume=3; value=800;
 power=3;
@@ -3161,10 +3161,10 @@ combineWith=furnace2_lit; toMake=volskarn_chunk;
 combineWith=furnace_everlit1; toMake=volskarn_chunk; 
 combineWith=furnace_everlit2; toMake=volskarn_chunk; 
  
-[ItemType]  name=沃尔斯卡恩之弓;
+[ItemType]  name=Volskarn Bow;
 texture=items_weapons; 
 ID=bow_volskarn; pR=pVolskarn; pB=pVolskarnHilt;
-description=用沃尔斯卡恩力量制作的弓.<n>容易增强.需要双手使用.;
+description=Bow crafted with the power of Volskarn. Easily augmented. Requires both hands to use.;
 journalID=journal_bow;
 sprite=2375; spriteWhenHeld=2407; itemCategory=weapon; element=bow; special=twoHanded;
 weight=1; volume=5; value=800;
@@ -3176,10 +3176,10 @@ combineWith=furnace2_lit; toMake=volskarn_chunk;
 combineWith=furnace_everlit1; toMake=volskarn_chunk; 
 combineWith=furnace_everlit2; toMake=volskarn_chunk; 
  
-[ItemType]  name=沃尔斯卡恩之弩;
+[ItemType]  name=Volskarn Crossbow;
 texture=items_weapons; 
 ID=xbow_volskarn; pR=pVolskarn; pB=pVolskarnHilt;
-description=沃尔斯卡恩基座的弩.容易增强.; 
+description=Crossbow with a Volskarn base. Easy to augment.; 
 journalID=journal_xbow;
 sprite=2376; spriteWhenHeld=2408; itemCategory=weapon; element=aim;
 weight=2; volume=5; value=800;
@@ -3193,10 +3193,10 @@ combineWith=furnace_everlit2; toMake=volskarn_chunk;
 [ItemReaction] 
 ID=xbow_volskarn; element=actionUsed; newID=xbow_volskarn_unloaded;
 
-[ItemType]  name=沃尔斯卡恩之弩(未装载);
+[ItemType]  name=Volskarn Crossbow (Unloaded);
 texture=items_weapons; 
 ID=xbow_volskarn_unloaded; pR=pVolskarn; pB=pVolskarnHilt;
-description=沃尔斯卡恩基座的弩<n> -- 需要重新装载.; 
+description=Crossbow with a Volskarn base -- needs to be reloaded.; 
 journalID=journal_xbow;
 sprite=2377; spriteWhenHeld=2409; itemCategory=weapon; 
 weight=2; volume=5; value=800;
@@ -3210,10 +3210,10 @@ combineWith=furnace_everlit2; toMake=volskarn_chunk;
 [ItemReaction] 
 ID=xbow_volskarn_unloaded; element=actionUsed; element=reload; newID=xbow_volskarn;
  
-[ItemType]  name=沃尔斯卡恩之矛;
+[ItemType]  name=Volskarn Spear;
 texture=items_weapons; 
 ID=spear_volskarn; pR=pVolskarn; pB=pVolskarnHilt;
-description=嵌入沃尔斯卡恩的矛.可增强的.;
+description=Spear with embedded Volskarn. More augmentable.;
 journalID=journal_spear;
 weight=4; volume=10; value=800;
 power=4;
@@ -3227,10 +3227,10 @@ combineWith=furnace2_lit; toMake=volskarn_chunk;
 combineWith=furnace_everlit1; toMake=volskarn_chunk; 
 combineWith=furnace_everlit2; toMake=volskarn_chunk; 
  
-[ItemType]  name=沃尔斯卡恩指虎;
+[ItemType]  name=Volskarn Knuckle;
 texture=items_weapons; 
 ID=knuckle_volskarn; pR=pVolskarn; pB=pVolskarnHilt;
-description=有着沃尔斯卡恩的金属指虎.容易增强.;
+description=Metal knuckles with Volskarn hand cover. Easy to augment.;
 journalID=journal_knuckle;
 weight=3; volume=1; value=800;
 power=3;
@@ -3242,10 +3242,10 @@ combineWith=furnace2_lit; toMake=volskarn_chunk;
 combineWith=furnace_everlit1; toMake=volskarn_chunk; 
 combineWith=furnace_everlit2; toMake=volskarn_chunk; 
  
-[ItemType]  name=沃尔斯卡恩刺剑;
+[ItemType]  name=Volskarn Rapier;
 texture=items_weapons; 
 ID=rapier_volskarn; pR=pVolskarn; pB=pVolskarnHilt;
-description=魔法的沃尔斯卡恩刺剑.容易增强.;
+description=Fencing sword of magical Volskarn. Easily augmented.;
 journalID=journal_rapier;
 weight=2; volume=5; value=800;
 power=4;
@@ -3260,10 +3260,10 @@ combineWith=furnace_everlit2; toMake=volskarn_chunk;
 [ItemEffect]
 ID=rapier_volskarn; actorValue=PhysEva; magnitude=3; duration=-1;
  
-[ItemType]  name=沃尔斯卡恩大剑;
+[ItemType]  name=Volskarn Greatsword;
 texture=items_weapons; 
 ID=greatsword_volskarn; pR=pVolskarn; pB=pVolskarnHilt;
-description=巨大的沃尔斯卡恩剑刃.<n>完美的增强.需要双手才能挥舞.;
+description=Massive Volskarn blade. Very augmentable. Requires both hands to wield.;
 journalID=journal_gsword;
 sprite=2381; spriteWhenHeld=2413; itemCategory=weapon; 
 special=enhanceSlots_3;
@@ -3281,96 +3281,96 @@ combineWith=furnace_everlit2; toMake=volskarn_chunk;
 [JournalEntry]
 ID=journal_sword;
 category=equipment; halfPage=true;
-title=剑;
-text=<itemBig=sword_steel><title=剑><brAdj=>剑在力量和精度上是平衡的.<n>他们能剪断绳索、藤蔓等.<br=>  无特殊属性;
+title=Sword;
+text=<itemBig=sword_steel><title=Sword><brAdj=>Swords are evenly balanced in power and accuracy. They can cut through ropes, vines, etc.<br=>  No special properties;
 
 [JournalEntry]
 ID=journal_gsword;
 category=equipment; halfPage=true;
-title=大剑;
-text=<itemBig=greatsword_steel><title=大剑><brAdj=>这种双手武器能以宽广的,<n>横扫的方式突破敌人的阵型.<br=>  宽阔的攻击范围<br=>  +1 增强孔;
+title=Greatsword;
+text=<itemBig=greatsword_steel><title=Greatsword><brAdj=>These 2-handers cut their way through enemy formations with broad, sweeping strokes.<br=>  Wide attack area<br=>  +1 Augment Slot;
 
 [JournalEntry]
 ID=journal_rapier;
 category=equipment; halfPage=true;
-title=刺剑;
-text=<itemBig=rapier_steel><title=刺剑><brAdj=>对于那些更看重准确度而非力量的人来说,<n>这种剑轻而易握.<br=>  +3% <icon=PhysEva>物理闪避 <br=>  +5% 命中<br=> 每级<icon=skill_Sword>额外+1%命中;
+title=Rapier;
+text=<itemBig=rapier_steel><title=Rapier><brAdj=>Light, easy to handle thrusting swords for those who value accuracy over power.<br=>  +3% <icon=PhysEva> Evasion<br=>  +5% Accuracy<br=>  Extra +1% Acc. per <icon=skill_Sword>;
 
 [JournalEntry]
 ID=journal_dagger;
 category=equipment; halfPage=true;
-title=匕首;
-text=<itemBig=dagger_steel><title=匕首><brAdj=>匕首非常精准,但很弱.<n>他们在正确的人手中是致命的.<br=>  +10% 命中<br=> 每级<icon=skill_Dagger>额外+1%命中;
+title=Dagger;
+text=<itemBig=dagger_steel><title=Dagger><brAdj=>Daggers are extremely accurate, but weak. They're deadly in the right hands.<br=>  +10% Accuracy<br=>  Extra +1% Acc. per <icon=skill_Dagger>;
 
 [JournalEntry]
 ID=journal_hammer;
 category=equipment; halfPage=true;
-title=锤;
-text=<itemBig=hammer_steel><title=锤><brAdj=>锤头可以无视盔甲重击...<n>可以砸碎岩石和障碍物.<br=>  -15% 命中<br=> 无视50%<icon=PhysDef>;
+title=Hammer;
+text=<itemBig=hammer_steel><title=Hammer><brAdj=>Hammers bypass armor and hit hard... if they hit at all. Can smash rocks & obstacles.<br=>  -15% Accuracy<br=>  Ignore 50% <icon=PhysDef>;
 
 [JournalEntry]
 ID=journal_axe;
 category=equipment; halfPage=true;
-title=斧;
-text=<itemBig=axe_steel><title=斧><brAdj=>斧头很强大但不如剑精准.能砍树劈柴.<br=>  -4% 命中;
+title=Axe;
+text=<itemBig=axe_steel><title=Axe><brAdj=>Axes are powerful, but less accurate than swords. Can cut trees & break wood.<br=>  -4% Accuracy;
 
 [JournalEntry]
 ID=journal_spear;
 category=equipment; halfPage=true;
-title=矛;
-text=<itemBig=spear_steel><title=矛><brAdj=>这是战争和狩猎的经典武器,理由很充分.<n>长矛增加的射程使它们成为多功能武器.<br=>  攻击距离: 2;
+title=Spear;
+text=<itemBig=spear_steel><title=Spear><brAdj=>The classic weapon of war & hunting, for good reason. The added range of spears make them versatile weapons.<br=>  Range: 2;
 
 [JournalEntry]
 ID=journal_flail;
 category=equipment; halfPage=true;
-title=链枷;
-text=<itemBig=flail_steel><title=链枷><brAdj=>起源于脱谷工具,现在变成了有力的武器.<n>伤害低但攻击范围比剑好.<br=> 可以攻击斜角处;
+title=Flail;
+text=<itemBig=flail_steel><title=Flail><brAdj=>Originated from a threshing tool, now a potent weapon. Less damaging, but better range than swords.<br=>  Can attack diagonally;
 
 [JournalEntry]
 ID=journal_whip;
 category=equipment; halfPage=true;
-title=鞭;
-text=<itemBig=whip_steel><title=鞭><brAdj=>伤害弱但灵活.任何近战武器中有着<n>最远的射程,但会被护甲所格挡.<br=>  攻击距离: 3,  +3% 命中<br=>  对<icon=PhysDef> -20%伤害;
+title=Whip;
+text=<itemBig=whip_steel><title=Whip><brAdj=>Weak but flexible. Longest range of any melee weapon, but thwarted by armor.<br=>  Range: 3,  +3% Accuracy<br=>  20% less damage vs. <icon=PhysDef>;
 
 [JournalEntry]
 ID=journal_knuckle;
 category=equipment; halfPage=true;
-title=指虎;
-text=<itemBig=knuckle_steel><title=指虎><brAdj=>比手无寸铁要好,但真正擅长使用他们的是专家拳手.<br=>  每级<icon=skill_Fist>额外+1.5%;
+title=Knuckle;
+text=<itemBig=knuckle_steel><title=Knuckle><brAdj=>Better than being unarmed, but where they truly excel is in the hands of experts.<br=>  Extra +1.5% Acc. per <icon=skill_Fist>;
 
 [JournalEntry]
 ID=journal_shield;
 category=equipment; halfPage=true;
-title=盾;
-text=<itemBig=shield_steel><title=盾><brAdj=>主要用于防护.用它攻击造成的伤害很小,<n>但有推力.把人推到障碍物上会伤害他们.<br=>  -5% 命中<br=>  推动敌人;
+title=Shield;
+text=<itemBig=shield_steel><title=Shield><brAdj=>Mainly used for protection. Bashing with it deals minimal damage, but also pushes. Pushing someone into an obstacle damages them.<br=>  -5% Accuracy<br=>  Pushes enemy;
 
 [JournalEntry]
 ID=journal_bow;
 category=equipment; halfPage=true;
-title=弓;
-text=<itemBig=bow_steel><title=弓><brAdj=>最通用的远程武器.强大有效(近距离战斗除外).<br=>  可以绕过障碍物攻击;
+title=Bow;
+text=<itemBig=bow_steel><title=Bow><brAdj=>Most versatile ranged weapon. Powerful & effective (except in close combat).<br=>  Can arc over obstacles;
 
 [JournalEntry]
 ID=journal_xbow;
 category=equipment; halfPage=true;
-title=弩;
-text=<itemBig=xbow_steel><title=弩><brAdj=>非常强大的武器,可单手使用,但需重新装载.<br=>  无法绕过障碍物<br=>  需要重新装载;
+title=Crossbow;
+text=<itemBig=xbow_steel><title=Crossbow><brAdj=>Extremely strong weapon that can be used 1-handed, but must be reloaded every shot.<br=>  Cannot arc over obstacles<br=>  Must be reloaded;
 
-[ItemType]  name=晶格之鞭;
+[ItemType]  name=Lattice Whip;
 texture=items_weapons; 
 ID=whip_lattice; pR=pGreen; pB=pYellow;
-description=由扭曲的网格杂草制成的鞭子.;
+description=Whip made of twisted lattice weed.;
 journalID=item_latticeWeed;
 weight=3; volume=3; value=15;
 power=4;
 sprite=373; spriteWhenHeld=405; itemCategory=weapon; element=whip;
  action=whipAttack;
  
-[ItemType]  name=蛛丝之鞭;
+[ItemType]  name=Silk Whip;
 texture=items_weapons; 
 ID=whip_silk; pR=pGrey; pB=pBoneDark;
 journalID=item_silk_spide;
-description=蜘蛛网缠绕的皮革鞭子.;
+description=Whip of webs wrapped around leather.;
 weight=3; volume=3; value=30;
 power=4;
 sprite=373; spriteWhenHeld=405; itemCategory=weapon; element=whip;
@@ -3381,10 +3381,10 @@ combineWith=furnace2_lit; toMake=silk_spide;
 combineWith=furnace_everlit1; toMake=silk_spide; 
 combineWith=furnace_everlit2; toMake=silk_spide; 
  
-[ItemType]  name=克里沃之刃;
+[ItemType]  name=Cleever Edge;
 texture=items_weapons; 
 ID=rapier_cleever; pR=pCRed; pB=pCRed;
-description=克里沃的断裂的手被锐化成武器.;
+description=Severed hand of a Cleever sharpened into a weapon.;
 journalID=journal_cleever_weapon;
 weight=2; volume=5; value=5;
 power=5;
@@ -3394,10 +3394,10 @@ special=rotate90WhenSheathed;
 [ItemEffect]
 ID=rapier_cleever; actorValue=PhysEva; magnitude=-3; duration=-1;
  
-[ItemType]  name=克里沃之矛;
+[ItemType]  name=Cleever Spear;
 texture=items_weapons; 
 ID=spear_cleever; pR=pCRed; pB=pCRed;
-description=克里沃的四肢变成了长矛.;
+description=Cleever limbs fashioned into a spear.;
 journalID=journal_cleever_weapon;
 weight=4; volume=10; value=5;
 power=5;
@@ -3408,10 +3408,10 @@ special=sprite2xHeight;
 [ItemEffect]
 ID=spear_cleever; actorValue=PhysEva; magnitude=-3; duration=-1;
  
-[ItemType]  name=克里沃之盾;
+[ItemType]  name=Cleever Shield;
 texture=items_weapons; 
 ID=shield_cleever; pR=pCRed; pB=pCRed;
-description=克里沃的甲壳制成的盾牌.;
+description=Shield wrought from Cleever carapace.;
 journalID=journal_cleever_weapon;
 sprite=483; spriteWhenHeld=515; itemCategory=weapon; element=shield;
 weight=5; volume=5; value=5;
@@ -3421,10 +3421,10 @@ action=shieldAttack;
 ID=shield_cleever; actorValue=PhysEva; magnitude=10; duration=-1;
 
 
-[ItemType]  name=克里沃之刺;
+[ItemType]  name=Cleever Impaler;
 texture=items_weapons; 
 ID=xbow_cleever; pR=pCRed; pB=pCRed;
-description=发射克里沃体刺的弩.; 
+description=Crossbow that fires Cleever spines.; 
 journalID=journal_cleever_weapon;
 sprite=484; spriteWhenHeld=516; itemCategory=weapon; element=aim;
 weight=2; volume=5; value=5;
@@ -3435,10 +3435,10 @@ ID=xbow_cleever; element=actionUsed; newID=xbow_cleever_unloaded;
 [ItemEffect]
 ID=xbow_cleever; actorValue=PhysEva; magnitude=-3; duration=-1;
  
-[ItemType]  name=克里沃之刺(未装载);
+[ItemType]  name=Cleever Impaler (Unloaded);
 texture=items_weapons; 
 ID=xbow_cleever_unloaded; pR=pCRed; pB=pCRed;
-description=发射克里沃体刺的弩 -- 需要重新装载.; 
+description=Cleever spine crossbow -- needs to be reloaded.; 
 journalID=journal_cleever_weapon;
 sprite=485; spriteWhenHeld=517; itemCategory=weapon; 
 weight=2; volume=5; value=5;
@@ -3449,10 +3449,10 @@ ID=xbow_cleever_unloaded; element=actionUsed; element=reload; newID=xbow_cleever
 [ItemEffect]
 ID=xbow_cleever_unloaded; actorValue=PhysEva; magnitude=-3; duration=-1;
 
-[ItemType]  name=克里沃链枷;
+[ItemType]  name=Cleever Flail;
 texture=items_weapons; 
 ID=flail_cleever; pR=pCRed; pB=pCRed;
-description=克里沃的关节制成的链枷.;
+description=Cleever joints clumped into sharp flail.;
 journalID=journal_cleever_weapon;
 weight=2; volume=5; value=5;
 power=5;
@@ -3464,13 +3464,13 @@ ID=flail_cleever; actorValue=PhysEva; magnitude=-3; duration=-1;
 [JournalEntry]
 ID=journal_cleever_weapon;
 category=equipment; halfPage=true; rarity=1;
-title=克里沃武器;
-text=<itemBig=rapier_cleever><itemBig=shield_cleever><itemBig=xbow_cleever><title=克里沃武器><brAdj=>克里沃制造的病态的武器.通过弯曲和聚集<n>锯齿状的克里沃解剖结构，制造出了功能性的<n>危险的武器.;
+title=Cleever Weapons;
+text=<itemBig=rapier_cleever><itemBig=shield_cleever><itemBig=xbow_cleever><title=Cleever Weapons><brAdj=>Morbid weaponry crafted by the Cleever, of the Cleever. By bending and clumping together the jagged Cleever anatomy, they have crafted functional, dangerous weapons.;
 
-[ItemType]  name=螳螂之刃;
+[ItemType]  name=Mantis Blade;
 texture=items_weapons; 
 ID=sword_mantis; pR=p56; pB=p56; pG=p56;
-description=螳螂兽锋利的四肢.;
+description=Sharp limb of a mantis beast.;
 journalID=journal_mantis_weapon;
 weight=2; volume=5; value=200;
 power=7;
@@ -3478,10 +3478,10 @@ sprite=487; spriteWhenHeld=519; itemCategory=weapon; element=sword;
  action=swordAttack;
 special=rotate90WhenSheathed; special=enhanceSlots_0;
  
-[ItemType]  name=螳螂击碎者;
+[ItemType]  name=Mantis Smasher;
 texture=items_weapons; 
 ID=hammer_mantis; pR=p56; pB=p56; pG=p56;
-description=被切断的棍棒状螳螂附肢.;
+description=A severed club-like mantis appendage.;
 journalID=journal_mantis_weapon;
 weight=2; volume=5; value=200;
 power=8;
@@ -3489,10 +3489,10 @@ sprite=488; spriteWhenHeld=520; itemCategory=weapon; element=hammer;
  action=hammerAttack;
 special=rotate90WhenSheathed; special=enhanceSlots_0;
 
-[ItemType]  name=螳螂之斧;
+[ItemType]  name=Mantis Hacker;
 texture=items_weapons; 
 ID=axe_mantis; pR=p56; pB=p56; pG=p56;
-description=凶猛的锯齿螳螂爪.;
+description=Vicious serrated mantis claw.;
 journalID=journal_mantis_weapon;
 weight=2; volume=5; value=200;
 power=8;
@@ -3502,14 +3502,14 @@ special=rotate90WhenSheathed; special=enhanceSlots_0;
 [JournalEntry]
 ID=journal_mantis_weapon;
 category=equipment; halfPage=true; rarity=2;
-title=螳螂武器;
-text=<itemBig=sword_mantis><itemBig=axe_mantis><title=Mantis Weapons><brAdj=>有时被砍下来的肢体就足以做成一件<n>野蛮的武器.而这些螳螂兽爪锋利如秘银,<n>但不能再增强.;
+title=Mantis Weapons;
+text=<itemBig=sword_mantis><itemBig=axe_mantis><title=Mantis Weapons><brAdj=>Sometimes a chopped off limb is enough to make a savage weapon. These mantis-beast claws are sharp as mythril, but cannot be augmented.;
 
 
-[ItemType]  name=废弃石制棍棒;
+[ItemType]  name=Junkstone Club;
 texture=items_weapons; 
 ID=hammer_junkstone; pR=pPurple2;
-description=克莱文的泥土与岩石之锤.;
+description=Hammer of Graven dirt & rock.;
 journalID=journal_hammer;
 weight=16; volume=5; value=50;
 power=6;
@@ -3520,10 +3520,10 @@ special=rotate90WhenSheathed; special=enhanceSlots_0;
 ID=hammer_junkstone; actorValue=PhysEva; magnitude=-5; duration=-1;
  
  
-[ItemType]  name=壳虫之盾;
+[ItemType]  name=Shellworm Shield;
 texture=items_weapons; 
 ID=shield_shellworm; pR=pPurple; pB=pPurple;
-description=由单一壳虫的壳制成的盾牌.;
+description=Shield made from a single plate of the Shellworm.;
 journalID=journal_shield;
 sprite=243; spriteWhenHeld=275; itemCategory=weapon; element=shield;
 weight=5; volume=5; value=950;
@@ -3539,10 +3539,10 @@ ID=shield_shellworm; actorValue=PhysEva; magnitude=18; duration=-1;
 ID=shield_shellworm; actorValue=MagEva; magnitude=4; duration=-1;
 
  
-[ItemType]  name=屏障之盾;
+[ItemType]  name=Barrier Shield;
 texture=items_weapons; 
 ID=shield_barrier; pR=pIce; pB=pIron;
-description=附有护佑魔法的巨大盾牌.;
+description=Massive shield enchanted with warding magic.;
 journalID=journal_shield;
 sprite=420; spriteWhenHeld=452; itemCategory=weapon; element=shield;
 weight=6; volume=8; value=8600;
@@ -3555,13 +3555,13 @@ ID=shield_barrier; actorValue=MagEva; magnitude=10; duration=-1;
 [JournalEntry]
 ID=item_shield_barrier;
 category=equipment; halfPage=true; rarity=2;
-title=屏障之盾;
-text=<itemBig=shield_barrier><title=屏障之盾><brAdj=>包含一组复杂的风和保护触发石,<n>可以永久保护使用者,<n>在向前猛推时能产生一堵屏障.;
+title=Barrier Shield;
+text=<itemBig=shield_barrier><title=Barrier Shield><brAdj=>Contains a complex array of Wind & Preservation triggers that permanently ward it. It also creates barriers when thrust forward.;
  
-[ItemType]  name=秘银塔盾;
+[ItemType]  name=Silver Tower;
 texture=items_weapons; 
 ID=shield_silvertower; pR=p14; pB=p8;
-description=巨大的秘银盾牌.;
+description=Mythril shield of massive proportions.;
 journalID=journal_shield;
 sprite=627; spriteWhenHeld=659; itemCategory=weapon; element=shield;
 weight=8; volume=8; value=12500;
@@ -3574,13 +3574,13 @@ ID=shield_silvertower; actorValue=MagEva; magnitude=6; duration=-1;
 [JournalEntry]
 ID=item_shield_silvertower;
 category=equipment; halfPage=true; rarity=2;
-title=秘银塔盾;
-text=<itemBig=shield_silvertower><title=秘银塔盾><brAdj=>由于其秘银合金成分而格外轻的大型塔盾.<n>为了保护怀尔德庞大的身体.但由于很轻,<n>也能被体型更小的生物使用.;
+title=Silver Tower;
+text=<itemBig=shield_silvertower><title=Silver Tower><brAdj=>Large tower shield that is exceptionally light due to its mythril alloy composition. Made to protect the large bodies of Wilderi - but thanks to its lightness, can be used just as well by smaller beings.;
 
-[ItemType]  name=盾弓;
+[ItemType]  name=Shieldshot;
 texture=items_weapons; 
 ID=shield_slingshot; pR=p14; pB=p4;
-description=顶部装有弹弓的奇怪盾牌.;
+description=Curious shield with a slingshot mounted on top.;
 journalID=journal_shield;
 sprite=563; spriteWhenHeld=595; itemCategory=weapon; element=shieldShotWpn;
 weight=5; volume=5; value=2500;
@@ -3591,14 +3591,14 @@ ID=shield_slingshot; actorValue=PhysEva; magnitude=15; duration=-1;
 [JournalEntry]
 ID=item_shield_slingshot;
 category=equipment; halfPage=true; rarity=2;
-title=盾弓;
-text=<itemBig=shield_slingshot><title=盾弓><brAdj=>有时一个奇怪的设计会产生比它应有的更好的效果.<n>这个盾牌/弹弓组合是一个有效的备用武器<n>-尽管它的缺点是不能再用来推对手.;
+title=Shieldshot;
+text=<itemBig=shield_slingshot><title=Shieldshot><brAdj=>Sometimes an odd design works better than it has any right to. This combination shield / slingshot makes an effective backup weapon - although with the drawback that it can no longer be used to push opponents.;
 
 
-[ItemType]  name=天堂之锥;
+[ItemType]  name=Heavenpiercer;
 texture=items_weapons; 
 ID=spear_heaven; pR=pGold; pB=pPurpleD;
-description=像钻头一样的矛激励你去做不可能的事.;
+description=Drill-like spear that inspires you to do the impossible.;
 journalID=journal_spear;
 sprite=426; spriteWhenHeld=426; itemCategory=weapon; element=spear;
 depthMod=900;
@@ -3611,13 +3611,13 @@ ID=spear_heaven; actorValues=morale; damageMultiplier=0;
 [JournalEntry]
 ID=item_spear_heaven;
 category=equipment; halfPage=true; rarity=3; rewardMod=250;
-title=天堂之锥;
-text=<itemBig=spear_heaven><title=天堂之锥><brAdj=>一位耻辱般死去的传奇英雄的矛.<n>它的持用者不知何为恐惧,<n>当它攻击时,它会激励附近的盟友.;
+title=Heavenpiercer;
+text=<itemBig=spear_heaven><title=Heavenpiercer><brAdj=>Spear of a legendary hero who died ignominiously. Its wielder knows no fear, and when it strikes it inspires nearby allies.;
 
-[ItemType]  name=钢之月牙;
+[ItemType]  name=Steel Crescent;
 texture=items_weapons; 
 ID=spear_crescent1; pR=pSteel; pB=pSteelHilt;
-description=带刃长柄武器,能够发动宽阔的横扫攻击.;
+description=Bladed polearm capable of wide sweep attacks.;
 journalID=journal_spear;
 sprite=569; spriteWhenHeld=569; itemCategory=weapon; element=spear;
 depthMod=900;
@@ -3626,10 +3626,10 @@ special=sprite2xHeight;
 power=4;
 action=spearAttack_crescent;
 
-[ItemType]  name=秘银之月牙;
+[ItemType]  name=Silver Crescent;
 texture=items_weapons; 
 ID=spear_crescent2; pR=pMythril; pB=pMythrilHilt;
-description=闪亮的刀刃用于宽范围的攻击.;
+description=Shining blade used for broad slash attacks.;
 journalID=journal_spear;
 sprite=569; spriteWhenHeld=569; itemCategory=weapon; element=spear;
 depthMod=900;
@@ -3640,14 +3640,14 @@ action=spearAttack_crescent;
 [JournalEntry]
 ID=journal_spear_crescent1;
 category=equipment; halfPage=true; rarity=2;
-title=月牙长柄武器;
-text=<itemBig=spear_crescent1><title=月牙长柄武器><brAdj=>并不是所有的长柄武器都只是用来刺人的<n>--这种制作精良的刀刃擅长于砍倒一大群人.<n>不幸的是,与标准矛相比,这种设计会降低5%命中.;
+title=Crescent Polearm;
+text=<itemBig=spear_crescent1><title=Crescent Polearm><brAdj=>Not all polearms are only for stabbing - this well-crafted blade excels at cutting down large groups. Unfortunately this design reduces its accuracy by 5% compared to standard spears.;
 
 
-[ItemType]  name=脱谷三叉戟;
+[ItemType]  name=Thresher Trident;
 texture=items_weapons; 
 ID=spear_trident_thresher; pR=pTeal; pB=pGold;
-description=凶险的三叉戟,在末端撕裂并使敌人迷失方向.;
+description=Vicious trident that mangles and disorients foes at the tip.;
 journalID=journal_spear;
 sprite=633; spriteWhenHeld=633; itemCategory=weapon; element=spear;
 depthMod=900;
@@ -3658,13 +3658,13 @@ action=spearAttack_thresher;
 [JournalEntry]
 ID=item_spear_trident_thresher;
 category=equipment; halfPage=true; rarity=2;
-title=脱谷三叉戟;
-text=<itemBig=spear_trident_thresher><title=脱谷三叉戟><brAdj=>最初是用来防御林罗夫特凶险的穿山甲的武器.<n>将矛对准冲过来的穿山甲.<n>之后被发现对埃拉尔的其他生物同样有效.;
+title=Thresher Trident;
+text=<itemBig=spear_trident_thresher><title=Thresher Trident><brAdj=>Originally a weapon to defend against vicious Pangullin in Limroft. By setting the spear against charging Pangullin, it would simultaneously wound and send the birds off course. It was found to be similarly effective against other beings in Eral.;
 
-[ItemType]  name=鞭笞;
+[ItemType]  name=Lasher;
 texture=items_weapons; 
 ID=whip_lasher; pR=pRedD; pB=pShockWeaponHilt;
-description=带倒钩用于剥皮的看起来非常邪恶的鞭子.;
+description=Wicked-looking whip with barbs for flaying.;
 journalID=journal_whip;
 weight=3; volume=3; value=3400;
 power=5;
@@ -3673,13 +3673,13 @@ sprite=422; spriteWhenHeld=454; itemCategory=weapon; element=whip;
 [JournalEntry]
 ID=item_whip_lasher;
 category=equipment; halfPage=true; rarity=2;
-title=鞭笞;
-text=<itemBig=whip_lasher><title=鞭笞><brAdj=>这条血迹斑斑的鞭子无疑是某个疯狂的拷问者<n>发明的.它似乎是为了造成痛苦<n>而不是伤害而设计的.;
+title=Lasher;
+text=<itemBig=whip_lasher><title=Lasher><brAdj=>This bloodstained whip is no doubt the invention of some crazed torturer. It seems designed to inflict pain rather than damage.;
 
-[ItemType]  name=抓钩之鞭;
+[ItemType]  name=Grapple Whip;
 texture=items_weapons; 
 ID=whip_grapple; pR=pMythril; pB=pBronze;
-description=末端有钩的鞭子,将目标拉过来.;
+description=Chain whip with a hook at the end. Pulls target.;
 journalID=journal_whip;
 weight=3; volume=3; value=1270;
 power=5;
@@ -3688,13 +3688,13 @@ sprite=421; spriteWhenHeld=453; itemCategory=weapon; element=whip;
 [JournalEntry]
 ID=item_whip_grapple;
 category=equipment; halfPage=true; rarity=2;
-title=抓钩之鞭;
-text=<itemBig=whip_grapple><title=抓钩之鞭><brAdj=>这种奇怪的秘银制的鞭子配有一个锋利的抓钩,<n>使其能够钩住并拉敌人.<n>结果是其攻击范围是有限的;
+title=Grapple Whip;
+text=<itemBig=whip_grapple><title=Grapple Whip><brAdj=>This odd mythril whip is fitted with a sharp grappling hook, allowing it to pull enemies. Its range is limited as a result.;
 
-[ItemType]  name=亡灵杀手;
+[ItemType]  name=Undead Killer;
 texture=items_weapons; 
 ID=whip_undeadkiller; pR=pGold; pB=pSilver;
-description=用来摧毁亡灵生物的战争之鞭.;
+description=War whip designed to destroy undead.;
 weight=3; volume=3; value=6000;
 power=6;
 sprite=358; spriteWhenHeld=390; itemCategory=weapon; element=whip;
@@ -3702,14 +3702,14 @@ sprite=358; spriteWhenHeld=390; itemCategory=weapon; element=whip;
 [JournalEntry]
 ID=item_whip_undeadkiller;
 category=equipment; halfPage=true; rarity=3; rewardMod=100;
-title=亡灵杀手;
-text=<itemBig=whip_undeadkiller><title=亡灵杀手><brAdj=>鞭上布满生命触发物,只有靠近亡灵生物时<n>才会产生反应.这使得它对亡灵生物<n>和活着的生物都有效.;
+title=Undead Killer;
+text=<itemBig=whip_undeadkiller><title=Undead Killer><brAdj=>Whip studded with life triggers that only respond to close proximity to undead. This allows it to be effective against both undead & living creatures.;
 
-[ItemType]  name=沃尔斯卡弗;
+[ItemType]  name=Volskarver;
 texture=items_weapons; 
 ID=sword_volskarver; sprite=34; spriteWhenHeld=66; 
 itemCategory=weapon;  element=sword; special=timer;
-description=耗尽能量的嵌有沃尔斯卡恩的剑.;
+description=Volskarn-inlaid sword bereft of energy.;
 timer=250;
 journalID=journal_volskarver;
 weight=3; volume=5; value=7600;
@@ -3720,11 +3720,11 @@ power=7;
 [ItemReaction]
 ID=sword_volskarver; element=elec; element=timerUp; newID=sword_volskarver_charged;
  
-[ItemType]  name=沃尔斯卡弗;
+[ItemType]  name=Volskarver;
 texture=items_weapons; 
 ID=sword_volskarver_charged; sprite=35; spriteWhenHeld=67; 
 itemCategory=weapon; special=animated; element=sword;
-description=充满能量的嵌有沃尔斯卡恩的剑.;
+description=Volskarn-inlaid sword overflowing with energy.;
 journalID=journal_volskarver;
 weight=3; volume=5; value=7600;
 power=11;
@@ -3738,13 +3738,13 @@ ID=sword_volskarver_charged; red=0.8; blue=0.9; green=0.7; alpha=0.5; size=0.15;
 [JournalEntry]
 ID=journal_volskarver;
 category=equipment; halfPage=true; rarity=4;
-title=沃尔斯卡弗;
-text=<itemBig=sword_volskarver_charged><title=沃尔斯卡弗><brAdj=>具有独特设计的杰作刀刃.<n>沃尔斯卡恩会随着时间或从闪电中吸收本源,<n>并在下一次攻击时释放.;
+title=Volskarver;
+text=<itemBig=sword_volskarver_charged><title=Volskarver><brAdj=>Masterwork blade with a peculiar design. The Volskarn absorbs essence over time or from lightning, which is then discharged next attack.;
 
-[ItemType]  name=回旋半月;
+[ItemType]  name=Whirling Scimitar;
 texture=items_weapons; 
 ID=scimitar_whirl; pR=pSteel; pB=pSilver;
-description=弯曲的刀刃使敌人迷失方向.;
+description=Curved blade that disorients foes.;
 sprite=190; spriteWhenHeld=222; itemCategory=weapon; 
 special=sprite2xWidth; element=sword;
 weight=6; volume=10; value=2800;
@@ -3753,13 +3753,13 @@ power=8;
 [JournalEntry]
 ID=item_scimitar_whirl;
 category=equipment; halfPage=true; rarity=2;
-title=回旋半月;
-text=<itemBig=scimitar_whirl><title=回旋半月><brAdj=>每次挥舞伴随着一股强风来自嵌入有强力的<n>触发物的剑柄.使敌人旋转,<n>暴露他们的侧面和背部.;
+title=Whirling Scimitar;
+text=<itemBig=scimitar_whirl><title=Whirling Scimitar><brAdj=>Each swing is accompanied by a gust of wind from a force trigger embedded in the hilt. This spins the enemy, exposing their sides & back.;
 
-[ItemType]  name=龙弯刀;
+[ItemType]  name=Dragon Scimitar;
 texture=items_weapons; 
 ID=scimitar_dragon; pR=p31; pB=p30;
-description=为表彰 Reeve 的成就而送给她的刀锋.;
+description=Blade presented to Reeve in honor of her accomplishments.;
 sprite=190; spriteWhenHeld=222; itemCategory=weapon; 
 special=sprite2xWidth; element=sword;
 weight=6; volume=10; value=6500;
@@ -3770,14 +3770,14 @@ ID=scimitar_dragon; actorValue=PhysEva; magnitude=3; duration=-1;
 [JournalEntry]
 ID=item_scimitar_dragon;
 category=equipment; halfPage=true; rarity=3; rewardMod=-500;
-title=龙弯刀;
-text=<itemBig=scimitar_dragon><title=龙弯刀><brAdj=>这是给 Reeve 的好刀作为他为<n>多米尼奥服务30年的奖励.<n>在里夫被风暴加农炮击中时丢失了<n>--但看起来它被重新找到并抵押了.;
+title=Dragon Scimitar;
+text=<itemBig=scimitar_dragon><title=Dragon Scimitar><brAdj=>Fine blade given to Reeve as a reward for 30 years of service to Dominio. Was lost when Reeve was blasted by a storm cannon - but it looks like it was recovered and pawned at some point.;
 
 
-[ItemType]  name=闪亮佩剑;
+[ItemType]  name=Shining Saber;
 texture=items_weapons; 
 ID=rapier_shining; pR=pWhite; pB=p12;
-description=高反射的剑,可以使来自近战的攻击者失明;
+description=Highly reflective rapier that can blind melee attackers.;
 sprite=571; spriteWhenHeld=603; itemCategory=weapon; 
 element=sword;
 weight=6; volume=10; value=7500;
@@ -3792,23 +3792,23 @@ ID=rapier_shining; red=0.1; blue=0.1; green=0.1; alpha=0.2; size=0.1; flicker=0;
 [JournalEntry]
 ID=item_rapier_shining;
 category=equipment; halfPage=true; rarity=3; rewardMod=50;
-title=闪亮佩剑;
-text=<itemBig=rapier_shining><title=闪亮佩剑><brAdj=>秘银的特殊处理方式让它的表面在阳光下<n>闪闪发光.未击中持用者的<n>相邻攻击者将短暂失明;
+title=Shining Saber;
+text=<itemBig=rapier_shining><title=Shining Saber><brAdj=>Something about the way the mythril was treated causes its surface to shine brightly in the light. Adjacent attackers that miss its wielder are blinded for a short time.;
 
-[ItemType]  name=穿孔匕首;
+[ItemType]  name=Punch Dagger;
 texture=items_weapons; 
 ID=knuckle_dagger_steel; pR=pIron; pB=pSteelHilt;
-description=钢刃指虎武器.;
+description=Steel bladed knuckle weapon.;
 journalID=journal_dagger_punch;
 weight=3; volume=1; value=100;
 power=4;
 sprite=427; spriteWhenHeld=459; itemCategory=weapon; element=punchDaggerWpn;
  action=fistAttack_slash;
  
-[ItemType]  name=秘银拳刃;
+[ItemType]  name=Mythril Katar;
 texture=items_weapons; 
 ID=knuckle_dagger_mythril; pR=pMythril; pB=pBoneDark;
-description=秘银制的带刃指虎.;
+description=Bladed knuckle weapon of mythril.;
 journalID=journal_dagger_punch;
 weight=3; volume=1; value=950;
 power=5;
@@ -3817,13 +3817,13 @@ sprite=427; spriteWhenHeld=459; itemCategory=weapon; element=punchDaggerWpn;
 [JournalEntry]
 ID=journal_dagger_punch;
 category=equipment; halfPage=true; rarity=1;
-title=穿孔匕首;
-text=<itemBig=knuckle_dagger_steel><title=穿孔匕首><brAdj=>与标准的指虎武器相似的厚刃握持.<n>允许拳手使用基于刀刃的技能.;
+title=Punch Dagger;
+text=<itemBig=knuckle_dagger_steel><title=Punch Dagger><brAdj=>Thick blade held in a grip similar to standard knuckle weapons. Allows a brawling expert to use blade-based abilities.;
 
-[ItemType]  name=八指指虎;
+[ItemType]  name=8-Finger Knuckle;
 texture=items_weapons; 
 ID=knuckle_8finger; pR=p8; pB=pSteelHilt;
-description=巨大的指关节是未知物种的杰作,<n>强大但不精准.;
+description=Oversized knuckle made for an unknown species. Powerful but inaccurate.;
 journalID=journal_knuckle;
 weight=8; volume=1; value=8000;
 power=8;
@@ -3834,13 +3834,13 @@ ID=knuckle_8finger; actorValue=PhysEva; magnitude=-8; duration=-1;
 [JournalEntry]
 ID=item_knuckle_8finger;
 category=equipment; halfPage=true; rarity=4; rewardMod=500;
-title=八指指虎;
-text=<itemBig=knuckle_8finger><title=八指指虎><brAdj=>这种指关节武器是由一种未知的材料制成的,<n>对于一个未知的物种来说--没有已知的<n>类人种族有8个手指,尤其是这种大小的手指.<n>尽管使用不便,但无论它是由什么制成的<n>(感觉像是光滑的骨头和金属的某种组合),<n>都使它特别强力且有效;
+title=8-Finger Knuckle;
+text=<itemBig=knuckle_8finger><title=8-Finger Knuckle><brAdj=>This knuckle weapon is crafted from an unknown material, and for an unknown species - no known humanoid has 8 fingers, particularly ones of this size. Though awkward to use, whatever it is made of (what feels like some sort of combination of smooth bone and metal) makes it especially effective.;
  
-[ItemType]  name=黄铜之龙;
+[ItemType]  name=Brass Dragon;
 texture=items_weapons; 
 ID=knuckle_bdragon; pR=pAsh_still2; pB=p31;
-description=指虎爆破器,撞击时会喷出火焰.;
+description=Knuckle blaster that spouts flames on impact.;
 journalID=journal_knuckle;
 weight=8; volume=1; value=4000;
 power=3;
@@ -3851,14 +3851,14 @@ ID=knuckle_bdragon; actorValue=skill_Fire; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_knuckle_bdragon;
 category=equipment; halfPage=true; rarity=3;
-title=黄铜之龙;
-text=<itemBig=knuckle_bdragon><title=黄铜之龙><brAdj=>这款难以理解又耐用的装备在攻击敌人时<n>可以触发多重火焰.它是由塞尔多斯·洛恩在<n>贡哈尔德科技发展的巅峰时期发明的.<n>尽管功能完美,但由于其昂贵的部件和<n>很少有人愿意把火炮绑在手上的事实,<n>它并没有被广泛使用.;
+title=Brass Dragon;
+text=<itemBig=knuckle_bdragon><title=Brass Dragon><brAdj=>This intricate yet durable device rigs up multiple fire triggers to blast flames when punching a foe. It was invented by Seldous Lorn during the peak of technological advancement in Gonhaldr. Despite functioning perfectly, it was not adopted for widespread use due to its expensive components and the fact that few were willing to strap fire cannons to their hands.;
  
  
-[ItemType]  name=格挡匕首;
+[ItemType]  name=Parrying Dagger;
 texture=items_weapons; 
 ID=dagger_parry; pR=pSilver; pB=pSteel;
-description=可以格挡来袭攻击的匕首.;
+description=Dagger for parrying incoming attacks.;
 journalID=journal_dagger;
 weight=2; volume=1; value=650;
 power=4;
@@ -3870,13 +3870,13 @@ ID=dagger_parry; actorValue=PhysEva; magnitude=8; duration=-1;
 [JournalEntry]
 ID=item_dagger_parry;
 category=equipment; halfPage=true; rarity=1;
-title=格挡匕首;
-text=<itemBig=dagger_parry><title=格挡匕首><brAdj=>剑柄特别宽的匕首,可以接住发起攻击的武器.<n>防守和进攻都能胜任,但都不出色.;
+title=Parrying Dagger;
+text=<itemBig=dagger_parry><title=Parrying Dagger><brAdj=>Dagger with an especially broad hilt to catch incoming weapons. Serviceable both defensively and offensively, but excels at neither.;
 
-[ItemType]  name=黑色錾刀;
+[ItemType]  name=Black Chisel;
 texture=items_weapons; 
 ID=dagger_chisel_black; pR=pLaserHilt; pB=pLaserHilt;
-description=有异常锋利边缘的凶险的錾刀.;
+description=Sinister-looking chisel with an abnormally sharp edge.;
 journalID=journal_dagger;
 weight=2; volume=1; value=2150;
 power=4;
@@ -3886,13 +3886,13 @@ special=rotate90WhenSheathed;
 [JournalEntry]
 ID=item_dagger_chisel_black;
 category=equipment; halfPage=true; rarity=3; rewardMod=500;
-title=黑色錾刀;
-text=<itemBig=dagger_chisel_black><title=黑色錾刀><brAdj=>诺拉冒充为雕刻家,轻而易举地接近了虚荣的<n>总督阿纳斯.然而,阿纳斯要求他在雕刻时<n>穿上全套盔甲.而这导致了黑色錾刀的诞生,<n>它可以让诺拉轻松地暗杀阿纳斯.錾刀插进了<n>目标身体里,但诺拉一直没被找到或抓住.;
+title=Black Chisel;
+text=<itemBig=dagger_chisel_black><title=Black Chisel><brAdj=>Posing as a sculptor, Nora had an easy time getting near the vain Governor-General Arnas. However, Arnas demanded that he be sculpted wearing his full armor set. This led to the creation of the Black Chisel, which allowed Nora to easily assassinate Arnas. The chisel was left embedded in its target, but Nora was never found or captured.;
  
-[ItemType]  name=勒马克的匕首;
+[ItemType]  name=Lemarck's Dagger;
 texture=items_weapons; 
 ID=dagger_lemarck; pR=pSilver; pB=p44; pG=p46;
-description=优雅的,完美平衡的匕首,能攻击两次.;
+description=Elegant, perfectly balanced dagger that strikes twice.;
 journalID=journal_dagger;
 weight=2; volume=1; value=8500;
 power=2;
@@ -3903,15 +3903,15 @@ special=enhanceSlots_0;
 [JournalEntry]
 ID=item_dagger_lemarck;
 category=equipment; halfPage=true; rarity=4; rewardMod=-200;
-title=勒马克的匕首;
-text=<itemBig=dagger_lemarck><title=勒马克的匕首><brAdj=>这是一把制作精良的匕首,它能以极快的速度<n>发起两次攻击.它与人民英雄勒马克抢劫腐败的<n>鲁马尼部落首领时使用的刀的描述相吻合--但是,<n>这个没有他的个人徽章.由于其流线型的设计.<n>它不能容纳任何增强或触发物.;
+title=Lemarck's Dagger;
+text=<itemBig=dagger_lemarck><title=Lemarck's Dagger><brAdj=>An exquisitely crafted dagger so refined that it can attack twice as fast. It matches a description of the knife the people's hero Lemarck used when robbing corrupt Rumanian clan leaders - however, it lacks his personal insignia. Due to its sleek design, it cannot fit any augments or triggers in it.;
  
 
 
-[ItemType]  name=灵魂冰雹;
+[ItemType]  name=Spirithail;
 texture=items_weapons; 
 ID=bow_spirithail; pR=pGold; pB=pPurple2;
-description=浸透毁灭魔法的弓,可以穿透守卫魔法.<n>需要双手才能使用.;
+description=Ruin-imbued bow that pierces Guard magic. Requires both hands to use.;
 journalID=journal_bow;
 sprite=423; spriteWhenHeld=455; itemCategory=weapon; element=bow; special=twoHanded;
 weight=1; volume=4; value=8900;
@@ -3921,13 +3921,13 @@ power=6;
 ID=item_bow_spirithail;
 category=equipment; halfPage=true; rarity=4; rewardMod=250;
 title=Spirithail;
-text=<itemBig=bow_spirithail><title=Spirithail><brAdj=>毁灭魔法允许它的射击忽略目标的守卫法术.<n>最著名的是40年前曾暗杀过西提尔的护佑者首领.;
+text=<itemBig=bow_spirithail><title=Spirithail><brAdj=>Ruin magic allows its shots to ignore the target's Guard spells. Most (in)famously used to assassinate Seartial's Head Warden 40 years ago.;
 
 
-[ItemType]  name=黄昏之弓;
+[ItemType]  name=Gloam Bow;
 texture=items_weapons; 
 ID=bow_gloam; pR=pShroom_glow; pB=pPurple;
-description=发射涂满了黄昏之尘的箭.需要双手使用.;
+description=Bow that shoots arrows coated in gloam dust. Requires both hands to use.;
 journalID=journal_bow;
 sprite=566; spriteWhenHeld=598; itemCategory=weapon; element=bow; special=twoHanded;
 weight=1; volume=4; value=4000;
@@ -3936,14 +3936,14 @@ power=5;
 [JournalEntry]
 ID=item_bow_gloam;
 category=equipment; halfPage=true; rarity=2;
-title=黄昏之弓;
-text=<itemBig=bow_gloam><title=黄昏之弓><brAdj=>通过一些巧妙的设计,这把弓上的黄昏之尘在<n>发射时被涂在箭上,防止使用者也被它的光芒照亮.<n>非常有效的对目标进行绘画;
+title=Gloam Bow;
+text=<itemBig=bow_gloam><title=Gloam Bow><brAdj=>Through some clever engineering, the gloam dust in this bow is applied to the arrows at the time of firing, preventing the user from also being lit up by its glow. Very effective for painting targets.;
  
  
-[ItemType]  name=机械之弓;
+[ItemType]  name=Machine Bow;
 texture=items_weapons; 
 ID=bow_machine; pR=p20; pB=p21;
-description=有着奇怪齿轮的弓,<n>赋予了巨大的攻击范围,<n>但限制了近距离使用.需要双手使用.;
+description=Bow with strange gears that give it massive range, but hinder short range usage. Requires both hands to use.;
 journalID=journal_bow;
 sprite=630; spriteWhenHeld=662; itemCategory=weapon; element=bow; special=twoHanded;
 weight=1; volume=5; value=5750;
@@ -3952,13 +3952,13 @@ power=5;
 [JournalEntry]
 ID=item_bow_machine;
 category=equipment; halfPage=true; rarity=3; rewardMod=50;
-title=机械之弓;
-text=<itemBig=bow_machine><title=机械之弓><brAdj=>人们普遍认为长弓是弓设计的顶峰--直到<n>这种弓的发明.它似乎是由某种秘银合金制成的,<n>这让它有足够的强度让巧妙的设计发挥作用.;
+title=Machine Bow;
+text=<itemBig=bow_machine><title=Machine Bow><brAdj=>It was commonly accepted that the longbow was the pinnacle of bow design - until the creation of this bow. It appears to be made from some sort of mythril alloy, lending it the strength it needs for the design to function.;
 
-[ItemType]  name=双重链枷;
+[ItemType]  name=Dual Flail;
 texture=items_weapons; 
 ID=flail_double; pR=pGreyD2; pB=pBoneDark;
-description=有两个尖刺头的链枷.;
+description=Dangerous flail with 2 heads.;
 journalID=journal_flail;
 weight=3; volume=5; value=1200;
 power=5;
@@ -3967,13 +3967,13 @@ sprite=293; spriteWhenHeld=325; itemCategory=weapon; element=flail;
 [JournalEntry]
 ID=item_flail_double;
 category=equipment; halfPage=true; rarity=1;
-title=双重链枷;
-text=<itemBig=flail_double><title=双重链枷><brAdj=>有人创造了一个比链枷更鲁莽和笨拙的武器<n>--双连枷!它有可能同时打击两个目标.;
+title=Dual Flail;
+text=<itemBig=flail_double><title=Dual Flail><brAdj=>Someone created a more reckless & awkward weapon than the flail - a double flail! It could potentially strike 2 targets at once.;
 
-[ItemType]  name=统率之链;
+[ItemType]  name=Chain of Command;
 ID=flail_command;
 texture=items_weapons; sprite=692; spriteWhenHeld=724; 
-description=闪光的链枷,激励盟友行动.;
+description=Shining flail that spurs allies into action.;
 journalID=journal_flail;
 weight=3; volume=5; value=5000;
 power=6;
@@ -3983,14 +3983,14 @@ action=flailAttack_command;
 [JournalEntry]
 ID=item_flail_command;
 category=equipment; halfPage=true; rarity=3;
-title=统率之链;
-text=<itemBig=flail_command><title=统率之链><brAdj=>在紧张的暴乱控制局面中,西提尔的一名护佑者首领<n>使用了这把精美抛光的链枷.当它的强光<n>击中目标时,她的下属清楚地知道该打倒谁,<n>并立即采取行动.;
+title=Chain of Command;
+text=<itemBig=flail_command><title=Chain of Command><brAdj=>This brilliantly polished flail was used by one of Seartial's Head Wardens during tense riot control situations. When its bright light lashed out at the target, her subordinates knew exactly who to take down and acted without delay.;
 
 
-[ItemType]  name=反噬爆炸;
+[ItemType]  name=Backblaster;
 texture=items_weapons; 
 ID=hammer_blaster; pR=pLaser; pB=pIronHilt;
-description=火箭动力的锤子,会伤害它的使用者.;
+description=Rocket-powered hammer that damages its user.;
 journalID=journal_hammer;
 weight=6; volume=5; value=9999;
 power=14;
@@ -4000,13 +4000,13 @@ special=rotate90WhenSheathed;
 [JournalEntry]
 ID=item_hammer_blaster;
 category=equipment; halfPage=true; rarity=2;
-title=反噬爆炸;
-text=<itemBig=hammer_blaster><title=反噬爆炸><brAdj=>设计这种武器的白痴立刻就被射杀了.<n>火焰触发器驱动了它,但也烧焦了使用者.;
+title=Backblaster;
+text=<itemBig=hammer_blaster><title=Backblaster><brAdj=>The idiot who designed this weapon was immediately fired, figuratively and literally. Fire triggers propel it but also scorch the user.;
 
-[ItemType]  name=万螯;
+[ItemType]  name=Myriapincer;
 texture=items_weapons; 
 ID=axe_crab; pR=pMeat; pB=pSilver;
-description=甲壳类动物锋利的附肢.;
+description=Sharp appendage of some vicious crustacean.;
 journalID=journal_axe;
 weight=5; volume=5; value=2750;
 power=9;
@@ -4016,13 +4016,13 @@ special=rotate90WhenSheathed;
 [JournalEntry]
 ID=item_axe_crab;
 category=equipment; halfPage=true; rarity=2;
-title=万螯;
-text=<itemBig=axe_crab><title=万螯><brAdj=>一条被遗弃的巨螯虾肢体--没人会想见到的东西.<n>它的爪子仍然像剃刀一样锋利和光滑,<n>里面有剧烈的毒素.;
+title=Myriapincer;
+text=<itemBig=axe_crab><title=Myriapincer><brAdj=>An abandoned limb of a Giant Myriacraw - something no one ever wants to meet. Its claw is still razor sharp and slick with aggravating toxin.;
 
-[ItemType]  name=碎冰锥;
+[ItemType]  name=The Icepick;
 texture=items_weapons; 
 ID=axe_icepick; pR=pBlue4; pB=pBlue5;
-description=特别制作的锄可以摧毁冰冻过的或结冰的目标.;
+description=Specially crafted pick that devastates Chilled or Frozen targets.;
 journalID=journal_axe;
 weight=5; volume=5; value=3500;
 power=9;
@@ -4032,13 +4032,13 @@ special=rotate90WhenSheathed;
 [JournalEntry]
 ID=item_axe_icepick;
 category=equipment; halfPage=true; rarity=3;
-title=碎冰锥;
-text=<itemBig=axe_icepick><title=碎冰锥><brAdj=>一个常见的怀尔德的成人仪式是完成一次<n>不公平的攀登神圣的 Mt. Jurrin <n> --林罗夫特的最高山峰.在埃拉尔,<n>他们会在较小的山上举行这种仪式.<n>奥德丽格·里芒德,一个蓄意谋杀的怀尔德人,<n>知道这些探险经常以意外的死亡而告终,<n>这使他们很容易成为目标.在他拖着不义之财<n>不小心滑倒而死之前,用这把斧头毫不费力地<n>消灭了许多这样的团体.;
+title=The Icepick;
+text=<itemBig=axe_icepick><title=The Icepick><brAdj=>A common Wilderi rite of passage is to make a partial climb of the holy Mt. Jurrin - tallest peak in Limroft. In Eral, they perform this rite on lesser mountains. Odrig Rymand, a murderous Wilderi, knew these expeditions often ended in unsolved deaths, making them easy marks. With this axe, he effortlessly dispatched many such groups before slipping and falling to his death hauling away his ill-gotten loot.;
 
-[ItemType]  name=砍斧;
+[ItemType]  name=Hacker;
 texture=items_weapons; 
 ID=axe_hacker; pR=p33; pB=p16;
-description=让你想不断砍下去的斧子.;
+description=Axe that makes you just want to keep chopping.;
 journalID=journal_axe;
 weight=5; volume=5; value=5000;
 power=8;
@@ -4052,14 +4052,14 @@ ID=axe_hacker; element=weaponBuff; element=usedMeleeWeaponAtk; action=axeAttack_
 [JournalEntry]
 ID=item_axe_hacker;
 category=equipment; halfPage=true; rarity=2;
-title=砍斧;
-text=<itemBig=axe_hacker><title=砍斧><brAdj=>这把未经雕琢的斧头有一个不寻常的切口刀刃,<n>但在其他方面并不出众.然而,它的某些东西<n>迫使你想要挥舞它.在激烈的战斗中,<n>每一个连续的攻击都比前一个更有力、更准确.;
+title=Hacker;
+text=<itemBig=axe_hacker><title=Hacker><brAdj=>This unrefined-looking axe has an unusual notched blade, but is otherwise unremarkable. And yet, something about it compels you to want to swing it. In the heat of combat, each consecutive swing feels stronger and more accurate than the last.;
 
 
-[ItemType]  name=吐温·阿克斯;
+[ItemType]  name=Twain Axe;
 texture=items_weapons; 
 ID=axe_twain; pR=pGreyL; pB=pGrey;
-description=将敌军一分为二的斧头.;
+description=Axe that splits enemy forces in twain.;
 journalID=journal_axe;
 weight=5; volume=5; value=5000;
 power=9;
@@ -4069,13 +4069,13 @@ special=rotate90WhenSheathed;
 [JournalEntry]
 ID=item_axe_twain;
 category=equipment; halfPage=true; rarity=3; rewardMod=150;
-title=吐温·阿克斯;
-text=<itemBig=axe_twain><title=吐温·阿克斯><brAdj=>这把双刃战斧是为了模仿传说中的吐温·阿克斯<n>(Twain Axe)而制作的,据说吐温·阿克斯<n>能将任何东西都复制成两个一模一样的复制品.<n>这把斧头没有这种能力,<n>它只是把它砍到的东西分成两半.;
+title=Twain Axe;
+text=<itemBig=axe_twain><title=Twain Axe><brAdj=>This double-sided battleaxe was made to resemble the fabled Twain Axe, a weapon said to duplicate anything it strikes into two exact copies. This axe does not possess that ability, instead merely splitting what it strikes into two halves.;
 
-[ItemType]  name=吐温·阿克斯;
+[ItemType]  name=Twain Axe;
 texture=items_weapons; 
 ID=axe_twain_true; pR=pGreyL; pB=pGrey;
-description=把敌人分成两半的斧子.;
+description=Axe that splits enemy forces into twain.;
 journalID=journal_axe;
 weight=5; volume=5; value=5000;
 power=999;
@@ -4083,10 +4083,10 @@ sprite=690; spriteWhenHeld=722; itemCategory=weapon; element=axe;
  action=axeAttack_twain_true;
 special=rotate90WhenSheathed;
 
-[ItemType]  name=远古手枪;
+[ItemType]  name=Ancient Pistol;
 texture=items_weapons; 
 ID=pistol_ancient; pR=pSepia; pB=pIron;
-description=生锈的单发手枪.; 
+description=Rusty single-shot handgun.; 
 journalID=journal_pistol_ancient;
 sprite=424; spriteWhenHeld=456; itemCategory=weapon; element=aim;
 weight=2; volume=3; value=1150;
@@ -4095,11 +4095,11 @@ power=7;
 [ItemReaction] 
 ID=pistol_ancient; element=actionUsed; newID=pistol_ancient_unloaded;
 
-[ItemType]  name=远古手枪(未装载);
+[ItemType]  name=Ancient Pistol (Unloaded);
 texture=items_weapons; 
 ID=pistol_ancient_unloaded; pR=pSepia; pB=pIron;
 journalID=journal_pistol_ancient;
-description=生锈的单发手枪 -- 需要重新装载.; 
+description=Rusty single-shot handgun -- needs to be reloaded.; 
 sprite=425; spriteWhenHeld=457; itemCategory=weapon; 
 weight=2; volume=3; value=1150;
 power=7;
@@ -4109,13 +4109,13 @@ ID=pistol_ancient_unloaded; element=actionUsed; element=reload; newID=pistol_anc
 [JournalEntry]
 ID=journal_pistol_ancient;
 category=equipment; halfPage=true; rarity=2;
-title=远古手枪;
-text=<itemBig=pistol_ancient><title=远古手枪><brAdj=>曾经威力强大的手枪因使用年限和滥用而退化.<n>即便如此,它仍然在力量和射程上超过大多数弩.;
+title=Ancient Pistol;
+text=<itemBig=pistol_ancient><title=Ancient Pistol><brAdj=>A once-powerful pistol degraded by age and misuse. Even so, it still outstrips most crossbows in power & range.;
 
-[ItemType]  name=巨龙手枪;
+[ItemType]  name=Dragon Pistol;
 texture=items_weapons; 
 ID=pistol_dragon; pR=pIron; pB=pIronHilt;
-description=强大的单发手枪.; 
+description=Powerful single-shot handgun.; 
 sprite=424; spriteWhenHeld=456; itemCategory=weapon; element=aim;
 weight=2; volume=3; value=3500;
 power=9;
@@ -4123,11 +4123,11 @@ power=9;
 [ItemReaction] 
 ID=pistol_dragon; element=actionUsed; newID=pistol_dragon_unloaded;
 
-[ItemType]  name=巨龙手枪(未装载);
+[ItemType]  name=Dragon Pistol (Unloaded);
 texture=items_weapons; 
 ID=pistol_dragon_unloaded; pR=pIron; pB=pIronHilt;
 journalID=item_pistol_dragon;
-description=强大的单发手枪 -- 需要重新装载.; 
+description=Powerful single-shot handgun -- needs to be reloaded.; 
 sprite=425; spriteWhenHeld=457; itemCategory=weapon; 
 weight=2; volume=3; value=3500;
 power=10;
@@ -4137,13 +4137,13 @@ ID=pistol_dragon_unloaded; element=actionUsed; element=reload; newID=pistol_drag
 [JournalEntry]
 ID=item_pistol_dragon;
 category=equipment; halfPage=true; rarity=2;
-title=巨龙手枪;
-text=<itemBig=pistol_dragon><title=巨龙手枪><brAdj=>威力巨大的手枪.<n>火焰触发器引爆并推动子弹高速穿过枪管.;
+title=Dragon Pistol;
+text=<itemBig=pistol_dragon><title=Dragon Pistol><brAdj=>A brutally powerful pistol. The fire triggers burst & propel a bullet through the barrel at high speed.;
  
-[ItemType]  name=风力手枪;
+[ItemType]  name=Force Pistol;
 texture=items_weapons; 
 ID=pistol_force; pR=pSilver; pB=pShockWeaponHilt;
-description=基于风力的单发手枪.; 
+description=Wind-based single-shot pistol.; 
 sprite=424; spriteWhenHeld=456; itemCategory=weapon; element=aim;
 weight=2; volume=3; value=3250;
 power=7;
@@ -4151,11 +4151,11 @@ power=7;
 [ItemReaction] 
 ID=pistol_force; element=actionUsed; newID=pistol_force_unloaded;
 
-[ItemType]  name=风力手枪(未装载);
+[ItemType]  name=Force Pistol (Unloaded);
 texture=items_weapons; 
 ID=pistol_force_unloaded; pR=pSilver; pB=pShockWeaponHilt;
 journalID=item_pistol_force;
-description=基于风力的单发手枪 -- 需要重新装载.; 
+description=Wind-based single-shot pistol -- needs to be reloaded.; 
 sprite=425; spriteWhenHeld=457; itemCategory=weapon; 
 weight=2; volume=3; value=3250;
 power=8;
@@ -4165,14 +4165,14 @@ ID=pistol_force_unloaded; element=actionUsed; element=reload; newID=pistol_force
 [JournalEntry]
 ID=item_pistol_force;
 category=equipment; halfPage=true; rarity=2;
-title=风力手枪;
-text=<itemBig=pistol_force><title=风力手枪><brAdj=>使用风触发器推动子弹的备用枪模型.<n>该系统的力量较小,但精度和射程更出色;
+title=Force Pistol;
+text=<itemBig=pistol_force><title=Force Pistol><brAdj=>Alternate gun model that propels bullets using wind triggers. The system results in less power but greater accuracy and range.;
  
 
-[ItemType]  name=滑动装弹手枪;
+[ItemType]  name=Slide Gun;
 texture=items_weapons; 
 ID=pistol_slide; pR=pIron; pB=pSteel;
-description=不用再重新装弹的手枪.; 
+description=Pistol that never needs a reload.; 
 sprite=364; spriteWhenHeld=396; itemCategory=weapon; element=aim;
 weight=3; volume=5; value=5000;
 power=5;
@@ -4180,14 +4180,14 @@ power=5;
 [JournalEntry]
 ID=item_pistol_slide;
 category=equipment; halfPage=true; rarity=3; rewardMod=-50;
-title=滑动装弹手枪;
-text=<itemBig=pistol_slide><title=滑动装弹手枪><brAdj=>一个笨重的滑动装备处理装弹.<n>不幸的是,它的力量和射程因此被削弱.;
+title=Slide Gun;
+text=<itemBig=pistol_slide><title=Slide Gun><brAdj=>A bulky slide mechanism handles reloading. Unfortunately its power and range is gutted as a result.;
 
 
-[ItemType]  name=雷筒;
+[ItemType]  name=Blunderbuss;
 texture=items_weapons; 
 ID=rifle_blunderbuss; pR=pIron; pB=pUnarmored;
-description=大口径的铳管能发射弹片的火器,<n>中心造成额外伤害.; 
+description=Muzzle-loaded firearm that blasts shrapnel. Deals extra damage in the center.; 
 sprite=365; spriteWhenHeld=397; itemCategory=weapon; element=aim;
 weight=4; volume=8; value=5500; special=twoHanded;
 power=12;
@@ -4195,11 +4195,11 @@ power=12;
 [ItemReaction] 
 ID=rifle_blunderbuss; element=actionUsed; newID=rifle_blunderbuss_unloaded;
  
-[ItemType]  name=雷筒(未装载);
+[ItemType]  name=Blunderbuss (Unloaded);
 texture=items_weapons; 
 ID=rifle_blunderbuss_unloaded; pR=pIron; pB=pUnarmored;
 journalID=item_rifle_blunderbuss;
-description=大口径的枪--需要重新装载.; 
+description=Muzzle-loaded rifle -- needs to be reloaded.; 
 sprite=366; spriteWhenHeld=398; itemCategory=weapon; 
 weight=4; volume=8; value=5500;
 power=12;
@@ -4209,14 +4209,14 @@ ID=rifle_blunderbuss_unloaded; element=actionUsed; element=reload; newID=rifle_b
 [JournalEntry]
 ID=item_rifle_blunderbuss;
 category=equipment; halfPage=true; rarity=2;
-title=雷筒;
-text=<itemBig=rifle_blunderbuss><title=雷筒><brAdj=>发射大量弹丸的现代武器奇迹.相当强大,<n>但射程相对较短且需要双手配合.;
+title=Blunderbuss;
+text=<itemBig=rifle_blunderbuss><title=Blunderbuss><brAdj=>A wonder of modern weaponry that fires a cloud of pellets. Quite potent, but has relatively short range and requires both hands.;
 
 
-[ItemType]  name=侦察步枪;
+[ItemType]  name=Scout Rifle;
 texture=items_weapons; 
 ID=rifle_scout; pR=pIron; pB=pUnarmored;
-description=强大的单发步枪.; 
+description=Powerful single-shot rifle.; 
 sprite=429; spriteWhenHeld=461; itemCategory=weapon; element=aim;
 weight=4; volume=8; value=9500; special=twoHanded;
 power=13;
@@ -4224,11 +4224,11 @@ power=13;
 [ItemReaction] 
 ID=rifle_scout; element=actionUsed; newID=rifle_scout_unloaded;
 
-[ItemType]  name=侦察步枪(未装载);
+[ItemType]  name=Scout Rifle (Unloaded);
 texture=items_weapons; 
 ID=rifle_scout_unloaded; pR=pIron; pB=pUnarmored;
 journalID=item_rifle_scout;
-description=强大的单发步枪 -- 需要重新装载.; 
+description=Powerful single-shot rifle -- needs to be reloaded.; 
 sprite=430; spriteWhenHeld=462; itemCategory=weapon; 
 weight=4; volume=8; value=9500;
 power=13;
@@ -4239,14 +4239,14 @@ ID=rifle_scout_unloaded; element=actionUsed; element=reload; newID=rifle_scout;
 [JournalEntry]
 ID=item_rifle_scout;
 category=equipment; halfPage=true; rarity=2;
-title=侦察步枪;
-text=<itemBig=rifle_scout><title=侦察步枪><brAdj=>西提尔精锐部队的标准步枪,技术力量强大.<n>多个触发器推动子弹.<n>它的巨大射程几乎可以触及任何目标.;
+title=Scout Rifle;
+text=<itemBig=rifle_scout><title=Scout Rifle><brAdj=>Standard rifle of Seartial elite troops, and a powerhouse of technology. Multiple fire triggers propel the bullet. Its massive range can reach almost any target.;
  
  
-[ItemType]  name=威吓者;
+[ItemType]  name=Intimidator;
 texture=items_weapons; 
 ID=gun_intimidator; pR=pGreyD2; pB=pGreyD2;
-description=一把臭名昭著的强大的枪的金属复制品.; 
+description=Solid metal replica of an infamously powerful gun.; 
 sprite=428; spriteWhenHeld=460; itemCategory=weapon; element=hammer;
 weight=4; volume=8; value=2000;
 power=9;
@@ -4254,14 +4254,14 @@ power=9;
 [JournalEntry]
 ID=item_gun_intimidator;
 category=equipment; halfPage=true; rarity=3; rewardMod=-200;
-title=威吓者;
-text=<itemBig=gun_intimidator><title=威吓者><brAdj=>复制品是为了吓跑敌对帮派而采用铤而走险的<n>策略制作的.从远距离来看,是有说服力的,<n>但它只是一大块金属.;
+title=Intimidator;
+text=<itemBig=gun_intimidator><title=Intimidator><brAdj=>Replica produced in a desperate gambit to a scare off a rival gang. It looks convincing from a distance but is merely a hunk of metal.;
 
 
-[ItemType]  name=匕手;
+[ItemType]  name=Daggerhand;
 texture=items_weapons; 
 ID=hammer_hand_dagger; pR=pGreyD2; pB=pSteel;
-description=想象一下用匕首来雕刻.<n>削弱敌人的防御.; 
+description=Fancy sculpted hand holding a dagger. Chips away at enemy defenses.; 
 sprite=561; spriteWhenHeld=593; itemCategory=weapon; element=hammerDaggerWpn;
 weight=4; volume=8; value=1800;
 power=8;
@@ -4269,13 +4269,13 @@ power=8;
 [JournalEntry]
 ID=item_hammer_hand_dagger;
 category=equipment; halfPage=true; rarity=2;
-title=匕手;
-text=<itemBig=hammer_hand_dagger><title=匕手><brAdj=>多米尼奥的阿沙尔家族的奇怪武器.阿沙尔资助了一个技艺惊人的铁匠,他经常大量生产出像这样奇怪但有效的作品.他们的部分合同要求铁匠保持匿名--是为了阿沙尔家族的利益还是为了保护铁匠,没有人知道.;
+title=Daggerhand;
+text=<itemBig=hammer_hand_dagger><title=Daggerhand><brAdj=>A bizarre weapon from House Ashar of Dominio. Ashar funds an amazingly skilled blacksmith who regularly churns out strange but potent creations such as this. Part of their contract requires the blacksmith remains anonymous - whether for House Ashar's benefit or the blacksmith's protection, none can say.;
  
-[ItemType]  name=战斗之锚;
+[ItemType]  name=Battle Anchor;
 texture=items_weapons; 
 ID=hammer_anchor; pR=pGreyblue2; pB=pSteelHilt;
-description=装有皮革把手的奇怪的锚.<n>它巨大的重量能将敌人击昏.; 
+description=Bizarre anchor fitted with a leather grip. Its massive weight knocks enemies silly.; 
 sprite=625; spriteWhenHeld=657; itemCategory=weapon; element=hammer;
 weight=12; volume=8; value=3000;
 power=9;
@@ -4285,13 +4285,13 @@ ID=hammer_anchor; actorValue=PhysEva; magnitude=-6; duration=-1;
 [JournalEntry]
 ID=item_hammer_anchor;
 category=equipment; halfPage=true; rarity=3; rewardMod=250;
-title=战斗之锚;
-text=<itemBig=hammer_anchor><title=战斗之锚><brAdj=>根据传说,雇佣兵骑士奥弗拉曾经被德拉利尔的<n>舰队俘虏.在她被处决的途中,克里沃的部落<n>包围了这艘船,杀死了所有船员,直到最后一个人.<n>没有了巨剑,奥芙拉伸手去拿下一件最重的武器<n>--船锚--将克里沃撞成碎片.也许正是这个<n>不太可能的故事激发了这个更不可能的武器;
+title=Battle Anchor;
+text=<itemBig=hammer_anchor><title=Battle Anchor><brAdj=>According to legend, the mercenary-knight Ovorra was once captured by Dralir's fleet. While en route to her execution, Cleever hordes beset the ship, killing the crew down to the last man. Without her greatsword, Ovorra reached for the next heaviest weapon - the ship's anchor - and smashed the Cleever to pieces. Perhaps that unlikely story is what inspired this even more unlikely weapon.;
  
-[ItemType]  name=半月大剑;
+[ItemType]  name=Arc Greatsword;
 texture=items_weapons; 
 ID=greatsword_arc; pR=pTeal; pB=pBlueD;
-description=弯曲的刀刃,因力量而火花四溅.<n>需要双手才能使用.;
+description=Curved blade that sparks with power. Requires both hands to use.;
 sprite=382; spriteWhenHeld=414; itemCategory=weapon; special=enhanceSlots_2;
 special=sprite2xWidth; special=twoHanded; element=sword;
 weight=6; volume=10; value=9900;
@@ -4300,14 +4300,14 @@ power=11;
 [JournalEntry]
 ID=item_greatsword_arc;
 category=equipment; halfPage=true; rarity=5; rewardMod=500;
-title=半月大剑;
-text=<itemBig=greatsword_arc><title=半月大剑><brAdj=>这把华丽的剑曾经属于著名的雇佣兵奥弗拉骑士.<n>它所赋予的广阔的攻击范围使她在多次<n>血腥的征服中得以存活.;
+title=Arc Greatsword;
+text=<itemBig=greatsword_arc><title=Arc Greatsword><brAdj=>Magnificent sword once owned by Knight Ovorra, the famous mercenary. The wide reach it grants kept her alive in many bloody conquests.;
  
  
-[ItemType]  name=全能;
+[ItemType]  name=Omnipode;
 ID=greatsword_omnipode_fire; pR=pRed2; pB=pGreyD2;
 texture=items_weapons; 
-description=多元素巨剑,火焰缭绕.<n>需要双手才能挥舞.;
+description=Multi-elemental greatsword, wreathed in flame. Requires both hands to wield.;
 journalID=journal_omnipode;
 sprite=572; spriteWhenHeld=604; itemCategory=weapon; special=enhanceSlots_2;
 special=sprite2xWidth; special=twoHanded; element=sword;
@@ -4321,10 +4321,10 @@ ID=greatsword_omnipode_fire; actorValue=skill_Fire; magnitude=1; duration=-1;
 [ItemLight]
 ID=greatsword_omnipode_fire; red=1; blue=0.4; green=0.4; alpha=0.5; size=0.25; flicker=0.03;
 
-[ItemType]  name=全能;
+[ItemType]  name=Omnipode;
 ID=greatsword_omnipode_ice; pR=pBlue2; pB=pGreyD2;
 texture=items_weapons;
-description=多元素巨剑,覆满冰霜.<n>需要双手才能挥舞.;
+description=Multi-elemental greatsword, covered in frost. Requires both hands to wield.;
 journalID=journal_omnipode;
 sprite=574; spriteWhenHeld=606; itemCategory=weapon; special=enhanceSlots_2;
 special=sprite2xWidth; special=twoHanded; element=sword;
@@ -4338,10 +4338,10 @@ ID=greatsword_omnipode_ice; actorValue=skill_Ice; magnitude=1; duration=-1;
 [ItemLight]
 ID=greatsword_omnipode_ice; red=0.5; blue=1; green=0.5; alpha=0.5; size=0.25; flicker=0.01;
 
-[ItemType]  name=全能;
+[ItemType]  name=Omnipode;
 ID=greatsword_omnipode_elec; pR=pYellow4; pB=pGreyD2;
 texture=items_weapons;
-description=多元素巨剑,闪电霹雳.<n>需要双手才能挥舞.;
+description=Multi-elemental greatsword, sparking with lightning. Requires both hands to wield.;
 journalID=journal_omnipode;
 sprite=636; spriteWhenHeld=668; itemCategory=weapon; special=enhanceSlots_2;
 special=sprite2xWidth; special=twoHanded; element=sword;
@@ -4355,10 +4355,10 @@ ID=greatsword_omnipode_elec; actorValue=skill_Elec; magnitude=1; duration=-1;
 [ItemLight]
 ID=greatsword_omnipode_elec; red=0.3; blue=1; green=1; alpha=0.5; size=0.25; flicker=0.04;
 
-[ItemType]  name=全能;
+[ItemType]  name=Omnipode;
 ID=greatsword_omnipode_wind; pR=pGrey2; pB=pGreyD2;
 texture=items_weapons;
-description=多元素巨剑,疾风环绕.<n>需要双手才能挥舞.;
+description=Multi-elemental greatsword, swirling with wind. Requires both hands to wield.;
 journalID=journal_omnipode;
 sprite=638; spriteWhenHeld=670; itemCategory=weapon; special=enhanceSlots_2;
 special=sprite2xWidth; special=twoHanded; element=sword;
@@ -4375,13 +4375,13 @@ ID=greatsword_omnipode_wind; red=1; blue=1; green=1; alpha=0.5; size=0.25; flick
 [JournalEntry]
 ID=journal_omnipode;
 category=equipment; halfPage=true; rarity=4; rewardMod=100;
-title=全能;
-text=<itemBig=greatsword_omnipode_fire><title=全能><brAdj=>这把大师级巨剑是由一个元素派狂热分子<n>在西提尔联盟早期所创造的.她使用全能巨剑<n>与魔法监管者进行了激烈的斗争,多年来一直躲避<n>追捕.具有讽刺意味的是,她后来因为拒绝承认<n>毁灭魔法是一种真正的元素而被元素主义者杀害.;
+title=Omnipode;
+text=<itemBig=greatsword_omnipode_fire><title=Omnipode><brAdj=>Masterwork greatsword created by an Elementalist zealot in the early days of the Seartial Alliance. Using the Omnipode, she fought bitterly against magic regulators and evaded capture for years. Ironically, she was later murdered by fellow Elementalists for refusing to acknowledge Ruin as a true element.;
 
-[ItemType]  name=风之权杖;
+[ItemType]  name=Wind Wand;
 texture=items_weapons; 
 ID=windWand; pR=pGrey; pB=pBoneDark;
-description=具有风触发器的权杖,<n>可以产生旋风攻击.;
+description=Rod with twirling wind triggers that can produce a cyclone attack.;
 weight=4; volume=10; value=850;
 sprite=299; spriteWhenHeld=331; itemCategory=weapon; 
 power=4;
@@ -4393,14 +4393,14 @@ ID=windWand; actorValue=skill_Wind; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_windWand;
 category=equipment; halfPage=true; rarity=2;
-title=风之权杖;
-text=<itemBig=windWand><title=风之权杖><brAdj=>当正确旋转该权杖时,会激活它的3个风触发器,<n>产生一个凶猛但短暂的气旋.;
+title=Wind Wand;
+text=<itemBig=windWand><title=Wind Wand><brAdj=>When spun properly, this rod activates its 3 wind triggers to create a brutal but short-lived cyclone.;
 
 
-[ItemType]  name=冰霜之杖;
+[ItemType]  name=Chill Rod;
 texture=items_weapons; 
 ID=iceWand; pR=pIce; pB=pSilver;
-description=能够喷出寒雾的冰冷法杖.;
+description=Icy stave that sprays cold.;
 weight=4; volume=10; value=850;
 sprite=300; spriteWhenHeld=332; itemCategory=weapon; 
 special=enhanceSlots_0; special=unbreakable;
@@ -4412,15 +4412,15 @@ ID=iceWand; actorValue=skill_Ice; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_iceWand;
 category=equipment; halfPage=true; rarity=2;
-title=冰霜之杖;
-text=<itemBig=iceWand><title=冰霜之杖><brAdj=>这个冰霜触发器的锯齿状设计能将寒冷传播到宽阔<n>的区域,降低了威力,但仍是可靠的近距离武器.;
+title=Chill Rod;
+text=<itemBig=iceWand><title=Chill Rod><brAdj=>The pronged design of this ice trigger spreads cold over a wide area. This reduces potency, but it's still a solid close-range weapon.;
  
  
 
-[ItemType]  name=蒸汽权杖;
+[ItemType]  name=Steam Staff;
 texture=items_weapons; 
 ID=steamWand; pR=pBlue; pG=pRed2; pB=pIron;
-description=当激活时喷出热蒸汽的权杖.;
+description=Rod that spouts hot steam when activated.;
 weight=4; volume=10; value=850;
 sprite=301; spriteWhenHeld=333; itemCategory=weapon; 
 power=6;
@@ -4432,15 +4432,15 @@ ID=steamWand; actorValue=skill_Fire; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_steamWand;
 category=equipment; halfPage=true; rarity=2;
-title=蒸汽权杖;
-text=<itemBig=steamWand><title=蒸汽权杖><brAdj=>一个混合的火/冰触发器被安装在头部,<n>产生一团蒸汽,伤害和渗入敌人.;
+title=Steam Staff;
+text=<itemBig=steamWand><title=Steam Staff><brAdj=>A combination fire/ice trigger is mounted at the head, which produces a gout of steam that damages and soaks the enemy.;
  
 
 
-[ItemType]  name=电击权杖;
+[ItemType]  name=Shock Rod;
 texture=items_weapons; 
 ID=shockWand; pR=pYellow5; pB=p5;
-description=可以击晕目标的发电装置.;
+description=Sparking device that can stun targets.;
 weight=4; volume=10; value=850;
 sprite=302; spriteWhenHeld=334; itemCategory=weapon; 
 special=enhanceSlots_0; special=unbreakable;  spawnFX=horizSpark_small;
@@ -4454,14 +4454,14 @@ ID=shockWand; actorValue=skill_Elec; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_shockWand;
 category=equipment; halfPage=true; rarity=2;
-title=电击权杖;
-text=<itemBig=shockWand><title=电击权杖><brAdj=>两个探针直接将电流集中在一个目标上,<n>电击它们使其投降.;
+title=Shock Rod;
+text=<itemBig=shockWand><title=Shock Rod><brAdj=>Two prods direct focused electricity at a single target, shocking them into submission.;
  
  
 
-[ItemType]  name=专注之石;
+[ItemType]  name=Focus Stone;
 texture=items_weapons; 
-description=光滑的球体,当紧紧握住时,<n>有助于提高专注力.
+description=Smooth sphere that aids focus when gripped tightly.
 <font=thickIcons><color=Black>
 <n=><icon=invIcon_sword> +1<icon=MagDef>
 <n=><icon=invIcon_armor> +1<icon=MagDef>;
@@ -4480,13 +4480,13 @@ ID=focus_stone; actorValue=MagDef; magnitude=1; duration=-1;
 [JournalEntry]
 ID=item_focus_stone;
 category=equipment; halfPage=true; rarity=1;
-title=专注之石;
-text=<itemBig=focus_stone><title=专注之石><brAdj=>它独特的质地使它可以被悠闲地握于掌中,<n>能去掉思想上的不专注.学徒间常见的小饰物.;
+title=Focus Stone;
+text=<itemBig=focus_stone><title=Focus Stone><brAdj=>Its peculiar texture lends itself to being idly palmed, ridding the mind of distraction. A common trinket found among apprentices.;
  
-[ItemType]  name=铁榔头;
+[ItemType]  name=Iron Hammer;
 texture=items_weapons; 
 ID=hammer_iron_prop; pR=pIron; pB=pIronHilt;
-description=榔头道具.;
+description=Hammer prop.;
 sprite=1439; spriteWhenHeld=1439; itemCategory=weapon; 
 element=hammer;
 special=cannotBeSheathed;
@@ -4494,10 +4494,10 @@ weight=6; volume=10; value=25;
 power=6;
  action=hammerAttack;
  
-[ItemType]  name=钢榔头;
+[ItemType]  name=Steel Hammer;
 texture=items_weapons; 
 ID=hammer_steel_prop; pR=pSteel; pB=pSteelHilt;
-description=榔头道具.;
+description=Hammer prop.;
 sprite=1439; spriteWhenHeld=1439; itemCategory=weapon; 
 element=hammer;
 special=cannotBeSheathed;
@@ -4505,10 +4505,10 @@ weight=6; volume=10; value=25;
 power=6;
  action=hammerAttack;
  
-[ItemType]  name=秘银榔头;
+[ItemType]  name=Mythril Hammer;
 texture=items_weapons; 
 ID=hammer_mythril_prop; pR=pMythril; pB=pMythrilHilt;
-description=榔头道具.;
+description=Hammer prop.;
 sprite=1439; spriteWhenHeld=1439; itemCategory=weapon; 
 element=hammer;
 special=cannotBeSheathed;
@@ -4516,10 +4516,10 @@ weight=6; volume=10; value=25;
 power=6;
  action=hammerAttack;
  
-[ItemType]  name=大剑;
+[ItemType]  name=Greatsword;
 texture=items_weapons; 
 ID=greatsword_iron_prop; pR=temperSwordGlow; pB=pIronHilt;
-description=大剑道具.;
+description=Greatsword prop.;
 journalID=journal_gsword;
 sprite=1471; spriteWhenHeld=1471; itemCategory=weapon; 
  element=sword;
@@ -4528,44 +4528,44 @@ weight=6; volume=10; value=25;
 power=5;
  action=greatswordAttack;
  
-[ItemType]  name=登船设备;
+[ItemType]  name=Boarding Gear;
 ID=gear_boarding; sprite=1945; spriteWhenHeld=65; itemCategory=weapon;
 journalID=journal_gear_boarding;
 texture=items_weapons;
-description=允许你在<icon=time>80 内登上相邻的船.<n=><adjX=56><font=thickIcons><icon=icon_crew>5;
+description=Allows you to board an adjacent boat for <icon=time>80.<n=><adjX=56><font=thickIcons><icon=icon_crew>5;
 weight=2; volume=3000; value=30; element=cannon;
  action=boardingGear_act;
  special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
  pR=pGreyD2;
  pG=pBrown;
 
-[ItemType]  name=登船抓钩;
+[ItemType]  name=Boarding Hooks;
 ID=gear_boarding_hook; sprite=1977; spriteWhenHeld=65;
 journalID=journal_gear_boarding;
 texture=items_weapons; itemCategory=weapon;
-description=复杂挂钩系统.能让你在<icon=time>90 内登船.<n=><adjX=56><font=thickIcons><icon=icon_crew>5;
+description=Complex hook system that boards for <icon=time>90.<n=><adjX=56><font=thickIcons><icon=icon_crew>5;
 weight=2; volume=3000; value=5500; element=cannon;
  action=boardingHook_act;
  special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
  pR=pSteel;
  pG=pBrown;
  
-[ItemType]  name=登船吊桥;
+[ItemType]  name=Boarding Corvus;
 ID=gear_boarding_plank; sprite=1944; spriteWhenHeld=65; 
 journalID=journal_gear_boarding;
 texture=items_weapons;
-description=可以让你带上更多船员的登船设备,<n>但只持续<icon=time>55.<n=><adjX=74><font=thickIcons><icon=icon_crew>6;
+description=Plank for boarding that brings more crew, but only for <icon=time>55.<n=><adjX=74><font=thickIcons><icon=icon_crew>6;
 weight=2; volume=3000; value=3500; element=cannon;itemCategory=weapon;
  action=boardingPlank_act;
  special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
  pR=pYellow5;
  pB=pGreyD2;
  
-[ItemType]  name=登船勾刺;
+[ItemType]  name=Boarding Spines;
 ID=gear_boarding_cleever; sprite=1977; spriteWhenHeld=65; itemCategory=weapon;
 journalID=journal_gear_boarding;
 texture=items_weapons;
-description=松软的钩子,能让你在<icon=time>60 内登上相邻船只.<n=><adjX=56><font=thickIcons><icon=icon_crew>5;
+description=Weak hooks that board an adjacent boat for <icon=time>60.<n=><adjX=56><font=thickIcons><icon=icon_crew>5;
 weight=2; volume=3000; value=20; element=cannon;
  action=boardingSpines_act;
  special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
@@ -4575,15 +4575,15 @@ weight=2; volume=3000; value=20; element=cannon;
 [JournalEntry]
 ID=journal_gear_boarding;
 category=equipment; halfPage=true; rarity=0;
-title=登船设备;
-text=<itemBig=gear_boarding><title=登船设备><brAdj=>这些钩子和绳索可以用来登上敌人的船,与他们的<n>船员进行一对一的战斗.一旦过持续时间,所有的<n>船员返回各自的舰船,然后海战继续正常进行.<n>不同类型的装备可以让你战斗更长时间或带来<n>更多的船员.如果你打败所有的敌人船员,<n>他们的船将是孤立无援的,你可以占领它!;
+title=Boarding Gear;
+text=<itemBig=gear_boarding><title=Boarding Gear><brAdj=>These hooks & ropes can be used to board an enemy ship and fight their crew man-to-man. Once the timer expires, both crews return to their ships, then naval combat continues as normal. Different types of gear allows you to fight longer or bring more crew. If you defeat all enemy crew, their ship will be helpless, and you can capture it!;
  
  
  
-[ItemType]  name=反登船网;
+[ItemType]  name=Anti-Boarding Net;
 ID=gear_antiboarding_net; sprite=1976; spriteWhenHeld=65; 
 texture=items_weapons;
-description=围绕着船的网,击退登船者的速度提高25%.;
+description=Net that encircles the ship, making it 30% faster to repel boarders.;
 weight=2; volume=3000; value=250; element=cannon; itemCategory=tool;
 special=cargo; special=shipWeapon; special=equipInAnySlot;
  pG=pBrown;
@@ -4593,13 +4593,13 @@ ID=gear_antiboarding_net; actorValues=board; damageMultiplier=0.7;
 [JournalEntry]
 ID=item_gear_antiboarding_net;
 category=equipment; halfPage=true; rarity=1;
-title=吸收性网;
-text=<itemBig=gear_antiboarding_net><title=反登船网><brAdj=>由于用粗绳子围住甲板,登上甲板会变得极其困难.<n>在克里沃出没的水域航行时非常有用.;
+title=Absorbent Mesh;
+text=<itemBig=gear_antiboarding_net><title=Anti-Boarding Net><brAdj=>By surrounding the deck with thick ropes, boarding can be made exceedingly difficult. Very useful while sailing in Cleever-infested waters.;
 
-[ItemType]  name=吸收性网;
+[ItemType]  name=Absorbent Mesh;
 ID=gear_absorb_mesh; sprite=1976; spriteWhenHeld=65; 
 texture=items_weapons;
-description=能够抵消20%火焰或闪电伤害的网;
+description=Mesh that dissipates 30% of incoming electricity and fire.;
 weight=2; volume=3000; value=1500; element=cannon; itemCategory=tool;
 special=cargo; special=shipWeapon; special=equipInAnySlot;
  pG=pShockWeaponHilt;
@@ -4609,13 +4609,13 @@ ID=gear_absorb_mesh; element=elec; element=fire; damageMultiplier=0.7;
 [JournalEntry]
 ID=item_gear_absorb_mesh;
 category=equipment; halfPage=true; rarity=2;
-title=吸收性网;
-text=<itemBig=gear_absorb_mesh><title=吸收性网><brAdj=>精心制作的网,围绕和保护船舶免受火焰和闪电.<n>能经受住风暴.;
+title=Absorbent Mesh;
+text=<itemBig=gear_absorb_mesh><title=Absorbent Mesh><brAdj=>Finely crafted mesh that encircles & shields the ship from incoming heat and lightning. Useful for weathering storms.;
  
-[ItemType]  name=无效玫瑰;
+[ItemType]  name=Nullrose;
 ID=gear_nullrose; sprite=2008; spriteWhenHeld=65; 
 texture=items_weapons;
-description=可以挂载在船上的球体,<n>可以吸收 50% 即将到来的<icon=skill_Fire><icon=skill_Ice><icon=skill_Elec><icon=skill_Wind> 伤害.;
+description=Sphere that can be mounted on a ship, absorbing half incoming <icon=skill_Fire><icon=skill_Ice><icon=skill_Elec><icon=skill_Wind> damage.;
 weight=2; volume=3000; value=9900; element=cannon; itemCategory=tool;
 special=cargo; special=shipWeapon; special=equipInAnySlot;
 [ItemReaction]
@@ -4624,15 +4624,15 @@ ID=gear_nullrose; element=elec; element=ice; element=fire; element=wind; damageM
 [JournalEntry]
 ID=item_gear_nullrose;
 category=equipment; halfPage=true; rarity=5;
-title=无效玫瑰;
-text=<itemBig=gear_nullrose><title=无效玫瑰><brAdj=>据说是一种未知深海生物的黑眼珠.<n>它无休止地吸收指向它的能量.虽然体积太大.<n>不适合个人保护,但它可以有效地保护<n>建筑物或船舶免受各类元素能量.;
+title=Nullrose;
+text=<itemBig=gear_nullrose><title=Nullrose><brAdj=>Said to be the blackened eyeball of an unknowable deep-sea creature. It endlessly absorbs energy directed at it. While too bulky for personal protection, it can effectively shelter a structure or ship from the elements.;
  
  
-[ItemType]  name=隼炮;
+[ItemType]  name=Falconet;
 ID=cannon_falconet; sprite=1913; spriteWhenHeld=65; itemCategory=weapon;
 journalID=journal_cannon;
 texture=items_weapons;
-description=小的,威力较弱的加农炮.<n=><adjX=14><font=thickIcons><icon=cannonRange> 4<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 3;
+description=Smallest, weakest cannon.<n=><adjX=14><font=thickIcons><icon=cannonRange> 4<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 3;
 weight=2; volume=3000; value=50;
 power=3; element=cannon;
  action=cannon_falconet_atk;
@@ -4640,11 +4640,11 @@ power=3; element=cannon;
  pR=pGreyD2;
  pG=pBrown;
 
-[ItemType]  name=小型隼炮;
+[ItemType]  name=Falcon;
 ID=cannon_falcon; sprite=1916; spriteWhenHeld=65; itemCategory=weapon;
 journalID=journal_cannon;
 texture=items_weapons;
-description=小型便携式加农炮.<n=><adjX=14><font=thickIcons><icon=cannonRange> 4<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 4;
+description=Small, portable cannon.<n=><adjX=14><font=thickIcons><icon=cannonRange> 4<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 4;
 weight=2; volume=3000; value=150;
 power=4; element=cannon;
  action=cannon_falcon_atk;
@@ -4652,11 +4652,11 @@ power=4; element=cannon;
  pR=pGreyD2;
  pG=pGreyD2;
 
-[ItemType]  name=猎隼炮;
+[ItemType]  name=Saker;
 ID=cannon_saker; sprite=1917; spriteWhenHeld=65; itemCategory=weapon;
 journalID=journal_cannon;
 texture=items_weapons;
-description=标准的加农炮.<n=><adjX=14><font=thickIcons><icon=cannonRange> 5<adjX=14><icon=cannonCone> Wide<adjX=14><icon=cannonPower> 5;
+description=Standard cannon.<n=><adjX=14><font=thickIcons><icon=cannonRange> 5<adjX=14><icon=cannonCone> Wide<adjX=14><icon=cannonPower> 5;
 weight=2; volume=3000; value=300;
 power=5; element=cannon;
  action=cannon_saker_atk;
@@ -4664,11 +4664,11 @@ power=5; element=cannon;
  pR=pGreyD2;
  pG=pBrown;
 
-[ItemType]  name=船头猎隼炮;
+[ItemType]  name=Fore Saker;
 ID=cannon_saker_fore; sprite=1918; spriteWhenHeld=65; itemCategory=weapon;
 journalID=journal_cannon;
 texture=items_weapons;
-description=在船头就位的猎隼炮,能向前开火.<n=><adjX=14><font=thickIcons><icon=cannonRange> 4<adjX=14><icon=cannonCone> Wide<adjX=14><icon=cannonPower> 5;
+description=Saker positioned at the bow, allowing forwards fire.<n=><adjX=14><font=thickIcons><icon=cannonRange> 4<adjX=14><icon=cannonCone> Wide<adjX=14><icon=cannonPower> 5;
 weight=2; volume=3000; value=300;
 power=5; element=cannon;
  action=cannon_saker_fore_atk;
@@ -4676,11 +4676,11 @@ power=5; element=cannon;
  pR=pGreyD2;
  pG=pBrown;
 
-[ItemType]  name=船尾猎隼炮;
+[ItemType]  name=Aft Saker;
 ID=cannon_saker_aft; sprite=1919; spriteWhenHeld=65; itemCategory=weapon;
 journalID=journal_cannon;
 texture=items_weapons;
-description=在船尾就位的猎隼炮,能向后开火.<n=><adjX=14><font=thickIcons><icon=cannonRange> 4<adjX=14><icon=cannonCone> Wide<adjX=14><icon=cannonPower> 5;
+description=Saker positioned at the stern, allowing backwards fire.<n=><adjX=14><font=thickIcons><icon=cannonRange> 4<adjX=14><icon=cannonCone> Wide<adjX=14><icon=cannonPower> 5;
 weight=2; volume=3000; value=300;
 power=5; element=cannon;
  action=cannon_saker_aft_atk;
@@ -4688,11 +4688,11 @@ power=5; element=cannon;
  pR=pGreyD2;
  pG=pBrown;
 
-[ItemType]  name=半蛇炮;
+[ItemType]  name=Demi-culverin;
 ID=cannon_demiculverin; sprite=1948; spriteWhenHeld=65; itemCategory=weapon;
 journalID=journal_cannon;
 texture=items_weapons;
-description=小型,便宜的长管炮.<n=><adjX=14><font=thickIcons><icon=cannonRange> 6<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 6;
+description=Smaller, cheaper culverin.<n=><adjX=14><font=thickIcons><icon=cannonRange> 6<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 6;
 weight=2; volume=3000; value=700;
 power=6; element=cannon;
  action=cannon_demiculverin_atk;
@@ -4700,11 +4700,11 @@ power=6; element=cannon;
  pR=pGreyD2;
  pG=pBrown;
 
-[ItemType]  name=蛇炮;
+[ItemType]  name=Culverin;
 ID=cannon_culverin; sprite=1914; spriteWhenHeld=65; itemCategory=weapon;
 journalID=journal_cannon;
 texture=items_weapons;
-description=大多数市场能买到的最强大的加农炮.<n=><adjX=14><font=thickIcons><icon=cannonRange> 6<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 7;
+description=Strongest cannon in most markets.<n=><adjX=14><font=thickIcons><icon=cannonRange> 6<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 7;
 weight=2; volume=3000; value=1500;
 power=7; element=cannon;
  action=cannon_culverin_atk;
@@ -4712,11 +4712,11 @@ power=7; element=cannon;
  pR=pGreyD2;
  pG=pBrown;
 
-[ItemType]  name=半加农炮;
+[ItemType]  name=Demi-cannon;
 ID=cannon_demicannon; sprite=1949; spriteWhenHeld=65; itemCategory=weapon;
 journalID=journal_cannon;
 texture=items_weapons;
-description=非常强大的加农炮.<n=><adjX=14><font=thickIcons><icon=cannonRange> 6<adjX=14><icon=cannonCone> Thin<adjX=14><icon=cannonPower> 8;
+description=Very powerful cannon.<n=><adjX=14><font=thickIcons><icon=cannonRange> 6<adjX=14><icon=cannonCone> Thin<adjX=14><icon=cannonPower> 8;
 weight=2; volume=3000; value=3500;
 power=8; element=cannon;
  action=cannon_demicannon_atk;
@@ -4724,11 +4724,11 @@ power=8; element=cannon;
  pR=pGreyD2;
  pG=pGreyD2;
 
-[ItemType]  name=加农炮;
+[ItemType]  name=Cannon;
 ID=cannon_cannon; sprite=1915; spriteWhenHeld=65; itemCategory=weapon;
 journalID=journal_cannon;
 texture=items_weapons;
-description=典型的加农炮.<n=><adjX=14><font=thickIcons><icon=cannonRange> 6<adjX=14><icon=cannonCone> Thin<adjX=14><icon=cannonPower> 9;
+description=The epitome of a cannon.<n=><adjX=14><font=thickIcons><icon=cannonRange> 6<adjX=14><icon=cannonCone> Thin<adjX=14><icon=cannonPower> 9;
 weight=2; volume=3000; value=8500;
 power=9; element=cannon;
  action=cannon_cannon_atk;
@@ -4736,11 +4736,11 @@ power=9; element=cannon;
  pR=pGreyD2;
  pG=pGreyD2;
  
-[ItemType]  name=里尔 巴斯特;
+[ItemType]  name=Lil' Buster;
 ID=cannon_lilbuster; sprite=2011; spriteWhenHeld=65; itemCategory=weapon;
 journalID=journal_cannon;
 texture=items_weapons;
-description=短而粗的威力惊人的特制大炮.<n=><adjX=14><font=thickIcons><icon=cannonRange> 3<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 9;
+description=Short, stubby custom-made cannon with surprising power.<n=><adjX=14><font=thickIcons><icon=cannonRange> 3<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 10;
 weight=2; volume=3000; value=1250;
 power=10; element=cannon;
  action=cannon_lilbuster_atk;
@@ -4749,22 +4749,22 @@ power=10; element=cannon;
  pG=pBrown;
  pB=pSilver;
 
-[ItemType]  name=巴西利斯克;
+[ItemType]  name=Basilisk;
 ID=cannon_basilisk; sprite=1951; spriteWhenHeld=65; itemCategory=weapon;
 journalID=journal_cannon;
 texture=items_weapons;
-description=一门巨大的加农炮,大的几乎不切实际.<n>能用重达160磅的炮弹抹去目标.<n=><adjX=14><font=thickIcons><icon=cannonRange> 4<adjX=14><icon=cannonCone> Line<adjX=14><icon=cannonPower> 20;
+description=A monstrous cannon of nearly impractical size. Obliterates targets with its 160 lb. shot.<n=><adjX=14><font=thickIcons><icon=cannonRange> 4<adjX=14><icon=cannonCone> Line<adjX=14><icon=cannonPower> 20;
 weight=2; volume=3000; value=50000;
 power=20; element=cannon;
  action=cannon_basilisk_atk;
  special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
  pR=pGreyD2;
  pG=pGreyD2;
-[ItemType]  name=捕鲸炮;
+[ItemType]  name=Harpoon;
 ID=cannon_harpoon; sprite=2042; spriteWhenHeld=65; itemCategory=weapon;
 journalID=journal_cannon;
 texture=items_weapons;
-description=把目标拉进来的矛炮.<n=><adjX=14><font=thickIcons><icon=cannonRange> 3<adjX=14><icon=cannonCone> Wide<adjX=14><icon=cannonPower> 4;
+description=Spear cannon that pulls targets in.<n=><adjX=14><font=thickIcons><icon=cannonRange> 3<adjX=14><icon=cannonCone> Wide<adjX=14><icon=cannonPower> 4;
 weight=2; volume=3000; value=150;
 power=4; element=cannon;
  action=cannon_harpoon_atk;
@@ -4774,11 +4774,11 @@ power=4; element=cannon;
  pB=pGreyD2;
 
 
-[ItemType]  name=葡萄弹;
+[ItemType]  name=Grapeshot;
 ID=cannon_grape; sprite=1946; spriteWhenHeld=65; itemCategory=weapon;
 journalID=journal_cannon;
 texture=items_weapons;
-description=对船员造成极大伤害,<n>但对船体几乎没有影响.<n=><adjX=14><font=thickIcons><icon=cannonRange> 4<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 2;
+description=Highly damaging to crew, but barely affects the hull.<n=><adjX=14><font=thickIcons><icon=cannonRange> 4<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 2;
 weight=2; volume=3000; value=250;
 power=2; element=cannon;
  action=cannon_grape_atk;
@@ -4786,11 +4786,11 @@ power=2; element=cannon;
  pR=pGreyD2;
  pG=pBrown;
  
-[ItemType]  name=链弹;
+[ItemType]  name=Chain Shot;
 ID=cannon_chain; sprite=1947; spriteWhenHeld=65; itemCategory=weapon;
 journalID=journal_cannon;
 texture=items_weapons;
-description=被拴在一起的子弹会破坏索具,<n>能降低击中船的机动性.<n=><adjX=14><font=thickIcons><icon=cannonRange> 3<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 3;
+description=Shot that has been chained together damages rigging, reducing ship mobility.<n=><adjX=14><font=thickIcons><icon=cannonRange> 3<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 3;
 weight=2; volume=3000; value=350;
 power=3; element=cannon;
  action=cannon_chain_atk;
@@ -4798,11 +4798,11 @@ power=3; element=cannon;
  pR=pGreyD2;
  pG=pBrown;
  
-[ItemType]  name=蜘蛛弹;
+[ItemType]  name=Spider Shot;
 ID=cannon_spider; sprite=1943; spriteWhenHeld=65; itemCategory=weapon;
 journalID=journal_cannon;
 texture=items_weapons;
-description=许多链弹破坏索具,<n>能大大降低船的机动性.<n=><adjX=14><font=thickIcons><icon=cannonRange> 3<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 1;
+description=Many chained shots that devastate rigging, greatly reducing ship mobility.<n=><adjX=14><font=thickIcons><icon=cannonRange> 3<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 1;
 weight=2; volume=3000; value=1500;
 power=1; element=cannon;
  action=cannon_spider_atk;
@@ -4810,11 +4810,11 @@ power=1; element=cannon;
  pR=pGreyD2;
  pG=pBrown;
  
-[ItemType]  name=聚能加农炮;
+[ItemType]  name=Vol Cannon;
 ID=cannon_vol; sprite=1885; spriteWhenHeld=65; itemCategory=weapon;
 journalID=journal_cannon;
 texture=items_weapons;
-description=轻量级的能量加农炮.覆盖范围达到270度的.<n=><adjX=14><font=thickIcons><icon=cannonRange> 5<adjX=14><icon=cannonCone> Huge<adjX=14><icon=cannonPower> 5;
+description=Lightweight energy cannon. Covers a 270 deg. front arc.<n=><adjX=14><font=thickIcons><icon=cannonRange> 5<adjX=14><icon=cannonCone> Huge<adjX=14><icon=cannonPower> 5;
 weight=2; volume=3000; value=15000;
 power=5; element=cannon;
  action=cannon_vol_atk;
@@ -4824,11 +4824,11 @@ power=5; element=cannon;
  pB=pVolskarn;
 
  
-[ItemType]  name=爆炸弹;
+[ItemType]  name=Explosive Shot;
 ID=cannon_explode; sprite=1979; spriteWhenHeld=65; itemCategory=weapon;
 journalID=journal_cannon;
 texture=items_weapons;
-description=子弹里塞满了炸药.<n>产生大范围的爆炸区域<n=><adjX=14><font=thickIcons><icon=cannonRange> 3<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 5;
+description=Shot crammed full of explosives. Blasts an area.<n=><adjX=14><font=thickIcons><icon=cannonRange> 3<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 5;
 weight=2; volume=3000; value=7500;
 power=5; element=cannon;
  action=cannon_explode_atk;
@@ -4837,11 +4837,11 @@ power=5; element=cannon;
  pB=pAsh;
  
  
-[ItemType]  name=长九炮;
+[ItemType]  name=Long Nine;
 ID=cannon_longnine; sprite=1980; spriteWhenHeld=65; itemCategory=weapon;
 journalID=journal_cannon;
 texture=items_weapons;
-description=非常长的前置加农炮.<n=><adjX=14><font=thickIcons><icon=cannonRange> 5<adjX=14><icon=cannonCone> Thin<adjX=14><icon=cannonPower> 6;
+description=Lengthy front-facing cannon.<n=><adjX=14><font=thickIcons><icon=cannonRange> 5<adjX=14><icon=cannonCone> Thin<adjX=14><icon=cannonPower> 6;
 weight=2; volume=3000; value=990;
 power=6; element=cannon;
  action=cannon_longnine_atk;
@@ -4849,11 +4849,11 @@ power=6; element=cannon;
  pR=pGreyD2;
  pG=pBrown;
  
-[ItemType]  name=长十炮;
+[ItemType]  name=Long Ten;
 ID=cannon_longten; sprite=1980; spriteWhenHeld=65; itemCategory=weapon;
 journalID=journal_cannon;
 texture=items_weapons;
-description=比长九炮威力更大.<n=><adjX=14><font=thickIcons><icon=cannonRange> 5<adjX=14><icon=cannonCone> Thin<adjX=14><icon=cannonPower> 7;
+description=Long Nine with even more power.<n=><adjX=14><font=thickIcons><icon=cannonRange> 5<adjX=14><icon=cannonCone> Thin<adjX=14><icon=cannonPower> 7;
 weight=2; volume=3000; value=1000;
 power=7; element=cannon;
  action=cannon_longten_atk;
@@ -4862,11 +4862,11 @@ power=7; element=cannon;
  pG=pGreyD2;
 
 
-[ItemType]  name=旋回炮;
+[ItemType]  name=Swivel Gun;
 ID=cannon_swivel; sprite=1981; spriteWhenHeld=65; itemCategory=weapon;
 journalID=journal_cannon;
 texture=items_weapons;
-description=可以瞄准任何方向的迷你加农炮,<n>可以在移动前使用.<n=><adjX=14><font=thickIcons><icon=cannonRange> 3<adjX=14><icon=cannonCone> Any<adjX=14><icon=cannonPower> 2;
+description=Mini-cannon that can aim in any direction. Can be used before moving.<n=><adjX=14><font=thickIcons><icon=cannonRange> 3<adjX=14><icon=cannonCone> Any<adjX=14><icon=cannonPower> 2;
 weight=2; volume=3000; value=175;
 power=2; element=cannon;
 action=cannon_swivel_atk;
@@ -4874,10 +4874,10 @@ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcon
 pR=pGreyD2;
 pG=pBrown;
 
-[ItemType]  name=装甲撞角;
+[ItemType]  name=Ram;
 ID=cannon_ram; sprite=1982; spriteWhenHeld=65; itemCategory=weapon;
 texture=items_weapons;
-description=挂载于船体的装甲喙,<n>能直接正面攻击.<n=><adjX=14><font=thickIcons><icon=cannonRange> 1<adjX=14><icon=cannonCone> Line<adjX=14><icon=cannonPower> 9;
+description=Hull-mounted armored beak. Allows a direct frontal attack.<n=><adjX=14><font=thickIcons><icon=cannonRange> 1<adjX=14><icon=cannonCone> Line<adjX=14><icon=cannonPower> 9;
 weight=2; volume=3000; value=175;
 power=9; element=cannon;
 action=cannon_ram_atk;
@@ -4885,9 +4885,9 @@ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcon
 pR=pGreyD2;
 pG=pBrown;
  
-[ItemType]  name=秘银装甲撞角;
+[ItemType]  name=Mythril Ram;
 texture=items_weapons;
-description=秘银装甲撞角,发动毁灭性的攻击.<n=><adjX=14><font=thickIcons><icon=cannonRange> 1<adjX=14><icon=cannonCone> Line<adjX=14><icon=cannonPower> 14;
+description=Mythril-clad ram that provides a devastating frontal attack.<n=><adjX=14><font=thickIcons><icon=cannonRange> 1<adjX=14><icon=cannonCone> Line<adjX=14><icon=cannonPower> 14;
 weight=2; volume=3000; value=5500;
 power=14; element=cannon;
 ID=cannon_ram_mythril; sprite=1982; spriteWhenHeld=65; itemCategory=weapon;
@@ -4896,11 +4896,11 @@ special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcon
 pR=pMythril;
 pG=pBrown;
 
-[ItemType]  name=爆裂旋风加农炮;
+[ItemType]  name=Cyclone Blaster;
 ID=cannon_cyclone; sprite=2012; spriteWhenHeld=65; itemCategory=weapon;
 journalID=journal_cannon;
 texture=items_weapons;
-description=前向加农炮,能释放凶猛的旋风<n>对目标造成减速且旋转180度.<n=><adjX=14><font=thickIcons><icon=cannonRange> 4<adjX=14><icon=cannonCone> Line<adjX=14><icon=cannonPower> 4;
+description=Front blaster that emits a brutal gale, slowing & spinning the target 180 degrees.<n=><adjX=14><font=thickIcons><icon=cannonRange> 4<adjX=14><icon=cannonCone> Line<adjX=14><icon=cannonPower> 4;
 weight=2; volume=3000; value=1250;
 power=4; element=cannon;
  action=cannon_cyclone_atk;
@@ -4909,11 +4909,11 @@ power=4; element=cannon;
  pG=pGreyD2;
  pB=pBW;
  
-[ItemType]  name=冰冻加农炮;
+[ItemType]  name=Freeze Cannon;
 ID=cannon_freeze; sprite=2013; spriteWhenHeld=65; itemCategory=weapon;
 journalID=journal_cannon;
 texture=items_weapons;
-description=前向光束加农炮.发射冻结光速,<n>制造能缓慢移动的浮冰.<n=><adjX=14><font=thickIcons><icon=cannonRange> 4<adjX=14><icon=cannonCone> Line<adjX=14><icon=cannonPower> 4;
+description=Front-facing beam cannon. Fires a freezing ray that creates ice floes to slow movement.<n=><adjX=14><font=thickIcons><icon=cannonRange> 4<adjX=14><icon=cannonCone> Line<adjX=14><icon=cannonPower> 4;
 weight=2; volume=3000; value=1400;
 power=4; element=cannon;
  action=cannon_freeze_atk;
@@ -4922,11 +4922,11 @@ power=4; element=cannon;
  pG=pGrey3;
  pB=pGrey;
 
-[ItemType]  name=风暴加农炮;
+[ItemType]  name=Storm Cannon;
 ID=cannon_storm; sprite=2043; spriteWhenHeld=65; itemCategory=weapon;
 journalID=journal_cannon;
 texture=items_weapons;
-description=全方位光束加农炮,能发射出毁灭性的闪电<n=><adjX=14><font=thickIcons><icon=cannonRange> 7<adjX=14><icon=cannonCone> Wide<adjX=14><icon=cannonPower> 7;
+description=Multi-directional beam cannon that fires devastating lightning.<n=><adjX=14><font=thickIcons><icon=cannonRange> 7<adjX=14><icon=cannonCone> Wide<adjX=14><icon=cannonPower> 7;
 weight=2; volume=3000; value=9750;
 power=0; element=cannon;
  action=cannon_storm_atk;
@@ -4936,31 +4936,31 @@ pR=p2; pB=pGreyD; pG=pGold;
 [JournalEntry]
 ID=journal_cannon;
 category=equipment; halfPage=true; rarity=0;
-title=加农炮;
-text=<itemBig=cannon_cannon> <itemBig=cannon_saker> <itemBig=cannon_falconet><title=Cannons> <brAdj=>加农炮!!它有以下三种属性:<n><icon=cannonRange> <color=DarkRed>攻击距离<color=> 能攻击到的最大范围.<n><icon=cannonCone> <color=DarkRed>角度<color=> 能攻击的角度.'任何'是最好的,<n>其次是'巨大','宽广','中等',<n>'狭窄',最后是'直线'.<n><icon=cannonPower> <color=DarkRed>威力<color=> 能造成的伤害.<n>受距离或船员数量影响. (重复装备不会提高伤害.);
+title=Cannons;
+text=<itemBig=cannon_cannon> <itemBig=cannon_saker> <itemBig=cannon_falconet><title=Cannons> <brAdj=>Cannons! Cannons have three properties:<n><icon=cannonRange> <color=DarkRed>Range<color=> is how many tiles it can reach.<n><icon=cannonCone> <color=DarkRed>Cone<color=> explains the angles it can reach. Any is best, followed by Huge, Wide, Med, Thin, then Line.<n><icon=cannonPower> <color=DarkRed>Power<color=> is the damage it deals. Damage is also boosted by being near the target or having more crew. (Equipping duplicate cannons does NOT increase power.);
 
  
-[ItemType]  name=额外货仓;
+[ItemType]  name=Extra Cache;
 ID=gear_extraCache; sprite=97; spriteWhenHeld=65; 
-description=在你的船上装备它,<n>最大载货量 <icon=cargo> +3.; 
+description=Equip this on your ship to increase max <icon=cargo>cargo by +3.; 
 itemCategory=tool;
 volume=999; special=cargo; special=shipWeapon; special=equipInAnySlot;
 value=900;
 [ItemEffect]  
 ID=gear_extraCache; actorValue=cargo; magnitude=3; duration=-1;
 
-[ItemType]  name=完美货仓;
+[ItemType]  name=Perfect Cache;
 ID=gear_perfectCache; sprite=96; spriteWhenHeld=65; 
-description=在你的船上装备它,<n>最大载货量 <icon=cargo> +8.; 
+description=Equip this on your ship to increase max <icon=cargo>cargo by +8.; 
 itemCategory=tool;
 volume=999; special=cargo; special=shipWeapon; special=equipInAnySlot;
 value=3000;
 [ItemEffect]  
 ID=gear_perfectCache; actorValue=cargo; magnitude=8; duration=-1;
 
-[ItemType]  name=强力推进器;
+[ItemType]  name=Force Thruster;
 ID=gear_thruster; sprite=1785;
-description=在战斗中使用时获得向前的速度.; 
+description=Grants a forward burst of speed when used in combat.; 
 itemCategory=tool;
 journalID=journal_thruster;
 volume=999; special=cargo; special=shipWeapon; special=equipInAnySlot;
@@ -4969,10 +4969,10 @@ action=cannon_thruster_act;
 pR=p2;
 pG=pBW;
 
-[ItemType]  name=脊刺发射器;
+[ItemType]  name=Spine Launcher;
 ID=cannon_spineLauncher; sprite=2009; spriteWhenHeld=65; itemCategory=weapon;
 texture=items_weapons;
-description=向敌人的船发射克里沃的脊刺,<n>可以在移动前使用.<n=><adjX=14><font=thickIcons><icon=cannonRange> 2<adjX=14><icon=cannonCone> Any<adjX=14><icon=cannonPower> 3;
+description=Fires Cleever spines at enemy ships. Can be used before moving.<n=><adjX=14><font=thickIcons><icon=cannonRange> 2<adjX=14><icon=cannonCone> Any<adjX=14><icon=cannonPower> 3;
 journalID=journal_cleever_weapon;
 weight=2; volume=3000; value=60;
 power=3; element=cannon;

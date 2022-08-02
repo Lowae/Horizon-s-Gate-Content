@@ -293,35 +293,3 @@
 	ID=Gla_throwWeapon;
 	cloneFrom=oneTile;
 
---角斗士
---name: Counter Throw
---tooltip: Throw your weapon at anyone who hits you with a ranged attach. max range is based on you skill with Hurl Weapon. (Can't use with other melee counters.)
-[SupportAbility]
-ID=counterThrow;
-name=反击投掷;
-cloneFrom=counterThrow;
-tooltip=反击任何远程武器攻击你的人，<n>反击攻击距离取决于你投掷武器的技能等级.<n>(无法与其他近战反击同时使用);
-
---name: Reckless
---tooltip: Start your first turn of combat with +5<icon=PhysAtk> and -1<icon=PhysDef>.
-[SupportAbility]
-ID=reckless;
-name=鲁莽;
-cloneFrom=reckless;
-tooltip=战斗首回合获得+5<icon=PhysAtk>和-1<icon=PhysDef>.;
-
---name: Timed Hits
---tooltip: Your weapon attacks deal +25% damage if you press the 'Use' (Space) button just before damage is dealt.
-[SupportAbility]
-ID=timedHits;
-name=定时击打;
-cloneFrom=timedHits;
-tooltip=在你武器造成伤害前按下<n>'Use'(空格)键，此次攻击伤害增加25%.;
-
---name: Weapon Master
---tooltip: At the start of combat, gain a <icon=PhysAtk> bonus equal to you lowest <icon=skill_Sword> <icon=skill_Axe> <icon=skill_Hammer> <icon=skill_Spear> <icon=skill_Flail> skill for <icon=time>300.
-[SupportAbility]
-ID=weaponMaster;
-name=武器大师;
-cloneFrom=weaponMaster;
-tooltip=战斗开始时，获得<icon=PhysAtk>奖励取决你你的最低的<icon=skill_Sword><icon=skill_Axe><icon=skill_Hammer><icon=skill_Spear><icon=skill_Flail>技能等级，持续<icon=time>300.;

@@ -250,35 +250,3 @@
 [AvAffecterAoE]
 	ID=Gu_impair;
 	cloneFrom=oneTile;
-
---name: Shield Bash
---tooltip: Follow up attacks with a push from you shield
-[SupportAbility]
-ID=shieldBash;
-name=盾击;
-cloneFrom=shieldBash;
-tooltip=攻击目标后再使用盾推开目标.;
-
---name: Blockade
---tooltip: When you end your turn, inflict -1 <icon=moveDistance> Move for a turn to any enemy directly in front of you.
-[SupportAbility]
-ID=blockade;
-name=阻塞;
-cloneFrom=blockade;
-tooltip=当你回合结束时，对你正前方的<n>敌人造成-1<icon=moveDistance>持续一回合.;
-
---name: Defensive
---tooltip: When you end you turn without acting, gain +3 <icon=PhysDef> until you next turn.
-[SupportAbility]
-ID=defensive;
-name=防御态势;
-cloneFrom=defensive;
-tooltip=当你回合结束时未行动，将获得+3<icon=PhysDef>持续到你下回合开始.;
-
---name: Bulwark
---tooltip: Gain immunity to pushes, pulls, rotating effects, and negative morale.
-[SupportAbility]
-ID=bulwark;
-name=壁垒;
-cloneFrom=bulwark;
-tooltip=对推，拉，旋转和士气降低效果免疫.;
