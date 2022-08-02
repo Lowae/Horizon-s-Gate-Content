@@ -199,7 +199,7 @@
 [Action] ID=Kra_static; 
 	name=静态电流;
 	icon=icon_Kra_static;
-	tooltip=使附近充电造成<thinnerIcon=skill_Elec><math=d:elecDmgDisplay(6)>伤害.<n>空格区将充满静态电流<n>造成<thinnerIcon=skill_Elec>8伤害保留<icon=time>60.;
+	tooltip=使附近充电造成<thinnerIcon=skill_Elec><math=d:elecDmgDisplay(7)>伤害.<n>空格区将充满静态电流<n>造成<thinnerIcon=skill_Elec>8伤害保留<icon=time>60.;
 	rankUpTooltip=;
 	tooltipIcons=;
 	tooltipTopRight=<icon=MagAtk_small><icon=skill_Elec_small>;
@@ -225,7 +225,7 @@
 [AvAffecter]
 	ID=Kra_static; 
 	actorValue=HP;
-	magnitude= d:elecDmg(6);
+	magnitude= d:elecDmg(7);
 	duration=-2;
 	chance=d:elecAcc;
 	element=magic;

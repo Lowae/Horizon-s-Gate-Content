@@ -1320,7 +1320,7 @@ itemCategory=4;
 pR=pRed;
 pB=pR;
 [ItemReaction] 
-ID=ring_thaw; actorValues=chilled; actorValues=frozen; damageMultiplier=0.5;
+ID=ring_thaw; actorValues=wet; actorValues=chilled; actorValues=frozen; damageMultiplier=0.5;
 
 [JournalEntry]
 ID=item_ring_thaw;
@@ -1336,7 +1336,7 @@ itemCategory=4;
 pR=pIron;
 pB=pIron;
 [ItemReaction] 
-ID=ring_sharp; actorValues=immob; damageMultiplier=0.5;
+ID=ring_sharp; actorValues=immob; actorValues=disable; damageMultiplier=0.5;
 
 [JournalEntry]
 ID=item_ring_sharp;
@@ -1573,7 +1573,7 @@ ID=cloak_veil; actorValue=moveDistance; magnitude=1; duration=-1;
 ID=item_cloak_veil;
 category=equipment; halfPage=true; rarity=5; rewardMod=500;
 title=虚无斗篷;
-text=<itemBig=cloak_veil><title=虚无斗篷><brAdj=>雪白的斗篷.它有一种超凡脱俗的品质<n>--它一定是从另一个疆域获得的.;
+text=<itemBig=cloak_veil><title=虚无斗篷><brAdj=>雪白的斗篷.它有一种超凡脱俗的品质<n>--它一定是从另一个领域获得的.;
  
 
 

@@ -4588,7 +4588,7 @@ weight=2; volume=3000; value=250; element=cannon; itemCategory=tool;
 special=cargo; special=shipWeapon; special=equipInAnySlot;
  pG=pBrown;
 [ItemReaction]
-ID=gear_antiboarding_net; actorValues=board; damageMultiplier=0.75;
+ID=gear_antiboarding_net; actorValues=board; damageMultiplier=0.7;
 
 [JournalEntry]
 ID=item_gear_antiboarding_net;
@@ -4604,7 +4604,7 @@ weight=2; volume=3000; value=1500; element=cannon; itemCategory=tool;
 special=cargo; special=shipWeapon; special=equipInAnySlot;
  pG=pShockWeaponHilt;
 [ItemReaction]
-ID=gear_absorb_mesh; element=elec; element=fire; damageMultiplier=0.8;
+ID=gear_absorb_mesh; element=elec; element=fire; damageMultiplier=0.7;
 
 [JournalEntry]
 ID=item_gear_absorb_mesh;
@@ -4742,7 +4742,7 @@ journalID=journal_cannon;
 texture=items_weapons;
 description=短而粗的威力惊人的特制大炮.<n=><adjX=14><font=thickIcons><icon=cannonRange> 3<adjX=14><icon=cannonCone> Med<adjX=14><icon=cannonPower> 9;
 weight=2; volume=3000; value=1250;
-power=9; element=cannon;
+power=10; element=cannon;
  action=cannon_lilbuster_atk;
  special=cargo; special=shipWeapon; special=enhanceSlots_0; special=noTooltipIcons;
  pR=pGreyD2;
